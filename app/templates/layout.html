@@ -1,0 +1,55 @@
+{# ---------------------------------------------------------------------
+   layout.html
+   Main shell layout with header, sidebar, and main content pane
+   --------------------------------------------------------------------- #}
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth bg-zinc-100 dark:bg-zinc-900 text-zinc-800 dark:text-zinc-100 min-h-screen flex flex-col">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grylli</title>
+    <link rel="icon" href="{{ url_for('static', filename='icons/favicon.ico') }}" type="image/x-icon" />
+    <link href="{{ url_for('static', filename='css/styles.css') }}" rel="stylesheet" />
+    <script defer src="{{ url_for('static', filename='js/theme-toggle.js') }}"></script>
+  </head>
+  <body class="bg-zinc-100 dark:bg-zinc-900 min-h-screen flex flex-col">
+    <!-- HEADER -->
+    <header class="fixed top-0 left-0 right-0 h-16 bg-white dark:bg-zinc-800 shadow-md z-10 flex items-center justify-between px-6">
+      <div class="text-xl font-bold tracking-tight">Grylli</div>
+      <div class="text-sm text-zinc-400">Welcome to Grylli</div>
+    </header>
+
+    <!-- SIDEBAR + MAIN -->
+    <div class="flex flex-1 pt-16">
+      
+      <!-- SIDEBAR -->
+      <aside class="w-64 bg-white dark:bg-zinc-800 border-r border-zinc-200 dark:border-zinc-700 h-[calc(100vh-2.5rem)] fixed top-16 left-0 bottom-10 overflow-y-auto">
+        <nav class="p-4 space-y-2 text-sm">
+          <a href="/" class="block px-3 py-2 rounded hover:bg-zinc-100 dark:hover:bg-zinc-700">Home</a>
+          <a href="/messages/" class="block px-3 py-2 rounded hover:bg-zinc-100 dark:hover:bg-zinc-700">Messages</a>
+          <a href="/account/" class="block px-3 py-2 rounded hover:bg-zinc-100 dark:hover:bg-zinc-700">Account</a>
+          <a href="/about/" class="block px-3 py-2 rounded hover:bg-zinc-100 dark:hover:bg-zinc-700">About</a>
+          <hr class="border-zinc-200 dark:border-zinc-700" />
+          <a href="/logout/" class="block px-3 py-2 rounded text-red-500 hover:bg-red-100 dark:hover:bg-red-900">Logout</a>
+        </nav>
+      </aside>
+
+      <!-- MAIN CONTENT -->
+      <main class="ml-64 w-full pt-6 pb-20 px-8 overflow-y-auto h-[calc(100vh-2.5rem)]">
+        {% block content %}
+        <!-- Default content goes here -->
+        {% endblock %}
+      </main>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="fixed bottom-0 left-0 right-0 h-10 bg-white dark:bg-zinc-800 border-t border-zinc-200 dark:border-zinc-700 flex items-center justify-between px-4 text-sm text-zinc-500 dark:text-zinc-400">
+      <button id="themeToggle" class="hover:underline">Toggle Theme</button>
+      <span>Version {{ app_version }}</span>
+    </footer>
+
+    <!-- TOASTS -->
+    <div id="toast-container" class="fixed top-20 right-4 space-y-2 z-50"></div>
+
+  </body>
+</html>
