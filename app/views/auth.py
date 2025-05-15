@@ -7,10 +7,9 @@ from flask import Blueprint, render_template, request, redirect, url_for, flash,
 from flask_login import login_user, logout_user, login_required
 from werkzeug.security import generate_password_hash, check_password_hash
 from app.forms.admin_creation_form import AdminCreationForm
-from app.db import get_db
-from app.utils.logging import log_info_message, log_error_message
-from app.models import User
 from app.forms.login_form import LoginForm
+from app.utils.logging import log_info_message, log_error_message
+from app.models import db, User
 
 bp = Blueprint("auth", __name__, url_prefix="/auth")
 
@@ -20,11 +19,9 @@ bp = Blueprint("auth", __name__, url_prefix="/auth")
 
 @bp.route("/bootstrap/", methods=["GET", "POST"])
 def bootstrap():
-    db = get_db()
-
     try:
-        result = db.execute("SELECT COUNT(*) FROM users WHERE role = 'admin'").fetchone()
-        if result[0] > 0:
+        admin_count = db.session.query(User).filter_by(role="admin").count()
+        if admin_count > 0:
             log_info_message("Admin account already exists. Redirecting to login.")
             return redirect(url_for("auth.login"))
     except Exception as e:
@@ -38,21 +35,20 @@ def bootstrap():
             username = form.username.data.strip()
             password_hash = generate_password_hash(form.password.data)
 
-            db.execute(
-                "INSERT INTO users (username, email, password_hash, role) VALUES (?, ?, ?, 'admin')",
-                (username, form.email.data.strip(), password_hash)
+            new_user = User(
+                username=username,
+                email=form.email.data.strip(),
+                password_hash=password_hash,
+                role="admin"
             )
-
-            db.commit()
+            db.session.add(new_user)
+            db.session.commit()
 
             log_info_message(f"Admin account '{username}' created during bootstrap.")
             flash("Admin account created successfully.", "success")
 
-            # Load the user object after creation (you need to implement this)
-            from app.models import User
-            user = User.get_by_username(db, username)  # Implement get_by_username method
+            user = User.query.filter_by(username=username).first()
 
-            # Log the user in
             login_user(user)
             log_info_message(f"User {user.username} logged in with ID {user.id}")
 
@@ -72,14 +68,12 @@ def login():
     form = LoginForm()
 
     if form.validate_on_submit():
-        db = get_db()
-        user = User.get_by_username(db, form.username.data.strip())
+        user = User.query.filter_by(username=form.username.data.strip()).first()
 
         if user and check_password_hash(user.password_hash, form.password.data):
             login_user(user)
             flash("Logged in successfully.", "success")
             next_page = request.args.get('next')
-            # Security check for next page
             if not next_page or not next_page.startswith('/'):
                 next_page = url_for('index.index')
             return redirect(next_page)
@@ -91,6 +85,7 @@ def login():
 # ---------------------------------------------------------------------
 # LOGOUT
 # ---------------------------------------------------------------------
+
 @bp.route('/logout/')
 @login_required
 def logout():

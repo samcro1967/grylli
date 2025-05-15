@@ -1,46 +1,63 @@
+# ──────────────────────────────────────────────────────────────
+# Personal & local project files
+# ──────────────────────────────────────────────────────────────
 Grylli.docx
-git.sh
-create_grylli_structure.sh
 Grylli.xlsx
 Notes.txt
+git.sh
+create_grylli_structure.sh
 
-# Node dependencies
-node_modules/
-
-# Python cache
+# ──────────────────────────────────────────────────────────────
+# Python-related
+# ──────────────────────────────────────────────────────────────
 __pycache__/
 *.py[cod]
 *.so
 
 # Virtual environments
-.env/
+.venv/
 venv/
+.env/
 *.env
 
-# macOS and editor junk
+# SQLite & other development databases
+*.sqlite3
+*.db
+instance/
+
+# ──────────────────────────────────────────────────────────────
+# Flask-Migrate
+# ──────────────────────────────────────────────────────────────
+migrations/
+
+# ──────────────────────────────────────────────────────────────
+# Node + TailwindCSS build system
+# ──────────────────────────────────────────────────────────────
+node_modules/
+app/static/css/output.css
+app/static/css/styles.css
+tailwind.config.js
+postcss.config.js
+
+# ──────────────────────────────────────────────────────────────
+# Local app data / secrets
+# ──────────────────────────────────────────────────────────────
+data/fernet_key/
+data/uploads/
+instance/uploads/
+
+# ──────────────────────────────────────────────────────────────
+# Editor & OS junk
+# ──────────────────────────────────────────────────────────────
 .DS_Store
 *.swp
 *.swo
 .idea/
 .vscode/
 
-# Compiled CSS
-app/static/css/output.css
-
-# Tailwind and PostCSS config (optional)
-postcss.config.js
-tailwind.config.js
-
-# Local data and uploads
-data/fernet_key/
-data/uploads/
-instance/uploads/
-
-# SQLite or other dev DBs
-*.sqlite3
-*.db
-
-# Logs, dumps, and misc
+# ──────────────────────────────────────────────────────────────
+# Logs, crash dumps, etc.
+# ──────────────────────────────────────────────────────────────
 *.log
 *.bak
 *.tmp

@@ -6,6 +6,9 @@
 from flask import Flask, request, session, redirect, url_for
 from flask_login import current_user, LoginManager
 from flask_migrate import Migrate, upgrade
+from app.models import db
+from app.services.settings import seed_system_config_from_env
+from sqlalchemy import text
 import os
 
 from app.utils.logging import (
@@ -23,6 +26,9 @@ def create_app():
         Flask: A configured Flask app instance.
     """
     app = Flask(__name__, instance_relative_config=True)
+
+    # Correctly load app/config.py regardless of instance_relative_config
+    app.config.from_pyfile(os.path.join(app.root_path, "config.py"))
 
     # -------------------------------------------------------------
     # Force session cookie settings for local dev (HTTP)
@@ -43,9 +49,7 @@ def create_app():
     # -------------------------------------------------------------
     # Load environment-specific configuration
     # -------------------------------------------------------------
-    env_config = os.environ.get('GRYLLI_CONFIG')
-    if env_config:
-        app.config.from_envvar(env_config)
+    app.config.from_pyfile(os.path.join(app.root_path, "config.py"))
 
     # -------------------------------------------------------------
     # Blueprint Registration
@@ -71,7 +75,10 @@ def create_app():
 
     with app.app_context():
         os.makedirs(app.instance_path, exist_ok=True)
-        upgrade()  # Automatically apply any pending migrations
+        # Automatically apply any pending migrations
+        if os.path.exists(os.path.join(app.root_path, "migrations")):
+            upgrade()
+        seed_system_config_from_env()
 
     # -------------------------------------------------------------
     # Jinja Globals
@@ -104,12 +111,13 @@ def create_app():
         if request.endpoint not in allowed_routes and not session.get("user_id"):
             try:
                 admin_count = db.session.execute(
-                    "SELECT COUNT(*) FROM users WHERE role = 'admin'"
+                    text("SELECT COUNT(*) FROM users WHERE role = 'admin'")
                 ).scalar()
                 if admin_count == 0:
                     return redirect(url_for("auth.bootstrap"))
             except Exception as e:
                 log_error_message(f"Admin bootstrap check failed: {e}")
+
 
     log_info_message(f"App secret key: {app.config['SECRET_KEY']}")
 

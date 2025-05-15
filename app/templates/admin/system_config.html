@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="max-w-3xl mx-auto mt-10">
+  <h1 class="text-2xl font-semibold mb-4">System Configuration</h1>
+  <table class="table-auto w-full bg-white shadow rounded-lg">
+    <thead class="bg-zinc-200">
+      <tr>
+        <th class="text-left px-4 py-2">Key</th>
+        <th class="text-left px-4 py-2">Value</th>
+        <th class="text-left px-4 py-2">Sensitive?</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for setting in settings %}
+      <tr class="border-t">
+        <td class="px-4 py-2 font-mono">{{ setting.key }}</td>
+        <td class="px-4 py-2">{{ setting.value }}</td>
+        <td class="px-4 py-2">{{ "Yes" if setting.is_sensitive else "No" }}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% endblock %}

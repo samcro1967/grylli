@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+  grylli:
+    image: grylli:latest
+    container_name: grylli
+    build:
+      context: .
+    env_file:
+      - .env
+    ports:
+      - "${FLASK_APP_PORT}:5069"
+    volumes:
+      - ./data/uploads:/app/instance/uploads
+      - ./data/fernet_key:/app/data/fernet_key
+    environment:
+      TZ: ${TZ}
+      PUID: ${PUID}
+      PGID: ${PGID}
+    restart: unless-stopped
