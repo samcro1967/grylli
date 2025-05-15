@@ -3,11 +3,8 @@
 // Handles light/dark mode toggle and persistence via localStorage
 // ---------------------------------------------------------------------
 
-console.log("🔥 theme-toggle.js script is executing");
-
 document.addEventListener("DOMContentLoaded", function () {
   const themeToggleBtn = document.getElementById("themeToggle");
-  console.log("🔍 Found toggle button:", themeToggleBtn);
   const html = document.documentElement;
 
   // -------------------------------------------------------------------

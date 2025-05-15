@@ -5,18 +5,15 @@
 
 from flask import Flask, request, session, redirect, url_for
 from flask_login import current_user, LoginManager
+from flask_migrate import Migrate, upgrade
 import os
-import sqlite3
+
 from app.utils.logging import (
     log_error_message,
     log_step,
     log_info_message,
     log_exception_with_traceback,
 )
-
-# ---------------------------------------------------------------------
-# Function: create_app
-# ---------------------------------------------------------------------
 
 def create_app():
     """
@@ -51,7 +48,7 @@ def create_app():
         app.config.from_envvar(env_config)
 
     # -------------------------------------------------------------
-    # Blueprint Registration (to be added per module)
+    # Blueprint Registration
     # -------------------------------------------------------------
     from app.views import about, auth, index, account, admin
 
@@ -67,76 +64,53 @@ def create_app():
     print("---------------------------")
 
     # -------------------------------------------------------------
-    # Jinja Globals or Filters (if needed)
+    # Initialize SQLAlchemy and Flask-Migrate
+    # -------------------------------------------------------------
+    db.init_app(app)
+    migrate = Migrate(app, db)
+
+    with app.app_context():
+        os.makedirs(app.instance_path, exist_ok=True)
+        upgrade()  # Automatically apply any pending migrations
+
+    # -------------------------------------------------------------
+    # Jinja Globals
     # -------------------------------------------------------------
     app.jinja_env.globals['app_version'] = os.environ.get('APP_VERSION', '0.1.0')
 
-    # ---------------------------------------------------------------------
-    # Database Configuration, Creation, and Teardown
-    # ---------------------------------------------------------------------
-    app.config['DATABASE'] = os.path.join(app.instance_path, 'grylli.db')
-
-    from app.db import close_db, get_db
-    from app.models import create_tables
-
-    app.teardown_appcontext(close_db)
-
-    try:
-        # Ensure the instance folder exists
-        os.makedirs(app.instance_path, exist_ok=True)
-
-        # If the database doesn't exist, create and initialize it
-        if not os.path.exists(app.config['DATABASE']):
-            log_step("Creating grylli.db and initializing schema")
-            conn = sqlite3.connect(app.config['DATABASE'])
-            create_tables(conn)
-            conn.close()
-            log_info_message("Database created and tables initialized successfully.")
-    except Exception as e:
-        log_exception_with_traceback("Failed to create database on first run", e)
-
-    # ---------------------------------------------------------------------
-    # REDIRECT if no admin exists and user is not already bootstrapping
-    # ---------------------------------------------------------------------
-    @app.before_request
-    def redirect_if_no_admin():
-        """
-        Redirects to /auth/bootstrap if no admin exists and the user is unauthenticated.
-
-        Ensures the app cannot be used until the first admin is created.
-        """
-        allowed_routes = {"auth.bootstrap", "auth.login", "static"}
-
-        if request.endpoint not in allowed_routes and not session.get("user_id"):
-            try:
-                db = get_db()
-                admin_count = db.execute("SELECT COUNT(*) FROM users WHERE role = 'admin'").fetchone()[0]
-                if admin_count == 0:
-                    return redirect(url_for("auth.bootstrap"))
-            except Exception as e:
-                log_error_message(f"Admin bootstrap check failed: {e}")
-
-    # ---------------------------------------------------------------------
-    # Create a LoginManager instance and initialize it
-    # ---------------------------------------------------------------------
-    # Initialize Flask-Login
+    # -------------------------------------------------------------
+    # Flask-Login Setup
+    # -------------------------------------------------------------
     login_manager = LoginManager()
-    login_manager.login_view = "auth.login"  # Adjust to your login route name
+    login_manager.login_view = "auth.login"
     login_manager.init_app(app)
 
     @login_manager.user_loader
     def load_user(user_id):
         from app.models import User
-        db = get_db()
-        return User.get_by_id(db, user_id)
+        return User.query.get(int(user_id))
 
-    log_info_message(f"App secret key: {app.config['SECRET_KEY']}")
-
-    # ---------------------------------------------------------------------
-    # Set Current user
-    # ---------------------------------------------------------------------
     @app.context_processor
     def inject_user():
         return dict(current_user=current_user)
+
+    # -------------------------------------------------------------
+    # Admin Bootstrap Check
+    # -------------------------------------------------------------
+    @app.before_request
+    def redirect_if_no_admin():
+        allowed_routes = {"auth.bootstrap", "auth.login", "static"}
+
+        if request.endpoint not in allowed_routes and not session.get("user_id"):
+            try:
+                admin_count = db.session.execute(
+                    "SELECT COUNT(*) FROM users WHERE role = 'admin'"
+                ).scalar()
+                if admin_count == 0:
+                    return redirect(url_for("auth.bootstrap"))
+            except Exception as e:
+                log_error_message(f"Admin bootstrap check failed: {e}")
+
+    log_info_message(f"App secret key: {app.config['SECRET_KEY']}")
 
     return app
