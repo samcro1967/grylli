@@ -14,9 +14,6 @@ bp = Blueprint("index", __name__)
 @bp.route("/")
 def index():
     """
-    Default landing page for authenticated users.
-
-    Returns:
-        Renders the index.html template.
+    Default landing page for unauthenticated or bootstrapped users.
     """
     return render_template("index.html")

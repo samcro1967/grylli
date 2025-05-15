@@ -55,8 +55,8 @@ def bootstrap():
             db.commit()
 
             log_info_message(f"Admin account '{username}' created during bootstrap.")
-            flash("Admin account created. Please log in.", "success")
-            return redirect(url_for("auth.login"))
+            flash("Admin account created successfully.", "success")
+            return redirect(url_for("index.index"))
         except Exception as e:
             log_error_message(f"Error creating admin during bootstrap: {e}")
             flash("An error occurred while creating the admin account.", "danger")

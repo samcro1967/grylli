@@ -43,11 +43,12 @@ def create_app():
     # -------------------------------------------------------------
     # Blueprint Registration (to be added per module)
     # -------------------------------------------------------------
-    from app.views import about, auth
+    from app.views import about, auth, index
     # from app.views import auth, account, messages, admin, destinations
 
-    app.register_blueprint(auth.bp)
     # app.register_blueprint(account.bp)
+    app.register_blueprint(index.bp)
+    app.register_blueprint(auth.bp)
     app.register_blueprint(about.bp)
 
     # -------------------------------------------------------------
