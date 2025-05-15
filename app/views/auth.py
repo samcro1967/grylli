@@ -39,9 +39,10 @@ def bootstrap():
             password_hash = generate_password_hash(form.password.data)
 
             db.execute(
-                "INSERT INTO users (username, password_hash, role) VALUES (?, ?, 'admin')",
-                (username, password_hash)
+                "INSERT INTO users (username, email, password_hash, role) VALUES (?, ?, ?, 'admin')",
+                (username, form.email.data.strip(), password_hash)
             )
+
             db.commit()
 
             log_info_message(f"Admin account '{username}' created during bootstrap.")

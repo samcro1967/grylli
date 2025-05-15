@@ -1,26 +1,56 @@
-# ---------------------------------------------------------------------
-# about.py
-# Blueprint for rendering the About page in Grylli
-# ---------------------------------------------------------------------
+from flask import Blueprint, render_template, request, redirect, url_for, flash
+from flask_login import login_required, current_user
+from werkzeug.security import check_password_hash, generate_password_hash
+from app.forms.account_form import AccountForm
+from app.db import get_db
+from app.models import User
 
-from flask import Blueprint, render_template
+bp = Blueprint("account", __name__, url_prefix="/account")
 
-# ---------------------------------------------------------------------
-# Blueprint Configuration
-# ---------------------------------------------------------------------
+@bp.route("/", methods=["GET", "POST"])
+@login_required
+def manage_account():
+    form = AccountForm(obj=current_user)
 
-bp = Blueprint("about", __name__, url_prefix="/about")
+    if form.validate_on_submit():
+        db = get_db()
 
-# ---------------------------------------------------------------------
-# Route: /about
-# ---------------------------------------------------------------------
+        # Update username and email
+        username = form.username.data.strip()
+        email = form.email.data.strip()
 
-@bp.route("/", methods=["GET"])
-def show_about():
-    """
-    Renders the About page, including version and GitHub info.
+        # If changing password, verify current password
+        if form.new_password.data:
+            if not form.current_password.data:
+                flash("Current password is required to change password.", "danger")
+                return render_template("account/manage_account.html", form=form)
 
-    Returns:
-        str: Rendered HTML for the About page.
-    """
-    return render_template("about.html")
+            if not check_password_hash(current_user.password_hash, form.current_password.data):
+                flash("Current password is incorrect.", "danger")
+                return render_template("account/manage_account.html", form=form)
+
+            new_password_hash = generate_password_hash(form.new_password.data)
+        else:
+            new_password_hash = None
+
+        try:
+            if new_password_hash:
+                db.execute(
+                    "UPDATE users SET username=?, email=?, password_hash=? WHERE id=?",
+                    (username, email, new_password_hash, current_user.id)
+                )
+            else:
+                db.execute(
+                    "UPDATE users SET username=?, email=? WHERE id=?",
+                    (username, email, current_user.id)
+                )
+            db.commit()
+            flash("Account updated successfully.", "success")
+
+            # Optionally, update current_user properties here or require re-login
+
+            return redirect(url_for("account.manage_account"))
+        except Exception as e:
+            flash("Error updating account: " + str(e), "danger")
+
+    return render_template("account/manage_account.html", form=form)

@@ -1,0 +1,93 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<h1 class="text-xl font-semibold mb-4">Users</h1>
+
+<!-- Toggle buttons -->
+<div class="mb-4 flex space-x-4">
+  <button id="btnTableView" class="px-4 py-2 bg-blue-600 text-white rounded">Table View</button>
+  <button id="btnCardView" class="px-4 py-2 bg-gray-300 text-black rounded">Card View</button>
+</div>
+
+<!-- Table View -->
+<div id="tableView">
+  <table class="table-auto w-full border-collapse border border-gray-300 dark:border-gray-700">
+    <thead>
+      <tr>
+        <th class="border border-gray-300 dark:border-gray-700 px-4 py-2">ID</th>
+        <th class="border border-gray-300 dark:border-gray-700 px-4 py-2">Username</th>
+        <th class="border border-gray-300 dark:border-gray-700 px-4 py-2">Email</th>
+        <th class="border border-gray-300 dark:border-gray-700 px-4 py-2">Role</th>
+        <th class="border border-gray-300 dark:border-gray-700 px-4 py-2">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for user in users %}
+      <tr>
+        <td class="border border-gray-300 dark:border-gray-700 px-4 py-2">{{ user.id }}</td>
+        <td class="border border-gray-300 dark:border-gray-700 px-4 py-2">{{ user.username }}</td>
+        <td class="border border-gray-300 dark:border-gray-700 px-4 py-2">{{ user.email }}</td>
+        <td class="border border-gray-300 dark:border-gray-700 px-4 py-2">{{ user.role }}</td>
+        <td class="border border-gray-300 dark:border-gray-700 px-4 py-2 space-x-2">
+          <a href="{{ url_for('admin.edit_user', user_id=user.id) }}" class="text-blue-500 hover:underline">Edit</a>
+          <form action="{{ url_for('admin.delete_user', user_id=user.id) }}" method="post" class="inline" onsubmit="return confirm('Are you sure you want to delete this user?');">
+            <button type="submit" class="text-red-500 hover:underline bg-transparent border-0 p-0 cursor-pointer">Delete</button>
+          </form>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<!-- Card View -->
+<div id="cardView" class="hidden grid grid-cols-1 md:grid-cols-3 gap-4">
+  {% for user in users %}
+  <div class="bg-white dark:bg-zinc-800 p-4 rounded shadow">
+    <p><strong>ID:</strong> {{ user.id }}</p>
+    <p><strong>Username:</strong> {{ user.username }}</p>
+    <p><strong>Email:</strong> {{ user.email }}</p>
+    <p><strong>Role:</strong> {{ user.role }}</p>
+    <div class="mt-2 space-x-2">
+      <a href="{{ url_for('admin.edit_user', user_id=user.id) }}" class="text-blue-500 hover:underline">Edit</a>
+      <form action="{{ url_for('admin.delete_user', user_id=user.id) }}" method="post" class="inline" onsubmit="return confirm('Are you sure you want to delete this user?');">
+        <button type="submit" class="text-red-500 hover:underline bg-transparent border-0 p-0 cursor-pointer">Delete</button>
+      </form>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endblock %}
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const btnTable = document.getElementById("btnTableView");
+    const btnCard = document.getElementById("btnCardView");
+    const tableView = document.getElementById("tableView");
+    const cardView = document.getElementById("cardView");
+
+    function showTable() {
+      tableView.classList.remove("hidden");
+      cardView.classList.add("hidden");
+      btnTable.classList.add("bg-blue-600", "text-white");
+      btnTable.classList.remove("bg-gray-300", "text-black");
+      btnCard.classList.remove("bg-blue-600", "text-white");
+      btnCard.classList.add("bg-gray-300", "text-black");
+    }
+
+    function showCards() {
+      cardView.classList.remove("hidden");
+      tableView.classList.add("hidden");
+      btnCard.classList.add("bg-blue-600", "text-white");
+      btnCard.classList.remove("bg-gray-300", "text-black");
+      btnTable.classList.remove("bg-blue-600", "text-white");
+      btnTable.classList.add("bg-gray-300", "text-black");
+    }
+
+    btnTable.addEventListener("click", showTable);
+    btnCard.addEventListener("click", showCards);
+
+    // Default to table view
+    showTable();
+  });
+</script>

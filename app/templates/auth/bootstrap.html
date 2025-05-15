@@ -16,6 +16,11 @@
       {{ form.username(class="form-input w-full bg-zinc-100 dark:bg-zinc-700 text-black dark:text-white", autocomplete="username") }}
     </div>
 
+    <div class="mb-4">
+      {{ form.email.label(class="block text-sm font-medium mb-1") }}
+      {{ form.email(class="form-input w-full bg-zinc-100 dark:bg-zinc-700 text-black dark:text-white", autocomplete="email") }}
+    </div>
+
     <!-- Password Field with Eye Icon -->
     <div class="mb-4 flex items-center space-x-2">
       <div class="flex-grow relative">

@@ -26,6 +26,7 @@ def create_tables(conn: sqlite3.Connection):
         CREATE TABLE IF NOT EXISTS users (
             id INTEGER PRIMARY KEY AUTOINCREMENT,
             username TEXT NOT NULL UNIQUE,
+            email TEXT NOT NULL UNIQUE,           -- Add this line
             password_hash TEXT NOT NULL,
             role TEXT NOT NULL CHECK (role IN ('admin', 'user')),
             date_created TEXT DEFAULT CURRENT_TIMESTAMP
@@ -102,29 +103,30 @@ def create_tables(conn: sqlite3.Connection):
     conn.commit()
 
 class User:
-    def __init__(self, id_, username, password_hash, role):
+    def __init__(self, id_, username, email, password_hash, role):
         self.id = id_
         self.username = username
+        self.email = email
         self.password_hash = password_hash
         self.role = role
 
     @staticmethod
     def get_by_username(db, username):
         row = db.execute(
-            "SELECT id, username, password_hash, role FROM users WHERE username = ?", (username,)
+            "SELECT id, username, email, password_hash, role FROM users WHERE username = ?", (username,)
         ).fetchone()
         if row is None:
             return None
-        return User(row['id'], row['username'], row['password_hash'], row['role'])
+        return User(row['id'], row['username'], row['email'], row['password_hash'], row['role'])
 
     @staticmethod
     def get_by_id(db, user_id):
         row = db.execute(
-            "SELECT id, username, password_hash, role FROM users WHERE id = ?", (user_id,)
+            "SELECT id, username, email, password_hash, role FROM users WHERE id = ?", (user_id,)
         ).fetchone()
         if row is None:
             return None
-        return User(row['id'], row['username'], row['password_hash'], row['role'])
+        return User(row['id'], row['username'], row['email'], row['password_hash'], row['role'])
 
     # Flask-Login properties
     @property
