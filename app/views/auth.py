@@ -4,11 +4,13 @@
 # ---------------------------------------------------------------------
 
 from flask import Blueprint, render_template, request, redirect, url_for, flash, session
-from flask_login import login_user
-from werkzeug.security import generate_password_hash
+from flask_login import login_user, logout_user, login_required
+from werkzeug.security import generate_password_hash, check_password_hash
 from app.forms.admin_creation_form import AdminCreationForm
 from app.db import get_db
 from app.utils.logging import log_info_message, log_error_message
+from app.models import User
+from app.forms.login_form import LoginForm
 
 bp = Blueprint("auth", __name__, url_prefix="/auth")
 
@@ -51,6 +53,7 @@ def bootstrap():
 
             # Log the user in
             login_user(user)
+            log_info_message(f"User {user.username} logged in with ID {user.id}")
 
             return redirect(url_for("index.index"))
         except Exception as e:
@@ -60,15 +63,35 @@ def bootstrap():
     return render_template("auth/bootstrap.html", form=form)
 
 # ---------------------------------------------------------------------
-# LOGIN: Placeholder for login view
+# LOGIN
 # ---------------------------------------------------------------------
 
 @bp.route("/login/", methods=["GET", "POST"])
 def login():
-    """
-    Placeholder login route for compatibility with post-bootstrap redirect.
+    form = LoginForm()
 
-    Returns:
-        Renders a temporary message or login screen once implemented.
-    """
-    return render_template("auth/login.html")
+    if form.validate_on_submit():
+        db = get_db()
+        user = User.get_by_username(db, form.username.data.strip())
+
+        if user and check_password_hash(user.password_hash, form.password.data):
+            login_user(user)
+            flash("Logged in successfully.", "success")
+            next_page = request.args.get('next')
+            # Security check for next page
+            if not next_page or not next_page.startswith('/'):
+                next_page = url_for('index.index')
+            return redirect(next_page)
+
+        flash("Invalid username or password.", "danger")
+
+    return render_template("auth/login.html", form=form)
+
+# ---------------------------------------------------------------------
+# LOGOUT
+# ---------------------------------------------------------------------
+@bp.route('/logout/')
+@login_required
+def logout():
+    logout_user()
+    return redirect(url_for('auth.login'))

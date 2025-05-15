@@ -26,15 +26,8 @@
         Grylli
       </div>
 
-      <p style="color: red; font-size: small;">
-        current_user.is_authenticated = {{ current_user.is_authenticated if current_user is defined else 'undefined' }}<br/>
-        current_user = {{ current_user if current_user is defined else 'undefined' }}<br/>
-        request.endpoint = {{ request.endpoint if request else 'undefined' }}
-      </p>
-
       <!-- Profile Dropdown -->
       {% if current_user.is_authenticated and request and request.endpoint not in ['auth.bootstrap', 'auth.login'] %}
-        <!-- Profile Dropdown -->
         <div x-data="{ open: false }" class="relative">
           <button @click="open = !open" class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-200 focus:outline-none">
             <svg class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -49,10 +42,11 @@
                x-transition>
             <a href="/account/" class="block px-4 py-2 text-sm hover:bg-zinc-100 dark:hover:bg-zinc-700 text-zinc-800 dark:text-zinc-100">Account</a>
             <a href="/about/" class="block px-4 py-2 text-sm hover:bg-zinc-100 dark:hover:bg-zinc-700 text-zinc-800 dark:text-zinc-100">About</a>
-            <a href="/logout/" class="block px-4 py-2 text-sm text-red-500 hover:bg-red-100 dark:hover:bg-red-900">Logout</a>
+            <a href="{{ url_for('auth.logout') }}" class="block px-4 py-2 text-sm text-red-500 hover:bg-red-100 dark:hover:bg-red-900">Logout</a>
           </div>
         </div>
       {% endif %}
+
     </header>
 
     <div class="flex pt-16 h-screen">

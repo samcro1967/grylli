@@ -28,6 +28,15 @@ def create_app():
     app = Flask(__name__, instance_relative_config=True)
 
     # -------------------------------------------------------------
+    # Force session cookie settings for local dev (HTTP)
+    # -------------------------------------------------------------
+    app.config.update(
+        SESSION_COOKIE_HTTPONLY=True,
+        SESSION_COOKIE_SAMESITE="Lax",
+        SESSION_COOKIE_SECURE=False,  # Must be False for local HTTP testing
+    )
+
+    # -------------------------------------------------------------
     # Basic Configuration
     # -------------------------------------------------------------
     app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY', 'supersecretkey')
@@ -110,13 +119,13 @@ def create_app():
     login_manager.login_view = "auth.login"  # Adjust to your login route name
     login_manager.init_app(app)
 
-    # Provide user_loader callback to reload user from session
     @login_manager.user_loader
     def load_user(user_id):
-        from app.models import User  # Import your User model
+        from app.models import User
         db = get_db()
-        return User.get_by_id(db, user_id)  # Implement this method in User model
+        return User.get_by_id(db, user_id)
 
+    log_info_message(f"App secret key: {app.config['SECRET_KEY']}")
 
     # ---------------------------------------------------------------------
     # Set Current user
