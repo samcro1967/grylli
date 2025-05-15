@@ -1,22 +1,33 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<div class="max-w-3xl mx-auto mt-10">
-  <h1 class="text-2xl font-semibold mb-4">System Configuration</h1>
-  <table class="table-auto w-full bg-white shadow rounded-lg">
-    <thead class="bg-zinc-200">
+<div class="max-w-4xl mx-auto mt-16 bg-white dark:bg-zinc-800 shadow-md rounded-xl p-6">
+  <h1 class="text-2xl font-semibold mb-6 text-black dark:text-white">System Configuration</h1>
+
+  <table class="table-auto w-full text-left text-sm">
+    <thead class="border-b border-zinc-300 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300">
       <tr>
-        <th class="text-left px-4 py-2">Key</th>
-        <th class="text-left px-4 py-2">Value</th>
-        <th class="text-left px-4 py-2">Sensitive?</th>
+        <th class="py-2 px-4">Key</th>
+        <th class="py-2 px-4">Value</th>
+        <th class="py-2 px-4">Sensitive</th>
+        <th class="py-2 px-4">Editable</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody class="text-black dark:text-white">
       {% for setting in settings %}
-      <tr class="border-t">
-        <td class="px-4 py-2 font-mono">{{ setting.key }}</td>
-        <td class="px-4 py-2">{{ setting.value }}</td>
-        <td class="px-4 py-2">{{ "Yes" if setting.is_sensitive else "No" }}</td>
+      <tr class="border-t border-zinc-200 dark:border-zinc-700">
+        <td class="py-2 px-4 font-mono text-xs">{{ setting.key }}</td>
+        <td class="py-2 px-4 break-all">
+          {% if setting.is_sensitive %}
+            <span class="italic text-zinc-400 dark:text-zinc-500">••••••••••</span>
+            <span class="ml-2 text-xs text-zinc-500 dark:text-zinc-400">(decrypted)</span>
+            <div class="text-xs text-zinc-300 dark:text-zinc-500">{{ setting.value }}</div>
+          {% else %}
+            {{ setting.value }}
+          {% endif %}
+        </td>
+        <td class="py-2 px-4">{{ "Yes" if setting.is_sensitive else "No" }}</td>
+        <td class="py-2 px-4">{{ "Yes" if setting.editable else "No" }}</td>
       </tr>
       {% endfor %}
     </tbody>

@@ -3,7 +3,7 @@
 # Admin user management views for Grylli
 # ---------------------------------------------------------------------
 
-from flask import Blueprint, render_template, request, redirect, url_for, flash
+from flask import Blueprint, render_template, request, redirect, url_for, flash, current_app
 from flask_login import login_required, current_user
 from werkzeug.security import generate_password_hash
 
@@ -13,6 +13,7 @@ from app.utils.logging import log_info_message, log_error_message
 
 from app.models import SystemConfig
 from app.services.encryption import decrypt
+from app.services.mail import send_email
 
 bp = Blueprint('admin', __name__, url_prefix='/admin')
 
@@ -114,3 +115,25 @@ def view_system_config():
                 setting.value = "[decryption error]"
 
     return render_template("admin/system_config.html", settings=settings)
+
+# ---------------------------------------------------------------------
+# System:
+# ---------------------------------------------------------------------
+@bp.route('/system/test-email/', methods=['POST'])
+@login_required
+def send_test_email():
+    if current_user.role != 'admin':
+        return "Unauthorized", 403
+
+    try:
+        send_email(
+            to=current_user.email,
+            subject="Test Email from Grylli",
+            body="This is a test email from the Grylli system configuration page."
+        )
+        flash("Test email sent successfully.", "success")
+    except Exception as e:
+        flash(f"Failed to send test email: {e}", "danger")
+        log_error_message(f"Test email failed: {e}")
+
+    return redirect(url_for('admin.view_system_config'))

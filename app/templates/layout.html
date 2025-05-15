@@ -57,7 +57,15 @@
           <a href="/" class="block px-3 py-2 rounded text-zinc-800 dark:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-700">Home</a>
 
           {% if current_user.is_authenticated and current_user.role == 'admin' %}
-            <a href="{{ url_for('admin.list_users') }}" class="block px-3 py-2 rounded text-zinc-800 dark:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-700">Users</a>
+            <a href="{{ url_for('admin.list_users') }}"
+               class="block px-3 py-2 rounded text-zinc-800 dark:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-700">
+              Users
+            </a>
+
+            <a href="{{ url_for('admin.view_system_config') }}"
+               class="block px-3 py-2 rounded text-zinc-800 dark:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-700">
+              System Settings
+            </a>
           {% endif %}
 
           <a href="/messages/" class="block px-3 py-2 rounded text-zinc-800 dark:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-700">Messages</a>

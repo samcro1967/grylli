@@ -38,6 +38,7 @@
       </div>
       <button type="button"
               class="pt-6"
+              aria-label="Hold to show password"
               onmousedown="showPassword('current_password')"
               onmouseup="hidePassword('current_password')"
               onmouseleave="hidePassword('current_password')">
@@ -102,11 +103,16 @@
 
     </div>
 
+    <p id="passwordMismatchWarning" class="text-sm text-red-500 mt-1 hidden">
+      Passwords do not match.
+    </p>
+
     <!-- Submit Button -->
     <div>
       {{ form.submit(
           id="submitBtn",
-          class="w-full bg-red-500 text-white py-2 px-4 rounded disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+          class="w-full bg-red-500 text-white py-2 px-4 rounded disabled:opacity-50 disabled:cursor-not-allowed transition-colors",
+          disabled=True
       ) }}
     </div>
 
@@ -143,6 +149,7 @@
     const newPassword = document.getElementById("new_password");
     const confirmPassword = document.getElementById("confirm_password");
     const submitBtn = document.getElementById("submitBtn");
+    const warning = document.getElementById("passwordMismatchWarning");
 
     function passwordsMatch() {
       return newPassword.value === confirmPassword.value;
@@ -153,16 +160,16 @@
         return false;
       }
 
-      if (newPassword.value.trim()) {
-        if (!currentPassword.value.trim() || !confirmPassword.value.trim()) {
-          return false;
-        }
-        if (!passwordsMatch()) {
-          return false;
-        }
-        if (newPassword.value.length < 8) {
-          return false;
-        }
+      if (!newPassword.value.trim() || !confirmPassword.value.trim() || !currentPassword.value.trim()) {
+        return false;
+      }
+
+      if (!passwordsMatch()) {
+        return false;
+      }
+
+      if (newPassword.value.length < 8) {
+        return false;
       }
 
       return true;
@@ -170,9 +177,25 @@
 
     function updateButtonState() {
       const valid = allFieldsValid();
-      submitBtn.disabled = !valid;
-      submitBtn.classList.toggle("bg-green-600", valid);
-      submitBtn.classList.toggle("bg-red-500", !valid);
+
+      // Toggle password mismatch warning
+      if (newPassword.value || confirmPassword.value) {
+        warning.classList.toggle("hidden", passwordsMatch());
+      } else {
+        warning.classList.add("hidden");
+      }
+
+      // Reset both colors first
+      submitBtn.classList.remove("bg-green-600", "bg-red-500");
+
+      // Set color based on state
+      if (valid) {
+        submitBtn.disabled = false;
+        submitBtn.classList.add("bg-green-600");
+      } else {
+        submitBtn.disabled = true;
+        submitBtn.classList.add("bg-red-500");
+      }
     }
 
     [username, email, currentPassword, newPassword, confirmPassword].forEach(el => {

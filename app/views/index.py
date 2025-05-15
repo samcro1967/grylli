@@ -1,15 +1,9 @@
-# ---------------------------------------------------------------------
-# index.py
-# Root landing page view for Grylli
-# ---------------------------------------------------------------------
-
 from flask import Blueprint, render_template
+from flask_login import login_required
 
 bp = Blueprint("index", __name__)
 
 @bp.route("/")
+@login_required
 def index():
-    """
-    Default landing page for Grylli.
-    """
     return render_template("index.html")
