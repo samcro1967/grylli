@@ -1,0 +1,33 @@
+{# ---------------------------------------------------------------------
+   bootstrap.html
+   First-time setup form for creating the initial admin user
+   --------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="max-w-md mx-auto mt-20 bg-white dark:bg-zinc-800 shadow-md rounded-xl p-6 space-y-4">
+  <h1 class="text-xl font-semibold text-black dark:text-white">Create Admin Account</h1>
+  <form method="POST">
+    {{ form.hidden_tag() }}
+
+    <div class="mb-4">
+      {{ form.username.label(class="block text-sm font-medium mb-1") }}
+      {{ form.username(class="form-input w-full bg-zinc-100 dark:bg-zinc-700 text-black dark:text-white") }}
+    </div>
+
+    <div class="mb-4">
+      {{ form.password.label(class="block text-sm font-medium mb-1") }}
+      {{ form.password(class="form-input w-full bg-zinc-100 dark:bg-zinc-700 text-black dark:text-white") }}
+    </div>
+
+    <div class="mb-4">
+      {{ form.confirm_password.label(class="block text-sm font-medium mb-1") }}
+      {{ form.confirm_password(class="form-input w-full bg-zinc-100 dark:bg-zinc-700 text-black dark:text-white") }}
+    </div>
+
+    <div>
+      {{ form.submit(class="btn btn-primary w-full") }}
+    </div>
+  </form>
+</div>
+{% endblock %}
