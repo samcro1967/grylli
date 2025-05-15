@@ -1,0 +1,149 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="max-w-md mx-auto mt-20 bg-white dark:bg-zinc-800 shadow-md rounded-xl p-6 space-y-4">
+  <h1 class="text-xl font-semibold text-black dark:text-white">Edit User</h1>
+  <form method="POST">
+    {{ form.hidden_tag() }}
+
+    <!-- Username -->
+    <div class="mb-4">
+      {{ form.username.label(class="block text-sm font-medium mb-1") }}
+      {{ form.username(id="username", class="form-input w-full bg-zinc-100 dark:bg-zinc-700 text-black dark:text-white") }}
+    </div>
+
+    <!-- Email -->
+    <div class="mb-4">
+      {{ form.email.label(class="block text-sm font-medium mb-1") }}
+      {{ form.email(id="email", class="form-input w-full bg-zinc-100 dark:bg-zinc-700 text-black dark:text-white") }}
+    </div>
+
+    <!-- Role -->
+    <div class="mb-4">
+      {{ form.role.label(class="block text-sm font-medium mb-1") }}
+      {{ form.role(id="role", class="form-select w-full bg-zinc-100 dark:bg-zinc-700 text-black dark:text-white") }}
+    </div>
+
+    <hr class="my-4 border-zinc-300 dark:border-zinc-700">
+
+    <!-- New Password with Show/Hide -->
+    <div class="mb-4 flex items-center space-x-2">
+      <div class="flex-grow relative">
+        {{ form.new_password.label(class="block text-sm font-medium mb-1") }}
+        {{ form.new_password(
+            id="new_password",
+            class="form-input w-full bg-zinc-100 dark:bg-zinc-700 text-black dark:text-white",
+            autocomplete="new-password"
+        ) }}
+      </div>
+      <button type="button"
+              onclick="togglePassword('new_password')"
+              class="pt-6">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-zinc-500 dark:text-zinc-400" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M2.458 12C3.732 7.943 7.522 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.478 0-8.268-2.943-9.542-7z" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Confirm New Password with Show/Hide -->
+    <div class="mb-4 flex items-center space-x-2">
+      <div class="flex-grow relative">
+        {{ form.confirm_password.label(class="block text-sm font-medium mb-1") }}
+        {{ form.confirm_password(
+            id="confirm_password",
+            class="form-input w-full bg-zinc-100 dark:bg-zinc-700 text-black dark:text-white",
+            autocomplete="new-password"
+        ) }}
+      </div>
+      <button type="button"
+              onclick="togglePassword('confirm_password')"
+              class="pt-6">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-zinc-500 dark:text-zinc-400" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M2.458 12C3.732 7.943 7.522 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.478 0-8.268-2.943-9.542-7z" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Password Requirements -->
+    <div class="text-sm text-zinc-600 dark:text-zinc-300 mt-1">
+      <ul class="list-disc list-inside space-y-1">
+        <li>Minimum 8 characters</li>
+        <li>At least one uppercase letter</li>
+        <li>At least one lowercase letter</li>
+        <li>At least one number</li>
+        <li>At least one special character (e.g., !@#$%)</li>
+      </ul>
+    </div>
+
+    <!-- Submit Button -->
+    <div>
+      {{ form.submit(
+          id="submitBtn",
+          class="w-full bg-red-500 text-white py-2 px-4 rounded disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+      ) }}
+    </div>
+  </form>
+</div>
+
+{% endblock %}
+
+<script>
+  function togglePassword(fieldId) {
+    const field = document.getElementById(fieldId);
+    if (field) {
+      field.type = (field.type === 'password') ? 'text' : 'password';
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.querySelector("form");
+    const username = document.getElementById("username");
+    const email = document.getElementById("email");
+    const newPassword = document.getElementById("new_password");
+    const confirmPassword = document.getElementById("confirm_password");
+    const submitBtn = document.getElementById("submitBtn");
+
+    function passwordsMatch() {
+      return newPassword.value === confirmPassword.value;
+    }
+
+    function allFieldsValid() {
+      if (!username.value.trim() || !email.value.trim()) {
+        return false;
+      }
+      if (newPassword.value.trim()) {
+        if (!passwordsMatch()) {
+          return false;
+        }
+      }
+      return true;
+    }
+
+    function updateButtonState() {
+      const valid = allFieldsValid();
+      submitBtn.disabled = !valid;
+      submitBtn.classList.toggle("bg-green-600", valid);
+      submitBtn.classList.toggle("bg-red-500", !valid);
+    }
+
+    [username, email, newPassword, confirmPassword].forEach(el => {
+      el.addEventListener("input", updateButtonState);
+    });
+
+    updateButtonState();
+
+    form.addEventListener("submit", e => {
+      if (!allFieldsValid()) {
+        e.preventDefault();
+      }
+    });
+  });
+</script>

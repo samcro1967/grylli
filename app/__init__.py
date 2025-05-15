@@ -61,6 +61,11 @@ def create_app():
     app.register_blueprint(auth.bp)
     app.register_blueprint(about.bp)
 
+    print("---- Registered routes ----")
+    for rule in app.url_map.iter_rules():
+        print(f"{rule.endpoint:30} {rule}")
+    print("---------------------------")
+
     # -------------------------------------------------------------
     # Jinja Globals or Filters (if needed)
     # -------------------------------------------------------------
