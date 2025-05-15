@@ -100,3 +100,44 @@ def create_tables(conn: sqlite3.Connection):
     """)
 
     conn.commit()
+
+class User:
+    def __init__(self, id_, username, password_hash, role):
+        self.id = id_
+        self.username = username
+        self.password_hash = password_hash
+        self.role = role
+
+    @staticmethod
+    def get_by_username(db, username):
+        row = db.execute(
+            "SELECT id, username, password_hash, role FROM users WHERE username = ?", (username,)
+        ).fetchone()
+        if row is None:
+            return None
+        return User(row['id'], row['username'], row['password_hash'], row['role'])
+
+    @staticmethod
+    def get_by_id(db, user_id):
+        row = db.execute(
+            "SELECT id, username, password_hash, role FROM users WHERE id = ?", (user_id,)
+        ).fetchone()
+        if row is None:
+            return None
+        return User(row['id'], row['username'], row['password_hash'], row['role'])
+
+    # Flask-Login properties
+    @property
+    def is_authenticated(self):
+        return True
+
+    @property
+    def is_active(self):
+        return True  # Or implement your own active logic
+
+    @property
+    def is_anonymous(self):
+        return False
+
+    def get_id(self):
+        return str(self.id)

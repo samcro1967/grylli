@@ -4,6 +4,7 @@
 # ---------------------------------------------------------------------
 
 from flask import Flask, request, session, redirect, url_for
+from flask_login import current_user, LoginManager
 import os
 import sqlite3
 from app.utils.logging import (
@@ -100,5 +101,28 @@ def create_app():
                     return redirect(url_for("auth.bootstrap"))
             except Exception as e:
                 log_error_message(f"Admin bootstrap check failed: {e}")
+
+    # ---------------------------------------------------------------------
+    # Create a LoginManager instance and initialize it
+    # ---------------------------------------------------------------------
+    # Initialize Flask-Login
+    login_manager = LoginManager()
+    login_manager.login_view = "auth.login"  # Adjust to your login route name
+    login_manager.init_app(app)
+
+    # Provide user_loader callback to reload user from session
+    @login_manager.user_loader
+    def load_user(user_id):
+        from app.models import User  # Import your User model
+        db = get_db()
+        return User.get_by_id(db, user_id)  # Implement this method in User model
+
+
+    # ---------------------------------------------------------------------
+    # Set Current user
+    # ---------------------------------------------------------------------
+    @app.context_processor
+    def inject_user():
+        return dict(current_user=current_user)
 
     return app
