@@ -10,8 +10,9 @@ from app.forms.admin_creation_form import AdminCreationForm
 from app.forms.login_form import LoginForm
 from app.utils.logging import log_info_message, log_error_message
 from app.models import db, User
+from urllib.parse import unquote
 
-bp = Blueprint("auth", __name__, url_prefix="/auth")
+bp = Blueprint("auth", __name__)
 
 # ---------------------------------------------------------------------
 # BOOTSTRAP: First-time admin setup
@@ -52,7 +53,7 @@ def bootstrap():
             login_user(user)
             log_info_message(f"User {user.username} logged in with ID {user.id}")
 
-            return redirect(url_for("index.index"))
+            return redirect(url_for("index_bp.index"))
         except Exception as e:
             log_error_message(f"Error creating admin during bootstrap: {e}")
             flash("An error occurred while creating the admin account.", "danger")
@@ -73,9 +74,9 @@ def login():
         if user and check_password_hash(user.password_hash, form.password.data):
             login_user(user)
             flash("Logged in successfully.", "success")
-            next_page = request.args.get('next')
-            if not next_page or not next_page.startswith('/'):
-                next_page = url_for('index.index')
+
+            # Always go to the home page after login
+            next_page = url_for('index_bp.index')
             return redirect(next_page)
 
         flash("Invalid username or password.", "danger")

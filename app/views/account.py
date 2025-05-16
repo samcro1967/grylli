@@ -16,7 +16,7 @@ bp = Blueprint("account", __name__, url_prefix="/account")
 # ---------------------------------------------------------------------
 # Route: Manage Account (view and update user account info)
 # ---------------------------------------------------------------------
-@bp.route("/", methods=["GET", "POST"])
+@bp.route("/account/", methods=["GET", "POST"])
 @login_required
 def manage_account():
     form = AccountForm(obj=current_user)

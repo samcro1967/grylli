@@ -15,7 +15,7 @@ from app.models import SystemConfig
 from app.services.encryption import decrypt
 from app.services.mail import send_email
 
-bp = Blueprint('admin', __name__, url_prefix='/admin')
+bp = Blueprint('admin', __name__)
 
 # ---------------------------------------------------------------------
 # View: List all users

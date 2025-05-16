@@ -15,7 +15,7 @@ bp = Blueprint("about", __name__, url_prefix="/about")
 # Route: /about
 # ---------------------------------------------------------------------
 
-@bp.route("/", methods=["GET"])
+@bp.route("/about/", methods=["GET"])
 def show_about():
     """
     Renders the About page, including version and GitHub info.

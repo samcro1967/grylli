@@ -2,7 +2,7 @@ from app.utils.locale import get_locale
 from flask import Blueprint, render_template
 from flask_login import login_required
 
-bp = Blueprint("index", __name__)
+bp = Blueprint("index_bp", __name__)
 
 @bp.route("/")
 @login_required
@@ -19,3 +19,7 @@ def langcheck():
         "locale": get_locale(),
         "translated": gettext("Welcome to Grylli")
     })
+
+@bp.route("/checkme/")
+def checkme():
+    return "✅ Blueprint is correctly mounted"

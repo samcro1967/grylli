@@ -3,28 +3,32 @@
 # Full Flask app factory with blueprints, login, Babel, sessions, etc.
 # ---------------------------------------------------------------------
 
-from app.utils.locale import get_locale
-from app.views import admin, account, index, auth, about
+import os
+from datetime import timedelta
+
 from flask import Flask, request, redirect, url_for
+from flask_babel import Babel, _
 from flask_login import current_user, LoginManager
 from flask_migrate import Migrate, upgrade
-from app.extensions import db      # import db here from extensions
-from app.services.settings import seed_system_config_from_env
 from sqlalchemy import inspect, text
-import os
-from flask_babel import Babel, _
-from datetime import timedelta
-from app.views import locale
+
+from app.extensions import db
+from app.services.settings import seed_system_config_from_env
+from app.utils.locale import get_locale
 from app.utils.logging import (
     log_error_message,
     log_info_message,
     log_debug_message,
     log_exception_with_traceback,
 )
-import os
+
+from app.views import admin, account, index, auth, about
+from app.views import index as index_module
+from app.views import locale  # this is fine as a separate line since it's not UI
 
 def create_app():
     app = Flask(__name__, instance_relative_config=True)
+    app.url_map.strict_slashes = False
     app.config.from_pyfile(os.path.join(app.root_path, "config.py"))
 
     # Override or set SECRET_KEY explicitly from environment if needed
@@ -32,6 +36,7 @@ def create_app():
 
     base_url = os.environ.get("BASE_URL", "/").rstrip("/")
     app.config['BASE_URL'] = base_url
+    log_info_message(f"Using base URL prefix: {base_url}")
 
     # Setup logging DB URI info
     db_uri = app.config.get("SQLALCHEMY_DATABASE_URI")
@@ -98,11 +103,20 @@ def create_app():
     elif prefix and not prefix.startswith("/"):
         prefix = "/" + prefix  # ensure leading slash
 
+    log_debug_message(f"[BEFORE REGISTER] index.bp.name = {index.bp.name}, deferred = {len(index.bp.deferred_functions)}")
+
+    log_debug_message(f"[DEBUG] prefix used for blueprint: {repr(prefix)}")
+
     app.register_blueprint(admin.bp, url_prefix=prefix)
     app.register_blueprint(account.bp, url_prefix=prefix)
-    app.register_blueprint(index.bp, url_prefix=prefix)
+    app.register_blueprint(index_module.bp, url_prefix=prefix)
     app.register_blueprint(auth.bp, url_prefix=prefix)
     app.register_blueprint(about.bp, url_prefix=prefix)
+
+    log_debug_message(f"[AFTER REGISTER] index.bp.name = {index.bp.name}")
+
+    for rule in app.url_map.iter_rules():
+        log_debug_message(f"[ROUTE MAP] rule: {rule}, endpoint: {rule.endpoint}, methods: {rule.methods}")
 
     log_debug_message("---- Registered routes ----")
     for rule in app.url_map.iter_rules():
@@ -126,7 +140,7 @@ def create_app():
     # Admin bootstrap check
     @app.before_request
     def enforce_login_and_bootstrap():
-        allowed_routes = {"auth.bootstrap", "auth.login", "static"}
+        allowed_routes = {"auth.bootstrap", "auth.login", "static", "index_bp.index"}
         if request.endpoint in allowed_routes:
             return
 
@@ -144,10 +158,18 @@ def create_app():
 
     log_info_message(f"App secret key: {app.config['SECRET_KEY']}")
 
-    # Redirect base path without trailing slash to trailing slash
-    if prefix:
-        @app.route(prefix)
-        def redirect_to_base_slash():
-            return redirect(prefix + "/")
+    # ---------------------------------------------------------------------
+    # TEST: Direct route outside of blueprints to verify Flask is working
+    # ---------------------------------------------------------------------
+    @app.route("/__test__")
+    def test_direct_route():
+        return "✅ Direct route is working"
+
+    # ---------------------------------------------------------------------
+    # TRACE: Log all incoming requests to help diagnose routing issues
+    # ---------------------------------------------------------------------
+    @app.before_request
+    def trace_request():
+        log_debug_message(f"[TRACE] Incoming path: {request.path} → endpoint: {request.endpoint}")
 
     return app
