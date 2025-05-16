@@ -10,7 +10,8 @@ from app.models import db
 from app.services.settings import seed_system_config_from_env
 from sqlalchemy import text
 import os
-from flask_babel import Babel
+from flask_babel import Babel, get_domain, gettext, lazy_gettext
+from datetime import timedelta
 
 from app.utils.logging import (
     log_error_message,
@@ -18,6 +19,12 @@ from app.utils.logging import (
     log_info_message,
     log_exception_with_traceback,
 )
+
+def get_locale():
+    lang = session.get("lang") or request.accept_languages.best_match(["en", "es", "fr"])
+    print(f"[DEBUG] get_locale() → {lang}")
+    return lang
+
 
 def create_app():
     """
@@ -31,6 +38,9 @@ def create_app():
     # Correctly load app/config.py regardless of instance_relative_config
     app.config.from_pyfile(os.path.join(app.root_path, "config.py"))
 
+    app.config["SESSION_PERMANENT"] = True
+    app.permanent_session_lifetime = timedelta(days=30)
+
     # -------------------------------------------------------------
     # Force session cookie settings for local dev (HTTP)
     # -------------------------------------------------------------
@@ -43,17 +53,17 @@ def create_app():
     # -------------------------------------------------------------
     # Initialize Babel
     # -------------------------------------------------------------
-    # Optional: set default locale
     app.config['BABEL_DEFAULT_LOCALE'] = 'en'
     app.config['BABEL_TRANSLATION_DIRECTORIES'] = 'app/translations'
-
-    def get_locale():
-        # Check session first, fallback to browser settings
-        return session.get('lang') or request.accept_languages.best_match(['en', 'es', 'fr'])
+    app.config["BABEL_DEFAULT_DOMAIN"] = "messages"  # ✅ Set this before Babel init
 
     babel = Babel(app, locale_selector=get_locale)
 
-    # ✅ Add this AFTER the Babel line:
+    domain = get_domain()
+
+    app.jinja_env.globals['lazy_gettext'] = lazy_gettext
+
+    # Optional: make locale accessible in templates
     app.jinja_env.globals['get_locale'] = get_locale
 
     # -------------------------------------------------------------

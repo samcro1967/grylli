@@ -98,6 +98,7 @@ def logout():
 @bp.route("/set_language", methods=["POST"])
 def set_language():
     lang = request.form.get("lang")
-    if lang in ["en", "es", "fr"]:  # adjust as needed
+    if lang in ["en", "es", "fr"]:
         session["lang"] = lang
-    return redirect(request.referrer or url_for("main.index"))
+        session.permanent = True  # 🟢 This ensures persistence across requests
+    return redirect(request.referrer or url_for("index.index"))

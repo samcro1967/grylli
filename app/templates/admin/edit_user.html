@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="max-w-md mx-auto mt-20 bg-white dark:bg-zinc-800 shadow-md rounded-xl p-6 space-y-4">
-  <h1 class="text-xl font-semibold text-black dark:text-white">{{ _('Edit User') }}</h1>
+  <h1 class="text-xl font-semibold text-black dark:text-white">{{ lazy_gettext('Edit User') }}</h1>
   <form method="POST">
     {{ form.hidden_tag() }}
 
@@ -49,7 +49,7 @@
               onmouseup="hidePassword('new_password')"
               onmouseleave="hidePassword('new_password')"
               class="pt-6"
-              aria-label="{{ _('Hold to show password') }}">
+              aria-label="{{ lazy_gettext('Hold to show password') }}">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-zinc-500 dark:text-zinc-400" fill="none"
              viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round"
@@ -70,7 +70,7 @@
             autocomplete="new-password"
         ) }}
         <p id="passwordMismatchWarning" class="text-sm text-red-500 mt-1 hidden">
-          {{ _('Passwords do not match.') }}
+          {{ lazy_gettext('Passwords do not match.') }}
         </p>
       </div>
       <button type="button"
@@ -78,7 +78,7 @@
               onmouseup="hidePassword('confirm_password')"
               onmouseleave="hidePassword('confirm_password')"
               class="pt-6"
-              aria-label="{{ _('Hold to show password') }}">
+              aria-label="{{ lazy_gettext('Hold to show password') }}">
         <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-zinc-500 dark:text-zinc-400" fill="none"
              viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round"
@@ -92,11 +92,11 @@
     <!-- Password Requirements -->
     <div class="text-sm text-zinc-600 dark:text-zinc-300 mt-1">
       <ul class="list-disc list-inside space-y-1">
-        <li>{{ _('Minimum 8 characters') }}</li>
-        <li>{{ _('At least one uppercase letter') }}</li>
-        <li>{{ _('At least one lowercase letter') }}</li>
-        <li>{{ _('At least one number') }}</li>
-        <li>{{ _('At least one special character (e.g., !@#$%%)') }}</li>
+        <li>{{ lazy_gettext('Minimum 8 characters') }}</li>
+        <li>{{ lazy_gettext('At least one uppercase letter') }}</li>
+        <li>{{ lazy_gettext('At least one lowercase letter') }}</li>
+        <li>{{ lazy_gettext('At least one number') }}</li>
+        <li>{{ lazy_gettext('At least one special character (e.g., !@#$%%)') }}</li>
       </ul>
     </div>
 

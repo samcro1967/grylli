@@ -30,15 +30,15 @@
     {% endif %}
   {% endwith %}
 
-  <h1 class="text-2xl font-semibold mb-6 text-black dark:text-white">{{ _('System Configuration') }}</h1>
+  <h1 class="text-2xl font-semibold mb-6 text-black dark:text-white">{{ lazy_gettext('System Configuration') }}</h1>
 
   <table class="table-auto w-full text-left text-sm">
     <thead class="border-b border-zinc-300 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300">
       <tr>
-        <th class="py-2 px-4">{{ _('Key') }}</th>
-        <th class="py-2 px-4">{{ _('Value') }}</th>
-        <th class="py-2 px-4">{{ _('Sensitive') }}</th>
-        <th class="py-2 px-4">{{ _('Editable') }}</th>
+        <th class="py-2 px-4">{{ lazy_gettext('Key') }}</th>
+        <th class="py-2 px-4">{{ lazy_gettext('Value') }}</th>
+        <th class="py-2 px-4">{{ lazy_gettext('Sensitive') }}</th>
+        <th class="py-2 px-4">{{ lazy_gettext('Editable') }}</th>
       </tr>
     </thead>
     <tbody class="text-black dark:text-white">
@@ -48,14 +48,14 @@
         <td class="py-2 px-4 break-all">
           {% if setting.is_sensitive %}
             <span class="italic text-zinc-400 dark:text-zinc-500">••••••••••</span>
-            <span class="ml-2 text-xs text-zinc-500 dark:text-zinc-400">({{ _('decrypted') }})</span>
+            <span class="ml-2 text-xs text-zinc-500 dark:text-zinc-400">({{ lazy_gettext('decrypted') }})</span>
             <div class="text-xs text-zinc-300 dark:text-zinc-500">{{ setting.value }}</div>
           {% else %}
             {{ setting.value }}
           {% endif %}
         </td>
-        <td class="py-2 px-4">{{ _('Yes') if setting.is_sensitive else _('No') }}</td>
-        <td class="py-2 px-4">{{ _('Yes') if setting.editable else _('No') }}</td>
+        <td class="py-2 px-4">{{ lazy_gettext('Yes') if setting.is_sensitive else _('No') }}</td>
+        <td class="py-2 px-4">{{ lazy_gettext('Yes') if setting.editable else _('No') }}</td>
       </tr>
       {% endfor %}
     </tbody>
@@ -64,7 +64,7 @@
   <form method="POST" action="{{ url_for('admin.send_test_email') }}">
     <button type="submit"
             class="mt-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded shadow">
-      {{ _('Send Test Email') }}
+      {{ lazy_gettext('Send Test Email') }}
     </button>
   </form>
 </div>

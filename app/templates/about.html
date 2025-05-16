@@ -7,25 +7,25 @@
 
 {% block content %}
 <div class="max-w-3xl mx-auto bg-white dark:bg-zinc-800 shadow-md rounded-xl p-6 space-y-4">
-  <h1 class="text-2xl font-bold">{{ _('About Grylli') }}</h1>
+  <h1 class="text-2xl font-bold">{{ lazy_gettext('About Grylli') }}</h1>
 
   <p class="text-sm leading-relaxed text-zinc-600 dark:text-zinc-300">
-    {{ _('Grylli is a secure message delivery platform designed to activate after prolonged user inactivity.') }}
-    {{ _('It is a modern reimplementation of Gone Man’s Switch with a refined tech stack, better maintainability, and an improved user experience.') }}
+    {{ lazy_gettext('Grylli is a secure message delivery platform designed to activate after prolonged user inactivity.') }}
+    {{ lazy_gettext('It is a modern reimplementation of Gone Man’s Switch with a refined tech stack, better maintainability, and an improved user experience.') }}
   </p>
 
   <ul class="text-sm list-disc pl-6 space-y-1">
-    <li><strong>{{ _('Version:') }}</strong> {{ app_version }}</li>
+    <li><strong>{{ lazy_gettext('Version:') }}</strong> {{ app_version }}</li>
     <li>
-      <strong>{{ _('Repository:') }}</strong>
+      <strong>{{ lazy_gettext('Repository:') }}</strong>
       <a href="https://github.com/samcro1967/grylli" class="text-blue-600 dark:text-blue-400 underline" target="_blank">
-        {{ _('GitHub - samcro1967/grylli') }}
+        {{ lazy_gettext('GitHub - samcro1967/grylli') }}
       </a>
     </li>
   </ul>
 
   <p class="text-xs text-zinc-500 dark:text-zinc-400">
-    &copy; 2025 {{ _('Grylli Project. All rights reserved.') }}
+    &copy; 2025 {{ lazy_gettext('Grylli Project. All rights reserved.') }}
   </p>
 </div>
 {% endblock %}
