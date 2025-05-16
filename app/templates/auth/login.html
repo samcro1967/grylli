@@ -2,7 +2,7 @@
 
 {% block content %}
 <div class="max-w-md mx-auto mt-20 bg-white dark:bg-zinc-800 shadow-md rounded-xl p-6 space-y-4">
-  <h1 class="text-xl font-semibold text-black dark:text-white">{{ lazy_gettext('Log In') }}</h1>
+  <h1 class="text-xl font-semibold text-black dark:text-white">{{ _('Log In') }}</h1>
 
   {# Flash message block for login errors #}
   {% with messages = get_flashed_messages(with_categories=true) %}
@@ -39,7 +39,7 @@
     <div>
       <button type="submit"
               class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded shadow transition duration-150">
-        {{ lazy_gettext('Log In') }}
+        {{ _('Log In') }}
       </button>
     </div>
   </form>

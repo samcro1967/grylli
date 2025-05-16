@@ -6,7 +6,7 @@
 {% block content %}
 
 <div class="max-w-md mx-auto mt-20 bg-white dark:bg-zinc-800 shadow-md rounded-xl p-6 space-y-4">
-  <h1 class="text-xl font-semibold text-black dark:text-white">{{ lazy_gettext('Create Admin Account') }}</h1>
+  <h1 class="text-xl font-semibold text-black dark:text-white">{{ _('Create Admin Account') }}</h1>
 
   <form method="POST">
     {{ form.hidden_tag() }}
@@ -79,7 +79,7 @@
 
     <!-- Mismatch Warning -->
     <div id="passwordMismatchWarning" class="text-red-500 text-sm hidden">
-      {{ lazy_gettext('Passwords do not match.') }}
+      {{ _('Passwords do not match.') }}
     </div>
 
     <!-- Submit -->
@@ -87,7 +87,7 @@
       <button id="submitBtn"
               type="submit"
               class="w-full bg-red-500 text-white py-2 px-4 rounded disabled:opacity-50 disabled:cursor-not-allowed transition-colors">
-        {{ lazy_gettext('Create Admin') }}
+        {{ _('Create Admin') }}
       </button>
     </div>
   </form>
@@ -95,11 +95,11 @@
   <!-- Password Requirements -->
   <div class="text-sm text-zinc-600 dark:text-zinc-300 mt-1">
     <ul class="list-disc list-inside space-y-1">
-      <li>{{ lazy_gettext('Minimum 8 characters') }}</li>
-      <li>{{ lazy_gettext('At least one uppercase letter') }}</li>
-      <li>{{ lazy_gettext('At least one lowercase letter') }}</li>
-      <li>{{ lazy_gettext('At least one number') }}</li>
-      <li>{{ lazy_gettext('At least one special character (e.g., !@#$%)') }}</li>
+      <li>{{ _('Minimum 8 characters') }}</li>
+      <li>{{ _('At least one uppercase letter') }}</li>
+      <li>{{ _('At least one lowercase letter') }}</li>
+      <li>{{ _('At least one number') }}</li>
+      <li>{{ _('At least one special character (e.g., !@#$%)') }}</li>
     </ul>
   </div>
 </div>

@@ -54,7 +54,10 @@
       <aside class="w-64 flex flex-col bg-white dark:bg-zinc-800 border-r border-zinc-200 dark:border-zinc-700">
         <!-- Nav links grow, push toggle down -->
         <div class="flex flex-col flex-grow overflow-y-auto px-4 py-6 space-y-2 text-sm">
-          <a href="/" class="block px-3 py-2 rounded text-zinc-800 dark:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-700">Home</a>
+          <a href="{{ url_for('index.index') }}"
+             class="block px-3 py-2 rounded text-zinc-800 dark:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-700">
+             Home
+          </a>
 
           {% if current_user.is_authenticated and current_user.role == 'admin' %}
             <a href="{{ url_for('admin.list_users') }}"
@@ -68,57 +71,54 @@
             </a>
           {% endif %}
 
-          <a href="/messages/" class="block px-3 py-2 rounded text-zinc-800 dark:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-700">Messages</a>
+          <a href="{{ url_for('messages.some_view') }}"
+             class="block px-3 py-2 rounded text-zinc-800 dark:text-zinc-100 hover:bg-zinc-100 dark:hover:bg-zinc-700">
+             Messages
+          </a>
+
           <div class="flex-grow"></div> <!-- Push the toggle down -->
           <div class="pt-6 border-t border-zinc-200 dark:border-zinc-700">
             <button id="themeToggle" class="text-zinc-500 dark:text-zinc-400 hover:text-zinc-700 dark:hover:text-zinc-200">
-              <svg class="w-10 h-10" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round"
-                  d="M12 3v1m0 16v1m8.66-13.66l-.707.707M4.05 19.95l-.707.707M21 12h-1M4 12H3m2.34-6.34l.707.707M19.95 19.95l.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-              </svg>
+              <!-- SVG icon here -->
             </button>
           </div>
-			<!-- Language Selector -->
-			<div class="flex items-center space-x-2 mt-4">
-			  <svg class="w-5 h-5 text-zinc-500 dark:text-zinc-400" fill="none" stroke="currentColor" stroke-width="2"
-				   viewBox="0 0 24 24">
-				<path stroke-linecap="round" stroke-linejoin="round"
-					  d="M12 3C7.03 3 3 7.03 3 12s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9zm0 0c3 2.5 3 9.5 0 12m0-12c-3 2.5-3 9.5 0 12m-5.2-1.8c1.5-.7 3.7-1.2 5.2-1.2 1.5 0 3.7.5 5.2 1.2M4.2 8.2c1.5.7 3.7 1.2 5.2 1.2s3.7-.5 5.2-1.2" />
-			  </svg>
-			  <form method="POST" action="{{ url_for('auth.set_language') }}" class="w-full">
-				<select name="lang" onchange="this.form.submit()"
-						class="w-full text-sm rounded bg-zinc-100 dark:bg-zinc-700 text-black dark:text-white border border-zinc-300 dark:border-zinc-600 px-2 py-1">
-				  <option value="en" {% if get_locale() == 'en' %}selected{% endif %}>English</option>
-				  <option value="es" {% if get_locale() == 'es' %}selected{% endif %}>Español</option>
-				  <option value="fr" {% if get_locale() == 'fr' %}selected{% endif %}>Français</option>
-				</select>
-			  </form>
-			</div>
+
+          <!-- Language Selector -->
+          <div class="flex items-center space-x-2 mt-4">
+            <!-- SVG globe icon -->
+            <form method="POST" action="{{ url_for('locale.set_locale_post') }}" class="w-full">
+              <select name="lang" onchange="this.form.submit()"
+                      class="w-full text-sm rounded bg-zinc-100 dark:bg-zinc-700 text-black dark:text-white border border-zinc-300 dark:border-zinc-600 px-2 py-1">
+                <option value="en" {% if get_locale() == 'en' %}selected{% endif %}>English</option>
+                <option value="es" {% if get_locale() == 'es' %}selected{% endif %}>Español</option>
+                <option value="fr" {% if get_locale() == 'fr' %}selected{% endif %}>Français</option>
+              </select>
+            </form>
+          </div>
         </div>
       </aside>
 
-		<!-- MAIN CONTENT -->
-		<main class="flex-grow overflow-y-auto p-6">
-		  {% block content %}{% endblock %}
+      <!-- MAIN CONTENT -->
+      <main class="flex-grow overflow-y-auto p-6">
+        {% block content %}{% endblock %}
 
-		  {% with messages = get_flashed_messages(with_categories=true) %}
-			{% if messages %}
-			  <div id="toast-container" class="fixed top-20 right-4 space-y-2 z-50">
-				{% for category, message in messages %}
-				  <div class="toast px-4 py-2 rounded shadow text-white
-							  {% if category == 'success' %} bg-green-600
-							  {% elif category == 'danger' %} bg-red-600
-							  {% elif category == 'warning' %} bg-yellow-500
-							  {% else %} bg-blue-500
-							  {% endif %}">
-					{{ message }}
-				  </div>
-				{% endfor %}
-			  </div>
-			{% endif %}
-		  {% endwith %}
-		</main>
-
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            <div id="toast-container" class="fixed top-20 right-4 space-y-2 z-50">
+              {% for category, message in messages %}
+                <div class="toast px-4 py-2 rounded shadow text-white
+                            {% if category == 'success' %} bg-green-600
+                            {% elif category == 'danger' %} bg-red-600
+                            {% elif category == 'warning' %} bg-yellow-500
+                            {% else %} bg-blue-500
+                            {% endif %}">
+                  {{ message }}
+                </div>
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endwith %}
+      </main>
     </div>
 
 	<!-- TOASTS -->

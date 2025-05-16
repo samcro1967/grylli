@@ -1,11 +1,11 @@
 {% extends "layout.html" %}
 
 {% block content %}
-<h1 class="text-xl font-semibold mb-4">{{ lazy_gettext('Users') }}</h1>
+<h1 class="text-xl font-semibold mb-4">{{ _('Users') }}</h1>
 
 <div class="mb-4 flex space-x-2">
   <!-- Table View Button -->
-  <button id="tableViewBtn" aria-label="{{ lazy_gettext('Table View') }}" title="{{ lazy_gettext('Table View') }}"
+  <button id="tableViewBtn" aria-label="{{ _('Table View') }}" title="{{ _('Table View') }}"
           class="p-2 rounded bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
       <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 10h16M4 14h16M4 18h16" />
@@ -13,7 +13,7 @@
   </button>
 
   <!-- Card View Button -->
-  <button id="cardViewBtn" aria-label="{{ lazy_gettext('Card View') }}" title="{{ lazy_gettext('Card View') }}"
+  <button id="cardViewBtn" aria-label="{{ _('Card View') }}" title="{{ _('Card View') }}"
           class="p-2 rounded bg-gray-300 text-black hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
       <rect x="3" y="3" width="7" height="7" />
@@ -29,11 +29,11 @@
   <table class="table-auto w-full border-collapse border border-gray-300 dark:border-gray-700">
     <thead>
       <tr>
-        <th class="border px-4 py-2">{{ lazy_gettext('ID') }}</th>
-        <th class="border px-4 py-2">{{ lazy_gettext('Username') }}</th>
-        <th class="border px-4 py-2">{{ lazy_gettext('Email') }}</th>
-        <th class="border px-4 py-2">{{ lazy_gettext('Role') }}</th>
-        <th class="border px-4 py-2">{{ lazy_gettext('Actions') }}</th>
+        <th class="border px-4 py-2">{{ _('ID') }}</th>
+        <th class="border px-4 py-2">{{ _('Username') }}</th>
+        <th class="border px-4 py-2">{{ _('Email') }}</th>
+        <th class="border px-4 py-2">{{ _('Role') }}</th>
+        <th class="border px-4 py-2">{{ _('Actions') }}</th>
       </tr>
     </thead>
     <tbody>
@@ -44,11 +44,11 @@
         <td class="border px-4 py-2">{{ user.email }}</td>
         <td class="border px-4 py-2">{{ user.role }}</td>
         <td class="border px-4 py-2">
-          <a href="{{ url_for('admin.edit_user', user_id=user.id) }}" title="{{ lazy_gettext('Edit User') }}" class="text-blue-500 hover:underline">
+          <a href="{{ url_for('admin.edit_user', user_id=user.id) }}" title="{{ _('Edit User') }}" class="text-blue-500 hover:underline">
             ✏️
           </a>
-          <form method="POST" action="{{ url_for('admin.delete_user', user_id=user.id) }}" class="inline" onsubmit="return confirm('{{ lazy_gettext('Delete user') }} {{ user.username }}?');">
-            <button type="submit" title="{{ lazy_gettext('Delete User') }}" class="text-red-500 hover:underline">🗑️</button>
+          <form method="POST" action="{{ url_for('admin.delete_user', user_id=user.id) }}" class="inline" onsubmit="return confirm('{{ _('Delete user') }} {{ user.username }}?');">
+            <button type="submit" title="{{ _('Delete User') }}" class="text-red-500 hover:underline">🗑️</button>
           </form>
         </td>
       </tr>
@@ -62,12 +62,12 @@
   {% for user in users %}
   <div class="bg-white dark:bg-zinc-800 rounded shadow p-4">
     <h2 class="text-lg font-semibold mb-2">{{ user.username }}</h2>
-    <p><strong>{{ lazy_gettext('Email:') }}</strong> {{ user.email }}</p>
-    <p><strong>{{ lazy_gettext('Role:') }}</strong> {{ user.role }}</p>
+    <p><strong>{{ _('Email:') }}</strong> {{ user.email }}</p>
+    <p><strong>{{ _('Role:') }}</strong> {{ user.role }}</p>
     <div class="mt-2">
-      <a href="{{ url_for('admin.edit_user', user_id=user.id) }}" class="text-blue-500 hover:underline mr-4" title="{{ lazy_gettext('Edit User') }}">✏️</a>
-      <form method="POST" action="{{ url_for('admin.delete_user', user_id=user.id) }}" class="inline" onsubmit="return confirm('{{ lazy_gettext('Delete user') }} {{ user.username }}?');">
-        <button type="submit" class="text-red-500 hover:underline" title="{{ lazy_gettext('Delete User') }}">🗑️</button>
+      <a href="{{ url_for('admin.edit_user', user_id=user.id) }}" class="text-blue-500 hover:underline mr-4" title="{{ _('Edit User') }}">✏️</a>
+      <form method="POST" action="{{ url_for('admin.delete_user', user_id=user.id) }}" class="inline" onsubmit="return confirm('{{ _('Delete user') }} {{ user.username }}?');">
+        <button type="submit" class="text-red-500 hover:underline" title="{{ _('Delete User') }}">🗑️</button>
       </form>
     </div>
   </div>

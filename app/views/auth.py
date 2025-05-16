@@ -91,14 +91,3 @@ def logout():
     logout_user()
     flash("You have been logged out.", "success")  # ✅ Add this line
     return redirect(url_for('auth.login'))
-
-# ---------------------------------------------------------------------
-# LANGUAGE
-# ---------------------------------------------------------------------
-@bp.route("/set_language", methods=["POST"])
-def set_language():
-    lang = request.form.get("lang")
-    if lang in ["en", "es", "fr"]:
-        session["lang"] = lang
-        session.permanent = True  # 🟢 This ensures persistence across requests
-    return redirect(request.referrer or url_for("index.index"))

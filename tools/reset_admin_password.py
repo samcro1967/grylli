@@ -2,7 +2,7 @@ import getpass
 import sqlite3
 from werkzeug.security import generate_password_hash
 
-DB_PATH = './instance/grylli.db'  # Adjust path if needed
+DB_PATH = './data/grylli.db'  # Adjust path if needed
 
 def list_admins(conn):
     cursor = conn.execute("SELECT id, username, email FROM users WHERE role = 'admin'")
