@@ -85,9 +85,19 @@ def login():
 # ---------------------------------------------------------------------
 # LOGOUT
 # ---------------------------------------------------------------------
-
 @bp.route('/logout/')
 @login_required
 def logout():
     logout_user()
+    flash("You have been logged out.", "success")  # ✅ Add this line
     return redirect(url_for('auth.login'))
+
+# ---------------------------------------------------------------------
+# LANGUAGE
+# ---------------------------------------------------------------------
+@bp.route("/set_language", methods=["POST"])
+def set_language():
+    lang = request.form.get("lang")
+    if lang in ["en", "es", "fr"]:  # adjust as needed
+        session["lang"] = lang
+    return redirect(request.referrer or url_for("main.index"))

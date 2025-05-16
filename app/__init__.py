@@ -10,6 +10,7 @@ from app.models import db
 from app.services.settings import seed_system_config_from_env
 from sqlalchemy import text
 import os
+from flask_babel import Babel
 
 from app.utils.logging import (
     log_error_message,
@@ -38,6 +39,22 @@ def create_app():
         SESSION_COOKIE_SAMESITE="Lax",
         SESSION_COOKIE_SECURE=False,  # Must be False for local HTTP testing
     )
+
+    # -------------------------------------------------------------
+    # Initialize Babel
+    # -------------------------------------------------------------
+    # Optional: set default locale
+    app.config['BABEL_DEFAULT_LOCALE'] = 'en'
+    app.config['BABEL_TRANSLATION_DIRECTORIES'] = 'app/translations'
+
+    def get_locale():
+        # Check session first, fallback to browser settings
+        return session.get('lang') or request.accept_languages.best_match(['en', 'es', 'fr'])
+
+    babel = Babel(app, locale_selector=get_locale)
+
+    # ✅ Add this AFTER the Babel line:
+    app.jinja_env.globals['get_locale'] = get_locale
 
     # -------------------------------------------------------------
     # Basic Configuration
@@ -105,19 +122,27 @@ def create_app():
     # Admin Bootstrap Check
     # -------------------------------------------------------------
     @app.before_request
-    def redirect_if_no_admin():
+    def enforce_login_and_bootstrap():
         allowed_routes = {"auth.bootstrap", "auth.login", "static"}
 
-        if request.endpoint not in allowed_routes and not session.get("user_id"):
-            try:
-                admin_count = db.session.execute(
-                    text("SELECT COUNT(*) FROM users WHERE role = 'admin'")
-                ).scalar()
-                if admin_count == 0:
-                    return redirect(url_for("auth.bootstrap"))
-            except Exception as e:
-                log_error_message(f"Admin bootstrap check failed: {e}")
+        if request.endpoint in allowed_routes:
+            return  # allow access to login, bootstrap, static files
 
+        try:
+            admin_count = db.session.execute(
+                text("SELECT COUNT(*) FROM users WHERE role = 'admin'")
+            ).scalar()
+        except Exception as e:
+            log_error_message(f"Admin bootstrap check failed: {e}")
+            return "Internal server error", 500
+
+        # If no admin exists, always redirect to bootstrap
+        if admin_count == 0:
+            return redirect(url_for("auth.bootstrap"))
+
+        # Block any unauthenticated user
+        if not current_user.is_authenticated:
+            return redirect(url_for("auth.login"))
 
     log_info_message(f"App secret key: {app.config['SECRET_KEY']}")
 

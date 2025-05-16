@@ -78,19 +78,56 @@
               </svg>
             </button>
           </div>
+			<!-- Language Selector -->
+			<div class="flex items-center space-x-2 mt-4">
+			  <svg class="w-5 h-5 text-zinc-500 dark:text-zinc-400" fill="none" stroke="currentColor" stroke-width="2"
+				   viewBox="0 0 24 24">
+				<path stroke-linecap="round" stroke-linejoin="round"
+					  d="M12 3C7.03 3 3 7.03 3 12s4.03 9 9 9 9-4.03 9-9-4.03-9-9-9zm0 0c3 2.5 3 9.5 0 12m0-12c-3 2.5-3 9.5 0 12m-5.2-1.8c1.5-.7 3.7-1.2 5.2-1.2 1.5 0 3.7.5 5.2 1.2M4.2 8.2c1.5.7 3.7 1.2 5.2 1.2s3.7-.5 5.2-1.2" />
+			  </svg>
+			  <form method="POST" action="{{ url_for('auth.set_language') }}" class="w-full">
+				<select name="lang" onchange="this.form.submit()"
+						class="w-full text-sm rounded bg-zinc-100 dark:bg-zinc-700 text-black dark:text-white border border-zinc-300 dark:border-zinc-600 px-2 py-1">
+				  <option value="en" {% if get_locale() == 'en' %}selected{% endif %}>English</option>
+				  <option value="es" {% if get_locale() == 'es' %}selected{% endif %}>Español</option>
+				  <option value="fr" {% if get_locale() == 'fr' %}selected{% endif %}>Français</option>
+				</select>
+			  </form>
+			</div>
         </div>
       </aside>
 
-      <!-- MAIN CONTENT -->
-      <main class="flex-grow overflow-y-auto p-6">
-        {% block content %}
-        <!-- Page content here -->
-        {% endblock %}
-      </main>
+		<!-- MAIN CONTENT -->
+		<main class="flex-grow overflow-y-auto p-6">
+		  {% block content %}{% endblock %}
+
+		  {% with messages = get_flashed_messages(with_categories=true) %}
+			{% if messages %}
+			  <div id="toast-container" class="fixed top-20 right-4 space-y-2 z-50">
+				{% for category, message in messages %}
+				  <div class="toast px-4 py-2 rounded shadow text-white
+							  {% if category == 'success' %} bg-green-600
+							  {% elif category == 'danger' %} bg-red-600
+							  {% elif category == 'warning' %} bg-yellow-500
+							  {% else %} bg-blue-500
+							  {% endif %}">
+					{{ message }}
+				  </div>
+				{% endfor %}
+			  </div>
+			{% endif %}
+		  {% endwith %}
+		</main>
+
     </div>
 
-    <!-- TOASTS -->
-    <div id="toast-container" class="fixed top-20 right-4 space-y-2 z-50"></div>
+	<!-- TOASTS -->
+	<script>
+	  setTimeout(() => {
+		const container = document.getElementById("toast-container");
+		if (container) container.innerHTML = "";
+	  }, 5000);
+	</script>
 
   </body>
 </html>

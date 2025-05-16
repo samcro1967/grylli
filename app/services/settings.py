@@ -9,7 +9,8 @@ DEFAULT_SYSTEM_KEYS = {
     "SMTP_PASS": True,
     "EMAIL_FROM": False,
     "EMAIL_DEFAULT_TO": False,
-    "FERRET_KEY": True
+    "FERRET_KEY": True,
+    "SMTP_USE_TLS": False,  # ✅ Add this line
 }
 
 def seed_system_config_from_env():
