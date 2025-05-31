@@ -1,0 +1,184 @@
+{# ---------------------------------------------------------------------
+  translations.html
+  app/templates/account/translations.html
+  [Describe purpose or main content of this template.]
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{# =================== JINJA BLOCK ==================== #}
+{% block title %}{{ _("Translations - Grylli") }}{% endblock %}
+{# =================== JINJA BLOCK ==================== #}
+{% block content %}
+    <!-- Main container for translations info page -->
+    <div class="max-w-2xl mx-auto p-6 bg-white dark:bg-zinc-900 rounded-2xl shadow">
+        {# ------------------------------------------------------------------------
+       PAGE HEADER AND INTRODUCTION
+------------------------------------------------------------------------ #}
+        <!-- Page header/title -->
+        <h1 class="text-2xl font-bold mb-4">{{ _("Translations") }}</h1>
+        <!-- Introductory paragraph explaining Grylli translations -->
+        <p class="mb-4">
+            {{ _("Grylli currently supports multiple languages and more will be added.") }}
+            {{ _("Many of the translations were performed with assistance from ChatGPT.") }}
+            {{ _("If you find a translation issue or want to suggest improvements, your input is welcome!") }}
+        </p>
+        {# ------------------------------------------------------------------------
+       HOW TO REQUEST TRANSLATION UPDATES SECTION
+------------------------------------------------------------------------ #}
+        <!-- Section heading -->
+        <h2 class="text-xl font-semibold mb-2">{{ _("How to request translation updates") }}</h2>
+        <!-- Section introduction paragraph -->
+        <p>{{ _("To contribute to translations, please use the following guidelines:") }}</p>
+        <!-- Main list of translation update guidelines -->
+        <ul class="list-disc pl-6 mb-4">
+            {# ----------------------------------------------------------------------
+         Collapsible: Fill in already discovered missing translations
+         ---------------------------------------------------------------------- #}
+            <li x-data="{ open: false }" class="mb-4">
+                <!-- Toggle button for this collapsible item -->
+                <button type="button"
+                        @click="open = !open"
+                        class="font-bold text-left w-full focus:outline-none flex items-center space-x-2"
+                        aria-expanded="false"
+                        :aria-expanded="open.toString()">
+                    <span>{{ _("Fill in already discovered missing translations:") }}</span>
+                    <!-- Chevron icon rotates when open -->
+                    <svg :class="{'transform rotate-90': open}"
+                         class="w-4 h-4 transition-transform duration-200"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="2"
+                         viewBox="0 0 24 24"
+                         stroke-linecap="round"
+                         stroke-linejoin="round"
+                         aria-hidden="true">
+                        <path d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+                <!-- Step-by-step instructions (collapsible) -->
+                <ul x-show="open"
+                    x-transition
+                    class="list-decimal list-inside ml-6 mt-2"
+                    style="display: none">
+                    <li>
+                        {{ _("Open the JSON translation file for your language. For example:") }}
+                        <br />
+                        <code>app/translations/de/LC_MESSAGES/messages_to_translate.json</code>
+                    </li>
+                    <li>
+                        {{ _("Add missing phrases in that JSON file.") }}
+                        <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;<strong>{{ _("For example:") }}</strong>
+                        <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>{{ _("From:") }}</strong>
+                        <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>{ "Home": "" }</code>
+                        <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>{{ _("To:") }}</strong>
+                        <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>{ "Home": "Startseite" }</code>
+                    </li>
+                    <li>{{ _("Attach the updated JSON file to a new GitHub issue when submitting your changes.") }}</li>
+                </ul>
+            </li>
+            {# ----------------------------------------------------------------------
+         Collapsible: Improving existing translations
+         ---------------------------------------------------------------------- #}
+            <li x-data="{ open: false }" class="mb-4">
+                <button type="button"
+                        @click="open = !open"
+                        class="font-bold text-left w-full focus:outline-none flex items-center space-x-2"
+                        aria-expanded="false"
+                        :aria-expanded="open.toString()">
+                    <span>{{ _("Improving existing translations:") }}</span>
+                    <svg :class="{'rotate-90': open, 'transform transition-transform duration-200': true}"
+                         class="w-4 h-4"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="2"
+                         viewBox="0 0 24 24"
+                         stroke-linecap="round"
+                         stroke-linejoin="round"
+                         aria-hidden="true">
+                        <path d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+                <!-- Ordered instructions (collapsible) -->
+                <ol x-show="open"
+                    x-transition
+                    class="list-decimal list-inside ml-6 mt-2 space-y-2"
+                    style="display: none">
+                    <li>
+                        {{ _("Open the relevant .po file for the translation you want to improve.") }}
+                        <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;<strong>{{ _("For example:") }}</strong>
+                        <br />
+                        &nbsp;&nbsp;&nbsp;&nbsp;<code>app/translations/de/LC_MESSAGES/messages.po</code>
+                    </li>
+                    <li>{{ _("Find the phrase(s) and its existing translation(s) you want to improve.") }}</li>
+                    <li>{{ _("Update the phrase(s).") }}</li>
+                    <li>{{ _("Copy the file name and path into the issue.") }}</li>
+                    <li>
+                        {{ _("Paste the copied snippet directly into the GitHub issue comment.") }}
+                        <strong>{{ _("Do not upload the full .po file to avoid merge conflicts.") }}</strong>
+                    </li>
+                    <li>
+                        <strong>{{ _("Example snippet:") }}</strong>
+                        <pre class="bg-zinc-800 p-3 rounded text-white mt-2 overflow-x-auto">
+app/translations/de/LC_MESSAGES/messages.po
+#: app/init_db.py:59
+msgid "Migrations applied successfully."
+msgstr "Migrationen erfolgreich durchgeführt."
+            </pre>
+                    </li>
+                </ol>
+            </li>
+            {# ----------------------------------------------------------------------
+         Collapsible: Report missing translations not yet discovered
+         ---------------------------------------------------------------------- #}
+            <li x-data="{ open: false }" class="mb-4">
+                <button type="button"
+                        @click="open = !open"
+                        class="font-bold text-left w-full focus:outline-none flex items-center space-x-2"
+                        aria-expanded="false"
+                        :aria-expanded="open.toString()">
+                    <span>{{ _("Report missing translations not yet discovered:") }}</span>
+                    <svg :class="{'rotate-90': open, 'transform transition-transform duration-200': true}"
+                         class="w-4 h-4"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="2"
+                         viewBox="0 0 24 24"
+                         stroke-linecap="round"
+                         stroke-linejoin="round"
+                         aria-hidden="true">
+                        <path d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+                <ol x-show="open"
+                    x-transition
+                    class="list-decimal list-inside ml-6 mt-2 space-y-2"
+                    style="display: none">
+                    <li>{{ _("If you see text in the app that appears untranslated or missing, please report it to us.") }}</li>
+                    <li>{{ _("Provide the exact English phrase as it appears on the screen.") }}</li>
+                    <li>{{ _("Include the page or section where you saw the phrase (e.g., Settings page, Account section).") }}</li>
+                    <li>
+                        {{ _("Submit this information via a new GitHub issue so we can add it to the translation files and wrap it for Babel.") }}
+                    </li>
+                </ol>
+            </li>
+        </ul>
+        {# ------------------------------------------------------------------------
+       GITHUB ISSUE LINK + THANK YOU NOTE
+------------------------------------------------------------------------ #}
+        <!-- Quick link for reporting missing translations -->
+        <p class="mt-4">
+            {{ _("Found a missing translation?") }}
+            <a href="{{ github_url }}/issues/new?title=Missing%20Translation%20Report:%20<lang_code>"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="text-blue-600 hover:underline">{{ _("Report it by opening a new GitHub issue") }}</a>.
+        </p>
+        <!-- Thank you message -->
+        <p class="text-sm text-zinc-500">{{ _("Thank you for helping us make Grylli better!") }}</p>
+    </div>
+{% endblock %}

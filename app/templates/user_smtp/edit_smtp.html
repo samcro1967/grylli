@@ -1,0 +1,206 @@
+{# ---------------------------------------------------------------------
+  edit_smtp.html
+  app/templates/user_smtp/edit_smtp.html
+  Edit an existing SMTP destination with live validation.
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    <div class="max-w-md mx-auto mt-20 bg-white dark:bg-zinc-800 shadow-md rounded-xl p-6 space-y-4">
+        <!-- ---------- Page Title ---------- -->
+        <h1 class="text-xl font-semibold text-black dark:text-white">{{ _("Edit SMTP Destination") }}</h1>
+        <!-- =================== FORM START =================== -->
+        <form method="post" novalidate>
+            {{ form.hidden_tag() }}
+            <!-- Label -->
+            <div class="mb-4">
+                {{ form.label.label(class="block text-sm font-medium mb-1 text-black dark:text-white") }}
+                {{ form.label(id="label",
+                                class="form-input w-full bg-zinc-100 dark:bg-zinc-700 text-black dark:text-white",
+                                autocomplete="off",
+                                aria_invalid="true" if form.label.errors else "false") }}
+                <div id="label-client-error" class="text-red-500 text-xs mt-1"></div>
+                {% if form.label.errors %}
+                    <ul class="text-red-500 text-xs mt-1" id="label-errors">
+                        {% for error in form.label.errors %}<li>{{ error }}</li>{% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+            <!-- SMTP Host -->
+            <div class="mb-4">
+                {{ form.smtp_host.label(class="block text-sm font-medium mb-1 text-black dark:text-white") }}
+                {{ form.smtp_host(id="smtp_host",
+                                class="form-input w-full bg-zinc-100 dark:bg-zinc-700 text-black dark:text-white",
+                                autocomplete="off",
+                                aria_invalid="true" if form.smtp_host.errors else "false") }}
+                <div id="smtp_host-client-error" class="text-red-500 text-xs mt-1"></div>
+                {% if form.smtp_host.errors %}
+                    <ul class="text-red-500 text-xs mt-1" id="smtp_host-errors">
+                        {% for error in form.smtp_host.errors %}<li>{{ error }}</li>{% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+            <!-- SMTP Port -->
+            <div class="mb-4">
+                {{ form.smtp_port.label(class="block text-sm font-medium mb-1 text-black dark:text-white") }}
+                {{ form.smtp_port(id="smtp_port",
+                                class="form-input w-full bg-zinc-100 dark:bg-zinc-700 text-black dark:text-white",
+                                autocomplete="off",
+                                aria_invalid="true" if form.smtp_port.errors else "false") }}
+                <div id="smtp_port-client-error" class="text-red-500 text-xs mt-1"></div>
+                {% if form.smtp_port.errors %}
+                    <ul class="text-red-500 text-xs mt-1" id="smtp_port-errors">
+                        {% for error in form.smtp_port.errors %}<li>{{ error }}</li>{% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+            <!-- SMTP Username -->
+            <div class="mb-4">
+                {{ form.smtp_username.label(class="block text-sm font-medium mb-1 text-black dark:text-white") }}
+                {{ form.smtp_username(id="smtp_username",
+                                class="form-input w-full bg-zinc-100 dark:bg-zinc-700 text-black dark:text-white",
+                                autocomplete="username",
+                                aria_invalid="true" if form.smtp_username.errors else "false") }}
+                <div id="smtp_username-client-error" class="text-red-500 text-xs mt-1"></div>
+                {% if form.smtp_username.errors %}
+                    <ul class="text-red-500 text-xs mt-1" id="smtp_username-errors">
+                        {% for error in form.smtp_username.errors %}<li>{{ error }}</li>{% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+            <!-- SMTP Password -->
+            <div class="mb-4 relative">
+                {{ form.smtp_password.label(class="block text-sm font-medium mb-1 text-black dark:text-white") }}
+                <div class="relative">
+                    {{ form.smtp_password(id="smtp_password",
+                                        class="form-input w-full pr-10 bg-zinc-100 dark:bg-zinc-700 text-black dark:text-white",
+                                        autocomplete="new-password",
+                                        aria_invalid="true" if form.smtp_password.errors else "false") }}
+                    <!-- Eye icon -->
+                    <div class="absolute inset-y-0 right-0 flex items-center px-3">
+                        <button type="button"
+                                class="focus:outline-none text-gray-500 hover:text-gray-700 dark:hover:text-gray-300"
+                                onmousedown="revealPassword()"
+                                onmouseup="hidePassword()"
+                                onmouseleave="hidePassword()"
+                                title="{{ _("Hold to reveal") }}">
+                            <svg class="h-5 w-5"
+                                 fill="none"
+                                 stroke="currentColor"
+                                 stroke-width="2"
+                                 viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5 c4.478 0 8.268 2.943 9.542 7 -1.274 4.057-5.064 7-9.542 7 -4.477 0-8.268-2.943-9.542-7z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div id="smtp_password-client-error" class="text-red-500 text-xs mt-1"></div>
+                {% if form.smtp_password.errors %}
+                    <ul class="text-red-500 text-xs mt-1" id="smtp_password-errors">
+                        {% for error in form.smtp_password.errors %}<li>{{ error }}</li>{% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+            <!-- Use TLS -->
+            <div class="mb-4">
+                <label class="inline-flex items-center">
+                    {{ form.use_tls() }}
+                    <span class="ml-2 text-sm text-black dark:text-white">{{ _("Use TLS") }}</span>
+                </label>
+            </div>
+            <!-- Enabled -->
+            <div class="mb-4">
+                <label class="inline-flex items-center">
+                    {{ form.enabled() }}
+                    <span class="ml-2 text-sm text-black dark:text-white">{{ _("Enabled") }}</span>
+                </label>
+            </div>
+            <!-- Submit + Cancel Buttons -->
+            <div class="flex gap-4">
+                <button id="submitBtn"
+                        type="submit"
+                        class="w-1/2 bg-red-500 text-white py-2 px-4 rounded disabled:opacity-50 disabled:cursor-not-allowed transition-colors">
+                    {{ _("Save") }}
+                </button>
+                <a class="w-1/2 text-center bg-zinc-400 text-white py-2 px-4 rounded hover:bg-zinc-500 transition-colors"
+                   href="{{ url_for("user_smtp.index") }}">{{ _("Cancel") }}</a>
+            </div>
+        </form>
+        <!-- =================== FORM END ===================== -->
+    </div>
+    <!-- =================== JS SECTION =================== -->
+    <script>
+    // Password reveal for smtp_password
+    function revealPassword() {
+      const input = document.getElementById("smtp_password");
+      input.type = "text";
+    }
+    function hidePassword() {
+      const input = document.getElementById("smtp_password");
+      input.type = "password";
+    }
+
+    // Validation helpers
+    function isValidHost(host) {
+      return /^[a-zA-Z0-9.-]+$/.test(host) && host.length > 2;
+    }
+    function isValidPort(port) {
+      const n = parseInt(port, 10);
+      return /^\d+$/.test(port) && n >= 1 && n <= 65535;
+    }
+    function isNonEmpty(str) {
+      return str.trim().length > 0;
+    }
+
+    function updateButtonState() {
+      const label = document.getElementById('label');
+      const smtp_host = document.getElementById('smtp_host');
+      const smtp_port = document.getElementById('smtp_port');
+      const smtp_username = document.getElementById('smtp_username');
+      const smtp_password = document.getElementById('smtp_password');
+      const submitBtn = document.getElementById('submitBtn');
+
+      // Clear all client error divs
+      document.getElementById('label-client-error').textContent = '';
+      document.getElementById('smtp_host-client-error').textContent = '';
+      document.getElementById('smtp_port-client-error').textContent = '';
+      document.getElementById('smtp_username-client-error').textContent = '';
+      document.getElementById('smtp_password-client-error').textContent = '';
+
+      // Validate fields
+      let valid = true;
+
+      if (!isNonEmpty(label.value)) {
+        document.getElementById('label-client-error').textContent = "Label is required.";
+        valid = false;
+      }
+      if (!isValidHost(smtp_host.value)) {
+        document.getElementById('smtp_host-client-error').textContent = "Enter a valid host.";
+        valid = false;
+      }
+      if (!isValidPort(smtp_port.value)) {
+        document.getElementById('smtp_port-client-error').textContent = "Enter a valid port (1-65535).";
+        valid = false;
+      }
+      if (!isNonEmpty(smtp_username.value)) {
+        document.getElementById('smtp_username-client-error').textContent = "Username is required.";
+        valid = false;
+      }
+      if (!isNonEmpty(smtp_password.value)) {
+        document.getElementById('smtp_password-client-error').textContent = "Password is required.";
+        valid = false;
+      }
+
+      submitBtn.disabled = !valid;
+      submitBtn.classList.toggle("bg-green-600", valid);
+      submitBtn.classList.toggle("bg-red-500", !valid);
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      ['label', 'smtp_host', 'smtp_port', 'smtp_username', 'smtp_password'].forEach(id => {
+        document.getElementById(id).addEventListener('input', updateButtonState);
+      });
+      updateButtonState();
+    });
+    </script>
+{% endblock %}

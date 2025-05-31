@@ -1,0 +1,43 @@
+{% extends "layout.html" %}
+{% block title %}{{ _("Help") }}{% endblock %}
+{% block content %}
+    <div class="max-w-4xl mx-auto p-6 bg-white dark:bg-zinc-900 rounded-2xl shadow">
+        <h1 class="text-2xl font-bold mb-4">{{ _("Help") }}</h1>
+        <p class="mb-4">
+            {{ _("Grylli includes built-in instructions throughout the app to help you configure and manage your setup.") }}
+            {{ _("This page provides an overview of key features and direct links to where they can be managed.") }}
+        </p>
+        <ul class="list-disc pl-6 space-y-2">
+            <li>
+                <strong>{{ _("Notifications") }}:</strong>
+                <a href="{{ url_for("messages_bp.index") }}"
+                   class="text-blue-500 underline">{{ _("Create and assign messages") }}</a>
+            </li>
+            <li>
+                <strong>{{ _("SMTP Settings") }}:</strong>
+                <a href="{{ url_for("user_smtp.index") }}"
+                   class="text-blue-500 underline">{{ _("Use your own email server") }}</a>
+            </li>
+            <li>
+                <strong>{{ _("Apprise Integration") }}:</strong>
+                <a href="{{ url_for("apprise_routes.config") }}"
+                   class="text-blue-500 underline">{{ _("Send notifications to 80+ supported services") }}</a>
+            </li>
+            <li>
+                <strong>{{ _("Webhooks") }}:</strong>
+                <a href="{{ url_for("webhook.config") }}"
+                   class="text-blue-500 underline">{{ _("Trigger actions or external workflows") }}</a>
+            </li>
+            <li>
+                <strong>{{ _("Emails") }}:</strong>
+                <a href="{{ url_for("email.index") }}" class="text-blue-500 underline">
+                    {{ _("View and manage secure email messages") }}
+                </a>
+            </li>
+            <li>
+                <strong>{{ _("Security") }}:</strong>
+                {{ _("Grylli encrypts sensitive data and logs all key actions for auditing.") }}
+            </li>
+        </ul>
+    </div>
+{% endblock %}

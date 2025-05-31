@@ -1,0 +1,220 @@
+{# ---------------------------------------------------------------------
+  signup.html
+  app/templates/auth/signup.html
+  User registration page: create a new account.
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{# =================== CONTENT BLOCK =================== #}
+{% block content %}
+    <!-- Outer container for centering and styling -->
+    <div class="max-w-md mx-auto mt-20 bg-white dark:bg-zinc-800 shadow-md rounded-xl p-6 space-y-4">
+        {# ---------- Page Title ---------- #}
+        <h1 class="text-xl font-semibold text-black dark:text-white">{{ _("Sign Up") }}</h1>
+        {# ---------- Instructions ---------- #}
+        <p class="text-sm text-zinc-600 dark:text-zinc-300">{{ _("Fill out the form to create your account.") }}</p>
+        <!-- =================== FORM START =================== -->
+        <form method="post" novalidate>
+            {{ form.hidden_tag() }}
+            {# ---------- Username Field ---------- #}
+            <div class="mb-4">
+                {{ form.username.label(class="block text-sm font-medium mb-1") }}
+                {{ form.username(id="username",
+                                class="form-input w-full bg-zinc-100 dark:bg-zinc-700 text-black dark:text-white",
+                                autocomplete="username",
+                                aria_invalid="true" if form.username.errors else "false") }}
+                {% if form.username.errors %}
+                    <ul class="text-red-600 text-xs mt-1" id="username-errors">
+                        {% for error in form.username.errors %}<li>{{ error }}</li>{% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+            {# ---------- Email Field ---------- #}
+            <div class="mb-4">
+                {{ form.email.label(class="block text-sm font-medium mb-1") }}
+                {{ form.email(id="email",
+                                class="form-input w-full bg-zinc-100 dark:bg-zinc-700 text-black dark:text-white",
+                                autocomplete="email",
+                                aria_invalid="true" if form.email.errors else "false") }}
+                {% if form.email.errors %}
+                    <ul class="text-red-600 text-xs mt-1" id="email-errors">
+                        {% for error in form.email.errors %}<li>{{ error }}</li>{% endfor %}
+                    </ul>
+                {% endif %}
+                <p id="emailWarning" class="text-red-500 text-sm hidden">{{ _("Please enter a valid email address.") }}</p>
+            </div>
+            {# ---------- New Password Field ---------- #}
+            <div class="mb-4 flex items-center space-x-2">
+                <div class="flex-grow relative">
+                    {{ form.password.label(class="block text-sm font-medium mb-1") }}
+                    {{ form.password(id="password",
+                                        class="form-input w-full bg-zinc-100 dark:bg-zinc-700 text-black dark:text-white",
+                                        autocomplete="new-password",
+                                        aria_invalid="true" if form.password.errors else "false") }}
+                    {% if form.password.errors %}
+                        <ul class="text-red-600 text-xs mt-1" id="password-errors">
+                            {% for error in form.password.errors %}<li>{{ error }}</li>{% endfor %}
+                        </ul>
+                    {% endif %}
+                    <p id="complexityWarning" class="text-red-500 text-sm hidden">
+                        {{ _("Password must meet all complexity requirements.") }}
+                    </p>
+                </div>
+                <button type="button"
+                        class="pt-6"
+                        id="togglePasswordEye"
+                        tabindex="-1"
+                        aria-label="{{ _("Show/hide password") }}">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         class="w-6 h-6 text-zinc-500 dark:text-zinc-400"
+                         fill="none"
+                         viewBox="0 0 24 24"
+                         stroke="currentColor"
+                         stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.522 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.478 0-8.268-2.943-9.542-7z" />
+                    </svg>
+                </button>
+            </div>
+            {# ---------- Confirm Password Field ---------- #}
+            <div class="mb-4 flex items-center space-x-2">
+                <div class="flex-grow relative">
+                    {{ form.confirm_password.label(class="block text-sm font-medium mb-1") }}
+                    {{ form.confirm_password(id="confirmPassword",
+                                        class="form-input w-full bg-zinc-100 dark:bg-zinc-700 text-black dark:text-white",
+                                        autocomplete="new-password",
+                                        aria_invalid="true" if form.confirm_password.errors else "false") }}
+                    {% if form.confirm_password.errors %}
+                        <ul class="text-red-600 text-xs mt-1" id="confirm-password-errors">
+                            {% for error in form.confirm_password.errors %}<li>{{ error }}</li>{% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+                <button type="button"
+                        class="pt-6"
+                        id="toggleConfirmPasswordEye"
+                        tabindex="-1"
+                        aria-label="{{ _("Show/hide password") }}">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         class="w-6 h-6 text-zinc-500 dark:text-zinc-400"
+                         fill="none"
+                         viewBox="0 0 24 24"
+                         stroke="currentColor"
+                         stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.522 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.478 0-8.268-2.943-9.542-7z" />
+                    </svg>
+                </button>
+            </div>
+            {# ---------- Password Match Warning ---------- #}
+            <div id="passwordMismatchWarning" class="text-red-500 text-sm hidden">{{ _("Passwords do not match.") }}</div>
+            {# ---------- Registration PIN Field ---------- #}
+            <div class="mb-4">
+                {{ form.registration_pin.label(class="block text-sm font-medium mb-1") }}
+                {{ form.registration_pin(id="pin",
+                                class="form-input w-full bg-zinc-100 dark:bg-zinc-700 text-black dark:text-white",
+                                autocomplete="one-time-code",
+                                aria_invalid="true" if form.registration_pin.errors else "false") }}
+                {% if form.registration_pin.errors %}
+                    <ul class="text-red-600 text-xs mt-1" id="pin-errors">
+                        {% for error in form.registration_pin.errors %}<li>{{ error }}</li>{% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+            {# ---------- Buttons Row ---------- #}
+            <div class="flex flex-row gap-2 items-stretch mt-4">
+                {{ form.submit(class="flex-1 bg-red-500 text-white font-semibold py-2 px-4 rounded shadow transition duration-150", id="submit-btn") }}
+                {{ form.cancel(class="flex-1 bg-gray-300 dark:bg-zinc-600 text-black dark:text-white font-semibold py-2 px-4 rounded shadow transition duration-150", formnovalidate=True) }}
+            </div>
+        </form>
+        <!-- =================== FORM END ===================== -->
+        {# ---------- Password Requirements List ---------- #}
+        <div class="text-sm text-zinc-600 dark:text-zinc-300 mt-1">
+            <ul class="list-disc list-inside space-y-1">
+                <li>{{ _("Minimum 8 characters") }}</li>
+                <li>{{ _("At least one uppercase letter") }}</li>
+                <li>{{ _("At least one lowercase letter") }}</li>
+                <li>{{ _("At least one number") }}</li>
+                <li>{{ _("At least one special character (e.g., !@#$%)") }}</li>
+            </ul>
+        </div>
+    </div>
+    <!-- =================== VALIDATION SCRIPT =================== -->
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Get elements
+      const form = document.querySelector("form");
+      const username = document.getElementById("username");
+      const email = document.getElementById("email");
+      const pw = document.getElementById("password");
+      const cpw = document.getElementById("confirmPassword");
+      const pin = document.getElementById("pin");
+      const warning = document.getElementById("passwordMismatchWarning");
+      const complexityWarning = document.getElementById("complexityWarning");
+      const emailWarning = document.getElementById("emailWarning");
+      const togglePw = document.getElementById("togglePasswordEye");
+      const toggleCpw = document.getElementById("toggleConfirmPasswordEye");
+
+      // Validation helpers
+      function passwordsMatch() {
+        return pw.value === cpw.value;
+      }
+      function meetsComplexity(password) {
+        return (
+          password.length >= 8 &&
+          /[A-Z]/.test(password) &&
+          /[a-z]/.test(password) &&
+          /[0-9]/.test(password) &&
+          /[!@#$%^&*(),.?":{}|<>]/.test(password)
+        );
+      }
+      function isValidEmail(value) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+      }
+
+      // Show/hide warnings only, never disable any buttons
+      function updateWarnings() {
+        warning.classList.toggle("hidden", passwordsMatch());
+        complexityWarning.classList.toggle("hidden", meetsComplexity(pw.value));
+        emailWarning.classList.toggle("hidden", isValidEmail(email.value));
+      }
+
+      // Attach listeners to inputs for real-time warnings
+      [username, email, pw, cpw, pin].forEach(field => {
+        field.addEventListener("input", updateWarnings);
+      });
+
+      // Prevent form submission if fields are invalid, but NEVER disable buttons
+      form.addEventListener("submit", (e) => {
+        // If Cancel was clicked, always allow submit
+        if (e.submitter && e.submitter.name === "cancel") {
+          return; // Do not block submission!
+        }
+        if (
+          username.value.trim() === "" ||
+          !isValidEmail(email.value) ||
+          pw.value.trim() === "" ||
+          cpw.value.trim() === "" ||
+          !passwordsMatch() ||
+          !meetsComplexity(pw.value) ||
+          pin.value.trim() === ""
+        ) {
+          e.preventDefault();
+          updateWarnings();
+          cpw.focus();
+        }
+      });
+
+      // Password visibility toggles
+      function setupEye(eyeBtn, field) {
+        eyeBtn.addEventListener("mousedown", () => { field.type = "text"; });
+        eyeBtn.addEventListener("mouseup", () => { field.type = "password"; });
+        eyeBtn.addEventListener("mouseleave", () => { field.type = "password"; });
+      }
+      setupEye(togglePw, pw);
+      setupEye(toggleCpw, cpw);
+
+      updateWarnings();
+    });
+    </script>
+    <!-- =================== END SCRIPT =================== -->
+{% endblock %}

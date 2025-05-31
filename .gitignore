@@ -1,0 +1,86 @@
+# ──────────────────────────────────────────────────────────────
+# Personal & local project files
+# ──────────────────────────────────────────────────────────────
+*.docx
+Notes.txt
+git.sh
+uploads/*
+!uploads/.keep
+data/*
+!data/.keep
+data/backups/*
+!data/backups/.keep
+docker-compose.yml
+
+# ──────────────────────────────────────────────────────────────
+# Python-related
+# ──────────────────────────────────────────────────────────────
+__pycache__/
+.pytest_cache/
+.mypy_cache/
+.cache/
+.coverage
+*.py[cod]
+*.so
+
+# Virtual environments
+.venv/
+venv/
+.env/
+*.env
+.grylli/
+site-packages/
+
+
+# SQLite & other development databases
+*.sqlite3
+*.db
+patches/
+
+# Ignore minified build artifacts
+*.min.js
+*.min.css
+
+# ──────────────────────────────────────────────────────────────
+# Flask-Migrate
+# ──────────────────────────────────────────────────────────────
+migrations/
+
+# ──────────────────────────────────────────────────────────────
+# Node + TailwindCSS build system
+# ──────────────────────────────────────────────────────────────
+node_modules/
+.vite/
+.postcss-cache/
+.parcel-cache/
+dist/
+build/
+app/static/css/output.css
+app/static/css/styles.css
+tailwind.config.js
+postcss.config.js
+
+# ──────────────────────────────────────────────────────────────
+# Local app data / secrets
+# ──────────────────────────────────────────────────────────────
+data/fernet_key/
+data/uploads/
+instance/uploads/
+*.json
+
+# ──────────────────────────────────────────────────────────────
+# Editor & OS junk
+# ──────────────────────────────────────────────────────────────
+.DS_Store
+*.swp
+*.swo
+.idea/
+.vscode/
+
+# ──────────────────────────────────────────────────────────────
+# Logs, crash dumps, etc.
+# ──────────────────────────────────────────────────────────────
+*.log
+*.bak
+*.tmp
+*.orig

@@ -1,0 +1,2393 @@
+# Korean translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-05-31 09:39-0500\n"
+"PO-Revision-Date: 2025-05-25 16:45-0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: ko <LL@li.org>\n"
+"Language: ko\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/init_db.py:55
+#, python-format
+msgid "Tables currently in DB: %s"
+msgstr "현재 DB의 테이블:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/init_db.py:58
+msgid "Database or system_config table missing. Running migrations now..."
+msgstr "데이터베이스 또는 system_config 테이블이 없습니다. 지금 마이그레이션을 실행합니다..."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/init_db.py:61
+msgid "Migrations applied successfully."
+msgstr "마이그레이션이 성공적으로 적용되었습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/init_db.py:63
+msgid "Migration failed."
+msgstr "마이그레이션 실패."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/init_db.py:68
+msgid "System config seeded successfully."
+msgstr "시스템 설정이 성공적으로 시드되었습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/init_db.py:70
+msgid "Error seeding system config."
+msgstr "시스템 설정 시드 오류:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/services/mail.py:12
+#: /home/osuhickeys/Documents/Docker/grylli/app/services/system_settings_email.py:40
+msgid "Missing required config setting: "
+msgstr "필수 설정이 누락되었습니다:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/services/mail.py:19
+#: /home/osuhickeys/Documents/Docker/grylli/app/services/system_settings_email.py:47
+#, python-format
+msgid "Failed to decrypt %(key)s: %(error)s"
+msgstr "%(key)s 복호화 실패: %(error)s"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/services/mail.py:29
+#, python-format
+msgid ""
+"get_setting('%(key)s') -> '%(value)s' (raw: '%(raw)s', sensitive: "
+"%(sensitive)s)"
+msgstr ""
+"get_setting('%(key)s') -> '%(value)s' (raw: '%(raw)s', sensitive: "
+"%(sensitive)s)"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/services/mail.py:40
+#, python-format
+msgid "Preparing email to %(to)s"
+msgstr "%(to)s에게 이메일 준비 중"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/services/mail.py:53
+#, python-format
+msgid ""
+"SMTP host = '%(host)s' (type: %(host_type)s), port = %(port)s (type: "
+"%(port_type)s)"
+msgstr ""
+"SMTP host = '%(host)s' (type: %(host_type)s), port = %(port)s (type: "
+"%(port_type)s)"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/services/mail.py:59
+#, python-format
+msgid "Using user: %(user)s"
+msgstr "사용자 사용 중: %(user)s"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/services/mail.py:64
+msgid "Starting TLS"
+msgstr "TLS 시작 중"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/services/mail.py:66
+msgid "Logging in"
+msgstr "로그인"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/services/mail.py:68
+msgid "Sending message"
+msgstr "메시지 일정"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/services/mail.py:70
+msgid "Email sent successfully"
+msgstr "테스트 이메일이 성공적으로 전송되었습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/services/mail.py:72
+msgid "SMTP error: "
+msgstr "SMTP 오류:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/about.html:10
+msgid "About Grylli"
+msgstr "Grylli 소개"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/about.html:13
+msgid ""
+"Grylli is a secure, self-hosted message delivery platform that automatically"
+" sends pre-configured messages if a user fails to check in within a defined "
+"time period."
+msgstr ""
+"Grylli는 사용자가 정의된 기간 내에 체크인하지 않을 경우 미리 설정된 메시지를 자동으로 전송하는 보안이 강화된 셀프 호스팅 메시지 "
+"전송 플랫폼입니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/about.html:14
+msgid "It supports multiple users and customizable schedules."
+msgstr "여러 사용자와 사용자 맞춤형 일정이 지원됩니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/about.html:15
+msgid ""
+"Messages can be delivered via email, webhooks, or over 80 third-party "
+"services through Apprise."
+msgstr "메시지는 이메일, 웹훅, 또는 Apprise를 통해 80개 이상의 타사 서비스로 전송될 수 있습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/about.html:16
+msgid ""
+"Users can configure their own SMTP servers to ensure messages appear to come"
+" directly from them — not from the system administrator."
+msgstr ""
+"사용자는 자신의 SMTP 서버를 구성하여 메시지가 시스템 관리자에서 온 것이 아닌 직접 발신된 것처럼 보이게 할 수 있습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/about.html:17
+msgid ""
+"Sensitive data is encrypted at rest, and all message operations are secured "
+"with strong authentication and audit-friendly logging."
+msgstr "민감한 데이터는 휴식 중 암호화되며, 모든 메시지 작업은 강력한 인증 및 감사 친화적인 로깅으로 보안됩니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/about.html:18
+msgid ""
+"Built with a modern, reactive technology stack, Grylli is optimized for "
+"responsiveness and works seamlessly across desktop and mobile devices."
+msgstr "모던하고 반응형 기술 스택으로 구축된 Grylli는 반응성이 최적화되어 데스크탑 및 모바일 장치에서 원활하게 작동합니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/about.html:23
+msgid "Version:"
+msgstr "버전:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/about.html:26
+msgid "Repository:"
+msgstr "저장소:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/about.html:30
+msgid "GitHub - samcro1967/grylli"
+msgstr "GitHub - samcro1967/grylli"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/help.html:2
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/help.html:5
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:117
+msgid "Help"
+msgstr "도움말"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/help.html:7
+msgid ""
+"Grylli includes built-in instructions throughout the app to help you "
+"configure and manage your setup."
+msgstr "Grylli는 설정 및 관리를 도와주는 내장 지침을 앱 전반에 포함하고 있습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/help.html:8
+msgid ""
+"This page provides an overview of key features and direct links to where "
+"they can be managed."
+msgstr "이 페이지는 핵심 기능에 대한 개요와 관리할 수 있는 직접 링크를 제공합니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/help.html:12
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:292
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:9
+msgid "Notifications"
+msgstr "알림"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/help.html:14
+msgid "Create and assign messages"
+msgstr "메시지 또는 이메일을 만드세요."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/index.html:32
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/help.html:17
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:267
+msgid "SMTP Settings"
+msgstr "SMTP 설정"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/help.html:19
+msgid "Use your own email server"
+msgstr "자신의 이메일 서버 사용"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/help.html:22
+msgid "Apprise Integration"
+msgstr "Apprise 목적지"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/help.html:24
+msgid "Send notifications to 80+ supported services"
+msgstr "80개 이상의 지원 서비스로 알림 전송"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/help.html:27
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:319
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/assign_destinations.html:41
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/view_message.html:58
+msgid "Webhooks"
+msgstr "Webhooks"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/help.html:29
+msgid "Trigger actions or external workflows"
+msgstr "작업 또는 외부 워크플로우 트리거"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:9
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/help.html:32
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:339
+msgid "Emails"
+msgstr "이메일"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/help.html:34
+msgid "View and manage secure email messages"
+msgstr "보안 이메일 메시지 개요"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/help.html:38
+msgid "Security"
+msgstr "🔐 보안"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/help.html:39
+msgid "Grylli encrypts sensitive data and logs all key actions for auditing."
+msgstr "Grylli는 민감한 데이터를 암호화하고 모든 주요 작업을 감사용으로 기록합니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/index.html:10
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/locale.py:73
+msgid "Welcome to Grylli"
+msgstr "Grylli에 오신 것을 환영합니다"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/index.html:12
+msgid "Pronounced"
+msgstr "발음"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/index.html:12
+msgid "like “grill-ee”"
+msgstr "“grill-ee”로 발음합니다"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/index.html:16
+msgid ""
+"Grylli is a secure message scheduling and delivery system designed to ensure"
+" your important messages are delivered — even if you can’t be there to send "
+"them."
+msgstr ""
+"Grylli는 중요한 메시지가 전달되도록 보장하기 위해 설계된 안전한 메시지 일정 및 전달 시스템입니다. - 심지어 당신이 직접 보낼 수"
+" 없을 때도."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/index.html:20
+msgid ""
+"Whether you’re planning ahead, setting up emergency communication, or "
+"building peace of mind, Grylli helps automate your message delivery via "
+"email, webhooks, or Apprise notifications if you miss a check-in."
+msgstr ""
+"미리 계획을 세우거나, 긴급 통신을 설정하거나, 안심하려는 경우 Grylli는 당신이 체크인을 놓쳤을 때 이메일, 웹훅 또는 "
+"Apprise 알림을 통해 메시지 전달을 자동화하는 데 도움을 줍니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/index.html:23
+msgid "Getting Started"
+msgstr "시작하기"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/index.html:25
+msgid "Create a message or email."
+msgstr "메시지 또는 이메일을 만드세요."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/index.html:26
+msgid "Set your check-in interval and grace period."
+msgstr "체크인 간격과 유예 기간을 설정하세요."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/index.html:27
+msgid "Assign one or more delivery destinations."
+msgstr "하나 이상의 전달 목적지를 지정하세요."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/index.html:28
+msgid "Optionally attach files for secure emails."
+msgstr "안전한 이메일에 파일을 선택적으로 첨부하세요."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/index.html:29
+msgid "Enable the message to start monitoring."
+msgstr "메시지를 활성화하여 모니터링을 시작하세요."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/index.html:30
+msgid "If you don’t check in, Grylli delivers the message for you."
+msgstr "체크인하지 않으면 Grylli가 메시지를 대신 전달합니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:17
+msgid "Grylli"
+msgstr "Grylli"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:51
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:209
+msgid "Home"
+msgstr "홈"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:99
+msgid "Account"
+msgstr "계정"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:105
+msgid "About"
+msgstr "소개"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:111
+msgid "System Info"
+msgstr "시스템 정보"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:17
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:134
+msgid "Translations"
+msgstr "번역"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:146
+msgid "Logout"
+msgstr "로그아웃"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:170
+msgid "Menu"
+msgstr "메뉴"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:232
+msgid "Administration"
+msgstr "관리"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:248
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:309
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:356
+msgid "Overview"
+msgstr "개요"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/index.html:27
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:253
+msgid "Backups"
+msgstr "백업"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:9
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:258
+msgid "Users"
+msgstr "사용자"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/index.html:22
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/system_settings.html:10
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:263
+msgid "System Settings"
+msgstr "시스템 설정"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:308
+msgid "Overview of notification settings"
+msgstr "알림 설정 개요"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:313
+msgid "Configure Apprise services"
+msgstr "Apprise 서비스 구성"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:314
+msgid "Apprise"
+msgstr "Apprise"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:318
+msgid "Configure Webhook integrations"
+msgstr "Webhook 통합 구성"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:355
+msgid "Overview of secure email messages"
+msgstr "보안 이메일 메시지 개요"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:360
+msgid "Configure SMTP email settings"
+msgstr "SMTP 이메일 설정 구성"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:361
+msgid "SMTP"
+msgstr "SMTP"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:373
+msgid "Toggle Theme"
+msgstr "테마 전환"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:403
+msgid "Theme"
+msgstr "테마"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:11
+msgid "📦 Environment Versions"
+msgstr "📦 환경 버전"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:17
+msgid "Category"
+msgstr "카테고리"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:18
+msgid "Tool"
+msgstr "도구"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:19
+msgid "Version"
+msgstr "버전"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:25
+msgid "🧠 Python"
+msgstr "🧠 파이썬"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:26
+msgid "Python"
+msgstr "파이썬"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:30
+msgid "pip"
+msgstr "pip"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:34
+msgid "SQLite"
+msgstr "SQLite"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:40
+msgid "⚙️ Core"
+msgstr "⚙️ 코어"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:47
+msgid "🔐 Security"
+msgstr "🔐 보안"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:48
+msgid "Email Validator"
+msgstr "이메일 검증기"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:52
+msgid "Cryptography"
+msgstr "암호화"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:57
+msgid "🕰️ Scheduling"
+msgstr "🕰️ 일정 관리"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:58
+msgid "APScheduler"
+msgstr "APScheduler"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:62
+msgid "Apprise (Python)"
+msgstr "Apprise (Python)"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:66
+msgid "Apprise CLI"
+msgstr "Apprise CLI"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:74
+msgid "🌐 Frontend"
+msgstr "🌐 프론트엔드"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/manage_account.html:11
+msgid "Manage Account"
+msgstr "계정 관리"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/manage_account.html:12
+msgid "Update your profile information and password."
+msgstr "프로필 정보와 비밀번호를 업데이트하세요."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/manage_account.html:41
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/create_user.html:40
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/bootstrap.html:43
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/reset_password.html:43
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/signup.html:43
+msgid "Please enter a valid email address."
+msgstr "유효한 이메일 주소를 입력하세요."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/manage_account.html:62
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/manage_account.html:96
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/manage_account.html:127
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/reset_password.html:67
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/reset_password.html:98
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/signup.html:66
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/signup.html:96
+msgid "Show/hide password"
+msgstr "비밀번호 표시를 위해 길게 누르세요"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/manage_account.html:89
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/create_user.html:53
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/bootstrap.html:51
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/reset_password.html:59
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/signup.html:59
+msgid "Password must meet all complexity requirements."
+msgstr "비밀번호는 모든 복잡성 요구사항을 충족해야 합니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/manage_account.html:141
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/create_user.html:72
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/edit_user.html:74
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/bootstrap.html:69
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/reset_password.html:111
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/signup.html:109
+msgid "Passwords do not match."
+msgstr "비밀번호가 일치하지 않습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/manage_account.html:147
+msgid "Update Account"
+msgstr "계정 업데이트"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/manage_account.html:151
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/create_user.html:82
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/edit_user.html:104
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/help_form.html:28
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/create_apprise.html:42
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/edit_apprise.html:42
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/reset_password.html:122
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/assign_smtp.html:50
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:46
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/edit_message.html:54
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/schedule_email.html:84
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/assign_destinations.html:66
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/create_message.html:55
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/edit_message.html:48
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/schedule_message.html:84
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/create_smtp.html:112
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/edit_smtp.html:126
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/create_webhook.html:48
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/edit_webhook.html:48
+msgid "Cancel"
+msgstr "취소"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/manage_account.html:159
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/create_user.html:90
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/edit_user.html:88
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/bootstrap.html:83
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/reset_password.html:129
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/signup.html:133
+msgid "Minimum 8 characters"
+msgstr "최소 8자"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/manage_account.html:160
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/create_user.html:91
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/edit_user.html:89
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/bootstrap.html:84
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/reset_password.html:130
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/signup.html:134
+msgid "At least one uppercase letter"
+msgstr "최소 하나의 대문자"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/manage_account.html:161
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/create_user.html:92
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/edit_user.html:90
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/bootstrap.html:85
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/reset_password.html:131
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/signup.html:135
+msgid "At least one lowercase letter"
+msgstr "최소 하나의 소문자"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/manage_account.html:162
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/create_user.html:93
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/edit_user.html:91
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/bootstrap.html:86
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/reset_password.html:132
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/signup.html:136
+msgid "At least one number"
+msgstr "최소 하나의 숫자"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/manage_account.html:163
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/create_user.html:94
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/bootstrap.html:87
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/reset_password.html:133
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/signup.html:137
+msgid "At least one special character (e.g., !@#$%)"
+msgstr "적어도 하나의 특수 문자 (예: !@#$%)"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:8
+msgid "Translations - Grylli"
+msgstr "번역 - Grylli"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:20
+msgid "Grylli currently supports multiple languages and more will be added."
+msgstr "Grylli는 현재 여러 언어를 지원하며, 더 많은 언어가 추가될 예정입니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:21
+msgid "Many of the translations were performed with assistance from ChatGPT."
+msgstr "많은 번역은 ChatGPT의 도움으로 수행되었습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:22
+msgid ""
+"If you find a translation issue or want to suggest improvements, your input "
+"is welcome!"
+msgstr "번역 문제를 발견하거나 개선을 제안하고 싶으시면, 의견을 환영합니다!"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:28
+msgid "How to request translation updates"
+msgstr "번역 업데이트 요청 방법"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:30
+msgid "To contribute to translations, please use the following guidelines:"
+msgstr "번역 기여를 위해 다음 가이드를 사용하세요:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:43
+msgid "Fill in already discovered missing translations:"
+msgstr "이미 발견된 누락된 번역을 채우세요:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:63
+msgid "Open the JSON translation file for your language. For example:"
+msgstr "귀하의 언어에 맞는 JSON 번역 파일을 엽니다. 예를 들어:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:68
+msgid "Add missing phrases in that JSON file."
+msgstr "해당 JSON 파일에 누락된 문구를 추가합니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:70
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:113
+msgid "For example:"
+msgstr "예를 들어:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:72
+msgid "From:"
+msgstr "From:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:76
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:154
+msgid "To:"
+msgstr "To:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:80
+msgid ""
+"Attach the updated JSON file to a new GitHub issue when submitting your "
+"changes."
+msgstr "변경사항을 제출할 때 업데이트된 JSON 파일을 새로운 GitHub 이슈에 첨부하세요."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:92
+msgid "Improving existing translations:"
+msgstr "기존 번역 개선:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:111
+msgid "Open the relevant .po file for the translation you want to improve."
+msgstr "개선하고자 하는 번역에 해당하는 .po 파일을 엽니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:117
+msgid ""
+"Find the phrase(s) and its existing translation(s) you want to improve."
+msgstr "개선하고자 하는 문구와 기존 번역을 찾습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:118
+msgid "Update the phrase(s)."
+msgstr "문구를 업데이트합니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:119
+msgid "Copy the file name and path into the issue."
+msgstr "파일 이름과 경로를 이슈에 복사합니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:121
+msgid "Paste the copied snippet directly into the GitHub issue comment."
+msgstr "복사한 스니펫을 GitHub 이슈 댓글에 직접 붙여넣습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:122
+msgid "Do not upload the full .po file to avoid merge conflicts."
+msgstr "병합 충돌을 피하기 위해 전체 .po 파일을 업로드하지 마세요."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:125
+msgid "Example snippet:"
+msgstr "예시 스니펫:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:144
+msgid "Report missing translations not yet discovered:"
+msgstr "아직 발견되지 않은 누락된 번역을 보고하세요:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:161
+msgid ""
+"If you see text in the app that appears untranslated or missing, please "
+"report it to us."
+msgstr "앱에서 번역되지 않은 텍스트를 보시면 저희에게 알려주시기 바랍니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:162
+msgid "Provide the exact English phrase as it appears on the screen."
+msgstr "화면에 나타나는 정확한 영어 문구를 제공해주세요."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:163
+msgid ""
+"Include the page or section where you saw the phrase (e.g., Settings page, "
+"Account section)."
+msgstr "(예: 설정 페이지, 계정 섹션)에서 문구를 본 페이지나 섹션을 포함하세요."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:165
+msgid ""
+"Submit this information via a new GitHub issue so we can add it to the "
+"translation files and wrap it for Babel."
+msgstr "이를 새로운 GitHub 이슈로 제출하여 번역 파일에 추가하고 Babel로 래핑할 수 있도록 해주세요."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:175
+msgid "Found a missing translation?"
+msgstr "누락된 번역을 찾으셨나요?"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:179
+msgid "Report it by opening a new GitHub issue"
+msgstr "새로운 GitHub 이슈를 열어 보고하세요."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:182
+msgid "Thank you for helping us make Grylli better!"
+msgstr "Grylli를 더 나은 곳으로 만들어주셔서 감사합니다!"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/create_user.html:14
+msgid "Create New User"
+msgstr "새 사용자 생성"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/create_user.html:15
+msgid "Fill out the form to add a new user."
+msgstr "새 사용자를 추가하려면 양식을 작성하세요."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/create_user.html:20
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/edit_user.html:17
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/bootstrap.html:24
+msgid "Please fix the following errors:"
+msgstr "다음 오류를 수정하십시오:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/create_user.html:78
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/edit_user.html:100
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:181
+msgid "Create User"
+msgstr "사용자 생성"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/edit_user.html:10
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:74
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:128
+msgid "Edit User"
+msgstr "사용자 편집"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/edit_user.html:62
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/edit_user.html:81
+msgid "Hold to show password"
+msgstr "비밀번호 표시를 위해 길게 누르세요"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/edit_user.html:92
+#, python-format
+msgid "At least one special character (e.g., !@#$%%)"
+msgstr "적어도 하나의 특수 문자 (예: !@#$%%)"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/help.html:4
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/login.html:73
+msgid "Admin Help"
+msgstr "관리자 패널"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/help.html:7
+msgid "Reset Admin Password"
+msgstr "비밀번호 재설정"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/help.html:9
+msgid ""
+"If you've forgotten the admin password, you can reset it using the following"
+" Docker command:"
+msgstr "관리자 비밀번호를 잊어버린 경우, 다음 Docker 명령어를 사용하여 재설정할 수 있습니다:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/help.html:15
+msgid ""
+"This script will prompt you to enter a new password for the admin user. You "
+"must run it from the host system where the Grylli container is running."
+msgstr ""
+"이 스크립트는 관리자 사용자의 새 비밀번호를 입력하라는 메시지를 표시합니다. Grylli 컨테이너가 실행되고 있는 호스트 시스템에서 "
+"실행해야 합니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/help.html:18
+msgid "After resetting, you can log in with the new password immediately."
+msgstr "재설정 후, 새 비밀번호로 즉시 로그인할 수 있습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/help.html:24
+msgid "Return to Login"
+msgstr "대시보드로 돌아가기"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/help_form.html:6
+msgid "Admin Help Access"
+msgstr "관리자 도움말 접근"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/help_form.html:9
+msgid "Enter your Ferret Key to unlock admin-only help documentation."
+msgstr "관리자 전용 도움말 문서를 잠금 해제하려면 Ferret Key를 입력하세요."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/help_form.html:34
+msgid "How to Find Your FERRET_KEY"
+msgstr "FERRET_KEY 찾는 방법"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/help_form.html:36
+msgid "The FERRET_KEY is set as an environment variable when running Grylli."
+msgstr "FERRET_KEY는 Grylli 실행 시 환경 변수로 설정됩니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/help_form.html:39
+msgid "Option 1: Check docker-compose.yml"
+msgstr "옵션 1: docker-compose.yml 확인"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/help_form.html:46
+msgid "Option 2: Use docker inspect"
+msgstr "옵션 2: docker inspect 사용"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/help_form.html:52
+msgid "This shows the FERRET_KEY as passed to the container at runtime."
+msgstr "이는 실행 중에 컨테이너에 전달된 FERRET_KEY를 보여줍니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/index.html:10
+msgid "Admin Panel"
+msgstr "관리자 패널"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/index.html:12
+msgid ""
+"Welcome to the Grylli Admin Panel. Use the links below to manage the system."
+msgstr "Grylli 관리자 패널에 오신 것을 환영합니다. 아래 링크를 사용하여 시스템을 관리하세요."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/index.html:17
+msgid "Manage Users"
+msgstr "사용자 관리"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/index.html:18
+msgid "Create, edit, enable/disable, or delete user accounts."
+msgstr "사용자 계정을 생성, 편집, 활성화/비활성화, 또는 삭제합니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/index.html:23
+msgid "View  system-wide environment values."
+msgstr "시스템 전체 환경 값을 확인합니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/index.html:28
+msgid "Create and delete database backups."
+msgstr "데이터베이스 백업"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/index.html:33
+msgid "View and test global SMTP settings."
+msgstr "테스트 이메일 전송에 실패했습니다. SMTP 설정을 확인하십시오."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/index.html:39
+msgid "View Admin Guide / README on GitHub"
+msgstr "GitHub에서 관리자 가이드 / README 보기"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/index.html:40
+msgid "Includes setup instructions, integrations, and troubleshooting."
+msgstr "설정 지침, 통합 및 문제 해결 포함."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/index.html:44
+msgid "⚠️ Admin Tips"
+msgstr "⚠️ 관리자 팁"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/index.html:46
+msgid "Ensure the data folder (database) is backed up on your host"
+msgstr "데이터 폴더(데이터베이스)가 호스트에 백업되었는지 확인하세요"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/index.html:48
+msgid ""
+"The uploads folder is not per user.  If required per user, you will ndd to "
+"create subdirectoried per user and setup permissions so users can only see "
+"their own folder."
+msgstr ""
+"업로드 폴더는 사용자별이 아닙니다. 사용자별로 필요할 경우, 사용자별로 하위 디렉터리를 생성하고 사용자가 자신의 폴더만 볼 수 있도록 "
+"권한을 설정해야 합니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/index.html:51
+msgid ""
+"To restore a backup: stop the container, replace the data/grylli.db with one"
+" from the backups folder, and restart the container."
+msgstr "백업을 복원하려면: 컨테이너를 중지하고, data/grylli.db를 백업 폴더의 파일로 교체한 후 컨테이너를 재시작합니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_backups.html:11
+msgid "Database Backups"
+msgstr "데이터베이스 백업"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_backups.html:13
+msgid "Create Backup"
+msgstr "백업 생성"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_backups.html:21
+msgid "Filename"
+msgstr "파일명"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_backups.html:22
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:61
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:62
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:60
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:60
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:59
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:63
+msgid "Actions"
+msgstr "작업"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_backups.html:32
+msgid "Delete this backup?"
+msgstr "이 백업을 삭제하시겠습니까?"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_backups.html:32
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:96
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:99
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:153
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:115
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:118
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:206
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:209
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:104
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:107
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:182
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:185
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:100
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:166
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:101
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:158
+msgid "Delete"
+msgstr "삭제"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_backups.html:41
+msgid "No backups found."
+msgstr "백업을 찾을 수 없습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_backups.html:44
+msgid ""
+"Backups contain your full app data. Store securely. Sensitive data is "
+"encrypted in the DB by default."
+msgstr "백업에는 앱의 전체 데이터가 포함됩니다. 안전하게 저장하세요. 민감한 데이터는 기본적으로 DB에서 암호화됩니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:15
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:16
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/apprise_config.html:10
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:16
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:17
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:15
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:16
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:16
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:17
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:14
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:17
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:16
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:17
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/webhook_config.html:10
+msgid "Table View"
+msgstr "테이블 보기"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:29
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:30
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/apprise_config.html:18
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:30
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:31
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:29
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:30
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:30
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:31
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:27
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:30
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:30
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:31
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/webhook_config.html:18
+msgid "Card View"
+msgstr "카드 보기"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:48
+msgid "Add User"
+msgstr "사용자 추가"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:57
+msgid "ID"
+msgstr "ID"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:58
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:55
+msgid "Username"
+msgstr "사용자 이름"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:59
+msgid "Email"
+msgstr "이메일"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:60
+msgid "Role"
+msgstr "역할"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:81
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:134
+msgid "Delete user"
+msgstr "사용자 삭제"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:83
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:137
+msgid "Delete User"
+msgstr "사용자 삭제"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:89
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:142
+msgid "You cannot disable yourself"
+msgstr "자신을 비활성화할 수 없습니다"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:96
+msgid "Disable"
+msgstr "비활성화"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:96
+msgid "Enable"
+msgstr "활성화"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:119
+msgid "Email:"
+msgstr "이메일:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:122
+msgid "Role:"
+msgstr "역할:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:166
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:53
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:233
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:206
+msgid "Hide Instructions"
+msgstr "지침 숨기기"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:166
+msgid "How to manage users"
+msgstr "사용자 관리 방법"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:174
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:181
+msgid "Click"
+msgstr "클릭"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:174
+msgid "➕ Add User"
+msgstr "➕ 사용자 추가"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:174
+msgid "to open the new user form."
+msgstr "새 사용자 양식을 엽니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:176
+msgid "Enter a unique username, valid email address, and strong password."
+msgstr "고유한 사용자 이름, 유효한 이메일 주소, 강력한 비밀번호를 입력합니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:178
+msgid "Select the appropriate"
+msgstr "적절한"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:178
+msgid "role"
+msgstr "역할 선택"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:178
+msgid "admin"
+msgstr "관리자"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:178
+msgid "user"
+msgstr "사용자"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:181
+msgid "to save."
+msgstr "저장합니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:183
+msgid "To edit a user, click ✏️ and update their info."
+msgstr "사용자를 편집하려면 ✏️을 클릭하여 정보를 업데이트합니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:184
+msgid "To delete a user, click 🗑️ and confirm the deletion."
+msgstr "사용자를 삭제하려면 🗑️을 클릭하고 삭제를 확인합니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:186
+msgid "To disable or enable a user, click 🔴 or 🟢."
+msgstr "사용자를 비활성화하거나 활성화하려면 🔴 또는 🟢을 클릭합니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:188
+msgid "🟢 = User is enabled and can log in."
+msgstr "🟢 = 사용자가 활성화되어 있으며 로그인할 수 있습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:189
+msgid "🔴 = User is disabled and cannot log in."
+msgstr "🔴 = 사용자가 비활성화되어 로그인할 수 없습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:190
+msgid "⚪ = You cannot disable your own account."
+msgstr "⚪ = 자신의 계정을 비활성화할 수 없습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/smtp_config.html:28
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/system_config.html:33
+msgid "System Configuration"
+msgstr "시스템 구성"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/smtp_config.html:33
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/system_config.html:38
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/system_settings.html:15
+msgid "Key"
+msgstr "키"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/smtp_config.html:34
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/system_config.html:39
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/system_settings.html:16
+msgid "Value"
+msgstr "값"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/smtp_config.html:35
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/system_config.html:40
+msgid "Sensitive"
+msgstr "민감함"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/smtp_config.html:36
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/system_config.html:41
+msgid "Editable"
+msgstr "편집 가능"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/smtp_config.html:50
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/smtp_config.html:51
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/system_config.html:57
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/system_config.html:58
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:60
+msgid "Yes"
+msgstr "예"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/smtp_config.html:50
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/smtp_config.html:51
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/system_config.html:57
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/system_config.html:58
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:60
+msgid "No"
+msgstr "아니요"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/smtp_config.html:62
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/system_config.html:67
+msgid "Send Test Email"
+msgstr "테스트 이메일 보내기"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/system_config.html:51
+msgid "decrypted"
+msgstr "생성됨"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/apprise_config.html:3
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:9
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/assign_destinations.html:22
+msgid "Apprise Destinations"
+msgstr "Apprise 목적지"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/apprise_config.html:32
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:49
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/webhook_config.html:32
+msgid "Add Webhook"
+msgstr "웹훅 추가"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/apprise_config.html:32
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:49
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:49
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/webhook_config.html:32
+msgid "Add Destination"
+msgstr "목적지 추가"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/create_apprise.html:10
+msgid "Create Apprise Destination"
+msgstr "Apprise 목적지 생성"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/create_apprise.html:30
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/edit_apprise.html:30
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:60
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/create_smtp.html:100
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/edit_smtp.html:115
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:57
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/create_webhook.html:36
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/edit_webhook.html:36
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:61
+msgid "Enabled"
+msgstr "활성화됨"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/create_apprise.html:38
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/edit_apprise.html:38
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/create_smtp.html:108
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/create_webhook.html:44
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/edit_webhook.html:44
+msgid "Create Destination"
+msgstr "목적지 생성"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/create_apprise.html:47
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/edit_apprise.html:47
+msgid "Need help with Apprise URLs? See the"
+msgstr "Apprise URL에 도움이 필요하십니까? 다음을 참조하세요"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/create_apprise.html:51
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/edit_apprise.html:51
+msgid "Apprise Notification Services documentation"
+msgstr "Apprise 알림 서비스 문서"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/edit_apprise.html:10
+msgid "Edit Apprise Destination"
+msgstr "Apprise 목적지 편집"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:49
+msgid "Add Apprise"
+msgstr "Apprise 추가"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:58
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/edit_message.html:21
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:56
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:14
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/create_message.html:29
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/edit_message.html:23
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:57
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/view_message.html:14
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:52
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:58
+msgid "Label"
+msgstr "라벨"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:59
+msgid "URL"
+msgstr "URL"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:61
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:59
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:59
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/view_message.html:36
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:62
+msgid "Created At"
+msgstr "생성일"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:77
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:131
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:79
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:145
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:79
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:136
+msgid "Edit"
+msgstr "편집"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:79
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:133
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:81
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:147
+msgid "Cannot edit while in use"
+msgstr "사용 중에 편집할 수 없습니다"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:88
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:142
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:90
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:147
+msgid "Test"
+msgstr "테스트"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:102
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:156
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:104
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:170
+msgid "Cannot delete while in use"
+msgstr "사용 중에 삭제할 수 없습니다"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:118
+msgid "URL:"
+msgstr "URL:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:121
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:135
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:126
+msgid "Enabled:"
+msgstr "활성화됨:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:124
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:138
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:129
+msgid "Created:"
+msgstr "생성:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/bootstrap.html:14
+msgid "Create Admin Account"
+msgstr "관리자 계정 생성"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/bootstrap.html:16
+msgid "Let’s get started by creating your first admin account."
+msgstr "첫 번째 관리자 계정을 생성하여 시작합시다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/bootstrap.html:75
+msgid "Create Admin"
+msgstr "관리자 생성"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/forgot_password.html:12
+msgid "Forgot Password"
+msgstr "비밀번호를 잊으셨나요"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/forgot_password.html:15
+msgid ""
+"Enter your username and email. We'll send you a link to reset your password."
+msgstr "사용자 이름과 이메일을 입력하세요. 비밀번호를 재설정할 수 있는 링크를 보내드리겠습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/forgot_username.html:12
+msgid "Forgot Username"
+msgstr "사용자 이름을 잊으셨나요"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/forgot_username.html:15
+msgid "Enter your email address, and we'll send you your username."
+msgstr "이메일 주소를 입력하시면 사용자 이름을 보내드립니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/forgot_username.html:40
+msgid "Send Username"
+msgstr "사용자 이름 보내기"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/login.html:12
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/login.html:55
+msgid "Log In"
+msgstr "로그인"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/login.html:63
+msgid "Forgot Username?"
+msgstr "사용자 이름을 잊으셨나요?"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/login.html:65
+msgid "Forgot Password?"
+msgstr "비밀번호를 잊으셨나요?"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/login.html:67
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/signup.html:12
+msgid "Sign Up"
+msgstr "회원가입"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/reset_password.html:12
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/reset_password.html:117
+msgid "Reset Password"
+msgstr "비밀번호 재설정"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/reset_password.html:14
+msgid "Enter your username, email, and new password."
+msgstr "사용자 이름, 이메일, 새로운 비밀번호를 입력하세요."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/signup.html:14
+msgid "Fill out the form to create your account."
+msgstr "계정을 생성하려면 양식을 작성하세요."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/checkin/thank_you.html:10
+msgid "Check-In Successful"
+msgstr "체크인 성공"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/checkin/thank_you.html:11
+msgid "Thank you for checking in."
+msgstr "체크인해 주셔서 감사합니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/checkin/thank_you.html:14
+msgid "Checked in for:"
+msgstr "체크인 완료:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/checkin/thank_you.html:19
+msgid "Return to Dashboard"
+msgstr "대시보드로 돌아가기"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/assign_smtp.html:11
+msgid "📧 Assign SMTP Config to:"
+msgstr "📧 SMTP 설정 할당:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/assign_smtp.html:26
+msgid "No SMTP (Unassign)"
+msgstr "할당된 SMTP 구성 없음"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/assign_smtp.html:29
+msgid "This email will not use any SMTP configuration."
+msgstr "이 이메일은 SMTP 구성을 사용하지 않습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/assign_smtp.html:48
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/edit_smtp.html:123
+msgid "Save"
+msgstr "저장"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:12
+msgid "Attach Files for:"
+msgstr "첨부 파일:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:20
+msgid "Available Files"
+msgstr "사용 가능한 파일"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:35
+msgid "No files found in the upload directory."
+msgstr "업로드 디렉토리에 파일이 없습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:43
+msgid "Save Attachments"
+msgstr "첨부 파일 저장"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:53
+msgid "File Attach Notes"
+msgstr "파일 첨부 노트"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:62
+msgid "Important:"
+msgstr "포트:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:64
+msgid ""
+"Only files that are present in the 'uploads' folder (provided by your system"
+" administrator) will be shown here. If you do not see your file(s), please "
+"contact your Grylli administrator."
+msgstr ""
+"'uploads' 폴더에 있는 파일들만 여기에 표시됩니다 (시스템 관리자가 제공). 파일이 보이지 않으면 Grylli 관리자에게 "
+"문의하세요."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:68
+msgid "Accepted file types:"
+msgstr "허용되는 파일 형식:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:70
+msgid "Documents:"
+msgstr "문서:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:72
+msgid "Images:"
+msgstr "이미지:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:74
+msgid "Audio:"
+msgstr "오디오:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:78
+msgid "Maximum file size:"
+msgstr "최대 파일 크기:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:79
+msgid "10 MB per file"
+msgstr "파일당 10 MB"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:82
+msgid "Total upload size:"
+msgstr "총 업로드 크기:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:83
+msgid "20 MB (all files combined)"
+msgstr "20 MB (모든 파일 합산)"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/edit_message.html:12
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:73
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:164
+msgid "Edit Email"
+msgstr "이메일 편집"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/edit_message.html:12
+msgid "Create Email"
+msgstr "이메일 생성"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/edit_message.html:28
+msgid "To (Recipient Email)"
+msgstr "수신자 이메일"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/edit_message.html:35
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:57
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:18
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/create_message.html:36
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/edit_message.html:30
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:58
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/view_message.html:18
+msgid "Subject"
+msgstr "제목"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/edit_message.html:42
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:28
+msgid "Body"
+msgstr "본문"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/edit_message.html:50
+msgid "Save Email"
+msgstr "이메일 저장"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:48
+msgid "Add Email"
+msgstr "이메일 추가"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:58
+msgid "To"
+msgstr "수신자"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:75
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:166
+msgid "Disable to edit email"
+msgstr "테스트 이메일 전송 실패:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:80
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:171
+msgid "Attach Files"
+msgstr "파일 첨부"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:82
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:173
+msgid "Disable to attach files"
+msgstr "파일 첨부"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:87
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:178
+msgid "Attach SMTP Config"
+msgstr "SMTP 설정 첨부"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:89
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:180
+msgid "Disable to assign SMTP"
+msgstr "SMTP 할당 해제"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:94
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:185
+msgid "Schedule Check-In"
+msgstr "체크인 예약"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:96
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:187
+msgid "Disable to schedule check-in"
+msgstr "체크인 예약"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:102
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:193
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:92
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:169
+msgid "View Details"
+msgstr "세부사항 보기"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:109
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:200
+msgid "Send this email to yourself to preview it."
+msgstr "이 이메일을 자신에게 보내 미리보기 하세요."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:125
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:216
+msgid "Toggle Email On/Off"
+msgstr "이메일 켬/끔 전환"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:128
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:219
+msgid "Email is enabled"
+msgstr "이메일이 활성화되었습니다"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:130
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:221
+msgid "Email is disabled"
+msgstr "이메일이 비활성화되었습니다"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:146
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:51
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:133
+msgid "Label:"
+msgstr "라벨:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:150
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:137
+msgid "Subject:"
+msgstr "제목"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:158
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:141
+msgid "Created At:"
+msgstr "생성일"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:233
+msgid "How to create and send an email"
+msgstr "이메일 생성 및 전송 방법"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:240
+msgid ""
+"Click “Add Email” and fill out the subject, content, and recipient address."
+msgstr "“이메일 추가”를 클릭하고 제목, 내용, 수신인 주소를 입력하세요."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:241
+msgid "Attach any optional files (if needed)."
+msgstr "선택적으로 파일을 첨부하세요 (필요한 경우)."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:242
+msgid ""
+"Click 🧩 to assign a single SMTP configuration that will be used to send the "
+"email."
+msgstr "🧩를 클릭하여 이메일을 전송할 단일 SMTP 구성을 할당합니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:243
+msgid "Click ⏱️ to set a check-in interval and grace period for the email."
+msgstr "⏱️를 클릭하여 이메일의 체크인 간격과 유예 기간을 설정합니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:244
+msgid "Enable the email using the 🔴/🟢 toggle button."
+msgstr "🔴/🟢 토글 버튼을 사용하여 이메일을 활성화합니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:245
+msgid ""
+"Click 🧪 to test the email by sending it to yourself (not the recipient)."
+msgstr "🧪를 클릭하여 이메일을 본인에게 시험 발송합니다 (수신인 제외)."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:246
+msgid ""
+"If you don’t check in before the grace period ends, the email will be "
+"automatically sent."
+msgstr "유예 기간이 끝나기 전에 체크인하지 않으면 이메일은 자동으로 발송됩니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:247
+msgid "You can preview the email configuration using 🔍."
+msgstr "🔍을 사용하여 이메일 구성을 미리 볼 수 있습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:248
+msgid "Once a secure email is sent, it will be automatically disabled."
+msgstr "보안 이메일이 발송되면 자동으로 비활성화됩니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/schedule_email.html:9
+msgid "Schedule Email"
+msgstr "이메일 예약"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/schedule_email.html:18
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/schedule_message.html:18
+msgid "Years"
+msgstr "년"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/schedule_email.html:19
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/schedule_message.html:19
+msgid "Months"
+msgstr "개월"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/schedule_email.html:20
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/schedule_message.html:20
+msgid "Weeks"
+msgstr "주"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/schedule_email.html:21
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/schedule_message.html:21
+msgid "Days"
+msgstr "일"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/schedule_email.html:22
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/schedule_message.html:22
+msgid "Hours"
+msgstr "시간"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/schedule_email.html:23
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/schedule_message.html:23
+msgid "Minutes"
+msgstr "분"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/schedule_email.html:28
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/schedule_message.html:28
+msgid "Check-in"
+msgstr "체크인"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/schedule_email.html:51
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/schedule_message.html:51
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/view_message.html:26
+msgid "Grace Period"
+msgstr "유예 기간"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/schedule_email.html:80
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/schedule_message.html:80
+msgid "Save Schedule"
+msgstr "일정 저장"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:9
+msgid "Email Configuration"
+msgstr "이메일 구성"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:22
+msgid "Recipient"
+msgstr "수신인"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:33
+msgid "Attached Files"
+msgstr "첨부 파일"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:39
+msgid "No files attached"
+msgstr "첨부 파일 없음"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:46
+msgid "SMTP Configuration"
+msgstr "SMTP 구성"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:54
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:120
+msgid "Host:"
+msgstr "호스트:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:57
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:126
+msgid "Username:"
+msgstr "사용자 이름:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:60
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:132
+msgid "TLS:"
+msgstr "TLS:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:64
+msgid "No SMTP configuration assigned"
+msgstr "할당된 SMTP 구성 없음"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:69
+msgid "Schedule Information"
+msgstr "일정 정보"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:72
+msgid "Check-in Interval:"
+msgstr "체크인 간격:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:72
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:75
+msgid "minutes"
+msgstr "분"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:75
+msgid "Grace Period:"
+msgstr "유예 기간:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:79
+msgid "Last Check-in:"
+msgstr "마지막 체크인:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:82
+msgid "No check-in has occurred yet"
+msgstr "아직 체크인이 발생하지 않았습니다"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:92
+msgid "Back to Emails"
+msgstr "이메일로 돌아가기"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/locale/redirect_after_lang_set.html:15
+msgid "Switching Language..."
+msgstr "언어 전환 중..."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/locale/redirect_after_lang_set.html:18
+msgid "Applying new language..."
+msgstr "새로운 언어 적용 중..."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/assign_destinations.html:13
+msgid "Assign Destinations for"
+msgstr "목적지 할당"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/assign_destinations.html:62
+msgid "Save Destinations"
+msgstr "목적지 저장"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/create_message.html:17
+msgid "Edit Notificaton"
+msgstr "알림 편집"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/create_message.html:19
+msgid "Create Notification"
+msgstr "알림 생성"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/create_message.html:43
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/edit_message.html:37
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/view_message.html:42
+msgid "Content"
+msgstr "내용"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/create_message.html:51
+msgid "Save Notification"
+msgstr "알림 저장"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/edit_message.html:15
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:72
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:147
+msgid "Edit Notification"
+msgstr "알림 편집"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/edit_message.html:45
+msgid "Update Notification"
+msgstr "알림 업데이트"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:49
+msgid "Add Notification"
+msgstr "알림 추가"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:74
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:149
+msgid "Disable to edit notification"
+msgstr "알림 편집"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:79
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:154
+msgid "Assign Destinations"
+msgstr "목적지 할당"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:81
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:156
+msgid "Disable to assign destinations"
+msgstr "목적지 할당"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:86
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:161
+msgid "Set Schedule"
+msgstr "일정 설정"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:88
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:163
+msgid "Disable to set schedule"
+msgstr "일정 설정"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:99
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:176
+msgid "Send Test Notification"
+msgstr "알림 편집"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:112
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:192
+msgid "Toggle Message On/Off"
+msgstr "메시지 전환 켜기/끄기"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:114
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:194
+msgid "Notification is enabled"
+msgstr "알림이 활성화되었습니다"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:116
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:196
+msgid "Notification is disabled"
+msgstr "알림이 비활성화되었습니다"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:206
+msgid "How to create and send a notification"
+msgstr "알림 생성 및 전송 방법"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:216
+msgid "Click “Add notification” and fill out the subject and content fields."
+msgstr "“알림 추가”을 클릭하고 제목과 내용 필드를 작성하세요."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:217
+msgid "Save the notification to return to the overview."
+msgstr "알림을 저장하여 개요로 돌아갑니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:218
+msgid "You need to create at least one apprise or webhook destination."
+msgstr "최소한 하나의 apprise 또는 webhook 목적지를 생성해야 합니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:219
+msgid "You can create as many destinations as you like."
+msgstr "원하는 만큼 목적지를 생성할 수 있습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:220
+msgid "Click 🧩 to assign one or more Apprise and/or Webhook destinations."
+msgstr "하나 이상의 Apprise 및/또는 Webhook 목적지를 할당하려면 🧩를 클릭하세요."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:221
+msgid "Click ⏱️ to set a schedule and check-in interval."
+msgstr "일정 및 체크인 간격을 설정하려면 ⏱️를 클릭하세요."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:222
+msgid "Enable the notification using the 🔴/🟢 toggle button."
+msgstr "🔴/🟢 토글 버튼을 사용하여 알림을 활성화하세요."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:223
+msgid ""
+"If you don’t check in before the grace period ends, the notification will be"
+" sent."
+msgstr "유예 기간이 끝나기 전에 체크인하지 않으면 알림이 전송됩니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:224
+msgid "You can preview the notification config using 🔍."
+msgstr "🔍를 사용하여 알림 구성을 미리 볼 수 있습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:225
+msgid "Once a notification is sent, it will be automatically disabled."
+msgstr "알림이 전송되면 자동으로 비활성화됩니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/schedule_message.html:9
+msgid "Schedule Message"
+msgstr "메시지 일정"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/view_message.html:9
+msgid "Notifications Details"
+msgstr "알림 세부 정보"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/view_message.html:22
+msgid "Check-in Interval"
+msgstr "체크인 간격"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/view_message.html:31
+msgid "Last Check-in"
+msgstr "마지막 체크인"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/view_message.html:48
+msgid "Apprise URLs"
+msgstr "Apprise URL"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/view_message.html:54
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/view_message.html:64
+msgid "None assigned."
+msgstr "할당됨 없음."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/view_message.html:73
+msgid "Back to Notifications"
+msgstr "알림으로 돌아가기"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/create_smtp.html:10
+msgid "Create SMTP Destination"
+msgstr "SMTP 목적지 생성"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/create_smtp.html:70
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/edit_smtp.html:85
+msgid "Hold to reveal"
+msgstr "보려면 길게 누르세요"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/create_smtp.html:93
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/edit_smtp.html:108
+msgid "Use TLS"
+msgstr "TLS 사용"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/edit_smtp.html:10
+msgid "Edit SMTP Destination"
+msgstr "SMTP 목적지 생성"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:9
+msgid "SMTP Destinations"
+msgstr "SMTP 목적지"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:44
+msgid "Add SMTP"
+msgstr "SMTP 추가"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:53
+msgid "Host"
+msgstr "호스트"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:54
+msgid "Port"
+msgstr "포트"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:56
+msgid "TLS"
+msgstr "TLS"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:58
+msgid "Created"
+msgstr "생성됨"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:89
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:155
+msgid "Send Test"
+msgstr "테스트 전송"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:123
+msgid "Port:"
+msgstr "포트:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:129
+msgid "Password:"
+msgstr "비밀번호:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:181
+msgid "Hide SMTP Setup Help"
+msgstr "SMTP 설정 도움말 숨기기"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:181
+msgid "Show SMTP Setup Help"
+msgstr "SMTP 설정 도움말 보기"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:187
+msgid ""
+"Need help finding your SMTP server settings? See here for some links to "
+"common providers:"
+msgstr "SMTP 서버 설정을 찾는 데 도움이 필요하신가요? 일반적인 제공 업체에 대한 링크 참조:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:191
+msgid "SMTP Server Settings Help (GitHub)"
+msgstr "SMTP 서버 설정 도움말 (GitHub)"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:195
+msgid ""
+"Find official documentation links for Gmail, Outlook, Yahoo, AOL, and "
+"others."
+msgstr "Gmail, Outlook, Yahoo, AOL 등 공식 문서 링크 찾기."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:196
+msgid ""
+"If your provider isn’t listed, search their support site or a search engine "
+"for 'SMTP settings'."
+msgstr "제공자 목록에 없다면, 지원 사이트 또는 검색 엔진에서 'SMTP 설정'을 검색하세요."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:197
+msgid ""
+"Some providers (like Gmail, Yahoo) require 'App Passwords' or special "
+"setup—see their docs!"
+msgstr "일부 제공자(Gmail, Yahoo 등)는 '앱 비밀번호' 또는 특별한 설정을 요구합니다—문서를 참조하세요!"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/create_webhook.html:10
+msgid "Create Webhook"
+msgstr "웹훅 생성"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/edit_webhook.html:10
+msgid "Edit Webhook"
+msgstr "웹훅 편집"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:9
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/webhook_config.html:3
+msgid "Webhooks Destinations"
+msgstr "웹훅 목적지"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:59
+msgid "Endpoint"
+msgstr "엔드포인트"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:60
+msgid "Description"
+msgstr "설명"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:81
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:138
+msgid "Cannot edit while assigned to notifications"
+msgstr "알림에 할당된 상태로 편집할 수 없습니다"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:104
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:161
+msgid "Cannot delete while assigned to notifications"
+msgstr "알림에 할당된 상태로 삭제할 수 없습니다"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:120
+msgid "Endpoint:"
+msgstr "엔드포인트:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:123
+msgid "Description:"
+msgstr "설명:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/account.py:51
+msgid "Current password is required to change password."
+msgstr "비밀번호를 변경하려면 현재 비밀번호가 필요합니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/account.py:55
+msgid "Current password is incorrect."
+msgstr "현재 비밀번호가 올바르지 않습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/account.py:66
+msgid "Account updated successfully."
+msgstr "계정이 성공적으로 업데이트되었습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/account.py:72
+msgid "An error occurred while updating your account."
+msgstr "계정 업데이트 중 오류가 발생했습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/apprise.py:48
+msgid "🧪 Test notification sent successfully!"
+msgstr "🧪 테스트 알림을 성공적으로 보냈습니다!"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/apprise.py:50
+msgid "🧪 Failed to send test notification: "
+msgstr "🧪 테스트 알림을 보내는 데 실패했습니다:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/apprise.py:53
+msgid "🧪 Error sending test notification."
+msgstr "🧪 테스트 알림을 보내는 중 오류가 발생했습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/apprise.py:89
+msgid "Apprise destination created successfully."
+msgstr "Apprise 목적지가 성공적으로 생성되었습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/apprise.py:147
+msgid "Apprise destination updated successfully."
+msgstr "Apprise 목적지가 성공적으로 업데이트되었습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/apprise.py:172
+msgid "Apprise destination deleted."
+msgstr "Apprise 목적지가 삭제되었습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:93
+msgid "Admin account created successfully."
+msgstr "관리자 계정이 성공적으로 생성되었습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:106
+msgid "An error occurred while creating the admin account."
+msgstr "관리자 계정을 생성하는 중 오류가 발생했습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:142
+msgid ""
+"Your account is not activated. Please check your email for the activation "
+"link."
+msgstr "계정이 활성화되지 않았습니다. 이메일에서 활성화 링크를 확인하세요."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:150
+msgid "Logged in successfully."
+msgstr "성공적으로 로그인했습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:165
+msgid "Invalid username or password."
+msgstr "잘못된 사용자 이름 또는 비밀번호입니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:190
+msgid "You have been logged out."
+msgstr "로그아웃되었습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:224
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/email.py:261
+msgid "Access denied."
+msgstr "접근이 거부되었습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:247
+msgid "If a user with that email exists, we've sent the username to them."
+msgstr "해당 이메일을 가진 사용자가 존재하면 사용자 이름을 보냈습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:272
+msgid "A password reset link has been sent to your email."
+msgstr "비밀번호 재설정 링크가 이메일로 전송되었습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:274
+msgid "No account found matching that username and email."
+msgstr "일치하는 사용자 이름과 이메일로 계정을 찾을 수 없습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:310
+msgid "The reset link is invalid or has expired."
+msgstr "재설정 링크가 유효하지 않거나 만료되었습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:322
+msgid "Username and email do not match."
+msgstr "사용자 이름과 이메일이 일치하지 않습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:340
+msgid "Your password has been reset. Please log in."
+msgstr "비밀번호가 재설정되었습니다. 로그인하십시오."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:361
+msgid "Invalid registration PIN."
+msgstr "잘못된 등록 PIN."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:368
+msgid "Username or email already exists."
+msgstr "사용자 이름 또는 이메일이 이미 존재합니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:395
+msgid "Account created! Please check your email to activate your account."
+msgstr "계정이 생성되었습니다! 이메일을 확인하여 계정을 활성화하십시오."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:412
+msgid "Activation link is invalid or expired."
+msgstr "활성화 링크가 유효하지 않거나 만료되었습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:417
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/users.py:44
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/users.py:87
+msgid "User not found."
+msgstr "사용자를 찾을 수 없습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:421
+msgid "Account already activated. Please log in."
+msgstr "계정이 이미 활성화되었습니다. 로그인하십시오."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:427
+msgid "Your account has been activated! You can now log in."
+msgstr "계정이 활성화되었습니다! 이제 로그인할 수 있습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/backups.py:44
+#, python-format
+msgid "Backup created: %(filename)s"
+msgstr "백업 생성됨: %(filename)s"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/backups.py:49
+msgid "Failed to create backup."
+msgstr "백업 생성에 실패했습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/backups.py:65
+#, python-format
+msgid "Backup deleted: %(filename)s"
+msgstr "백업 삭제됨: %(filename)s"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/backups.py:68
+msgid "Backup file not found."
+msgstr "백업 파일을 찾을 수 없습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/backups.py:70
+msgid "Failed to delete backup."
+msgstr "백업 삭제에 실패했습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/checkin.py:37
+msgid "Invalid check-in link."
+msgstr "잘못된 체크인 링크입니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/checkin.py:42
+msgid "You are not authorized to check in for this item."
+msgstr "이 항목에 대해 체크인할 권한이 없습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/checkin.py:66
+msgid "Unsupported check-in type."
+msgstr "지원되지 않는 체크인 유형입니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/checkin.py:105
+msgid "✅ Enabled and timer started."
+msgstr "✅ 활성화되고 타이머가 시작되었습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/checkin.py:108
+msgid "⛔ Disabled."
+msgstr "⛔ 비활성화되었습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/checkin.py:110
+msgid "⚠️ Cannot toggle — missing schedule or destination."
+msgstr "⚠️ 전환할 수 없습니다 — 일정 또는 목적지가 없습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/email.py:87
+msgid "Message saved."
+msgstr "메시지가 저장되었습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/email.py:118
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/messages.py:162
+msgid "Message deleted."
+msgstr "메시지가 삭제되었습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/email.py:150
+msgid "Attached files updated."
+msgstr "첨부 파일이 업데이트되었습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/email.py:201
+msgid "SMTP configuration not assigned or is disabled."
+msgstr "SMTP 구성 할당되지 않았거나 비활성화되었습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/email.py:232
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/smtp_settings_admin.py:49
+msgid "Test email sent successfully."
+msgstr "테스트 이메일이 성공적으로 전송되었습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/email.py:277
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/messages.py:294
+msgid "Schedule updated successfully."
+msgstr "일정이 성공적으로 업데이트되었습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/email.py:304
+msgid "SMTP configuration assigned."
+msgstr "SMTP 구성이 할당되었습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/email.py:310
+msgid "SMTP configuration removed."
+msgstr "SMTP 구성이 할당되었습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/messages.py:94
+msgid "Message created successfully."
+msgstr "메시지가 성공적으로 생성되었습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/messages.py:129
+msgid "Message updated successfully."
+msgstr "메시지가 성공적으로 업데이트되었습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/messages.py:215
+msgid "Destinations updated."
+msgstr "목적지가 업데이트되었습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/messages.py:421
+msgid "No destinations assigned to this message."
+msgstr "SMTP 구성 할당되지 않았거나 비활성화되었습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/messages.py:427
+msgid "Test message sent successfully."
+msgstr "테스트 이메일이 성공적으로 전송되었습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/messages.py:429
+msgid "Test message failed: "
+msgstr "메시지가 저장되었습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/secure_email.py:107
+msgid "✅ SMTP settings saved."
+msgstr "SMTP 설정"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/smtp.py:53
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/user_smtp.py:56
+msgid "SMTP destination created successfully."
+msgstr "SMTP 목적지가 성공적으로 생성되었습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/smtp.py:80
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/user_smtp.py:89
+msgid "SMTP destination updated."
+msgstr "SMTP 목적지가 업데이트되었습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/smtp.py:95
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/user_smtp.py:104
+msgid "SMTP destination deleted."
+msgstr "SMTP 목적지가 삭제되었습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/smtp.py:109
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/user_smtp.py:120
+msgid "Test email sent successfully to your account email."
+msgstr "테스트 이메일이 계정 이메일로 성공적으로 전송되었습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/smtp.py:111
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/user_smtp.py:122
+msgid "Failed to send test email. Check SMTP settings."
+msgstr "테스트 이메일 전송에 실패했습니다. SMTP 설정을 확인하십시오."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/smtp_settings_admin.py:46
+msgid "Test Email from Grylli"
+msgstr "Grylli의 테스트 이메일"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/smtp_settings_admin.py:47
+msgid "This is a test email from the Grylli SMTP settings page."
+msgstr "이것은 Grylli SMTP 설정 페이지에서 보낸 테스트 이메일입니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/smtp_settings_admin.py:51
+msgid "Failed to send test email: "
+msgstr "테스트 이메일 전송 실패:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/users.py:63
+msgid "User updated successfully."
+msgstr "사용자가 성공적으로 업데이트되었습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/users.py:71
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/users.py:230
+msgid "An error occurred while updating the user."
+msgstr "사용자를 업데이트하는 동안 오류가 발생했습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/users.py:141
+msgid "User deleted."
+msgstr "사용자가 삭제되었습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/users.py:148
+msgid "An error occurred while deleting the user."
+msgstr "사용자를 삭제하는 동안 오류가 발생했습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/users.py:169
+msgid "Password is required when creating a new user."
+msgstr "새 사용자를 생성할 때 암호가 필요합니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/users.py:173
+msgid "Username already exists."
+msgstr "사용자 이름이 이미 존재합니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/users.py:177
+msgid "Email already exists."
+msgstr "이메일이 이미 존재합니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/users.py:191
+#, python-format
+msgid "User '%(username)s' created successfully."
+msgstr "사용자 '%(username)s'이(가) 성공적으로 생성되었습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/users.py:198
+msgid "Failed to create user."
+msgstr "사용자를 생성하는 데 실패했습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/users.py:211
+msgid "You cannot change your own enabled status."
+msgstr "자신의 활성 상태를 변경할 수 없습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/users.py:220
+#, python-format
+msgid "User '%(username)s' has been %(status)s."
+msgstr "사용자 '%(username)s'이(가) %(status)s되었습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/users.py:223
+msgid "enabled"
+msgstr "활성화됨"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/users.py:223
+msgid "disabled"
+msgstr "비활성화됨"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/webhook.py:51
+msgid "Webhook created successfully."
+msgstr "웹훅이 성공적으로 생성되었습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/webhook.py:104
+msgid "Webhook updated successfully."
+msgstr "웹훅이 성공적으로 업데이트되었습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/webhook.py:130
+msgid "Webhook deleted."
+msgstr "웹훅이 삭제되었습니다."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/webhook.py:160
+msgid "🧪 Webhook test sent successfully!"
+msgstr "🧪 웹훅 테스트가 성공적으로 전송되었습니다!"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/webhook.py:162
+msgid "🧪 Webhook test failed: "
+msgstr "🧪 웹훅 테스트 실패:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/webhook.py:165
+msgid "🧪 Error sending webhook test."
+msgstr "🧪 웹훅 테스트 전송 오류."
+
+#~ msgid ""
+#~ "Grylli is a secure message delivery platform designed to activate after "
+#~ "prolonged user inactivity."
+#~ msgstr "Grylli는 사용자의 장기적인 비활성화 후에 활성화될 수 있는 안전한 메시지 전달 플랫폼입니다."
+
+#~ msgid ""
+#~ "It is a modern reimplementation of Gone Man’s Switch with a refined tech "
+#~ "stack, better maintainability, and an improved user experience."
+#~ msgstr ""
+#~ "이것은 개선된 기술 스택, 더 나은 유지 관리성과 향상된 사용자 경험을 제공하는 Gone Man's Switch의 현대적인 재구현입니다."
+
+#~ msgid "Body:"
+#~ msgstr "본문:"
+
+#~ msgid "Subject:"
+#~ msgstr "제목:"
+
+#~ msgid "Content:"
+#~ msgstr "내용:"
+
+#~ msgid "Edit SMTP"
+#~ msgstr "SMTP 편집"
+
+#~ msgid ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+#~ msgstr ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+
+#~ msgid "Admin Notes"
+#~ msgstr "관리자 메모"
+
+#~ msgid "Register"
+#~ msgstr "등록"
+
+#~ msgid "View"
+#~ msgstr "보기"
+
+#~ msgid "Schedule"
+#~ msgstr "일정"
+
+#~ msgid "Message is enabled"
+#~ msgstr "메시지가 활성화되었습니다"
+
+#~ msgid "Message is disabled"
+#~ msgstr "메시지가 비활성화되었습니다"
+
+#~ msgid "No SMTP configuration selected."
+#~ msgstr "선택한 SMTP 구성이 없습니다."

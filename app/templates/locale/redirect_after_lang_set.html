@@ -1,0 +1,20 @@
+{# ---------------------------------------------------------------------
+  redirect_after_lang_set.html
+  app/templates/locale/redirect_after_lang_set.html
+  [Describe purpose or main content of this template.]
+--------------------------------------------------------------------- #}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="refresh"
+              content="0; url={{ request.referrer or url_for("auth.login") }}" />
+        <script>
+      // In case meta refresh fails
+      window.location.href = "{{ request.referrer or url_for('auth.login') }}";
+        </script>
+        <title>{{ _("Switching Language...") }}</title>
+    </head>
+    <body>
+        <p>{{ _("Applying new language...") }}</p>
+    </body>
+</html>

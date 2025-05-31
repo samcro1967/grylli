@@ -1,0 +1,76 @@
+{# ---------------------------------------------------------------------
+  forgot_username.html
+  app/templates/auth/forgot_username.html
+  Username recovery page: enter your email, get your username via email.
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{# =================== CONTENT BLOCK =================== #}
+{% block content %}
+    <!-- Outer container for centering and styling -->
+    <div class="max-w-md mx-auto mt-20 bg-white dark:bg-zinc-800 shadow-md rounded-xl p-6 space-y-4">
+        {# ---------- Page Title ---------- #}
+        <h1 class="text-xl font-semibold text-black dark:text-white">{{ _("Forgot Username") }}</h1>
+        {# ---------- Instructions ---------- #}
+        <p class="text-sm text-zinc-600 dark:text-zinc-300">
+            {{ _("Enter your email address, and we'll send you your username.") }}
+        </p>
+        <!-- =================== FORM START =================== -->
+        <form method="post" id="forgot-username-form" novalidate>
+            {{ form.hidden_tag() }}
+            {# ---------- Email Field ---------- #}
+            <div class="mb-4">
+                {{ form.email.label(class="block text-sm font-medium mb-1") }}
+                {{ form.email(id="email",
+                                class="form-input w-full bg-zinc-100 dark:bg-zinc-700 text-black dark:text-white",
+                                autocomplete="email",
+                                aria_invalid="true" if form.email.errors else "false") }}
+                {# Error messages for email #}
+                {% if form.email.errors %}
+                    <ul class="text-red-600 text-xs mt-1" id="email-errors">
+                        {% for error in form.email.errors %}<li>{{ error }}</li>{% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+            {# ---------- Buttons Row ---------- #}
+            <div class="flex flex-row gap-2 items-stretch mt-4">
+                {# Submit button. JS controls enabled/disabled state and color. #}
+                <button type="submit"
+                        id="submit-btn"
+                        class="flex-1 bg-red-600 text-white font-semibold py-2 px-4 rounded shadow transition duration-150 cursor-not-allowed"
+                        disabled>{{ _("Send Username") }}</button>
+                {{ form.cancel(class="flex-1 bg-gray-300 dark:bg-zinc-600 text-black dark:text-white font-semibold py-2 px-4 rounded shadow transition duration-150",
+                                formnovalidate=True) }}
+            </div>
+        </form>
+        <!-- =================== FORM END ===================== -->
+    </div>
+    <!-- =================== EMAIL VALIDATION SCRIPT =================== -->
+    <script>
+    // Form email validation and submit button handling
+    document.addEventListener("DOMContentLoaded", function () {
+      const emailInput = document.getElementById("email");
+      const submitBtn = document.getElementById("submit-btn");
+
+      function validateEmail(email) {
+        // Basic email pattern; matches WTForms Email validator
+        const re = /^[^@\s]+@[^@\s]+\.[^@\s]+$/;
+        return re.test(email);
+      }
+
+      emailInput.addEventListener("input", () => {
+        const isValid = validateEmail(emailInput.value);
+
+        if (isValid) {
+          submitBtn.disabled = false;
+          submitBtn.classList.remove("bg-red-600", "cursor-not-allowed");
+          submitBtn.classList.add("bg-green-600", "hover:bg-green-700", "cursor-pointer");
+        } else {
+          submitBtn.disabled = true;
+          submitBtn.classList.remove("bg-green-600", "hover:bg-green-700", "cursor-pointer");
+          submitBtn.classList.add("bg-red-600", "cursor-not-allowed");
+        }
+      });
+    });
+    </script>
+    <!-- =================== END SCRIPT =================== -->
+{% endblock %}

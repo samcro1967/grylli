@@ -1,0 +1,2471 @@
+# Icelandic translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-05-31 09:39-0500\n"
+"PO-Revision-Date: 2025-05-25 16:12-0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: is <LL@li.org>\n"
+"Language: is\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n%10==1 && n%100!=11 ? 0 : 1);\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/init_db.py:55
+#, python-format
+msgid "Tables currently in DB: %s"
+msgstr "Töflur núna í gagnagrunni:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/init_db.py:58
+msgid "Database or system_config table missing. Running migrations now..."
+msgstr "Gagnagrunn eða system_config tafla vantar. Keyri núna breytingar..."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/init_db.py:61
+msgid "Migrations applied successfully."
+msgstr "Breytingar hafa verið beittar með góðum árangri."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/init_db.py:63
+msgid "Migration failed."
+msgstr "Breyting mistókst."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/init_db.py:68
+msgid "System config seeded successfully."
+msgstr "System config var sáð með góðum árangri."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/init_db.py:70
+msgid "Error seeding system config."
+msgstr "Villa við sáningu system config:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/services/mail.py:12
+#: /home/osuhickeys/Documents/Docker/grylli/app/services/system_settings_email.py:40
+msgid "Missing required config setting: "
+msgstr "Vantar nauðsynlega stillingu:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/services/mail.py:19
+#: /home/osuhickeys/Documents/Docker/grylli/app/services/system_settings_email.py:47
+#, python-format
+msgid "Failed to decrypt %(key)s: %(error)s"
+msgstr "Mistókst að afkóða %(key)s: %(error)s"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/services/mail.py:29
+#, python-format
+msgid ""
+"get_setting('%(key)s') -> '%(value)s' (raw: '%(raw)s', sensitive: "
+"%(sensitive)s)"
+msgstr ""
+"fá stillingu('%(key)s') -> '%(value)s' (hrátt: '%(raw)s', viðkvæmt: "
+"%(sensitive)s)"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/services/mail.py:40
+#, python-format
+msgid "Preparing email to %(to)s"
+msgstr "Undirbýr tölvupóst til %(to)s"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/services/mail.py:53
+#, python-format
+msgid ""
+"SMTP host = '%(host)s' (type: %(host_type)s), port = %(port)s (type: "
+"%(port_type)s)"
+msgstr ""
+"SMTP host = '%(host)s' (tegund: %(host_type)s), port = %(port)s (tegund: "
+"%(port_type)s)"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/services/mail.py:59
+#, python-format
+msgid "Using user: %(user)s"
+msgstr "Notar notanda: %(user)s"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/services/mail.py:64
+msgid "Starting TLS"
+msgstr "Byrjar TLS"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/services/mail.py:66
+msgid "Logging in"
+msgstr "Skrá inn"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/services/mail.py:68
+msgid "Sending message"
+msgstr "Dagskrá skilaboðs"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/services/mail.py:70
+msgid "Email sent successfully"
+msgstr "Prófunarpóstur sendur með árangri."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/services/mail.py:72
+msgid "SMTP error: "
+msgstr "SMTP villa:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/about.html:10
+msgid "About Grylli"
+msgstr "Um Grylli"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/about.html:13
+msgid ""
+"Grylli is a secure, self-hosted message delivery platform that automatically"
+" sends pre-configured messages if a user fails to check in within a defined "
+"time period."
+msgstr ""
+"Grylli er öruggur, sjálfshýstur skilaboðapallur sem sendir sjálfkrafa "
+"fyrirfram stillt skilaboð ef notandi gleymir að skrá sig inn innan "
+"skilgreinds tímabils."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/about.html:14
+msgid "It supports multiple users and customizable schedules."
+msgstr "Það styður marga notendur og sérhannaðar tímasetningar."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/about.html:15
+msgid ""
+"Messages can be delivered via email, webhooks, or over 80 third-party "
+"services through Apprise."
+msgstr ""
+"Skilaboð geta verið send með tölvupósti, vefkrókum eða yfir 80 þjónustum "
+"þriðja aðila með Apprise."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/about.html:16
+msgid ""
+"Users can configure their own SMTP servers to ensure messages appear to come"
+" directly from them — not from the system administrator."
+msgstr ""
+"Notendur geta stillt eigin SMTP þjónara til að tryggja að skilaboð virðist "
+"koma beint frá þeim — ekki frá kerfisstjóra."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/about.html:17
+msgid ""
+"Sensitive data is encrypted at rest, and all message operations are secured "
+"with strong authentication and audit-friendly logging."
+msgstr ""
+"Viúkvæmir gögn eru dulkóðuð í hvíld, og allir skilaboðaaðgerðir eru tryggðar"
+" með sterkri auðkenningu og skráningu sem er hentug til endurskoðunar."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/about.html:18
+msgid ""
+"Built with a modern, reactive technology stack, Grylli is optimized for "
+"responsiveness and works seamlessly across desktop and mobile devices."
+msgstr ""
+"Gert með nútíma og áreiáanlegum tækni, er Grylli bjartsýnt fyrir viðbrögð og"
+" vinnur hnökralaust á bæði skjáborðum og farsímum."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/about.html:23
+msgid "Version:"
+msgstr "Útgáfa:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/about.html:26
+msgid "Repository:"
+msgstr "Geymsla:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/about.html:30
+msgid "GitHub - samcro1967/grylli"
+msgstr "GitHub - samcro1967/grylli"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/help.html:2
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/help.html:5
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:117
+msgid "Help"
+msgstr "Aðstoð"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/help.html:7
+msgid ""
+"Grylli includes built-in instructions throughout the app to help you "
+"configure and manage your setup."
+msgstr ""
+"Grylli inniheldur innbyggðar leiðbeiningar í gegnum appið til að hjálpa þér "
+"að stilla og stjórna uppsetningu þinni."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/help.html:8
+msgid ""
+"This page provides an overview of key features and direct links to where "
+"they can be managed."
+msgstr ""
+"Þessi síða veitir yfirlit yfir lykileiginleika og beinar tengingar við það "
+"hvar hægt er að stjórna þeim."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/help.html:12
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:292
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:9
+msgid "Notifications"
+msgstr "Tilkynningar"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/help.html:14
+msgid "Create and assign messages"
+msgstr "Búðu til skilaboð eða tölvupóst."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/index.html:32
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/help.html:17
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:267
+msgid "SMTP Settings"
+msgstr "SMTP stillingar"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/help.html:19
+msgid "Use your own email server"
+msgstr "Notaðu eigin tölvupóstþjón"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/help.html:22
+msgid "Apprise Integration"
+msgstr "Apprise áfangastaðir"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/help.html:24
+msgid "Send notifications to 80+ supported services"
+msgstr "Sendu tilkynningar til 80+ styddra þjónusta"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/help.html:27
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:319
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/assign_destinations.html:41
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/view_message.html:58
+msgid "Webhooks"
+msgstr "Webhooks"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/help.html:29
+msgid "Trigger actions or external workflows"
+msgstr "Kveikja aðgerðir eða ytri verkflæði"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:9
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/help.html:32
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:339
+msgid "Emails"
+msgstr "Tölvupóstar"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/help.html:34
+msgid "View and manage secure email messages"
+msgstr "Yfirlit yfir örugg skilaboð með tölvupósti"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/help.html:38
+msgid "Security"
+msgstr "🔐 Öryggi"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/help.html:39
+msgid "Grylli encrypts sensitive data and logs all key actions for auditing."
+msgstr ""
+"Grylli dulkóðar viðkvæm gögn og skráir allar lykil aðgerðir til "
+"endurskoðunar."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/index.html:10
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/locale.py:73
+msgid "Welcome to Grylli"
+msgstr "Velkomin/n í Grylli"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/index.html:12
+msgid "Pronounced"
+msgstr "Borist eins"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/index.html:12
+msgid "like “grill-ee”"
+msgstr "og \"grill-ee\""
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/index.html:16
+msgid ""
+"Grylli is a secure message scheduling and delivery system designed to ensure"
+" your important messages are delivered — even if you can’t be there to send "
+"them."
+msgstr ""
+"Grylli er öruggt skilaboða fyrirkomulag og sendingarkerfi sem er hannað til "
+"að tryggja að mikilvægu skilaboð komist til skila — jafnvel þó að þú sért "
+"ekki til staðar til að senda þau."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/index.html:20
+msgid ""
+"Whether you’re planning ahead, setting up emergency communication, or "
+"building peace of mind, Grylli helps automate your message delivery via "
+"email, webhooks, or Apprise notifications if you miss a check-in."
+msgstr ""
+"Hvort sem þú ert að skipuleggja framtíðina, setja upp neyðarsamskipti, eða "
+"byggja frið, hjálpar Grylli við að gera færsluaðgerð sjálfvirka "
+"skeytasendingar þínar í gegnum tölvupóst, vefhooks eða Apprise tilkynningar "
+"ef þú missir af innritun."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/index.html:23
+msgid "Getting Started"
+msgstr "Byrjaðu"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/index.html:25
+msgid "Create a message or email."
+msgstr "Búðu til skilaboð eða tölvupóst."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/index.html:26
+msgid "Set your check-in interval and grace period."
+msgstr "Settu innritunarbil og frest."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/index.html:27
+msgid "Assign one or more delivery destinations."
+msgstr "Úthlutaðu einni eða fleiri sendaáfangastöðum."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/index.html:28
+msgid "Optionally attach files for secure emails."
+msgstr "Bættu við skráum fyrir örugga tölvupósta ef óskað."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/index.html:29
+msgid "Enable the message to start monitoring."
+msgstr "Virkjaðu skilaboðið til að hefja vöktun."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/index.html:30
+msgid "If you don’t check in, Grylli delivers the message for you."
+msgstr "Ef þú skráir þig ekki inn, sendir Grylli skilaboðin fyrir þig."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:17
+msgid "Grylli"
+msgstr "Grylli"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:51
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:209
+msgid "Home"
+msgstr "Heim"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:99
+msgid "Account"
+msgstr "Aðgangur"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:105
+msgid "About"
+msgstr "Um"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:111
+msgid "System Info"
+msgstr "Kerfisupplýsingar"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:17
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:134
+msgid "Translations"
+msgstr "Þýðingar"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:146
+msgid "Logout"
+msgstr "Útskráning"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:170
+msgid "Menu"
+msgstr "Valmynd"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:232
+msgid "Administration"
+msgstr "Stjórnun"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:248
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:309
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:356
+msgid "Overview"
+msgstr "Yfirlit"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/index.html:27
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:253
+msgid "Backups"
+msgstr "Afrit"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:9
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:258
+msgid "Users"
+msgstr "Notendur"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/index.html:22
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/system_settings.html:10
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:263
+msgid "System Settings"
+msgstr "Kerfisstillingar"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:308
+msgid "Overview of notification settings"
+msgstr "Yfirlit yfir stillingar fyrir tilkynningar"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:313
+msgid "Configure Apprise services"
+msgstr "Stilla Apprise þjónustur"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:314
+msgid "Apprise"
+msgstr "Apprise"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:318
+msgid "Configure Webhook integrations"
+msgstr "Stilla Webhook samþættingar"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:355
+msgid "Overview of secure email messages"
+msgstr "Yfirlit yfir örugg skilaboð með tölvupósti"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:360
+msgid "Configure SMTP email settings"
+msgstr "Stilla SMTP póststillningar"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:361
+msgid "SMTP"
+msgstr "SMTP"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:373
+msgid "Toggle Theme"
+msgstr "Skipta um Þema"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:403
+msgid "Theme"
+msgstr "Þema"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:11
+msgid "📦 Environment Versions"
+msgstr "📦 Útgáfur af Umhverfi"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:17
+msgid "Category"
+msgstr "Flokkur"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:18
+msgid "Tool"
+msgstr "Verkfæri"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:19
+msgid "Version"
+msgstr "Útgáfa"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:25
+msgid "🧠 Python"
+msgstr "🧠 Python"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:26
+msgid "Python"
+msgstr "Python"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:30
+msgid "pip"
+msgstr "pip"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:34
+msgid "SQLite"
+msgstr "SQLite"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:40
+msgid "⚙️ Core"
+msgstr "⚙️ Kjarni"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:47
+msgid "🔐 Security"
+msgstr "🔐 Öryggi"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:48
+msgid "Email Validator"
+msgstr "Tölvupóststaðfestir"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:52
+msgid "Cryptography"
+msgstr "Dulkóðun"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:57
+msgid "🕰️ Scheduling"
+msgstr "🕰️ Tímasetningar"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:58
+msgid "APScheduler"
+msgstr "APScheduler"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:62
+msgid "Apprise (Python)"
+msgstr "Apprise (Python)"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:66
+msgid "Apprise CLI"
+msgstr "Apprise CLI"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:74
+msgid "🌐 Frontend"
+msgstr "🌐 Framendi"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/manage_account.html:11
+msgid "Manage Account"
+msgstr "Stjórna Reikningi"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/manage_account.html:12
+msgid "Update your profile information and password."
+msgstr "Uppfæra upplýsingar um prófíl þinn og lykilorð."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/manage_account.html:41
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/create_user.html:40
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/bootstrap.html:43
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/reset_password.html:43
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/signup.html:43
+msgid "Please enter a valid email address."
+msgstr "Vinsamlegast sláðu inn gilt netfang."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/manage_account.html:62
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/manage_account.html:96
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/manage_account.html:127
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/reset_password.html:67
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/reset_password.html:98
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/signup.html:66
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/signup.html:96
+msgid "Show/hide password"
+msgstr "Haltu til að sýna lykilorð"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/manage_account.html:89
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/create_user.html:53
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/bootstrap.html:51
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/reset_password.html:59
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/signup.html:59
+msgid "Password must meet all complexity requirements."
+msgstr "Lykilorð verður að uppfylla allar flækjukröfur."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/manage_account.html:141
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/create_user.html:72
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/edit_user.html:74
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/bootstrap.html:69
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/reset_password.html:111
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/signup.html:109
+msgid "Passwords do not match."
+msgstr "Lykilorð passa ekki saman."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/manage_account.html:147
+msgid "Update Account"
+msgstr "Uppfæra Reikning"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/manage_account.html:151
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/create_user.html:82
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/edit_user.html:104
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/help_form.html:28
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/create_apprise.html:42
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/edit_apprise.html:42
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/reset_password.html:122
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/assign_smtp.html:50
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:46
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/edit_message.html:54
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/schedule_email.html:84
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/assign_destinations.html:66
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/create_message.html:55
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/edit_message.html:48
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/schedule_message.html:84
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/create_smtp.html:112
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/edit_smtp.html:126
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/create_webhook.html:48
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/edit_webhook.html:48
+msgid "Cancel"
+msgstr "Hætta við"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/manage_account.html:159
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/create_user.html:90
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/edit_user.html:88
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/bootstrap.html:83
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/reset_password.html:129
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/signup.html:133
+msgid "Minimum 8 characters"
+msgstr "Að lágmarki 8 stafir"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/manage_account.html:160
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/create_user.html:91
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/edit_user.html:89
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/bootstrap.html:84
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/reset_password.html:130
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/signup.html:134
+msgid "At least one uppercase letter"
+msgstr "Að minnsta kosti einn stór stafur"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/manage_account.html:161
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/create_user.html:92
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/edit_user.html:90
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/bootstrap.html:85
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/reset_password.html:131
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/signup.html:135
+msgid "At least one lowercase letter"
+msgstr "Að minnsta kosti einn lítill stafur"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/manage_account.html:162
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/create_user.html:93
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/edit_user.html:91
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/bootstrap.html:86
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/reset_password.html:132
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/signup.html:136
+msgid "At least one number"
+msgstr "Að minnsta kosti ein tala"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/manage_account.html:163
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/create_user.html:94
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/bootstrap.html:87
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/reset_password.html:133
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/signup.html:137
+msgid "At least one special character (e.g., !@#$%)"
+msgstr "Að minnsta kosti eitt sérstakt tákn (t.d., !@#$%)"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:8
+msgid "Translations - Grylli"
+msgstr "Þýðingar - Grylli"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:20
+msgid "Grylli currently supports multiple languages and more will be added."
+msgstr "Grylli styður nú þegar mörg tungumál og fleiri verða bætt við."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:21
+msgid "Many of the translations were performed with assistance from ChatGPT."
+msgstr "Margar þýðingarnar voru gerðar með aðstoð ChatGPT."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:22
+msgid ""
+"If you find a translation issue or want to suggest improvements, your input "
+"is welcome!"
+msgstr ""
+"Ef þú finnur þýðingavilla eða vilt stinga upp á umbótum, er þín innkoma "
+"velkomin!"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:28
+msgid "How to request translation updates"
+msgstr "Hvernig á að óska eftir þýðinguðuppfærslur"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:30
+msgid "To contribute to translations, please use the following guidelines:"
+msgstr ""
+"Til að leggja þitt af mörkum til þýðinganna, vinsamlegast notaðu "
+"eftirfarandi leiðbeiningar:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:43
+msgid "Fill in already discovered missing translations:"
+msgstr "Fylltu út þegar fundist vantar þýðingar:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:63
+msgid "Open the JSON translation file for your language. For example:"
+msgstr "Opnaðu JSON þýðingarskrána fyrir tungumálið þitt. Til dæmis:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:68
+msgid "Add missing phrases in that JSON file."
+msgstr "Bættu við vantar setningum í þá JSON skrá."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:70
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:113
+msgid "For example:"
+msgstr "Til dæmis:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:72
+msgid "From:"
+msgstr "Frá:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:76
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:154
+msgid "To:"
+msgstr "Til:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:80
+msgid ""
+"Attach the updated JSON file to a new GitHub issue when submitting your "
+"changes."
+msgstr ""
+"Hengdu uppfærðu JSON skrána við nýtt GitHub mál þegar þú sendir inn "
+"breytingarnar."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:92
+msgid "Improving existing translations:"
+msgstr "Bæta núverandi þýðingar:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:111
+msgid "Open the relevant .po file for the translation you want to improve."
+msgstr "Opnaðu viðeigandi .po skrá fyrir þýðinguna sem þú vilt bæta."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:117
+msgid ""
+"Find the phrase(s) and its existing translation(s) you want to improve."
+msgstr "Finndu setningarnar og núverandi þýðingar þeirra sem þú vilt bæta."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:118
+msgid "Update the phrase(s)."
+msgstr "Uppfærðu setningarnar."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:119
+msgid "Copy the file name and path into the issue."
+msgstr "Afritaðu skrárnafn og leið í málið."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:121
+msgid "Paste the copied snippet directly into the GitHub issue comment."
+msgstr "Límdu afritaða bútið beint í athugasemd GitHub málsins."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:122
+msgid "Do not upload the full .po file to avoid merge conflicts."
+msgstr "Ekki hlaða upp heilli .po skránni til að forðast sameiningarárekstra."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:125
+msgid "Example snippet:"
+msgstr "Dæmabútur:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:144
+msgid "Report missing translations not yet discovered:"
+msgstr "Skýra vanta þýðingar enn ófundnar:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:161
+msgid ""
+"If you see text in the app that appears untranslated or missing, please "
+"report it to us."
+msgstr ""
+"Ef þú sérð texta í forritinu sem virðist óþýddur eða vantar, vinsamlegast "
+"skýrðu það til okkar."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:162
+msgid "Provide the exact English phrase as it appears on the screen."
+msgstr "Veittu nákvæmu ensku setninguna eins og það birtist á skjánum."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:163
+msgid ""
+"Include the page or section where you saw the phrase (e.g., Settings page, "
+"Account section)."
+msgstr ""
+"Inklúderaðu síðuna eða hluta þar sem þú sást setninguna (t.d., Stillingar "
+"síða, Reiknings hluti)."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:165
+msgid ""
+"Submit this information via a new GitHub issue so we can add it to the "
+"translation files and wrap it for Babel."
+msgstr ""
+"Sendu þessar upplýsingar í gegnum nýtt GitHub mál svo við getum bætt því við"
+" þýðingarskrárnar og pakkað því fyrir Babel."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:175
+msgid "Found a missing translation?"
+msgstr "Fundið vanta þýðingu?"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:179
+msgid "Report it by opening a new GitHub issue"
+msgstr "Skýrðu það með því að opna nýtt GitHub mál"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:182
+msgid "Thank you for helping us make Grylli better!"
+msgstr "Þakka þér fyrir að hjálpa okkur að gera Grylli betra!"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/create_user.html:14
+msgid "Create New User"
+msgstr "Búa til nýjan notanda"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/create_user.html:15
+msgid "Fill out the form to add a new user."
+msgstr "Fylltu út formið til að bæta við nýjum notanda."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/create_user.html:20
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/edit_user.html:17
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/bootstrap.html:24
+msgid "Please fix the following errors:"
+msgstr "Vinsamlegast lagaðu eftirfarandi villur:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/create_user.html:78
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/edit_user.html:100
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:181
+msgid "Create User"
+msgstr "Búa til notanda"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/edit_user.html:10
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:74
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:128
+msgid "Edit User"
+msgstr "Breyta notanda"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/edit_user.html:62
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/edit_user.html:81
+msgid "Hold to show password"
+msgstr "Haltu til að sýna lykilorð"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/edit_user.html:92
+#, python-format
+msgid "At least one special character (e.g., !@#$%%)"
+msgstr "Að minnsta kosti eitt sérstakt tákn (t.d., !@#$%%)"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/help.html:4
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/login.html:73
+msgid "Admin Help"
+msgstr "Stjórnborð"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/help.html:7
+msgid "Reset Admin Password"
+msgstr "Endurræstu lykilorð"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/help.html:9
+msgid ""
+"If you've forgotten the admin password, you can reset it using the following"
+" Docker command:"
+msgstr ""
+"Ef þú hefur gleymt stjórnunarlyklinum geturðu endurstilt hann með "
+"eftirfarandi Docker skipun:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/help.html:15
+msgid ""
+"This script will prompt you to enter a new password for the admin user. You "
+"must run it from the host system where the Grylli container is running."
+msgstr ""
+"Þessi skrift mun biðja þig um að slá inn nýtt lykilorð fyrir stjórnandi "
+"notanda. Þú verður að keyra hana frá hýskerfi þar sem Grylli gámurinn er "
+"keyrður."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/help.html:18
+msgid "After resetting, you can log in with the new password immediately."
+msgstr ""
+"Eftir endurstillingu geturðu skráð þig inn með nýja lykilorðinu strax."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/help.html:24
+msgid "Return to Login"
+msgstr "Fara aftur á mælingaborð"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/help_form.html:6
+msgid "Admin Help Access"
+msgstr "Aðstoð stjórnanda aðgangur"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/help_form.html:9
+msgid "Enter your Ferret Key to unlock admin-only help documentation."
+msgstr ""
+"Sláðu inn frettalykil þinn til að opna einungis hjálparskjöl stjórnanda."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/help_form.html:34
+msgid "How to Find Your FERRET_KEY"
+msgstr "Hvernig á að finna FRETTALYKLIRINN þinn"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/help_form.html:36
+msgid "The FERRET_KEY is set as an environment variable when running Grylli."
+msgstr ""
+"FRETTALYKLIRINN er stilltur sem umhverfisbreyta þegar Grylli er keyrt."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/help_form.html:39
+msgid "Option 1: Check docker-compose.yml"
+msgstr "Valkostur 1: Athugaðu docker-compose.yml"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/help_form.html:46
+msgid "Option 2: Use docker inspect"
+msgstr "Valkostur 2: Notaðu docker inspect"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/help_form.html:52
+msgid "This shows the FERRET_KEY as passed to the container at runtime."
+msgstr ""
+"Þetta sýnir FRETTALYKLIRINN eins og honum er miðlað til gámsins á "
+"keyrslutíma."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/index.html:10
+msgid "Admin Panel"
+msgstr "Stjórnborð"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/index.html:12
+msgid ""
+"Welcome to the Grylli Admin Panel. Use the links below to manage the system."
+msgstr ""
+"Velkomin á Grylli stjórnborðið. Notaðu tenglana hér fyrir neðan til að "
+"stjórna kerfinu."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/index.html:17
+msgid "Manage Users"
+msgstr "Stjórna notendum"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/index.html:18
+msgid "Create, edit, enable/disable, or delete user accounts."
+msgstr "Búðu til, breyttu, gerið virkja/óvirkja eða eyða notendareikningum."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/index.html:23
+msgid "View  system-wide environment values."
+msgstr "Skoða umhverfisgildi kerfisins í heild."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/index.html:28
+msgid "Create and delete database backups."
+msgstr "Afrit af gagnagrunni"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/index.html:33
+msgid "View and test global SMTP settings."
+msgstr "Mistókst að senda prófunarpóst. Athugaðu SMTP stillingar."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/index.html:39
+msgid "View Admin Guide / README on GitHub"
+msgstr "Skoða Admin Guide / README á GitHub"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/index.html:40
+msgid "Includes setup instructions, integrations, and troubleshooting."
+msgstr "Inniheldur uppsetningarleiðbeiningar, samþættingar og bilanaleit."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/index.html:44
+msgid "⚠️ Admin Tips"
+msgstr "⚠️ Stjórn ráð"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/index.html:46
+msgid "Ensure the data folder (database) is backed up on your host"
+msgstr "Tryggja að gagnamöppan (gagnagrunnur) sé afrituð á hýsingunni þinni"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/index.html:48
+msgid ""
+"The uploads folder is not per user.  If required per user, you will ndd to "
+"create subdirectoried per user and setup permissions so users can only see "
+"their own folder."
+msgstr ""
+"Upphleðslumappan er ekki per notandi. Ef þörf er á per notanda, þarftu að "
+"búa til undirmöppur per notanda og stilla réttindi svo notendur geti aðeins "
+"séð sína eigin möppu."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/index.html:51
+msgid ""
+"To restore a backup: stop the container, replace the data/grylli.db with one"
+" from the backups folder, and restart the container."
+msgstr ""
+"Til að endurheimta afrit: stoppaðu gáminn, skiptu út data/grylli.db með einu"
+" úr afritamöppunni og endurræstu gáminn."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_backups.html:11
+msgid "Database Backups"
+msgstr "Afrit af gagnagrunni"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_backups.html:13
+msgid "Create Backup"
+msgstr "Búa til afrit"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_backups.html:21
+msgid "Filename"
+msgstr "Skjalsheiti"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_backups.html:22
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:61
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:62
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:60
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:60
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:59
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:63
+msgid "Actions"
+msgstr "Aðgerðir"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_backups.html:32
+msgid "Delete this backup?"
+msgstr "Eyða þessu afriti?"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_backups.html:32
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:96
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:99
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:153
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:115
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:118
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:206
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:209
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:104
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:107
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:182
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:185
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:100
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:166
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:101
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:158
+msgid "Delete"
+msgstr "Eyða"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_backups.html:41
+msgid "No backups found."
+msgstr "Engin afrit fundust."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_backups.html:44
+msgid ""
+"Backups contain your full app data. Store securely. Sensitive data is "
+"encrypted in the DB by default."
+msgstr ""
+"Afrit innihalda öll gögn forritsins þíns. Geymið þau örugglega. Viðkvæm gögn"
+" eru sjálfgefið dulkóðuð í gagnagrunninum."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:15
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:16
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/apprise_config.html:10
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:16
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:17
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:15
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:16
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:16
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:17
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:14
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:17
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:16
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:17
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/webhook_config.html:10
+msgid "Table View"
+msgstr "Töfluskoðun"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:29
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:30
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/apprise_config.html:18
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:30
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:31
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:29
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:30
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:30
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:31
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:27
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:30
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:30
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:31
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/webhook_config.html:18
+msgid "Card View"
+msgstr "Spjaldskoðun"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:48
+msgid "Add User"
+msgstr "Bæta við notanda"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:57
+msgid "ID"
+msgstr "ID"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:58
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:55
+msgid "Username"
+msgstr "Notandanafn"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:59
+msgid "Email"
+msgstr "Netfang"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:60
+msgid "Role"
+msgstr "Hlutverk"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:81
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:134
+msgid "Delete user"
+msgstr "Eyða notanda"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:83
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:137
+msgid "Delete User"
+msgstr "Eyða notanda"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:89
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:142
+msgid "You cannot disable yourself"
+msgstr "Þú getur ekki gert þig óvirkan"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:96
+msgid "Disable"
+msgstr "Gera óvirkan"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:96
+msgid "Enable"
+msgstr "Gera virkan"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:119
+msgid "Email:"
+msgstr "Netfang:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:122
+msgid "Role:"
+msgstr "Hlutverk:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:166
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:53
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:233
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:206
+msgid "Hide Instructions"
+msgstr "Fela leiðbeiningar"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:166
+msgid "How to manage users"
+msgstr "Hvernig á að stjórna notendum"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:174
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:181
+msgid "Click"
+msgstr "Smellt"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:174
+msgid "➕ Add User"
+msgstr "➕ Bæta við notanda"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:174
+msgid "to open the new user form."
+msgstr "til að opna form fyrir nýjan notanda."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:176
+msgid "Enter a unique username, valid email address, and strong password."
+msgstr "Sláðu inn einstakt notandanafn, gilt netfang og sterkt lykilorð."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:178
+msgid "Select the appropriate"
+msgstr "Veldu viðeigandi"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:178
+msgid "role"
+msgstr "hlutverk"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:178
+msgid "admin"
+msgstr "admin"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:178
+msgid "user"
+msgstr "notandi"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:181
+msgid "to save."
+msgstr "til að vista."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:183
+msgid "To edit a user, click ✏️ and update their info."
+msgstr "Til að breyta notanda, smelltu ✏️ og uppfærðu upplýsingar þeirra."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:184
+msgid "To delete a user, click 🗑️ and confirm the deletion."
+msgstr "Til að eyða notanda, smelltu 🗑️ og staðfestu eyðinguna."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:186
+msgid "To disable or enable a user, click 🔴 or 🟢."
+msgstr "Til að gera notanda óvirkan eða virkan, smelltu 🔴 eða 🟢."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:188
+msgid "🟢 = User is enabled and can log in."
+msgstr "🟢 = Notandi er virkur og getur skráð sig inn."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:189
+msgid "🔴 = User is disabled and cannot log in."
+msgstr "🔴 = Notandi er óvirkjaður og getur ekki skráð sig inn."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:190
+msgid "⚪ = You cannot disable your own account."
+msgstr "⚪ = Þú getur ekki afvirkjað þinn eigin reikning."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/smtp_config.html:28
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/system_config.html:33
+msgid "System Configuration"
+msgstr "Kerfisstillingar"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/smtp_config.html:33
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/system_config.html:38
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/system_settings.html:15
+msgid "Key"
+msgstr "Lykill"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/smtp_config.html:34
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/system_config.html:39
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/system_settings.html:16
+msgid "Value"
+msgstr "Gildi"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/smtp_config.html:35
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/system_config.html:40
+msgid "Sensitive"
+msgstr "Viðkvæmt"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/smtp_config.html:36
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/system_config.html:41
+msgid "Editable"
+msgstr "Hægt að breyta"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/smtp_config.html:50
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/smtp_config.html:51
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/system_config.html:57
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/system_config.html:58
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:60
+msgid "Yes"
+msgstr "Já"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/smtp_config.html:50
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/smtp_config.html:51
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/system_config.html:57
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/system_config.html:58
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:60
+msgid "No"
+msgstr "Nei"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/smtp_config.html:62
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/system_config.html:67
+msgid "Send Test Email"
+msgstr "Senda prufupóst"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/system_config.html:51
+msgid "decrypted"
+msgstr "Búið til"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/apprise_config.html:3
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:9
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/assign_destinations.html:22
+msgid "Apprise Destinations"
+msgstr "Apprise áfangastaðir"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/apprise_config.html:32
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:49
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/webhook_config.html:32
+msgid "Add Webhook"
+msgstr "Bæta við Vefkrók"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/apprise_config.html:32
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:49
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:49
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/webhook_config.html:32
+msgid "Add Destination"
+msgstr "Bæta við áfangastað"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/create_apprise.html:10
+msgid "Create Apprise Destination"
+msgstr "Búa til Apprise áfangastað"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/create_apprise.html:30
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/edit_apprise.html:30
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:60
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/create_smtp.html:100
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/edit_smtp.html:115
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:57
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/create_webhook.html:36
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/edit_webhook.html:36
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:61
+msgid "Enabled"
+msgstr "Virkt"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/create_apprise.html:38
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/edit_apprise.html:38
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/create_smtp.html:108
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/create_webhook.html:44
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/edit_webhook.html:44
+msgid "Create Destination"
+msgstr "Búa til áfangastað"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/create_apprise.html:47
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/edit_apprise.html:47
+msgid "Need help with Apprise URLs? See the"
+msgstr "Þarftu hjálp með Apprise URL?"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/create_apprise.html:51
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/edit_apprise.html:51
+msgid "Apprise Notification Services documentation"
+msgstr "Sjá Apprise tilkynningarþjónusta skjölun"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/edit_apprise.html:10
+msgid "Edit Apprise Destination"
+msgstr "Breyta Apprise áfangastað"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:49
+msgid "Add Apprise"
+msgstr "Bæta við Apprise"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:58
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/edit_message.html:21
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:56
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:14
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/create_message.html:29
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/edit_message.html:23
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:57
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/view_message.html:14
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:52
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:58
+msgid "Label"
+msgstr "Merkimiði"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:59
+msgid "URL"
+msgstr "URL"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:61
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:59
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:59
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/view_message.html:36
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:62
+msgid "Created At"
+msgstr "Búið til"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:77
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:131
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:79
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:145
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:79
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:136
+msgid "Edit"
+msgstr "Breyta"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:79
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:133
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:81
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:147
+msgid "Cannot edit while in use"
+msgstr "Ekki hægt að breyta á meðan í notkun"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:88
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:142
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:90
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:147
+msgid "Test"
+msgstr "Prófa"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:102
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:156
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:104
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:170
+msgid "Cannot delete while in use"
+msgstr "Ekki hægt að eyða á meðan í notkun"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:118
+msgid "URL:"
+msgstr "URL:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:121
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:135
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:126
+msgid "Enabled:"
+msgstr "Virkt:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:124
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:138
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:129
+msgid "Created:"
+msgstr "Búið til:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/bootstrap.html:14
+msgid "Create Admin Account"
+msgstr "Búa til stjórnendareikning"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/bootstrap.html:16
+msgid "Let’s get started by creating your first admin account."
+msgstr "Byrjum á að búa til þinn fyrsta stjórnendareikning."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/bootstrap.html:75
+msgid "Create Admin"
+msgstr "Búa til stjórnanda"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/forgot_password.html:12
+msgid "Forgot Password"
+msgstr "Gleymt lykilorð"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/forgot_password.html:15
+msgid ""
+"Enter your username and email. We'll send you a link to reset your password."
+msgstr ""
+"Sláðu inn notendanafnið þitt og netfang. Við munum senda þér hlekk til að "
+"endurstilla lykilorðið þitt."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/forgot_username.html:12
+msgid "Forgot Username"
+msgstr "Gleymt notendanafn"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/forgot_username.html:15
+msgid "Enter your email address, and we'll send you your username."
+msgstr "Sláðu inn netfangið þitt, og við munum senda þér notandanafnið þitt."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/forgot_username.html:40
+msgid "Send Username"
+msgstr "Senda notendanafn"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/login.html:12
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/login.html:55
+msgid "Log In"
+msgstr "Skrá inn"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/login.html:63
+msgid "Forgot Username?"
+msgstr "Gleymt notendanafn?"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/login.html:65
+msgid "Forgot Password?"
+msgstr "Gleymt lykilorð?"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/login.html:67
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/signup.html:12
+msgid "Sign Up"
+msgstr "Nýskrá"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/reset_password.html:12
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/reset_password.html:117
+msgid "Reset Password"
+msgstr "Endurræstu lykilorð"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/reset_password.html:14
+msgid "Enter your username, email, and new password."
+msgstr "Sláðu inn notandanafn, netfang og nýtt lykilorð."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/signup.html:14
+msgid "Fill out the form to create your account."
+msgstr "Fylla út eyðublaðið til að búa til reikning."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/checkin/thank_you.html:10
+msgid "Check-In Successful"
+msgstr "Innritun tókst"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/checkin/thank_you.html:11
+msgid "Thank you for checking in."
+msgstr "Takk fyrir að innrita þig."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/checkin/thank_you.html:14
+msgid "Checked in for:"
+msgstr "Innritað fyrir:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/checkin/thank_you.html:19
+msgid "Return to Dashboard"
+msgstr "Fara aftur á mælingaborð"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/assign_smtp.html:11
+msgid "📧 Assign SMTP Config to:"
+msgstr "📧 Úthluta SMTP stillingum á:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/assign_smtp.html:26
+msgid "No SMTP (Unassign)"
+msgstr "Engin SMTP stilling úthlutuð"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/assign_smtp.html:29
+msgid "This email will not use any SMTP configuration."
+msgstr "Þessi tölvupóstur mun ekki nota neinar SMTP stillingar."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/assign_smtp.html:48
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/edit_smtp.html:123
+msgid "Save"
+msgstr "Vista"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:12
+msgid "Attach Files for:"
+msgstr "Hengja skrár fyrir:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:20
+msgid "Available Files"
+msgstr "Aðgengilegar skrár"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:35
+msgid "No files found in the upload directory."
+msgstr "Engar skrár fundust í upphalsskránni."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:43
+msgid "Save Attachments"
+msgstr "Vista viðhengi"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:53
+msgid "File Attach Notes"
+msgstr "Viðhengis athugasemdir"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:62
+msgid "Important:"
+msgstr "Tengill:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:64
+msgid ""
+"Only files that are present in the 'uploads' folder (provided by your system"
+" administrator) will be shown here. If you do not see your file(s), please "
+"contact your Grylli administrator."
+msgstr ""
+"Aðeins skrár sem eru í 'uploads' möppunni (sem kerfisstjóri þinn hefur sett "
+"upp) verða sýndar hér. Ef þú sérð ekki skrá(ur) þínar, vinsamlegast hafðu "
+"samband við Grylli stjórnanda þinn."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:68
+msgid "Accepted file types:"
+msgstr "Samþykktar skráartegundir:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:70
+msgid "Documents:"
+msgstr "Skjöl:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:72
+msgid "Images:"
+msgstr "Myndir:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:74
+msgid "Audio:"
+msgstr "Hljóð:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:78
+msgid "Maximum file size:"
+msgstr "Hámarks skráarstærð:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:79
+msgid "10 MB per file"
+msgstr "10 MB á skrá"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:82
+msgid "Total upload size:"
+msgstr "Samtals upphalsstærð:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:83
+msgid "20 MB (all files combined)"
+msgstr "20 MB (allar skrár saman)"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/edit_message.html:12
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:73
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:164
+msgid "Edit Email"
+msgstr "Breyta tölvupósti"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/edit_message.html:12
+msgid "Create Email"
+msgstr "Búa til tölvupóst"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/edit_message.html:28
+msgid "To (Recipient Email)"
+msgstr "Til (tökupóstfang)"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/edit_message.html:35
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:57
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:18
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/create_message.html:36
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/edit_message.html:30
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:58
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/view_message.html:18
+msgid "Subject"
+msgstr "Efni"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/edit_message.html:42
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:28
+msgid "Body"
+msgstr "Innihald"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/edit_message.html:50
+msgid "Save Email"
+msgstr "Vista tölvupóst"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:48
+msgid "Add Email"
+msgstr "Bæta við tölvupósti"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:58
+msgid "To"
+msgstr "Til"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:75
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:166
+msgid "Disable to edit email"
+msgstr "Mistókst að senda prófunarpóst:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:80
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:171
+msgid "Attach Files"
+msgstr "Hengja skrár"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:82
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:173
+msgid "Disable to attach files"
+msgstr "Hengja skrár"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:87
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:178
+msgid "Attach SMTP Config"
+msgstr "Hengja SMTP stillingar"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:89
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:180
+msgid "Disable to assign SMTP"
+msgstr "Afvirkja til að úthluta SMTP"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:94
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:185
+msgid "Schedule Check-In"
+msgstr "Tímaáætlun innritunar"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:96
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:187
+msgid "Disable to schedule check-in"
+msgstr "Tímaáætlun innritunar"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:102
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:193
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:92
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:169
+msgid "View Details"
+msgstr "Skoða upplýsingar"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:109
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:200
+msgid "Send this email to yourself to preview it."
+msgstr "Senda þennan tölvupóst til þín sjálfs til að forskoða hann."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:125
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:216
+msgid "Toggle Email On/Off"
+msgstr "Skipta á/af tölvupósti"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:128
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:219
+msgid "Email is enabled"
+msgstr "Tölvupóstur er virkur"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:130
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:221
+msgid "Email is disabled"
+msgstr "Tölvupóstur er óvirkur"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:146
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:51
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:133
+msgid "Label:"
+msgstr "Merki:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:150
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:137
+msgid "Subject:"
+msgstr "Efni"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:158
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:141
+msgid "Created At:"
+msgstr "Búið til"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:233
+msgid "How to create and send an email"
+msgstr "Hvernig á að búa til og senda tölvupóst"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:240
+msgid ""
+"Click “Add Email” and fill out the subject, content, and recipient address."
+msgstr ""
+"Smelltu á “Bæta við tölvupósti” og fylltu út efni, innihald og viðtakanda."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:241
+msgid "Attach any optional files (if needed)."
+msgstr "Hengdu við valfrjáls skrár (ef þörf krefur)."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:242
+msgid ""
+"Click 🧩 to assign a single SMTP configuration that will be used to send the "
+"email."
+msgstr ""
+"Smelltu á 🧩 til að úthluta einni SMTP stillingu sem verður notuð til að "
+"senda tölvupóstinn."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:243
+msgid "Click ⏱️ to set a check-in interval and grace period for the email."
+msgstr "Smelltu á ⏱️ til að stilla innritunarbil og frest fyrir tölvupóstinn."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:244
+msgid "Enable the email using the 🔴/🟢 toggle button."
+msgstr "Virkjaðu tölvupóstinn með 🔴/🟢 rofa."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:245
+msgid ""
+"Click 🧪 to test the email by sending it to yourself (not the recipient)."
+msgstr ""
+"Smelltu á 🧪 til að prófa tölvupóstinn með því að senda hann til sjálfs þín "
+"(ekki viðtakanda)."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:246
+msgid ""
+"If you don’t check in before the grace period ends, the email will be "
+"automatically sent."
+msgstr ""
+"Ef þú innritar þig ekki áður en fresturinn rennur út verður tölvupósturinn "
+"sjálfkrafa sendur."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:247
+msgid "You can preview the email configuration using 🔍."
+msgstr "Þú getur forskoðað tölvupóststillinguna með 🔍."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:248
+msgid "Once a secure email is sent, it will be automatically disabled."
+msgstr ""
+"Þegar öruggur tölvupóstur hefur verið sendur verður hann sjálfkrafa "
+"óvirkjaður."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/schedule_email.html:9
+msgid "Schedule Email"
+msgstr "Tímasetja tölvupóst"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/schedule_email.html:18
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/schedule_message.html:18
+msgid "Years"
+msgstr "Ár"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/schedule_email.html:19
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/schedule_message.html:19
+msgid "Months"
+msgstr "Mánuðir"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/schedule_email.html:20
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/schedule_message.html:20
+msgid "Weeks"
+msgstr "Vikur"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/schedule_email.html:21
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/schedule_message.html:21
+msgid "Days"
+msgstr "Dagar"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/schedule_email.html:22
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/schedule_message.html:22
+msgid "Hours"
+msgstr "Klukkustundir"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/schedule_email.html:23
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/schedule_message.html:23
+msgid "Minutes"
+msgstr "Mínútur"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/schedule_email.html:28
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/schedule_message.html:28
+msgid "Check-in"
+msgstr "Innritun"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/schedule_email.html:51
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/schedule_message.html:51
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/view_message.html:26
+msgid "Grace Period"
+msgstr "Frestur"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/schedule_email.html:80
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/schedule_message.html:80
+msgid "Save Schedule"
+msgstr "Vista tímasetningu"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:9
+msgid "Email Configuration"
+msgstr "Tölvupóststilling"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:22
+msgid "Recipient"
+msgstr "Viðtakandi"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:33
+msgid "Attached Files"
+msgstr "Viðhengdar skrár"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:39
+msgid "No files attached"
+msgstr "Engar skrár viðhengdar"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:46
+msgid "SMTP Configuration"
+msgstr "SMTP stilling"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:54
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:120
+msgid "Host:"
+msgstr "Hýsill:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:57
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:126
+msgid "Username:"
+msgstr "Notandanafn:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:60
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:132
+msgid "TLS:"
+msgstr "TLS:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:64
+msgid "No SMTP configuration assigned"
+msgstr "Engin SMTP stilling úthlutuð"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:69
+msgid "Schedule Information"
+msgstr "Tímasetningarupplýsingar"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:72
+msgid "Check-in Interval:"
+msgstr "Innritunarbili:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:72
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:75
+msgid "minutes"
+msgstr "mínútur"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:75
+msgid "Grace Period:"
+msgstr "Frestur:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:79
+msgid "Last Check-in:"
+msgstr "Síðasta innritun:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:82
+msgid "No check-in has occurred yet"
+msgstr "Engin innritun hefur átt sér stað ennþá"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:92
+msgid "Back to Emails"
+msgstr "Til baka í tölvupósta"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/locale/redirect_after_lang_set.html:15
+msgid "Switching Language..."
+msgstr "Skipta um tungumál..."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/locale/redirect_after_lang_set.html:18
+msgid "Applying new language..."
+msgstr "Beita nýtt tungumál..."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/assign_destinations.html:13
+msgid "Assign Destinations for"
+msgstr "Úthluta áfangastöðum fyrir"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/assign_destinations.html:62
+msgid "Save Destinations"
+msgstr "Vista áfangastaði"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/create_message.html:17
+msgid "Edit Notificaton"
+msgstr "Breyta tilkynningu"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/create_message.html:19
+msgid "Create Notification"
+msgstr "Búa til tilkynningu"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/create_message.html:43
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/edit_message.html:37
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/view_message.html:42
+msgid "Content"
+msgstr "Efni"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/create_message.html:51
+msgid "Save Notification"
+msgstr "Vista tilkynningu"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/edit_message.html:15
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:72
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:147
+msgid "Edit Notification"
+msgstr "Breyta tilkynningu"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/edit_message.html:45
+msgid "Update Notification"
+msgstr "Uppfæra tilkynningu"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:49
+msgid "Add Notification"
+msgstr "Bæta við tilkynningu"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:74
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:149
+msgid "Disable to edit notification"
+msgstr "Breyta tilkynningu"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:79
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:154
+msgid "Assign Destinations"
+msgstr "Úthluta áfangastöðum"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:81
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:156
+msgid "Disable to assign destinations"
+msgstr "Úthluta áfangastöðum"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:86
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:161
+msgid "Set Schedule"
+msgstr "Setja tímaáætlun"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:88
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:163
+msgid "Disable to set schedule"
+msgstr "Setja tímaáætlun"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:99
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:176
+msgid "Send Test Notification"
+msgstr "Breyta tilkynningu"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:112
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:192
+msgid "Toggle Message On/Off"
+msgstr "Kveikja/slökkva á skilaboðum"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:114
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:194
+msgid "Notification is enabled"
+msgstr "Tilkynning er virk"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:116
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:196
+msgid "Notification is disabled"
+msgstr "Tilkynning er óvirk"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:206
+msgid "How to create and send a notification"
+msgstr "Hvernig á að búa til og senda tilkynningu"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:216
+msgid "Click “Add notification” and fill out the subject and content fields."
+msgstr "Smelltu á „Bæta við tilkynningu“ og fylltu út efnis- og efnisreiti."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:217
+msgid "Save the notification to return to the overview."
+msgstr "Vistaðu tilkynninguna til að fara aftur í yfirlitið."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:218
+msgid "You need to create at least one apprise or webhook destination."
+msgstr ""
+"Þú þarft að búa til að minnsta kosti einn apprise eða webhook áfangastað."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:219
+msgid "You can create as many destinations as you like."
+msgstr "Þú getur búið til eins marga áfangastaði og þú vilt."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:220
+msgid "Click 🧩 to assign one or more Apprise and/or Webhook destinations."
+msgstr ""
+"Smelltu á 🧩 til að úthluta einum eða fleiri Apprise og/eða Webhook "
+"áfangastöðum."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:221
+msgid "Click ⏱️ to set a schedule and check-in interval."
+msgstr "Smelltu á ⏱️ til að setja tímaáætlun og innritunarmilli."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:222
+msgid "Enable the notification using the 🔴/🟢 toggle button."
+msgstr "Virktu tilkynninguna með því að nota 🔴/🟢 kveikja/slökkva hnappinn."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:223
+msgid ""
+"If you don’t check in before the grace period ends, the notification will be"
+" sent."
+msgstr ""
+"Ef þú innritar ekki áður en náðartímabilið rennur út verður tilkynningin "
+"send."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:224
+msgid "You can preview the notification config using 🔍."
+msgstr "Þú getur forskoðað tilkynningastillinguna með því að nota 🔍."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:225
+msgid "Once a notification is sent, it will be automatically disabled."
+msgstr "Þegar tilkynning er send verður hún sjálfkrafa óvirk."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/schedule_message.html:9
+msgid "Schedule Message"
+msgstr "Dagskrá skilaboðs"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/view_message.html:9
+msgid "Notifications Details"
+msgstr "Upplýsingar um tilkynningar"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/view_message.html:22
+msgid "Check-in Interval"
+msgstr "Innritunarmilli"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/view_message.html:31
+msgid "Last Check-in"
+msgstr "Síðasta innritun"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/view_message.html:48
+msgid "Apprise URLs"
+msgstr "Apprise URL"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/view_message.html:54
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/view_message.html:64
+msgid "None assigned."
+msgstr "Enginn úthlutaður."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/view_message.html:73
+msgid "Back to Notifications"
+msgstr "Til baka í tilkynningar"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/create_smtp.html:10
+msgid "Create SMTP Destination"
+msgstr "Búa til SMTP áfangastað"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/create_smtp.html:70
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/edit_smtp.html:85
+msgid "Hold to reveal"
+msgstr "Haltu inni til að birta"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/create_smtp.html:93
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/edit_smtp.html:108
+msgid "Use TLS"
+msgstr "Notaðu TLS"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/edit_smtp.html:10
+msgid "Edit SMTP Destination"
+msgstr "Búa til SMTP áfangastað"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:9
+msgid "SMTP Destinations"
+msgstr "SMTP Áfangastaðir"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:44
+msgid "Add SMTP"
+msgstr "Bæta við SMTP"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:53
+msgid "Host"
+msgstr "Hýsill"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:54
+msgid "Port"
+msgstr "Tengill"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:56
+msgid "TLS"
+msgstr "TLS"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:58
+msgid "Created"
+msgstr "Búið til"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:89
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:155
+msgid "Send Test"
+msgstr "Senda próf"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:123
+msgid "Port:"
+msgstr "Tengill:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:129
+msgid "Password:"
+msgstr "Lykilorð:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:181
+msgid "Hide SMTP Setup Help"
+msgstr "Fela SMTP uppsetningarhjálp"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:181
+msgid "Show SMTP Setup Help"
+msgstr "Sýna SMTP uppsetningarhjálp"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:187
+msgid ""
+"Need help finding your SMTP server settings? See here for some links to "
+"common providers:"
+msgstr ""
+"Þarftu hjálp við að finna stillingar fyrir SMTP þjóninn þinn? Sjá hér fyrir "
+"nokkra tengla á algenga þjónustuaðila:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:191
+msgid "SMTP Server Settings Help (GitHub)"
+msgstr "SMTP Server Settings Help (GitHub)"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:195
+msgid ""
+"Find official documentation links for Gmail, Outlook, Yahoo, AOL, and "
+"others."
+msgstr ""
+"Finndu opinbera skjalatengla fyrir Gmail, Outlook, Yahoo, AOL og fleiri."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:196
+msgid ""
+"If your provider isn’t listed, search their support site or a search engine "
+"for 'SMTP settings'."
+msgstr ""
+"Ef þjónustuaðili þinn er ekki á listanum, leitaðu á stuðningsvef þeirra eða "
+"með leitarvél eftir 'SMTP stillingar'."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:197
+msgid ""
+"Some providers (like Gmail, Yahoo) require 'App Passwords' or special "
+"setup—see their docs!"
+msgstr ""
+"Sumir þjónustuaðilar (eins og Gmail, Yahoo) krefjast 'Forritalyklanna' eða "
+"sérstakrar uppsetningar—sjáðu skjöl þeirra!"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/create_webhook.html:10
+msgid "Create Webhook"
+msgstr "Búa til Vefkrók"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/edit_webhook.html:10
+msgid "Edit Webhook"
+msgstr "Breyta Vefkrók"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:9
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/webhook_config.html:3
+msgid "Webhooks Destinations"
+msgstr "Vefkróka Áfangastaðir"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:59
+msgid "Endpoint"
+msgstr "Endapunktur"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:60
+msgid "Description"
+msgstr "Lýsing"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:81
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:138
+msgid "Cannot edit while assigned to notifications"
+msgstr "Ekki hægt að breyta á meðan úthlutað til tilkynninga"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:104
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:161
+msgid "Cannot delete while assigned to notifications"
+msgstr "Ekki hægt að eyða á meðan úthlutað til tilkynninga"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:120
+msgid "Endpoint:"
+msgstr "Endapunktur:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:123
+msgid "Description:"
+msgstr "Lýsing:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/account.py:51
+msgid "Current password is required to change password."
+msgstr "Núverandi lykilorð er nauðsynlegt til að breyta lykilorði."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/account.py:55
+msgid "Current password is incorrect."
+msgstr "Núverandi lykilorð er rangt."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/account.py:66
+msgid "Account updated successfully."
+msgstr "Reikningurinn uppfærður með góðum árangri."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/account.py:72
+msgid "An error occurred while updating your account."
+msgstr "Villa kom upp við uppfærslu reikningsins."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/apprise.py:48
+msgid "🧪 Test notification sent successfully!"
+msgstr "🧪 Próftilkynning send með góðum árangri!"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/apprise.py:50
+msgid "🧪 Failed to send test notification: "
+msgstr "🧪 Mistókst að senda próftilkynningu:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/apprise.py:53
+msgid "🧪 Error sending test notification."
+msgstr "🧪 Villa við að senda próftilkynningu."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/apprise.py:89
+msgid "Apprise destination created successfully."
+msgstr "Apprise áfangastaður búinn til með góðum árangri."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/apprise.py:147
+msgid "Apprise destination updated successfully."
+msgstr "Apprise áfangastaður uppfærður með góðum árangri."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/apprise.py:172
+msgid "Apprise destination deleted."
+msgstr "Apprise áfangastaður eytt."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:93
+msgid "Admin account created successfully."
+msgstr "Stjórnendur reikningur búinn til með góðum árangri."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:106
+msgid "An error occurred while creating the admin account."
+msgstr "Villa kom upp við að búa til stjórnendur reikning."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:142
+msgid ""
+"Your account is not activated. Please check your email for the activation "
+"link."
+msgstr ""
+"Reikningurinn þinn er ekki virkjaður. Vinsamlegast athugaðu netfangið þitt "
+"fyrir virkjunartengilinn."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:150
+msgid "Logged in successfully."
+msgstr "Innskráður með góðum árangri."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:165
+msgid "Invalid username or password."
+msgstr "Ógilt notandanafn eða lykilorð."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:190
+msgid "You have been logged out."
+msgstr "Þú hefur verið útskráður."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:224
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/email.py:261
+msgid "Access denied."
+msgstr "Aðgangur synjaður."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:247
+msgid "If a user with that email exists, we've sent the username to them."
+msgstr ""
+"Ef notandi með það netfang er til, höfum við sent honum notandanafnið."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:272
+msgid "A password reset link has been sent to your email."
+msgstr ""
+"Tengil til að endurstilla lykilorð hefur verið sendur í tölvupóstinn þinn."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:274
+msgid "No account found matching that username and email."
+msgstr "Ekkert reikningur fannst sem samsvarar því notandanafni og netfangi."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:310
+msgid "The reset link is invalid or has expired."
+msgstr "Endurstillingartengillinn er ógildur eða útrunninn."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:322
+msgid "Username and email do not match."
+msgstr "Notendanafn og netfang passa ekki saman."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:340
+msgid "Your password has been reset. Please log in."
+msgstr ""
+"Lykilorðinu þínu hefur verið endurstillt. Vinsamlegast skráðu þig inn."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:361
+msgid "Invalid registration PIN."
+msgstr "Ógildur skráningarnúmer."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:368
+msgid "Username or email already exists."
+msgstr "Notandanafn eða netfang er þegar til."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:395
+msgid "Account created! Please check your email to activate your account."
+msgstr ""
+"Reikningur búinn til! Vinsamlegast athugaðu netfangið þitt til að virkja "
+"reikninginn þinn."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:412
+msgid "Activation link is invalid or expired."
+msgstr "Virkjunartengill er ógildur eða útrunninn."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:417
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/users.py:44
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/users.py:87
+msgid "User not found."
+msgstr "Notandi fannst ekki."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:421
+msgid "Account already activated. Please log in."
+msgstr "Reikningur þegar virkjaður. Vinsamlegast skráðu þig inn."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:427
+msgid "Your account has been activated! You can now log in."
+msgstr "Reikningur þinn hefur verið virkjaður! Þú getur nú skráð þig inn."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/backups.py:44
+#, python-format
+msgid "Backup created: %(filename)s"
+msgstr "Afrit búið til: %(filename)s"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/backups.py:49
+msgid "Failed to create backup."
+msgstr "Mistókst að búa til afrit."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/backups.py:65
+#, python-format
+msgid "Backup deleted: %(filename)s"
+msgstr "Afrit eytt: %(filename)s"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/backups.py:68
+msgid "Backup file not found."
+msgstr "Afritaskrá fannst ekki."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/backups.py:70
+msgid "Failed to delete backup."
+msgstr "Mistókst að eyða afriti."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/checkin.py:37
+msgid "Invalid check-in link."
+msgstr "Ógild skráningartengill."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/checkin.py:42
+msgid "You are not authorized to check in for this item."
+msgstr "Þú hefur ekki heimild til að skrá þig inn fyrir þennan hlut."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/checkin.py:66
+msgid "Unsupported check-in type."
+msgstr "Ekki studd skráningartýpa."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/checkin.py:105
+msgid "✅ Enabled and timer started."
+msgstr "✅ Virkjað og tímasettjari hafinn."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/checkin.py:108
+msgid "⛔ Disabled."
+msgstr "⛔ Afvirkjað."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/checkin.py:110
+msgid "⚠️ Cannot toggle — missing schedule or destination."
+msgstr "⚠️ Get ekki kveikt eða slökkt á — vantar áætlun eða ákvörðunarstað."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/email.py:87
+msgid "Message saved."
+msgstr "Skilaboð vistuð."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/email.py:118
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/messages.py:162
+msgid "Message deleted."
+msgstr "Skilaboð eytt."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/email.py:150
+msgid "Attached files updated."
+msgstr "Viðhengjum uppfært."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/email.py:201
+msgid "SMTP configuration not assigned or is disabled."
+msgstr "SMTP stillingar ekki úthlutaðar eða eru óvirkar."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/email.py:232
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/smtp_settings_admin.py:49
+msgid "Test email sent successfully."
+msgstr "Prófunarpóstur sendur með árangri."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/email.py:277
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/messages.py:294
+msgid "Schedule updated successfully."
+msgstr "Áætlun uppfært með árangri."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/email.py:304
+msgid "SMTP configuration assigned."
+msgstr "SMTP stillingar úthlutaðar."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/email.py:310
+msgid "SMTP configuration removed."
+msgstr "SMTP stillingar úthlutaðar."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/messages.py:94
+msgid "Message created successfully."
+msgstr "Skilaboð búin til með árangri."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/messages.py:129
+msgid "Message updated successfully."
+msgstr "Skilaboð uppfærð með árangri."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/messages.py:215
+msgid "Destinations updated."
+msgstr "Áfangastaðir uppfærðir."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/messages.py:421
+msgid "No destinations assigned to this message."
+msgstr "SMTP stillingar ekki úthlutaðar eða eru óvirkar."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/messages.py:427
+msgid "Test message sent successfully."
+msgstr "Prófunarpóstur sendur með árangri."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/messages.py:429
+msgid "Test message failed: "
+msgstr "Skilaboð vistuð."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/secure_email.py:107
+msgid "✅ SMTP settings saved."
+msgstr "SMTP stillingar"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/smtp.py:53
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/user_smtp.py:56
+msgid "SMTP destination created successfully."
+msgstr "SMTP áfangastaður búinn til með árangri."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/smtp.py:80
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/user_smtp.py:89
+msgid "SMTP destination updated."
+msgstr "SMTP áfangastaður uppfærður."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/smtp.py:95
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/user_smtp.py:104
+msgid "SMTP destination deleted."
+msgstr "SMTP áfangastaður eytt."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/smtp.py:109
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/user_smtp.py:120
+msgid "Test email sent successfully to your account email."
+msgstr "Prófunarpóstur sendur með árangri á netfang reikningsins þíns."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/smtp.py:111
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/user_smtp.py:122
+msgid "Failed to send test email. Check SMTP settings."
+msgstr "Mistókst að senda prófunarpóst. Athugaðu SMTP stillingar."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/smtp_settings_admin.py:46
+msgid "Test Email from Grylli"
+msgstr "Prófunarpóstur frá Grylli"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/smtp_settings_admin.py:47
+msgid "This is a test email from the Grylli SMTP settings page."
+msgstr "Þetta er prófunarpóstur frá SMTP stillingarsíðunni hjá Grylli."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/smtp_settings_admin.py:51
+msgid "Failed to send test email: "
+msgstr "Mistókst að senda prófunarpóst:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/users.py:63
+msgid "User updated successfully."
+msgstr "Notandi uppfærður með árangri."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/users.py:71
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/users.py:230
+msgid "An error occurred while updating the user."
+msgstr "Villa kom upp þegar verið var að uppfæra notanda."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/users.py:141
+msgid "User deleted."
+msgstr "Notandi eytt."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/users.py:148
+msgid "An error occurred while deleting the user."
+msgstr "Villa kom upp við að eyða notanda."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/users.py:169
+msgid "Password is required when creating a new user."
+msgstr "Lykilorð er krafist þegar verið er að stofna nýjan notanda."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/users.py:173
+msgid "Username already exists."
+msgstr "Notandanafn er þegar til."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/users.py:177
+msgid "Email already exists."
+msgstr "Netfang er þegar til."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/users.py:191
+#, python-format
+msgid "User '%(username)s' created successfully."
+msgstr "Notandi '%(username)s' var búinn til með góðum árangri."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/users.py:198
+msgid "Failed to create user."
+msgstr "Tókst ekki að búa til notanda."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/users.py:211
+msgid "You cannot change your own enabled status."
+msgstr "Þú getur ekki breytt þínu eigin virkjunarstöðu."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/users.py:220
+#, python-format
+msgid "User '%(username)s' has been %(status)s."
+msgstr "Notandi '%(username)s' hefur verið %(status)s."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/users.py:223
+msgid "enabled"
+msgstr "virkjaður"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/users.py:223
+msgid "disabled"
+msgstr "óvirkur"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/webhook.py:51
+msgid "Webhook created successfully."
+msgstr "Webhook búið til með góðum árangri."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/webhook.py:104
+msgid "Webhook updated successfully."
+msgstr "Webhook uppfært með góðum árangri."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/webhook.py:130
+msgid "Webhook deleted."
+msgstr "Webhook var eytt."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/webhook.py:160
+msgid "🧪 Webhook test sent successfully!"
+msgstr "🧪 Webhook próf var sent með góðum árangri!"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/webhook.py:162
+msgid "🧪 Webhook test failed: "
+msgstr "🧪 Webhook próf mistókst:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/webhook.py:165
+msgid "🧪 Error sending webhook test."
+msgstr "🧪 Villa við að senda webhook próf."
+
+#~ msgid ""
+#~ "Grylli is a secure message delivery platform designed to activate after "
+#~ "prolonged user inactivity."
+#~ msgstr ""
+#~ "Grylli er öruggt skilaboðasendingarkerfi sem er hannað til að virkjast eftir"
+#~ " langa óvirkni notanda."
+
+#~ msgid ""
+#~ "It is a modern reimplementation of Gone Man’s Switch with a refined tech "
+#~ "stack, better maintainability, and an improved user experience."
+#~ msgstr ""
+#~ "Það er nútíma endurútfærsla af Gone Man’s Switch með betri tækni, betri "
+#~ "viðhaldi og betri notendaupplifun."
+
+#~ msgid "Body:"
+#~ msgstr "Líkami:"
+
+#~ msgid "Subject:"
+#~ msgstr "Efni:"
+
+#~ msgid "Content:"
+#~ msgstr "Efni:"
+
+#~ msgid "Edit SMTP"
+#~ msgstr "Breyta SMTP"
+
+#~ msgid ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+#~ msgstr ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+
+#~ msgid "Admin Notes"
+#~ msgstr "Stjórnendanótur"
+
+#~ msgid "Register"
+#~ msgstr "Skrá"
+
+#~ msgid "View"
+#~ msgstr "Skoða"
+
+#~ msgid "Schedule"
+#~ msgstr "Dagskrá"
+
+#~ msgid "Message is enabled"
+#~ msgstr "Skilaboð eru virk"
+
+#~ msgid "Message is disabled"
+#~ msgstr "Skilaboð eru óvirk"
+
+#~ msgid "No SMTP configuration selected."
+#~ msgstr "Engar SMTP stillingar valdar."

@@ -1,0 +1,2503 @@
+# Malagasy translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-05-31 09:39-0500\n"
+"PO-Revision-Date: 2025-05-25 17:36-0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: mg <LL@li.org>\n"
+"Language: mg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/init_db.py:55
+#, python-format
+msgid "Tables currently in DB: %s"
+msgstr "Ny tabilao ankehitriny ao amin'ny DB:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/init_db.py:58
+msgid "Database or system_config table missing. Running migrations now..."
+msgstr ""
+"Tsy hita ny angona na ny tabilao system_config. Atao ny fifindrana izao..."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/init_db.py:61
+msgid "Migrations applied successfully."
+msgstr "Fanjohizantsika vita soa aman-tsara."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/init_db.py:63
+msgid "Migration failed."
+msgstr "Tsy nahomby ny fifindra-monina."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/init_db.py:68
+msgid "System config seeded successfully."
+msgstr "Vita soa aman-tsara ny famafazana ny fanamboarana ny rafitra."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/init_db.py:70
+msgid "Error seeding system config."
+msgstr "Fahadisoana famafazana ny fanamboarana ny rafitra:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/services/mail.py:12
+#: /home/osuhickeys/Documents/Docker/grylli/app/services/system_settings_email.py:40
+msgid "Missing required config setting: "
+msgstr "Ny fametrahana tsy maintsy atao ila:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/services/mail.py:19
+#: /home/osuhickeys/Documents/Docker/grylli/app/services/system_settings_email.py:47
+#, python-format
+msgid "Failed to decrypt %(key)s: %(error)s"
+msgstr "Tsy nahomby ny fanongananao %(key)s: %(error)s"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/services/mail.py:29
+#, python-format
+msgid ""
+"get_setting('%(key)s') -> '%(value)s' (raw: '%(raw)s', sensitive: "
+"%(sensitive)s)"
+msgstr ""
+"get_setting('%(key)s') -> '%(value)s' (raw: '%(raw)s', sensitive: "
+"%(sensitive)s)"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/services/mail.py:40
+#, python-format
+msgid "Preparing email to %(to)s"
+msgstr "Manomana mail ho an'i %(to)s"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/services/mail.py:53
+#, python-format
+msgid ""
+"SMTP host = '%(host)s' (type: %(host_type)s), port = %(port)s (type: "
+"%(port_type)s)"
+msgstr ""
+"SMTP host = '%(host)s' (type: %(host_type)s), port = %(port)s (type: "
+"%(port_type)s)"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/services/mail.py:59
+#, python-format
+msgid "Using user: %(user)s"
+msgstr "Mampiasa mpampiasa: %(user)s"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/services/mail.py:64
+msgid "Starting TLS"
+msgstr "Manomboka TLS"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/services/mail.py:66
+msgid "Logging in"
+msgstr "Midira"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/services/mail.py:68
+msgid "Sending message"
+msgstr "Fandaharana Hafatra"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/services/mail.py:70
+msgid "Email sent successfully"
+msgstr "Nandefasana mailaka fitsapana."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/services/mail.py:72
+msgid "SMTP error: "
+msgstr "SMTP error:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/about.html:10
+msgid "About Grylli"
+msgstr "About Grylli"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/about.html:13
+msgid ""
+"Grylli is a secure, self-hosted message delivery platform that automatically"
+" sends pre-configured messages if a user fails to check in within a defined "
+"time period."
+msgstr ""
+"Grylli dia sehatra fandefasan-kafatra azo antoka sy hosokajiana manokana "
+"izay mandefa hafatra voaomana mialoha raha tsy mijery izy ny mpampiasa ao "
+"anatin'ny fe-potoana voafaritra."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/about.html:14
+msgid "It supports multiple users and customizable schedules."
+msgstr "Manohana mpampiasa maro sy fandaharam-potoana azo amboarina izy io."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/about.html:15
+msgid ""
+"Messages can be delivered via email, webhooks, or over 80 third-party "
+"services through Apprise."
+msgstr ""
+"Afaka alefa amin'ny alalan'ny mailaka, webhooks, na serivisy avy amin'ny "
+"antoko fahatelo efa mihoatra ny 80 izy ireo amin'ny alalan'i Apprise."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/about.html:16
+msgid ""
+"Users can configure their own SMTP servers to ensure messages appear to come"
+" directly from them — not from the system administrator."
+msgstr ""
+"Afaka mametraka ny SMTP serivera azy manokana ny mpampiasa mba hahazoana "
+"antoka fa ny hafatra dia toa mivantana avy aminy fa tsy avy amin'ny "
+"mpiandraikitra ny rafitra."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/about.html:17
+msgid ""
+"Sensitive data is encrypted at rest, and all message operations are secured "
+"with strong authentication and audit-friendly logging."
+msgstr ""
+"Voaaro amin'ny fitahirizana ny tahirin-kevitra saro-pady, ary sehatra "
+"rehetra mikasika ny hafatra dia voaaro amin'ny fisoratana anarana mafy sy "
+"fofona anaovana fanamarinana."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/about.html:18
+msgid ""
+"Built with a modern, reactive technology stack, Grylli is optimized for "
+"responsiveness and works seamlessly across desktop and mobile devices."
+msgstr ""
+"Noforonina amin'ny teknolojia mihetsiketsika maoderina, optimizena ho an'ny "
+"valinteny haingana i Grylli ary miasa tsy misy sakantsakana manerana ny "
+"fitaovana anaty birao sy finday."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/about.html:23
+msgid "Version:"
+msgstr "Version:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/about.html:26
+msgid "Repository:"
+msgstr "Repository:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/about.html:30
+msgid "GitHub - samcro1967/grylli"
+msgstr "GitHub - samcro1967/grylli"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/help.html:2
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/help.html:5
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:117
+msgid "Help"
+msgstr "Fanampiana"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/help.html:7
+msgid ""
+"Grylli includes built-in instructions throughout the app to help you "
+"configure and manage your setup."
+msgstr ""
+"Misy torolalana tafiditra ao amin'ny fampiharana manontolo i Grylli mba "
+"hanampy anao amin'ny fametrahana sy fitantanana."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/help.html:8
+msgid ""
+"This page provides an overview of key features and direct links to where "
+"they can be managed."
+msgstr ""
+"Mitovy amin'ity pejy ity ny famintinana ny endri-javatra lehibe sy rohy "
+"mivantana amin'izay azo tantanana."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/help.html:12
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:292
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:9
+msgid "Notifications"
+msgstr "Fampahafantarana"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/help.html:14
+msgid "Create and assign messages"
+msgstr "Manangana hafatra na mailaka."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/index.html:32
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/help.html:17
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:267
+msgid "SMTP Settings"
+msgstr "SMTP Settings"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/help.html:19
+msgid "Use your own email server"
+msgstr "Ampiasao ny seriveran'ny mailakao manokana"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/help.html:22
+msgid "Apprise Integration"
+msgstr "Toerana Apprise"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/help.html:24
+msgid "Send notifications to 80+ supported services"
+msgstr "Mandefasa fampandrenesana amin'ny serivisy tohana mihoatra ny 80"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/help.html:27
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:319
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/assign_destinations.html:41
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/view_message.html:58
+msgid "Webhooks"
+msgstr "Webhooks"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/help.html:29
+msgid "Trigger actions or external workflows"
+msgstr "Mampiasà hetsika na workflow ivelany"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:9
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/help.html:32
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:339
+msgid "Emails"
+msgstr "Mailaka"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/help.html:34
+msgid "View and manage secure email messages"
+msgstr "Topimaso momba ny hafatra email azo antoka"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/help.html:38
+msgid "Security"
+msgstr "🔐 Fiarovana"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/help.html:39
+msgid "Grylli encrypts sensitive data and logs all key actions for auditing."
+msgstr ""
+"Manan-maso fo ny tahirin-kevitra saropady i Grylli ary mitahiry ny hetsika "
+"lehibe rehetra ho an'ny fanamarinana."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/index.html:10
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/locale.py:73
+msgid "Welcome to Grylli"
+msgstr "Tonga soa ao Grylli"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/index.html:12
+msgid "Pronounced"
+msgstr "Lazaina"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/index.html:12
+msgid "like “grill-ee”"
+msgstr "toy ny \"grill-ee\""
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/index.html:16
+msgid ""
+"Grylli is a secure message scheduling and delivery system designed to ensure"
+" your important messages are delivered — even if you can’t be there to send "
+"them."
+msgstr ""
+"Grylli dia rafitra fandefasana sy fandaminana hafatra azo antoka natao "
+"hanampy antoka fa alefa ireo hafatrao manan-danja — na dia tsy afaka eo "
+"ianao handefa azy ireo."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/index.html:20
+msgid ""
+"Whether you’re planning ahead, setting up emergency communication, or "
+"building peace of mind, Grylli helps automate your message delivery via "
+"email, webhooks, or Apprise notifications if you miss a check-in."
+msgstr ""
+"Na mikasa mialoha ianao, manomana serasera vonjy maika, na manangana "
+"filaminan-tsaina, Grylli dia manampy amin'ny fanamafisana automatique ny "
+"fandefasana ny hafatrao amin'ny alalan'ny mailaka, webhooks, na "
+"fampahafantarana Apprise raha tsy mahazo toky ianao."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/index.html:23
+msgid "Getting Started"
+msgstr "Manomboka"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/index.html:25
+msgid "Create a message or email."
+msgstr "Manangana hafatra na mailaka."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/index.html:26
+msgid "Set your check-in interval and grace period."
+msgstr "Apetrakao ny elanelam-potoana handaharanao sy ny fahafahana."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/index.html:27
+msgid "Assign one or more delivery destinations."
+msgstr "Asiana toerana fandefasana iray na maromaro."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/index.html:28
+msgid "Optionally attach files for secure emails."
+msgstr ""
+"Mipetrapetraha antontan-taratasy ho an'ny mailaka azo antoka raha tianao."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/index.html:29
+msgid "Enable the message to start monitoring."
+msgstr "Alefaso ny hafatra ho fanaraha-maso."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/index.html:30
+msgid "If you don’t check in, Grylli delivers the message for you."
+msgstr "Raha tsy mahazo toky ianao, Grylli hanaterana ny hafatra ho anao."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:17
+msgid "Grylli"
+msgstr "Grylli"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:51
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:209
+msgid "Home"
+msgstr "Home"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:99
+msgid "Account"
+msgstr "Account"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:105
+msgid "About"
+msgstr "About"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:111
+msgid "System Info"
+msgstr "System Info"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:17
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:134
+msgid "Translations"
+msgstr "Translations"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:146
+msgid "Logout"
+msgstr "Logout"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:170
+msgid "Menu"
+msgstr "Menu"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:232
+msgid "Administration"
+msgstr "Administration"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:248
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:309
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:356
+msgid "Overview"
+msgstr "Overview"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/index.html:27
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:253
+msgid "Backups"
+msgstr "Backups"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:9
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:258
+msgid "Users"
+msgstr "Users"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/index.html:22
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/system_settings.html:10
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:263
+msgid "System Settings"
+msgstr "System Settings"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:308
+msgid "Overview of notification settings"
+msgstr "Topimaso momba ny toe-javatra fampandrenesana"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:313
+msgid "Configure Apprise services"
+msgstr "Apetraho ny serivisy Apprise"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:314
+msgid "Apprise"
+msgstr "Apprise"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:318
+msgid "Configure Webhook integrations"
+msgstr "Apetraho ny fampidirana Webhook"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:355
+msgid "Overview of secure email messages"
+msgstr "Topimaso momba ny hafatra email azo antoka"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:360
+msgid "Configure SMTP email settings"
+msgstr "Apetraho ny toe-javatra email SMTP"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:361
+msgid "SMTP"
+msgstr "SMTP"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:373
+msgid "Toggle Theme"
+msgstr "Ampodino ny Lohahevitra"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/layout.html:403
+msgid "Theme"
+msgstr "Lohahevitra"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:11
+msgid "📦 Environment Versions"
+msgstr "📦 Dikan-tontolo iainana"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:17
+msgid "Category"
+msgstr "Sokajy"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:18
+msgid "Tool"
+msgstr "Fitaovana"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:19
+msgid "Version"
+msgstr "Dikan-teny"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:25
+msgid "🧠 Python"
+msgstr "🧠 Python"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:26
+msgid "Python"
+msgstr "Python"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:30
+msgid "pip"
+msgstr "pip"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:34
+msgid "SQLite"
+msgstr "SQLite"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:40
+msgid "⚙️ Core"
+msgstr "⚙️ Fototra"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:47
+msgid "🔐 Security"
+msgstr "🔐 Fiarovana"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:48
+msgid "Email Validator"
+msgstr "Mpamaritra Email"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:52
+msgid "Cryptography"
+msgstr "Cryptography"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:57
+msgid "🕰️ Scheduling"
+msgstr "🕰️ Fandaharam-potoana"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:58
+msgid "APScheduler"
+msgstr "APScheduler"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:62
+msgid "Apprise (Python)"
+msgstr "Apprise (Python)"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:66
+msgid "Apprise CLI"
+msgstr "Apprise CLI"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/system_info.html:74
+msgid "🌐 Frontend"
+msgstr "🌐 Tava misongadina"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/manage_account.html:11
+msgid "Manage Account"
+msgstr "Mitantana ny Kaonty"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/manage_account.html:12
+msgid "Update your profile information and password."
+msgstr "Havaozy ny fampahalalana momba ny mombamomba anao sy ny tenimiafinao."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/manage_account.html:41
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/create_user.html:40
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/bootstrap.html:43
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/reset_password.html:43
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/signup.html:43
+msgid "Please enter a valid email address."
+msgstr "Ampidiro ny adiresy email manankery azafady."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/manage_account.html:62
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/manage_account.html:96
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/manage_account.html:127
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/reset_password.html:67
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/reset_password.html:98
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/signup.html:66
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/signup.html:96
+msgid "Show/hide password"
+msgstr "Tazonina mba haneho ny teny miafina"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/manage_account.html:89
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/create_user.html:53
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/bootstrap.html:51
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/reset_password.html:59
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/signup.html:59
+msgid "Password must meet all complexity requirements."
+msgstr "༤ertʃʉ dɨmðu ɔɨmwɛń džimbeṭ all kɨmpleksi rɨkwaɨrments."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/manage_account.html:141
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/create_user.html:72
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/edit_user.html:74
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/bootstrap.html:69
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/reset_password.html:111
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/signup.html:109
+msgid "Passwords do not match."
+msgstr "Tsy mitovy ny teny miafina."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/manage_account.html:147
+msgid "Update Account"
+msgstr "Havaozy ny Kaonty"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/manage_account.html:151
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/create_user.html:82
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/edit_user.html:104
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/help_form.html:28
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/create_apprise.html:42
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/edit_apprise.html:42
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/reset_password.html:122
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/assign_smtp.html:50
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:46
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/edit_message.html:54
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/schedule_email.html:84
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/assign_destinations.html:66
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/create_message.html:55
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/edit_message.html:48
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/schedule_message.html:84
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/create_smtp.html:112
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/edit_smtp.html:126
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/create_webhook.html:48
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/edit_webhook.html:48
+msgid "Cancel"
+msgstr "Hanafoana"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/manage_account.html:159
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/create_user.html:90
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/edit_user.html:88
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/bootstrap.html:83
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/reset_password.html:129
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/signup.html:133
+msgid "Minimum 8 characters"
+msgstr "Farafahakeliny 8 tarehintsoratra"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/manage_account.html:160
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/create_user.html:91
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/edit_user.html:89
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/bootstrap.html:84
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/reset_password.html:130
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/signup.html:134
+msgid "At least one uppercase letter"
+msgstr "Farafahakeliny litera iray ambony"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/manage_account.html:161
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/create_user.html:92
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/edit_user.html:90
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/bootstrap.html:85
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/reset_password.html:131
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/signup.html:135
+msgid "At least one lowercase letter"
+msgstr "Farafahakeliny litera ambany iray"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/manage_account.html:162
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/create_user.html:93
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/edit_user.html:91
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/bootstrap.html:86
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/reset_password.html:132
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/signup.html:136
+msgid "At least one number"
+msgstr "Farafahakeliny isa iray"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/manage_account.html:163
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/create_user.html:94
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/bootstrap.html:87
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/reset_password.html:133
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/signup.html:137
+msgid "At least one special character (e.g., !@#$%)"
+msgstr "Farafaharatsiny misy tarehintsoratra manokana iray (ohatra, !@#$%)"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:8
+msgid "Translations - Grylli"
+msgstr "Fandikana - Grylli"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:20
+msgid "Grylli currently supports multiple languages and more will be added."
+msgstr ""
+"Manaiky fiteny maro i Grylli amin'izao fotoana izao ary hisy ampiana bebe "
+"kokoa."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:21
+msgid "Many of the translations were performed with assistance from ChatGPT."
+msgstr "Nataon'ny ChatGPT ny ankamaroan'ireo fandikana ireo."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:22
+msgid ""
+"If you find a translation issue or want to suggest improvements, your input "
+"is welcome!"
+msgstr ""
+"Raha mahita olana amin'ny fandikana ianao na te-hanoro hevitra fanatsarana, "
+"raisina ny fikasana avy aminao!"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:28
+msgid "How to request translation updates"
+msgstr "Ahoana ny fangatahana fanavaozana amin'ny fandikana"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:30
+msgid "To contribute to translations, please use the following guidelines:"
+msgstr ""
+"Raha te-hanampy amin'ny fandikana ianao, ampiasao ireto toro-làlana manaraka"
+" ireto:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:43
+msgid "Fill in already discovered missing translations:"
+msgstr "Fenoy ny fandikana mbola tsy hita:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:63
+msgid "Open the JSON translation file for your language. For example:"
+msgstr "Sokafy ny rakitra JSON fandikana ho an'ny fiteninao. Ohatra:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:68
+msgid "Add missing phrases in that JSON file."
+msgstr "Ampidiro ny fehezanteny tsy hita tao amin'izany rakitra JSON izany."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:70
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:113
+msgid "For example:"
+msgstr "Ohatra:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:72
+msgid "From:"
+msgstr "Avy:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:76
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:154
+msgid "To:"
+msgstr "Ho:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:80
+msgid ""
+"Attach the updated JSON file to a new GitHub issue when submitting your "
+"changes."
+msgstr ""
+"Mampidira ny rakitra JSON nohavaozina amin'ny olana vaovao ao amin'ny GitHub"
+" rehefa maneho ny fanovana."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:92
+msgid "Improving existing translations:"
+msgstr "Fanatsarana ireo fandikana efa misy:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:111
+msgid "Open the relevant .po file for the translation you want to improve."
+msgstr ""
+"Sokafy ny rakitra .po mifandraika amin'ny fandikana tianao hasiana "
+"fanatsarana."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:117
+msgid ""
+"Find the phrase(s) and its existing translation(s) you want to improve."
+msgstr ""
+"Tadiavo ny fehezanteny sy ny fandikana misy izay tianao hasiana fanatsarana."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:118
+msgid "Update the phrase(s)."
+msgstr "Havaozy ny fehezanteny."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:119
+msgid "Copy the file name and path into the issue."
+msgstr "Kopia ny anaran'ny rakitra sy ny làlany ao amin'ny olana."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:121
+msgid "Paste the copied snippet directly into the GitHub issue comment."
+msgstr ""
+"Apetraho mivantana any amin'ny fanehoan-kevitra momba ny olana GitHub ilay "
+"tahirinao nadika."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:122
+msgid "Do not upload the full .po file to avoid merge conflicts."
+msgstr ""
+"Aza mampakatra ny rakitra .po manontolo mba hisorohana ny fifandonana eo "
+"amin'ny fivoarana."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:125
+msgid "Example snippet:"
+msgstr "Santionany ohatra:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:144
+msgid "Report missing translations not yet discovered:"
+msgstr "Tatitra fandikana tsy hita mbola tsy hita:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:161
+msgid ""
+"If you see text in the app that appears untranslated or missing, please "
+"report it to us."
+msgstr ""
+"Raha mahita lahatsoratra ao amin'ny fampiharana ianao izay toa tsy nadika na"
+" tsy hita, azafady tatitra izany aminay."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:162
+msgid "Provide the exact English phrase as it appears on the screen."
+msgstr "Omeo fehezanteny anglisy marina araka ny hita eo amin'ny efijery."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:163
+msgid ""
+"Include the page or section where you saw the phrase (e.g., Settings page, "
+"Account section)."
+msgstr ""
+"Ampio ny pejy na fizarana izay nahitanareo ilay fehezanteny (ohatra, "
+"pejin'ny Fikirakirana, fizarana kaonty)."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:165
+msgid ""
+"Submit this information via a new GitHub issue so we can add it to the "
+"translation files and wrap it for Babel."
+msgstr ""
+"Aleo alefa amin'ny alalan'ny olana vaovao ao amin'ny GitHub ity "
+"fampahalalana ity mba ahafahanay mampiditra azy ao amin'ny rakitra fandikana"
+" ary amboarina ho an'ny Babel."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:175
+msgid "Found a missing translation?"
+msgstr "Nahita fandikana tsy hita ve ianao?"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:179
+msgid "Report it by opening a new GitHub issue"
+msgstr ""
+"Tatitra izany amin'ny alàlan'ny fanokafana olana vaovao ao amin'ny GitHub"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/account/translations.html:182
+msgid "Thank you for helping us make Grylli better!"
+msgstr "Misaotra anao nanampy anay nanatsara an'i Grylli!"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/create_user.html:14
+msgid "Create New User"
+msgstr "Mamorona Mpampiasa Vaovao"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/create_user.html:15
+msgid "Fill out the form to add a new user."
+msgstr "Fenoy ny taratasy mba hanampy mpampiasa vaovao."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/create_user.html:20
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/edit_user.html:17
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/bootstrap.html:24
+msgid "Please fix the following errors:"
+msgstr "Tsarao ireto lesoka manaraka ireto:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/create_user.html:78
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/edit_user.html:100
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:181
+msgid "Create User"
+msgstr "Mamorona Mpampiasa"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/edit_user.html:10
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:74
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:128
+msgid "Edit User"
+msgstr "Hanova Mpampiasa"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/edit_user.html:62
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/edit_user.html:81
+msgid "Hold to show password"
+msgstr "Tazonina mba haneho ny teny miafina"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/edit_user.html:92
+#, python-format
+msgid "At least one special character (e.g., !@#$%%)"
+msgstr "Farafaharatsiny misy tarehintsoratra manokana iray (ohatra, !@#$%%)"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/help.html:4
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/login.html:73
+msgid "Admin Help"
+msgstr "Panalana Admin"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/help.html:7
+msgid "Reset Admin Password"
+msgstr "Avereno ny tenimiafina"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/help.html:9
+msgid ""
+"If you've forgotten the admin password, you can reset it using the following"
+" Docker command:"
+msgstr ""
+"Raha adinonao ny tenimiafina admin, azonao afindra io amin'ny alalan'ny "
+"baiko Docker manaraka:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/help.html:15
+msgid ""
+"This script will prompt you to enter a new password for the admin user. You "
+"must run it from the host system where the Grylli container is running."
+msgstr ""
+"Ity script ity dia hangataka anao hiditra tenimiafina vaovao ho an'ny "
+"mpampiasa admin. Tsy maintsy tanterahanao izany avy amin'ny rafitra "
+"mpampiantrano izay iasan'ny kaontenera Grylli."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/help.html:18
+msgid "After resetting, you can log in with the new password immediately."
+msgstr ""
+"Rehefa avy namerina azy ianao dia afaka miditra amin'ny alalan'ny "
+"tenimiafina vaovao avy hatrany."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/help.html:24
+msgid "Return to Login"
+msgstr "Miverina amin'ny Dashboard"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/help_form.html:6
+msgid "Admin Help Access"
+msgstr "Fidirana Fanampiana Admin"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/help_form.html:9
+msgid "Enter your Ferret Key to unlock admin-only help documentation."
+msgstr ""
+"Ampidiro ny Lakilen'ny Ferret anao mba hanokatra ny tahirin-kevitra "
+"fanampiana ho an'ny admin irery."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/help_form.html:34
+msgid "How to Find Your FERRET_KEY"
+msgstr "Ahoana ny fahitana ny FERRET_KEY anao"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/help_form.html:36
+msgid "The FERRET_KEY is set as an environment variable when running Grylli."
+msgstr ""
+"Ny FERRET_KEY dia apetraka ho masontsivana environment rehefa alefa ny "
+"Grylli."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/help_form.html:39
+msgid "Option 1: Check docker-compose.yml"
+msgstr "Safidy 1: Zahao ny docker-compose.yml"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/help_form.html:46
+msgid "Option 2: Use docker inspect"
+msgstr "Safidy 2: Ampiasao ny docker inspect"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/help_form.html:52
+msgid "This shows the FERRET_KEY as passed to the container at runtime."
+msgstr ""
+"Ity dia mampiseho ny FERRET_KEY rehefa alefa ao anaty kaontenera amin'ny "
+"fotoana mihazakazaka."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/index.html:10
+msgid "Admin Panel"
+msgstr "Panalana Admin"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/index.html:12
+msgid ""
+"Welcome to the Grylli Admin Panel. Use the links below to manage the system."
+msgstr ""
+"Tongasoa eto amin'ny Panel Koamin'ireo Admin Grylli. Ampiasao ny rohy etsy "
+"ambany mba hitantanana ny rafitra."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/index.html:17
+msgid "Manage Users"
+msgstr "Mitantana Mpampiasa"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/index.html:18
+msgid "Create, edit, enable/disable, or delete user accounts."
+msgstr "Mamorona, amboary, alefa/diovy, na foano ny kaonty mpampiasa."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/index.html:23
+msgid "View  system-wide environment values."
+msgstr "Jereo ny soatoavina manerana ny tontolon'ny rafitra."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/index.html:28
+msgid "Create and delete database backups."
+msgstr "Fizarana Angona Miverina"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/index.html:33
+msgid "View and test global SMTP settings."
+msgstr ""
+"Tsy nahomby ny fandefasana mailaka fitsapana. Jereo ny fanamboarana SMTP."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/index.html:39
+msgid "View Admin Guide / README on GitHub"
+msgstr "Jereo ny Torolàlana Admin / README amin'ny GitHub"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/index.html:40
+msgid "Includes setup instructions, integrations, and troubleshooting."
+msgstr "Ahitana toromarika amboary, fampidirana ary famahana olana."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/index.html:44
+msgid "⚠️ Admin Tips"
+msgstr "⚠️ Torohevitra ho an'ny Admin"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/index.html:46
+msgid "Ensure the data folder (database) is backed up on your host"
+msgstr ""
+"Ataovy azo antoka fa voavotra ao amin'ny mpampiantrano ny lahatahiry data "
+"(database)"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/index.html:48
+msgid ""
+"The uploads folder is not per user.  If required per user, you will ndd to "
+"create subdirectoried per user and setup permissions so users can only see "
+"their own folder."
+msgstr ""
+"Ny lahatahiry fampiakarana dia tsy isaky ny mpampiasa. Raha ilaina isaky ny "
+"mpampiasa, mila mamorona lahatahiry madinika isaky ny mpampiasa sy mametraka"
+" alalana mba hahafahan'ny mpampiasa mahita ny lahatahiry misy azy ihany "
+"ianao."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/index.html:51
+msgid ""
+"To restore a backup: stop the container, replace the data/grylli.db with one"
+" from the backups folder, and restart the container."
+msgstr ""
+"Mba hamerenana indray ny backup: ajanony ny container, soloina ny "
+"data/grylli.db izay misy ao amin'ny lahatahiry backups, ary avereno indray "
+"ny container."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_backups.html:11
+msgid "Database Backups"
+msgstr "Fizarana Angona Miverina"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_backups.html:13
+msgid "Create Backup"
+msgstr "Mamorona Backup"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_backups.html:21
+msgid "Filename"
+msgstr "Anaran'ny rakitra"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_backups.html:22
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:61
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:62
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:60
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:60
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:59
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:63
+msgid "Actions"
+msgstr "Hetra"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_backups.html:32
+msgid "Delete this backup?"
+msgstr "Hamafana ity backup ity?"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_backups.html:32
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:96
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:99
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:153
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:115
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:118
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:206
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:209
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:104
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:107
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:182
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:185
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:100
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:166
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:101
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:158
+msgid "Delete"
+msgstr "Fafao"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_backups.html:41
+msgid "No backups found."
+msgstr "Tsy nahita backup."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_backups.html:44
+msgid ""
+"Backups contain your full app data. Store securely. Sensitive data is "
+"encrypted in the DB by default."
+msgstr ""
+"Ny Backup dia ahitana ny angona fampiharanao manontolo. Tehirizo soa aman-"
+"tsara. Ny angona manan-danja dia voafono ao amin'ny DB ho default."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:15
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:16
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/apprise_config.html:10
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:16
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:17
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:15
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:16
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:16
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:17
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:14
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:17
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:16
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:17
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/webhook_config.html:10
+msgid "Table View"
+msgstr "Fijery Tabila"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:29
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:30
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/apprise_config.html:18
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:30
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:31
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:29
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:30
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:30
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:31
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:27
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:30
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:30
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:31
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/webhook_config.html:18
+msgid "Card View"
+msgstr "Fijery Karatra"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:48
+msgid "Add User"
+msgstr "Ampio Mpampiasa"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:57
+msgid "ID"
+msgstr "ID"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:58
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:55
+msgid "Username"
+msgstr "Anarana"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:59
+msgid "Email"
+msgstr "Mailaka"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:60
+msgid "Role"
+msgstr "Anjara"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:81
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:134
+msgid "Delete user"
+msgstr "Fafao mpampiasa"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:83
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:137
+msgid "Delete User"
+msgstr "Fafao Mpampiasa"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:89
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:142
+msgid "You cannot disable yourself"
+msgstr "Tsy afaka manafoana ny tenanao ianao"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:96
+msgid "Disable"
+msgstr "Afohy"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:96
+msgid "Enable"
+msgstr "Alefa"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:119
+msgid "Email:"
+msgstr "Mailaka:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:122
+msgid "Role:"
+msgstr "Anjara asa:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:166
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:53
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:233
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:206
+msgid "Hide Instructions"
+msgstr "Afeno ny Torolàlana"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:166
+msgid "How to manage users"
+msgstr "Fomba fitantanana ny mpampiasa"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:174
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:181
+msgid "Click"
+msgstr "Tsindrio"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:174
+msgid "➕ Add User"
+msgstr "➕ Ampio Mpampiasa"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:174
+msgid "to open the new user form."
+msgstr "hanokatra ny endrika mpampiasa vaovao."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:176
+msgid "Enter a unique username, valid email address, and strong password."
+msgstr ""
+"Ampidiro ny anarana tsy manam-paharoa, adiresy mailaka manan-kery, ary teny "
+"miafina matanjaka."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:178
+msgid "Select the appropriate"
+msgstr "Safidio ny"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:178
+msgid "role"
+msgstr "andraikitra"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:178
+msgid "admin"
+msgstr "admin"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:178
+msgid "user"
+msgstr "mpampiasa"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:181
+msgid "to save."
+msgstr "mba hamonjy."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:183
+msgid "To edit a user, click ✏️ and update their info."
+msgstr "Raha hanova mpampiasa, tsindrio 🖊️ ary havaozy ny mombamomba azy."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:184
+msgid "To delete a user, click 🗑️ and confirm the deletion."
+msgstr "Raha hamafa mpampiasa, tsindrio 🗑️ ary hamafiso ny famafana."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:186
+msgid "To disable or enable a user, click 🔴 or 🟢."
+msgstr "Raha hampiasa na hanala mpampiasa, tsindrio 🔴 na 🟢."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:188
+msgid "🟢 = User is enabled and can log in."
+msgstr "🟢 = Nah enabled ny mpampiasa ary afaka miditra."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:189
+msgid "🔴 = User is disabled and cannot log in."
+msgstr "🔴 = Tsy afaka miditra ny mpampiasa."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/list_users.html:190
+msgid "⚪ = You cannot disable your own account."
+msgstr "⚪ = Tsy afaka manafoana ny kaontinao ianao."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/smtp_config.html:28
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/system_config.html:33
+msgid "System Configuration"
+msgstr "Fanamboarana Rafitra"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/smtp_config.html:33
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/system_config.html:38
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/system_settings.html:15
+msgid "Key"
+msgstr "Lakile"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/smtp_config.html:34
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/system_config.html:39
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/system_settings.html:16
+msgid "Value"
+msgstr "Lanja"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/smtp_config.html:35
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/system_config.html:40
+msgid "Sensitive"
+msgstr "Saro-pady"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/smtp_config.html:36
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/system_config.html:41
+msgid "Editable"
+msgstr "Aforitra"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/smtp_config.html:50
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/smtp_config.html:51
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/system_config.html:57
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/system_config.html:58
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:60
+msgid "Yes"
+msgstr "Eny"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/smtp_config.html:50
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/smtp_config.html:51
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/system_config.html:57
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/system_config.html:58
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:60
+msgid "No"
+msgstr "Tsia"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/smtp_config.html:62
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/system_config.html:67
+msgid "Send Test Email"
+msgstr "Mandefa Mailaka Fitsapana"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/admin/system_config.html:51
+msgid "decrypted"
+msgstr "Noforonina"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/apprise_config.html:3
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:9
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/assign_destinations.html:22
+msgid "Apprise Destinations"
+msgstr "Toerana Apprise"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/apprise_config.html:32
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:49
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/webhook_config.html:32
+msgid "Add Webhook"
+msgstr "Manampy Webhook"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/apprise_config.html:32
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:49
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:49
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/webhook_config.html:32
+msgid "Add Destination"
+msgstr "Manampy Toerana"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/create_apprise.html:10
+msgid "Create Apprise Destination"
+msgstr "Mamorona Toerana Apprise"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/create_apprise.html:30
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/edit_apprise.html:30
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:60
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/create_smtp.html:100
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/edit_smtp.html:115
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:57
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/create_webhook.html:36
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/edit_webhook.html:36
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:61
+msgid "Enabled"
+msgstr "Nampiasaina"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/create_apprise.html:38
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/edit_apprise.html:38
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/create_smtp.html:108
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/create_webhook.html:44
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/edit_webhook.html:44
+msgid "Create Destination"
+msgstr "Mamorona Toerana"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/create_apprise.html:47
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/edit_apprise.html:47
+msgid "Need help with Apprise URLs? See the"
+msgstr "Mila fanampiana amin'ny URL Apprise? Jereo ny"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/create_apprise.html:51
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/edit_apprise.html:51
+msgid "Apprise Notification Services documentation"
+msgstr "Apprise Notification Services documentation"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/edit_apprise.html:10
+msgid "Edit Apprise Destination"
+msgstr "Ahitsy Toerana Apprise"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:49
+msgid "Add Apprise"
+msgstr "Manampy Apprise"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:58
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/edit_message.html:21
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:56
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:14
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/create_message.html:29
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/edit_message.html:23
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:57
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/view_message.html:14
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:52
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:58
+msgid "Label"
+msgstr "Marika"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:59
+msgid "URL"
+msgstr "URL"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:61
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:59
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:59
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/view_message.html:36
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:62
+msgid "Created At"
+msgstr "Noforonina Tamin'ny"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:77
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:131
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:79
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:145
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:79
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:136
+msgid "Edit"
+msgstr "Ahitsy"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:79
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:133
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:81
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:147
+msgid "Cannot edit while in use"
+msgstr "Tsy afaka manova rehefa ampiasaina"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:88
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:142
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:90
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:147
+msgid "Test"
+msgstr "Fitsapana"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:102
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:156
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:104
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:170
+msgid "Cannot delete while in use"
+msgstr "Tsy afaka mamafa rehefa ampiasaina"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:118
+msgid "URL:"
+msgstr "URL:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:121
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:135
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:126
+msgid "Enabled:"
+msgstr "Nampiasaina:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/apprise/list_apprise.html:124
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:138
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:129
+msgid "Created:"
+msgstr "Noforonina:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/bootstrap.html:14
+msgid "Create Admin Account"
+msgstr "Mamorona Kaonty Admin"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/bootstrap.html:16
+msgid "Let’s get started by creating your first admin account."
+msgstr "Andao hanomboka amin'ny famoronana ny kaontin'ny admin voalohany."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/bootstrap.html:75
+msgid "Create Admin"
+msgstr "Mamorona Admin"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/forgot_password.html:12
+msgid "Forgot Password"
+msgstr "Nohadinoina ny Tenimiafina"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/forgot_password.html:15
+msgid ""
+"Enter your username and email. We'll send you a link to reset your password."
+msgstr ""
+"Ampidiro ny anarana sy ny mailaka. Handefa rohy hanamboarana ny tenimiafina "
+"izahay."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/forgot_username.html:12
+msgid "Forgot Username"
+msgstr "Nohadinoina Ny Anarana Ireo"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/forgot_username.html:15
+msgid "Enter your email address, and we'll send you your username."
+msgstr "Ampidiro ny adiresy mailakao, dia handefa anao ny anaranao izahay."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/forgot_username.html:40
+msgid "Send Username"
+msgstr "Alefaso Ny Anarana"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/login.html:12
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/login.html:55
+msgid "Log In"
+msgstr "Midira"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/login.html:63
+msgid "Forgot Username?"
+msgstr "Nohadinoina Ny Anarana Ireo?"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/login.html:65
+msgid "Forgot Password?"
+msgstr "Nohadinoina ny Tenimiafina?"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/login.html:67
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/signup.html:12
+msgid "Sign Up"
+msgstr "Hisoratra Anarana"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/reset_password.html:12
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/reset_password.html:117
+msgid "Reset Password"
+msgstr "Avereno ny tenimiafina"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/reset_password.html:14
+msgid "Enter your username, email, and new password."
+msgstr "Ampidiro ny anaranao, mailakao, ary ny tenimiafina vaovao."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/auth/signup.html:14
+msgid "Fill out the form to create your account."
+msgstr "Fenoy ny taratasy hamoronana ny kaontinao."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/checkin/thank_you.html:10
+msgid "Check-In Successful"
+msgstr "Nandresy soa aman-tsara ny Check-In"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/checkin/thank_you.html:11
+msgid "Thank you for checking in."
+msgstr "Misaotra anao noho ny fisoratanao anarana."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/checkin/thank_you.html:14
+msgid "Checked in for:"
+msgstr "Nandray anjara tamin'ny:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/checkin/thank_you.html:19
+msgid "Return to Dashboard"
+msgstr "Miverina amin'ny Dashboard"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/assign_smtp.html:11
+msgid "📧 Assign SMTP Config to:"
+msgstr "📧 Atokana ny SMTP Config amin'ny:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/assign_smtp.html:26
+msgid "No SMTP (Unassign)"
+msgstr "Tsy misy fametrahana SMTP natokana"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/assign_smtp.html:29
+msgid "This email will not use any SMTP configuration."
+msgstr "Tsy hampiasa fanamboarana SMTP ity mailaka ity."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/assign_smtp.html:48
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/edit_smtp.html:123
+msgid "Save"
+msgstr "Tehirizo"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:12
+msgid "Attach Files for:"
+msgstr "Mampiaraka Rakitra ho an'ny:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:20
+msgid "Available Files"
+msgstr "Rakitra misy"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:35
+msgid "No files found in the upload directory."
+msgstr "Tsy misy rakitra hita ao amin'ny faritra fampirana."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:43
+msgid "Save Attachments"
+msgstr "Vonjeo ny Mampiaraka"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:53
+msgid "File Attach Notes"
+msgstr "Fanamarihana Mampiaraka Rakitra"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:62
+msgid "Important:"
+msgstr "Seranana:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:64
+msgid ""
+"Only files that are present in the 'uploads' folder (provided by your system"
+" administrator) will be shown here. If you do not see your file(s), please "
+"contact your Grylli administrator."
+msgstr ""
+"Fichier hita ao anatin'ny fampirimana 'uploads' ihany (navoakan'ny "
+"mpandrindra ny rafitrao) no haseho eto. Raha tsy hitanao ny rakitrao, "
+"azafady ampahafantaro ny mpandrindra Grylli anao."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:68
+msgid "Accepted file types:"
+msgstr "Ekena ny karazana rakitra:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:70
+msgid "Documents:"
+msgstr "Taratasy:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:72
+msgid "Images:"
+msgstr "Sary:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:74
+msgid "Audio:"
+msgstr "Feo:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:78
+msgid "Maximum file size:"
+msgstr "Fetra fara tampony:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:79
+msgid "10 MB per file"
+msgstr "10 MB isaky ny rakitra"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:82
+msgid "Total upload size:"
+msgstr "Isan'ny fampakarana rehetra:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/attach_files.html:83
+msgid "20 MB (all files combined)"
+msgstr "20 MB (rakitra rehetra)"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/edit_message.html:12
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:73
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:164
+msgid "Edit Email"
+msgstr "Ovay Email"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/edit_message.html:12
+msgid "Create Email"
+msgstr "Mamorona Email"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/edit_message.html:28
+msgid "To (Recipient Email)"
+msgstr "Ho an'i (Mailaka Mpandray)"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/edit_message.html:35
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:57
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:18
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/create_message.html:36
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/edit_message.html:30
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:58
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/view_message.html:18
+msgid "Subject"
+msgstr "Lohahevitra"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/edit_message.html:42
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:28
+msgid "Body"
+msgstr "Vatana"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/edit_message.html:50
+msgid "Save Email"
+msgstr "Vonjeo Email"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:48
+msgid "Add Email"
+msgstr "Ampio Email"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:58
+msgid "To"
+msgstr "Ho an'i"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:75
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:166
+msgid "Disable to edit email"
+msgstr "Tsy nahomby ny fandefasana mailaka fitsapana:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:80
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:171
+msgid "Attach Files"
+msgstr "Mampiaraka Rakitra"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:82
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:173
+msgid "Disable to attach files"
+msgstr "Mampiaraka Rakitra"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:87
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:178
+msgid "Attach SMTP Config"
+msgstr "Mampiaraka SMTP Config"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:89
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:180
+msgid "Disable to assign SMTP"
+msgstr "Atsaharo mba hametahana SMTP"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:94
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:185
+msgid "Schedule Check-In"
+msgstr "Fanasiana ny Check-In"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:96
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:187
+msgid "Disable to schedule check-in"
+msgstr "Fanasiana ny Check-In"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:102
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:193
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:92
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:169
+msgid "View Details"
+msgstr "Hijery antsipirihany"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:109
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:200
+msgid "Send this email to yourself to preview it."
+msgstr "Alefaso amin'ny tenanao ity mailaka ity hijerena mialoha azy."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:125
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:216
+msgid "Toggle Email On/Off"
+msgstr "Mivadika Email On/Off"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:128
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:219
+msgid "Email is enabled"
+msgstr "Mandefitra mailaka"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:130
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:221
+msgid "Email is disabled"
+msgstr "Tsy misy mailaka"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:146
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:51
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:133
+msgid "Label:"
+msgstr "Marika:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:150
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:137
+msgid "Subject:"
+msgstr "Lohahevitra"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:158
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:141
+msgid "Created At:"
+msgstr "Noforonina Tamin'ny"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:233
+msgid "How to create and send an email"
+msgstr "Ahoana ny fomba hamoronana sy handefasana mailaka"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:240
+msgid ""
+"Click “Add Email” and fill out the subject, content, and recipient address."
+msgstr ""
+"Tsindrio “Add Email” ary fenoy ny lohateny, votoaty, ary adiresy mpandray."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:241
+msgid "Attach any optional files (if needed)."
+msgstr "Ampidiro ireo rakitra tsy voatery (raha ilaina)."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:242
+msgid ""
+"Click 🧩 to assign a single SMTP configuration that will be used to send the "
+"email."
+msgstr ""
+"Tsindrio 🧩 mba hanendry SMTP tokana izay ampiasaina handefasana ny mailaka."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:243
+msgid "Click ⏱️ to set a check-in interval and grace period for the email."
+msgstr ""
+"Tsindrio ⏱️ mba hametraka fe-potoana fikambanana sy fe-potoana fandeferana "
+"ho an'ny mailaka."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:244
+msgid "Enable the email using the 🔴/🟢 toggle button."
+msgstr "Alefaso ny mailaka amin'ny alàlan'ity bokotra fametrahana 🔴/🟢 ity."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:245
+msgid ""
+"Click 🧪 to test the email by sending it to yourself (not the recipient)."
+msgstr ""
+"Tsindrio 🧪 mba hizaha ny mailaka amin'ny fandefasana azy ho anao (tsy ho "
+"an'ny mpandray)."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:246
+msgid ""
+"If you don’t check in before the grace period ends, the email will be "
+"automatically sent."
+msgstr ""
+"Raha tsy manamarina alohan'ny hanaperana ny fe-potoana fandeferana ianao, "
+"dia handefasana ho azy ny mailaka."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:247
+msgid "You can preview the email configuration using 🔍."
+msgstr "Azonao atao ny manadihady ny fametrahana ny mailaka amin'ny 🔍."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/list_emails.html:248
+msgid "Once a secure email is sent, it will be automatically disabled."
+msgstr "Raha vantany vao alefa mailaka azo antoka dia hoesorina ho azy."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/schedule_email.html:9
+msgid "Schedule Email"
+msgstr "Fandaharam-mailaka"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/schedule_email.html:18
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/schedule_message.html:18
+msgid "Years"
+msgstr "Taona"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/schedule_email.html:19
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/schedule_message.html:19
+msgid "Months"
+msgstr "Volana"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/schedule_email.html:20
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/schedule_message.html:20
+msgid "Weeks"
+msgstr "Herinandro"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/schedule_email.html:21
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/schedule_message.html:21
+msgid "Days"
+msgstr "Andro"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/schedule_email.html:22
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/schedule_message.html:22
+msgid "Hours"
+msgstr "Ora"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/schedule_email.html:23
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/schedule_message.html:23
+msgid "Minutes"
+msgstr "Minitra"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/schedule_email.html:28
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/schedule_message.html:28
+msgid "Check-in"
+msgstr "Fanamarinana"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/schedule_email.html:51
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/schedule_message.html:51
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/view_message.html:26
+msgid "Grace Period"
+msgstr "Fe-potoana fandeferana"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/schedule_email.html:80
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/schedule_message.html:80
+msgid "Save Schedule"
+msgstr "Vonjeny ny fandaharam-potoana"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:9
+msgid "Email Configuration"
+msgstr "Fametrahana mailaka"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:22
+msgid "Recipient"
+msgstr "Mpandray"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:33
+msgid "Attached Files"
+msgstr "Rakitra mifatotra"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:39
+msgid "No files attached"
+msgstr "Tsy misy rakitra mifatotra"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:46
+msgid "SMTP Configuration"
+msgstr "Fametrahana SMTP"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:54
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:120
+msgid "Host:"
+msgstr "Mpampiantrano:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:57
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:126
+msgid "Username:"
+msgstr "Anarana:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:60
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:132
+msgid "TLS:"
+msgstr "TLS:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:64
+msgid "No SMTP configuration assigned"
+msgstr "Tsy misy fametrahana SMTP natokana"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:69
+msgid "Schedule Information"
+msgstr "Fampahalalana fandaharam-potoana"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:72
+msgid "Check-in Interval:"
+msgstr "Interval fanamarinana:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:72
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:75
+msgid "minutes"
+msgstr "minitra"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:75
+msgid "Grace Period:"
+msgstr "Fe-potoana fandeferana:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:79
+msgid "Last Check-in:"
+msgstr "Fanamarinana farany:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:82
+msgid "No check-in has occurred yet"
+msgstr "Tsy mbola nisy fanamarinana nitranga"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/email/view_config.html:92
+msgid "Back to Emails"
+msgstr "Miverina amin'ny mailaka"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/locale/redirect_after_lang_set.html:15
+msgid "Switching Language..."
+msgstr "Mamindra fiteny..."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/locale/redirect_after_lang_set.html:18
+msgid "Applying new language..."
+msgstr "Mametraka fiteny vaovao..."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/assign_destinations.html:13
+msgid "Assign Destinations for"
+msgstr "Manendry Tanjona ho an'ny"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/assign_destinations.html:62
+msgid "Save Destinations"
+msgstr "Tehirizo Tanjona"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/create_message.html:17
+msgid "Edit Notificaton"
+msgstr "Hanova Fampahafantarana"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/create_message.html:19
+msgid "Create Notification"
+msgstr "Mamorona Fampahafantarana"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/create_message.html:43
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/edit_message.html:37
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/view_message.html:42
+msgid "Content"
+msgstr "Votoaty"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/create_message.html:51
+msgid "Save Notification"
+msgstr "Tehirizo Fampahafantarana"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/edit_message.html:15
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:72
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:147
+msgid "Edit Notification"
+msgstr "Hanova Fampahafantarana"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/edit_message.html:45
+msgid "Update Notification"
+msgstr "Hanavao Fampahafantarana"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:49
+msgid "Add Notification"
+msgstr "Manampy Fampahafantarana"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:74
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:149
+msgid "Disable to edit notification"
+msgstr "Hanova Fampahafantarana"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:79
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:154
+msgid "Assign Destinations"
+msgstr "Manendry Tanjona"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:81
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:156
+msgid "Disable to assign destinations"
+msgstr "Manendry Tanjona"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:86
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:161
+msgid "Set Schedule"
+msgstr "Mametrahana Fandaharana"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:88
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:163
+msgid "Disable to set schedule"
+msgstr "Mametrahana Fandaharana"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:99
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:176
+msgid "Send Test Notification"
+msgstr "Hanova Fampahafantarana"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:112
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:192
+msgid "Toggle Message On/Off"
+msgstr "Ahodino Hafatra Misy/TSY Misy"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:114
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:194
+msgid "Notification is enabled"
+msgstr "Fampandrenesana no alefa"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:116
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:196
+msgid "Notification is disabled"
+msgstr "Fampandrenesana no tsy alefa"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:206
+msgid "How to create and send a notification"
+msgstr "Ahoana ny fomba famoronana sy fandefasana fampandrenesana"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:216
+msgid "Click “Add notification” and fill out the subject and content fields."
+msgstr ""
+"Tsindrio “Manampy fampahafantarana” ary fenoy ny saha lohahevitra sy "
+"votoaty."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:217
+msgid "Save the notification to return to the overview."
+msgstr "Tehirizo ny fampahafantarana mba hiverina amin'ny famintinana."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:218
+msgid "You need to create at least one apprise or webhook destination."
+msgstr "Tena mila mamorona tanjona apprise na webhook farafaharatsiny."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:219
+msgid "You can create as many destinations as you like."
+msgstr "Afaka mamorona tanjona betsaka kokoa ianao araka izay tianao."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:220
+msgid "Click 🧩 to assign one or more Apprise and/or Webhook destinations."
+msgstr ""
+"Tsindrio 🧩 mba hanendry tanjona Apprise sy/na Webhook iray na maromaro."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:221
+msgid "Click ⏱️ to set a schedule and check-in interval."
+msgstr "Tsindrio ⏱️ mba hametraha fandaharana sy fotoana fanamarinana."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:222
+msgid "Enable the notification using the 🔴/🟢 toggle button."
+msgstr "Alefaso ny fampandrenesana amin'ny alalan'ny bokotra ahodino 🔴/🟢."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:223
+msgid ""
+"If you don’t check in before the grace period ends, the notification will be"
+" sent."
+msgstr ""
+"Raha tsy manamarina ianao alohan'ny fiafaran'ny vanim-potoana famindram-po, "
+"dia halefa ny fampandrenesana."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:224
+msgid "You can preview the notification config using 🔍."
+msgstr ""
+"Afaka manana topi-maso ny fikirakirana fampandrenesana ianao amin'ny "
+"fampiasana 🔍."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/list_messages.html:225
+msgid "Once a notification is sent, it will be automatically disabled."
+msgstr ""
+"Raha vantany vao alefa ny fampandrenesana dia ho voatonga ho azy izy izany."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/schedule_message.html:9
+msgid "Schedule Message"
+msgstr "Fandaharana Hafatra"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/view_message.html:9
+msgid "Notifications Details"
+msgstr "Antsipirian'ny Fampandrenesana"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/view_message.html:22
+msgid "Check-in Interval"
+msgstr "Interval Fanamarinana"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/view_message.html:31
+msgid "Last Check-in"
+msgstr "Fanamarinana Farany"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/view_message.html:48
+msgid "Apprise URLs"
+msgstr "URL Apprise"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/view_message.html:54
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/view_message.html:64
+msgid "None assigned."
+msgstr "Tsy misy napetraka."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/messages/view_message.html:73
+msgid "Back to Notifications"
+msgstr "Miverena amin'ny Fampandrenesana"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/create_smtp.html:10
+msgid "Create SMTP Destination"
+msgstr "Mamorona Tanjona SMTP"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/create_smtp.html:70
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/edit_smtp.html:85
+msgid "Hold to reveal"
+msgstr "Tazonina mba haneho"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/create_smtp.html:93
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/edit_smtp.html:108
+msgid "Use TLS"
+msgstr "Ampiasao TLS"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/edit_smtp.html:10
+msgid "Edit SMTP Destination"
+msgstr "Mamorona Tanjona SMTP"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:9
+msgid "SMTP Destinations"
+msgstr "Tanjona SMTP"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:44
+msgid "Add SMTP"
+msgstr "Manampy SMTP"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:53
+msgid "Host"
+msgstr "Mpampiantrano"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:54
+msgid "Port"
+msgstr "Seranana"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:56
+msgid "TLS"
+msgstr "TLS"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:58
+msgid "Created"
+msgstr "Noforonina"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:89
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:155
+msgid "Send Test"
+msgstr "Alefaso ny Fitsapana"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:123
+msgid "Port:"
+msgstr "Seranana:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:129
+msgid "Password:"
+msgstr "Teny miafina:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:181
+msgid "Hide SMTP Setup Help"
+msgstr "Afeno ny Fanampiana Amin'ny Setup SMTP"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:181
+msgid "Show SMTP Setup Help"
+msgstr "Asehoy ny Fanampiana Amin'ny Setup SMTP"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:187
+msgid ""
+"Need help finding your SMTP server settings? See here for some links to "
+"common providers:"
+msgstr ""
+"Mila fanampiana amin'ny fitadiavana ny fampidiranao SMTP? Jereo eto misy "
+"rohy vitsivitsy amin'ny mpamatsy mahazatra:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:191
+msgid "SMTP Server Settings Help (GitHub)"
+msgstr "Fanampiana Amin'ny Fampidirana SMTP Server (GitHub)"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:195
+msgid ""
+"Find official documentation links for Gmail, Outlook, Yahoo, AOL, and "
+"others."
+msgstr ""
+"Mahita rohy documentation ofisialy ho an'ny Gmail, Outlook, Yahoo, AOL, sy "
+"ny hafa."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:196
+msgid ""
+"If your provider isn’t listed, search their support site or a search engine "
+"for 'SMTP settings'."
+msgstr ""
+"Raha tsy misy ny mpamatsy anao, tadiavo ny tranonkala fanohanany na motera "
+"fikarohana ho an'ny 'SMTP settings'."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/user_smtp/list_smtp.html:197
+msgid ""
+"Some providers (like Gmail, Yahoo) require 'App Passwords' or special "
+"setup—see their docs!"
+msgstr ""
+"Misy mpamatsy sasany (toy ny Gmail, Yahoo) mila 'App Passwords' na "
+"fanamboarana manokana—jereo ny docs-ny!"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/create_webhook.html:10
+msgid "Create Webhook"
+msgstr "Mamorona Webhook"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/edit_webhook.html:10
+msgid "Edit Webhook"
+msgstr "Hamarino ny Webhook"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:9
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/webhook_config.html:3
+msgid "Webhooks Destinations"
+msgstr "Tanjona Webhook"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:59
+msgid "Endpoint"
+msgstr "Tanjona Farany"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:60
+msgid "Description"
+msgstr "Famaritana"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:81
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:138
+msgid "Cannot edit while assigned to notifications"
+msgstr "Tsy afaka manova rehefa nametrahana amin'ny fampahafantarana"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:104
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:161
+msgid "Cannot delete while assigned to notifications"
+msgstr "Tsy afaka mamafa rehefa nametrahana amin'ny fampahafantarana"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:120
+msgid "Endpoint:"
+msgstr "Tanjona Farany:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/templates/webhook/list_webhooks.html:123
+msgid "Description:"
+msgstr "Famaritana:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/account.py:51
+msgid "Current password is required to change password."
+msgstr "Ilaina ny teny miafina ankehitriny raha te-hanova teny miafina."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/account.py:55
+msgid "Current password is incorrect."
+msgstr "Diso ny teny miafina ankehitriny."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/account.py:66
+msgid "Account updated successfully."
+msgstr "Nohavaozina soa aman-tsara ny kaonty."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/account.py:72
+msgid "An error occurred while updating your account."
+msgstr "Nisy fahadisoana tamin'ny fanavaozana ny kaontinao."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/apprise.py:48
+msgid "🧪 Test notification sent successfully!"
+msgstr "🧪 Nahomby ny fandefasana fampandrenesana fitsapana!"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/apprise.py:50
+msgid "🧪 Failed to send test notification: "
+msgstr "🧪 Tsy nahomby ny fandefasana fampandrenesana fitsapana:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/apprise.py:53
+msgid "🧪 Error sending test notification."
+msgstr "🧪 Nisy fahadisoana tamin'ny fandefasana fampandrenesana fitsapana."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/apprise.py:89
+msgid "Apprise destination created successfully."
+msgstr "Nahomby ny famoronana ny tanjona Apprise."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/apprise.py:147
+msgid "Apprise destination updated successfully."
+msgstr "Nahomby ny fanavaozana ny tanjona Apprise."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/apprise.py:172
+msgid "Apprise destination deleted."
+msgstr "Voafafa ny tanjona Apprise."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:93
+msgid "Admin account created successfully."
+msgstr "Nahomby ny famoronana ny kaonty admin."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:106
+msgid "An error occurred while creating the admin account."
+msgstr "Nisy fahadisoana tamin'ny famoronana ny kaonty admin."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:142
+msgid ""
+"Your account is not activated. Please check your email for the activation "
+"link."
+msgstr ""
+"Tsy mavitrika ny kaontinao. Azafady jereo ny mailakao ho an'ny rohy "
+"fanehoana."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:150
+msgid "Logged in successfully."
+msgstr "Niditra soa aman-tsara."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:165
+msgid "Invalid username or password."
+msgstr "Diso ny anarana na teny miafina."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:190
+msgid "You have been logged out."
+msgstr "Niala ianao."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:224
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/email.py:261
+msgid "Access denied."
+msgstr "Nolavina ny fidirana."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:247
+msgid "If a user with that email exists, we've sent the username to them."
+msgstr ""
+"Raha misy mpampiasa manana an'io mailaka io, dia nalefanay taminy ny "
+"anarana."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:272
+msgid "A password reset link has been sent to your email."
+msgstr "Nalefanay ny rohy famerenana teny miafina amin'ny mailakao."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:274
+msgid "No account found matching that username and email."
+msgstr "Tsy misy kaonty mifanaraka amin'izany anarana sy mailaka izany."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:310
+msgid "The reset link is invalid or has expired."
+msgstr "Tsy mety na lany daty ny rohy famerenana."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:322
+msgid "Username and email do not match."
+msgstr "Tsy mitovy ny solonanarana sy ny mailaka."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:340
+msgid "Your password has been reset. Please log in."
+msgstr "Nohavaozina ny teny miafinao. Azafady midira."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:361
+msgid "Invalid registration PIN."
+msgstr "Tsy manan-kery ny kaody fisoratana anarana."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:368
+msgid "Username or email already exists."
+msgstr "Efa misy ilay solonanarana na mailaka."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:395
+msgid "Account created! Please check your email to activate your account."
+msgstr ""
+"Noforonina ny kaonty! Azafady, jereo ny mailakao mba hanokafana ny "
+"kaontinao."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:412
+msgid "Activation link is invalid or expired."
+msgstr "Tsy manan-kery na lany andro ny rohy fampahavitana."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:417
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/users.py:44
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/users.py:87
+msgid "User not found."
+msgstr "Tsy hita ilay mpampiasa."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:421
+msgid "Account already activated. Please log in."
+msgstr "Efa nampahavitana ny kaonty. Azafady midira."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/auth.py:427
+msgid "Your account has been activated! You can now log in."
+msgstr "Vita ny fampahavitana ny kaontinao! Azonao atao izao ny miditra."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/backups.py:44
+#, python-format
+msgid "Backup created: %(filename)s"
+msgstr "Noforonina ny tahiry: %(filename)s"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/backups.py:49
+msgid "Failed to create backup."
+msgstr "Tsy nahomby ny famoronana tahiry."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/backups.py:65
+#, python-format
+msgid "Backup deleted: %(filename)s"
+msgstr "Voafafa ny tahiry: %(filename)s"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/backups.py:68
+msgid "Backup file not found."
+msgstr "Tsy hita ny rakitra tahiry."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/backups.py:70
+msgid "Failed to delete backup."
+msgstr "Tsy nahomby tamin'ny famafana tahiry."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/checkin.py:37
+msgid "Invalid check-in link."
+msgstr "Tsy manan-kery ny rohy fidirana."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/checkin.py:42
+msgid "You are not authorized to check in for this item."
+msgstr "Tsy mahazo alalana ianao hiditra amin'ity zavatra ity."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/checkin.py:66
+msgid "Unsupported check-in type."
+msgstr "Karazana fidirana izay tsy tohanana."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/checkin.py:105
+msgid "✅ Enabled and timer started."
+msgstr "✅ Nohiditra ary nanomboka ny fanisana ora."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/checkin.py:108
+msgid "⛔ Disabled."
+msgstr "⛔ Nampiana voasakana."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/checkin.py:110
+msgid "⚠️ Cannot toggle — missing schedule or destination."
+msgstr "⚠️ Tsy afaka manova — tsy hita ny ora sy toerana."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/email.py:87
+msgid "Message saved."
+msgstr "Voatahiry ny hafatra."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/email.py:118
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/messages.py:162
+msgid "Message deleted."
+msgstr "Voafafa ny hafatra."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/email.py:150
+msgid "Attached files updated."
+msgstr "Nohavaozina ny rakitra mampirina."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/email.py:201
+msgid "SMTP configuration not assigned or is disabled."
+msgstr "Tsy napetraka na nampiana ilay fepetra SMTP."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/email.py:232
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/smtp_settings_admin.py:49
+msgid "Test email sent successfully."
+msgstr "Nandefasana mailaka fitsapana."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/email.py:277
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/messages.py:294
+msgid "Schedule updated successfully."
+msgstr "Vita tsara ny fanavaozana ny fandaharam-potoana."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/email.py:304
+msgid "SMTP configuration assigned."
+msgstr "Natao ny fametrahana SMTP."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/email.py:310
+msgid "SMTP configuration removed."
+msgstr "Natao ny fametrahana SMTP."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/messages.py:94
+msgid "Message created successfully."
+msgstr "Noforonina soa aman-tsara ny hafatra."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/messages.py:129
+msgid "Message updated successfully."
+msgstr "Nohavaozina soa aman-tsara ny hafatra."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/messages.py:215
+msgid "Destinations updated."
+msgstr "Nohavaozina ny toerana."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/messages.py:421
+msgid "No destinations assigned to this message."
+msgstr "Tsy napetraka na nampiana ilay fepetra SMTP."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/messages.py:427
+msgid "Test message sent successfully."
+msgstr "Nandefasana mailaka fitsapana."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/messages.py:429
+msgid "Test message failed: "
+msgstr "Voatahiry ny hafatra."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/secure_email.py:107
+msgid "✅ SMTP settings saved."
+msgstr "SMTP Settings"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/smtp.py:53
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/user_smtp.py:56
+msgid "SMTP destination created successfully."
+msgstr "Noforonina soa aman-tsara ny toerana SMTP."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/smtp.py:80
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/user_smtp.py:89
+msgid "SMTP destination updated."
+msgstr "Nohavaozina ny toerana SMTP."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/smtp.py:95
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/user_smtp.py:104
+msgid "SMTP destination deleted."
+msgstr "Nofafa ny toerana SMTP."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/smtp.py:109
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/user_smtp.py:120
+msgid "Test email sent successfully to your account email."
+msgstr "Nandefasana mailaka fitsapana soa aman-tsara amin'ny mailakanao."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/smtp.py:111
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/user_smtp.py:122
+msgid "Failed to send test email. Check SMTP settings."
+msgstr ""
+"Tsy nahomby ny fandefasana mailaka fitsapana. Jereo ny fanamboarana SMTP."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/smtp_settings_admin.py:46
+msgid "Test Email from Grylli"
+msgstr "Mailaka Fitsapana avy amin'ny Grylli"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/smtp_settings_admin.py:47
+msgid "This is a test email from the Grylli SMTP settings page."
+msgstr ""
+"Ity dia mailaka fitsapana avy amin'ny pejin'ny fanamboarana SMTP an'ny "
+"Grylli."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/smtp_settings_admin.py:51
+msgid "Failed to send test email: "
+msgstr "Tsy nahomby ny fandefasana mailaka fitsapana:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/users.py:63
+msgid "User updated successfully."
+msgstr "Nohavaozina soa aman-tsara ny mpampiasa."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/users.py:71
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/users.py:230
+msgid "An error occurred while updating the user."
+msgstr "Nisy hadisoana nitranga rehefa nanavao ny mpampiasa."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/users.py:141
+msgid "User deleted."
+msgstr "Voafafa ny mpampiasa."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/users.py:148
+msgid "An error occurred while deleting the user."
+msgstr "Nisy hadisoana nitranga rehefa mamafa ny mpampiasa."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/users.py:169
+msgid "Password is required when creating a new user."
+msgstr "Takiana ny tenimiafina rehefa mamorona mpampiasa vaovao."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/users.py:173
+msgid "Username already exists."
+msgstr "Efa misy ny solonanarana."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/users.py:177
+msgid "Email already exists."
+msgstr "Efa misy ny mailaka."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/users.py:191
+#, python-format
+msgid "User '%(username)s' created successfully."
+msgstr "Mpampiasa '%(username)s' noforonina soa aman-tsara."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/users.py:198
+msgid "Failed to create user."
+msgstr "Tsy nahomby ny famoronana mpampiasa."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/users.py:211
+msgid "You cannot change your own enabled status."
+msgstr "Tsy afaka manova ny satan'ny tenanao ianao."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/users.py:220
+#, python-format
+msgid "User '%(username)s' has been %(status)s."
+msgstr "Mpampiasa '%(username)s' dia %(status)s."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/users.py:223
+msgid "enabled"
+msgstr "nampiasaina"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/users.py:223
+msgid "disabled"
+msgstr "voaato"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/webhook.py:51
+msgid "Webhook created successfully."
+msgstr "Webhook noforonina soa aman-tsara."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/webhook.py:104
+msgid "Webhook updated successfully."
+msgstr "Webhook nohavaozina soa aman-tsara."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/webhook.py:130
+msgid "Webhook deleted."
+msgstr "Voafafa ny webhook."
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/webhook.py:160
+msgid "🧪 Webhook test sent successfully!"
+msgstr "🧪 Fandefasana fitsapana webhook nahomby!"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/webhook.py:162
+msgid "🧪 Webhook test failed: "
+msgstr "🧪 Tsy nahomby ny fitsapana webhook:"
+
+#: /home/osuhickeys/Documents/Docker/grylli/app/views/webhook.py:165
+msgid "🧪 Error sending webhook test."
+msgstr "🧪 Hadisoana nandritra ny fandefasana fitsapana webhook."
+
+#~ msgid ""
+#~ "Grylli is a secure message delivery platform designed to activate after "
+#~ "prolonged user inactivity."
+#~ msgstr ""
+#~ "Grylli dia sehatra fandefasana hafatra azo antoka natao hiasa rehefa elaela "
+#~ "tsy niasana ny mpampiasa."
+
+#~ msgid ""
+#~ "It is a modern reimplementation of Gone Man’s Switch with a refined tech "
+#~ "stack, better maintainability, and an improved user experience."
+#~ msgstr ""
+#~ "Fampiharana maoderina amin'ny sehatra Switch ny Olona Lasa miaraka amin'ny "
+#~ "teknolojia voahevitra tsara kokoa, fikojakojana tsara kokoa, ary traikefa "
+#~ "mpampiasa nohatsaraina."
+
+#~ msgid "Body:"
+#~ msgstr "Atiny:"
+
+#~ msgid "Subject:"
+#~ msgstr "Lohateny:"
+
+#~ msgid "Content:"
+#~ msgstr "Votoaty:"
+
+#~ msgid "Edit SMTP"
+#~ msgstr "Hamarino ny SMTP"
+
+#~ msgid ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+#~ msgstr ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+
+#~ msgid "Admin Notes"
+#~ msgstr "Fanamarihana Admin"
+
+#~ msgid "Register"
+#~ msgstr "Misoratra anarana"
+
+#~ msgid "View"
+#~ msgstr "Jereo"
+
+#~ msgid "Schedule"
+#~ msgstr "Fandaharana"
+
+#~ msgid "Message is enabled"
+#~ msgstr "Hafatra no alefa"
+
+#~ msgid "Message is disabled"
+#~ msgstr "Hafatra no tsy alefa"
+
+#~ msgid "No SMTP configuration selected."
+#~ msgstr "Tsy misy fifantenana fandaharana SMTP."

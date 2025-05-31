@@ -1,0 +1,33 @@
+{# ---------------------------------------------------------------------
+   index.html
+   app/templates/index.html
+   Enhanced landing page for Grylli.
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    <div class="max-w-3xl mx-auto mt-20 bg-white dark:bg-zinc-800 shadow-md rounded-xl p-6 space-y-5">
+        {# ------------------- Greeting Block ----------------------------- #}
+        <h1 class="text-2xl font-semibold text-black dark:text-white">{{ _("Welcome to Grylli") }}</h1>
+        <p class="text-zinc-500 dark:text-zinc-300">
+            <strong>{{ _("Pronounced") }}:</strong> /ˈɡrɪli/ — {{ _("like “grill-ee”") }}
+        </p>
+        {# ------------------- What Grylli Is ----------------------------- #}
+        <p class="text-zinc-600 dark:text-zinc-300">
+            {{ _("Grylli is a secure message scheduling and delivery system designed to ensure your important messages are delivered — even if you can’t be there to send them.") }}
+        </p>
+        {# ------------------- Why Grylli Exists -------------------------- #}
+        <p class="text-zinc-600 dark:text-zinc-300">
+            {{ _("Whether you’re planning ahead, setting up emergency communication, or building peace of mind, Grylli helps automate your message delivery via email, webhooks, or Apprise notifications if you miss a check-in.") }}
+        </p>
+        {# ------------------- Getting Started Instructions --------------- #}
+        <h2 class="text-lg font-semibold text-zinc-800 dark:text-zinc-100 mt-4">{{ _("Getting Started") }}:</h2>
+        <ol class="list-decimal list-inside text-zinc-600 dark:text-zinc-300 space-y-1">
+            <li>{{ _("Create a message or email.") }}</li>
+            <li>{{ _("Set your check-in interval and grace period.") }}</li>
+            <li>{{ _("Assign one or more delivery destinations.") }}</li>
+            <li>{{ _("Optionally attach files for secure emails.") }}</li>
+            <li>{{ _("Enable the message to start monitoring.") }}</li>
+            <li>{{ _("If you don’t check in, Grylli delivers the message for you.") }}</li>
+        </ol>
+    </div>
+{% endblock %}

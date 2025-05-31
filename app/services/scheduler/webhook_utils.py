@@ -1,0 +1,64 @@
+"""
+# ---------------------------------------------------------------------
+# webhook_utils.py
+# app/services/scheduler/webhook_utils.py
+# Execute Webhook trigger for expired messages
+# ---------------------------------------------------------------------
+"""
+
+# ------------------------ Imports (PEP8 order) -----------------------
+import requests
+
+from app.utils.logging import log_error_message, log_info_message
+
+
+# ---------------------------------------------------------------------
+# execute_webhooks
+# ---------------------------------------------------------------------
+def execute_webhooks(message):
+    """
+    Send HTTP POST requests to all enabled webhooks linked to the given message.
+
+    Args:
+        message: The message object (should have .webhooks, .label, .id, .subject, .content).
+
+    Logging:
+        - log_info_message for delivery attempts and successes.
+        - log_error_message for failures and exceptions.
+    """
+    log_info_message(f"🌐 Executing Webhook(s) for message: {message.label}")
+
+    if not message.webhooks:
+        log_info_message("⚠️ No webhooks linked to this message.")
+        return
+
+    for webhook in message.webhooks:
+        if not webhook.enabled:
+            continue
+
+        try:
+            response = requests.post(
+                webhook.endpoint,
+                json={
+                    "message_id": message.id,
+                    "label": message.label,
+                    "subject": message.subject,
+                    "content": message.content,
+                },
+                timeout=5,
+            )
+
+            if response.status_code == 200:
+                log_info_message(f"✅ Webhook delivered: {webhook.label}")
+            else:
+                log_error_message(
+                    f"❌ Webhook [{webhook.label}] failed with status {response.status_code}: {response.text}"
+                )
+
+        except Exception as e:
+            log_error_message(f"❌ Exception during webhook [{webhook.label}]: {e}")
+
+
+# ---------------------------------------------------------------------
+# End of file: app/services/scheduler/webhook_utils.py
+# ---------------------------------------------------------------------

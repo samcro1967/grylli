@@ -1,0 +1,36 @@
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+
+[tool.isort]
+profile = "black"
+line_length = 100
+known_first_party = ["app", "tools"]
+
+[tool.pylint]
+# Import path
+init-hook = "import sys; sys.path.append('.')"
+
+# Maximum line length (should match black/isort)
+max-line-length = 100
+
+# List of message IDs to disable globally
+disable = [
+#    "C0114",  # missing-module-docstring
+#    "C0115",  # missing-class-docstring
+#    "C0116",  # missing-function-docstring
+    "R0903",  # too-few-public-methods (often for simple classes)
+    "I0011",  # Locally disabling wrong-import-position (C0413)
+    "I0020",  # Suppressed 'wrong-import-position'
+]
+
+# Additional good names or variable names to allow without warnings
+good-names = ["i", "j", "k", "ex", "Run", "_"]
+
+# Enable or disable specific checkers if needed
+enable = [
+    "all"
+]
+
+# Ignore specific directories or files from linting
+ignore = ["migrations"]

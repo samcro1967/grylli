@@ -1,0 +1,89 @@
+{# ---------------------------------------------------------------------
+  attach_files.html
+  app/templates/email/attach_files.html
+  [Describe purpose or main content of this template.]
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{# =================== JINJA BLOCK ==================== #}
+{% block content %}
+    <!-- Page Title -->
+    <h1 class="text-2xl font-semibold mb-6 flex items-center space-x-2">
+        <span>📎</span>
+        <span>{{ _("Attach Files for:") }} {{ message.label }}</span>
+    </h1>
+    <!-- Card Container -->
+    <!-- =================== FORM START =================== -->
+    <form method="post"
+          class="bg-white dark:bg-zinc-800 rounded shadow p-6 max-w-3xl space-y-6">
+        <!-- File List -->
+        <div>
+            <h2 class="text-sm font-medium text-zinc-500 dark:text-zinc-400 mb-2">{{ _("Available Files") }}</h2>
+            <ul class="space-y-2">
+                {% for file in available_files %}
+                    <li>
+                        <label class="inline-flex items-center space-x-2">
+                            <input type="checkbox"
+                                   name="file_paths"
+                                   value="{{ file.name }}"
+                                   {% if file.name in existing_files %}checked{% endif %}
+                                   class="form-checkbox text-indigo-600">
+                            <span class="text-sm text-zinc-900 dark:text-zinc-100">{{ file.name }}</span>
+                            <span class="text-xs text-zinc-500 ml-2">({{ file.size | filesizeformat }})</span>
+                        </label>
+                    </li>
+                {% else %}
+                    <li class="italic text-zinc-400 text-sm">{{ _("No files found in the upload directory.") }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+        <!-- Save/Cancel Buttons -->
+        <div class="flex space-x-4 mt-4">
+            <button type="submit"
+                    class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">
+                {{ _("Save Attachments") }}
+            </button>
+            <a href="{{ url_for("email.index") }}"
+               class="px-4 py-2 bg-zinc-500 text-white rounded hover:bg-zinc-600 transition">{{ _("Cancel") }}</a>
+        </div>
+        <!-- =================== FORM END ===================== -->
+    </form>
+    <div x-data="{ showHelp: false }" class="mt-8">
+        <button @click="showHelp = !showHelp"
+                class="text-sm text-blue-400 hover:text-blue-200 underline focus:outline-none">
+            <span x-data="{ hide: '{{ _("Hide Instructions") }}', show: '{{ _("File Attach Notes") }}' }"
+                  x-text="showHelp ? hide : show"></span>
+        </button>
+        <!-- =================== Help ===================== -->
+        <div x-show="showHelp"
+             x-transition
+             class="mt-4 p-4 rounded bg-zinc-800 text-sm text-zinc-100 space-y-2 shadow-md border border-zinc-700">
+            <ul class="list-disc ml-5">
+                <li>
+                    <strong>{{ _("Important:") }}</strong>
+                    <span class="ml-1">
+                        {{ _("Only files that are present in the 'uploads' folder (provided by your system administrator) will be shown here. If you do not see your file(s), please contact your Grylli administrator.") }}
+                    </span>
+                </li>
+                <li>
+                    <strong>{{ _("Accepted file types:") }}</strong>
+                    <div class="ml-3">
+                        – <strong>{{ _("Documents:") }}</strong> PDF, DOCX, XLSX, PPTX, TXT, CSV
+                        <br>
+                        – <strong>{{ _("Images:") }}</strong> JPG, JPEG, PNG, GIF, BMP
+                        <br>
+                        – <strong>{{ _("Audio:") }}</strong> WAV, M4A
+                    </div>
+                </li>
+                <li>
+                    <strong>{{ _("Maximum file size:") }}</strong>
+                    <span class="ml-1">{{ _("10 MB per file") }}</span>
+                </li>
+                <li>
+                    <strong>{{ _("Total upload size:") }}</strong>
+                    <span class="ml-1">{{ _("20 MB (all files combined)") }}</span>
+                </li>
+            </ul>
+        </div>
+        <!-- =================== Help End ===================== -->
+    </div>
+{% endblock %}

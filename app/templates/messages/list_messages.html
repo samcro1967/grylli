@@ -1,0 +1,298 @@
+{# ---------------------------------------------------------------------
+  list_messages.html
+  app/templates/messages/list_messages.html
+  [Describe purpose or main content of this template.]
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{# =================== JINJA BLOCK ==================== #}
+{% block content %}
+    <h1 class="text-xl font-semibold mb-4">{{ _("Notifications") }}</h1>
+    <!-- View toggle and Add button -->
+    <div class="mb-4 flex items-center justify-between">
+        <!-- Toggle Buttons -->
+        <div class="flex space-x-2">
+            <!-- Table View -->
+            <button id="tableViewBtn"
+                    aria-label="{{ _("Table View") }}"
+                    title="{{ _("Table View") }}"
+                    class="p-2 rounded bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     class="h-6 w-6"
+                     fill="none"
+                     viewBox="0 0 24 24"
+                     stroke="currentColor"
+                     stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+                </svg>
+            </button>
+            <!-- Card View -->
+            <button id="cardViewBtn"
+                    aria-label="{{ _("Card View") }}"
+                    title="{{ _("Card View") }}"
+                    class="p-2 rounded bg-gray-300 text-black hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     class="h-6 w-6"
+                     fill="none"
+                     viewBox="0 0 24 24"
+                     stroke="currentColor"
+                     stroke-width="2">
+                    <rect x="3" y="3" width="7" height="7" />
+                    <rect x="14" y="3" width="7" height="7" />
+                    <rect x="14" y="14" width="7" height="7" />
+                    <rect x="3" y="14" width="7" height="7" />
+                </svg>
+            </button>
+        </div>
+        <!-- Add Message Button -->
+        <a href="{{ url_for("messages_bp.create_message") }}"
+           class="inline-block px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition">
+            ➕ {{ _("Add Notification") }}
+        </a>
+    </div>
+<!-- ===================Table View=================== -->
+<div id="tableView">
+    <table class="table-auto w-full border-collapse border border-gray-300 dark:border-gray-700">
+        <thead>
+            <tr>
+              <th class="border px-4 py-2">{{ _("Label") }}</th>
+              <th class="border px-4 py-2">{{ _("Subject") }}</th>
+              <th class="border px-4 py-2">{{ _("Created At") }}</th>
+              <th class="border px-4 py-2">{{ _("Actions") }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for message in messages %}
+                <tr>
+                    <td class="border px-4 py-2">{{ message.label }}</td>
+                    <td class="border px-4 py-2">{{ message.subject }}</td>
+                    <td class="border px-4 py-2">{{ message.created_at.strftime("%Y-%m-%d %H:%M") }}</td>
+                    <td class="border px-4 py-2">
+                        <!-- Edit Notification -->
+                        {% if not message.is_enabled %}
+                          <a href="{{ url_for('messages_bp.edit_message', message_id=message.id) }}" class="text-blue-500 hover:underline" title="{{ _('Edit Notification') }}">✏️</a>
+                        {% else %}
+                          <span class="text-gray-400 cursor-not-allowed" title="{{ _('Disable to edit notification') }}">✏️</span>
+                        {% endif %}
+
+                        <!-- Assign Destinations -->
+                        {% if not message.is_enabled %}
+                          <a href="{{ url_for('messages_bp.assign_destinations', message_id=message.id) }}" class="text-purple-500 hover:underline ml-2" title="{{ _('Assign Destinations') }}">🧩</a>
+                        {% else %}
+                          <span class="text-gray-400 cursor-not-allowed ml-2" title="{{ _('Disable to assign destinations') }}">🧩</span>
+                        {% endif %}
+
+                        <!-- Set Schedule -->
+                        {% if not message.is_enabled %}
+                          <a href="{{ url_for('messages_bp.schedule_message', message_id=message.id) }}" class="text-yellow-500 hover:underline ml-2" title="{{ _('Set Schedule') }}">⏱️</a>
+                        {% else %}
+                          <span class="text-gray-400 cursor-not-allowed ml-2" title="{{ _('Disable to set schedule') }}">⏱️</span>
+                        {% endif %}
+                        <a href="{{ url_for('messages_bp.view_message', message_id=message.id) }}"
+                           class="text-gray-500 hover:underline ml-2"
+                           title="{{ _("View Details") }}">🔍</a>
+                        <!-- ADD INSIDE TABLE VIEW ACTIONS (Always Enabled) -->
+                        <form method="post"
+                              action="{{ url_for('messages_bp.send_test_message', message_id=message.id) }}"
+                              class="inline ml-2">
+                            <button type="submit"
+                                    class="text-indigo-600 hover:underline"
+                                    title="{{ _('Send Test Notification') }}">🧪</button>
+                        </form>
+                        <form method="post"
+                              action="{{ url_for('messages_bp.delete_message', message_id=message.id) }}"
+                              class="inline ml-2"
+                              onsubmit="return confirm('{{ _("Delete") }} {{ message.label or message.subject }}?');">
+                            <button type="submit"
+                                    class="text-red-500 hover:underline"
+                                    title="{{ _("Delete") }}">🗑️</button>
+                        </form>
+                        <form method="post"
+                              action="{{ url_for('checkin.toggle_enabled', type='message', id=message.id) }}"
+                              class="inline ml-2">
+                            <button type="submit" title="{{ _("Toggle Message On/Off") }}">
+                                {% if message.is_enabled %}
+                                    <span class="text-green-600" title="{{ _("Notification is enabled") }}">🟢</span>
+                                {% else %}
+                                    <span class="text-red-500" title="{{ _("Notification is disabled") }}">🔴</span>
+                                {% endif %}
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+    <!-- =================== CARD VIEW =================== -->
+    <div id="cardView"
+         class="hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {% for message in messages %}
+            <div class="bg-white dark:bg-zinc-800 rounded shadow p-4 flex flex-col gap-1">
+                <div>
+                    <span class="font-semibold">{{ _("Label:") }}</span>
+                    <span>{{ message.label }}</span>
+                </div>
+                <div>
+                    <span class="font-semibold">{{ _("Subject:") }}</span>
+                    <span>{{ message.subject }}</span>
+                </div>
+                <div>
+                    <span class="font-semibold">{{ _("Created At:") }}</span>
+                    <span>{{ message.created_at.strftime("%Y-%m-%d %H:%M") }}</span>
+                </div>
+                <div class="flex flex-wrap gap-2 mt-2">
+                    <!-- Edit Notification -->
+                    {% if not message.is_enabled %}
+                      <a href="{{ url_for('messages_bp.edit_message', message_id=message.id) }}" class="text-blue-500 hover:underline" title="{{ _('Edit Notification') }}">✏️</a>
+                    {% else %}
+                      <span class="text-gray-400 cursor-not-allowed" title="{{ _('Disable to edit notification') }}">✏️</span>
+                    {% endif %}
+
+                    <!-- Assign Destinations -->
+                    {% if not message.is_enabled %}
+                      <a href="{{ url_for('messages_bp.assign_destinations', message_id=message.id) }}" class="text-purple-500 hover:underline" title="{{ _('Assign Destinations') }}">🧩</a>
+                    {% else %}
+                      <span class="text-gray-400 cursor-not-allowed" title="{{ _('Disable to assign destinations') }}">🧩</span>
+                    {% endif %}
+
+                    <!-- Set Schedule -->
+                    {% if not message.is_enabled %}
+                      <a href="{{ url_for('messages_bp.schedule_message', message_id=message.id) }}" class="text-yellow-500 hover:underline" title="{{ _('Set Schedule') }}">⏱️</a>
+                    {% else %}
+                      <span class="text-gray-400 cursor-not-allowed" title="{{ _('Disable to set schedule') }}">⏱️</span>
+                    {% endif %}
+
+                    <!-- View Details -->
+                    <a href="{{ url_for('messages_bp.view_message', message_id=message.id) }}"
+                       class="text-gray-500 hover:underline"
+                       title="{{ _('View Details') }}">🔍</a>
+                    <!-- ADD INSIDE CARD VIEW ACTIONS (Always Enabled) -->
+                    <form method="post"
+                          action="{{ url_for('messages_bp.send_test_message', message_id=message.id) }}"
+                          class="inline">
+                        <button type="submit"
+                                class="text-indigo-600 hover:underline"
+                                title="{{ _('Send Test Notification') }}">🧪</button>
+                    </form>
+                    <!-- Delete Notification -->
+                    <form method="post"
+                          action="{{ url_for('messages_bp.delete_message', message_id=message.id) }}"
+                          class="inline"
+                          onsubmit="return confirm('{{ _('Delete') }} {{ message.label or message.subject }}?');">
+                        <button type="submit"
+                                class="text-red-500 hover:underline"
+                                title="{{ _('Delete') }}">🗑️</button>
+                    </form>
+                    <!-- Enable/Disable Toggle -->
+                    <form method="post"
+                          action="{{ url_for('checkin.toggle_enabled', type='message', id=message.id) }}"
+                          class="inline">
+                        <button type="submit"
+                                title="{{ _('Toggle Message On/Off') }}">
+                            {% if message.is_enabled %}
+                                <span class="text-green-600" title="{{ _('Notification is enabled') }}">🟢</span>
+                            {% else %}
+                                <span class="text-red-500" title="{{ _('Notification is disabled') }}">🔴</span>
+                            {% endif %}
+                        </button>
+                    </form>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <!-- ===================Expandable Instructions=================== Panel -->
+    <!-- These lines ensure strings are picked up by Babel -->
+    <div x-data="{ showHelp: false, hideText: '{{ _("Hide Instructions") }}', showText: '{{ _("How to create and send a notification") }}' }"
+         class="mt-8">
+        <button @click="showHelp = !showHelp"
+                class="text-sm text-blue-400 hover:text-blue-200 underline focus:outline-none">
+            <span x-text="showHelp ? hideText : showText"></span>
+        </button>
+        <div x-show="showHelp"
+             x-transition
+             class="mt-4 p-4 rounded bg-zinc-800 text-sm text-zinc-100 space-y-2 shadow-md border border-zinc-700">
+            <ol class="list-decimal list-inside space-y-1">
+                <li>{{ _("Click “Add notification” and fill out the subject and content fields.") }}</li>
+                <li>{{ _("Save the notification to return to the overview.") }}</li>
+                <li>{{ _("You need to create at least one apprise or webhook destination.") }}</li>
+                <li>{{ _("You can create as many destinations as you like.") }}</li>
+                <li>{{ _("Click 🧩 to assign one or more Apprise and/or Webhook destinations.") }}</li>
+                <li>{{ _("Click ⏱️ to set a schedule and check-in interval.") }}</li>
+                <li>{{ _("Enable the notification using the 🔴/🟢 toggle button.") }}</li>
+                <li>{{ _("If you don’t check in before the grace period ends, the notification will be sent.") }}</li>
+                <li>{{ _("You can preview the notification config using 🔍.") }}</li>
+                <li>{{ _("Once a notification is sent, it will be automatically disabled.") }}</li>
+            </ol>
+        </div>
+    </div>
+    <!-- View Toggle Script -->
+    <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const tableBtn = document.getElementById('tableViewBtn');
+    const cardBtn = document.getElementById('cardViewBtn');
+    const tableView = document.getElementById('tableView');
+    const cardView = document.getElementById('cardView');
+
+    // Restore previous view from localStorage
+    const savedView = localStorage.getItem('messageListView');
+    if (savedView === 'card') {
+      tableView.classList.add('hidden');
+      cardView.classList.remove('hidden');
+      tableBtn.classList.replace('bg-blue-600', 'bg-gray-300');
+      tableBtn.classList.replace('text-white', 'text-black');
+      cardBtn.classList.replace('bg-gray-300', 'bg-blue-600');
+      cardBtn.classList.replace('text-black', 'text-white');
+    }
+
+    tableBtn.addEventListener('click', () => {
+      tableView.classList.remove('hidden');
+      cardView.classList.add('hidden');
+      tableBtn.classList.replace('bg-gray-300', 'bg-blue-600');
+      tableBtn.classList.replace('text-black', 'text-white');
+      cardBtn.classList.replace('bg-blue-600', 'bg-gray-300');
+      cardBtn.classList.replace('text-white', 'text-black');
+      localStorage.setItem('messageListView', 'table');
+    });
+
+    cardBtn.addEventListener('click', () => {
+      cardView.classList.remove('hidden');
+      tableView.classList.add('hidden');
+      cardBtn.classList.replace('bg-gray-300', 'bg-blue-600');
+      cardBtn.classList.replace('text-black', 'text-white');
+      tableBtn.classList.replace('bg-blue-600', 'bg-gray-300');
+      tableBtn.classList.replace('text-white', 'text-black');
+      localStorage.setItem('messageListView', 'card');
+    });
+  });
+
+  function fetchMessageStatuses() {
+    fetch('/grylli/messages/status')
+      .then(response => response.json())
+      .then(data => {
+        data.forEach(message => {
+          // Find the enable/disable toggle button for this message by id
+          const button = document.querySelector(`form[action*='${message.id}'] button[title='Toggle Message On/Off']`);
+          if (!button) return;
+
+          if (message.is_enabled) {
+            button.classList.remove('text-red-500');
+            button.classList.add('text-green-600');
+            button.innerHTML = '<span class="text-green-600" title="Notification is enabled">🟢</span>';
+          } else {
+            button.classList.remove('text-green-600');
+            button.classList.add('text-red-500');
+            button.innerHTML = '<span class="text-red-500" title="Notification is disabled">🔴</span>';
+          }
+        });
+      })
+      .catch(err => console.error('Failed to fetch message statuses:', err));
+  }
+
+  // Poll every 15 seconds
+  setInterval(fetchMessageStatuses, 15000);
+
+  // Also fetch once on page load
+  document.addEventListener('DOMContentLoaded', fetchMessageStatuses);
+    </script>
+{% endblock %}

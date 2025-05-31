@@ -1,0 +1,237 @@
+{# ---------------------------------------------------------------------
+  manage_account.html
+  app/templates/account/manage_account.html
+  Account management form: update profile info and password.
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{# =================== CONTENT BLOCK =================== #}
+{% block content %}
+    <!-- Outer container for centering and styling -->
+    <div class="max-w-md mx-auto mt-20 bg-white dark:bg-zinc-800 shadow-md rounded-xl p-6 space-y-4">
+        <h1 class="text-xl font-semibold text-black dark:text-white">{{ _("Manage Account") }}</h1>
+        <p class="text-sm text-zinc-600 dark:text-zinc-300">{{ _("Update your profile information and password.") }}</p>
+        <!-- =================== FORM START =================== -->
+        <form method="post" novalidate>
+            {{ form.hidden_tag() }}
+            <!-- ---------- Username Field ---------- -->
+            <div class="mb-4">
+                {{ form.username.label(class="block text-sm font-medium mb-1") }}
+                {{ form.username(id="username",
+                                class="form-input w-full bg-zinc-100 dark:bg-zinc-700 text-black dark:text-white",
+                                autocomplete="username",
+                                aria_invalid="true" if form.username.errors else "false") }}
+                {% if form.username.errors %}
+                    <ul class="text-red-600 text-xs mt-1" id="username-errors">
+                        {% for error in form.username.errors %}<li>{{ error }}</li>{% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+            <!-- ---------- Email Field ---------- -->
+            <div class="mb-4">
+                {{ form.email.label(class="block text-sm font-medium mb-1") }}
+                {{ form.email(id="email",
+                                class="form-input w-full bg-zinc-100 dark:bg-zinc-700 text-black dark:text-white",
+                                autocomplete="email",
+                                aria_invalid="true" if form.email.errors else "false") }}
+                {% if form.email.errors %}
+                    <ul class="text-red-600 text-xs mt-1" id="email-errors">
+                        {% for error in form.email.errors %}<li>{{ error }}</li>{% endfor %}
+                    </ul>
+                {% endif %}
+                <p id="emailWarning" class="text-red-500 text-sm hidden">{{ _("Please enter a valid email address.") }}</p>
+            </div>
+            <hr class="my-4 border-zinc-300 dark:border-zinc-700">
+            <!-- ---------- Current Password Field ---------- -->
+            <div class="mb-4 flex items-center space-x-2">
+                <div class="flex-grow relative">
+                    {{ form.current_password.label(class="block text-sm font-medium mb-1") }}
+                    {{ form.current_password(id="current_password",
+                                        class="form-input w-full bg-zinc-100 dark:bg-zinc-700 text-black dark:text-white",
+                                        autocomplete="current-password",
+                                        aria_invalid="true" if form.current_password.errors else "false") }}
+                    {% if form.current_password.errors %}
+                        <ul class="text-red-600 text-xs mt-1" id="current-password-errors">
+                            {% for error in form.current_password.errors %}<li>{{ error }}</li>{% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+                <button type="button"
+                        class="pt-6"
+                        id="toggleCurrentPasswordEye"
+                        tabindex="-1"
+                        aria-label="{{ _("Show/hide password") }}">
+                    <!-- SVG icon unchanged -->
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         class="w-6 h-6 text-zinc-500 dark:text-zinc-400"
+                         fill="none"
+                         viewBox="0 0 24 24"
+                         stroke="currentColor"
+                         stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.522 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.478 0-8.268-2.943-9.542-7z" />
+                    </svg>
+                </button>
+            </div>
+            <!-- ---------- New Password Field ---------- -->
+            <div class="mb-4 flex items-center space-x-2">
+                <div class="flex-grow relative">
+                    {{ form.new_password.label(class="block text-sm font-medium mb-1") }}
+                    {{ form.new_password(id="new_password",
+                                        class="form-input w-full bg-zinc-100 dark:bg-zinc-700 text-black dark:text-white",
+                                        autocomplete="new-password",
+                                        aria_invalid="true" if form.new_password.errors else "false") }}
+                    {% if form.new_password.errors %}
+                        <ul class="text-red-600 text-xs mt-1" id="new-password-errors">
+                            {% for error in form.new_password.errors %}<li>{{ error }}</li>{% endfor %}
+                        </ul>
+                    {% endif %}
+                    <p id="complexityWarning" class="text-red-500 text-sm hidden">
+                        {{ _("Password must meet all complexity requirements.") }}
+                    </p>
+                </div>
+                <button type="button"
+                        class="pt-6"
+                        id="toggleNewPasswordEye"
+                        tabindex="-1"
+                        aria-label="{{ _("Show/hide password") }}">
+                    <!-- SVG icon unchanged -->
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         class="w-6 h-6 text-zinc-500 dark:text-zinc-400"
+                         fill="none"
+                         viewBox="0 0 24 24"
+                         stroke="currentColor"
+                         stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.522 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.478 0-8.268-2.943-9.542-7z" />
+                    </svg>
+                </button>
+            </div>
+            <!-- ---------- Confirm Password Field ---------- -->
+            <div class="mb-4 flex items-center space-x-2">
+                <div class="flex-grow relative">
+                    {{ form.confirm_password.label(class="block text-sm font-medium mb-1") }}
+                    {{ form.confirm_password(id="confirm_password",
+                                        class="form-input w-full bg-zinc-100 dark:bg-zinc-700 text-black dark:text-white",
+                                        autocomplete="new-password",
+                                        aria_invalid="true" if form.confirm_password.errors else "false") }}
+                    {% if form.confirm_password.errors %}
+                        <ul class="text-red-600 text-xs mt-1" id="confirm-password-errors">
+                            {% for error in form.confirm_password.errors %}<li>{{ error }}</li>{% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+                <button type="button"
+                        class="pt-6"
+                        id="toggleConfirmPasswordEye"
+                        tabindex="-1"
+                        aria-label="{{ _("Show/hide password") }}">
+                    <!-- SVG icon unchanged -->
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         class="w-6 h-6 text-zinc-500 dark:text-zinc-400"
+                         fill="none"
+                         viewBox="0 0 24 24"
+                         stroke="currentColor"
+                         stroke-width="2">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.522 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.478 0-8.268-2.943-9.542-7z" />
+                    </svg>
+                </button>
+            </div>
+            <!-- ---------- Password Mismatch Warning ---------- -->
+            <div id="passwordMismatchWarning" class="text-sm text-red-500 hidden">{{ _("Passwords do not match.") }}</div>
+            <!-- ---------- Submit and Cancel Buttons ---------- -->
+            <div class="flex gap-4 mt-6">
+                <button id="submitBtn"
+                        type="submit"
+                        class="w-1/2 bg-red-500 text-white py-2 px-4 rounded disabled:opacity-50 disabled:cursor-not-allowed transition-colors">
+                    {{ _("Update Account") }}
+                </button>
+                <a href="{{ url_for("index.index") }}"
+                   class="w-1/2 text-center bg-zinc-400 text-white py-2 px-4 rounded hover:bg-zinc-500 transition-colors">
+                    {{ _("Cancel") }}
+                </a>
+            </div>
+        </form>
+        <!-- =================== FORM END ===================== -->
+        <!-- ---------- Password Requirements ---------- -->
+        <div class="text-sm text-zinc-600 dark:text-zinc-300 mt-1">
+            <ul class="list-disc list-inside space-y-1">
+                <li>{{ _("Minimum 8 characters") }}</li>
+                <li>{{ _("At least one uppercase letter") }}</li>
+                <li>{{ _("At least one lowercase letter") }}</li>
+                <li>{{ _("At least one number") }}</li>
+                <li>{{ _("At least one special character (e.g., !@#$%)") }}</li>
+            </ul>
+        </div>
+    </div>
+    <!-- =================== VALIDATION SCRIPT =================== -->
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const username = document.getElementById("username");
+      const email = document.getElementById("email");
+      const currentPw = document.getElementById("current_password");
+      const newPw = document.getElementById("new_password");
+      const confirmPw = document.getElementById("confirm_password");
+      const submitBtn = document.getElementById("submitBtn");
+      const mismatchWarning = document.getElementById("passwordMismatchWarning");
+      const complexityWarning = document.getElementById("complexityWarning");
+      const emailWarning = document.getElementById("emailWarning");
+
+      function passwordsMatch() {
+        return newPw.value === confirmPw.value;
+      }
+
+      function meetsComplexity(pw) {
+        return (
+          pw.length >= 8 &&
+          /[A-Z]/.test(pw) &&
+          /[a-z]/.test(pw) &&
+          /[0-9]/.test(pw) &&
+          /[!@#$%^&*(),.?":{}|<>]/.test(pw)
+        );
+      }
+
+      function isValidEmail(value) {
+        return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value);
+      }
+
+      function allValid() {
+        return (
+          username.value.trim() &&
+          isValidEmail(email.value) &&
+          currentPw.value.trim() &&
+          newPw.value.trim() &&
+          confirmPw.value.trim() &&
+          passwordsMatch() &&
+          meetsComplexity(newPw.value)
+        );
+      }
+
+      function updateButtonState() {
+        const valid = allValid();
+        mismatchWarning.classList.toggle("hidden", passwordsMatch());
+        complexityWarning.classList.toggle("hidden", meetsComplexity(newPw.value));
+        emailWarning.classList.toggle("hidden", isValidEmail(email.value));
+        submitBtn.disabled = !valid;
+        submitBtn.classList.toggle("bg-green-600", valid);
+        submitBtn.classList.toggle("bg-red-500", !valid);
+      }
+
+      [username, email, currentPw, newPw, confirmPw].forEach(field => {
+        field.addEventListener("input", updateButtonState);
+      });
+
+      function setupEye(eyeBtn, field) {
+        eyeBtn.addEventListener("mousedown", () => { field.type = "text"; });
+        eyeBtn.addEventListener("mouseup", () => { field.type = "password"; });
+        eyeBtn.addEventListener("mouseleave", () => { field.type = "password"; });
+      }
+      setupEye(document.getElementById("toggleCurrentPasswordEye"), currentPw);
+      setupEye(document.getElementById("toggleNewPasswordEye"), newPw);
+      setupEye(document.getElementById("toggleConfirmPasswordEye"), confirmPw);
+
+      updateButtonState();
+    });
+    </script>
+    <!-- =================== END SCRIPT =================== -->
+{% endblock %}

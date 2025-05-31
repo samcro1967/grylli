@@ -1,0 +1,320 @@
+{# ---------------------------------------------------------------------
+  list_emails.html
+  app/templates/email/list_emails.html
+  Main Email List page – table & card views, action buttons, instructions.
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    <!-- =================== PAGE TITLE =================== -->
+    <h1 class="text-xl font-semibold mb-4">{{ _("Emails") }}</h1>
+    <!-- =================== VIEW TOGGLE + ADD EMAIL =================== -->
+    <div class="mb-4 flex items-center justify-between">
+        <div class="flex space-x-2">
+            <!-- Table View Toggle Button -->
+            <button id="tableViewBtn"
+                    aria-label="{{ _("Table View") }}"
+                    title="{{ _("Table View") }}"
+                    class="p-2 rounded bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     class="h-6 w-6"
+                     fill="none"
+                     viewBox="0 0 24 24"
+                     stroke="currentColor"
+                     stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+                </svg>
+            </button>
+            <!-- Card View Toggle Button -->
+            <button id="cardViewBtn"
+                    aria-label="{{ _("Card View") }}"
+                    title="{{ _("Card View") }}"
+                    class="p-2 rounded bg-gray-300 text-black hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     class="h-6 w-6"
+                     fill="none"
+                     viewBox="0 0 24 24"
+                     stroke="currentColor"
+                     stroke-width="2">
+                    <rect x="3" y="3" width="7" height="7" />
+                    <rect x="14" y="3" width="7" height="7" />
+                    <rect x="14" y="14" width="7" height="7" />
+                    <rect x="3" y="14" width="7" height="7" />
+                </svg>
+            </button>
+        </div>
+        <!-- Add Email Button -->
+        <a href="{{ url_for("email.edit_message") }}"
+           class="inline-block px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition">
+            ➕ {{ _("Add Email") }}
+        </a>
+    </div>
+    <!-- =================== TABLE VIEW =================== -->
+    <div id="tableView">
+        <table class="table-auto w-full border-collapse border border-gray-300 dark:border-gray-700">
+            <thead>
+                <tr>
+                    <th class="border px-4 py-2">{{ _("Label") }}</th>
+                    <th class="border px-4 py-2">{{ _("Subject") }}</th>
+                    <th class="border px-4 py-2">{{ _("To") }}</th>
+                    <th class="border px-4 py-2">{{ _("Created At") }}</th>
+                    <th class="border px-4 py-2">{{ _("Actions") }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for email in emails %}
+                    <tr>
+                        <td class="border px-4 py-2">{{ email.label }}</td>
+                        <td class="border px-4 py-2">{{ email.subject }}</td>
+                        <td class="border px-4 py-2">{{ email.recipient }}</td>
+                        <td class="border px-4 py-2">{{ email.created_at.strftime("%Y-%m-%d %H:%M") }}</td>
+                        <td class="border px-4 py-2">
+                          <!-- Edit Email -->
+                          {% if not email.is_enabled %}
+                            <a href="{{ url_for('email.edit_message', message_id=email.id) }}" class="text-blue-500 hover:underline" title="{{ _("Edit Email") }}">✏️</a>
+                          {% else %}
+                            <span class="text-gray-400 cursor-not-allowed" title="{{ _('Disable to edit email') }}">✏️</span>
+                          {% endif %}
+
+                          <!-- Attach Files -->
+                          {% if not email.is_enabled %}
+                            <a href="{{ url_for('email.attach_files', message_id=email.id) }}" class="text-green-600 hover:underline ml-2" title="{{ _("Attach Files") }}">📎</a>
+                          {% else %}
+                            <span class="text-gray-400 cursor-not-allowed ml-2" title="{{ _('Disable to attach files') }}">📎</span>
+                          {% endif %}
+
+                          <!-- Assign SMTP -->
+                          {% if not email.is_enabled %}
+                            <a href="{{ url_for('email.assign_smtp', message_id=email.id) }}" class="text-sky-500 hover:underline ml-2" title="{{ _("Attach SMTP Config") }}">🧩</a>
+                          {% else %}
+                            <span class="text-gray-400 cursor-not-allowed ml-2" title="{{ _('Disable to assign SMTP') }}">🧩</span>
+                          {% endif %}
+
+                          <!-- Schedule Check-In -->
+                          {% if not email.is_enabled %}
+                            <a href="{{ url_for('email.schedule', message_id=email.id) }}" class="text-yellow-500 hover:underline ml-2" title="{{ _("Schedule Check-In") }}">⏱️</a>
+                          {% else %}
+                            <span class="text-gray-400 cursor-not-allowed ml-2" title="{{ _('Disable to schedule check-in') }}">⏱️</span>
+                          {% endif %}
+
+                            <!-- View Config -->
+                            <a href="{{ url_for('email.view_config', message_id=email.id) }}"
+                               class="text-gray-500 hover:underline ml-2"
+                               title="{{ _("View Details") }}">🔍</a>
+                            <!-- =================== FORM: SEND TEST =================== -->
+                            <form method="post"
+                                  action="{{ url_for('email.send_test', message_id=email.id) }}"
+                                  class="inline ml-2">
+                                <button type="submit"
+                                        class="text-indigo-500 hover:underline"
+                                        title="{{ _("Send this email to yourself to preview it.") }}">🧪</button>
+                            </form>
+                            <!-- =================== FORM: DELETE EMAIL =================== -->
+                            <form method="post"
+                                  action="{{ url_for('email.delete_message', message_id=email.id) }}"
+                                  class="inline ml-2"
+                                  onsubmit="return confirm('{{ _("Delete") }} {{ email.subject }}?');">
+                                <button type="submit"
+                                        class="text-red-500 hover:underline"
+                                        title="{{ _("Delete") }}">🗑️</button>
+                            </form>
+                            <!-- =================== FORM: ENABLE/DISABLE TOGGLE =================== -->
+                            <form method="post"
+                                  action="{{ url_for('checkin.toggle_enabled', type='email', id=email.id) }}"
+                                  class="inline ml-2">
+                                <button type="submit"
+                                        title="{{ _("Toggle Email On/Off") }}"
+                                        class="text-xl {% if email.is_enabled %}text-green-600{% else %}text-red-500{% endif %} hover:scale-110 transition">
+                                    {% if email.is_enabled %}
+                                        <span class="text-green-600" title="{{ _("Email is enabled") }}">🟢</span>
+                                    {% else %}
+                                        <span class="text-red-500" title="{{ _("Email is disabled") }}">🔴</span>
+                                    {% endif %}
+                                </button>
+                            </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <!-- =================== CARD VIEW =================== -->
+    <div id="cardView"
+         class="hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {% for email in emails %}
+            <div class="bg-white dark:bg-zinc-800 rounded shadow p-4 flex flex-col gap-1">
+                <div>
+                    <span class="font-semibold">{{ _("Label:") }}</span>
+                    <span>{{ email.label }}</span>
+                </div>
+                <div>
+                    <span class="font-semibold">{{ _("Subject:") }}</span>
+                    <span>{{ email.subject }}</span>
+                </div>
+                <div>
+                    <span class="font-semibold">{{ _("To:") }}</span>
+                    <span>{{ email.recipient }}</span>
+                </div>
+                <div>
+                    <span class="font-semibold">{{ _("Created At:") }}</span>
+                    <span>{{ email.created_at.strftime("%Y-%m-%d %H:%M") }}</span>
+                </div>
+                <div class="flex flex-wrap gap-2 mt-2">
+                    <!-- Edit Email -->
+                    {% if not email.is_enabled %}
+                      <a href="{{ url_for('email.edit_message', message_id=email.id) }}" class="text-blue-500 hover:underline" title="{{ _("Edit Email") }}">✏️</a>
+                    {% else %}
+                      <span class="text-gray-400 cursor-not-allowed" title="{{ _('Disable to edit email') }}">✏️</span>
+                    {% endif %}
+
+                    <!-- Attach Files -->
+                    {% if not email.is_enabled %}
+                      <a href="{{ url_for('email.attach_files', message_id=email.id) }}" class="text-green-600 hover:underline ml-2" title="{{ _("Attach Files") }}">📎</a>
+                    {% else %}
+                      <span class="text-gray-400 cursor-not-allowed ml-2" title="{{ _('Disable to attach files') }}">📎</span>
+                    {% endif %}
+
+                    <!-- Assign SMTP -->
+                    {% if not email.is_enabled %}
+                      <a href="{{ url_for('email.assign_smtp', message_id=email.id) }}" class="text-sky-500 hover:underline ml-2" title="{{ _("Attach SMTP Config") }}">🧩</a>
+                    {% else %}
+                      <span class="text-gray-400 cursor-not-allowed ml-2" title="{{ _('Disable to assign SMTP') }}">🧩</span>
+                    {% endif %}
+
+                    <!-- Schedule Check-In -->
+                    {% if not email.is_enabled %}
+                      <a href="{{ url_for('email.schedule', message_id=email.id) }}" class="text-yellow-500 hover:underline ml-2" title="{{ _("Schedule Check-In") }}">⏱️</a>
+                    {% else %}
+                      <span class="text-gray-400 cursor-not-allowed ml-2" title="{{ _('Disable to schedule check-in') }}">⏱️</span>
+                    {% endif %}
+ 
+                   <!-- View Details -->
+                    <a href="{{ url_for('email.view_config', message_id=email.id) }}"
+                       class="text-gray-500 hover:underline"
+                       title="{{ _('View Details') }}">🔍</a>
+                    <!-- Send Test -->
+                    <form method="post"
+                          action="{{ url_for('email.send_test', message_id=email.id) }}"
+                          class="inline">
+                        <button type="submit"
+                                class="text-indigo-500 hover:underline"
+                                title="{{ _('Send this email to yourself to preview it.') }}">🧪</button>
+                    </form>
+                    <!-- Delete Email -->
+                    <form method="post"
+                          action="{{ url_for('email.delete_message', message_id=email.id) }}"
+                          class="inline"
+                          onsubmit="return confirm('{{ _('Delete') }} {{ email.subject }}?');">
+                        <button type="submit"
+                                class="text-red-500 hover:underline"
+                                title="{{ _('Delete') }}">🗑️</button>
+                    </form>
+                    <!-- Enable/Disable Toggle -->
+                    <form method="post"
+                          action="{{ url_for('checkin.toggle_enabled', type='email', id=email.id) }}"
+                          class="inline">
+                        <button type="submit"
+                                title="{{ _('Toggle Email On/Off') }}"
+                                class="text-xl align-middle transition {% if email.is_enabled %} text-green-600 {% else %} text-red-500 {% endif %}">
+                            {% if email.is_enabled %}
+                                <span class="text-green-600" title="{{ _('Email is enabled') }}">🟢</span>
+                            {% else %}
+                                <span class="text-red-500" title="{{ _('Email is disabled') }}">🔴</span>
+                            {% endif %}
+                        </button>
+                    </form>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <!-- =================== INSTRUCTIONS PANEL =================== -->
+    <div x-data="{ showHelp: false }" class="mt-8">
+        <button @click="showHelp = !showHelp"
+                class="text-sm text-blue-400 hover:text-blue-200 underline focus:outline-none">
+            <span x-data="{ hide: '{{ _("Hide Instructions") }}', show: '{{ _("How to create and send an email") }}' }"
+                  x-text="showHelp ? hide : show"></span>
+        </button>
+        <div x-show="showHelp"
+             x-transition
+             class="mt-4 p-4 rounded bg-zinc-800 text-sm text-zinc-100 space-y-2 shadow-md border border-zinc-700">
+            <ol class="list-decimal list-inside space-y-1">
+                <li>{{ _("Click “Add Email” and fill out the subject, content, and recipient address.") }}</li>
+                <li>{{ _("Attach any optional files (if needed).") }}</li>
+                <li>{{ _("Click 🧩 to assign a single SMTP configuration that will be used to send the email.") }}</li>
+                <li>{{ _("Click ⏱️ to set a check-in interval and grace period for the email.") }}</li>
+                <li>{{ _("Enable the email using the 🔴/🟢 toggle button.") }}</li>
+                <li>{{ _("Click 🧪 to test the email by sending it to yourself (not the recipient).") }}</li>
+                <li>{{ _("If you don’t check in before the grace period ends, the email will be automatically sent.") }}</li>
+                <li>{{ _("You can preview the email configuration using 🔍.") }}</li>
+                <li>{{ _("Once a secure email is sent, it will be automatically disabled.") }}</li>
+            </ol>
+        </div>
+    </div>
+    <!-- =================== VIEW TOGGLE SCRIPT =================== -->
+    <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const tableBtn = document.getElementById('tableViewBtn');
+    const cardBtn = document.getElementById('cardViewBtn');
+    const tableView = document.getElementById('tableView');
+    const cardView = document.getElementById('cardView');
+
+    // Restore previous view from localStorage
+    const savedView = localStorage.getItem('emailListView');
+    if (savedView === 'card') {
+      tableView.classList.add('hidden');
+      cardView.classList.remove('hidden');
+      tableBtn.classList.replace('bg-blue-600', 'bg-gray-300');
+      tableBtn.classList.replace('text-white', 'text-black');
+      cardBtn.classList.replace('bg-gray-300', 'bg-blue-600');
+      cardBtn.classList.replace('text-black', 'text-white');
+    }
+
+    tableBtn.addEventListener('click', () => {
+      tableView.classList.remove('hidden');
+      cardView.classList.add('hidden');
+      tableBtn.classList.replace('bg-gray-300', 'bg-blue-600');
+      tableBtn.classList.replace('text-black', 'text-white');
+      cardBtn.classList.replace('bg-blue-600', 'bg-gray-300');
+      cardBtn.classList.replace('text-white', 'text-black');
+      localStorage.setItem('emailListView', 'table');
+    });
+    cardBtn.addEventListener('click', () => {
+      cardView.classList.remove('hidden');
+      tableView.classList.add('hidden');
+      cardBtn.classList.replace('bg-gray-300', 'bg-blue-600');
+      cardBtn.classList.replace('text-black', 'text-white');
+      tableBtn.classList.replace('bg-blue-600', 'bg-gray-300');
+      tableBtn.classList.replace('text-white', 'text-black');
+      localStorage.setItem('emailListView', 'card');
+    });
+  });
+  
+  function fetchEmailStatuses() {
+    fetch('/grylli/email/status')
+      .then(response => response.json())
+      .then(data => {
+        data.forEach(email => {
+          // Find the enable/disable button or icon for this email by ID
+          const button = document.querySelector(`form[action*='${email.id}'] button[title='Toggle Email On/Off']`);
+          if (!button) return;
+
+          if (email.is_enabled) {
+            button.classList.remove('text-red-500');
+            button.classList.add('text-green-600');
+            button.innerHTML = '<span class="text-green-600" title="Email is enabled">🟢</span>';
+          } else {
+            button.classList.remove('text-green-600');
+            button.classList.add('text-red-500');
+            button.innerHTML = '<span class="text-red-500" title="Email is disabled">🔴</span>';
+          }
+        });
+      })
+      .catch(err => console.error('Failed to fetch email statuses:', err));
+  }
+
+  // Poll every 15 seconds
+  setInterval(fetchEmailStatuses, 15000);
+
+  // Optionally, fetch once on page load
+  document.addEventListener('DOMContentLoaded', fetchEmailStatuses);
+    </script>
+{% endblock %}

@@ -1,0 +1,223 @@
+{# ---------------------------------------------------------------------
+  list_users.html
+  app/templates/admin/list_users.html
+  [Describe purpose or main content of this template.]
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{# =================== JINJA BLOCK ==================== #}
+{% block content %}
+    <h1 class="text-xl font-semibold mb-4">{{ _("Users") }}</h1>
+    <!-- View toggle and Add User button -->
+    <div class="mb-4 flex items-center justify-between">
+        <div class="flex space-x-2">
+            <!-- Table View Button -->
+            <button id="tableViewBtn"
+                    aria-label="{{ _("Table View") }}"
+                    title="{{ _("Table View") }}"
+                    class="p-2 rounded bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     class="h-6 w-6"
+                     fill="none"
+                     viewBox="0 0 24 24"
+                     stroke="currentColor"
+                     stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+                </svg>
+            </button>
+            <!-- Card View Button -->
+            <button id="cardViewBtn"
+                    aria-label="{{ _("Card View") }}"
+                    title="{{ _("Card View") }}"
+                    class="p-2 rounded bg-gray-300 text-black hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     class="h-6 w-6"
+                     fill="none"
+                     viewBox="0 0 24 24"
+                     stroke="currentColor"
+                     stroke-width="2">
+                    <rect x="3" y="3" width="7" height="7" />
+                    <rect x="14" y="3" width="7" height="7" />
+                    <rect x="14" y="14" width="7" height="7" />
+                    <rect x="3" y="14" width="7" height="7" />
+                </svg>
+            </button>
+        </div>
+        <!-- Add User Button -->
+        <a href="{{ url_for("users.create_user") }}"
+           class="inline-block px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition">
+            ➕ {{ _("Add User") }}
+        </a>
+    </div>
+    <!-- Table View -->
+    <div id="tableView">
+        <!-- =================== TABLE START ================== -->
+        <table class="table-auto w-full border-collapse border border-gray-300 dark:border-gray-700">
+            <thead>
+                <tr>
+                    <th class="border px-4 py-2">{{ _("ID") }}</th>
+                    <th class="border px-4 py-2">{{ _("Username") }}</th>
+                    <th class="border px-4 py-2">{{ _("Email") }}</th>
+                    <th class="border px-4 py-2">{{ _("Role") }}</th>
+                    <th class="border px-4 py-2">{{ _("Actions") }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in users %}
+                    <tr>
+                        <td class="border px-4 py-2">{{ user.id }}</td>
+                        <td class="border px-4 py-2">{{ user.username }}</td>
+                        <td class="border px-4 py-2">{{ user.email }}</td>
+                        <td class="border px-4 py-2">{{ user.role }}</td>
+                        <td class="border px-4 py-2">
+                            <!-- Edit -->
+                            <a href="{{ url_for('users.edit_user', user_id=user.id) }}"
+                               title="{{ _("Edit User") }}"
+                               class="text-blue-500 hover:underline mr-2">✏️</a>
+                            <!-- Delete -->
+                            <!-- =================== FORM START =================== -->
+                            <form method="post"
+                                  action="{{ url_for('users.delete_user', user_id=user.id) }}"
+                                  class="inline"
+                                  onsubmit="return confirm('{{ _("Delete user") }} {{ user.username }}?');">
+                                <button type="submit"
+                                        title="{{ _("Delete User") }}"
+                                        class="text-red-500 hover:underline mr-2">🗑️</button>
+                                <!-- =================== FORM END ===================== -->
+                            </form>
+                            <!-- Enable/Disable -->
+                            {% if user.id == current_user.id %}
+                                <span title="{{ _("You cannot disable yourself") }}" class="text-gray-400">⚪</span>
+                            {% else %}
+                                <!-- =================== FORM START =================== -->
+                                <form method="post"
+                                      action="{{ url_for('users.toggle_user_enabled', user_id=user.id) }}"
+                                      class="inline">
+                                    <button type="submit"
+                                            title="{{ _("Disable") if user.is_enabled else _('Enable') }}"
+                                            class="text-xl leading-none"
+                                            style="color: {{ 'limegreen' if user.is_enabled else 'red' }};
+                                                   background: transparent;
+                                                   border: none;
+                                                   cursor: pointer">{{ '🟢' if user.is_enabled else '🔴' }}</button>
+                                    <!-- =================== FORM END ===================== -->
+                                </form>
+                            {% endif %}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+            <!-- =================== TABLE END ==================== -->
+        </table>
+    </div>
+    <!-- Card View -->
+    <div id="cardView"
+         class="hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {% for user in users %}
+            <div class="bg-white dark:bg-zinc-800 rounded shadow p-4">
+                <h2 class="text-lg font-semibold mb-2">{{ user.username }}</h2>
+                <p>
+                    <strong>{{ _("Email:") }}</strong> {{ user.email }}
+                </p>
+                <p>
+                    <strong>{{ _("Role:") }}</strong> {{ user.role }}
+                </p>
+                <div class="mt-2">
+                    <!-- Edit -->
+                    <a href="{{ url_for('users.edit_user', user_id=user.id) }}"
+                       class="text-blue-500 hover:underline mr-2"
+                       title="{{ _("Edit User") }}">✏️</a>
+                    <!-- Delete -->
+                    <!-- =================== FORM START =================== -->
+                    <form method="post"
+                          action="{{ url_for('users.delete_user', user_id=user.id) }}"
+                          class="inline"
+                          onsubmit="return confirm('{{ _("Delete user") }} {{ user.username }}?');">
+                        <button type="submit"
+                                class="text-red-500 hover:underline mr-2"
+                                title="{{ _("Delete User") }}">🗑️</button>
+                        <!-- =================== FORM END ===================== -->
+                    </form>
+                    <!-- Enable/Disable -->
+                    {% if user.id == current_user.id %}
+                        <span title="{{ _("You cannot disable yourself") }}" class="text-gray-400">⚪</span>
+                    {% else %}
+                        <!-- =================== FORM START =================== -->
+                        <form method="post"
+                              action="{{ url_for('users.toggle_user_enabled', user_id=user.id) }}"
+                              class="inline">
+                            <button type="submit"
+                                    title="{{ 'Disable' if user.is_enabled else 'Enable' }}"
+                                    class="text-xl leading-none"
+                                    style="color: {{ 'limegreen' if user.is_enabled else 'red' }};
+                                           background: transparent;
+                                           border: none;
+                                           cursor: pointer">{{ '🟢' if user.is_enabled else '🔴' }}</button>
+                            <!-- =================== FORM END ===================== -->
+                        </form>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <!-- Expandable Instructions Panel -->
+    <div x-data="{ showHelp: false }" class="mt-8">
+        <button @click="showHelp = !showHelp"
+                class="text-sm text-blue-400 hover:text-blue-200 underline focus:outline-none">
+            <span x-data="{ showHelp: false, hideText: '{{ _("Hide Instructions") }}', showText: '{{ _("How to manage users") }}' }"
+                  x-text="showHelp ? hideText : showText"></span>
+        </button>
+        <div x-show="showHelp"
+             x-transition
+             class="mt-4 p-4 rounded bg-zinc-800 text-sm text-zinc-100 space-y-2 shadow-md border border-zinc-700">
+            <ol class="list-decimal list-inside space-y-1">
+                <li>
+                    {{ _("Click") }} <strong>{{ _("➕ Add User") }}</strong> {{ _("to open the new user form.") }}
+                </li>
+                <li>{{ _("Enter a unique username, valid email address, and strong password.") }}</li>
+                <li>
+                    {{ _("Select the appropriate") }} <strong>{{ _("role") }}</strong>: <code>{{ _("admin") }}</code> or <code>{{ _("user") }}</code>.
+                </li>
+                <li>
+                    {{ _("Click") }} <strong>{{ _("Create User") }}</strong> {{ _("to save.") }}
+                </li>
+                <li>{{ _("To edit a user, click ✏️ and update their info.") }}</li>
+                <li>{{ _("To delete a user, click 🗑️ and confirm the deletion.") }}</li>
+                <li>
+                    {{ _("To disable or enable a user, click 🔴 or 🟢.") }}
+                    <ul class="list-disc ml-5 mt-1">
+                        <li>{{ _("🟢 = User is enabled and can log in.") }}</li>
+                        <li>{{ _("🔴 = User is disabled and cannot log in.") }}</li>
+                        <li>{{ _("⚪ = You cannot disable your own account.") }}</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+    </div>
+    <!-- Toggle Script -->
+    <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const tableBtn = document.getElementById('tableViewBtn');
+    const cardBtn = document.getElementById('cardViewBtn');
+    const tableView = document.getElementById('tableView');
+    const cardView = document.getElementById('cardView');
+
+    tableBtn.addEventListener('click', () => {
+      tableView.classList.remove('hidden');
+      cardView.classList.add('hidden');
+      tableBtn.classList.replace('bg-gray-300', 'bg-blue-600');
+      tableBtn.classList.replace('text-black', 'text-white');
+      cardBtn.classList.replace('bg-blue-600', 'bg-gray-300');
+      cardBtn.classList.replace('text-white', 'text-black');
+    });
+
+    cardBtn.addEventListener('click', () => {
+      cardView.classList.remove('hidden');
+      tableView.classList.add('hidden');
+      cardBtn.classList.replace('bg-gray-300', 'bg-blue-600');
+      cardBtn.classList.replace('text-black', 'text-white');
+      tableBtn.classList.replace('bg-blue-600', 'bg-gray-300');
+      tableBtn.classList.replace('text-white', 'text-black');
+    });
+  });
+    </script>
+{% endblock %}
