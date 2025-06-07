@@ -1,0 +1,68 @@
+{# ---------------------------------------------------------------------
+  smtp_config.html
+  app/templates/admin/smtp_config.html
+  [Describe purpose or main content of this template.]
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{# =================== JINJA BLOCK ==================== #}
+{% block content %}
+    <div class="max-w-4xl mx-auto mt-16 bg-white dark:bg-zinc-800 shadow-md rounded-xl p-6">
+        <!-- Flash messages -->
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div id="flash-messages" class="mb-4 space-y-2">
+                    {% for category, message in messages %}
+                        <div class="px-4 py-2 rounded text-sm font-medium transition-opacity duration-500 {% if category == 'success' %} bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-100 {% elif category == 'danger' %} bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-100 {% else %} bg-zinc-100 text-zinc-800 dark:bg-zinc-700 dark:text-zinc-100 {% endif %}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                </div>
+                <script>
+        setTimeout(() => {
+          const flashBox = document.getElementById("flash-messages");
+          if (flashBox) flashBox.style.opacity = 0;
+        }, 5000);
+                </script>
+            {% endif %}
+        {% endwith %}
+        <h1 class="text-2xl font-semibold mb-6 text-black dark:text-white">{{ _("System Configuration") }}</h1>
+        <!-- =================== TABLE START ================== -->
+        <table class="table-auto w-full text-left text-sm">
+            <thead class="border-b border-zinc-300 dark:border-zinc-700 text-zinc-700 dark:text-zinc-300">
+                <tr>
+                    <th class="py-2 px-4">{{ _("Key") }}</th>
+                    <th class="py-2 px-4">{{ _("Value") }}</th>
+                    <th class="py-2 px-4">{{ _("Sensitive") }}</th>
+                    <th class="py-2 px-4">{{ _("Editable") }}</th>
+                </tr>
+            </thead>
+            <tbody class="text-black dark:text-white">
+                {% for setting in settings %}
+                    <tr class="border-t border-zinc-200 dark:border-zinc-700">
+                        <td class="py-2 px-4 font-mono text-xs">{{ setting.key }}</td>
+                        <td class="py-2 px-4 break-all">
+                            {% if setting.is_sensitive %}
+                                <span class="italic text-zinc-400 dark:text-zinc-500">••••••••••</span>
+                            {% else %}
+                                {{ setting.value }}
+                            {% endif %}
+                        </td>
+                        <td class="py-2 px-4">{{ _("Yes") if setting.is_sensitive else _('No') }}</td>
+                        <td class="py-2 px-4">{{ _("Yes") if setting.editable else _('No') }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+            <!-- =================== TABLE END ==================== -->
+        </table>
+        <!-- =================== FORM START =================== -->
+        <form method="post"
+              action="{{ url_for("smtp_settings_admin.send_test_email") }}">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <button type="submit"
+                    class="mt-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded shadow">
+                {{ _("Send Test Email") }}
+            </button>
+            <!-- =================== FORM END ===================== -->
+        </form>
+    </div>
+{% endblock %}

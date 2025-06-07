@@ -1,0 +1,160 @@
+{# ---------------------------------------------------------------------
+  edit_user.html
+  app/templates/admin/edit_user.html
+  [Describe purpose or main content of this template.]
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{# =================== JINJA BLOCK ==================== #}
+{% block content %}
+    <div class="max-w-md mx-auto mt-20 bg-white dark:bg-zinc-800 shadow-md rounded-xl p-6 space-y-4">
+        <h1 class="text-xl font-semibold text-black dark:text-white">{{ _("Edit User") }}</h1>
+        <!-- =================== FORM START =================== -->
+        <form method="post">
+            {{ form.hidden_tag() }}
+            {# General error summary #}
+            {% if form.errors %}
+                <div class="mb-4 p-2 bg-red-100 border border-red-400 text-red-700 rounded">
+                    <strong>{{ _("Please fix the following errors:") }}</strong>
+                    <ul class="list-disc pl-5">
+                        {% for field, errors in form.errors.items() %}
+                            {% for error in errors %}<li>{{ error }}</li>{% endfor %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+            <!-- Username -->
+            <div class="mb-4">
+                {{ form.username.label(class="block text-sm font-medium mb-1") }}
+                {{ form.username(id="username",
+                                class="form-input w-full bg-zinc-100 dark:bg-zinc-700 text-black dark:text-white",
+                                autocomplete="username") }}
+                {% for error in form.username.errors %}<div class="text-red-500 text-xs mt-1">{{ error }}</div>{% endfor %}
+            </div>
+            <!-- Email -->
+            <div class="mb-4">
+                {{ form.email.label(class="block text-sm font-medium mb-1") }}
+                {{ form.email(id="email",
+                                class="form-input w-full bg-zinc-100 dark:bg-zinc-700 text-black dark:text-white",
+                                autocomplete="email") }}
+                {% for error in form.email.errors %}<div class="text-red-500 text-xs mt-1">{{ error }}</div>{% endfor %}
+            </div>
+            <!-- New Password -->
+            <div class="mb-4 flex items-center space-x-2">
+                <div class="flex-grow relative">
+                    {{ form.new_password.label(class="block text-sm font-medium mb-1") }}
+                    {{ form.new_password(id="new_password",
+                                        class="form-input w-full bg-zinc-100 dark:bg-zinc-700 text-black dark:text-white",
+                                        autocomplete="new-password") }}
+                    {% for error in form.new_password.errors %}<div class="text-red-500 text-xs mt-1">{{ error }}</div>{% endfor %}
+                </div>
+                <button type="button"
+                        onmousedown="showPassword('new_password')"
+                        onmouseup="hidePassword('new_password')"
+                        onmouseleave="hidePassword('new_password')"
+                        class="pt-6"
+                        aria-label="{{ _("Hold to show password") }}">
+                    <!-- SVG here -->
+                </button>
+            </div>
+            <!-- Confirm Password -->
+            <div class="mb-4 flex items-center space-x-2">
+                <div class="flex-grow relative">
+                    {{ form.confirm_password.label(class="block text-sm font-medium mb-1") }}
+                    {{ form.confirm_password(id="confirm_password",
+                                        class="form-input w-full bg-zinc-100 dark:bg-zinc-700 text-black dark:text-white",
+                                        autocomplete="new-password") }}
+                    {% for error in form.confirm_password.errors %}<div class="text-red-500 text-xs mt-1">{{ error }}</div>{% endfor %}
+                    <p id="passwordMismatchWarning" class="text-sm text-red-500 mt-1 hidden">{{ _("Passwords do not match.") }}</p>
+                </div>
+                <button type="button"
+                        onmousedown="showPassword('confirm_password')"
+                        onmouseup="hidePassword('confirm_password')"
+                        onmouseleave="hidePassword('confirm_password')"
+                        class="pt-6"
+                        aria-label="{{ _("Hold to show password") }}">
+                    <!-- SVG here -->
+                </button>
+            </div>
+            <!-- Password Requirements -->
+            <div class="text-sm text-zinc-600 dark:text-zinc-300 mt-1">
+                <ul class="list-disc list-inside space-y-1">
+                    <li>{{ _("Minimum 8 characters") }}</li>
+                    <li>{{ _("At least one uppercase letter") }}</li>
+                    <li>{{ _("At least one lowercase letter") }}</li>
+                    <li>{{ _("At least one number") }}</li>
+                    <li>{{ _("At least one special character (e.g., !@#$%%)") }}</li>
+                </ul>
+            </div>
+            <!-- Submit + Cancel Buttons -->
+            <div class="flex gap-4">
+                <button id="submitBtn"
+                        type="submit"
+                        class="w-1/2 bg-red-500 text-white py-2 px-4 rounded disabled:opacity-50 disabled:cursor-not-allowed transition-colors">
+                    {{ _("Create User") }}
+                </button>
+                <a href="{{ url_for("users.list_users") }}"
+                   class="w-1/2 text-center bg-zinc-400 text-white py-2 px-4 rounded hover:bg-zinc-500 transition-colors">
+                    {{ _("Cancel") }}
+                </a>
+            </div>
+        </form>
+        <!-- =================== FORM END ===================== -->
+    </div>
+    <script>
+  function showPassword(fieldId) {
+    const field = document.getElementById(fieldId);
+    if (field) field.type = 'text';
+  }
+
+  function hidePassword(fieldId) {
+    const field = document.getElementById(fieldId);
+    if (field) field.type = 'password';
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const form = document.querySelector("form");
+    const username = document.getElementById("username");
+    const email = document.getElementById("email");
+    const newPassword = document.getElementById("new_password");
+    const confirmPassword = document.getElementById("confirm_password");
+    const submitBtn = document.getElementById("submitBtn");
+    const warning = document.getElementById("passwordMismatchWarning");
+
+    function passwordsMatch() {
+      return newPassword.value === confirmPassword.value;
+    }
+
+    function allFieldsValid() {
+      return (
+        username.value.trim() &&
+        email.value.trim() &&
+        newPassword.value.trim() &&
+        confirmPassword.value.trim() &&
+        passwordsMatch() &&
+        newPassword.value.length >= 8
+      );
+    }
+
+    function updateButtonState() {
+      const valid = allFieldsValid();
+
+      warning.classList.toggle("hidden", passwordsMatch());
+      submitBtn.disabled = !valid;
+      submitBtn.classList.toggle("bg-green-600", valid);
+      submitBtn.classList.toggle("bg-red-500", !valid);
+    }
+
+    [username, email, newPassword, confirmPassword].forEach(el => {
+      el.addEventListener("input", updateButtonState);
+    });
+
+    updateButtonState();
+
+    form.addEventListener("submit", e => {
+      if (!allFieldsValid()) {
+        e.preventDefault();
+      }
+    });
+  });
+    </script>
+{% endblock %}

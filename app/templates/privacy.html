@@ -1,0 +1,47 @@
+{# ---------------------------------------------------------------------
+   privacy.html
+   app/templates/privacy.html
+   Styled privacy notice rendered within the Grylli layout.
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    <div class="max-w-3xl mx-auto bg-white dark:bg-zinc-800 shadow-md rounded-xl p-6 space-y-4">
+        {# ------------------- Page Heading ------------------------------- #}
+        <h1 class="text-2xl font-bold">{{ _("Privacy Notice") }}</h1>
+        {# ------------------- Description Paragraph ---------------------- #}
+        <p class="text-sm leading-relaxed text-zinc-600 dark:text-zinc-300">
+            {{ _("Grylli respects your privacy and is designed to minimize the collection and storage of personal data.") }}
+            {{ _("All data is encrypted where appropriate and remains fully under your control if you self-host this platform.") }}
+        </p>
+        {# ------------------- Data Collection ----------------------------- #}
+        <h2 class="text-lg font-semibold mt-4">{{ _("What Data We Collect") }}</h2>
+        <ul class="list-disc pl-6 text-sm space-y-1 text-zinc-600 dark:text-zinc-300">
+            <li>{{ _("Email address and password hash (for authentication)") }}</li>
+            <li>{{ _("Optional MFA secret and recovery codes (encrypted at rest)") }}</li>
+            <li>{{ _("Reminder and message content you configure") }}</li>
+            <li>{{ _("User-specific settings, SMTP configuration (if provided)") }}</li>
+        </ul>
+        {# ------------------- How We Use Your Data ------------------------ #}
+        <h2 class="text-lg font-semibold mt-4">{{ _("How Your Data Is Used") }}</h2>
+        <p class="text-sm text-zinc-600 dark:text-zinc-300">
+            {{ _("Your data is used solely for the purpose of delivering reminders and messages according to your preferences.") }}
+            {{ _("Grylli does not share, sell, or transmit your personal data to any third parties.") }}
+        </p>
+        {# ------------------- Your Rights ------------------------------- #}
+        <h2 class="text-lg font-semibold mt-4">{{ _("Your Rights") }}</h2>
+        <ul class="list-disc pl-6 text-sm space-y-1 text-zinc-600 dark:text-zinc-300">
+            <li>{{ _("You can export all of your data at any time from the Account Settings page.") }}</li>
+            <li>{{ _("You may permanently delete your account and all associated data.") }}</li>
+            <li>{{ _("If you are using a self-hosted instance, contact the instance administrator for data inquiries.") }}</li>
+        </ul>
+        {# ------------------- Hosting Context ---------------------------- #}
+        <h2 class="text-lg font-semibold mt-4">{{ _("Self-Hosting Responsibility") }}</h2>
+        <p class="text-sm text-zinc-600 dark:text-zinc-300">
+            {{ _("If you are running Grylli on your own server, you are responsible for the storage, processing, and lawful handling of all user data on that instance.") }}
+        </p>
+        {# ------------------- Closing Section ---------------------------- #}
+        <p class="text-xs text-zinc-500 dark:text-zinc-400">
+            {{ _("This notice was last updated in June 2025 and may evolve to reflect changes in the software or regulatory landscape.") }}
+        </p>
+    </div>
+{% endblock %}

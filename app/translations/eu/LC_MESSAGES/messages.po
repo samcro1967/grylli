@@ -1,0 +1,3284 @@
+# Basque translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-06-07 15:49-0500\n"
+"PO-Revision-Date: 2025-05-25 17:36-0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: eu <LL@li.org>\n"
+"Language: eu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: app/init_db.py:55
+#, python-format
+msgid "Tables currently in DB: %s"
+msgstr "Unean oraingo taulak DBan:"
+
+#: app/init_db.py:58
+msgid "Database or system_config table missing. Running migrations now..."
+msgstr ""
+"Datu-basea edo system_config taula falta. Migratzeak orain abiaraziko "
+"dira..."
+
+#: app/init_db.py:61
+msgid "Migrations applied successfully."
+msgstr "Migratzeak arrakastaz aplikatu dira."
+
+#: app/init_db.py:63
+msgid "Migration failed."
+msgstr "Migratzea huts egin du."
+
+#: app/init_db.py:68
+msgid "System config seeded successfully."
+msgstr "Sistema konfigurazioa arrakastaz sastratu da."
+
+#: app/init_db.py:70
+msgid "Error seeding system config."
+msgstr "Errorea sistema konfigurazioa sastratzean:"
+
+#: app/forms/mfa_form.py:15 app/templates/apprise/create_apprise.html:30
+#: app/templates/apprise/edit_apprise.html:30
+#: app/templates/apprise/list_apprise.html:60
+#: app/templates/mfa/settings.html:24 app/templates/mfa/settings.html:40
+#: app/templates/user_smtp/create_smtp.html:99
+#: app/templates/user_smtp/edit_smtp.html:114
+#: app/templates/user_smtp/list_smtp.html:57
+#: app/templates/webhook/create_webhook.html:36
+#: app/templates/webhook/edit_webhook.html:36
+#: app/templates/webhook/list_webhooks.html:61
+msgid "Enabled"
+msgstr "Gaituta"
+
+#: app/forms/mfa_form.py:16
+msgid "Authenticator Code"
+msgstr "Autentikatzailearen kodea"
+
+#: app/forms/mfa_form.py:17
+#: app/templates/admin/partials/user_instructions_and_modal.html:66
+#: app/templates/admin/partials/user_table.html:115
+#: app/templates/email/assign_smtp.html:44 app/templates/mfa/settings.html:47
+#: app/templates/user_smtp/edit_smtp.html:122
+msgid "Save"
+msgstr "Gorde"
+
+#: app/forms/mfa_form.py:27
+msgid "Authentication Code"
+msgstr "Jakinarazpena eguneratu"
+
+#: app/forms/mfa_form.py:29
+msgid "Please enter your authentication code."
+msgstr "Mesedez, sartu zure autentikazio kodea."
+
+#: app/forms/mfa_form.py:30
+msgid "Enter a valid 6-digit code or recovery code."
+msgstr "Sartu 6 digituko kode baliozko edo berreskurapen kode."
+
+#: app/forms/mfa_form.py:31
+msgid "Invalid code format."
+msgstr "Kode formatua ez da baliozkoa."
+
+#: app/forms/mfa_form.py:35 app/templates/mfa/challenge.html:25
+msgid "Verify"
+msgstr "Bertsioa"
+
+#: app/services/mail.py:37 app/services/system_settings_email.py:40
+msgid "Missing required config setting: "
+msgstr "Falta den beharrezkoa den konfigurazio ezarpena:"
+
+#: app/services/mail.py:46 app/services/system_settings_email.py:50
+#, python-format
+msgid "Failed to decrypt %(key)s: %(error)s"
+msgstr "%(key)s deszifratzeko huts egin du: %(error)s"
+
+#: app/services/mail.py:54
+#, python-format
+msgid "get_setting('%(key)s') -> '%(value)s' (sensitive: %(sensitive)s)"
+msgstr ""
+"get_setting('%(key)s') -> '%(value)s' (raw: '%(raw)s', sensitive: "
+"%(sensitive)s)"
+
+#: app/services/mail.py:75
+#, python-format
+msgid "Preparing email to %(to)s"
+msgstr "Emaila prestatzen %(to)s"
+
+#: app/services/mail.py:90
+#, python-format
+msgid ""
+"SMTP configuration: host=%(host)s (type=%(host_type)s), port=%(port)s "
+"(type=%(port_type)s)"
+msgstr ""
+"SMTP host = '%(host)s' (type: %(host_type)s), port = %(port)s (type: "
+"%(port_type)s)"
+
+#: app/services/mail.py:99
+#, python-format
+msgid "SMTP username: %(user)s"
+msgstr "Erabiltzaile hau erabiltzen: %(user)s"
+
+#: app/services/mail.py:100
+#, python-format
+msgid "TLS enabled: %(tls)s"
+msgstr "TLS gaituta: %(tls)s"
+
+#: app/services/mail.py:105
+msgid "Starting TLS connection..."
+msgstr "TLS hasten"
+
+#: app/services/mail.py:107
+msgid "Logging into SMTP server..."
+msgstr "SMTP zerbitzarira saioa hasten..."
+
+#: app/services/mail.py:109
+msgid "Sending email message..."
+msgstr "Mezuaren Ordutegia"
+
+#: app/services/mail.py:111
+#, python-format
+msgid "Email sent successfully to %(to)s"
+msgstr "Proba-emaila ongi bidali da."
+
+#: app/services/mail.py:114
+#, python-format
+msgid "SMTP error while sending to %(to)s: %(error)s"
+msgstr "SMTP errorea %(to)s helbidera bidaltzen: %(error)s"
+
+#: app/templates/about.html:10
+msgid "About Grylli"
+msgstr "Grylliri buruz"
+
+#: app/templates/about.html:13
+msgid ""
+"Grylli is a secure, self-hosted message delivery platform that automatically"
+" sends pre-configured messages if a user fails to check in within a defined "
+"time period."
+msgstr ""
+"Grylli seguru, auto-ostatutako mezua bidaltzeko plataforma da, eta aurrez "
+"konfiguratutako mezuak automatikoki bidaltzen ditu erabiltzaile batek epe "
+"zehatz batean ez badu txekinatzen."
+
+#: app/templates/about.html:14
+msgid ""
+"It supports multiple users, customizable schedules, and recurring reminders."
+msgstr "Erabiltzaile anitz eta egutegi pertsonalizagarriak onartzen ditu."
+
+#: app/templates/about.html:15
+msgid ""
+"Messages and reminders can be delivered via email, webhooks, or over 100 "
+"third-party services through Apprise."
+msgstr ""
+"Mezuak posta elektronikoaren bidez, webhook-en bidez edo beste 80 "
+"hirugarrenen zerbitzuren bidez bidal daitezke, Apprise-ren bidez."
+
+#: app/templates/about.html:16
+msgid ""
+"Users can configure their own SMTP servers to ensure emails and reminders "
+"appear to come directly from them — not from the system administrator."
+msgstr ""
+"Erabiltzaileek beren SMTP zerbitzariak konfigura ditzakete mezuak zuzenean "
+"beraiengandik irteten direla ziurtatzeko — ez sistemaren "
+"administratzailearengandik."
+
+#: app/templates/about.html:17
+msgid ""
+"Sensitive data is encrypted at rest, and all operations are secured with "
+"strong authentication and audit-friendly logging."
+msgstr ""
+"Datu sentikorrak atseden hartuta enkriptatuta daude, eta mezu eragiketa "
+"guztiak autentifikazio sendo eta auditora egoki erregistroarekin ziurtatuta "
+"daude."
+
+#: app/templates/about.html:18
+msgid ""
+"Built with a modern, reactive technology stack, Grylli is optimized for "
+"responsiveness and works seamlessly across desktop and mobile devices."
+msgstr ""
+"Teknologia pila moderno eta erreaktibo batekin eraikita, Grylli erantzuteko "
+"optimizatuta dago eta ordenagailu eta gailu mugikorretan modu eraginkorrean "
+"funtzionatzen du."
+
+#: app/templates/about.html:23
+msgid "Version:"
+msgstr "Bertsioa:"
+
+#: app/templates/about.html:26
+msgid "Repository:"
+msgstr "Biltegia:"
+
+#: app/templates/about.html:30
+msgid "GitHub - samcro1967/grylli"
+msgstr "GitHub - samcro1967/grylli"
+
+#: app/templates/help.html:2 app/templates/help.html:5
+#: app/templates/partials/header.html:85
+msgid "Help"
+msgstr "Laguntza"
+
+#: app/templates/help.html:7
+msgid ""
+"Grylli includes built-in instructions throughout the app to help you "
+"configure and manage your setup."
+msgstr ""
+"Gryllik aplikazio osoan zehar integratutako argibideak dauzka zure "
+"konfigurazioa konfiguratu eta kudeatzeko laguntzeko."
+
+#: app/templates/help.html:8
+msgid ""
+"This page provides an overview of key features and direct links to where "
+"they can be managed."
+msgstr ""
+"Orri honek funtzio nagusien ikuspegi orokorra eta kudeatu daitezkeen "
+"zuzeneko estekak eskaintzen ditu."
+
+#: app/templates/help.html:12 app/templates/messages/list_messages.html:9
+#: app/templates/partials/shared_nav.html:17
+msgid "Notifications"
+msgstr "Jakinarazpenak"
+
+#: app/templates/help.html:14
+msgid "Create and assign messages"
+msgstr "Sortu mezu edo posta elektroniko bat."
+
+#: app/templates/admin/index.html:32 app/templates/help.html:17
+#: app/templates/partials/admin_nav.html:56
+msgid "SMTP Settings"
+msgstr "SMTP Ezarpenak"
+
+#: app/templates/help.html:19
+msgid "Use your own email server"
+msgstr "Erabili zure posta elektronikoko zerbitzaria"
+
+#: app/templates/help.html:22
+msgid "Apprise Integration"
+msgstr "Apprise Helmugak"
+
+#: app/templates/help.html:24
+msgid "Send notifications to 80+ supported services"
+msgstr "Bidali jakinarazpenak 80+ zerbitzu onartuetara"
+
+#: app/templates/help.html:27
+#: app/templates/messages/assign_destinations.html:41
+#: app/templates/messages/view_message.html:58
+#: app/templates/partials/shared_nav.html:44
+#: app/templates/reminders/assign_destinations.html:39
+#: app/templates/reminders/view_reminder.html:69
+msgid "Webhooks"
+msgstr "Webhooks"
+
+#: app/templates/help.html:29
+msgid "Trigger actions or external workflows"
+msgstr "Ekintzak edo kanpoko lan-fluxuak eragin"
+
+#: app/templates/email/list_emails.html:9 app/templates/help.html:32
+#: app/templates/partials/shared_nav.html:61
+msgid "Emails"
+msgstr "Posta elektronikoak"
+
+#: app/templates/help.html:34
+msgid "View and manage secure email messages"
+msgstr "Ziurtaturiko posta elektronikoko mezuen ikuspegi orokorra"
+
+#: app/templates/help.html:38
+msgid "Security"
+msgstr "🔐 Segurtasuna"
+
+#: app/templates/help.html:39
+msgid "Grylli encrypts sensitive data and logs all key actions for auditing."
+msgstr ""
+"Gryllik datu sentikorrak enkriptatzen ditu eta ekintza gako guztiak "
+"erregistratzen ditu auditoriak egiteko."
+
+#: app/templates/index.html:9 app/views/locale.py:95
+msgid "Welcome to Grylli"
+msgstr "Ongi etorri Gryllira"
+
+#: app/templates/index.html:11
+msgid "Pronounced"
+msgstr "Ahotsetik"
+
+#: app/templates/index.html:11
+msgid "like “grill-ee”"
+msgstr "“grill-ee” bezala"
+
+#: app/templates/index.html:14
+msgid ""
+"Grylli is a secure message scheduling and delivery system designed to ensure"
+" your important messages are delivered — even if you can’t be there to send "
+"them."
+msgstr ""
+"Grylli mezularitza programatze eta entregatzeko sistema segurua da, zure "
+"mezu garrantzitsuak entregatuko direla ziurtatzeko — zu bertan ez bazaude "
+"ere bidaltzeko."
+
+#: app/templates/index.html:17
+msgid ""
+"Whether you’re planning ahead, setting up emergency communication, or "
+"building peace of mind, Grylli helps automate your message delivery via "
+"multiple channels including email, webhooks, and Apprise notifications."
+msgstr ""
+"Aurreikusita zaudenean, larrialdi komunikazioa prestatzean, edo buruasun "
+"saretzen ari zarenean, Gryllik zure mezularitza entregatzea automatizatzen "
+"laguntzen dizu, posta elektronikoen bidez, web gakoak edo Apprise "
+"jakinarazpenetan, check-inean huts egiten baduzu."
+
+#: app/templates/index.html:19
+msgid "Getting Started"
+msgstr "Hasteko"
+
+#: app/templates/index.html:21
+msgid "Create a message, email, or reminder."
+msgstr "Sortu mezu edo posta elektroniko bat."
+
+#: app/templates/index.html:22
+msgid "Set your check-in interval and grace period (for messages)."
+msgstr "Ezartarazi zure check-in tartea eta grazia epea."
+
+#: app/templates/index.html:23
+msgid "Assign one or more delivery destinations."
+msgstr "Esleitu entrega helmuga bat edo gehiago."
+
+#: app/templates/index.html:24
+msgid "Optionally attach files for secure emails."
+msgstr ""
+"Beharrezkoak diren fitxategiak erantsi posta elektroniko seguruetarako."
+
+#: app/templates/index.html:25
+msgid "Schedule reminders to send at specific times or on a recurring basis."
+msgstr ""
+"Ordutegi gogorarazleak une jakin batzuetan edo modu errepikakorrean "
+"bidaltzeko."
+
+#: app/templates/index.html:26
+msgid "Enable the message or reminder to activate delivery."
+msgstr "Gaitu mezua edo gogorarazlea entrega aktibatzeko."
+
+#: app/templates/index.html:28
+msgid ""
+"Regularly check in to Grylli to prevent automated delivery; miss a check-in "
+"and Grylli sends your messages as scheduled."
+msgstr ""
+"Aldizka egiaztatu Gryllin entregatzeko automatikoa saihesteko; egiaztapen "
+"bat huts egiten baduzu, Gryllik zure mezuak programatutako bezala bidaltzen "
+"ditu."
+
+#: app/templates/privacy.html:10
+msgid "Privacy Notice"
+msgstr "Pribatutasun-oharra"
+
+#: app/templates/privacy.html:13
+msgid ""
+"Grylli respects your privacy and is designed to minimize the collection and "
+"storage of personal data."
+msgstr ""
+"Gryllik zure pribatutasuna errespetatzen du eta datu pertsonalen bilketa eta"
+" biltegiratzea ahalik eta gehien murrizteko diseinatuta dago."
+
+#: app/templates/privacy.html:14
+msgid ""
+"All data is encrypted where appropriate and remains fully under your control"
+" if you self-host this platform."
+msgstr ""
+"Datu guztiak enkriptatuta daude behar denean eta zure kontrolpean daude "
+"plataforma hau auto-ostatu baduzu."
+
+#: app/templates/privacy.html:17
+msgid "What Data We Collect"
+msgstr "Biltzen Ditugun Datuak"
+
+#: app/templates/privacy.html:19
+msgid "Email address and password hash (for authentication)"
+msgstr "Posta elektronikoko helbidea eta pasahitz-hash-a (autentifikaziorako)"
+
+#: app/templates/privacy.html:20
+msgid "Optional MFA secret and recovery codes (encrypted at rest)"
+msgstr ""
+"Aukerako MFA sekretua eta berreskuratze-kodeak (geldirik enkriptatuta)"
+
+#: app/templates/privacy.html:21
+msgid "Reminder and message content you configure"
+msgstr "Zuk konfiguratutako ohar eta mezu edukiak"
+
+#: app/templates/privacy.html:22
+msgid "User-specific settings, SMTP configuration (if provided)"
+msgstr ""
+"Erabiltzaile espezifiko ezarpenak, SMTP konfigurazioa (baldin eta emandakoa)"
+
+#: app/templates/privacy.html:25
+msgid "How Your Data Is Used"
+msgstr "Zure Datuak Nola Erabiltzen Dira"
+
+#: app/templates/privacy.html:27
+msgid ""
+"Your data is used solely for the purpose of delivering reminders and "
+"messages according to your preferences."
+msgstr ""
+"Zure datuak soilik erabiltzen dira ohar eta mezuak entregatzeko zure "
+"lehentasunen arabera."
+
+#: app/templates/privacy.html:28
+msgid ""
+"Grylli does not share, sell, or transmit your personal data to any third "
+"parties."
+msgstr ""
+"Gryllik ez du zure datu pertsonalak partekatzen, saltzen edo transmititzen "
+"hirugarren pertsonei."
+
+#: app/templates/privacy.html:31
+msgid "Your Rights"
+msgstr "Zure Eskubideak"
+
+#: app/templates/privacy.html:33
+msgid ""
+"You can export all of your data at any time from the Account Settings page."
+msgstr ""
+"Zure datu guztiak esportatu ditzakezu edozein unetan Kontu Ezarpenak "
+"orritik."
+
+#: app/templates/privacy.html:34
+msgid "You may permanently delete your account and all associated data."
+msgstr "Ezin duzu zure kontua ezabatu azken administratzailea zarelako."
+
+#: app/templates/privacy.html:35
+msgid ""
+"If you are using a self-hosted instance, contact the instance administrator "
+"for data inquiries."
+msgstr ""
+"Auto-ostatutako instantzia bat erabiltzen ari bazara, jarri harremanetan "
+"instantzia administratzailearekin datu kontsultak egiteko."
+
+#: app/templates/privacy.html:38
+msgid "Self-Hosting Responsibility"
+msgstr "Auto-ostatuen Erantzukizuna"
+
+#: app/templates/privacy.html:40
+msgid ""
+"If you are running Grylli on your own server, you are responsible for the "
+"storage, processing, and lawful handling of all user data on that instance."
+msgstr ""
+"Grylli zure zerbitzarian exekutatzen ari bazara, erabiltzaileen datu guztiak"
+" biltegiratzeaz, prozesatzeaz eta modu legezkoan kudeatzeaz arduratu behar "
+"duzu."
+
+#: app/templates/privacy.html:44
+msgid ""
+"This notice was last updated in June 2025 and may evolve to reflect changes "
+"in the software or regulatory landscape."
+msgstr ""
+"Ohar hau azkenekoz eguneratu zen 2025eko ekainean eta alda daiteke "
+"softwarean edo erregulazio-panoraman egon daitezkeen aldaketak islatzeko."
+
+#: app/templates/system_info.html:11
+msgid "📦 Environment Versions"
+msgstr "📦 Ingurune Bertsioak"
+
+#: app/templates/system_info.html:17
+msgid "Category"
+msgstr "Kategoria"
+
+#: app/templates/system_info.html:18
+msgid "Tool"
+msgstr "Tresna"
+
+#: app/templates/system_info.html:19
+msgid "Version"
+msgstr "Bertsioa"
+
+#: app/templates/system_info.html:25
+msgid "🧠 Python"
+msgstr "🧠 Python"
+
+#: app/templates/system_info.html:26
+msgid "Python"
+msgstr "Python"
+
+#: app/templates/system_info.html:30
+msgid "pip"
+msgstr "pip"
+
+#: app/templates/system_info.html:34
+msgid "SQLite"
+msgstr "SQLite"
+
+#: app/templates/system_info.html:40
+msgid "⚙️ Core"
+msgstr "⚙️ Nukleoa"
+
+#: app/templates/system_info.html:47
+msgid "🔐 Security"
+msgstr "🔐 Segurtasuna"
+
+#: app/templates/system_info.html:48
+msgid "Email Validator"
+msgstr "Posta Elektronikoaren Balioztatzailea"
+
+#: app/templates/system_info.html:52
+msgid "Cryptography"
+msgstr "Kriptografia"
+
+#: app/templates/system_info.html:57
+msgid "🕰️ Scheduling"
+msgstr "🕰️ Programazioa"
+
+#: app/templates/system_info.html:58
+msgid "APScheduler"
+msgstr "APScheduler"
+
+#: app/templates/system_info.html:62
+msgid "Apprise (Python)"
+msgstr "Apprise (Python)"
+
+#: app/templates/system_info.html:66
+msgid "Apprise CLI"
+msgstr "Apprise CLI"
+
+#: app/templates/system_info.html:74
+msgid "🌐 Frontend"
+msgstr "🌐 Aurrealdea"
+
+#: app/templates/account/manage_account.html:11
+msgid "Manage Account"
+msgstr "Kontua Kudeatu"
+
+#: app/templates/account/manage_account.html:12
+msgid "Update your profile information and password."
+msgstr "Eguneratu zure profila eta pasahitza."
+
+#: app/templates/account/manage_account.html:41
+#: app/templates/admin/create_user.html:40
+#: app/templates/auth/bootstrap.html:43
+#: app/templates/auth/reset_password.html:42 app/templates/auth/signup.html:42
+msgid "Please enter a valid email address."
+msgstr "Sartu baliozko posta elektroniko helbide bat."
+
+#: app/templates/account/manage_account.html:62
+#: app/templates/account/manage_account.html:96
+#: app/templates/account/manage_account.html:127
+#: app/templates/auth/reset_password.html:66
+#: app/templates/auth/reset_password.html:97 app/templates/auth/signup.html:65
+#: app/templates/auth/signup.html:95
+msgid "Show/hide password"
+msgstr "Eutsi pasahitza erakusteko"
+
+#: app/templates/account/manage_account.html:89
+#: app/templates/admin/create_user.html:53
+#: app/templates/auth/bootstrap.html:51
+#: app/templates/auth/reset_password.html:58 app/templates/auth/signup.html:58
+msgid "Password must meet all complexity requirements."
+msgstr "Pasahitzak konplexutasuna betetzea beharrezkotzat du."
+
+#: app/templates/account/manage_account.html:141
+#: app/templates/admin/create_user.html:72
+#: app/templates/admin/edit_user.html:67 app/templates/auth/bootstrap.html:69
+#: app/templates/auth/reset_password.html:110
+#: app/templates/auth/signup.html:108
+msgid "Passwords do not match."
+msgstr "Pasahitzak ez dira bat etortzen."
+
+#: app/templates/account/manage_account.html:147
+msgid "Update Account"
+msgstr "Kontua Eguneratu"
+
+#: app/templates/account/manage_account.html:151
+#: app/templates/admin/create_user.html:82
+#: app/templates/admin/edit_user.html:97 app/templates/admin/help_form.html:28
+#: app/templates/admin/partials/user_instructions_and_modal.html:62
+#: app/templates/admin/partials/user_table.html:113
+#: app/templates/apprise/create_apprise.html:42
+#: app/templates/apprise/edit_apprise.html:42
+#: app/templates/auth/reset_password.html:121
+#: app/templates/email/assign_smtp.html:46
+#: app/templates/email/attach_files.html:47
+#: app/templates/email/edit_message.html:54
+#: app/templates/email/schedule_email.html:84
+#: app/templates/messages/assign_destinations.html:66
+#: app/templates/messages/create_message.html:55
+#: app/templates/messages/edit_message.html:48
+#: app/templates/messages/schedule_message.html:84
+#: app/templates/mfa/challenge.html:29 app/templates/mfa/settings.html:51
+#: app/templates/reminders/assign_destinations.html:64
+#: app/templates/reminders/assign_email_reminder.html:94
+#: app/templates/reminders/create_reminder.html:49
+#: app/templates/reminders/edit_reminder.html:42
+#: app/templates/reminders/schedule_reminder.html:51
+#: app/templates/user_smtp/create_smtp.html:111
+#: app/templates/user_smtp/edit_smtp.html:125
+#: app/templates/webhook/create_webhook.html:48
+#: app/templates/webhook/edit_webhook.html:48
+msgid "Cancel"
+msgstr "Ezeztatu"
+
+#: app/templates/account/manage_account.html:159
+#: app/templates/admin/create_user.html:90
+#: app/templates/admin/edit_user.html:81 app/templates/auth/bootstrap.html:83
+#: app/templates/auth/reset_password.html:128
+#: app/templates/auth/signup.html:132
+msgid "Minimum 8 characters"
+msgstr "Gutxienez 8 karaktere"
+
+#: app/templates/account/manage_account.html:160
+#: app/templates/admin/create_user.html:91
+#: app/templates/admin/edit_user.html:82 app/templates/auth/bootstrap.html:84
+#: app/templates/auth/reset_password.html:129
+#: app/templates/auth/signup.html:133
+msgid "At least one uppercase letter"
+msgstr "Gutxienez maiuskula bat"
+
+#: app/templates/account/manage_account.html:161
+#: app/templates/admin/create_user.html:92
+#: app/templates/admin/edit_user.html:83 app/templates/auth/bootstrap.html:85
+#: app/templates/auth/reset_password.html:130
+#: app/templates/auth/signup.html:134
+msgid "At least one lowercase letter"
+msgstr "Gutxienez minuskula bat"
+
+#: app/templates/account/manage_account.html:162
+#: app/templates/admin/create_user.html:93
+#: app/templates/admin/edit_user.html:84 app/templates/auth/bootstrap.html:86
+#: app/templates/auth/reset_password.html:131
+#: app/templates/auth/signup.html:135
+msgid "At least one number"
+msgstr "Gutxienez zenbaki bat"
+
+#: app/templates/account/manage_account.html:163
+#: app/templates/admin/create_user.html:94
+#: app/templates/auth/bootstrap.html:87
+#: app/templates/auth/reset_password.html:132
+#: app/templates/auth/signup.html:136
+msgid "At least one special character (e.g., !@#$%)"
+msgstr "Gutxienez karaktere berezi bat (adibidez, !@#$%)"
+
+#: app/templates/account/manage_account.html:169
+msgid "Download My Data"
+msgstr "Nire Datuak Deskargatu"
+
+#: app/templates/account/manage_account.html:171
+msgid ""
+"Download all your account data as a JSON file. This includes your reminders,"
+" messages, email settings, and more. The file is for your records only and "
+"cannot be imported back. Protect it as it may contain sensitive information."
+msgstr ""
+"Zure kontuaren datu guztiak JSON fitxategi gisa deskargatu. Horrek zure "
+"oharrak, mezuak, posta elektronikoko ezarpenak eta gehiago barne hartzen "
+"ditu. Fitxategi hau zure erregistroetarako soilik da eta ezin da berriz "
+"inportatu. Babestu ezazu, informazio sentikorra izan dezake eta."
+
+#: app/templates/account/manage_account.html:175
+msgid "Download My Data (JSON)"
+msgstr "Nire Datuak Deskargatu (JSON)"
+
+#: app/templates/account/manage_account.html:179
+msgid "Danger Zone"
+msgstr "Arrisku Zona"
+
+#: app/templates/account/manage_account.html:180
+msgid "Deleting your account is permanent and cannot be undone."
+msgstr "Zure kontua ezabatzea iraunkorra da eta ezin da desegin."
+
+#: app/templates/account/manage_account.html:185
+msgid "Delete My Account"
+msgstr "Kontua Eguneratu"
+
+#: app/templates/account/translations.html:8
+msgid "Translations - Grylli"
+msgstr "Itzulpenak - Grylli"
+
+#: app/templates/account/translations.html:17
+#: app/templates/partials/header.html:102
+msgid "Translations"
+msgstr "Itzulpenak"
+
+#: app/templates/account/translations.html:20
+msgid "Grylli currently supports multiple languages and more will be added."
+msgstr ""
+"Gryllik gaur egun hainbat hizkuntza onartzen ditu eta gehiago gehituko dira."
+
+#: app/templates/account/translations.html:21
+msgid "Many of the translations were performed with assistance from ChatGPT."
+msgstr "Itzulpen askotan ChatGPTren laguntza izan da."
+
+#: app/templates/account/translations.html:22
+msgid ""
+"If you find a translation issue or want to suggest improvements, your input "
+"is welcome!"
+msgstr ""
+"Itzulpen arazoren bat aurkitzen baduzu edo hobekuntzak proposatu nahi "
+"badituzu, zure ekarpenak ongi etorriak izango dira!"
+
+#: app/templates/account/translations.html:28
+msgid "How to request translation updates"
+msgstr "Itzulpen eguneratzeak nola eskatu"
+
+#: app/templates/account/translations.html:30
+msgid "To contribute to translations, please use the following guidelines:"
+msgstr "Itzulpenetan parte hartzeko, jar zaitez hurrengo gidalerroak:"
+
+#: app/templates/account/translations.html:43
+msgid "Contribute missing or improved translations:"
+msgstr "Itzulpen falta bat aurkitu duzu?"
+
+#: app/templates/account/translations.html:63
+msgid "Open the relevant .po translation file for your language."
+msgstr "Zabaldu zure hizkuntzarako JSON itzulpen fitxategia. Adibidez:"
+
+#: app/templates/account/translations.html:67
+msgid ""
+"Find untranslated or incomplete entries and add or improve translations."
+msgstr ""
+"Aurkitu itzulitako edo osatu gabeko sarrerak eta gehitu edo hobetu "
+"itzulpenak."
+
+#: app/templates/account/translations.html:68
+msgid "You may use a PO file editor or a text editor."
+msgstr "PO fitxategi-editore bat edo testu-editore bat erabil dezakezu."
+
+#: app/templates/account/translations.html:69
+msgid "Copy the file path and the snippet of your changes."
+msgstr "Kopiatu fitxategiaren bidea eta zure aldaketen zati bat."
+
+#: app/templates/account/translations.html:70
+msgid "Paste the snippet directly into a new GitHub issue for review."
+msgstr "Itsatsi kopiatu duzun zatia zuzenean GitHub arazketa iruzkinera."
+
+#: app/templates/account/translations.html:72
+msgid "Please do not upload the full .po file to avoid merge conflicts."
+msgstr "Ez igo .po fitxategi osoa elkarketa gatazkak saihesteko."
+
+#: app/templates/account/translations.html:85
+msgid "Improving existing translations:"
+msgstr "Dauden itzulpenak hobetzea:"
+
+#: app/templates/account/translations.html:104
+msgid "Open the relevant .po file for the translation you want to improve."
+msgstr "Zabaldu hobetu nahi duzun itzulpeneko .po fitxategia."
+
+#: app/templates/account/translations.html:106
+msgid "For example:"
+msgstr "Adibidez:"
+
+#: app/templates/account/translations.html:110
+msgid ""
+"Find the phrase(s) and its existing translation(s) you want to improve."
+msgstr ""
+"Bilatu hobetu nahi dituzun esaldia(k) eta bere(a) itzulpen(a) esistentziak."
+
+#: app/templates/account/translations.html:111
+msgid "Update the phrase(s)."
+msgstr "Egizu esaldi(a)."
+
+#: app/templates/account/translations.html:112
+msgid "Copy the file name and path into the issue."
+msgstr "Kopiatu fitxategiaren izena eta bidea arazketan."
+
+#: app/templates/account/translations.html:114
+msgid "Paste the copied snippet directly into the GitHub issue comment."
+msgstr "Itsatsi kopiatu duzun zatia zuzenean GitHub arazketa iruzkinera."
+
+#: app/templates/account/translations.html:115
+msgid "Do not upload the full .po file to avoid merge conflicts."
+msgstr "Ez igo .po fitxategi osoa elkarketa gatazkak saihesteko."
+
+#: app/templates/account/translations.html:118
+msgid "Example snippet:"
+msgstr "Adibidez zati bat:"
+
+#: app/templates/account/translations.html:137
+msgid "Report missing translations not yet discovered:"
+msgstr "Itzulpen faltak oraindik ez dira aurkitu:"
+
+#: app/templates/account/translations.html:154
+msgid ""
+"If you see text in the app that appears untranslated or missing, please "
+"report it to us."
+msgstr ""
+"Aplikazioan itzuligabe edo falta diren textuak ikusiz gero, jakinarazi "
+"gaitzazu."
+
+#: app/templates/account/translations.html:155
+msgid "Provide the exact English phrase as it appears on the screen."
+msgstr "Eman pantailan agertzen den ingelesezko esaldi zehatza."
+
+#: app/templates/account/translations.html:156
+msgid ""
+"Include the page or section where you saw the phrase (e.g., Apprise page, "
+"Account Page, etc.)."
+msgstr ""
+"Sartu esaldia ikusi duzun orria edo atala (adibidez, Ezarpenen orria, "
+"Kontuen atala)."
+
+#: app/templates/account/translations.html:157
+msgid ""
+"Submit this information via a new GitHub issue so we can add it to the "
+"translation files"
+msgstr ""
+"Eman informazio hau GitHub arazketa berri batean, itzulpen fitxategietan "
+"gehitu eta Babelerako prestatzeko."
+
+#: app/templates/account/translations.html:166
+msgid "Found a missing translation?"
+msgstr "Itzulpen falta bat aurkitu duzu?"
+
+#: app/templates/account/translations.html:171
+msgid ""
+"This link will create a new GitHub issue pre-filled with a language code."
+msgstr ""
+"Esteka honek hizkuntza-kode baten aurrez betetako GitHub kontu berri bat "
+"sortuko du."
+
+#: app/templates/account/translations.html:172
+msgid "Report it by opening a new GitHub issue"
+msgstr "Jakinarazi GitHub arazketa berri bat irekiz"
+
+#: app/templates/account/translations.html:175
+msgid "Please specify the language code and exact phrase when reporting."
+msgstr "Mesedez, zehaztu hizkuntza-kodea eta esaldi zehatza jakinarazteko."
+
+#: app/templates/account/translations.html:176
+msgid "Thank you for helping us make Grylli better!"
+msgstr "Eskerrik asko Grylli hobetzen laguntzeagatik!"
+
+#: app/templates/admin/create_user.html:14
+msgid "Create New User"
+msgstr "Erabiltzaile Berria Sortu"
+
+#: app/templates/admin/create_user.html:15
+msgid "Fill out the form to add a new user."
+msgstr "Bete formularioa erabiltzaile berri bat gehitzeko."
+
+#: app/templates/admin/create_user.html:21
+#: app/templates/admin/edit_user.html:17 app/templates/auth/bootstrap.html:24
+msgid "Please fix the following errors:"
+msgstr "Hurrengo akatsak konpondu mesedez:"
+
+#: app/templates/admin/create_user.html:78
+#: app/templates/admin/edit_user.html:93
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "Create User"
+msgstr "Erabiltzailea Sortu"
+
+#: app/templates/admin/edit_user.html:10
+#: app/templates/admin/partials/user_card.html:20
+#: app/templates/admin/partials/user_table.html:26
+msgid "Edit User"
+msgstr "Erabiltzailea Editatu"
+
+#: app/templates/admin/edit_user.html:55 app/templates/admin/edit_user.html:74
+msgid "Hold to show password"
+msgstr "Eutsi pasahitza erakusteko"
+
+#: app/templates/admin/edit_user.html:85
+#, python-format
+msgid "At least one special character (e.g., !@#$%%)"
+msgstr "Gutxienez karaktere berezi bat (adibidez, !@#$%%)"
+
+#: app/templates/admin/help.html:4 app/templates/auth/login.html:72
+msgid "Admin Help"
+msgstr "Kudeatzaile Panela"
+
+#: app/templates/admin/help.html:7
+msgid "Reset Admin Password"
+msgstr "Pasahitza Berrezarri"
+
+#: app/templates/admin/help.html:9
+msgid ""
+"If you've forgotten the admin password, you can reset it using the following"
+" Docker command:"
+msgstr ""
+"Administratzailearen pasahitza ahaztu baduzu, Docker komando hau erabiliz "
+"berrezarri dezakezu:"
+
+#: app/templates/admin/help.html:15
+msgid ""
+"This script will prompt you to enter a new password for the admin user. You "
+"must run it from the host system where the Grylli container is running."
+msgstr ""
+"Script honek admin erabiltzailearen pasahitz berria sartzeko eskatuko dizu. "
+"Grylli edukiontzia exekutatzen ari den ostalari sistematik exekutatu behar "
+"duzu."
+
+#: app/templates/admin/help.html:18
+msgid "After resetting, you can log in with the new password immediately."
+msgstr "Berrezarri ondoren, pasahitz berriarekin berehala sar zaitezke."
+
+#: app/templates/admin/help.html:24
+msgid "Return to Login"
+msgstr "Itzuli Hasiera-Orriara"
+
+#: app/templates/admin/help_form.html:6
+msgid "Admin Help Access"
+msgstr "Administratzailearen Laguntza Sarbidea"
+
+#: app/templates/admin/help_form.html:9
+msgid "Enter your Ferret Key to unlock admin-only help documentation."
+msgstr ""
+"Sartu zure Ferret Giltza administratzaileentzako laguntza-dokumentazioa "
+"desblokeatzeko."
+
+#: app/templates/admin/help_form.html:34
+msgid "How to Find Your FERRET_KEY"
+msgstr "Nola Aurkitu Zure FERRET_KEY"
+
+#: app/templates/admin/help_form.html:36
+msgid "The FERRET_KEY is set as an environment variable when running Grylli."
+msgstr ""
+"FERRET_KEY Grylli exekutatzen denean inguruneko aldagai gisa ezarrita dago."
+
+#: app/templates/admin/help_form.html:39
+msgid "Option 1: Check docker-compose.yml"
+msgstr "Aukera 1: Egiaztatu docker-compose.yml"
+
+#: app/templates/admin/help_form.html:46
+msgid "Option 2: Use docker inspect"
+msgstr "Aukera 2: Erabili docker inspect"
+
+#: app/templates/admin/help_form.html:52
+msgid "This shows the FERRET_KEY as passed to the container at runtime."
+msgstr ""
+"Honek erakusten du FERRET_KEY edukiontzira denbora errealeko pasatutakoa "
+"dela."
+
+#: app/templates/admin/index.html:10
+msgid "Admin Panel"
+msgstr "Kudeatzaile Panela"
+
+#: app/templates/admin/index.html:12
+msgid ""
+"Welcome to the Grylli Admin Panel. Use the links below to manage the system."
+msgstr ""
+"Ongi etorri Grylli Kudeatzaile Panela. Erabili beheko estekak sistema "
+"kudeatzeko."
+
+#: app/templates/admin/index.html:17
+msgid "Manage Users"
+msgstr "Erabiltzaileak Kudeatu"
+
+#: app/templates/admin/index.html:18
+msgid "Create, edit, enable/disable, or delete user accounts."
+msgstr "Sortu, editatu, gaitu/desgaitu, edo ezabatu erabiltzaile kontuak."
+
+#: app/templates/admin/index.html:22
+#: app/templates/admin/system_settings.html:10
+#: app/templates/partials/admin_nav.html:52
+msgid "System Settings"
+msgstr "Sistema ezarpenak"
+
+#: app/templates/admin/index.html:23
+msgid "View  system-wide environment values."
+msgstr "Ikusi sistema osoaren ingurune balioak."
+
+#: app/templates/admin/index.html:27 app/templates/partials/admin_nav.html:42
+msgid "Backups"
+msgstr "Babeskopiak"
+
+#: app/templates/admin/index.html:28
+msgid "Create and delete database backups."
+msgstr "Datubase Babeskopiak"
+
+#: app/templates/admin/index.html:33
+msgid "View and test global SMTP settings."
+msgstr "Ezin izan da proba-emaila bidali. Egiaztatu SMTP ezarpenak."
+
+#: app/templates/admin/index.html:39
+msgid "View Admin Guide / README on GitHub"
+msgstr "Ikusi Admin Gida / README GitHub-en"
+
+#: app/templates/admin/index.html:40
+msgid "Includes setup instructions, integrations, and troubleshooting."
+msgstr ""
+"Taldeko argibideak, integrazioak, eta arazoak konpontzea barnebiltzen ditu."
+
+#: app/templates/admin/index.html:44
+msgid "⚠️ Admin Tips"
+msgstr "⚠️ Kudeatzaile Iradokizunak"
+
+#: app/templates/admin/index.html:46
+msgid "Ensure the data folder (database) is backed up on your host"
+msgstr "Ziurtatu datu-karpeta (datubasea) zure ostatuan babesten dela"
+
+#: app/templates/admin/index.html:48
+msgid ""
+"The uploads folder is not per user.  If required per user, you will ndd to "
+"create subdirectoried per user and setup permissions so users can only see "
+"their own folder."
+msgstr ""
+"Igotako fitxategiak ez dira erabiltzaile bakoitzeko. Erabiltzaile bakoitzeko"
+" behar badira, azpikarpeta erabili eta baimenak ezarri behar dituzu "
+"erabiltzaileek beraien karpeta bakarrik ikus dezaten."
+
+#: app/templates/admin/index.html:51
+msgid ""
+"To restore a backup: stop the container, replace the data/grylli.db with one"
+" from the backups folder, and restart the container."
+msgstr ""
+"Babeskopia bat berreskuratzeko: gelditu edukiontzia, ordezkatu "
+"data/grylli.db babeskopiekin eta berrabiarazi edukiontzia."
+
+#: app/templates/admin/list_backups.html:11
+msgid "Database Backups"
+msgstr "Datubase Babeskopiak"
+
+#: app/templates/admin/list_backups.html:13
+msgid "Create Backup"
+msgstr "Sortu Babeskopia"
+
+#: app/templates/admin/list_backups.html:21
+msgid "Filename"
+msgstr "Fitxategi izena"
+
+#: app/templates/admin/list_backups.html:22
+#: app/templates/admin/partials/user_table.html:14
+#: app/templates/apprise/list_apprise.html:62
+#: app/templates/email/list_emails.html:60
+#: app/templates/messages/list_messages.html:60
+#: app/templates/reminders/list_reminders.html:60
+#: app/templates/user_smtp/list_smtp.html:59
+#: app/templates/webhook/list_webhooks.html:63
+msgid "Actions"
+msgstr "Ekintzak"
+
+#: app/templates/admin/list_backups.html:32
+msgid "Delete this backup?"
+msgstr "Ezabatu babeskopia hau?"
+
+#: app/templates/admin/list_backups.html:32
+#: app/templates/apprise/list_apprise.html:95
+#: app/templates/apprise/list_apprise.html:99
+#: app/templates/apprise/list_apprise.html:150
+#: app/templates/apprise/list_apprise.html:154
+#: app/templates/email/list_emails.html:124
+#: app/templates/email/list_emails.html:128
+#: app/templates/email/list_emails.html:226
+#: app/templates/email/list_emails.html:230
+#: app/templates/messages/list_messages.html:112
+#: app/templates/messages/list_messages.html:116
+#: app/templates/messages/list_messages.html:198
+#: app/templates/messages/list_messages.html:202
+#: app/templates/reminders/list_reminders.html:107
+#: app/templates/reminders/list_reminders.html:113
+#: app/templates/reminders/list_reminders.html:192
+#: app/templates/reminders/list_reminders.html:198
+#: app/templates/user_smtp/list_smtp.html:101
+#: app/templates/user_smtp/list_smtp.html:169
+#: app/templates/webhook/list_webhooks.html:102
+#: app/templates/webhook/list_webhooks.html:161
+msgid "Delete"
+msgstr "Ezabatu"
+
+#: app/templates/admin/list_backups.html:41
+msgid "No backups found."
+msgstr "Ez da babeskopiarik aurkitu."
+
+#: app/templates/admin/list_backups.html:44
+msgid ""
+"Backups contain your full app data. Store securely. Sensitive data is "
+"encrypted in the DB by default."
+msgstr ""
+"Babeskopiak zure aplikazioaren datu osoak dauzka. Gorde segurtasunez. Datu "
+"sentikorrak DBan zifraturik daude lehenetsita."
+
+#: app/templates/admin/smtp_config.html:28
+#: app/templates/admin/system_config.html:22
+msgid "System Configuration"
+msgstr "Sistema Konfigurazioa"
+
+#: app/templates/admin/smtp_config.html:33
+#: app/templates/admin/system_config.html:26
+#: app/templates/admin/system_settings.html:15
+msgid "Key"
+msgstr "Gakoa"
+
+#: app/templates/admin/smtp_config.html:34
+#: app/templates/admin/system_config.html:27
+#: app/templates/admin/system_settings.html:16
+msgid "Value"
+msgstr "Balioa"
+
+#: app/templates/admin/smtp_config.html:35
+#: app/templates/admin/system_config.html:28
+msgid "Sensitive"
+msgstr "Sentikorra"
+
+#: app/templates/admin/smtp_config.html:36
+#: app/templates/admin/system_config.html:29
+msgid "Editable"
+msgstr "Editagarria"
+
+#: app/templates/admin/smtp_config.html:50
+#: app/templates/admin/smtp_config.html:51
+#: app/templates/admin/system_config.html:45
+#: app/templates/admin/system_config.html:46
+#: app/templates/email/view_config.html:60
+msgid "Yes"
+msgstr "Bai"
+
+#: app/templates/admin/smtp_config.html:50
+#: app/templates/admin/smtp_config.html:51
+#: app/templates/admin/system_config.html:45
+#: app/templates/admin/system_config.html:46
+#: app/templates/email/view_config.html:60
+msgid "No"
+msgstr "Ez"
+
+#: app/templates/admin/smtp_config.html:63
+#: app/templates/admin/system_config.html:55
+msgid "Send Test Email"
+msgstr "Bidali Proba Emaila"
+
+#: app/templates/admin/system_config.html:39
+msgid "decrypted"
+msgstr "Sortua"
+
+#: app/templates/admin/partials/user_card.html:12
+msgid "Email:"
+msgstr "Emaila:"
+
+#: app/templates/admin/partials/user_card.html:15
+msgid "Role:"
+msgstr "Rola:"
+
+#: app/templates/admin/partials/user_card.html:27
+#: app/templates/admin/partials/user_table.html:34
+msgid "Change Role"
+msgstr "Rol aldaketa"
+
+#: app/templates/admin/partials/user_card.html:29
+#: app/templates/admin/partials/user_table.html:36
+msgid "You cannot change your own role"
+msgstr "Zure egoera gaitua aldatu ezin duzu."
+
+#: app/templates/admin/partials/user_card.html:36
+#: app/templates/admin/partials/user_table.html:43
+msgid "Are you sure you want to reset MFA for this user?"
+msgstr "Ziur zaude erabiltzaile honentzako MFA berrezarri nahi duzula?"
+
+#: app/templates/admin/partials/user_card.html:39
+#: app/templates/admin/partials/user_table.html:46
+msgid "Reset MFA"
+msgstr "Pasahitza Berrezarri"
+
+#: app/templates/admin/partials/user_card.html:51
+#: app/templates/admin/partials/user_table.html:58
+msgid "Delete user"
+msgstr "Ezabatu erabiltzailea"
+
+#: app/templates/admin/partials/user_card.html:55
+#: app/templates/admin/partials/user_table.html:61
+msgid "Delete User"
+msgstr "Ezabatu Erabiltzailea"
+
+#: app/templates/admin/partials/user_card.html:58
+#: app/templates/admin/partials/user_table.html:65
+msgid "You cannot disable yourself"
+msgstr "Ezingo duzu zeure burua desgaitu"
+
+#: app/templates/admin/partials/user_card.html:65
+#: app/templates/admin/partials/user_table.html:72
+msgid "Disable"
+msgstr "Desgaitu"
+
+#: app/templates/admin/partials/user_card.html:65
+#: app/templates/admin/partials/user_table.html:72
+msgid "Enable"
+msgstr "Gaitu"
+
+#: app/templates/admin/partials/user_header.html:6
+#: app/templates/partials/admin_nav.html:47
+msgid "Users"
+msgstr "Erabiltzaileak"
+
+#: app/templates/admin/partials/user_header.html:12
+#: app/templates/admin/partials/user_header.html:13
+#: app/templates/apprise/apprise_config.html:10
+#: app/templates/apprise/apprise_config.html:11
+#: app/templates/apprise/list_apprise.html:16
+#: app/templates/apprise/list_apprise.html:17
+#: app/templates/email/list_emails.html:15
+#: app/templates/email/list_emails.html:16
+#: app/templates/messages/list_messages.html:16
+#: app/templates/messages/list_messages.html:17
+#: app/templates/reminders/list_reminders.html:15
+#: app/templates/reminders/list_reminders.html:16
+#: app/templates/user_smtp/list_smtp.html:14
+#: app/templates/user_smtp/list_smtp.html:17
+#: app/templates/webhook/list_webhooks.html:16
+#: app/templates/webhook/list_webhooks.html:17
+#: app/templates/webhook/webhook_config.html:10
+#: app/templates/webhook/webhook_config.html:11
+msgid "Table View"
+msgstr "Taula Bista"
+
+#: app/templates/admin/partials/user_header.html:26
+#: app/templates/admin/partials/user_header.html:27
+#: app/templates/apprise/apprise_config.html:24
+#: app/templates/apprise/apprise_config.html:25
+#: app/templates/apprise/list_apprise.html:30
+#: app/templates/apprise/list_apprise.html:31
+#: app/templates/email/list_emails.html:29
+#: app/templates/email/list_emails.html:30
+#: app/templates/messages/list_messages.html:30
+#: app/templates/messages/list_messages.html:31
+#: app/templates/reminders/list_reminders.html:29
+#: app/templates/reminders/list_reminders.html:30
+#: app/templates/user_smtp/list_smtp.html:27
+#: app/templates/user_smtp/list_smtp.html:30
+#: app/templates/webhook/list_webhooks.html:30
+#: app/templates/webhook/list_webhooks.html:31
+#: app/templates/webhook/webhook_config.html:24
+#: app/templates/webhook/webhook_config.html:25
+msgid "Card View"
+msgstr "Txartela Bista"
+
+#: app/templates/admin/partials/user_header.html:45
+msgid "Add User"
+msgstr "Gehitu Erabiltzailea"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:9
+#: app/templates/email/attach_files.html:54
+#: app/templates/email/list_emails.html:255
+#: app/templates/messages/list_messages.html:223
+#: app/templates/reminders/list_reminders.html:218
+#: app/templates/reminders/schedule_reminder.html:56
+msgid "Hide Instructions"
+msgstr "Ezkutatu Argibideak"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:9
+msgid "How to manage users"
+msgstr "Nola kudeatu erabiltzaileak"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "Click"
+msgstr "Egin klik"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+msgid "➕ Add User"
+msgstr "➕ Gehitu Erabiltzailea"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+msgid "to open the new user form."
+msgstr "erabiltzaile berriko formularioa irekitzeko."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:18
+msgid "Enter a unique username, valid email address, and strong password."
+msgstr ""
+"Idatzi erabiltzaile izen berezi bat, baliozko helbide elektronikoa eta "
+"pasahitz sendoa."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "Select the appropriate"
+msgstr "Hautatu egokia"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "role"
+msgstr "rola"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "or"
+msgstr "Ataka"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "to save."
+msgstr "gorde."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:25
+msgid "To edit a user, click ✏️ and update their info."
+msgstr "Erabiltzaile bat editatzeko, egin klik ✏️ eta eguneratu informazioa."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:26
+msgid "To delete a user, click 🗑️ and confirm the deletion."
+msgstr "Erabiltzaile bat ezabatzeko, egin klik 🗑️ eta baieztatu ezabatzea."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:28
+msgid "To disable or enable a user, click 🔴 or 🟢."
+msgstr "Erabiltzaile bat desgaitu edo gaitzeko, egin klik 🔴 edo 🟢."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:30
+msgid "🟢 = User is enabled and can log in."
+msgstr "🟢 = Erabiltzailea gaituta dago eta saioa hasteko aukera du."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:31
+msgid "🔴 = User is disabled and cannot log in."
+msgstr "🔴 = Erabiltzailea desgaituta dago eta ezin da saioa hasi."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:32
+msgid "⚪ = You cannot disable your own account."
+msgstr "⚪ = Ezin duzu zure kontua desgaitu."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:43
+#: app/templates/admin/partials/user_table.html:91
+msgid "Assign Role for"
+msgstr "Helmugak esleitu"
+
+#: app/templates/admin/partials/user_table.html:10
+msgid "ID"
+msgstr "ID"
+
+#: app/templates/admin/partials/user_table.html:11
+#: app/templates/user_smtp/list_smtp.html:55
+msgid "Username"
+msgstr "Erabiltzailea"
+
+#: app/templates/admin/partials/user_table.html:12
+msgid "Email"
+msgstr "Emaila"
+
+#: app/templates/admin/partials/user_table.html:13
+msgid "Role"
+msgstr "Rola"
+
+#: app/templates/apprise/apprise_config.html:3
+#: app/templates/apprise/list_apprise.html:9
+#: app/templates/messages/assign_destinations.html:22
+#: app/templates/reminders/assign_destinations.html:20
+msgid "Apprise Destinations"
+msgstr "Apprise Helmugak"
+
+#: app/templates/apprise/apprise_config.html:43
+#: app/templates/webhook/list_webhooks.html:49
+#: app/templates/webhook/webhook_config.html:43
+msgid "Add Webhook"
+msgstr "Gehitu Webhook-a"
+
+#: app/templates/apprise/apprise_config.html:43
+#: app/templates/apprise/list_apprise.html:49
+#: app/templates/webhook/list_webhooks.html:49
+#: app/templates/webhook/webhook_config.html:43
+msgid "Add Destination"
+msgstr "Gehitu Helmuga"
+
+#: app/templates/apprise/create_apprise.html:10
+msgid "Create Apprise Destination"
+msgstr "Sortu Apprise Helmuga"
+
+#: app/templates/apprise/create_apprise.html:38
+#: app/templates/apprise/edit_apprise.html:38
+#: app/templates/user_smtp/create_smtp.html:107
+#: app/templates/webhook/create_webhook.html:44
+#: app/templates/webhook/edit_webhook.html:44
+msgid "Create Destination"
+msgstr "Sortu Helmuga"
+
+#: app/templates/apprise/create_apprise.html:47
+#: app/templates/apprise/edit_apprise.html:47
+msgid "Need help with Apprise URLs? See the"
+msgstr "Apprise URL edo laguntza behar duzu? Ikusi"
+
+#: app/templates/apprise/create_apprise.html:51
+#: app/templates/apprise/edit_apprise.html:51
+msgid "Apprise Notification Services documentation"
+msgstr "Apprise Jakinarazpenen Zerbitzuen dokumentazioa"
+
+#: app/templates/apprise/edit_apprise.html:10
+msgid "Edit Apprise Destination"
+msgstr "Editatu Apprise Helmuga"
+
+#: app/templates/apprise/list_apprise.html:49
+msgid "Add Apprise"
+msgstr "Gehitu Apprise"
+
+#: app/templates/apprise/list_apprise.html:58
+#: app/templates/email/edit_message.html:21
+#: app/templates/email/list_emails.html:56
+#: app/templates/email/view_config.html:14
+#: app/templates/messages/create_message.html:29
+#: app/templates/messages/edit_message.html:23
+#: app/templates/messages/list_messages.html:57
+#: app/templates/messages/view_message.html:14
+#: app/templates/reminders/create_reminder.html:23
+#: app/templates/reminders/edit_reminder.html:17
+#: app/templates/reminders/list_reminders.html:56
+#: app/templates/reminders/view_reminder.html:13
+#: app/templates/user_smtp/list_smtp.html:52
+#: app/templates/webhook/list_webhooks.html:58
+msgid "Label"
+msgstr "Etiketa"
+
+#: app/templates/apprise/list_apprise.html:59
+msgid "URL"
+msgstr "URL"
+
+#: app/templates/apprise/list_apprise.html:61
+#: app/templates/email/list_emails.html:59
+#: app/templates/messages/list_messages.html:59
+#: app/templates/messages/view_message.html:36
+#: app/templates/reminders/view_reminder.html:47
+#: app/templates/webhook/list_webhooks.html:62
+msgid "Created At"
+msgstr "Sortu Zenean"
+
+#: app/templates/apprise/list_apprise.html:77
+#: app/templates/apprise/list_apprise.html:132
+#: app/templates/user_smtp/list_smtp.html:79
+#: app/templates/user_smtp/list_smtp.html:147
+#: app/templates/webhook/list_webhooks.html:79
+#: app/templates/webhook/list_webhooks.html:138
+msgid "Edit"
+msgstr "Editatu"
+
+#: app/templates/apprise/list_apprise.html:80
+#: app/templates/apprise/list_apprise.html:135
+#: app/templates/user_smtp/list_smtp.html:82
+#: app/templates/user_smtp/list_smtp.html:150
+msgid "Cannot edit while in use"
+msgstr "Ez daiteke editatu erabiltzen den bitartean"
+
+#: app/templates/apprise/list_apprise.html:88
+#: app/templates/apprise/list_apprise.html:143
+#: app/templates/webhook/list_webhooks.html:91
+#: app/templates/webhook/list_webhooks.html:150
+msgid "Test"
+msgstr "Proba"
+
+#: app/templates/apprise/list_apprise.html:103
+#: app/templates/apprise/list_apprise.html:158
+#: app/templates/user_smtp/list_smtp.html:106
+#: app/templates/user_smtp/list_smtp.html:174
+msgid "Cannot delete while in use"
+msgstr "Ez daiteke ezabatu erabiltzen den bitartean"
+
+#: app/templates/apprise/list_apprise.html:119
+msgid "URL:"
+msgstr "URL:"
+
+#: app/templates/apprise/list_apprise.html:122
+#: app/templates/user_smtp/list_smtp.html:137
+#: app/templates/webhook/list_webhooks.html:128
+msgid "Enabled:"
+msgstr "Gaituta:"
+
+#: app/templates/apprise/list_apprise.html:125
+#: app/templates/user_smtp/list_smtp.html:140
+#: app/templates/webhook/list_webhooks.html:131
+msgid "Created:"
+msgstr "Sortua:"
+
+#: app/templates/auth/bootstrap.html:14
+msgid "Create Admin Account"
+msgstr "Sortu Administratzaile Kontua"
+
+#: app/templates/auth/bootstrap.html:16
+msgid "Let’s get started by creating your first admin account."
+msgstr "Has gaitezen zure lehen administratzaile kontua sortuz."
+
+#: app/templates/auth/bootstrap.html:75
+msgid "Create Admin"
+msgstr "Sortu Admin"
+
+#: app/templates/auth/forgot_password.html:12
+msgid "Forgot Password"
+msgstr "Pasahitza Ahaztu"
+
+#: app/templates/auth/forgot_password.html:15
+msgid ""
+"Enter your username and email. We'll send you a link to reset your password."
+msgstr ""
+"Idatzi zure erabiltzaile izena eta emaila. Pasahitza berrezartzeko esteka "
+"bat bidaliko dizugu."
+
+#: app/templates/auth/forgot_username.html:12
+msgid "Forgot Username"
+msgstr "Erabiltzaile Izena Ahaztu"
+
+#: app/templates/auth/forgot_username.html:15
+msgid "Enter your email address, and we'll send you your username."
+msgstr ""
+"Idatzi zure helbide elektronikoa, eta zure erabiltzaile izena bidaliko "
+"dizugu."
+
+#: app/templates/auth/forgot_username.html:40
+msgid "Send Username"
+msgstr "Bidali Erabiltzaile Izena"
+
+#: app/templates/auth/login.html:12 app/templates/auth/login.html:54
+msgid "Log In"
+msgstr "Hasi Saioa"
+
+#: app/templates/auth/login.html:62
+msgid "Forgot Username?"
+msgstr "Erabiltzaile Izena Ahaztu?"
+
+#: app/templates/auth/login.html:64
+msgid "Forgot Password?"
+msgstr "Pasahitza Ahaztu?"
+
+#: app/templates/auth/login.html:66 app/templates/auth/signup.html:12
+msgid "Sign Up"
+msgstr "Izena Eman"
+
+#: app/templates/auth/rate_limit.html:9
+msgid "Hold On"
+msgstr "Eutsi"
+
+#: app/templates/auth/rate_limit.html:11
+msgid "Too many failed login attempts. Please wait"
+msgstr "Saiakera mugagabeak. Mesedez, itxaron"
+
+#: app/templates/auth/rate_limit.html:13
+msgid "seconds..."
+msgstr "segundu..."
+
+#: app/templates/auth/rate_limit.html:15
+msgid "Redirecting to login..."
+msgstr "Itzuli Hasiera-Orriara"
+
+#: app/templates/auth/reset_password.html:12
+#: app/templates/auth/reset_password.html:116
+msgid "Reset Password"
+msgstr "Pasahitza Berrezarri"
+
+#: app/templates/auth/reset_password.html:14
+msgid "Enter your username, email, and new password."
+msgstr "Sartu zure erabiltzaile-izena, emaila eta pasahitz berria."
+
+#: app/templates/auth/signup.html:14
+msgid "Fill out the form to create your account."
+msgstr "Bete ezazu formularioa zure kontua sortzeko."
+
+#: app/templates/checkin/already_checked_in.html:10
+msgid "Already Checked In"
+msgstr "Azken Kontroleratzea"
+
+#: app/templates/checkin/already_checked_in.html:12
+msgid ""
+"You have already checked in for this item. No further action is needed at "
+"this time."
+msgstr ""
+"Elementu honetarako dagoeneko egiaztatu duzu. Une honetan ez da ekintza "
+"gehiago behar."
+
+#: app/templates/checkin/already_checked_in.html:16
+#: app/templates/checkin/disabled.html:16
+#: app/templates/checkin/executed_disabled.html:18
+msgid "Check-in for:"
+msgstr "Honetarako erregistratua:"
+
+#: app/templates/checkin/already_checked_in.html:21
+#: app/templates/checkin/disabled.html:21
+#: app/templates/checkin/executed_disabled.html:23
+#: app/templates/checkin/thank_you.html:19
+msgid "Return to Dashboard"
+msgstr "Itzuli Hasiera-Orriara"
+
+#: app/templates/checkin/disabled.html:10
+msgid "Check-In Disabled"
+msgstr "Emaila desgaituta dago"
+
+#: app/templates/checkin/disabled.html:12
+msgid "This check-in is currently disabled and cannot be completed."
+msgstr "Check-in hau desgaituta dago une honetan eta ezin da osatu."
+
+#: app/templates/checkin/executed_disabled.html:11
+msgid "Already Executed & Disabled"
+msgstr "Dagoeneko Beteta eta Desgaitua"
+
+#: app/templates/checkin/executed_disabled.html:14
+msgid ""
+"This check-in has already been executed and is now disabled. No further "
+"action is required."
+msgstr ""
+"Check-in hau dagoeneko exekutatu da eta orain desgaituta dago. Ez da ekintza"
+" gehiagorik behar."
+
+#: app/templates/checkin/thank_you.html:10
+msgid "Check-In Successful"
+msgstr "Check-In Arrakastatsua"
+
+#: app/templates/checkin/thank_you.html:11
+msgid "Thank you for checking in."
+msgstr "Eskerrik asko erregistratzeagatik."
+
+#: app/templates/checkin/thank_you.html:14
+msgid "Checked in for:"
+msgstr "Honetarako erregistratua:"
+
+#: app/templates/email/assign_smtp.html:11
+msgid "📧 Assign SMTP Config to:"
+msgstr "📧 SMTP Konfigurazioa esleitu:"
+
+#: app/templates/email/assign_smtp.html:25
+msgid "No SMTP (Unassign)"
+msgstr "SMTP konfiguraziorik ez da asignatu"
+
+#: app/templates/email/assign_smtp.html:26
+msgid "This email will not use any SMTP configuration."
+msgstr "Email honek ez du SMTP konfiguraziorik erabiliko."
+
+#: app/templates/email/attach_files.html:12
+msgid "Attach Files for:"
+msgstr "Eransketa Fitxategiak:"
+
+#: app/templates/email/attach_files.html:21
+msgid "Available Files"
+msgstr "Eskuragarri dauden Fitxategiak"
+
+#: app/templates/email/attach_files.html:36
+msgid "No files found in the upload directory."
+msgstr "Ez da fitxategirik aurkitu kargatzeko direktorioan."
+
+#: app/templates/email/attach_files.html:44
+msgid "Save Attachments"
+msgstr "Gorde Eranskinak"
+
+#: app/templates/email/attach_files.html:54
+msgid "File Attach Notes"
+msgstr "Eranskineko Oharrak"
+
+#: app/templates/email/attach_files.html:63
+msgid "Important:"
+msgstr "Ataka:"
+
+#: app/templates/email/attach_files.html:65
+msgid ""
+"Only files that are present in the 'uploads' folder (provided by your system"
+" administrator) will be shown here. If you do not see your file(s), please "
+"contact your Grylli administrator."
+msgstr ""
+"Hemen bakarrik 'igoerak' karpetan (zure sistemako administratzaileak emana) "
+"dauden fitxategiak erakutsiko dira. Zure fitxategia(k) ez baduzu ikusten, "
+"jarri harremanetan zure Grylli administratzailearekin."
+
+#: app/templates/email/attach_files.html:69
+msgid "Accepted file types:"
+msgstr "Onartutako fitxategi motak:"
+
+#: app/templates/email/attach_files.html:71
+msgid "Documents:"
+msgstr "Dokumentuak:"
+
+#: app/templates/email/attach_files.html:73
+msgid "Images:"
+msgstr "Irudiak:"
+
+#: app/templates/email/attach_files.html:75
+msgid "Audio:"
+msgstr "Audio:"
+
+#: app/templates/email/attach_files.html:79
+msgid "Maximum file size:"
+msgstr "Fitxategi tamaina maximoa:"
+
+#: app/templates/email/attach_files.html:80
+msgid "10 MB per file"
+msgstr "10 MB fitxategi bakoitzeko"
+
+#: app/templates/email/attach_files.html:83
+msgid "Total upload size:"
+msgstr "Kargatze tamaina guztira:"
+
+#: app/templates/email/attach_files.html:84
+msgid "20 MB (all files combined)"
+msgstr "20 MB (fitxategi guztiak konbinatuta)"
+
+#: app/templates/email/edit_message.html:12
+#: app/templates/email/list_emails.html:75
+#: app/templates/email/list_emails.html:177
+msgid "Edit Email"
+msgstr "Editatu Emaila"
+
+#: app/templates/email/edit_message.html:12
+msgid "Create Email"
+msgstr "Sortu Emaila"
+
+#: app/templates/email/edit_message.html:28
+msgid "To (Recipient Email)"
+msgstr "Nori (Jasotzaile Emaila)"
+
+#: app/templates/email/edit_message.html:35
+#: app/templates/email/list_emails.html:57
+#: app/templates/email/view_config.html:18
+#: app/templates/messages/create_message.html:36
+#: app/templates/messages/edit_message.html:30
+#: app/templates/messages/list_messages.html:58
+#: app/templates/messages/view_message.html:18
+#: app/templates/reminders/create_reminder.html:30
+#: app/templates/reminders/edit_reminder.html:24
+#: app/templates/reminders/list_reminders.html:57
+#: app/templates/reminders/view_reminder.html:17
+msgid "Subject"
+msgstr "Gaia"
+
+#: app/templates/email/edit_message.html:42
+#: app/templates/email/view_config.html:28
+msgid "Body"
+msgstr "Gorputza"
+
+#: app/templates/email/edit_message.html:50
+msgid "Save Email"
+msgstr "Gorde Emaila"
+
+#: app/templates/email/list_emails.html:48
+msgid "Add Email"
+msgstr "Gehitu Emaila"
+
+#: app/templates/email/list_emails.html:58
+#: app/templates/reminders/assign_email_reminder.html:77
+msgid "To"
+msgstr "Nori"
+
+#: app/templates/email/list_emails.html:78
+#: app/templates/email/list_emails.html:180
+msgid "Disable to edit email"
+msgstr "Ezin izan da proba-emaila bidali:"
+
+#: app/templates/email/list_emails.html:84
+#: app/templates/email/list_emails.html:186
+msgid "Attach Files"
+msgstr "Erantsi Fitxategiak"
+
+#: app/templates/email/list_emails.html:87
+#: app/templates/email/list_emails.html:189
+msgid "Disable to attach files"
+msgstr "Erantsi Fitxategiak"
+
+#: app/templates/email/list_emails.html:93
+#: app/templates/email/list_emails.html:195
+msgid "Attach SMTP Config"
+msgstr "Erantsi SMTP Konfigurazioa"
+
+#: app/templates/email/list_emails.html:96
+#: app/templates/email/list_emails.html:198
+msgid "Disable to assign SMTP"
+msgstr "SMTP esleitzeko desgaitu"
+
+#: app/templates/email/list_emails.html:102
+#: app/templates/email/list_emails.html:204
+msgid "Schedule Check-In"
+msgstr "Programatu Check-In"
+
+#: app/templates/email/list_emails.html:105
+#: app/templates/email/list_emails.html:207
+msgid "Disable to schedule check-in"
+msgstr "Programatu Check-In"
+
+#: app/templates/email/list_emails.html:110
+#: app/templates/email/list_emails.html:212
+#: app/templates/messages/list_messages.html:99
+#: app/templates/messages/list_messages.html:184
+#: app/templates/reminders/list_reminders.html:93
+#: app/templates/reminders/list_reminders.html:178
+msgid "View Details"
+msgstr "Ikusi Xehetasunak"
+
+#: app/templates/email/list_emails.html:118
+#: app/templates/email/list_emails.html:220
+msgid "Send this email to yourself to preview it."
+msgstr "Bidali email hau zure buruari, ikusteko."
+
+#: app/templates/email/list_emails.html:136
+#: app/templates/email/list_emails.html:238
+msgid "Toggle Email On/Off"
+msgstr "Aldatu Emaila Piztu/Itzali"
+
+#: app/templates/email/list_emails.html:139
+#: app/templates/email/list_emails.html:241
+msgid "Email is enabled"
+msgstr "Emaila gaituta dago"
+
+#: app/templates/email/list_emails.html:141
+#: app/templates/email/list_emails.html:243
+msgid "Email is disabled"
+msgstr "Emaila desgaituta dago"
+
+#: app/templates/email/list_emails.html:157
+#: app/templates/email/view_config.html:51
+#: app/templates/messages/list_messages.html:142
+#: app/templates/reminders/list_reminders.html:140
+msgid "Label:"
+msgstr "Etiketa:"
+
+#: app/templates/email/list_emails.html:161
+#: app/templates/messages/list_messages.html:146
+#: app/templates/reminders/list_reminders.html:144
+#: app/templates/reminders/view_reminder.html:98
+msgid "Subject:"
+msgstr "Gaia"
+
+#: app/templates/email/list_emails.html:165
+msgid "To:"
+msgstr "Rara:"
+
+#: app/templates/email/list_emails.html:169
+#: app/templates/messages/list_messages.html:150
+msgid "Created At:"
+msgstr "Sortu Zenean"
+
+#: app/templates/email/list_emails.html:255
+msgid "How to create and send an email"
+msgstr "Nola sortu eta bidali email bat"
+
+#: app/templates/email/list_emails.html:262
+msgid ""
+"Click “Add Email” and fill out the subject, content, and recipient address."
+msgstr ""
+"Egin klik “Email gehitu” eta bete gaia, edukia, eta hartzailearen helbidea."
+
+#: app/templates/email/list_emails.html:263
+msgid "Attach any optional files (if needed)."
+msgstr "Erantsi edozein fitxategi aukerakoak (behar izanez gero)."
+
+#: app/templates/email/list_emails.html:264
+msgid ""
+"Click 🧩 to assign a single SMTP configuration that will be used to send the "
+"email."
+msgstr ""
+"Egin klik 🧩 emaila bidaltzeko erabiliko den SMTP konfigurazio bakarra "
+"esleitzeko."
+
+#: app/templates/email/list_emails.html:265
+msgid "Click ⏱️ to set a check-in interval and grace period for the email."
+msgstr ""
+"Egin klik ⏱️ emailerako check-in tarte eta onarpenerako epea ezartzeko."
+
+#: app/templates/email/list_emails.html:266
+msgid "Enable the email using the 🔴/🟢 toggle button."
+msgstr "Gaitu emaila 🔴/🟢 piztu/itzali botoia erabiliz."
+
+#: app/templates/email/list_emails.html:267
+msgid ""
+"Click 🧪 to test the email by sending it to yourself (not the recipient)."
+msgstr "Egin klik 🧪 emaila probatzeko, zu zeuri bidaliz (ez hartzaileari)."
+
+#: app/templates/email/list_emails.html:268
+msgid ""
+"If you don’t check in before the grace period ends, the email will be "
+"automatically sent."
+msgstr ""
+"Onarpenerako epea amaitu baino lehen ez baduzu check-in egiten, emaila "
+"automatikoki bidaliko da."
+
+#: app/templates/email/list_emails.html:269
+msgid "You can preview the email configuration using 🔍."
+msgstr "Email konfigurazioa aurrebista dezakezu 🔍 erabiliz."
+
+#: app/templates/email/list_emails.html:270
+msgid "Once a secure email is sent, it will be automatically disabled."
+msgstr "Email seguru bat bidali ondoren, automatikoki desgaituko da."
+
+#: app/templates/email/schedule_email.html:9
+msgid "Schedule Email"
+msgstr "Emaila programatu"
+
+#: app/templates/email/schedule_email.html:18
+#: app/templates/messages/schedule_message.html:18
+msgid "Years"
+msgstr "Urteak"
+
+#: app/templates/email/schedule_email.html:19
+#: app/templates/messages/schedule_message.html:19
+msgid "Months"
+msgstr "Hilabeteak"
+
+#: app/templates/email/schedule_email.html:20
+#: app/templates/messages/schedule_message.html:20
+msgid "Weeks"
+msgstr "Asteak"
+
+#: app/templates/email/schedule_email.html:21
+#: app/templates/messages/schedule_message.html:21
+msgid "Days"
+msgstr "Egunak"
+
+#: app/templates/email/schedule_email.html:22
+#: app/templates/messages/schedule_message.html:22
+msgid "Hours"
+msgstr "Orduak"
+
+#: app/templates/email/schedule_email.html:23
+#: app/templates/messages/schedule_message.html:23
+msgid "Minutes"
+msgstr "Minutuak"
+
+#: app/templates/email/schedule_email.html:28
+#: app/templates/messages/schedule_message.html:28
+msgid "Check-in"
+msgstr "Check-in"
+
+#: app/templates/email/schedule_email.html:51
+#: app/templates/messages/schedule_message.html:51
+#: app/templates/messages/view_message.html:26
+msgid "Grace Period"
+msgstr "Onarpenerako epea"
+
+#: app/templates/email/schedule_email.html:80
+#: app/templates/messages/schedule_message.html:80
+#: app/templates/reminders/schedule_reminder.html:47
+msgid "Save Schedule"
+msgstr "Programazioa gorde"
+
+#: app/templates/email/view_config.html:9
+msgid "Email Configuration"
+msgstr "Email Konfigurazioa"
+
+#: app/templates/email/view_config.html:22
+msgid "Recipient"
+msgstr "Hartzailea"
+
+#: app/templates/email/view_config.html:33
+msgid "Attached Files"
+msgstr "Erantsitako Fitxategiak"
+
+#: app/templates/email/view_config.html:39
+msgid "No files attached"
+msgstr "Ez dago fitxategirik erantsita"
+
+#: app/templates/email/view_config.html:46
+#: app/templates/reminders/assign_email_reminder.html:20
+msgid "SMTP Configuration"
+msgstr "SMTP Konfigurazioa"
+
+#: app/templates/email/view_config.html:54
+#: app/templates/user_smtp/list_smtp.html:122
+msgid "Host:"
+msgstr "Ostalaria:"
+
+#: app/templates/email/view_config.html:57
+#: app/templates/user_smtp/list_smtp.html:128
+msgid "Username:"
+msgstr "Erabiltzailea:"
+
+#: app/templates/email/view_config.html:60
+#: app/templates/user_smtp/list_smtp.html:134
+msgid "TLS:"
+msgstr "TLS:"
+
+#: app/templates/email/view_config.html:64
+msgid "No SMTP configuration assigned"
+msgstr "SMTP konfiguraziorik ez da asignatu"
+
+#: app/templates/email/view_config.html:69
+msgid "Schedule Information"
+msgstr "Programazio Informazioa"
+
+#: app/templates/email/view_config.html:72
+msgid "Check-in Interval:"
+msgstr "Check-in Tartea:"
+
+#: app/templates/email/view_config.html:72
+#: app/templates/email/view_config.html:75
+msgid "minutes"
+msgstr "minutuak"
+
+#: app/templates/email/view_config.html:75
+msgid "Grace Period:"
+msgstr "Onarpenerako Epea:"
+
+#: app/templates/email/view_config.html:79
+msgid "Last Check-in:"
+msgstr "Azken Check-in:"
+
+#: app/templates/email/view_config.html:82
+msgid "No check-in has occurred yet"
+msgstr "Ez da check-inik gertatu oraindik"
+
+#: app/templates/email/view_config.html:92
+msgid "Back to Emails"
+msgstr "Itzuli Emailetara"
+
+#: app/templates/errors/500.html:4
+msgid "Something went wrong"
+msgstr "Zerbait gaizki joan da"
+
+#: app/templates/errors/500.html:6
+msgid ""
+"An unexpected error occurred. Please try again later or contact support."
+msgstr ""
+"Ustekabeko errorea gertatu da. Mesedez, saiatu berriro geroago edo jarri "
+"harremanetan laguntzarekin."
+
+#: app/templates/locale/redirect_after_lang_set.html:15
+msgid "Switching Language..."
+msgstr "Hizkuntza aldatzen..."
+
+#: app/templates/locale/redirect_after_lang_set.html:18
+msgid "Applying new language..."
+msgstr "Hizkuntza berria aplikatzen..."
+
+#: app/templates/messages/assign_destinations.html:13
+#: app/templates/reminders/assign_destinations.html:12
+msgid "Assign Destinations for"
+msgstr "Helmugak esleitu"
+
+#: app/templates/messages/assign_destinations.html:62
+#: app/templates/reminders/assign_destinations.html:60
+msgid "Save Destinations"
+msgstr "Helmugak gorde"
+
+#: app/templates/messages/create_message.html:17
+msgid "Edit Notificaton"
+msgstr "Jakinarazpena editatu"
+
+#: app/templates/messages/create_message.html:19
+msgid "Create Notification"
+msgstr "Jakinarazpena sortu"
+
+#: app/templates/messages/create_message.html:43
+#: app/templates/messages/edit_message.html:37
+#: app/templates/messages/view_message.html:42
+#: app/templates/reminders/create_reminder.html:37
+#: app/templates/reminders/edit_reminder.html:31
+#: app/templates/reminders/view_reminder.html:53
+msgid "Content"
+msgstr "Edukia"
+
+#: app/templates/messages/create_message.html:51
+msgid "Save Notification"
+msgstr "Jakinarazpena gorde"
+
+#: app/templates/messages/edit_message.html:15
+#: app/templates/messages/list_messages.html:74
+#: app/templates/messages/list_messages.html:158
+msgid "Edit Notification"
+msgstr "Jakinarazpena editatu"
+
+#: app/templates/messages/edit_message.html:45
+msgid "Update Notification"
+msgstr "Jakinarazpena eguneratu"
+
+#: app/templates/messages/list_messages.html:49
+msgid "Add Notification"
+msgstr "Jakinarazpena gehitu"
+
+#: app/templates/messages/list_messages.html:77
+#: app/templates/messages/list_messages.html:161
+msgid "Disable to edit notification"
+msgstr "Jakinarazpena editatu"
+
+#: app/templates/messages/list_messages.html:83
+#: app/templates/messages/list_messages.html:167
+#: app/templates/reminders/list_reminders.html:78
+#: app/templates/reminders/list_reminders.html:163
+msgid "Assign Destinations"
+msgstr "Helmugak esleitu"
+
+#: app/templates/messages/list_messages.html:86
+#: app/templates/messages/list_messages.html:170
+msgid "Disable to assign destinations"
+msgstr "Helmugak esleitu"
+
+#: app/templates/messages/list_messages.html:92
+#: app/templates/messages/list_messages.html:176
+#: app/templates/reminders/list_reminders.html:88
+#: app/templates/reminders/list_reminders.html:173
+msgid "Set Schedule"
+msgstr "Ordutegia ezarri"
+
+#: app/templates/messages/list_messages.html:95
+#: app/templates/messages/list_messages.html:179
+msgid "Disable to set schedule"
+msgstr "Ordutegia ezarri"
+
+#: app/templates/messages/list_messages.html:107
+#: app/templates/messages/list_messages.html:192
+msgid "Send Test Notification"
+msgstr "Jakinarazpena editatu"
+
+#: app/templates/messages/list_messages.html:122
+#: app/templates/messages/list_messages.html:209
+msgid "Toggle Message On/Off"
+msgstr "Mezua Piztu/Itzali"
+
+#: app/templates/messages/list_messages.html:124
+#: app/templates/messages/list_messages.html:211
+msgid "Notification is enabled"
+msgstr "Jakinarazpena gaituta dago"
+
+#: app/templates/messages/list_messages.html:126
+#: app/templates/messages/list_messages.html:213
+msgid "Notification is disabled"
+msgstr "Jakinarazpena desgaituta dago"
+
+#: app/templates/messages/list_messages.html:223
+msgid "How to create and send a notification"
+msgstr "Nola sortu eta bidali jakinarazpen bat"
+
+#: app/templates/messages/list_messages.html:233
+msgid "Click “Add notification” and fill out the subject and content fields."
+msgstr ""
+"Klik egin “Jakinarazpena gehitu” gaian eta osatu gaia eta eduki eremuak."
+
+#: app/templates/messages/list_messages.html:234
+msgid "Save the notification to return to the overview."
+msgstr "Gorde jakinarazpena gainbegiratzera itzultzeko."
+
+#: app/templates/messages/list_messages.html:235
+msgid "You need to create at least one apprise or webhook destination."
+msgstr "Gutxienez apprise edo webhook helmuga bat sortu behar duzu."
+
+#: app/templates/messages/list_messages.html:236
+msgid "You can create as many destinations as you like."
+msgstr "Nahi adina helmuga sor ditzakezu."
+
+#: app/templates/messages/list_messages.html:237
+msgid "Click 🧩 to assign one or more Apprise and/or Webhook destinations."
+msgstr ""
+"Klik egin 🧩 Apprise eta/edo Webhook helmuga bat edo gehiago esleitzeko."
+
+#: app/templates/messages/list_messages.html:238
+msgid "Click ⏱️ to set a schedule and check-in interval."
+msgstr "Klik egin ⏱️ ordutegia eta kontrolerako tartea ezartzeko."
+
+#: app/templates/messages/list_messages.html:239
+msgid "Enable the notification using the 🔴/🟢 toggle button."
+msgstr "Aktibatu jakinarazpena 🔴/🟢 botoia erabiliz."
+
+#: app/templates/messages/list_messages.html:240
+msgid ""
+"If you don’t check in before the grace period ends, the notification will be"
+" sent."
+msgstr ""
+"Barkamen-epea amaitu aurretik ez baduzu egiaztatzen, jakinarazpena bidaliko "
+"da."
+
+#: app/templates/messages/list_messages.html:241
+msgid "You can preview the notification config using 🔍."
+msgstr "Jakinarazpenaren konfigurazioa aurreikusi dezakezu 🔍 erabiliz."
+
+#: app/templates/messages/list_messages.html:242
+msgid "Once a notification is sent, it will be automatically disabled."
+msgstr "Jakinarazpena bidalitakoan, automatikoki desgaituko da."
+
+#: app/templates/messages/schedule_message.html:9
+msgid "Schedule Message"
+msgstr "Mezuaren Ordutegia"
+
+#: app/templates/messages/view_message.html:9
+msgid "Notifications Details"
+msgstr "Jakinarazpenaren Xehetasunak"
+
+#: app/templates/messages/view_message.html:22
+msgid "Check-in Interval"
+msgstr "Kontrolerako Tartea"
+
+#: app/templates/messages/view_message.html:31
+msgid "Last Check-in"
+msgstr "Azken Kontroleratzea"
+
+#: app/templates/messages/view_message.html:48
+#: app/templates/reminders/view_reminder.html:59
+msgid "Apprise URLs"
+msgstr "Apprise URLak"
+
+#: app/templates/messages/view_message.html:54
+#: app/templates/messages/view_message.html:64
+#: app/templates/reminders/view_reminder.html:65
+#: app/templates/reminders/view_reminder.html:75
+#: app/templates/reminders/view_reminder.html:85
+msgid "None assigned."
+msgstr "Bat ere ez esleitu."
+
+#: app/templates/messages/view_message.html:73
+msgid "Back to Notifications"
+msgstr "Itzuli Jakinarazpenetara"
+
+#: app/templates/mfa/challenge.html:5 app/templates/mfa/settings.html:5
+msgid "Two-Factor Authentication (MFA)"
+msgstr "Bi-Faktoreko Autentikazioa (MFA)"
+
+#: app/templates/mfa/recovery_codes.html:4
+msgid "Your Recovery Codes"
+msgstr "Zure Berreskuratze Kodeak"
+
+#: app/templates/mfa/recovery_codes.html:7
+msgid "Save these recovery codes in a safe place!"
+msgstr "Gorde berreskuratze kode hauek toki seguruan!"
+
+#: app/templates/mfa/recovery_codes.html:10
+msgid ""
+"Each code can be used once if you lose access to your authenticator. These "
+"codes will not be shown again."
+msgstr ""
+"Kode bakoitza behin erabil daiteke zure autentikatzailearen sarrera galtzen "
+"baduzu. Kode hauek ez dira berriro erakutsiko."
+
+#: app/templates/mfa/recovery_codes.html:24
+msgid "OK, I've saved them"
+msgstr "Ados, gorde ditut"
+
+#: app/templates/mfa/settings.html:12
+msgid "MFA QR Code"
+msgstr "MFA QR Kodea"
+
+#: app/templates/mfa/settings.html:15
+msgid "Manual Entry:"
+msgstr "Sarrera Eskuliburua:"
+
+#: app/templates/partials/admin_nav.html:21
+msgid "Administration"
+msgstr "Administrazioa"
+
+#: app/templates/partials/admin_nav.html:37
+#: app/templates/partials/shared_nav.html:34
+#: app/templates/partials/shared_nav.html:78
+#: app/templates/partials/shared_nav.html:117
+msgid "Overview"
+msgstr "Orokorra"
+
+#: app/templates/partials/footer.html:7
+msgid "Toggle Theme"
+msgstr "Aldatu gaia"
+
+#: app/templates/partials/footer.html:32
+msgid "Theme"
+msgstr "Gaia"
+
+#: app/templates/partials/head.html:7
+msgid "Grylli"
+msgstr "Grylli"
+
+#: app/templates/partials/header.html:6 app/templates/partials/sidebar.html:32
+#: app/templates/partials/sidebar.html:66
+msgid "Home"
+msgstr "Hasiera"
+
+#: app/templates/partials/header.html:55
+msgid "Account"
+msgstr "Kontu"
+
+#: app/templates/partials/header.html:61
+msgid "MFA"
+msgstr "MFA"
+
+#: app/templates/partials/header.html:67
+msgid "About"
+msgstr "Honi buruz"
+
+#: app/templates/partials/header.html:73
+msgid "Privacy"
+msgstr "Pribatutasuna"
+
+#: app/templates/partials/header.html:79
+msgid "System Info"
+msgstr "Sistema info"
+
+#: app/templates/partials/header.html:114
+msgid "Logout"
+msgstr "Irten"
+
+#: app/templates/partials/shared_nav.html:33
+msgid "Overview of notification settings"
+msgstr "Jakinarazpenen ezarpenen ikuspegi orokorra"
+
+#: app/templates/partials/shared_nav.html:38
+msgid "Configure Apprise services"
+msgstr "Apprise zerbitzuak konfiguratzea"
+
+#: app/templates/partials/shared_nav.html:39
+msgid "Apprise"
+msgstr "Apprise"
+
+#: app/templates/partials/shared_nav.html:43
+msgid "Configure Webhook integrations"
+msgstr "Webhook integrazioak konfiguratzea"
+
+#: app/templates/partials/shared_nav.html:77
+msgid "Overview of secure email messages"
+msgstr "Ziurtaturiko posta elektronikoko mezuen ikuspegi orokorra"
+
+#: app/templates/partials/shared_nav.html:82
+msgid "Configure SMTP email settings"
+msgstr "SMTP posta elektronikoaren ezarpenak konfiguratzea"
+
+#: app/templates/partials/shared_nav.html:83
+#: app/templates/reminders/view_reminder.html:79
+msgid "SMTP"
+msgstr "SMTP"
+
+#: app/templates/partials/shared_nav.html:100
+#: app/templates/reminders/list_reminders.html:8
+msgid "Reminders"
+msgstr "minutuak"
+
+#: app/templates/partials/shared_nav.html:116
+msgid "Overview of reminders"
+msgstr "Gogorarazleen ikuspegi orokorra"
+
+#: app/templates/partials/sidebar.html:13
+#: app/templates/partials/sidebar.html:47
+msgid "Menu"
+msgstr "Menua"
+
+#: app/templates/reminders/assign_email_reminder.html:12
+msgid "Link Email Reminder for"
+msgstr "Email Gogorarazlea Lotu"
+
+#: app/templates/reminders/assign_email_reminder.html:30
+#: app/templates/reminders/assign_email_reminder.html:64
+msgid "None (Unassign)"
+msgstr "SMTP konfiguraziorik ez da asignatu"
+
+#: app/templates/reminders/assign_email_reminder.html:43
+msgid "No sender address"
+msgstr "Igorlearen helbiderik ez"
+
+#: app/templates/reminders/assign_email_reminder.html:54
+msgid "Email Message"
+msgstr "Mezuaren Ordutegia"
+
+#: app/templates/reminders/assign_email_reminder.html:77
+msgid "No subject"
+msgstr "Gaia"
+
+#: app/templates/reminders/assign_email_reminder.html:90
+msgid "Save Email Reminder"
+msgstr "Gorde Emaila"
+
+#: app/templates/reminders/create_reminder.html:12
+#: app/templates/reminders/edit_reminder.html:10
+#: app/templates/reminders/list_reminders.html:73
+#: app/templates/reminders/list_reminders.html:158
+msgid "Edit Reminder"
+msgstr "Editatu Emaila"
+
+#: app/templates/reminders/create_reminder.html:14
+msgid "Create Reminder"
+msgstr "Sortu Emaila"
+
+#: app/templates/reminders/create_reminder.html:45
+msgid "Save Reminder"
+msgstr "Gorde Emaila"
+
+#: app/templates/reminders/edit_reminder.html:39
+msgid "Update Reminder"
+msgstr "Gogorarazlea Eguneratu"
+
+#: app/templates/reminders/list_reminders.html:48
+msgid "Add Reminder"
+msgstr "Gehitu Emaila"
+
+#: app/templates/reminders/list_reminders.html:58
+#: app/templates/reminders/view_reminder.html:21
+msgid "Start At"
+msgstr "TLS hasten"
+
+#: app/templates/reminders/list_reminders.html:59
+msgid "Recurrence"
+msgstr "Errepikapena"
+
+#: app/templates/reminders/list_reminders.html:69
+#: app/templates/reminders/list_reminders.html:153
+#: app/templates/reminders/view_reminder.html:26
+msgid "One-time"
+msgstr "Behin bakarrik"
+
+#: app/templates/reminders/list_reminders.html:83
+msgid "Assign Email Reminder"
+msgstr "Email Gogorarazlea Esleitu"
+
+#: app/templates/reminders/list_reminders.html:102
+#: app/templates/reminders/list_reminders.html:187
+msgid "Send Test Reminder"
+msgstr "Bidali Proba Emaila"
+
+#: app/templates/reminders/list_reminders.html:120
+#: app/templates/reminders/list_reminders.html:205
+msgid "Toggle Reminder On/Off"
+msgstr "Aldatu Emaila Piztu/Itzali"
+
+#: app/templates/reminders/list_reminders.html:122
+#: app/templates/reminders/list_reminders.html:207
+msgid "Reminder is enabled"
+msgstr "Emaila gaituta dago"
+
+#: app/templates/reminders/list_reminders.html:124
+#: app/templates/reminders/list_reminders.html:209
+msgid "Reminder is disabled"
+msgstr "Emaila desgaituta dago"
+
+#: app/templates/reminders/list_reminders.html:148
+msgid "Start At:"
+msgstr "TLS hasten"
+
+#: app/templates/reminders/list_reminders.html:152
+msgid "Recurrence:"
+msgstr "Errepikapena:"
+
+#: app/templates/reminders/list_reminders.html:168
+msgid "Link Email Reminder"
+msgstr "Email Gogorarazlea Lotu"
+
+#: app/templates/reminders/list_reminders.html:218
+msgid "How to use reminders"
+msgstr "Nola kudeatu erabiltzaileak"
+
+#: app/templates/reminders/list_reminders.html:231
+msgid "➕ Click “Add Reminder” and fill out the subject and content fields."
+msgstr ""
+"Klik egin “Jakinarazpena gehitu” gaian eta osatu gaia eta eduki eremuak."
+
+#: app/templates/reminders/list_reminders.html:232
+msgid "💾 Save the reminder to return to the overview."
+msgstr "Gorde jakinarazpena gainbegiratzera itzultzeko."
+
+#: app/templates/reminders/list_reminders.html:233
+msgid ""
+"📣 Assign Apprise, 🌐 Webhook, and/or 📧 Email (SMTP) destinations as needed."
+msgstr ""
+"📣 Apprise, 🌐 Webhook, eta/edo 📧 Email (SMTP) helmugak behar bezala esleitu."
+
+#: app/templates/reminders/list_reminders.html:234
+msgid ""
+"⏱️ Set the schedule using the schedule button to define when reminders are "
+"sent."
+msgstr ""
+"⏱️ Ordutegia ezarri ordutegiaren botoia erabiliz, gogorarazleak noiz bidali "
+"behar diren definitzeko."
+
+#: app/templates/reminders/list_reminders.html:235
+msgid ""
+"🔍 Click “View Details” to review or edit assigned destinations and other "
+"settings."
+msgstr ""
+"🔍 \"Xehetasunak Ikusi\" sakatu helmuga esleitutakoak eta beste ezarpen "
+"batzuk berrikusteko edo editatzeko."
+
+#: app/templates/reminders/list_reminders.html:236
+msgid ""
+"🧪 Click the Test button to verify all assigned destinations are working "
+"correctly."
+msgstr ""
+"🧪 Probera Botoia sakatu esleitutako helmugak behar bezala funtzionatzen "
+"dutela egiaztatzeko."
+
+#: app/templates/reminders/list_reminders.html:237
+msgid "🔴/🟢 Enable or disable the reminder using the toggle button."
+msgstr "Gaitu emaila 🔴/🟢 piztu/itzali botoia erabiliz."
+
+#: app/templates/reminders/list_reminders.html:238
+msgid "📤 Reminders will be sent as scheduled to the assigned destinations."
+msgstr ""
+"📤 Gogorarazleak esleitutako helmugei bidaliko zaizkie, aurrez ezarritako "
+"programaren arabera."
+
+#: app/templates/reminders/schedule_reminder.html:8
+msgid "Schedule Reminder"
+msgstr "Emaila programatu"
+
+#: app/templates/reminders/schedule_reminder.html:15
+msgid "Start Date & Time"
+msgstr "Hasiera Data eta Ordua"
+
+#: app/templates/reminders/schedule_reminder.html:22
+#: app/templates/reminders/view_reminder.html:25
+msgid "Recurrence Rule"
+msgstr "Errepikapen Araua"
+
+#: app/templates/reminders/schedule_reminder.html:24
+msgid "(Optional) Enter RRULE or leave blank for one-time."
+msgstr "(Aukerakoa) Sartu RRULE edo utzi hutsik behin egiteko."
+
+#: app/templates/reminders/schedule_reminder.html:30
+msgid "End Date"
+msgstr "Bidali Proba"
+
+#: app/templates/reminders/schedule_reminder.html:32
+msgid "(Optional) Stop sending after this date."
+msgstr "(Aukerakoa) Bidalketak data honetaz geroztik gelditu."
+
+#: app/templates/reminders/schedule_reminder.html:38
+#: app/templates/reminders/view_reminder.html:36
+msgid "Max Occurrences"
+msgstr "Gehienezko Gertaerak"
+
+#: app/templates/reminders/schedule_reminder.html:40
+msgid "(Optional) Stop after this many reminders."
+msgstr "(Aukerakoa) Gogorarazle kopuru honetaz geroztik gelditu."
+
+#: app/templates/reminders/schedule_reminder.html:56
+msgid "Help for RRULE syntax"
+msgstr "RRULE sintaxirako laguntza"
+
+#: app/templates/reminders/schedule_reminder.html:66
+msgid "Several tools are available to help generate an RRULE."
+msgstr "RRULE sortzen laguntzeko hainbat tresna daude eskuragarri."
+
+#: app/templates/reminders/schedule_reminder.html:67
+msgid "Use a search engine or AI tool to assist."
+msgstr "Bilaketa-motor edo AI tresna erabili laguntzeko."
+
+#: app/templates/reminders/schedule_reminder.html:69
+msgid "Here is an example of one such online tool:"
+msgstr "Hona hemen horrelako online tresna baten adibidea:"
+
+#: app/templates/reminders/schedule_reminder.html:73
+msgid "RRULE Generator Tool"
+msgstr "RRULE Sortzailea"
+
+#: app/templates/reminders/schedule_reminder.html:77
+msgid "See here for some common examples:"
+msgstr "Hemen ikus ditzakezu adibide arrunt batzuk:"
+
+#: app/templates/reminders/schedule_reminder.html:81
+msgid "RRULE Help (GitHub)"
+msgstr "RRULE Laguntza (GitHub)"
+
+#: app/templates/reminders/view_reminder.html:8
+msgid "Reminder Details"
+msgstr "Ikusi Xehetasunak"
+
+#: app/templates/reminders/view_reminder.html:30
+msgid "End At"
+msgstr "Bidali Proba"
+
+#: app/templates/reminders/view_reminder.html:42
+msgid "Last Sent"
+msgstr "Azken Kontroleratzea"
+
+#: app/templates/reminders/view_reminder.html:91
+msgid "Email Template"
+msgstr "Posta Elektronikoaren Balioztatzailea"
+
+#: app/templates/reminders/view_reminder.html:103
+msgid "No email linked."
+msgstr "Emaila gaituta dago"
+
+#: app/templates/reminders/view_reminder.html:111
+msgid "Back to Reminders"
+msgstr "Itzuli Emailetara"
+
+#: app/templates/user_smtp/create_smtp.html:10
+msgid "Create SMTP Destination"
+msgstr "SMTP Helmuga Sortu"
+
+#: app/templates/user_smtp/create_smtp.html:69
+#: app/templates/user_smtp/edit_smtp.html:84
+msgid "Hold to reveal"
+msgstr "Eutsi erakusteko"
+
+#: app/templates/user_smtp/create_smtp.html:92
+#: app/templates/user_smtp/edit_smtp.html:107
+msgid "Use TLS"
+msgstr "Erabili TLS"
+
+#: app/templates/user_smtp/edit_smtp.html:10
+msgid "Edit SMTP Destination"
+msgstr "SMTP Helmuga Sortu"
+
+#: app/templates/user_smtp/list_smtp.html:9
+msgid "SMTP Destinations"
+msgstr "SMTP Helmugak"
+
+#: app/templates/user_smtp/list_smtp.html:44
+msgid "Add SMTP"
+msgstr "Gehitu SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:53
+msgid "Host"
+msgstr "Ostalaria"
+
+#: app/templates/user_smtp/list_smtp.html:54
+msgid "Port"
+msgstr "Ataka"
+
+#: app/templates/user_smtp/list_smtp.html:56
+msgid "TLS"
+msgstr "TLS"
+
+#: app/templates/user_smtp/list_smtp.html:58
+msgid "Created"
+msgstr "Sortua"
+
+#: app/templates/user_smtp/list_smtp.html:90
+#: app/templates/user_smtp/list_smtp.html:158
+msgid "Send Test"
+msgstr "Bidali Proba"
+
+#: app/templates/user_smtp/list_smtp.html:125
+msgid "Port:"
+msgstr "Ataka:"
+
+#: app/templates/user_smtp/list_smtp.html:131
+msgid "Password:"
+msgstr "Pasahitza:"
+
+#: app/templates/user_smtp/list_smtp.html:184
+msgid "Hide SMTP Setup Help"
+msgstr "SMTP Konfigurazio Laguntza ezkutatu"
+
+#: app/templates/user_smtp/list_smtp.html:184
+msgid "Show SMTP Setup Help"
+msgstr "SMTP Konfigurazio Laguntza erakutsi"
+
+#: app/templates/user_smtp/list_smtp.html:190
+msgid ""
+"Need help finding your SMTP server settings? See here for some links to "
+"common providers:"
+msgstr ""
+"Zure SMTP zerbitzariaren ezarpenak aurkitzen laguntza behar duzu? Hona hemen"
+" hornitzaile arrunten estekak:"
+
+#: app/templates/user_smtp/list_smtp.html:194
+msgid "SMTP Server Settings Help (GitHub)"
+msgstr "SMTP Zerbitzari Ezarpenen Laguntza (GitHub)"
+
+#: app/templates/user_smtp/list_smtp.html:198
+msgid ""
+"Find official documentation links for Gmail, Outlook, Yahoo, AOL, and "
+"others."
+msgstr ""
+"Gmail, Outlook, Yahoo, AOL eta besteren dokumentazio ofizialen estekak "
+"aurkitu."
+
+#: app/templates/user_smtp/list_smtp.html:199
+msgid ""
+"If your provider isn’t listed, search their support site or a search engine "
+"for 'SMTP settings'."
+msgstr ""
+"Zure hornitzailea zerrendan ez badago, bilatu haien laguntza webgunean edo "
+"bilatzaile batean 'SMTP ezarpenak'."
+
+#: app/templates/user_smtp/list_smtp.html:200
+msgid ""
+"Some providers (like Gmail, Yahoo) require 'App Passwords' or special "
+"setup—see their docs!"
+msgstr ""
+"Zenbait hornitzaileek (Gmail, Yahoo bezalakoek) 'Aplikazio Pasahitzak' edo "
+"ezarpen bereziak eskatzen dituzte—ikus ezazu haien dokumentazioa!"
+
+#: app/templates/webhook/create_webhook.html:10
+msgid "Create Webhook"
+msgstr "Sortu Webhook-a"
+
+#: app/templates/webhook/edit_webhook.html:10
+msgid "Edit Webhook"
+msgstr "Editatu Webhook-a"
+
+#: app/templates/webhook/list_webhooks.html:9
+#: app/templates/webhook/webhook_config.html:3
+msgid "Webhooks Destinations"
+msgstr "Webhook Helmugak"
+
+#: app/templates/webhook/list_webhooks.html:59
+msgid "Endpoint"
+msgstr "Amaiera"
+
+#: app/templates/webhook/list_webhooks.html:60
+msgid "Description"
+msgstr "Deskripzioa"
+
+#: app/templates/webhook/list_webhooks.html:82
+#: app/templates/webhook/list_webhooks.html:141
+msgid "Cannot edit while assigned to notifications"
+msgstr "Ez daiteke editatu jakinarazpenetara esleitua dagoenean"
+
+#: app/templates/webhook/list_webhooks.html:106
+#: app/templates/webhook/list_webhooks.html:165
+msgid "Cannot delete while assigned to notifications"
+msgstr "Ez daiteke ezabatu jakinarazpenetara esleitua dagoenean"
+
+#: app/templates/webhook/list_webhooks.html:122
+msgid "Endpoint:"
+msgstr "Amaiera:"
+
+#: app/templates/webhook/list_webhooks.html:125
+msgid "Description:"
+msgstr "Deskripzioa:"
+
+#: app/views/account.py:74
+msgid "Current password is required to change password."
+msgstr "Oraingo pasahitza beharrezkoa da pasahitza aldatzeko."
+
+#: app/views/account.py:78
+msgid "Current password is incorrect."
+msgstr "Oraingo pasahitza okerra da."
+
+#: app/views/account.py:94
+msgid "Account updated successfully."
+msgstr "Kontua arrakastaz eguneratu da."
+
+#: app/views/account.py:100
+msgid "An error occurred while updating your account."
+msgstr "Errore bat gertatu da zure kontua eguneratzean."
+
+#: app/views/account.py:137
+msgid "You cannot delete your account because you are the last admin."
+msgstr "Ezin duzu zure kontua ezabatu azken administratzailea zarelako."
+
+#: app/views/account.py:146
+msgid "Your account has been permanently deleted."
+msgstr "Zure kontua iraunkorki ezabatu da."
+
+#: app/views/account.py:152
+msgid "An error occurred while trying to delete your account."
+msgstr "Errore bat gertatu da zure kontua eguneratzean."
+
+#: app/views/account.py:171
+msgid "Your account has been deleted"
+msgstr "Zure kontua iraunkorki ezabatu da."
+
+#: app/views/account.py:173
+#, python-brace-format
+msgid ""
+"Hello {username},\n"
+"\n"
+"Your account on {site_name} has been deleted.Remember to delete your files from the uploads folder.If this was not you, please contact support immediately.\n"
+"\n"
+"{site_url}"
+msgstr ""
+"Kaixo {username},\n"
+"\n"
+"Zure kontua {site_name}-en ezabatu da. Gogoratu zure fitxategiak igoeren karpetatik ezabatzea. Hori ez bazina izan, mesedez, jarri berehala harremanetan laguntzarekin.\n"
+"\n"
+"{site_url}"
+
+#: app/views/admin.py:59
+msgid "Invalid role."
+msgstr "Rol baliogabea."
+
+#: app/views/apprise.py:51
+msgid "🧪 Test notification sent successfully!"
+msgstr "🧪 Testeko jakinarazpena arrakastaz bidali da!"
+
+#: app/views/apprise.py:56
+msgid "🧪 Failed to send test notification: "
+msgstr "🧪 Testeko jakinarazpena bidaltzean huts egin du:"
+
+#: app/views/apprise.py:62
+msgid "🧪 Error sending test notification."
+msgstr "🧪 Testeko jakinarazpena bidaltzean errorea."
+
+#: app/views/apprise.py:101
+msgid "Apprise destination created successfully."
+msgstr "Apprise helmuga arrakastaz sortu da."
+
+#: app/views/apprise.py:168
+msgid "Apprise destination updated successfully."
+msgstr "Apprise helmuga arrakastaz eguneratu da."
+
+#: app/views/apprise.py:199
+msgid "Apprise destination deleted."
+msgstr "Apprise helmuga ezabatuta."
+
+#: app/views/auth.py:95
+msgid "Admin account created successfully."
+msgstr "Administrazio kontua arrakastaz sortu da."
+
+#: app/views/auth.py:108
+msgid "An error occurred while creating the admin account."
+msgstr "Errore bat gertatu da administrazio kontua sortzean."
+
+#: app/views/auth.py:141
+msgid ""
+"Your account is not activated. Please check your email for the activation "
+"link."
+msgstr ""
+"Zure kontua ez dago aktibatuta. Mesedez, egiaztatu zure posta elektronikoa "
+"aktibazio esteka lortzeko."
+
+#: app/views/auth.py:157
+msgid "Multi-factor authentication required. Please enter your code."
+msgstr ""
+"Multi-faktoreko autentikazioa beharrezkoa da. Mesedez, sartu zure kodea."
+
+#: app/views/auth.py:162 app/views/mfa.py:195
+msgid "Logged in successfully."
+msgstr "Arrakastaz saioa hasi duzu."
+
+#: app/views/auth.py:179
+msgid "Invalid username or password."
+msgstr "Erabiltzaile izena edo pasahitza baliogabea da."
+
+#: app/views/auth.py:203
+msgid "You have been logged out."
+msgstr "Saioa amaitu duzu."
+
+#: app/views/auth.py:239 app/views/email.py:263
+msgid "Access denied."
+msgstr "Sarrera ukatua."
+
+#: app/views/auth.py:273
+msgid "If a user with that email exists, we've sent the username to them."
+msgstr ""
+"Posta elektroniko horrekin erabiltzailea badago, erabiltzaile izena bidali "
+"diegu."
+
+#: app/views/auth.py:314
+msgid "A password reset link has been sent to your email."
+msgstr ""
+"Pasahitza berrezartzeko esteka bat bidali dizugu zure posta elektronikora."
+
+#: app/views/auth.py:319
+msgid "No account found matching that username and email."
+msgstr ""
+"Ez da erabiltzaile izen eta posta elektroniko horri dagokion konturik "
+"aurkitu."
+
+#: app/views/auth.py:389
+msgid "The reset link is invalid or has expired."
+msgstr "Berrezarpen esteka baliogabea da edo iraungi da."
+
+#: app/views/auth.py:401
+msgid "Username and email do not match."
+msgstr "Erabiltzaile-izena eta mezu elektronikoa ez datoz bat."
+
+#: app/views/auth.py:421
+msgid "Your password has been reset. Please log in."
+msgstr "Zure pasahitza berrezarri da. Mesedez, saioa hasi."
+
+#: app/views/auth.py:458
+msgid "Invalid registration PIN."
+msgstr "Erregistro PIN baliogabea."
+
+#: app/views/auth.py:467
+msgid "Username or email already exists."
+msgstr "Erabiltzaile-izena edo mezu elektronikoa dagoeneko existitzen da."
+
+#: app/views/auth.py:492
+msgid "Activate Your Grylli Account"
+msgstr "Grylli Kontua Aktibatu"
+
+#: app/views/auth.py:493
+#, python-brace-format
+msgid ""
+"Hello {username},\n"
+"\n"
+"Please activate your account by clicking..."
+msgstr ""
+"Kaixo {username},\n"
+"\n"
+"Mesedez, aktibatu zure kontua klikatuz..."
+
+#: app/views/auth.py:498
+msgid "Account created! Please check your email to activate your account."
+msgstr ""
+"Kontua sortu da! Mesedez, egiaztatu zure posta elektronikoa kontua "
+"aktibatzeko."
+
+#: app/views/auth.py:521
+msgid "Activation link is invalid or expired."
+msgstr "Aktibazio esteka baliogabea edo iraungita dago."
+
+#: app/views/auth.py:528 app/views/users.py:76 app/views/users.py:140
+msgid "User not found."
+msgstr "Erabiltzailea ez da aurkitu."
+
+#: app/views/auth.py:532
+msgid "Account already activated. Please log in."
+msgstr "Kontua dagoeneko aktibatuta dago. Mesedez, saioa hasi."
+
+#: app/views/auth.py:540
+msgid "Your account has been activated! You can now log in."
+msgstr "Zure kontua aktibatu da! Orain saioa hasi dezakezu."
+
+#: app/views/backups.py:72
+#, python-format
+msgid "Backup created: %(filename)s"
+msgstr "Babeskopia sortua: %(filename)s"
+
+#: app/views/backups.py:77
+msgid "Failed to create backup."
+msgstr "Ezin izan da babeskopia sortu."
+
+#: app/views/backups.py:106
+#, python-format
+msgid "Backup deleted: %(filename)s"
+msgstr "Babeskopia ezabatua: %(filename)s"
+
+#: app/views/backups.py:109
+msgid "Backup file not found."
+msgstr "Babeskopia fitxategia ez da aurkitu."
+
+#: app/views/backups.py:112
+msgid "Failed to delete backup."
+msgstr "Ezin izan da babeskopia ezabatu."
+
+#: app/views/checkin.py:41
+msgid "Invalid check-in link."
+msgstr "Baliogabeko check-in esteka."
+
+#: app/views/checkin.py:48
+msgid "You are not authorized to check in for this item."
+msgstr "Ez zaizu elementu honen check-in egiteko baimenik."
+
+#: app/views/checkin.py:62
+msgid "Unsupported check-in type."
+msgstr "Check-in mota onartzen ez da."
+
+#: app/views/checkin.py:137
+msgid "⚠️ Cannot enable reminder: Start date/time is in the past."
+msgstr "⚠️ Ezin da gogorarazlea gaitu: Hasiera data/ordua iraganean dago."
+
+#: app/views/checkin.py:158
+msgid "✅ Enabled and timer started."
+msgstr "✅ Gaituta eta tenporizadorea hasi da."
+
+#: app/views/checkin.py:168
+msgid "⛔ Disabled."
+msgstr "⛔ Desgaituta."
+
+#: app/views/checkin.py:170
+msgid "⚠️ Cannot toggle — missing schedule or destination."
+msgstr "⚠️ Ezin da aldatu — ordutegia edo helmuga falta da."
+
+#: app/views/email.py:88
+msgid "Message saved."
+msgstr "Mezua gorde da."
+
+#: app/views/email.py:118 app/views/messages.py:167
+msgid "Message deleted."
+msgstr "Mezua ezabatua."
+
+#: app/views/email.py:152
+msgid "Attached files updated."
+msgstr "Erantsitako fitxategiak eguneratu dira."
+
+#: app/views/email.py:200
+msgid "SMTP configuration not assigned or is disabled."
+msgstr "SMTP konfigurazioa ez dago esleituta edo desgaituta dago."
+
+#: app/views/email.py:234 app/views/smtp_settings_admin.py:82
+msgid "Test email sent successfully."
+msgstr "Proba-emaila ongi bidali da."
+
+#: app/views/email.py:282 app/views/messages.py:305
+msgid "Schedule updated successfully."
+msgstr "Ordutegia ongi eguneratu da."
+
+#: app/views/email.py:310
+msgid "SMTP configuration assigned."
+msgstr "SMTP konfigurazioa esleituta."
+
+#: app/views/email.py:319
+msgid "SMTP configuration removed."
+msgstr "SMTP konfigurazioa esleituta."
+
+#: app/views/messages.py:97
+msgid "Message created successfully."
+msgstr "Mezua ongi sortu da."
+
+#: app/views/messages.py:133
+msgid "Message updated successfully."
+msgstr "Mezua ongi eguneratu da."
+
+#: app/views/messages.py:223 app/views/reminders.py:240
+msgid "Destinations updated."
+msgstr "Helmugak eguneratu dira."
+
+#: app/views/messages.py:441
+msgid "No destinations assigned to this message."
+msgstr "SMTP konfigurazioa ez dago esleituta edo desgaituta dago."
+
+#: app/views/messages.py:453
+msgid "Test message sent successfully."
+msgstr "Proba-emaila ongi bidali da."
+
+#: app/views/messages.py:455
+msgid "Test message failed: "
+msgstr "Mezua gorde da."
+
+#: app/views/mfa.py:68
+msgid "You must enter a code from your authenticator."
+msgstr "Autentikatzailearen kode bat sartu behar duzu."
+
+#: app/views/mfa.py:82 app/views/mfa.py:259
+msgid "Invalid code. Please try again."
+msgstr "Kodea baliogabea da. Mesedez saiatu berriro."
+
+#: app/views/mfa.py:91
+msgid "Two-factor authentication disabled."
+msgstr "Jakinarazpena desgaituta dago"
+
+#: app/views/mfa.py:132
+msgid "Recovery codes are only shown immediately after enabling MFA."
+msgstr "Berreskurapen kodeak bakarrik erakusten dira MFA gaitzean berehala."
+
+#: app/views/mfa.py:142
+msgid "Could not load recovery codes."
+msgstr "Berreskurapen kodeak ezin izan dira kargatu."
+
+#: app/views/mfa.py:168
+msgid "No MFA challenge in progress."
+msgstr "Ez dago MFA erronkarik egiten."
+
+#: app/views/mfa.py:176
+msgid "User not found for MFA challenge."
+msgstr "Erabiltzailea ez da aurkitu."
+
+#: app/views/mfa.py:225
+msgid ""
+"You have used your last recovery code. MFA has been disabled. Please remove "
+"Grylli from your authenticator app, and re-enable MFA to protect your "
+"account."
+msgstr ""
+"Zure azken berreskurapen kodea erabili duzu. MFA desgaitua izan da. Ezabatu "
+"Grylli zure autentikazio aplikaziotik, eta berriro gaitzazu MFA zure kontua "
+"babesteko."
+
+#: app/views/mfa.py:248
+#, python-brace-format
+msgid "Recovery code accepted. You have {remaining} recovery codes left."
+msgstr ""
+"Berreskurapen kodea onartua. {remaining} berreskurapen kode geratzen "
+"zaizkizu."
+
+#: app/views/reminders.py:106
+msgid "Reminder created successfully."
+msgstr "Mezua ongi sortu da."
+
+#: app/views/reminders.py:143
+msgid "Reminder updated successfully."
+msgstr "Erabiltzailea ongi eguneratu da."
+
+#: app/views/reminders.py:174
+msgid "Reminder deleted."
+msgstr "Erabiltzailea ezabatua."
+
+#: app/views/reminders.py:287
+msgid "No destinations assigned to this reminder."
+msgstr "SMTP konfigurazioa ez dago esleituta edo desgaituta dago."
+
+#: app/views/reminders.py:311
+msgid "No email message linked to this reminder."
+msgstr "Gogorarazle honi lotutako email mezurik ez dago."
+
+#: app/views/reminders.py:314
+msgid "SMTP configuration is disabled."
+msgstr "SMTP konfigurazioa ez dago esleituta edo desgaituta dago."
+
+#: app/views/reminders.py:353
+msgid "Test reminder sent successfully."
+msgstr "Proba-emaila ongi bidali da."
+
+#: app/views/reminders.py:356
+msgid "Test reminder failed: "
+msgstr "Mezua gorde da."
+
+#: app/views/reminders.py:430
+msgid "Reminder schedule updated successfully."
+msgstr "Ordutegia ongi eguneratu da."
+
+#: app/views/reminders.py:434
+msgid "Please correct the errors below."
+msgstr "Mesedez, zuzendu beheko akatsak."
+
+#: app/views/reminders.py:481 app/views/reminders.py:482
+msgid "None"
+msgstr "Ez"
+
+#: app/views/reminders.py:508
+msgid "You must select both an SMTP config and an email message, or neither."
+msgstr ""
+"SMTP konfigurazioa eta email mezua hautatu behar dituzu biak, edo ezer ez."
+
+#: app/views/reminders.py:528
+msgid "Email reminder settings updated."
+msgstr "Helmugak eguneratu dira."
+
+#: app/views/smtp.py:83 app/views/user_smtp.py:80
+msgid "SMTP destination created successfully."
+msgstr "SMTP helmuga ongi sortu da."
+
+#: app/views/smtp.py:129 app/views/user_smtp.py:135
+msgid "SMTP destination updated."
+msgstr "SMTP helmuga eguneratua."
+
+#: app/views/smtp.py:160 app/views/user_smtp.py:166
+msgid "SMTP destination deleted."
+msgstr "SMTP helmuga ezabatua."
+
+#: app/views/smtp.py:191 app/views/user_smtp.py:199
+msgid "Test email sent successfully to your account email."
+msgstr "Proba-emaila ongi bidali da zure kontuko helbidera."
+
+#: app/views/smtp.py:196 app/views/user_smtp.py:204
+msgid "Failed to send test email. Check SMTP settings."
+msgstr "Ezin izan da proba-emaila bidali. Egiaztatu SMTP ezarpenak."
+
+#: app/views/smtp_settings_admin.py:76
+msgid "Test Email from Grylli"
+msgstr "Grylli-tik Proba Emaila"
+
+#: app/views/smtp_settings_admin.py:77
+msgid "This is a test email from the Grylli SMTP settings page."
+msgstr "Hau Grylli SMTP ezarpenen orrialdeko proba-emaila da."
+
+#: app/views/smtp_settings_admin.py:84
+msgid "Failed to send test email: "
+msgstr "Ezin izan da proba-emaila bidali:"
+
+#: app/views/users.py:99
+msgid "User updated successfully."
+msgstr "Erabiltzailea ongi eguneratu da."
+
+#: app/views/users.py:106 app/views/users.py:327
+msgid "An error occurred while updating the user."
+msgstr "Errore bat gertatu da erabiltzailea eguneratzean."
+
+#: app/views/users.py:195
+msgid "User deleted."
+msgstr "Erabiltzailea ezabatua."
+
+#: app/views/users.py:202
+msgid "An error occurred while deleting the user."
+msgstr "Errore bat gertatu da erabiltzailea ezabatzean."
+
+#: app/views/users.py:237
+msgid "Password is required when creating a new user."
+msgstr "Pasahitza beharrezkoa da erabiltzaile berri bat sortzean."
+
+#: app/views/users.py:244
+msgid "Username already exists."
+msgstr "Erabiltzaile izena dagoeneko existitzen da."
+
+#: app/views/users.py:251
+msgid "Email already exists."
+msgstr "Email-a dagoeneko existitzen da."
+
+#: app/views/users.py:268
+#, python-format
+msgid "User '%(username)s' created successfully."
+msgstr "Erabiltzailea '%(username)s' ondo sortu da."
+
+#: app/views/users.py:278
+msgid "Failed to create user."
+msgstr "Erabiltzailea sortzea huts egin du."
+
+#: app/views/users.py:305
+msgid "You cannot change your own enabled status."
+msgstr "Zure egoera gaitua aldatu ezin duzu."
+
+#: app/views/users.py:318
+#, python-format
+msgid "User '%(username)s' has been %(status)s."
+msgstr "Erabiltzailea '%(username)s' %(status)s izan da."
+
+#: app/views/users.py:356
+msgid "You cannot reset your own MFA."
+msgstr "⚪ = Ezin duzu zure kontua desgaitu."
+
+#: app/views/users.py:368
+#, python-format
+msgid "MFA disabled for user '%(username)s'."
+msgstr "MFA desgaituta dago '%(username)s' erabiltzailearentzat."
+
+#: app/views/users.py:374
+msgid "An error occurred while resetting MFA."
+msgstr "Errore bat gertatu da erabiltzailea ezabatzean."
+
+#: app/views/webhook.py:54
+msgid "Webhook created successfully."
+msgstr "Webhook ondo sortu da."
+
+#: app/views/webhook.py:113
+msgid "Webhook updated successfully."
+msgstr "Webhook ondo eguneratu da."
+
+#: app/views/webhook.py:142
+msgid "Webhook deleted."
+msgstr "Webhook ezabatua."
+
+#: app/views/webhook.py:175
+msgid "🧪 Webhook test sent successfully!"
+msgstr "🧪 Webhook proba ondo bidali da!"
+
+#: app/views/webhook.py:177
+msgid "🧪 Webhook test failed: "
+msgstr "🧪 Webhook proba huts egin du:"
+
+#: app/views/webhook.py:180
+msgid "🧪 Error sending webhook test."
+msgstr "🧪 Errore bat gertatu da webhook proba bidaltzean."
+
+#~ msgid ""
+#~ "Grylli is a secure message delivery platform designed to activate after "
+#~ "prolonged user inactivity."
+#~ msgstr ""
+#~ "Grylli mezularitza seguruko plataforma bat da, erabiltzailearen jarduerarik "
+#~ "gabeko epe luzeko ondoren aktibatzeko diseinatua."
+
+#~ msgid ""
+#~ "It is a modern reimplementation of Gone Man’s Switch with a refined tech "
+#~ "stack, better maintainability, and an improved user experience."
+#~ msgstr ""
+#~ "Gone Man’s Switch-en berritze tekniko modernoa da, mantentze hobetua eta "
+#~ "erabiltzaile-esperientzia hobetua duena."
+
+#~ msgid "Body:"
+#~ msgstr "Gorputza:"
+
+#~ msgid "Subject:"
+#~ msgstr "Gaia:"
+
+#~ msgid "Content:"
+#~ msgstr "Edukia:"
+
+#~ msgid "Edit SMTP"
+#~ msgstr "SMTP editatu"
+
+#~ msgid ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+#~ msgstr ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+
+#~ msgid "Admin Notes"
+#~ msgstr "Administratzaile Oharrak"
+
+#~ msgid "Register"
+#~ msgstr "Erregistratu"
+
+#~ msgid "View"
+#~ msgstr "Ikusi"
+
+#~ msgid "Schedule"
+#~ msgstr "Ordutegia"
+
+#~ msgid "Message is enabled"
+#~ msgstr "Mezua gaituta dago"
+
+#~ msgid "Message is disabled"
+#~ msgstr "Mezua desgaituta dago"
+
+#~ msgid "No SMTP configuration selected."
+#~ msgstr "Ez da SMTP konfiguraziorik hautatu."
+
+#~ msgid "Enable the message to start monitoring."
+#~ msgstr "Mesedea aktibatu kontrola has dadin."
+
+#~ msgid "✅ SMTP settings saved."
+#~ msgstr "SMTP Ezarpenak"
+
+#~ msgid "If you don’t check in, Grylli delivers the message for you."
+#~ msgstr "Ez baduzu check-in egiten, Gryllik mezua zure ordez entregatzen du."
+
+#~ msgid "Fill in already discovered missing translations:"
+#~ msgstr "Aurkitu diren itzulpen faltak osatu:"
+
+#~ msgid "Add missing phrases in that JSON file."
+#~ msgstr "Gehitu falta diren esaldiak JSON fitxategi horretan."
+
+#~ msgid "From:"
+#~ msgstr "Tik:"
+
+#~ msgid ""
+#~ "Attach the updated JSON file to a new GitHub issue when submitting your "
+#~ "changes."
+#~ msgstr ""
+#~ "Erantsi eguneratutako JSON fitxategia GitHub arazketa berri batera zure "
+#~ "aldaketak bidaltzean."
+
+#~ msgid "admin"
+#~ msgstr "admin"
+
+#~ msgid "user"
+#~ msgstr "erabiltzailea"
+
+#~ msgid "Logging in"
+#~ msgstr "Hasi Saioa"
+
+#~ msgid "SMTP error: "
+#~ msgstr "SMTP errorea:"
+
+#~ msgid "enabled"
+#~ msgstr "gaituta"
+
+#~ msgid "disabled"
+#~ msgstr "ezgaituta"

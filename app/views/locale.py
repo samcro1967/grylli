@@ -1,0 +1,95 @@
+# ---------------------------------------------------------------------
+# locale.py
+# app/views/locale.py
+# Locale/translation switching blueprint and utility routes.
+# ---------------------------------------------------------------------
+
+from flask import (
+    Blueprint,
+    current_app,
+    jsonify,
+    make_response,
+    redirect,
+    request,
+    session,
+    url_for,
+)
+from flask_babel import gettext
+from flask_login import current_user, login_required
+
+from app.utils.locale import get_locale
+from app.utils.logging import log_info_message
+
+bp = Blueprint("locale", __name__)
+
+
+# ---------------------------------------------------------------------
+# Locale set AJAX language route
+# ---------------------------------------------------------------------
+@bp.route("/locale/set", methods=["POST"])
+def set_locale_post():
+    """
+    Handles the AJAX request for setting the user's locale, and redirects
+    them back to the current page or the home page if the referrer is not
+    set.
+    """
+    supported = current_app.config.get("SUPPORTED_LANGUAGES", {}).keys()
+    locale_code = request.form.get("lang", "en")
+
+    if locale_code not in supported:
+        locale_code = "en"
+
+    session["user_locale"] = locale_code
+    session.modified = True
+    log_info_message(
+        f"Locale set via POST to '{locale_code}' (user: {current_user.username if current_user.is_authenticated else 'anonymous'})."
+    )
+
+    return redirect(request.referrer or url_for("index.index"))
+
+
+# ---------------------------------------------------------------------
+# Locale set language route
+# ---------------------------------------------------------------------
+@bp.route("/locale/set/<lang_code>", methods=["GET"])
+def set_language(lang_code):
+    """
+    Handles the GET request for setting the user's locale cookie, and redirects
+    them back to the current page or the home page if the referrer is not
+    set.
+    """
+    supported = current_app.config.get("SUPPORTED_LANGUAGES", {}).keys()
+    if lang_code not in supported:
+        lang_code = current_app.config.get("DEFAULT_LANGUAGE", "en")
+
+    resp = make_response(redirect(request.referrer or url_for("index.index")))
+    resp.set_cookie(
+        "user_locale",
+        lang_code,
+        max_age=60 * 60 * 24 * 365,
+        path="/",
+        secure=False,
+        samesite="Lax",
+    )
+    log_info_message(
+        f"Locale cookie set via GET to '{lang_code}' (user: {current_user.username if current_user.is_authenticated else 'anonymous'})."
+    )
+    return resp
+
+
+# ---------------------------------------------------------------------
+# Locale language check route
+# ---------------------------------------------------------------------
+@bp.route("/locale/langcheck")
+@login_required
+def langcheck():
+    """
+    Debug route to verify current Babel language settings.
+    Only accessible to logged-in admins.
+    """
+    if not current_user.is_admin:
+        abort(403)
+
+    lang = get_locale()
+    log_info_message("✅ log_info_message executed in /logtest route.")
+    return jsonify({"manual_locale": lang, "babel_locale": str(gettext("Welcome to Grylli"))})

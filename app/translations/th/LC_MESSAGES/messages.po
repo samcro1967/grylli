@@ -1,0 +1,3203 @@
+# Thai translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-06-07 15:49-0500\n"
+"PO-Revision-Date: 2025-05-25 16:45-0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: th <LL@li.org>\n"
+"Language: th\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: app/init_db.py:55
+#, python-format
+msgid "Tables currently in DB: %s"
+msgstr "ตารางที่มีอยู่ใน DB:"
+
+#: app/init_db.py:58
+msgid "Database or system_config table missing. Running migrations now..."
+msgstr ""
+"ฐานข้อมูลหรือระบบ system_config หายไป กำลังเรียกใช้งาน migrations ตอนนี้..."
+
+#: app/init_db.py:61
+msgid "Migrations applied successfully."
+msgstr "บังคับใช้ migrations เสร็จเรียบร้อยแล้ว"
+
+#: app/init_db.py:63
+msgid "Migration failed."
+msgstr "การย้ายถิ่นฐานล้มเหลว"
+
+#: app/init_db.py:68
+msgid "System config seeded successfully."
+msgstr "ตั้งค่าระบบเป็นผลสำเร็จ"
+
+#: app/init_db.py:70
+msgid "Error seeding system config."
+msgstr "ข้อผิดพลาดในการตั้งค่าระบบ:"
+
+#: app/forms/mfa_form.py:15 app/templates/apprise/create_apprise.html:30
+#: app/templates/apprise/edit_apprise.html:30
+#: app/templates/apprise/list_apprise.html:60
+#: app/templates/mfa/settings.html:24 app/templates/mfa/settings.html:40
+#: app/templates/user_smtp/create_smtp.html:99
+#: app/templates/user_smtp/edit_smtp.html:114
+#: app/templates/user_smtp/list_smtp.html:57
+#: app/templates/webhook/create_webhook.html:36
+#: app/templates/webhook/edit_webhook.html:36
+#: app/templates/webhook/list_webhooks.html:61
+msgid "Enabled"
+msgstr "เปิดใช้งาน"
+
+#: app/forms/mfa_form.py:16
+msgid "Authenticator Code"
+msgstr "รหัสตัวตรวจสอบ"
+
+#: app/forms/mfa_form.py:17
+#: app/templates/admin/partials/user_instructions_and_modal.html:66
+#: app/templates/admin/partials/user_table.html:115
+#: app/templates/email/assign_smtp.html:44 app/templates/mfa/settings.html:47
+#: app/templates/user_smtp/edit_smtp.html:122
+msgid "Save"
+msgstr "บันทึก"
+
+#: app/forms/mfa_form.py:27
+msgid "Authentication Code"
+msgstr "อัปเดตการแจ้งเตือน"
+
+#: app/forms/mfa_form.py:29
+msgid "Please enter your authentication code."
+msgstr "กรุณาใส่รหัสการยืนยันของคุณ"
+
+#: app/forms/mfa_form.py:30
+msgid "Enter a valid 6-digit code or recovery code."
+msgstr "ใส่รหัส 6 หลักที่ถูกต้องหรือรหัสการกู้คืน"
+
+#: app/forms/mfa_form.py:31
+msgid "Invalid code format."
+msgstr "รูปแบบรหัสไม่ถูกต้อง"
+
+#: app/forms/mfa_form.py:35 app/templates/mfa/challenge.html:25
+msgid "Verify"
+msgstr "เวอร์ชัน"
+
+#: app/services/mail.py:37 app/services/system_settings_email.py:40
+msgid "Missing required config setting: "
+msgstr "ขาดการตั้งค่าคอนฟิกที่จำเป็น:"
+
+#: app/services/mail.py:46 app/services/system_settings_email.py:50
+#, python-format
+msgid "Failed to decrypt %(key)s: %(error)s"
+msgstr "ถอดรหัส %(key)s ไม่สำเร็จ: %(error)s"
+
+#: app/services/mail.py:54
+#, python-format
+msgid "get_setting('%(key)s') -> '%(value)s' (sensitive: %(sensitive)s)"
+msgstr ""
+"get_setting('%(key)s') -> '%(value)s' (raw: '%(raw)s', sensitive: "
+"%(sensitive)s)"
+
+#: app/services/mail.py:75
+#, python-format
+msgid "Preparing email to %(to)s"
+msgstr "เตรียมอีเมลถึง %(to)s"
+
+#: app/services/mail.py:90
+#, python-format
+msgid ""
+"SMTP configuration: host=%(host)s (type=%(host_type)s), port=%(port)s "
+"(type=%(port_type)s)"
+msgstr ""
+"SMTP host = '%(host)s' (type: %(host_type)s), port = %(port)s (type: "
+"%(port_type)s)"
+
+#: app/services/mail.py:99
+#, python-format
+msgid "SMTP username: %(user)s"
+msgstr "ใช้ผู้ใช้: %(user)s"
+
+#: app/services/mail.py:100
+#, python-format
+msgid "TLS enabled: %(tls)s"
+msgstr "เปิดใช้งาน TLS: %(tls)s"
+
+#: app/services/mail.py:105
+msgid "Starting TLS connection..."
+msgstr "เริ่มต้น TLS"
+
+#: app/services/mail.py:107
+msgid "Logging into SMTP server..."
+msgstr "กำลังเข้าสู่ SMTP server..."
+
+#: app/services/mail.py:109
+msgid "Sending email message..."
+msgstr "ตารางข้อความ"
+
+#: app/services/mail.py:111
+#, python-format
+msgid "Email sent successfully to %(to)s"
+msgstr "ส่งอีเมลทดสอบสำเร็จ"
+
+#: app/services/mail.py:114
+#, python-format
+msgid "SMTP error while sending to %(to)s: %(error)s"
+msgstr "ข้อผิดพลาด SMTP ขณะส่งไปยัง %(to)s: %(error)s"
+
+#: app/templates/about.html:10
+msgid "About Grylli"
+msgstr "เกี่ยวกับ Grylli"
+
+#: app/templates/about.html:13
+msgid ""
+"Grylli is a secure, self-hosted message delivery platform that automatically"
+" sends pre-configured messages if a user fails to check in within a defined "
+"time period."
+msgstr ""
+"Grylli เป็นแพลตฟอร์มส่งข้อความแบบโฮสต์เองที่ปลอดภัย "
+"ซึ่งจะส่งข้อความที่ตั้งค่าไว้ล่วงหน้าโดยอัตโนมัติหากผู้ใช้ไม่เช็กอินภายในระยะเวลาที่กำหนด"
+
+#: app/templates/about.html:14
+msgid ""
+"It supports multiple users, customizable schedules, and recurring reminders."
+msgstr "รองรับผู้ใช้หลายคนและการตั้งเวลาที่ปรับแต่งได้"
+
+#: app/templates/about.html:15
+msgid ""
+"Messages and reminders can be delivered via email, webhooks, or over 100 "
+"third-party services through Apprise."
+msgstr ""
+"สามารถส่งข้อความผ่านทางอีเมล, webhooks หรือมากกว่า 80 "
+"บริการของบุคคลที่สามผ่าน Apprise"
+
+#: app/templates/about.html:16
+msgid ""
+"Users can configure their own SMTP servers to ensure emails and reminders "
+"appear to come directly from them — not from the system administrator."
+msgstr ""
+"ผู้ใช้สามารถตั้งค่าเซิร์ฟเวอร์ SMTP "
+"ของตนเองเพื่อให้แน่ใจว่าข้อความดูเหมือนส่งมาจากพวกเขาโดยตรง — "
+"ไม่ใช่จากผู้ดูแลระบบ"
+
+#: app/templates/about.html:17
+msgid ""
+"Sensitive data is encrypted at rest, and all operations are secured with "
+"strong authentication and audit-friendly logging."
+msgstr ""
+"ข้อมูลที่อ่อนไหวจะถูกเข้ารหัสเมื่อเก็บและทุกการดำเนินการของข้อความจะได้รับการรักษาความปลอดภัยด้วยการตรวจสอบยืนยันตัวตนที่แข็งแกร่งและการบันทึกที่พร้อมสำหรับการตรวจสอบ"
+
+#: app/templates/about.html:18
+msgid ""
+"Built with a modern, reactive technology stack, Grylli is optimized for "
+"responsiveness and works seamlessly across desktop and mobile devices."
+msgstr ""
+"สร้างด้วยเทคโนโลยีสมัยใหม่และระบบที่ตอบสนอง Grylli "
+"ถูกปรับให้เหมาะสมสำหรับการตอบสนองและทำงานได้อย่างราบรื่นทั้งบนเดสก์ท็อปและอุปกรณ์เคลื่อนที่"
+
+#: app/templates/about.html:23
+msgid "Version:"
+msgstr "เวอร์ชั่น:"
+
+#: app/templates/about.html:26
+msgid "Repository:"
+msgstr "ที่เก็บ:"
+
+#: app/templates/about.html:30
+msgid "GitHub - samcro1967/grylli"
+msgstr "GitHub - samcro1967/grylli"
+
+#: app/templates/help.html:2 app/templates/help.html:5
+#: app/templates/partials/header.html:85
+msgid "Help"
+msgstr "ช่วยเหลือ"
+
+#: app/templates/help.html:7
+msgid ""
+"Grylli includes built-in instructions throughout the app to help you "
+"configure and manage your setup."
+msgstr "Grylli รวมคำแนะนำในตัวแอปเพื่อช่วยคุณตั้งค่าและจัดการระบบของคุณ"
+
+#: app/templates/help.html:8
+msgid ""
+"This page provides an overview of key features and direct links to where "
+"they can be managed."
+msgstr "หน้านี้ให้ภาพรวมของคุณสมบัติหลักและลิงก์ตรงไปยังที่ที่สามารถจัดการได้"
+
+#: app/templates/help.html:12 app/templates/messages/list_messages.html:9
+#: app/templates/partials/shared_nav.html:17
+msgid "Notifications"
+msgstr "การแจ้งเตือน"
+
+#: app/templates/help.html:14
+msgid "Create and assign messages"
+msgstr "สร้างข้อความหรืออีเมล"
+
+#: app/templates/admin/index.html:32 app/templates/help.html:17
+#: app/templates/partials/admin_nav.html:56
+msgid "SMTP Settings"
+msgstr "การตั้งค่า SMTP"
+
+#: app/templates/help.html:19
+msgid "Use your own email server"
+msgstr "ใช้เซิร์ฟเวอร์อีเมลของคุณเอง"
+
+#: app/templates/help.html:22
+msgid "Apprise Integration"
+msgstr "ที่หมาย Apprise"
+
+#: app/templates/help.html:24
+msgid "Send notifications to 80+ supported services"
+msgstr "ส่งการแจ้งเตือนไปยังบริการกว่า 80 รายการที่รองรับ"
+
+#: app/templates/help.html:27
+#: app/templates/messages/assign_destinations.html:41
+#: app/templates/messages/view_message.html:58
+#: app/templates/partials/shared_nav.html:44
+#: app/templates/reminders/assign_destinations.html:39
+#: app/templates/reminders/view_reminder.html:69
+msgid "Webhooks"
+msgstr "Webhooks"
+
+#: app/templates/help.html:29
+msgid "Trigger actions or external workflows"
+msgstr "กระตุ้นการดำเนินการหรือกระบวนการทำงานภายนอก"
+
+#: app/templates/email/list_emails.html:9 app/templates/help.html:32
+#: app/templates/partials/shared_nav.html:61
+msgid "Emails"
+msgstr "อีเมล"
+
+#: app/templates/help.html:34
+msgid "View and manage secure email messages"
+msgstr "ภาพรวมของข้อความอีเมลที่ปลอดภัย"
+
+#: app/templates/help.html:38
+msgid "Security"
+msgstr "🔐 ความปลอดภัย"
+
+#: app/templates/help.html:39
+msgid "Grylli encrypts sensitive data and logs all key actions for auditing."
+msgstr ""
+"Grylli เข้ารหัสข้อมูลอ่อนไหวและบันทึกการกระทำที่สำคัญทั้งหมดเพื่อการตรวจสอบ"
+
+#: app/templates/index.html:9 app/views/locale.py:95
+msgid "Welcome to Grylli"
+msgstr "ยินดีต้อนรับสู่ Grylli"
+
+#: app/templates/index.html:11
+msgid "Pronounced"
+msgstr "ออกเสียง"
+
+#: app/templates/index.html:11
+msgid "like “grill-ee”"
+msgstr "เหมือน “กริล-ลี่”"
+
+#: app/templates/index.html:14
+msgid ""
+"Grylli is a secure message scheduling and delivery system designed to ensure"
+" your important messages are delivered — even if you can’t be there to send "
+"them."
+msgstr ""
+"Grylli "
+"เป็นระบบจัดเวลาและส่งข้อความที่ปลอดภัยซึ่งออกแบบมาเพื่อให้แน่ใจว่าข้อความสำคัญของคุณจะถูกส่ง"
+" — แม้ว่าคุณจะไม่สามารถอยู่ที่นั่นเพื่อส่งได้ก็ตาม"
+
+#: app/templates/index.html:17
+msgid ""
+"Whether you’re planning ahead, setting up emergency communication, or "
+"building peace of mind, Grylli helps automate your message delivery via "
+"multiple channels including email, webhooks, and Apprise notifications."
+msgstr ""
+"ไม่ว่าคุณจะวางแผนล่วงหน้า, ตั้งค่าการสื่อสารฉุกเฉิน, หรือสร้างความอุ่นใจ "
+"Grylli สามารถช่วยจัดการการส่งข้อความของคุณผ่านอีเมล, เว็บฮุก, "
+"หรือการแจ้งเตือน Apprise หากคุณพลาดการเช็คอิน"
+
+#: app/templates/index.html:19
+msgid "Getting Started"
+msgstr "เริ่มต้นการใช้งาน"
+
+#: app/templates/index.html:21
+msgid "Create a message, email, or reminder."
+msgstr "สร้างข้อความหรืออีเมล"
+
+#: app/templates/index.html:22
+msgid "Set your check-in interval and grace period (for messages)."
+msgstr "ตั้งค่าช่วงเวลาเช็คอินและระยะเวลาก่อนปิดใช้งาน"
+
+#: app/templates/index.html:23
+msgid "Assign one or more delivery destinations."
+msgstr "กำหนดหนึ่งหรือมากกว่าหนึ่งปลายทางการส่ง"
+
+#: app/templates/index.html:24
+msgid "Optionally attach files for secure emails."
+msgstr "เลือกแนบไฟล์สำหรับอีเมลที่ปลอดภัย"
+
+#: app/templates/index.html:25
+msgid "Schedule reminders to send at specific times or on a recurring basis."
+msgstr "กำหนดเตือนความจำให้ส่งในเวลาที่กำหนดหรือเป็นระยะๆ"
+
+#: app/templates/index.html:26
+msgid "Enable the message or reminder to activate delivery."
+msgstr "เปิดใช้งานข้อความหรือเตือนความจำเพื่อเปิดใช้งานการส่ง"
+
+#: app/templates/index.html:28
+msgid ""
+"Regularly check in to Grylli to prevent automated delivery; miss a check-in "
+"and Grylli sends your messages as scheduled."
+msgstr ""
+"ตรวจสอบ Grylli เป็นประจำเพื่อป้องกันการส่งข้อความอัตโนมัติ; "
+"หากพลาดการตรวจสอบ Grylli จะส่งข้อความของคุณตามกำหนด"
+
+#: app/templates/privacy.html:10
+msgid "Privacy Notice"
+msgstr "ประกาศเรื่องความเป็นส่วนตัว"
+
+#: app/templates/privacy.html:13
+msgid ""
+"Grylli respects your privacy and is designed to minimize the collection and "
+"storage of personal data."
+msgstr ""
+"Grylli "
+"เคารพความเป็นส่วนตัวของคุณและถูกออกแบบมาเพื่อเก็บรวบรวมและเก็บรักษาข้อมูลส่วนบุคคลให้น้อยที่สุด"
+
+#: app/templates/privacy.html:14
+msgid ""
+"All data is encrypted where appropriate and remains fully under your control"
+" if you self-host this platform."
+msgstr ""
+"ข้อมูลทั้งหมดถูกเข้ารหัสที่เหมาะสม "
+"และยังคงอยู่ภายใต้การควบคุมของคุณอย่างเต็มที่หากคุณโฮสต์แพลตฟอร์มนี้เอง"
+
+#: app/templates/privacy.html:17
+msgid "What Data We Collect"
+msgstr "ข้อมูลที่เรารวบรวม"
+
+#: app/templates/privacy.html:19
+msgid "Email address and password hash (for authentication)"
+msgstr "ที่อยู่อีเมลและแฮชของรหัสผ่าน (สำหรับการยืนยันตัวตน)"
+
+#: app/templates/privacy.html:20
+msgid "Optional MFA secret and recovery codes (encrypted at rest)"
+msgstr "รหัส MFA และรหัสการกู้คืนที่เป็นตัวเลือก (ถูกเข้ารหัสที่พัก)"
+
+#: app/templates/privacy.html:21
+msgid "Reminder and message content you configure"
+msgstr "เนื้อหาการเตือนและข้อความที่คุณกำหนดค่า"
+
+#: app/templates/privacy.html:22
+msgid "User-specific settings, SMTP configuration (if provided)"
+msgstr "การตั้งค่าเฉพาะของผู้ใช้, การตั้งค่า SMTP (ถ้ามี)"
+
+#: app/templates/privacy.html:25
+msgid "How Your Data Is Used"
+msgstr "วิธีการใช้ข้อมูลของคุณ"
+
+#: app/templates/privacy.html:27
+msgid ""
+"Your data is used solely for the purpose of delivering reminders and "
+"messages according to your preferences."
+msgstr "ข้อมูลของคุณใช้สำหรับการส่งการเตือนและข้อความตามความชอบของคุณเท่านั้น"
+
+#: app/templates/privacy.html:28
+msgid ""
+"Grylli does not share, sell, or transmit your personal data to any third "
+"parties."
+msgstr ""
+"Grylli ไม่แบ่งปัน ขาย หรือส่งข้อมูลส่วนบุคคลของคุณไปยังบุคคลที่สามใด ๆ"
+
+#: app/templates/privacy.html:31
+msgid "Your Rights"
+msgstr "สิทธิของคุณ"
+
+#: app/templates/privacy.html:33
+msgid ""
+"You can export all of your data at any time from the Account Settings page."
+msgstr "คุณสามารถส่งออกข้อมูลทั้งหมดของคุณได้ทุกเวลาจากหน้าการตั้งค่าบัญชี"
+
+#: app/templates/privacy.html:34
+msgid "You may permanently delete your account and all associated data."
+msgstr "คุณไม่สามารถลบบัญชีของคุณได้เนื่องจากคุณเป็นผู้ดูแลระบบคนสุดท้าย"
+
+#: app/templates/privacy.html:35
+msgid ""
+"If you are using a self-hosted instance, contact the instance administrator "
+"for data inquiries."
+msgstr ""
+"หากคุณใช้ตัวอย่างที่โฮสต์เอง ให้ติดต่อผู้ดูแลตัวอย่างสำหรับการสอบถามข้อมูล"
+
+#: app/templates/privacy.html:38
+msgid "Self-Hosting Responsibility"
+msgstr "ความรับผิดชอบในการโฮสต์เอง"
+
+#: app/templates/privacy.html:40
+msgid ""
+"If you are running Grylli on your own server, you are responsible for the "
+"storage, processing, and lawful handling of all user data on that instance."
+msgstr ""
+"หากคุณรัน Grylli บนเซิร์ฟเวอร์ของคุณเอง คุณมีความรับผิดชอบในการเก็บ "
+"การประมวลผล "
+"และการจัดการข้อมูลผู้ใช้ทั้งหมดในตัวอย่างนั้นอย่างถูกต้องตามกฎหมาย"
+
+#: app/templates/privacy.html:44
+msgid ""
+"This notice was last updated in June 2025 and may evolve to reflect changes "
+"in the software or regulatory landscape."
+msgstr ""
+"ประกาศนี้ได้รับการอัปเดตล่าสุดในเดือนมิถุนายน 2025 "
+"และอาจพัฒนาให้สอดคล้องกับการเปลี่ยนแปลงในซอฟต์แวร์หรือภูมิทัศน์ทางกฎหมาย"
+
+#: app/templates/system_info.html:11
+msgid "📦 Environment Versions"
+msgstr "📦 เวอร์ชันสิ่งแวดล้อม"
+
+#: app/templates/system_info.html:17
+msgid "Category"
+msgstr "หมวดหมู่"
+
+#: app/templates/system_info.html:18
+msgid "Tool"
+msgstr "เครื่องมือ"
+
+#: app/templates/system_info.html:19
+msgid "Version"
+msgstr "เวอร์ชัน"
+
+#: app/templates/system_info.html:25
+msgid "🧠 Python"
+msgstr "🧠 Python"
+
+#: app/templates/system_info.html:26
+msgid "Python"
+msgstr "Python"
+
+#: app/templates/system_info.html:30
+msgid "pip"
+msgstr "pip"
+
+#: app/templates/system_info.html:34
+msgid "SQLite"
+msgstr "SQLite"
+
+#: app/templates/system_info.html:40
+msgid "⚙️ Core"
+msgstr "⚙️ แกนหลัก"
+
+#: app/templates/system_info.html:47
+msgid "🔐 Security"
+msgstr "🔐 ความปลอดภัย"
+
+#: app/templates/system_info.html:48
+msgid "Email Validator"
+msgstr "ตัวตรวจสอบอีเมล"
+
+#: app/templates/system_info.html:52
+msgid "Cryptography"
+msgstr "การเข้ารหัส"
+
+#: app/templates/system_info.html:57
+msgid "🕰️ Scheduling"
+msgstr "🕰️ การตั้งเวลา"
+
+#: app/templates/system_info.html:58
+msgid "APScheduler"
+msgstr "APScheduler"
+
+#: app/templates/system_info.html:62
+msgid "Apprise (Python)"
+msgstr "Apprise (Python)"
+
+#: app/templates/system_info.html:66
+msgid "Apprise CLI"
+msgstr "Apprise CLI"
+
+#: app/templates/system_info.html:74
+msgid "🌐 Frontend"
+msgstr "🌐 ส่วนหน้า"
+
+#: app/templates/account/manage_account.html:11
+msgid "Manage Account"
+msgstr "จัดการบัญชี"
+
+#: app/templates/account/manage_account.html:12
+msgid "Update your profile information and password."
+msgstr "อัปเดตข้อมูลโปรไฟล์และรหัสผ่านของคุณ"
+
+#: app/templates/account/manage_account.html:41
+#: app/templates/admin/create_user.html:40
+#: app/templates/auth/bootstrap.html:43
+#: app/templates/auth/reset_password.html:42 app/templates/auth/signup.html:42
+msgid "Please enter a valid email address."
+msgstr "กรุณาใส่ที่อยู่อีเมลที่ถูกต้อง"
+
+#: app/templates/account/manage_account.html:62
+#: app/templates/account/manage_account.html:96
+#: app/templates/account/manage_account.html:127
+#: app/templates/auth/reset_password.html:66
+#: app/templates/auth/reset_password.html:97 app/templates/auth/signup.html:65
+#: app/templates/auth/signup.html:95
+msgid "Show/hide password"
+msgstr "กดค้างเพื่อแสดงรหัสผ่าน"
+
+#: app/templates/account/manage_account.html:89
+#: app/templates/admin/create_user.html:53
+#: app/templates/auth/bootstrap.html:51
+#: app/templates/auth/reset_password.html:58 app/templates/auth/signup.html:58
+msgid "Password must meet all complexity requirements."
+msgstr "รหัสผ่านต้องเป็นไปตามข้อกำหนดด้านความซับซ้อนทั้งหมด"
+
+#: app/templates/account/manage_account.html:141
+#: app/templates/admin/create_user.html:72
+#: app/templates/admin/edit_user.html:67 app/templates/auth/bootstrap.html:69
+#: app/templates/auth/reset_password.html:110
+#: app/templates/auth/signup.html:108
+msgid "Passwords do not match."
+msgstr "รหัสผ่านไม่ตรงกัน"
+
+#: app/templates/account/manage_account.html:147
+msgid "Update Account"
+msgstr "อัปเดตบัญชี"
+
+#: app/templates/account/manage_account.html:151
+#: app/templates/admin/create_user.html:82
+#: app/templates/admin/edit_user.html:97 app/templates/admin/help_form.html:28
+#: app/templates/admin/partials/user_instructions_and_modal.html:62
+#: app/templates/admin/partials/user_table.html:113
+#: app/templates/apprise/create_apprise.html:42
+#: app/templates/apprise/edit_apprise.html:42
+#: app/templates/auth/reset_password.html:121
+#: app/templates/email/assign_smtp.html:46
+#: app/templates/email/attach_files.html:47
+#: app/templates/email/edit_message.html:54
+#: app/templates/email/schedule_email.html:84
+#: app/templates/messages/assign_destinations.html:66
+#: app/templates/messages/create_message.html:55
+#: app/templates/messages/edit_message.html:48
+#: app/templates/messages/schedule_message.html:84
+#: app/templates/mfa/challenge.html:29 app/templates/mfa/settings.html:51
+#: app/templates/reminders/assign_destinations.html:64
+#: app/templates/reminders/assign_email_reminder.html:94
+#: app/templates/reminders/create_reminder.html:49
+#: app/templates/reminders/edit_reminder.html:42
+#: app/templates/reminders/schedule_reminder.html:51
+#: app/templates/user_smtp/create_smtp.html:111
+#: app/templates/user_smtp/edit_smtp.html:125
+#: app/templates/webhook/create_webhook.html:48
+#: app/templates/webhook/edit_webhook.html:48
+msgid "Cancel"
+msgstr "ยกเลิก"
+
+#: app/templates/account/manage_account.html:159
+#: app/templates/admin/create_user.html:90
+#: app/templates/admin/edit_user.html:81 app/templates/auth/bootstrap.html:83
+#: app/templates/auth/reset_password.html:128
+#: app/templates/auth/signup.html:132
+msgid "Minimum 8 characters"
+msgstr "อักขระขั้นต่ำ 8 ตัว"
+
+#: app/templates/account/manage_account.html:160
+#: app/templates/admin/create_user.html:91
+#: app/templates/admin/edit_user.html:82 app/templates/auth/bootstrap.html:84
+#: app/templates/auth/reset_password.html:129
+#: app/templates/auth/signup.html:133
+msgid "At least one uppercase letter"
+msgstr "อย่างน้อยหนึ่งตัวอักษรตัวพิมพ์ใหญ่"
+
+#: app/templates/account/manage_account.html:161
+#: app/templates/admin/create_user.html:92
+#: app/templates/admin/edit_user.html:83 app/templates/auth/bootstrap.html:85
+#: app/templates/auth/reset_password.html:130
+#: app/templates/auth/signup.html:134
+msgid "At least one lowercase letter"
+msgstr "อย่างน้อยหนึ่งตัวอักษรตัวพิมพ์เล็ก"
+
+#: app/templates/account/manage_account.html:162
+#: app/templates/admin/create_user.html:93
+#: app/templates/admin/edit_user.html:84 app/templates/auth/bootstrap.html:86
+#: app/templates/auth/reset_password.html:131
+#: app/templates/auth/signup.html:135
+msgid "At least one number"
+msgstr "อย่างน้อยหนึ่งตัวเลข"
+
+#: app/templates/account/manage_account.html:163
+#: app/templates/admin/create_user.html:94
+#: app/templates/auth/bootstrap.html:87
+#: app/templates/auth/reset_password.html:132
+#: app/templates/auth/signup.html:136
+msgid "At least one special character (e.g., !@#$%)"
+msgstr "อย่างน้อยหนึ่งอักขระพิเศษ (เช่น !@#$%)"
+
+#: app/templates/account/manage_account.html:169
+msgid "Download My Data"
+msgstr "ดาวน์โหลดข้อมูลของฉัน"
+
+#: app/templates/account/manage_account.html:171
+msgid ""
+"Download all your account data as a JSON file. This includes your reminders,"
+" messages, email settings, and more. The file is for your records only and "
+"cannot be imported back. Protect it as it may contain sensitive information."
+msgstr ""
+"ดาวน์โหลดข้อมูลบัญชีของคุณทั้งหมดเป็นไฟล์ JSON ซึ่งรวมถึงการเตือน ข้อความ "
+"การตั้งค่าอีเมล และอื่น ๆ "
+"ไฟล์นี้มีไว้สำหรับบันทึกของคุณเท่านั้นและไม่สามารถนำเข้ากลับมาได้ "
+"ควรปกป้องเนื่องจากอาจมีข้อมูลที่ละเอียดอ่อน"
+
+#: app/templates/account/manage_account.html:175
+msgid "Download My Data (JSON)"
+msgstr "ดาวน์โหลดข้อมูลของฉัน (JSON)"
+
+#: app/templates/account/manage_account.html:179
+msgid "Danger Zone"
+msgstr "เขตอันตราย"
+
+#: app/templates/account/manage_account.html:180
+msgid "Deleting your account is permanent and cannot be undone."
+msgstr "การลบบัญชีของคุณเป็นการถาวรและไม่สามารถยกเลิกได้"
+
+#: app/templates/account/manage_account.html:185
+msgid "Delete My Account"
+msgstr "อัปเดตบัญชี"
+
+#: app/templates/account/translations.html:8
+msgid "Translations - Grylli"
+msgstr "แปล - Grylli"
+
+#: app/templates/account/translations.html:17
+#: app/templates/partials/header.html:102
+msgid "Translations"
+msgstr "การแปล"
+
+#: app/templates/account/translations.html:20
+msgid "Grylli currently supports multiple languages and more will be added."
+msgstr "ปัจจุบัน Grylli สนับสนุนหลายภาษาและจะเพิ่มอีกในภายหลัง"
+
+#: app/templates/account/translations.html:21
+msgid "Many of the translations were performed with assistance from ChatGPT."
+msgstr "การแปลหลายอย่างได้รับความช่วยเหลือจาก ChatGPT"
+
+#: app/templates/account/translations.html:22
+msgid ""
+"If you find a translation issue or want to suggest improvements, your input "
+"is welcome!"
+msgstr "หากคุณพบปัญหาด้านการแปลหรือมีข้อเสนอแนะ แนะนำของคุณยินดีต้อนรับเสมอ!"
+
+#: app/templates/account/translations.html:28
+msgid "How to request translation updates"
+msgstr "วิธีการขออัปเดตการแปล"
+
+#: app/templates/account/translations.html:30
+msgid "To contribute to translations, please use the following guidelines:"
+msgstr "หากต้องการร่วมแปล กรุณาใช้แนวทางดังนี้:"
+
+#: app/templates/account/translations.html:43
+msgid "Contribute missing or improved translations:"
+msgstr "เจอการแปลที่ขาดหาย?"
+
+#: app/templates/account/translations.html:63
+msgid "Open the relevant .po translation file for your language."
+msgstr "เปิดไฟล์การแปล JSON สำหรับภาษาของคุณ เช่น:"
+
+#: app/templates/account/translations.html:67
+msgid ""
+"Find untranslated or incomplete entries and add or improve translations."
+msgstr "ค้นหารายการที่ยังไม่ได้แปลหรือไม่สมบูรณ์และเพิ่มหรือปรับปรุงคำแปล"
+
+#: app/templates/account/translations.html:68
+msgid "You may use a PO file editor or a text editor."
+msgstr "คุณสามารถใช้โปรแกรมแก้ไขไฟล์ PO หรือโปรแกรมแก้ไขข้อความ"
+
+#: app/templates/account/translations.html:69
+msgid "Copy the file path and the snippet of your changes."
+msgstr "คัดลอกเส้นทางของไฟล์และส่วนของการเปลี่ยนแปลงของคุณ"
+
+#: app/templates/account/translations.html:70
+msgid "Paste the snippet directly into a new GitHub issue for review."
+msgstr "วางสเนปเก็ตที่คัดลอกลงในความคิดเห็นของ GitHub issue โดยตรง"
+
+#: app/templates/account/translations.html:72
+msgid "Please do not upload the full .po file to avoid merge conflicts."
+msgstr "อย่าอัปโหลดไฟล์ .po ทั้งหมดเพื่อหลีกเลี่ยงความขัดแย้งในการควบเชิง"
+
+#: app/templates/account/translations.html:85
+msgid "Improving existing translations:"
+msgstr "ปรับปรุงการแปลที่มีอยู่เดิม:"
+
+#: app/templates/account/translations.html:104
+msgid "Open the relevant .po file for the translation you want to improve."
+msgstr "เปิดไฟล์ .po ที่เกี่ยวข้องสำหรับการแปลที่คุณต้องการปรับปรุง"
+
+#: app/templates/account/translations.html:106
+msgid "For example:"
+msgstr "ตัวอย่างเช่น:"
+
+#: app/templates/account/translations.html:110
+msgid ""
+"Find the phrase(s) and its existing translation(s) you want to improve."
+msgstr "ค้นหาวลีและการแปลที่มีอยู่ที่คุณต้องการปรับปรุง"
+
+#: app/templates/account/translations.html:111
+msgid "Update the phrase(s)."
+msgstr "อัปเดตวลี"
+
+#: app/templates/account/translations.html:112
+msgid "Copy the file name and path into the issue."
+msgstr "คัดลอกชื่อไฟล์และเส้นทางเข้าไปใน issue"
+
+#: app/templates/account/translations.html:114
+msgid "Paste the copied snippet directly into the GitHub issue comment."
+msgstr "วางสเนปเก็ตที่คัดลอกลงในความคิดเห็นของ GitHub issue โดยตรง"
+
+#: app/templates/account/translations.html:115
+msgid "Do not upload the full .po file to avoid merge conflicts."
+msgstr "อย่าอัปโหลดไฟล์ .po ทั้งหมดเพื่อหลีกเลี่ยงความขัดแย้งในการควบเชิง"
+
+#: app/templates/account/translations.html:118
+msgid "Example snippet:"
+msgstr "ตัวอย่างสเนปเก็ต:"
+
+#: app/templates/account/translations.html:137
+msgid "Report missing translations not yet discovered:"
+msgstr "รายงานการแปลที่ขาดหายแต่ยังไม่ถูกค้นพบ:"
+
+#: app/templates/account/translations.html:154
+msgid ""
+"If you see text in the app that appears untranslated or missing, please "
+"report it to us."
+msgstr ""
+"หากคุณเห็นข้อความในแอปที่ดูเหมือนไม่ได้รับการแปลหรือขาดหาย "
+"กรุณารายงานให้เราทราบ"
+
+#: app/templates/account/translations.html:155
+msgid "Provide the exact English phrase as it appears on the screen."
+msgstr "ให้ข้อมูลวลีภาษาอังกฤษตามที่ปรากฏบนหน้าจอ"
+
+#: app/templates/account/translations.html:156
+msgid ""
+"Include the page or section where you saw the phrase (e.g., Apprise page, "
+"Account Page, etc.)."
+msgstr "รวมทั้งหน้าและส่วนที่คุณเห็นวลี (เช่น หน้าการตั้งค่า, ส่วนบัญชี)"
+
+#: app/templates/account/translations.html:157
+msgid ""
+"Submit this information via a new GitHub issue so we can add it to the "
+"translation files"
+msgstr ""
+"ส่งข้อมูลนี้ผ่าน GitHub issue "
+"ใหม่เพื่อให้เราสามารถเพิ่มลงในไฟล์การแปลและหุ้มมันสำหรับ Babel"
+
+#: app/templates/account/translations.html:166
+msgid "Found a missing translation?"
+msgstr "เจอการแปลที่ขาดหาย?"
+
+#: app/templates/account/translations.html:171
+msgid ""
+"This link will create a new GitHub issue pre-filled with a language code."
+msgstr "ลิงค์นี้จะสร้าง GitHub issue ใหม่ที่กรอกข้อมูลล่วงหน้าด้วยรหัสภาษา"
+
+#: app/templates/account/translations.html:172
+msgid "Report it by opening a new GitHub issue"
+msgstr "รายงานโดยการเปิด GitHub issue ใหม่"
+
+#: app/templates/account/translations.html:175
+msgid "Please specify the language code and exact phrase when reporting."
+msgstr "โปรดระบุรหัสภาษาและวลีที่แน่นอนเมื่อรายงาน"
+
+#: app/templates/account/translations.html:176
+msgid "Thank you for helping us make Grylli better!"
+msgstr "ขอบคุณที่ช่วยทำให้ Grylli ดีขึ้น!"
+
+#: app/templates/admin/create_user.html:14
+msgid "Create New User"
+msgstr "สร้างผู้ใช้ใหม่"
+
+#: app/templates/admin/create_user.html:15
+msgid "Fill out the form to add a new user."
+msgstr "กรอกแบบฟอร์มเพื่อเพิ่มผู้ใช้ใหม่"
+
+#: app/templates/admin/create_user.html:21
+#: app/templates/admin/edit_user.html:17 app/templates/auth/bootstrap.html:24
+msgid "Please fix the following errors:"
+msgstr "โปรดแก้ไขข้อผิดพลาดต่อไปนี้:"
+
+#: app/templates/admin/create_user.html:78
+#: app/templates/admin/edit_user.html:93
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "Create User"
+msgstr "สร้างผู้ใช้"
+
+#: app/templates/admin/edit_user.html:10
+#: app/templates/admin/partials/user_card.html:20
+#: app/templates/admin/partials/user_table.html:26
+msgid "Edit User"
+msgstr "แก้ไขผู้ใช้"
+
+#: app/templates/admin/edit_user.html:55 app/templates/admin/edit_user.html:74
+msgid "Hold to show password"
+msgstr "กดค้างเพื่อแสดงรหัสผ่าน"
+
+#: app/templates/admin/edit_user.html:85
+#, python-format
+msgid "At least one special character (e.g., !@#$%%)"
+msgstr "อย่างน้อยหนึ่งอักขระพิเศษ (เช่น !@#$%%)"
+
+#: app/templates/admin/help.html:4 app/templates/auth/login.html:72
+msgid "Admin Help"
+msgstr "แผงควบคุมผู้ดูแลระบบ"
+
+#: app/templates/admin/help.html:7
+msgid "Reset Admin Password"
+msgstr "รีเซ็ตรหัสผ่าน"
+
+#: app/templates/admin/help.html:9
+msgid ""
+"If you've forgotten the admin password, you can reset it using the following"
+" Docker command:"
+msgstr "หากคุณลืมรหัสผ่านผู้ดูแลระบบ คุณสามารถรีเซ็ตด้วยคำสั่ง Docker ดังนี้:"
+
+#: app/templates/admin/help.html:15
+msgid ""
+"This script will prompt you to enter a new password for the admin user. You "
+"must run it from the host system where the Grylli container is running."
+msgstr ""
+"สคริปต์นี้จะขอให้คุณป้อนรหัสผ่านใหม่สำหรับผู้ใช้ผู้ดูแลระบบ "
+"คุณต้องเรียกใช้จากระบบโฮสต์ที่มีการรันคอนเทนเนอร์ Grylli"
+
+#: app/templates/admin/help.html:18
+msgid "After resetting, you can log in with the new password immediately."
+msgstr "หลังจากรีเซ็ตแล้ว คุณสามารถเข้าสู่ระบบด้วยรหัสผ่านใหม่ได้ทันที"
+
+#: app/templates/admin/help.html:24
+msgid "Return to Login"
+msgstr "กลับไปยังแดชบอร์ด"
+
+#: app/templates/admin/help_form.html:6
+msgid "Admin Help Access"
+msgstr "การเข้าถึงความช่วยเหลือของผู้ดูแลระบบ"
+
+#: app/templates/admin/help_form.html:9
+msgid "Enter your Ferret Key to unlock admin-only help documentation."
+msgstr ""
+"กรอก Ferret Key ของคุณเพื่อปลดล็อกเอกสารช่วยเหลือที่มีเฉพาะสำหรับผู้ดูแลระบบ"
+
+#: app/templates/admin/help_form.html:34
+msgid "How to Find Your FERRET_KEY"
+msgstr "วิธีหาคีย์ FERRET ของคุณ"
+
+#: app/templates/admin/help_form.html:36
+msgid "The FERRET_KEY is set as an environment variable when running Grylli."
+msgstr "FERRET_KEY ถูกตั้งเป็นตัวแปรสภาพแวดล้อมเมื่อรัน Grylli"
+
+#: app/templates/admin/help_form.html:39
+msgid "Option 1: Check docker-compose.yml"
+msgstr "ตัวเลือก 1: ตรวจสอบ docker-compose.yml"
+
+#: app/templates/admin/help_form.html:46
+msgid "Option 2: Use docker inspect"
+msgstr "ตัวเลือก 2: ใช้ docker inspect"
+
+#: app/templates/admin/help_form.html:52
+msgid "This shows the FERRET_KEY as passed to the container at runtime."
+msgstr "นี่จะแสดง FERRET_KEY ที่ส่งไปยังคอนเทนเนอร์ในขณะรัน"
+
+#: app/templates/admin/index.html:10
+msgid "Admin Panel"
+msgstr "แผงควบคุมผู้ดูแลระบบ"
+
+#: app/templates/admin/index.html:12
+msgid ""
+"Welcome to the Grylli Admin Panel. Use the links below to manage the system."
+msgstr ""
+"ยินดีต้อนรับสู่แผงควบคุมผู้ดูแล Grylli ใช้ลิงก์ด้านล่างเพื่อจัดการระบบ"
+
+#: app/templates/admin/index.html:17
+msgid "Manage Users"
+msgstr "จัดการผู้ใช้"
+
+#: app/templates/admin/index.html:18
+msgid "Create, edit, enable/disable, or delete user accounts."
+msgstr "สร้าง แก้ไข เปิด/ปิดใช้งาน หรือ ลบบัญชีผู้ใช้"
+
+#: app/templates/admin/index.html:22
+#: app/templates/admin/system_settings.html:10
+#: app/templates/partials/admin_nav.html:52
+msgid "System Settings"
+msgstr "ตั้งค่าระบบ"
+
+#: app/templates/admin/index.html:23
+msgid "View  system-wide environment values."
+msgstr "ดูค่าของสภาพแวดล้อมทั่วทั้งระบบ"
+
+#: app/templates/admin/index.html:27 app/templates/partials/admin_nav.html:42
+msgid "Backups"
+msgstr "การสำรองข้อมูล"
+
+#: app/templates/admin/index.html:28
+msgid "Create and delete database backups."
+msgstr "สำรองข้อมูลฐานข้อมูล"
+
+#: app/templates/admin/index.html:33
+msgid "View and test global SMTP settings."
+msgstr "ไม่สามารถส่งอีเมลทดสอบได้ ตรวจสอบการตั้งค่า SMTP"
+
+#: app/templates/admin/index.html:39
+msgid "View Admin Guide / README on GitHub"
+msgstr "ดูคู่มือแอดมิน / README บน GitHub"
+
+#: app/templates/admin/index.html:40
+msgid "Includes setup instructions, integrations, and troubleshooting."
+msgstr "รวมคำแนะนำการตั้งค่า, การรวมเข้ากับระบบอื่น, และการแก้ปัญหา"
+
+#: app/templates/admin/index.html:44
+msgid "⚠️ Admin Tips"
+msgstr "⚠️ เคล็ดลับสำหรับผู้ดูแล"
+
+#: app/templates/admin/index.html:46
+msgid "Ensure the data folder (database) is backed up on your host"
+msgstr ""
+"ตรวจสอบให้แน่ใจว่าโฟลเดอร์ข้อมูล (ฐานข้อมูล) "
+"ได้รับการสำรองข้อมูลบนโฮสต์ของคุณ"
+
+#: app/templates/admin/index.html:48
+msgid ""
+"The uploads folder is not per user.  If required per user, you will ndd to "
+"create subdirectoried per user and setup permissions so users can only see "
+"their own folder."
+msgstr ""
+"โฟลเดอร์อัพโหลดไม่ได้แยกตามผู้ใช้ หากต้องการให้แยกตามผู้ใช้ "
+"คุณจะต้องสร้างโฟลเดอร์ย่อยตามผู้ใช้และตั้งค่าสิทธิ์ให้ผู้ใช้เห็นได้เฉพาะโฟลเดอร์ของตนเอง"
+
+#: app/templates/admin/index.html:51
+msgid ""
+"To restore a backup: stop the container, replace the data/grylli.db with one"
+" from the backups folder, and restart the container."
+msgstr ""
+"เพื่อกู้คืนข้อมูลสำรอง: หยุดคอนเทนเนอร์, แทนที่ data/grylli.db "
+"ด้วยไฟล์จากโฟลเดอร์สำรองข้อมูล, และเริ่มคอนเทนเนอร์ใหม่"
+
+#: app/templates/admin/list_backups.html:11
+msgid "Database Backups"
+msgstr "สำรองข้อมูลฐานข้อมูล"
+
+#: app/templates/admin/list_backups.html:13
+msgid "Create Backup"
+msgstr "สร้างข้อมูลสำรอง"
+
+#: app/templates/admin/list_backups.html:21
+msgid "Filename"
+msgstr "ชื่อไฟล์"
+
+#: app/templates/admin/list_backups.html:22
+#: app/templates/admin/partials/user_table.html:14
+#: app/templates/apprise/list_apprise.html:62
+#: app/templates/email/list_emails.html:60
+#: app/templates/messages/list_messages.html:60
+#: app/templates/reminders/list_reminders.html:60
+#: app/templates/user_smtp/list_smtp.html:59
+#: app/templates/webhook/list_webhooks.html:63
+msgid "Actions"
+msgstr "การกระทำ"
+
+#: app/templates/admin/list_backups.html:32
+msgid "Delete this backup?"
+msgstr "ลบข้อมูลสำรองนี้?"
+
+#: app/templates/admin/list_backups.html:32
+#: app/templates/apprise/list_apprise.html:95
+#: app/templates/apprise/list_apprise.html:99
+#: app/templates/apprise/list_apprise.html:150
+#: app/templates/apprise/list_apprise.html:154
+#: app/templates/email/list_emails.html:124
+#: app/templates/email/list_emails.html:128
+#: app/templates/email/list_emails.html:226
+#: app/templates/email/list_emails.html:230
+#: app/templates/messages/list_messages.html:112
+#: app/templates/messages/list_messages.html:116
+#: app/templates/messages/list_messages.html:198
+#: app/templates/messages/list_messages.html:202
+#: app/templates/reminders/list_reminders.html:107
+#: app/templates/reminders/list_reminders.html:113
+#: app/templates/reminders/list_reminders.html:192
+#: app/templates/reminders/list_reminders.html:198
+#: app/templates/user_smtp/list_smtp.html:101
+#: app/templates/user_smtp/list_smtp.html:169
+#: app/templates/webhook/list_webhooks.html:102
+#: app/templates/webhook/list_webhooks.html:161
+msgid "Delete"
+msgstr "ลบ"
+
+#: app/templates/admin/list_backups.html:41
+msgid "No backups found."
+msgstr "ไม่พบข้อมูลสำรอง"
+
+#: app/templates/admin/list_backups.html:44
+msgid ""
+"Backups contain your full app data. Store securely. Sensitive data is "
+"encrypted in the DB by default."
+msgstr ""
+"ข้อมูลสำรองประกอบด้วยข้อมูลแอปพลิเคชันเต็มรูปแบบของคุณ เก็บให้ปลอดภัย "
+"ข้อมูลที่ละเอียดอ่อนถูกเข้ารหัสในฐานข้อมูลโดยค่าเริ่มต้น"
+
+#: app/templates/admin/smtp_config.html:28
+#: app/templates/admin/system_config.html:22
+msgid "System Configuration"
+msgstr "การกำหนดค่าระบบ"
+
+#: app/templates/admin/smtp_config.html:33
+#: app/templates/admin/system_config.html:26
+#: app/templates/admin/system_settings.html:15
+msgid "Key"
+msgstr "คีย์"
+
+#: app/templates/admin/smtp_config.html:34
+#: app/templates/admin/system_config.html:27
+#: app/templates/admin/system_settings.html:16
+msgid "Value"
+msgstr "ค่า"
+
+#: app/templates/admin/smtp_config.html:35
+#: app/templates/admin/system_config.html:28
+msgid "Sensitive"
+msgstr "ละเอียดอ่อน"
+
+#: app/templates/admin/smtp_config.html:36
+#: app/templates/admin/system_config.html:29
+msgid "Editable"
+msgstr "แก้ไขได้"
+
+#: app/templates/admin/smtp_config.html:50
+#: app/templates/admin/smtp_config.html:51
+#: app/templates/admin/system_config.html:45
+#: app/templates/admin/system_config.html:46
+#: app/templates/email/view_config.html:60
+msgid "Yes"
+msgstr "ใช่"
+
+#: app/templates/admin/smtp_config.html:50
+#: app/templates/admin/smtp_config.html:51
+#: app/templates/admin/system_config.html:45
+#: app/templates/admin/system_config.html:46
+#: app/templates/email/view_config.html:60
+msgid "No"
+msgstr "ไม่"
+
+#: app/templates/admin/smtp_config.html:63
+#: app/templates/admin/system_config.html:55
+msgid "Send Test Email"
+msgstr "ส่งอีเมลทดสอบ"
+
+#: app/templates/admin/system_config.html:39
+msgid "decrypted"
+msgstr "สร้างเมื่อ"
+
+#: app/templates/admin/partials/user_card.html:12
+msgid "Email:"
+msgstr "อีเมล:"
+
+#: app/templates/admin/partials/user_card.html:15
+msgid "Role:"
+msgstr "บทบาท:"
+
+#: app/templates/admin/partials/user_card.html:27
+#: app/templates/admin/partials/user_table.html:34
+msgid "Change Role"
+msgstr "เปลี่ยนบทบาท"
+
+#: app/templates/admin/partials/user_card.html:29
+#: app/templates/admin/partials/user_table.html:36
+msgid "You cannot change your own role"
+msgstr "คุณไม่สามารถเปลี่ยนสถานะเปิดใช้งานของตัวเองได้"
+
+#: app/templates/admin/partials/user_card.html:36
+#: app/templates/admin/partials/user_table.html:43
+msgid "Are you sure you want to reset MFA for this user?"
+msgstr "แน่ใจหรือไม่ว่าต้องการรีเซ็ต MFA สำหรับผู้ใช้นี้?"
+
+#: app/templates/admin/partials/user_card.html:39
+#: app/templates/admin/partials/user_table.html:46
+msgid "Reset MFA"
+msgstr "รีเซ็ตรหัสผ่าน"
+
+#: app/templates/admin/partials/user_card.html:51
+#: app/templates/admin/partials/user_table.html:58
+msgid "Delete user"
+msgstr "ลบผู้ใช้"
+
+#: app/templates/admin/partials/user_card.html:55
+#: app/templates/admin/partials/user_table.html:61
+msgid "Delete User"
+msgstr "ลบผู้ใช้"
+
+#: app/templates/admin/partials/user_card.html:58
+#: app/templates/admin/partials/user_table.html:65
+msgid "You cannot disable yourself"
+msgstr "คุณไม่สามารถปิดการใช้งานตัวเองได้"
+
+#: app/templates/admin/partials/user_card.html:65
+#: app/templates/admin/partials/user_table.html:72
+msgid "Disable"
+msgstr "ปิดการใช้งาน"
+
+#: app/templates/admin/partials/user_card.html:65
+#: app/templates/admin/partials/user_table.html:72
+msgid "Enable"
+msgstr "เปิดใช้งาน"
+
+#: app/templates/admin/partials/user_header.html:6
+#: app/templates/partials/admin_nav.html:47
+msgid "Users"
+msgstr "ผู้ใช้"
+
+#: app/templates/admin/partials/user_header.html:12
+#: app/templates/admin/partials/user_header.html:13
+#: app/templates/apprise/apprise_config.html:10
+#: app/templates/apprise/apprise_config.html:11
+#: app/templates/apprise/list_apprise.html:16
+#: app/templates/apprise/list_apprise.html:17
+#: app/templates/email/list_emails.html:15
+#: app/templates/email/list_emails.html:16
+#: app/templates/messages/list_messages.html:16
+#: app/templates/messages/list_messages.html:17
+#: app/templates/reminders/list_reminders.html:15
+#: app/templates/reminders/list_reminders.html:16
+#: app/templates/user_smtp/list_smtp.html:14
+#: app/templates/user_smtp/list_smtp.html:17
+#: app/templates/webhook/list_webhooks.html:16
+#: app/templates/webhook/list_webhooks.html:17
+#: app/templates/webhook/webhook_config.html:10
+#: app/templates/webhook/webhook_config.html:11
+msgid "Table View"
+msgstr "มุมมองตาราง"
+
+#: app/templates/admin/partials/user_header.html:26
+#: app/templates/admin/partials/user_header.html:27
+#: app/templates/apprise/apprise_config.html:24
+#: app/templates/apprise/apprise_config.html:25
+#: app/templates/apprise/list_apprise.html:30
+#: app/templates/apprise/list_apprise.html:31
+#: app/templates/email/list_emails.html:29
+#: app/templates/email/list_emails.html:30
+#: app/templates/messages/list_messages.html:30
+#: app/templates/messages/list_messages.html:31
+#: app/templates/reminders/list_reminders.html:29
+#: app/templates/reminders/list_reminders.html:30
+#: app/templates/user_smtp/list_smtp.html:27
+#: app/templates/user_smtp/list_smtp.html:30
+#: app/templates/webhook/list_webhooks.html:30
+#: app/templates/webhook/list_webhooks.html:31
+#: app/templates/webhook/webhook_config.html:24
+#: app/templates/webhook/webhook_config.html:25
+msgid "Card View"
+msgstr "มุมมองการ์ด"
+
+#: app/templates/admin/partials/user_header.html:45
+msgid "Add User"
+msgstr "เพิ่มผู้ใช้"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:9
+#: app/templates/email/attach_files.html:54
+#: app/templates/email/list_emails.html:255
+#: app/templates/messages/list_messages.html:223
+#: app/templates/reminders/list_reminders.html:218
+#: app/templates/reminders/schedule_reminder.html:56
+msgid "Hide Instructions"
+msgstr "ซ่อนคำแนะนำ"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:9
+msgid "How to manage users"
+msgstr "วิธีการจัดการผู้ใช้"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "Click"
+msgstr "คลิก"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+msgid "➕ Add User"
+msgstr "➕ เพิ่มผู้ใช้"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+msgid "to open the new user form."
+msgstr "เพื่อเปิดฟอร์มผู้ใช้ใหม่"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:18
+msgid "Enter a unique username, valid email address, and strong password."
+msgstr "ใส่ชื่อผู้ใช้ที่ไม่ซ้ำ, ที่อยู่อีเมลที่ถูกต้อง, และรหัสผ่านที่แข็งแรง"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "Select the appropriate"
+msgstr "เลือก"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "role"
+msgstr "บทบาท"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "or"
+msgstr "พอร์ต"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "to save."
+msgstr "เพื่อบันทึก"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:25
+msgid "To edit a user, click ✏️ and update their info."
+msgstr "เพื่อแก้ไขผู้ใช้ ให้คลิก ✏️ และอัปเดตข้อมูลของพวกเขา"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:26
+msgid "To delete a user, click 🗑️ and confirm the deletion."
+msgstr "เพื่อลบผู้ใช้ ให้คลิก 🗑️ และยืนยันการลบ"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:28
+msgid "To disable or enable a user, click 🔴 or 🟢."
+msgstr "เพื่อปิดหรือเปิดผู้ใช้ ให้คลิก 🔴 หรือ 🟢"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:30
+msgid "🟢 = User is enabled and can log in."
+msgstr "🟢 = ผู้ใช้ถูกเปิดใช้งานและสามารถเข้าสู่ระบบ"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:31
+msgid "🔴 = User is disabled and cannot log in."
+msgstr "🔴 = ผู้ใช้ถูกปิดใช้งานและไม่สามารถเข้าสู่ระบบได้"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:32
+msgid "⚪ = You cannot disable your own account."
+msgstr "⚪ = คุณไม่สามารถปิดใช้งานบัญชีของคุณเอง"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:43
+#: app/templates/admin/partials/user_table.html:91
+msgid "Assign Role for"
+msgstr "กำหนดปลายทางสำหรับ"
+
+#: app/templates/admin/partials/user_table.html:10
+msgid "ID"
+msgstr "รหัส"
+
+#: app/templates/admin/partials/user_table.html:11
+#: app/templates/user_smtp/list_smtp.html:55
+msgid "Username"
+msgstr "ชื่อผู้ใช้"
+
+#: app/templates/admin/partials/user_table.html:12
+msgid "Email"
+msgstr "อีเมล"
+
+#: app/templates/admin/partials/user_table.html:13
+msgid "Role"
+msgstr "บทบาท"
+
+#: app/templates/apprise/apprise_config.html:3
+#: app/templates/apprise/list_apprise.html:9
+#: app/templates/messages/assign_destinations.html:22
+#: app/templates/reminders/assign_destinations.html:20
+msgid "Apprise Destinations"
+msgstr "ที่หมาย Apprise"
+
+#: app/templates/apprise/apprise_config.html:43
+#: app/templates/webhook/list_webhooks.html:49
+#: app/templates/webhook/webhook_config.html:43
+msgid "Add Webhook"
+msgstr "เพิ่ม Webhook"
+
+#: app/templates/apprise/apprise_config.html:43
+#: app/templates/apprise/list_apprise.html:49
+#: app/templates/webhook/list_webhooks.html:49
+#: app/templates/webhook/webhook_config.html:43
+msgid "Add Destination"
+msgstr "เพิ่มที่หมาย"
+
+#: app/templates/apprise/create_apprise.html:10
+msgid "Create Apprise Destination"
+msgstr "สร้างที่หมาย Apprise"
+
+#: app/templates/apprise/create_apprise.html:38
+#: app/templates/apprise/edit_apprise.html:38
+#: app/templates/user_smtp/create_smtp.html:107
+#: app/templates/webhook/create_webhook.html:44
+#: app/templates/webhook/edit_webhook.html:44
+msgid "Create Destination"
+msgstr "สร้างที่หมาย"
+
+#: app/templates/apprise/create_apprise.html:47
+#: app/templates/apprise/edit_apprise.html:47
+msgid "Need help with Apprise URLs? See the"
+msgstr "ต้องการความช่วยเหลือเกี่ยวกับ Apprise URLs? ดูที่"
+
+#: app/templates/apprise/create_apprise.html:51
+#: app/templates/apprise/edit_apprise.html:51
+msgid "Apprise Notification Services documentation"
+msgstr "เอกสารการบริการแจ้งเตือน Apprise"
+
+#: app/templates/apprise/edit_apprise.html:10
+msgid "Edit Apprise Destination"
+msgstr "แก้ไขที่หมาย Apprise"
+
+#: app/templates/apprise/list_apprise.html:49
+msgid "Add Apprise"
+msgstr "เพิ่ม Apprise"
+
+#: app/templates/apprise/list_apprise.html:58
+#: app/templates/email/edit_message.html:21
+#: app/templates/email/list_emails.html:56
+#: app/templates/email/view_config.html:14
+#: app/templates/messages/create_message.html:29
+#: app/templates/messages/edit_message.html:23
+#: app/templates/messages/list_messages.html:57
+#: app/templates/messages/view_message.html:14
+#: app/templates/reminders/create_reminder.html:23
+#: app/templates/reminders/edit_reminder.html:17
+#: app/templates/reminders/list_reminders.html:56
+#: app/templates/reminders/view_reminder.html:13
+#: app/templates/user_smtp/list_smtp.html:52
+#: app/templates/webhook/list_webhooks.html:58
+msgid "Label"
+msgstr "ป้าย"
+
+#: app/templates/apprise/list_apprise.html:59
+msgid "URL"
+msgstr "URL"
+
+#: app/templates/apprise/list_apprise.html:61
+#: app/templates/email/list_emails.html:59
+#: app/templates/messages/list_messages.html:59
+#: app/templates/messages/view_message.html:36
+#: app/templates/reminders/view_reminder.html:47
+#: app/templates/webhook/list_webhooks.html:62
+msgid "Created At"
+msgstr "สร้างเมื่อ"
+
+#: app/templates/apprise/list_apprise.html:77
+#: app/templates/apprise/list_apprise.html:132
+#: app/templates/user_smtp/list_smtp.html:79
+#: app/templates/user_smtp/list_smtp.html:147
+#: app/templates/webhook/list_webhooks.html:79
+#: app/templates/webhook/list_webhooks.html:138
+msgid "Edit"
+msgstr "แก้ไข"
+
+#: app/templates/apprise/list_apprise.html:80
+#: app/templates/apprise/list_apprise.html:135
+#: app/templates/user_smtp/list_smtp.html:82
+#: app/templates/user_smtp/list_smtp.html:150
+msgid "Cannot edit while in use"
+msgstr "ไม่สามารถแก้ไขในขณะใช้งาน"
+
+#: app/templates/apprise/list_apprise.html:88
+#: app/templates/apprise/list_apprise.html:143
+#: app/templates/webhook/list_webhooks.html:91
+#: app/templates/webhook/list_webhooks.html:150
+msgid "Test"
+msgstr "ทดสอบ"
+
+#: app/templates/apprise/list_apprise.html:103
+#: app/templates/apprise/list_apprise.html:158
+#: app/templates/user_smtp/list_smtp.html:106
+#: app/templates/user_smtp/list_smtp.html:174
+msgid "Cannot delete while in use"
+msgstr "ไม่สามารถลบในขณะใช้งาน"
+
+#: app/templates/apprise/list_apprise.html:119
+msgid "URL:"
+msgstr "URL:"
+
+#: app/templates/apprise/list_apprise.html:122
+#: app/templates/user_smtp/list_smtp.html:137
+#: app/templates/webhook/list_webhooks.html:128
+msgid "Enabled:"
+msgstr "เปิดใช้งาน:"
+
+#: app/templates/apprise/list_apprise.html:125
+#: app/templates/user_smtp/list_smtp.html:140
+#: app/templates/webhook/list_webhooks.html:131
+msgid "Created:"
+msgstr "สร้างเมื่อ:"
+
+#: app/templates/auth/bootstrap.html:14
+msgid "Create Admin Account"
+msgstr "สร้างบัญชีแอดมิน"
+
+#: app/templates/auth/bootstrap.html:16
+msgid "Let’s get started by creating your first admin account."
+msgstr "มาเริ่มต้นด้วยการสร้างบัญชีแอดมินแรกของคุณ"
+
+#: app/templates/auth/bootstrap.html:75
+msgid "Create Admin"
+msgstr "สร้างแอดมิน"
+
+#: app/templates/auth/forgot_password.html:12
+msgid "Forgot Password"
+msgstr "ลืมรหัสผ่าน"
+
+#: app/templates/auth/forgot_password.html:15
+msgid ""
+"Enter your username and email. We'll send you a link to reset your password."
+msgstr "ใส่ชื่อผู้ใช้และอีเมลของคุณ เราจะส่งลิงก์เพื่อรีเซ็ตรหัสผ่านของคุณ"
+
+#: app/templates/auth/forgot_username.html:12
+msgid "Forgot Username"
+msgstr "ลืมชื่อผู้ใช้"
+
+#: app/templates/auth/forgot_username.html:15
+msgid "Enter your email address, and we'll send you your username."
+msgstr "ใส่อีเมลของคุณแล้วเราจะส่งชื่อผู้ใช้ของคุณให้"
+
+#: app/templates/auth/forgot_username.html:40
+msgid "Send Username"
+msgstr "ส่งชื่อผู้ใช้"
+
+#: app/templates/auth/login.html:12 app/templates/auth/login.html:54
+msgid "Log In"
+msgstr "เข้าสู่ระบบ"
+
+#: app/templates/auth/login.html:62
+msgid "Forgot Username?"
+msgstr "ลืมชื่อผู้ใช้?"
+
+#: app/templates/auth/login.html:64
+msgid "Forgot Password?"
+msgstr "ลืมรหัสผ่าน?"
+
+#: app/templates/auth/login.html:66 app/templates/auth/signup.html:12
+msgid "Sign Up"
+msgstr "ลงชื่อสมัครใช้"
+
+#: app/templates/auth/rate_limit.html:9
+msgid "Hold On"
+msgstr "รอไว้"
+
+#: app/templates/auth/rate_limit.html:11
+msgid "Too many failed login attempts. Please wait"
+msgstr "มีความพยายามในการเข้าสู่ระบบล้มเหลวมากเกินไป โปรดรอ"
+
+#: app/templates/auth/rate_limit.html:13
+msgid "seconds..."
+msgstr "วินาที..."
+
+#: app/templates/auth/rate_limit.html:15
+msgid "Redirecting to login..."
+msgstr "กลับไปยังแดชบอร์ด"
+
+#: app/templates/auth/reset_password.html:12
+#: app/templates/auth/reset_password.html:116
+msgid "Reset Password"
+msgstr "รีเซ็ตรหัสผ่าน"
+
+#: app/templates/auth/reset_password.html:14
+msgid "Enter your username, email, and new password."
+msgstr "ป้อนชื่อผู้ใช้ อีเมล และรหัสผ่านใหม่ของคุณ"
+
+#: app/templates/auth/signup.html:14
+msgid "Fill out the form to create your account."
+msgstr "กรอกแบบฟอร์มเพื่อสร้างบัญชีของคุณ"
+
+#: app/templates/checkin/already_checked_in.html:10
+msgid "Already Checked In"
+msgstr "เช็คอินล่าสุด"
+
+#: app/templates/checkin/already_checked_in.html:12
+msgid ""
+"You have already checked in for this item. No further action is needed at "
+"this time."
+msgstr "คุณได้เช็คอินสำหรับรายการนี้แล้ว ไม่ต้องดำเนินการเพิ่มเติมในขณะนี้"
+
+#: app/templates/checkin/already_checked_in.html:16
+#: app/templates/checkin/disabled.html:16
+#: app/templates/checkin/executed_disabled.html:18
+msgid "Check-in for:"
+msgstr "เช็คอินสำหรับ:"
+
+#: app/templates/checkin/already_checked_in.html:21
+#: app/templates/checkin/disabled.html:21
+#: app/templates/checkin/executed_disabled.html:23
+#: app/templates/checkin/thank_you.html:19
+msgid "Return to Dashboard"
+msgstr "กลับไปยังแดชบอร์ด"
+
+#: app/templates/checkin/disabled.html:10
+msgid "Check-In Disabled"
+msgstr "อีเมลถูกปิดใช้งาน"
+
+#: app/templates/checkin/disabled.html:12
+msgid "This check-in is currently disabled and cannot be completed."
+msgstr "การเช็คอินนี้ปิดใช้งานอยู่ในขณะนี้และไม่สามารถทำได้"
+
+#: app/templates/checkin/executed_disabled.html:11
+msgid "Already Executed & Disabled"
+msgstr "ดำเนินการแล้วและปิดใช้งาน"
+
+#: app/templates/checkin/executed_disabled.html:14
+msgid ""
+"This check-in has already been executed and is now disabled. No further "
+"action is required."
+msgstr ""
+"การเช็คอินนี้ได้ดำเนินการแล้วและปิดใช้งานในขณะนี้ "
+"ไม่จำเป็นต้องดำเนินการเพิ่มเติม"
+
+#: app/templates/checkin/thank_you.html:10
+msgid "Check-In Successful"
+msgstr "เช็คอินสำเร็จ"
+
+#: app/templates/checkin/thank_you.html:11
+msgid "Thank you for checking in."
+msgstr "ขอบคุณที่เช็คอิน"
+
+#: app/templates/checkin/thank_you.html:14
+msgid "Checked in for:"
+msgstr "เช็คอินสำหรับ:"
+
+#: app/templates/email/assign_smtp.html:11
+msgid "📧 Assign SMTP Config to:"
+msgstr "📧 กำหนดการตั้งค่า SMTP ให้:"
+
+#: app/templates/email/assign_smtp.html:25
+msgid "No SMTP (Unassign)"
+msgstr "ไม่ได้กำหนดการตั้งค่า SMTP"
+
+#: app/templates/email/assign_smtp.html:26
+msgid "This email will not use any SMTP configuration."
+msgstr "อีเมลนี้จะไม่ใช้งานการตั้งค่า SMTP ใดๆ"
+
+#: app/templates/email/attach_files.html:12
+msgid "Attach Files for:"
+msgstr "แนบไฟล์สำหรับ:"
+
+#: app/templates/email/attach_files.html:21
+msgid "Available Files"
+msgstr "ไฟล์ที่ใช้ได้"
+
+#: app/templates/email/attach_files.html:36
+msgid "No files found in the upload directory."
+msgstr "ไม่พบไฟล์ในไดเรกทอรีอัปโหลด"
+
+#: app/templates/email/attach_files.html:44
+msgid "Save Attachments"
+msgstr "บันทึกไฟล์แนบ"
+
+#: app/templates/email/attach_files.html:54
+msgid "File Attach Notes"
+msgstr "จดบันทึกไฟล์แนบ"
+
+#: app/templates/email/attach_files.html:63
+msgid "Important:"
+msgstr "พอร์ต:"
+
+#: app/templates/email/attach_files.html:65
+msgid ""
+"Only files that are present in the 'uploads' folder (provided by your system"
+" administrator) will be shown here. If you do not see your file(s), please "
+"contact your Grylli administrator."
+msgstr ""
+"เฉพาะไฟล์ที่อยู่ในโฟลเดอร์ 'uploads' (โดยผู้ดูแลระบบของคุณให้) "
+"เท่านั้นที่จะถูกแสดงที่นี่ หากคุณไม่เห็นไฟล์ของคุณ โปรดติดต่อผู้ดูแลระบบ "
+"Grylli ของคุณ"
+
+#: app/templates/email/attach_files.html:69
+msgid "Accepted file types:"
+msgstr "ประเภทไฟล์ที่ยอมรับ:"
+
+#: app/templates/email/attach_files.html:71
+msgid "Documents:"
+msgstr "เอกสาร:"
+
+#: app/templates/email/attach_files.html:73
+msgid "Images:"
+msgstr "รูปภาพ:"
+
+#: app/templates/email/attach_files.html:75
+msgid "Audio:"
+msgstr "เสียง:"
+
+#: app/templates/email/attach_files.html:79
+msgid "Maximum file size:"
+msgstr "ขนาดไฟล์สูงสุด:"
+
+#: app/templates/email/attach_files.html:80
+msgid "10 MB per file"
+msgstr "10 MB ต่อไฟล์"
+
+#: app/templates/email/attach_files.html:83
+msgid "Total upload size:"
+msgstr "ขนาดอัปโหลดทั้งหมด:"
+
+#: app/templates/email/attach_files.html:84
+msgid "20 MB (all files combined)"
+msgstr "20 MB (รวมไฟล์ทั้งหมด)"
+
+#: app/templates/email/edit_message.html:12
+#: app/templates/email/list_emails.html:75
+#: app/templates/email/list_emails.html:177
+msgid "Edit Email"
+msgstr "แก้ไขอีเมล"
+
+#: app/templates/email/edit_message.html:12
+msgid "Create Email"
+msgstr "สร้างอีเมล"
+
+#: app/templates/email/edit_message.html:28
+msgid "To (Recipient Email)"
+msgstr "ถึง (อีเมลผู้รับ)"
+
+#: app/templates/email/edit_message.html:35
+#: app/templates/email/list_emails.html:57
+#: app/templates/email/view_config.html:18
+#: app/templates/messages/create_message.html:36
+#: app/templates/messages/edit_message.html:30
+#: app/templates/messages/list_messages.html:58
+#: app/templates/messages/view_message.html:18
+#: app/templates/reminders/create_reminder.html:30
+#: app/templates/reminders/edit_reminder.html:24
+#: app/templates/reminders/list_reminders.html:57
+#: app/templates/reminders/view_reminder.html:17
+msgid "Subject"
+msgstr "หัวข้อ"
+
+#: app/templates/email/edit_message.html:42
+#: app/templates/email/view_config.html:28
+msgid "Body"
+msgstr "เนื้อหา"
+
+#: app/templates/email/edit_message.html:50
+msgid "Save Email"
+msgstr "บันทึกอีเมล"
+
+#: app/templates/email/list_emails.html:48
+msgid "Add Email"
+msgstr "เพิ่มอีเมล"
+
+#: app/templates/email/list_emails.html:58
+#: app/templates/reminders/assign_email_reminder.html:77
+msgid "To"
+msgstr "ถึง"
+
+#: app/templates/email/list_emails.html:78
+#: app/templates/email/list_emails.html:180
+msgid "Disable to edit email"
+msgstr "ไม่สามารถส่งอีเมลทดสอบ:"
+
+#: app/templates/email/list_emails.html:84
+#: app/templates/email/list_emails.html:186
+msgid "Attach Files"
+msgstr "แนบไฟล์"
+
+#: app/templates/email/list_emails.html:87
+#: app/templates/email/list_emails.html:189
+msgid "Disable to attach files"
+msgstr "แนบไฟล์"
+
+#: app/templates/email/list_emails.html:93
+#: app/templates/email/list_emails.html:195
+msgid "Attach SMTP Config"
+msgstr "แนบการตั้งค่า SMTP"
+
+#: app/templates/email/list_emails.html:96
+#: app/templates/email/list_emails.html:198
+msgid "Disable to assign SMTP"
+msgstr "ปิดใช้งานการกำหนด SMTP"
+
+#: app/templates/email/list_emails.html:102
+#: app/templates/email/list_emails.html:204
+msgid "Schedule Check-In"
+msgstr "กำหนดเวลาเช็คอิน"
+
+#: app/templates/email/list_emails.html:105
+#: app/templates/email/list_emails.html:207
+msgid "Disable to schedule check-in"
+msgstr "กำหนดเวลาเช็คอิน"
+
+#: app/templates/email/list_emails.html:110
+#: app/templates/email/list_emails.html:212
+#: app/templates/messages/list_messages.html:99
+#: app/templates/messages/list_messages.html:184
+#: app/templates/reminders/list_reminders.html:93
+#: app/templates/reminders/list_reminders.html:178
+msgid "View Details"
+msgstr "ดูรายละเอียด"
+
+#: app/templates/email/list_emails.html:118
+#: app/templates/email/list_emails.html:220
+msgid "Send this email to yourself to preview it."
+msgstr "ส่งอีเมลนี้ให้ตัวคุณเองเพื่อดูตัวอย่าง"
+
+#: app/templates/email/list_emails.html:136
+#: app/templates/email/list_emails.html:238
+msgid "Toggle Email On/Off"
+msgstr "สลับเปิด/ปิดอีเมล"
+
+#: app/templates/email/list_emails.html:139
+#: app/templates/email/list_emails.html:241
+msgid "Email is enabled"
+msgstr "อีเมลถูกเปิดใช้งาน"
+
+#: app/templates/email/list_emails.html:141
+#: app/templates/email/list_emails.html:243
+msgid "Email is disabled"
+msgstr "อีเมลถูกปิดใช้งาน"
+
+#: app/templates/email/list_emails.html:157
+#: app/templates/email/view_config.html:51
+#: app/templates/messages/list_messages.html:142
+#: app/templates/reminders/list_reminders.html:140
+msgid "Label:"
+msgstr "ป้ายกำกับ:"
+
+#: app/templates/email/list_emails.html:161
+#: app/templates/messages/list_messages.html:146
+#: app/templates/reminders/list_reminders.html:144
+#: app/templates/reminders/view_reminder.html:98
+msgid "Subject:"
+msgstr "หัวข้อ"
+
+#: app/templates/email/list_emails.html:165
+msgid "To:"
+msgstr "ถึง:"
+
+#: app/templates/email/list_emails.html:169
+#: app/templates/messages/list_messages.html:150
+msgid "Created At:"
+msgstr "สร้างเมื่อ"
+
+#: app/templates/email/list_emails.html:255
+msgid "How to create and send an email"
+msgstr "วิธีสร้างและส่งอีเมล"
+
+#: app/templates/email/list_emails.html:262
+msgid ""
+"Click “Add Email” and fill out the subject, content, and recipient address."
+msgstr "คลิก \"Add Email\" และกรอกหัวข้อเนื้อหาและที่อยู่ผู้รับ"
+
+#: app/templates/email/list_emails.html:263
+msgid "Attach any optional files (if needed)."
+msgstr "แนบไฟล์เสริม (ถ้าต้องการ)"
+
+#: app/templates/email/list_emails.html:264
+msgid ""
+"Click 🧩 to assign a single SMTP configuration that will be used to send the "
+"email."
+msgstr "คลิก 🧩 เพื่อกำหนดการตั้งค่า SMTP ที่จะใช้ในการส่งอีเมล"
+
+#: app/templates/email/list_emails.html:265
+msgid "Click ⏱️ to set a check-in interval and grace period for the email."
+msgstr "คลิก ⏱️ เพื่อตั้งค่าเวลาเช็คอินและช่วงผ่อนผันสำหรับอีเมล"
+
+#: app/templates/email/list_emails.html:266
+msgid "Enable the email using the 🔴/🟢 toggle button."
+msgstr "ใช้งานอีเมลด้วยสวิตช์ 🔴/🟢"
+
+#: app/templates/email/list_emails.html:267
+msgid ""
+"Click 🧪 to test the email by sending it to yourself (not the recipient)."
+msgstr "คลิก 🧪 เพื่อทดสอบอีเมลโดยส่งไปหาตัวเอง (ไม่ใช่ผู้รับ)"
+
+#: app/templates/email/list_emails.html:268
+msgid ""
+"If you don’t check in before the grace period ends, the email will be "
+"automatically sent."
+msgstr "หากคุณไม่เช็คอินก่อนสิ้นสุดช่วงผ่อนผัน อีเมลจะถูกส่งอัตโนมัติ"
+
+#: app/templates/email/list_emails.html:269
+msgid "You can preview the email configuration using 🔍."
+msgstr "คุณสามารถแสดงตัวอย่างการตั้งค่าอีเมลโดยใช้ 🔍"
+
+#: app/templates/email/list_emails.html:270
+msgid "Once a secure email is sent, it will be automatically disabled."
+msgstr ""
+"เมื่ออีเมลที่ปลอดภัยถูกส่งออกไปแล้ว อีเมลนั้นจะถูกปิดการใช้งานอัตโนมัติ"
+
+#: app/templates/email/schedule_email.html:9
+msgid "Schedule Email"
+msgstr "กำหนดเวลาอีเมล"
+
+#: app/templates/email/schedule_email.html:18
+#: app/templates/messages/schedule_message.html:18
+msgid "Years"
+msgstr "ปี"
+
+#: app/templates/email/schedule_email.html:19
+#: app/templates/messages/schedule_message.html:19
+msgid "Months"
+msgstr "เดือน"
+
+#: app/templates/email/schedule_email.html:20
+#: app/templates/messages/schedule_message.html:20
+msgid "Weeks"
+msgstr "สัปดาห์"
+
+#: app/templates/email/schedule_email.html:21
+#: app/templates/messages/schedule_message.html:21
+msgid "Days"
+msgstr "วัน"
+
+#: app/templates/email/schedule_email.html:22
+#: app/templates/messages/schedule_message.html:22
+msgid "Hours"
+msgstr "ชั่วโมง"
+
+#: app/templates/email/schedule_email.html:23
+#: app/templates/messages/schedule_message.html:23
+msgid "Minutes"
+msgstr "นาที"
+
+#: app/templates/email/schedule_email.html:28
+#: app/templates/messages/schedule_message.html:28
+msgid "Check-in"
+msgstr "เช็คอิน"
+
+#: app/templates/email/schedule_email.html:51
+#: app/templates/messages/schedule_message.html:51
+#: app/templates/messages/view_message.html:26
+msgid "Grace Period"
+msgstr "ช่วงผ่อนผัน"
+
+#: app/templates/email/schedule_email.html:80
+#: app/templates/messages/schedule_message.html:80
+#: app/templates/reminders/schedule_reminder.html:47
+msgid "Save Schedule"
+msgstr "บันทึกตารางเวลา"
+
+#: app/templates/email/view_config.html:9
+msgid "Email Configuration"
+msgstr "การตั้งค่าอีเมล"
+
+#: app/templates/email/view_config.html:22
+msgid "Recipient"
+msgstr "ผู้รับ"
+
+#: app/templates/email/view_config.html:33
+msgid "Attached Files"
+msgstr "ไฟล์แนบ"
+
+#: app/templates/email/view_config.html:39
+msgid "No files attached"
+msgstr "ไม่มีไฟล์แนบ"
+
+#: app/templates/email/view_config.html:46
+#: app/templates/reminders/assign_email_reminder.html:20
+msgid "SMTP Configuration"
+msgstr "การตั้งค่า SMTP"
+
+#: app/templates/email/view_config.html:54
+#: app/templates/user_smtp/list_smtp.html:122
+msgid "Host:"
+msgstr "โฮสต์:"
+
+#: app/templates/email/view_config.html:57
+#: app/templates/user_smtp/list_smtp.html:128
+msgid "Username:"
+msgstr "ชื่อผู้ใช้:"
+
+#: app/templates/email/view_config.html:60
+#: app/templates/user_smtp/list_smtp.html:134
+msgid "TLS:"
+msgstr "TLS:"
+
+#: app/templates/email/view_config.html:64
+msgid "No SMTP configuration assigned"
+msgstr "ไม่ได้กำหนดการตั้งค่า SMTP"
+
+#: app/templates/email/view_config.html:69
+msgid "Schedule Information"
+msgstr "ข้อมูลตารางเวลา"
+
+#: app/templates/email/view_config.html:72
+msgid "Check-in Interval:"
+msgstr "ช่วงเวลาเช็คอิน:"
+
+#: app/templates/email/view_config.html:72
+#: app/templates/email/view_config.html:75
+msgid "minutes"
+msgstr "นาที"
+
+#: app/templates/email/view_config.html:75
+msgid "Grace Period:"
+msgstr "ช่วงผ่อนผัน:"
+
+#: app/templates/email/view_config.html:79
+msgid "Last Check-in:"
+msgstr "เช็คอินครั้งล่าสุด:"
+
+#: app/templates/email/view_config.html:82
+msgid "No check-in has occurred yet"
+msgstr "ยังไม่ได้มีการเช็คอิน"
+
+#: app/templates/email/view_config.html:92
+msgid "Back to Emails"
+msgstr "กลับไปที่อีเมล"
+
+#: app/templates/errors/500.html:4
+msgid "Something went wrong"
+msgstr "มีบางอย่างผิดพลาด"
+
+#: app/templates/errors/500.html:6
+msgid ""
+"An unexpected error occurred. Please try again later or contact support."
+msgstr ""
+"เกิดข้อผิดพลาดที่ไม่คาดคิด "
+"กรุณาลองใหม่อีกครั้งในภายหลังหรือติดต่อฝ่ายสนับสนุน"
+
+#: app/templates/locale/redirect_after_lang_set.html:15
+msgid "Switching Language..."
+msgstr "กำลังเปลี่ยนภาษา..."
+
+#: app/templates/locale/redirect_after_lang_set.html:18
+msgid "Applying new language..."
+msgstr "กำลังใช้ภาษาใหม่..."
+
+#: app/templates/messages/assign_destinations.html:13
+#: app/templates/reminders/assign_destinations.html:12
+msgid "Assign Destinations for"
+msgstr "กำหนดปลายทางสำหรับ"
+
+#: app/templates/messages/assign_destinations.html:62
+#: app/templates/reminders/assign_destinations.html:60
+msgid "Save Destinations"
+msgstr "บันทึกปลายทาง"
+
+#: app/templates/messages/create_message.html:17
+msgid "Edit Notificaton"
+msgstr "แก้ไขการแจ้งเตือน"
+
+#: app/templates/messages/create_message.html:19
+msgid "Create Notification"
+msgstr "สร้างการแจ้งเตือน"
+
+#: app/templates/messages/create_message.html:43
+#: app/templates/messages/edit_message.html:37
+#: app/templates/messages/view_message.html:42
+#: app/templates/reminders/create_reminder.html:37
+#: app/templates/reminders/edit_reminder.html:31
+#: app/templates/reminders/view_reminder.html:53
+msgid "Content"
+msgstr "เนื้อหา"
+
+#: app/templates/messages/create_message.html:51
+msgid "Save Notification"
+msgstr "บันทึกการแจ้งเตือน"
+
+#: app/templates/messages/edit_message.html:15
+#: app/templates/messages/list_messages.html:74
+#: app/templates/messages/list_messages.html:158
+msgid "Edit Notification"
+msgstr "แก้ไขการแจ้งเตือน"
+
+#: app/templates/messages/edit_message.html:45
+msgid "Update Notification"
+msgstr "อัปเดตการแจ้งเตือน"
+
+#: app/templates/messages/list_messages.html:49
+msgid "Add Notification"
+msgstr "เพิ่มการแจ้งเตือน"
+
+#: app/templates/messages/list_messages.html:77
+#: app/templates/messages/list_messages.html:161
+msgid "Disable to edit notification"
+msgstr "แก้ไขการแจ้งเตือน"
+
+#: app/templates/messages/list_messages.html:83
+#: app/templates/messages/list_messages.html:167
+#: app/templates/reminders/list_reminders.html:78
+#: app/templates/reminders/list_reminders.html:163
+msgid "Assign Destinations"
+msgstr "กำหนดปลายทาง"
+
+#: app/templates/messages/list_messages.html:86
+#: app/templates/messages/list_messages.html:170
+msgid "Disable to assign destinations"
+msgstr "กำหนดปลายทาง"
+
+#: app/templates/messages/list_messages.html:92
+#: app/templates/messages/list_messages.html:176
+#: app/templates/reminders/list_reminders.html:88
+#: app/templates/reminders/list_reminders.html:173
+msgid "Set Schedule"
+msgstr "ตั้งเวลาตาราง"
+
+#: app/templates/messages/list_messages.html:95
+#: app/templates/messages/list_messages.html:179
+msgid "Disable to set schedule"
+msgstr "ตั้งเวลาตาราง"
+
+#: app/templates/messages/list_messages.html:107
+#: app/templates/messages/list_messages.html:192
+msgid "Send Test Notification"
+msgstr "แก้ไขการแจ้งเตือน"
+
+#: app/templates/messages/list_messages.html:122
+#: app/templates/messages/list_messages.html:209
+msgid "Toggle Message On/Off"
+msgstr "สลับข้อความเปิด/ปิด"
+
+#: app/templates/messages/list_messages.html:124
+#: app/templates/messages/list_messages.html:211
+msgid "Notification is enabled"
+msgstr "การแจ้งเตือนถูกเปิดใช้งาน"
+
+#: app/templates/messages/list_messages.html:126
+#: app/templates/messages/list_messages.html:213
+msgid "Notification is disabled"
+msgstr "การแจ้งเตือนถูกปิดใช้งาน"
+
+#: app/templates/messages/list_messages.html:223
+msgid "How to create and send a notification"
+msgstr "วิธีสร้างและส่งการแจ้งเตือน"
+
+#: app/templates/messages/list_messages.html:233
+msgid "Click “Add notification” and fill out the subject and content fields."
+msgstr "คลิก “เพิ่มการแจ้งเตือน” และกรอกฟิลด์หัวข้อและเนื้อหา"
+
+#: app/templates/messages/list_messages.html:234
+msgid "Save the notification to return to the overview."
+msgstr "บันทึกการแจ้งเตือนเพื่อกลับไปยังภาพรวม"
+
+#: app/templates/messages/list_messages.html:235
+msgid "You need to create at least one apprise or webhook destination."
+msgstr "คุณต้องสร้างปลายทาง apprise หรือ webhook อย่างน้อยหนึ่งรายการ"
+
+#: app/templates/messages/list_messages.html:236
+msgid "You can create as many destinations as you like."
+msgstr "คุณสามารถสร้างปลายทางได้มากเท่าที่คุณต้องการ"
+
+#: app/templates/messages/list_messages.html:237
+msgid "Click 🧩 to assign one or more Apprise and/or Webhook destinations."
+msgstr ""
+"คลิก 🧩 เพื่อกำหนดปลายทาง Apprise และ/หรือ Webhook หนึ่งรายการหรือมากกว่านั้น"
+
+#: app/templates/messages/list_messages.html:238
+msgid "Click ⏱️ to set a schedule and check-in interval."
+msgstr "คลิก ⏱️ เพื่อตั้งเวลาตารางและช่วงเวลาเช็คอิน"
+
+#: app/templates/messages/list_messages.html:239
+msgid "Enable the notification using the 🔴/🟢 toggle button."
+msgstr "เปิดใช้งานการแจ้งเตือนโดยใช้ปุ่มสลับ 🔴/🟢"
+
+#: app/templates/messages/list_messages.html:240
+msgid ""
+"If you don’t check in before the grace period ends, the notification will be"
+" sent."
+msgstr "หากคุณไม่เช็คอินก่อนระยะเวลาผ่อนผันสิ้นสุด การแจ้งเตือนจะถูกส่ง"
+
+#: app/templates/messages/list_messages.html:241
+msgid "You can preview the notification config using 🔍."
+msgstr "คุณสามารถดูตัวอย่างการกำหนดค่าการแจ้งเตือนได้โดยใช้ 🔍"
+
+#: app/templates/messages/list_messages.html:242
+msgid "Once a notification is sent, it will be automatically disabled."
+msgstr "เมื่อการแจ้งเตือนถูกส่งแล้ว จะถูกปิดใช้งานอัตโนมัติ"
+
+#: app/templates/messages/schedule_message.html:9
+msgid "Schedule Message"
+msgstr "ตารางข้อความ"
+
+#: app/templates/messages/view_message.html:9
+msgid "Notifications Details"
+msgstr "รายละเอียดการแจ้งเตือน"
+
+#: app/templates/messages/view_message.html:22
+msgid "Check-in Interval"
+msgstr "ช่วงเวลาเช็คอิน"
+
+#: app/templates/messages/view_message.html:31
+msgid "Last Check-in"
+msgstr "เช็คอินล่าสุด"
+
+#: app/templates/messages/view_message.html:48
+#: app/templates/reminders/view_reminder.html:59
+msgid "Apprise URLs"
+msgstr "Apprise URLs"
+
+#: app/templates/messages/view_message.html:54
+#: app/templates/messages/view_message.html:64
+#: app/templates/reminders/view_reminder.html:65
+#: app/templates/reminders/view_reminder.html:75
+#: app/templates/reminders/view_reminder.html:85
+msgid "None assigned."
+msgstr "ไม่มีการกำหนด"
+
+#: app/templates/messages/view_message.html:73
+msgid "Back to Notifications"
+msgstr "กลับไปที่การแจ้งเตือน"
+
+#: app/templates/mfa/challenge.html:5 app/templates/mfa/settings.html:5
+msgid "Two-Factor Authentication (MFA)"
+msgstr "การยืนยันตัวตนสองขั้นตอน (MFA)"
+
+#: app/templates/mfa/recovery_codes.html:4
+msgid "Your Recovery Codes"
+msgstr "รหัสการกู้คืนของคุณ"
+
+#: app/templates/mfa/recovery_codes.html:7
+msgid "Save these recovery codes in a safe place!"
+msgstr "บันทึกรหัสการกู้คืนเหล่านี้ไว้ในที่ปลอดภัย!"
+
+#: app/templates/mfa/recovery_codes.html:10
+msgid ""
+"Each code can be used once if you lose access to your authenticator. These "
+"codes will not be shown again."
+msgstr "แต่ละรหัสสามารถใช้ได้ครั้งเดียวหากคุณไม่สามารถเข้าถึงตัวตรวจสอบ"
+
+#: app/templates/mfa/recovery_codes.html:24
+msgid "OK, I've saved them"
+msgstr "ตกลง, ฉันได้บันทึกไว้แล้ว"
+
+#: app/templates/mfa/settings.html:12
+msgid "MFA QR Code"
+msgstr "QR Code ของ MFA"
+
+#: app/templates/mfa/settings.html:15
+msgid "Manual Entry:"
+msgstr "การป้อนด้วยตนเอง:"
+
+#: app/templates/partials/admin_nav.html:21
+msgid "Administration"
+msgstr "การบริหาร"
+
+#: app/templates/partials/admin_nav.html:37
+#: app/templates/partials/shared_nav.html:34
+#: app/templates/partials/shared_nav.html:78
+#: app/templates/partials/shared_nav.html:117
+msgid "Overview"
+msgstr "ภาพรวม"
+
+#: app/templates/partials/footer.html:7
+msgid "Toggle Theme"
+msgstr "สลับธีม"
+
+#: app/templates/partials/footer.html:32
+msgid "Theme"
+msgstr "ธีม"
+
+#: app/templates/partials/head.html:7
+msgid "Grylli"
+msgstr "Grylli"
+
+#: app/templates/partials/header.html:6 app/templates/partials/sidebar.html:32
+#: app/templates/partials/sidebar.html:66
+msgid "Home"
+msgstr "หน้าหลัก"
+
+#: app/templates/partials/header.html:55
+msgid "Account"
+msgstr "บัญชี"
+
+#: app/templates/partials/header.html:61
+msgid "MFA"
+msgstr "MFA"
+
+#: app/templates/partials/header.html:67
+msgid "About"
+msgstr "เกี่ยวกับ"
+
+#: app/templates/partials/header.html:73
+msgid "Privacy"
+msgstr "ความเป็นส่วนตัว"
+
+#: app/templates/partials/header.html:79
+msgid "System Info"
+msgstr "ข้อมูลระบบ"
+
+#: app/templates/partials/header.html:114
+msgid "Logout"
+msgstr "ออกจากระบบ"
+
+#: app/templates/partials/shared_nav.html:33
+msgid "Overview of notification settings"
+msgstr "ภาพรวมของการตั้งค่าการแจ้งเตือน"
+
+#: app/templates/partials/shared_nav.html:38
+msgid "Configure Apprise services"
+msgstr "กำหนดค่า Apprise บริการ"
+
+#: app/templates/partials/shared_nav.html:39
+msgid "Apprise"
+msgstr "Apprise"
+
+#: app/templates/partials/shared_nav.html:43
+msgid "Configure Webhook integrations"
+msgstr "กำหนดค่า Webhook การผสานรวม"
+
+#: app/templates/partials/shared_nav.html:77
+msgid "Overview of secure email messages"
+msgstr "ภาพรวมของข้อความอีเมลที่ปลอดภัย"
+
+#: app/templates/partials/shared_nav.html:82
+msgid "Configure SMTP email settings"
+msgstr "กำหนดค่า SMTP อีเมล"
+
+#: app/templates/partials/shared_nav.html:83
+#: app/templates/reminders/view_reminder.html:79
+msgid "SMTP"
+msgstr "SMTP"
+
+#: app/templates/partials/shared_nav.html:100
+#: app/templates/reminders/list_reminders.html:8
+msgid "Reminders"
+msgstr "นาที"
+
+#: app/templates/partials/shared_nav.html:116
+msgid "Overview of reminders"
+msgstr "ภาพรวมของการเตือนความจำ"
+
+#: app/templates/partials/sidebar.html:13
+#: app/templates/partials/sidebar.html:47
+msgid "Menu"
+msgstr "เมนู"
+
+#: app/templates/reminders/assign_email_reminder.html:12
+msgid "Link Email Reminder for"
+msgstr "ลิงก์เตือนความจำอีเมลสำหรับ"
+
+#: app/templates/reminders/assign_email_reminder.html:30
+#: app/templates/reminders/assign_email_reminder.html:64
+msgid "None (Unassign)"
+msgstr "ไม่ได้กำหนดการตั้งค่า SMTP"
+
+#: app/templates/reminders/assign_email_reminder.html:43
+msgid "No sender address"
+msgstr "ไม่มีที่อยู่ผู้ส่ง"
+
+#: app/templates/reminders/assign_email_reminder.html:54
+msgid "Email Message"
+msgstr "ตารางข้อความ"
+
+#: app/templates/reminders/assign_email_reminder.html:77
+msgid "No subject"
+msgstr "หัวข้อ"
+
+#: app/templates/reminders/assign_email_reminder.html:90
+msgid "Save Email Reminder"
+msgstr "บันทึกอีเมล"
+
+#: app/templates/reminders/create_reminder.html:12
+#: app/templates/reminders/edit_reminder.html:10
+#: app/templates/reminders/list_reminders.html:73
+#: app/templates/reminders/list_reminders.html:158
+msgid "Edit Reminder"
+msgstr "แก้ไขอีเมล"
+
+#: app/templates/reminders/create_reminder.html:14
+msgid "Create Reminder"
+msgstr "สร้างอีเมล"
+
+#: app/templates/reminders/create_reminder.html:45
+msgid "Save Reminder"
+msgstr "บันทึกอีเมล"
+
+#: app/templates/reminders/edit_reminder.html:39
+msgid "Update Reminder"
+msgstr "อัปเดตการเตือนความจำ"
+
+#: app/templates/reminders/list_reminders.html:48
+msgid "Add Reminder"
+msgstr "เพิ่มอีเมล"
+
+#: app/templates/reminders/list_reminders.html:58
+#: app/templates/reminders/view_reminder.html:21
+msgid "Start At"
+msgstr "เริ่มต้น TLS"
+
+#: app/templates/reminders/list_reminders.html:59
+msgid "Recurrence"
+msgstr "ความถี่"
+
+#: app/templates/reminders/list_reminders.html:69
+#: app/templates/reminders/list_reminders.html:153
+#: app/templates/reminders/view_reminder.html:26
+msgid "One-time"
+msgstr "ครั้งเดียว"
+
+#: app/templates/reminders/list_reminders.html:83
+msgid "Assign Email Reminder"
+msgstr "มอบหมายการเตือนความจำทางอีเมล"
+
+#: app/templates/reminders/list_reminders.html:102
+#: app/templates/reminders/list_reminders.html:187
+msgid "Send Test Reminder"
+msgstr "ส่งอีเมลทดสอบ"
+
+#: app/templates/reminders/list_reminders.html:120
+#: app/templates/reminders/list_reminders.html:205
+msgid "Toggle Reminder On/Off"
+msgstr "สลับเปิด/ปิดอีเมล"
+
+#: app/templates/reminders/list_reminders.html:122
+#: app/templates/reminders/list_reminders.html:207
+msgid "Reminder is enabled"
+msgstr "อีเมลถูกเปิดใช้งาน"
+
+#: app/templates/reminders/list_reminders.html:124
+#: app/templates/reminders/list_reminders.html:209
+msgid "Reminder is disabled"
+msgstr "อีเมลถูกปิดใช้งาน"
+
+#: app/templates/reminders/list_reminders.html:148
+msgid "Start At:"
+msgstr "เริ่มต้น TLS"
+
+#: app/templates/reminders/list_reminders.html:152
+msgid "Recurrence:"
+msgstr "ความถี่:"
+
+#: app/templates/reminders/list_reminders.html:168
+msgid "Link Email Reminder"
+msgstr "ลิงก์เตือนความจำอีเมล"
+
+#: app/templates/reminders/list_reminders.html:218
+msgid "How to use reminders"
+msgstr "วิธีการจัดการผู้ใช้"
+
+#: app/templates/reminders/list_reminders.html:231
+msgid "➕ Click “Add Reminder” and fill out the subject and content fields."
+msgstr "คลิก “เพิ่มการแจ้งเตือน” และกรอกฟิลด์หัวข้อและเนื้อหา"
+
+#: app/templates/reminders/list_reminders.html:232
+msgid "💾 Save the reminder to return to the overview."
+msgstr "บันทึกการแจ้งเตือนเพื่อกลับไปยังภาพรวม"
+
+#: app/templates/reminders/list_reminders.html:233
+msgid ""
+"📣 Assign Apprise, 🌐 Webhook, and/or 📧 Email (SMTP) destinations as needed."
+msgstr ""
+"📣 มอบหมาย Apprise, 🌐 Webhook, และ/หรือ 📧 ที่หมายอีเมล (SMTP) ตามความจำเป็น"
+
+#: app/templates/reminders/list_reminders.html:234
+msgid ""
+"⏱️ Set the schedule using the schedule button to define when reminders are "
+"sent."
+msgstr "⏱️ ตั้งตารางเวลาผ่านปุ่มตารางเวลาเพื่อกำหนดเวลาส่งเตือนความจำ"
+
+#: app/templates/reminders/list_reminders.html:235
+msgid ""
+"🔍 Click “View Details” to review or edit assigned destinations and other "
+"settings."
+msgstr ""
+"🔍 คลิก “ดูรายละเอียด” เพื่อทบทวนหรือแก้ไขที่หมายที่มอบหมายและการตั้งค่าอื่นๆ"
+
+#: app/templates/reminders/list_reminders.html:236
+msgid ""
+"🧪 Click the Test button to verify all assigned destinations are working "
+"correctly."
+msgstr ""
+"🧪 คลิกปุ่มทดสอบเพื่อตรวจสอบว่าสถานที่ที่มอบหมายทั้งหมดใช้งานได้ถูกต้อง"
+
+#: app/templates/reminders/list_reminders.html:237
+msgid "🔴/🟢 Enable or disable the reminder using the toggle button."
+msgstr "ใช้งานอีเมลด้วยสวิตช์ 🔴/🟢"
+
+#: app/templates/reminders/list_reminders.html:238
+msgid "📤 Reminders will be sent as scheduled to the assigned destinations."
+msgstr "📤 การเตือนความจำจะถูกส่งตามกำหนดเวลาที่ไปยังที่หมายที่มอบหมาย"
+
+#: app/templates/reminders/schedule_reminder.html:8
+msgid "Schedule Reminder"
+msgstr "กำหนดเวลาอีเมล"
+
+#: app/templates/reminders/schedule_reminder.html:15
+msgid "Start Date & Time"
+msgstr "วันที่และเวลาเริ่มต้น"
+
+#: app/templates/reminders/schedule_reminder.html:22
+#: app/templates/reminders/view_reminder.html:25
+msgid "Recurrence Rule"
+msgstr "กฎการส่งซ้ำ"
+
+#: app/templates/reminders/schedule_reminder.html:24
+msgid "(Optional) Enter RRULE or leave blank for one-time."
+msgstr "(ไม่บังคับ) กรอก RRULE หรือเว้นว่างไว้สำหรับครั้งเดียว"
+
+#: app/templates/reminders/schedule_reminder.html:30
+msgid "End Date"
+msgstr "ส่งทดสอบ"
+
+#: app/templates/reminders/schedule_reminder.html:32
+msgid "(Optional) Stop sending after this date."
+msgstr "(ไม่บังคับ) หยุดการส่งหลังจากวันนี้"
+
+#: app/templates/reminders/schedule_reminder.html:38
+#: app/templates/reminders/view_reminder.html:36
+msgid "Max Occurrences"
+msgstr "การแสดงจำนวนครั้งสูงสุด"
+
+#: app/templates/reminders/schedule_reminder.html:40
+msgid "(Optional) Stop after this many reminders."
+msgstr "(ไม่บังคับ) หยุดหลังจากจำนวนการเตือนความจำนี้"
+
+#: app/templates/reminders/schedule_reminder.html:56
+msgid "Help for RRULE syntax"
+msgstr "ช่วยเหลือเกี่ยวกับไวยากรณ์ RRULE"
+
+#: app/templates/reminders/schedule_reminder.html:66
+msgid "Several tools are available to help generate an RRULE."
+msgstr "มีเครื่องมือหลายอย่างที่ช่วยสร้าง RRULE"
+
+#: app/templates/reminders/schedule_reminder.html:67
+msgid "Use a search engine or AI tool to assist."
+msgstr "ใช้เครื่องมือค้นหาหรือเครื่องมือ AI เพื่อช่วย"
+
+#: app/templates/reminders/schedule_reminder.html:69
+msgid "Here is an example of one such online tool:"
+msgstr "นี่คือตัวอย่างของเครื่องมือออนไลน์ดังกล่าว:"
+
+#: app/templates/reminders/schedule_reminder.html:73
+msgid "RRULE Generator Tool"
+msgstr "เครื่องมือสร้าง RRULE"
+
+#: app/templates/reminders/schedule_reminder.html:77
+msgid "See here for some common examples:"
+msgstr "ดูตัวอย่างทั่วไปบางส่วนที่นี่:"
+
+#: app/templates/reminders/schedule_reminder.html:81
+msgid "RRULE Help (GitHub)"
+msgstr "RRULE Help (GitHub)"
+
+#: app/templates/reminders/view_reminder.html:8
+msgid "Reminder Details"
+msgstr "ดูรายละเอียด"
+
+#: app/templates/reminders/view_reminder.html:30
+msgid "End At"
+msgstr "ส่งทดสอบ"
+
+#: app/templates/reminders/view_reminder.html:42
+msgid "Last Sent"
+msgstr "เช็คอินล่าสุด"
+
+#: app/templates/reminders/view_reminder.html:91
+msgid "Email Template"
+msgstr "ตัวตรวจสอบอีเมล"
+
+#: app/templates/reminders/view_reminder.html:103
+msgid "No email linked."
+msgstr "อีเมลถูกเปิดใช้งาน"
+
+#: app/templates/reminders/view_reminder.html:111
+msgid "Back to Reminders"
+msgstr "กลับไปที่อีเมล"
+
+#: app/templates/user_smtp/create_smtp.html:10
+msgid "Create SMTP Destination"
+msgstr "สร้างปลายทาง SMTP"
+
+#: app/templates/user_smtp/create_smtp.html:69
+#: app/templates/user_smtp/edit_smtp.html:84
+msgid "Hold to reveal"
+msgstr "กดค้างเพื่อแสดง"
+
+#: app/templates/user_smtp/create_smtp.html:92
+#: app/templates/user_smtp/edit_smtp.html:107
+msgid "Use TLS"
+msgstr "ใช้ TLS"
+
+#: app/templates/user_smtp/edit_smtp.html:10
+msgid "Edit SMTP Destination"
+msgstr "สร้างปลายทาง SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:9
+msgid "SMTP Destinations"
+msgstr "ปลายทาง SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:44
+msgid "Add SMTP"
+msgstr "เพิ่ม SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:53
+msgid "Host"
+msgstr "โฮสต์"
+
+#: app/templates/user_smtp/list_smtp.html:54
+msgid "Port"
+msgstr "พอร์ต"
+
+#: app/templates/user_smtp/list_smtp.html:56
+msgid "TLS"
+msgstr "TLS"
+
+#: app/templates/user_smtp/list_smtp.html:58
+msgid "Created"
+msgstr "สร้างเมื่อ"
+
+#: app/templates/user_smtp/list_smtp.html:90
+#: app/templates/user_smtp/list_smtp.html:158
+msgid "Send Test"
+msgstr "ส่งทดสอบ"
+
+#: app/templates/user_smtp/list_smtp.html:125
+msgid "Port:"
+msgstr "พอร์ต:"
+
+#: app/templates/user_smtp/list_smtp.html:131
+msgid "Password:"
+msgstr "รหัสผ่าน:"
+
+#: app/templates/user_smtp/list_smtp.html:184
+msgid "Hide SMTP Setup Help"
+msgstr "ซ่อนความช่วยเหลือในการตั้งค่า SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:184
+msgid "Show SMTP Setup Help"
+msgstr "แสดงความช่วยเหลือในการตั้งค่า SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:190
+msgid ""
+"Need help finding your SMTP server settings? See here for some links to "
+"common providers:"
+msgstr ""
+"ต้องการความช่วยเหลือในการค้นหาการตั้งค่าเซิร์ฟเวอร์ SMTP ของคุณหรือไม่? "
+"ดูที่นี่สำหรับลิงก์ไปยังผู้ให้บริการทั่วไป:"
+
+#: app/templates/user_smtp/list_smtp.html:194
+msgid "SMTP Server Settings Help (GitHub)"
+msgstr "ความช่วยเหลือการตั้งค่าเซิร์ฟเวอร์ SMTP (GitHub)"
+
+#: app/templates/user_smtp/list_smtp.html:198
+msgid ""
+"Find official documentation links for Gmail, Outlook, Yahoo, AOL, and "
+"others."
+msgstr ""
+"ค้นหาลิงก์เอกสารอย่างเป็นทางการสำหรับ Gmail, Outlook, Yahoo, AOL และอื่นๆ"
+
+#: app/templates/user_smtp/list_smtp.html:199
+msgid ""
+"If your provider isn’t listed, search their support site or a search engine "
+"for 'SMTP settings'."
+msgstr ""
+"หากผู้ให้บริการของคุณไม่ได้ระบุไว้ "
+"ค้นหาในไซต์การสนับสนุนหรือเครื่องมือค้นหาสำหรับ 'การตั้งค่า SMTP'"
+
+#: app/templates/user_smtp/list_smtp.html:200
+msgid ""
+"Some providers (like Gmail, Yahoo) require 'App Passwords' or special "
+"setup—see their docs!"
+msgstr ""
+"ผู้ให้บริการบางราย (เช่น Gmail, Yahoo) ต้องการใช้ 'รหัสผ่านแอพ' "
+"หรือการตั้งค่าพิเศษ—ดูเอกสารของพวกเขา!"
+
+#: app/templates/webhook/create_webhook.html:10
+msgid "Create Webhook"
+msgstr "สร้าง Webhook"
+
+#: app/templates/webhook/edit_webhook.html:10
+msgid "Edit Webhook"
+msgstr "แก้ไข Webhook"
+
+#: app/templates/webhook/list_webhooks.html:9
+#: app/templates/webhook/webhook_config.html:3
+msgid "Webhooks Destinations"
+msgstr "ปลายทาง Webhooks"
+
+#: app/templates/webhook/list_webhooks.html:59
+msgid "Endpoint"
+msgstr "ปลายทาง"
+
+#: app/templates/webhook/list_webhooks.html:60
+msgid "Description"
+msgstr "คำอธิบาย"
+
+#: app/templates/webhook/list_webhooks.html:82
+#: app/templates/webhook/list_webhooks.html:141
+msgid "Cannot edit while assigned to notifications"
+msgstr "ไม่สามารถแก้ไขในขณะที่มีการกำหนดไปยังการแจ้งเตือน"
+
+#: app/templates/webhook/list_webhooks.html:106
+#: app/templates/webhook/list_webhooks.html:165
+msgid "Cannot delete while assigned to notifications"
+msgstr "ไม่สามารถลบในขณะที่มีการกำหนดไปยังการแจ้งเตือน"
+
+#: app/templates/webhook/list_webhooks.html:122
+msgid "Endpoint:"
+msgstr "ปลายทาง:"
+
+#: app/templates/webhook/list_webhooks.html:125
+msgid "Description:"
+msgstr "คำอธิบาย:"
+
+#: app/views/account.py:74
+msgid "Current password is required to change password."
+msgstr "ต้องใส่รหัสผ่านปัจจุบันเพื่อเปลี่ยนรหัสผ่าน"
+
+#: app/views/account.py:78
+msgid "Current password is incorrect."
+msgstr "รหัสผ่านปัจจุบันไม่ถูกต้อง"
+
+#: app/views/account.py:94
+msgid "Account updated successfully."
+msgstr "บัญชีถูกอัปเดตเรียบร้อยแล้ว"
+
+#: app/views/account.py:100
+msgid "An error occurred while updating your account."
+msgstr "เกิดข้อผิดพลาดขณะอัปเดตบัญชีของคุณ"
+
+#: app/views/account.py:137
+msgid "You cannot delete your account because you are the last admin."
+msgstr "คุณไม่สามารถลบบัญชีของคุณได้เนื่องจากคุณเป็นผู้ดูแลระบบคนสุดท้าย"
+
+#: app/views/account.py:146
+msgid "Your account has been permanently deleted."
+msgstr "บัญชีของคุณถูกลบอย่างถาวรแล้ว"
+
+#: app/views/account.py:152
+msgid "An error occurred while trying to delete your account."
+msgstr "เกิดข้อผิดพลาดขณะอัปเดตบัญชีของคุณ"
+
+#: app/views/account.py:171
+msgid "Your account has been deleted"
+msgstr "บัญชีของคุณถูกลบอย่างถาวรแล้ว"
+
+#: app/views/account.py:173
+#, python-brace-format
+msgid ""
+"Hello {username},\n"
+"\n"
+"Your account on {site_name} has been deleted.Remember to delete your files from the uploads folder.If this was not you, please contact support immediately.\n"
+"\n"
+"{site_url}"
+msgstr ""
+"สวัสดี {username},\n"
+"\n"
+"บัญชีของคุณบน {site_name} ได้ถูกลบแล้ว อย่าลืมลบไฟล์ของคุณจากโฟลเดอร์อัพโหลด หากไม่ใช่คุณ โปรดติดต่อฝ่ายสนับสนุนทันที\n"
+"\n"
+"{site_url}"
+
+#: app/views/admin.py:59
+msgid "Invalid role."
+msgstr "บทบาทไม่ถูกต้อง"
+
+#: app/views/apprise.py:51
+msgid "🧪 Test notification sent successfully!"
+msgstr "🧪 ส่งการแจ้งเตือนการทดสอบเรียบร้อยแล้ว!"
+
+#: app/views/apprise.py:56
+msgid "🧪 Failed to send test notification: "
+msgstr "🧪 ล้มเหลวในการส่งการแจ้งเตือนการทดสอบ:"
+
+#: app/views/apprise.py:62
+msgid "🧪 Error sending test notification."
+msgstr "🧪 ข้อผิดพลาดในการส่งการแจ้งเตือนการทดสอบ"
+
+#: app/views/apprise.py:101
+msgid "Apprise destination created successfully."
+msgstr "สร้างปลายทาง Apprise เรียบร้อยแล้ว"
+
+#: app/views/apprise.py:168
+msgid "Apprise destination updated successfully."
+msgstr "อัปเดตปลายทาง Apprise เรียบร้อยแล้ว"
+
+#: app/views/apprise.py:199
+msgid "Apprise destination deleted."
+msgstr "ลบปลายทาง Apprise แล้ว"
+
+#: app/views/auth.py:95
+msgid "Admin account created successfully."
+msgstr "สร้างบัญชีผู้ดูแลระบบเรียบร้อยแล้ว"
+
+#: app/views/auth.py:108
+msgid "An error occurred while creating the admin account."
+msgstr "เกิดข้อผิดพลาดขณะสร้างบัญชีผู้ดูแลระบบ"
+
+#: app/views/auth.py:141
+msgid ""
+"Your account is not activated. Please check your email for the activation "
+"link."
+msgstr ""
+"บัญชีของคุณยังไม่ได้รับการยืนยัน โปรดตรวจสอบอีเมลเพื่อดูลิงก์การยืนยัน"
+
+#: app/views/auth.py:157
+msgid "Multi-factor authentication required. Please enter your code."
+msgstr "ต้องมีการยืนยันหลายขั้นตอน กรุณาใส่รหัสของคุณ"
+
+#: app/views/auth.py:162 app/views/mfa.py:195
+msgid "Logged in successfully."
+msgstr "เข้าสู่ระบบสำเร็จ"
+
+#: app/views/auth.py:179
+msgid "Invalid username or password."
+msgstr "ชื่อผู้ใช้หรือรหัสผ่านไม่ถูกต้อง"
+
+#: app/views/auth.py:203
+msgid "You have been logged out."
+msgstr "คุณได้ออกจากระบบแล้ว"
+
+#: app/views/auth.py:239 app/views/email.py:263
+msgid "Access denied."
+msgstr "การเข้าถูกปฏิเสธ"
+
+#: app/views/auth.py:273
+msgid "If a user with that email exists, we've sent the username to them."
+msgstr "ถ้ามีผู้ใช้ที่ใช้อีเมลนั้นอยู่ เราได้ส่งชื่อผู้ใช้ไปให้แล้ว"
+
+#: app/views/auth.py:314
+msgid "A password reset link has been sent to your email."
+msgstr "ส่งลิงก์รีเซ็ตรหัสผ่านไปยังอีเมลของคุณแล้ว"
+
+#: app/views/auth.py:319
+msgid "No account found matching that username and email."
+msgstr "ไม่พบบัญชีที่ตรงกับชื่อผู้ใช้และอีเมลนั้น"
+
+#: app/views/auth.py:389
+msgid "The reset link is invalid or has expired."
+msgstr "ลิงก์รีเซ็ตไม่ถูกต้องหรือหมดอายุแล้ว"
+
+#: app/views/auth.py:401
+msgid "Username and email do not match."
+msgstr "ชื่อผู้ใช้และอีเมลไม่ตรงกัน"
+
+#: app/views/auth.py:421
+msgid "Your password has been reset. Please log in."
+msgstr "รหัสผ่านของคุณถูกรีเซ็ตแล้ว กรุณาเข้าสู่ระบบ"
+
+#: app/views/auth.py:458
+msgid "Invalid registration PIN."
+msgstr "รหัส PIN สำหรับลงทะเบียนไม่ถูกต้อง"
+
+#: app/views/auth.py:467
+msgid "Username or email already exists."
+msgstr "ชื่อผู้ใช้หรืออีเมลมีอยู่แล้ว"
+
+#: app/views/auth.py:492
+msgid "Activate Your Grylli Account"
+msgstr "เปิดใช้งานบัญชี Grylli ของคุณ"
+
+#: app/views/auth.py:493
+#, python-brace-format
+msgid ""
+"Hello {username},\n"
+"\n"
+"Please activate your account by clicking..."
+msgstr ""
+"สวัสดี {username},\n"
+"\n"
+"กรุณาเปิดใช้งานบัญชีของคุณโดยคลิก..."
+
+#: app/views/auth.py:498
+msgid "Account created! Please check your email to activate your account."
+msgstr "สร้างบัญชีแล้ว! กรุณาตรวจสอบอีเมลของคุณเพื่อเปิดใช้งานบัญชี"
+
+#: app/views/auth.py:521
+msgid "Activation link is invalid or expired."
+msgstr "ลิงก์เปิดใช้งานไม่ถูกต้องหรือหมดอายุ"
+
+#: app/views/auth.py:528 app/views/users.py:76 app/views/users.py:140
+msgid "User not found."
+msgstr "ไม่พบผู้ใช้"
+
+#: app/views/auth.py:532
+msgid "Account already activated. Please log in."
+msgstr "บัญชีถูกเปิดใช้งานแล้ว กรุณาเข้าสู่ระบบ"
+
+#: app/views/auth.py:540
+msgid "Your account has been activated! You can now log in."
+msgstr "บัญชีของคุณถูกเปิดใช้งานแล้ว! คุณสามารถเข้าสู่ระบบได้แล้ว"
+
+#: app/views/backups.py:72
+#, python-format
+msgid "Backup created: %(filename)s"
+msgstr "สร้างการสำรองข้อมูล: %(filename)s"
+
+#: app/views/backups.py:77
+msgid "Failed to create backup."
+msgstr "ไม่สามารถสร้างการสำรองข้อมูลได้"
+
+#: app/views/backups.py:106
+#, python-format
+msgid "Backup deleted: %(filename)s"
+msgstr "ลบการสำรองข้อมูล: %(filename)s"
+
+#: app/views/backups.py:109
+msgid "Backup file not found."
+msgstr "ไม่พบไฟล์สำรองข้อมูล"
+
+#: app/views/backups.py:112
+msgid "Failed to delete backup."
+msgstr "ไม่สามารถลบการสำรองข้อมูลได้"
+
+#: app/views/checkin.py:41
+msgid "Invalid check-in link."
+msgstr "ลิงก์เช็คอินไม่ถูกต้อง"
+
+#: app/views/checkin.py:48
+msgid "You are not authorized to check in for this item."
+msgstr "คุณไม่ได้รับอนุญาตให้เช็คอินสำหรับรายการนี้"
+
+#: app/views/checkin.py:62
+msgid "Unsupported check-in type."
+msgstr "ประเภทเช็คอินที่ไม่รองรับ"
+
+#: app/views/checkin.py:137
+msgid "⚠️ Cannot enable reminder: Start date/time is in the past."
+msgstr "⚠️ ไม่สามารถเปิดใช้งานการเตือนความจำ: วันที่/เวลาเริ่มต้นอยู่ในอดีต"
+
+#: app/views/checkin.py:158
+msgid "✅ Enabled and timer started."
+msgstr "✅ เปิดใช้งานและเริ่มจับเวลาแล้ว"
+
+#: app/views/checkin.py:168
+msgid "⛔ Disabled."
+msgstr "⛔ ปิดใช้งาน"
+
+#: app/views/checkin.py:170
+msgid "⚠️ Cannot toggle — missing schedule or destination."
+msgstr "⚠️ ไม่สามารถสลับได้ — ขาดกำหนดการหรือปลายทาง"
+
+#: app/views/email.py:88
+msgid "Message saved."
+msgstr "บันทึกข้อความแล้ว"
+
+#: app/views/email.py:118 app/views/messages.py:167
+msgid "Message deleted."
+msgstr "ลบข้อความแล้ว"
+
+#: app/views/email.py:152
+msgid "Attached files updated."
+msgstr "อัปเดตไฟล์ที่แนบแล้ว"
+
+#: app/views/email.py:200
+msgid "SMTP configuration not assigned or is disabled."
+msgstr "การตั้งค่า SMTP ไม่ได้มอบหมายหรือถูกปิดใช้งาน"
+
+#: app/views/email.py:234 app/views/smtp_settings_admin.py:82
+msgid "Test email sent successfully."
+msgstr "ส่งอีเมลทดสอบสำเร็จ"
+
+#: app/views/email.py:282 app/views/messages.py:305
+msgid "Schedule updated successfully."
+msgstr "อัปเดตกำหนดการสำเร็จ"
+
+#: app/views/email.py:310
+msgid "SMTP configuration assigned."
+msgstr "มอบหมายการตั้งค่า SMTP แล้ว"
+
+#: app/views/email.py:319
+msgid "SMTP configuration removed."
+msgstr "มอบหมายการตั้งค่า SMTP แล้ว"
+
+#: app/views/messages.py:97
+msgid "Message created successfully."
+msgstr "สร้างข้อความสำเร็จ"
+
+#: app/views/messages.py:133
+msgid "Message updated successfully."
+msgstr "อัปเดตข้อความสำเร็จ"
+
+#: app/views/messages.py:223 app/views/reminders.py:240
+msgid "Destinations updated."
+msgstr "อัปเดตปลายทางแล้ว"
+
+#: app/views/messages.py:441
+msgid "No destinations assigned to this message."
+msgstr "การตั้งค่า SMTP ไม่ได้มอบหมายหรือถูกปิดใช้งาน"
+
+#: app/views/messages.py:453
+msgid "Test message sent successfully."
+msgstr "ส่งอีเมลทดสอบสำเร็จ"
+
+#: app/views/messages.py:455
+msgid "Test message failed: "
+msgstr "บันทึกข้อความแล้ว"
+
+#: app/views/mfa.py:68
+msgid "You must enter a code from your authenticator."
+msgstr "คุณต้องใส่รหัสจากตัวตรวจสอบ"
+
+#: app/views/mfa.py:82 app/views/mfa.py:259
+msgid "Invalid code. Please try again."
+msgstr "รหัสไม่ถูกต้อง กรุณาลองอีกครั้ง"
+
+#: app/views/mfa.py:91
+msgid "Two-factor authentication disabled."
+msgstr "การแจ้งเตือนถูกปิดใช้งาน"
+
+#: app/views/mfa.py:132
+msgid "Recovery codes are only shown immediately after enabling MFA."
+msgstr "แสดงรหัสการกู้คืนเฉพาะทันทีหลังจากเปิดใช้งาน MFA"
+
+#: app/views/mfa.py:142
+msgid "Could not load recovery codes."
+msgstr "ไม่สามารถโหลดรหัสการกู้คืนได้"
+
+#: app/views/mfa.py:168
+msgid "No MFA challenge in progress."
+msgstr "ไม่มีการท้า MFA กำลังดำเนินการ"
+
+#: app/views/mfa.py:176
+msgid "User not found for MFA challenge."
+msgstr "ไม่พบผู้ใช้"
+
+#: app/views/mfa.py:225
+msgid ""
+"You have used your last recovery code. MFA has been disabled. Please remove "
+"Grylli from your authenticator app, and re-enable MFA to protect your "
+"account."
+msgstr ""
+"คุณใช้รหัสการกู้คืนสุดท้ายแล้ว MFA ถูกปิดการใช้งาน กรุณาลบ Grylli "
+"จากแอปตัวตรวจสอบของคุณและเปิดใช้งาน MFA อีกครั้งเพื่อปกป้องบัญชีของคุณ"
+
+#: app/views/mfa.py:248
+#, python-brace-format
+msgid "Recovery code accepted. You have {remaining} recovery codes left."
+msgstr "ยอมรับรหัสการกู้คืน คุณมีรหัสการกู้คืนเหลืออยู่ {remaining} รหัส"
+
+#: app/views/reminders.py:106
+msgid "Reminder created successfully."
+msgstr "สร้างข้อความสำเร็จ"
+
+#: app/views/reminders.py:143
+msgid "Reminder updated successfully."
+msgstr "อัปเดตผู้ใช้สำเร็จ"
+
+#: app/views/reminders.py:174
+msgid "Reminder deleted."
+msgstr "ลบผู้ใช้แล้ว"
+
+#: app/views/reminders.py:287
+msgid "No destinations assigned to this reminder."
+msgstr "การตั้งค่า SMTP ไม่ได้มอบหมายหรือถูกปิดใช้งาน"
+
+#: app/views/reminders.py:311
+msgid "No email message linked to this reminder."
+msgstr "ไม่มีข้อความอีเมลเชื่อมโยงกับการเตือนความจำนี้"
+
+#: app/views/reminders.py:314
+msgid "SMTP configuration is disabled."
+msgstr "การตั้งค่า SMTP ไม่ได้มอบหมายหรือถูกปิดใช้งาน"
+
+#: app/views/reminders.py:353
+msgid "Test reminder sent successfully."
+msgstr "ส่งอีเมลทดสอบสำเร็จ"
+
+#: app/views/reminders.py:356
+msgid "Test reminder failed: "
+msgstr "บันทึกข้อความแล้ว"
+
+#: app/views/reminders.py:430
+msgid "Reminder schedule updated successfully."
+msgstr "อัปเดตกำหนดการสำเร็จ"
+
+#: app/views/reminders.py:434
+msgid "Please correct the errors below."
+msgstr "โปรดแก้ไขข้อผิดพลาดด้านล่าง"
+
+#: app/views/reminders.py:481 app/views/reminders.py:482
+msgid "None"
+msgstr "ไม่"
+
+#: app/views/reminders.py:508
+msgid "You must select both an SMTP config and an email message, or neither."
+msgstr "คุณต้องเลือกทั้งการตั้งค่า SMTP และข้อความอีเมลหรือไม่เลือกเลย"
+
+#: app/views/reminders.py:528
+msgid "Email reminder settings updated."
+msgstr "อัปเดตปลายทางแล้ว"
+
+#: app/views/smtp.py:83 app/views/user_smtp.py:80
+msgid "SMTP destination created successfully."
+msgstr "สร้างปลายทาง SMTP สำเร็จ"
+
+#: app/views/smtp.py:129 app/views/user_smtp.py:135
+msgid "SMTP destination updated."
+msgstr "อัปเดตปลายทาง SMTP แล้ว"
+
+#: app/views/smtp.py:160 app/views/user_smtp.py:166
+msgid "SMTP destination deleted."
+msgstr "ลบปลายทาง SMTP แล้ว"
+
+#: app/views/smtp.py:191 app/views/user_smtp.py:199
+msgid "Test email sent successfully to your account email."
+msgstr "ส่งอีเมลทดสอบไปยังอีเมลบัญชีของคุณสำเร็จ"
+
+#: app/views/smtp.py:196 app/views/user_smtp.py:204
+msgid "Failed to send test email. Check SMTP settings."
+msgstr "ไม่สามารถส่งอีเมลทดสอบได้ ตรวจสอบการตั้งค่า SMTP"
+
+#: app/views/smtp_settings_admin.py:76
+msgid "Test Email from Grylli"
+msgstr "อีเมลทดสอบจาก Grylli"
+
+#: app/views/smtp_settings_admin.py:77
+msgid "This is a test email from the Grylli SMTP settings page."
+msgstr "นี่คืออีเมลทดสอบจากหน้า SMTP Settings ของ Grylli"
+
+#: app/views/smtp_settings_admin.py:84
+msgid "Failed to send test email: "
+msgstr "ไม่สามารถส่งอีเมลทดสอบ:"
+
+#: app/views/users.py:99
+msgid "User updated successfully."
+msgstr "อัปเดตผู้ใช้สำเร็จ"
+
+#: app/views/users.py:106 app/views/users.py:327
+msgid "An error occurred while updating the user."
+msgstr "เกิดข้อผิดพลาดระหว่างการอัปเดตผู้ใช้"
+
+#: app/views/users.py:195
+msgid "User deleted."
+msgstr "ลบผู้ใช้แล้ว"
+
+#: app/views/users.py:202
+msgid "An error occurred while deleting the user."
+msgstr "เกิดข้อผิดพลาดระหว่างการลบผู้ใช้"
+
+#: app/views/users.py:237
+msgid "Password is required when creating a new user."
+msgstr "ต้องใส่รหัสผ่านเมื่อสร้างผู้ใช้ใหม่"
+
+#: app/views/users.py:244
+msgid "Username already exists."
+msgstr "ชื่อผู้ใช้มีอยู่แล้ว"
+
+#: app/views/users.py:251
+msgid "Email already exists."
+msgstr "อีเมลมีอยู่แล้ว"
+
+#: app/views/users.py:268
+#, python-format
+msgid "User '%(username)s' created successfully."
+msgstr "สร้างผู้ใช้ '%(username)s' สำเร็จแล้ว"
+
+#: app/views/users.py:278
+msgid "Failed to create user."
+msgstr "สร้างผู้ใช้ไม่สำเร็จ"
+
+#: app/views/users.py:305
+msgid "You cannot change your own enabled status."
+msgstr "คุณไม่สามารถเปลี่ยนสถานะเปิดใช้งานของตัวเองได้"
+
+#: app/views/users.py:318
+#, python-format
+msgid "User '%(username)s' has been %(status)s."
+msgstr "ผู้ใช้ '%(username)s' ได้รับสถานะ %(status)s แล้ว"
+
+#: app/views/users.py:356
+msgid "You cannot reset your own MFA."
+msgstr "⚪ = คุณไม่สามารถปิดใช้งานบัญชีของคุณเอง"
+
+#: app/views/users.py:368
+#, python-format
+msgid "MFA disabled for user '%(username)s'."
+msgstr "ปิดการใช้งาน MFA สำหรับผู้ใช้ '%(username)s'"
+
+#: app/views/users.py:374
+msgid "An error occurred while resetting MFA."
+msgstr "เกิดข้อผิดพลาดระหว่างการลบผู้ใช้"
+
+#: app/views/webhook.py:54
+msgid "Webhook created successfully."
+msgstr "สร้าง webhook สำเร็จแล้ว"
+
+#: app/views/webhook.py:113
+msgid "Webhook updated successfully."
+msgstr "อัปเดต webhook สำเร็จแล้ว"
+
+#: app/views/webhook.py:142
+msgid "Webhook deleted."
+msgstr "ลบ webhook แล้ว"
+
+#: app/views/webhook.py:175
+msgid "🧪 Webhook test sent successfully!"
+msgstr "🧪 ทดสอบ webhook ส่งสำเร็จ!"
+
+#: app/views/webhook.py:177
+msgid "🧪 Webhook test failed: "
+msgstr "🧪 ทดสอบ webhook ล้มเหลว:"
+
+#: app/views/webhook.py:180
+msgid "🧪 Error sending webhook test."
+msgstr "🧪 เกิดข้อผิดพลาดในการส่งทดสอบ webhook"
+
+#~ msgid ""
+#~ "Grylli is a secure message delivery platform designed to activate after "
+#~ "prolonged user inactivity."
+#~ msgstr ""
+#~ "Grylli "
+#~ "เป็นแพลตฟอร์มส่งข้อความที่ปลอดภัยที่ออกแบบมาเพื่อเปิดใช้งานหลังจากผู้ใช้ไม่ได้ใช้งานเป็นเวลานาน"
+
+#~ msgid ""
+#~ "It is a modern reimplementation of Gone Man’s Switch with a refined tech "
+#~ "stack, better maintainability, and an improved user experience."
+#~ msgstr ""
+#~ "มันเป็นการนำมาใช้งานใหม่ของ Gone Man’s Switch ด้วยเทคโนโลยีสมัยใหม่, "
+#~ "คำบำรุงรักษาที่ดีขึ้น, และประสบการณ์การใช้งานที่ดีขึ้น"
+
+#~ msgid "Body:"
+#~ msgstr "เนื้อหา:"
+
+#~ msgid "Subject:"
+#~ msgstr "หัวข้อ:"
+
+#~ msgid "Content:"
+#~ msgstr "เนื้อหา:"
+
+#~ msgid "Edit SMTP"
+#~ msgstr "แก้ไข SMTP"
+
+#~ msgid ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+#~ msgstr ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+
+#~ msgid "Admin Notes"
+#~ msgstr "บันทึกของแอดมิน"
+
+#~ msgid "Register"
+#~ msgstr "ลงทะเบียน"
+
+#~ msgid "View"
+#~ msgstr "ดู"
+
+#~ msgid "Schedule"
+#~ msgstr "ตารางเวลา"
+
+#~ msgid "Message is enabled"
+#~ msgstr "ข้อความถูกเปิดใช้งาน"
+
+#~ msgid "Message is disabled"
+#~ msgstr "ข้อความถูกปิดใช้งาน"
+
+#~ msgid "No SMTP configuration selected."
+#~ msgstr "ไม่ได้เลือกการตั้งค่า SMTP"
+
+#~ msgid "Enable the message to start monitoring."
+#~ msgstr "เปิดใช้งานข้อความเพื่อเริ่มการตรวจสอบ"
+
+#~ msgid "✅ SMTP settings saved."
+#~ msgstr "การตั้งค่า SMTP"
+
+#~ msgid "If you don’t check in, Grylli delivers the message for you."
+#~ msgstr "หากคุณไม่เช็คอิน Grylli จะส่งข้อความให้คุณ"
+
+#~ msgid "Fill in already discovered missing translations:"
+#~ msgstr "เติมคำแปลที่ค้นพบแล้วว่าขาดหาย:"
+
+#~ msgid "Add missing phrases in that JSON file."
+#~ msgstr "เพิ่มวลีที่ขาดหายไปในไฟล์ JSON นั้น"
+
+#~ msgid "From:"
+#~ msgstr "จาก:"
+
+#~ msgid ""
+#~ "Attach the updated JSON file to a new GitHub issue when submitting your "
+#~ "changes."
+#~ msgstr ""
+#~ "แนบไฟล์ JSON ที่อัปเดตให้กับ GitHub issue ใหม่เมื่อคุณส่งการเปลี่ยนแปลง"
+
+#~ msgid "admin"
+#~ msgstr "ผู้ดูแลระบบ"
+
+#~ msgid "user"
+#~ msgstr "ผู้ใช้"
+
+#~ msgid "Logging in"
+#~ msgstr "เข้าสู่ระบบ"
+
+#~ msgid "SMTP error: "
+#~ msgstr "ข้อผิดพลาด SMTP:"
+
+#~ msgid "enabled"
+#~ msgstr "เปิดใช้งาน"
+
+#~ msgid "disabled"
+#~ msgstr "ปิดใช้งาน"

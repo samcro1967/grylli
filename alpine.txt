@@ -1,0 +1,120 @@
+app/templates/partials/shared_nav.html:5:<div x-data="{ openNotify: true }" class="space-y-1">
+app/templates/partials/shared_nav.html:6:    <button @click="openNotify = !openNotify"
+app/templates/partials/shared_nav.html:17:            <span x-show="!sidebarCollapsed" class="truncate">{{ _("Notifications") }}</span>
+app/templates/partials/shared_nav.html:19:        <svg x-show="!sidebarCollapsed"
+app/templates/partials/shared_nav.html:29:    <div x-show="openNotify" x-collapse>
+app/templates/partials/shared_nav.html:34:            <span x-show="!sidebarCollapsed" class="truncate">{{ _("Overview") }}</span>
+app/templates/partials/shared_nav.html:39:            <span x-show="!sidebarCollapsed" class="truncate">{{ _("Apprise") }}</span>
+app/templates/partials/shared_nav.html:44:            <span x-show="!sidebarCollapsed" class="truncate">{{ _("Webhooks") }}</span>
+app/templates/partials/shared_nav.html:49:<div x-data="{ openEmails: true }" class="space-y-1">
+app/templates/partials/shared_nav.html:50:    <button @click="openEmails = !openEmails"
+app/templates/partials/shared_nav.html:61:            <span x-show="!sidebarCollapsed" class="truncate">{{ _("Emails") }}</span>
+app/templates/partials/shared_nav.html:63:        <svg x-show="!sidebarCollapsed"
+app/templates/partials/shared_nav.html:73:    <div x-show="openEmails" x-collapse>
+app/templates/partials/shared_nav.html:78:            <span x-show="!sidebarCollapsed" class="truncate">{{ _("Overview") }}</span>
+app/templates/partials/shared_nav.html:83:            <span x-show="!sidebarCollapsed" class="truncate">{{ _("SMTP") }}</span>
+app/templates/partials/shared_nav.html:88:<div x-data="{ openReminders: true }" class="space-y-1">
+app/templates/partials/shared_nav.html:89:    <button @click="openReminders = !openReminders"
+app/templates/partials/shared_nav.html:100:            <span x-show="!sidebarCollapsed" class="truncate">{{ _("Reminders") }}</span>
+app/templates/partials/shared_nav.html:102:        <svg x-show="!sidebarCollapsed"
+app/templates/partials/shared_nav.html:112:    <div x-show="openReminders" x-collapse>
+app/templates/partials/shared_nav.html:117:            <span x-show="!sidebarCollapsed" class="truncate">{{ _("Overview") }}</span>
+app/templates/partials/head.html:25:            src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+app/templates/partials/footer.html:5:    <button @click=" const html = document.documentElement; const isDark = html.classList.toggle('dark'); localStorage.setItem('theme', isDark ? 'dark' : 'light'); "
+app/templates/partials/footer.html:9:        <svg x-show="!document.documentElement.classList.contains('dark')"
+app/templates/partials/footer.html:19:        <svg x-show="document.documentElement.classList.contains('dark')"
+app/templates/partials/footer.html:29:        <span x-show="!sidebarCollapsed"
+app/templates/partials/footer.html:31:              x-show="!sidebarCollapsed"
+app/templates/partials/sidebar.html:2:<div x-show="sidebarOpen"
+app/templates/partials/sidebar.html:3:     @click="sidebarOpen = false"
+app/templates/partials/sidebar.html:5:     x-transition.opacity
+app/templates/partials/sidebar.html:6:     x-cloak></div>
+app/templates/partials/sidebar.html:12:        <span x-show="!sidebarCollapsed"
+app/templates/partials/sidebar.html:14:        <button @click="sidebarCollapsed = !sidebarCollapsed"
+app/templates/partials/sidebar.html:27:            <!-- Your links (no @click needed) -->
+app/templates/partials/sidebar.html:32:                <span x-show="!sidebarCollapsed" class="truncate">{{ _("Home") }}</span>
+app/templates/partials/sidebar.html:40:<aside x-show="sidebarOpen"
+app/templates/partials/sidebar.html:41:       x-cloak
+app/templates/partials/sidebar.html:44:       @keydown.window.escape="sidebarOpen = false">
+app/templates/partials/sidebar.html:48:        <button @click="sidebarOpen = false"
+app/templates/partials/sidebar.html:61:            <!-- Your links (add @click="sidebarOpen = false" to close on tap) -->
+app/templates/partials/sidebar.html:63:               @click="sidebarOpen = false"
+app/templates/partials/admin_nav.html:7:    <div x-data="{ openAdmin: true }" class="space-y-1">
+app/templates/partials/admin_nav.html:8:        <button @click="openAdmin = !openAdmin"
+app/templates/partials/admin_nav.html:18:                <span x-show="!sidebarCollapsed"
+app/templates/partials/admin_nav.html:20:                      x-show="!sidebarCollapsed"
+app/templates/partials/admin_nav.html:23:            <svg x-show="!sidebarCollapsed"
+app/templates/partials/admin_nav.html:33:        <div x-show="openAdmin" x-collapse>
+app/templates/partials/admin_nav.html:37:                <span x-show="!sidebarCollapsed" class="truncate">{{ _("Overview") }}</span>
+app/templates/partials/admin_nav.html:42:                <span x-show="!sidebarCollapsed" class="truncate">{{ _("Backups") }}</span>
+app/templates/partials/admin_nav.html:47:                <span x-show="!sidebarCollapsed" class="truncate">{{ _("Users") }}</span>
+app/templates/partials/admin_nav.html:52:                <span x-show="!sidebarCollapsed" class="truncate">{{ _("System Settings") }}</span>
+app/templates/partials/admin_nav.html:56:                <span x-show="!sidebarCollapsed" class="truncate">{{ _("SMTP Settings") }}</span>
+app/templates/partials/header.html:18:        <button @click="sidebarOpen = true"
+app/templates/partials/header.html:34:        <div x-data="{ open: false }" class="relative">
+app/templates/partials/header.html:36:            <button @click="open = !open"
+app/templates/partials/header.html:47:            <div x-show="open"
+app/templates/partials/header.html:48:                 @click.outside="open = false"
+app/templates/partials/header.html:50:                 x-transition>
+app/templates/layout.html:15:    <body x-data="{ sidebarOpen: false, sidebarCollapsed: false }"
+app/templates/admin/partials/user_card.html:22:                    <button @click="$dispatch('open-role-modal', { userId: {{ user.id }}, username: '{{ user.username }}', role: '{{ user.role }}' })"
+app/templates/admin/partials/user_instructions_and_modal.html:7:<button @click="showHelp = !showHelp"
+app/templates/admin/partials/user_instructions_and_modal.html:9:    <span x-text="showHelp ? '{{ _("Hide Instructions") }}' : '{{ _("How to manage users") }}'"></span>
+app/templates/admin/partials/user_instructions_and_modal.html:11:<div x-show="showHelp"
+app/templates/admin/partials/user_instructions_and_modal.html:12:     x-transition
+app/templates/admin/partials/user_instructions_and_modal.html:38:<div x-show="showRoleModal"
+app/templates/admin/partials/user_instructions_and_modal.html:40:     x-cloak>
+app/templates/admin/partials/user_instructions_and_modal.html:43:            {{ _("Assign Role for") }} <span x-text="selectedUsername" class="font-mono text-blue-400"></span>
+app/templates/admin/partials/user_instructions_and_modal.html:51:                    <input type="radio" name="role" value="user" x-model="selectedRole">
+app/templates/admin/partials/user_instructions_and_modal.html:55:                    <input type="radio" name="role" value="admin" x-model="selectedRole">
+app/templates/admin/partials/user_instructions_and_modal.html:61:                        @click="showRoleModal = false"
+app/templates/admin/partials/user_table.html:29:                            <button @click="$dispatch('open-role-modal', { userId: {{ user.id }}, username: '{{ user.username }}', role: '{{ user.role }}' })"
+app/templates/admin/list_users.html:3:    <div x-data="{ showHelp: false, showRoleModal: false, selectedRole: '', selectedUserId: null, selectedUsername: '', openRoleModal(userId, username, role) { this.selectedUserId = userId; this.selectedUsername = username; this.selectedRole = role; this.showRoleModal = true; } }"
+app/templates/admin/list_users.html:4:         @open-role-modal.window="openRoleModal($event.detail.userId, $event.detail.username, $event.detail.role)"
+app/templates/admin/list_users.html:5:         x-cloak>
+app/templates/email/list_emails.html:252:    <div x-data="{ showHelp: false }" class="mt-8">
+app/templates/email/list_emails.html:253:        <button @click="showHelp = !showHelp"
+app/templates/email/list_emails.html:255:            <span x-data="{ hide: '{{ _("Hide Instructions") }}', show: '{{ _("How to create and send an email") }}' }"
+app/templates/email/list_emails.html:256:                  x-text="showHelp ? hide : show"></span>
+app/templates/email/list_emails.html:258:        <div x-show="showHelp"
+app/templates/email/list_emails.html:259:             x-transition
+app/templates/email/attach_files.html:51:    <div x-data="{ showHelp: false }" class="mt-8">
+app/templates/email/attach_files.html:52:        <button @click="showHelp = !showHelp"
+app/templates/email/attach_files.html:54:            <span x-data="{ hide: '{{ _("Hide Instructions") }}', show: '{{ _("File Attach Notes") }}' }"
+app/templates/email/attach_files.html:55:                  x-text="showHelp ? hide : show"></span>
+app/templates/email/attach_files.html:58:        <div x-show="showHelp"
+app/templates/email/attach_files.html:59:             x-transition
+app/templates/reminders/schedule_reminder.html:56:    <div x-data="{ showHelp: false, hideText: '{{ _("Hide Instructions") }}', showText: '{{ _("Help for RRULE syntax") }}' }"
+app/templates/reminders/schedule_reminder.html:58:        <button @click="showHelp = !showHelp"
+app/templates/reminders/schedule_reminder.html:60:            <span x-text="showHelp ? hideText : showText"></span>
+app/templates/reminders/schedule_reminder.html:62:        <div x-show="showHelp"
+app/templates/reminders/schedule_reminder.html:63:             x-transition
+app/templates/reminders/list_reminders.html:218:    <div x-data="{ showHelp: false, hideText: '{{ _("Hide Instructions") }}', showText: '{{ _("How to use reminders") }}' }"
+app/templates/reminders/list_reminders.html:220:        <button @click="showHelp = !showHelp"
+app/templates/reminders/list_reminders.html:222:            <span x-text="showHelp ? hideText : showText"></span>
+app/templates/reminders/list_reminders.html:224:        <div x-show="showHelp"
+app/templates/reminders/list_reminders.html:225:             x-transition
+app/templates/reminders/list_reminders.html:227:            <div x-show="showHelp"
+app/templates/reminders/list_reminders.html:228:                 x-transition
+app/templates/messages/list_messages.html:223:    <div x-data="{ showHelp: false, hideText: '{{ _("Hide Instructions") }}', showText: '{{ _("How to create and send a notification") }}' }"
+app/templates/messages/list_messages.html:225:        <button @click="showHelp = !showHelp"
+app/templates/messages/list_messages.html:227:            <span x-text="showHelp ? hideText : showText"></span>
+app/templates/messages/list_messages.html:229:        <div x-show="showHelp"
+app/templates/messages/list_messages.html:230:             x-transition
+app/templates/user_smtp/list_smtp.html:182:    <div x-data="{ showHelp: false }" class="mt-8">
+app/templates/user_smtp/list_smtp.html:183:        <button @click="showHelp = !showHelp"
+app/templates/user_smtp/list_smtp.html:185:            <span x-text="showHelp ? '{{ _("Hide SMTP Setup Help") }}' : '{{ _("Show SMTP Setup Help") }}'"></span>
+app/templates/user_smtp/list_smtp.html:187:        <div x-show="showHelp"
+app/templates/user_smtp/list_smtp.html:188:             x-transition
+app/templates/account/translations.html:36:            <li x-data="{ open: false }" class="mb-4">
+app/templates/account/translations.html:39:                        @click="open = !open"
+app/templates/account/translations.html:58:                <ul x-show="open"
+app/templates/account/translations.html:59:                    x-transition
+app/templates/account/translations.html:79:            <li x-data="{ open: false }" class="mb-4">
+app/templates/account/translations.html:81:                        @click="open = !open"
+app/templates/account/translations.html:99:                <ol x-show="open"
+app/templates/account/translations.html:100:                    x-transition
+app/templates/account/translations.html:131:            <li x-data="{ open: false }" class="mb-4">
+app/templates/account/translations.html:133:                        @click="open = !open"
+app/templates/account/translations.html:150:                <ol x-show="open"
+app/templates/account/translations.html:151:                    x-transition

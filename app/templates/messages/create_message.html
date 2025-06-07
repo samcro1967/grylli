@@ -1,0 +1,61 @@
+{# ---------------------------------------------------------------------
+  create_message.html
+  app/templates/messages/create_message.html
+  [Describe purpose or main content of this template.]
+--------------------------------------------------------------------- #}
+{# ---------------------------------------------------------------------
+   create_message.html
+   Page to create a new message
+   --------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{# =================== JINJA BLOCK ==================== #}
+{% block content %}
+    <div class="max-w-2xl mx-auto px-4 py-8">
+        <!-- Page Title -->
+        <h1 class="text-2xl font-semibold mb-6 text-zinc-900 dark:text-zinc-100">
+            {% if message %}
+                ✏️ {{ _("Edit Notificaton") }}
+            {% else %}
+                ➕ {{ _("Create Notification") }}
+            {% endif %}
+        </h1>
+        <!-- Message Form -->
+        <!-- =================== FORM START =================== -->
+        <form method="post" class="space-y-6">
+            {{ form.hidden_tag() }}
+            <!-- Label -->
+            <div>
+                <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300"
+                       for="label">{{ _("Label") }}</label>
+                {{ form.label(class_="w-full mt-1 px-3 py-2 border rounded bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100") }}
+                {% for error in form.label.errors %}<p class="text-red-500 text-sm mt-1">{{ error }}</p>{% endfor %}
+            </div>
+            <!-- Subject -->
+            <div>
+                <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300"
+                       for="subject">{{ _("Subject") }}</label>
+                {{ form.subject(class_="w-full mt-1 px-3 py-2 border rounded bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100") }}
+                {% for error in form.subject.errors %}<p class="text-red-500 text-sm mt-1">{{ error }}</p>{% endfor %}
+            </div>
+            <!-- Content -->
+            <div>
+                <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300"
+                       for="content">{{ _("Content") }}</label>
+                {{ form.content(rows=6, class_="w-full mt-1 px-3 py-2 border rounded bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100") }}
+                {% for error in form.content.errors %}<p class="text-red-500 text-sm mt-1">{{ error }}</p>{% endfor %}
+            </div>
+            <!-- Submit -->
+            <div>
+                <button type="submit"
+                        class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">
+                    {{ _("Save Notification") }}
+                </button>
+                <a href="{{ url_for("messages_bp.index") }}"
+                   class="ml-4 px-4 py-2 bg-zinc-200 text-zinc-800 rounded hover:bg-zinc-300 dark:bg-zinc-700 dark:text-white dark:hover:bg-zinc-600 transition">
+                    {{ _("Cancel") }}
+                </a>
+            </div>
+            <!-- =================== FORM END ===================== -->
+        </form>
+    </div>
+{% endblock %}

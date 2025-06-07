@@ -1,0 +1,3277 @@
+# Swedish translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-06-07 15:49-0500\n"
+"PO-Revision-Date: 2025-05-25 12:41-0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: sv <LL@li.org>\n"
+"Language: sv\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: app/init_db.py:55
+#, python-format
+msgid "Tables currently in DB: %s"
+msgstr "Tabeller för närvarande i DB:"
+
+#: app/init_db.py:58
+msgid "Database or system_config table missing. Running migrations now..."
+msgstr "Databas eller system_config-tabell saknas. Kör migrationer nu..."
+
+#: app/init_db.py:61
+msgid "Migrations applied successfully."
+msgstr "Migrationer tillämpade framgångsrikt."
+
+#: app/init_db.py:63
+msgid "Migration failed."
+msgstr "Migration misslyckades."
+
+#: app/init_db.py:68
+msgid "System config seeded successfully."
+msgstr "Systemconfig seeddades framgångsrikt."
+
+#: app/init_db.py:70
+msgid "Error seeding system config."
+msgstr "Fel vid seed av systemconfig:"
+
+#: app/forms/mfa_form.py:15 app/templates/apprise/create_apprise.html:30
+#: app/templates/apprise/edit_apprise.html:30
+#: app/templates/apprise/list_apprise.html:60
+#: app/templates/mfa/settings.html:24 app/templates/mfa/settings.html:40
+#: app/templates/user_smtp/create_smtp.html:99
+#: app/templates/user_smtp/edit_smtp.html:114
+#: app/templates/user_smtp/list_smtp.html:57
+#: app/templates/webhook/create_webhook.html:36
+#: app/templates/webhook/edit_webhook.html:36
+#: app/templates/webhook/list_webhooks.html:61
+msgid "Enabled"
+msgstr "Aktiverad"
+
+#: app/forms/mfa_form.py:16
+msgid "Authenticator Code"
+msgstr "Autentisering kod"
+
+#: app/forms/mfa_form.py:17
+#: app/templates/admin/partials/user_instructions_and_modal.html:66
+#: app/templates/admin/partials/user_table.html:115
+#: app/templates/email/assign_smtp.html:44 app/templates/mfa/settings.html:47
+#: app/templates/user_smtp/edit_smtp.html:122
+msgid "Save"
+msgstr "Spara"
+
+#: app/forms/mfa_form.py:27
+msgid "Authentication Code"
+msgstr "Uppdatera notifikation"
+
+#: app/forms/mfa_form.py:29
+msgid "Please enter your authentication code."
+msgstr "Var god ange din autentiseringskod."
+
+#: app/forms/mfa_form.py:30
+msgid "Enter a valid 6-digit code or recovery code."
+msgstr "Ange en giltig 6-siffrig kod eller återställningskod."
+
+#: app/forms/mfa_form.py:31
+msgid "Invalid code format."
+msgstr "Ogiltigt kodformat."
+
+#: app/forms/mfa_form.py:35 app/templates/mfa/challenge.html:25
+msgid "Verify"
+msgstr "Version"
+
+#: app/services/mail.py:37 app/services/system_settings_email.py:40
+msgid "Missing required config setting: "
+msgstr "Saknar obligatorisk konfigurationsinställning:"
+
+#: app/services/mail.py:46 app/services/system_settings_email.py:50
+#, python-format
+msgid "Failed to decrypt %(key)s: %(error)s"
+msgstr "Kunde inte dekryptera %(key)s: %(error)s"
+
+#: app/services/mail.py:54
+#, python-format
+msgid "get_setting('%(key)s') -> '%(value)s' (sensitive: %(sensitive)s)"
+msgstr ""
+"get_setting('%(key)s') -> '%(value)s' (rå: '%(raw)s', känsligt: "
+"%(sensitive)s)"
+
+#: app/services/mail.py:75
+#, python-format
+msgid "Preparing email to %(to)s"
+msgstr "Förbereder e-post till %(to)s"
+
+#: app/services/mail.py:90
+#, python-format
+msgid ""
+"SMTP configuration: host=%(host)s (type=%(host_type)s), port=%(port)s "
+"(type=%(port_type)s)"
+msgstr ""
+"SMTP värd = '%(host)s' (typ: %(host_type)s), port = %(port)s (typ: "
+"%(port_type)s)"
+
+#: app/services/mail.py:99
+#, python-format
+msgid "SMTP username: %(user)s"
+msgstr "Använder användare: %(user)s"
+
+#: app/services/mail.py:100
+#, python-format
+msgid "TLS enabled: %(tls)s"
+msgstr "TLS aktiverat: %(tls)s"
+
+#: app/services/mail.py:105
+msgid "Starting TLS connection..."
+msgstr "Startar TLS"
+
+#: app/services/mail.py:107
+msgid "Logging into SMTP server..."
+msgstr "Loggar in på SMTP-servern..."
+
+#: app/services/mail.py:109
+msgid "Sending email message..."
+msgstr "Schemalägg meddelande"
+
+#: app/services/mail.py:111
+#, python-format
+msgid "Email sent successfully to %(to)s"
+msgstr "Test-e-post skickades framgångsrikt."
+
+#: app/services/mail.py:114
+#, python-format
+msgid "SMTP error while sending to %(to)s: %(error)s"
+msgstr "SMTP-fel vid sändning till %(to)s: %(error)s"
+
+#: app/templates/about.html:10
+msgid "About Grylli"
+msgstr "Om Grylli"
+
+#: app/templates/about.html:13
+msgid ""
+"Grylli is a secure, self-hosted message delivery platform that automatically"
+" sends pre-configured messages if a user fails to check in within a defined "
+"time period."
+msgstr ""
+"Grylli är en säker, självhystad meddelandeleveransplattform som automatiskt "
+"skickar förkonfigurerade meddelanden om en användare inte checkar in inom en"
+" definierad tidsperiod."
+
+#: app/templates/about.html:14
+msgid ""
+"It supports multiple users, customizable schedules, and recurring reminders."
+msgstr "Den stöder flera användare och anpassningsbara scheman."
+
+#: app/templates/about.html:15
+msgid ""
+"Messages and reminders can be delivered via email, webhooks, or over 100 "
+"third-party services through Apprise."
+msgstr ""
+"Meddelanden kan levereras via e-post, webhooks eller över 80 tredje "
+"partstjänster genom Apprise."
+
+#: app/templates/about.html:16
+msgid ""
+"Users can configure their own SMTP servers to ensure emails and reminders "
+"appear to come directly from them — not from the system administrator."
+msgstr ""
+"Användare kan konfigurera sina egna SMTP-servrar för att säkerställa att "
+"meddelanden verkar komma direkt från dem — inte från systemadministratören."
+
+#: app/templates/about.html:17
+msgid ""
+"Sensitive data is encrypted at rest, and all operations are secured with "
+"strong authentication and audit-friendly logging."
+msgstr ""
+"Känslig data är krypterad i vila, och alla meddelandeoperationer är säkrade "
+"med stark autentisering och revisionsvänlig loggning."
+
+#: app/templates/about.html:18
+msgid ""
+"Built with a modern, reactive technology stack, Grylli is optimized for "
+"responsiveness and works seamlessly across desktop and mobile devices."
+msgstr ""
+"Byggd med en modern, reaktiv teknologisk stack är Grylli optimerad för "
+"respons och fungerar sömlöst över dator- och mobila enheter."
+
+#: app/templates/about.html:23
+msgid "Version:"
+msgstr "Version:"
+
+#: app/templates/about.html:26
+msgid "Repository:"
+msgstr "Repository:"
+
+#: app/templates/about.html:30
+msgid "GitHub - samcro1967/grylli"
+msgstr "GitHub - samcro1967/grylli"
+
+#: app/templates/help.html:2 app/templates/help.html:5
+#: app/templates/partials/header.html:85
+msgid "Help"
+msgstr "Hjälp"
+
+#: app/templates/help.html:7
+msgid ""
+"Grylli includes built-in instructions throughout the app to help you "
+"configure and manage your setup."
+msgstr ""
+"Grylli inkluderar inbyggda instruktioner i appen för att hjälpa dig "
+"konfigurera och hantera din inställning."
+
+#: app/templates/help.html:8
+msgid ""
+"This page provides an overview of key features and direct links to where "
+"they can be managed."
+msgstr ""
+"Den här sidan ger en översikt över nyckelfunktioner och direkta länkar till "
+"där de kan hanteras."
+
+#: app/templates/help.html:12 app/templates/messages/list_messages.html:9
+#: app/templates/partials/shared_nav.html:17
+msgid "Notifications"
+msgstr "Aviseringar"
+
+#: app/templates/help.html:14
+msgid "Create and assign messages"
+msgstr "Skapa ett meddelande eller e-post."
+
+#: app/templates/admin/index.html:32 app/templates/help.html:17
+#: app/templates/partials/admin_nav.html:56
+msgid "SMTP Settings"
+msgstr "SMTP-inställningar"
+
+#: app/templates/help.html:19
+msgid "Use your own email server"
+msgstr "Använd din egen e-postserver"
+
+#: app/templates/help.html:22
+msgid "Apprise Integration"
+msgstr "Apprise-destinationer"
+
+#: app/templates/help.html:24
+msgid "Send notifications to 80+ supported services"
+msgstr "Skicka notifikationer till 80+ stödda tjänster"
+
+#: app/templates/help.html:27
+#: app/templates/messages/assign_destinations.html:41
+#: app/templates/messages/view_message.html:58
+#: app/templates/partials/shared_nav.html:44
+#: app/templates/reminders/assign_destinations.html:39
+#: app/templates/reminders/view_reminder.html:69
+msgid "Webhooks"
+msgstr "Webhooks"
+
+#: app/templates/help.html:29
+msgid "Trigger actions or external workflows"
+msgstr "Utlös händelser eller externa arbetsflöden"
+
+#: app/templates/email/list_emails.html:9 app/templates/help.html:32
+#: app/templates/partials/shared_nav.html:61
+msgid "Emails"
+msgstr "E-post"
+
+#: app/templates/help.html:34
+msgid "View and manage secure email messages"
+msgstr "Översikt över säker e-post"
+
+#: app/templates/help.html:38
+msgid "Security"
+msgstr "🔐 Säkerhet"
+
+#: app/templates/help.html:39
+msgid "Grylli encrypts sensitive data and logs all key actions for auditing."
+msgstr ""
+"Grylli krypterar känslig data och loggar alla nyckelåtgärder för revision."
+
+#: app/templates/index.html:9 app/views/locale.py:95
+msgid "Welcome to Grylli"
+msgstr "Välkommen till Grylli"
+
+#: app/templates/index.html:11
+msgid "Pronounced"
+msgstr "Uttalas"
+
+#: app/templates/index.html:11
+msgid "like “grill-ee”"
+msgstr "som \"grill-ee\""
+
+#: app/templates/index.html:14
+msgid ""
+"Grylli is a secure message scheduling and delivery system designed to ensure"
+" your important messages are delivered — even if you can’t be there to send "
+"them."
+msgstr ""
+"Grylli är ett säkert meddelandeschemaläggnings- och leveranssystem designat "
+"för att säkerställa att dina viktiga meddelanden levereras, även om du inte "
+"kan vara där för att skicka dem."
+
+#: app/templates/index.html:17
+msgid ""
+"Whether you’re planning ahead, setting up emergency communication, or "
+"building peace of mind, Grylli helps automate your message delivery via "
+"multiple channels including email, webhooks, and Apprise notifications."
+msgstr ""
+"Oavsett om du planerar i förväg, ställer in nödkontakter eller bygger "
+"sinnesro, hjälper Grylli till med att automatisera din meddelandeleverans "
+"via e-post, webhooks eller Apprise-notifikationer om du missar en "
+"incheckning."
+
+#: app/templates/index.html:19
+msgid "Getting Started"
+msgstr "Komma igång"
+
+#: app/templates/index.html:21
+msgid "Create a message, email, or reminder."
+msgstr "Skapa ett meddelande eller e-post."
+
+#: app/templates/index.html:22
+msgid "Set your check-in interval and grace period (for messages)."
+msgstr "Ställ in din incheckningsintervall och tidsfrist."
+
+#: app/templates/index.html:23
+msgid "Assign one or more delivery destinations."
+msgstr "Tilldela ett eller flera leveransmål."
+
+#: app/templates/index.html:24
+msgid "Optionally attach files for secure emails."
+msgstr "Valfritt bifoga filer för säkra e-postmeddelanden."
+
+#: app/templates/index.html:25
+msgid "Schedule reminders to send at specific times or on a recurring basis."
+msgstr ""
+"Schemalägg påminnelser att skickas vid specifika tider eller på en "
+"återkommande basis."
+
+#: app/templates/index.html:26
+msgid "Enable the message or reminder to activate delivery."
+msgstr "Aktivera meddelandet eller påminnelsen för att möjliggöra leverans."
+
+#: app/templates/index.html:28
+msgid ""
+"Regularly check in to Grylli to prevent automated delivery; miss a check-in "
+"and Grylli sends your messages as scheduled."
+msgstr ""
+"Kontrollera regelbundet Grylli för att förhindra automatisk leverans; missar"
+" du en kontroll skickar Grylli dina meddelanden enligt schema."
+
+#: app/templates/privacy.html:10
+msgid "Privacy Notice"
+msgstr "Sekretessmeddelande"
+
+#: app/templates/privacy.html:13
+msgid ""
+"Grylli respects your privacy and is designed to minimize the collection and "
+"storage of personal data."
+msgstr ""
+"Grylli respekterar din integritet och är utformad för att minimera insamling"
+" och lagring av personuppgifter."
+
+#: app/templates/privacy.html:14
+msgid ""
+"All data is encrypted where appropriate and remains fully under your control"
+" if you self-host this platform."
+msgstr ""
+"All data är krypterad där det är relevant och förblir helt under din "
+"kontroll om du själv hostar denna plattform."
+
+#: app/templates/privacy.html:17
+msgid "What Data We Collect"
+msgstr "Vilka uppgifter vi samlar in"
+
+#: app/templates/privacy.html:19
+msgid "Email address and password hash (for authentication)"
+msgstr "E-postadress och lösenordshash (för autentisering)"
+
+#: app/templates/privacy.html:20
+msgid "Optional MFA secret and recovery codes (encrypted at rest)"
+msgstr "Valfritt MFA-hemlighet och återställningskoder (krypterade vid vila)"
+
+#: app/templates/privacy.html:21
+msgid "Reminder and message content you configure"
+msgstr "Påminnelse- och meddelandeinnehåll du konfigurerar"
+
+#: app/templates/privacy.html:22
+msgid "User-specific settings, SMTP configuration (if provided)"
+msgstr ""
+"Användarspecifika inställningar, SMTP-konfiguration (om tillhandahållet)"
+
+#: app/templates/privacy.html:25
+msgid "How Your Data Is Used"
+msgstr "Hur dina uppgifter används"
+
+#: app/templates/privacy.html:27
+msgid ""
+"Your data is used solely for the purpose of delivering reminders and "
+"messages according to your preferences."
+msgstr ""
+"Dina uppgifter används endast för att leverera påminnelser och meddelanden "
+"enligt dina preferenser."
+
+#: app/templates/privacy.html:28
+msgid ""
+"Grylli does not share, sell, or transmit your personal data to any third "
+"parties."
+msgstr ""
+"Grylli delar, säljer eller överför inte dina personuppgifter till tredje "
+"part."
+
+#: app/templates/privacy.html:31
+msgid "Your Rights"
+msgstr "Dina rättigheter"
+
+#: app/templates/privacy.html:33
+msgid ""
+"You can export all of your data at any time from the Account Settings page."
+msgstr ""
+"Du kan exportera alla dina uppgifter när som helst från sidan "
+"Kontoinställningar."
+
+#: app/templates/privacy.html:34
+msgid "You may permanently delete your account and all associated data."
+msgstr "Du kan inte ta bort ditt konto eftersom du är den sista admin."
+
+#: app/templates/privacy.html:35
+msgid ""
+"If you are using a self-hosted instance, contact the instance administrator "
+"for data inquiries."
+msgstr ""
+"Om du använder en självhostad instans, kontakta instansadministratören för "
+"dataförfrågningar."
+
+#: app/templates/privacy.html:38
+msgid "Self-Hosting Responsibility"
+msgstr "Självhostingsansvar"
+
+#: app/templates/privacy.html:40
+msgid ""
+"If you are running Grylli on your own server, you are responsible for the "
+"storage, processing, and lawful handling of all user data on that instance."
+msgstr ""
+"Om du kör Grylli på din egen server, är du ansvarig för lagring, bearbetning"
+" och laglig hantering av all användardata på den instansen."
+
+#: app/templates/privacy.html:44
+msgid ""
+"This notice was last updated in June 2025 and may evolve to reflect changes "
+"in the software or regulatory landscape."
+msgstr ""
+"Denna notis uppdaterades senast i juni 2025 och kan utvecklas för att "
+"återspegla förändringar i programvaran eller den regulatoriska miljön."
+
+#: app/templates/system_info.html:11
+msgid "📦 Environment Versions"
+msgstr "📦 Miljöversioner"
+
+#: app/templates/system_info.html:17
+msgid "Category"
+msgstr "Kategori"
+
+#: app/templates/system_info.html:18
+msgid "Tool"
+msgstr "Verktyg"
+
+#: app/templates/system_info.html:19
+msgid "Version"
+msgstr "Version"
+
+#: app/templates/system_info.html:25
+msgid "🧠 Python"
+msgstr "🧠 Python"
+
+#: app/templates/system_info.html:26
+msgid "Python"
+msgstr "Python"
+
+#: app/templates/system_info.html:30
+msgid "pip"
+msgstr "pip"
+
+#: app/templates/system_info.html:34
+msgid "SQLite"
+msgstr "SQLite"
+
+#: app/templates/system_info.html:40
+msgid "⚙️ Core"
+msgstr "⚙️ Kärna"
+
+#: app/templates/system_info.html:47
+msgid "🔐 Security"
+msgstr "🔐 Säkerhet"
+
+#: app/templates/system_info.html:48
+msgid "Email Validator"
+msgstr "E-postvalidator"
+
+#: app/templates/system_info.html:52
+msgid "Cryptography"
+msgstr "Kryptografi"
+
+#: app/templates/system_info.html:57
+msgid "🕰️ Scheduling"
+msgstr "🕰️ Schemaläggning"
+
+#: app/templates/system_info.html:58
+msgid "APScheduler"
+msgstr "APScheduler"
+
+#: app/templates/system_info.html:62
+msgid "Apprise (Python)"
+msgstr "Apprise (Python)"
+
+#: app/templates/system_info.html:66
+msgid "Apprise CLI"
+msgstr "Apprise CLI"
+
+#: app/templates/system_info.html:74
+msgid "🌐 Frontend"
+msgstr "🌐 Frontend"
+
+#: app/templates/account/manage_account.html:11
+msgid "Manage Account"
+msgstr "Hantera Konto"
+
+#: app/templates/account/manage_account.html:12
+msgid "Update your profile information and password."
+msgstr "Uppdatera din profilinformation och lösenord."
+
+#: app/templates/account/manage_account.html:41
+#: app/templates/admin/create_user.html:40
+#: app/templates/auth/bootstrap.html:43
+#: app/templates/auth/reset_password.html:42 app/templates/auth/signup.html:42
+msgid "Please enter a valid email address."
+msgstr "Vänligen ange en giltig e-postadress."
+
+#: app/templates/account/manage_account.html:62
+#: app/templates/account/manage_account.html:96
+#: app/templates/account/manage_account.html:127
+#: app/templates/auth/reset_password.html:66
+#: app/templates/auth/reset_password.html:97 app/templates/auth/signup.html:65
+#: app/templates/auth/signup.html:95
+msgid "Show/hide password"
+msgstr "Håll för att visa lösenord"
+
+#: app/templates/account/manage_account.html:89
+#: app/templates/admin/create_user.html:53
+#: app/templates/auth/bootstrap.html:51
+#: app/templates/auth/reset_password.html:58 app/templates/auth/signup.html:58
+msgid "Password must meet all complexity requirements."
+msgstr "Lösenordet måste uppfylla alla komplexitetskrav."
+
+#: app/templates/account/manage_account.html:141
+#: app/templates/admin/create_user.html:72
+#: app/templates/admin/edit_user.html:67 app/templates/auth/bootstrap.html:69
+#: app/templates/auth/reset_password.html:110
+#: app/templates/auth/signup.html:108
+msgid "Passwords do not match."
+msgstr "Lösenorden matchar inte."
+
+#: app/templates/account/manage_account.html:147
+msgid "Update Account"
+msgstr "Uppdatera Konto"
+
+#: app/templates/account/manage_account.html:151
+#: app/templates/admin/create_user.html:82
+#: app/templates/admin/edit_user.html:97 app/templates/admin/help_form.html:28
+#: app/templates/admin/partials/user_instructions_and_modal.html:62
+#: app/templates/admin/partials/user_table.html:113
+#: app/templates/apprise/create_apprise.html:42
+#: app/templates/apprise/edit_apprise.html:42
+#: app/templates/auth/reset_password.html:121
+#: app/templates/email/assign_smtp.html:46
+#: app/templates/email/attach_files.html:47
+#: app/templates/email/edit_message.html:54
+#: app/templates/email/schedule_email.html:84
+#: app/templates/messages/assign_destinations.html:66
+#: app/templates/messages/create_message.html:55
+#: app/templates/messages/edit_message.html:48
+#: app/templates/messages/schedule_message.html:84
+#: app/templates/mfa/challenge.html:29 app/templates/mfa/settings.html:51
+#: app/templates/reminders/assign_destinations.html:64
+#: app/templates/reminders/assign_email_reminder.html:94
+#: app/templates/reminders/create_reminder.html:49
+#: app/templates/reminders/edit_reminder.html:42
+#: app/templates/reminders/schedule_reminder.html:51
+#: app/templates/user_smtp/create_smtp.html:111
+#: app/templates/user_smtp/edit_smtp.html:125
+#: app/templates/webhook/create_webhook.html:48
+#: app/templates/webhook/edit_webhook.html:48
+msgid "Cancel"
+msgstr "Avbryt"
+
+#: app/templates/account/manage_account.html:159
+#: app/templates/admin/create_user.html:90
+#: app/templates/admin/edit_user.html:81 app/templates/auth/bootstrap.html:83
+#: app/templates/auth/reset_password.html:128
+#: app/templates/auth/signup.html:132
+msgid "Minimum 8 characters"
+msgstr "Minst 8 tecken"
+
+#: app/templates/account/manage_account.html:160
+#: app/templates/admin/create_user.html:91
+#: app/templates/admin/edit_user.html:82 app/templates/auth/bootstrap.html:84
+#: app/templates/auth/reset_password.html:129
+#: app/templates/auth/signup.html:133
+msgid "At least one uppercase letter"
+msgstr "Minst en versal"
+
+#: app/templates/account/manage_account.html:161
+#: app/templates/admin/create_user.html:92
+#: app/templates/admin/edit_user.html:83 app/templates/auth/bootstrap.html:85
+#: app/templates/auth/reset_password.html:130
+#: app/templates/auth/signup.html:134
+msgid "At least one lowercase letter"
+msgstr "Minst en gemen"
+
+#: app/templates/account/manage_account.html:162
+#: app/templates/admin/create_user.html:93
+#: app/templates/admin/edit_user.html:84 app/templates/auth/bootstrap.html:86
+#: app/templates/auth/reset_password.html:131
+#: app/templates/auth/signup.html:135
+msgid "At least one number"
+msgstr "Minst en siffra"
+
+#: app/templates/account/manage_account.html:163
+#: app/templates/admin/create_user.html:94
+#: app/templates/auth/bootstrap.html:87
+#: app/templates/auth/reset_password.html:132
+#: app/templates/auth/signup.html:136
+msgid "At least one special character (e.g., !@#$%)"
+msgstr "Minst ett specialtecken (t.ex. !@#$%)"
+
+#: app/templates/account/manage_account.html:169
+msgid "Download My Data"
+msgstr "Ladda ner mina data"
+
+#: app/templates/account/manage_account.html:171
+msgid ""
+"Download all your account data as a JSON file. This includes your reminders,"
+" messages, email settings, and more. The file is for your records only and "
+"cannot be imported back. Protect it as it may contain sensitive information."
+msgstr ""
+"Ladda ner alla dina kontouppgifter som en JSON-fil. Detta inkluderar dina "
+"påminnelser, meddelanden, e-postinställningar och mer. Filen är enbart för "
+"dina egna uppgifter och kan inte importeras tillbaka. Skydda den eftersom "
+"den kan innehålla känslig information."
+
+#: app/templates/account/manage_account.html:175
+msgid "Download My Data (JSON)"
+msgstr "Ladda ner mina data (JSON)"
+
+#: app/templates/account/manage_account.html:179
+msgid "Danger Zone"
+msgstr "Farlig zon"
+
+#: app/templates/account/manage_account.html:180
+msgid "Deleting your account is permanent and cannot be undone."
+msgstr "Att ta bort ditt konto är permanent och kan inte ångras."
+
+#: app/templates/account/manage_account.html:185
+msgid "Delete My Account"
+msgstr "Uppdatera Konto"
+
+#: app/templates/account/translations.html:8
+msgid "Translations - Grylli"
+msgstr "Översättningar - Grylli"
+
+#: app/templates/account/translations.html:17
+#: app/templates/partials/header.html:102
+msgid "Translations"
+msgstr "Översättningar"
+
+#: app/templates/account/translations.html:20
+msgid "Grylli currently supports multiple languages and more will be added."
+msgstr ""
+"Grylli stöder för närvarande flera språk och fler kommer att läggas till."
+
+#: app/templates/account/translations.html:21
+msgid "Many of the translations were performed with assistance from ChatGPT."
+msgstr "Många av översättningarna gjordes med hjälp av ChatGPT."
+
+#: app/templates/account/translations.html:22
+msgid ""
+"If you find a translation issue or want to suggest improvements, your input "
+"is welcome!"
+msgstr ""
+"Om du hittar ett översättningsfel eller vill föreslå förbättringar, är ditt "
+"bidrag välkommet!"
+
+#: app/templates/account/translations.html:28
+msgid "How to request translation updates"
+msgstr "Hur man begär översättningsuppdateringar"
+
+#: app/templates/account/translations.html:30
+msgid "To contribute to translations, please use the following guidelines:"
+msgstr "För att bidra till översättningar, använd följande riktlinjer:"
+
+#: app/templates/account/translations.html:43
+msgid "Contribute missing or improved translations:"
+msgstr "Hittade en saknad översättning?"
+
+#: app/templates/account/translations.html:63
+msgid "Open the relevant .po translation file for your language."
+msgstr "Öppna JSON-översättningsfilen för ditt språk. Till exempel:"
+
+#: app/templates/account/translations.html:67
+msgid ""
+"Find untranslated or incomplete entries and add or improve translations."
+msgstr ""
+"Hitta ej översatta eller ofullständiga poster och lägg till eller förbättra "
+"översättningar."
+
+#: app/templates/account/translations.html:68
+msgid "You may use a PO file editor or a text editor."
+msgstr "Du kan använda en PO-filredigerare eller en textredigerare."
+
+#: app/templates/account/translations.html:69
+msgid "Copy the file path and the snippet of your changes."
+msgstr "Kopiera filvägen och utdraget av dina ändringar."
+
+#: app/templates/account/translations.html:70
+msgid "Paste the snippet directly into a new GitHub issue for review."
+msgstr "Klistra in den kopierade koden direkt i GitHub-ärendets kommentar."
+
+#: app/templates/account/translations.html:72
+msgid "Please do not upload the full .po file to avoid merge conflicts."
+msgstr ""
+"Ladda inte upp hela .po-filen för att undvika sammanslagningskonflikter."
+
+#: app/templates/account/translations.html:85
+msgid "Improving existing translations:"
+msgstr "Förbättra befintliga översättningar:"
+
+#: app/templates/account/translations.html:104
+msgid "Open the relevant .po file for the translation you want to improve."
+msgstr "Öppna den relevanta .po-filen för översättningen du vill förbättra."
+
+#: app/templates/account/translations.html:106
+msgid "For example:"
+msgstr "Till exempel:"
+
+#: app/templates/account/translations.html:110
+msgid ""
+"Find the phrase(s) and its existing translation(s) you want to improve."
+msgstr ""
+"Hitta frasen/frases och dess befintliga översättning/ar du vill förbättra."
+
+#: app/templates/account/translations.html:111
+msgid "Update the phrase(s)."
+msgstr "Uppdatera frasen/frases."
+
+#: app/templates/account/translations.html:112
+msgid "Copy the file name and path into the issue."
+msgstr "Kopiera filnamnet och sökvägen till ärendet."
+
+#: app/templates/account/translations.html:114
+msgid "Paste the copied snippet directly into the GitHub issue comment."
+msgstr "Klistra in den kopierade koden direkt i GitHub-ärendets kommentar."
+
+#: app/templates/account/translations.html:115
+msgid "Do not upload the full .po file to avoid merge conflicts."
+msgstr ""
+"Ladda inte upp hela .po-filen för att undvika sammanslagningskonflikter."
+
+#: app/templates/account/translations.html:118
+msgid "Example snippet:"
+msgstr "Exempelkod:"
+
+#: app/templates/account/translations.html:137
+msgid "Report missing translations not yet discovered:"
+msgstr "Rapportera saknade översättningar som ännu inte upptäckts:"
+
+#: app/templates/account/translations.html:154
+msgid ""
+"If you see text in the app that appears untranslated or missing, please "
+"report it to us."
+msgstr ""
+"Om du ser text i appen som verkar oöversatt eller saknas, vänligen "
+"rapportera det till oss."
+
+#: app/templates/account/translations.html:155
+msgid "Provide the exact English phrase as it appears on the screen."
+msgstr "Ge den exakta engelska frasen som den visas på skärmen."
+
+#: app/templates/account/translations.html:156
+msgid ""
+"Include the page or section where you saw the phrase (e.g., Apprise page, "
+"Account Page, etc.)."
+msgstr ""
+"Inkludera sidan eller sektionen där du såg frasen (t.ex. Inställningssidan, "
+"Kontosektion)."
+
+#: app/templates/account/translations.html:157
+msgid ""
+"Submit this information via a new GitHub issue so we can add it to the "
+"translation files"
+msgstr ""
+"Skicka denna information via ett nytt GitHub-ärende så att vi kan lägga till"
+" det i översättningsfilerna och paketera det för Babel."
+
+#: app/templates/account/translations.html:166
+msgid "Found a missing translation?"
+msgstr "Hittade en saknad översättning?"
+
+#: app/templates/account/translations.html:171
+msgid ""
+"This link will create a new GitHub issue pre-filled with a language code."
+msgstr ""
+"Denna länk kommer att skapa ett nytt GitHub-problem förifyllt med en "
+"språkkod."
+
+#: app/templates/account/translations.html:172
+msgid "Report it by opening a new GitHub issue"
+msgstr "Rapportera det genom att öppna ett nytt GitHub-ärende"
+
+#: app/templates/account/translations.html:175
+msgid "Please specify the language code and exact phrase when reporting."
+msgstr "Ange språkkod och exakt fras när du rapporterar."
+
+#: app/templates/account/translations.html:176
+msgid "Thank you for helping us make Grylli better!"
+msgstr "Tack för att du hjälper oss att göra Grylli bättre!"
+
+#: app/templates/admin/create_user.html:14
+msgid "Create New User"
+msgstr "Skapa ny användare"
+
+#: app/templates/admin/create_user.html:15
+msgid "Fill out the form to add a new user."
+msgstr "Fyll i formuläret för att lägga till en ny användare."
+
+#: app/templates/admin/create_user.html:21
+#: app/templates/admin/edit_user.html:17 app/templates/auth/bootstrap.html:24
+msgid "Please fix the following errors:"
+msgstr "Vänligen åtgärda följande fel:"
+
+#: app/templates/admin/create_user.html:78
+#: app/templates/admin/edit_user.html:93
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "Create User"
+msgstr "Skapa användare"
+
+#: app/templates/admin/edit_user.html:10
+#: app/templates/admin/partials/user_card.html:20
+#: app/templates/admin/partials/user_table.html:26
+msgid "Edit User"
+msgstr "Redigera användare"
+
+#: app/templates/admin/edit_user.html:55 app/templates/admin/edit_user.html:74
+msgid "Hold to show password"
+msgstr "Håll för att visa lösenord"
+
+#: app/templates/admin/edit_user.html:85
+#, python-format
+msgid "At least one special character (e.g., !@#$%%)"
+msgstr "Minst ett specialtecken (t.ex. !@#$%%)"
+
+#: app/templates/admin/help.html:4 app/templates/auth/login.html:72
+msgid "Admin Help"
+msgstr "Adminpanel"
+
+#: app/templates/admin/help.html:7
+msgid "Reset Admin Password"
+msgstr "Återställ Lösenord"
+
+#: app/templates/admin/help.html:9
+msgid ""
+"If you've forgotten the admin password, you can reset it using the following"
+" Docker command:"
+msgstr ""
+"Om du har glömt administratörslösenordet kan du återställa det med följande "
+"Docker-kommando:"
+
+#: app/templates/admin/help.html:15
+msgid ""
+"This script will prompt you to enter a new password for the admin user. You "
+"must run it from the host system where the Grylli container is running."
+msgstr ""
+"Detta skript kommer att be dig ange ett nytt lösenord för "
+"administratörsanvändaren. Du måste köra det från värdsystemet där Grylli-"
+"containern körs."
+
+#: app/templates/admin/help.html:18
+msgid "After resetting, you can log in with the new password immediately."
+msgstr "Efter återställning kan du logga in med det nya lösenordet direkt."
+
+#: app/templates/admin/help.html:24
+msgid "Return to Login"
+msgstr "Återgå till Instrumentbrädan"
+
+#: app/templates/admin/help_form.html:6
+msgid "Admin Help Access"
+msgstr "Administratörshjälpåtkomst"
+
+#: app/templates/admin/help_form.html:9
+msgid "Enter your Ferret Key to unlock admin-only help documentation."
+msgstr ""
+"Ange din Ferret Key för att låsa upp administrationsspecifik hjälpavdelning."
+
+#: app/templates/admin/help_form.html:34
+msgid "How to Find Your FERRET_KEY"
+msgstr "Hur man hittar din FERRET_KEY"
+
+#: app/templates/admin/help_form.html:36
+msgid "The FERRET_KEY is set as an environment variable when running Grylli."
+msgstr "FERRET_KEY är satt som en miljövariabel när Grylli körs."
+
+#: app/templates/admin/help_form.html:39
+msgid "Option 1: Check docker-compose.yml"
+msgstr "Alternativ 1: Kontrollera docker-compose.yml"
+
+#: app/templates/admin/help_form.html:46
+msgid "Option 2: Use docker inspect"
+msgstr "Alternativ 2: Använd docker inspect"
+
+#: app/templates/admin/help_form.html:52
+msgid "This shows the FERRET_KEY as passed to the container at runtime."
+msgstr "Detta visar FERRET_KEY som överförs till containern vid körning."
+
+#: app/templates/admin/index.html:10
+msgid "Admin Panel"
+msgstr "Adminpanel"
+
+#: app/templates/admin/index.html:12
+msgid ""
+"Welcome to the Grylli Admin Panel. Use the links below to manage the system."
+msgstr ""
+"Välkommen till Gryllis adminpanel. Använd länkarna nedan för att hantera "
+"systemet."
+
+#: app/templates/admin/index.html:17
+msgid "Manage Users"
+msgstr "Hantera användare"
+
+#: app/templates/admin/index.html:18
+msgid "Create, edit, enable/disable, or delete user accounts."
+msgstr "Skapa, redigera, aktivera/inaktivera eller ta bort användarkonton."
+
+#: app/templates/admin/index.html:22
+#: app/templates/admin/system_settings.html:10
+#: app/templates/partials/admin_nav.html:52
+msgid "System Settings"
+msgstr "Systeminställningar"
+
+#: app/templates/admin/index.html:23
+msgid "View  system-wide environment values."
+msgstr "Visa systemomfattande miljövärden."
+
+#: app/templates/admin/index.html:27 app/templates/partials/admin_nav.html:42
+msgid "Backups"
+msgstr "Säkerhetskopior"
+
+#: app/templates/admin/index.html:28
+msgid "Create and delete database backups."
+msgstr "Database Backups"
+
+#: app/templates/admin/index.html:33
+msgid "View and test global SMTP settings."
+msgstr ""
+"Misslyckades att skicka test-e-post. Kontrollera SMTP-inställningarna."
+
+#: app/templates/admin/index.html:39
+msgid "View Admin Guide / README on GitHub"
+msgstr "Visa Admin Guide / README på GitHub"
+
+#: app/templates/admin/index.html:40
+msgid "Includes setup instructions, integrations, and troubleshooting."
+msgstr "Inkluderar installationsanvisningar, integrationer och felsökning."
+
+#: app/templates/admin/index.html:44
+msgid "⚠️ Admin Tips"
+msgstr "⚠️ Adminknep"
+
+#: app/templates/admin/index.html:46
+msgid "Ensure the data folder (database) is backed up on your host"
+msgstr "Säkerställ att datamappen (databas) är säkerhetskopierad på din värd"
+
+#: app/templates/admin/index.html:48
+msgid ""
+"The uploads folder is not per user.  If required per user, you will ndd to "
+"create subdirectoried per user and setup permissions so users can only see "
+"their own folder."
+msgstr ""
+"Uppladdningsmappen är inte per användare. Om det krävs per användare behöver"
+" du skapa undermappar per användare och ställa in behörigheter så att "
+"användare bara kan se sin egen mapp."
+
+#: app/templates/admin/index.html:51
+msgid ""
+"To restore a backup: stop the container, replace the data/grylli.db with one"
+" from the backups folder, and restart the container."
+msgstr ""
+"För att återställa en säkerhetskopia: stoppa behållaren, ersätt "
+"data/grylli.db med en från backup-mappen och starta om behållaren."
+
+#: app/templates/admin/list_backups.html:11
+msgid "Database Backups"
+msgstr "Database Backups"
+
+#: app/templates/admin/list_backups.html:13
+msgid "Create Backup"
+msgstr "Skapa Backup"
+
+#: app/templates/admin/list_backups.html:21
+msgid "Filename"
+msgstr "Filnamn"
+
+#: app/templates/admin/list_backups.html:22
+#: app/templates/admin/partials/user_table.html:14
+#: app/templates/apprise/list_apprise.html:62
+#: app/templates/email/list_emails.html:60
+#: app/templates/messages/list_messages.html:60
+#: app/templates/reminders/list_reminders.html:60
+#: app/templates/user_smtp/list_smtp.html:59
+#: app/templates/webhook/list_webhooks.html:63
+msgid "Actions"
+msgstr "Åtgärder"
+
+#: app/templates/admin/list_backups.html:32
+msgid "Delete this backup?"
+msgstr "Ta bort denna säkerhetskopia?"
+
+#: app/templates/admin/list_backups.html:32
+#: app/templates/apprise/list_apprise.html:95
+#: app/templates/apprise/list_apprise.html:99
+#: app/templates/apprise/list_apprise.html:150
+#: app/templates/apprise/list_apprise.html:154
+#: app/templates/email/list_emails.html:124
+#: app/templates/email/list_emails.html:128
+#: app/templates/email/list_emails.html:226
+#: app/templates/email/list_emails.html:230
+#: app/templates/messages/list_messages.html:112
+#: app/templates/messages/list_messages.html:116
+#: app/templates/messages/list_messages.html:198
+#: app/templates/messages/list_messages.html:202
+#: app/templates/reminders/list_reminders.html:107
+#: app/templates/reminders/list_reminders.html:113
+#: app/templates/reminders/list_reminders.html:192
+#: app/templates/reminders/list_reminders.html:198
+#: app/templates/user_smtp/list_smtp.html:101
+#: app/templates/user_smtp/list_smtp.html:169
+#: app/templates/webhook/list_webhooks.html:102
+#: app/templates/webhook/list_webhooks.html:161
+msgid "Delete"
+msgstr "Ta bort"
+
+#: app/templates/admin/list_backups.html:41
+msgid "No backups found."
+msgstr "Inga säkerhetskopior hittades."
+
+#: app/templates/admin/list_backups.html:44
+msgid ""
+"Backups contain your full app data. Store securely. Sensitive data is "
+"encrypted in the DB by default."
+msgstr ""
+"Säkerhetskopior innehåller hela appens data. Förvara säkert. Känslig data "
+"krypteras i DB som standard."
+
+#: app/templates/admin/smtp_config.html:28
+#: app/templates/admin/system_config.html:22
+msgid "System Configuration"
+msgstr "Systemkonfiguration"
+
+#: app/templates/admin/smtp_config.html:33
+#: app/templates/admin/system_config.html:26
+#: app/templates/admin/system_settings.html:15
+msgid "Key"
+msgstr "Nyckel"
+
+#: app/templates/admin/smtp_config.html:34
+#: app/templates/admin/system_config.html:27
+#: app/templates/admin/system_settings.html:16
+msgid "Value"
+msgstr "Värde"
+
+#: app/templates/admin/smtp_config.html:35
+#: app/templates/admin/system_config.html:28
+msgid "Sensitive"
+msgstr "Känslig"
+
+#: app/templates/admin/smtp_config.html:36
+#: app/templates/admin/system_config.html:29
+msgid "Editable"
+msgstr "Redigerbar"
+
+#: app/templates/admin/smtp_config.html:50
+#: app/templates/admin/smtp_config.html:51
+#: app/templates/admin/system_config.html:45
+#: app/templates/admin/system_config.html:46
+#: app/templates/email/view_config.html:60
+msgid "Yes"
+msgstr "Ja"
+
+#: app/templates/admin/smtp_config.html:50
+#: app/templates/admin/smtp_config.html:51
+#: app/templates/admin/system_config.html:45
+#: app/templates/admin/system_config.html:46
+#: app/templates/email/view_config.html:60
+msgid "No"
+msgstr "Nej"
+
+#: app/templates/admin/smtp_config.html:63
+#: app/templates/admin/system_config.html:55
+msgid "Send Test Email"
+msgstr "Skicka testmail"
+
+#: app/templates/admin/system_config.html:39
+msgid "decrypted"
+msgstr "Skapad"
+
+#: app/templates/admin/partials/user_card.html:12
+msgid "Email:"
+msgstr "E-post:"
+
+#: app/templates/admin/partials/user_card.html:15
+msgid "Role:"
+msgstr "Roll:"
+
+#: app/templates/admin/partials/user_card.html:27
+#: app/templates/admin/partials/user_table.html:34
+msgid "Change Role"
+msgstr "Byt roll"
+
+#: app/templates/admin/partials/user_card.html:29
+#: app/templates/admin/partials/user_table.html:36
+msgid "You cannot change your own role"
+msgstr "Du kan inte ändra din egen aktiveringsstatus."
+
+#: app/templates/admin/partials/user_card.html:36
+#: app/templates/admin/partials/user_table.html:43
+msgid "Are you sure you want to reset MFA for this user?"
+msgstr "Är du säker på att du vill återställa MFA för denna användare?"
+
+#: app/templates/admin/partials/user_card.html:39
+#: app/templates/admin/partials/user_table.html:46
+msgid "Reset MFA"
+msgstr "Återställ Lösenord"
+
+#: app/templates/admin/partials/user_card.html:51
+#: app/templates/admin/partials/user_table.html:58
+msgid "Delete user"
+msgstr "Radera användare"
+
+#: app/templates/admin/partials/user_card.html:55
+#: app/templates/admin/partials/user_table.html:61
+msgid "Delete User"
+msgstr "Radera Användare"
+
+#: app/templates/admin/partials/user_card.html:58
+#: app/templates/admin/partials/user_table.html:65
+msgid "You cannot disable yourself"
+msgstr "Du kan inte inaktivera dig själv"
+
+#: app/templates/admin/partials/user_card.html:65
+#: app/templates/admin/partials/user_table.html:72
+msgid "Disable"
+msgstr "Inaktivera"
+
+#: app/templates/admin/partials/user_card.html:65
+#: app/templates/admin/partials/user_table.html:72
+msgid "Enable"
+msgstr "Aktivera"
+
+#: app/templates/admin/partials/user_header.html:6
+#: app/templates/partials/admin_nav.html:47
+msgid "Users"
+msgstr "Användare"
+
+#: app/templates/admin/partials/user_header.html:12
+#: app/templates/admin/partials/user_header.html:13
+#: app/templates/apprise/apprise_config.html:10
+#: app/templates/apprise/apprise_config.html:11
+#: app/templates/apprise/list_apprise.html:16
+#: app/templates/apprise/list_apprise.html:17
+#: app/templates/email/list_emails.html:15
+#: app/templates/email/list_emails.html:16
+#: app/templates/messages/list_messages.html:16
+#: app/templates/messages/list_messages.html:17
+#: app/templates/reminders/list_reminders.html:15
+#: app/templates/reminders/list_reminders.html:16
+#: app/templates/user_smtp/list_smtp.html:14
+#: app/templates/user_smtp/list_smtp.html:17
+#: app/templates/webhook/list_webhooks.html:16
+#: app/templates/webhook/list_webhooks.html:17
+#: app/templates/webhook/webhook_config.html:10
+#: app/templates/webhook/webhook_config.html:11
+msgid "Table View"
+msgstr "Tabellvy"
+
+#: app/templates/admin/partials/user_header.html:26
+#: app/templates/admin/partials/user_header.html:27
+#: app/templates/apprise/apprise_config.html:24
+#: app/templates/apprise/apprise_config.html:25
+#: app/templates/apprise/list_apprise.html:30
+#: app/templates/apprise/list_apprise.html:31
+#: app/templates/email/list_emails.html:29
+#: app/templates/email/list_emails.html:30
+#: app/templates/messages/list_messages.html:30
+#: app/templates/messages/list_messages.html:31
+#: app/templates/reminders/list_reminders.html:29
+#: app/templates/reminders/list_reminders.html:30
+#: app/templates/user_smtp/list_smtp.html:27
+#: app/templates/user_smtp/list_smtp.html:30
+#: app/templates/webhook/list_webhooks.html:30
+#: app/templates/webhook/list_webhooks.html:31
+#: app/templates/webhook/webhook_config.html:24
+#: app/templates/webhook/webhook_config.html:25
+msgid "Card View"
+msgstr "Kortvy"
+
+#: app/templates/admin/partials/user_header.html:45
+msgid "Add User"
+msgstr "Lägg till Användare"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:9
+#: app/templates/email/attach_files.html:54
+#: app/templates/email/list_emails.html:255
+#: app/templates/messages/list_messages.html:223
+#: app/templates/reminders/list_reminders.html:218
+#: app/templates/reminders/schedule_reminder.html:56
+msgid "Hide Instructions"
+msgstr "Dölj Instruktioner"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:9
+msgid "How to manage users"
+msgstr "Hur man hanterar användare"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "Click"
+msgstr "Klicka"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+msgid "➕ Add User"
+msgstr "➕ Lägg till Användare"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+msgid "to open the new user form."
+msgstr "för att öppna det nya användarformuläret."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:18
+msgid "Enter a unique username, valid email address, and strong password."
+msgstr "Ange ett unikt användarnamn, giltig e-postadress och starkt lösenord."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "Select the appropriate"
+msgstr "Välj lämplig"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "role"
+msgstr "roll"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "or"
+msgstr "Port"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "to save."
+msgstr "för att spara."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:25
+msgid "To edit a user, click ✏️ and update their info."
+msgstr ""
+"För att redigera en användare, klicka ✏️ och uppdatera deras information."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:26
+msgid "To delete a user, click 🗑️ and confirm the deletion."
+msgstr "För att radera en användare, klicka 🗑️ och bekräfta borttagningen."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:28
+msgid "To disable or enable a user, click 🔴 or 🟢."
+msgstr "För att inaktivera eller aktivera en användare, klicka 🔴 eller 🟢."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:30
+msgid "🟢 = User is enabled and can log in."
+msgstr "🟢 = Användaren är aktiverad och kan logga in."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:31
+msgid "🔴 = User is disabled and cannot log in."
+msgstr "🔴 = Användaren är inaktiverad och kan inte logga in."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:32
+msgid "⚪ = You cannot disable your own account."
+msgstr "⚪ = Du kan inte inaktivera ditt eget konto."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:43
+#: app/templates/admin/partials/user_table.html:91
+msgid "Assign Role for"
+msgstr "Tilldela destinationer för"
+
+#: app/templates/admin/partials/user_table.html:10
+msgid "ID"
+msgstr "ID"
+
+#: app/templates/admin/partials/user_table.html:11
+#: app/templates/user_smtp/list_smtp.html:55
+msgid "Username"
+msgstr "Användarnamn"
+
+#: app/templates/admin/partials/user_table.html:12
+msgid "Email"
+msgstr "E-post"
+
+#: app/templates/admin/partials/user_table.html:13
+msgid "Role"
+msgstr "Roll"
+
+#: app/templates/apprise/apprise_config.html:3
+#: app/templates/apprise/list_apprise.html:9
+#: app/templates/messages/assign_destinations.html:22
+#: app/templates/reminders/assign_destinations.html:20
+msgid "Apprise Destinations"
+msgstr "Apprise-destinationer"
+
+#: app/templates/apprise/apprise_config.html:43
+#: app/templates/webhook/list_webhooks.html:49
+#: app/templates/webhook/webhook_config.html:43
+msgid "Add Webhook"
+msgstr "Lägg till Webhook"
+
+#: app/templates/apprise/apprise_config.html:43
+#: app/templates/apprise/list_apprise.html:49
+#: app/templates/webhook/list_webhooks.html:49
+#: app/templates/webhook/webhook_config.html:43
+msgid "Add Destination"
+msgstr "Lägg till destination"
+
+#: app/templates/apprise/create_apprise.html:10
+msgid "Create Apprise Destination"
+msgstr "Skapa Apprise-destination"
+
+#: app/templates/apprise/create_apprise.html:38
+#: app/templates/apprise/edit_apprise.html:38
+#: app/templates/user_smtp/create_smtp.html:107
+#: app/templates/webhook/create_webhook.html:44
+#: app/templates/webhook/edit_webhook.html:44
+msgid "Create Destination"
+msgstr "Skapa destination"
+
+#: app/templates/apprise/create_apprise.html:47
+#: app/templates/apprise/edit_apprise.html:47
+msgid "Need help with Apprise URLs? See the"
+msgstr "Behöver du hjälp med Apprise URL:er? Se"
+
+#: app/templates/apprise/create_apprise.html:51
+#: app/templates/apprise/edit_apprise.html:51
+msgid "Apprise Notification Services documentation"
+msgstr "Apprise Notification Services dokumentation"
+
+#: app/templates/apprise/edit_apprise.html:10
+msgid "Edit Apprise Destination"
+msgstr "Redigera Apprise-destination"
+
+#: app/templates/apprise/list_apprise.html:49
+msgid "Add Apprise"
+msgstr "Lägg till Apprise"
+
+#: app/templates/apprise/list_apprise.html:58
+#: app/templates/email/edit_message.html:21
+#: app/templates/email/list_emails.html:56
+#: app/templates/email/view_config.html:14
+#: app/templates/messages/create_message.html:29
+#: app/templates/messages/edit_message.html:23
+#: app/templates/messages/list_messages.html:57
+#: app/templates/messages/view_message.html:14
+#: app/templates/reminders/create_reminder.html:23
+#: app/templates/reminders/edit_reminder.html:17
+#: app/templates/reminders/list_reminders.html:56
+#: app/templates/reminders/view_reminder.html:13
+#: app/templates/user_smtp/list_smtp.html:52
+#: app/templates/webhook/list_webhooks.html:58
+msgid "Label"
+msgstr "Etikett"
+
+#: app/templates/apprise/list_apprise.html:59
+msgid "URL"
+msgstr "URL"
+
+#: app/templates/apprise/list_apprise.html:61
+#: app/templates/email/list_emails.html:59
+#: app/templates/messages/list_messages.html:59
+#: app/templates/messages/view_message.html:36
+#: app/templates/reminders/view_reminder.html:47
+#: app/templates/webhook/list_webhooks.html:62
+msgid "Created At"
+msgstr "Skapad"
+
+#: app/templates/apprise/list_apprise.html:77
+#: app/templates/apprise/list_apprise.html:132
+#: app/templates/user_smtp/list_smtp.html:79
+#: app/templates/user_smtp/list_smtp.html:147
+#: app/templates/webhook/list_webhooks.html:79
+#: app/templates/webhook/list_webhooks.html:138
+msgid "Edit"
+msgstr "Redigera"
+
+#: app/templates/apprise/list_apprise.html:80
+#: app/templates/apprise/list_apprise.html:135
+#: app/templates/user_smtp/list_smtp.html:82
+#: app/templates/user_smtp/list_smtp.html:150
+msgid "Cannot edit while in use"
+msgstr "Kan inte redigera medan den används"
+
+#: app/templates/apprise/list_apprise.html:88
+#: app/templates/apprise/list_apprise.html:143
+#: app/templates/webhook/list_webhooks.html:91
+#: app/templates/webhook/list_webhooks.html:150
+msgid "Test"
+msgstr "Testa"
+
+#: app/templates/apprise/list_apprise.html:103
+#: app/templates/apprise/list_apprise.html:158
+#: app/templates/user_smtp/list_smtp.html:106
+#: app/templates/user_smtp/list_smtp.html:174
+msgid "Cannot delete while in use"
+msgstr "Kan inte ta bort medan den används"
+
+#: app/templates/apprise/list_apprise.html:119
+msgid "URL:"
+msgstr "URL:"
+
+#: app/templates/apprise/list_apprise.html:122
+#: app/templates/user_smtp/list_smtp.html:137
+#: app/templates/webhook/list_webhooks.html:128
+msgid "Enabled:"
+msgstr "Aktiverad:"
+
+#: app/templates/apprise/list_apprise.html:125
+#: app/templates/user_smtp/list_smtp.html:140
+#: app/templates/webhook/list_webhooks.html:131
+msgid "Created:"
+msgstr "Skapad:"
+
+#: app/templates/auth/bootstrap.html:14
+msgid "Create Admin Account"
+msgstr "Skapa administratörskonto"
+
+#: app/templates/auth/bootstrap.html:16
+msgid "Let’s get started by creating your first admin account."
+msgstr "Låt oss börja med att skapa ditt första administratörskonto."
+
+#: app/templates/auth/bootstrap.html:75
+msgid "Create Admin"
+msgstr "Skapa administratör"
+
+#: app/templates/auth/forgot_password.html:12
+msgid "Forgot Password"
+msgstr "Glömt lösenord"
+
+#: app/templates/auth/forgot_password.html:15
+msgid ""
+"Enter your username and email. We'll send you a link to reset your password."
+msgstr ""
+"Ange ditt användarnamn och e-post. Vi skickar en länk för att återställa "
+"ditt lösenord."
+
+#: app/templates/auth/forgot_username.html:12
+msgid "Forgot Username"
+msgstr "Glömt användarnamn"
+
+#: app/templates/auth/forgot_username.html:15
+msgid "Enter your email address, and we'll send you your username."
+msgstr "Ange din e-postadress, så skickar vi ditt användarnamn."
+
+#: app/templates/auth/forgot_username.html:40
+msgid "Send Username"
+msgstr "Skicka användarnamn"
+
+#: app/templates/auth/login.html:12 app/templates/auth/login.html:54
+msgid "Log In"
+msgstr "Logga in"
+
+#: app/templates/auth/login.html:62
+msgid "Forgot Username?"
+msgstr "Glömt användarnamn?"
+
+#: app/templates/auth/login.html:64
+msgid "Forgot Password?"
+msgstr "Glömt lösenord?"
+
+#: app/templates/auth/login.html:66 app/templates/auth/signup.html:12
+msgid "Sign Up"
+msgstr "Registrera dig"
+
+#: app/templates/auth/rate_limit.html:9
+msgid "Hold On"
+msgstr "Håll fast"
+
+#: app/templates/auth/rate_limit.html:11
+msgid "Too many failed login attempts. Please wait"
+msgstr "För många misslyckade inloggningsförsök. Vänta"
+
+#: app/templates/auth/rate_limit.html:13
+msgid "seconds..."
+msgstr "sekunder..."
+
+#: app/templates/auth/rate_limit.html:15
+msgid "Redirecting to login..."
+msgstr "Återgå till Instrumentbrädan"
+
+#: app/templates/auth/reset_password.html:12
+#: app/templates/auth/reset_password.html:116
+msgid "Reset Password"
+msgstr "Återställ Lösenord"
+
+#: app/templates/auth/reset_password.html:14
+msgid "Enter your username, email, and new password."
+msgstr "Ange ditt användarnamn, e-postadress och nya lösenord."
+
+#: app/templates/auth/signup.html:14
+msgid "Fill out the form to create your account."
+msgstr "Fyll i formuläret för att skapa ditt konto."
+
+#: app/templates/checkin/already_checked_in.html:10
+msgid "Already Checked In"
+msgstr "Senaste incheckning"
+
+#: app/templates/checkin/already_checked_in.html:12
+msgid ""
+"You have already checked in for this item. No further action is needed at "
+"this time."
+msgstr ""
+"Du har redan checkat in för denna post. Ingen ytterligare åtgärd behövs just"
+" nu."
+
+#: app/templates/checkin/already_checked_in.html:16
+#: app/templates/checkin/disabled.html:16
+#: app/templates/checkin/executed_disabled.html:18
+msgid "Check-in for:"
+msgstr "Incheckad för:"
+
+#: app/templates/checkin/already_checked_in.html:21
+#: app/templates/checkin/disabled.html:21
+#: app/templates/checkin/executed_disabled.html:23
+#: app/templates/checkin/thank_you.html:19
+msgid "Return to Dashboard"
+msgstr "Återgå till Instrumentbrädan"
+
+#: app/templates/checkin/disabled.html:10
+msgid "Check-In Disabled"
+msgstr "E-post är avaktiverad"
+
+#: app/templates/checkin/disabled.html:12
+msgid "This check-in is currently disabled and cannot be completed."
+msgstr ""
+"Denna incheckning är för närvarande inaktiverad och kan inte slutföras."
+
+#: app/templates/checkin/executed_disabled.html:11
+msgid "Already Executed & Disabled"
+msgstr "Redan Utfört & Inaktiverat"
+
+#: app/templates/checkin/executed_disabled.html:14
+msgid ""
+"This check-in has already been executed and is now disabled. No further "
+"action is required."
+msgstr ""
+"Denna incheckning har redan utförts och är nu inaktiverad. Ingen ytterligare"
+" åtgärd krävs."
+
+#: app/templates/checkin/thank_you.html:10
+msgid "Check-In Successful"
+msgstr "Incheckning Lyckades"
+
+#: app/templates/checkin/thank_you.html:11
+msgid "Thank you for checking in."
+msgstr "Tack för att du checkade in."
+
+#: app/templates/checkin/thank_you.html:14
+msgid "Checked in for:"
+msgstr "Incheckad för:"
+
+#: app/templates/email/assign_smtp.html:11
+msgid "📧 Assign SMTP Config to:"
+msgstr "📧 Tilldela SMTP-konfiguration till:"
+
+#: app/templates/email/assign_smtp.html:25
+msgid "No SMTP (Unassign)"
+msgstr "Ingen SMTP-konfiguration tilldelad"
+
+#: app/templates/email/assign_smtp.html:26
+msgid "This email will not use any SMTP configuration."
+msgstr "Denna e-post kommer inte att använda någon SMTP-konfiguration."
+
+#: app/templates/email/attach_files.html:12
+msgid "Attach Files for:"
+msgstr "Bifoga filer till:"
+
+#: app/templates/email/attach_files.html:21
+msgid "Available Files"
+msgstr "Tillgängliga filer"
+
+#: app/templates/email/attach_files.html:36
+msgid "No files found in the upload directory."
+msgstr "Inga filer hittades i uppladdningskatalogen."
+
+#: app/templates/email/attach_files.html:44
+msgid "Save Attachments"
+msgstr "Spara bilagor"
+
+#: app/templates/email/attach_files.html:54
+msgid "File Attach Notes"
+msgstr "Anteckningar om bifogade filer"
+
+#: app/templates/email/attach_files.html:63
+msgid "Important:"
+msgstr "Port:"
+
+#: app/templates/email/attach_files.html:65
+msgid ""
+"Only files that are present in the 'uploads' folder (provided by your system"
+" administrator) will be shown here. If you do not see your file(s), please "
+"contact your Grylli administrator."
+msgstr ""
+"Endast filer som finns i mappen 'uploads' (försedd av din "
+"systemadministratör) kommer att visas här. Om du inte ser din(a) fil(er), "
+"vänligen kontakta din Grylli-administratör."
+
+#: app/templates/email/attach_files.html:69
+msgid "Accepted file types:"
+msgstr "Godkända filtyper:"
+
+#: app/templates/email/attach_files.html:71
+msgid "Documents:"
+msgstr "Dokument:"
+
+#: app/templates/email/attach_files.html:73
+msgid "Images:"
+msgstr "Bilder:"
+
+#: app/templates/email/attach_files.html:75
+msgid "Audio:"
+msgstr "Ljud:"
+
+#: app/templates/email/attach_files.html:79
+msgid "Maximum file size:"
+msgstr "Maximal filstorlek:"
+
+#: app/templates/email/attach_files.html:80
+msgid "10 MB per file"
+msgstr "10 MB per fil"
+
+#: app/templates/email/attach_files.html:83
+msgid "Total upload size:"
+msgstr "Total uppladdningsstorlek:"
+
+#: app/templates/email/attach_files.html:84
+msgid "20 MB (all files combined)"
+msgstr "20 MB (alla filer tillsammans)"
+
+#: app/templates/email/edit_message.html:12
+#: app/templates/email/list_emails.html:75
+#: app/templates/email/list_emails.html:177
+msgid "Edit Email"
+msgstr "Redigera E-post"
+
+#: app/templates/email/edit_message.html:12
+msgid "Create Email"
+msgstr "Skapa E-post"
+
+#: app/templates/email/edit_message.html:28
+msgid "To (Recipient Email)"
+msgstr "Till (Mottagarens e-post)"
+
+#: app/templates/email/edit_message.html:35
+#: app/templates/email/list_emails.html:57
+#: app/templates/email/view_config.html:18
+#: app/templates/messages/create_message.html:36
+#: app/templates/messages/edit_message.html:30
+#: app/templates/messages/list_messages.html:58
+#: app/templates/messages/view_message.html:18
+#: app/templates/reminders/create_reminder.html:30
+#: app/templates/reminders/edit_reminder.html:24
+#: app/templates/reminders/list_reminders.html:57
+#: app/templates/reminders/view_reminder.html:17
+msgid "Subject"
+msgstr "Ämne"
+
+#: app/templates/email/edit_message.html:42
+#: app/templates/email/view_config.html:28
+msgid "Body"
+msgstr "Brödtext"
+
+#: app/templates/email/edit_message.html:50
+msgid "Save Email"
+msgstr "Spara E-post"
+
+#: app/templates/email/list_emails.html:48
+msgid "Add Email"
+msgstr "Lägg till E-post"
+
+#: app/templates/email/list_emails.html:58
+#: app/templates/reminders/assign_email_reminder.html:77
+msgid "To"
+msgstr "Till"
+
+#: app/templates/email/list_emails.html:78
+#: app/templates/email/list_emails.html:180
+msgid "Disable to edit email"
+msgstr "Misslyckades att skicka test-e-post:"
+
+#: app/templates/email/list_emails.html:84
+#: app/templates/email/list_emails.html:186
+msgid "Attach Files"
+msgstr "Bifoga Filer"
+
+#: app/templates/email/list_emails.html:87
+#: app/templates/email/list_emails.html:189
+msgid "Disable to attach files"
+msgstr "Bifoga Filer"
+
+#: app/templates/email/list_emails.html:93
+#: app/templates/email/list_emails.html:195
+msgid "Attach SMTP Config"
+msgstr "Bifoga SMTP-konfiguration"
+
+#: app/templates/email/list_emails.html:96
+#: app/templates/email/list_emails.html:198
+msgid "Disable to assign SMTP"
+msgstr "Inaktivera för att tilldela SMTP"
+
+#: app/templates/email/list_emails.html:102
+#: app/templates/email/list_emails.html:204
+msgid "Schedule Check-In"
+msgstr "Schemalägg Incheckning"
+
+#: app/templates/email/list_emails.html:105
+#: app/templates/email/list_emails.html:207
+msgid "Disable to schedule check-in"
+msgstr "Schemalägg Incheckning"
+
+#: app/templates/email/list_emails.html:110
+#: app/templates/email/list_emails.html:212
+#: app/templates/messages/list_messages.html:99
+#: app/templates/messages/list_messages.html:184
+#: app/templates/reminders/list_reminders.html:93
+#: app/templates/reminders/list_reminders.html:178
+msgid "View Details"
+msgstr "Visa Detaljer"
+
+#: app/templates/email/list_emails.html:118
+#: app/templates/email/list_emails.html:220
+msgid "Send this email to yourself to preview it."
+msgstr ""
+"Skicka detta e-postmeddelande till dig själv för att förhandsgranska det."
+
+#: app/templates/email/list_emails.html:136
+#: app/templates/email/list_emails.html:238
+msgid "Toggle Email On/Off"
+msgstr "Aktivera/Avaktivera e-post"
+
+#: app/templates/email/list_emails.html:139
+#: app/templates/email/list_emails.html:241
+msgid "Email is enabled"
+msgstr "E-post är aktiverad"
+
+#: app/templates/email/list_emails.html:141
+#: app/templates/email/list_emails.html:243
+msgid "Email is disabled"
+msgstr "E-post är avaktiverad"
+
+#: app/templates/email/list_emails.html:157
+#: app/templates/email/view_config.html:51
+#: app/templates/messages/list_messages.html:142
+#: app/templates/reminders/list_reminders.html:140
+msgid "Label:"
+msgstr "Etikett:"
+
+#: app/templates/email/list_emails.html:161
+#: app/templates/messages/list_messages.html:146
+#: app/templates/reminders/list_reminders.html:144
+#: app/templates/reminders/view_reminder.html:98
+msgid "Subject:"
+msgstr "Ämne"
+
+#: app/templates/email/list_emails.html:165
+msgid "To:"
+msgstr "Till:"
+
+#: app/templates/email/list_emails.html:169
+#: app/templates/messages/list_messages.html:150
+msgid "Created At:"
+msgstr "Skapad"
+
+#: app/templates/email/list_emails.html:255
+msgid "How to create and send an email"
+msgstr "Hur man skapar och skickar ett e-postmeddelande"
+
+#: app/templates/email/list_emails.html:262
+msgid ""
+"Click “Add Email” and fill out the subject, content, and recipient address."
+msgstr ""
+"Klicka på “Lägg till e-post” och fyll i ämnet, innehållet och mottagarens "
+"adress."
+
+#: app/templates/email/list_emails.html:263
+msgid "Attach any optional files (if needed)."
+msgstr "Bifoga eventuella valfria filer (om nödvändigt)."
+
+#: app/templates/email/list_emails.html:264
+msgid ""
+"Click 🧩 to assign a single SMTP configuration that will be used to send the "
+"email."
+msgstr ""
+"Klicka på 🧩 för att tilldela en enda SMTP-konfiguration som kommer att "
+"användas för att skicka e-postmeddelandet."
+
+#: app/templates/email/list_emails.html:265
+msgid "Click ⏱️ to set a check-in interval and grace period for the email."
+msgstr ""
+"Klicka på ⏱️ för att ställa in ett incheckningsintervall och en frist för "
+"e-postmeddelandet."
+
+#: app/templates/email/list_emails.html:266
+msgid "Enable the email using the 🔴/🟢 toggle button."
+msgstr "Aktivera e-postmeddelandet med hjälp av 🔴/🟢 växlingsknappen."
+
+#: app/templates/email/list_emails.html:267
+msgid ""
+"Click 🧪 to test the email by sending it to yourself (not the recipient)."
+msgstr ""
+"Klicka på 🧪 för att testa e-postmeddelandet genom att skicka det till dig "
+"själv (inte mottagaren)."
+
+#: app/templates/email/list_emails.html:268
+msgid ""
+"If you don’t check in before the grace period ends, the email will be "
+"automatically sent."
+msgstr ""
+"Om du inte checkar in innan fristen löper ut, skickas e-postmeddelandet "
+"automatiskt."
+
+#: app/templates/email/list_emails.html:269
+msgid "You can preview the email configuration using 🔍."
+msgstr "Du kan förhandsgranska e-postkonfigurationen med hjälp av 🔍."
+
+#: app/templates/email/list_emails.html:270
+msgid "Once a secure email is sent, it will be automatically disabled."
+msgstr ""
+"När ett säkert e-postmeddelande har skickats, inaktiveras det automatiskt."
+
+#: app/templates/email/schedule_email.html:9
+msgid "Schedule Email"
+msgstr "Schemalägg e-post"
+
+#: app/templates/email/schedule_email.html:18
+#: app/templates/messages/schedule_message.html:18
+msgid "Years"
+msgstr "År"
+
+#: app/templates/email/schedule_email.html:19
+#: app/templates/messages/schedule_message.html:19
+msgid "Months"
+msgstr "Månader"
+
+#: app/templates/email/schedule_email.html:20
+#: app/templates/messages/schedule_message.html:20
+msgid "Weeks"
+msgstr "Veckor"
+
+#: app/templates/email/schedule_email.html:21
+#: app/templates/messages/schedule_message.html:21
+msgid "Days"
+msgstr "Dagar"
+
+#: app/templates/email/schedule_email.html:22
+#: app/templates/messages/schedule_message.html:22
+msgid "Hours"
+msgstr "Timmar"
+
+#: app/templates/email/schedule_email.html:23
+#: app/templates/messages/schedule_message.html:23
+msgid "Minutes"
+msgstr "Minuter"
+
+#: app/templates/email/schedule_email.html:28
+#: app/templates/messages/schedule_message.html:28
+msgid "Check-in"
+msgstr "Incheckning"
+
+#: app/templates/email/schedule_email.html:51
+#: app/templates/messages/schedule_message.html:51
+#: app/templates/messages/view_message.html:26
+msgid "Grace Period"
+msgstr "Frist"
+
+#: app/templates/email/schedule_email.html:80
+#: app/templates/messages/schedule_message.html:80
+#: app/templates/reminders/schedule_reminder.html:47
+msgid "Save Schedule"
+msgstr "Spara schema"
+
+#: app/templates/email/view_config.html:9
+msgid "Email Configuration"
+msgstr "E-postkonfiguration"
+
+#: app/templates/email/view_config.html:22
+msgid "Recipient"
+msgstr "Mottagare"
+
+#: app/templates/email/view_config.html:33
+msgid "Attached Files"
+msgstr "Bifogade filer"
+
+#: app/templates/email/view_config.html:39
+msgid "No files attached"
+msgstr "Inga filer bifogade"
+
+#: app/templates/email/view_config.html:46
+#: app/templates/reminders/assign_email_reminder.html:20
+msgid "SMTP Configuration"
+msgstr "SMTP-konfiguration"
+
+#: app/templates/email/view_config.html:54
+#: app/templates/user_smtp/list_smtp.html:122
+msgid "Host:"
+msgstr "Värd:"
+
+#: app/templates/email/view_config.html:57
+#: app/templates/user_smtp/list_smtp.html:128
+msgid "Username:"
+msgstr "Användarnamn:"
+
+#: app/templates/email/view_config.html:60
+#: app/templates/user_smtp/list_smtp.html:134
+msgid "TLS:"
+msgstr "TLS:"
+
+#: app/templates/email/view_config.html:64
+msgid "No SMTP configuration assigned"
+msgstr "Ingen SMTP-konfiguration tilldelad"
+
+#: app/templates/email/view_config.html:69
+msgid "Schedule Information"
+msgstr "Schema Information"
+
+#: app/templates/email/view_config.html:72
+msgid "Check-in Interval:"
+msgstr "Incheckningsintervall:"
+
+#: app/templates/email/view_config.html:72
+#: app/templates/email/view_config.html:75
+msgid "minutes"
+msgstr "minuter"
+
+#: app/templates/email/view_config.html:75
+msgid "Grace Period:"
+msgstr "Frist:"
+
+#: app/templates/email/view_config.html:79
+msgid "Last Check-in:"
+msgstr "Senaste incheckningen:"
+
+#: app/templates/email/view_config.html:82
+msgid "No check-in has occurred yet"
+msgstr "Ingen incheckning har ägt rum ännu"
+
+#: app/templates/email/view_config.html:92
+msgid "Back to Emails"
+msgstr "Tillbaka till e-post"
+
+#: app/templates/errors/500.html:4
+msgid "Something went wrong"
+msgstr "Något gick fel"
+
+#: app/templates/errors/500.html:6
+msgid ""
+"An unexpected error occurred. Please try again later or contact support."
+msgstr ""
+"Ett oväntat fel inträffade. Försök igen senare eller kontakta support."
+
+#: app/templates/locale/redirect_after_lang_set.html:15
+msgid "Switching Language..."
+msgstr "Byter språk..."
+
+#: app/templates/locale/redirect_after_lang_set.html:18
+msgid "Applying new language..."
+msgstr "Tillämpa nytt språk..."
+
+#: app/templates/messages/assign_destinations.html:13
+#: app/templates/reminders/assign_destinations.html:12
+msgid "Assign Destinations for"
+msgstr "Tilldela destinationer för"
+
+#: app/templates/messages/assign_destinations.html:62
+#: app/templates/reminders/assign_destinations.html:60
+msgid "Save Destinations"
+msgstr "Spara destinationer"
+
+#: app/templates/messages/create_message.html:17
+msgid "Edit Notificaton"
+msgstr "Redigera notifikation"
+
+#: app/templates/messages/create_message.html:19
+msgid "Create Notification"
+msgstr "Skapa notifikation"
+
+#: app/templates/messages/create_message.html:43
+#: app/templates/messages/edit_message.html:37
+#: app/templates/messages/view_message.html:42
+#: app/templates/reminders/create_reminder.html:37
+#: app/templates/reminders/edit_reminder.html:31
+#: app/templates/reminders/view_reminder.html:53
+msgid "Content"
+msgstr "Innehåll"
+
+#: app/templates/messages/create_message.html:51
+msgid "Save Notification"
+msgstr "Spara notifikation"
+
+#: app/templates/messages/edit_message.html:15
+#: app/templates/messages/list_messages.html:74
+#: app/templates/messages/list_messages.html:158
+msgid "Edit Notification"
+msgstr "Redigera notifikation"
+
+#: app/templates/messages/edit_message.html:45
+msgid "Update Notification"
+msgstr "Uppdatera notifikation"
+
+#: app/templates/messages/list_messages.html:49
+msgid "Add Notification"
+msgstr "Lägg till notifikation"
+
+#: app/templates/messages/list_messages.html:77
+#: app/templates/messages/list_messages.html:161
+msgid "Disable to edit notification"
+msgstr "Redigera notifikation"
+
+#: app/templates/messages/list_messages.html:83
+#: app/templates/messages/list_messages.html:167
+#: app/templates/reminders/list_reminders.html:78
+#: app/templates/reminders/list_reminders.html:163
+msgid "Assign Destinations"
+msgstr "Tilldela destinationer"
+
+#: app/templates/messages/list_messages.html:86
+#: app/templates/messages/list_messages.html:170
+msgid "Disable to assign destinations"
+msgstr "Tilldela destinationer"
+
+#: app/templates/messages/list_messages.html:92
+#: app/templates/messages/list_messages.html:176
+#: app/templates/reminders/list_reminders.html:88
+#: app/templates/reminders/list_reminders.html:173
+msgid "Set Schedule"
+msgstr "Ange schema"
+
+#: app/templates/messages/list_messages.html:95
+#: app/templates/messages/list_messages.html:179
+msgid "Disable to set schedule"
+msgstr "Ange schema"
+
+#: app/templates/messages/list_messages.html:107
+#: app/templates/messages/list_messages.html:192
+msgid "Send Test Notification"
+msgstr "Redigera notifikation"
+
+#: app/templates/messages/list_messages.html:122
+#: app/templates/messages/list_messages.html:209
+msgid "Toggle Message On/Off"
+msgstr "Slå på/av meddelande"
+
+#: app/templates/messages/list_messages.html:124
+#: app/templates/messages/list_messages.html:211
+msgid "Notification is enabled"
+msgstr "Notifikationen är aktiverad"
+
+#: app/templates/messages/list_messages.html:126
+#: app/templates/messages/list_messages.html:213
+msgid "Notification is disabled"
+msgstr "Notifikationen är inaktiverad"
+
+#: app/templates/messages/list_messages.html:223
+msgid "How to create and send a notification"
+msgstr "Hur man skapar och skickar en notifikation"
+
+#: app/templates/messages/list_messages.html:233
+msgid "Click “Add notification” and fill out the subject and content fields."
+msgstr ""
+"Klicka på \"Lägg till notifikation\" och fyll i fälten för ämne och "
+"innehåll."
+
+#: app/templates/messages/list_messages.html:234
+msgid "Save the notification to return to the overview."
+msgstr "Spara notifikationen för att återgå till översikten."
+
+#: app/templates/messages/list_messages.html:235
+msgid "You need to create at least one apprise or webhook destination."
+msgstr "Du behöver skapa minst en apprise- eller webhookdestination."
+
+#: app/templates/messages/list_messages.html:236
+msgid "You can create as many destinations as you like."
+msgstr "Du kan skapa så många destinationer du vill."
+
+#: app/templates/messages/list_messages.html:237
+msgid "Click 🧩 to assign one or more Apprise and/or Webhook destinations."
+msgstr ""
+"Klicka på 🧩 för att tilldela en eller flera Apprise- och/eller "
+"Webhookdestinationer."
+
+#: app/templates/messages/list_messages.html:238
+msgid "Click ⏱️ to set a schedule and check-in interval."
+msgstr "Klicka på ⏱️ för att ange ett schema och incheckningsintervall."
+
+#: app/templates/messages/list_messages.html:239
+msgid "Enable the notification using the 🔴/🟢 toggle button."
+msgstr "Aktivera notifikationen med hjälp av 🔴/🟢 växla-knappen."
+
+#: app/templates/messages/list_messages.html:240
+msgid ""
+"If you don’t check in before the grace period ends, the notification will be"
+" sent."
+msgstr ""
+"Om du inte checkar in innan fristen går ut, kommer notifikationen att "
+"skickas."
+
+#: app/templates/messages/list_messages.html:241
+msgid "You can preview the notification config using 🔍."
+msgstr "Du kan förhandsgranska notifikationens konfiguration med 🔍."
+
+#: app/templates/messages/list_messages.html:242
+msgid "Once a notification is sent, it will be automatically disabled."
+msgstr ""
+"När en notifikation är skickad, kommer den automatiskt att inaktiveras."
+
+#: app/templates/messages/schedule_message.html:9
+msgid "Schedule Message"
+msgstr "Schemalägg meddelande"
+
+#: app/templates/messages/view_message.html:9
+msgid "Notifications Details"
+msgstr "Notifikationsdetaljer"
+
+#: app/templates/messages/view_message.html:22
+msgid "Check-in Interval"
+msgstr "Incheckningsintervall"
+
+#: app/templates/messages/view_message.html:31
+msgid "Last Check-in"
+msgstr "Senaste incheckning"
+
+#: app/templates/messages/view_message.html:48
+#: app/templates/reminders/view_reminder.html:59
+msgid "Apprise URLs"
+msgstr "Apprise-URL:er"
+
+#: app/templates/messages/view_message.html:54
+#: app/templates/messages/view_message.html:64
+#: app/templates/reminders/view_reminder.html:65
+#: app/templates/reminders/view_reminder.html:75
+#: app/templates/reminders/view_reminder.html:85
+msgid "None assigned."
+msgstr "Inget tilldelat."
+
+#: app/templates/messages/view_message.html:73
+msgid "Back to Notifications"
+msgstr "Tillbaka till notifikationer"
+
+#: app/templates/mfa/challenge.html:5 app/templates/mfa/settings.html:5
+msgid "Two-Factor Authentication (MFA)"
+msgstr "Tvåfaktorsautentisering (MFA)"
+
+#: app/templates/mfa/recovery_codes.html:4
+msgid "Your Recovery Codes"
+msgstr "Dina återställningskoder"
+
+#: app/templates/mfa/recovery_codes.html:7
+msgid "Save these recovery codes in a safe place!"
+msgstr "Spara dessa återställningskoder på en säker plats!"
+
+#: app/templates/mfa/recovery_codes.html:10
+msgid ""
+"Each code can be used once if you lose access to your authenticator. These "
+"codes will not be shown again."
+msgstr ""
+"Varje kod kan användas en gång om du förlorar åtkomst till din "
+"autentiserare. Dessa koder kommer inte att visas igen."
+
+#: app/templates/mfa/recovery_codes.html:24
+msgid "OK, I've saved them"
+msgstr "OK, jag har sparat dem"
+
+#: app/templates/mfa/settings.html:12
+msgid "MFA QR Code"
+msgstr "MFA QR-kod"
+
+#: app/templates/mfa/settings.html:15
+msgid "Manual Entry:"
+msgstr "Manuell inmatning:"
+
+#: app/templates/partials/admin_nav.html:21
+msgid "Administration"
+msgstr "Administration"
+
+#: app/templates/partials/admin_nav.html:37
+#: app/templates/partials/shared_nav.html:34
+#: app/templates/partials/shared_nav.html:78
+#: app/templates/partials/shared_nav.html:117
+msgid "Overview"
+msgstr "Översikt"
+
+#: app/templates/partials/footer.html:7
+msgid "Toggle Theme"
+msgstr "Växla Tema"
+
+#: app/templates/partials/footer.html:32
+msgid "Theme"
+msgstr "Tema"
+
+#: app/templates/partials/head.html:7
+msgid "Grylli"
+msgstr "Grylli"
+
+#: app/templates/partials/header.html:6 app/templates/partials/sidebar.html:32
+#: app/templates/partials/sidebar.html:66
+msgid "Home"
+msgstr "Hem"
+
+#: app/templates/partials/header.html:55
+msgid "Account"
+msgstr "Konto"
+
+#: app/templates/partials/header.html:61
+msgid "MFA"
+msgstr "MFA"
+
+#: app/templates/partials/header.html:67
+msgid "About"
+msgstr "Om"
+
+#: app/templates/partials/header.html:73
+msgid "Privacy"
+msgstr "Sekretess"
+
+#: app/templates/partials/header.html:79
+msgid "System Info"
+msgstr "Systeminformation"
+
+#: app/templates/partials/header.html:114
+msgid "Logout"
+msgstr "Logga ut"
+
+#: app/templates/partials/shared_nav.html:33
+msgid "Overview of notification settings"
+msgstr "Översikt över aviseringar"
+
+#: app/templates/partials/shared_nav.html:38
+msgid "Configure Apprise services"
+msgstr "Konfigurera Apprise-tjänster"
+
+#: app/templates/partials/shared_nav.html:39
+msgid "Apprise"
+msgstr "Apprise"
+
+#: app/templates/partials/shared_nav.html:43
+msgid "Configure Webhook integrations"
+msgstr "Konfigurera Webhook-integrationer"
+
+#: app/templates/partials/shared_nav.html:77
+msgid "Overview of secure email messages"
+msgstr "Översikt över säker e-post"
+
+#: app/templates/partials/shared_nav.html:82
+msgid "Configure SMTP email settings"
+msgstr "Konfigurera SMTP-e-postinställningar"
+
+#: app/templates/partials/shared_nav.html:83
+#: app/templates/reminders/view_reminder.html:79
+msgid "SMTP"
+msgstr "SMTP"
+
+#: app/templates/partials/shared_nav.html:100
+#: app/templates/reminders/list_reminders.html:8
+msgid "Reminders"
+msgstr "minuter"
+
+#: app/templates/partials/shared_nav.html:116
+msgid "Overview of reminders"
+msgstr "Översikt över påminnelser"
+
+#: app/templates/partials/sidebar.html:13
+#: app/templates/partials/sidebar.html:47
+msgid "Menu"
+msgstr "Meny"
+
+#: app/templates/reminders/assign_email_reminder.html:12
+msgid "Link Email Reminder for"
+msgstr "Länka E-postpåminnelse för"
+
+#: app/templates/reminders/assign_email_reminder.html:30
+#: app/templates/reminders/assign_email_reminder.html:64
+msgid "None (Unassign)"
+msgstr "Ingen SMTP-konfiguration tilldelad"
+
+#: app/templates/reminders/assign_email_reminder.html:43
+msgid "No sender address"
+msgstr "Ingen avsändaradress"
+
+#: app/templates/reminders/assign_email_reminder.html:54
+msgid "Email Message"
+msgstr "Schemalägg meddelande"
+
+#: app/templates/reminders/assign_email_reminder.html:77
+msgid "No subject"
+msgstr "Ämne"
+
+#: app/templates/reminders/assign_email_reminder.html:90
+msgid "Save Email Reminder"
+msgstr "Spara E-post"
+
+#: app/templates/reminders/create_reminder.html:12
+#: app/templates/reminders/edit_reminder.html:10
+#: app/templates/reminders/list_reminders.html:73
+#: app/templates/reminders/list_reminders.html:158
+msgid "Edit Reminder"
+msgstr "Redigera E-post"
+
+#: app/templates/reminders/create_reminder.html:14
+msgid "Create Reminder"
+msgstr "Skapa E-post"
+
+#: app/templates/reminders/create_reminder.html:45
+msgid "Save Reminder"
+msgstr "Spara E-post"
+
+#: app/templates/reminders/edit_reminder.html:39
+msgid "Update Reminder"
+msgstr "Uppdatera Påminnelse"
+
+#: app/templates/reminders/list_reminders.html:48
+msgid "Add Reminder"
+msgstr "Lägg till E-post"
+
+#: app/templates/reminders/list_reminders.html:58
+#: app/templates/reminders/view_reminder.html:21
+msgid "Start At"
+msgstr "Startar TLS"
+
+#: app/templates/reminders/list_reminders.html:59
+msgid "Recurrence"
+msgstr "Återkommande"
+
+#: app/templates/reminders/list_reminders.html:69
+#: app/templates/reminders/list_reminders.html:153
+#: app/templates/reminders/view_reminder.html:26
+msgid "One-time"
+msgstr "Engångs"
+
+#: app/templates/reminders/list_reminders.html:83
+msgid "Assign Email Reminder"
+msgstr "Tilldela E-postpåminnelse"
+
+#: app/templates/reminders/list_reminders.html:102
+#: app/templates/reminders/list_reminders.html:187
+msgid "Send Test Reminder"
+msgstr "Skicka testmail"
+
+#: app/templates/reminders/list_reminders.html:120
+#: app/templates/reminders/list_reminders.html:205
+msgid "Toggle Reminder On/Off"
+msgstr "Aktivera/Avaktivera e-post"
+
+#: app/templates/reminders/list_reminders.html:122
+#: app/templates/reminders/list_reminders.html:207
+msgid "Reminder is enabled"
+msgstr "E-post är aktiverad"
+
+#: app/templates/reminders/list_reminders.html:124
+#: app/templates/reminders/list_reminders.html:209
+msgid "Reminder is disabled"
+msgstr "E-post är avaktiverad"
+
+#: app/templates/reminders/list_reminders.html:148
+msgid "Start At:"
+msgstr "Startar TLS"
+
+#: app/templates/reminders/list_reminders.html:152
+msgid "Recurrence:"
+msgstr "Återkommande:"
+
+#: app/templates/reminders/list_reminders.html:168
+msgid "Link Email Reminder"
+msgstr "Länka E-postpåminnelse"
+
+#: app/templates/reminders/list_reminders.html:218
+msgid "How to use reminders"
+msgstr "Hur man hanterar användare"
+
+#: app/templates/reminders/list_reminders.html:231
+msgid "➕ Click “Add Reminder” and fill out the subject and content fields."
+msgstr ""
+"Klicka på \"Lägg till notifikation\" och fyll i fälten för ämne och "
+"innehåll."
+
+#: app/templates/reminders/list_reminders.html:232
+msgid "💾 Save the reminder to return to the overview."
+msgstr "Spara notifikationen för att återgå till översikten."
+
+#: app/templates/reminders/list_reminders.html:233
+msgid ""
+"📣 Assign Apprise, 🌐 Webhook, and/or 📧 Email (SMTP) destinations as needed."
+msgstr ""
+"📣 Tilldela Apprise, 🌐 Webhook, och/eller 📧 E-post (SMTP) destinationer efter"
+" behov."
+
+#: app/templates/reminders/list_reminders.html:234
+msgid ""
+"⏱️ Set the schedule using the schedule button to define when reminders are "
+"sent."
+msgstr ""
+"⏱️ Ställ in schemat med hjälp av schemaknappen för att definiera när "
+"påminnelser skickas."
+
+#: app/templates/reminders/list_reminders.html:235
+msgid ""
+"🔍 Click “View Details” to review or edit assigned destinations and other "
+"settings."
+msgstr ""
+"🔍 Klicka på “Visa Detaljer” för att granska eller redigera tilldelade "
+"destinationer och andra inställningar."
+
+#: app/templates/reminders/list_reminders.html:236
+msgid ""
+"🧪 Click the Test button to verify all assigned destinations are working "
+"correctly."
+msgstr ""
+"🧪 Klicka på Testa-knappen för att verifiera att alla tilldelade "
+"destinationer fungerar korrekt."
+
+#: app/templates/reminders/list_reminders.html:237
+msgid "🔴/🟢 Enable or disable the reminder using the toggle button."
+msgstr "Aktivera e-postmeddelandet med hjälp av 🔴/🟢 växlingsknappen."
+
+#: app/templates/reminders/list_reminders.html:238
+msgid "📤 Reminders will be sent as scheduled to the assigned destinations."
+msgstr ""
+"📤 Påminnelser kommer att skickas enligt schema till de tilldelade "
+"destinationerna."
+
+#: app/templates/reminders/schedule_reminder.html:8
+msgid "Schedule Reminder"
+msgstr "Schemalägg e-post"
+
+#: app/templates/reminders/schedule_reminder.html:15
+msgid "Start Date & Time"
+msgstr "Startdatum & Tid"
+
+#: app/templates/reminders/schedule_reminder.html:22
+#: app/templates/reminders/view_reminder.html:25
+msgid "Recurrence Rule"
+msgstr "Återkommande Regel"
+
+#: app/templates/reminders/schedule_reminder.html:24
+msgid "(Optional) Enter RRULE or leave blank for one-time."
+msgstr "(Valfritt) Ange RRULE eller lämna tomt för engångs."
+
+#: app/templates/reminders/schedule_reminder.html:30
+msgid "End Date"
+msgstr "Skicka test"
+
+#: app/templates/reminders/schedule_reminder.html:32
+msgid "(Optional) Stop sending after this date."
+msgstr "(Valfritt) Sluta skicka efter detta datum."
+
+#: app/templates/reminders/schedule_reminder.html:38
+#: app/templates/reminders/view_reminder.html:36
+msgid "Max Occurrences"
+msgstr "Max Antal Förekomster"
+
+#: app/templates/reminders/schedule_reminder.html:40
+msgid "(Optional) Stop after this many reminders."
+msgstr "(Valfritt) Sluta efter så här många påminnelser."
+
+#: app/templates/reminders/schedule_reminder.html:56
+msgid "Help for RRULE syntax"
+msgstr "Hjälp för RRULE-syntax"
+
+#: app/templates/reminders/schedule_reminder.html:66
+msgid "Several tools are available to help generate an RRULE."
+msgstr ""
+"Flera verktyg finns tillgängliga för att hjälpa till att generera en RRULE."
+
+#: app/templates/reminders/schedule_reminder.html:67
+msgid "Use a search engine or AI tool to assist."
+msgstr "Använd en sökmotor eller AI-verktyg för att få hjälp."
+
+#: app/templates/reminders/schedule_reminder.html:69
+msgid "Here is an example of one such online tool:"
+msgstr "Här är ett exempel på ett sådant onlineverktyg:"
+
+#: app/templates/reminders/schedule_reminder.html:73
+msgid "RRULE Generator Tool"
+msgstr "RRULE Generator Verktyg"
+
+#: app/templates/reminders/schedule_reminder.html:77
+msgid "See here for some common examples:"
+msgstr "Se här för några vanliga exempel:"
+
+#: app/templates/reminders/schedule_reminder.html:81
+msgid "RRULE Help (GitHub)"
+msgstr "RRULE Hjälp (GitHub)"
+
+#: app/templates/reminders/view_reminder.html:8
+msgid "Reminder Details"
+msgstr "Visa Detaljer"
+
+#: app/templates/reminders/view_reminder.html:30
+msgid "End At"
+msgstr "Skicka test"
+
+#: app/templates/reminders/view_reminder.html:42
+msgid "Last Sent"
+msgstr "Senaste incheckning"
+
+#: app/templates/reminders/view_reminder.html:91
+msgid "Email Template"
+msgstr "E-postvalidator"
+
+#: app/templates/reminders/view_reminder.html:103
+msgid "No email linked."
+msgstr "E-post är aktiverad"
+
+#: app/templates/reminders/view_reminder.html:111
+msgid "Back to Reminders"
+msgstr "Tillbaka till e-post"
+
+#: app/templates/user_smtp/create_smtp.html:10
+msgid "Create SMTP Destination"
+msgstr "Skapa SMTP-destination"
+
+#: app/templates/user_smtp/create_smtp.html:69
+#: app/templates/user_smtp/edit_smtp.html:84
+msgid "Hold to reveal"
+msgstr "Håll för att avslöja"
+
+#: app/templates/user_smtp/create_smtp.html:92
+#: app/templates/user_smtp/edit_smtp.html:107
+msgid "Use TLS"
+msgstr "Använd TLS"
+
+#: app/templates/user_smtp/edit_smtp.html:10
+msgid "Edit SMTP Destination"
+msgstr "Skapa SMTP-destination"
+
+#: app/templates/user_smtp/list_smtp.html:9
+msgid "SMTP Destinations"
+msgstr "SMTP-destinationer"
+
+#: app/templates/user_smtp/list_smtp.html:44
+msgid "Add SMTP"
+msgstr "Lägg till SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:53
+msgid "Host"
+msgstr "Värd"
+
+#: app/templates/user_smtp/list_smtp.html:54
+msgid "Port"
+msgstr "Port"
+
+#: app/templates/user_smtp/list_smtp.html:56
+msgid "TLS"
+msgstr "TLS"
+
+#: app/templates/user_smtp/list_smtp.html:58
+msgid "Created"
+msgstr "Skapad"
+
+#: app/templates/user_smtp/list_smtp.html:90
+#: app/templates/user_smtp/list_smtp.html:158
+msgid "Send Test"
+msgstr "Skicka test"
+
+#: app/templates/user_smtp/list_smtp.html:125
+msgid "Port:"
+msgstr "Port:"
+
+#: app/templates/user_smtp/list_smtp.html:131
+msgid "Password:"
+msgstr "Lösenord:"
+
+#: app/templates/user_smtp/list_smtp.html:184
+msgid "Hide SMTP Setup Help"
+msgstr "Dölj SMTP-inställningshjälp"
+
+#: app/templates/user_smtp/list_smtp.html:184
+msgid "Show SMTP Setup Help"
+msgstr "Visa SMTP-inställningshjälp"
+
+#: app/templates/user_smtp/list_smtp.html:190
+msgid ""
+"Need help finding your SMTP server settings? See here for some links to "
+"common providers:"
+msgstr ""
+"Behöver du hjälp med att hitta dina SMTP-serverinställningar? Se här för "
+"länkar till vanliga leverantörer:"
+
+#: app/templates/user_smtp/list_smtp.html:194
+msgid "SMTP Server Settings Help (GitHub)"
+msgstr "SMTP Serverinställningshjälp (GitHub)"
+
+#: app/templates/user_smtp/list_smtp.html:198
+msgid ""
+"Find official documentation links for Gmail, Outlook, Yahoo, AOL, and "
+"others."
+msgstr ""
+"Hitta länkar till officiell dokumentation för Gmail, Outlook, Yahoo, AOL och"
+" andra."
+
+#: app/templates/user_smtp/list_smtp.html:199
+msgid ""
+"If your provider isn’t listed, search their support site or a search engine "
+"for 'SMTP settings'."
+msgstr ""
+"Om din leverantör inte är listad, sök deras support-sajt eller en sökmotor "
+"efter 'SMTP-inställningar'."
+
+#: app/templates/user_smtp/list_smtp.html:200
+msgid ""
+"Some providers (like Gmail, Yahoo) require 'App Passwords' or special "
+"setup—see their docs!"
+msgstr ""
+"Vissa leverantörer (som Gmail, Yahoo) kräver 'App-lösenord' eller speciell "
+"inställning—se deras dokumentation!"
+
+#: app/templates/webhook/create_webhook.html:10
+msgid "Create Webhook"
+msgstr "Skapa Webhook"
+
+#: app/templates/webhook/edit_webhook.html:10
+msgid "Edit Webhook"
+msgstr "Redigera Webhook"
+
+#: app/templates/webhook/list_webhooks.html:9
+#: app/templates/webhook/webhook_config.html:3
+msgid "Webhooks Destinations"
+msgstr "Webhook-destinationer"
+
+#: app/templates/webhook/list_webhooks.html:59
+msgid "Endpoint"
+msgstr "Slutpunkt"
+
+#: app/templates/webhook/list_webhooks.html:60
+msgid "Description"
+msgstr "Beskrivning"
+
+#: app/templates/webhook/list_webhooks.html:82
+#: app/templates/webhook/list_webhooks.html:141
+msgid "Cannot edit while assigned to notifications"
+msgstr "Kan inte redigera medan den är tilldelad till aviseringar"
+
+#: app/templates/webhook/list_webhooks.html:106
+#: app/templates/webhook/list_webhooks.html:165
+msgid "Cannot delete while assigned to notifications"
+msgstr "Kan inte ta bort medan den är tilldelad till aviseringar"
+
+#: app/templates/webhook/list_webhooks.html:122
+msgid "Endpoint:"
+msgstr "Slutpunkt:"
+
+#: app/templates/webhook/list_webhooks.html:125
+msgid "Description:"
+msgstr "Beskrivning:"
+
+#: app/views/account.py:74
+msgid "Current password is required to change password."
+msgstr "Nuvarande lösenord krävs för att ändra lösenord."
+
+#: app/views/account.py:78
+msgid "Current password is incorrect."
+msgstr "Nuvarande lösenord är felaktigt."
+
+#: app/views/account.py:94
+msgid "Account updated successfully."
+msgstr "Kontot uppdaterades framgångsrikt."
+
+#: app/views/account.py:100
+msgid "An error occurred while updating your account."
+msgstr "Ett fel inträffade vid uppdatering av ditt konto."
+
+#: app/views/account.py:137
+msgid "You cannot delete your account because you are the last admin."
+msgstr "Du kan inte ta bort ditt konto eftersom du är den sista admin."
+
+#: app/views/account.py:146
+msgid "Your account has been permanently deleted."
+msgstr "Ditt konto har raderats permanent."
+
+#: app/views/account.py:152
+msgid "An error occurred while trying to delete your account."
+msgstr "Ett fel inträffade vid uppdatering av ditt konto."
+
+#: app/views/account.py:171
+msgid "Your account has been deleted"
+msgstr "Ditt konto har raderats permanent."
+
+#: app/views/account.py:173
+#, python-brace-format
+msgid ""
+"Hello {username},\n"
+"\n"
+"Your account on {site_name} has been deleted.Remember to delete your files from the uploads folder.If this was not you, please contact support immediately.\n"
+"\n"
+"{site_url}"
+msgstr ""
+"Hej {username},\n"
+"\n"
+"Ditt konto på {site_name} har blivit raderat. Kom ihåg att ta bort dina filer från uppladdningsmappen. Om det inte var du, kontakta supporten omedelbart.\n"
+"\n"
+"{site_url}"
+
+#: app/views/admin.py:59
+msgid "Invalid role."
+msgstr "Ogiltig roll."
+
+#: app/views/apprise.py:51
+msgid "🧪 Test notification sent successfully!"
+msgstr "🧪 Testnotis skickad framgångsrikt!"
+
+#: app/views/apprise.py:56
+msgid "🧪 Failed to send test notification: "
+msgstr "🧪 Misslyckades med att skicka testnotis:"
+
+#: app/views/apprise.py:62
+msgid "🧪 Error sending test notification."
+msgstr "🧪 Fel vid skickande av testnotis."
+
+#: app/views/apprise.py:101
+msgid "Apprise destination created successfully."
+msgstr "Apprise-destination skapad framgångsrikt."
+
+#: app/views/apprise.py:168
+msgid "Apprise destination updated successfully."
+msgstr "Apprise-destination uppdaterad framgångsrikt."
+
+#: app/views/apprise.py:199
+msgid "Apprise destination deleted."
+msgstr "Apprise-destination raderad."
+
+#: app/views/auth.py:95
+msgid "Admin account created successfully."
+msgstr "Administratörskonto skapades framgångsrikt."
+
+#: app/views/auth.py:108
+msgid "An error occurred while creating the admin account."
+msgstr "Ett fel uppstod vid skapandet av administratörskontot."
+
+#: app/views/auth.py:141
+msgid ""
+"Your account is not activated. Please check your email for the activation "
+"link."
+msgstr ""
+"Ditt konto är inte aktiverat. Vänligen kontrollera din e-post för "
+"aktiveringslänken."
+
+#: app/views/auth.py:157
+msgid "Multi-factor authentication required. Please enter your code."
+msgstr "Multifaktorautentisering krävs. Vänligen ange din kod."
+
+#: app/views/auth.py:162 app/views/mfa.py:195
+msgid "Logged in successfully."
+msgstr "Inloggad framgångsrikt."
+
+#: app/views/auth.py:179
+msgid "Invalid username or password."
+msgstr "Ogiltigt användarnamn eller lösenord."
+
+#: app/views/auth.py:203
+msgid "You have been logged out."
+msgstr "Du har blivit utloggad."
+
+#: app/views/auth.py:239 app/views/email.py:263
+msgid "Access denied."
+msgstr "Åtkomst nekad."
+
+#: app/views/auth.py:273
+msgid "If a user with that email exists, we've sent the username to them."
+msgstr ""
+"Om en användare med den e-posten existerar, har vi skickat användarnamnet "
+"till dem."
+
+#: app/views/auth.py:314
+msgid "A password reset link has been sent to your email."
+msgstr "En länk för återställning av lösenord har skickats till din e-post."
+
+#: app/views/auth.py:319
+msgid "No account found matching that username and email."
+msgstr "Inget konto hittades som matchar det användarnamnet och e-posten."
+
+#: app/views/auth.py:389
+msgid "The reset link is invalid or has expired."
+msgstr "Återställningslänken är ogiltig eller har löpt ut."
+
+#: app/views/auth.py:401
+msgid "Username and email do not match."
+msgstr "Användarnamn och e-post stämmer inte överens."
+
+#: app/views/auth.py:421
+msgid "Your password has been reset. Please log in."
+msgstr "Ditt lösenord har återställts. Vänligen logga in."
+
+#: app/views/auth.py:458
+msgid "Invalid registration PIN."
+msgstr "Ogiltig registreringskod."
+
+#: app/views/auth.py:467
+msgid "Username or email already exists."
+msgstr "Användarnamn eller e-post finns redan."
+
+#: app/views/auth.py:492
+msgid "Activate Your Grylli Account"
+msgstr "Aktivera ditt Grylli-konto"
+
+#: app/views/auth.py:493
+#, python-brace-format
+msgid ""
+"Hello {username},\n"
+"\n"
+"Please activate your account by clicking..."
+msgstr ""
+"Hej {username},\n"
+"\n"
+"Vänligen aktivera ditt konto genom att klicka..."
+
+#: app/views/auth.py:498
+msgid "Account created! Please check your email to activate your account."
+msgstr ""
+"Konto skapat! Vänligen kontrollera din e-post för att aktivera ditt konto."
+
+#: app/views/auth.py:521
+msgid "Activation link is invalid or expired."
+msgstr "Aktiveringslänk är ogiltig eller har gått ut."
+
+#: app/views/auth.py:528 app/views/users.py:76 app/views/users.py:140
+msgid "User not found."
+msgstr "Användare hittades inte."
+
+#: app/views/auth.py:532
+msgid "Account already activated. Please log in."
+msgstr "Konto redan aktiverat. Vänligen logga in."
+
+#: app/views/auth.py:540
+msgid "Your account has been activated! You can now log in."
+msgstr "Ditt konto har aktiverats! Du kan nu logga in."
+
+#: app/views/backups.py:72
+#, python-format
+msgid "Backup created: %(filename)s"
+msgstr "Säkerhetskopiering skapad: %(filename)s"
+
+#: app/views/backups.py:77
+msgid "Failed to create backup."
+msgstr "Misslyckades att skapa säkerhetskopiering."
+
+#: app/views/backups.py:106
+#, python-format
+msgid "Backup deleted: %(filename)s"
+msgstr "Säkerhetskopia raderad: %(filename)s"
+
+#: app/views/backups.py:109
+msgid "Backup file not found."
+msgstr "Säkerhetskopieringsfilen hittades inte."
+
+#: app/views/backups.py:112
+msgid "Failed to delete backup."
+msgstr "Misslyckades att radera säkerhetskopiering."
+
+#: app/views/checkin.py:41
+msgid "Invalid check-in link."
+msgstr "Ogiltig incheckningslänk."
+
+#: app/views/checkin.py:48
+msgid "You are not authorized to check in for this item."
+msgstr "Du är inte behörig att checka in för detta objekt."
+
+#: app/views/checkin.py:62
+msgid "Unsupported check-in type."
+msgstr "Incheckningstyp stöds inte."
+
+#: app/views/checkin.py:137
+msgid "⚠️ Cannot enable reminder: Start date/time is in the past."
+msgstr "⚠️ Kan inte aktivera påminnelse: Startdatum/-tid är i det förflutna."
+
+#: app/views/checkin.py:158
+msgid "✅ Enabled and timer started."
+msgstr "✅ Aktiverad och timer startad."
+
+#: app/views/checkin.py:168
+msgid "⛔ Disabled."
+msgstr "⛔ Inaktiverad."
+
+#: app/views/checkin.py:170
+msgid "⚠️ Cannot toggle — missing schedule or destination."
+msgstr "⚠️ Kan inte växla — saknas schema eller destination."
+
+#: app/views/email.py:88
+msgid "Message saved."
+msgstr "Meddelande sparat."
+
+#: app/views/email.py:118 app/views/messages.py:167
+msgid "Message deleted."
+msgstr "Meddelande raderat."
+
+#: app/views/email.py:152
+msgid "Attached files updated."
+msgstr "Bifogade filer uppdaterade."
+
+#: app/views/email.py:200
+msgid "SMTP configuration not assigned or is disabled."
+msgstr "SMTP-konfiguration inte tilldelad eller är inaktiverad."
+
+#: app/views/email.py:234 app/views/smtp_settings_admin.py:82
+msgid "Test email sent successfully."
+msgstr "Test-e-post skickades framgångsrikt."
+
+#: app/views/email.py:282 app/views/messages.py:305
+msgid "Schedule updated successfully."
+msgstr "Schema uppdaterat framgångsrikt."
+
+#: app/views/email.py:310
+msgid "SMTP configuration assigned."
+msgstr "SMTP-konfiguration tilldelad."
+
+#: app/views/email.py:319
+msgid "SMTP configuration removed."
+msgstr "SMTP-konfiguration tilldelad."
+
+#: app/views/messages.py:97
+msgid "Message created successfully."
+msgstr "Meddelande skapat framgångsrikt."
+
+#: app/views/messages.py:133
+msgid "Message updated successfully."
+msgstr "Meddelande uppdaterat framgångsrikt."
+
+#: app/views/messages.py:223 app/views/reminders.py:240
+msgid "Destinations updated."
+msgstr "Destinationer uppdaterade."
+
+#: app/views/messages.py:441
+msgid "No destinations assigned to this message."
+msgstr "SMTP-konfiguration inte tilldelad eller är inaktiverad."
+
+#: app/views/messages.py:453
+msgid "Test message sent successfully."
+msgstr "Test-e-post skickades framgångsrikt."
+
+#: app/views/messages.py:455
+msgid "Test message failed: "
+msgstr "Meddelande sparat."
+
+#: app/views/mfa.py:68
+msgid "You must enter a code from your authenticator."
+msgstr "Du måste ange en kod från din autentiserare."
+
+#: app/views/mfa.py:82 app/views/mfa.py:259
+msgid "Invalid code. Please try again."
+msgstr "Ogiltig kod. Försök igen."
+
+#: app/views/mfa.py:91
+msgid "Two-factor authentication disabled."
+msgstr "Notifikationen är inaktiverad"
+
+#: app/views/mfa.py:132
+msgid "Recovery codes are only shown immediately after enabling MFA."
+msgstr "Återställningskoder visas endast direkt efter att MFA har aktiverats."
+
+#: app/views/mfa.py:142
+msgid "Could not load recovery codes."
+msgstr "Kunde inte ladda återställningskoder."
+
+#: app/views/mfa.py:168
+msgid "No MFA challenge in progress."
+msgstr "Inget MFA-utmaning pågår."
+
+#: app/views/mfa.py:176
+msgid "User not found for MFA challenge."
+msgstr "Användare hittades inte."
+
+#: app/views/mfa.py:225
+msgid ""
+"You have used your last recovery code. MFA has been disabled. Please remove "
+"Grylli from your authenticator app, and re-enable MFA to protect your "
+"account."
+msgstr ""
+"Du har använt din sista återställningskod. MFA har inaktiverats. Vänligen ta"
+" bort Grylli från din autentiseringsapp och aktivera MFA igen för att skydda"
+" ditt konto."
+
+#: app/views/mfa.py:248
+#, python-brace-format
+msgid "Recovery code accepted. You have {remaining} recovery codes left."
+msgstr ""
+"Återställningskod accepterad. Du har {remaining} återställningskoder kvar."
+
+#: app/views/reminders.py:106
+msgid "Reminder created successfully."
+msgstr "Meddelande skapat framgångsrikt."
+
+#: app/views/reminders.py:143
+msgid "Reminder updated successfully."
+msgstr "Användare uppdaterad framgångsrikt."
+
+#: app/views/reminders.py:174
+msgid "Reminder deleted."
+msgstr "Användare raderad."
+
+#: app/views/reminders.py:287
+msgid "No destinations assigned to this reminder."
+msgstr "SMTP-konfiguration inte tilldelad eller är inaktiverad."
+
+#: app/views/reminders.py:311
+msgid "No email message linked to this reminder."
+msgstr "Inget e-postmeddelande länkat till denna påminnelse."
+
+#: app/views/reminders.py:314
+msgid "SMTP configuration is disabled."
+msgstr "SMTP-konfiguration inte tilldelad eller är inaktiverad."
+
+#: app/views/reminders.py:353
+msgid "Test reminder sent successfully."
+msgstr "Test-e-post skickades framgångsrikt."
+
+#: app/views/reminders.py:356
+msgid "Test reminder failed: "
+msgstr "Meddelande sparat."
+
+#: app/views/reminders.py:430
+msgid "Reminder schedule updated successfully."
+msgstr "Schema uppdaterat framgångsrikt."
+
+#: app/views/reminders.py:434
+msgid "Please correct the errors below."
+msgstr "Vänligen rätta till felen nedan."
+
+#: app/views/reminders.py:481 app/views/reminders.py:482
+msgid "None"
+msgstr "Nej"
+
+#: app/views/reminders.py:508
+msgid "You must select both an SMTP config and an email message, or neither."
+msgstr ""
+"Du måste välja både en SMTP-konfiguration och ett e-postmeddelande, eller "
+"inget av dem."
+
+#: app/views/reminders.py:528
+msgid "Email reminder settings updated."
+msgstr "Destinationer uppdaterade."
+
+#: app/views/smtp.py:83 app/views/user_smtp.py:80
+msgid "SMTP destination created successfully."
+msgstr "SMTP-destination skapad framgångsrikt."
+
+#: app/views/smtp.py:129 app/views/user_smtp.py:135
+msgid "SMTP destination updated."
+msgstr "SMTP-destination uppdaterad."
+
+#: app/views/smtp.py:160 app/views/user_smtp.py:166
+msgid "SMTP destination deleted."
+msgstr "SMTP-destination raderad."
+
+#: app/views/smtp.py:191 app/views/user_smtp.py:199
+msgid "Test email sent successfully to your account email."
+msgstr "Test-e-post skickades framgångsrikt till din kontos e-post."
+
+#: app/views/smtp.py:196 app/views/user_smtp.py:204
+msgid "Failed to send test email. Check SMTP settings."
+msgstr ""
+"Misslyckades att skicka test-e-post. Kontrollera SMTP-inställningarna."
+
+#: app/views/smtp_settings_admin.py:76
+msgid "Test Email from Grylli"
+msgstr "Test-E-post från Grylli"
+
+#: app/views/smtp_settings_admin.py:77
+msgid "This is a test email from the Grylli SMTP settings page."
+msgstr "Det här är en test-e-post från sidan för Grylli SMTP-inställningar."
+
+#: app/views/smtp_settings_admin.py:84
+msgid "Failed to send test email: "
+msgstr "Misslyckades att skicka test-e-post:"
+
+#: app/views/users.py:99
+msgid "User updated successfully."
+msgstr "Användare uppdaterad framgångsrikt."
+
+#: app/views/users.py:106 app/views/users.py:327
+msgid "An error occurred while updating the user."
+msgstr "Ett fel uppstod vid uppdatering av användaren."
+
+#: app/views/users.py:195
+msgid "User deleted."
+msgstr "Användare raderad."
+
+#: app/views/users.py:202
+msgid "An error occurred while deleting the user."
+msgstr "Ett fel uppstod vid radering av användaren."
+
+#: app/views/users.py:237
+msgid "Password is required when creating a new user."
+msgstr "Lösenord krävs vid skapande av ny användare."
+
+#: app/views/users.py:244
+msgid "Username already exists."
+msgstr "Användarnamn finns redan."
+
+#: app/views/users.py:251
+msgid "Email already exists."
+msgstr "E-post finns redan."
+
+#: app/views/users.py:268
+#, python-format
+msgid "User '%(username)s' created successfully."
+msgstr "Användare '%(username)s' skapades framgångsrikt."
+
+#: app/views/users.py:278
+msgid "Failed to create user."
+msgstr "Misslyckades med att skapa användare."
+
+#: app/views/users.py:305
+msgid "You cannot change your own enabled status."
+msgstr "Du kan inte ändra din egen aktiveringsstatus."
+
+#: app/views/users.py:318
+#, python-format
+msgid "User '%(username)s' has been %(status)s."
+msgstr "Användare '%(username)s' har blivit %(status)s."
+
+#: app/views/users.py:356
+msgid "You cannot reset your own MFA."
+msgstr "⚪ = Du kan inte inaktivera ditt eget konto."
+
+#: app/views/users.py:368
+#, python-format
+msgid "MFA disabled for user '%(username)s'."
+msgstr "MFA inaktiverad för användare '%(username)s'."
+
+#: app/views/users.py:374
+msgid "An error occurred while resetting MFA."
+msgstr "Ett fel uppstod vid radering av användaren."
+
+#: app/views/webhook.py:54
+msgid "Webhook created successfully."
+msgstr "Webhook skapades framgångsrikt."
+
+#: app/views/webhook.py:113
+msgid "Webhook updated successfully."
+msgstr "Webhook uppdaterades framgångsrikt."
+
+#: app/views/webhook.py:142
+msgid "Webhook deleted."
+msgstr "Webhook raderad."
+
+#: app/views/webhook.py:175
+msgid "🧪 Webhook test sent successfully!"
+msgstr "🧪 Webhook-test skickades framgångsrikt!"
+
+#: app/views/webhook.py:177
+msgid "🧪 Webhook test failed: "
+msgstr "🧪 Webhooktest misslyckades:"
+
+#: app/views/webhook.py:180
+msgid "🧪 Error sending webhook test."
+msgstr "🧪 Fel vid skickande av webhooktest."
+
+#~ msgid ""
+#~ "Grylli is a secure message delivery platform designed to activate after "
+#~ "prolonged user inactivity."
+#~ msgstr ""
+#~ "Grylli är en säker meddelandeleveransplattform designad att aktiveras efter "
+#~ "långvarig användarinaktivitet."
+
+#~ msgid ""
+#~ "It is a modern reimplementation of Gone Man’s Switch with a refined tech "
+#~ "stack, better maintainability, and an improved user experience."
+#~ msgstr ""
+#~ "Det är en modern nyttoplantation av Gone Man's Switch med en förfinad "
+#~ "teknisk stack, bättre underhåll och en förbättrad användarupplevelse."
+
+#~ msgid "Body:"
+#~ msgstr "Brödtext:"
+
+#~ msgid "Subject:"
+#~ msgstr "Ämne:"
+
+#~ msgid "Content:"
+#~ msgstr "Innehåll:"
+
+#~ msgid "Edit SMTP"
+#~ msgstr "Redigera SMTP"
+
+#~ msgid ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+#~ msgstr ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+
+#~ msgid "Admin Notes"
+#~ msgstr "Admin-anteckningar"
+
+#~ msgid "Register"
+#~ msgstr "Registrera"
+
+#~ msgid "View"
+#~ msgstr "Visa"
+
+#~ msgid "Schedule"
+#~ msgstr "Schema"
+
+#~ msgid "Message is enabled"
+#~ msgstr "Meddelande är aktiverat"
+
+#~ msgid "Message is disabled"
+#~ msgstr "Meddelande är inaktiverat"
+
+#~ msgid "No SMTP configuration selected."
+#~ msgstr "Ingen SMTP-konfiguration vald."
+
+#~ msgid "Enable the message to start monitoring."
+#~ msgstr "Aktivera meddelandet för att börja övervaka."
+
+#~ msgid "✅ SMTP settings saved."
+#~ msgstr "SMTP-inställningar"
+
+#~ msgid "If you don’t check in, Grylli delivers the message for you."
+#~ msgstr "Om du inte checkar in, levererar Grylli meddelandet åt dig."
+
+#~ msgid "Fill in already discovered missing translations:"
+#~ msgstr "Fyll i redan upptäckta saknade översättningar:"
+
+#~ msgid "Add missing phrases in that JSON file."
+#~ msgstr "Lägg till saknade fraser i den JSON-filen."
+
+#~ msgid "From:"
+#~ msgstr "Från:"
+
+#~ msgid ""
+#~ "Attach the updated JSON file to a new GitHub issue when submitting your "
+#~ "changes."
+#~ msgstr ""
+#~ "Bifoga den uppdaterade JSON-filen till ett nytt GitHub-ärende när du skickar"
+#~ " dina ändringar."
+
+#~ msgid "admin"
+#~ msgstr "admin"
+
+#~ msgid "user"
+#~ msgstr "användare"
+
+#~ msgid "Logging in"
+#~ msgstr "Logga in"
+
+#~ msgid "SMTP error: "
+#~ msgstr "SMTP fel:"
+
+#~ msgid "enabled"
+#~ msgstr "aktiverad"
+
+#~ msgid "disabled"
+#~ msgstr "avaktiverad"

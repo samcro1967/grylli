@@ -1,0 +1,3324 @@
+# Malagasy translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-06-07 15:49-0500\n"
+"PO-Revision-Date: 2025-05-25 17:36-0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: mg <LL@li.org>\n"
+"Language: mg\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: app/init_db.py:55
+#, python-format
+msgid "Tables currently in DB: %s"
+msgstr "Ny tabilao ankehitriny ao amin'ny DB:"
+
+#: app/init_db.py:58
+msgid "Database or system_config table missing. Running migrations now..."
+msgstr ""
+"Tsy hita ny angona na ny tabilao system_config. Atao ny fifindrana izao..."
+
+#: app/init_db.py:61
+msgid "Migrations applied successfully."
+msgstr "Fanjohizantsika vita soa aman-tsara."
+
+#: app/init_db.py:63
+msgid "Migration failed."
+msgstr "Tsy nahomby ny fifindra-monina."
+
+#: app/init_db.py:68
+msgid "System config seeded successfully."
+msgstr "Vita soa aman-tsara ny famafazana ny fanamboarana ny rafitra."
+
+#: app/init_db.py:70
+msgid "Error seeding system config."
+msgstr "Fahadisoana famafazana ny fanamboarana ny rafitra:"
+
+#: app/forms/mfa_form.py:15 app/templates/apprise/create_apprise.html:30
+#: app/templates/apprise/edit_apprise.html:30
+#: app/templates/apprise/list_apprise.html:60
+#: app/templates/mfa/settings.html:24 app/templates/mfa/settings.html:40
+#: app/templates/user_smtp/create_smtp.html:99
+#: app/templates/user_smtp/edit_smtp.html:114
+#: app/templates/user_smtp/list_smtp.html:57
+#: app/templates/webhook/create_webhook.html:36
+#: app/templates/webhook/edit_webhook.html:36
+#: app/templates/webhook/list_webhooks.html:61
+msgid "Enabled"
+msgstr "Nampiasaina"
+
+#: app/forms/mfa_form.py:16
+msgid "Authenticator Code"
+msgstr "Kaody ny mampiavaka"
+
+#: app/forms/mfa_form.py:17
+#: app/templates/admin/partials/user_instructions_and_modal.html:66
+#: app/templates/admin/partials/user_table.html:115
+#: app/templates/email/assign_smtp.html:44 app/templates/mfa/settings.html:47
+#: app/templates/user_smtp/edit_smtp.html:122
+msgid "Save"
+msgstr "Tehirizo"
+
+#: app/forms/mfa_form.py:27
+msgid "Authentication Code"
+msgstr "Hanavao Fampahafantarana"
+
+#: app/forms/mfa_form.py:29
+msgid "Please enter your authentication code."
+msgstr "Ampidiro azafady ny kaody fampiavahanao."
+
+#: app/forms/mfa_form.py:30
+msgid "Enter a valid 6-digit code or recovery code."
+msgstr "Ampidiro azafady ny kaody manan-kery misy 6 isa na kaody famerenana."
+
+#: app/forms/mfa_form.py:31
+msgid "Invalid code format."
+msgstr "Tsy mety ny endrika kaody."
+
+#: app/forms/mfa_form.py:35 app/templates/mfa/challenge.html:25
+msgid "Verify"
+msgstr "Dikan-teny"
+
+#: app/services/mail.py:37 app/services/system_settings_email.py:40
+msgid "Missing required config setting: "
+msgstr "Ny fametrahana tsy maintsy atao ila:"
+
+#: app/services/mail.py:46 app/services/system_settings_email.py:50
+#, python-format
+msgid "Failed to decrypt %(key)s: %(error)s"
+msgstr "Tsy nahomby ny fanongananao %(key)s: %(error)s"
+
+#: app/services/mail.py:54
+#, python-format
+msgid "get_setting('%(key)s') -> '%(value)s' (sensitive: %(sensitive)s)"
+msgstr ""
+"get_setting('%(key)s') -> '%(value)s' (raw: '%(raw)s', sensitive: "
+"%(sensitive)s)"
+
+#: app/services/mail.py:75
+#, python-format
+msgid "Preparing email to %(to)s"
+msgstr "Manomana mail ho an'i %(to)s"
+
+#: app/services/mail.py:90
+#, python-format
+msgid ""
+"SMTP configuration: host=%(host)s (type=%(host_type)s), port=%(port)s "
+"(type=%(port_type)s)"
+msgstr ""
+"SMTP host = '%(host)s' (type: %(host_type)s), port = %(port)s (type: "
+"%(port_type)s)"
+
+#: app/services/mail.py:99
+#, python-format
+msgid "SMTP username: %(user)s"
+msgstr "Mampiasa mpampiasa: %(user)s"
+
+#: app/services/mail.py:100
+#, python-format
+msgid "TLS enabled: %(tls)s"
+msgstr "TLS azo: %(tls)s"
+
+#: app/services/mail.py:105
+msgid "Starting TLS connection..."
+msgstr "Manomboka TLS"
+
+#: app/services/mail.py:107
+msgid "Logging into SMTP server..."
+msgstr "Miditra amin'ny SMTP server..."
+
+#: app/services/mail.py:109
+msgid "Sending email message..."
+msgstr "Fandaharana Hafatra"
+
+#: app/services/mail.py:111
+#, python-format
+msgid "Email sent successfully to %(to)s"
+msgstr "Nandefasana mailaka fitsapana."
+
+#: app/services/mail.py:114
+#, python-format
+msgid "SMTP error while sending to %(to)s: %(error)s"
+msgstr "SMTP fahadisoana nandritra ny fandefasana ho any %(to)s: %(error)s"
+
+#: app/templates/about.html:10
+msgid "About Grylli"
+msgstr "About Grylli"
+
+#: app/templates/about.html:13
+msgid ""
+"Grylli is a secure, self-hosted message delivery platform that automatically"
+" sends pre-configured messages if a user fails to check in within a defined "
+"time period."
+msgstr ""
+"Grylli dia sehatra fandefasan-kafatra azo antoka sy hosokajiana manokana "
+"izay mandefa hafatra voaomana mialoha raha tsy mijery izy ny mpampiasa ao "
+"anatin'ny fe-potoana voafaritra."
+
+#: app/templates/about.html:14
+msgid ""
+"It supports multiple users, customizable schedules, and recurring reminders."
+msgstr "Manohana mpampiasa maro sy fandaharam-potoana azo amboarina izy io."
+
+#: app/templates/about.html:15
+msgid ""
+"Messages and reminders can be delivered via email, webhooks, or over 100 "
+"third-party services through Apprise."
+msgstr ""
+"Afaka alefa amin'ny alalan'ny mailaka, webhooks, na serivisy avy amin'ny "
+"antoko fahatelo efa mihoatra ny 80 izy ireo amin'ny alalan'i Apprise."
+
+#: app/templates/about.html:16
+msgid ""
+"Users can configure their own SMTP servers to ensure emails and reminders "
+"appear to come directly from them — not from the system administrator."
+msgstr ""
+"Afaka mametraka ny SMTP serivera azy manokana ny mpampiasa mba hahazoana "
+"antoka fa ny hafatra dia toa mivantana avy aminy fa tsy avy amin'ny "
+"mpiandraikitra ny rafitra."
+
+#: app/templates/about.html:17
+msgid ""
+"Sensitive data is encrypted at rest, and all operations are secured with "
+"strong authentication and audit-friendly logging."
+msgstr ""
+"Voaaro amin'ny fitahirizana ny tahirin-kevitra saro-pady, ary sehatra "
+"rehetra mikasika ny hafatra dia voaaro amin'ny fisoratana anarana mafy sy "
+"fofona anaovana fanamarinana."
+
+#: app/templates/about.html:18
+msgid ""
+"Built with a modern, reactive technology stack, Grylli is optimized for "
+"responsiveness and works seamlessly across desktop and mobile devices."
+msgstr ""
+"Noforonina amin'ny teknolojia mihetsiketsika maoderina, optimizena ho an'ny "
+"valinteny haingana i Grylli ary miasa tsy misy sakantsakana manerana ny "
+"fitaovana anaty birao sy finday."
+
+#: app/templates/about.html:23
+msgid "Version:"
+msgstr "Version:"
+
+#: app/templates/about.html:26
+msgid "Repository:"
+msgstr "Repository:"
+
+#: app/templates/about.html:30
+msgid "GitHub - samcro1967/grylli"
+msgstr "GitHub - samcro1967/grylli"
+
+#: app/templates/help.html:2 app/templates/help.html:5
+#: app/templates/partials/header.html:85
+msgid "Help"
+msgstr "Fanampiana"
+
+#: app/templates/help.html:7
+msgid ""
+"Grylli includes built-in instructions throughout the app to help you "
+"configure and manage your setup."
+msgstr ""
+"Misy torolalana tafiditra ao amin'ny fampiharana manontolo i Grylli mba "
+"hanampy anao amin'ny fametrahana sy fitantanana."
+
+#: app/templates/help.html:8
+msgid ""
+"This page provides an overview of key features and direct links to where "
+"they can be managed."
+msgstr ""
+"Mitovy amin'ity pejy ity ny famintinana ny endri-javatra lehibe sy rohy "
+"mivantana amin'izay azo tantanana."
+
+#: app/templates/help.html:12 app/templates/messages/list_messages.html:9
+#: app/templates/partials/shared_nav.html:17
+msgid "Notifications"
+msgstr "Fampahafantarana"
+
+#: app/templates/help.html:14
+msgid "Create and assign messages"
+msgstr "Manangana hafatra na mailaka."
+
+#: app/templates/admin/index.html:32 app/templates/help.html:17
+#: app/templates/partials/admin_nav.html:56
+msgid "SMTP Settings"
+msgstr "SMTP Settings"
+
+#: app/templates/help.html:19
+msgid "Use your own email server"
+msgstr "Ampiasao ny seriveran'ny mailakao manokana"
+
+#: app/templates/help.html:22
+msgid "Apprise Integration"
+msgstr "Toerana Apprise"
+
+#: app/templates/help.html:24
+msgid "Send notifications to 80+ supported services"
+msgstr "Mandefasa fampandrenesana amin'ny serivisy tohana mihoatra ny 80"
+
+#: app/templates/help.html:27
+#: app/templates/messages/assign_destinations.html:41
+#: app/templates/messages/view_message.html:58
+#: app/templates/partials/shared_nav.html:44
+#: app/templates/reminders/assign_destinations.html:39
+#: app/templates/reminders/view_reminder.html:69
+msgid "Webhooks"
+msgstr "Webhooks"
+
+#: app/templates/help.html:29
+msgid "Trigger actions or external workflows"
+msgstr "Mampiasà hetsika na workflow ivelany"
+
+#: app/templates/email/list_emails.html:9 app/templates/help.html:32
+#: app/templates/partials/shared_nav.html:61
+msgid "Emails"
+msgstr "Mailaka"
+
+#: app/templates/help.html:34
+msgid "View and manage secure email messages"
+msgstr "Topimaso momba ny hafatra email azo antoka"
+
+#: app/templates/help.html:38
+msgid "Security"
+msgstr "🔐 Fiarovana"
+
+#: app/templates/help.html:39
+msgid "Grylli encrypts sensitive data and logs all key actions for auditing."
+msgstr ""
+"Manan-maso fo ny tahirin-kevitra saropady i Grylli ary mitahiry ny hetsika "
+"lehibe rehetra ho an'ny fanamarinana."
+
+#: app/templates/index.html:9 app/views/locale.py:95
+msgid "Welcome to Grylli"
+msgstr "Tonga soa ao Grylli"
+
+#: app/templates/index.html:11
+msgid "Pronounced"
+msgstr "Lazaina"
+
+#: app/templates/index.html:11
+msgid "like “grill-ee”"
+msgstr "toy ny \"grill-ee\""
+
+#: app/templates/index.html:14
+msgid ""
+"Grylli is a secure message scheduling and delivery system designed to ensure"
+" your important messages are delivered — even if you can’t be there to send "
+"them."
+msgstr ""
+"Grylli dia rafitra fandefasana sy fandaminana hafatra azo antoka natao "
+"hanampy antoka fa alefa ireo hafatrao manan-danja — na dia tsy afaka eo "
+"ianao handefa azy ireo."
+
+#: app/templates/index.html:17
+msgid ""
+"Whether you’re planning ahead, setting up emergency communication, or "
+"building peace of mind, Grylli helps automate your message delivery via "
+"multiple channels including email, webhooks, and Apprise notifications."
+msgstr ""
+"Na mikasa mialoha ianao, manomana serasera vonjy maika, na manangana "
+"filaminan-tsaina, Grylli dia manampy amin'ny fanamafisana automatique ny "
+"fandefasana ny hafatrao amin'ny alalan'ny mailaka, webhooks, na "
+"fampahafantarana Apprise raha tsy mahazo toky ianao."
+
+#: app/templates/index.html:19
+msgid "Getting Started"
+msgstr "Manomboka"
+
+#: app/templates/index.html:21
+msgid "Create a message, email, or reminder."
+msgstr "Manangana hafatra na mailaka."
+
+#: app/templates/index.html:22
+msgid "Set your check-in interval and grace period (for messages)."
+msgstr "Apetrakao ny elanelam-potoana handaharanao sy ny fahafahana."
+
+#: app/templates/index.html:23
+msgid "Assign one or more delivery destinations."
+msgstr "Asiana toerana fandefasana iray na maromaro."
+
+#: app/templates/index.html:24
+msgid "Optionally attach files for secure emails."
+msgstr ""
+"Mipetrapetraha antontan-taratasy ho an'ny mailaka azo antoka raha tianao."
+
+#: app/templates/index.html:25
+msgid "Schedule reminders to send at specific times or on a recurring basis."
+msgstr ""
+"Mamorona fampahatsiahivana halefa amin'ny fotoana voatondro na "
+"miverimberina."
+
+#: app/templates/index.html:26
+msgid "Enable the message or reminder to activate delivery."
+msgstr ""
+"Ampandehanana ny hafatra na ny fampahatsiahivana mba hampihetsika ny "
+"fandefasana."
+
+#: app/templates/index.html:28
+msgid ""
+"Regularly check in to Grylli to prevent automated delivery; miss a check-in "
+"and Grylli sends your messages as scheduled."
+msgstr ""
+"Ataovy matetika ny fisavana ao Grylli mba hisorohana ny fandefasana mandeha "
+"ho azy; raha tsy manao fisavana ianao dia alefan'i Grylli araka ny "
+"fandaharam-potoana ny hafatrao."
+
+#: app/templates/privacy.html:10
+msgid "Privacy Notice"
+msgstr "Fanamarihana momba ny Fiainana Manokana"
+
+#: app/templates/privacy.html:13
+msgid ""
+"Grylli respects your privacy and is designed to minimize the collection and "
+"storage of personal data."
+msgstr ""
+"Grylli manaja ny fiainanao manokana ary natao mba hampihena ny fanangonana "
+"sy fitehirizana angon-drakitra manokana."
+
+#: app/templates/privacy.html:14
+msgid ""
+"All data is encrypted where appropriate and remains fully under your control"
+" if you self-host this platform."
+msgstr ""
+"Ny angon-drakitra rehetra dia voaaro amin'ny alalan'ny tsiambaratelo rehefa "
+"ilaina ary mijanona eo ambany fifehezanao tanteraka raha mampiantrano "
+"samirery izany sehatra izany ianao."
+
+#: app/templates/privacy.html:17
+msgid "What Data We Collect"
+msgstr "Izay Angon-drakitra Angoninay"
+
+#: app/templates/privacy.html:19
+msgid "Email address and password hash (for authentication)"
+msgstr "Adiresy mailaka sy hash tenimiafina (ho an'ny fankatoavana)"
+
+#: app/templates/privacy.html:20
+msgid "Optional MFA secret and recovery codes (encrypted at rest)"
+msgstr ""
+"Kaody MFA tsy voatery sy kaody fanarenana (voaaro ao anaty fitoeran-"
+"drakitra)"
+
+#: app/templates/privacy.html:21
+msgid "Reminder and message content you configure"
+msgstr "Afohezina sy votoatin’ny hafatra noforoninao"
+
+#: app/templates/privacy.html:22
+msgid "User-specific settings, SMTP configuration (if provided)"
+msgstr "Fanamarinam-panokana ho an'ny mpampiasa, fanamora-na SMTP (raha misy)"
+
+#: app/templates/privacy.html:25
+msgid "How Your Data Is Used"
+msgstr "Ny Fomba Ampiasain'ny Angon-drakitrao"
+
+#: app/templates/privacy.html:27
+msgid ""
+"Your data is used solely for the purpose of delivering reminders and "
+"messages according to your preferences."
+msgstr ""
+"Ny angon-drakitrao dia ampiasaina fotsiny ho an'ny tanjon'ny fandefasana "
+"fifampahatsiahivana sy hafatra araka ny safidinao."
+
+#: app/templates/privacy.html:28
+msgid ""
+"Grylli does not share, sell, or transmit your personal data to any third "
+"parties."
+msgstr ""
+"Grylli dia tsy mizara, mivarotra, na mandefa ny angona-tsika ho amin'olon-"
+"telo hafa."
+
+#: app/templates/privacy.html:31
+msgid "Your Rights"
+msgstr "Ny Zony"
+
+#: app/templates/privacy.html:33
+msgid ""
+"You can export all of your data at any time from the Account Settings page."
+msgstr ""
+"Azonao atao ny manondrana ny angon-drakitrao rehetra isaky ny te hivoaka "
+"amin'ny Pejy Fikirana Kaonty."
+
+#: app/templates/privacy.html:34
+msgid "You may permanently delete your account and all associated data."
+msgstr ""
+"Tsy afaka mamafa ny kaontinao ianao satria ilay mpitantana farany ianao."
+
+#: app/templates/privacy.html:35
+msgid ""
+"If you are using a self-hosted instance, contact the instance administrator "
+"for data inquiries."
+msgstr ""
+"Raha mampiasa fizarana mampiantrano tena ianao, mifandraisa amin'ny "
+"mpandrindra fizarana raha misy fanontaniana momba ny angon-drakitra."
+
+#: app/templates/privacy.html:38
+msgid "Self-Hosting Responsibility"
+msgstr "Andraikitry ny Fampiantranoana Tena"
+
+#: app/templates/privacy.html:40
+msgid ""
+"If you are running Grylli on your own server, you are responsible for the "
+"storage, processing, and lawful handling of all user data on that instance."
+msgstr ""
+"Raha mampandeha Grylli amin'ny server anao ianao, tompon'andraikitra amin'ny"
+" fitahirizana, fanodinana, ary fikarakarana ara-dalàna ny angon-drakitra "
+"rehetra ao amin'io fizarana io ianao."
+
+#: app/templates/privacy.html:44
+msgid ""
+"This notice was last updated in June 2025 and may evolve to reflect changes "
+"in the software or regulatory landscape."
+msgstr ""
+"Ity fanamarihana ity dia noforonina tamin'ny Jona 2025 ary mety hivoatra mba"
+" hifanaraka amin'ny fiovan'ny rindrambaiko na lalàna mifehy."
+
+#: app/templates/system_info.html:11
+msgid "📦 Environment Versions"
+msgstr "📦 Dikan-tontolo iainana"
+
+#: app/templates/system_info.html:17
+msgid "Category"
+msgstr "Sokajy"
+
+#: app/templates/system_info.html:18
+msgid "Tool"
+msgstr "Fitaovana"
+
+#: app/templates/system_info.html:19
+msgid "Version"
+msgstr "Dikan-teny"
+
+#: app/templates/system_info.html:25
+msgid "🧠 Python"
+msgstr "🧠 Python"
+
+#: app/templates/system_info.html:26
+msgid "Python"
+msgstr "Python"
+
+#: app/templates/system_info.html:30
+msgid "pip"
+msgstr "pip"
+
+#: app/templates/system_info.html:34
+msgid "SQLite"
+msgstr "SQLite"
+
+#: app/templates/system_info.html:40
+msgid "⚙️ Core"
+msgstr "⚙️ Fototra"
+
+#: app/templates/system_info.html:47
+msgid "🔐 Security"
+msgstr "🔐 Fiarovana"
+
+#: app/templates/system_info.html:48
+msgid "Email Validator"
+msgstr "Mpamaritra Email"
+
+#: app/templates/system_info.html:52
+msgid "Cryptography"
+msgstr "Cryptography"
+
+#: app/templates/system_info.html:57
+msgid "🕰️ Scheduling"
+msgstr "🕰️ Fandaharam-potoana"
+
+#: app/templates/system_info.html:58
+msgid "APScheduler"
+msgstr "APScheduler"
+
+#: app/templates/system_info.html:62
+msgid "Apprise (Python)"
+msgstr "Apprise (Python)"
+
+#: app/templates/system_info.html:66
+msgid "Apprise CLI"
+msgstr "Apprise CLI"
+
+#: app/templates/system_info.html:74
+msgid "🌐 Frontend"
+msgstr "🌐 Tava misongadina"
+
+#: app/templates/account/manage_account.html:11
+msgid "Manage Account"
+msgstr "Mitantana ny Kaonty"
+
+#: app/templates/account/manage_account.html:12
+msgid "Update your profile information and password."
+msgstr "Havaozy ny fampahalalana momba ny mombamomba anao sy ny tenimiafinao."
+
+#: app/templates/account/manage_account.html:41
+#: app/templates/admin/create_user.html:40
+#: app/templates/auth/bootstrap.html:43
+#: app/templates/auth/reset_password.html:42 app/templates/auth/signup.html:42
+msgid "Please enter a valid email address."
+msgstr "Ampidiro ny adiresy email manankery azafady."
+
+#: app/templates/account/manage_account.html:62
+#: app/templates/account/manage_account.html:96
+#: app/templates/account/manage_account.html:127
+#: app/templates/auth/reset_password.html:66
+#: app/templates/auth/reset_password.html:97 app/templates/auth/signup.html:65
+#: app/templates/auth/signup.html:95
+msgid "Show/hide password"
+msgstr "Tazonina mba haneho ny teny miafina"
+
+#: app/templates/account/manage_account.html:89
+#: app/templates/admin/create_user.html:53
+#: app/templates/auth/bootstrap.html:51
+#: app/templates/auth/reset_password.html:58 app/templates/auth/signup.html:58
+msgid "Password must meet all complexity requirements."
+msgstr "༤ertʃʉ dɨmðu ɔɨmwɛń džimbeṭ all kɨmpleksi rɨkwaɨrments."
+
+#: app/templates/account/manage_account.html:141
+#: app/templates/admin/create_user.html:72
+#: app/templates/admin/edit_user.html:67 app/templates/auth/bootstrap.html:69
+#: app/templates/auth/reset_password.html:110
+#: app/templates/auth/signup.html:108
+msgid "Passwords do not match."
+msgstr "Tsy mitovy ny teny miafina."
+
+#: app/templates/account/manage_account.html:147
+msgid "Update Account"
+msgstr "Havaozy ny Kaonty"
+
+#: app/templates/account/manage_account.html:151
+#: app/templates/admin/create_user.html:82
+#: app/templates/admin/edit_user.html:97 app/templates/admin/help_form.html:28
+#: app/templates/admin/partials/user_instructions_and_modal.html:62
+#: app/templates/admin/partials/user_table.html:113
+#: app/templates/apprise/create_apprise.html:42
+#: app/templates/apprise/edit_apprise.html:42
+#: app/templates/auth/reset_password.html:121
+#: app/templates/email/assign_smtp.html:46
+#: app/templates/email/attach_files.html:47
+#: app/templates/email/edit_message.html:54
+#: app/templates/email/schedule_email.html:84
+#: app/templates/messages/assign_destinations.html:66
+#: app/templates/messages/create_message.html:55
+#: app/templates/messages/edit_message.html:48
+#: app/templates/messages/schedule_message.html:84
+#: app/templates/mfa/challenge.html:29 app/templates/mfa/settings.html:51
+#: app/templates/reminders/assign_destinations.html:64
+#: app/templates/reminders/assign_email_reminder.html:94
+#: app/templates/reminders/create_reminder.html:49
+#: app/templates/reminders/edit_reminder.html:42
+#: app/templates/reminders/schedule_reminder.html:51
+#: app/templates/user_smtp/create_smtp.html:111
+#: app/templates/user_smtp/edit_smtp.html:125
+#: app/templates/webhook/create_webhook.html:48
+#: app/templates/webhook/edit_webhook.html:48
+msgid "Cancel"
+msgstr "Hanafoana"
+
+#: app/templates/account/manage_account.html:159
+#: app/templates/admin/create_user.html:90
+#: app/templates/admin/edit_user.html:81 app/templates/auth/bootstrap.html:83
+#: app/templates/auth/reset_password.html:128
+#: app/templates/auth/signup.html:132
+msgid "Minimum 8 characters"
+msgstr "Farafahakeliny 8 tarehintsoratra"
+
+#: app/templates/account/manage_account.html:160
+#: app/templates/admin/create_user.html:91
+#: app/templates/admin/edit_user.html:82 app/templates/auth/bootstrap.html:84
+#: app/templates/auth/reset_password.html:129
+#: app/templates/auth/signup.html:133
+msgid "At least one uppercase letter"
+msgstr "Farafahakeliny litera iray ambony"
+
+#: app/templates/account/manage_account.html:161
+#: app/templates/admin/create_user.html:92
+#: app/templates/admin/edit_user.html:83 app/templates/auth/bootstrap.html:85
+#: app/templates/auth/reset_password.html:130
+#: app/templates/auth/signup.html:134
+msgid "At least one lowercase letter"
+msgstr "Farafahakeliny litera ambany iray"
+
+#: app/templates/account/manage_account.html:162
+#: app/templates/admin/create_user.html:93
+#: app/templates/admin/edit_user.html:84 app/templates/auth/bootstrap.html:86
+#: app/templates/auth/reset_password.html:131
+#: app/templates/auth/signup.html:135
+msgid "At least one number"
+msgstr "Farafahakeliny isa iray"
+
+#: app/templates/account/manage_account.html:163
+#: app/templates/admin/create_user.html:94
+#: app/templates/auth/bootstrap.html:87
+#: app/templates/auth/reset_password.html:132
+#: app/templates/auth/signup.html:136
+msgid "At least one special character (e.g., !@#$%)"
+msgstr "Farafaharatsiny misy tarehintsoratra manokana iray (ohatra, !@#$%)"
+
+#: app/templates/account/manage_account.html:169
+msgid "Download My Data"
+msgstr "Misintona ny Angon-drakitro"
+
+#: app/templates/account/manage_account.html:171
+msgid ""
+"Download all your account data as a JSON file. This includes your reminders,"
+" messages, email settings, and more. The file is for your records only and "
+"cannot be imported back. Protect it as it may contain sensitive information."
+msgstr ""
+"Alaivo ny angon-drakitra rehetra mandeha amin'ny kaontinao ho rakitra JSON. "
+"Tafiditra amin'izany ny fifampahatsiahivana, hafatra, fanovana mailaka, sy "
+"ny maro hafa. Ity rakitra ity dia ho an'ny rakitahinao fotsiny ary tsy azo "
+"averina indray. Zahao tsara satria mety misy vaovao marefo ilay izy."
+
+#: app/templates/account/manage_account.html:175
+msgid "Download My Data (JSON)"
+msgstr "Misintona ny Angon-drakitro (JSON)"
+
+#: app/templates/account/manage_account.html:179
+msgid "Danger Zone"
+msgstr "Faritra mampidi-doza"
+
+#: app/templates/account/manage_account.html:180
+msgid "Deleting your account is permanent and cannot be undone."
+msgstr "Mandrakizay ny famafana ny kaontinao ary tsy azo averina."
+
+#: app/templates/account/manage_account.html:185
+msgid "Delete My Account"
+msgstr "Havaozy ny Kaonty"
+
+#: app/templates/account/translations.html:8
+msgid "Translations - Grylli"
+msgstr "Fandikana - Grylli"
+
+#: app/templates/account/translations.html:17
+#: app/templates/partials/header.html:102
+msgid "Translations"
+msgstr "Translations"
+
+#: app/templates/account/translations.html:20
+msgid "Grylli currently supports multiple languages and more will be added."
+msgstr ""
+"Manaiky fiteny maro i Grylli amin'izao fotoana izao ary hisy ampiana bebe "
+"kokoa."
+
+#: app/templates/account/translations.html:21
+msgid "Many of the translations were performed with assistance from ChatGPT."
+msgstr "Nataon'ny ChatGPT ny ankamaroan'ireo fandikana ireo."
+
+#: app/templates/account/translations.html:22
+msgid ""
+"If you find a translation issue or want to suggest improvements, your input "
+"is welcome!"
+msgstr ""
+"Raha mahita olana amin'ny fandikana ianao na te-hanoro hevitra fanatsarana, "
+"raisina ny fikasana avy aminao!"
+
+#: app/templates/account/translations.html:28
+msgid "How to request translation updates"
+msgstr "Ahoana ny fangatahana fanavaozana amin'ny fandikana"
+
+#: app/templates/account/translations.html:30
+msgid "To contribute to translations, please use the following guidelines:"
+msgstr ""
+"Raha te-hanampy amin'ny fandikana ianao, ampiasao ireto toro-làlana manaraka"
+" ireto:"
+
+#: app/templates/account/translations.html:43
+msgid "Contribute missing or improved translations:"
+msgstr "Nahita fandikana tsy hita ve ianao?"
+
+#: app/templates/account/translations.html:63
+msgid "Open the relevant .po translation file for your language."
+msgstr "Sokafy ny rakitra JSON fandikana ho an'ny fiteninao. Ohatra:"
+
+#: app/templates/account/translations.html:67
+msgid ""
+"Find untranslated or incomplete entries and add or improve translations."
+msgstr ""
+"Mitadiava fandraisana tsy voadika na tsy feno ary ampio na hatsarao ny "
+"fandikan-teny."
+
+#: app/templates/account/translations.html:68
+msgid "You may use a PO file editor or a text editor."
+msgstr ""
+"Azonao ampiasaina ny tonian-dahatsoratra PO na tonian-dahatsoratra tsotra."
+
+#: app/templates/account/translations.html:69
+msgid "Copy the file path and the snippet of your changes."
+msgstr "Adikao ny lalan'ny rakitra sy ny sombintsombin'ny fanovanao."
+
+#: app/templates/account/translations.html:70
+msgid "Paste the snippet directly into a new GitHub issue for review."
+msgstr ""
+"Apetraho mivantana any amin'ny fanehoan-kevitra momba ny olana GitHub ilay "
+"tahirinao nadika."
+
+#: app/templates/account/translations.html:72
+msgid "Please do not upload the full .po file to avoid merge conflicts."
+msgstr ""
+"Aza mampakatra ny rakitra .po manontolo mba hisorohana ny fifandonana eo "
+"amin'ny fivoarana."
+
+#: app/templates/account/translations.html:85
+msgid "Improving existing translations:"
+msgstr "Fanatsarana ireo fandikana efa misy:"
+
+#: app/templates/account/translations.html:104
+msgid "Open the relevant .po file for the translation you want to improve."
+msgstr ""
+"Sokafy ny rakitra .po mifandraika amin'ny fandikana tianao hasiana "
+"fanatsarana."
+
+#: app/templates/account/translations.html:106
+msgid "For example:"
+msgstr "Ohatra:"
+
+#: app/templates/account/translations.html:110
+msgid ""
+"Find the phrase(s) and its existing translation(s) you want to improve."
+msgstr ""
+"Tadiavo ny fehezanteny sy ny fandikana misy izay tianao hasiana fanatsarana."
+
+#: app/templates/account/translations.html:111
+msgid "Update the phrase(s)."
+msgstr "Havaozy ny fehezanteny."
+
+#: app/templates/account/translations.html:112
+msgid "Copy the file name and path into the issue."
+msgstr "Kopia ny anaran'ny rakitra sy ny làlany ao amin'ny olana."
+
+#: app/templates/account/translations.html:114
+msgid "Paste the copied snippet directly into the GitHub issue comment."
+msgstr ""
+"Apetraho mivantana any amin'ny fanehoan-kevitra momba ny olana GitHub ilay "
+"tahirinao nadika."
+
+#: app/templates/account/translations.html:115
+msgid "Do not upload the full .po file to avoid merge conflicts."
+msgstr ""
+"Aza mampakatra ny rakitra .po manontolo mba hisorohana ny fifandonana eo "
+"amin'ny fivoarana."
+
+#: app/templates/account/translations.html:118
+msgid "Example snippet:"
+msgstr "Santionany ohatra:"
+
+#: app/templates/account/translations.html:137
+msgid "Report missing translations not yet discovered:"
+msgstr "Tatitra fandikana tsy hita mbola tsy hita:"
+
+#: app/templates/account/translations.html:154
+msgid ""
+"If you see text in the app that appears untranslated or missing, please "
+"report it to us."
+msgstr ""
+"Raha mahita lahatsoratra ao amin'ny fampiharana ianao izay toa tsy nadika na"
+" tsy hita, azafady tatitra izany aminay."
+
+#: app/templates/account/translations.html:155
+msgid "Provide the exact English phrase as it appears on the screen."
+msgstr "Omeo fehezanteny anglisy marina araka ny hita eo amin'ny efijery."
+
+#: app/templates/account/translations.html:156
+msgid ""
+"Include the page or section where you saw the phrase (e.g., Apprise page, "
+"Account Page, etc.)."
+msgstr ""
+"Ampio ny pejy na fizarana izay nahitanareo ilay fehezanteny (ohatra, "
+"pejin'ny Fikirakirana, fizarana kaonty)."
+
+#: app/templates/account/translations.html:157
+msgid ""
+"Submit this information via a new GitHub issue so we can add it to the "
+"translation files"
+msgstr ""
+"Aleo alefa amin'ny alalan'ny olana vaovao ao amin'ny GitHub ity "
+"fampahalalana ity mba ahafahanay mampiditra azy ao amin'ny rakitra fandikana"
+" ary amboarina ho an'ny Babel."
+
+#: app/templates/account/translations.html:166
+msgid "Found a missing translation?"
+msgstr "Nahita fandikana tsy hita ve ianao?"
+
+#: app/templates/account/translations.html:171
+msgid ""
+"This link will create a new GitHub issue pre-filled with a language code."
+msgstr ""
+"Ity rohy ity dia hamorona olana vaovao ao amin'ny GitHub efa fenoina mialoha"
+" amin'ny kaody fiteny."
+
+#: app/templates/account/translations.html:172
+msgid "Report it by opening a new GitHub issue"
+msgstr ""
+"Tatitra izany amin'ny alàlan'ny fanokafana olana vaovao ao amin'ny GitHub"
+
+#: app/templates/account/translations.html:175
+msgid "Please specify the language code and exact phrase when reporting."
+msgstr ""
+"Azafady manondro ny kaody fiteny sy ny teny manokana rehefa mitatitra."
+
+#: app/templates/account/translations.html:176
+msgid "Thank you for helping us make Grylli better!"
+msgstr "Misaotra anao nanampy anay nanatsara an'i Grylli!"
+
+#: app/templates/admin/create_user.html:14
+msgid "Create New User"
+msgstr "Mamorona Mpampiasa Vaovao"
+
+#: app/templates/admin/create_user.html:15
+msgid "Fill out the form to add a new user."
+msgstr "Fenoy ny taratasy mba hanampy mpampiasa vaovao."
+
+#: app/templates/admin/create_user.html:21
+#: app/templates/admin/edit_user.html:17 app/templates/auth/bootstrap.html:24
+msgid "Please fix the following errors:"
+msgstr "Tsarao ireto lesoka manaraka ireto:"
+
+#: app/templates/admin/create_user.html:78
+#: app/templates/admin/edit_user.html:93
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "Create User"
+msgstr "Mamorona Mpampiasa"
+
+#: app/templates/admin/edit_user.html:10
+#: app/templates/admin/partials/user_card.html:20
+#: app/templates/admin/partials/user_table.html:26
+msgid "Edit User"
+msgstr "Hanova Mpampiasa"
+
+#: app/templates/admin/edit_user.html:55 app/templates/admin/edit_user.html:74
+msgid "Hold to show password"
+msgstr "Tazonina mba haneho ny teny miafina"
+
+#: app/templates/admin/edit_user.html:85
+#, python-format
+msgid "At least one special character (e.g., !@#$%%)"
+msgstr "Farafaharatsiny misy tarehintsoratra manokana iray (ohatra, !@#$%%)"
+
+#: app/templates/admin/help.html:4 app/templates/auth/login.html:72
+msgid "Admin Help"
+msgstr "Panalana Admin"
+
+#: app/templates/admin/help.html:7
+msgid "Reset Admin Password"
+msgstr "Avereno ny tenimiafina"
+
+#: app/templates/admin/help.html:9
+msgid ""
+"If you've forgotten the admin password, you can reset it using the following"
+" Docker command:"
+msgstr ""
+"Raha adinonao ny tenimiafina admin, azonao afindra io amin'ny alalan'ny "
+"baiko Docker manaraka:"
+
+#: app/templates/admin/help.html:15
+msgid ""
+"This script will prompt you to enter a new password for the admin user. You "
+"must run it from the host system where the Grylli container is running."
+msgstr ""
+"Ity script ity dia hangataka anao hiditra tenimiafina vaovao ho an'ny "
+"mpampiasa admin. Tsy maintsy tanterahanao izany avy amin'ny rafitra "
+"mpampiantrano izay iasan'ny kaontenera Grylli."
+
+#: app/templates/admin/help.html:18
+msgid "After resetting, you can log in with the new password immediately."
+msgstr ""
+"Rehefa avy namerina azy ianao dia afaka miditra amin'ny alalan'ny "
+"tenimiafina vaovao avy hatrany."
+
+#: app/templates/admin/help.html:24
+msgid "Return to Login"
+msgstr "Miverina amin'ny Dashboard"
+
+#: app/templates/admin/help_form.html:6
+msgid "Admin Help Access"
+msgstr "Fidirana Fanampiana Admin"
+
+#: app/templates/admin/help_form.html:9
+msgid "Enter your Ferret Key to unlock admin-only help documentation."
+msgstr ""
+"Ampidiro ny Lakilen'ny Ferret anao mba hanokatra ny tahirin-kevitra "
+"fanampiana ho an'ny admin irery."
+
+#: app/templates/admin/help_form.html:34
+msgid "How to Find Your FERRET_KEY"
+msgstr "Ahoana ny fahitana ny FERRET_KEY anao"
+
+#: app/templates/admin/help_form.html:36
+msgid "The FERRET_KEY is set as an environment variable when running Grylli."
+msgstr ""
+"Ny FERRET_KEY dia apetraka ho masontsivana environment rehefa alefa ny "
+"Grylli."
+
+#: app/templates/admin/help_form.html:39
+msgid "Option 1: Check docker-compose.yml"
+msgstr "Safidy 1: Zahao ny docker-compose.yml"
+
+#: app/templates/admin/help_form.html:46
+msgid "Option 2: Use docker inspect"
+msgstr "Safidy 2: Ampiasao ny docker inspect"
+
+#: app/templates/admin/help_form.html:52
+msgid "This shows the FERRET_KEY as passed to the container at runtime."
+msgstr ""
+"Ity dia mampiseho ny FERRET_KEY rehefa alefa ao anaty kaontenera amin'ny "
+"fotoana mihazakazaka."
+
+#: app/templates/admin/index.html:10
+msgid "Admin Panel"
+msgstr "Panalana Admin"
+
+#: app/templates/admin/index.html:12
+msgid ""
+"Welcome to the Grylli Admin Panel. Use the links below to manage the system."
+msgstr ""
+"Tongasoa eto amin'ny Panel Koamin'ireo Admin Grylli. Ampiasao ny rohy etsy "
+"ambany mba hitantanana ny rafitra."
+
+#: app/templates/admin/index.html:17
+msgid "Manage Users"
+msgstr "Mitantana Mpampiasa"
+
+#: app/templates/admin/index.html:18
+msgid "Create, edit, enable/disable, or delete user accounts."
+msgstr "Mamorona, amboary, alefa/diovy, na foano ny kaonty mpampiasa."
+
+#: app/templates/admin/index.html:22
+#: app/templates/admin/system_settings.html:10
+#: app/templates/partials/admin_nav.html:52
+msgid "System Settings"
+msgstr "System Settings"
+
+#: app/templates/admin/index.html:23
+msgid "View  system-wide environment values."
+msgstr "Jereo ny soatoavina manerana ny tontolon'ny rafitra."
+
+#: app/templates/admin/index.html:27 app/templates/partials/admin_nav.html:42
+msgid "Backups"
+msgstr "Backups"
+
+#: app/templates/admin/index.html:28
+msgid "Create and delete database backups."
+msgstr "Fizarana Angona Miverina"
+
+#: app/templates/admin/index.html:33
+msgid "View and test global SMTP settings."
+msgstr ""
+"Tsy nahomby ny fandefasana mailaka fitsapana. Jereo ny fanamboarana SMTP."
+
+#: app/templates/admin/index.html:39
+msgid "View Admin Guide / README on GitHub"
+msgstr "Jereo ny Torolàlana Admin / README amin'ny GitHub"
+
+#: app/templates/admin/index.html:40
+msgid "Includes setup instructions, integrations, and troubleshooting."
+msgstr "Ahitana toromarika amboary, fampidirana ary famahana olana."
+
+#: app/templates/admin/index.html:44
+msgid "⚠️ Admin Tips"
+msgstr "⚠️ Torohevitra ho an'ny Admin"
+
+#: app/templates/admin/index.html:46
+msgid "Ensure the data folder (database) is backed up on your host"
+msgstr ""
+"Ataovy azo antoka fa voavotra ao amin'ny mpampiantrano ny lahatahiry data "
+"(database)"
+
+#: app/templates/admin/index.html:48
+msgid ""
+"The uploads folder is not per user.  If required per user, you will ndd to "
+"create subdirectoried per user and setup permissions so users can only see "
+"their own folder."
+msgstr ""
+"Ny lahatahiry fampiakarana dia tsy isaky ny mpampiasa. Raha ilaina isaky ny "
+"mpampiasa, mila mamorona lahatahiry madinika isaky ny mpampiasa sy mametraka"
+" alalana mba hahafahan'ny mpampiasa mahita ny lahatahiry misy azy ihany "
+"ianao."
+
+#: app/templates/admin/index.html:51
+msgid ""
+"To restore a backup: stop the container, replace the data/grylli.db with one"
+" from the backups folder, and restart the container."
+msgstr ""
+"Mba hamerenana indray ny backup: ajanony ny container, soloina ny "
+"data/grylli.db izay misy ao amin'ny lahatahiry backups, ary avereno indray "
+"ny container."
+
+#: app/templates/admin/list_backups.html:11
+msgid "Database Backups"
+msgstr "Fizarana Angona Miverina"
+
+#: app/templates/admin/list_backups.html:13
+msgid "Create Backup"
+msgstr "Mamorona Backup"
+
+#: app/templates/admin/list_backups.html:21
+msgid "Filename"
+msgstr "Anaran'ny rakitra"
+
+#: app/templates/admin/list_backups.html:22
+#: app/templates/admin/partials/user_table.html:14
+#: app/templates/apprise/list_apprise.html:62
+#: app/templates/email/list_emails.html:60
+#: app/templates/messages/list_messages.html:60
+#: app/templates/reminders/list_reminders.html:60
+#: app/templates/user_smtp/list_smtp.html:59
+#: app/templates/webhook/list_webhooks.html:63
+msgid "Actions"
+msgstr "Hetra"
+
+#: app/templates/admin/list_backups.html:32
+msgid "Delete this backup?"
+msgstr "Hamafana ity backup ity?"
+
+#: app/templates/admin/list_backups.html:32
+#: app/templates/apprise/list_apprise.html:95
+#: app/templates/apprise/list_apprise.html:99
+#: app/templates/apprise/list_apprise.html:150
+#: app/templates/apprise/list_apprise.html:154
+#: app/templates/email/list_emails.html:124
+#: app/templates/email/list_emails.html:128
+#: app/templates/email/list_emails.html:226
+#: app/templates/email/list_emails.html:230
+#: app/templates/messages/list_messages.html:112
+#: app/templates/messages/list_messages.html:116
+#: app/templates/messages/list_messages.html:198
+#: app/templates/messages/list_messages.html:202
+#: app/templates/reminders/list_reminders.html:107
+#: app/templates/reminders/list_reminders.html:113
+#: app/templates/reminders/list_reminders.html:192
+#: app/templates/reminders/list_reminders.html:198
+#: app/templates/user_smtp/list_smtp.html:101
+#: app/templates/user_smtp/list_smtp.html:169
+#: app/templates/webhook/list_webhooks.html:102
+#: app/templates/webhook/list_webhooks.html:161
+msgid "Delete"
+msgstr "Fafao"
+
+#: app/templates/admin/list_backups.html:41
+msgid "No backups found."
+msgstr "Tsy nahita backup."
+
+#: app/templates/admin/list_backups.html:44
+msgid ""
+"Backups contain your full app data. Store securely. Sensitive data is "
+"encrypted in the DB by default."
+msgstr ""
+"Ny Backup dia ahitana ny angona fampiharanao manontolo. Tehirizo soa aman-"
+"tsara. Ny angona manan-danja dia voafono ao amin'ny DB ho default."
+
+#: app/templates/admin/smtp_config.html:28
+#: app/templates/admin/system_config.html:22
+msgid "System Configuration"
+msgstr "Fanamboarana Rafitra"
+
+#: app/templates/admin/smtp_config.html:33
+#: app/templates/admin/system_config.html:26
+#: app/templates/admin/system_settings.html:15
+msgid "Key"
+msgstr "Lakile"
+
+#: app/templates/admin/smtp_config.html:34
+#: app/templates/admin/system_config.html:27
+#: app/templates/admin/system_settings.html:16
+msgid "Value"
+msgstr "Lanja"
+
+#: app/templates/admin/smtp_config.html:35
+#: app/templates/admin/system_config.html:28
+msgid "Sensitive"
+msgstr "Saro-pady"
+
+#: app/templates/admin/smtp_config.html:36
+#: app/templates/admin/system_config.html:29
+msgid "Editable"
+msgstr "Aforitra"
+
+#: app/templates/admin/smtp_config.html:50
+#: app/templates/admin/smtp_config.html:51
+#: app/templates/admin/system_config.html:45
+#: app/templates/admin/system_config.html:46
+#: app/templates/email/view_config.html:60
+msgid "Yes"
+msgstr "Eny"
+
+#: app/templates/admin/smtp_config.html:50
+#: app/templates/admin/smtp_config.html:51
+#: app/templates/admin/system_config.html:45
+#: app/templates/admin/system_config.html:46
+#: app/templates/email/view_config.html:60
+msgid "No"
+msgstr "Tsia"
+
+#: app/templates/admin/smtp_config.html:63
+#: app/templates/admin/system_config.html:55
+msgid "Send Test Email"
+msgstr "Mandefa Mailaka Fitsapana"
+
+#: app/templates/admin/system_config.html:39
+msgid "decrypted"
+msgstr "Noforonina"
+
+#: app/templates/admin/partials/user_card.html:12
+msgid "Email:"
+msgstr "Mailaka:"
+
+#: app/templates/admin/partials/user_card.html:15
+msgid "Role:"
+msgstr "Anjara asa:"
+
+#: app/templates/admin/partials/user_card.html:27
+#: app/templates/admin/partials/user_table.html:34
+msgid "Change Role"
+msgstr "Ovao andraikitra"
+
+#: app/templates/admin/partials/user_card.html:29
+#: app/templates/admin/partials/user_table.html:36
+msgid "You cannot change your own role"
+msgstr "Tsy afaka manova ny satan'ny tenanao ianao."
+
+#: app/templates/admin/partials/user_card.html:36
+#: app/templates/admin/partials/user_table.html:43
+msgid "Are you sure you want to reset MFA for this user?"
+msgstr "Azonao antoka ve fa hanavao ny MFA an'ity mpampiasa ity ianao?"
+
+#: app/templates/admin/partials/user_card.html:39
+#: app/templates/admin/partials/user_table.html:46
+msgid "Reset MFA"
+msgstr "Avereno ny tenimiafina"
+
+#: app/templates/admin/partials/user_card.html:51
+#: app/templates/admin/partials/user_table.html:58
+msgid "Delete user"
+msgstr "Fafao mpampiasa"
+
+#: app/templates/admin/partials/user_card.html:55
+#: app/templates/admin/partials/user_table.html:61
+msgid "Delete User"
+msgstr "Fafao Mpampiasa"
+
+#: app/templates/admin/partials/user_card.html:58
+#: app/templates/admin/partials/user_table.html:65
+msgid "You cannot disable yourself"
+msgstr "Tsy afaka manafoana ny tenanao ianao"
+
+#: app/templates/admin/partials/user_card.html:65
+#: app/templates/admin/partials/user_table.html:72
+msgid "Disable"
+msgstr "Afohy"
+
+#: app/templates/admin/partials/user_card.html:65
+#: app/templates/admin/partials/user_table.html:72
+msgid "Enable"
+msgstr "Alefa"
+
+#: app/templates/admin/partials/user_header.html:6
+#: app/templates/partials/admin_nav.html:47
+msgid "Users"
+msgstr "Users"
+
+#: app/templates/admin/partials/user_header.html:12
+#: app/templates/admin/partials/user_header.html:13
+#: app/templates/apprise/apprise_config.html:10
+#: app/templates/apprise/apprise_config.html:11
+#: app/templates/apprise/list_apprise.html:16
+#: app/templates/apprise/list_apprise.html:17
+#: app/templates/email/list_emails.html:15
+#: app/templates/email/list_emails.html:16
+#: app/templates/messages/list_messages.html:16
+#: app/templates/messages/list_messages.html:17
+#: app/templates/reminders/list_reminders.html:15
+#: app/templates/reminders/list_reminders.html:16
+#: app/templates/user_smtp/list_smtp.html:14
+#: app/templates/user_smtp/list_smtp.html:17
+#: app/templates/webhook/list_webhooks.html:16
+#: app/templates/webhook/list_webhooks.html:17
+#: app/templates/webhook/webhook_config.html:10
+#: app/templates/webhook/webhook_config.html:11
+msgid "Table View"
+msgstr "Fijery Tabila"
+
+#: app/templates/admin/partials/user_header.html:26
+#: app/templates/admin/partials/user_header.html:27
+#: app/templates/apprise/apprise_config.html:24
+#: app/templates/apprise/apprise_config.html:25
+#: app/templates/apprise/list_apprise.html:30
+#: app/templates/apprise/list_apprise.html:31
+#: app/templates/email/list_emails.html:29
+#: app/templates/email/list_emails.html:30
+#: app/templates/messages/list_messages.html:30
+#: app/templates/messages/list_messages.html:31
+#: app/templates/reminders/list_reminders.html:29
+#: app/templates/reminders/list_reminders.html:30
+#: app/templates/user_smtp/list_smtp.html:27
+#: app/templates/user_smtp/list_smtp.html:30
+#: app/templates/webhook/list_webhooks.html:30
+#: app/templates/webhook/list_webhooks.html:31
+#: app/templates/webhook/webhook_config.html:24
+#: app/templates/webhook/webhook_config.html:25
+msgid "Card View"
+msgstr "Fijery Karatra"
+
+#: app/templates/admin/partials/user_header.html:45
+msgid "Add User"
+msgstr "Ampio Mpampiasa"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:9
+#: app/templates/email/attach_files.html:54
+#: app/templates/email/list_emails.html:255
+#: app/templates/messages/list_messages.html:223
+#: app/templates/reminders/list_reminders.html:218
+#: app/templates/reminders/schedule_reminder.html:56
+msgid "Hide Instructions"
+msgstr "Afeno ny Torolàlana"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:9
+msgid "How to manage users"
+msgstr "Fomba fitantanana ny mpampiasa"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "Click"
+msgstr "Tsindrio"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+msgid "➕ Add User"
+msgstr "➕ Ampio Mpampiasa"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+msgid "to open the new user form."
+msgstr "hanokatra ny endrika mpampiasa vaovao."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:18
+msgid "Enter a unique username, valid email address, and strong password."
+msgstr ""
+"Ampidiro ny anarana tsy manam-paharoa, adiresy mailaka manan-kery, ary teny "
+"miafina matanjaka."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "Select the appropriate"
+msgstr "Safidio ny"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "role"
+msgstr "andraikitra"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "or"
+msgstr "Seranana"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "to save."
+msgstr "mba hamonjy."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:25
+msgid "To edit a user, click ✏️ and update their info."
+msgstr "Raha hanova mpampiasa, tsindrio 🖊️ ary havaozy ny mombamomba azy."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:26
+msgid "To delete a user, click 🗑️ and confirm the deletion."
+msgstr "Raha hamafa mpampiasa, tsindrio 🗑️ ary hamafiso ny famafana."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:28
+msgid "To disable or enable a user, click 🔴 or 🟢."
+msgstr "Raha hampiasa na hanala mpampiasa, tsindrio 🔴 na 🟢."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:30
+msgid "🟢 = User is enabled and can log in."
+msgstr "🟢 = Nah enabled ny mpampiasa ary afaka miditra."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:31
+msgid "🔴 = User is disabled and cannot log in."
+msgstr "🔴 = Tsy afaka miditra ny mpampiasa."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:32
+msgid "⚪ = You cannot disable your own account."
+msgstr "⚪ = Tsy afaka manafoana ny kaontinao ianao."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:43
+#: app/templates/admin/partials/user_table.html:91
+msgid "Assign Role for"
+msgstr "Manendry Tanjona ho an'ny"
+
+#: app/templates/admin/partials/user_table.html:10
+msgid "ID"
+msgstr "ID"
+
+#: app/templates/admin/partials/user_table.html:11
+#: app/templates/user_smtp/list_smtp.html:55
+msgid "Username"
+msgstr "Anarana"
+
+#: app/templates/admin/partials/user_table.html:12
+msgid "Email"
+msgstr "Mailaka"
+
+#: app/templates/admin/partials/user_table.html:13
+msgid "Role"
+msgstr "Anjara"
+
+#: app/templates/apprise/apprise_config.html:3
+#: app/templates/apprise/list_apprise.html:9
+#: app/templates/messages/assign_destinations.html:22
+#: app/templates/reminders/assign_destinations.html:20
+msgid "Apprise Destinations"
+msgstr "Toerana Apprise"
+
+#: app/templates/apprise/apprise_config.html:43
+#: app/templates/webhook/list_webhooks.html:49
+#: app/templates/webhook/webhook_config.html:43
+msgid "Add Webhook"
+msgstr "Manampy Webhook"
+
+#: app/templates/apprise/apprise_config.html:43
+#: app/templates/apprise/list_apprise.html:49
+#: app/templates/webhook/list_webhooks.html:49
+#: app/templates/webhook/webhook_config.html:43
+msgid "Add Destination"
+msgstr "Manampy Toerana"
+
+#: app/templates/apprise/create_apprise.html:10
+msgid "Create Apprise Destination"
+msgstr "Mamorona Toerana Apprise"
+
+#: app/templates/apprise/create_apprise.html:38
+#: app/templates/apprise/edit_apprise.html:38
+#: app/templates/user_smtp/create_smtp.html:107
+#: app/templates/webhook/create_webhook.html:44
+#: app/templates/webhook/edit_webhook.html:44
+msgid "Create Destination"
+msgstr "Mamorona Toerana"
+
+#: app/templates/apprise/create_apprise.html:47
+#: app/templates/apprise/edit_apprise.html:47
+msgid "Need help with Apprise URLs? See the"
+msgstr "Mila fanampiana amin'ny URL Apprise? Jereo ny"
+
+#: app/templates/apprise/create_apprise.html:51
+#: app/templates/apprise/edit_apprise.html:51
+msgid "Apprise Notification Services documentation"
+msgstr "Apprise Notification Services documentation"
+
+#: app/templates/apprise/edit_apprise.html:10
+msgid "Edit Apprise Destination"
+msgstr "Ahitsy Toerana Apprise"
+
+#: app/templates/apprise/list_apprise.html:49
+msgid "Add Apprise"
+msgstr "Manampy Apprise"
+
+#: app/templates/apprise/list_apprise.html:58
+#: app/templates/email/edit_message.html:21
+#: app/templates/email/list_emails.html:56
+#: app/templates/email/view_config.html:14
+#: app/templates/messages/create_message.html:29
+#: app/templates/messages/edit_message.html:23
+#: app/templates/messages/list_messages.html:57
+#: app/templates/messages/view_message.html:14
+#: app/templates/reminders/create_reminder.html:23
+#: app/templates/reminders/edit_reminder.html:17
+#: app/templates/reminders/list_reminders.html:56
+#: app/templates/reminders/view_reminder.html:13
+#: app/templates/user_smtp/list_smtp.html:52
+#: app/templates/webhook/list_webhooks.html:58
+msgid "Label"
+msgstr "Marika"
+
+#: app/templates/apprise/list_apprise.html:59
+msgid "URL"
+msgstr "URL"
+
+#: app/templates/apprise/list_apprise.html:61
+#: app/templates/email/list_emails.html:59
+#: app/templates/messages/list_messages.html:59
+#: app/templates/messages/view_message.html:36
+#: app/templates/reminders/view_reminder.html:47
+#: app/templates/webhook/list_webhooks.html:62
+msgid "Created At"
+msgstr "Noforonina Tamin'ny"
+
+#: app/templates/apprise/list_apprise.html:77
+#: app/templates/apprise/list_apprise.html:132
+#: app/templates/user_smtp/list_smtp.html:79
+#: app/templates/user_smtp/list_smtp.html:147
+#: app/templates/webhook/list_webhooks.html:79
+#: app/templates/webhook/list_webhooks.html:138
+msgid "Edit"
+msgstr "Ahitsy"
+
+#: app/templates/apprise/list_apprise.html:80
+#: app/templates/apprise/list_apprise.html:135
+#: app/templates/user_smtp/list_smtp.html:82
+#: app/templates/user_smtp/list_smtp.html:150
+msgid "Cannot edit while in use"
+msgstr "Tsy afaka manova rehefa ampiasaina"
+
+#: app/templates/apprise/list_apprise.html:88
+#: app/templates/apprise/list_apprise.html:143
+#: app/templates/webhook/list_webhooks.html:91
+#: app/templates/webhook/list_webhooks.html:150
+msgid "Test"
+msgstr "Fitsapana"
+
+#: app/templates/apprise/list_apprise.html:103
+#: app/templates/apprise/list_apprise.html:158
+#: app/templates/user_smtp/list_smtp.html:106
+#: app/templates/user_smtp/list_smtp.html:174
+msgid "Cannot delete while in use"
+msgstr "Tsy afaka mamafa rehefa ampiasaina"
+
+#: app/templates/apprise/list_apprise.html:119
+msgid "URL:"
+msgstr "URL:"
+
+#: app/templates/apprise/list_apprise.html:122
+#: app/templates/user_smtp/list_smtp.html:137
+#: app/templates/webhook/list_webhooks.html:128
+msgid "Enabled:"
+msgstr "Nampiasaina:"
+
+#: app/templates/apprise/list_apprise.html:125
+#: app/templates/user_smtp/list_smtp.html:140
+#: app/templates/webhook/list_webhooks.html:131
+msgid "Created:"
+msgstr "Noforonina:"
+
+#: app/templates/auth/bootstrap.html:14
+msgid "Create Admin Account"
+msgstr "Mamorona Kaonty Admin"
+
+#: app/templates/auth/bootstrap.html:16
+msgid "Let’s get started by creating your first admin account."
+msgstr "Andao hanomboka amin'ny famoronana ny kaontin'ny admin voalohany."
+
+#: app/templates/auth/bootstrap.html:75
+msgid "Create Admin"
+msgstr "Mamorona Admin"
+
+#: app/templates/auth/forgot_password.html:12
+msgid "Forgot Password"
+msgstr "Nohadinoina ny Tenimiafina"
+
+#: app/templates/auth/forgot_password.html:15
+msgid ""
+"Enter your username and email. We'll send you a link to reset your password."
+msgstr ""
+"Ampidiro ny anarana sy ny mailaka. Handefa rohy hanamboarana ny tenimiafina "
+"izahay."
+
+#: app/templates/auth/forgot_username.html:12
+msgid "Forgot Username"
+msgstr "Nohadinoina Ny Anarana Ireo"
+
+#: app/templates/auth/forgot_username.html:15
+msgid "Enter your email address, and we'll send you your username."
+msgstr "Ampidiro ny adiresy mailakao, dia handefa anao ny anaranao izahay."
+
+#: app/templates/auth/forgot_username.html:40
+msgid "Send Username"
+msgstr "Alefaso Ny Anarana"
+
+#: app/templates/auth/login.html:12 app/templates/auth/login.html:54
+msgid "Log In"
+msgstr "Midira"
+
+#: app/templates/auth/login.html:62
+msgid "Forgot Username?"
+msgstr "Nohadinoina Ny Anarana Ireo?"
+
+#: app/templates/auth/login.html:64
+msgid "Forgot Password?"
+msgstr "Nohadinoina ny Tenimiafina?"
+
+#: app/templates/auth/login.html:66 app/templates/auth/signup.html:12
+msgid "Sign Up"
+msgstr "Hisoratra Anarana"
+
+#: app/templates/auth/rate_limit.html:9
+msgid "Hold On"
+msgstr "Tano tsara"
+
+#: app/templates/auth/rate_limit.html:11
+msgid "Too many failed login attempts. Please wait"
+msgstr ""
+"Betsaka loatra ny fanandramana fidirana tsy nahomby. Miandrasa azafady"
+
+#: app/templates/auth/rate_limit.html:13
+msgid "seconds..."
+msgstr "segondra..."
+
+#: app/templates/auth/rate_limit.html:15
+msgid "Redirecting to login..."
+msgstr "Miverina amin'ny Dashboard"
+
+#: app/templates/auth/reset_password.html:12
+#: app/templates/auth/reset_password.html:116
+msgid "Reset Password"
+msgstr "Avereno ny tenimiafina"
+
+#: app/templates/auth/reset_password.html:14
+msgid "Enter your username, email, and new password."
+msgstr "Ampidiro ny anaranao, mailakao, ary ny tenimiafina vaovao."
+
+#: app/templates/auth/signup.html:14
+msgid "Fill out the form to create your account."
+msgstr "Fenoy ny taratasy hamoronana ny kaontinao."
+
+#: app/templates/checkin/already_checked_in.html:10
+msgid "Already Checked In"
+msgstr "Fanamarinana Farany"
+
+#: app/templates/checkin/already_checked_in.html:12
+msgid ""
+"You have already checked in for this item. No further action is needed at "
+"this time."
+msgstr ""
+"Efa nihainoana an'ity zavatra ity ianao. Tsy ilaina ny hetsika fanampiny "
+"amin'izao fotoana izao."
+
+#: app/templates/checkin/already_checked_in.html:16
+#: app/templates/checkin/disabled.html:16
+#: app/templates/checkin/executed_disabled.html:18
+msgid "Check-in for:"
+msgstr "Nandray anjara tamin'ny:"
+
+#: app/templates/checkin/already_checked_in.html:21
+#: app/templates/checkin/disabled.html:21
+#: app/templates/checkin/executed_disabled.html:23
+#: app/templates/checkin/thank_you.html:19
+msgid "Return to Dashboard"
+msgstr "Miverina amin'ny Dashboard"
+
+#: app/templates/checkin/disabled.html:10
+msgid "Check-In Disabled"
+msgstr "Tsy misy mailaka"
+
+#: app/templates/checkin/disabled.html:12
+msgid "This check-in is currently disabled and cannot be completed."
+msgstr ""
+"Amin'izao fotoana izao dia tsy mandeha ity fanamarinana ity ary tsy vita."
+
+#: app/templates/checkin/executed_disabled.html:11
+msgid "Already Executed & Disabled"
+msgstr "Efa Notanterahina & Nampahori"
+
+#: app/templates/checkin/executed_disabled.html:14
+msgid ""
+"This check-in has already been executed and is now disabled. No further "
+"action is required."
+msgstr ""
+"Efa vita ity fanamarinana ity ary efa tsy mandeha intsony. Tsy ilaina ny "
+"hetsika fanampiny."
+
+#: app/templates/checkin/thank_you.html:10
+msgid "Check-In Successful"
+msgstr "Nandresy soa aman-tsara ny Check-In"
+
+#: app/templates/checkin/thank_you.html:11
+msgid "Thank you for checking in."
+msgstr "Misaotra anao noho ny fisoratanao anarana."
+
+#: app/templates/checkin/thank_you.html:14
+msgid "Checked in for:"
+msgstr "Nandray anjara tamin'ny:"
+
+#: app/templates/email/assign_smtp.html:11
+msgid "📧 Assign SMTP Config to:"
+msgstr "📧 Atokana ny SMTP Config amin'ny:"
+
+#: app/templates/email/assign_smtp.html:25
+msgid "No SMTP (Unassign)"
+msgstr "Tsy misy fametrahana SMTP natokana"
+
+#: app/templates/email/assign_smtp.html:26
+msgid "This email will not use any SMTP configuration."
+msgstr "Tsy hampiasa fanamboarana SMTP ity mailaka ity."
+
+#: app/templates/email/attach_files.html:12
+msgid "Attach Files for:"
+msgstr "Mampiaraka Rakitra ho an'ny:"
+
+#: app/templates/email/attach_files.html:21
+msgid "Available Files"
+msgstr "Rakitra misy"
+
+#: app/templates/email/attach_files.html:36
+msgid "No files found in the upload directory."
+msgstr "Tsy misy rakitra hita ao amin'ny faritra fampirana."
+
+#: app/templates/email/attach_files.html:44
+msgid "Save Attachments"
+msgstr "Vonjeo ny Mampiaraka"
+
+#: app/templates/email/attach_files.html:54
+msgid "File Attach Notes"
+msgstr "Fanamarihana Mampiaraka Rakitra"
+
+#: app/templates/email/attach_files.html:63
+msgid "Important:"
+msgstr "Seranana:"
+
+#: app/templates/email/attach_files.html:65
+msgid ""
+"Only files that are present in the 'uploads' folder (provided by your system"
+" administrator) will be shown here. If you do not see your file(s), please "
+"contact your Grylli administrator."
+msgstr ""
+"Fichier hita ao anatin'ny fampirimana 'uploads' ihany (navoakan'ny "
+"mpandrindra ny rafitrao) no haseho eto. Raha tsy hitanao ny rakitrao, "
+"azafady ampahafantaro ny mpandrindra Grylli anao."
+
+#: app/templates/email/attach_files.html:69
+msgid "Accepted file types:"
+msgstr "Ekena ny karazana rakitra:"
+
+#: app/templates/email/attach_files.html:71
+msgid "Documents:"
+msgstr "Taratasy:"
+
+#: app/templates/email/attach_files.html:73
+msgid "Images:"
+msgstr "Sary:"
+
+#: app/templates/email/attach_files.html:75
+msgid "Audio:"
+msgstr "Feo:"
+
+#: app/templates/email/attach_files.html:79
+msgid "Maximum file size:"
+msgstr "Fetra fara tampony:"
+
+#: app/templates/email/attach_files.html:80
+msgid "10 MB per file"
+msgstr "10 MB isaky ny rakitra"
+
+#: app/templates/email/attach_files.html:83
+msgid "Total upload size:"
+msgstr "Isan'ny fampakarana rehetra:"
+
+#: app/templates/email/attach_files.html:84
+msgid "20 MB (all files combined)"
+msgstr "20 MB (rakitra rehetra)"
+
+#: app/templates/email/edit_message.html:12
+#: app/templates/email/list_emails.html:75
+#: app/templates/email/list_emails.html:177
+msgid "Edit Email"
+msgstr "Ovay Email"
+
+#: app/templates/email/edit_message.html:12
+msgid "Create Email"
+msgstr "Mamorona Email"
+
+#: app/templates/email/edit_message.html:28
+msgid "To (Recipient Email)"
+msgstr "Ho an'i (Mailaka Mpandray)"
+
+#: app/templates/email/edit_message.html:35
+#: app/templates/email/list_emails.html:57
+#: app/templates/email/view_config.html:18
+#: app/templates/messages/create_message.html:36
+#: app/templates/messages/edit_message.html:30
+#: app/templates/messages/list_messages.html:58
+#: app/templates/messages/view_message.html:18
+#: app/templates/reminders/create_reminder.html:30
+#: app/templates/reminders/edit_reminder.html:24
+#: app/templates/reminders/list_reminders.html:57
+#: app/templates/reminders/view_reminder.html:17
+msgid "Subject"
+msgstr "Lohahevitra"
+
+#: app/templates/email/edit_message.html:42
+#: app/templates/email/view_config.html:28
+msgid "Body"
+msgstr "Vatana"
+
+#: app/templates/email/edit_message.html:50
+msgid "Save Email"
+msgstr "Vonjeo Email"
+
+#: app/templates/email/list_emails.html:48
+msgid "Add Email"
+msgstr "Ampio Email"
+
+#: app/templates/email/list_emails.html:58
+#: app/templates/reminders/assign_email_reminder.html:77
+msgid "To"
+msgstr "Ho an'i"
+
+#: app/templates/email/list_emails.html:78
+#: app/templates/email/list_emails.html:180
+msgid "Disable to edit email"
+msgstr "Tsy nahomby ny fandefasana mailaka fitsapana:"
+
+#: app/templates/email/list_emails.html:84
+#: app/templates/email/list_emails.html:186
+msgid "Attach Files"
+msgstr "Mampiaraka Rakitra"
+
+#: app/templates/email/list_emails.html:87
+#: app/templates/email/list_emails.html:189
+msgid "Disable to attach files"
+msgstr "Mampiaraka Rakitra"
+
+#: app/templates/email/list_emails.html:93
+#: app/templates/email/list_emails.html:195
+msgid "Attach SMTP Config"
+msgstr "Mampiaraka SMTP Config"
+
+#: app/templates/email/list_emails.html:96
+#: app/templates/email/list_emails.html:198
+msgid "Disable to assign SMTP"
+msgstr "Atsaharo mba hametahana SMTP"
+
+#: app/templates/email/list_emails.html:102
+#: app/templates/email/list_emails.html:204
+msgid "Schedule Check-In"
+msgstr "Fanasiana ny Check-In"
+
+#: app/templates/email/list_emails.html:105
+#: app/templates/email/list_emails.html:207
+msgid "Disable to schedule check-in"
+msgstr "Fanasiana ny Check-In"
+
+#: app/templates/email/list_emails.html:110
+#: app/templates/email/list_emails.html:212
+#: app/templates/messages/list_messages.html:99
+#: app/templates/messages/list_messages.html:184
+#: app/templates/reminders/list_reminders.html:93
+#: app/templates/reminders/list_reminders.html:178
+msgid "View Details"
+msgstr "Hijery antsipirihany"
+
+#: app/templates/email/list_emails.html:118
+#: app/templates/email/list_emails.html:220
+msgid "Send this email to yourself to preview it."
+msgstr "Alefaso amin'ny tenanao ity mailaka ity hijerena mialoha azy."
+
+#: app/templates/email/list_emails.html:136
+#: app/templates/email/list_emails.html:238
+msgid "Toggle Email On/Off"
+msgstr "Mivadika Email On/Off"
+
+#: app/templates/email/list_emails.html:139
+#: app/templates/email/list_emails.html:241
+msgid "Email is enabled"
+msgstr "Mandefitra mailaka"
+
+#: app/templates/email/list_emails.html:141
+#: app/templates/email/list_emails.html:243
+msgid "Email is disabled"
+msgstr "Tsy misy mailaka"
+
+#: app/templates/email/list_emails.html:157
+#: app/templates/email/view_config.html:51
+#: app/templates/messages/list_messages.html:142
+#: app/templates/reminders/list_reminders.html:140
+msgid "Label:"
+msgstr "Marika:"
+
+#: app/templates/email/list_emails.html:161
+#: app/templates/messages/list_messages.html:146
+#: app/templates/reminders/list_reminders.html:144
+#: app/templates/reminders/view_reminder.html:98
+msgid "Subject:"
+msgstr "Lohahevitra"
+
+#: app/templates/email/list_emails.html:165
+msgid "To:"
+msgstr "Ho:"
+
+#: app/templates/email/list_emails.html:169
+#: app/templates/messages/list_messages.html:150
+msgid "Created At:"
+msgstr "Noforonina Tamin'ny"
+
+#: app/templates/email/list_emails.html:255
+msgid "How to create and send an email"
+msgstr "Ahoana ny fomba hamoronana sy handefasana mailaka"
+
+#: app/templates/email/list_emails.html:262
+msgid ""
+"Click “Add Email” and fill out the subject, content, and recipient address."
+msgstr ""
+"Tsindrio “Add Email” ary fenoy ny lohateny, votoaty, ary adiresy mpandray."
+
+#: app/templates/email/list_emails.html:263
+msgid "Attach any optional files (if needed)."
+msgstr "Ampidiro ireo rakitra tsy voatery (raha ilaina)."
+
+#: app/templates/email/list_emails.html:264
+msgid ""
+"Click 🧩 to assign a single SMTP configuration that will be used to send the "
+"email."
+msgstr ""
+"Tsindrio 🧩 mba hanendry SMTP tokana izay ampiasaina handefasana ny mailaka."
+
+#: app/templates/email/list_emails.html:265
+msgid "Click ⏱️ to set a check-in interval and grace period for the email."
+msgstr ""
+"Tsindrio ⏱️ mba hametraka fe-potoana fikambanana sy fe-potoana fandeferana "
+"ho an'ny mailaka."
+
+#: app/templates/email/list_emails.html:266
+msgid "Enable the email using the 🔴/🟢 toggle button."
+msgstr "Alefaso ny mailaka amin'ny alàlan'ity bokotra fametrahana 🔴/🟢 ity."
+
+#: app/templates/email/list_emails.html:267
+msgid ""
+"Click 🧪 to test the email by sending it to yourself (not the recipient)."
+msgstr ""
+"Tsindrio 🧪 mba hizaha ny mailaka amin'ny fandefasana azy ho anao (tsy ho "
+"an'ny mpandray)."
+
+#: app/templates/email/list_emails.html:268
+msgid ""
+"If you don’t check in before the grace period ends, the email will be "
+"automatically sent."
+msgstr ""
+"Raha tsy manamarina alohan'ny hanaperana ny fe-potoana fandeferana ianao, "
+"dia handefasana ho azy ny mailaka."
+
+#: app/templates/email/list_emails.html:269
+msgid "You can preview the email configuration using 🔍."
+msgstr "Azonao atao ny manadihady ny fametrahana ny mailaka amin'ny 🔍."
+
+#: app/templates/email/list_emails.html:270
+msgid "Once a secure email is sent, it will be automatically disabled."
+msgstr "Raha vantany vao alefa mailaka azo antoka dia hoesorina ho azy."
+
+#: app/templates/email/schedule_email.html:9
+msgid "Schedule Email"
+msgstr "Fandaharam-mailaka"
+
+#: app/templates/email/schedule_email.html:18
+#: app/templates/messages/schedule_message.html:18
+msgid "Years"
+msgstr "Taona"
+
+#: app/templates/email/schedule_email.html:19
+#: app/templates/messages/schedule_message.html:19
+msgid "Months"
+msgstr "Volana"
+
+#: app/templates/email/schedule_email.html:20
+#: app/templates/messages/schedule_message.html:20
+msgid "Weeks"
+msgstr "Herinandro"
+
+#: app/templates/email/schedule_email.html:21
+#: app/templates/messages/schedule_message.html:21
+msgid "Days"
+msgstr "Andro"
+
+#: app/templates/email/schedule_email.html:22
+#: app/templates/messages/schedule_message.html:22
+msgid "Hours"
+msgstr "Ora"
+
+#: app/templates/email/schedule_email.html:23
+#: app/templates/messages/schedule_message.html:23
+msgid "Minutes"
+msgstr "Minitra"
+
+#: app/templates/email/schedule_email.html:28
+#: app/templates/messages/schedule_message.html:28
+msgid "Check-in"
+msgstr "Fanamarinana"
+
+#: app/templates/email/schedule_email.html:51
+#: app/templates/messages/schedule_message.html:51
+#: app/templates/messages/view_message.html:26
+msgid "Grace Period"
+msgstr "Fe-potoana fandeferana"
+
+#: app/templates/email/schedule_email.html:80
+#: app/templates/messages/schedule_message.html:80
+#: app/templates/reminders/schedule_reminder.html:47
+msgid "Save Schedule"
+msgstr "Vonjeny ny fandaharam-potoana"
+
+#: app/templates/email/view_config.html:9
+msgid "Email Configuration"
+msgstr "Fametrahana mailaka"
+
+#: app/templates/email/view_config.html:22
+msgid "Recipient"
+msgstr "Mpandray"
+
+#: app/templates/email/view_config.html:33
+msgid "Attached Files"
+msgstr "Rakitra mifatotra"
+
+#: app/templates/email/view_config.html:39
+msgid "No files attached"
+msgstr "Tsy misy rakitra mifatotra"
+
+#: app/templates/email/view_config.html:46
+#: app/templates/reminders/assign_email_reminder.html:20
+msgid "SMTP Configuration"
+msgstr "Fametrahana SMTP"
+
+#: app/templates/email/view_config.html:54
+#: app/templates/user_smtp/list_smtp.html:122
+msgid "Host:"
+msgstr "Mpampiantrano:"
+
+#: app/templates/email/view_config.html:57
+#: app/templates/user_smtp/list_smtp.html:128
+msgid "Username:"
+msgstr "Anarana:"
+
+#: app/templates/email/view_config.html:60
+#: app/templates/user_smtp/list_smtp.html:134
+msgid "TLS:"
+msgstr "TLS:"
+
+#: app/templates/email/view_config.html:64
+msgid "No SMTP configuration assigned"
+msgstr "Tsy misy fametrahana SMTP natokana"
+
+#: app/templates/email/view_config.html:69
+msgid "Schedule Information"
+msgstr "Fampahalalana fandaharam-potoana"
+
+#: app/templates/email/view_config.html:72
+msgid "Check-in Interval:"
+msgstr "Interval fanamarinana:"
+
+#: app/templates/email/view_config.html:72
+#: app/templates/email/view_config.html:75
+msgid "minutes"
+msgstr "minitra"
+
+#: app/templates/email/view_config.html:75
+msgid "Grace Period:"
+msgstr "Fe-potoana fandeferana:"
+
+#: app/templates/email/view_config.html:79
+msgid "Last Check-in:"
+msgstr "Fanamarinana farany:"
+
+#: app/templates/email/view_config.html:82
+msgid "No check-in has occurred yet"
+msgstr "Tsy mbola nisy fanamarinana nitranga"
+
+#: app/templates/email/view_config.html:92
+msgid "Back to Emails"
+msgstr "Miverina amin'ny mailaka"
+
+#: app/templates/errors/500.html:4
+msgid "Something went wrong"
+msgstr "Nisy zavatra tsy nety"
+
+#: app/templates/errors/500.html:6
+msgid ""
+"An unexpected error occurred. Please try again later or contact support."
+msgstr ""
+"Nisy hadisoana tsy nampoizina nitranga. Andramo indray azafady aty aoriana "
+"na mifandraisa amin'ny fanohanana."
+
+#: app/templates/locale/redirect_after_lang_set.html:15
+msgid "Switching Language..."
+msgstr "Mamindra fiteny..."
+
+#: app/templates/locale/redirect_after_lang_set.html:18
+msgid "Applying new language..."
+msgstr "Mametraka fiteny vaovao..."
+
+#: app/templates/messages/assign_destinations.html:13
+#: app/templates/reminders/assign_destinations.html:12
+msgid "Assign Destinations for"
+msgstr "Manendry Tanjona ho an'ny"
+
+#: app/templates/messages/assign_destinations.html:62
+#: app/templates/reminders/assign_destinations.html:60
+msgid "Save Destinations"
+msgstr "Tehirizo Tanjona"
+
+#: app/templates/messages/create_message.html:17
+msgid "Edit Notificaton"
+msgstr "Hanova Fampahafantarana"
+
+#: app/templates/messages/create_message.html:19
+msgid "Create Notification"
+msgstr "Mamorona Fampahafantarana"
+
+#: app/templates/messages/create_message.html:43
+#: app/templates/messages/edit_message.html:37
+#: app/templates/messages/view_message.html:42
+#: app/templates/reminders/create_reminder.html:37
+#: app/templates/reminders/edit_reminder.html:31
+#: app/templates/reminders/view_reminder.html:53
+msgid "Content"
+msgstr "Votoaty"
+
+#: app/templates/messages/create_message.html:51
+msgid "Save Notification"
+msgstr "Tehirizo Fampahafantarana"
+
+#: app/templates/messages/edit_message.html:15
+#: app/templates/messages/list_messages.html:74
+#: app/templates/messages/list_messages.html:158
+msgid "Edit Notification"
+msgstr "Hanova Fampahafantarana"
+
+#: app/templates/messages/edit_message.html:45
+msgid "Update Notification"
+msgstr "Hanavao Fampahafantarana"
+
+#: app/templates/messages/list_messages.html:49
+msgid "Add Notification"
+msgstr "Manampy Fampahafantarana"
+
+#: app/templates/messages/list_messages.html:77
+#: app/templates/messages/list_messages.html:161
+msgid "Disable to edit notification"
+msgstr "Hanova Fampahafantarana"
+
+#: app/templates/messages/list_messages.html:83
+#: app/templates/messages/list_messages.html:167
+#: app/templates/reminders/list_reminders.html:78
+#: app/templates/reminders/list_reminders.html:163
+msgid "Assign Destinations"
+msgstr "Manendry Tanjona"
+
+#: app/templates/messages/list_messages.html:86
+#: app/templates/messages/list_messages.html:170
+msgid "Disable to assign destinations"
+msgstr "Manendry Tanjona"
+
+#: app/templates/messages/list_messages.html:92
+#: app/templates/messages/list_messages.html:176
+#: app/templates/reminders/list_reminders.html:88
+#: app/templates/reminders/list_reminders.html:173
+msgid "Set Schedule"
+msgstr "Mametrahana Fandaharana"
+
+#: app/templates/messages/list_messages.html:95
+#: app/templates/messages/list_messages.html:179
+msgid "Disable to set schedule"
+msgstr "Mametrahana Fandaharana"
+
+#: app/templates/messages/list_messages.html:107
+#: app/templates/messages/list_messages.html:192
+msgid "Send Test Notification"
+msgstr "Hanova Fampahafantarana"
+
+#: app/templates/messages/list_messages.html:122
+#: app/templates/messages/list_messages.html:209
+msgid "Toggle Message On/Off"
+msgstr "Ahodino Hafatra Misy/TSY Misy"
+
+#: app/templates/messages/list_messages.html:124
+#: app/templates/messages/list_messages.html:211
+msgid "Notification is enabled"
+msgstr "Fampandrenesana no alefa"
+
+#: app/templates/messages/list_messages.html:126
+#: app/templates/messages/list_messages.html:213
+msgid "Notification is disabled"
+msgstr "Fampandrenesana no tsy alefa"
+
+#: app/templates/messages/list_messages.html:223
+msgid "How to create and send a notification"
+msgstr "Ahoana ny fomba famoronana sy fandefasana fampandrenesana"
+
+#: app/templates/messages/list_messages.html:233
+msgid "Click “Add notification” and fill out the subject and content fields."
+msgstr ""
+"Tsindrio “Manampy fampahafantarana” ary fenoy ny saha lohahevitra sy "
+"votoaty."
+
+#: app/templates/messages/list_messages.html:234
+msgid "Save the notification to return to the overview."
+msgstr "Tehirizo ny fampahafantarana mba hiverina amin'ny famintinana."
+
+#: app/templates/messages/list_messages.html:235
+msgid "You need to create at least one apprise or webhook destination."
+msgstr "Tena mila mamorona tanjona apprise na webhook farafaharatsiny."
+
+#: app/templates/messages/list_messages.html:236
+msgid "You can create as many destinations as you like."
+msgstr "Afaka mamorona tanjona betsaka kokoa ianao araka izay tianao."
+
+#: app/templates/messages/list_messages.html:237
+msgid "Click 🧩 to assign one or more Apprise and/or Webhook destinations."
+msgstr ""
+"Tsindrio 🧩 mba hanendry tanjona Apprise sy/na Webhook iray na maromaro."
+
+#: app/templates/messages/list_messages.html:238
+msgid "Click ⏱️ to set a schedule and check-in interval."
+msgstr "Tsindrio ⏱️ mba hametraha fandaharana sy fotoana fanamarinana."
+
+#: app/templates/messages/list_messages.html:239
+msgid "Enable the notification using the 🔴/🟢 toggle button."
+msgstr "Alefaso ny fampandrenesana amin'ny alalan'ny bokotra ahodino 🔴/🟢."
+
+#: app/templates/messages/list_messages.html:240
+msgid ""
+"If you don’t check in before the grace period ends, the notification will be"
+" sent."
+msgstr ""
+"Raha tsy manamarina ianao alohan'ny fiafaran'ny vanim-potoana famindram-po, "
+"dia halefa ny fampandrenesana."
+
+#: app/templates/messages/list_messages.html:241
+msgid "You can preview the notification config using 🔍."
+msgstr ""
+"Afaka manana topi-maso ny fikirakirana fampandrenesana ianao amin'ny "
+"fampiasana 🔍."
+
+#: app/templates/messages/list_messages.html:242
+msgid "Once a notification is sent, it will be automatically disabled."
+msgstr ""
+"Raha vantany vao alefa ny fampandrenesana dia ho voatonga ho azy izy izany."
+
+#: app/templates/messages/schedule_message.html:9
+msgid "Schedule Message"
+msgstr "Fandaharana Hafatra"
+
+#: app/templates/messages/view_message.html:9
+msgid "Notifications Details"
+msgstr "Antsipirian'ny Fampandrenesana"
+
+#: app/templates/messages/view_message.html:22
+msgid "Check-in Interval"
+msgstr "Interval Fanamarinana"
+
+#: app/templates/messages/view_message.html:31
+msgid "Last Check-in"
+msgstr "Fanamarinana Farany"
+
+#: app/templates/messages/view_message.html:48
+#: app/templates/reminders/view_reminder.html:59
+msgid "Apprise URLs"
+msgstr "URL Apprise"
+
+#: app/templates/messages/view_message.html:54
+#: app/templates/messages/view_message.html:64
+#: app/templates/reminders/view_reminder.html:65
+#: app/templates/reminders/view_reminder.html:75
+#: app/templates/reminders/view_reminder.html:85
+msgid "None assigned."
+msgstr "Tsy misy napetraka."
+
+#: app/templates/messages/view_message.html:73
+msgid "Back to Notifications"
+msgstr "Miverena amin'ny Fampandrenesana"
+
+#: app/templates/mfa/challenge.html:5 app/templates/mfa/settings.html:5
+msgid "Two-Factor Authentication (MFA)"
+msgstr "Fampahavitrihana roa dingana (MFA)"
+
+#: app/templates/mfa/recovery_codes.html:4
+msgid "Your Recovery Codes"
+msgstr "Ny Kaodinao famerenana"
+
+#: app/templates/mfa/recovery_codes.html:7
+msgid "Save these recovery codes in a safe place!"
+msgstr "Tehirizo amin'ny toerana azo antoka ireto kaody famerenana ireto!"
+
+#: app/templates/mfa/recovery_codes.html:10
+msgid ""
+"Each code can be used once if you lose access to your authenticator. These "
+"codes will not be shown again."
+msgstr ""
+"Afaka ampiasa iray ihany io kaody tsirairay raha very ny fidirana amin'ny "
+"fampiavahanao."
+
+#: app/templates/mfa/recovery_codes.html:24
+msgid "OK, I've saved them"
+msgstr "OK, nataoko ny fanerenana"
+
+#: app/templates/mfa/settings.html:12
+msgid "MFA QR Code"
+msgstr "Kaody QR MFA"
+
+#: app/templates/mfa/settings.html:15
+msgid "Manual Entry:"
+msgstr "Fampidirana an-tanana:"
+
+#: app/templates/partials/admin_nav.html:21
+msgid "Administration"
+msgstr "Administration"
+
+#: app/templates/partials/admin_nav.html:37
+#: app/templates/partials/shared_nav.html:34
+#: app/templates/partials/shared_nav.html:78
+#: app/templates/partials/shared_nav.html:117
+msgid "Overview"
+msgstr "Overview"
+
+#: app/templates/partials/footer.html:7
+msgid "Toggle Theme"
+msgstr "Ampodino ny Lohahevitra"
+
+#: app/templates/partials/footer.html:32
+msgid "Theme"
+msgstr "Lohahevitra"
+
+#: app/templates/partials/head.html:7
+msgid "Grylli"
+msgstr "Grylli"
+
+#: app/templates/partials/header.html:6 app/templates/partials/sidebar.html:32
+#: app/templates/partials/sidebar.html:66
+msgid "Home"
+msgstr "Home"
+
+#: app/templates/partials/header.html:55
+msgid "Account"
+msgstr "Account"
+
+#: app/templates/partials/header.html:61
+msgid "MFA"
+msgstr "MFA"
+
+#: app/templates/partials/header.html:67
+msgid "About"
+msgstr "About"
+
+#: app/templates/partials/header.html:73
+msgid "Privacy"
+msgstr "Fiainana Manokana"
+
+#: app/templates/partials/header.html:79
+msgid "System Info"
+msgstr "System Info"
+
+#: app/templates/partials/header.html:114
+msgid "Logout"
+msgstr "Logout"
+
+#: app/templates/partials/shared_nav.html:33
+msgid "Overview of notification settings"
+msgstr "Topimaso momba ny toe-javatra fampandrenesana"
+
+#: app/templates/partials/shared_nav.html:38
+msgid "Configure Apprise services"
+msgstr "Apetraho ny serivisy Apprise"
+
+#: app/templates/partials/shared_nav.html:39
+msgid "Apprise"
+msgstr "Apprise"
+
+#: app/templates/partials/shared_nav.html:43
+msgid "Configure Webhook integrations"
+msgstr "Apetraho ny fampidirana Webhook"
+
+#: app/templates/partials/shared_nav.html:77
+msgid "Overview of secure email messages"
+msgstr "Topimaso momba ny hafatra email azo antoka"
+
+#: app/templates/partials/shared_nav.html:82
+msgid "Configure SMTP email settings"
+msgstr "Apetraho ny toe-javatra email SMTP"
+
+#: app/templates/partials/shared_nav.html:83
+#: app/templates/reminders/view_reminder.html:79
+msgid "SMTP"
+msgstr "SMTP"
+
+#: app/templates/partials/shared_nav.html:100
+#: app/templates/reminders/list_reminders.html:8
+msgid "Reminders"
+msgstr "minitra"
+
+#: app/templates/partials/shared_nav.html:116
+msgid "Overview of reminders"
+msgstr "Topi-maso ny fampahatsiahivana"
+
+#: app/templates/partials/sidebar.html:13
+#: app/templates/partials/sidebar.html:47
+msgid "Menu"
+msgstr "Menu"
+
+#: app/templates/reminders/assign_email_reminder.html:12
+msgid "Link Email Reminder for"
+msgstr "Rohy Fampahatsiahivana Mailaka ho an'ny"
+
+#: app/templates/reminders/assign_email_reminder.html:30
+#: app/templates/reminders/assign_email_reminder.html:64
+msgid "None (Unassign)"
+msgstr "Tsy misy fametrahana SMTP natokana"
+
+#: app/templates/reminders/assign_email_reminder.html:43
+msgid "No sender address"
+msgstr "Tsy misy adiresy mpandefa"
+
+#: app/templates/reminders/assign_email_reminder.html:54
+msgid "Email Message"
+msgstr "Fandaharana Hafatra"
+
+#: app/templates/reminders/assign_email_reminder.html:77
+msgid "No subject"
+msgstr "Lohahevitra"
+
+#: app/templates/reminders/assign_email_reminder.html:90
+msgid "Save Email Reminder"
+msgstr "Vonjeo Email"
+
+#: app/templates/reminders/create_reminder.html:12
+#: app/templates/reminders/edit_reminder.html:10
+#: app/templates/reminders/list_reminders.html:73
+#: app/templates/reminders/list_reminders.html:158
+msgid "Edit Reminder"
+msgstr "Ovay Email"
+
+#: app/templates/reminders/create_reminder.html:14
+msgid "Create Reminder"
+msgstr "Mamorona Email"
+
+#: app/templates/reminders/create_reminder.html:45
+msgid "Save Reminder"
+msgstr "Vonjeo Email"
+
+#: app/templates/reminders/edit_reminder.html:39
+msgid "Update Reminder"
+msgstr "Hanavao Fampahatsiahivana"
+
+#: app/templates/reminders/list_reminders.html:48
+msgid "Add Reminder"
+msgstr "Ampio Email"
+
+#: app/templates/reminders/list_reminders.html:58
+#: app/templates/reminders/view_reminder.html:21
+msgid "Start At"
+msgstr "Manomboka TLS"
+
+#: app/templates/reminders/list_reminders.html:59
+msgid "Recurrence"
+msgstr "Famerimberenana"
+
+#: app/templates/reminders/list_reminders.html:69
+#: app/templates/reminders/list_reminders.html:153
+#: app/templates/reminders/view_reminder.html:26
+msgid "One-time"
+msgstr "Indray mandeha"
+
+#: app/templates/reminders/list_reminders.html:83
+msgid "Assign Email Reminder"
+msgstr "Nanendry Fampahatsiahivana Mailaka"
+
+#: app/templates/reminders/list_reminders.html:102
+#: app/templates/reminders/list_reminders.html:187
+msgid "Send Test Reminder"
+msgstr "Mandefa Mailaka Fitsapana"
+
+#: app/templates/reminders/list_reminders.html:120
+#: app/templates/reminders/list_reminders.html:205
+msgid "Toggle Reminder On/Off"
+msgstr "Mivadika Email On/Off"
+
+#: app/templates/reminders/list_reminders.html:122
+#: app/templates/reminders/list_reminders.html:207
+msgid "Reminder is enabled"
+msgstr "Mandefitra mailaka"
+
+#: app/templates/reminders/list_reminders.html:124
+#: app/templates/reminders/list_reminders.html:209
+msgid "Reminder is disabled"
+msgstr "Tsy misy mailaka"
+
+#: app/templates/reminders/list_reminders.html:148
+msgid "Start At:"
+msgstr "Manomboka TLS"
+
+#: app/templates/reminders/list_reminders.html:152
+msgid "Recurrence:"
+msgstr "Famerimberenana:"
+
+#: app/templates/reminders/list_reminders.html:168
+msgid "Link Email Reminder"
+msgstr "Rohy Fampahatsiahivana Mailaka"
+
+#: app/templates/reminders/list_reminders.html:218
+msgid "How to use reminders"
+msgstr "Fomba fitantanana ny mpampiasa"
+
+#: app/templates/reminders/list_reminders.html:231
+msgid "➕ Click “Add Reminder” and fill out the subject and content fields."
+msgstr ""
+"Tsindrio “Manampy fampahafantarana” ary fenoy ny saha lohahevitra sy "
+"votoaty."
+
+#: app/templates/reminders/list_reminders.html:232
+msgid "💾 Save the reminder to return to the overview."
+msgstr "Tehirizo ny fampahafantarana mba hiverina amin'ny famintinana."
+
+#: app/templates/reminders/list_reminders.html:233
+msgid ""
+"📣 Assign Apprise, 🌐 Webhook, and/or 📧 Email (SMTP) destinations as needed."
+msgstr ""
+"📣 Atokana ho an'ny Apprise, 🌐 Webhook, ary/na 📧 Mailaka (SMTP) ireo "
+"fitaovana ilaina."
+
+#: app/templates/reminders/list_reminders.html:234
+msgid ""
+"⏱️ Set the schedule using the schedule button to define when reminders are "
+"sent."
+msgstr ""
+"⏱️ Atombohy ny fandaharam-potoana amin'ny bokotra fandaharam-potoana mba "
+"hamaritana rehefa alefa ny fampahatsiahivana."
+
+#: app/templates/reminders/list_reminders.html:235
+msgid ""
+"🔍 Click “View Details” to review or edit assigned destinations and other "
+"settings."
+msgstr ""
+"🔍 Tsindrio “View Details” mba hijery na hanovana ireo toerana voatondro sy "
+"ny toe-javatra hafa."
+
+#: app/templates/reminders/list_reminders.html:236
+msgid ""
+"🧪 Click the Test button to verify all assigned destinations are working "
+"correctly."
+msgstr ""
+"🧪 Tsindrio ny bokotra Fitsapana mba hahazoana antoka fa miasa tsara ny "
+"toerana voatondro rehetra."
+
+#: app/templates/reminders/list_reminders.html:237
+msgid "🔴/🟢 Enable or disable the reminder using the toggle button."
+msgstr "Alefaso ny mailaka amin'ny alàlan'ity bokotra fametrahana 🔴/🟢 ity."
+
+#: app/templates/reminders/list_reminders.html:238
+msgid "📤 Reminders will be sent as scheduled to the assigned destinations."
+msgstr ""
+"📤 Alefa araka ny fandaharam-potoana ny fampahatsiahivana amin'ny toerana "
+"voatondro."
+
+#: app/templates/reminders/schedule_reminder.html:8
+msgid "Schedule Reminder"
+msgstr "Fandaharam-mailaka"
+
+#: app/templates/reminders/schedule_reminder.html:15
+msgid "Start Date & Time"
+msgstr "Daty sy Ora fanombohana"
+
+#: app/templates/reminders/schedule_reminder.html:22
+#: app/templates/reminders/view_reminder.html:25
+msgid "Recurrence Rule"
+msgstr "Lalàna Famerimberenana"
+
+#: app/templates/reminders/schedule_reminder.html:24
+msgid "(Optional) Enter RRULE or leave blank for one-time."
+msgstr ""
+"(Tsy voatery) Ampidiro ny RRULE na avelao ho foana ho an'ny indray mandeha."
+
+#: app/templates/reminders/schedule_reminder.html:30
+msgid "End Date"
+msgstr "Alefaso ny Fitsapana"
+
+#: app/templates/reminders/schedule_reminder.html:32
+msgid "(Optional) Stop sending after this date."
+msgstr "(Tsy voatery) Atsaharo ny fandefasana aorian'ity daty ity."
+
+#: app/templates/reminders/schedule_reminder.html:38
+#: app/templates/reminders/view_reminder.html:36
+msgid "Max Occurrences"
+msgstr "Fihaviana Ambony Indrindra"
+
+#: app/templates/reminders/schedule_reminder.html:40
+msgid "(Optional) Stop after this many reminders."
+msgstr "(Tsy voatery) Atsaharo aorian'ity fampahatsiahivana maro ity."
+
+#: app/templates/reminders/schedule_reminder.html:56
+msgid "Help for RRULE syntax"
+msgstr "Fanampiana ho an'ny RRULE syntax"
+
+#: app/templates/reminders/schedule_reminder.html:66
+msgid "Several tools are available to help generate an RRULE."
+msgstr "Misy fitaovana maro azo ampiasaina hananganana RRULE."
+
+#: app/templates/reminders/schedule_reminder.html:67
+msgid "Use a search engine or AI tool to assist."
+msgstr "Ampiasao ny milina fikarohana na fitaovana AI hanampy."
+
+#: app/templates/reminders/schedule_reminder.html:69
+msgid "Here is an example of one such online tool:"
+msgstr "Ity ny ohatra amin'ny fitaovana an-tserasera iray:"
+
+#: app/templates/reminders/schedule_reminder.html:73
+msgid "RRULE Generator Tool"
+msgstr "Fitaovan'ny RRULE Vokatra"
+
+#: app/templates/reminders/schedule_reminder.html:77
+msgid "See here for some common examples:"
+msgstr "Jereo eto ny ohatra mahazatra:"
+
+#: app/templates/reminders/schedule_reminder.html:81
+msgid "RRULE Help (GitHub)"
+msgstr "RRULE Fanampiana (GitHub)"
+
+#: app/templates/reminders/view_reminder.html:8
+msgid "Reminder Details"
+msgstr "Hijery antsipirihany"
+
+#: app/templates/reminders/view_reminder.html:30
+msgid "End At"
+msgstr "Alefaso ny Fitsapana"
+
+#: app/templates/reminders/view_reminder.html:42
+msgid "Last Sent"
+msgstr "Fanamarinana Farany"
+
+#: app/templates/reminders/view_reminder.html:91
+msgid "Email Template"
+msgstr "Mpamaritra Email"
+
+#: app/templates/reminders/view_reminder.html:103
+msgid "No email linked."
+msgstr "Mandefitra mailaka"
+
+#: app/templates/reminders/view_reminder.html:111
+msgid "Back to Reminders"
+msgstr "Miverina amin'ny mailaka"
+
+#: app/templates/user_smtp/create_smtp.html:10
+msgid "Create SMTP Destination"
+msgstr "Mamorona Tanjona SMTP"
+
+#: app/templates/user_smtp/create_smtp.html:69
+#: app/templates/user_smtp/edit_smtp.html:84
+msgid "Hold to reveal"
+msgstr "Tazonina mba haneho"
+
+#: app/templates/user_smtp/create_smtp.html:92
+#: app/templates/user_smtp/edit_smtp.html:107
+msgid "Use TLS"
+msgstr "Ampiasao TLS"
+
+#: app/templates/user_smtp/edit_smtp.html:10
+msgid "Edit SMTP Destination"
+msgstr "Mamorona Tanjona SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:9
+msgid "SMTP Destinations"
+msgstr "Tanjona SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:44
+msgid "Add SMTP"
+msgstr "Manampy SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:53
+msgid "Host"
+msgstr "Mpampiantrano"
+
+#: app/templates/user_smtp/list_smtp.html:54
+msgid "Port"
+msgstr "Seranana"
+
+#: app/templates/user_smtp/list_smtp.html:56
+msgid "TLS"
+msgstr "TLS"
+
+#: app/templates/user_smtp/list_smtp.html:58
+msgid "Created"
+msgstr "Noforonina"
+
+#: app/templates/user_smtp/list_smtp.html:90
+#: app/templates/user_smtp/list_smtp.html:158
+msgid "Send Test"
+msgstr "Alefaso ny Fitsapana"
+
+#: app/templates/user_smtp/list_smtp.html:125
+msgid "Port:"
+msgstr "Seranana:"
+
+#: app/templates/user_smtp/list_smtp.html:131
+msgid "Password:"
+msgstr "Teny miafina:"
+
+#: app/templates/user_smtp/list_smtp.html:184
+msgid "Hide SMTP Setup Help"
+msgstr "Afeno ny Fanampiana Amin'ny Setup SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:184
+msgid "Show SMTP Setup Help"
+msgstr "Asehoy ny Fanampiana Amin'ny Setup SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:190
+msgid ""
+"Need help finding your SMTP server settings? See here for some links to "
+"common providers:"
+msgstr ""
+"Mila fanampiana amin'ny fitadiavana ny fampidiranao SMTP? Jereo eto misy "
+"rohy vitsivitsy amin'ny mpamatsy mahazatra:"
+
+#: app/templates/user_smtp/list_smtp.html:194
+msgid "SMTP Server Settings Help (GitHub)"
+msgstr "Fanampiana Amin'ny Fampidirana SMTP Server (GitHub)"
+
+#: app/templates/user_smtp/list_smtp.html:198
+msgid ""
+"Find official documentation links for Gmail, Outlook, Yahoo, AOL, and "
+"others."
+msgstr ""
+"Mahita rohy documentation ofisialy ho an'ny Gmail, Outlook, Yahoo, AOL, sy "
+"ny hafa."
+
+#: app/templates/user_smtp/list_smtp.html:199
+msgid ""
+"If your provider isn’t listed, search their support site or a search engine "
+"for 'SMTP settings'."
+msgstr ""
+"Raha tsy misy ny mpamatsy anao, tadiavo ny tranonkala fanohanany na motera "
+"fikarohana ho an'ny 'SMTP settings'."
+
+#: app/templates/user_smtp/list_smtp.html:200
+msgid ""
+"Some providers (like Gmail, Yahoo) require 'App Passwords' or special "
+"setup—see their docs!"
+msgstr ""
+"Misy mpamatsy sasany (toy ny Gmail, Yahoo) mila 'App Passwords' na "
+"fanamboarana manokana—jereo ny docs-ny!"
+
+#: app/templates/webhook/create_webhook.html:10
+msgid "Create Webhook"
+msgstr "Mamorona Webhook"
+
+#: app/templates/webhook/edit_webhook.html:10
+msgid "Edit Webhook"
+msgstr "Hamarino ny Webhook"
+
+#: app/templates/webhook/list_webhooks.html:9
+#: app/templates/webhook/webhook_config.html:3
+msgid "Webhooks Destinations"
+msgstr "Tanjona Webhook"
+
+#: app/templates/webhook/list_webhooks.html:59
+msgid "Endpoint"
+msgstr "Tanjona Farany"
+
+#: app/templates/webhook/list_webhooks.html:60
+msgid "Description"
+msgstr "Famaritana"
+
+#: app/templates/webhook/list_webhooks.html:82
+#: app/templates/webhook/list_webhooks.html:141
+msgid "Cannot edit while assigned to notifications"
+msgstr "Tsy afaka manova rehefa nametrahana amin'ny fampahafantarana"
+
+#: app/templates/webhook/list_webhooks.html:106
+#: app/templates/webhook/list_webhooks.html:165
+msgid "Cannot delete while assigned to notifications"
+msgstr "Tsy afaka mamafa rehefa nametrahana amin'ny fampahafantarana"
+
+#: app/templates/webhook/list_webhooks.html:122
+msgid "Endpoint:"
+msgstr "Tanjona Farany:"
+
+#: app/templates/webhook/list_webhooks.html:125
+msgid "Description:"
+msgstr "Famaritana:"
+
+#: app/views/account.py:74
+msgid "Current password is required to change password."
+msgstr "Ilaina ny teny miafina ankehitriny raha te-hanova teny miafina."
+
+#: app/views/account.py:78
+msgid "Current password is incorrect."
+msgstr "Diso ny teny miafina ankehitriny."
+
+#: app/views/account.py:94
+msgid "Account updated successfully."
+msgstr "Nohavaozina soa aman-tsara ny kaonty."
+
+#: app/views/account.py:100
+msgid "An error occurred while updating your account."
+msgstr "Nisy fahadisoana tamin'ny fanavaozana ny kaontinao."
+
+#: app/views/account.py:137
+msgid "You cannot delete your account because you are the last admin."
+msgstr ""
+"Tsy afaka mamafa ny kaontinao ianao satria ilay mpitantana farany ianao."
+
+#: app/views/account.py:146
+msgid "Your account has been permanently deleted."
+msgstr "Nofafana mandrakizay ny kaontinao."
+
+#: app/views/account.py:152
+msgid "An error occurred while trying to delete your account."
+msgstr "Nisy fahadisoana tamin'ny fanavaozana ny kaontinao."
+
+#: app/views/account.py:171
+msgid "Your account has been deleted"
+msgstr "Nofafana mandrakizay ny kaontinao."
+
+#: app/views/account.py:173
+#, python-brace-format
+msgid ""
+"Hello {username},\n"
+"\n"
+"Your account on {site_name} has been deleted.Remember to delete your files from the uploads folder.If this was not you, please contact support immediately.\n"
+"\n"
+"{site_url}"
+msgstr ""
+"Salama {username},\n"
+"\n"
+"Voafafa ny kaontinao ao amin'ny {site_name}. Tsarovy ny mamafa ny rakitrao ao amin'ny lahatahiry fampiakarana. Raha tsy ianao no nikarakara izany, azafady mifandraisa amin'ny fanohanana avy hatrany.\n"
+"\n"
+"{site_url}"
+
+#: app/views/admin.py:59
+msgid "Invalid role."
+msgstr "Tsy mety ny andraikitra."
+
+#: app/views/apprise.py:51
+msgid "🧪 Test notification sent successfully!"
+msgstr "🧪 Nahomby ny fandefasana fampandrenesana fitsapana!"
+
+#: app/views/apprise.py:56
+msgid "🧪 Failed to send test notification: "
+msgstr "🧪 Tsy nahomby ny fandefasana fampandrenesana fitsapana:"
+
+#: app/views/apprise.py:62
+msgid "🧪 Error sending test notification."
+msgstr "🧪 Nisy fahadisoana tamin'ny fandefasana fampandrenesana fitsapana."
+
+#: app/views/apprise.py:101
+msgid "Apprise destination created successfully."
+msgstr "Nahomby ny famoronana ny tanjona Apprise."
+
+#: app/views/apprise.py:168
+msgid "Apprise destination updated successfully."
+msgstr "Nahomby ny fanavaozana ny tanjona Apprise."
+
+#: app/views/apprise.py:199
+msgid "Apprise destination deleted."
+msgstr "Voafafa ny tanjona Apprise."
+
+#: app/views/auth.py:95
+msgid "Admin account created successfully."
+msgstr "Nahomby ny famoronana ny kaonty admin."
+
+#: app/views/auth.py:108
+msgid "An error occurred while creating the admin account."
+msgstr "Nisy fahadisoana tamin'ny famoronana ny kaonty admin."
+
+#: app/views/auth.py:141
+msgid ""
+"Your account is not activated. Please check your email for the activation "
+"link."
+msgstr ""
+"Tsy mavitrika ny kaontinao. Azafady jereo ny mailakao ho an'ny rohy "
+"fanehoana."
+
+#: app/views/auth.py:157
+msgid "Multi-factor authentication required. Please enter your code."
+msgstr ""
+"Efa ilaina ny fampahavitrihana roa dingana. Ampidiro azafady ny kaody."
+
+#: app/views/auth.py:162 app/views/mfa.py:195
+msgid "Logged in successfully."
+msgstr "Niditra soa aman-tsara."
+
+#: app/views/auth.py:179
+msgid "Invalid username or password."
+msgstr "Diso ny anarana na teny miafina."
+
+#: app/views/auth.py:203
+msgid "You have been logged out."
+msgstr "Niala ianao."
+
+#: app/views/auth.py:239 app/views/email.py:263
+msgid "Access denied."
+msgstr "Nolavina ny fidirana."
+
+#: app/views/auth.py:273
+msgid "If a user with that email exists, we've sent the username to them."
+msgstr ""
+"Raha misy mpampiasa manana an'io mailaka io, dia nalefanay taminy ny "
+"anarana."
+
+#: app/views/auth.py:314
+msgid "A password reset link has been sent to your email."
+msgstr "Nalefanay ny rohy famerenana teny miafina amin'ny mailakao."
+
+#: app/views/auth.py:319
+msgid "No account found matching that username and email."
+msgstr "Tsy misy kaonty mifanaraka amin'izany anarana sy mailaka izany."
+
+#: app/views/auth.py:389
+msgid "The reset link is invalid or has expired."
+msgstr "Tsy mety na lany daty ny rohy famerenana."
+
+#: app/views/auth.py:401
+msgid "Username and email do not match."
+msgstr "Tsy mitovy ny solonanarana sy ny mailaka."
+
+#: app/views/auth.py:421
+msgid "Your password has been reset. Please log in."
+msgstr "Nohavaozina ny teny miafinao. Azafady midira."
+
+#: app/views/auth.py:458
+msgid "Invalid registration PIN."
+msgstr "Tsy manan-kery ny kaody fisoratana anarana."
+
+#: app/views/auth.py:467
+msgid "Username or email already exists."
+msgstr "Efa misy ilay solonanarana na mailaka."
+
+#: app/views/auth.py:492
+msgid "Activate Your Grylli Account"
+msgstr "Ampidiro ny kaody Grylli-nao"
+
+#: app/views/auth.py:493
+#, python-brace-format
+msgid ""
+"Hello {username},\n"
+"\n"
+"Please activate your account by clicking..."
+msgstr ""
+"Salama {username},\n"
+"\n"
+"Ampidiro ny kaontinao azafady amin'ny fanindriana..."
+
+#: app/views/auth.py:498
+msgid "Account created! Please check your email to activate your account."
+msgstr ""
+"Noforonina ny kaonty! Azafady, jereo ny mailakao mba hanokafana ny "
+"kaontinao."
+
+#: app/views/auth.py:521
+msgid "Activation link is invalid or expired."
+msgstr "Tsy manan-kery na lany andro ny rohy fampahavitana."
+
+#: app/views/auth.py:528 app/views/users.py:76 app/views/users.py:140
+msgid "User not found."
+msgstr "Tsy hita ilay mpampiasa."
+
+#: app/views/auth.py:532
+msgid "Account already activated. Please log in."
+msgstr "Efa nampahavitana ny kaonty. Azafady midira."
+
+#: app/views/auth.py:540
+msgid "Your account has been activated! You can now log in."
+msgstr "Vita ny fampahavitana ny kaontinao! Azonao atao izao ny miditra."
+
+#: app/views/backups.py:72
+#, python-format
+msgid "Backup created: %(filename)s"
+msgstr "Noforonina ny tahiry: %(filename)s"
+
+#: app/views/backups.py:77
+msgid "Failed to create backup."
+msgstr "Tsy nahomby ny famoronana tahiry."
+
+#: app/views/backups.py:106
+#, python-format
+msgid "Backup deleted: %(filename)s"
+msgstr "Voafafa ny tahiry: %(filename)s"
+
+#: app/views/backups.py:109
+msgid "Backup file not found."
+msgstr "Tsy hita ny rakitra tahiry."
+
+#: app/views/backups.py:112
+msgid "Failed to delete backup."
+msgstr "Tsy nahomby tamin'ny famafana tahiry."
+
+#: app/views/checkin.py:41
+msgid "Invalid check-in link."
+msgstr "Tsy manan-kery ny rohy fidirana."
+
+#: app/views/checkin.py:48
+msgid "You are not authorized to check in for this item."
+msgstr "Tsy mahazo alalana ianao hiditra amin'ity zavatra ity."
+
+#: app/views/checkin.py:62
+msgid "Unsupported check-in type."
+msgstr "Karazana fidirana izay tsy tohanana."
+
+#: app/views/checkin.py:137
+msgid "⚠️ Cannot enable reminder: Start date/time is in the past."
+msgstr ""
+"⚠️ Tsy afaka mampihetsika fampahatsiahivana: Ny daty/ora nanombohana dia "
+"taloha."
+
+#: app/views/checkin.py:158
+msgid "✅ Enabled and timer started."
+msgstr "✅ Nohiditra ary nanomboka ny fanisana ora."
+
+#: app/views/checkin.py:168
+msgid "⛔ Disabled."
+msgstr "⛔ Nampiana voasakana."
+
+#: app/views/checkin.py:170
+msgid "⚠️ Cannot toggle — missing schedule or destination."
+msgstr "⚠️ Tsy afaka manova — tsy hita ny ora sy toerana."
+
+#: app/views/email.py:88
+msgid "Message saved."
+msgstr "Voatahiry ny hafatra."
+
+#: app/views/email.py:118 app/views/messages.py:167
+msgid "Message deleted."
+msgstr "Voafafa ny hafatra."
+
+#: app/views/email.py:152
+msgid "Attached files updated."
+msgstr "Nohavaozina ny rakitra mampirina."
+
+#: app/views/email.py:200
+msgid "SMTP configuration not assigned or is disabled."
+msgstr "Tsy napetraka na nampiana ilay fepetra SMTP."
+
+#: app/views/email.py:234 app/views/smtp_settings_admin.py:82
+msgid "Test email sent successfully."
+msgstr "Nandefasana mailaka fitsapana."
+
+#: app/views/email.py:282 app/views/messages.py:305
+msgid "Schedule updated successfully."
+msgstr "Vita tsara ny fanavaozana ny fandaharam-potoana."
+
+#: app/views/email.py:310
+msgid "SMTP configuration assigned."
+msgstr "Natao ny fametrahana SMTP."
+
+#: app/views/email.py:319
+msgid "SMTP configuration removed."
+msgstr "Natao ny fametrahana SMTP."
+
+#: app/views/messages.py:97
+msgid "Message created successfully."
+msgstr "Noforonina soa aman-tsara ny hafatra."
+
+#: app/views/messages.py:133
+msgid "Message updated successfully."
+msgstr "Nohavaozina soa aman-tsara ny hafatra."
+
+#: app/views/messages.py:223 app/views/reminders.py:240
+msgid "Destinations updated."
+msgstr "Nohavaozina ny toerana."
+
+#: app/views/messages.py:441
+msgid "No destinations assigned to this message."
+msgstr "Tsy napetraka na nampiana ilay fepetra SMTP."
+
+#: app/views/messages.py:453
+msgid "Test message sent successfully."
+msgstr "Nandefasana mailaka fitsapana."
+
+#: app/views/messages.py:455
+msgid "Test message failed: "
+msgstr "Voatahiry ny hafatra."
+
+#: app/views/mfa.py:68
+msgid "You must enter a code from your authenticator."
+msgstr "Tsy maintsy mampiditra kaody avy amin'ny fampiavohana ianao."
+
+#: app/views/mfa.py:82 app/views/mfa.py:259
+msgid "Invalid code. Please try again."
+msgstr "Tsy mety ny kaody. Avereno azafady."
+
+#: app/views/mfa.py:91
+msgid "Two-factor authentication disabled."
+msgstr "Fampandrenesana no tsy alefa"
+
+#: app/views/mfa.py:132
+msgid "Recovery codes are only shown immediately after enabling MFA."
+msgstr "Ny kaody famerenana dia aseho rehefa, vao nampavitrika ny MFA ianao."
+
+#: app/views/mfa.py:142
+msgid "Could not load recovery codes."
+msgstr "Tsy afaka nampiditra ny kaody famerenana."
+
+#: app/views/mfa.py:168
+msgid "No MFA challenge in progress."
+msgstr "Tsy misy MFA fitsapana mbola mandeha."
+
+#: app/views/mfa.py:176
+msgid "User not found for MFA challenge."
+msgstr "Tsy hita ilay mpampiasa."
+
+#: app/views/mfa.py:225
+msgid ""
+"You have used your last recovery code. MFA has been disabled. Please remove "
+"Grylli from your authenticator app, and re-enable MFA to protect your "
+"account."
+msgstr ""
+"Efa nofainao ny kaody famerenana farany anao. Nalana ny MFA. Azafady esory "
+"ny Grylli amin'ny fampiavahanao, ary ataovy eto ny MFA mba hiarovana ny "
+"kaontinao."
+
+#: app/views/mfa.py:248
+#, python-brace-format
+msgid "Recovery code accepted. You have {remaining} recovery codes left."
+msgstr ""
+"Neken'ny kaody famerenana. Manana {remaining} kaody famerenana sisa ianao."
+
+#: app/views/reminders.py:106
+msgid "Reminder created successfully."
+msgstr "Noforonina soa aman-tsara ny hafatra."
+
+#: app/views/reminders.py:143
+msgid "Reminder updated successfully."
+msgstr "Nohavaozina soa aman-tsara ny mpampiasa."
+
+#: app/views/reminders.py:174
+msgid "Reminder deleted."
+msgstr "Voafafa ny mpampiasa."
+
+#: app/views/reminders.py:287
+msgid "No destinations assigned to this reminder."
+msgstr "Tsy napetraka na nampiana ilay fepetra SMTP."
+
+#: app/views/reminders.py:311
+msgid "No email message linked to this reminder."
+msgstr "Tsy misy hafatra mailaka mifandray amin'ity fampahatsiahivana ity."
+
+#: app/views/reminders.py:314
+msgid "SMTP configuration is disabled."
+msgstr "Tsy napetraka na nampiana ilay fepetra SMTP."
+
+#: app/views/reminders.py:353
+msgid "Test reminder sent successfully."
+msgstr "Nandefasana mailaka fitsapana."
+
+#: app/views/reminders.py:356
+msgid "Test reminder failed: "
+msgstr "Voatahiry ny hafatra."
+
+#: app/views/reminders.py:430
+msgid "Reminder schedule updated successfully."
+msgstr "Vita tsara ny fanavaozana ny fandaharam-potoana."
+
+#: app/views/reminders.py:434
+msgid "Please correct the errors below."
+msgstr "Aza hadino ny manitsy ny lesoka etsy ambany."
+
+#: app/views/reminders.py:481 app/views/reminders.py:482
+msgid "None"
+msgstr "Tsia"
+
+#: app/views/reminders.py:508
+msgid "You must select both an SMTP config and an email message, or neither."
+msgstr ""
+"Tsy maintsy misafidy fomba SMTP sy hafatra mailaka, na tsy misy na iray aza "
+"ianao."
+
+#: app/views/reminders.py:528
+msgid "Email reminder settings updated."
+msgstr "Nohavaozina ny toerana."
+
+#: app/views/smtp.py:83 app/views/user_smtp.py:80
+msgid "SMTP destination created successfully."
+msgstr "Noforonina soa aman-tsara ny toerana SMTP."
+
+#: app/views/smtp.py:129 app/views/user_smtp.py:135
+msgid "SMTP destination updated."
+msgstr "Nohavaozina ny toerana SMTP."
+
+#: app/views/smtp.py:160 app/views/user_smtp.py:166
+msgid "SMTP destination deleted."
+msgstr "Nofafa ny toerana SMTP."
+
+#: app/views/smtp.py:191 app/views/user_smtp.py:199
+msgid "Test email sent successfully to your account email."
+msgstr "Nandefasana mailaka fitsapana soa aman-tsara amin'ny mailakanao."
+
+#: app/views/smtp.py:196 app/views/user_smtp.py:204
+msgid "Failed to send test email. Check SMTP settings."
+msgstr ""
+"Tsy nahomby ny fandefasana mailaka fitsapana. Jereo ny fanamboarana SMTP."
+
+#: app/views/smtp_settings_admin.py:76
+msgid "Test Email from Grylli"
+msgstr "Mailaka Fitsapana avy amin'ny Grylli"
+
+#: app/views/smtp_settings_admin.py:77
+msgid "This is a test email from the Grylli SMTP settings page."
+msgstr ""
+"Ity dia mailaka fitsapana avy amin'ny pejin'ny fanamboarana SMTP an'ny "
+"Grylli."
+
+#: app/views/smtp_settings_admin.py:84
+msgid "Failed to send test email: "
+msgstr "Tsy nahomby ny fandefasana mailaka fitsapana:"
+
+#: app/views/users.py:99
+msgid "User updated successfully."
+msgstr "Nohavaozina soa aman-tsara ny mpampiasa."
+
+#: app/views/users.py:106 app/views/users.py:327
+msgid "An error occurred while updating the user."
+msgstr "Nisy hadisoana nitranga rehefa nanavao ny mpampiasa."
+
+#: app/views/users.py:195
+msgid "User deleted."
+msgstr "Voafafa ny mpampiasa."
+
+#: app/views/users.py:202
+msgid "An error occurred while deleting the user."
+msgstr "Nisy hadisoana nitranga rehefa mamafa ny mpampiasa."
+
+#: app/views/users.py:237
+msgid "Password is required when creating a new user."
+msgstr "Takiana ny tenimiafina rehefa mamorona mpampiasa vaovao."
+
+#: app/views/users.py:244
+msgid "Username already exists."
+msgstr "Efa misy ny solonanarana."
+
+#: app/views/users.py:251
+msgid "Email already exists."
+msgstr "Efa misy ny mailaka."
+
+#: app/views/users.py:268
+#, python-format
+msgid "User '%(username)s' created successfully."
+msgstr "Mpampiasa '%(username)s' noforonina soa aman-tsara."
+
+#: app/views/users.py:278
+msgid "Failed to create user."
+msgstr "Tsy nahomby ny famoronana mpampiasa."
+
+#: app/views/users.py:305
+msgid "You cannot change your own enabled status."
+msgstr "Tsy afaka manova ny satan'ny tenanao ianao."
+
+#: app/views/users.py:318
+#, python-format
+msgid "User '%(username)s' has been %(status)s."
+msgstr "Mpampiasa '%(username)s' dia %(status)s."
+
+#: app/views/users.py:356
+msgid "You cannot reset your own MFA."
+msgstr "⚪ = Tsy afaka manafoana ny kaontinao ianao."
+
+#: app/views/users.py:368
+#, python-format
+msgid "MFA disabled for user '%(username)s'."
+msgstr "Ala ny MFA ho an'ny mpampiasa '%(username)s'."
+
+#: app/views/users.py:374
+msgid "An error occurred while resetting MFA."
+msgstr "Nisy hadisoana nitranga rehefa mamafa ny mpampiasa."
+
+#: app/views/webhook.py:54
+msgid "Webhook created successfully."
+msgstr "Webhook noforonina soa aman-tsara."
+
+#: app/views/webhook.py:113
+msgid "Webhook updated successfully."
+msgstr "Webhook nohavaozina soa aman-tsara."
+
+#: app/views/webhook.py:142
+msgid "Webhook deleted."
+msgstr "Voafafa ny webhook."
+
+#: app/views/webhook.py:175
+msgid "🧪 Webhook test sent successfully!"
+msgstr "🧪 Fandefasana fitsapana webhook nahomby!"
+
+#: app/views/webhook.py:177
+msgid "🧪 Webhook test failed: "
+msgstr "🧪 Tsy nahomby ny fitsapana webhook:"
+
+#: app/views/webhook.py:180
+msgid "🧪 Error sending webhook test."
+msgstr "🧪 Hadisoana nandritra ny fandefasana fitsapana webhook."
+
+#~ msgid ""
+#~ "Grylli is a secure message delivery platform designed to activate after "
+#~ "prolonged user inactivity."
+#~ msgstr ""
+#~ "Grylli dia sehatra fandefasana hafatra azo antoka natao hiasa rehefa elaela "
+#~ "tsy niasana ny mpampiasa."
+
+#~ msgid ""
+#~ "It is a modern reimplementation of Gone Man’s Switch with a refined tech "
+#~ "stack, better maintainability, and an improved user experience."
+#~ msgstr ""
+#~ "Fampiharana maoderina amin'ny sehatra Switch ny Olona Lasa miaraka amin'ny "
+#~ "teknolojia voahevitra tsara kokoa, fikojakojana tsara kokoa, ary traikefa "
+#~ "mpampiasa nohatsaraina."
+
+#~ msgid "Body:"
+#~ msgstr "Atiny:"
+
+#~ msgid "Subject:"
+#~ msgstr "Lohateny:"
+
+#~ msgid "Content:"
+#~ msgstr "Votoaty:"
+
+#~ msgid "Edit SMTP"
+#~ msgstr "Hamarino ny SMTP"
+
+#~ msgid ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+#~ msgstr ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+
+#~ msgid "Admin Notes"
+#~ msgstr "Fanamarihana Admin"
+
+#~ msgid "Register"
+#~ msgstr "Misoratra anarana"
+
+#~ msgid "View"
+#~ msgstr "Jereo"
+
+#~ msgid "Schedule"
+#~ msgstr "Fandaharana"
+
+#~ msgid "Message is enabled"
+#~ msgstr "Hafatra no alefa"
+
+#~ msgid "Message is disabled"
+#~ msgstr "Hafatra no tsy alefa"
+
+#~ msgid "No SMTP configuration selected."
+#~ msgstr "Tsy misy fifantenana fandaharana SMTP."
+
+#~ msgid "Enable the message to start monitoring."
+#~ msgstr "Alefaso ny hafatra ho fanaraha-maso."
+
+#~ msgid "✅ SMTP settings saved."
+#~ msgstr "SMTP Settings"
+
+#~ msgid "If you don’t check in, Grylli delivers the message for you."
+#~ msgstr "Raha tsy mahazo toky ianao, Grylli hanaterana ny hafatra ho anao."
+
+#~ msgid "Fill in already discovered missing translations:"
+#~ msgstr "Fenoy ny fandikana mbola tsy hita:"
+
+#~ msgid "Add missing phrases in that JSON file."
+#~ msgstr "Ampidiro ny fehezanteny tsy hita tao amin'izany rakitra JSON izany."
+
+#~ msgid "From:"
+#~ msgstr "Avy:"
+
+#~ msgid ""
+#~ "Attach the updated JSON file to a new GitHub issue when submitting your "
+#~ "changes."
+#~ msgstr ""
+#~ "Mampidira ny rakitra JSON nohavaozina amin'ny olana vaovao ao amin'ny GitHub"
+#~ " rehefa maneho ny fanovana."
+
+#~ msgid "admin"
+#~ msgstr "admin"
+
+#~ msgid "user"
+#~ msgstr "mpampiasa"
+
+#~ msgid "Logging in"
+#~ msgstr "Midira"
+
+#~ msgid "SMTP error: "
+#~ msgstr "SMTP error:"
+
+#~ msgid "enabled"
+#~ msgstr "nampiasaina"
+
+#~ msgid "disabled"
+#~ msgstr "voaato"

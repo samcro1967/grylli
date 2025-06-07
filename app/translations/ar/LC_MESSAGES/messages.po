@@ -1,0 +1,3209 @@
+# Arabic translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-06-07 15:49-0500\n"
+"PO-Revision-Date: 2025-05-25 16:45-0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: ar <LL@li.org>\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=0 && n%100<=2 ? 4 : 5);\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: app/init_db.py:55
+#, python-format
+msgid "Tables currently in DB: %s"
+msgstr "الجداول الحالية في قاعدة البيانات:"
+
+#: app/init_db.py:58
+msgid "Database or system_config table missing. Running migrations now..."
+msgstr ""
+"قاعدة البيانات أو جدول system_config مفقود. يتم تشغيل الترحيلات الآن..."
+
+#: app/init_db.py:61
+msgid "Migrations applied successfully."
+msgstr "تم تطبيق الترحيلات بنجاح."
+
+#: app/init_db.py:63
+msgid "Migration failed."
+msgstr "فشل الترحيل."
+
+#: app/init_db.py:68
+msgid "System config seeded successfully."
+msgstr "تم زراعة تكوين النظام بنجاح."
+
+#: app/init_db.py:70
+msgid "Error seeding system config."
+msgstr "خطأ في زراعة تكوين النظام:"
+
+#: app/forms/mfa_form.py:15 app/templates/apprise/create_apprise.html:30
+#: app/templates/apprise/edit_apprise.html:30
+#: app/templates/apprise/list_apprise.html:60
+#: app/templates/mfa/settings.html:24 app/templates/mfa/settings.html:40
+#: app/templates/user_smtp/create_smtp.html:99
+#: app/templates/user_smtp/edit_smtp.html:114
+#: app/templates/user_smtp/list_smtp.html:57
+#: app/templates/webhook/create_webhook.html:36
+#: app/templates/webhook/edit_webhook.html:36
+#: app/templates/webhook/list_webhooks.html:61
+msgid "Enabled"
+msgstr "مفعل"
+
+#: app/forms/mfa_form.py:16
+msgid "Authenticator Code"
+msgstr "رمز المصادقة"
+
+#: app/forms/mfa_form.py:17
+#: app/templates/admin/partials/user_instructions_and_modal.html:66
+#: app/templates/admin/partials/user_table.html:115
+#: app/templates/email/assign_smtp.html:44 app/templates/mfa/settings.html:47
+#: app/templates/user_smtp/edit_smtp.html:122
+msgid "Save"
+msgstr "حفظ"
+
+#: app/forms/mfa_form.py:27
+msgid "Authentication Code"
+msgstr "تحديث الإشعار"
+
+#: app/forms/mfa_form.py:29
+msgid "Please enter your authentication code."
+msgstr "يرجى إدخال رمز المصادقة الخاص بك."
+
+#: app/forms/mfa_form.py:30
+msgid "Enter a valid 6-digit code or recovery code."
+msgstr "أدخل رمزًا صالحًا مكونًا من 6 أرقام أو رمز استعادة."
+
+#: app/forms/mfa_form.py:31
+msgid "Invalid code format."
+msgstr "تنسيق رمز غير صالح."
+
+#: app/forms/mfa_form.py:35 app/templates/mfa/challenge.html:25
+msgid "Verify"
+msgstr "الإصدار"
+
+#: app/services/mail.py:37 app/services/system_settings_email.py:40
+msgid "Missing required config setting: "
+msgstr "الإعدادات المطلوبة غير مكتملة:"
+
+#: app/services/mail.py:46 app/services/system_settings_email.py:50
+#, python-format
+msgid "Failed to decrypt %(key)s: %(error)s"
+msgstr "فشل فك تشفير %(key)s: %(error)s"
+
+#: app/services/mail.py:54
+#, python-format
+msgid "get_setting('%(key)s') -> '%(value)s' (sensitive: %(sensitive)s)"
+msgstr ""
+"get_setting('%(key)s') -> '%(value)s' (raw: '%(raw)s', sensitive: "
+"%(sensitive)s)"
+
+#: app/services/mail.py:75
+#, python-format
+msgid "Preparing email to %(to)s"
+msgstr "تحضير البريد الإلكتروني إلى %(to)s"
+
+#: app/services/mail.py:90
+#, python-format
+msgid ""
+"SMTP configuration: host=%(host)s (type=%(host_type)s), port=%(port)s "
+"(type=%(port_type)s)"
+msgstr ""
+"SMTP المضيف = '%(host)s' (نوع: %(host_type)s), المنفذ = %(port)s (نوع: "
+"%(port_type)s)"
+
+#: app/services/mail.py:99
+#, python-format
+msgid "SMTP username: %(user)s"
+msgstr "استخدام المستخدم: %(user)s"
+
+#: app/services/mail.py:100
+#, python-format
+msgid "TLS enabled: %(tls)s"
+msgstr "تمكين TLS: %(tls)s"
+
+#: app/services/mail.py:105
+msgid "Starting TLS connection..."
+msgstr "بدء TLS"
+
+#: app/services/mail.py:107
+msgid "Logging into SMTP server..."
+msgstr "تسجيل الدخول إلى خادم SMTP..."
+
+#: app/services/mail.py:109
+msgid "Sending email message..."
+msgstr "جدول الرسالة"
+
+#: app/services/mail.py:111
+#, python-format
+msgid "Email sent successfully to %(to)s"
+msgstr "تم إرسال البريد الالكتروني التجريبي بنجاح."
+
+#: app/services/mail.py:114
+#, python-format
+msgid "SMTP error while sending to %(to)s: %(error)s"
+msgstr "خطأ في SMTP أثناء الإرسال إلى %(to)s: %(error)s"
+
+#: app/templates/about.html:10
+msgid "About Grylli"
+msgstr "حول Grylli"
+
+#: app/templates/about.html:13
+msgid ""
+"Grylli is a secure, self-hosted message delivery platform that automatically"
+" sends pre-configured messages if a user fails to check in within a defined "
+"time period."
+msgstr ""
+"Grylli هو منصة آمنة ومُستضافة ذاتيًا لتوصيل الرسائل ترسل تلقائيًا الرسائل "
+"المُعدة مسبقًا إذا فشل المستخدم في تسجيل الدخول خلال فترة زمنية محددة."
+
+#: app/templates/about.html:14
+msgid ""
+"It supports multiple users, customizable schedules, and recurring reminders."
+msgstr "يدعم عدة مستخدمين وجداول زمنية قابلة للتخصيص."
+
+#: app/templates/about.html:15
+msgid ""
+"Messages and reminders can be delivered via email, webhooks, or over 100 "
+"third-party services through Apprise."
+msgstr ""
+"يمكن تسليم الرسائل عبر البريد الإلكتروني أو webhooks أو أكثر من 80 خدمة طرف "
+"ثالث عبر Apprise."
+
+#: app/templates/about.html:16
+msgid ""
+"Users can configure their own SMTP servers to ensure emails and reminders "
+"appear to come directly from them — not from the system administrator."
+msgstr ""
+"يمكن للمستخدمين إعداد خوادم SMTP الخاصة بهم لضمان أن تظهر الرسائل كأنها تأتي"
+" مباشرة منهم — وليس من مدير النظام."
+
+#: app/templates/about.html:17
+msgid ""
+"Sensitive data is encrypted at rest, and all operations are secured with "
+"strong authentication and audit-friendly logging."
+msgstr ""
+"يتم تشفير البيانات الحساسة أثناء عدم النشاط وجميع عمليات الرسائل محمية "
+"بمصادقة قوية وتسجيل يسهل مراجعتها."
+
+#: app/templates/about.html:18
+msgid ""
+"Built with a modern, reactive technology stack, Grylli is optimized for "
+"responsiveness and works seamlessly across desktop and mobile devices."
+msgstr ""
+"بنيت بتقنية حديثة ومتفاعلة، Grylli مُحسّن للاستجابة ويعمل بسلاسة عبر أجهزة "
+"سطح المكتب والأجهزة المحمولة."
+
+#: app/templates/about.html:23
+msgid "Version:"
+msgstr "الإصدار:"
+
+#: app/templates/about.html:26
+msgid "Repository:"
+msgstr "المستودع:"
+
+#: app/templates/about.html:30
+msgid "GitHub - samcro1967/grylli"
+msgstr "GitHub - samcro1967/grylli"
+
+#: app/templates/help.html:2 app/templates/help.html:5
+#: app/templates/partials/header.html:85
+msgid "Help"
+msgstr "المساعدة"
+
+#: app/templates/help.html:7
+msgid ""
+"Grylli includes built-in instructions throughout the app to help you "
+"configure and manage your setup."
+msgstr ""
+"يتضمن Grylli تعليمات مدمجة في جميع أنحاء التطبيق لمساعدتك في تكوين وإدارة "
+"إعداداتك."
+
+#: app/templates/help.html:8
+msgid ""
+"This page provides an overview of key features and direct links to where "
+"they can be managed."
+msgstr ""
+"توفر هذه الصفحة نظرة عامة على الميزات الرئيسية وروابط مباشرة إلى الأماكن "
+"التي يمكن إدارتها فيها."
+
+#: app/templates/help.html:12 app/templates/messages/list_messages.html:9
+#: app/templates/partials/shared_nav.html:17
+msgid "Notifications"
+msgstr "الإشعارات"
+
+#: app/templates/help.html:14
+msgid "Create and assign messages"
+msgstr "أنشئ رسالة أو بريد إلكتروني."
+
+#: app/templates/admin/index.html:32 app/templates/help.html:17
+#: app/templates/partials/admin_nav.html:56
+msgid "SMTP Settings"
+msgstr "إعدادات SMTP"
+
+#: app/templates/help.html:19
+msgid "Use your own email server"
+msgstr "استخدم خادم البريد الإلكتروني الخاص بك"
+
+#: app/templates/help.html:22
+msgid "Apprise Integration"
+msgstr "وجهات Apprise"
+
+#: app/templates/help.html:24
+msgid "Send notifications to 80+ supported services"
+msgstr "إرسال إشعارات إلى أكثر من 80 خدمة مدعومة"
+
+#: app/templates/help.html:27
+#: app/templates/messages/assign_destinations.html:41
+#: app/templates/messages/view_message.html:58
+#: app/templates/partials/shared_nav.html:44
+#: app/templates/reminders/assign_destinations.html:39
+#: app/templates/reminders/view_reminder.html:69
+msgid "Webhooks"
+msgstr "Webhooks"
+
+#: app/templates/help.html:29
+msgid "Trigger actions or external workflows"
+msgstr "تشغيل الإجراءات أو مسارات العمل الخارجية"
+
+#: app/templates/email/list_emails.html:9 app/templates/help.html:32
+#: app/templates/partials/shared_nav.html:61
+msgid "Emails"
+msgstr "البريد الإلكتروني"
+
+#: app/templates/help.html:34
+msgid "View and manage secure email messages"
+msgstr "نظرة عامة على رسائل البريد الإلكتروني الآمنة"
+
+#: app/templates/help.html:38
+msgid "Security"
+msgstr "🔐 الأمان"
+
+#: app/templates/help.html:39
+msgid "Grylli encrypts sensitive data and logs all key actions for auditing."
+msgstr "يشفّر Grylli البيانات الحساسة ويسجل جميع الإجراءات الرئيسية للمراجعة."
+
+#: app/templates/index.html:9 app/views/locale.py:95
+msgid "Welcome to Grylli"
+msgstr "مرحباً بك في Grylli"
+
+#: app/templates/index.html:11
+msgid "Pronounced"
+msgstr "تنطق"
+
+#: app/templates/index.html:11
+msgid "like “grill-ee”"
+msgstr "مثل \"grill-ee\""
+
+#: app/templates/index.html:14
+msgid ""
+"Grylli is a secure message scheduling and delivery system designed to ensure"
+" your important messages are delivered — even if you can’t be there to send "
+"them."
+msgstr ""
+"Grylli هو نظام جدولة وتسليم رسائل آمن مصمم لضمان تسليم رسائلك المهمة - حتى "
+"إذا لم تكن تستطيع إرسالها بنفسك."
+
+#: app/templates/index.html:17
+msgid ""
+"Whether you’re planning ahead, setting up emergency communication, or "
+"building peace of mind, Grylli helps automate your message delivery via "
+"multiple channels including email, webhooks, and Apprise notifications."
+msgstr ""
+"سواء كنت تخطط مسبقًا، تقوم بإعداد اتصال طارئ، أو بناء راحة بال، يساعد Grylli"
+" في أتمتة تسليم رسائلك عبر البريد الإلكتروني، أو webhooks، أو إشعارات "
+"Apprise في حال فاتتك تسجيل الدخول."
+
+#: app/templates/index.html:19
+msgid "Getting Started"
+msgstr "البداية"
+
+#: app/templates/index.html:21
+msgid "Create a message, email, or reminder."
+msgstr "أنشئ رسالة أو بريد إلكتروني."
+
+#: app/templates/index.html:22
+msgid "Set your check-in interval and grace period (for messages)."
+msgstr "حدد فترة تسجيل الدخول وفترة السماح."
+
+#: app/templates/index.html:23
+msgid "Assign one or more delivery destinations."
+msgstr "عين وجهة واحدة أو أكثر للتسليم."
+
+#: app/templates/index.html:24
+msgid "Optionally attach files for secure emails."
+msgstr "قم بإرفاق ملفات للبريد الإلكتروني الآمن بشكل اختياري."
+
+#: app/templates/index.html:25
+msgid "Schedule reminders to send at specific times or on a recurring basis."
+msgstr "جدولة التذكيرات لإرسالها في أوقات محددة أو على أساس متكرر."
+
+#: app/templates/index.html:26
+msgid "Enable the message or reminder to activate delivery."
+msgstr "تفعيل الرسالة أو التذكير لتنشيط الإرسال."
+
+#: app/templates/index.html:28
+msgid ""
+"Regularly check in to Grylli to prevent automated delivery; miss a check-in "
+"and Grylli sends your messages as scheduled."
+msgstr ""
+"قم بالتحقق بانتظام من Grylli لمنع التسليم التلقائي؛ إذا فاتك التحقق، يقوم "
+"Grylli بإرسال رسائلك كما هو مقرر."
+
+#: app/templates/privacy.html:10
+msgid "Privacy Notice"
+msgstr "إشعار الخصوصية"
+
+#: app/templates/privacy.html:13
+msgid ""
+"Grylli respects your privacy and is designed to minimize the collection and "
+"storage of personal data."
+msgstr "Grylli تحترم خصوصيتك وصممت لتقليل جمع وتخزين البيانات الشخصية."
+
+#: app/templates/privacy.html:14
+msgid ""
+"All data is encrypted where appropriate and remains fully under your control"
+" if you self-host this platform."
+msgstr ""
+"جميع البيانات مشفرة حيثما كان ذلك مناسبًا وتظل تحت سيطرتك الكاملة إذا كنت "
+"تستضيف هذه المنصة بنفسك."
+
+#: app/templates/privacy.html:17
+msgid "What Data We Collect"
+msgstr "ما البيانات التي نجمعها"
+
+#: app/templates/privacy.html:19
+msgid "Email address and password hash (for authentication)"
+msgstr "عنوان البريد الإلكتروني وتجزيء كلمة المرور (للمصادقة)"
+
+#: app/templates/privacy.html:20
+msgid "Optional MFA secret and recovery codes (encrypted at rest)"
+msgstr "رمز MFA الاختياري وأكواد الاسترداد (مشفرة أثناء التخزين)"
+
+#: app/templates/privacy.html:21
+msgid "Reminder and message content you configure"
+msgstr "محتوى التذكير والرسائل التي تقوم بإعدادها"
+
+#: app/templates/privacy.html:22
+msgid "User-specific settings, SMTP configuration (if provided)"
+msgstr "إعدادات المستخدم الخاصة، تكوين SMTP (إذا تم توفيره)"
+
+#: app/templates/privacy.html:25
+msgid "How Your Data Is Used"
+msgstr "كيف تُستخدم بياناتك"
+
+#: app/templates/privacy.html:27
+msgid ""
+"Your data is used solely for the purpose of delivering reminders and "
+"messages according to your preferences."
+msgstr "تُستخدم بياناتك فقط لغرض إرسال التذكيرات والرسائل وفقًا لتفضيلاتك."
+
+#: app/templates/privacy.html:28
+msgid ""
+"Grylli does not share, sell, or transmit your personal data to any third "
+"parties."
+msgstr "Grylli لا تشارك، تبيع أو تنقل بياناتك الشخصية إلى أي طرف ثالث."
+
+#: app/templates/privacy.html:31
+msgid "Your Rights"
+msgstr "حقوقك"
+
+#: app/templates/privacy.html:33
+msgid ""
+"You can export all of your data at any time from the Account Settings page."
+msgstr "يمكنك تصدير جميع بياناتك في أي وقت من صفحة إعدادات الحساب."
+
+#: app/templates/privacy.html:34
+msgid "You may permanently delete your account and all associated data."
+msgstr "لا يمكنك حذف حسابك لأنك المسؤول الأخير."
+
+#: app/templates/privacy.html:35
+msgid ""
+"If you are using a self-hosted instance, contact the instance administrator "
+"for data inquiries."
+msgstr ""
+"إذا كنت تستخدم نسخة ذات استضافة ذاتية، فاتصل بمسؤول النسخة لطلبات البيانات."
+
+#: app/templates/privacy.html:38
+msgid "Self-Hosting Responsibility"
+msgstr "مسؤولية الاستضافة الذاتية"
+
+#: app/templates/privacy.html:40
+msgid ""
+"If you are running Grylli on your own server, you are responsible for the "
+"storage, processing, and lawful handling of all user data on that instance."
+msgstr ""
+"إذا كنت تقوم بتشغيل Grylli على خادمك الخاص، فأنت مسؤول عن تخزين، ومعالجة، "
+"والتعامل القانوني مع جميع بيانات المستخدم على تلك النسخة."
+
+#: app/templates/privacy.html:44
+msgid ""
+"This notice was last updated in June 2025 and may evolve to reflect changes "
+"in the software or regulatory landscape."
+msgstr ""
+"تم تحديث هذا الإشعار آخر مرة في يونيو 2025 وقد يتطور ليعكس التغييرات في "
+"البرنامج أو اللوائح."
+
+#: app/templates/system_info.html:11
+msgid "📦 Environment Versions"
+msgstr "📦 إصدارات البيئة"
+
+#: app/templates/system_info.html:17
+msgid "Category"
+msgstr "الفئة"
+
+#: app/templates/system_info.html:18
+msgid "Tool"
+msgstr "الأداة"
+
+#: app/templates/system_info.html:19
+msgid "Version"
+msgstr "الإصدار"
+
+#: app/templates/system_info.html:25
+msgid "🧠 Python"
+msgstr "🧠 بايثون"
+
+#: app/templates/system_info.html:26
+msgid "Python"
+msgstr "بايثون"
+
+#: app/templates/system_info.html:30
+msgid "pip"
+msgstr "pip"
+
+#: app/templates/system_info.html:34
+msgid "SQLite"
+msgstr "SQLite"
+
+#: app/templates/system_info.html:40
+msgid "⚙️ Core"
+msgstr "⚙️ النواة"
+
+#: app/templates/system_info.html:47
+msgid "🔐 Security"
+msgstr "🔐 الأمان"
+
+#: app/templates/system_info.html:48
+msgid "Email Validator"
+msgstr "مدقق البريد الإلكتروني"
+
+#: app/templates/system_info.html:52
+msgid "Cryptography"
+msgstr "التشفير"
+
+#: app/templates/system_info.html:57
+msgid "🕰️ Scheduling"
+msgstr "🕰️ الجدولة"
+
+#: app/templates/system_info.html:58
+msgid "APScheduler"
+msgstr "APScheduler"
+
+#: app/templates/system_info.html:62
+msgid "Apprise (Python)"
+msgstr "Apprise (بايثون)"
+
+#: app/templates/system_info.html:66
+msgid "Apprise CLI"
+msgstr "Apprise CLI"
+
+#: app/templates/system_info.html:74
+msgid "🌐 Frontend"
+msgstr "🌐 الواجهة الأمامية"
+
+#: app/templates/account/manage_account.html:11
+msgid "Manage Account"
+msgstr "إدارة الحساب"
+
+#: app/templates/account/manage_account.html:12
+msgid "Update your profile information and password."
+msgstr "تحديث معلومات ملفك الشخصي وكلمة المرور."
+
+#: app/templates/account/manage_account.html:41
+#: app/templates/admin/create_user.html:40
+#: app/templates/auth/bootstrap.html:43
+#: app/templates/auth/reset_password.html:42 app/templates/auth/signup.html:42
+msgid "Please enter a valid email address."
+msgstr "يرجى إدخال عنوان بريد إلكتروني صالح."
+
+#: app/templates/account/manage_account.html:62
+#: app/templates/account/manage_account.html:96
+#: app/templates/account/manage_account.html:127
+#: app/templates/auth/reset_password.html:66
+#: app/templates/auth/reset_password.html:97 app/templates/auth/signup.html:65
+#: app/templates/auth/signup.html:95
+msgid "Show/hide password"
+msgstr "استمر في الضغط لعرض كلمة المرور"
+
+#: app/templates/account/manage_account.html:89
+#: app/templates/admin/create_user.html:53
+#: app/templates/auth/bootstrap.html:51
+#: app/templates/auth/reset_password.html:58 app/templates/auth/signup.html:58
+msgid "Password must meet all complexity requirements."
+msgstr "يجب أن تفي كلمة المرور بجميع متطلبات التعقيد."
+
+#: app/templates/account/manage_account.html:141
+#: app/templates/admin/create_user.html:72
+#: app/templates/admin/edit_user.html:67 app/templates/auth/bootstrap.html:69
+#: app/templates/auth/reset_password.html:110
+#: app/templates/auth/signup.html:108
+msgid "Passwords do not match."
+msgstr "كلمات المرور لا تتطابق."
+
+#: app/templates/account/manage_account.html:147
+msgid "Update Account"
+msgstr "تحديث الحساب"
+
+#: app/templates/account/manage_account.html:151
+#: app/templates/admin/create_user.html:82
+#: app/templates/admin/edit_user.html:97 app/templates/admin/help_form.html:28
+#: app/templates/admin/partials/user_instructions_and_modal.html:62
+#: app/templates/admin/partials/user_table.html:113
+#: app/templates/apprise/create_apprise.html:42
+#: app/templates/apprise/edit_apprise.html:42
+#: app/templates/auth/reset_password.html:121
+#: app/templates/email/assign_smtp.html:46
+#: app/templates/email/attach_files.html:47
+#: app/templates/email/edit_message.html:54
+#: app/templates/email/schedule_email.html:84
+#: app/templates/messages/assign_destinations.html:66
+#: app/templates/messages/create_message.html:55
+#: app/templates/messages/edit_message.html:48
+#: app/templates/messages/schedule_message.html:84
+#: app/templates/mfa/challenge.html:29 app/templates/mfa/settings.html:51
+#: app/templates/reminders/assign_destinations.html:64
+#: app/templates/reminders/assign_email_reminder.html:94
+#: app/templates/reminders/create_reminder.html:49
+#: app/templates/reminders/edit_reminder.html:42
+#: app/templates/reminders/schedule_reminder.html:51
+#: app/templates/user_smtp/create_smtp.html:111
+#: app/templates/user_smtp/edit_smtp.html:125
+#: app/templates/webhook/create_webhook.html:48
+#: app/templates/webhook/edit_webhook.html:48
+msgid "Cancel"
+msgstr "إلغاء"
+
+#: app/templates/account/manage_account.html:159
+#: app/templates/admin/create_user.html:90
+#: app/templates/admin/edit_user.html:81 app/templates/auth/bootstrap.html:83
+#: app/templates/auth/reset_password.html:128
+#: app/templates/auth/signup.html:132
+msgid "Minimum 8 characters"
+msgstr "حد أدنى 8 أحرف"
+
+#: app/templates/account/manage_account.html:160
+#: app/templates/admin/create_user.html:91
+#: app/templates/admin/edit_user.html:82 app/templates/auth/bootstrap.html:84
+#: app/templates/auth/reset_password.html:129
+#: app/templates/auth/signup.html:133
+msgid "At least one uppercase letter"
+msgstr "على الأقل حرف كبير واحد"
+
+#: app/templates/account/manage_account.html:161
+#: app/templates/admin/create_user.html:92
+#: app/templates/admin/edit_user.html:83 app/templates/auth/bootstrap.html:85
+#: app/templates/auth/reset_password.html:130
+#: app/templates/auth/signup.html:134
+msgid "At least one lowercase letter"
+msgstr "على الأقل حرف صغير واحد"
+
+#: app/templates/account/manage_account.html:162
+#: app/templates/admin/create_user.html:93
+#: app/templates/admin/edit_user.html:84 app/templates/auth/bootstrap.html:86
+#: app/templates/auth/reset_password.html:131
+#: app/templates/auth/signup.html:135
+msgid "At least one number"
+msgstr "على الأقل رقم واحد"
+
+#: app/templates/account/manage_account.html:163
+#: app/templates/admin/create_user.html:94
+#: app/templates/auth/bootstrap.html:87
+#: app/templates/auth/reset_password.html:132
+#: app/templates/auth/signup.html:136
+msgid "At least one special character (e.g., !@#$%)"
+msgstr "على الأقل رمز خاص واحد (مثال: !@#$%)"
+
+#: app/templates/account/manage_account.html:169
+msgid "Download My Data"
+msgstr "تنزيل بياناتي"
+
+#: app/templates/account/manage_account.html:171
+msgid ""
+"Download all your account data as a JSON file. This includes your reminders,"
+" messages, email settings, and more. The file is for your records only and "
+"cannot be imported back. Protect it as it may contain sensitive information."
+msgstr ""
+"تنزيل جميع بيانات حسابك كملف JSON. يشمل هذا تذكيراتك، رسائلك، إعدادات البريد"
+" الإلكتروني والمزيد. الملف للأرشفة فقط ولا يمكن استيراده مرة أخرى. احفظه "
+"بعناية لأنه قد يحتوي على معلومات حساسة."
+
+#: app/templates/account/manage_account.html:175
+msgid "Download My Data (JSON)"
+msgstr "تنزيل بياناتي (JSON)"
+
+#: app/templates/account/manage_account.html:179
+msgid "Danger Zone"
+msgstr "منطقة الخطر"
+
+#: app/templates/account/manage_account.html:180
+msgid "Deleting your account is permanent and cannot be undone."
+msgstr "حذف حسابك دائم ولا يمكن التراجع عنه."
+
+#: app/templates/account/manage_account.html:185
+msgid "Delete My Account"
+msgstr "تحديث الحساب"
+
+#: app/templates/account/translations.html:8
+msgid "Translations - Grylli"
+msgstr "الترجمات - Grylli"
+
+#: app/templates/account/translations.html:17
+#: app/templates/partials/header.html:102
+msgid "Translations"
+msgstr "الترجمات"
+
+#: app/templates/account/translations.html:20
+msgid "Grylli currently supports multiple languages and more will be added."
+msgstr "Grylli يدعم حالياً لغات متعددة وسيتم إضافة المزيد."
+
+#: app/templates/account/translations.html:21
+msgid "Many of the translations were performed with assistance from ChatGPT."
+msgstr "تم تنفيذ العديد من الترجمات بمساعدة من ChatGPT."
+
+#: app/templates/account/translations.html:22
+msgid ""
+"If you find a translation issue or want to suggest improvements, your input "
+"is welcome!"
+msgstr "إذا وجدت مشكلة في الترجمة أو ترغب في اقتراح تحسينات، فأنت مرحب بك!"
+
+#: app/templates/account/translations.html:28
+msgid "How to request translation updates"
+msgstr "كيفية طلب تحديثات الترجمة"
+
+#: app/templates/account/translations.html:30
+msgid "To contribute to translations, please use the following guidelines:"
+msgstr "للمساهمة في الترجمات، يرجى استخدام الإرشادات التالية:"
+
+#: app/templates/account/translations.html:43
+msgid "Contribute missing or improved translations:"
+msgstr "وجدت ترجمة مفقودة؟"
+
+#: app/templates/account/translations.html:63
+msgid "Open the relevant .po translation file for your language."
+msgstr "افتح ملف الترجمة JSON للغتك. على سبيل المثال:"
+
+#: app/templates/account/translations.html:67
+msgid ""
+"Find untranslated or incomplete entries and add or improve translations."
+msgstr "ابحث عن الإدخالات غير المترجمة أو غير المكتملة وأضف أو حسّن الترجمات."
+
+#: app/templates/account/translations.html:68
+msgid "You may use a PO file editor or a text editor."
+msgstr "يمكنك استخدام محرر ملفات PO أو محرر نصوص."
+
+#: app/templates/account/translations.html:69
+msgid "Copy the file path and the snippet of your changes."
+msgstr "انسخ مسار الملف والجزء الخاص بتغييراتك."
+
+#: app/templates/account/translations.html:70
+msgid "Paste the snippet directly into a new GitHub issue for review."
+msgstr "ألصق المقطع المنسوخ مباشرة في تعليق القضية على GitHub."
+
+#: app/templates/account/translations.html:72
+msgid "Please do not upload the full .po file to avoid merge conflicts."
+msgstr "لا تقم برفع ملف .po الكامل لتجنب التعارضات في الدمج."
+
+#: app/templates/account/translations.html:85
+msgid "Improving existing translations:"
+msgstr "تحسين الترجمات الحالية:"
+
+#: app/templates/account/translations.html:104
+msgid "Open the relevant .po file for the translation you want to improve."
+msgstr "افتح ملف .po ذات الصلة للترجمة التي تريد تحسينها."
+
+#: app/templates/account/translations.html:106
+msgid "For example:"
+msgstr "على سبيل المثال:"
+
+#: app/templates/account/translations.html:110
+msgid ""
+"Find the phrase(s) and its existing translation(s) you want to improve."
+msgstr ""
+"اعثر على العبارة/العبارات والترجمة/الترجمات الحالية التي تريد تحسينها."
+
+#: app/templates/account/translations.html:111
+msgid "Update the phrase(s)."
+msgstr "قم بتحديث العبارة/العبارات."
+
+#: app/templates/account/translations.html:112
+msgid "Copy the file name and path into the issue."
+msgstr "انسخ اسم الملف والمسار إلى القضية."
+
+#: app/templates/account/translations.html:114
+msgid "Paste the copied snippet directly into the GitHub issue comment."
+msgstr "ألصق المقطع المنسوخ مباشرة في تعليق القضية على GitHub."
+
+#: app/templates/account/translations.html:115
+msgid "Do not upload the full .po file to avoid merge conflicts."
+msgstr "لا تقم برفع ملف .po الكامل لتجنب التعارضات في الدمج."
+
+#: app/templates/account/translations.html:118
+msgid "Example snippet:"
+msgstr "مثال على المقطع:"
+
+#: app/templates/account/translations.html:137
+msgid "Report missing translations not yet discovered:"
+msgstr "الإبلاغ عن الترجمات المفقودة التي لم يتم اكتشافها بعد:"
+
+#: app/templates/account/translations.html:154
+msgid ""
+"If you see text in the app that appears untranslated or missing, please "
+"report it to us."
+msgstr "إذا رأيت نصاً في التطبيق يبدو غير مترجم أو مفقود، يرجى الإبلاغ لنا."
+
+#: app/templates/account/translations.html:155
+msgid "Provide the exact English phrase as it appears on the screen."
+msgstr "قدم العبارة الإنجليزية بدقة كما تظهر على الشاشة."
+
+#: app/templates/account/translations.html:156
+msgid ""
+"Include the page or section where you saw the phrase (e.g., Apprise page, "
+"Account Page, etc.)."
+msgstr ""
+"اذكر الصفحة أو القسم حيث رأيت العبارة (مثال: صفحة الإعدادات، قسم الحساب)."
+
+#: app/templates/account/translations.html:157
+msgid ""
+"Submit this information via a new GitHub issue so we can add it to the "
+"translation files"
+msgstr ""
+"قدم هذه المعلومات عبر قضية جديدة على GitHub حتى نتمكن من إضافتها إلى ملفات "
+"الترجمة وتغليفها لـ Babel."
+
+#: app/templates/account/translations.html:166
+msgid "Found a missing translation?"
+msgstr "وجدت ترجمة مفقودة؟"
+
+#: app/templates/account/translations.html:171
+msgid ""
+"This link will create a new GitHub issue pre-filled with a language code."
+msgstr ""
+"هذا الرابط سيقوم بإنشاء مشكلة جديدة في GitHub مملوءة مسبقاً برمز اللغة."
+
+#: app/templates/account/translations.html:172
+msgid "Report it by opening a new GitHub issue"
+msgstr "أبلغ عنها بفتح قضية جديدة على GitHub"
+
+#: app/templates/account/translations.html:175
+msgid "Please specify the language code and exact phrase when reporting."
+msgstr "يرجى تحديد رمز اللغة والعبارة الدقيقة عند الإبلاغ."
+
+#: app/templates/account/translations.html:176
+msgid "Thank you for helping us make Grylli better!"
+msgstr "شكرًا لمساعدتك في تحسين Grylli!"
+
+#: app/templates/admin/create_user.html:14
+msgid "Create New User"
+msgstr "إنشاء مستخدم جديد"
+
+#: app/templates/admin/create_user.html:15
+msgid "Fill out the form to add a new user."
+msgstr "املأ النموذج لإضافة مستخدم جديد."
+
+#: app/templates/admin/create_user.html:21
+#: app/templates/admin/edit_user.html:17 app/templates/auth/bootstrap.html:24
+msgid "Please fix the following errors:"
+msgstr "يرجى تصحيح الأخطاء التالية:"
+
+#: app/templates/admin/create_user.html:78
+#: app/templates/admin/edit_user.html:93
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "Create User"
+msgstr "إنشاء مستخدم"
+
+#: app/templates/admin/edit_user.html:10
+#: app/templates/admin/partials/user_card.html:20
+#: app/templates/admin/partials/user_table.html:26
+msgid "Edit User"
+msgstr "تحرير مستخدم"
+
+#: app/templates/admin/edit_user.html:55 app/templates/admin/edit_user.html:74
+msgid "Hold to show password"
+msgstr "استمر في الضغط لعرض كلمة المرور"
+
+#: app/templates/admin/edit_user.html:85
+#, python-format
+msgid "At least one special character (e.g., !@#$%%)"
+msgstr "على الأقل رمز خاص واحد (مثال: !@#$%%)"
+
+#: app/templates/admin/help.html:4 app/templates/auth/login.html:72
+msgid "Admin Help"
+msgstr "لوحة التحكم"
+
+#: app/templates/admin/help.html:7
+msgid "Reset Admin Password"
+msgstr "إعادة تعيين كلمة المرور"
+
+#: app/templates/admin/help.html:9
+msgid ""
+"If you've forgotten the admin password, you can reset it using the following"
+" Docker command:"
+msgstr ""
+"إذا نسيت كلمة مرور المسؤول، يمكنك إعادة تعيينها باستخدام أمر Docker التالي:"
+
+#: app/templates/admin/help.html:15
+msgid ""
+"This script will prompt you to enter a new password for the admin user. You "
+"must run it from the host system where the Grylli container is running."
+msgstr ""
+"سيطالبك هذا النص بإدخال كلمة مرور جديدة للمستخدم المسؤول. يجب تشغيله من نظام"
+" المضيف حيث يعمل حاوية Grylli."
+
+#: app/templates/admin/help.html:18
+msgid "After resetting, you can log in with the new password immediately."
+msgstr ""
+"بعد إعادة التعيين، يمكنك تسجيل الدخول باستخدام كلمة المرور الجديدة فورًا."
+
+#: app/templates/admin/help.html:24
+msgid "Return to Login"
+msgstr "العودة إلى لوحة التحكم"
+
+#: app/templates/admin/help_form.html:6
+msgid "Admin Help Access"
+msgstr "الوصول إلى مساعدة المسؤول"
+
+#: app/templates/admin/help_form.html:9
+msgid "Enter your Ferret Key to unlock admin-only help documentation."
+msgstr "أدخل مفتاح Ferret الخاص بك لفتح وثائق المساعدة الخاصة بالمشرف فقط."
+
+#: app/templates/admin/help_form.html:34
+msgid "How to Find Your FERRET_KEY"
+msgstr "كيفية العثور على FERRET_KEY الخاص بك"
+
+#: app/templates/admin/help_form.html:36
+msgid "The FERRET_KEY is set as an environment variable when running Grylli."
+msgstr "يتم تعيين FERRET_KEY كمتغير بيئي عند تشغيل Grylli."
+
+#: app/templates/admin/help_form.html:39
+msgid "Option 1: Check docker-compose.yml"
+msgstr "الخيار 1: تحقق من docker-compose.yml"
+
+#: app/templates/admin/help_form.html:46
+msgid "Option 2: Use docker inspect"
+msgstr "الخيار 2: استخدم docker inspect"
+
+#: app/templates/admin/help_form.html:52
+msgid "This shows the FERRET_KEY as passed to the container at runtime."
+msgstr "هذا يظهر FERRET_KEY كما يُمرر إلى الحاوية أثناء وقت التشغيل."
+
+#: app/templates/admin/index.html:10
+msgid "Admin Panel"
+msgstr "لوحة التحكم"
+
+#: app/templates/admin/index.html:12
+msgid ""
+"Welcome to the Grylli Admin Panel. Use the links below to manage the system."
+msgstr "مرحبًا بك في لوحة التحكم Grylli. استخدم الروابط أدناه لإدارة النظام."
+
+#: app/templates/admin/index.html:17
+msgid "Manage Users"
+msgstr "إدارة المستخدمين"
+
+#: app/templates/admin/index.html:18
+msgid "Create, edit, enable/disable, or delete user accounts."
+msgstr "إنشاء وتعديل وتمكين/تعطيل أو حذف حسابات المستخدمين."
+
+#: app/templates/admin/index.html:22
+#: app/templates/admin/system_settings.html:10
+#: app/templates/partials/admin_nav.html:52
+msgid "System Settings"
+msgstr "إعدادات النظام"
+
+#: app/templates/admin/index.html:23
+msgid "View  system-wide environment values."
+msgstr "عرض قيم البيئة على مستوى النظام."
+
+#: app/templates/admin/index.html:27 app/templates/partials/admin_nav.html:42
+msgid "Backups"
+msgstr "النسخ الاحتياطي"
+
+#: app/templates/admin/index.html:28
+msgid "Create and delete database backups."
+msgstr "نسخ قاعدة البيانات الاحتياطية"
+
+#: app/templates/admin/index.html:33
+msgid "View and test global SMTP settings."
+msgstr "فشل في إرسال البريد الإلكتروني التجريبي. تحقق من إعدادات SMTP."
+
+#: app/templates/admin/index.html:39
+msgid "View Admin Guide / README on GitHub"
+msgstr "عرض دليل المسؤول / README على GitHub"
+
+#: app/templates/admin/index.html:40
+msgid "Includes setup instructions, integrations, and troubleshooting."
+msgstr "تتضمن تعليمات الإعداد والتكاملات وحل المشكلات."
+
+#: app/templates/admin/index.html:44
+msgid "⚠️ Admin Tips"
+msgstr "⚠️ نصائح الإدارة"
+
+#: app/templates/admin/index.html:46
+msgid "Ensure the data folder (database) is backed up on your host"
+msgstr "تأكد من أن مجلد البيانات (قاعدة البيانات) مدعوم على المضيف الخاص بك"
+
+#: app/templates/admin/index.html:48
+msgid ""
+"The uploads folder is not per user.  If required per user, you will ndd to "
+"create subdirectoried per user and setup permissions so users can only see "
+"their own folder."
+msgstr ""
+"مجلد التحميلات ليس لكل مستخدم على حدة. إذا كان مطلوبًا لكل مستخدم، ستحتاج "
+"إلى إنشاء مجلدات فرعية لكل مستخدم وتعيين الأذونات حتى يتمكن المستخدمون من "
+"رؤية مجلداتهم فقط."
+
+#: app/templates/admin/index.html:51
+msgid ""
+"To restore a backup: stop the container, replace the data/grylli.db with one"
+" from the backups folder, and restart the container."
+msgstr ""
+"لاستعادة نسخة احتياطية: أوقف الحاوية، واستبدل data/grylli.db بواحدة من مجلد "
+"النسخ الاحتياطية، ثم أعد تشغيل الحاوية."
+
+#: app/templates/admin/list_backups.html:11
+msgid "Database Backups"
+msgstr "نسخ قاعدة البيانات الاحتياطية"
+
+#: app/templates/admin/list_backups.html:13
+msgid "Create Backup"
+msgstr "إنشاء نسخة احتياطية"
+
+#: app/templates/admin/list_backups.html:21
+msgid "Filename"
+msgstr "اسم الملف"
+
+#: app/templates/admin/list_backups.html:22
+#: app/templates/admin/partials/user_table.html:14
+#: app/templates/apprise/list_apprise.html:62
+#: app/templates/email/list_emails.html:60
+#: app/templates/messages/list_messages.html:60
+#: app/templates/reminders/list_reminders.html:60
+#: app/templates/user_smtp/list_smtp.html:59
+#: app/templates/webhook/list_webhooks.html:63
+msgid "Actions"
+msgstr "الإجراءات"
+
+#: app/templates/admin/list_backups.html:32
+msgid "Delete this backup?"
+msgstr "حذف هذه النسخة الاحتياطية؟"
+
+#: app/templates/admin/list_backups.html:32
+#: app/templates/apprise/list_apprise.html:95
+#: app/templates/apprise/list_apprise.html:99
+#: app/templates/apprise/list_apprise.html:150
+#: app/templates/apprise/list_apprise.html:154
+#: app/templates/email/list_emails.html:124
+#: app/templates/email/list_emails.html:128
+#: app/templates/email/list_emails.html:226
+#: app/templates/email/list_emails.html:230
+#: app/templates/messages/list_messages.html:112
+#: app/templates/messages/list_messages.html:116
+#: app/templates/messages/list_messages.html:198
+#: app/templates/messages/list_messages.html:202
+#: app/templates/reminders/list_reminders.html:107
+#: app/templates/reminders/list_reminders.html:113
+#: app/templates/reminders/list_reminders.html:192
+#: app/templates/reminders/list_reminders.html:198
+#: app/templates/user_smtp/list_smtp.html:101
+#: app/templates/user_smtp/list_smtp.html:169
+#: app/templates/webhook/list_webhooks.html:102
+#: app/templates/webhook/list_webhooks.html:161
+msgid "Delete"
+msgstr "حذف"
+
+#: app/templates/admin/list_backups.html:41
+msgid "No backups found."
+msgstr "لم يتم العثور على نسخ احتياطية."
+
+#: app/templates/admin/list_backups.html:44
+msgid ""
+"Backups contain your full app data. Store securely. Sensitive data is "
+"encrypted in the DB by default."
+msgstr ""
+"النسخ الاحتياطية تحتوي على جميع بيانات التطبيق الخاصة بك. احفظها بأمان. يتم "
+"تشفير البيانات الحساسة في قاعدة البيانات افتراضيًا."
+
+#: app/templates/admin/smtp_config.html:28
+#: app/templates/admin/system_config.html:22
+msgid "System Configuration"
+msgstr "اعدادات النظام"
+
+#: app/templates/admin/smtp_config.html:33
+#: app/templates/admin/system_config.html:26
+#: app/templates/admin/system_settings.html:15
+msgid "Key"
+msgstr "مفتاح"
+
+#: app/templates/admin/smtp_config.html:34
+#: app/templates/admin/system_config.html:27
+#: app/templates/admin/system_settings.html:16
+msgid "Value"
+msgstr "قيمة"
+
+#: app/templates/admin/smtp_config.html:35
+#: app/templates/admin/system_config.html:28
+msgid "Sensitive"
+msgstr "حساس"
+
+#: app/templates/admin/smtp_config.html:36
+#: app/templates/admin/system_config.html:29
+msgid "Editable"
+msgstr "قابل للتعديل"
+
+#: app/templates/admin/smtp_config.html:50
+#: app/templates/admin/smtp_config.html:51
+#: app/templates/admin/system_config.html:45
+#: app/templates/admin/system_config.html:46
+#: app/templates/email/view_config.html:60
+msgid "Yes"
+msgstr "نعم"
+
+#: app/templates/admin/smtp_config.html:50
+#: app/templates/admin/smtp_config.html:51
+#: app/templates/admin/system_config.html:45
+#: app/templates/admin/system_config.html:46
+#: app/templates/email/view_config.html:60
+msgid "No"
+msgstr "لا"
+
+#: app/templates/admin/smtp_config.html:63
+#: app/templates/admin/system_config.html:55
+msgid "Send Test Email"
+msgstr "إرسال بريد إلكتروني تجريبي"
+
+#: app/templates/admin/system_config.html:39
+msgid "decrypted"
+msgstr "تم الإنشاء"
+
+#: app/templates/admin/partials/user_card.html:12
+msgid "Email:"
+msgstr "البريد الإلكتروني:"
+
+#: app/templates/admin/partials/user_card.html:15
+msgid "Role:"
+msgstr "الدور:"
+
+#: app/templates/admin/partials/user_card.html:27
+#: app/templates/admin/partials/user_table.html:34
+msgid "Change Role"
+msgstr "تغيير الدور"
+
+#: app/templates/admin/partials/user_card.html:29
+#: app/templates/admin/partials/user_table.html:36
+msgid "You cannot change your own role"
+msgstr "لا يمكنك تغيير حالتك المفعلة الخاصة."
+
+#: app/templates/admin/partials/user_card.html:36
+#: app/templates/admin/partials/user_table.html:43
+msgid "Are you sure you want to reset MFA for this user?"
+msgstr ""
+"هل أنت متأكد أنك تريد إعادة ضبط المصادقة متعددة العوامل لهذا المستخدم؟"
+
+#: app/templates/admin/partials/user_card.html:39
+#: app/templates/admin/partials/user_table.html:46
+msgid "Reset MFA"
+msgstr "إعادة تعيين كلمة المرور"
+
+#: app/templates/admin/partials/user_card.html:51
+#: app/templates/admin/partials/user_table.html:58
+msgid "Delete user"
+msgstr "حذف المستخدم"
+
+#: app/templates/admin/partials/user_card.html:55
+#: app/templates/admin/partials/user_table.html:61
+msgid "Delete User"
+msgstr "حذف المستخدم"
+
+#: app/templates/admin/partials/user_card.html:58
+#: app/templates/admin/partials/user_table.html:65
+msgid "You cannot disable yourself"
+msgstr "لا يمكنك تعطيل نفسك"
+
+#: app/templates/admin/partials/user_card.html:65
+#: app/templates/admin/partials/user_table.html:72
+msgid "Disable"
+msgstr "تعطيل"
+
+#: app/templates/admin/partials/user_card.html:65
+#: app/templates/admin/partials/user_table.html:72
+msgid "Enable"
+msgstr "تمكين"
+
+#: app/templates/admin/partials/user_header.html:6
+#: app/templates/partials/admin_nav.html:47
+msgid "Users"
+msgstr "المستخدمون"
+
+#: app/templates/admin/partials/user_header.html:12
+#: app/templates/admin/partials/user_header.html:13
+#: app/templates/apprise/apprise_config.html:10
+#: app/templates/apprise/apprise_config.html:11
+#: app/templates/apprise/list_apprise.html:16
+#: app/templates/apprise/list_apprise.html:17
+#: app/templates/email/list_emails.html:15
+#: app/templates/email/list_emails.html:16
+#: app/templates/messages/list_messages.html:16
+#: app/templates/messages/list_messages.html:17
+#: app/templates/reminders/list_reminders.html:15
+#: app/templates/reminders/list_reminders.html:16
+#: app/templates/user_smtp/list_smtp.html:14
+#: app/templates/user_smtp/list_smtp.html:17
+#: app/templates/webhook/list_webhooks.html:16
+#: app/templates/webhook/list_webhooks.html:17
+#: app/templates/webhook/webhook_config.html:10
+#: app/templates/webhook/webhook_config.html:11
+msgid "Table View"
+msgstr "عرض الجدول"
+
+#: app/templates/admin/partials/user_header.html:26
+#: app/templates/admin/partials/user_header.html:27
+#: app/templates/apprise/apprise_config.html:24
+#: app/templates/apprise/apprise_config.html:25
+#: app/templates/apprise/list_apprise.html:30
+#: app/templates/apprise/list_apprise.html:31
+#: app/templates/email/list_emails.html:29
+#: app/templates/email/list_emails.html:30
+#: app/templates/messages/list_messages.html:30
+#: app/templates/messages/list_messages.html:31
+#: app/templates/reminders/list_reminders.html:29
+#: app/templates/reminders/list_reminders.html:30
+#: app/templates/user_smtp/list_smtp.html:27
+#: app/templates/user_smtp/list_smtp.html:30
+#: app/templates/webhook/list_webhooks.html:30
+#: app/templates/webhook/list_webhooks.html:31
+#: app/templates/webhook/webhook_config.html:24
+#: app/templates/webhook/webhook_config.html:25
+msgid "Card View"
+msgstr "عرض البطاقة"
+
+#: app/templates/admin/partials/user_header.html:45
+msgid "Add User"
+msgstr "إضافة مستخدم"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:9
+#: app/templates/email/attach_files.html:54
+#: app/templates/email/list_emails.html:255
+#: app/templates/messages/list_messages.html:223
+#: app/templates/reminders/list_reminders.html:218
+#: app/templates/reminders/schedule_reminder.html:56
+msgid "Hide Instructions"
+msgstr "إخفاء التعليمات"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:9
+msgid "How to manage users"
+msgstr "كيفية إدارة المستخدمين"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "Click"
+msgstr "انقر"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+msgid "➕ Add User"
+msgstr "➕ إضافة مستخدم"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+msgid "to open the new user form."
+msgstr "لفتح نموذج المستخدم الجديد."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:18
+msgid "Enter a unique username, valid email address, and strong password."
+msgstr "أدخل اسم مستخدم فريد، وعنوان بريد إلكتروني صالح، وكلمة مرور قوية."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "Select the appropriate"
+msgstr "اختر"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "role"
+msgstr "الدور المناسب"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "or"
+msgstr "المنفذ"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "to save."
+msgstr "للحفظ."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:25
+msgid "To edit a user, click ✏️ and update their info."
+msgstr "لتعديل مستخدم، انقر ✏️ وحدث معلوماته."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:26
+msgid "To delete a user, click 🗑️ and confirm the deletion."
+msgstr "لحذف مستخدم، انقر 🗑️ وأكد الحذف."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:28
+msgid "To disable or enable a user, click 🔴 or 🟢."
+msgstr "لتعطيل أو تمكين مستخدم، انقر 🔴 أو 🟢."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:30
+msgid "🟢 = User is enabled and can log in."
+msgstr "🟢 = المستخدم مُفعل ويمكنه تسجيل الدخول."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:31
+msgid "🔴 = User is disabled and cannot log in."
+msgstr "🔴 = المستخدم معطل ولا يمكنه تسجيل الدخول."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:32
+msgid "⚪ = You cannot disable your own account."
+msgstr "⚪ = لا يمكنك تعطيل حسابك الخاص."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:43
+#: app/templates/admin/partials/user_table.html:91
+msgid "Assign Role for"
+msgstr "تحديد الوجهات ل"
+
+#: app/templates/admin/partials/user_table.html:10
+msgid "ID"
+msgstr "المعرف"
+
+#: app/templates/admin/partials/user_table.html:11
+#: app/templates/user_smtp/list_smtp.html:55
+msgid "Username"
+msgstr "اسم المستخدم"
+
+#: app/templates/admin/partials/user_table.html:12
+msgid "Email"
+msgstr "البريد الإلكتروني"
+
+#: app/templates/admin/partials/user_table.html:13
+msgid "Role"
+msgstr "الدور"
+
+#: app/templates/apprise/apprise_config.html:3
+#: app/templates/apprise/list_apprise.html:9
+#: app/templates/messages/assign_destinations.html:22
+#: app/templates/reminders/assign_destinations.html:20
+msgid "Apprise Destinations"
+msgstr "وجهات Apprise"
+
+#: app/templates/apprise/apprise_config.html:43
+#: app/templates/webhook/list_webhooks.html:49
+#: app/templates/webhook/webhook_config.html:43
+msgid "Add Webhook"
+msgstr "إضافة ويب هوك"
+
+#: app/templates/apprise/apprise_config.html:43
+#: app/templates/apprise/list_apprise.html:49
+#: app/templates/webhook/list_webhooks.html:49
+#: app/templates/webhook/webhook_config.html:43
+msgid "Add Destination"
+msgstr "إضافة وجهة"
+
+#: app/templates/apprise/create_apprise.html:10
+msgid "Create Apprise Destination"
+msgstr "إنشاء وجهة Apprise"
+
+#: app/templates/apprise/create_apprise.html:38
+#: app/templates/apprise/edit_apprise.html:38
+#: app/templates/user_smtp/create_smtp.html:107
+#: app/templates/webhook/create_webhook.html:44
+#: app/templates/webhook/edit_webhook.html:44
+msgid "Create Destination"
+msgstr "إنشاء وجهة"
+
+#: app/templates/apprise/create_apprise.html:47
+#: app/templates/apprise/edit_apprise.html:47
+msgid "Need help with Apprise URLs? See the"
+msgstr "تحتاج إلى مساعدة في روابط Apprise؟ انظر"
+
+#: app/templates/apprise/create_apprise.html:51
+#: app/templates/apprise/edit_apprise.html:51
+msgid "Apprise Notification Services documentation"
+msgstr "وثائق خدمات إشعارات Apprise"
+
+#: app/templates/apprise/edit_apprise.html:10
+msgid "Edit Apprise Destination"
+msgstr "تعديل وجهة Apprise"
+
+#: app/templates/apprise/list_apprise.html:49
+msgid "Add Apprise"
+msgstr "إضافة Apprise"
+
+#: app/templates/apprise/list_apprise.html:58
+#: app/templates/email/edit_message.html:21
+#: app/templates/email/list_emails.html:56
+#: app/templates/email/view_config.html:14
+#: app/templates/messages/create_message.html:29
+#: app/templates/messages/edit_message.html:23
+#: app/templates/messages/list_messages.html:57
+#: app/templates/messages/view_message.html:14
+#: app/templates/reminders/create_reminder.html:23
+#: app/templates/reminders/edit_reminder.html:17
+#: app/templates/reminders/list_reminders.html:56
+#: app/templates/reminders/view_reminder.html:13
+#: app/templates/user_smtp/list_smtp.html:52
+#: app/templates/webhook/list_webhooks.html:58
+msgid "Label"
+msgstr "تسمية"
+
+#: app/templates/apprise/list_apprise.html:59
+msgid "URL"
+msgstr "URL"
+
+#: app/templates/apprise/list_apprise.html:61
+#: app/templates/email/list_emails.html:59
+#: app/templates/messages/list_messages.html:59
+#: app/templates/messages/view_message.html:36
+#: app/templates/reminders/view_reminder.html:47
+#: app/templates/webhook/list_webhooks.html:62
+msgid "Created At"
+msgstr "أنشئت في"
+
+#: app/templates/apprise/list_apprise.html:77
+#: app/templates/apprise/list_apprise.html:132
+#: app/templates/user_smtp/list_smtp.html:79
+#: app/templates/user_smtp/list_smtp.html:147
+#: app/templates/webhook/list_webhooks.html:79
+#: app/templates/webhook/list_webhooks.html:138
+msgid "Edit"
+msgstr "تحرير"
+
+#: app/templates/apprise/list_apprise.html:80
+#: app/templates/apprise/list_apprise.html:135
+#: app/templates/user_smtp/list_smtp.html:82
+#: app/templates/user_smtp/list_smtp.html:150
+msgid "Cannot edit while in use"
+msgstr "لا يمكن التعديل أثناء الاستخدام"
+
+#: app/templates/apprise/list_apprise.html:88
+#: app/templates/apprise/list_apprise.html:143
+#: app/templates/webhook/list_webhooks.html:91
+#: app/templates/webhook/list_webhooks.html:150
+msgid "Test"
+msgstr "اختبار"
+
+#: app/templates/apprise/list_apprise.html:103
+#: app/templates/apprise/list_apprise.html:158
+#: app/templates/user_smtp/list_smtp.html:106
+#: app/templates/user_smtp/list_smtp.html:174
+msgid "Cannot delete while in use"
+msgstr "لا يمكن الحذف أثناء الاستخدام"
+
+#: app/templates/apprise/list_apprise.html:119
+msgid "URL:"
+msgstr "URL:"
+
+#: app/templates/apprise/list_apprise.html:122
+#: app/templates/user_smtp/list_smtp.html:137
+#: app/templates/webhook/list_webhooks.html:128
+msgid "Enabled:"
+msgstr "مفعل:"
+
+#: app/templates/apprise/list_apprise.html:125
+#: app/templates/user_smtp/list_smtp.html:140
+#: app/templates/webhook/list_webhooks.html:131
+msgid "Created:"
+msgstr "أنشئت:"
+
+#: app/templates/auth/bootstrap.html:14
+msgid "Create Admin Account"
+msgstr "إنشاء حساب مسؤول"
+
+#: app/templates/auth/bootstrap.html:16
+msgid "Let’s get started by creating your first admin account."
+msgstr "لنبدأ بإنشاء حساب المسؤول الأول الخاص بك."
+
+#: app/templates/auth/bootstrap.html:75
+msgid "Create Admin"
+msgstr "إنشاء مسؤول"
+
+#: app/templates/auth/forgot_password.html:12
+msgid "Forgot Password"
+msgstr "نسيت كلمة المرور"
+
+#: app/templates/auth/forgot_password.html:15
+msgid ""
+"Enter your username and email. We'll send you a link to reset your password."
+msgstr ""
+"أدخل اسم المستخدم والبريد الإلكتروني الخاص بك. سنرسل لك رابطًا لإعادة تعيين "
+"كلمة المرور الخاصة بك."
+
+#: app/templates/auth/forgot_username.html:12
+msgid "Forgot Username"
+msgstr "نسيت اسم المستخدم"
+
+#: app/templates/auth/forgot_username.html:15
+msgid "Enter your email address, and we'll send you your username."
+msgstr "أدخل عنوان بريدك الإلكتروني، وسنرسل لك اسم المستخدم الخاص بك."
+
+#: app/templates/auth/forgot_username.html:40
+msgid "Send Username"
+msgstr "إرسال اسم المستخدم"
+
+#: app/templates/auth/login.html:12 app/templates/auth/login.html:54
+msgid "Log In"
+msgstr "تسجيل الدخول"
+
+#: app/templates/auth/login.html:62
+msgid "Forgot Username?"
+msgstr "نسيت اسم المستخدم؟"
+
+#: app/templates/auth/login.html:64
+msgid "Forgot Password?"
+msgstr "نسيت كلمة المرور؟"
+
+#: app/templates/auth/login.html:66 app/templates/auth/signup.html:12
+msgid "Sign Up"
+msgstr "اشتراك"
+
+#: app/templates/auth/rate_limit.html:9
+msgid "Hold On"
+msgstr "انتظر"
+
+#: app/templates/auth/rate_limit.html:11
+msgid "Too many failed login attempts. Please wait"
+msgstr "عدد كبير من محاولات تسجيل الدخول الفاشلة. الرجاء الانتظار"
+
+#: app/templates/auth/rate_limit.html:13
+msgid "seconds..."
+msgstr "ثواني..."
+
+#: app/templates/auth/rate_limit.html:15
+msgid "Redirecting to login..."
+msgstr "العودة إلى لوحة التحكم"
+
+#: app/templates/auth/reset_password.html:12
+#: app/templates/auth/reset_password.html:116
+msgid "Reset Password"
+msgstr "إعادة تعيين كلمة المرور"
+
+#: app/templates/auth/reset_password.html:14
+msgid "Enter your username, email, and new password."
+msgstr "أدخل اسم المستخدم والبريد الإلكتروني وكلمة المرور الجديدة."
+
+#: app/templates/auth/signup.html:14
+msgid "Fill out the form to create your account."
+msgstr "املأ النموذج لإنشاء حسابك."
+
+#: app/templates/checkin/already_checked_in.html:10
+msgid "Already Checked In"
+msgstr "آخر تسجيل دخول"
+
+#: app/templates/checkin/already_checked_in.html:12
+msgid ""
+"You have already checked in for this item. No further action is needed at "
+"this time."
+msgstr ""
+"لقد قمت بالفعل بتسجيل الوصول لهذا العنصر. لا حاجة لاتخاذ مزيد من الإجراءات "
+"في هذا الوقت."
+
+#: app/templates/checkin/already_checked_in.html:16
+#: app/templates/checkin/disabled.html:16
+#: app/templates/checkin/executed_disabled.html:18
+msgid "Check-in for:"
+msgstr "تم تسجيل الوصول لـ:"
+
+#: app/templates/checkin/already_checked_in.html:21
+#: app/templates/checkin/disabled.html:21
+#: app/templates/checkin/executed_disabled.html:23
+#: app/templates/checkin/thank_you.html:19
+msgid "Return to Dashboard"
+msgstr "العودة إلى لوحة التحكم"
+
+#: app/templates/checkin/disabled.html:10
+msgid "Check-In Disabled"
+msgstr "البريد الإلكتروني مُعطل"
+
+#: app/templates/checkin/disabled.html:12
+msgid "This check-in is currently disabled and cannot be completed."
+msgstr "هذا التسجيل معطل حاليًا ولا يمكن إكماله."
+
+#: app/templates/checkin/executed_disabled.html:11
+msgid "Already Executed & Disabled"
+msgstr "تم التنفيذ بالفعل & معطل"
+
+#: app/templates/checkin/executed_disabled.html:14
+msgid ""
+"This check-in has already been executed and is now disabled. No further "
+"action is required."
+msgstr ""
+"هذا التسجيل تم تنفيذه بالفعل وهو الآن معطل. لا حاجة لاتخاذ إجراءات إضافية."
+
+#: app/templates/checkin/thank_you.html:10
+msgid "Check-In Successful"
+msgstr "تم تسجيل الوصول بنجاح"
+
+#: app/templates/checkin/thank_you.html:11
+msgid "Thank you for checking in."
+msgstr "شكرًا لتسجيل الوصول."
+
+#: app/templates/checkin/thank_you.html:14
+msgid "Checked in for:"
+msgstr "تم تسجيل الوصول لـ:"
+
+#: app/templates/email/assign_smtp.html:11
+msgid "📧 Assign SMTP Config to:"
+msgstr "📧 تعيين إعدادات SMTP لـ:"
+
+#: app/templates/email/assign_smtp.html:25
+msgid "No SMTP (Unassign)"
+msgstr "لم يتم تعيين تكوين SMTP"
+
+#: app/templates/email/assign_smtp.html:26
+msgid "This email will not use any SMTP configuration."
+msgstr "لن يستخدم هذا البريد الإلكتروني أي إعدادات SMTP."
+
+#: app/templates/email/attach_files.html:12
+msgid "Attach Files for:"
+msgstr "إرفاق ملفات لـ:"
+
+#: app/templates/email/attach_files.html:21
+msgid "Available Files"
+msgstr "الملفات المتاحة"
+
+#: app/templates/email/attach_files.html:36
+msgid "No files found in the upload directory."
+msgstr "لم يتم العثور على ملفات في دليل الرفع."
+
+#: app/templates/email/attach_files.html:44
+msgid "Save Attachments"
+msgstr "حفظ المرفقات"
+
+#: app/templates/email/attach_files.html:54
+msgid "File Attach Notes"
+msgstr "ملاحظات إرفاق الملفات"
+
+#: app/templates/email/attach_files.html:63
+msgid "Important:"
+msgstr "المنفذ:"
+
+#: app/templates/email/attach_files.html:65
+msgid ""
+"Only files that are present in the 'uploads' folder (provided by your system"
+" administrator) will be shown here. If you do not see your file(s), please "
+"contact your Grylli administrator."
+msgstr ""
+"سيتم عرض الملفات الموجودة في مجلد 'التحميلات' (المُقدم من قبل مسؤول النظام "
+"لديك) هنا فقط. إذا لم تشاهد ملفك/ملفاتك، يرجى الاتصال بمسؤول Grylli الخاص "
+"بك."
+
+#: app/templates/email/attach_files.html:69
+msgid "Accepted file types:"
+msgstr "أنواع الملفات المقبولة:"
+
+#: app/templates/email/attach_files.html:71
+msgid "Documents:"
+msgstr "مستندات:"
+
+#: app/templates/email/attach_files.html:73
+msgid "Images:"
+msgstr "صور:"
+
+#: app/templates/email/attach_files.html:75
+msgid "Audio:"
+msgstr "صوت:"
+
+#: app/templates/email/attach_files.html:79
+msgid "Maximum file size:"
+msgstr "الحد الأقصى لحجم الملف:"
+
+#: app/templates/email/attach_files.html:80
+msgid "10 MB per file"
+msgstr "10 ميجابايت لكل ملف"
+
+#: app/templates/email/attach_files.html:83
+msgid "Total upload size:"
+msgstr "إجمالي حجم التحميل:"
+
+#: app/templates/email/attach_files.html:84
+msgid "20 MB (all files combined)"
+msgstr "20 ميجابايت (لجميع الملفات معاً)"
+
+#: app/templates/email/edit_message.html:12
+#: app/templates/email/list_emails.html:75
+#: app/templates/email/list_emails.html:177
+msgid "Edit Email"
+msgstr "تحرير البريد الإلكتروني"
+
+#: app/templates/email/edit_message.html:12
+msgid "Create Email"
+msgstr "إنشاء بريد إلكتروني"
+
+#: app/templates/email/edit_message.html:28
+msgid "To (Recipient Email)"
+msgstr "إلى (البريد الإلكتروني للمستلم)"
+
+#: app/templates/email/edit_message.html:35
+#: app/templates/email/list_emails.html:57
+#: app/templates/email/view_config.html:18
+#: app/templates/messages/create_message.html:36
+#: app/templates/messages/edit_message.html:30
+#: app/templates/messages/list_messages.html:58
+#: app/templates/messages/view_message.html:18
+#: app/templates/reminders/create_reminder.html:30
+#: app/templates/reminders/edit_reminder.html:24
+#: app/templates/reminders/list_reminders.html:57
+#: app/templates/reminders/view_reminder.html:17
+msgid "Subject"
+msgstr "الموضوع"
+
+#: app/templates/email/edit_message.html:42
+#: app/templates/email/view_config.html:28
+msgid "Body"
+msgstr "النص"
+
+#: app/templates/email/edit_message.html:50
+msgid "Save Email"
+msgstr "حفظ البريد الإلكتروني"
+
+#: app/templates/email/list_emails.html:48
+msgid "Add Email"
+msgstr "إضافة بريد إلكتروني"
+
+#: app/templates/email/list_emails.html:58
+#: app/templates/reminders/assign_email_reminder.html:77
+msgid "To"
+msgstr "إلى"
+
+#: app/templates/email/list_emails.html:78
+#: app/templates/email/list_emails.html:180
+msgid "Disable to edit email"
+msgstr "فشل في إرسال رسالة البريد الإلكتروني التجريبية:"
+
+#: app/templates/email/list_emails.html:84
+#: app/templates/email/list_emails.html:186
+msgid "Attach Files"
+msgstr "إرفاق ملفات"
+
+#: app/templates/email/list_emails.html:87
+#: app/templates/email/list_emails.html:189
+msgid "Disable to attach files"
+msgstr "إرفاق ملفات"
+
+#: app/templates/email/list_emails.html:93
+#: app/templates/email/list_emails.html:195
+msgid "Attach SMTP Config"
+msgstr "إرفاق إعدادات SMTP"
+
+#: app/templates/email/list_emails.html:96
+#: app/templates/email/list_emails.html:198
+msgid "Disable to assign SMTP"
+msgstr "تعطيل لتعيين SMTP"
+
+#: app/templates/email/list_emails.html:102
+#: app/templates/email/list_emails.html:204
+msgid "Schedule Check-In"
+msgstr "جدولة تسجيل الوصول"
+
+#: app/templates/email/list_emails.html:105
+#: app/templates/email/list_emails.html:207
+msgid "Disable to schedule check-in"
+msgstr "جدولة تسجيل الوصول"
+
+#: app/templates/email/list_emails.html:110
+#: app/templates/email/list_emails.html:212
+#: app/templates/messages/list_messages.html:99
+#: app/templates/messages/list_messages.html:184
+#: app/templates/reminders/list_reminders.html:93
+#: app/templates/reminders/list_reminders.html:178
+msgid "View Details"
+msgstr "عرض التفاصيل"
+
+#: app/templates/email/list_emails.html:118
+#: app/templates/email/list_emails.html:220
+msgid "Send this email to yourself to preview it."
+msgstr "أرسل هذا البريد الإلكتروني لنفسك لمعاينته."
+
+#: app/templates/email/list_emails.html:136
+#: app/templates/email/list_emails.html:238
+msgid "Toggle Email On/Off"
+msgstr "تبديل البريد الإلكتروني تشغيل/إيقاف"
+
+#: app/templates/email/list_emails.html:139
+#: app/templates/email/list_emails.html:241
+msgid "Email is enabled"
+msgstr "البريد الإلكتروني مُفعل"
+
+#: app/templates/email/list_emails.html:141
+#: app/templates/email/list_emails.html:243
+msgid "Email is disabled"
+msgstr "البريد الإلكتروني مُعطل"
+
+#: app/templates/email/list_emails.html:157
+#: app/templates/email/view_config.html:51
+#: app/templates/messages/list_messages.html:142
+#: app/templates/reminders/list_reminders.html:140
+msgid "Label:"
+msgstr "التسمية:"
+
+#: app/templates/email/list_emails.html:161
+#: app/templates/messages/list_messages.html:146
+#: app/templates/reminders/list_reminders.html:144
+#: app/templates/reminders/view_reminder.html:98
+msgid "Subject:"
+msgstr "الموضوع"
+
+#: app/templates/email/list_emails.html:165
+msgid "To:"
+msgstr "إلى:"
+
+#: app/templates/email/list_emails.html:169
+#: app/templates/messages/list_messages.html:150
+msgid "Created At:"
+msgstr "أنشئت في"
+
+#: app/templates/email/list_emails.html:255
+msgid "How to create and send an email"
+msgstr "كيفية إنشاء وإرسال بريد إلكتروني"
+
+#: app/templates/email/list_emails.html:262
+msgid ""
+"Click “Add Email” and fill out the subject, content, and recipient address."
+msgstr ""
+"انقر على “إضافة بريد إلكتروني” واملأ الموضوع والمحتوى والعنوان المستلم."
+
+#: app/templates/email/list_emails.html:263
+msgid "Attach any optional files (if needed)."
+msgstr "أرفق أي ملفات اختيارية (إذا لزم الأمر)."
+
+#: app/templates/email/list_emails.html:264
+msgid ""
+"Click 🧩 to assign a single SMTP configuration that will be used to send the "
+"email."
+msgstr ""
+"انقر على 🧩 لتعيين تكوين SMTP واحد سيتم استخدامه لإرسال البريد الإلكتروني."
+
+#: app/templates/email/list_emails.html:265
+msgid "Click ⏱️ to set a check-in interval and grace period for the email."
+msgstr "انقر على ⏱️ لتعيين فترة تسجيل الوصول ومدة السماح للبريد الإلكتروني."
+
+#: app/templates/email/list_emails.html:266
+msgid "Enable the email using the 🔴/🟢 toggle button."
+msgstr "قم بتمكين البريد الإلكتروني باستخدام زر التبديل 🔴/🟢."
+
+#: app/templates/email/list_emails.html:267
+msgid ""
+"Click 🧪 to test the email by sending it to yourself (not the recipient)."
+msgstr "انقر على 🧪 لاختبار البريد الإلكتروني بإرساله إلى نفسك (وليس المستلم)."
+
+#: app/templates/email/list_emails.html:268
+msgid ""
+"If you don’t check in before the grace period ends, the email will be "
+"automatically sent."
+msgstr ""
+"إذا لم تقم بالتسجيل قبل انتهاء فترة السماح، سيتم إرسال البريد الإلكتروني "
+"تلقائيًا."
+
+#: app/templates/email/list_emails.html:269
+msgid "You can preview the email configuration using 🔍."
+msgstr "يمكنك معاينة تكوين البريد الإلكتروني باستخدام 🔍."
+
+#: app/templates/email/list_emails.html:270
+msgid "Once a secure email is sent, it will be automatically disabled."
+msgstr "بمجرد إرسال بريد إلكتروني آمن، سيتم تعطيله تلقائيًا."
+
+#: app/templates/email/schedule_email.html:9
+msgid "Schedule Email"
+msgstr "جدولة البريد الإلكتروني"
+
+#: app/templates/email/schedule_email.html:18
+#: app/templates/messages/schedule_message.html:18
+msgid "Years"
+msgstr "سنوات"
+
+#: app/templates/email/schedule_email.html:19
+#: app/templates/messages/schedule_message.html:19
+msgid "Months"
+msgstr "أشهر"
+
+#: app/templates/email/schedule_email.html:20
+#: app/templates/messages/schedule_message.html:20
+msgid "Weeks"
+msgstr "أسابيع"
+
+#: app/templates/email/schedule_email.html:21
+#: app/templates/messages/schedule_message.html:21
+msgid "Days"
+msgstr "أيام"
+
+#: app/templates/email/schedule_email.html:22
+#: app/templates/messages/schedule_message.html:22
+msgid "Hours"
+msgstr "ساعات"
+
+#: app/templates/email/schedule_email.html:23
+#: app/templates/messages/schedule_message.html:23
+msgid "Minutes"
+msgstr "دقائق"
+
+#: app/templates/email/schedule_email.html:28
+#: app/templates/messages/schedule_message.html:28
+msgid "Check-in"
+msgstr "تسجيل الوصول"
+
+#: app/templates/email/schedule_email.html:51
+#: app/templates/messages/schedule_message.html:51
+#: app/templates/messages/view_message.html:26
+msgid "Grace Period"
+msgstr "فترة السماح"
+
+#: app/templates/email/schedule_email.html:80
+#: app/templates/messages/schedule_message.html:80
+#: app/templates/reminders/schedule_reminder.html:47
+msgid "Save Schedule"
+msgstr "حفظ الجدولة"
+
+#: app/templates/email/view_config.html:9
+msgid "Email Configuration"
+msgstr "تكوين البريد الإلكتروني"
+
+#: app/templates/email/view_config.html:22
+msgid "Recipient"
+msgstr "المستلم"
+
+#: app/templates/email/view_config.html:33
+msgid "Attached Files"
+msgstr "الملفات المرفقة"
+
+#: app/templates/email/view_config.html:39
+msgid "No files attached"
+msgstr "لا توجد ملفات مرفقة"
+
+#: app/templates/email/view_config.html:46
+#: app/templates/reminders/assign_email_reminder.html:20
+msgid "SMTP Configuration"
+msgstr "تكوين SMTP"
+
+#: app/templates/email/view_config.html:54
+#: app/templates/user_smtp/list_smtp.html:122
+msgid "Host:"
+msgstr "المضيف:"
+
+#: app/templates/email/view_config.html:57
+#: app/templates/user_smtp/list_smtp.html:128
+msgid "Username:"
+msgstr "اسم المستخدم:"
+
+#: app/templates/email/view_config.html:60
+#: app/templates/user_smtp/list_smtp.html:134
+msgid "TLS:"
+msgstr "TLS:"
+
+#: app/templates/email/view_config.html:64
+msgid "No SMTP configuration assigned"
+msgstr "لم يتم تعيين تكوين SMTP"
+
+#: app/templates/email/view_config.html:69
+msgid "Schedule Information"
+msgstr "معلومات الجدولة"
+
+#: app/templates/email/view_config.html:72
+msgid "Check-in Interval:"
+msgstr "فترة تسجيل الوصول:"
+
+#: app/templates/email/view_config.html:72
+#: app/templates/email/view_config.html:75
+msgid "minutes"
+msgstr "دقائق"
+
+#: app/templates/email/view_config.html:75
+msgid "Grace Period:"
+msgstr "فترة السماح:"
+
+#: app/templates/email/view_config.html:79
+msgid "Last Check-in:"
+msgstr "آخر تسجيل دخول:"
+
+#: app/templates/email/view_config.html:82
+msgid "No check-in has occurred yet"
+msgstr "لم يحدث أي تسجيل دخول حتى الآن"
+
+#: app/templates/email/view_config.html:92
+msgid "Back to Emails"
+msgstr "العودة إلى رسائل البريد الإلكتروني"
+
+#: app/templates/errors/500.html:4
+msgid "Something went wrong"
+msgstr "حدث خطأ ما"
+
+#: app/templates/errors/500.html:6
+msgid ""
+"An unexpected error occurred. Please try again later or contact support."
+msgstr "حدث خطأ غير متوقع. يرجى إعادة المحاولة لاحقًا أو الاتصال بالدعم."
+
+#: app/templates/locale/redirect_after_lang_set.html:15
+msgid "Switching Language..."
+msgstr "تبديل اللغة..."
+
+#: app/templates/locale/redirect_after_lang_set.html:18
+msgid "Applying new language..."
+msgstr "تطبيق لغة جديدة..."
+
+#: app/templates/messages/assign_destinations.html:13
+#: app/templates/reminders/assign_destinations.html:12
+msgid "Assign Destinations for"
+msgstr "تحديد الوجهات ل"
+
+#: app/templates/messages/assign_destinations.html:62
+#: app/templates/reminders/assign_destinations.html:60
+msgid "Save Destinations"
+msgstr "حفظ الوجهات"
+
+#: app/templates/messages/create_message.html:17
+msgid "Edit Notificaton"
+msgstr "تعديل الإشعار"
+
+#: app/templates/messages/create_message.html:19
+msgid "Create Notification"
+msgstr "إنشاء إشعار"
+
+#: app/templates/messages/create_message.html:43
+#: app/templates/messages/edit_message.html:37
+#: app/templates/messages/view_message.html:42
+#: app/templates/reminders/create_reminder.html:37
+#: app/templates/reminders/edit_reminder.html:31
+#: app/templates/reminders/view_reminder.html:53
+msgid "Content"
+msgstr "المحتوى"
+
+#: app/templates/messages/create_message.html:51
+msgid "Save Notification"
+msgstr "حفظ الإشعار"
+
+#: app/templates/messages/edit_message.html:15
+#: app/templates/messages/list_messages.html:74
+#: app/templates/messages/list_messages.html:158
+msgid "Edit Notification"
+msgstr "تعديل الإشعار"
+
+#: app/templates/messages/edit_message.html:45
+msgid "Update Notification"
+msgstr "تحديث الإشعار"
+
+#: app/templates/messages/list_messages.html:49
+msgid "Add Notification"
+msgstr "إضافة إشعار"
+
+#: app/templates/messages/list_messages.html:77
+#: app/templates/messages/list_messages.html:161
+msgid "Disable to edit notification"
+msgstr "تعديل الإشعار"
+
+#: app/templates/messages/list_messages.html:83
+#: app/templates/messages/list_messages.html:167
+#: app/templates/reminders/list_reminders.html:78
+#: app/templates/reminders/list_reminders.html:163
+msgid "Assign Destinations"
+msgstr "تعيين الوجهات"
+
+#: app/templates/messages/list_messages.html:86
+#: app/templates/messages/list_messages.html:170
+msgid "Disable to assign destinations"
+msgstr "تعيين الوجهات"
+
+#: app/templates/messages/list_messages.html:92
+#: app/templates/messages/list_messages.html:176
+#: app/templates/reminders/list_reminders.html:88
+#: app/templates/reminders/list_reminders.html:173
+msgid "Set Schedule"
+msgstr "تعيين الجدول"
+
+#: app/templates/messages/list_messages.html:95
+#: app/templates/messages/list_messages.html:179
+msgid "Disable to set schedule"
+msgstr "تعيين الجدول"
+
+#: app/templates/messages/list_messages.html:107
+#: app/templates/messages/list_messages.html:192
+msgid "Send Test Notification"
+msgstr "تعديل الإشعار"
+
+#: app/templates/messages/list_messages.html:122
+#: app/templates/messages/list_messages.html:209
+msgid "Toggle Message On/Off"
+msgstr "تبديل الرسالة تشغيل/إيقاف"
+
+#: app/templates/messages/list_messages.html:124
+#: app/templates/messages/list_messages.html:211
+msgid "Notification is enabled"
+msgstr "تم تفعيل الإشعار"
+
+#: app/templates/messages/list_messages.html:126
+#: app/templates/messages/list_messages.html:213
+msgid "Notification is disabled"
+msgstr "تم تعطيل الإشعار"
+
+#: app/templates/messages/list_messages.html:223
+msgid "How to create and send a notification"
+msgstr "كيفية إنشاء وإرسال إشعار"
+
+#: app/templates/messages/list_messages.html:233
+msgid "Click “Add notification” and fill out the subject and content fields."
+msgstr "انقر على \"إضافة إشعار\" واملأ حقلي الموضوع والمحتوى."
+
+#: app/templates/messages/list_messages.html:234
+msgid "Save the notification to return to the overview."
+msgstr "حفظ الإشعار للعودة إلى النظرة العامة."
+
+#: app/templates/messages/list_messages.html:235
+msgid "You need to create at least one apprise or webhook destination."
+msgstr "تحتاج إلى إنشاء وجهة واحدة على الأقل من نوع apprise أو webhook."
+
+#: app/templates/messages/list_messages.html:236
+msgid "You can create as many destinations as you like."
+msgstr "يمكنك إنشاء أكبر عدد تريده من الوجهات."
+
+#: app/templates/messages/list_messages.html:237
+msgid "Click 🧩 to assign one or more Apprise and/or Webhook destinations."
+msgstr "انقر على 🧩 لتحديد واحدة أو أكثر من وجهات Apprise و/أو Webhook."
+
+#: app/templates/messages/list_messages.html:238
+msgid "Click ⏱️ to set a schedule and check-in interval."
+msgstr "انقر على ⏱️ لتعيين جدول وفترة تسجيل الدخول."
+
+#: app/templates/messages/list_messages.html:239
+msgid "Enable the notification using the 🔴/🟢 toggle button."
+msgstr "فعّل الإشعار باستخدام زر التبديل 🔴/🟢."
+
+#: app/templates/messages/list_messages.html:240
+msgid ""
+"If you don’t check in before the grace period ends, the notification will be"
+" sent."
+msgstr "إذا لم تسجل الدخول قبل انتهاء فترة السماح، سيتم إرسال الإشعار."
+
+#: app/templates/messages/list_messages.html:241
+msgid "You can preview the notification config using 🔍."
+msgstr "يمكنك معاينة تكوين الإشعار باستخدام 🔍."
+
+#: app/templates/messages/list_messages.html:242
+msgid "Once a notification is sent, it will be automatically disabled."
+msgstr "بمجرد إرسال الإشعار، سيتم تعطيله تلقائيًا."
+
+#: app/templates/messages/schedule_message.html:9
+msgid "Schedule Message"
+msgstr "جدول الرسالة"
+
+#: app/templates/messages/view_message.html:9
+msgid "Notifications Details"
+msgstr "تفاصيل الإشعارات"
+
+#: app/templates/messages/view_message.html:22
+msgid "Check-in Interval"
+msgstr "فترة تسجيل الدخول"
+
+#: app/templates/messages/view_message.html:31
+msgid "Last Check-in"
+msgstr "آخر تسجيل دخول"
+
+#: app/templates/messages/view_message.html:48
+#: app/templates/reminders/view_reminder.html:59
+msgid "Apprise URLs"
+msgstr "Apprise URLs"
+
+#: app/templates/messages/view_message.html:54
+#: app/templates/messages/view_message.html:64
+#: app/templates/reminders/view_reminder.html:65
+#: app/templates/reminders/view_reminder.html:75
+#: app/templates/reminders/view_reminder.html:85
+msgid "None assigned."
+msgstr "لم يتم تعيين شيء."
+
+#: app/templates/messages/view_message.html:73
+msgid "Back to Notifications"
+msgstr "العودة إلى الإشعارات"
+
+#: app/templates/mfa/challenge.html:5 app/templates/mfa/settings.html:5
+msgid "Two-Factor Authentication (MFA)"
+msgstr "المصادقة الثنائية (MFA)"
+
+#: app/templates/mfa/recovery_codes.html:4
+msgid "Your Recovery Codes"
+msgstr "رموز الاستعادة الخاصة بك"
+
+#: app/templates/mfa/recovery_codes.html:7
+msgid "Save these recovery codes in a safe place!"
+msgstr "احفظ هذه الرموز في مكان آمن!"
+
+#: app/templates/mfa/recovery_codes.html:10
+msgid ""
+"Each code can be used once if you lose access to your authenticator. These "
+"codes will not be shown again."
+msgstr ""
+"يمكن استخدام كل رمز مرة واحدة إذا فقدت الوصول إلى المصادقة الخاصة بك. لن يتم"
+" عرض هذه الرموز مرة أخرى."
+
+#: app/templates/mfa/recovery_codes.html:24
+msgid "OK, I've saved them"
+msgstr "حسنًا، لقد حفظتهم"
+
+#: app/templates/mfa/settings.html:12
+msgid "MFA QR Code"
+msgstr "رمز الاستجابة السريعة للمصادقة متعددة العوامل"
+
+#: app/templates/mfa/settings.html:15
+msgid "Manual Entry:"
+msgstr "الإدخال اليدوي:"
+
+#: app/templates/partials/admin_nav.html:21
+msgid "Administration"
+msgstr "الإدارة"
+
+#: app/templates/partials/admin_nav.html:37
+#: app/templates/partials/shared_nav.html:34
+#: app/templates/partials/shared_nav.html:78
+#: app/templates/partials/shared_nav.html:117
+msgid "Overview"
+msgstr "نظرة عامة"
+
+#: app/templates/partials/footer.html:7
+msgid "Toggle Theme"
+msgstr "تبديل السمة"
+
+#: app/templates/partials/footer.html:32
+msgid "Theme"
+msgstr "السمة"
+
+#: app/templates/partials/head.html:7
+msgid "Grylli"
+msgstr "Grylli"
+
+#: app/templates/partials/header.html:6 app/templates/partials/sidebar.html:32
+#: app/templates/partials/sidebar.html:66
+msgid "Home"
+msgstr "الصفحة الرئيسية"
+
+#: app/templates/partials/header.html:55
+msgid "Account"
+msgstr "الحساب"
+
+#: app/templates/partials/header.html:61
+msgid "MFA"
+msgstr "MFA"
+
+#: app/templates/partials/header.html:67
+msgid "About"
+msgstr "حول"
+
+#: app/templates/partials/header.html:73
+msgid "Privacy"
+msgstr "الخصوصية"
+
+#: app/templates/partials/header.html:79
+msgid "System Info"
+msgstr "معلومات النظام"
+
+#: app/templates/partials/header.html:114
+msgid "Logout"
+msgstr "تسجيل الخروج"
+
+#: app/templates/partials/shared_nav.html:33
+msgid "Overview of notification settings"
+msgstr "نظرة عامة على إعدادات الإشعارات"
+
+#: app/templates/partials/shared_nav.html:38
+msgid "Configure Apprise services"
+msgstr "تكوين خدمات Apprise"
+
+#: app/templates/partials/shared_nav.html:39
+msgid "Apprise"
+msgstr "Apprise"
+
+#: app/templates/partials/shared_nav.html:43
+msgid "Configure Webhook integrations"
+msgstr "تكوين تكاملات Webhook"
+
+#: app/templates/partials/shared_nav.html:77
+msgid "Overview of secure email messages"
+msgstr "نظرة عامة على رسائل البريد الإلكتروني الآمنة"
+
+#: app/templates/partials/shared_nav.html:82
+msgid "Configure SMTP email settings"
+msgstr "تكوين إعدادات البريد الإلكتروني SMTP"
+
+#: app/templates/partials/shared_nav.html:83
+#: app/templates/reminders/view_reminder.html:79
+msgid "SMTP"
+msgstr "SMTP"
+
+#: app/templates/partials/shared_nav.html:100
+#: app/templates/reminders/list_reminders.html:8
+msgid "Reminders"
+msgstr "دقائق"
+
+#: app/templates/partials/shared_nav.html:116
+msgid "Overview of reminders"
+msgstr "نظرة عامة على التذكيرات"
+
+#: app/templates/partials/sidebar.html:13
+#: app/templates/partials/sidebar.html:47
+msgid "Menu"
+msgstr "القائمة"
+
+#: app/templates/reminders/assign_email_reminder.html:12
+msgid "Link Email Reminder for"
+msgstr "ربط تذكير البريد الإلكتروني لـ"
+
+#: app/templates/reminders/assign_email_reminder.html:30
+#: app/templates/reminders/assign_email_reminder.html:64
+msgid "None (Unassign)"
+msgstr "لم يتم تعيين تكوين SMTP"
+
+#: app/templates/reminders/assign_email_reminder.html:43
+msgid "No sender address"
+msgstr "لا يوجد عنوان للمرسل"
+
+#: app/templates/reminders/assign_email_reminder.html:54
+msgid "Email Message"
+msgstr "جدول الرسالة"
+
+#: app/templates/reminders/assign_email_reminder.html:77
+msgid "No subject"
+msgstr "الموضوع"
+
+#: app/templates/reminders/assign_email_reminder.html:90
+msgid "Save Email Reminder"
+msgstr "حفظ البريد الإلكتروني"
+
+#: app/templates/reminders/create_reminder.html:12
+#: app/templates/reminders/edit_reminder.html:10
+#: app/templates/reminders/list_reminders.html:73
+#: app/templates/reminders/list_reminders.html:158
+msgid "Edit Reminder"
+msgstr "تحرير البريد الإلكتروني"
+
+#: app/templates/reminders/create_reminder.html:14
+msgid "Create Reminder"
+msgstr "إنشاء بريد إلكتروني"
+
+#: app/templates/reminders/create_reminder.html:45
+msgid "Save Reminder"
+msgstr "حفظ البريد الإلكتروني"
+
+#: app/templates/reminders/edit_reminder.html:39
+msgid "Update Reminder"
+msgstr "تحديث التذكير"
+
+#: app/templates/reminders/list_reminders.html:48
+msgid "Add Reminder"
+msgstr "إضافة بريد إلكتروني"
+
+#: app/templates/reminders/list_reminders.html:58
+#: app/templates/reminders/view_reminder.html:21
+msgid "Start At"
+msgstr "بدء TLS"
+
+#: app/templates/reminders/list_reminders.html:59
+msgid "Recurrence"
+msgstr "التكرار"
+
+#: app/templates/reminders/list_reminders.html:69
+#: app/templates/reminders/list_reminders.html:153
+#: app/templates/reminders/view_reminder.html:26
+msgid "One-time"
+msgstr "مرة واحدة"
+
+#: app/templates/reminders/list_reminders.html:83
+msgid "Assign Email Reminder"
+msgstr "تخصيص تذكير بريد إلكتروني"
+
+#: app/templates/reminders/list_reminders.html:102
+#: app/templates/reminders/list_reminders.html:187
+msgid "Send Test Reminder"
+msgstr "إرسال بريد إلكتروني تجريبي"
+
+#: app/templates/reminders/list_reminders.html:120
+#: app/templates/reminders/list_reminders.html:205
+msgid "Toggle Reminder On/Off"
+msgstr "تبديل البريد الإلكتروني تشغيل/إيقاف"
+
+#: app/templates/reminders/list_reminders.html:122
+#: app/templates/reminders/list_reminders.html:207
+msgid "Reminder is enabled"
+msgstr "البريد الإلكتروني مُفعل"
+
+#: app/templates/reminders/list_reminders.html:124
+#: app/templates/reminders/list_reminders.html:209
+msgid "Reminder is disabled"
+msgstr "البريد الإلكتروني مُعطل"
+
+#: app/templates/reminders/list_reminders.html:148
+msgid "Start At:"
+msgstr "بدء TLS"
+
+#: app/templates/reminders/list_reminders.html:152
+msgid "Recurrence:"
+msgstr "التكرار:"
+
+#: app/templates/reminders/list_reminders.html:168
+msgid "Link Email Reminder"
+msgstr "ربط تذكير البريد الإلكتروني"
+
+#: app/templates/reminders/list_reminders.html:218
+msgid "How to use reminders"
+msgstr "كيفية إدارة المستخدمين"
+
+#: app/templates/reminders/list_reminders.html:231
+msgid "➕ Click “Add Reminder” and fill out the subject and content fields."
+msgstr "انقر على \"إضافة إشعار\" واملأ حقلي الموضوع والمحتوى."
+
+#: app/templates/reminders/list_reminders.html:232
+msgid "💾 Save the reminder to return to the overview."
+msgstr "حفظ الإشعار للعودة إلى النظرة العامة."
+
+#: app/templates/reminders/list_reminders.html:233
+msgid ""
+"📣 Assign Apprise, 🌐 Webhook, and/or 📧 Email (SMTP) destinations as needed."
+msgstr ""
+"📣 تخصيص الوصول، 🌐 الويب هوك، و/أو 📧 وجهات البريد الإلكتروني (SMTP) حسب "
+"الحاجة."
+
+#: app/templates/reminders/list_reminders.html:234
+msgid ""
+"⏱️ Set the schedule using the schedule button to define when reminders are "
+"sent."
+msgstr "⏱️ اضبط الجدول باستخدام زر الجدولة لتحديد وقت إرسال التذكيرات."
+
+#: app/templates/reminders/list_reminders.html:235
+msgid ""
+"🔍 Click “View Details” to review or edit assigned destinations and other "
+"settings."
+msgstr ""
+"🔍 انقر على \"عرض التفاصيل\" لمراجعة أو تعديل الوجهات المعينة والإعدادات "
+"الأخرى."
+
+#: app/templates/reminders/list_reminders.html:236
+msgid ""
+"🧪 Click the Test button to verify all assigned destinations are working "
+"correctly."
+msgstr "🧪 انقر على زر الاختبار للتحقق من عمل جميع الوجهات المعينة بشكل صحيح."
+
+#: app/templates/reminders/list_reminders.html:237
+msgid "🔴/🟢 Enable or disable the reminder using the toggle button."
+msgstr "قم بتمكين البريد الإلكتروني باستخدام زر التبديل 🔴/🟢."
+
+#: app/templates/reminders/list_reminders.html:238
+msgid "📤 Reminders will be sent as scheduled to the assigned destinations."
+msgstr "📤 سيتم إرسال التذكيرات حسب الجدول إلى الوجهات المخصصة."
+
+#: app/templates/reminders/schedule_reminder.html:8
+msgid "Schedule Reminder"
+msgstr "جدولة البريد الإلكتروني"
+
+#: app/templates/reminders/schedule_reminder.html:15
+msgid "Start Date & Time"
+msgstr "تاريخ ووقت البدء"
+
+#: app/templates/reminders/schedule_reminder.html:22
+#: app/templates/reminders/view_reminder.html:25
+msgid "Recurrence Rule"
+msgstr "قاعدة التكرار"
+
+#: app/templates/reminders/schedule_reminder.html:24
+msgid "(Optional) Enter RRULE or leave blank for one-time."
+msgstr "(اختياري) أدخل RRULE أو اتركه فارغًا لمرة واحدة."
+
+#: app/templates/reminders/schedule_reminder.html:30
+msgid "End Date"
+msgstr "إرسال اختبار"
+
+#: app/templates/reminders/schedule_reminder.html:32
+msgid "(Optional) Stop sending after this date."
+msgstr "(اختياري) توقف عن الإرسال بعد هذا التاريخ."
+
+#: app/templates/reminders/schedule_reminder.html:38
+#: app/templates/reminders/view_reminder.html:36
+msgid "Max Occurrences"
+msgstr "الحد الأقصى لعدد المرات"
+
+#: app/templates/reminders/schedule_reminder.html:40
+msgid "(Optional) Stop after this many reminders."
+msgstr "(اختياري) توقف بعد هذا العدد من التذكيرات."
+
+#: app/templates/reminders/schedule_reminder.html:56
+msgid "Help for RRULE syntax"
+msgstr "مساعدة لكتابة بناء جملة RRULE"
+
+#: app/templates/reminders/schedule_reminder.html:66
+msgid "Several tools are available to help generate an RRULE."
+msgstr "تتوفر عدة أدوات للمساعدة في توليد RRULE."
+
+#: app/templates/reminders/schedule_reminder.html:67
+msgid "Use a search engine or AI tool to assist."
+msgstr "استخدم محرك بحث أو أداة ذكاء صناعي للمساعدة."
+
+#: app/templates/reminders/schedule_reminder.html:69
+msgid "Here is an example of one such online tool:"
+msgstr "إليك مثال على إحدى هذه الأدوات عبر الإنترنت:"
+
+#: app/templates/reminders/schedule_reminder.html:73
+msgid "RRULE Generator Tool"
+msgstr "أداة توليد RRULE"
+
+#: app/templates/reminders/schedule_reminder.html:77
+msgid "See here for some common examples:"
+msgstr "اطلع هنا على بعض الأمثلة الشائعة:"
+
+#: app/templates/reminders/schedule_reminder.html:81
+msgid "RRULE Help (GitHub)"
+msgstr "مساعدة RRULE (GitHub)"
+
+#: app/templates/reminders/view_reminder.html:8
+msgid "Reminder Details"
+msgstr "عرض التفاصيل"
+
+#: app/templates/reminders/view_reminder.html:30
+msgid "End At"
+msgstr "إرسال اختبار"
+
+#: app/templates/reminders/view_reminder.html:42
+msgid "Last Sent"
+msgstr "آخر تسجيل دخول"
+
+#: app/templates/reminders/view_reminder.html:91
+msgid "Email Template"
+msgstr "مدقق البريد الإلكتروني"
+
+#: app/templates/reminders/view_reminder.html:103
+msgid "No email linked."
+msgstr "البريد الإلكتروني مُفعل"
+
+#: app/templates/reminders/view_reminder.html:111
+msgid "Back to Reminders"
+msgstr "العودة إلى رسائل البريد الإلكتروني"
+
+#: app/templates/user_smtp/create_smtp.html:10
+msgid "Create SMTP Destination"
+msgstr "إنشاء وجهة SMTP"
+
+#: app/templates/user_smtp/create_smtp.html:69
+#: app/templates/user_smtp/edit_smtp.html:84
+msgid "Hold to reveal"
+msgstr "اضغط للإظهار"
+
+#: app/templates/user_smtp/create_smtp.html:92
+#: app/templates/user_smtp/edit_smtp.html:107
+msgid "Use TLS"
+msgstr "استخدام TLS"
+
+#: app/templates/user_smtp/edit_smtp.html:10
+msgid "Edit SMTP Destination"
+msgstr "إنشاء وجهة SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:9
+msgid "SMTP Destinations"
+msgstr "وجهات SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:44
+msgid "Add SMTP"
+msgstr "إضافة SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:53
+msgid "Host"
+msgstr "المضيف"
+
+#: app/templates/user_smtp/list_smtp.html:54
+msgid "Port"
+msgstr "المنفذ"
+
+#: app/templates/user_smtp/list_smtp.html:56
+msgid "TLS"
+msgstr "TLS"
+
+#: app/templates/user_smtp/list_smtp.html:58
+msgid "Created"
+msgstr "تم الإنشاء"
+
+#: app/templates/user_smtp/list_smtp.html:90
+#: app/templates/user_smtp/list_smtp.html:158
+msgid "Send Test"
+msgstr "إرسال اختبار"
+
+#: app/templates/user_smtp/list_smtp.html:125
+msgid "Port:"
+msgstr "المنفذ:"
+
+#: app/templates/user_smtp/list_smtp.html:131
+msgid "Password:"
+msgstr "كلمة المرور:"
+
+#: app/templates/user_smtp/list_smtp.html:184
+msgid "Hide SMTP Setup Help"
+msgstr "إخفاء تعليمات إعداد SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:184
+msgid "Show SMTP Setup Help"
+msgstr "إظهار تعليمات إعداد SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:190
+msgid ""
+"Need help finding your SMTP server settings? See here for some links to "
+"common providers:"
+msgstr ""
+"تحتاج لمساعدة في العثور على إعدادات خادم SMTP الخاص بك؟ انظر هنا لبعض "
+"الروابط لمزودي الخدمة الشائعين:"
+
+#: app/templates/user_smtp/list_smtp.html:194
+msgid "SMTP Server Settings Help (GitHub)"
+msgstr "مساعدة إعدادات خادم SMTP (GitHub)"
+
+#: app/templates/user_smtp/list_smtp.html:198
+msgid ""
+"Find official documentation links for Gmail, Outlook, Yahoo, AOL, and "
+"others."
+msgstr ""
+"العثور على روابط الوثائق الرسمية لـ Gmail وOutlook وYahoo وAOL وغيرها."
+
+#: app/templates/user_smtp/list_smtp.html:199
+msgid ""
+"If your provider isn’t listed, search their support site or a search engine "
+"for 'SMTP settings'."
+msgstr ""
+"إذا لم يتم إدراج مزود الخدمة الخاص بك، ابحث في موقع الدعم الخاص بهم أو محرك "
+"بحث عن 'إعدادات SMTP'."
+
+#: app/templates/user_smtp/list_smtp.html:200
+msgid ""
+"Some providers (like Gmail, Yahoo) require 'App Passwords' or special "
+"setup—see their docs!"
+msgstr ""
+"بعض المزودين (مثل Gmail وYahoo) يتطلبون 'كلمات مرور التطبيقات' أو إعداد خاص "
+"- انظر وثائقهم!"
+
+#: app/templates/webhook/create_webhook.html:10
+msgid "Create Webhook"
+msgstr "إنشاء ويب هوك"
+
+#: app/templates/webhook/edit_webhook.html:10
+msgid "Edit Webhook"
+msgstr "تحرير ويب هوك"
+
+#: app/templates/webhook/list_webhooks.html:9
+#: app/templates/webhook/webhook_config.html:3
+msgid "Webhooks Destinations"
+msgstr "وجهات الويب هوك"
+
+#: app/templates/webhook/list_webhooks.html:59
+msgid "Endpoint"
+msgstr "نقطة النهاية"
+
+#: app/templates/webhook/list_webhooks.html:60
+msgid "Description"
+msgstr "الوصف"
+
+#: app/templates/webhook/list_webhooks.html:82
+#: app/templates/webhook/list_webhooks.html:141
+msgid "Cannot edit while assigned to notifications"
+msgstr "لا يمكن التعديل أثناء التعيين للإشعارات"
+
+#: app/templates/webhook/list_webhooks.html:106
+#: app/templates/webhook/list_webhooks.html:165
+msgid "Cannot delete while assigned to notifications"
+msgstr "لا يمكن الحذف أثناء التعيين للإشعارات"
+
+#: app/templates/webhook/list_webhooks.html:122
+msgid "Endpoint:"
+msgstr "نقطة النهاية:"
+
+#: app/templates/webhook/list_webhooks.html:125
+msgid "Description:"
+msgstr "الوصف:"
+
+#: app/views/account.py:74
+msgid "Current password is required to change password."
+msgstr "مطلوب كلمة المرور الحالية لتغيير كلمة المرور."
+
+#: app/views/account.py:78
+msgid "Current password is incorrect."
+msgstr "كلمة المرور الحالية غير صحيحة."
+
+#: app/views/account.py:94
+msgid "Account updated successfully."
+msgstr "تم تحديث الحساب بنجاح."
+
+#: app/views/account.py:100
+msgid "An error occurred while updating your account."
+msgstr "حدث خطأ أثناء تحديث حسابك."
+
+#: app/views/account.py:137
+msgid "You cannot delete your account because you are the last admin."
+msgstr "لا يمكنك حذف حسابك لأنك المسؤول الأخير."
+
+#: app/views/account.py:146
+msgid "Your account has been permanently deleted."
+msgstr "تم حذف حسابك بشكل دائم."
+
+#: app/views/account.py:152
+msgid "An error occurred while trying to delete your account."
+msgstr "حدث خطأ أثناء تحديث حسابك."
+
+#: app/views/account.py:171
+msgid "Your account has been deleted"
+msgstr "تم حذف حسابك بشكل دائم."
+
+#: app/views/account.py:173
+#, python-brace-format
+msgid ""
+"Hello {username},\n"
+"\n"
+"Your account on {site_name} has been deleted.Remember to delete your files from the uploads folder.If this was not you, please contact support immediately.\n"
+"\n"
+"{site_url}"
+msgstr ""
+"مرحبًا {username},\n"
+"\n"
+"تم حذف حسابك على {site_name}. تذكر حذف ملفاتك من مجلد التحميلات. إذا لم تكن هذه أنت، يرجى الاتصال بالدعم فورًا.\n"
+"\n"
+"{site_url}"
+
+#: app/views/admin.py:59
+msgid "Invalid role."
+msgstr "دور غير صالح."
+
+#: app/views/apprise.py:51
+msgid "🧪 Test notification sent successfully!"
+msgstr "🧪 تم إرسال إشعار الاختبار بنجاح!"
+
+#: app/views/apprise.py:56
+msgid "🧪 Failed to send test notification: "
+msgstr "🧪 فشل في إرسال إشعار الاختبار:"
+
+#: app/views/apprise.py:62
+msgid "🧪 Error sending test notification."
+msgstr "🧪 خطأ في إرسال إشعار الاختبار."
+
+#: app/views/apprise.py:101
+msgid "Apprise destination created successfully."
+msgstr "تم إنشاء وجهة Apprise بنجاح."
+
+#: app/views/apprise.py:168
+msgid "Apprise destination updated successfully."
+msgstr "تم تحديث وجهة Apprise بنجاح."
+
+#: app/views/apprise.py:199
+msgid "Apprise destination deleted."
+msgstr "تم حذف وجهة Apprise."
+
+#: app/views/auth.py:95
+msgid "Admin account created successfully."
+msgstr "تم إنشاء حساب المسؤول بنجاح."
+
+#: app/views/auth.py:108
+msgid "An error occurred while creating the admin account."
+msgstr "حدث خطأ أثناء إنشاء حساب المسؤول."
+
+#: app/views/auth.py:141
+msgid ""
+"Your account is not activated. Please check your email for the activation "
+"link."
+msgstr ""
+"لم يتم تفعيل حسابك. يرجى التحقق من بريدك الإلكتروني للحصول على رابط التفعيل."
+
+#: app/views/auth.py:157
+msgid "Multi-factor authentication required. Please enter your code."
+msgstr "المصادقة متعددة العوامل مطلوبة. يرجى إدخال الرمز الخاص بك."
+
+#: app/views/auth.py:162 app/views/mfa.py:195
+msgid "Logged in successfully."
+msgstr "تم تسجيل الدخول بنجاح."
+
+#: app/views/auth.py:179
+msgid "Invalid username or password."
+msgstr "اسم المستخدم أو كلمة المرور غير صحيحة."
+
+#: app/views/auth.py:203
+msgid "You have been logged out."
+msgstr "تم تسجيل خروجك."
+
+#: app/views/auth.py:239 app/views/email.py:263
+msgid "Access denied."
+msgstr "تم رفض الوصول."
+
+#: app/views/auth.py:273
+msgid "If a user with that email exists, we've sent the username to them."
+msgstr ""
+"إذا كان هناك مستخدم بهذا البريد الإلكتروني، فقد أرسلنا اسم المستخدم إليه."
+
+#: app/views/auth.py:314
+msgid "A password reset link has been sent to your email."
+msgstr "تم إرسال رابط إعادة تعيين كلمة المرور إلى بريدك الإلكتروني."
+
+#: app/views/auth.py:319
+msgid "No account found matching that username and email."
+msgstr "لم يتم العثور على حساب يطابق اسم المستخدم والبريد الإلكتروني."
+
+#: app/views/auth.py:389
+msgid "The reset link is invalid or has expired."
+msgstr "رابط إعادة التعيين غير صالح أو منتهي الصلاحية."
+
+#: app/views/auth.py:401
+msgid "Username and email do not match."
+msgstr "اسم المستخدم والبريد الإلكتروني لا يتطابقان."
+
+#: app/views/auth.py:421
+msgid "Your password has been reset. Please log in."
+msgstr "تم إعادة تعيين كلمة المرور الخاصة بك. الرجاء تسجيل الدخول."
+
+#: app/views/auth.py:458
+msgid "Invalid registration PIN."
+msgstr "رمز التسجيل غير صالح."
+
+#: app/views/auth.py:467
+msgid "Username or email already exists."
+msgstr "اسم المستخدم أو البريد الإلكتروني موجود مسبقًا."
+
+#: app/views/auth.py:492
+msgid "Activate Your Grylli Account"
+msgstr "فعّل حسابك في Grylli"
+
+#: app/views/auth.py:493
+#, python-brace-format
+msgid ""
+"Hello {username},\n"
+"\n"
+"Please activate your account by clicking..."
+msgstr ""
+"مرحبًا {username},\n"
+"\n"
+"يرجى تفعيل حسابك بالنقر على..."
+
+#: app/views/auth.py:498
+msgid "Account created! Please check your email to activate your account."
+msgstr "تم إنشاء الحساب! يرجى التحقق من بريدك الإلكتروني لتفعيل حسابك."
+
+#: app/views/auth.py:521
+msgid "Activation link is invalid or expired."
+msgstr "رابط التفعيل غير صالح أو منتهي الصلاحية."
+
+#: app/views/auth.py:528 app/views/users.py:76 app/views/users.py:140
+msgid "User not found."
+msgstr "المستخدم غير موجود."
+
+#: app/views/auth.py:532
+msgid "Account already activated. Please log in."
+msgstr "تم تفعيل الحساب مسبقًا. الرجاء تسجيل الدخول."
+
+#: app/views/auth.py:540
+msgid "Your account has been activated! You can now log in."
+msgstr "تم تفعيل حسابك! يمكنك الآن تسجيل الدخول."
+
+#: app/views/backups.py:72
+#, python-format
+msgid "Backup created: %(filename)s"
+msgstr "تم إنشاء النسخ الاحتياطي: %(filename)s"
+
+#: app/views/backups.py:77
+msgid "Failed to create backup."
+msgstr "فشل في إنشاء النسخ الاحتياطي."
+
+#: app/views/backups.py:106
+#, python-format
+msgid "Backup deleted: %(filename)s"
+msgstr "تم حذف النسخ الاحتياطي: %(filename)s"
+
+#: app/views/backups.py:109
+msgid "Backup file not found."
+msgstr "ملف النسخ الاحتياطي غير موجود."
+
+#: app/views/backups.py:112
+msgid "Failed to delete backup."
+msgstr "فشل في حذف النسخ الاحتياطي."
+
+#: app/views/checkin.py:41
+msgid "Invalid check-in link."
+msgstr "رابط تسجيل الوصول غير صالح."
+
+#: app/views/checkin.py:48
+msgid "You are not authorized to check in for this item."
+msgstr "لا تملك إذن لتسجيل الوصول لهذا العنصر."
+
+#: app/views/checkin.py:62
+msgid "Unsupported check-in type."
+msgstr "نوع تسجيل الوصول غير مدعوم."
+
+#: app/views/checkin.py:137
+msgid "⚠️ Cannot enable reminder: Start date/time is in the past."
+msgstr "⚠️ لا يمكن تمكين التذكير: تاريخ/وقت البدء في الماضي."
+
+#: app/views/checkin.py:158
+msgid "✅ Enabled and timer started."
+msgstr "✅ تم التمكين وبدأ المؤقت."
+
+#: app/views/checkin.py:168
+msgid "⛔ Disabled."
+msgstr "⛔ تم التعطيل."
+
+#: app/views/checkin.py:170
+msgid "⚠️ Cannot toggle — missing schedule or destination."
+msgstr "⚠️ لا يمكن التبديل — مفقود جدولة أو وجهة."
+
+#: app/views/email.py:88
+msgid "Message saved."
+msgstr "تم حفظ الرسالة."
+
+#: app/views/email.py:118 app/views/messages.py:167
+msgid "Message deleted."
+msgstr "تم حذف الرسالة."
+
+#: app/views/email.py:152
+msgid "Attached files updated."
+msgstr "تم تحديث الملفات المرفقة."
+
+#: app/views/email.py:200
+msgid "SMTP configuration not assigned or is disabled."
+msgstr "لم يتم تعيين أو تم تعطيل تكوين SMTP."
+
+#: app/views/email.py:234 app/views/smtp_settings_admin.py:82
+msgid "Test email sent successfully."
+msgstr "تم إرسال البريد الالكتروني التجريبي بنجاح."
+
+#: app/views/email.py:282 app/views/messages.py:305
+msgid "Schedule updated successfully."
+msgstr "تم تحديث الجدول بنجاح."
+
+#: app/views/email.py:310
+msgid "SMTP configuration assigned."
+msgstr "تم تعيين تكوين SMTP."
+
+#: app/views/email.py:319
+msgid "SMTP configuration removed."
+msgstr "تم تعيين تكوين SMTP."
+
+#: app/views/messages.py:97
+msgid "Message created successfully."
+msgstr "تم إنشاء الرسالة بنجاح."
+
+#: app/views/messages.py:133
+msgid "Message updated successfully."
+msgstr "تم تحديث الرسالة بنجاح."
+
+#: app/views/messages.py:223 app/views/reminders.py:240
+msgid "Destinations updated."
+msgstr "تم تحديث الوجهات."
+
+#: app/views/messages.py:441
+msgid "No destinations assigned to this message."
+msgstr "لم يتم تعيين أو تم تعطيل تكوين SMTP."
+
+#: app/views/messages.py:453
+msgid "Test message sent successfully."
+msgstr "تم إرسال البريد الالكتروني التجريبي بنجاح."
+
+#: app/views/messages.py:455
+msgid "Test message failed: "
+msgstr "تم حفظ الرسالة."
+
+#: app/views/mfa.py:68
+msgid "You must enter a code from your authenticator."
+msgstr "يجب عليك إدخال رمز من المصادقة الخاصة بك."
+
+#: app/views/mfa.py:82 app/views/mfa.py:259
+msgid "Invalid code. Please try again."
+msgstr "رمز غير صالح. يرجى المحاولة مرة أخرى."
+
+#: app/views/mfa.py:91
+msgid "Two-factor authentication disabled."
+msgstr "تم تعطيل الإشعار"
+
+#: app/views/mfa.py:132
+msgid "Recovery codes are only shown immediately after enabling MFA."
+msgstr "تُعرض رموز الاستعادة فقط بعد تفعيل المصادقة متعددة العوامل مباشرة."
+
+#: app/views/mfa.py:142
+msgid "Could not load recovery codes."
+msgstr "تعذر تحميل رموز الاستعادة."
+
+#: app/views/mfa.py:168
+msgid "No MFA challenge in progress."
+msgstr "لا يوجد تحدي MFA قيد التنفيذ."
+
+#: app/views/mfa.py:176
+msgid "User not found for MFA challenge."
+msgstr "المستخدم غير موجود."
+
+#: app/views/mfa.py:225
+msgid ""
+"You have used your last recovery code. MFA has been disabled. Please remove "
+"Grylli from your authenticator app, and re-enable MFA to protect your "
+"account."
+msgstr ""
+"لقد استخدمت آخر رمز استعادة لديك. تم تعطيل المصادقة متعددة العوامل. يرجى "
+"إزالة Grylli من تطبيق المصادقة الخاص بك، وإعادة تفعيل المصادقة متعددة "
+"العوامل لحماية حسابك."
+
+#: app/views/mfa.py:248
+#, python-brace-format
+msgid "Recovery code accepted. You have {remaining} recovery codes left."
+msgstr "تم قبول رمز الاستعادة. لديك {remaining} رموز استعادة متبقية."
+
+#: app/views/reminders.py:106
+msgid "Reminder created successfully."
+msgstr "تم إنشاء الرسالة بنجاح."
+
+#: app/views/reminders.py:143
+msgid "Reminder updated successfully."
+msgstr "تم تحديث المستخدم بنجاح."
+
+#: app/views/reminders.py:174
+msgid "Reminder deleted."
+msgstr "تم حذف المستخدم."
+
+#: app/views/reminders.py:287
+msgid "No destinations assigned to this reminder."
+msgstr "لم يتم تعيين أو تم تعطيل تكوين SMTP."
+
+#: app/views/reminders.py:311
+msgid "No email message linked to this reminder."
+msgstr "لا رسالة بريد إلكتروني مرتبطة بهذا التذكير."
+
+#: app/views/reminders.py:314
+msgid "SMTP configuration is disabled."
+msgstr "لم يتم تعيين أو تم تعطيل تكوين SMTP."
+
+#: app/views/reminders.py:353
+msgid "Test reminder sent successfully."
+msgstr "تم إرسال البريد الالكتروني التجريبي بنجاح."
+
+#: app/views/reminders.py:356
+msgid "Test reminder failed: "
+msgstr "تم حفظ الرسالة."
+
+#: app/views/reminders.py:430
+msgid "Reminder schedule updated successfully."
+msgstr "تم تحديث الجدول بنجاح."
+
+#: app/views/reminders.py:434
+msgid "Please correct the errors below."
+msgstr "يرجى تصحيح الأخطاء أدناه."
+
+#: app/views/reminders.py:481 app/views/reminders.py:482
+msgid "None"
+msgstr "لا"
+
+#: app/views/reminders.py:508
+msgid "You must select both an SMTP config and an email message, or neither."
+msgstr ""
+"يجب عليك اختيار كل من تكوين SMTP ورسالة بريد إلكتروني، أو لا شيء منهما."
+
+#: app/views/reminders.py:528
+msgid "Email reminder settings updated."
+msgstr "تم تحديث الوجهات."
+
+#: app/views/smtp.py:83 app/views/user_smtp.py:80
+msgid "SMTP destination created successfully."
+msgstr "تم إنشاء وجهة SMTP بنجاح."
+
+#: app/views/smtp.py:129 app/views/user_smtp.py:135
+msgid "SMTP destination updated."
+msgstr "تم تحديث وجهة SMTP."
+
+#: app/views/smtp.py:160 app/views/user_smtp.py:166
+msgid "SMTP destination deleted."
+msgstr "تم حذف وجهة SMTP."
+
+#: app/views/smtp.py:191 app/views/user_smtp.py:199
+msgid "Test email sent successfully to your account email."
+msgstr "تم إرسال البريد الإلكتروني التجريبي بنجاح إلى بريد حسابك."
+
+#: app/views/smtp.py:196 app/views/user_smtp.py:204
+msgid "Failed to send test email. Check SMTP settings."
+msgstr "فشل في إرسال البريد الإلكتروني التجريبي. تحقق من إعدادات SMTP."
+
+#: app/views/smtp_settings_admin.py:76
+msgid "Test Email from Grylli"
+msgstr "رسالة بريد إلكتروني تجريبية من Grylli"
+
+#: app/views/smtp_settings_admin.py:77
+msgid "This is a test email from the Grylli SMTP settings page."
+msgstr "هذا بريد إلكتروني تجريبي من صفحة إعدادات SMTP في Grylli."
+
+#: app/views/smtp_settings_admin.py:84
+msgid "Failed to send test email: "
+msgstr "فشل في إرسال رسالة البريد الإلكتروني التجريبية:"
+
+#: app/views/users.py:99
+msgid "User updated successfully."
+msgstr "تم تحديث المستخدم بنجاح."
+
+#: app/views/users.py:106 app/views/users.py:327
+msgid "An error occurred while updating the user."
+msgstr "حدث خطأ أثناء تحديث المستخدم."
+
+#: app/views/users.py:195
+msgid "User deleted."
+msgstr "تم حذف المستخدم."
+
+#: app/views/users.py:202
+msgid "An error occurred while deleting the user."
+msgstr "حدث خطأ أثناء حذف المستخدم."
+
+#: app/views/users.py:237
+msgid "Password is required when creating a new user."
+msgstr "مطلوب كلمة مرور عند إنشاء مستخدم جديد."
+
+#: app/views/users.py:244
+msgid "Username already exists."
+msgstr "اسم المستخدم موجود بالفعل."
+
+#: app/views/users.py:251
+msgid "Email already exists."
+msgstr "البريد الإلكتروني موجود بالفعل."
+
+#: app/views/users.py:268
+#, python-format
+msgid "User '%(username)s' created successfully."
+msgstr "تم إنشاء المستخدم '%(username)s' بنجاح."
+
+#: app/views/users.py:278
+msgid "Failed to create user."
+msgstr "فشل في إنشاء المستخدم."
+
+#: app/views/users.py:305
+msgid "You cannot change your own enabled status."
+msgstr "لا يمكنك تغيير حالتك المفعلة الخاصة."
+
+#: app/views/users.py:318
+#, python-format
+msgid "User '%(username)s' has been %(status)s."
+msgstr "تم %(status)s المستخدم '%(username)s'."
+
+#: app/views/users.py:356
+msgid "You cannot reset your own MFA."
+msgstr "⚪ = لا يمكنك تعطيل حسابك الخاص."
+
+#: app/views/users.py:368
+#, python-format
+msgid "MFA disabled for user '%(username)s'."
+msgstr "تم تعطيل المصادقة متعددة العوامل للمستخدم '%(username)s'."
+
+#: app/views/users.py:374
+msgid "An error occurred while resetting MFA."
+msgstr "حدث خطأ أثناء حذف المستخدم."
+
+#: app/views/webhook.py:54
+msgid "Webhook created successfully."
+msgstr "تم إنشاء الويب هوك بنجاح."
+
+#: app/views/webhook.py:113
+msgid "Webhook updated successfully."
+msgstr "تم تحديث الويب هوك بنجاح."
+
+#: app/views/webhook.py:142
+msgid "Webhook deleted."
+msgstr "تم حذف الويب هوك."
+
+#: app/views/webhook.py:175
+msgid "🧪 Webhook test sent successfully!"
+msgstr "🧪 تم إرسال اختبار الويب هوك بنجاح!"
+
+#: app/views/webhook.py:177
+msgid "🧪 Webhook test failed: "
+msgstr "🧪 فشل اختبار الويب هوك:"
+
+#: app/views/webhook.py:180
+msgid "🧪 Error sending webhook test."
+msgstr "🧪 حدث خطأ في إرسال اختبار الويب هوك."
+
+#~ msgid ""
+#~ "Grylli is a secure message delivery platform designed to activate after "
+#~ "prolonged user inactivity."
+#~ msgstr ""
+#~ "Grylli هو منصة تسليم رسائل آمنة مصممة للتفعيل بعد فترة طويلة من عدم نشاط "
+#~ "المستخدم."
+
+#~ msgid ""
+#~ "It is a modern reimplementation of Gone Man’s Switch with a refined tech "
+#~ "stack, better maintainability, and an improved user experience."
+#~ msgstr ""
+#~ "إنها إعادة تنفيذ حديثة لنظام Gone Man’s Switch بتقنية محسنة وقابلية أفضل "
+#~ "للصيانة وتحسين تجربة المستخدم."
+
+#~ msgid "Body:"
+#~ msgstr "النص:"
+
+#~ msgid "Subject:"
+#~ msgstr "الموضوع:"
+
+#~ msgid "Content:"
+#~ msgstr "المحتوى:"
+
+#~ msgid "Edit SMTP"
+#~ msgstr "تحرير SMTP"
+
+#~ msgid ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+#~ msgstr ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+
+#~ msgid "Admin Notes"
+#~ msgstr "ملاحظات المسؤول"
+
+#~ msgid "Register"
+#~ msgstr "تسجيل"
+
+#~ msgid "View"
+#~ msgstr "عرض"
+
+#~ msgid "Schedule"
+#~ msgstr "الجدول"
+
+#~ msgid "Message is enabled"
+#~ msgstr "تم تفعيل الرسالة"
+
+#~ msgid "Message is disabled"
+#~ msgstr "تم تعطيل الرسالة"
+
+#~ msgid "No SMTP configuration selected."
+#~ msgstr "لم يتم اختيار تكوين SMTP."
+
+#~ msgid "Enable the message to start monitoring."
+#~ msgstr "فعّل الرسالة لبدء المراقبة."
+
+#~ msgid "✅ SMTP settings saved."
+#~ msgstr "إعدادات SMTP"
+
+#~ msgid "If you don’t check in, Grylli delivers the message for you."
+#~ msgstr "إذا لم تسجل الدخول، يقوم Grylli بتسليم الرسالة نيابةً عنك."
+
+#~ msgid "Fill in already discovered missing translations:"
+#~ msgstr "املأ الترجمات المفقودة التي تم اكتشافها بالفعل:"
+
+#~ msgid "Add missing phrases in that JSON file."
+#~ msgstr "أضف العبارات المفقودة في ملف JSON ذاته."
+
+#~ msgid "From:"
+#~ msgstr "من:"
+
+#~ msgid ""
+#~ "Attach the updated JSON file to a new GitHub issue when submitting your "
+#~ "changes."
+#~ msgstr "أرفق ملف JSON المحدث في قضية جديدة على GitHub عند تقديم تغييراتك."
+
+#~ msgid "admin"
+#~ msgstr "مسؤول"
+
+#~ msgid "user"
+#~ msgstr "مستخدم"
+
+#~ msgid "Logging in"
+#~ msgstr "تسجيل الدخول"
+
+#~ msgid "SMTP error: "
+#~ msgstr "خطأ SMTP:"
+
+#~ msgid "enabled"
+#~ msgstr "مفعل"
+
+#~ msgid "disabled"
+#~ msgstr "معطل"

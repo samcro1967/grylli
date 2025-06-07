@@ -1,0 +1,3392 @@
+# Italian translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-06-07 15:49-0500\n"
+"PO-Revision-Date: 2025-05-25 12:23-0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: it <LL@li.org>\n"
+"Language: it\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: app/init_db.py:55
+#, python-format
+msgid "Tables currently in DB: %s"
+msgstr "Tabelle attualmente nel DB:"
+
+#: app/init_db.py:58
+msgid "Database or system_config table missing. Running migrations now..."
+msgstr ""
+"Database o tabella system_config mancante. Eseguendo le migrazioni ora..."
+
+#: app/init_db.py:61
+msgid "Migrations applied successfully."
+msgstr "Migrazioni applicate con successo."
+
+#: app/init_db.py:63
+msgid "Migration failed."
+msgstr "Migrazione fallita."
+
+#: app/init_db.py:68
+msgid "System config seeded successfully."
+msgstr "Configurazione di sistema impostata con successo."
+
+#: app/init_db.py:70
+msgid "Error seeding system config."
+msgstr "Errore durante l'impostazione della configurazione di sistema:"
+
+#: app/forms/mfa_form.py:15 app/templates/apprise/create_apprise.html:30
+#: app/templates/apprise/edit_apprise.html:30
+#: app/templates/apprise/list_apprise.html:60
+#: app/templates/mfa/settings.html:24 app/templates/mfa/settings.html:40
+#: app/templates/user_smtp/create_smtp.html:99
+#: app/templates/user_smtp/edit_smtp.html:114
+#: app/templates/user_smtp/list_smtp.html:57
+#: app/templates/webhook/create_webhook.html:36
+#: app/templates/webhook/edit_webhook.html:36
+#: app/templates/webhook/list_webhooks.html:61
+msgid "Enabled"
+msgstr "Abilitato"
+
+#: app/forms/mfa_form.py:16
+msgid "Authenticator Code"
+msgstr "Codice dell'autenticatore"
+
+#: app/forms/mfa_form.py:17
+#: app/templates/admin/partials/user_instructions_and_modal.html:66
+#: app/templates/admin/partials/user_table.html:115
+#: app/templates/email/assign_smtp.html:44 app/templates/mfa/settings.html:47
+#: app/templates/user_smtp/edit_smtp.html:122
+msgid "Save"
+msgstr "Salva"
+
+#: app/forms/mfa_form.py:27
+msgid "Authentication Code"
+msgstr "Aggiorna Notifica"
+
+#: app/forms/mfa_form.py:29
+msgid "Please enter your authentication code."
+msgstr "Per favore inserisci il tuo codice di autenticazione."
+
+#: app/forms/mfa_form.py:30
+msgid "Enter a valid 6-digit code or recovery code."
+msgstr "Inserisci un codice valido a 6 cifre o codice di recupero."
+
+#: app/forms/mfa_form.py:31
+msgid "Invalid code format."
+msgstr "Formato del codice non valido."
+
+#: app/forms/mfa_form.py:35 app/templates/mfa/challenge.html:25
+msgid "Verify"
+msgstr "Versione"
+
+#: app/services/mail.py:37 app/services/system_settings_email.py:40
+msgid "Missing required config setting: "
+msgstr "Impostazione config richiesta mancante:"
+
+#: app/services/mail.py:46 app/services/system_settings_email.py:50
+#, python-format
+msgid "Failed to decrypt %(key)s: %(error)s"
+msgstr "Impossibile decriptare %(key)s: %(error)s"
+
+#: app/services/mail.py:54
+#, python-format
+msgid "get_setting('%(key)s') -> '%(value)s' (sensitive: %(sensitive)s)"
+msgstr ""
+"get_setting('%(key)s') -> '%(value)s' (raw: '%(raw)s', sensibile: "
+"%(sensitive)s)"
+
+#: app/services/mail.py:75
+#, python-format
+msgid "Preparing email to %(to)s"
+msgstr "Preparazione email a %(to)s"
+
+#: app/services/mail.py:90
+#, python-format
+msgid ""
+"SMTP configuration: host=%(host)s (type=%(host_type)s), port=%(port)s "
+"(type=%(port_type)s)"
+msgstr ""
+"Host SMTP = '%(host)s' (tipo: %(host_type)s), porta = %(port)s (tipo: "
+"%(port_type)s)"
+
+#: app/services/mail.py:99
+#, python-format
+msgid "SMTP username: %(user)s"
+msgstr "Utilizzando utente: %(user)s"
+
+#: app/services/mail.py:100
+#, python-format
+msgid "TLS enabled: %(tls)s"
+msgstr "TLS abilitato: %(tls)s"
+
+#: app/services/mail.py:105
+msgid "Starting TLS connection..."
+msgstr "Avvio TLS"
+
+#: app/services/mail.py:107
+msgid "Logging into SMTP server..."
+msgstr "Accesso al server SMTP..."
+
+#: app/services/mail.py:109
+msgid "Sending email message..."
+msgstr "Programma Messaggio"
+
+#: app/services/mail.py:111
+#, python-format
+msgid "Email sent successfully to %(to)s"
+msgstr "Email di test inviata con successo."
+
+#: app/services/mail.py:114
+#, python-format
+msgid "SMTP error while sending to %(to)s: %(error)s"
+msgstr "Errore SMTP durante l'invio a %(to)s: %(error)s"
+
+#: app/templates/about.html:10
+msgid "About Grylli"
+msgstr "Informazioni su Grylli"
+
+#: app/templates/about.html:13
+msgid ""
+"Grylli is a secure, self-hosted message delivery platform that automatically"
+" sends pre-configured messages if a user fails to check in within a defined "
+"time period."
+msgstr ""
+"Grylli è una piattaforma di consegna messaggi sicura e autogestita che invia"
+" automaticamente messaggi preconfigurati se un utente non effettua il check-"
+"in entro un periodo di tempo definito."
+
+#: app/templates/about.html:14
+msgid ""
+"It supports multiple users, customizable schedules, and recurring reminders."
+msgstr "Supporta più utenti e programmi personalizzabili."
+
+#: app/templates/about.html:15
+msgid ""
+"Messages and reminders can be delivered via email, webhooks, or over 100 "
+"third-party services through Apprise."
+msgstr ""
+"I messaggi possono essere consegnati via email, webhook o tramite oltre 80 "
+"servizi di terze parti tramite Apprise."
+
+#: app/templates/about.html:16
+msgid ""
+"Users can configure their own SMTP servers to ensure emails and reminders "
+"appear to come directly from them — not from the system administrator."
+msgstr ""
+"Gli utenti possono configurare i propri server SMTP per garantire che i "
+"messaggi sembrino provenire direttamente da loro — non dall'amministratore "
+"di sistema."
+
+#: app/templates/about.html:17
+msgid ""
+"Sensitive data is encrypted at rest, and all operations are secured with "
+"strong authentication and audit-friendly logging."
+msgstr ""
+"I dati sensibili sono criptati a riposo e tutte le operazioni sui messaggi "
+"sono protette con forte autenticazione e registrazione compatibile con gli "
+"audit."
+
+#: app/templates/about.html:18
+msgid ""
+"Built with a modern, reactive technology stack, Grylli is optimized for "
+"responsiveness and works seamlessly across desktop and mobile devices."
+msgstr ""
+"Costruito con uno stack tecnologico moderno e reattivo, Grylli è ottimizzato"
+" per la reattività e funziona perfettamente su dispositivi desktop e mobili."
+
+#: app/templates/about.html:23
+msgid "Version:"
+msgstr "Versione:"
+
+#: app/templates/about.html:26
+msgid "Repository:"
+msgstr "Repository:"
+
+#: app/templates/about.html:30
+msgid "GitHub - samcro1967/grylli"
+msgstr "GitHub - samcro1967/grylli"
+
+#: app/templates/help.html:2 app/templates/help.html:5
+#: app/templates/partials/header.html:85
+msgid "Help"
+msgstr "Aiuto"
+
+#: app/templates/help.html:7
+msgid ""
+"Grylli includes built-in instructions throughout the app to help you "
+"configure and manage your setup."
+msgstr ""
+"Grylli include istruzioni integrate nell'app per aiutarti a configurare e "
+"gestire la tua configurazione."
+
+#: app/templates/help.html:8
+msgid ""
+"This page provides an overview of key features and direct links to where "
+"they can be managed."
+msgstr ""
+"Questa pagina fornisce una panoramica delle caratteristiche chiave e "
+"collegamenti diretti a dove possono essere gestite."
+
+#: app/templates/help.html:12 app/templates/messages/list_messages.html:9
+#: app/templates/partials/shared_nav.html:17
+msgid "Notifications"
+msgstr "Notifiche"
+
+#: app/templates/help.html:14
+msgid "Create and assign messages"
+msgstr "Crea un messaggio o un'email."
+
+#: app/templates/admin/index.html:32 app/templates/help.html:17
+#: app/templates/partials/admin_nav.html:56
+msgid "SMTP Settings"
+msgstr "Impostazioni SMTP"
+
+#: app/templates/help.html:19
+msgid "Use your own email server"
+msgstr "Usa il tuo server email"
+
+#: app/templates/help.html:22
+msgid "Apprise Integration"
+msgstr "Destinazioni Apprise"
+
+#: app/templates/help.html:24
+msgid "Send notifications to 80+ supported services"
+msgstr "Invia notifiche a oltre 80 servizi supportati"
+
+#: app/templates/help.html:27
+#: app/templates/messages/assign_destinations.html:41
+#: app/templates/messages/view_message.html:58
+#: app/templates/partials/shared_nav.html:44
+#: app/templates/reminders/assign_destinations.html:39
+#: app/templates/reminders/view_reminder.html:69
+msgid "Webhooks"
+msgstr "Webhook"
+
+#: app/templates/help.html:29
+msgid "Trigger actions or external workflows"
+msgstr "Attiva azioni o flussi di lavoro esterni"
+
+#: app/templates/email/list_emails.html:9 app/templates/help.html:32
+#: app/templates/partials/shared_nav.html:61
+msgid "Emails"
+msgstr "Email"
+
+#: app/templates/help.html:34
+msgid "View and manage secure email messages"
+msgstr "Panoramica dei messaggi email sicuri"
+
+#: app/templates/help.html:38
+msgid "Security"
+msgstr "🔐 Sicurezza"
+
+#: app/templates/help.html:39
+msgid "Grylli encrypts sensitive data and logs all key actions for auditing."
+msgstr ""
+"Grylli cripta dati sensibili e registra tutte le azioni chiave per audit."
+
+#: app/templates/index.html:9 app/views/locale.py:95
+msgid "Welcome to Grylli"
+msgstr "Benvenuto in Grylli"
+
+#: app/templates/index.html:11
+msgid "Pronounced"
+msgstr "Pronunciato"
+
+#: app/templates/index.html:11
+msgid "like “grill-ee”"
+msgstr "come \"grill-ee\""
+
+#: app/templates/index.html:14
+msgid ""
+"Grylli is a secure message scheduling and delivery system designed to ensure"
+" your important messages are delivered — even if you can’t be there to send "
+"them."
+msgstr ""
+"Grylli è un sistema di programmazione e consegna messaggi sicuro progettato "
+"per garantire che i tuoi messaggi importanti vengano consegnati, anche se "
+"non puoi essere lì a inviarli."
+
+#: app/templates/index.html:17
+msgid ""
+"Whether you’re planning ahead, setting up emergency communication, or "
+"building peace of mind, Grylli helps automate your message delivery via "
+"multiple channels including email, webhooks, and Apprise notifications."
+msgstr ""
+"Che tu stia pianificando in anticipo, impostando comunicazioni di emergenza "
+"o creando tranquillità, Grylli aiuta ad automatizzare la consegna dei tuoi "
+"messaggi tramite email, webhook o notifiche Apprise se salti un check-in."
+
+#: app/templates/index.html:19
+msgid "Getting Started"
+msgstr "Iniziare"
+
+#: app/templates/index.html:21
+msgid "Create a message, email, or reminder."
+msgstr "Crea un messaggio o un'email."
+
+#: app/templates/index.html:22
+msgid "Set your check-in interval and grace period (for messages)."
+msgstr "Imposta il tuo intervallo di check-in e il periodo di tolleranza."
+
+#: app/templates/index.html:23
+msgid "Assign one or more delivery destinations."
+msgstr "Assegna una o più destinazioni di consegna."
+
+#: app/templates/index.html:24
+msgid "Optionally attach files for secure emails."
+msgstr "Allega opzionalmente file per email sicure."
+
+#: app/templates/index.html:25
+msgid "Schedule reminders to send at specific times or on a recurring basis."
+msgstr ""
+"Programma promemoria da inviare a orari specifici o su base ricorrente."
+
+#: app/templates/index.html:26
+msgid "Enable the message or reminder to activate delivery."
+msgstr "Abilita il messaggio o promemoria per attivare la consegna."
+
+#: app/templates/index.html:28
+msgid ""
+"Regularly check in to Grylli to prevent automated delivery; miss a check-in "
+"and Grylli sends your messages as scheduled."
+msgstr ""
+"Controlla regolarmente Grylli per prevenire la consegna automatica; salta un"
+" check-in e Grylli invia i tuoi messaggi come programmato."
+
+#: app/templates/privacy.html:10
+msgid "Privacy Notice"
+msgstr "Informativa sulla Privacy"
+
+#: app/templates/privacy.html:13
+msgid ""
+"Grylli respects your privacy and is designed to minimize the collection and "
+"storage of personal data."
+msgstr ""
+"Grylli rispetta la tua privacy ed è progettato per ridurre al minimo la "
+"raccolta e l'archiviazione di dati personali."
+
+#: app/templates/privacy.html:14
+msgid ""
+"All data is encrypted where appropriate and remains fully under your control"
+" if you self-host this platform."
+msgstr ""
+"Tutti i dati sono criptati dove opportuno e rimangono completamente sotto il"
+" tuo controllo se ospiti autonomamente questa piattaforma."
+
+#: app/templates/privacy.html:17
+msgid "What Data We Collect"
+msgstr "Quali Dati Raccogliamo"
+
+#: app/templates/privacy.html:19
+msgid "Email address and password hash (for authentication)"
+msgstr "Indirizzo email e hash della password (per l'autenticazione)"
+
+#: app/templates/privacy.html:20
+msgid "Optional MFA secret and recovery codes (encrypted at rest)"
+msgstr "Segreto MFA opzionale e codici di recupero (crittografati a riposo)"
+
+#: app/templates/privacy.html:21
+msgid "Reminder and message content you configure"
+msgstr "Contenuto di promemoria e messaggi che configuri"
+
+#: app/templates/privacy.html:22
+msgid "User-specific settings, SMTP configuration (if provided)"
+msgstr "Impostazioni specifiche dell'utente, configurazione SMTP (se fornita)"
+
+#: app/templates/privacy.html:25
+msgid "How Your Data Is Used"
+msgstr "Come Utilizziamo i Tuoi Dati"
+
+#: app/templates/privacy.html:27
+msgid ""
+"Your data is used solely for the purpose of delivering reminders and "
+"messages according to your preferences."
+msgstr ""
+"I tuoi dati vengono utilizzati esclusivamente per lo scopo di consegnare "
+"promemoria e messaggi secondo le tue preferenze."
+
+#: app/templates/privacy.html:28
+msgid ""
+"Grylli does not share, sell, or transmit your personal data to any third "
+"parties."
+msgstr ""
+"Grylli non condivide, vende o trasmette i tuoi dati personali a terze parti."
+
+#: app/templates/privacy.html:31
+msgid "Your Rights"
+msgstr "I Tuoi Diritti"
+
+#: app/templates/privacy.html:33
+msgid ""
+"You can export all of your data at any time from the Account Settings page."
+msgstr ""
+"Puoi esportare tutti i tuoi dati in qualsiasi momento dalla pagina delle "
+"Impostazioni Account."
+
+#: app/templates/privacy.html:34
+msgid "You may permanently delete your account and all associated data."
+msgstr "Non puoi eliminare il tuo account perché sei l'ultimo admin."
+
+#: app/templates/privacy.html:35
+msgid ""
+"If you are using a self-hosted instance, contact the instance administrator "
+"for data inquiries."
+msgstr ""
+"Se stai usando un'istanza autogestita, contatta l'amministratore "
+"dell'istanza per richieste sui dati."
+
+#: app/templates/privacy.html:38
+msgid "Self-Hosting Responsibility"
+msgstr "Responsabilità dell'Auto-Ospitalità"
+
+#: app/templates/privacy.html:40
+msgid ""
+"If you are running Grylli on your own server, you are responsible for the "
+"storage, processing, and lawful handling of all user data on that instance."
+msgstr ""
+"Se stai eseguendo Grylli sul tuo server, sei responsabile "
+"dell'archiviazione, dell'elaborazione e della gestione legale di tutti i "
+"dati degli utenti su quell'istanza."
+
+#: app/templates/privacy.html:44
+msgid ""
+"This notice was last updated in June 2025 and may evolve to reflect changes "
+"in the software or regulatory landscape."
+msgstr ""
+"Questo avviso è stato aggiornato l'ultima volta a giugno 2025 e può "
+"evolversi per riflettere i cambiamenti nel software o nel panorama "
+"normativo."
+
+#: app/templates/system_info.html:11
+msgid "📦 Environment Versions"
+msgstr "📦 Versioni dell'Ambiente"
+
+#: app/templates/system_info.html:17
+msgid "Category"
+msgstr "Categoria"
+
+#: app/templates/system_info.html:18
+msgid "Tool"
+msgstr "Strumento"
+
+#: app/templates/system_info.html:19
+msgid "Version"
+msgstr "Versione"
+
+#: app/templates/system_info.html:25
+msgid "🧠 Python"
+msgstr "🧠 Python"
+
+#: app/templates/system_info.html:26
+msgid "Python"
+msgstr "Python"
+
+#: app/templates/system_info.html:30
+msgid "pip"
+msgstr "pip"
+
+#: app/templates/system_info.html:34
+msgid "SQLite"
+msgstr "SQLite"
+
+#: app/templates/system_info.html:40
+msgid "⚙️ Core"
+msgstr "⚙️ Core"
+
+#: app/templates/system_info.html:47
+msgid "🔐 Security"
+msgstr "🔐 Sicurezza"
+
+#: app/templates/system_info.html:48
+msgid "Email Validator"
+msgstr "Validatore Email"
+
+#: app/templates/system_info.html:52
+msgid "Cryptography"
+msgstr "Crittografia"
+
+#: app/templates/system_info.html:57
+msgid "🕰️ Scheduling"
+msgstr "🕰️ Pianificazione"
+
+#: app/templates/system_info.html:58
+msgid "APScheduler"
+msgstr "APScheduler"
+
+#: app/templates/system_info.html:62
+msgid "Apprise (Python)"
+msgstr "Apprise (Python)"
+
+#: app/templates/system_info.html:66
+msgid "Apprise CLI"
+msgstr "Apprise CLI"
+
+#: app/templates/system_info.html:74
+msgid "🌐 Frontend"
+msgstr "🌐 Frontend"
+
+#: app/templates/account/manage_account.html:11
+msgid "Manage Account"
+msgstr "Gestisci Account"
+
+#: app/templates/account/manage_account.html:12
+msgid "Update your profile information and password."
+msgstr "Aggiorna le informazioni del tuo profilo e la password."
+
+#: app/templates/account/manage_account.html:41
+#: app/templates/admin/create_user.html:40
+#: app/templates/auth/bootstrap.html:43
+#: app/templates/auth/reset_password.html:42 app/templates/auth/signup.html:42
+msgid "Please enter a valid email address."
+msgstr "Per favore inserisci un indirizzo email valido."
+
+#: app/templates/account/manage_account.html:62
+#: app/templates/account/manage_account.html:96
+#: app/templates/account/manage_account.html:127
+#: app/templates/auth/reset_password.html:66
+#: app/templates/auth/reset_password.html:97 app/templates/auth/signup.html:65
+#: app/templates/auth/signup.html:95
+msgid "Show/hide password"
+msgstr "Tieni premuto per mostrare la password"
+
+#: app/templates/account/manage_account.html:89
+#: app/templates/admin/create_user.html:53
+#: app/templates/auth/bootstrap.html:51
+#: app/templates/auth/reset_password.html:58 app/templates/auth/signup.html:58
+msgid "Password must meet all complexity requirements."
+msgstr "La password deve soddisfare tutti i requisiti di complessità."
+
+#: app/templates/account/manage_account.html:141
+#: app/templates/admin/create_user.html:72
+#: app/templates/admin/edit_user.html:67 app/templates/auth/bootstrap.html:69
+#: app/templates/auth/reset_password.html:110
+#: app/templates/auth/signup.html:108
+msgid "Passwords do not match."
+msgstr "Le password non corrispondono."
+
+#: app/templates/account/manage_account.html:147
+msgid "Update Account"
+msgstr "Aggiorna account"
+
+#: app/templates/account/manage_account.html:151
+#: app/templates/admin/create_user.html:82
+#: app/templates/admin/edit_user.html:97 app/templates/admin/help_form.html:28
+#: app/templates/admin/partials/user_instructions_and_modal.html:62
+#: app/templates/admin/partials/user_table.html:113
+#: app/templates/apprise/create_apprise.html:42
+#: app/templates/apprise/edit_apprise.html:42
+#: app/templates/auth/reset_password.html:121
+#: app/templates/email/assign_smtp.html:46
+#: app/templates/email/attach_files.html:47
+#: app/templates/email/edit_message.html:54
+#: app/templates/email/schedule_email.html:84
+#: app/templates/messages/assign_destinations.html:66
+#: app/templates/messages/create_message.html:55
+#: app/templates/messages/edit_message.html:48
+#: app/templates/messages/schedule_message.html:84
+#: app/templates/mfa/challenge.html:29 app/templates/mfa/settings.html:51
+#: app/templates/reminders/assign_destinations.html:64
+#: app/templates/reminders/assign_email_reminder.html:94
+#: app/templates/reminders/create_reminder.html:49
+#: app/templates/reminders/edit_reminder.html:42
+#: app/templates/reminders/schedule_reminder.html:51
+#: app/templates/user_smtp/create_smtp.html:111
+#: app/templates/user_smtp/edit_smtp.html:125
+#: app/templates/webhook/create_webhook.html:48
+#: app/templates/webhook/edit_webhook.html:48
+msgid "Cancel"
+msgstr "Annulla"
+
+#: app/templates/account/manage_account.html:159
+#: app/templates/admin/create_user.html:90
+#: app/templates/admin/edit_user.html:81 app/templates/auth/bootstrap.html:83
+#: app/templates/auth/reset_password.html:128
+#: app/templates/auth/signup.html:132
+msgid "Minimum 8 characters"
+msgstr "Minimo 8 caratteri"
+
+#: app/templates/account/manage_account.html:160
+#: app/templates/admin/create_user.html:91
+#: app/templates/admin/edit_user.html:82 app/templates/auth/bootstrap.html:84
+#: app/templates/auth/reset_password.html:129
+#: app/templates/auth/signup.html:133
+msgid "At least one uppercase letter"
+msgstr "Almeno una lettera maiuscola"
+
+#: app/templates/account/manage_account.html:161
+#: app/templates/admin/create_user.html:92
+#: app/templates/admin/edit_user.html:83 app/templates/auth/bootstrap.html:85
+#: app/templates/auth/reset_password.html:130
+#: app/templates/auth/signup.html:134
+msgid "At least one lowercase letter"
+msgstr "Almeno una lettera minuscola"
+
+#: app/templates/account/manage_account.html:162
+#: app/templates/admin/create_user.html:93
+#: app/templates/admin/edit_user.html:84 app/templates/auth/bootstrap.html:86
+#: app/templates/auth/reset_password.html:131
+#: app/templates/auth/signup.html:135
+msgid "At least one number"
+msgstr "Almeno un numero"
+
+#: app/templates/account/manage_account.html:163
+#: app/templates/admin/create_user.html:94
+#: app/templates/auth/bootstrap.html:87
+#: app/templates/auth/reset_password.html:132
+#: app/templates/auth/signup.html:136
+msgid "At least one special character (e.g., !@#$%)"
+msgstr "Almeno un carattere speciale (es. !@#$%)"
+
+#: app/templates/account/manage_account.html:169
+msgid "Download My Data"
+msgstr "Scarica i Miei Dati"
+
+#: app/templates/account/manage_account.html:171
+msgid ""
+"Download all your account data as a JSON file. This includes your reminders,"
+" messages, email settings, and more. The file is for your records only and "
+"cannot be imported back. Protect it as it may contain sensitive information."
+msgstr ""
+"Scarica tutti i dati del tuo account come file JSON. Questo include i tuoi "
+"promemoria, messaggi, impostazioni email e altro. Il file è solo per i tuoi "
+"archivi e non può essere importato nuovamente. Proteggilo in quanto può "
+"contenere informazioni sensibili."
+
+#: app/templates/account/manage_account.html:175
+msgid "Download My Data (JSON)"
+msgstr "Scarica i Miei Dati (JSON)"
+
+#: app/templates/account/manage_account.html:179
+msgid "Danger Zone"
+msgstr "Zona di pericolo"
+
+#: app/templates/account/manage_account.html:180
+msgid "Deleting your account is permanent and cannot be undone."
+msgstr "Eliminare il tuo account è permanente e non può essere annullato."
+
+#: app/templates/account/manage_account.html:185
+msgid "Delete My Account"
+msgstr "Aggiorna account"
+
+#: app/templates/account/translations.html:8
+msgid "Translations - Grylli"
+msgstr "Traduzioni - Grylli"
+
+#: app/templates/account/translations.html:17
+#: app/templates/partials/header.html:102
+msgid "Translations"
+msgstr "Traduzioni"
+
+#: app/templates/account/translations.html:20
+msgid "Grylli currently supports multiple languages and more will be added."
+msgstr "Grylli supporta attualmente più lingue e altre verranno aggiunte."
+
+#: app/templates/account/translations.html:21
+msgid "Many of the translations were performed with assistance from ChatGPT."
+msgstr ""
+"Molte delle traduzioni sono state effettuate con l'assistenza di ChatGPT."
+
+#: app/templates/account/translations.html:22
+msgid ""
+"If you find a translation issue or want to suggest improvements, your input "
+"is welcome!"
+msgstr ""
+"Se trovi un problema di traduzione o vuoi suggerire miglioramenti, il tuo "
+"contributo è benvenuto!"
+
+#: app/templates/account/translations.html:28
+msgid "How to request translation updates"
+msgstr "Come richiedere aggiornamenti sulle traduzioni"
+
+#: app/templates/account/translations.html:30
+msgid "To contribute to translations, please use the following guidelines:"
+msgstr ""
+"Per contribuire alle traduzioni, si prega di utilizzare le seguenti linee "
+"guida:"
+
+#: app/templates/account/translations.html:43
+msgid "Contribute missing or improved translations:"
+msgstr "Hai trovato una traduzione mancante?"
+
+#: app/templates/account/translations.html:63
+msgid "Open the relevant .po translation file for your language."
+msgstr "Apri il file di traduzione JSON per la tua lingua. Ad esempio:"
+
+#: app/templates/account/translations.html:67
+msgid ""
+"Find untranslated or incomplete entries and add or improve translations."
+msgstr ""
+"Trova voci non tradotte o incomplete e aggiungi o migliora le traduzioni."
+
+#: app/templates/account/translations.html:68
+msgid "You may use a PO file editor or a text editor."
+msgstr "Puoi usare un editor di file PO o un editor di testo."
+
+#: app/templates/account/translations.html:69
+msgid "Copy the file path and the snippet of your changes."
+msgstr "Copia il percorso del file e il frammento delle tue modifiche."
+
+#: app/templates/account/translations.html:70
+msgid "Paste the snippet directly into a new GitHub issue for review."
+msgstr ""
+"Incolla il frammento copiato direttamente nel commento del problema su "
+"GitHub."
+
+#: app/templates/account/translations.html:72
+msgid "Please do not upload the full .po file to avoid merge conflicts."
+msgstr "Non caricare il file .po completo per evitare conflitti di fusione."
+
+#: app/templates/account/translations.html:85
+msgid "Improving existing translations:"
+msgstr "Migliorare le traduzioni esistenti:"
+
+#: app/templates/account/translations.html:104
+msgid "Open the relevant .po file for the translation you want to improve."
+msgstr "Apri il file .po pertinente per la traduzione che vuoi migliorare."
+
+#: app/templates/account/translations.html:106
+msgid "For example:"
+msgstr "Ad esempio:"
+
+#: app/templates/account/translations.html:110
+msgid ""
+"Find the phrase(s) and its existing translation(s) you want to improve."
+msgstr ""
+"Trova la/e frase/i e la/le traduzione/i esistente/i che vuoi migliorare."
+
+#: app/templates/account/translations.html:111
+msgid "Update the phrase(s)."
+msgstr "Aggiorna la/e frase/i."
+
+#: app/templates/account/translations.html:112
+msgid "Copy the file name and path into the issue."
+msgstr "Copia il nome del file e il percorso nel problema."
+
+#: app/templates/account/translations.html:114
+msgid "Paste the copied snippet directly into the GitHub issue comment."
+msgstr ""
+"Incolla il frammento copiato direttamente nel commento del problema su "
+"GitHub."
+
+#: app/templates/account/translations.html:115
+msgid "Do not upload the full .po file to avoid merge conflicts."
+msgstr "Non caricare il file .po completo per evitare conflitti di fusione."
+
+#: app/templates/account/translations.html:118
+msgid "Example snippet:"
+msgstr "Esempio di frammento:"
+
+#: app/templates/account/translations.html:137
+msgid "Report missing translations not yet discovered:"
+msgstr "Segnala traduzioni mancanti non ancora scoperte:"
+
+#: app/templates/account/translations.html:154
+msgid ""
+"If you see text in the app that appears untranslated or missing, please "
+"report it to us."
+msgstr ""
+"Se vedi del testo nell'app che appare non tradotto o mancante, segnalalo a "
+"noi."
+
+#: app/templates/account/translations.html:155
+msgid "Provide the exact English phrase as it appears on the screen."
+msgstr "Fornisci la frase esatta in inglese come appare sullo schermo."
+
+#: app/templates/account/translations.html:156
+msgid ""
+"Include the page or section where you saw the phrase (e.g., Apprise page, "
+"Account Page, etc.)."
+msgstr ""
+"Includi la pagina o la sezione dove hai visto la frase (ad esempio, pagina "
+"delle Impostazioni, sezione Account)."
+
+#: app/templates/account/translations.html:157
+msgid ""
+"Submit this information via a new GitHub issue so we can add it to the "
+"translation files"
+msgstr ""
+"Invia queste informazioni tramite una nuova issue su GitHub così possiamo "
+"aggiungerle ai file di traduzione e prepararle per Babel."
+
+#: app/templates/account/translations.html:166
+msgid "Found a missing translation?"
+msgstr "Hai trovato una traduzione mancante?"
+
+#: app/templates/account/translations.html:171
+msgid ""
+"This link will create a new GitHub issue pre-filled with a language code."
+msgstr ""
+"Questo link creerà un nuovo problema su GitHub precompilato con un codice "
+"lingua."
+
+#: app/templates/account/translations.html:172
+msgid "Report it by opening a new GitHub issue"
+msgstr "Segnalala aprendo una nuova issue su GitHub"
+
+#: app/templates/account/translations.html:175
+msgid "Please specify the language code and exact phrase when reporting."
+msgstr ""
+"Si prega di specificare il codice lingua e la frase esatta quando si "
+"segnala."
+
+#: app/templates/account/translations.html:176
+msgid "Thank you for helping us make Grylli better!"
+msgstr "Grazie per aiutare a migliorare Grylli!"
+
+#: app/templates/admin/create_user.html:14
+msgid "Create New User"
+msgstr "Crea nuovo utente"
+
+#: app/templates/admin/create_user.html:15
+msgid "Fill out the form to add a new user."
+msgstr "Compila il modulo per aggiungere un nuovo utente."
+
+#: app/templates/admin/create_user.html:21
+#: app/templates/admin/edit_user.html:17 app/templates/auth/bootstrap.html:24
+msgid "Please fix the following errors:"
+msgstr "Si prega di correggere i seguenti errori:"
+
+#: app/templates/admin/create_user.html:78
+#: app/templates/admin/edit_user.html:93
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "Create User"
+msgstr "Crea utente"
+
+#: app/templates/admin/edit_user.html:10
+#: app/templates/admin/partials/user_card.html:20
+#: app/templates/admin/partials/user_table.html:26
+msgid "Edit User"
+msgstr "Modifica utente"
+
+#: app/templates/admin/edit_user.html:55 app/templates/admin/edit_user.html:74
+msgid "Hold to show password"
+msgstr "Tieni premuto per mostrare la password"
+
+#: app/templates/admin/edit_user.html:85
+#, python-format
+msgid "At least one special character (e.g., !@#$%%)"
+msgstr "Almeno un carattere speciale (ad esempio, !@#$%%)"
+
+#: app/templates/admin/help.html:4 app/templates/auth/login.html:72
+msgid "Admin Help"
+msgstr "Pannello amministratore"
+
+#: app/templates/admin/help.html:7
+msgid "Reset Admin Password"
+msgstr "Reimposta password"
+
+#: app/templates/admin/help.html:9
+msgid ""
+"If you've forgotten the admin password, you can reset it using the following"
+" Docker command:"
+msgstr ""
+"Se hai dimenticato la password admin, puoi reimpostarla utilizzando il "
+"seguente comando Docker:"
+
+#: app/templates/admin/help.html:15
+msgid ""
+"This script will prompt you to enter a new password for the admin user. You "
+"must run it from the host system where the Grylli container is running."
+msgstr ""
+"Questo script ti chiederà di inserire una nuova password per l'utente admin."
+" Devi eseguirlo dal sistema host dove è in esecuzione il container Grylli."
+
+#: app/templates/admin/help.html:18
+msgid "After resetting, you can log in with the new password immediately."
+msgstr "Dopo il reset, puoi accedere immediatamente con la nuova password."
+
+#: app/templates/admin/help.html:24
+msgid "Return to Login"
+msgstr "Ritorna al Dashboard"
+
+#: app/templates/admin/help_form.html:6
+msgid "Admin Help Access"
+msgstr "Accesso Aiuto Admin"
+
+#: app/templates/admin/help_form.html:9
+msgid "Enter your Ferret Key to unlock admin-only help documentation."
+msgstr ""
+"Inserisci la tua Ferret Key per sbloccare la documentazione di aiuto "
+"riservata agli amministratori."
+
+#: app/templates/admin/help_form.html:34
+msgid "How to Find Your FERRET_KEY"
+msgstr "Come Trovare la Tua FERRET_KEY"
+
+#: app/templates/admin/help_form.html:36
+msgid "The FERRET_KEY is set as an environment variable when running Grylli."
+msgstr ""
+"La FERRET_KEY è impostata come variabile d'ambiente durante l'esecuzione di "
+"Grylli."
+
+#: app/templates/admin/help_form.html:39
+msgid "Option 1: Check docker-compose.yml"
+msgstr "Opzione 1: Controlla docker-compose.yml"
+
+#: app/templates/admin/help_form.html:46
+msgid "Option 2: Use docker inspect"
+msgstr "Opzione 2: Usa docker inspect"
+
+#: app/templates/admin/help_form.html:52
+msgid "This shows the FERRET_KEY as passed to the container at runtime."
+msgstr "Questo mostra la FERRET_KEY come passata al container a runtime."
+
+#: app/templates/admin/index.html:10
+msgid "Admin Panel"
+msgstr "Pannello amministratore"
+
+#: app/templates/admin/index.html:12
+msgid ""
+"Welcome to the Grylli Admin Panel. Use the links below to manage the system."
+msgstr ""
+"Benvenuto nel Pannello Admin di Grylli. Utilizza i link qui sotto per "
+"gestire il sistema."
+
+#: app/templates/admin/index.html:17
+msgid "Manage Users"
+msgstr "Gestisci utenti"
+
+#: app/templates/admin/index.html:18
+msgid "Create, edit, enable/disable, or delete user accounts."
+msgstr "Crea, modifica, abilita/disabilita o elimina account utente."
+
+#: app/templates/admin/index.html:22
+#: app/templates/admin/system_settings.html:10
+#: app/templates/partials/admin_nav.html:52
+msgid "System Settings"
+msgstr "Impostazioni di Sistema"
+
+#: app/templates/admin/index.html:23
+msgid "View  system-wide environment values."
+msgstr "Visualizza valori ambientali a livello di sistema."
+
+#: app/templates/admin/index.html:27 app/templates/partials/admin_nav.html:42
+msgid "Backups"
+msgstr "Backup"
+
+#: app/templates/admin/index.html:28
+msgid "Create and delete database backups."
+msgstr "Backup del database"
+
+#: app/templates/admin/index.html:33
+msgid "View and test global SMTP settings."
+msgstr "Invio email di test fallito. Controlla le impostazioni SMTP."
+
+#: app/templates/admin/index.html:39
+msgid "View Admin Guide / README on GitHub"
+msgstr "Visualizza Guida Amministrativa / README su GitHub"
+
+#: app/templates/admin/index.html:40
+msgid "Includes setup instructions, integrations, and troubleshooting."
+msgstr ""
+"Include istruzioni di configurazione, integrazioni e risoluzione dei "
+"problemi."
+
+#: app/templates/admin/index.html:44
+msgid "⚠️ Admin Tips"
+msgstr "⚠️ Consigli per amministratori"
+
+#: app/templates/admin/index.html:46
+msgid "Ensure the data folder (database) is backed up on your host"
+msgstr ""
+"Assicurati che la cartella dei dati (database) sia salvata sul tuo host"
+
+#: app/templates/admin/index.html:48
+msgid ""
+"The uploads folder is not per user.  If required per user, you will ndd to "
+"create subdirectoried per user and setup permissions so users can only see "
+"their own folder."
+msgstr ""
+"La cartella degli upload non è per utente. Se necessario per utente, dovrai "
+"creare sottodirectory per utente e impostare i permessi così che gli utenti "
+"possano vedere solo la loro cartella."
+
+#: app/templates/admin/index.html:51
+msgid ""
+"To restore a backup: stop the container, replace the data/grylli.db with one"
+" from the backups folder, and restart the container."
+msgstr ""
+"Per ripristinare un backup: ferma il container, sostituisci data/grylli.db "
+"con uno dalla cartella dei backup e riavvia il container."
+
+#: app/templates/admin/list_backups.html:11
+msgid "Database Backups"
+msgstr "Backup del database"
+
+#: app/templates/admin/list_backups.html:13
+msgid "Create Backup"
+msgstr "Crea backup"
+
+#: app/templates/admin/list_backups.html:21
+msgid "Filename"
+msgstr "Nome del file"
+
+#: app/templates/admin/list_backups.html:22
+#: app/templates/admin/partials/user_table.html:14
+#: app/templates/apprise/list_apprise.html:62
+#: app/templates/email/list_emails.html:60
+#: app/templates/messages/list_messages.html:60
+#: app/templates/reminders/list_reminders.html:60
+#: app/templates/user_smtp/list_smtp.html:59
+#: app/templates/webhook/list_webhooks.html:63
+msgid "Actions"
+msgstr "Azioni"
+
+#: app/templates/admin/list_backups.html:32
+msgid "Delete this backup?"
+msgstr "Eliminare questo backup?"
+
+#: app/templates/admin/list_backups.html:32
+#: app/templates/apprise/list_apprise.html:95
+#: app/templates/apprise/list_apprise.html:99
+#: app/templates/apprise/list_apprise.html:150
+#: app/templates/apprise/list_apprise.html:154
+#: app/templates/email/list_emails.html:124
+#: app/templates/email/list_emails.html:128
+#: app/templates/email/list_emails.html:226
+#: app/templates/email/list_emails.html:230
+#: app/templates/messages/list_messages.html:112
+#: app/templates/messages/list_messages.html:116
+#: app/templates/messages/list_messages.html:198
+#: app/templates/messages/list_messages.html:202
+#: app/templates/reminders/list_reminders.html:107
+#: app/templates/reminders/list_reminders.html:113
+#: app/templates/reminders/list_reminders.html:192
+#: app/templates/reminders/list_reminders.html:198
+#: app/templates/user_smtp/list_smtp.html:101
+#: app/templates/user_smtp/list_smtp.html:169
+#: app/templates/webhook/list_webhooks.html:102
+#: app/templates/webhook/list_webhooks.html:161
+msgid "Delete"
+msgstr "Elimina"
+
+#: app/templates/admin/list_backups.html:41
+msgid "No backups found."
+msgstr "Nessun backup trovato."
+
+#: app/templates/admin/list_backups.html:44
+msgid ""
+"Backups contain your full app data. Store securely. Sensitive data is "
+"encrypted in the DB by default."
+msgstr ""
+"I backup contengono i dati completi dell'app. Conserva in modo sicuro. I "
+"dati sensibili sono crittografati nel DB per impostazione predefinita."
+
+#: app/templates/admin/smtp_config.html:28
+#: app/templates/admin/system_config.html:22
+msgid "System Configuration"
+msgstr "Configurazione di sistema"
+
+#: app/templates/admin/smtp_config.html:33
+#: app/templates/admin/system_config.html:26
+#: app/templates/admin/system_settings.html:15
+msgid "Key"
+msgstr "Chiave"
+
+#: app/templates/admin/smtp_config.html:34
+#: app/templates/admin/system_config.html:27
+#: app/templates/admin/system_settings.html:16
+msgid "Value"
+msgstr "Valore"
+
+#: app/templates/admin/smtp_config.html:35
+#: app/templates/admin/system_config.html:28
+msgid "Sensitive"
+msgstr "Sensibile"
+
+#: app/templates/admin/smtp_config.html:36
+#: app/templates/admin/system_config.html:29
+msgid "Editable"
+msgstr "Modificabile"
+
+#: app/templates/admin/smtp_config.html:50
+#: app/templates/admin/smtp_config.html:51
+#: app/templates/admin/system_config.html:45
+#: app/templates/admin/system_config.html:46
+#: app/templates/email/view_config.html:60
+msgid "Yes"
+msgstr "Sì"
+
+#: app/templates/admin/smtp_config.html:50
+#: app/templates/admin/smtp_config.html:51
+#: app/templates/admin/system_config.html:45
+#: app/templates/admin/system_config.html:46
+#: app/templates/email/view_config.html:60
+msgid "No"
+msgstr "No"
+
+#: app/templates/admin/smtp_config.html:63
+#: app/templates/admin/system_config.html:55
+msgid "Send Test Email"
+msgstr "Invia email di prova"
+
+#: app/templates/admin/system_config.html:39
+msgid "decrypted"
+msgstr "Creato"
+
+#: app/templates/admin/partials/user_card.html:12
+msgid "Email:"
+msgstr "Email:"
+
+#: app/templates/admin/partials/user_card.html:15
+msgid "Role:"
+msgstr "Ruolo:"
+
+#: app/templates/admin/partials/user_card.html:27
+#: app/templates/admin/partials/user_table.html:34
+msgid "Change Role"
+msgstr "Cambia ruolo"
+
+#: app/templates/admin/partials/user_card.html:29
+#: app/templates/admin/partials/user_table.html:36
+msgid "You cannot change your own role"
+msgstr "Non puoi cambiare il tuo stato di attivazione."
+
+#: app/templates/admin/partials/user_card.html:36
+#: app/templates/admin/partials/user_table.html:43
+msgid "Are you sure you want to reset MFA for this user?"
+msgstr "Sei sicuro di voler reimpostare MFA per questo utente?"
+
+#: app/templates/admin/partials/user_card.html:39
+#: app/templates/admin/partials/user_table.html:46
+msgid "Reset MFA"
+msgstr "Reimposta password"
+
+#: app/templates/admin/partials/user_card.html:51
+#: app/templates/admin/partials/user_table.html:58
+msgid "Delete user"
+msgstr "Elimina utente"
+
+#: app/templates/admin/partials/user_card.html:55
+#: app/templates/admin/partials/user_table.html:61
+msgid "Delete User"
+msgstr "Elimina utente"
+
+#: app/templates/admin/partials/user_card.html:58
+#: app/templates/admin/partials/user_table.html:65
+msgid "You cannot disable yourself"
+msgstr "Non puoi disabilitare te stesso"
+
+#: app/templates/admin/partials/user_card.html:65
+#: app/templates/admin/partials/user_table.html:72
+msgid "Disable"
+msgstr "Disabilita"
+
+#: app/templates/admin/partials/user_card.html:65
+#: app/templates/admin/partials/user_table.html:72
+msgid "Enable"
+msgstr "Abilita"
+
+#: app/templates/admin/partials/user_header.html:6
+#: app/templates/partials/admin_nav.html:47
+msgid "Users"
+msgstr "Utenti"
+
+#: app/templates/admin/partials/user_header.html:12
+#: app/templates/admin/partials/user_header.html:13
+#: app/templates/apprise/apprise_config.html:10
+#: app/templates/apprise/apprise_config.html:11
+#: app/templates/apprise/list_apprise.html:16
+#: app/templates/apprise/list_apprise.html:17
+#: app/templates/email/list_emails.html:15
+#: app/templates/email/list_emails.html:16
+#: app/templates/messages/list_messages.html:16
+#: app/templates/messages/list_messages.html:17
+#: app/templates/reminders/list_reminders.html:15
+#: app/templates/reminders/list_reminders.html:16
+#: app/templates/user_smtp/list_smtp.html:14
+#: app/templates/user_smtp/list_smtp.html:17
+#: app/templates/webhook/list_webhooks.html:16
+#: app/templates/webhook/list_webhooks.html:17
+#: app/templates/webhook/webhook_config.html:10
+#: app/templates/webhook/webhook_config.html:11
+msgid "Table View"
+msgstr "Vista tabella"
+
+#: app/templates/admin/partials/user_header.html:26
+#: app/templates/admin/partials/user_header.html:27
+#: app/templates/apprise/apprise_config.html:24
+#: app/templates/apprise/apprise_config.html:25
+#: app/templates/apprise/list_apprise.html:30
+#: app/templates/apprise/list_apprise.html:31
+#: app/templates/email/list_emails.html:29
+#: app/templates/email/list_emails.html:30
+#: app/templates/messages/list_messages.html:30
+#: app/templates/messages/list_messages.html:31
+#: app/templates/reminders/list_reminders.html:29
+#: app/templates/reminders/list_reminders.html:30
+#: app/templates/user_smtp/list_smtp.html:27
+#: app/templates/user_smtp/list_smtp.html:30
+#: app/templates/webhook/list_webhooks.html:30
+#: app/templates/webhook/list_webhooks.html:31
+#: app/templates/webhook/webhook_config.html:24
+#: app/templates/webhook/webhook_config.html:25
+msgid "Card View"
+msgstr "Vista a schede"
+
+#: app/templates/admin/partials/user_header.html:45
+msgid "Add User"
+msgstr "Aggiungi utente"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:9
+#: app/templates/email/attach_files.html:54
+#: app/templates/email/list_emails.html:255
+#: app/templates/messages/list_messages.html:223
+#: app/templates/reminders/list_reminders.html:218
+#: app/templates/reminders/schedule_reminder.html:56
+msgid "Hide Instructions"
+msgstr "Nascondi istruzioni"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:9
+msgid "How to manage users"
+msgstr "Come gestire gli utenti"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "Click"
+msgstr "Clicca"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+msgid "➕ Add User"
+msgstr "➕ Aggiungi utente"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+msgid "to open the new user form."
+msgstr "per aprire il modulo per il nuovo utente."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:18
+msgid "Enter a unique username, valid email address, and strong password."
+msgstr ""
+"Inserisci un nome utente univoco, un indirizzo email valido e una password "
+"sicura."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "Select the appropriate"
+msgstr "Seleziona il"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "role"
+msgstr "ruolo"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "or"
+msgstr "Porta"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "to save."
+msgstr "per salvare."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:25
+msgid "To edit a user, click ✏️ and update their info."
+msgstr "Per modificare un utente, clicca ✏️ e aggiorna le informazioni."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:26
+msgid "To delete a user, click 🗑️ and confirm the deletion."
+msgstr "Per eliminare un utente, clicca 🗑️ e conferma l'eliminazione."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:28
+msgid "To disable or enable a user, click 🔴 or 🟢."
+msgstr "Per disattivare o attivare un utente, clicca 🔴 o 🟢."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:30
+msgid "🟢 = User is enabled and can log in."
+msgstr "🟢 = L'utente è abilitato e può accedere."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:31
+msgid "🔴 = User is disabled and cannot log in."
+msgstr "🔴 = L'utente è disabilitato e non può accedere."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:32
+msgid "⚪ = You cannot disable your own account."
+msgstr "⚪ = Non puoi disabilitare il tuo account."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:43
+#: app/templates/admin/partials/user_table.html:91
+msgid "Assign Role for"
+msgstr "Assegna Destinazioni per"
+
+#: app/templates/admin/partials/user_table.html:10
+msgid "ID"
+msgstr "ID"
+
+#: app/templates/admin/partials/user_table.html:11
+#: app/templates/user_smtp/list_smtp.html:55
+msgid "Username"
+msgstr "Nome utente"
+
+#: app/templates/admin/partials/user_table.html:12
+msgid "Email"
+msgstr "Email"
+
+#: app/templates/admin/partials/user_table.html:13
+msgid "Role"
+msgstr "Ruolo"
+
+#: app/templates/apprise/apprise_config.html:3
+#: app/templates/apprise/list_apprise.html:9
+#: app/templates/messages/assign_destinations.html:22
+#: app/templates/reminders/assign_destinations.html:20
+msgid "Apprise Destinations"
+msgstr "Destinazioni Apprise"
+
+#: app/templates/apprise/apprise_config.html:43
+#: app/templates/webhook/list_webhooks.html:49
+#: app/templates/webhook/webhook_config.html:43
+msgid "Add Webhook"
+msgstr "Aggiungi Webhook"
+
+#: app/templates/apprise/apprise_config.html:43
+#: app/templates/apprise/list_apprise.html:49
+#: app/templates/webhook/list_webhooks.html:49
+#: app/templates/webhook/webhook_config.html:43
+msgid "Add Destination"
+msgstr "Aggiungi destinazione"
+
+#: app/templates/apprise/create_apprise.html:10
+msgid "Create Apprise Destination"
+msgstr "Crea destinazione Apprise"
+
+#: app/templates/apprise/create_apprise.html:38
+#: app/templates/apprise/edit_apprise.html:38
+#: app/templates/user_smtp/create_smtp.html:107
+#: app/templates/webhook/create_webhook.html:44
+#: app/templates/webhook/edit_webhook.html:44
+msgid "Create Destination"
+msgstr "Crea destinazione"
+
+#: app/templates/apprise/create_apprise.html:47
+#: app/templates/apprise/edit_apprise.html:47
+msgid "Need help with Apprise URLs? See the"
+msgstr "Hai bisogno di aiuto con gli URL di Apprise? Vedi la"
+
+#: app/templates/apprise/create_apprise.html:51
+#: app/templates/apprise/edit_apprise.html:51
+msgid "Apprise Notification Services documentation"
+msgstr "documentazione dei servizi di notifica Apprise"
+
+#: app/templates/apprise/edit_apprise.html:10
+msgid "Edit Apprise Destination"
+msgstr "Modifica destinazione Apprise"
+
+#: app/templates/apprise/list_apprise.html:49
+msgid "Add Apprise"
+msgstr "Aggiungi Apprise"
+
+#: app/templates/apprise/list_apprise.html:58
+#: app/templates/email/edit_message.html:21
+#: app/templates/email/list_emails.html:56
+#: app/templates/email/view_config.html:14
+#: app/templates/messages/create_message.html:29
+#: app/templates/messages/edit_message.html:23
+#: app/templates/messages/list_messages.html:57
+#: app/templates/messages/view_message.html:14
+#: app/templates/reminders/create_reminder.html:23
+#: app/templates/reminders/edit_reminder.html:17
+#: app/templates/reminders/list_reminders.html:56
+#: app/templates/reminders/view_reminder.html:13
+#: app/templates/user_smtp/list_smtp.html:52
+#: app/templates/webhook/list_webhooks.html:58
+msgid "Label"
+msgstr "Etichetta"
+
+#: app/templates/apprise/list_apprise.html:59
+msgid "URL"
+msgstr "URL"
+
+#: app/templates/apprise/list_apprise.html:61
+#: app/templates/email/list_emails.html:59
+#: app/templates/messages/list_messages.html:59
+#: app/templates/messages/view_message.html:36
+#: app/templates/reminders/view_reminder.html:47
+#: app/templates/webhook/list_webhooks.html:62
+msgid "Created At"
+msgstr "Creato il"
+
+#: app/templates/apprise/list_apprise.html:77
+#: app/templates/apprise/list_apprise.html:132
+#: app/templates/user_smtp/list_smtp.html:79
+#: app/templates/user_smtp/list_smtp.html:147
+#: app/templates/webhook/list_webhooks.html:79
+#: app/templates/webhook/list_webhooks.html:138
+msgid "Edit"
+msgstr "Modifica"
+
+#: app/templates/apprise/list_apprise.html:80
+#: app/templates/apprise/list_apprise.html:135
+#: app/templates/user_smtp/list_smtp.html:82
+#: app/templates/user_smtp/list_smtp.html:150
+msgid "Cannot edit while in use"
+msgstr "Impossibile modificare mentre è in uso"
+
+#: app/templates/apprise/list_apprise.html:88
+#: app/templates/apprise/list_apprise.html:143
+#: app/templates/webhook/list_webhooks.html:91
+#: app/templates/webhook/list_webhooks.html:150
+msgid "Test"
+msgstr "Test"
+
+#: app/templates/apprise/list_apprise.html:103
+#: app/templates/apprise/list_apprise.html:158
+#: app/templates/user_smtp/list_smtp.html:106
+#: app/templates/user_smtp/list_smtp.html:174
+msgid "Cannot delete while in use"
+msgstr "Impossibile eliminare mentre è in uso"
+
+#: app/templates/apprise/list_apprise.html:119
+msgid "URL:"
+msgstr "URL:"
+
+#: app/templates/apprise/list_apprise.html:122
+#: app/templates/user_smtp/list_smtp.html:137
+#: app/templates/webhook/list_webhooks.html:128
+msgid "Enabled:"
+msgstr "Abilitato:"
+
+#: app/templates/apprise/list_apprise.html:125
+#: app/templates/user_smtp/list_smtp.html:140
+#: app/templates/webhook/list_webhooks.html:131
+msgid "Created:"
+msgstr "Creato:"
+
+#: app/templates/auth/bootstrap.html:14
+msgid "Create Admin Account"
+msgstr "Crea Account Admin"
+
+#: app/templates/auth/bootstrap.html:16
+msgid "Let’s get started by creating your first admin account."
+msgstr "Iniziamo creando il tuo primo account admin."
+
+#: app/templates/auth/bootstrap.html:75
+msgid "Create Admin"
+msgstr "Crea Admin"
+
+#: app/templates/auth/forgot_password.html:12
+msgid "Forgot Password"
+msgstr "Password dimenticata"
+
+#: app/templates/auth/forgot_password.html:15
+msgid ""
+"Enter your username and email. We'll send you a link to reset your password."
+msgstr ""
+"Inserisci il tuo nome utente e email. Ti invieremo un link per reimpostare "
+"la password."
+
+#: app/templates/auth/forgot_username.html:12
+msgid "Forgot Username"
+msgstr "Nome utente dimenticato"
+
+#: app/templates/auth/forgot_username.html:15
+msgid "Enter your email address, and we'll send you your username."
+msgstr "Inserisci il tuo indirizzo email, e ti invieremo il tuo nome utente."
+
+#: app/templates/auth/forgot_username.html:40
+msgid "Send Username"
+msgstr "Invia nome utente"
+
+#: app/templates/auth/login.html:12 app/templates/auth/login.html:54
+msgid "Log In"
+msgstr "Accedi"
+
+#: app/templates/auth/login.html:62
+msgid "Forgot Username?"
+msgstr "Nome utente dimenticato?"
+
+#: app/templates/auth/login.html:64
+msgid "Forgot Password?"
+msgstr "Password dimenticata?"
+
+#: app/templates/auth/login.html:66 app/templates/auth/signup.html:12
+msgid "Sign Up"
+msgstr "Iscriviti"
+
+#: app/templates/auth/rate_limit.html:9
+msgid "Hold On"
+msgstr "Attendere"
+
+#: app/templates/auth/rate_limit.html:11
+msgid "Too many failed login attempts. Please wait"
+msgstr "Troppi tentativi di accesso non riusciti. Attendere"
+
+#: app/templates/auth/rate_limit.html:13
+msgid "seconds..."
+msgstr "secondi..."
+
+#: app/templates/auth/rate_limit.html:15
+msgid "Redirecting to login..."
+msgstr "Ritorna al Dashboard"
+
+#: app/templates/auth/reset_password.html:12
+#: app/templates/auth/reset_password.html:116
+msgid "Reset Password"
+msgstr "Reimposta password"
+
+#: app/templates/auth/reset_password.html:14
+msgid "Enter your username, email, and new password."
+msgstr "Inserisci il tuo nome utente, email e nuova password."
+
+#: app/templates/auth/signup.html:14
+msgid "Fill out the form to create your account."
+msgstr "Compila il modulo per creare il tuo account."
+
+#: app/templates/checkin/already_checked_in.html:10
+msgid "Already Checked In"
+msgstr "Ultimo Check-in"
+
+#: app/templates/checkin/already_checked_in.html:12
+msgid ""
+"You have already checked in for this item. No further action is needed at "
+"this time."
+msgstr ""
+"Hai già effettuato il check-in per questo articolo. Nessuna ulteriore azione"
+" è necessaria in questo momento."
+
+#: app/templates/checkin/already_checked_in.html:16
+#: app/templates/checkin/disabled.html:16
+#: app/templates/checkin/executed_disabled.html:18
+msgid "Check-in for:"
+msgstr "Check-in per:"
+
+#: app/templates/checkin/already_checked_in.html:21
+#: app/templates/checkin/disabled.html:21
+#: app/templates/checkin/executed_disabled.html:23
+#: app/templates/checkin/thank_you.html:19
+msgid "Return to Dashboard"
+msgstr "Ritorna al Dashboard"
+
+#: app/templates/checkin/disabled.html:10
+msgid "Check-In Disabled"
+msgstr "Email è disabilitata"
+
+#: app/templates/checkin/disabled.html:12
+msgid "This check-in is currently disabled and cannot be completed."
+msgstr ""
+"Questo check-in è attualmente disabilitato e non può essere completato."
+
+#: app/templates/checkin/executed_disabled.html:11
+msgid "Already Executed & Disabled"
+msgstr "Già Eseguito & Disabilitato"
+
+#: app/templates/checkin/executed_disabled.html:14
+msgid ""
+"This check-in has already been executed and is now disabled. No further "
+"action is required."
+msgstr ""
+"Questo check-in è già stato eseguito ed è ora disabilitato. Nessuna "
+"ulteriore azione è richiesta."
+
+#: app/templates/checkin/thank_you.html:10
+msgid "Check-In Successful"
+msgstr "Check-In Riuscito"
+
+#: app/templates/checkin/thank_you.html:11
+msgid "Thank you for checking in."
+msgstr "Grazie per aver fatto il check-in."
+
+#: app/templates/checkin/thank_you.html:14
+msgid "Checked in for:"
+msgstr "Check-in per:"
+
+#: app/templates/email/assign_smtp.html:11
+msgid "📧 Assign SMTP Config to:"
+msgstr "📧 Assegna Config SMTP a:"
+
+#: app/templates/email/assign_smtp.html:25
+msgid "No SMTP (Unassign)"
+msgstr "Nessuna configurazione SMTP assegnata"
+
+#: app/templates/email/assign_smtp.html:26
+msgid "This email will not use any SMTP configuration."
+msgstr "Questa email non utilizzerà alcuna configurazione SMTP."
+
+#: app/templates/email/attach_files.html:12
+msgid "Attach Files for:"
+msgstr "Allega File per:"
+
+#: app/templates/email/attach_files.html:21
+msgid "Available Files"
+msgstr "File Disponibili"
+
+#: app/templates/email/attach_files.html:36
+msgid "No files found in the upload directory."
+msgstr "Nessun file trovato nella directory di upload."
+
+#: app/templates/email/attach_files.html:44
+msgid "Save Attachments"
+msgstr "Salva Allegati"
+
+#: app/templates/email/attach_files.html:54
+msgid "File Attach Notes"
+msgstr "Note su File Allegati"
+
+#: app/templates/email/attach_files.html:63
+msgid "Important:"
+msgstr "Porta:"
+
+#: app/templates/email/attach_files.html:65
+msgid ""
+"Only files that are present in the 'uploads' folder (provided by your system"
+" administrator) will be shown here. If you do not see your file(s), please "
+"contact your Grylli administrator."
+msgstr ""
+"Solo i file presenti nella cartella 'uploads' (fornita dal tuo "
+"amministratore di sistema) verranno mostrati qui. Se non vedi il/i tuo/i "
+"file, contatta il tuo amministratore di Grylli."
+
+#: app/templates/email/attach_files.html:69
+msgid "Accepted file types:"
+msgstr "Tipi di file accettati:"
+
+#: app/templates/email/attach_files.html:71
+msgid "Documents:"
+msgstr "Documenti:"
+
+#: app/templates/email/attach_files.html:73
+msgid "Images:"
+msgstr "Immagini:"
+
+#: app/templates/email/attach_files.html:75
+msgid "Audio:"
+msgstr "Audio:"
+
+#: app/templates/email/attach_files.html:79
+msgid "Maximum file size:"
+msgstr "Dimensione massima del file:"
+
+#: app/templates/email/attach_files.html:80
+msgid "10 MB per file"
+msgstr "10 MB per file"
+
+#: app/templates/email/attach_files.html:83
+msgid "Total upload size:"
+msgstr "Dimensione totale di upload:"
+
+#: app/templates/email/attach_files.html:84
+msgid "20 MB (all files combined)"
+msgstr "20 MB (tutti i file combinati)"
+
+#: app/templates/email/edit_message.html:12
+#: app/templates/email/list_emails.html:75
+#: app/templates/email/list_emails.html:177
+msgid "Edit Email"
+msgstr "Modifica Email"
+
+#: app/templates/email/edit_message.html:12
+msgid "Create Email"
+msgstr "Crea Email"
+
+#: app/templates/email/edit_message.html:28
+msgid "To (Recipient Email)"
+msgstr "A (Email Destinatario)"
+
+#: app/templates/email/edit_message.html:35
+#: app/templates/email/list_emails.html:57
+#: app/templates/email/view_config.html:18
+#: app/templates/messages/create_message.html:36
+#: app/templates/messages/edit_message.html:30
+#: app/templates/messages/list_messages.html:58
+#: app/templates/messages/view_message.html:18
+#: app/templates/reminders/create_reminder.html:30
+#: app/templates/reminders/edit_reminder.html:24
+#: app/templates/reminders/list_reminders.html:57
+#: app/templates/reminders/view_reminder.html:17
+msgid "Subject"
+msgstr "Oggetto"
+
+#: app/templates/email/edit_message.html:42
+#: app/templates/email/view_config.html:28
+msgid "Body"
+msgstr "Corpo"
+
+#: app/templates/email/edit_message.html:50
+msgid "Save Email"
+msgstr "Salva Email"
+
+#: app/templates/email/list_emails.html:48
+msgid "Add Email"
+msgstr "Aggiungi Email"
+
+#: app/templates/email/list_emails.html:58
+#: app/templates/reminders/assign_email_reminder.html:77
+msgid "To"
+msgstr "A"
+
+#: app/templates/email/list_emails.html:78
+#: app/templates/email/list_emails.html:180
+msgid "Disable to edit email"
+msgstr "Invio email di test fallito:"
+
+#: app/templates/email/list_emails.html:84
+#: app/templates/email/list_emails.html:186
+msgid "Attach Files"
+msgstr "Allega File"
+
+#: app/templates/email/list_emails.html:87
+#: app/templates/email/list_emails.html:189
+msgid "Disable to attach files"
+msgstr "Allega File"
+
+#: app/templates/email/list_emails.html:93
+#: app/templates/email/list_emails.html:195
+msgid "Attach SMTP Config"
+msgstr "Allega Configurazione SMTP"
+
+#: app/templates/email/list_emails.html:96
+#: app/templates/email/list_emails.html:198
+msgid "Disable to assign SMTP"
+msgstr "Disattivare per assegnare SMTP"
+
+#: app/templates/email/list_emails.html:102
+#: app/templates/email/list_emails.html:204
+msgid "Schedule Check-In"
+msgstr "Programma Check-In"
+
+#: app/templates/email/list_emails.html:105
+#: app/templates/email/list_emails.html:207
+msgid "Disable to schedule check-in"
+msgstr "Programma Check-In"
+
+#: app/templates/email/list_emails.html:110
+#: app/templates/email/list_emails.html:212
+#: app/templates/messages/list_messages.html:99
+#: app/templates/messages/list_messages.html:184
+#: app/templates/reminders/list_reminders.html:93
+#: app/templates/reminders/list_reminders.html:178
+msgid "View Details"
+msgstr "Visualizza Dettagli"
+
+#: app/templates/email/list_emails.html:118
+#: app/templates/email/list_emails.html:220
+msgid "Send this email to yourself to preview it."
+msgstr "Invia questa email a te stesso per visualizzarla in anteprima."
+
+#: app/templates/email/list_emails.html:136
+#: app/templates/email/list_emails.html:238
+msgid "Toggle Email On/Off"
+msgstr "Attiva/Disattiva Email"
+
+#: app/templates/email/list_emails.html:139
+#: app/templates/email/list_emails.html:241
+msgid "Email is enabled"
+msgstr "Email è abilitata"
+
+#: app/templates/email/list_emails.html:141
+#: app/templates/email/list_emails.html:243
+msgid "Email is disabled"
+msgstr "Email è disabilitata"
+
+#: app/templates/email/list_emails.html:157
+#: app/templates/email/view_config.html:51
+#: app/templates/messages/list_messages.html:142
+#: app/templates/reminders/list_reminders.html:140
+msgid "Label:"
+msgstr "Etichetta:"
+
+#: app/templates/email/list_emails.html:161
+#: app/templates/messages/list_messages.html:146
+#: app/templates/reminders/list_reminders.html:144
+#: app/templates/reminders/view_reminder.html:98
+msgid "Subject:"
+msgstr "Oggetto"
+
+#: app/templates/email/list_emails.html:165
+msgid "To:"
+msgstr "A:"
+
+#: app/templates/email/list_emails.html:169
+#: app/templates/messages/list_messages.html:150
+msgid "Created At:"
+msgstr "Creato il"
+
+#: app/templates/email/list_emails.html:255
+msgid "How to create and send an email"
+msgstr "Come creare e inviare un'email"
+
+#: app/templates/email/list_emails.html:262
+msgid ""
+"Click “Add Email” and fill out the subject, content, and recipient address."
+msgstr ""
+"Clicca “Aggiungi Email” e compila l'oggetto, il contenuto e l'indirizzo del "
+"destinatario."
+
+#: app/templates/email/list_emails.html:263
+msgid "Attach any optional files (if needed)."
+msgstr "Allega eventuali file opzionali (se necessario)."
+
+#: app/templates/email/list_emails.html:264
+msgid ""
+"Click 🧩 to assign a single SMTP configuration that will be used to send the "
+"email."
+msgstr ""
+"Clicca 🧩 per assegnare una singola configurazione SMTP che verrà utilizzata "
+"per inviare l'email."
+
+#: app/templates/email/list_emails.html:265
+msgid "Click ⏱️ to set a check-in interval and grace period for the email."
+msgstr ""
+"Clicca ⏱️ per impostare un intervallo di check-in e un periodo di tolleranza"
+" per l'email."
+
+#: app/templates/email/list_emails.html:266
+msgid "Enable the email using the 🔴/🟢 toggle button."
+msgstr "Abilita l'email utilizzando il pulsante a levetta 🔴/🟢."
+
+#: app/templates/email/list_emails.html:267
+msgid ""
+"Click 🧪 to test the email by sending it to yourself (not the recipient)."
+msgstr ""
+"Clicca 🧪 per testare l'email inviandola a te stesso (non al destinatario)."
+
+#: app/templates/email/list_emails.html:268
+msgid ""
+"If you don’t check in before the grace period ends, the email will be "
+"automatically sent."
+msgstr ""
+"Se non effettui il check-in prima della fine del periodo di tolleranza, "
+"l'email verrà inviata automaticamente."
+
+#: app/templates/email/list_emails.html:269
+msgid "You can preview the email configuration using 🔍."
+msgstr ""
+"Puoi visualizzare l'anteprima della configurazione dell'email utilizzando 🔍."
+
+#: app/templates/email/list_emails.html:270
+msgid "Once a secure email is sent, it will be automatically disabled."
+msgstr ""
+"Una volta inviata un'email sicura, verrà automaticamente disabilitata."
+
+#: app/templates/email/schedule_email.html:9
+msgid "Schedule Email"
+msgstr "Programma Email"
+
+#: app/templates/email/schedule_email.html:18
+#: app/templates/messages/schedule_message.html:18
+msgid "Years"
+msgstr "Anni"
+
+#: app/templates/email/schedule_email.html:19
+#: app/templates/messages/schedule_message.html:19
+msgid "Months"
+msgstr "Mesi"
+
+#: app/templates/email/schedule_email.html:20
+#: app/templates/messages/schedule_message.html:20
+msgid "Weeks"
+msgstr "Settimane"
+
+#: app/templates/email/schedule_email.html:21
+#: app/templates/messages/schedule_message.html:21
+msgid "Days"
+msgstr "Giorni"
+
+#: app/templates/email/schedule_email.html:22
+#: app/templates/messages/schedule_message.html:22
+msgid "Hours"
+msgstr "Ore"
+
+#: app/templates/email/schedule_email.html:23
+#: app/templates/messages/schedule_message.html:23
+msgid "Minutes"
+msgstr "Minuti"
+
+#: app/templates/email/schedule_email.html:28
+#: app/templates/messages/schedule_message.html:28
+msgid "Check-in"
+msgstr "Check-in"
+
+#: app/templates/email/schedule_email.html:51
+#: app/templates/messages/schedule_message.html:51
+#: app/templates/messages/view_message.html:26
+msgid "Grace Period"
+msgstr "Periodo di Tolleranza"
+
+#: app/templates/email/schedule_email.html:80
+#: app/templates/messages/schedule_message.html:80
+#: app/templates/reminders/schedule_reminder.html:47
+msgid "Save Schedule"
+msgstr "Salva programma"
+
+#: app/templates/email/view_config.html:9
+msgid "Email Configuration"
+msgstr "Configurazione Email"
+
+#: app/templates/email/view_config.html:22
+msgid "Recipient"
+msgstr "Destinatario"
+
+#: app/templates/email/view_config.html:33
+msgid "Attached Files"
+msgstr "File Allegati"
+
+#: app/templates/email/view_config.html:39
+msgid "No files attached"
+msgstr "Nessun file allegato"
+
+#: app/templates/email/view_config.html:46
+#: app/templates/reminders/assign_email_reminder.html:20
+msgid "SMTP Configuration"
+msgstr "Configurazione SMTP"
+
+#: app/templates/email/view_config.html:54
+#: app/templates/user_smtp/list_smtp.html:122
+msgid "Host:"
+msgstr "Host:"
+
+#: app/templates/email/view_config.html:57
+#: app/templates/user_smtp/list_smtp.html:128
+msgid "Username:"
+msgstr "Username:"
+
+#: app/templates/email/view_config.html:60
+#: app/templates/user_smtp/list_smtp.html:134
+msgid "TLS:"
+msgstr "TLS:"
+
+#: app/templates/email/view_config.html:64
+msgid "No SMTP configuration assigned"
+msgstr "Nessuna configurazione SMTP assegnata"
+
+#: app/templates/email/view_config.html:69
+msgid "Schedule Information"
+msgstr "Informazioni di Programmazione"
+
+#: app/templates/email/view_config.html:72
+msgid "Check-in Interval:"
+msgstr "Intervallo di Check-in:"
+
+#: app/templates/email/view_config.html:72
+#: app/templates/email/view_config.html:75
+msgid "minutes"
+msgstr "minuti"
+
+#: app/templates/email/view_config.html:75
+msgid "Grace Period:"
+msgstr "Periodo di Tolleranza:"
+
+#: app/templates/email/view_config.html:79
+msgid "Last Check-in:"
+msgstr "Ultimo Check-in:"
+
+#: app/templates/email/view_config.html:82
+msgid "No check-in has occurred yet"
+msgstr "Nessun check-in è ancora avvenuto"
+
+#: app/templates/email/view_config.html:92
+msgid "Back to Emails"
+msgstr "Torna alle Email"
+
+#: app/templates/errors/500.html:4
+msgid "Something went wrong"
+msgstr "Qualcosa è andato storto"
+
+#: app/templates/errors/500.html:6
+msgid ""
+"An unexpected error occurred. Please try again later or contact support."
+msgstr ""
+"Si è verificato un errore imprevisto. Riprova più tardi o contatta il "
+"supporto."
+
+#: app/templates/locale/redirect_after_lang_set.html:15
+msgid "Switching Language..."
+msgstr "Cambio Lingua..."
+
+#: app/templates/locale/redirect_after_lang_set.html:18
+msgid "Applying new language..."
+msgstr "Applicazione della nuova lingua..."
+
+#: app/templates/messages/assign_destinations.html:13
+#: app/templates/reminders/assign_destinations.html:12
+msgid "Assign Destinations for"
+msgstr "Assegna Destinazioni per"
+
+#: app/templates/messages/assign_destinations.html:62
+#: app/templates/reminders/assign_destinations.html:60
+msgid "Save Destinations"
+msgstr "Salva Destinazioni"
+
+#: app/templates/messages/create_message.html:17
+msgid "Edit Notificaton"
+msgstr "Modifica Notifica"
+
+#: app/templates/messages/create_message.html:19
+msgid "Create Notification"
+msgstr "Crea Notifica"
+
+#: app/templates/messages/create_message.html:43
+#: app/templates/messages/edit_message.html:37
+#: app/templates/messages/view_message.html:42
+#: app/templates/reminders/create_reminder.html:37
+#: app/templates/reminders/edit_reminder.html:31
+#: app/templates/reminders/view_reminder.html:53
+msgid "Content"
+msgstr "Contenuto"
+
+#: app/templates/messages/create_message.html:51
+msgid "Save Notification"
+msgstr "Salva Notifica"
+
+#: app/templates/messages/edit_message.html:15
+#: app/templates/messages/list_messages.html:74
+#: app/templates/messages/list_messages.html:158
+msgid "Edit Notification"
+msgstr "Modifica Notifica"
+
+#: app/templates/messages/edit_message.html:45
+msgid "Update Notification"
+msgstr "Aggiorna Notifica"
+
+#: app/templates/messages/list_messages.html:49
+msgid "Add Notification"
+msgstr "Aggiungi Notifica"
+
+#: app/templates/messages/list_messages.html:77
+#: app/templates/messages/list_messages.html:161
+msgid "Disable to edit notification"
+msgstr "Modifica Notifica"
+
+#: app/templates/messages/list_messages.html:83
+#: app/templates/messages/list_messages.html:167
+#: app/templates/reminders/list_reminders.html:78
+#: app/templates/reminders/list_reminders.html:163
+msgid "Assign Destinations"
+msgstr "Assegna Destinazioni"
+
+#: app/templates/messages/list_messages.html:86
+#: app/templates/messages/list_messages.html:170
+msgid "Disable to assign destinations"
+msgstr "Assegna Destinazioni"
+
+#: app/templates/messages/list_messages.html:92
+#: app/templates/messages/list_messages.html:176
+#: app/templates/reminders/list_reminders.html:88
+#: app/templates/reminders/list_reminders.html:173
+msgid "Set Schedule"
+msgstr "Imposta Programma"
+
+#: app/templates/messages/list_messages.html:95
+#: app/templates/messages/list_messages.html:179
+msgid "Disable to set schedule"
+msgstr "Imposta Programma"
+
+#: app/templates/messages/list_messages.html:107
+#: app/templates/messages/list_messages.html:192
+msgid "Send Test Notification"
+msgstr "Modifica Notifica"
+
+#: app/templates/messages/list_messages.html:122
+#: app/templates/messages/list_messages.html:209
+msgid "Toggle Message On/Off"
+msgstr "Attiva/Disattiva Messaggio"
+
+#: app/templates/messages/list_messages.html:124
+#: app/templates/messages/list_messages.html:211
+msgid "Notification is enabled"
+msgstr "Notifica abilitata"
+
+#: app/templates/messages/list_messages.html:126
+#: app/templates/messages/list_messages.html:213
+msgid "Notification is disabled"
+msgstr "Notifica disabilitata"
+
+#: app/templates/messages/list_messages.html:223
+msgid "How to create and send a notification"
+msgstr "Come creare e inviare una notifica"
+
+#: app/templates/messages/list_messages.html:233
+msgid "Click “Add notification” and fill out the subject and content fields."
+msgstr "Clicca su “Aggiungi notifica” e compila i campi oggetto e contenuto."
+
+#: app/templates/messages/list_messages.html:234
+msgid "Save the notification to return to the overview."
+msgstr "Salva la notifica per tornare alla panoramica."
+
+#: app/templates/messages/list_messages.html:235
+msgid "You need to create at least one apprise or webhook destination."
+msgstr "Devi creare almeno una destinazione apprise o webhook."
+
+#: app/templates/messages/list_messages.html:236
+msgid "You can create as many destinations as you like."
+msgstr "Puoi creare quante destinazioni desideri."
+
+#: app/templates/messages/list_messages.html:237
+msgid "Click 🧩 to assign one or more Apprise and/or Webhook destinations."
+msgstr "Clicca su 🧩 per assegnare una o più destinazioni Apprise e/o Webhook."
+
+#: app/templates/messages/list_messages.html:238
+msgid "Click ⏱️ to set a schedule and check-in interval."
+msgstr "Clicca su ⏱️ per impostare un programma e un intervallo di check-in."
+
+#: app/templates/messages/list_messages.html:239
+msgid "Enable the notification using the 🔴/🟢 toggle button."
+msgstr ""
+"Abilita la notifica usando il pulsante di attivazione/disattivazione 🔴/🟢."
+
+#: app/templates/messages/list_messages.html:240
+msgid ""
+"If you don’t check in before the grace period ends, the notification will be"
+" sent."
+msgstr ""
+"Se non fai il check-in prima del termine del periodo di grazia, la notifica "
+"verrà inviata."
+
+#: app/templates/messages/list_messages.html:241
+msgid "You can preview the notification config using 🔍."
+msgstr ""
+"Puoi visualizzare in anteprima la configurazione della notifica usando 🔍."
+
+#: app/templates/messages/list_messages.html:242
+msgid "Once a notification is sent, it will be automatically disabled."
+msgstr "Una volta inviata una notifica, verrà automaticamente disabilitata."
+
+#: app/templates/messages/schedule_message.html:9
+msgid "Schedule Message"
+msgstr "Programma Messaggio"
+
+#: app/templates/messages/view_message.html:9
+msgid "Notifications Details"
+msgstr "Dettagli Notifiche"
+
+#: app/templates/messages/view_message.html:22
+msgid "Check-in Interval"
+msgstr "Intervallo di Check-in"
+
+#: app/templates/messages/view_message.html:31
+msgid "Last Check-in"
+msgstr "Ultimo Check-in"
+
+#: app/templates/messages/view_message.html:48
+#: app/templates/reminders/view_reminder.html:59
+msgid "Apprise URLs"
+msgstr "URL Apprise"
+
+#: app/templates/messages/view_message.html:54
+#: app/templates/messages/view_message.html:64
+#: app/templates/reminders/view_reminder.html:65
+#: app/templates/reminders/view_reminder.html:75
+#: app/templates/reminders/view_reminder.html:85
+msgid "None assigned."
+msgstr "Nessuno assegnato."
+
+#: app/templates/messages/view_message.html:73
+msgid "Back to Notifications"
+msgstr "Torna alle Notifiche"
+
+#: app/templates/mfa/challenge.html:5 app/templates/mfa/settings.html:5
+msgid "Two-Factor Authentication (MFA)"
+msgstr "Autenticazione a due fattori (MFA)"
+
+#: app/templates/mfa/recovery_codes.html:4
+msgid "Your Recovery Codes"
+msgstr "I tuoi codici di recupero"
+
+#: app/templates/mfa/recovery_codes.html:7
+msgid "Save these recovery codes in a safe place!"
+msgstr "Conserva questi codici di recupero in un luogo sicuro!"
+
+#: app/templates/mfa/recovery_codes.html:10
+msgid ""
+"Each code can be used once if you lose access to your authenticator. These "
+"codes will not be shown again."
+msgstr ""
+"Ogni codice può essere utilizzato una sola volta se perdi l'accesso al tuo "
+"autenticatore. Questi codici non verranno mostrati di nuovo."
+
+#: app/templates/mfa/recovery_codes.html:24
+msgid "OK, I've saved them"
+msgstr "OK, li ho salvati"
+
+#: app/templates/mfa/settings.html:12
+msgid "MFA QR Code"
+msgstr "Codice QR MFA"
+
+#: app/templates/mfa/settings.html:15
+msgid "Manual Entry:"
+msgstr "Inserimento manuale:"
+
+#: app/templates/partials/admin_nav.html:21
+msgid "Administration"
+msgstr "Amministrazione"
+
+#: app/templates/partials/admin_nav.html:37
+#: app/templates/partials/shared_nav.html:34
+#: app/templates/partials/shared_nav.html:78
+#: app/templates/partials/shared_nav.html:117
+msgid "Overview"
+msgstr "Panoramica"
+
+#: app/templates/partials/footer.html:7
+msgid "Toggle Theme"
+msgstr "Attiva/Disattiva Tema"
+
+#: app/templates/partials/footer.html:32
+msgid "Theme"
+msgstr "Tema"
+
+#: app/templates/partials/head.html:7
+msgid "Grylli"
+msgstr "Grylli"
+
+#: app/templates/partials/header.html:6 app/templates/partials/sidebar.html:32
+#: app/templates/partials/sidebar.html:66
+msgid "Home"
+msgstr "Home"
+
+#: app/templates/partials/header.html:55
+msgid "Account"
+msgstr "Account"
+
+#: app/templates/partials/header.html:61
+msgid "MFA"
+msgstr "MFA"
+
+#: app/templates/partials/header.html:67
+msgid "About"
+msgstr "Informazioni"
+
+#: app/templates/partials/header.html:73
+msgid "Privacy"
+msgstr "Privacy"
+
+#: app/templates/partials/header.html:79
+msgid "System Info"
+msgstr "Info di Sistema"
+
+#: app/templates/partials/header.html:114
+msgid "Logout"
+msgstr "Esci"
+
+#: app/templates/partials/shared_nav.html:33
+msgid "Overview of notification settings"
+msgstr "Panoramica delle impostazioni di notifica"
+
+#: app/templates/partials/shared_nav.html:38
+msgid "Configure Apprise services"
+msgstr "Configura i servizi Apprise"
+
+#: app/templates/partials/shared_nav.html:39
+msgid "Apprise"
+msgstr "Apprise"
+
+#: app/templates/partials/shared_nav.html:43
+msgid "Configure Webhook integrations"
+msgstr "Configura integrazioni Webhook"
+
+#: app/templates/partials/shared_nav.html:77
+msgid "Overview of secure email messages"
+msgstr "Panoramica dei messaggi email sicuri"
+
+#: app/templates/partials/shared_nav.html:82
+msgid "Configure SMTP email settings"
+msgstr "Configura impostazioni email SMTP"
+
+#: app/templates/partials/shared_nav.html:83
+#: app/templates/reminders/view_reminder.html:79
+msgid "SMTP"
+msgstr "SMTP"
+
+#: app/templates/partials/shared_nav.html:100
+#: app/templates/reminders/list_reminders.html:8
+msgid "Reminders"
+msgstr "minuti"
+
+#: app/templates/partials/shared_nav.html:116
+msgid "Overview of reminders"
+msgstr "Panoramica dei promemoria"
+
+#: app/templates/partials/sidebar.html:13
+#: app/templates/partials/sidebar.html:47
+msgid "Menu"
+msgstr "Menu"
+
+#: app/templates/reminders/assign_email_reminder.html:12
+msgid "Link Email Reminder for"
+msgstr "Collega Promemoria Email per"
+
+#: app/templates/reminders/assign_email_reminder.html:30
+#: app/templates/reminders/assign_email_reminder.html:64
+msgid "None (Unassign)"
+msgstr "Nessuna configurazione SMTP assegnata"
+
+#: app/templates/reminders/assign_email_reminder.html:43
+msgid "No sender address"
+msgstr "Nessun indirizzo mittente"
+
+#: app/templates/reminders/assign_email_reminder.html:54
+msgid "Email Message"
+msgstr "Programma Messaggio"
+
+#: app/templates/reminders/assign_email_reminder.html:77
+msgid "No subject"
+msgstr "Oggetto"
+
+#: app/templates/reminders/assign_email_reminder.html:90
+msgid "Save Email Reminder"
+msgstr "Salva Email"
+
+#: app/templates/reminders/create_reminder.html:12
+#: app/templates/reminders/edit_reminder.html:10
+#: app/templates/reminders/list_reminders.html:73
+#: app/templates/reminders/list_reminders.html:158
+msgid "Edit Reminder"
+msgstr "Modifica Email"
+
+#: app/templates/reminders/create_reminder.html:14
+msgid "Create Reminder"
+msgstr "Crea Email"
+
+#: app/templates/reminders/create_reminder.html:45
+msgid "Save Reminder"
+msgstr "Salva Email"
+
+#: app/templates/reminders/edit_reminder.html:39
+msgid "Update Reminder"
+msgstr "Aggiorna Promemoria"
+
+#: app/templates/reminders/list_reminders.html:48
+msgid "Add Reminder"
+msgstr "Aggiungi Email"
+
+#: app/templates/reminders/list_reminders.html:58
+#: app/templates/reminders/view_reminder.html:21
+msgid "Start At"
+msgstr "Avvio TLS"
+
+#: app/templates/reminders/list_reminders.html:59
+msgid "Recurrence"
+msgstr "Ricorrenza"
+
+#: app/templates/reminders/list_reminders.html:69
+#: app/templates/reminders/list_reminders.html:153
+#: app/templates/reminders/view_reminder.html:26
+msgid "One-time"
+msgstr "Una volta"
+
+#: app/templates/reminders/list_reminders.html:83
+msgid "Assign Email Reminder"
+msgstr "Assegna Promemoria Email"
+
+#: app/templates/reminders/list_reminders.html:102
+#: app/templates/reminders/list_reminders.html:187
+msgid "Send Test Reminder"
+msgstr "Invia email di prova"
+
+#: app/templates/reminders/list_reminders.html:120
+#: app/templates/reminders/list_reminders.html:205
+msgid "Toggle Reminder On/Off"
+msgstr "Attiva/Disattiva Email"
+
+#: app/templates/reminders/list_reminders.html:122
+#: app/templates/reminders/list_reminders.html:207
+msgid "Reminder is enabled"
+msgstr "Email è abilitata"
+
+#: app/templates/reminders/list_reminders.html:124
+#: app/templates/reminders/list_reminders.html:209
+msgid "Reminder is disabled"
+msgstr "Email è disabilitata"
+
+#: app/templates/reminders/list_reminders.html:148
+msgid "Start At:"
+msgstr "Avvio TLS"
+
+#: app/templates/reminders/list_reminders.html:152
+msgid "Recurrence:"
+msgstr "Ricorrenza:"
+
+#: app/templates/reminders/list_reminders.html:168
+msgid "Link Email Reminder"
+msgstr "Collega Promemoria Email"
+
+#: app/templates/reminders/list_reminders.html:218
+msgid "How to use reminders"
+msgstr "Come gestire gli utenti"
+
+#: app/templates/reminders/list_reminders.html:231
+msgid "➕ Click “Add Reminder” and fill out the subject and content fields."
+msgstr "Clicca su “Aggiungi notifica” e compila i campi oggetto e contenuto."
+
+#: app/templates/reminders/list_reminders.html:232
+msgid "💾 Save the reminder to return to the overview."
+msgstr "Salva la notifica per tornare alla panoramica."
+
+#: app/templates/reminders/list_reminders.html:233
+msgid ""
+"📣 Assign Apprise, 🌐 Webhook, and/or 📧 Email (SMTP) destinations as needed."
+msgstr ""
+"📣 Assegna Apprise, 🌐 Webhook, e/o 📧 destinazioni Email (SMTP) come "
+"necessario."
+
+#: app/templates/reminders/list_reminders.html:234
+msgid ""
+"⏱️ Set the schedule using the schedule button to define when reminders are "
+"sent."
+msgstr ""
+"⏱️ Imposta il programma utilizzando il pulsante del programma per definire "
+"quando i promemoria sono inviati."
+
+#: app/templates/reminders/list_reminders.html:235
+msgid ""
+"🔍 Click “View Details” to review or edit assigned destinations and other "
+"settings."
+msgstr ""
+"🔍 Fai clic su “Visualizza Dettagli” per rivedere o modificare destinazioni "
+"assegnate e altre impostazioni."
+
+#: app/templates/reminders/list_reminders.html:236
+msgid ""
+"🧪 Click the Test button to verify all assigned destinations are working "
+"correctly."
+msgstr ""
+"🧪 Fai clic sul pulsante Test per verificare che tutte le destinazioni "
+"assegnate funzionino correttamente."
+
+#: app/templates/reminders/list_reminders.html:237
+msgid "🔴/🟢 Enable or disable the reminder using the toggle button."
+msgstr "Abilita l'email utilizzando il pulsante a levetta 🔴/🟢."
+
+#: app/templates/reminders/list_reminders.html:238
+msgid "📤 Reminders will be sent as scheduled to the assigned destinations."
+msgstr ""
+"📤 I promemoria saranno inviati come programmato alle destinazioni assegnate."
+
+#: app/templates/reminders/schedule_reminder.html:8
+msgid "Schedule Reminder"
+msgstr "Programma Email"
+
+#: app/templates/reminders/schedule_reminder.html:15
+msgid "Start Date & Time"
+msgstr "Data & Ora di Inizio"
+
+#: app/templates/reminders/schedule_reminder.html:22
+#: app/templates/reminders/view_reminder.html:25
+msgid "Recurrence Rule"
+msgstr "Regola di Ricorrenza"
+
+#: app/templates/reminders/schedule_reminder.html:24
+msgid "(Optional) Enter RRULE or leave blank for one-time."
+msgstr "(Opzionale) Inserisci RRULE o lascia vuoto per una volta."
+
+#: app/templates/reminders/schedule_reminder.html:30
+msgid "End Date"
+msgstr "Invia Test"
+
+#: app/templates/reminders/schedule_reminder.html:32
+msgid "(Optional) Stop sending after this date."
+msgstr "(Opzionale) Interrompi l'invio dopo questa data."
+
+#: app/templates/reminders/schedule_reminder.html:38
+#: app/templates/reminders/view_reminder.html:36
+msgid "Max Occurrences"
+msgstr "Numero Massimo di Occorrenze"
+
+#: app/templates/reminders/schedule_reminder.html:40
+msgid "(Optional) Stop after this many reminders."
+msgstr "(Opzionale) Interrompi dopo questo numero di promemoria."
+
+#: app/templates/reminders/schedule_reminder.html:56
+msgid "Help for RRULE syntax"
+msgstr "Aiuto per la sintassi RRULE"
+
+#: app/templates/reminders/schedule_reminder.html:66
+msgid "Several tools are available to help generate an RRULE."
+msgstr "Sono disponibili diversi strumenti per aiutare a generare un RRULE."
+
+#: app/templates/reminders/schedule_reminder.html:67
+msgid "Use a search engine or AI tool to assist."
+msgstr "Usa un motore di ricerca o uno strumento AI per assistere."
+
+#: app/templates/reminders/schedule_reminder.html:69
+msgid "Here is an example of one such online tool:"
+msgstr "Ecco un esempio di uno di questi strumenti online:"
+
+#: app/templates/reminders/schedule_reminder.html:73
+msgid "RRULE Generator Tool"
+msgstr "Strumento Generatore RRULE"
+
+#: app/templates/reminders/schedule_reminder.html:77
+msgid "See here for some common examples:"
+msgstr "Vedi qui alcuni esempi comuni:"
+
+#: app/templates/reminders/schedule_reminder.html:81
+msgid "RRULE Help (GitHub)"
+msgstr "Aiuto RRULE (GitHub)"
+
+#: app/templates/reminders/view_reminder.html:8
+msgid "Reminder Details"
+msgstr "Visualizza Dettagli"
+
+#: app/templates/reminders/view_reminder.html:30
+msgid "End At"
+msgstr "Invia Test"
+
+#: app/templates/reminders/view_reminder.html:42
+msgid "Last Sent"
+msgstr "Ultimo Check-in"
+
+#: app/templates/reminders/view_reminder.html:91
+msgid "Email Template"
+msgstr "Validatore Email"
+
+#: app/templates/reminders/view_reminder.html:103
+msgid "No email linked."
+msgstr "Email è abilitata"
+
+#: app/templates/reminders/view_reminder.html:111
+msgid "Back to Reminders"
+msgstr "Torna alle Email"
+
+#: app/templates/user_smtp/create_smtp.html:10
+msgid "Create SMTP Destination"
+msgstr "Crea Destinazione SMTP"
+
+#: app/templates/user_smtp/create_smtp.html:69
+#: app/templates/user_smtp/edit_smtp.html:84
+msgid "Hold to reveal"
+msgstr "Tieni premuto per visualizzare"
+
+#: app/templates/user_smtp/create_smtp.html:92
+#: app/templates/user_smtp/edit_smtp.html:107
+msgid "Use TLS"
+msgstr "Usa TLS"
+
+#: app/templates/user_smtp/edit_smtp.html:10
+msgid "Edit SMTP Destination"
+msgstr "Crea Destinazione SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:9
+msgid "SMTP Destinations"
+msgstr "Destinazioni SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:44
+msgid "Add SMTP"
+msgstr "Aggiungi SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:53
+msgid "Host"
+msgstr "Host"
+
+#: app/templates/user_smtp/list_smtp.html:54
+msgid "Port"
+msgstr "Porta"
+
+#: app/templates/user_smtp/list_smtp.html:56
+msgid "TLS"
+msgstr "TLS"
+
+#: app/templates/user_smtp/list_smtp.html:58
+msgid "Created"
+msgstr "Creato"
+
+#: app/templates/user_smtp/list_smtp.html:90
+#: app/templates/user_smtp/list_smtp.html:158
+msgid "Send Test"
+msgstr "Invia Test"
+
+#: app/templates/user_smtp/list_smtp.html:125
+msgid "Port:"
+msgstr "Porta:"
+
+#: app/templates/user_smtp/list_smtp.html:131
+msgid "Password:"
+msgstr "Password:"
+
+#: app/templates/user_smtp/list_smtp.html:184
+msgid "Hide SMTP Setup Help"
+msgstr "Nascondi aiuto configurazione SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:184
+msgid "Show SMTP Setup Help"
+msgstr "Mostra aiuto configurazione SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:190
+msgid ""
+"Need help finding your SMTP server settings? See here for some links to "
+"common providers:"
+msgstr ""
+"Hai bisogno di aiuto per trovare le impostazioni del tuo server SMTP? Vedi "
+"qui per alcuni link ai fornitori comuni:"
+
+#: app/templates/user_smtp/list_smtp.html:194
+msgid "SMTP Server Settings Help (GitHub)"
+msgstr "Aiuto impostazioni server SMTP (GitHub)"
+
+#: app/templates/user_smtp/list_smtp.html:198
+msgid ""
+"Find official documentation links for Gmail, Outlook, Yahoo, AOL, and "
+"others."
+msgstr ""
+"Trova link alla documentazione ufficiale per Gmail, Outlook, Yahoo, AOL e "
+"altri."
+
+#: app/templates/user_smtp/list_smtp.html:199
+msgid ""
+"If your provider isn’t listed, search their support site or a search engine "
+"for 'SMTP settings'."
+msgstr ""
+"Se il tuo fornitore non è elencato, cerca sul loro sito di supporto o su un "
+"motore di ricerca per 'impostazioni SMTP'."
+
+#: app/templates/user_smtp/list_smtp.html:200
+msgid ""
+"Some providers (like Gmail, Yahoo) require 'App Passwords' or special "
+"setup—see their docs!"
+msgstr ""
+"Alcuni fornitori (come Gmail, Yahoo) richiedono 'Password per le app' o "
+"configurazioni speciali—vedi la loro documentazione!"
+
+#: app/templates/webhook/create_webhook.html:10
+msgid "Create Webhook"
+msgstr "Crea Webhook"
+
+#: app/templates/webhook/edit_webhook.html:10
+msgid "Edit Webhook"
+msgstr "Modifica Webhook"
+
+#: app/templates/webhook/list_webhooks.html:9
+#: app/templates/webhook/webhook_config.html:3
+msgid "Webhooks Destinations"
+msgstr "Destinazioni Webhook"
+
+#: app/templates/webhook/list_webhooks.html:59
+msgid "Endpoint"
+msgstr "Endpoint"
+
+#: app/templates/webhook/list_webhooks.html:60
+msgid "Description"
+msgstr "Descrizione"
+
+#: app/templates/webhook/list_webhooks.html:82
+#: app/templates/webhook/list_webhooks.html:141
+msgid "Cannot edit while assigned to notifications"
+msgstr "Impossibile modificare mentre è assegnato alle notifiche"
+
+#: app/templates/webhook/list_webhooks.html:106
+#: app/templates/webhook/list_webhooks.html:165
+msgid "Cannot delete while assigned to notifications"
+msgstr "Impossibile eliminare mentre è assegnato alle notifiche"
+
+#: app/templates/webhook/list_webhooks.html:122
+msgid "Endpoint:"
+msgstr "Endpoint:"
+
+#: app/templates/webhook/list_webhooks.html:125
+msgid "Description:"
+msgstr "Descrizione:"
+
+#: app/views/account.py:74
+msgid "Current password is required to change password."
+msgstr "La password attuale è necessaria per cambiare la password."
+
+#: app/views/account.py:78
+msgid "Current password is incorrect."
+msgstr "La password attuale è errata."
+
+#: app/views/account.py:94
+msgid "Account updated successfully."
+msgstr "Account aggiornato con successo."
+
+#: app/views/account.py:100
+msgid "An error occurred while updating your account."
+msgstr "Si è verificato un errore durante l'aggiornamento del tuo account."
+
+#: app/views/account.py:137
+msgid "You cannot delete your account because you are the last admin."
+msgstr "Non puoi eliminare il tuo account perché sei l'ultimo admin."
+
+#: app/views/account.py:146
+msgid "Your account has been permanently deleted."
+msgstr "Il tuo account è stato eliminato in modo permanente."
+
+#: app/views/account.py:152
+msgid "An error occurred while trying to delete your account."
+msgstr "Si è verificato un errore durante l'aggiornamento del tuo account."
+
+#: app/views/account.py:171
+msgid "Your account has been deleted"
+msgstr "Il tuo account è stato eliminato in modo permanente."
+
+#: app/views/account.py:173
+#, python-brace-format
+msgid ""
+"Hello {username},\n"
+"\n"
+"Your account on {site_name} has been deleted.Remember to delete your files from the uploads folder.If this was not you, please contact support immediately.\n"
+"\n"
+"{site_url}"
+msgstr ""
+"Ciao {username},\n"
+"\n"
+"Il tuo account su {site_name} è stato eliminato. Ricorda di cancellare i tuoi file dalla cartella degli upload. Se non sei stato tu, contatta immediatamente il supporto.\n"
+"\n"
+"{site_url}"
+
+#: app/views/admin.py:59
+msgid "Invalid role."
+msgstr "Ruolo non valido."
+
+#: app/views/apprise.py:51
+msgid "🧪 Test notification sent successfully!"
+msgstr "🧪 Notifica di test inviata con successo!"
+
+#: app/views/apprise.py:56
+msgid "🧪 Failed to send test notification: "
+msgstr "🧪 Invio della notifica di test fallito:"
+
+#: app/views/apprise.py:62
+msgid "🧪 Error sending test notification."
+msgstr "🧪 Errore nell'invio della notifica di test."
+
+#: app/views/apprise.py:101
+msgid "Apprise destination created successfully."
+msgstr "Destinazione Apprise creata con successo."
+
+#: app/views/apprise.py:168
+msgid "Apprise destination updated successfully."
+msgstr "Destinazione Apprise aggiornata con successo."
+
+#: app/views/apprise.py:199
+msgid "Apprise destination deleted."
+msgstr "Destinazione Apprise eliminata."
+
+#: app/views/auth.py:95
+msgid "Admin account created successfully."
+msgstr "Account amministratore creato con successo."
+
+#: app/views/auth.py:108
+msgid "An error occurred while creating the admin account."
+msgstr ""
+"Si è verificato un errore durante la creazione dell'account amministratore."
+
+#: app/views/auth.py:141
+msgid ""
+"Your account is not activated. Please check your email for the activation "
+"link."
+msgstr ""
+"Il tuo account non è attivato. Si prega di controllare l'email per il link "
+"di attivazione."
+
+#: app/views/auth.py:157
+msgid "Multi-factor authentication required. Please enter your code."
+msgstr "Richiesta autenticazione a più fattori. Inserisci il tuo codice."
+
+#: app/views/auth.py:162 app/views/mfa.py:195
+msgid "Logged in successfully."
+msgstr "Accesso effettuato con successo."
+
+#: app/views/auth.py:179
+msgid "Invalid username or password."
+msgstr "Nome utente o password non validi."
+
+#: app/views/auth.py:203
+msgid "You have been logged out."
+msgstr "Sei stato disconnesso."
+
+#: app/views/auth.py:239 app/views/email.py:263
+msgid "Access denied."
+msgstr "Accesso negato."
+
+#: app/views/auth.py:273
+msgid "If a user with that email exists, we've sent the username to them."
+msgstr "Se un utente con quell'email esiste, abbiamo inviato il nome utente."
+
+#: app/views/auth.py:314
+msgid "A password reset link has been sent to your email."
+msgstr "Un link per reimpostare la password è stato inviato alla tua email."
+
+#: app/views/auth.py:319
+msgid "No account found matching that username and email."
+msgstr "Nessun account trovato corrispondente a quel nome utente ed email."
+
+#: app/views/auth.py:389
+msgid "The reset link is invalid or has expired."
+msgstr "Il link di reset non è valido o è scaduto."
+
+#: app/views/auth.py:401
+msgid "Username and email do not match."
+msgstr "Nome utente ed email non corrispondono."
+
+#: app/views/auth.py:421
+msgid "Your password has been reset. Please log in."
+msgstr "La tua password è stata reimpostata. Effettua il login."
+
+#: app/views/auth.py:458
+msgid "Invalid registration PIN."
+msgstr "PIN di registrazione non valido."
+
+#: app/views/auth.py:467
+msgid "Username or email already exists."
+msgstr "Nome utente o email già esistenti."
+
+#: app/views/auth.py:492
+msgid "Activate Your Grylli Account"
+msgstr "Attiva il tuo account Grylli"
+
+#: app/views/auth.py:493
+#, python-brace-format
+msgid ""
+"Hello {username},\n"
+"\n"
+"Please activate your account by clicking..."
+msgstr ""
+"Ciao {username},\n"
+"\n"
+"Per favore attiva il tuo account cliccando..."
+
+#: app/views/auth.py:498
+msgid "Account created! Please check your email to activate your account."
+msgstr ""
+"Account creato! Si prega di controllare l'email per attivare il tuo account."
+
+#: app/views/auth.py:521
+msgid "Activation link is invalid or expired."
+msgstr "Il link di attivazione è invalido o scaduto."
+
+#: app/views/auth.py:528 app/views/users.py:76 app/views/users.py:140
+msgid "User not found."
+msgstr "Utente non trovato."
+
+#: app/views/auth.py:532
+msgid "Account already activated. Please log in."
+msgstr "Account già attivato. Si prega di accedere."
+
+#: app/views/auth.py:540
+msgid "Your account has been activated! You can now log in."
+msgstr "Il tuo account è stato attivato! Ora puoi accedere."
+
+#: app/views/backups.py:72
+#, python-format
+msgid "Backup created: %(filename)s"
+msgstr "Backup creato: %(filename)s"
+
+#: app/views/backups.py:77
+msgid "Failed to create backup."
+msgstr "Impossibile creare il backup."
+
+#: app/views/backups.py:106
+#, python-format
+msgid "Backup deleted: %(filename)s"
+msgstr "Backup eliminato: %(filename)s"
+
+#: app/views/backups.py:109
+msgid "Backup file not found."
+msgstr "File di backup non trovato."
+
+#: app/views/backups.py:112
+msgid "Failed to delete backup."
+msgstr "Impossibile eliminare il backup."
+
+#: app/views/checkin.py:41
+msgid "Invalid check-in link."
+msgstr "Link di check-in invalido."
+
+#: app/views/checkin.py:48
+msgid "You are not authorized to check in for this item."
+msgstr "Non sei autorizzato a effettuare il check-in per questo elemento."
+
+#: app/views/checkin.py:62
+msgid "Unsupported check-in type."
+msgstr "Tipo di check-in non supportato."
+
+#: app/views/checkin.py:137
+msgid "⚠️ Cannot enable reminder: Start date/time is in the past."
+msgstr ""
+"⚠️ Impossibile abilitare il promemoria: la data/ora di inizio è nel passato."
+
+#: app/views/checkin.py:158
+msgid "✅ Enabled and timer started."
+msgstr "✅ Abilitato e timer avviato."
+
+#: app/views/checkin.py:168
+msgid "⛔ Disabled."
+msgstr "⛔ Disabilitato."
+
+#: app/views/checkin.py:170
+msgid "⚠️ Cannot toggle — missing schedule or destination."
+msgstr "⚠️ Impossibile alternare — manca programma o destinazione."
+
+#: app/views/email.py:88
+msgid "Message saved."
+msgstr "Messaggio salvato."
+
+#: app/views/email.py:118 app/views/messages.py:167
+msgid "Message deleted."
+msgstr "Messaggio eliminato."
+
+#: app/views/email.py:152
+msgid "Attached files updated."
+msgstr "File allegati aggiornati."
+
+#: app/views/email.py:200
+msgid "SMTP configuration not assigned or is disabled."
+msgstr "Configurazione SMTP non assegnata o è disabilitata."
+
+#: app/views/email.py:234 app/views/smtp_settings_admin.py:82
+msgid "Test email sent successfully."
+msgstr "Email di test inviata con successo."
+
+#: app/views/email.py:282 app/views/messages.py:305
+msgid "Schedule updated successfully."
+msgstr "Programma aggiornato con successo."
+
+#: app/views/email.py:310
+msgid "SMTP configuration assigned."
+msgstr "Configurazione SMTP assegnata."
+
+#: app/views/email.py:319
+msgid "SMTP configuration removed."
+msgstr "Configurazione SMTP assegnata."
+
+#: app/views/messages.py:97
+msgid "Message created successfully."
+msgstr "Messaggio creato con successo."
+
+#: app/views/messages.py:133
+msgid "Message updated successfully."
+msgstr "Messaggio aggiornato con successo."
+
+#: app/views/messages.py:223 app/views/reminders.py:240
+msgid "Destinations updated."
+msgstr "Destinazioni aggiornate."
+
+#: app/views/messages.py:441
+msgid "No destinations assigned to this message."
+msgstr "Configurazione SMTP non assegnata o è disabilitata."
+
+#: app/views/messages.py:453
+msgid "Test message sent successfully."
+msgstr "Email di test inviata con successo."
+
+#: app/views/messages.py:455
+msgid "Test message failed: "
+msgstr "Messaggio salvato."
+
+#: app/views/mfa.py:68
+msgid "You must enter a code from your authenticator."
+msgstr "Devi inserire un codice dal tuo autenticatore."
+
+#: app/views/mfa.py:82 app/views/mfa.py:259
+msgid "Invalid code. Please try again."
+msgstr "Codice non valido. Riprova."
+
+#: app/views/mfa.py:91
+msgid "Two-factor authentication disabled."
+msgstr "Notifica disabilitata"
+
+#: app/views/mfa.py:132
+msgid "Recovery codes are only shown immediately after enabling MFA."
+msgstr ""
+"I codici di recupero vengono mostrati solo immediatamente dopo aver "
+"abilitato MFA."
+
+#: app/views/mfa.py:142
+msgid "Could not load recovery codes."
+msgstr "Impossibile caricare i codici di recupero."
+
+#: app/views/mfa.py:168
+msgid "No MFA challenge in progress."
+msgstr "Nessuna sfida MFA in corso."
+
+#: app/views/mfa.py:176
+msgid "User not found for MFA challenge."
+msgstr "Utente non trovato."
+
+#: app/views/mfa.py:225
+msgid ""
+"You have used your last recovery code. MFA has been disabled. Please remove "
+"Grylli from your authenticator app, and re-enable MFA to protect your "
+"account."
+msgstr ""
+"Hai usato il tuo ultimo codice di recupero. MFA è stato disabilitato. "
+"Rimuovi Grylli dalla tua app di autenticazione e riabilita MFA per "
+"proteggere il tuo account."
+
+#: app/views/mfa.py:248
+#, python-brace-format
+msgid "Recovery code accepted. You have {remaining} recovery codes left."
+msgstr ""
+"Codice di recupero accettato. Ti restano {remaining} codici di recupero."
+
+#: app/views/reminders.py:106
+msgid "Reminder created successfully."
+msgstr "Messaggio creato con successo."
+
+#: app/views/reminders.py:143
+msgid "Reminder updated successfully."
+msgstr "Utente aggiornato con successo."
+
+#: app/views/reminders.py:174
+msgid "Reminder deleted."
+msgstr "Utente eliminato."
+
+#: app/views/reminders.py:287
+msgid "No destinations assigned to this reminder."
+msgstr "Configurazione SMTP non assegnata o è disabilitata."
+
+#: app/views/reminders.py:311
+msgid "No email message linked to this reminder."
+msgstr "Nessun messaggio email collegato a questo promemoria."
+
+#: app/views/reminders.py:314
+msgid "SMTP configuration is disabled."
+msgstr "Configurazione SMTP non assegnata o è disabilitata."
+
+#: app/views/reminders.py:353
+msgid "Test reminder sent successfully."
+msgstr "Email di test inviata con successo."
+
+#: app/views/reminders.py:356
+msgid "Test reminder failed: "
+msgstr "Messaggio salvato."
+
+#: app/views/reminders.py:430
+msgid "Reminder schedule updated successfully."
+msgstr "Programma aggiornato con successo."
+
+#: app/views/reminders.py:434
+msgid "Please correct the errors below."
+msgstr "Correggi gli errori sotto."
+
+#: app/views/reminders.py:481 app/views/reminders.py:482
+msgid "None"
+msgstr "No"
+
+#: app/views/reminders.py:508
+msgid "You must select both an SMTP config and an email message, or neither."
+msgstr ""
+"Devi selezionare sia una configurazione SMTP che un messaggio email, o "
+"nessuno dei due."
+
+#: app/views/reminders.py:528
+msgid "Email reminder settings updated."
+msgstr "Destinazioni aggiornate."
+
+#: app/views/smtp.py:83 app/views/user_smtp.py:80
+msgid "SMTP destination created successfully."
+msgstr "Destinazione SMTP creata con successo."
+
+#: app/views/smtp.py:129 app/views/user_smtp.py:135
+msgid "SMTP destination updated."
+msgstr "Destinazione SMTP aggiornata."
+
+#: app/views/smtp.py:160 app/views/user_smtp.py:166
+msgid "SMTP destination deleted."
+msgstr "Destinazione SMTP eliminata."
+
+#: app/views/smtp.py:191 app/views/user_smtp.py:199
+msgid "Test email sent successfully to your account email."
+msgstr "Email di test inviata con successo all'email del tuo account."
+
+#: app/views/smtp.py:196 app/views/user_smtp.py:204
+msgid "Failed to send test email. Check SMTP settings."
+msgstr "Invio email di test fallito. Controlla le impostazioni SMTP."
+
+#: app/views/smtp_settings_admin.py:76
+msgid "Test Email from Grylli"
+msgstr "Email di test da Grylli"
+
+#: app/views/smtp_settings_admin.py:77
+msgid "This is a test email from the Grylli SMTP settings page."
+msgstr "Questa è un'email di test dalla pagina impostazioni SMTP di Grylli."
+
+#: app/views/smtp_settings_admin.py:84
+msgid "Failed to send test email: "
+msgstr "Invio email di test fallito:"
+
+#: app/views/users.py:99
+msgid "User updated successfully."
+msgstr "Utente aggiornato con successo."
+
+#: app/views/users.py:106 app/views/users.py:327
+msgid "An error occurred while updating the user."
+msgstr "Si è verificato un errore durante l'aggiornamento dell'utente."
+
+#: app/views/users.py:195
+msgid "User deleted."
+msgstr "Utente eliminato."
+
+#: app/views/users.py:202
+msgid "An error occurred while deleting the user."
+msgstr "Si è verificato un errore durante l'eliminazione dell'utente."
+
+#: app/views/users.py:237
+msgid "Password is required when creating a new user."
+msgstr "La password è richiesta quando si crea un nuovo utente."
+
+#: app/views/users.py:244
+msgid "Username already exists."
+msgstr "Nome utente già esistente."
+
+#: app/views/users.py:251
+msgid "Email already exists."
+msgstr "Email già esistente."
+
+#: app/views/users.py:268
+#, python-format
+msgid "User '%(username)s' created successfully."
+msgstr "Utente '%(username)s' creato con successo."
+
+#: app/views/users.py:278
+msgid "Failed to create user."
+msgstr "Impossibile creare l'utente."
+
+#: app/views/users.py:305
+msgid "You cannot change your own enabled status."
+msgstr "Non puoi cambiare il tuo stato di attivazione."
+
+#: app/views/users.py:318
+#, python-format
+msgid "User '%(username)s' has been %(status)s."
+msgstr "L'utente '%(username)s' è stato %(status)s."
+
+#: app/views/users.py:356
+msgid "You cannot reset your own MFA."
+msgstr "⚪ = Non puoi disabilitare il tuo account."
+
+#: app/views/users.py:368
+#, python-format
+msgid "MFA disabled for user '%(username)s'."
+msgstr "MFA disabilitato per l'utente '%(username)s'."
+
+#: app/views/users.py:374
+msgid "An error occurred while resetting MFA."
+msgstr "Si è verificato un errore durante l'eliminazione dell'utente."
+
+#: app/views/webhook.py:54
+msgid "Webhook created successfully."
+msgstr "Webhook creato con successo."
+
+#: app/views/webhook.py:113
+msgid "Webhook updated successfully."
+msgstr "Webhook aggiornato con successo."
+
+#: app/views/webhook.py:142
+msgid "Webhook deleted."
+msgstr "Webhook eliminato."
+
+#: app/views/webhook.py:175
+msgid "🧪 Webhook test sent successfully!"
+msgstr "🧪 Test del webhook inviato con successo!"
+
+#: app/views/webhook.py:177
+msgid "🧪 Webhook test failed: "
+msgstr "🧪 Test del webhook fallito:"
+
+#: app/views/webhook.py:180
+msgid "🧪 Error sending webhook test."
+msgstr "🧪 Errore nell'inviare il test del webhook."
+
+#~ msgid "Current Password"
+#~ msgstr "Password attuale"
+
+#~ msgid "New Password"
+#~ msgstr "Nuova password"
+
+#~ msgid "Passwords must match"
+#~ msgstr "Le password devono corrispondere"
+
+#~ msgid "Confirm New Password"
+#~ msgstr "Conferma nuova password"
+
+#~ msgid "Password"
+#~ msgstr "Password"
+
+#~ msgid "Confirm Password"
+#~ msgstr "Conferma password"
+
+#~ msgid "Passwords must match."
+#~ msgstr "Le password devono corrispondere."
+
+#~ msgid "Apprise URL"
+#~ msgstr "URL Apprise"
+
+#~ msgid "Invalid Apprise URL"
+#~ msgstr "URL Apprise non valido"
+
+#~ msgid "Send Reset Link"
+#~ msgstr "Invia link di reset"
+
+#~ msgid "Admin"
+#~ msgstr "Admin"
+
+#~ msgid "User"
+#~ msgstr "Utente"
+
+#~ msgid "Must have at least one uppercase letter"
+#~ msgstr "Deve avere almeno una lettera maiuscola"
+
+#~ msgid "Must have at least one lowercase letter"
+#~ msgstr "Deve avere almeno una lettera minuscola"
+
+#~ msgid "Must have at least one number"
+#~ msgstr "Deve avere almeno un numero"
+
+#~ msgid "Must have at least one special character"
+#~ msgstr "Deve avere almeno un carattere speciale"
+
+#~ msgid "Update User"
+#~ msgstr "Aggiorna utente"
+
+#~ msgid "Recipient Email"
+#~ msgstr "Email del destinatario"
+
+#~ msgid "Message Body"
+#~ msgstr "Corpo del messaggio"
+
+#~ msgid "Save Message"
+#~ msgstr "Salva messaggio"
+
+#~ msgid "SMTP Host"
+#~ msgstr "Host SMTP"
+
+#~ msgid "SMTP Port"
+#~ msgstr "Porta SMTP"
+
+#~ msgid "SMTP Username"
+#~ msgstr "Nome utente SMTP"
+
+#~ msgid "SMTP Password"
+#~ msgstr "Password SMTP"
+
+#~ msgid "Enable Email Sending"
+#~ msgstr "Abilita l'invio email"
+
+#~ msgid "Save Settings"
+#~ msgstr "Salva impostazioni"
+
+#~ msgid "Attach Selected Files"
+#~ msgstr "Allega file selezionati"
+
+#~ msgid "Label is required."
+#~ msgstr "Etichetta obbligatoria."
+
+#~ msgid "Label must be 100 characters or fewer."
+#~ msgstr "L'etichetta deve contenere al massimo 100 caratteri."
+
+#~ msgid "Subject is required."
+#~ msgstr "Soggetto obbligatorio."
+
+#~ msgid "Subject must be 200 characters or fewer."
+#~ msgstr "Il soggetto deve contenere al massimo 200 caratteri."
+
+#~ msgid "Content is required."
+#~ msgstr "Contenuto obbligatorio."
+
+#~ msgid "Registration PIN"
+#~ msgstr "PIN di registrazione"
+
+#~ msgid ""
+#~ "Password must be 8+ characters and include upper, lower, number, and special"
+#~ " character."
+#~ msgstr ""
+#~ "La password deve contenere almeno 8 caratteri, includere maiuscola, "
+#~ "minuscola, numero e carattere speciale."
+
+#~ msgid "Webhook URL"
+#~ msgstr "Webhook URL"
+
+#~ msgid ""
+#~ "Grylli is a secure message delivery platform designed to activate after "
+#~ "prolonged user inactivity."
+#~ msgstr ""
+#~ "Grylli è una piattaforma di consegna messaggi sicura progettata per "
+#~ "attivarsi dopo una prolungata inattività dell'utente."
+
+#~ msgid ""
+#~ "It is a modern reimplementation of Gone Man’s Switch with a refined tech "
+#~ "stack, better maintainability, and an improved user experience."
+#~ msgstr ""
+#~ "È una reimplementazione moderna dello switch dell'uomo scomparso con un tecn"
+#~ " stack perfezionato, una migliore manutenzione e un'esperienza utente "
+#~ "migliorata."
+
+#~ msgid "Body:"
+#~ msgstr "Corpo:"
+
+#~ msgid "Subject:"
+#~ msgstr "Oggetto:"
+
+#~ msgid "Content:"
+#~ msgstr "Contenuto:"
+
+#~ msgid "Edit SMTP"
+#~ msgstr "Modifica SMTP"
+
+#~ msgid ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+#~ msgstr ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+
+#~ msgid "Admin Notes"
+#~ msgstr "Note Admin"
+
+#~ msgid "Register"
+#~ msgstr "Registrati"
+
+#~ msgid "View"
+#~ msgstr "Visualizza"
+
+#~ msgid "Schedule"
+#~ msgstr "Programma"
+
+#~ msgid "Message is enabled"
+#~ msgstr "Messaggio abilitato"
+
+#~ msgid "Message is disabled"
+#~ msgstr "Messaggio disabilitato"
+
+#~ msgid "No SMTP configuration selected."
+#~ msgstr "Nessuna configurazione SMTP selezionata."
+
+#~ msgid "Enable the message to start monitoring."
+#~ msgstr "Attiva il messaggio per iniziare il monitoraggio."
+
+#~ msgid "✅ SMTP settings saved."
+#~ msgstr "Impostazioni SMTP"
+
+#~ msgid "If you don’t check in, Grylli delivers the message for you."
+#~ msgstr "Se non fai il check-in, Grylli consegna il messaggio per te."
+
+#~ msgid "Fill in already discovered missing translations:"
+#~ msgstr "Compila le traduzioni mancanti già individuate:"
+
+#~ msgid "Add missing phrases in that JSON file."
+#~ msgstr "Aggiungi le frasi mancanti in quel file JSON."
+
+#~ msgid "From:"
+#~ msgstr "Da:"
+
+#~ msgid ""
+#~ "Attach the updated JSON file to a new GitHub issue when submitting your "
+#~ "changes."
+#~ msgstr ""
+#~ "Allega il file JSON aggiornato a un nuovo problema su GitHub quando invii le"
+#~ " tue modifiche."
+
+#~ msgid "admin"
+#~ msgstr "admin"
+
+#~ msgid "user"
+#~ msgstr "utente"
+
+#~ msgid "Logging in"
+#~ msgstr "Accedi"
+
+#~ msgid "SMTP error: "
+#~ msgstr "Errore SMTP:"
+
+#~ msgid "enabled"
+#~ msgstr "abilitato"
+
+#~ msgid "disabled"
+#~ msgstr "disabilitato"

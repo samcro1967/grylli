@@ -1,0 +1,52 @@
+{# ---------------------------------------------------------------------
+  layout.html
+  app/templates/layout.html
+  Main layout: persistent sidebar, top nav, main content,
+  profile dropdown, theme/language toggles, and flash message toasts.
+  --------------------------------------------------------------------- #}
+<!DOCTYPE html>
+<!-- Root HTML element with language and theme classes -->
+<html lang="{{ get_locale() }}"
+      class="scroll-smooth bg-zinc-100 dark:bg-zinc-900 text-zinc-800 dark:text-zinc-100 min-h-screen">
+    <!-- head section -->
+    {% include "partials/head.html" %}
+    <!-- Body uses Tailwind utilities and dark mode classes, fills full height, and disables scrollbars if overflow -->
+    <!-- =================== BODY & LAYOUT ROOT =================== -->
+    <body x-data="{ sidebarOpen: false, sidebarCollapsed: false }"
+          class="min-h-screen bg-zinc-100 dark:bg-zinc-900 text-zinc-800 dark:text-zinc-100 overflow-hidden">
+        <!-- Include header section -->
+        {% include "partials/header.html" %}
+        <!-- Main layout container with Alpine state for sidebar behavior:
+             - sidebarOpen controls visibility (used in mobile)
+             - sidebarCollapsed toggles width between compact and expanded -->
+        <!-- ===============================================================
+        MAIN LAYOUT: Sidebar + Main Content
+        =============================================================== -->
+        <div class="flex pt-16 h-screen">
+            <!-- COLLAPSIBLE SIDEBAR -->
+            <!-- Dynamically adjusts width using Alpine's `sidebarCollapsed` state -->
+            <!-- ================= COLLAPSIBLE SIDEBAR ================== -->
+            {% include "partials/sidebar.html" %}
+            <!-- MAIN CONTENT -->
+            <!-- =================== MAIN CONTENT =================== -->
+            <main class="flex-grow overflow-y-auto p-6">
+                <!-- Page-specific content will be injected here -->
+                {% block content %}{% endblock %}
+                <!-- Flash messages (success, danger, warning, etc.) -->
+                {% include "partials/flash_messages.html" %}
+            </main>
+        </div>
+        <script>
+            // Auto-clear toast notifications after 5 seconds
+            setTimeout(() => {
+                const container = document.getElementById("toast-container");
+                if (container) container.innerHTML = "";
+            }, 5000);
+        </script>
+        <script>
+          // Use a dummy ID, like 0
+          const roleChangeBase = "{{ url_for('users.change_role', user_id=0) }}";
+        </script>
+        <script src="{{ url_for('static', filename='js/role-modal.js') }}"></script>
+    </body>
+</html>

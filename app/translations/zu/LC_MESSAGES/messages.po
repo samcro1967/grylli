@@ -1,0 +1,3298 @@
+# Zulu translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-06-07 15:49-0500\n"
+"PO-Revision-Date: 2025-05-25 16:45-0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: zu <LL@li.org>\n"
+"Language: zu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: app/init_db.py:55
+#, python-format
+msgid "Tables currently in DB: %s"
+msgstr "Amathebhulebhu akhona kwi-DB:"
+
+#: app/init_db.py:58
+msgid "Database or system_config table missing. Running migrations now..."
+msgstr ""
+"Idathabheyisi noma itafula elenziwe ngesistimu lilahlekile. Ukwenza "
+"izinguquko manje..."
+
+#: app/init_db.py:61
+msgid "Migrations applied successfully."
+msgstr "Izinguquko zafakwa ngempumelelo."
+
+#: app/init_db.py:63
+msgid "Migration failed."
+msgstr "Ukunikezwa akuphumelelanga."
+
+#: app/init_db.py:68
+msgid "System config seeded successfully."
+msgstr "Ukulungiswa kwesistimu kutholwe ngempumelelo."
+
+#: app/init_db.py:70
+msgid "Error seeding system config."
+msgstr "Iphutha ekulungiseni izilungiselelo zesistimu:"
+
+#: app/forms/mfa_form.py:15 app/templates/apprise/create_apprise.html:30
+#: app/templates/apprise/edit_apprise.html:30
+#: app/templates/apprise/list_apprise.html:60
+#: app/templates/mfa/settings.html:24 app/templates/mfa/settings.html:40
+#: app/templates/user_smtp/create_smtp.html:99
+#: app/templates/user_smtp/edit_smtp.html:114
+#: app/templates/user_smtp/list_smtp.html:57
+#: app/templates/webhook/create_webhook.html:36
+#: app/templates/webhook/edit_webhook.html:36
+#: app/templates/webhook/list_webhooks.html:61
+msgid "Enabled"
+msgstr "Kuvuliwe"
+
+#: app/forms/mfa_form.py:16
+msgid "Authenticator Code"
+msgstr "Ikhodi ye-Authenticator"
+
+#: app/forms/mfa_form.py:17
+#: app/templates/admin/partials/user_instructions_and_modal.html:66
+#: app/templates/admin/partials/user_table.html:115
+#: app/templates/email/assign_smtp.html:44 app/templates/mfa/settings.html:47
+#: app/templates/user_smtp/edit_smtp.html:122
+msgid "Save"
+msgstr "Londoloza"
+
+#: app/forms/mfa_form.py:27
+msgid "Authentication Code"
+msgstr "Buyekeza Isaziso"
+
+#: app/forms/mfa_form.py:29
+msgid "Please enter your authentication code."
+msgstr "Sicela ufake ikhodi yakho yokuqinisekisa."
+
+#: app/forms/mfa_form.py:30
+msgid "Enter a valid 6-digit code or recovery code."
+msgstr ""
+"Faka ikhodi evumelekile enezinombolo eziyisithupha noma ikhodi yokutakula."
+
+#: app/forms/mfa_form.py:31
+msgid "Invalid code format."
+msgstr "Ifomethi yekhodi engavumelekile."
+
+#: app/forms/mfa_form.py:35 app/templates/mfa/challenge.html:25
+msgid "Verify"
+msgstr "Inguqulo"
+
+#: app/services/mail.py:37 app/services/system_settings_email.py:40
+msgid "Missing required config setting: "
+msgstr "Ilungiselelo elifunekayo lishoda:"
+
+#: app/services/mail.py:46 app/services/system_settings_email.py:50
+#, python-format
+msgid "Failed to decrypt %(key)s: %(error)s"
+msgstr "Yehlulekile ukuvuleka %(key)s: %(error)s"
+
+#: app/services/mail.py:54
+#, python-format
+msgid "get_setting('%(key)s') -> '%(value)s' (sensitive: %(sensitive)s)"
+msgstr ""
+"thola_isethingi('%(key)s') -> '%(value)s' (raw: '%(raw)s', ebucayi: "
+"%(sensitive)s)"
+
+#: app/services/mail.py:75
+#, python-format
+msgid "Preparing email to %(to)s"
+msgstr "Lungisa i-imeyili ukuya ku-%(to)s"
+
+#: app/services/mail.py:90
+#, python-format
+msgid ""
+"SMTP configuration: host=%(host)s (type=%(host_type)s), port=%(port)s "
+"(type=%(port_type)s)"
+msgstr ""
+"Isiphequluli se-SMTP = '%(host)s' (uhlobo: %(host_type)s), imbobo = %(port)s"
+" (uhlobo: %(port_type)s)"
+
+#: app/services/mail.py:99
+#, python-format
+msgid "SMTP username: %(user)s"
+msgstr "Sebenzisa umsebenzisi: %(user)s"
+
+#: app/services/mail.py:100
+#, python-format
+msgid "TLS enabled: %(tls)s"
+msgstr "Kuqalisiwe i-TLS: %(tls)s"
+
+#: app/services/mail.py:105
+msgid "Starting TLS connection..."
+msgstr "Ukusungula TLS"
+
+#: app/services/mail.py:107
+msgid "Logging into SMTP server..."
+msgstr "Ukungena ngemvume kwi-server ye-SMTP..."
+
+#: app/services/mail.py:109
+msgid "Sending email message..."
+msgstr "Isheduli Yomlayezo"
+
+#: app/services/mail.py:111
+#, python-format
+msgid "Email sent successfully to %(to)s"
+msgstr "I-imeyili yokuhlola ithunyelwe ngempumelelo."
+
+#: app/services/mail.py:114
+#, python-format
+msgid "SMTP error while sending to %(to)s: %(error)s"
+msgstr "Iphutha le-SMTP ngenkathi uthumela ku-%(to)s: %(error)s"
+
+#: app/templates/about.html:10
+msgid "About Grylli"
+msgstr "Mayelana ne-Grylli"
+
+#: app/templates/about.html:13
+msgid ""
+"Grylli is a secure, self-hosted message delivery platform that automatically"
+" sends pre-configured messages if a user fails to check in within a defined "
+"time period."
+msgstr ""
+"IGrylli iyiplatifomu yokulethwa kwemilayezo enokuphepha, ezibanjwe yona "
+"uqobo ezithumela ngokuzenzakalelayo imilayezo ehleliwe uma umsebenzisi "
+"ehluleka ukubheka ngesikhathi esibekiwe."
+
+#: app/templates/about.html:14
+msgid ""
+"It supports multiple users, customizable schedules, and recurring reminders."
+msgstr "Iyasekela abasebenzisi abaningi nezinhlelo ezisebenziseka kalula."
+
+#: app/templates/about.html:15
+msgid ""
+"Messages and reminders can be delivered via email, webhooks, or over 100 "
+"third-party services through Apprise."
+msgstr ""
+"Imiyalezo ingahanjiswa nge-imeyili, ama-webhooks, noma ngezinsiza "
+"ezingaphezu kuka-80 zomuntu wesithathu nge-Apprise."
+
+#: app/templates/about.html:16
+msgid ""
+"Users can configure their own SMTP servers to ensure emails and reminders "
+"appear to come directly from them — not from the system administrator."
+msgstr ""
+"Abasebenzisi bangahlela iziphakeli zabo ze-SMTP ukwenza imiyalezo ibonakale "
+"ivela kubo ngqo — hhayi kumphathi wendawo yokusebenza."
+
+#: app/templates/about.html:17
+msgid ""
+"Sensitive data is encrypted at rest, and all operations are secured with "
+"strong authentication and audit-friendly logging."
+msgstr ""
+"Idatha ebucayi inokuqiniswa lapho iphumule, futhi yonke imisebenzi "
+"yemilayezo iqinisekisiwe ngokuqashelwa okuqinile nokubhalwa kwamalogi "
+"okulula ukuwenza owokubonisa."
+
+#: app/templates/about.html:18
+msgid ""
+"Built with a modern, reactive technology stack, Grylli is optimized for "
+"responsiveness and works seamlessly across desktop and mobile devices."
+msgstr ""
+"Yakhiwe ngaphansi kobuchwepheshe obunempendulo yamanje, iGrylli ikhethiwe "
+"ukwenza kahle emphendulweni futhi isebenza kahle kuwo wonke amadivayisi "
+"edeskithophu nezibambisi."
+
+#: app/templates/about.html:23
+msgid "Version:"
+msgstr "Inguqulo:"
+
+#: app/templates/about.html:26
+msgid "Repository:"
+msgstr "Umthombo:"
+
+#: app/templates/about.html:30
+msgid "GitHub - samcro1967/grylli"
+msgstr "GitHub - samcro1967/grylli"
+
+#: app/templates/help.html:2 app/templates/help.html:5
+#: app/templates/partials/header.html:85
+msgid "Help"
+msgstr "Usizo"
+
+#: app/templates/help.html:7
+msgid ""
+"Grylli includes built-in instructions throughout the app to help you "
+"configure and manage your setup."
+msgstr ""
+"IGrylli iqukethe iziyalezo zokwakhiwe zohlelo olufakiwe ukuze likusize "
+"ulungiselele futhi ulawule isistimu yakho."
+
+#: app/templates/help.html:8
+msgid ""
+"This page provides an overview of key features and direct links to where "
+"they can be managed."
+msgstr ""
+"Leli khasi linebuka konke lwezici ezibalulekile nezixhumanisi eziqondile "
+"lapho zingalawulwa khona."
+
+#: app/templates/help.html:12 app/templates/messages/list_messages.html:9
+#: app/templates/partials/shared_nav.html:17
+msgid "Notifications"
+msgstr "Izaziso"
+
+#: app/templates/help.html:14
+msgid "Create and assign messages"
+msgstr "Dala umyalezo noma i-imeyili."
+
+#: app/templates/admin/index.html:32 app/templates/help.html:17
+#: app/templates/partials/admin_nav.html:56
+msgid "SMTP Settings"
+msgstr "Izilungiselelo ze-SMTP"
+
+#: app/templates/help.html:19
+msgid "Use your own email server"
+msgstr "Sebenzisa iseva yakho ye-imeyili"
+
+#: app/templates/help.html:22
+msgid "Apprise Integration"
+msgstr "Izindawo Zokuqinisekisa"
+
+#: app/templates/help.html:24
+msgid "Send notifications to 80+ supported services"
+msgstr "Thumela izaziso kuzinsiza ezisekelwa ezingaphezu kuka-80"
+
+#: app/templates/help.html:27
+#: app/templates/messages/assign_destinations.html:41
+#: app/templates/messages/view_message.html:58
+#: app/templates/partials/shared_nav.html:44
+#: app/templates/reminders/assign_destinations.html:39
+#: app/templates/reminders/view_reminder.html:69
+msgid "Webhooks"
+msgstr "AmaWebhooks"
+
+#: app/templates/help.html:29
+msgid "Trigger actions or external workflows"
+msgstr "Qala izenzo noma izinqubo ezangaphandle"
+
+#: app/templates/email/list_emails.html:9 app/templates/help.html:32
+#: app/templates/partials/shared_nav.html:61
+msgid "Emails"
+msgstr "Ama-imeyili"
+
+#: app/templates/help.html:34
+msgid "View and manage secure email messages"
+msgstr "Ukubuka konke kwemiyalezo ye-imeyili evikelekile"
+
+#: app/templates/help.html:38
+msgid "Security"
+msgstr "🔐 Ezokuvikela"
+
+#: app/templates/help.html:39
+msgid "Grylli encrypts sensitive data and logs all key actions for auditing."
+msgstr ""
+"IGrylli iqinisa idatha ebucayi futhi ibhalisela zonke izenzo ezibalulekile "
+"zokuhlola."
+
+#: app/templates/index.html:9 app/views/locale.py:95
+msgid "Welcome to Grylli"
+msgstr "Siyakwamukela ku-Grylli"
+
+#: app/templates/index.html:11
+msgid "Pronounced"
+msgstr "Kukhonjwe"
+
+#: app/templates/index.html:11
+msgid "like “grill-ee”"
+msgstr "njenge- “grill-ee”"
+
+#: app/templates/index.html:14
+msgid ""
+"Grylli is a secure message scheduling and delivery system designed to ensure"
+" your important messages are delivered — even if you can’t be there to send "
+"them."
+msgstr ""
+"I-Grylli yisistimu yokuhlela nokuletha imilayezo evikelekile ehlelwe "
+"ukuqinisekisa ukuthi imilayezo yakho ebalulekile iyalethwa — noma ungakwazi "
+"ukuba khona ukuyithumela."
+
+#: app/templates/index.html:17
+msgid ""
+"Whether you’re planning ahead, setting up emergency communication, or "
+"building peace of mind, Grylli helps automate your message delivery via "
+"multiple channels including email, webhooks, and Apprise notifications."
+msgstr ""
+"Noma uhlela phambili, usetha ukuxhumana okuvikeleke, noma udala ukwehluka "
+"kokuthula kwengqondo, i-Grylli ikusiza ukuzenzakalelayo kokulethwa "
+"kwemilayezo yakho nge-imeyili, izicelo zewebhu, noma izaziso ze-Apprise uma "
+"uphuthelwe ukuhlangana ngesikhathi."
+
+#: app/templates/index.html:19
+msgid "Getting Started"
+msgstr "Ukuqala"
+
+#: app/templates/index.html:21
+msgid "Create a message, email, or reminder."
+msgstr "Dala umyalezo noma i-imeyili."
+
+#: app/templates/index.html:22
+msgid "Set your check-in interval and grace period (for messages)."
+msgstr "Setha isikhethi sakho sokuhlola nesikhathi sokuxolela."
+
+#: app/templates/index.html:23
+msgid "Assign one or more delivery destinations."
+msgstr "Nika okungenani indawo yokuletha eyodwa noma ngaphezulu."
+
+#: app/templates/index.html:24
+msgid "Optionally attach files for secure emails."
+msgstr "Uma uyikho kushisa, faka amanye amafayela ukuze imeyili ephephile."
+
+#: app/templates/index.html:25
+msgid "Schedule reminders to send at specific times or on a recurring basis."
+msgstr "Hlela izikhumbuzo zokuthumela ngezikhathi ezithile noma njalo."
+
+#: app/templates/index.html:26
+msgid "Enable the message or reminder to activate delivery."
+msgstr "Nika amandla umlayezo noma isikhumbuzo ukuvula ukuhanjiswa."
+
+#: app/templates/index.html:28
+msgid ""
+"Regularly check in to Grylli to prevent automated delivery; miss a check-in "
+"and Grylli sends your messages as scheduled."
+msgstr ""
+"Hlola njalo ku-Grylli ukuvimbela ukulethwa okuzenzakalelayo; uma ungahloli, "
+"i-Grylli ithumela imiyalezo yakho njengoba kuhleliwe."
+
+#: app/templates/privacy.html:10
+msgid "Privacy Notice"
+msgstr "Isimemezelo Sobumfihlo"
+
+#: app/templates/privacy.html:13
+msgid ""
+"Grylli respects your privacy and is designed to minimize the collection and "
+"storage of personal data."
+msgstr ""
+"I-Grylli ihlonipha ubumfihlo bakho futhi yakhelwe ukunciphisa ukuqoqa "
+"nokugcinwa kwedatha yomuntu siqu."
+
+#: app/templates/privacy.html:14
+msgid ""
+"All data is encrypted where appropriate and remains fully under your control"
+" if you self-host this platform."
+msgstr ""
+"Yonke idatha igcinwa imfihlo lapho kufanele futhi ihlala ngaphansi kolawulo "
+"lwakho ngokuphelele uma usebenzisa le platform wena ngokwakho."
+
+#: app/templates/privacy.html:17
+msgid "What Data We Collect"
+msgstr "Iziphi Idatha Esiyiqoqayo"
+
+#: app/templates/privacy.html:19
+msgid "Email address and password hash (for authentication)"
+msgstr "Ikheli le-imeyili ne-password hash (ngokuzazisa)"
+
+#: app/templates/privacy.html:20
+msgid "Optional MFA secret and recovery codes (encrypted at rest)"
+msgstr ""
+"Imfihlo ye-MFA ongayikhethela namakhodi okubuyisa (ahlinzekwe ngenkululeko "
+"yokuxhumana)"
+
+#: app/templates/privacy.html:21
+msgid "Reminder and message content you configure"
+msgstr "Isaziso nokuqukethwe kwezimyalezo ozibekile"
+
+#: app/templates/privacy.html:22
+msgid "User-specific settings, SMTP configuration (if provided)"
+msgstr ""
+"Izilungiselelo zomsebenzisi ezithile, ukuhlelwa kwe-SMTP (uma kunikeziwe)"
+
+#: app/templates/privacy.html:25
+msgid "How Your Data Is Used"
+msgstr "Indlela Idatha Yakho Esebenza Ngayo"
+
+#: app/templates/privacy.html:27
+msgid ""
+"Your data is used solely for the purpose of delivering reminders and "
+"messages according to your preferences."
+msgstr ""
+"Idatha yakho isetshenziswa kuphela ngenjongo yokuletha izikhumbuzo "
+"nezimiyalezo ngokuya ngokuncamelayo kwakho."
+
+#: app/templates/privacy.html:28
+msgid ""
+"Grylli does not share, sell, or transmit your personal data to any third "
+"parties."
+msgstr ""
+"I-Grylli ayihlanganyeli, ayidayisi, noma ayithumeli idatha yakho yomuntu "
+"kwabanye abakwaqathi abangena."
+
+#: app/templates/privacy.html:31
+msgid "Your Rights"
+msgstr "Amalungelo Akho"
+
+#: app/templates/privacy.html:33
+msgid ""
+"You can export all of your data at any time from the Account Settings page."
+msgstr ""
+"Ungathola zonke izinkomba zakho nganoma yisiphi isikhathi ekhasini Lokusetha"
+" I-akhawunti."
+
+#: app/templates/privacy.html:34
+msgid "You may permanently delete your account and all associated data."
+msgstr "Awukwazi ukususa i-akhawunti yakho ngoba ungumgcinimafa wokugcina."
+
+#: app/templates/privacy.html:35
+msgid ""
+"If you are using a self-hosted instance, contact the instance administrator "
+"for data inquiries."
+msgstr ""
+"Uma usebenzisa iveni yokuzekelela, xhumana nomphathi weveni ukuze ubuze "
+"ngobudle."
+
+#: app/templates/privacy.html:38
+msgid "Self-Hosting Responsibility"
+msgstr "Umthwalo Womkhondo"
+
+#: app/templates/privacy.html:40
+msgid ""
+"If you are running Grylli on your own server, you are responsible for the "
+"storage, processing, and lawful handling of all user data on that instance."
+msgstr ""
+"Uma uqhuba i-Grylli ku-server yakho, unesibopho sokugcinwa, ukusebenza, "
+"nokuphatha okusemthethweni kwedatha yabasebenzisi bonke ekhasini lelo."
+
+#: app/templates/privacy.html:44
+msgid ""
+"This notice was last updated in June 2025 and may evolve to reflect changes "
+"in the software or regulatory landscape."
+msgstr ""
+"Lesi saziso sabuyekezwa ngoJuni 2025 futhi singashintsha ukuze sibonise "
+"izinguquko kwi-software noma umkhawulo wezokusebenziswa."
+
+#: app/templates/system_info.html:11
+msgid "📦 Environment Versions"
+msgstr "📦 Izinhlobo Zesimo Sezulu"
+
+#: app/templates/system_info.html:17
+msgid "Category"
+msgstr "Isigaba"
+
+#: app/templates/system_info.html:18
+msgid "Tool"
+msgstr "Ithuluzi"
+
+#: app/templates/system_info.html:19
+msgid "Version"
+msgstr "Inguqulo"
+
+#: app/templates/system_info.html:25
+msgid "🧠 Python"
+msgstr "🧠 iPython"
+
+#: app/templates/system_info.html:26
+msgid "Python"
+msgstr "I-Python"
+
+#: app/templates/system_info.html:30
+msgid "pip"
+msgstr "ipip"
+
+#: app/templates/system_info.html:34
+msgid "SQLite"
+msgstr "SQLite"
+
+#: app/templates/system_info.html:40
+msgid "⚙️ Core"
+msgstr "⚙️ Okuyinhloko"
+
+#: app/templates/system_info.html:47
+msgid "🔐 Security"
+msgstr "🔐 Ezokuvikela"
+
+#: app/templates/system_info.html:48
+msgid "Email Validator"
+msgstr "Umhloli we-imeyili"
+
+#: app/templates/system_info.html:52
+msgid "Cryptography"
+msgstr "Ubucwebecwebe"
+
+#: app/templates/system_info.html:57
+msgid "🕰️ Scheduling"
+msgstr "🕰️ Ukuhlelwa"
+
+#: app/templates/system_info.html:58
+msgid "APScheduler"
+msgstr "I-APScheduler"
+
+#: app/templates/system_info.html:62
+msgid "Apprise (Python)"
+msgstr "Apprise (Python)"
+
+#: app/templates/system_info.html:66
+msgid "Apprise CLI"
+msgstr "Apprise CLI"
+
+#: app/templates/system_info.html:74
+msgid "🌐 Frontend"
+msgstr "🌐 I-Frontend"
+
+#: app/templates/account/manage_account.html:11
+msgid "Manage Account"
+msgstr "Phatha I-akhawunti"
+
+#: app/templates/account/manage_account.html:12
+msgid "Update your profile information and password."
+msgstr "Buyekeza ulwazi lwephrofayela yakho nephasiwedi."
+
+#: app/templates/account/manage_account.html:41
+#: app/templates/admin/create_user.html:40
+#: app/templates/auth/bootstrap.html:43
+#: app/templates/auth/reset_password.html:42 app/templates/auth/signup.html:42
+msgid "Please enter a valid email address."
+msgstr "Sicela ufake ikheli le-imeyili elivumelekile."
+
+#: app/templates/account/manage_account.html:62
+#: app/templates/account/manage_account.html:96
+#: app/templates/account/manage_account.html:127
+#: app/templates/auth/reset_password.html:66
+#: app/templates/auth/reset_password.html:97 app/templates/auth/signup.html:65
+#: app/templates/auth/signup.html:95
+msgid "Show/hide password"
+msgstr "Bamba ukuze ubonise iphasiwedi"
+
+#: app/templates/account/manage_account.html:89
+#: app/templates/admin/create_user.html:53
+#: app/templates/auth/bootstrap.html:51
+#: app/templates/auth/reset_password.html:58 app/templates/auth/signup.html:58
+msgid "Password must meet all complexity requirements."
+msgstr "Iphasiwedi kumele ihlangabezane nazo zonke izidingo zokuhlukanisa."
+
+#: app/templates/account/manage_account.html:141
+#: app/templates/admin/create_user.html:72
+#: app/templates/admin/edit_user.html:67 app/templates/auth/bootstrap.html:69
+#: app/templates/auth/reset_password.html:110
+#: app/templates/auth/signup.html:108
+msgid "Passwords do not match."
+msgstr "Amaphasiwedi awafani."
+
+#: app/templates/account/manage_account.html:147
+msgid "Update Account"
+msgstr "Buyekeza I-akhawunti"
+
+#: app/templates/account/manage_account.html:151
+#: app/templates/admin/create_user.html:82
+#: app/templates/admin/edit_user.html:97 app/templates/admin/help_form.html:28
+#: app/templates/admin/partials/user_instructions_and_modal.html:62
+#: app/templates/admin/partials/user_table.html:113
+#: app/templates/apprise/create_apprise.html:42
+#: app/templates/apprise/edit_apprise.html:42
+#: app/templates/auth/reset_password.html:121
+#: app/templates/email/assign_smtp.html:46
+#: app/templates/email/attach_files.html:47
+#: app/templates/email/edit_message.html:54
+#: app/templates/email/schedule_email.html:84
+#: app/templates/messages/assign_destinations.html:66
+#: app/templates/messages/create_message.html:55
+#: app/templates/messages/edit_message.html:48
+#: app/templates/messages/schedule_message.html:84
+#: app/templates/mfa/challenge.html:29 app/templates/mfa/settings.html:51
+#: app/templates/reminders/assign_destinations.html:64
+#: app/templates/reminders/assign_email_reminder.html:94
+#: app/templates/reminders/create_reminder.html:49
+#: app/templates/reminders/edit_reminder.html:42
+#: app/templates/reminders/schedule_reminder.html:51
+#: app/templates/user_smtp/create_smtp.html:111
+#: app/templates/user_smtp/edit_smtp.html:125
+#: app/templates/webhook/create_webhook.html:48
+#: app/templates/webhook/edit_webhook.html:48
+msgid "Cancel"
+msgstr "Khansela"
+
+#: app/templates/account/manage_account.html:159
+#: app/templates/admin/create_user.html:90
+#: app/templates/admin/edit_user.html:81 app/templates/auth/bootstrap.html:83
+#: app/templates/auth/reset_password.html:128
+#: app/templates/auth/signup.html:132
+msgid "Minimum 8 characters"
+msgstr "Okungenani izinhlamvu ezingu-8"
+
+#: app/templates/account/manage_account.html:160
+#: app/templates/admin/create_user.html:91
+#: app/templates/admin/edit_user.html:82 app/templates/auth/bootstrap.html:84
+#: app/templates/auth/reset_password.html:129
+#: app/templates/auth/signup.html:133
+msgid "At least one uppercase letter"
+msgstr "Okungenani uhlamvu olukhulu olulodwa"
+
+#: app/templates/account/manage_account.html:161
+#: app/templates/admin/create_user.html:92
+#: app/templates/admin/edit_user.html:83 app/templates/auth/bootstrap.html:85
+#: app/templates/auth/reset_password.html:130
+#: app/templates/auth/signup.html:134
+msgid "At least one lowercase letter"
+msgstr "Okungenani uhlamvu oluncane olulodwa"
+
+#: app/templates/account/manage_account.html:162
+#: app/templates/admin/create_user.html:93
+#: app/templates/admin/edit_user.html:84 app/templates/auth/bootstrap.html:86
+#: app/templates/auth/reset_password.html:131
+#: app/templates/auth/signup.html:135
+msgid "At least one number"
+msgstr "Okungenani inombolo eyodwa"
+
+#: app/templates/account/manage_account.html:163
+#: app/templates/admin/create_user.html:94
+#: app/templates/auth/bootstrap.html:87
+#: app/templates/auth/reset_password.html:132
+#: app/templates/auth/signup.html:136
+msgid "At least one special character (e.g., !@#$%)"
+msgstr "Okungenani uhlamvu olukhethekile olulodwa (isb., !@#$%)"
+
+#: app/templates/account/manage_account.html:169
+msgid "Download My Data"
+msgstr "Landa Idatha Yami"
+
+#: app/templates/account/manage_account.html:171
+msgid ""
+"Download all your account data as a JSON file. This includes your reminders,"
+" messages, email settings, and more. The file is for your records only and "
+"cannot be imported back. Protect it as it may contain sensitive information."
+msgstr ""
+"Landa yonke idatha yakho ye-akhawunti njengefayela le-JSON. Lokhu kufaka "
+"izikhumbuzo zakho, izimiyalezo, izilungiselelo ze-imeyili, nokuningi. "
+"Ifayela liyi kadatha yakho kuphela futhi alinakungenwa emuva. Vikela "
+"njengoba kungenzeka iqukethe imininingwane ewubucayi."
+
+#: app/templates/account/manage_account.html:175
+msgid "Download My Data (JSON)"
+msgstr "Landa Idatha Yami (JSON)"
+
+#: app/templates/account/manage_account.html:179
+msgid "Danger Zone"
+msgstr "Indawo Yengozi"
+
+#: app/templates/account/manage_account.html:180
+msgid "Deleting your account is permanent and cannot be undone."
+msgstr ""
+"Ukususa i-akhawunti yakho kuhlala unomphelo futhi akukwazi ukubuyiswa."
+
+#: app/templates/account/manage_account.html:185
+msgid "Delete My Account"
+msgstr "Buyekeza I-akhawunti"
+
+#: app/templates/account/translations.html:8
+msgid "Translations - Grylli"
+msgstr "Izinguqulo - Grylli"
+
+#: app/templates/account/translations.html:17
+#: app/templates/partials/header.html:102
+msgid "Translations"
+msgstr "Ukuhumusha"
+
+#: app/templates/account/translations.html:20
+msgid "Grylli currently supports multiple languages and more will be added."
+msgstr "IGrylli okwamanje isekela izilimi eziningi futhi kuzongezwa eziningi."
+
+#: app/templates/account/translations.html:21
+msgid "Many of the translations were performed with assistance from ChatGPT."
+msgstr "Amanye amaningi okuguqulwa enziwa ngosizo lweChatGPT."
+
+#: app/templates/account/translations.html:22
+msgid ""
+"If you find a translation issue or want to suggest improvements, your input "
+"is welcome!"
+msgstr ""
+"Uma uthola inkinga yenguqulo noma ufuna ukusikisela ukuthuthukiswa, imibono "
+"yakho iyamukeleka!"
+
+#: app/templates/account/translations.html:28
+msgid "How to request translation updates"
+msgstr "Indlela yokucela izibuyekezo zenguqulo"
+
+#: app/templates/account/translations.html:30
+msgid "To contribute to translations, please use the following guidelines:"
+msgstr "Ukuze ungeze okuhumushwayo, sicela usebenzise lesi sinyathelo:"
+
+#: app/templates/account/translations.html:43
+msgid "Contribute missing or improved translations:"
+msgstr "Uthuswene isithombe esilahlekile?"
+
+#: app/templates/account/translations.html:63
+msgid "Open the relevant .po translation file for your language."
+msgstr "Vula ifayela le-json ye-translation yolimi lwakho. Ngokwesibonelo:"
+
+#: app/templates/account/translations.html:67
+msgid ""
+"Find untranslated or incomplete entries and add or improve translations."
+msgstr ""
+"Thola okufakiwe okungakahunyushwa noma okungaphelelanga bese wengeza noma "
+"uthuthukise izinguqulo."
+
+#: app/templates/account/translations.html:68
+msgid "You may use a PO file editor or a text editor."
+msgstr ""
+"Ungasebenzisa uhlelo lokuhlela lwefayela le-PO noma uhlelo lokuhlela "
+"umbhalo."
+
+#: app/templates/account/translations.html:69
+msgid "Copy the file path and the snippet of your changes."
+msgstr ""
+"Kopisha indlela yefayela kanye nokuhlelwa kwezingxenye zakho eziguquliwe."
+
+#: app/templates/account/translations.html:70
+msgid "Paste the snippet directly into a new GitHub issue for review."
+msgstr "Namathisela ingxenyeni ekopishiwe ngqo kumcholo wengxoxo ye-GitHub."
+
+#: app/templates/account/translations.html:72
+msgid "Please do not upload the full .po file to avoid merge conflicts."
+msgstr ""
+"Ungalayishi ifayela eliphelele le-.po ukuze ugweme ukungqubuzana "
+"kokuhlanganisa."
+
+#: app/templates/account/translations.html:85
+msgid "Improving existing translations:"
+msgstr "Ukuthuthukisa izinguqulo ezingekhona:"
+
+#: app/templates/account/translations.html:104
+msgid "Open the relevant .po file for the translation you want to improve."
+msgstr "Vula ifayela elifanelekayo le-.po lenguqulo ofuna ukuyithuthukisa."
+
+#: app/templates/account/translations.html:106
+msgid "For example:"
+msgstr "Isibonelo:"
+
+#: app/templates/account/translations.html:110
+msgid ""
+"Find the phrase(s) and its existing translation(s) you want to improve."
+msgstr "Thola imisho kanye nezinguqulo ezikhona ofuna ukuzithuthukisa."
+
+#: app/templates/account/translations.html:111
+msgid "Update the phrase(s)."
+msgstr "Hlinzeka imisho."
+
+#: app/templates/account/translations.html:112
+msgid "Copy the file name and path into the issue."
+msgstr "Kopisha igama lefayela kanye ne-path endabeni."
+
+#: app/templates/account/translations.html:114
+msgid "Paste the copied snippet directly into the GitHub issue comment."
+msgstr "Namathisela ingxenyeni ekopishiwe ngqo kumcholo wengxoxo ye-GitHub."
+
+#: app/templates/account/translations.html:115
+msgid "Do not upload the full .po file to avoid merge conflicts."
+msgstr ""
+"Ungalayishi ifayela eliphelele le-.po ukuze ugweme ukungqubuzana "
+"kokuhlanganisa."
+
+#: app/templates/account/translations.html:118
+msgid "Example snippet:"
+msgstr "Isibonelo sengxenye:"
+
+#: app/templates/account/translations.html:137
+msgid "Report missing translations not yet discovered:"
+msgstr "Bika izinguqulo ezithokoza ezisatholakele ezingadaluliwe:"
+
+#: app/templates/account/translations.html:154
+msgid ""
+"If you see text in the app that appears untranslated or missing, please "
+"report it to us."
+msgstr ""
+"Uma ubona umbhalo kuhlelo ongakahunyushwa noma olahlekile, sicela ubikele "
+"thina."
+
+#: app/templates/account/translations.html:155
+msgid "Provide the exact English phrase as it appears on the screen."
+msgstr "Nikeza imusho eyiqiniso yesiNgisi njengoba ivela esikrinini."
+
+#: app/templates/account/translations.html:156
+msgid ""
+"Include the page or section where you saw the phrase (e.g., Apprise page, "
+"Account Page, etc.)."
+msgstr ""
+"Faka ikhasi noma isigaba lapho ubone khona leyo musho (isibonelo, ikhasi le-"
+"Settings, isigaba se-Account)."
+
+#: app/templates/account/translations.html:157
+msgid ""
+"Submit this information via a new GitHub issue so we can add it to the "
+"translation files"
+msgstr ""
+"Thumela le mininingwane ngokusebenzisa udaba olusha lwe-GitHub ukuze sikwazi"
+" ukwengeza kwi fayela lokuhumusha bese uyivila kwi-Babel."
+
+#: app/templates/account/translations.html:166
+msgid "Found a missing translation?"
+msgstr "Uthuswene isithombe esilahlekile?"
+
+#: app/templates/account/translations.html:171
+msgid ""
+"This link will create a new GitHub issue pre-filled with a language code."
+msgstr ""
+"Le link izokha ahluzo yakha okusha kweGitHub okuyoba sekuhlangwene kudingeka"
+" okwaziwe ukufakazeka."
+
+#: app/templates/account/translations.html:172
+msgid "Report it by opening a new GitHub issue"
+msgstr "Kuyivula udaba olusha lwe-GitHub"
+
+#: app/templates/account/translations.html:175
+msgid "Please specify the language code and exact phrase when reporting."
+msgstr "Sicela uchaze ikhodi yolimi nembula ngqo uma ebika."
+
+#: app/templates/account/translations.html:176
+msgid "Thank you for helping us make Grylli better!"
+msgstr "Siyabonga ngokusiza ukwenza iGrylli ibe ngcono!"
+
+#: app/templates/admin/create_user.html:14
+msgid "Create New User"
+msgstr "Dala Umsebenzisi Omusha"
+
+#: app/templates/admin/create_user.html:15
+msgid "Fill out the form to add a new user."
+msgstr "Gcwalisa ifomu ukuze ungeze umsebenzisi omusha."
+
+#: app/templates/admin/create_user.html:21
+#: app/templates/admin/edit_user.html:17 app/templates/auth/bootstrap.html:24
+msgid "Please fix the following errors:"
+msgstr "Sicela ulengeke amaphutha alandelayo:"
+
+#: app/templates/admin/create_user.html:78
+#: app/templates/admin/edit_user.html:93
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "Create User"
+msgstr "Dala Umsebenzisi"
+
+#: app/templates/admin/edit_user.html:10
+#: app/templates/admin/partials/user_card.html:20
+#: app/templates/admin/partials/user_table.html:26
+msgid "Edit User"
+msgstr "Hlela Umsebenzisi"
+
+#: app/templates/admin/edit_user.html:55 app/templates/admin/edit_user.html:74
+msgid "Hold to show password"
+msgstr "Bamba ukuze ubonise iphasiwedi"
+
+#: app/templates/admin/edit_user.html:85
+#, python-format
+msgid "At least one special character (e.g., !@#$%%)"
+msgstr "Okungenani uhlamvu olukhethekile olulodwa (isb., !@#$%%)"
+
+#: app/templates/admin/help.html:4 app/templates/auth/login.html:72
+msgid "Admin Help"
+msgstr "Iphaneli Eliphakanyisiwe"
+
+#: app/templates/admin/help.html:7
+msgid "Reset Admin Password"
+msgstr "Setha Iphasiwedi"
+
+#: app/templates/admin/help.html:9
+msgid ""
+"If you've forgotten the admin password, you can reset it using the following"
+" Docker command:"
+msgstr ""
+"Uma ukhohliwe iphasiwedi yomphathi, ungalibuyisela usebenzisa umyalo we-"
+"Docker olandelayo:"
+
+#: app/templates/admin/help.html:15
+msgid ""
+"This script will prompt you to enter a new password for the admin user. You "
+"must run it from the host system where the Grylli container is running."
+msgstr ""
+"Lolu hlelo luzokucela ukuthi ufake iphasiwedi entsha yomsebenzisi womphathi."
+" Kufanele uligijime kusistimu ebanjelwe lapho kugijima khona ikhonteyina ye-"
+"Grylli."
+
+#: app/templates/admin/help.html:18
+msgid "After resetting, you can log in with the new password immediately."
+msgstr ""
+"Ngemuva kokusetha kabusha, ungakwazi ukungena ngemvume ngephasiwedi entsha "
+"ngokushesha."
+
+#: app/templates/admin/help.html:24
+msgid "Return to Login"
+msgstr "Buyela ku-Dashboard"
+
+#: app/templates/admin/help_form.html:6
+msgid "Admin Help Access"
+msgstr "Usizo Lokungena Lomphathi"
+
+#: app/templates/admin/help_form.html:9
+msgid "Enter your Ferret Key to unlock admin-only help documentation."
+msgstr ""
+"Faka Ukhiye Wakho We-Ferret ukuze uvule amathuluzi osizo agcinelwe abaphathi"
+" kuphela."
+
+#: app/templates/admin/help_form.html:34
+msgid "How to Find Your FERRET_KEY"
+msgstr "Indlela Yokuthola I-FERRET_KEY Yakho"
+
+#: app/templates/admin/help_form.html:36
+msgid "The FERRET_KEY is set as an environment variable when running Grylli."
+msgstr ""
+"I-FERRET_KEY isethwa njengokuguquguquka kwemvelo uma kugijima i-Grylli."
+
+#: app/templates/admin/help_form.html:39
+msgid "Option 1: Check docker-compose.yml"
+msgstr "Inketho 1: Hlola i-docker-compose.yml"
+
+#: app/templates/admin/help_form.html:46
+msgid "Option 2: Use docker inspect"
+msgstr "Inketho 2: Sebenzisa i-docker inspect"
+
+#: app/templates/admin/help_form.html:52
+msgid "This shows the FERRET_KEY as passed to the container at runtime."
+msgstr ""
+"Lokhu kukhombisa i-FERRET_KEY njengoba ihanjiswa kwikhonteyina ngesikhathi "
+"sokugijima."
+
+#: app/templates/admin/index.html:10
+msgid "Admin Panel"
+msgstr "Iphaneli Eliphakanyisiwe"
+
+#: app/templates/admin/index.html:12
+msgid ""
+"Welcome to the Grylli Admin Panel. Use the links below to manage the system."
+msgstr ""
+"Siyakwamukela ePhanelini Lophenyo Lokuphatha I-Grylli. Sebenzisa "
+"izixhumanisi ezingezansi ukuphatha uhlelo."
+
+#: app/templates/admin/index.html:17
+msgid "Manage Users"
+msgstr "Phatha Abasebenzisi"
+
+#: app/templates/admin/index.html:18
+msgid "Create, edit, enable/disable, or delete user accounts."
+msgstr "Dala, hlela, vula/vala noma ususe ama-akhawunti abasebenzisi."
+
+#: app/templates/admin/index.html:22
+#: app/templates/admin/system_settings.html:10
+#: app/templates/partials/admin_nav.html:52
+msgid "System Settings"
+msgstr "Izilungiselelo zesistimu"
+
+#: app/templates/admin/index.html:23
+msgid "View  system-wide environment values."
+msgstr "Buka amanani aphakathi kohlelo lonke lokuphila."
+
+#: app/templates/admin/index.html:27 app/templates/partials/admin_nav.html:42
+msgid "Backups"
+msgstr "Izinqolobane"
+
+#: app/templates/admin/index.html:28
+msgid "Create and delete database backups."
+msgstr "Izipele Zedatha"
+
+#: app/templates/admin/index.html:33
+msgid "View and test global SMTP settings."
+msgstr ""
+"Yehlulekile ukuthumela i-imeyili yokuhlola. Hlola izilungiselelo ze-SMTP."
+
+#: app/templates/admin/index.html:39
+msgid "View Admin Guide / README on GitHub"
+msgstr "Buka isiqondisi somphathi / README ku-GitHub"
+
+#: app/templates/admin/index.html:40
+msgid "Includes setup instructions, integrations, and troubleshooting."
+msgstr ""
+"Iqukethe iziyalezo zokumisela, ukuhlangana, nokukhiqiza izixazululo za-"
+"manqikana."
+
+#: app/templates/admin/index.html:44
+msgid "⚠️ Admin Tips"
+msgstr "⚠️ Amathiphu Ophakanyisiwe"
+
+#: app/templates/admin/index.html:46
+msgid "Ensure the data folder (database) is backed up on your host"
+msgstr ""
+"Qinisekisa ukuthi ifolda yedatha (iserver) iyekwephula kubanjwa kwakho"
+
+#: app/templates/admin/index.html:48
+msgid ""
+"The uploads folder is not per user.  If required per user, you will ndd to "
+"create subdirectoried per user and setup permissions so users can only see "
+"their own folder."
+msgstr ""
+"Ifolda yokulayishwa ayisiyo yomsebenzisi ngamunye. Uma idingeka "
+"ngomsebenzisi ngamunye, kuzodingeka udale amafolda angaphansi ngomsebenzisi "
+"ngamunye bese usetha izimvume ukuze abasebenzisi babone kuphela ifolda yabo."
+
+#: app/templates/admin/index.html:51
+msgid ""
+"To restore a backup: stop the container, replace the data/grylli.db with one"
+" from the backups folder, and restart the container."
+msgstr ""
+"Ukuvuselela isipele: misa isiqukathi, eshintsha i-data/grylli.db ngenye "
+"esuka kufolda yezipele, bese uqala isiqukathi kabusha."
+
+#: app/templates/admin/list_backups.html:11
+msgid "Database Backups"
+msgstr "Izipele Zedatha"
+
+#: app/templates/admin/list_backups.html:13
+msgid "Create Backup"
+msgstr "Dala Ipele"
+
+#: app/templates/admin/list_backups.html:21
+msgid "Filename"
+msgstr "Ifayela"
+
+#: app/templates/admin/list_backups.html:22
+#: app/templates/admin/partials/user_table.html:14
+#: app/templates/apprise/list_apprise.html:62
+#: app/templates/email/list_emails.html:60
+#: app/templates/messages/list_messages.html:60
+#: app/templates/reminders/list_reminders.html:60
+#: app/templates/user_smtp/list_smtp.html:59
+#: app/templates/webhook/list_webhooks.html:63
+msgid "Actions"
+msgstr "Izenzo"
+
+#: app/templates/admin/list_backups.html:32
+msgid "Delete this backup?"
+msgstr "Susa lesi sipele?"
+
+#: app/templates/admin/list_backups.html:32
+#: app/templates/apprise/list_apprise.html:95
+#: app/templates/apprise/list_apprise.html:99
+#: app/templates/apprise/list_apprise.html:150
+#: app/templates/apprise/list_apprise.html:154
+#: app/templates/email/list_emails.html:124
+#: app/templates/email/list_emails.html:128
+#: app/templates/email/list_emails.html:226
+#: app/templates/email/list_emails.html:230
+#: app/templates/messages/list_messages.html:112
+#: app/templates/messages/list_messages.html:116
+#: app/templates/messages/list_messages.html:198
+#: app/templates/messages/list_messages.html:202
+#: app/templates/reminders/list_reminders.html:107
+#: app/templates/reminders/list_reminders.html:113
+#: app/templates/reminders/list_reminders.html:192
+#: app/templates/reminders/list_reminders.html:198
+#: app/templates/user_smtp/list_smtp.html:101
+#: app/templates/user_smtp/list_smtp.html:169
+#: app/templates/webhook/list_webhooks.html:102
+#: app/templates/webhook/list_webhooks.html:161
+msgid "Delete"
+msgstr "Susa"
+
+#: app/templates/admin/list_backups.html:41
+msgid "No backups found."
+msgstr "Awekho amafakephele atholiwe."
+
+#: app/templates/admin/list_backups.html:44
+msgid ""
+"Backups contain your full app data. Store securely. Sensitive data is "
+"encrypted in the DB by default."
+msgstr ""
+"Izipele ziqukethe yonke imininingwane yakho yohlelo lokusebenza. Gcina "
+"ngokuvikelekile. Idatha ebucayi ifihliwe ku-DB ngokuzenzakalelayo."
+
+#: app/templates/admin/smtp_config.html:28
+#: app/templates/admin/system_config.html:22
+msgid "System Configuration"
+msgstr "Ukucushwa Kohlelo"
+
+#: app/templates/admin/smtp_config.html:33
+#: app/templates/admin/system_config.html:26
+#: app/templates/admin/system_settings.html:15
+msgid "Key"
+msgstr "Ukhiye"
+
+#: app/templates/admin/smtp_config.html:34
+#: app/templates/admin/system_config.html:27
+#: app/templates/admin/system_settings.html:16
+msgid "Value"
+msgstr "Inani"
+
+#: app/templates/admin/smtp_config.html:35
+#: app/templates/admin/system_config.html:28
+msgid "Sensitive"
+msgstr "Sibucayi"
+
+#: app/templates/admin/smtp_config.html:36
+#: app/templates/admin/system_config.html:29
+msgid "Editable"
+msgstr "Kuyahlehliswa"
+
+#: app/templates/admin/smtp_config.html:50
+#: app/templates/admin/smtp_config.html:51
+#: app/templates/admin/system_config.html:45
+#: app/templates/admin/system_config.html:46
+#: app/templates/email/view_config.html:60
+msgid "Yes"
+msgstr "Yebo"
+
+#: app/templates/admin/smtp_config.html:50
+#: app/templates/admin/smtp_config.html:51
+#: app/templates/admin/system_config.html:45
+#: app/templates/admin/system_config.html:46
+#: app/templates/email/view_config.html:60
+msgid "No"
+msgstr "Cha"
+
+#: app/templates/admin/smtp_config.html:63
+#: app/templates/admin/system_config.html:55
+msgid "Send Test Email"
+msgstr "Thumela I-imeyili Yokuhlola"
+
+#: app/templates/admin/system_config.html:39
+msgid "decrypted"
+msgstr "Kudaliwe"
+
+#: app/templates/admin/partials/user_card.html:12
+msgid "Email:"
+msgstr "I-imeyili:"
+
+#: app/templates/admin/partials/user_card.html:15
+msgid "Role:"
+msgstr "Indima:"
+
+#: app/templates/admin/partials/user_card.html:27
+#: app/templates/admin/partials/user_table.html:34
+msgid "Change Role"
+msgstr "Guqula Indima"
+
+#: app/templates/admin/partials/user_card.html:29
+#: app/templates/admin/partials/user_table.html:36
+msgid "You cannot change your own role"
+msgstr "Awukwazi ukushintsha isimo sakho sokuvunywa."
+
+#: app/templates/admin/partials/user_card.html:36
+#: app/templates/admin/partials/user_table.html:43
+msgid "Are you sure you want to reset MFA for this user?"
+msgstr "Uqinisekile ukuthi ufuna ukusetha kabusha i-MFA yalomsebenzisi?"
+
+#: app/templates/admin/partials/user_card.html:39
+#: app/templates/admin/partials/user_table.html:46
+msgid "Reset MFA"
+msgstr "Setha Iphasiwedi"
+
+#: app/templates/admin/partials/user_card.html:51
+#: app/templates/admin/partials/user_table.html:58
+msgid "Delete user"
+msgstr "Susa umsebenzisi"
+
+#: app/templates/admin/partials/user_card.html:55
+#: app/templates/admin/partials/user_table.html:61
+msgid "Delete User"
+msgstr "Susa Umsebenzisi"
+
+#: app/templates/admin/partials/user_card.html:58
+#: app/templates/admin/partials/user_table.html:65
+msgid "You cannot disable yourself"
+msgstr "Awukwazi ukuvimba wena"
+
+#: app/templates/admin/partials/user_card.html:65
+#: app/templates/admin/partials/user_table.html:72
+msgid "Disable"
+msgstr "Block"
+
+#: app/templates/admin/partials/user_card.html:65
+#: app/templates/admin/partials/user_table.html:72
+msgid "Enable"
+msgstr "Vumela"
+
+#: app/templates/admin/partials/user_header.html:6
+#: app/templates/partials/admin_nav.html:47
+msgid "Users"
+msgstr "Abasebenzisi"
+
+#: app/templates/admin/partials/user_header.html:12
+#: app/templates/admin/partials/user_header.html:13
+#: app/templates/apprise/apprise_config.html:10
+#: app/templates/apprise/apprise_config.html:11
+#: app/templates/apprise/list_apprise.html:16
+#: app/templates/apprise/list_apprise.html:17
+#: app/templates/email/list_emails.html:15
+#: app/templates/email/list_emails.html:16
+#: app/templates/messages/list_messages.html:16
+#: app/templates/messages/list_messages.html:17
+#: app/templates/reminders/list_reminders.html:15
+#: app/templates/reminders/list_reminders.html:16
+#: app/templates/user_smtp/list_smtp.html:14
+#: app/templates/user_smtp/list_smtp.html:17
+#: app/templates/webhook/list_webhooks.html:16
+#: app/templates/webhook/list_webhooks.html:17
+#: app/templates/webhook/webhook_config.html:10
+#: app/templates/webhook/webhook_config.html:11
+msgid "Table View"
+msgstr "Ukubuka Kwethebula"
+
+#: app/templates/admin/partials/user_header.html:26
+#: app/templates/admin/partials/user_header.html:27
+#: app/templates/apprise/apprise_config.html:24
+#: app/templates/apprise/apprise_config.html:25
+#: app/templates/apprise/list_apprise.html:30
+#: app/templates/apprise/list_apprise.html:31
+#: app/templates/email/list_emails.html:29
+#: app/templates/email/list_emails.html:30
+#: app/templates/messages/list_messages.html:30
+#: app/templates/messages/list_messages.html:31
+#: app/templates/reminders/list_reminders.html:29
+#: app/templates/reminders/list_reminders.html:30
+#: app/templates/user_smtp/list_smtp.html:27
+#: app/templates/user_smtp/list_smtp.html:30
+#: app/templates/webhook/list_webhooks.html:30
+#: app/templates/webhook/list_webhooks.html:31
+#: app/templates/webhook/webhook_config.html:24
+#: app/templates/webhook/webhook_config.html:25
+msgid "Card View"
+msgstr "Ukubuka Kwekhadi"
+
+#: app/templates/admin/partials/user_header.html:45
+msgid "Add User"
+msgstr "Engeza Umsebenzisi"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:9
+#: app/templates/email/attach_files.html:54
+#: app/templates/email/list_emails.html:255
+#: app/templates/messages/list_messages.html:223
+#: app/templates/reminders/list_reminders.html:218
+#: app/templates/reminders/schedule_reminder.html:56
+msgid "Hide Instructions"
+msgstr "Fihlela Imiyalelo"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:9
+msgid "How to manage users"
+msgstr "Indlela yokuphatha abasebenzisi"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "Click"
+msgstr "Chofoza"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+msgid "➕ Add User"
+msgstr "➕ Engeza Umsebenzisi"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+msgid "to open the new user form."
+msgstr "ukuvula ifomu lomsebenzisi omusha."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:18
+msgid "Enter a unique username, valid email address, and strong password."
+msgstr ""
+"Faka igama lomsebenzisi eliyingqayizivele, ikheli le-imeyili elivumelekile, "
+"nephasiwedi eqinile."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "Select the appropriate"
+msgstr "Khetha"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "role"
+msgstr "indima"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "or"
+msgstr "Isango"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "to save."
+msgstr "ukugcina."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:25
+msgid "To edit a user, click ✏️ and update their info."
+msgstr "Ukuhlela umsebenzisi, chofoza ✏️ bese uvuselela imininingwane yabo."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:26
+msgid "To delete a user, click 🗑️ and confirm the deletion."
+msgstr "Ukuze ususe umsebenzisi, chofoza 🗑️ bese uqinisekisa ukususa."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:28
+msgid "To disable or enable a user, click 🔴 or 🟢."
+msgstr "Ukuze uvimbe noma uvulele umsebenzisi, chofoza 🔴 noma 🟢."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:30
+msgid "🟢 = User is enabled and can log in."
+msgstr "🟢 = Umsebenzisi uvuliwe futhi angaqinisekisa ukungena ngemvume."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:31
+msgid "🔴 = User is disabled and cannot log in."
+msgstr "🔴 = Umsebenzisi unenkanyezi futhi akakwazi ukungena ngemvume."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:32
+msgid "⚪ = You cannot disable your own account."
+msgstr "⚪ = Awukwazi ukukhubaza i-akhawunti yakho siqu."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:43
+#: app/templates/admin/partials/user_table.html:91
+msgid "Assign Role for"
+msgstr "Nikeza Izinhloso ze"
+
+#: app/templates/admin/partials/user_table.html:10
+msgid "ID"
+msgstr "ID"
+
+#: app/templates/admin/partials/user_table.html:11
+#: app/templates/user_smtp/list_smtp.html:55
+msgid "Username"
+msgstr "Igama Lomsebenzisi"
+
+#: app/templates/admin/partials/user_table.html:12
+msgid "Email"
+msgstr "I-imeyili"
+
+#: app/templates/admin/partials/user_table.html:13
+msgid "Role"
+msgstr "Indima"
+
+#: app/templates/apprise/apprise_config.html:3
+#: app/templates/apprise/list_apprise.html:9
+#: app/templates/messages/assign_destinations.html:22
+#: app/templates/reminders/assign_destinations.html:20
+msgid "Apprise Destinations"
+msgstr "Izindawo Zokuqinisekisa"
+
+#: app/templates/apprise/apprise_config.html:43
+#: app/templates/webhook/list_webhooks.html:49
+#: app/templates/webhook/webhook_config.html:43
+msgid "Add Webhook"
+msgstr "Engeza i-Webhook"
+
+#: app/templates/apprise/apprise_config.html:43
+#: app/templates/apprise/list_apprise.html:49
+#: app/templates/webhook/list_webhooks.html:49
+#: app/templates/webhook/webhook_config.html:43
+msgid "Add Destination"
+msgstr "Engeza Indawo"
+
+#: app/templates/apprise/create_apprise.html:10
+msgid "Create Apprise Destination"
+msgstr "Dala Indawo Yokuthumela Apprise"
+
+#: app/templates/apprise/create_apprise.html:38
+#: app/templates/apprise/edit_apprise.html:38
+#: app/templates/user_smtp/create_smtp.html:107
+#: app/templates/webhook/create_webhook.html:44
+#: app/templates/webhook/edit_webhook.html:44
+msgid "Create Destination"
+msgstr "Dala Indawo"
+
+#: app/templates/apprise/create_apprise.html:47
+#: app/templates/apprise/edit_apprise.html:47
+msgid "Need help with Apprise URLs? See the"
+msgstr "Udinga usizo nge-Apprise URLs? Bheka i"
+
+#: app/templates/apprise/create_apprise.html:51
+#: app/templates/apprise/edit_apprise.html:51
+msgid "Apprise Notification Services documentation"
+msgstr "Idokhumenti Yezinsizakalo Zokuxwayisa ze-Apprise"
+
+#: app/templates/apprise/edit_apprise.html:10
+msgid "Edit Apprise Destination"
+msgstr "Hlela Indawo Yokuqinisekisa"
+
+#: app/templates/apprise/list_apprise.html:49
+msgid "Add Apprise"
+msgstr "Engeza iApprise"
+
+#: app/templates/apprise/list_apprise.html:58
+#: app/templates/email/edit_message.html:21
+#: app/templates/email/list_emails.html:56
+#: app/templates/email/view_config.html:14
+#: app/templates/messages/create_message.html:29
+#: app/templates/messages/edit_message.html:23
+#: app/templates/messages/list_messages.html:57
+#: app/templates/messages/view_message.html:14
+#: app/templates/reminders/create_reminder.html:23
+#: app/templates/reminders/edit_reminder.html:17
+#: app/templates/reminders/list_reminders.html:56
+#: app/templates/reminders/view_reminder.html:13
+#: app/templates/user_smtp/list_smtp.html:52
+#: app/templates/webhook/list_webhooks.html:58
+msgid "Label"
+msgstr "Ilebula"
+
+#: app/templates/apprise/list_apprise.html:59
+msgid "URL"
+msgstr "URL"
+
+#: app/templates/apprise/list_apprise.html:61
+#: app/templates/email/list_emails.html:59
+#: app/templates/messages/list_messages.html:59
+#: app/templates/messages/view_message.html:36
+#: app/templates/reminders/view_reminder.html:47
+#: app/templates/webhook/list_webhooks.html:62
+msgid "Created At"
+msgstr "Idalwe Ngesikhathi"
+
+#: app/templates/apprise/list_apprise.html:77
+#: app/templates/apprise/list_apprise.html:132
+#: app/templates/user_smtp/list_smtp.html:79
+#: app/templates/user_smtp/list_smtp.html:147
+#: app/templates/webhook/list_webhooks.html:79
+#: app/templates/webhook/list_webhooks.html:138
+msgid "Edit"
+msgstr "Hlela"
+
+#: app/templates/apprise/list_apprise.html:80
+#: app/templates/apprise/list_apprise.html:135
+#: app/templates/user_smtp/list_smtp.html:82
+#: app/templates/user_smtp/list_smtp.html:150
+msgid "Cannot edit while in use"
+msgstr "Awukwazi ukuhlela ngenkathi kusetshenziswa"
+
+#: app/templates/apprise/list_apprise.html:88
+#: app/templates/apprise/list_apprise.html:143
+#: app/templates/webhook/list_webhooks.html:91
+#: app/templates/webhook/list_webhooks.html:150
+msgid "Test"
+msgstr "Hlola"
+
+#: app/templates/apprise/list_apprise.html:103
+#: app/templates/apprise/list_apprise.html:158
+#: app/templates/user_smtp/list_smtp.html:106
+#: app/templates/user_smtp/list_smtp.html:174
+msgid "Cannot delete while in use"
+msgstr "Awukwazi ukususa ngenkathi kusetshenziswa"
+
+#: app/templates/apprise/list_apprise.html:119
+msgid "URL:"
+msgstr "I-URL:"
+
+#: app/templates/apprise/list_apprise.html:122
+#: app/templates/user_smtp/list_smtp.html:137
+#: app/templates/webhook/list_webhooks.html:128
+msgid "Enabled:"
+msgstr "Kuvuliwe:"
+
+#: app/templates/apprise/list_apprise.html:125
+#: app/templates/user_smtp/list_smtp.html:140
+#: app/templates/webhook/list_webhooks.html:131
+msgid "Created:"
+msgstr "Kudaliwe:"
+
+#: app/templates/auth/bootstrap.html:14
+msgid "Create Admin Account"
+msgstr "Dala I-akhawunti ye-Admin"
+
+#: app/templates/auth/bootstrap.html:16
+msgid "Let’s get started by creating your first admin account."
+msgstr "Masiqale ngokudala i-akhawunti yakho yokuqala ye-admin."
+
+#: app/templates/auth/bootstrap.html:75
+msgid "Create Admin"
+msgstr "Dala i-Admin"
+
+#: app/templates/auth/forgot_password.html:12
+msgid "Forgot Password"
+msgstr "Ukhohliwe Iphasiwedi"
+
+#: app/templates/auth/forgot_password.html:15
+msgid ""
+"Enter your username and email. We'll send you a link to reset your password."
+msgstr ""
+"Faka igama lomsebenzisi ne-imeyili yakho. Sizokuthumela isixhumanisi "
+"sokusetha kabusha iphasiwedi yakho."
+
+#: app/templates/auth/forgot_username.html:12
+msgid "Forgot Username"
+msgstr "Ukhohliwe Igama Lomsebenzisi"
+
+#: app/templates/auth/forgot_username.html:15
+msgid "Enter your email address, and we'll send you your username."
+msgstr ""
+"Faka ikheli le-imeyili lakho, sizokuthumelela igama lomsebenzisi wakho."
+
+#: app/templates/auth/forgot_username.html:40
+msgid "Send Username"
+msgstr "Thumela Igama Lomsebenzisi"
+
+#: app/templates/auth/login.html:12 app/templates/auth/login.html:54
+msgid "Log In"
+msgstr "Ngena ngemvume"
+
+#: app/templates/auth/login.html:62
+msgid "Forgot Username?"
+msgstr "Ukhohliwe Igama Lomsebenzisi?"
+
+#: app/templates/auth/login.html:64
+msgid "Forgot Password?"
+msgstr "Ukhohliwe Iphasiwedi?"
+
+#: app/templates/auth/login.html:66 app/templates/auth/signup.html:12
+msgid "Sign Up"
+msgstr "Bhalisa"
+
+#: app/templates/auth/rate_limit.html:9
+msgid "Hold On"
+msgstr "Bamba Khona"
+
+#: app/templates/auth/rate_limit.html:11
+msgid "Too many failed login attempts. Please wait"
+msgstr "Ukungena ngemvume okuningi kwehlulekile. Ngicela ulinde"
+
+#: app/templates/auth/rate_limit.html:13
+msgid "seconds..."
+msgstr "amasekhondi..."
+
+#: app/templates/auth/rate_limit.html:15
+msgid "Redirecting to login..."
+msgstr "Buyela ku-Dashboard"
+
+#: app/templates/auth/reset_password.html:12
+#: app/templates/auth/reset_password.html:116
+msgid "Reset Password"
+msgstr "Setha Iphasiwedi"
+
+#: app/templates/auth/reset_password.html:14
+msgid "Enter your username, email, and new password."
+msgstr "Faka igama lakho lomsebenzisi, i-imeyili yakho, nephasiwedi entsha."
+
+#: app/templates/auth/signup.html:14
+msgid "Fill out the form to create your account."
+msgstr "Gcwalisa ifomu ukuze udale i-akhawunti yakho."
+
+#: app/templates/checkin/already_checked_in.html:10
+msgid "Already Checked In"
+msgstr "Ukugcina Okunye Okuseduze"
+
+#: app/templates/checkin/already_checked_in.html:12
+msgid ""
+"You have already checked in for this item. No further action is needed at "
+"this time."
+msgstr ""
+"Usuvele ubuyele kule nto. Awukho omunye umsebenzi odingekayo njengamanje."
+
+#: app/templates/checkin/already_checked_in.html:16
+#: app/templates/checkin/disabled.html:16
+#: app/templates/checkin/executed_disabled.html:18
+msgid "Check-in for:"
+msgstr "Kubhalwe ukuthi:"
+
+#: app/templates/checkin/already_checked_in.html:21
+#: app/templates/checkin/disabled.html:21
+#: app/templates/checkin/executed_disabled.html:23
+#: app/templates/checkin/thank_you.html:19
+msgid "Return to Dashboard"
+msgstr "Buyela ku-Dashboard"
+
+#: app/templates/checkin/disabled.html:10
+msgid "Check-In Disabled"
+msgstr "I-imeyili ivaliwe"
+
+#: app/templates/checkin/disabled.html:12
+msgid "This check-in is currently disabled and cannot be completed."
+msgstr "Lokhu kuhlolwa njengamanje kunikwe amandla futhi akunakuphelelwa."
+
+#: app/templates/checkin/executed_disabled.html:11
+msgid "Already Executed & Disabled"
+msgstr "Usufeziwe futhi Akusebenzeki"
+
+#: app/templates/checkin/executed_disabled.html:14
+msgid ""
+"This check-in has already been executed and is now disabled. No further "
+"action is required."
+msgstr ""
+"Lokhu kuhlolwa sekufeziwe futhi manje akusebenzi. Alikho elinye isidingo "
+"somsebenzi."
+
+#: app/templates/checkin/thank_you.html:10
+msgid "Check-In Successful"
+msgstr "Ukuhlola Okuphumelele"
+
+#: app/templates/checkin/thank_you.html:11
+msgid "Thank you for checking in."
+msgstr "Siyabonga ngokuhlola."
+
+#: app/templates/checkin/thank_you.html:14
+msgid "Checked in for:"
+msgstr "Kubhalwe ukuthi:"
+
+#: app/templates/email/assign_smtp.html:11
+msgid "📧 Assign SMTP Config to:"
+msgstr "📧 Nquma i-SMTP Config ku:"
+
+#: app/templates/email/assign_smtp.html:25
+msgid "No SMTP (Unassign)"
+msgstr "Ayikho inqubomgomo ye-SMTP ekhonjwe"
+
+#: app/templates/email/assign_smtp.html:26
+msgid "This email will not use any SMTP configuration."
+msgstr "Le imeyili ngeke isebenzise noma yikuphi ukusethwa kwe-SMTP."
+
+#: app/templates/email/attach_files.html:12
+msgid "Attach Files for:"
+msgstr "Namathisela Amafayela ku:"
+
+#: app/templates/email/attach_files.html:21
+msgid "Available Files"
+msgstr "Amafayela Atholakalayo"
+
+#: app/templates/email/attach_files.html:36
+msgid "No files found in the upload directory."
+msgstr "Awekho amafayela atholakele kudirektori yokulayisha."
+
+#: app/templates/email/attach_files.html:44
+msgid "Save Attachments"
+msgstr "Londoloza Okunamathelayo"
+
+#: app/templates/email/attach_files.html:54
+msgid "File Attach Notes"
+msgstr "Imininingwane Yefayela Elinamathiselwe"
+
+#: app/templates/email/attach_files.html:63
+msgid "Important:"
+msgstr "Isango:"
+
+#: app/templates/email/attach_files.html:65
+msgid ""
+"Only files that are present in the 'uploads' folder (provided by your system"
+" administrator) will be shown here. If you do not see your file(s), please "
+"contact your Grylli administrator."
+msgstr ""
+"Amafayela kuphela akhona kufolda 'uploads' (enikezwe umphathi wesistimu "
+"yakho) azoboniswa lapha. Uma ungaboni ifayela(lakho), sicela uthinte "
+"umphathi wakho we-Grylli."
+
+#: app/templates/email/attach_files.html:69
+msgid "Accepted file types:"
+msgstr "Izinhlobo zamafayela ezamukelekayo:"
+
+#: app/templates/email/attach_files.html:71
+msgid "Documents:"
+msgstr "Amadokhumenti:"
+
+#: app/templates/email/attach_files.html:73
+msgid "Images:"
+msgstr "Izithombe:"
+
+#: app/templates/email/attach_files.html:75
+msgid "Audio:"
+msgstr "Umsindo:"
+
+#: app/templates/email/attach_files.html:79
+msgid "Maximum file size:"
+msgstr "Usayizi omkhulu wefayela:"
+
+#: app/templates/email/attach_files.html:80
+msgid "10 MB per file"
+msgstr "10 MB ifayela ngalinye"
+
+#: app/templates/email/attach_files.html:83
+msgid "Total upload size:"
+msgstr "Usayizi wokulayisha ophelele:"
+
+#: app/templates/email/attach_files.html:84
+msgid "20 MB (all files combined)"
+msgstr "20 MB (wonke amafayela ahlanganisiwe)"
+
+#: app/templates/email/edit_message.html:12
+#: app/templates/email/list_emails.html:75
+#: app/templates/email/list_emails.html:177
+msgid "Edit Email"
+msgstr "Hlela I-imeyili"
+
+#: app/templates/email/edit_message.html:12
+msgid "Create Email"
+msgstr "Dala I-imeyili"
+
+#: app/templates/email/edit_message.html:28
+msgid "To (Recipient Email)"
+msgstr "Ku (I-imeyili yomamukeli)"
+
+#: app/templates/email/edit_message.html:35
+#: app/templates/email/list_emails.html:57
+#: app/templates/email/view_config.html:18
+#: app/templates/messages/create_message.html:36
+#: app/templates/messages/edit_message.html:30
+#: app/templates/messages/list_messages.html:58
+#: app/templates/messages/view_message.html:18
+#: app/templates/reminders/create_reminder.html:30
+#: app/templates/reminders/edit_reminder.html:24
+#: app/templates/reminders/list_reminders.html:57
+#: app/templates/reminders/view_reminder.html:17
+msgid "Subject"
+msgstr "Isihloko"
+
+#: app/templates/email/edit_message.html:42
+#: app/templates/email/view_config.html:28
+msgid "Body"
+msgstr "Umzimba"
+
+#: app/templates/email/edit_message.html:50
+msgid "Save Email"
+msgstr "Londoloza I-imeyili"
+
+#: app/templates/email/list_emails.html:48
+msgid "Add Email"
+msgstr "Engeza I-imeyili"
+
+#: app/templates/email/list_emails.html:58
+#: app/templates/reminders/assign_email_reminder.html:77
+msgid "To"
+msgstr "Ku"
+
+#: app/templates/email/list_emails.html:78
+#: app/templates/email/list_emails.html:180
+msgid "Disable to edit email"
+msgstr "Yehlulekile ukuthumela i-imeyili yokuhlola:"
+
+#: app/templates/email/list_emails.html:84
+#: app/templates/email/list_emails.html:186
+msgid "Attach Files"
+msgstr "Namathisela Amafayela"
+
+#: app/templates/email/list_emails.html:87
+#: app/templates/email/list_emails.html:189
+msgid "Disable to attach files"
+msgstr "Namathisela Amafayela"
+
+#: app/templates/email/list_emails.html:93
+#: app/templates/email/list_emails.html:195
+msgid "Attach SMTP Config"
+msgstr "Namathisela i-SMTP Config"
+
+#: app/templates/email/list_emails.html:96
+#: app/templates/email/list_emails.html:198
+msgid "Disable to assign SMTP"
+msgstr "Khansela ukwabela i-SMTP"
+
+#: app/templates/email/list_emails.html:102
+#: app/templates/email/list_emails.html:204
+msgid "Schedule Check-In"
+msgstr "Hlela Isheduli Yokuhlola"
+
+#: app/templates/email/list_emails.html:105
+#: app/templates/email/list_emails.html:207
+msgid "Disable to schedule check-in"
+msgstr "Hlela Isheduli Yokuhlola"
+
+#: app/templates/email/list_emails.html:110
+#: app/templates/email/list_emails.html:212
+#: app/templates/messages/list_messages.html:99
+#: app/templates/messages/list_messages.html:184
+#: app/templates/reminders/list_reminders.html:93
+#: app/templates/reminders/list_reminders.html:178
+msgid "View Details"
+msgstr "Buka Imininingwane"
+
+#: app/templates/email/list_emails.html:118
+#: app/templates/email/list_emails.html:220
+msgid "Send this email to yourself to preview it."
+msgstr "Thumela le imeyili kuwe ukuze uyibuke kuqala."
+
+#: app/templates/email/list_emails.html:136
+#: app/templates/email/list_emails.html:238
+msgid "Toggle Email On/Off"
+msgstr "Shintsha I-imeyili Ivalwe/Vuliwe"
+
+#: app/templates/email/list_emails.html:139
+#: app/templates/email/list_emails.html:241
+msgid "Email is enabled"
+msgstr "I-imeyili ivuliwe"
+
+#: app/templates/email/list_emails.html:141
+#: app/templates/email/list_emails.html:243
+msgid "Email is disabled"
+msgstr "I-imeyili ivaliwe"
+
+#: app/templates/email/list_emails.html:157
+#: app/templates/email/view_config.html:51
+#: app/templates/messages/list_messages.html:142
+#: app/templates/reminders/list_reminders.html:140
+msgid "Label:"
+msgstr "Ilebula:"
+
+#: app/templates/email/list_emails.html:161
+#: app/templates/messages/list_messages.html:146
+#: app/templates/reminders/list_reminders.html:144
+#: app/templates/reminders/view_reminder.html:98
+msgid "Subject:"
+msgstr "Isihloko"
+
+#: app/templates/email/list_emails.html:165
+msgid "To:"
+msgstr "Ukuba:"
+
+#: app/templates/email/list_emails.html:169
+#: app/templates/messages/list_messages.html:150
+msgid "Created At:"
+msgstr "Idalwe Ngesikhathi"
+
+#: app/templates/email/list_emails.html:255
+msgid "How to create and send an email"
+msgstr "Indlela yokwenza nokuthumela i-imeyili"
+
+#: app/templates/email/list_emails.html:262
+msgid ""
+"Click “Add Email” and fill out the subject, content, and recipient address."
+msgstr ""
+"Chofoza “Engeza I-imeyili” bese ugcwalisa isihloko, okuqukethwe, nekheli "
+"lomamukeli."
+
+#: app/templates/email/list_emails.html:263
+msgid "Attach any optional files (if needed)."
+msgstr ""
+"Namathisela noma yiluphi uhlelo lwefayela oluyekilekile (uma luyadingeka)."
+
+#: app/templates/email/list_emails.html:264
+msgid ""
+"Click 🧩 to assign a single SMTP configuration that will be used to send the "
+"email."
+msgstr ""
+"Chofoza 🧩 ukuze unikeze ukucushwa kwe-SMTP okukodwa okuzosetshenziswa "
+"ukuthumela i-imeyili."
+
+#: app/templates/email/list_emails.html:265
+msgid "Click ⏱️ to set a check-in interval and grace period for the email."
+msgstr "Chofoza ⏱️ ukusetha isikhathi sokungena nezikhathi zomusa ze-imeyili."
+
+#: app/templates/email/list_emails.html:266
+msgid "Enable the email using the 🔴/🟢 toggle button."
+msgstr "Nika amandla i-imeyili usebenzisa inkinobho ye-toggle 🔴/🟢."
+
+#: app/templates/email/list_emails.html:267
+msgid ""
+"Click 🧪 to test the email by sending it to yourself (not the recipient)."
+msgstr ""
+"Chofoza 🧪 ukuze uhlolisise i-imeyili ngokuyithumela kuwe (hhayi kumamukeli)."
+
+#: app/templates/email/list_emails.html:268
+msgid ""
+"If you don’t check in before the grace period ends, the email will be "
+"automatically sent."
+msgstr ""
+"Uma ungahloleli ngaphambi kokuphela kwesikhathi somusa, i-imeyili "
+"izothunyelwa ngokuzenzakalelayo."
+
+#: app/templates/email/list_emails.html:269
+msgid "You can preview the email configuration using 🔍."
+msgstr "Ungabuka ukucushwa kwe-imeyili usebenzisa 🔍."
+
+#: app/templates/email/list_emails.html:270
+msgid "Once a secure email is sent, it will be automatically disabled."
+msgstr "Uma i-imeyili evikelekile isithunyelwe, izovalwa ngokuzenzakalelayo."
+
+#: app/templates/email/schedule_email.html:9
+msgid "Schedule Email"
+msgstr "Misela I-imeyili"
+
+#: app/templates/email/schedule_email.html:18
+#: app/templates/messages/schedule_message.html:18
+msgid "Years"
+msgstr "Iminyaka"
+
+#: app/templates/email/schedule_email.html:19
+#: app/templates/messages/schedule_message.html:19
+msgid "Months"
+msgstr "Izinyanga"
+
+#: app/templates/email/schedule_email.html:20
+#: app/templates/messages/schedule_message.html:20
+msgid "Weeks"
+msgstr "Amaviki"
+
+#: app/templates/email/schedule_email.html:21
+#: app/templates/messages/schedule_message.html:21
+msgid "Days"
+msgstr "Izinsuku"
+
+#: app/templates/email/schedule_email.html:22
+#: app/templates/messages/schedule_message.html:22
+msgid "Hours"
+msgstr "Amahora"
+
+#: app/templates/email/schedule_email.html:23
+#: app/templates/messages/schedule_message.html:23
+msgid "Minutes"
+msgstr "Imizuzu"
+
+#: app/templates/email/schedule_email.html:28
+#: app/templates/messages/schedule_message.html:28
+msgid "Check-in"
+msgstr "Hlola"
+
+#: app/templates/email/schedule_email.html:51
+#: app/templates/messages/schedule_message.html:51
+#: app/templates/messages/view_message.html:26
+msgid "Grace Period"
+msgstr "Isikhathi Somusa"
+
+#: app/templates/email/schedule_email.html:80
+#: app/templates/messages/schedule_message.html:80
+#: app/templates/reminders/schedule_reminder.html:47
+msgid "Save Schedule"
+msgstr "Londoloza Ishedejuli"
+
+#: app/templates/email/view_config.html:9
+msgid "Email Configuration"
+msgstr "Ukucushwa Kwe-imeyili"
+
+#: app/templates/email/view_config.html:22
+msgid "Recipient"
+msgstr "Umamukeli"
+
+#: app/templates/email/view_config.html:33
+msgid "Attached Files"
+msgstr "Amafayela Anamathiselwe"
+
+#: app/templates/email/view_config.html:39
+msgid "No files attached"
+msgstr "Awukho amafayela anamathiselwe"
+
+#: app/templates/email/view_config.html:46
+#: app/templates/reminders/assign_email_reminder.html:20
+msgid "SMTP Configuration"
+msgstr "Ukucushwa kwe-SMTP"
+
+#: app/templates/email/view_config.html:54
+#: app/templates/user_smtp/list_smtp.html:122
+msgid "Host:"
+msgstr "Host:"
+
+#: app/templates/email/view_config.html:57
+#: app/templates/user_smtp/list_smtp.html:128
+msgid "Username:"
+msgstr "Igama lomsebenzisi:"
+
+#: app/templates/email/view_config.html:60
+#: app/templates/user_smtp/list_smtp.html:134
+msgid "TLS:"
+msgstr "TLS:"
+
+#: app/templates/email/view_config.html:64
+msgid "No SMTP configuration assigned"
+msgstr "Ayikho inqubomgomo ye-SMTP ekhonjwe"
+
+#: app/templates/email/view_config.html:69
+msgid "Schedule Information"
+msgstr "Imininingwane Yeshedejuli"
+
+#: app/templates/email/view_config.html:72
+msgid "Check-in Interval:"
+msgstr "Isikhathi Sokuhlola:"
+
+#: app/templates/email/view_config.html:72
+#: app/templates/email/view_config.html:75
+msgid "minutes"
+msgstr "imizuzu"
+
+#: app/templates/email/view_config.html:75
+msgid "Grace Period:"
+msgstr "Isikhathi Somusa:"
+
+#: app/templates/email/view_config.html:79
+msgid "Last Check-in:"
+msgstr "Ihlolo Lokugcina:"
+
+#: app/templates/email/view_config.html:82
+msgid "No check-in has occurred yet"
+msgstr "Akukho hlolo elake lenzekile"
+
+#: app/templates/email/view_config.html:92
+msgid "Back to Emails"
+msgstr "Buyela ku-imeyili"
+
+#: app/templates/errors/500.html:4
+msgid "Something went wrong"
+msgstr "Kukhona okungahambi kahle"
+
+#: app/templates/errors/500.html:6
+msgid ""
+"An unexpected error occurred. Please try again later or contact support."
+msgstr ""
+"Kwenzeke iphutha elingalindelekile. Zama futhi ngemuva kwesikhashana noma "
+"xhumana nosizo."
+
+#: app/templates/locale/redirect_after_lang_set.html:15
+msgid "Switching Language..."
+msgstr "Ushintsha Ulimi..."
+
+#: app/templates/locale/redirect_after_lang_set.html:18
+msgid "Applying new language..."
+msgstr "Ukusebenzisa ulimi olusha..."
+
+#: app/templates/messages/assign_destinations.html:13
+#: app/templates/reminders/assign_destinations.html:12
+msgid "Assign Destinations for"
+msgstr "Nikeza Izinhloso ze"
+
+#: app/templates/messages/assign_destinations.html:62
+#: app/templates/reminders/assign_destinations.html:60
+msgid "Save Destinations"
+msgstr "Londoloza Izinhloso"
+
+#: app/templates/messages/create_message.html:17
+msgid "Edit Notificaton"
+msgstr "Hlela Izaziso"
+
+#: app/templates/messages/create_message.html:19
+msgid "Create Notification"
+msgstr "Yakha Isaziso"
+
+#: app/templates/messages/create_message.html:43
+#: app/templates/messages/edit_message.html:37
+#: app/templates/messages/view_message.html:42
+#: app/templates/reminders/create_reminder.html:37
+#: app/templates/reminders/edit_reminder.html:31
+#: app/templates/reminders/view_reminder.html:53
+msgid "Content"
+msgstr "Okuqukethwe"
+
+#: app/templates/messages/create_message.html:51
+msgid "Save Notification"
+msgstr "Londoloza Isaziso"
+
+#: app/templates/messages/edit_message.html:15
+#: app/templates/messages/list_messages.html:74
+#: app/templates/messages/list_messages.html:158
+msgid "Edit Notification"
+msgstr "Hlela Isaziso"
+
+#: app/templates/messages/edit_message.html:45
+msgid "Update Notification"
+msgstr "Buyekeza Isaziso"
+
+#: app/templates/messages/list_messages.html:49
+msgid "Add Notification"
+msgstr "Engeza Isaziso"
+
+#: app/templates/messages/list_messages.html:77
+#: app/templates/messages/list_messages.html:161
+msgid "Disable to edit notification"
+msgstr "Hlela Isaziso"
+
+#: app/templates/messages/list_messages.html:83
+#: app/templates/messages/list_messages.html:167
+#: app/templates/reminders/list_reminders.html:78
+#: app/templates/reminders/list_reminders.html:163
+msgid "Assign Destinations"
+msgstr "Nikeza Izinhloso"
+
+#: app/templates/messages/list_messages.html:86
+#: app/templates/messages/list_messages.html:170
+msgid "Disable to assign destinations"
+msgstr "Nikeza Izinhloso"
+
+#: app/templates/messages/list_messages.html:92
+#: app/templates/messages/list_messages.html:176
+#: app/templates/reminders/list_reminders.html:88
+#: app/templates/reminders/list_reminders.html:173
+msgid "Set Schedule"
+msgstr "Setha Isheduli"
+
+#: app/templates/messages/list_messages.html:95
+#: app/templates/messages/list_messages.html:179
+msgid "Disable to set schedule"
+msgstr "Setha Isheduli"
+
+#: app/templates/messages/list_messages.html:107
+#: app/templates/messages/list_messages.html:192
+msgid "Send Test Notification"
+msgstr "Hlela Isaziso"
+
+#: app/templates/messages/list_messages.html:122
+#: app/templates/messages/list_messages.html:209
+msgid "Toggle Message On/Off"
+msgstr "Guqula Umlayezo On/Off"
+
+#: app/templates/messages/list_messages.html:124
+#: app/templates/messages/list_messages.html:211
+msgid "Notification is enabled"
+msgstr "Isaziso sivuliwe"
+
+#: app/templates/messages/list_messages.html:126
+#: app/templates/messages/list_messages.html:213
+msgid "Notification is disabled"
+msgstr "Isaziso sivalwe"
+
+#: app/templates/messages/list_messages.html:223
+msgid "How to create and send a notification"
+msgstr "Ungayakha kanjani futhi uthumele isaziso"
+
+#: app/templates/messages/list_messages.html:233
+msgid "Click “Add notification” and fill out the subject and content fields."
+msgstr ""
+"Chofoza “Add notification” bese ugcwalisa izinkambu zesihloko nokuhlinzekwa."
+
+#: app/templates/messages/list_messages.html:234
+msgid "Save the notification to return to the overview."
+msgstr "Londoloza isaziso ukuze ubuyele encazelweni."
+
+#: app/templates/messages/list_messages.html:235
+msgid "You need to create at least one apprise or webhook destination."
+msgstr "Udinga ukukha okungenani inyanga ye-apprise noma indawo ye-webhook."
+
+#: app/templates/messages/list_messages.html:236
+msgid "You can create as many destinations as you like."
+msgstr "Ungakha izinhloso eziningi njengoba uthanda."
+
+#: app/templates/messages/list_messages.html:237
+msgid "Click 🧩 to assign one or more Apprise and/or Webhook destinations."
+msgstr ""
+"Chofoza 🧩 ukuze unikeze esisodwa noma ngaphezulu se-Apprise futhi/ noma "
+"izindawo ze-Webhook."
+
+#: app/templates/messages/list_messages.html:238
+msgid "Click ⏱️ to set a schedule and check-in interval."
+msgstr "Chofoza ⏱️ ukuze usethe isheduli nesikhathi sokuhlola."
+
+#: app/templates/messages/list_messages.html:239
+msgid "Enable the notification using the 🔴/🟢 toggle button."
+msgstr "Vula isaziso usebenzisa inkinobho yokuguqula 🔴/🟢."
+
+#: app/templates/messages/list_messages.html:240
+msgid ""
+"If you don’t check in before the grace period ends, the notification will be"
+" sent."
+msgstr ""
+"Uma ungahloli ngaphambi kokuphela kwesikhathi sokukhululwa, isaziso "
+"sizothunyelwa."
+
+#: app/templates/messages/list_messages.html:241
+msgid "You can preview the notification config using 🔍."
+msgstr "Ungabuka kuqala ukulungiswa kwesaziso usebenzisa i-🔍."
+
+#: app/templates/messages/list_messages.html:242
+msgid "Once a notification is sent, it will be automatically disabled."
+msgstr "Uma isaziso sithunyelwa, sizovimba ngokuzenzakalelayo."
+
+#: app/templates/messages/schedule_message.html:9
+msgid "Schedule Message"
+msgstr "Isheduli Yomlayezo"
+
+#: app/templates/messages/view_message.html:9
+msgid "Notifications Details"
+msgstr "Imininingwane Yemilayezo"
+
+#: app/templates/messages/view_message.html:22
+msgid "Check-in Interval"
+msgstr "Isikhathi Sokuhlola"
+
+#: app/templates/messages/view_message.html:31
+msgid "Last Check-in"
+msgstr "Ukugcina Okunye Okuseduze"
+
+#: app/templates/messages/view_message.html:48
+#: app/templates/reminders/view_reminder.html:59
+msgid "Apprise URLs"
+msgstr "URL ze-Apprise"
+
+#: app/templates/messages/view_message.html:54
+#: app/templates/messages/view_message.html:64
+#: app/templates/reminders/view_reminder.html:65
+#: app/templates/reminders/view_reminder.html:75
+#: app/templates/reminders/view_reminder.html:85
+msgid "None assigned."
+msgstr "Akusekho okunqunjwe."
+
+#: app/templates/messages/view_message.html:73
+msgid "Back to Notifications"
+msgstr "Buyela ku Izaziso"
+
+#: app/templates/mfa/challenge.html:5 app/templates/mfa/settings.html:5
+msgid "Two-Factor Authentication (MFA)"
+msgstr "Ukuqinisekiswa Kwezinyathelo Eziyisibili (MFA)"
+
+#: app/templates/mfa/recovery_codes.html:4
+msgid "Your Recovery Codes"
+msgstr "Amakhodi Wakho Wokutakula"
+
+#: app/templates/mfa/recovery_codes.html:7
+msgid "Save these recovery codes in a safe place!"
+msgstr "Gcina lawa makhodi okuthola endaweni ephephile!"
+
+#: app/templates/mfa/recovery_codes.html:10
+msgid ""
+"Each code can be used once if you lose access to your authenticator. These "
+"codes will not be shown again."
+msgstr ""
+"Ikhodi ngayinye ingasetshenziswa kanye uma ulahlekelwa ukufinyelela "
+"kumqinisekisi wakho. Lawa makhodi angeke aphinde aboniswe."
+
+#: app/templates/mfa/recovery_codes.html:24
+msgid "OK, I've saved them"
+msgstr "KULUNGILE, Sengiwalondolozile"
+
+#: app/templates/mfa/settings.html:12
+msgid "MFA QR Code"
+msgstr "Ikhodi ye-QR ye-MFA"
+
+#: app/templates/mfa/settings.html:15
+msgid "Manual Entry:"
+msgstr "Ukufakwa Kwenye:"
+
+#: app/templates/partials/admin_nav.html:21
+msgid "Administration"
+msgstr "Ukuphathwa"
+
+#: app/templates/partials/admin_nav.html:37
+#: app/templates/partials/shared_nav.html:34
+#: app/templates/partials/shared_nav.html:78
+#: app/templates/partials/shared_nav.html:117
+msgid "Overview"
+msgstr "Isifinyezo"
+
+#: app/templates/partials/footer.html:7
+msgid "Toggle Theme"
+msgstr "Shintsha Itimu"
+
+#: app/templates/partials/footer.html:32
+msgid "Theme"
+msgstr "Itimu"
+
+#: app/templates/partials/head.html:7
+msgid "Grylli"
+msgstr "Grylli"
+
+#: app/templates/partials/header.html:6 app/templates/partials/sidebar.html:32
+#: app/templates/partials/sidebar.html:66
+msgid "Home"
+msgstr "Ikhaya"
+
+#: app/templates/partials/header.html:55
+msgid "Account"
+msgstr "Akhawunti"
+
+#: app/templates/partials/header.html:61
+msgid "MFA"
+msgstr "MFA"
+
+#: app/templates/partials/header.html:67
+msgid "About"
+msgstr "Mayelana"
+
+#: app/templates/partials/header.html:73
+msgid "Privacy"
+msgstr "Ubumfihlo"
+
+#: app/templates/partials/header.html:79
+msgid "System Info"
+msgstr "Ulwazi lweSistimu"
+
+#: app/templates/partials/header.html:114
+msgid "Logout"
+msgstr "Phuma"
+
+#: app/templates/partials/shared_nav.html:33
+msgid "Overview of notification settings"
+msgstr "Ukubuka konke kwezilungiselelo zezaziso"
+
+#: app/templates/partials/shared_nav.html:38
+msgid "Configure Apprise services"
+msgstr "Lungisa izinsizakalo ze-Apprise"
+
+#: app/templates/partials/shared_nav.html:39
+msgid "Apprise"
+msgstr "Apprise"
+
+#: app/templates/partials/shared_nav.html:43
+msgid "Configure Webhook integrations"
+msgstr "Lungisa ukuhlanganiswa kwe-Webhook"
+
+#: app/templates/partials/shared_nav.html:77
+msgid "Overview of secure email messages"
+msgstr "Ukubuka konke kwemiyalezo ye-imeyili evikelekile"
+
+#: app/templates/partials/shared_nav.html:82
+msgid "Configure SMTP email settings"
+msgstr "Lungisa izilungiselelo ze-SMTP ze-imeyili"
+
+#: app/templates/partials/shared_nav.html:83
+#: app/templates/reminders/view_reminder.html:79
+msgid "SMTP"
+msgstr "SMTP"
+
+#: app/templates/partials/shared_nav.html:100
+#: app/templates/reminders/list_reminders.html:8
+msgid "Reminders"
+msgstr "imizuzu"
+
+#: app/templates/partials/shared_nav.html:116
+msgid "Overview of reminders"
+msgstr "Ukubukeza kwezikhumbuzo"
+
+#: app/templates/partials/sidebar.html:13
+#: app/templates/partials/sidebar.html:47
+msgid "Menu"
+msgstr "Imenyu"
+
+#: app/templates/reminders/assign_email_reminder.html:12
+msgid "Link Email Reminder for"
+msgstr "Xhumanisa Isikhumbuzo se-Imeyili ku"
+
+#: app/templates/reminders/assign_email_reminder.html:30
+#: app/templates/reminders/assign_email_reminder.html:64
+msgid "None (Unassign)"
+msgstr "Ayikho inqubomgomo ye-SMTP ekhonjwe"
+
+#: app/templates/reminders/assign_email_reminder.html:43
+msgid "No sender address"
+msgstr "Ayikho ikheli lomthumeli"
+
+#: app/templates/reminders/assign_email_reminder.html:54
+msgid "Email Message"
+msgstr "Isheduli Yomlayezo"
+
+#: app/templates/reminders/assign_email_reminder.html:77
+msgid "No subject"
+msgstr "Isihloko"
+
+#: app/templates/reminders/assign_email_reminder.html:90
+msgid "Save Email Reminder"
+msgstr "Londoloza I-imeyili"
+
+#: app/templates/reminders/create_reminder.html:12
+#: app/templates/reminders/edit_reminder.html:10
+#: app/templates/reminders/list_reminders.html:73
+#: app/templates/reminders/list_reminders.html:158
+msgid "Edit Reminder"
+msgstr "Hlela I-imeyili"
+
+#: app/templates/reminders/create_reminder.html:14
+msgid "Create Reminder"
+msgstr "Dala I-imeyili"
+
+#: app/templates/reminders/create_reminder.html:45
+msgid "Save Reminder"
+msgstr "Londoloza I-imeyili"
+
+#: app/templates/reminders/edit_reminder.html:39
+msgid "Update Reminder"
+msgstr "Buyekeza Isikhumbuzo"
+
+#: app/templates/reminders/list_reminders.html:48
+msgid "Add Reminder"
+msgstr "Engeza I-imeyili"
+
+#: app/templates/reminders/list_reminders.html:58
+#: app/templates/reminders/view_reminder.html:21
+msgid "Start At"
+msgstr "Ukusungula TLS"
+
+#: app/templates/reminders/list_reminders.html:59
+msgid "Recurrence"
+msgstr "Ukuhamba Njalo"
+
+#: app/templates/reminders/list_reminders.html:69
+#: app/templates/reminders/list_reminders.html:153
+#: app/templates/reminders/view_reminder.html:26
+msgid "One-time"
+msgstr "Kanye kuphela"
+
+#: app/templates/reminders/list_reminders.html:83
+msgid "Assign Email Reminder"
+msgstr "Nika Imeyili Isikhumbuzo"
+
+#: app/templates/reminders/list_reminders.html:102
+#: app/templates/reminders/list_reminders.html:187
+msgid "Send Test Reminder"
+msgstr "Thumela I-imeyili Yokuhlola"
+
+#: app/templates/reminders/list_reminders.html:120
+#: app/templates/reminders/list_reminders.html:205
+msgid "Toggle Reminder On/Off"
+msgstr "Shintsha I-imeyili Ivalwe/Vuliwe"
+
+#: app/templates/reminders/list_reminders.html:122
+#: app/templates/reminders/list_reminders.html:207
+msgid "Reminder is enabled"
+msgstr "I-imeyili ivuliwe"
+
+#: app/templates/reminders/list_reminders.html:124
+#: app/templates/reminders/list_reminders.html:209
+msgid "Reminder is disabled"
+msgstr "I-imeyili ivaliwe"
+
+#: app/templates/reminders/list_reminders.html:148
+msgid "Start At:"
+msgstr "Ukusungula TLS"
+
+#: app/templates/reminders/list_reminders.html:152
+msgid "Recurrence:"
+msgstr "Ukuhamba Njalo:"
+
+#: app/templates/reminders/list_reminders.html:168
+msgid "Link Email Reminder"
+msgstr "Xhumanisa Isikhumbuzo se-Imeyili"
+
+#: app/templates/reminders/list_reminders.html:218
+msgid "How to use reminders"
+msgstr "Indlela yokuphatha abasebenzisi"
+
+#: app/templates/reminders/list_reminders.html:231
+msgid "➕ Click “Add Reminder” and fill out the subject and content fields."
+msgstr ""
+"Chofoza “Add notification” bese ugcwalisa izinkambu zesihloko nokuhlinzekwa."
+
+#: app/templates/reminders/list_reminders.html:232
+msgid "💾 Save the reminder to return to the overview."
+msgstr "Londoloza isaziso ukuze ubuyele encazelweni."
+
+#: app/templates/reminders/list_reminders.html:233
+msgid ""
+"📣 Assign Apprise, 🌐 Webhook, and/or 📧 Email (SMTP) destinations as needed."
+msgstr ""
+"📣 Nika Apprise, 🌐 Webhook, kanye/kwe-📧 Imeyili (SMTP) indawo njengoba "
+"kudingeka."
+
+#: app/templates/reminders/list_reminders.html:234
+msgid ""
+"⏱️ Set the schedule using the schedule button to define when reminders are "
+"sent."
+msgstr ""
+"⏱️ Setha uhlelelo usebenzisa inkinobho yoHlelo ukuze uchaze ukuthi "
+"izikhumbuzo zithunyelwa nini."
+
+#: app/templates/reminders/list_reminders.html:235
+msgid ""
+"🔍 Click “View Details” to review or edit assigned destinations and other "
+"settings."
+msgstr ""
+"🔍 Chofoza “Bheka Imininingwane” ukuze uhlole noma uhlela izindawo ezabiwe "
+"nezinye izilungiselelo."
+
+#: app/templates/reminders/list_reminders.html:236
+msgid ""
+"🧪 Click the Test button to verify all assigned destinations are working "
+"correctly."
+msgstr ""
+"🧪 Chofoza inkinobho ethi Hlola ukuze uqiniseke ukuthi zonke izindawo ezabiwe"
+" zisebenza kahle."
+
+#: app/templates/reminders/list_reminders.html:237
+msgid "🔴/🟢 Enable or disable the reminder using the toggle button."
+msgstr "Nika amandla i-imeyili usebenzisa inkinobho ye-toggle 🔴/🟢."
+
+#: app/templates/reminders/list_reminders.html:238
+msgid "📤 Reminders will be sent as scheduled to the assigned destinations."
+msgstr "📤 Izikhumbuzo zizothunyelwa njengoba kuhlelwe ezindaweni ezabiwe."
+
+#: app/templates/reminders/schedule_reminder.html:8
+msgid "Schedule Reminder"
+msgstr "Misela I-imeyili"
+
+#: app/templates/reminders/schedule_reminder.html:15
+msgid "Start Date & Time"
+msgstr "Usuku Nendawo Yokuqala"
+
+#: app/templates/reminders/schedule_reminder.html:22
+#: app/templates/reminders/view_reminder.html:25
+msgid "Recurrence Rule"
+msgstr "Umthetho Wokuvamile"
+
+#: app/templates/reminders/schedule_reminder.html:24
+msgid "(Optional) Enter RRULE or leave blank for one-time."
+msgstr ""
+"(Okuyisisekelo) Faka i-RRULE noma uhlale uhlukile okwasekupheleni kanye."
+
+#: app/templates/reminders/schedule_reminder.html:30
+msgid "End Date"
+msgstr "Thumela Isivivinyo"
+
+#: app/templates/reminders/schedule_reminder.html:32
+msgid "(Optional) Stop sending after this date."
+msgstr "(Okuyisisekelo) Yeka ukuthumela ngemuva kwalolu suku."
+
+#: app/templates/reminders/schedule_reminder.html:38
+#: app/templates/reminders/view_reminder.html:36
+msgid "Max Occurrences"
+msgstr "Ukubonakala Okuphezulu"
+
+#: app/templates/reminders/schedule_reminder.html:40
+msgid "(Optional) Stop after this many reminders."
+msgstr ""
+"(Okuyisisekelo) Yeka ngemuva kwalokhu kusetshenziswa okuningi isikhumbuzo."
+
+#: app/templates/reminders/schedule_reminder.html:56
+msgid "Help for RRULE syntax"
+msgstr "Usizo lwe-RRULE syntax"
+
+#: app/templates/reminders/schedule_reminder.html:66
+msgid "Several tools are available to help generate an RRULE."
+msgstr "Amathuluzi amaningana ayatholakala ukusiza ukudala i-RRULE."
+
+#: app/templates/reminders/schedule_reminder.html:67
+msgid "Use a search engine or AI tool to assist."
+msgstr "Sebenzisa injini yokusesha noma ithuluzi le-AI ukuze usize."
+
+#: app/templates/reminders/schedule_reminder.html:69
+msgid "Here is an example of one such online tool:"
+msgstr "Nasi isibonelo esisodwa sethuluzi eku-inthanethi:"
+
+#: app/templates/reminders/schedule_reminder.html:73
+msgid "RRULE Generator Tool"
+msgstr "Ithuluzi Lokwakha I-RRULE"
+
+#: app/templates/reminders/schedule_reminder.html:77
+msgid "See here for some common examples:"
+msgstr "Buka lapha izibonelo ezivamile:"
+
+#: app/templates/reminders/schedule_reminder.html:81
+msgid "RRULE Help (GitHub)"
+msgstr "Usizo lwe-RRULE (GitHub)"
+
+#: app/templates/reminders/view_reminder.html:8
+msgid "Reminder Details"
+msgstr "Buka Imininingwane"
+
+#: app/templates/reminders/view_reminder.html:30
+msgid "End At"
+msgstr "Thumela Isivivinyo"
+
+#: app/templates/reminders/view_reminder.html:42
+msgid "Last Sent"
+msgstr "Ukugcina Okunye Okuseduze"
+
+#: app/templates/reminders/view_reminder.html:91
+msgid "Email Template"
+msgstr "Umhloli we-imeyili"
+
+#: app/templates/reminders/view_reminder.html:103
+msgid "No email linked."
+msgstr "I-imeyili ivuliwe"
+
+#: app/templates/reminders/view_reminder.html:111
+msgid "Back to Reminders"
+msgstr "Buyela ku-imeyili"
+
+#: app/templates/user_smtp/create_smtp.html:10
+msgid "Create SMTP Destination"
+msgstr "Yakha Iya Kwendlunkulu ye-SMTP"
+
+#: app/templates/user_smtp/create_smtp.html:69
+#: app/templates/user_smtp/edit_smtp.html:84
+msgid "Hold to reveal"
+msgstr "Bamba ukuze uveze"
+
+#: app/templates/user_smtp/create_smtp.html:92
+#: app/templates/user_smtp/edit_smtp.html:107
+msgid "Use TLS"
+msgstr "Sebenzisa i-TLS"
+
+#: app/templates/user_smtp/edit_smtp.html:10
+msgid "Edit SMTP Destination"
+msgstr "Yakha Iya Kwendlunkulu ye-SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:9
+msgid "SMTP Destinations"
+msgstr "Izindawo ze-SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:44
+msgid "Add SMTP"
+msgstr "Engeza i-SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:53
+msgid "Host"
+msgstr "Isiphequluli"
+
+#: app/templates/user_smtp/list_smtp.html:54
+msgid "Port"
+msgstr "Isango"
+
+#: app/templates/user_smtp/list_smtp.html:56
+msgid "TLS"
+msgstr "I-TLS"
+
+#: app/templates/user_smtp/list_smtp.html:58
+msgid "Created"
+msgstr "Kudaliwe"
+
+#: app/templates/user_smtp/list_smtp.html:90
+#: app/templates/user_smtp/list_smtp.html:158
+msgid "Send Test"
+msgstr "Thumela Isivivinyo"
+
+#: app/templates/user_smtp/list_smtp.html:125
+msgid "Port:"
+msgstr "Isango:"
+
+#: app/templates/user_smtp/list_smtp.html:131
+msgid "Password:"
+msgstr "Igama eliyimfihlo:"
+
+#: app/templates/user_smtp/list_smtp.html:184
+msgid "Hide SMTP Setup Help"
+msgstr "Fihla Usizo Lokusetha lwe-SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:184
+msgid "Show SMTP Setup Help"
+msgstr "Bonisa Usizo Lokusetha lwe-SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:190
+msgid ""
+"Need help finding your SMTP server settings? See here for some links to "
+"common providers:"
+msgstr ""
+"Udinga usizo lokuthola izilungiselelo zesiphakeli sakho se-SMTP? Bona lapha "
+"ngezixhumanisi ezithile kubahlinzeki abavame kakhulu:"
+
+#: app/templates/user_smtp/list_smtp.html:194
+msgid "SMTP Server Settings Help (GitHub)"
+msgstr "Usizo Lwezilungiselelo zesiphakeli se-SMTP (GitHub)"
+
+#: app/templates/user_smtp/list_smtp.html:198
+msgid ""
+"Find official documentation links for Gmail, Outlook, Yahoo, AOL, and "
+"others."
+msgstr ""
+"Thola izixhumanisi zemibhalo esemthethweni ye-Gmail, Outlook, Yahoo, AOL, "
+"kanye nabanye."
+
+#: app/templates/user_smtp/list_smtp.html:199
+msgid ""
+"If your provider isn’t listed, search their support site or a search engine "
+"for 'SMTP settings'."
+msgstr ""
+"Uma umhlinzeki wakho engalungiswa, funa kuwebusayithi yezokusekela noma "
+"enjinini yokusesha ethi 'izilungiselelo ze-SMTP'."
+
+#: app/templates/user_smtp/list_smtp.html:200
+msgid ""
+"Some providers (like Gmail, Yahoo) require 'App Passwords' or special "
+"setup—see their docs!"
+msgstr ""
+"Abanye abahlinzeki (njenge-Gmail, Yahoo) badinga 'Amaphasiwedi Ezinkampani' "
+"noma ukusethwa okukhethekile—bona imibhalo yabo!"
+
+#: app/templates/webhook/create_webhook.html:10
+msgid "Create Webhook"
+msgstr "Dala i-Webhook"
+
+#: app/templates/webhook/edit_webhook.html:10
+msgid "Edit Webhook"
+msgstr "Hlela i-Webhook"
+
+#: app/templates/webhook/list_webhooks.html:9
+#: app/templates/webhook/webhook_config.html:3
+msgid "Webhooks Destinations"
+msgstr "Izindawo ze-Webhooks"
+
+#: app/templates/webhook/list_webhooks.html:59
+msgid "Endpoint"
+msgstr "Isiphetho"
+
+#: app/templates/webhook/list_webhooks.html:60
+msgid "Description"
+msgstr "Incazelo"
+
+#: app/templates/webhook/list_webhooks.html:82
+#: app/templates/webhook/list_webhooks.html:141
+msgid "Cannot edit while assigned to notifications"
+msgstr "Awukwazi ukuhlela ngenkathi okunikezelwe izaziso"
+
+#: app/templates/webhook/list_webhooks.html:106
+#: app/templates/webhook/list_webhooks.html:165
+msgid "Cannot delete while assigned to notifications"
+msgstr "Awukwazi ukususa ngenkathi okunikezelwe izaziso"
+
+#: app/templates/webhook/list_webhooks.html:122
+msgid "Endpoint:"
+msgstr "Isiphetho:"
+
+#: app/templates/webhook/list_webhooks.html:125
+msgid "Description:"
+msgstr "Incazelo:"
+
+#: app/views/account.py:74
+msgid "Current password is required to change password."
+msgstr "Iphasiwedi yamanje iyadingeka ukushintsha iphasiwedi."
+
+#: app/views/account.py:78
+msgid "Current password is incorrect."
+msgstr "Iphasiwedi yamanje ayilungile."
+
+#: app/views/account.py:94
+msgid "Account updated successfully."
+msgstr "I-akhawunti ibuyekeziwe ngempumelelo."
+
+#: app/views/account.py:100
+msgid "An error occurred while updating your account."
+msgstr "Kube nephutha ngenkathi kubuyekezwa i-akhawunti yakho."
+
+#: app/views/account.py:137
+msgid "You cannot delete your account because you are the last admin."
+msgstr "Awukwazi ukususa i-akhawunti yakho ngoba ungumgcinimafa wokugcina."
+
+#: app/views/account.py:146
+msgid "Your account has been permanently deleted."
+msgstr "I-akhawunti yakho isusiwe unomphelo."
+
+#: app/views/account.py:152
+msgid "An error occurred while trying to delete your account."
+msgstr "Kube nephutha ngenkathi kubuyekezwa i-akhawunti yakho."
+
+#: app/views/account.py:171
+msgid "Your account has been deleted"
+msgstr "I-akhawunti yakho isusiwe unomphelo."
+
+#: app/views/account.py:173
+#, python-brace-format
+msgid ""
+"Hello {username},\n"
+"\n"
+"Your account on {site_name} has been deleted.Remember to delete your files from the uploads folder.If this was not you, please contact support immediately.\n"
+"\n"
+"{site_url}"
+msgstr ""
+"Sawubona {username},\n"
+"\n"
+"I-akhawunti yakho ku-{site_name} isusiwe.Khumbula ukuhlanza amafayela akho kufolda yokulayisha uma ungazange uzenze wena lezi zenzo, sicela uthinte ukwesekwa ngokushesha.\n"
+"\n"
+"{site_url}"
+
+#: app/views/admin.py:59
+msgid "Invalid role."
+msgstr "Indima engavumelekile."
+
+#: app/views/apprise.py:51
+msgid "🧪 Test notification sent successfully!"
+msgstr "🧪 Isaziso sokuhlola sithunyelwe ngempumelelo!"
+
+#: app/views/apprise.py:56
+msgid "🧪 Failed to send test notification: "
+msgstr "🧪 Yehlulekile ukuthumela isaziso sokuhlola:"
+
+#: app/views/apprise.py:62
+msgid "🧪 Error sending test notification."
+msgstr "🧪 Iphutha ekuthumeleni isaziso sokuhlola."
+
+#: app/views/apprise.py:101
+msgid "Apprise destination created successfully."
+msgstr "Indawo ye-Apprise idaliwe ngempumelelo."
+
+#: app/views/apprise.py:168
+msgid "Apprise destination updated successfully."
+msgstr "Indawo ye-Apprise ivuselelwe ngempumelelo."
+
+#: app/views/apprise.py:199
+msgid "Apprise destination deleted."
+msgstr "Indawo ye-Apprise isusiwe."
+
+#: app/views/auth.py:95
+msgid "Admin account created successfully."
+msgstr "I-akhawunti yomlawuli idaliwe ngempumelelo."
+
+#: app/views/auth.py:108
+msgid "An error occurred while creating the admin account."
+msgstr "Kube nephutha ngenkathi kudalwa i-akhawunti yomlawuli."
+
+#: app/views/auth.py:141
+msgid ""
+"Your account is not activated. Please check your email for the activation "
+"link."
+msgstr ""
+"I-akhawunti yakho ayikavulelwa ukusebenza. Sicela uhlole i-imeyili yakho "
+"ngesixhumanisi sokuvula i-akhawunti."
+
+#: app/views/auth.py:157
+msgid "Multi-factor authentication required. Please enter your code."
+msgstr ""
+"Kudingeka ukuqinisekiswa kwezinto eziningi. Sicela ufake ikhodi yakho."
+
+#: app/views/auth.py:162 app/views/mfa.py:195
+msgid "Logged in successfully."
+msgstr "Ungene ngempumelelo."
+
+#: app/views/auth.py:179
+msgid "Invalid username or password."
+msgstr "Igama lomsebenzisi noma iphasiwedi ayilungile."
+
+#: app/views/auth.py:203
+msgid "You have been logged out."
+msgstr "Uphumile kuphothali."
+
+#: app/views/auth.py:239 app/views/email.py:263
+msgid "Access denied."
+msgstr "Ukufinyelela kwenqatshelwe."
+
+#: app/views/auth.py:273
+msgid "If a user with that email exists, we've sent the username to them."
+msgstr ""
+"Uma umsebenzisi onaleso sikhathi we-imeyili ekhona, sithumele igama "
+"lomsebenzisi kuye."
+
+#: app/views/auth.py:314
+msgid "A password reset link has been sent to your email."
+msgstr ""
+"Isixhumanisi sokusetha kabusha iphasiwedi sithunyelwe ku-imeyili yakho."
+
+#: app/views/auth.py:319
+msgid "No account found matching that username and email."
+msgstr ""
+"Ayikho i-akhawunti etholakele ehambisana nalo igama lomsebenzisi ne-imeyili."
+
+#: app/views/auth.py:389
+msgid "The reset link is invalid or has expired."
+msgstr ""
+"Isixhumanisi sokusetha kabusha asivumelekile noma sesidlulile isikhathi."
+
+#: app/views/auth.py:401
+msgid "Username and email do not match."
+msgstr "Igama lomsebenzisi nekheli le-imeyili alihambisani."
+
+#: app/views/auth.py:421
+msgid "Your password has been reset. Please log in."
+msgstr "Iphasiwedi yakho isethwe kabusha. Ngicela ungene ngemvume."
+
+#: app/views/auth.py:458
+msgid "Invalid registration PIN."
+msgstr "Iphini lokubhalisa alilungile."
+
+#: app/views/auth.py:467
+msgid "Username or email already exists."
+msgstr "Igama lomsebenzisi noma ikheli le-imeyili selivele likhona."
+
+#: app/views/auth.py:492
+msgid "Activate Your Grylli Account"
+msgstr "Vula I-akhawunti Yakho ye-Grylli"
+
+#: app/views/auth.py:493
+#, python-brace-format
+msgid ""
+"Hello {username},\n"
+"\n"
+"Please activate your account by clicking..."
+msgstr ""
+"Sawubona {username},\n"
+"\n"
+"Sicela uvule i-akhawunti yakho ngokuchofoza..."
+
+#: app/views/auth.py:498
+msgid "Account created! Please check your email to activate your account."
+msgstr ""
+"I-akhawunti idalwe! Sicela uhlole i-imeyili yakho ukuvimba i-akhawunti "
+"yakho."
+
+#: app/views/auth.py:521
+msgid "Activation link is invalid or expired."
+msgstr "Isixhumanisi sokuvimba asisebenzi noma siphelelwe isikhathi."
+
+#: app/views/auth.py:528 app/views/users.py:76 app/views/users.py:140
+msgid "User not found."
+msgstr "Umsebenzisi akatholakali."
+
+#: app/views/auth.py:532
+msgid "Account already activated. Please log in."
+msgstr "I-akhawunti isivimbile. Ngicela ungene ngemvume."
+
+#: app/views/auth.py:540
+msgid "Your account has been activated! You can now log in."
+msgstr "I-akhawunti yakho isivimbile! Ungangena ngemvume manje."
+
+#: app/views/backups.py:72
+#, python-format
+msgid "Backup created: %(filename)s"
+msgstr "Isipele esidaliwe: %(filename)s"
+
+#: app/views/backups.py:77
+msgid "Failed to create backup."
+msgstr "Yehlulekile ukudala isipele."
+
+#: app/views/backups.py:106
+#, python-format
+msgid "Backup deleted: %(filename)s"
+msgstr "Isipele sisusiwe: %(filename)s"
+
+#: app/views/backups.py:109
+msgid "Backup file not found."
+msgstr "Ifayela lesipele alitholakali."
+
+#: app/views/backups.py:112
+msgid "Failed to delete backup."
+msgstr "Yehlulekile ukususa isipele."
+
+#: app/views/checkin.py:41
+msgid "Invalid check-in link."
+msgstr "Isixhumanisi sokungena asisebenzi."
+
+#: app/views/checkin.py:48
+msgid "You are not authorized to check in for this item."
+msgstr "Awunagunya lokungena kule nto."
+
+#: app/views/checkin.py:62
+msgid "Unsupported check-in type."
+msgstr "Uhlobo lokungena alusasekelwa."
+
+#: app/views/checkin.py:137
+msgid "⚠️ Cannot enable reminder: Start date/time is in the past."
+msgstr ""
+"⚠️ Ayikwazi ukuvula isikhumbuzo: Usuku/Isikhathi sokuqala kusexadlule."
+
+#: app/views/checkin.py:158
+msgid "✅ Enabled and timer started."
+msgstr "✅ Kuvuliwe nohlaka luxhasiwe."
+
+#: app/views/checkin.py:168
+msgid "⛔ Disabled."
+msgstr "⛔ Kuvaliwe."
+
+#: app/views/checkin.py:170
+msgid "⚠️ Cannot toggle — missing schedule or destination."
+msgstr "⚠️ Akwazi ukuvuleka — kushoda uhlelo noma indawo."
+
+#: app/views/email.py:88
+msgid "Message saved."
+msgstr "Umsebenzi ugcinwe."
+
+#: app/views/email.py:118 app/views/messages.py:167
+msgid "Message deleted."
+msgstr "Umsebenzi ususiwe."
+
+#: app/views/email.py:152
+msgid "Attached files updated."
+msgstr "Amafayela adingisiwe abuyekeziwe."
+
+#: app/views/email.py:200
+msgid "SMTP configuration not assigned or is disabled."
+msgstr "Ukulungiswa kwe-SMTP akuhlinzekwe noma kuvaliwe."
+
+#: app/views/email.py:234 app/views/smtp_settings_admin.py:82
+msgid "Test email sent successfully."
+msgstr "I-imeyili yokuhlola ithunyelwe ngempumelelo."
+
+#: app/views/email.py:282 app/views/messages.py:305
+msgid "Schedule updated successfully."
+msgstr "Ishadi libuyekeziwe ngempumelelo."
+
+#: app/views/email.py:310
+msgid "SMTP configuration assigned."
+msgstr "Ukulungiswa kwe-SMTP kuhlonyisiwe."
+
+#: app/views/email.py:319
+msgid "SMTP configuration removed."
+msgstr "Ukulungiswa kwe-SMTP kuhlonyisiwe."
+
+#: app/views/messages.py:97
+msgid "Message created successfully."
+msgstr "Umsebenzi udalwe ngempumelelo."
+
+#: app/views/messages.py:133
+msgid "Message updated successfully."
+msgstr "Umsebenzi ubuyekeziwe ngempumelelo."
+
+#: app/views/messages.py:223 app/views/reminders.py:240
+msgid "Destinations updated."
+msgstr "Izinhloso zibuyekeziwe."
+
+#: app/views/messages.py:441
+msgid "No destinations assigned to this message."
+msgstr "Ukulungiswa kwe-SMTP akuhlinzekwe noma kuvaliwe."
+
+#: app/views/messages.py:453
+msgid "Test message sent successfully."
+msgstr "I-imeyili yokuhlola ithunyelwe ngempumelelo."
+
+#: app/views/messages.py:455
+msgid "Test message failed: "
+msgstr "Umsebenzi ugcinwe."
+
+#: app/views/mfa.py:68
+msgid "You must enter a code from your authenticator."
+msgstr "Kufanele ufake ikhodi evela kumqinisekisi wakho."
+
+#: app/views/mfa.py:82 app/views/mfa.py:259
+msgid "Invalid code. Please try again."
+msgstr "Ikhodi engavumelekile. Sicela uzame futhi."
+
+#: app/views/mfa.py:91
+msgid "Two-factor authentication disabled."
+msgstr "Isaziso sivalwe"
+
+#: app/views/mfa.py:132
+msgid "Recovery codes are only shown immediately after enabling MFA."
+msgstr "Amakhodi okuthola aboniswa kuphela ngemva nje kokukhubaza i-MFA."
+
+#: app/views/mfa.py:142
+msgid "Could not load recovery codes."
+msgstr "Alikwazanga ukulayisha amakhodi okuthola."
+
+#: app/views/mfa.py:168
+msgid "No MFA challenge in progress."
+msgstr "Ayikho inkinga ye-MFA eqhubekayo."
+
+#: app/views/mfa.py:176
+msgid "User not found for MFA challenge."
+msgstr "Umsebenzisi akatholakali."
+
+#: app/views/mfa.py:225
+msgid ""
+"You have used your last recovery code. MFA has been disabled. Please remove "
+"Grylli from your authenticator app, and re-enable MFA to protect your "
+"account."
+msgstr ""
+"Usebenzise ikhodi yakho yokugcina yokutakula. I-MFA imisiwe. Sicela ususe "
+"i-Grylli kufaka lokho kulungiselela umqinisekisi wakho, bese uyibuyisela "
+"kabusha i-MFA ukuvikela i-akhawunti yakho."
+
+#: app/views/mfa.py:248
+#, python-brace-format
+msgid "Recovery code accepted. You have {remaining} recovery codes left."
+msgstr "Ikhodi yokutakula yamukelwe. Kusale amakhodi okuthola {remaining}."
+
+#: app/views/reminders.py:106
+msgid "Reminder created successfully."
+msgstr "Umsebenzi udalwe ngempumelelo."
+
+#: app/views/reminders.py:143
+msgid "Reminder updated successfully."
+msgstr "Umsebenzisi ubuyekeziwe ngempumelelo."
+
+#: app/views/reminders.py:174
+msgid "Reminder deleted."
+msgstr "Umsebenzisi ususiwe."
+
+#: app/views/reminders.py:287
+msgid "No destinations assigned to this reminder."
+msgstr "Ukulungiswa kwe-SMTP akuhlinzekwe noma kuvaliwe."
+
+#: app/views/reminders.py:311
+msgid "No email message linked to this reminder."
+msgstr "Akukho myalezo we-imeyili oxhunyiwe kulokhu isikhumbuzo."
+
+#: app/views/reminders.py:314
+msgid "SMTP configuration is disabled."
+msgstr "Ukulungiswa kwe-SMTP akuhlinzekwe noma kuvaliwe."
+
+#: app/views/reminders.py:353
+msgid "Test reminder sent successfully."
+msgstr "I-imeyili yokuhlola ithunyelwe ngempumelelo."
+
+#: app/views/reminders.py:356
+msgid "Test reminder failed: "
+msgstr "Umsebenzi ugcinwe."
+
+#: app/views/reminders.py:430
+msgid "Reminder schedule updated successfully."
+msgstr "Ishadi libuyekeziwe ngempumelelo."
+
+#: app/views/reminders.py:434
+msgid "Please correct the errors below."
+msgstr "Sicela ulungise amaphutha angezansi."
+
+#: app/views/reminders.py:481 app/views/reminders.py:482
+msgid "None"
+msgstr "Cha"
+
+#: app/views/reminders.py:508
+msgid "You must select both an SMTP config and an email message, or neither."
+msgstr ""
+"Kumele ukhethe kokubili i-SMTP config kanye nomyalezo we-imeyili, noma "
+"akukhona."
+
+#: app/views/reminders.py:528
+msgid "Email reminder settings updated."
+msgstr "Izinhloso zibuyekeziwe."
+
+#: app/views/smtp.py:83 app/views/user_smtp.py:80
+msgid "SMTP destination created successfully."
+msgstr "Inhloso ye-SMTP idalwe ngempumelelo."
+
+#: app/views/smtp.py:129 app/views/user_smtp.py:135
+msgid "SMTP destination updated."
+msgstr "Inhloso ye-SMTP ibuyekeziwe."
+
+#: app/views/smtp.py:160 app/views/user_smtp.py:166
+msgid "SMTP destination deleted."
+msgstr "Inhloso ye-SMTP isusiwe."
+
+#: app/views/smtp.py:191 app/views/user_smtp.py:199
+msgid "Test email sent successfully to your account email."
+msgstr ""
+"I-imeyili yokuhlola ithunyelwe ngempumelelo kukheli le-imeyili ye-akhawunti "
+"yakho."
+
+#: app/views/smtp.py:196 app/views/user_smtp.py:204
+msgid "Failed to send test email. Check SMTP settings."
+msgstr ""
+"Yehlulekile ukuthumela i-imeyili yokuhlola. Hlola izilungiselelo ze-SMTP."
+
+#: app/views/smtp_settings_admin.py:76
+msgid "Test Email from Grylli"
+msgstr "I-imeyili yokuhlola evela ku-Grylli"
+
+#: app/views/smtp_settings_admin.py:77
+msgid "This is a test email from the Grylli SMTP settings page."
+msgstr ""
+"Le i-imeyili yokuhlola evela ekhasini lezilungiselelo ze-SMTP le-Grylli."
+
+#: app/views/smtp_settings_admin.py:84
+msgid "Failed to send test email: "
+msgstr "Yehlulekile ukuthumela i-imeyili yokuhlola:"
+
+#: app/views/users.py:99
+msgid "User updated successfully."
+msgstr "Umsebenzisi ubuyekeziwe ngempumelelo."
+
+#: app/views/users.py:106 app/views/users.py:327
+msgid "An error occurred while updating the user."
+msgstr "Kunenkinga kwenzekile ngenkathi kubuyekezwa umsebenzisi."
+
+#: app/views/users.py:195
+msgid "User deleted."
+msgstr "Umsebenzisi ususiwe."
+
+#: app/views/users.py:202
+msgid "An error occurred while deleting the user."
+msgstr "Kunenkinga kwenzekile ngenkathi kususwa umsebenzisi."
+
+#: app/views/users.py:237
+msgid "Password is required when creating a new user."
+msgstr "Iphasiwedi iyadingeka uma kudalwa umsebenzisi omusha."
+
+#: app/views/users.py:244
+msgid "Username already exists."
+msgstr "Igama lomsebenzisi selivele likhona."
+
+#: app/views/users.py:251
+msgid "Email already exists."
+msgstr "Imeyili isivele ikhona."
+
+#: app/views/users.py:268
+#, python-format
+msgid "User '%(username)s' created successfully."
+msgstr "Umsebenzisi '%(username)s' udalwe ngempumelelo."
+
+#: app/views/users.py:278
+msgid "Failed to create user."
+msgstr "Yehlulekile ukudala umsebenzisi."
+
+#: app/views/users.py:305
+msgid "You cannot change your own enabled status."
+msgstr "Awukwazi ukushintsha isimo sakho sokuvunywa."
+
+#: app/views/users.py:318
+#, python-format
+msgid "User '%(username)s' has been %(status)s."
+msgstr "Umsebenzisi '%(username)s' ube %(status)s."
+
+#: app/views/users.py:356
+msgid "You cannot reset your own MFA."
+msgstr "⚪ = Awukwazi ukukhubaza i-akhawunti yakho siqu."
+
+#: app/views/users.py:368
+#, python-format
+msgid "MFA disabled for user '%(username)s'."
+msgstr "I-MFA imisiwe kumsebenzisi '%(username)s'."
+
+#: app/views/users.py:374
+msgid "An error occurred while resetting MFA."
+msgstr "Kunenkinga kwenzekile ngenkathi kususwa umsebenzisi."
+
+#: app/views/webhook.py:54
+msgid "Webhook created successfully."
+msgstr "I-Webhook idalwe ngempumelelo."
+
+#: app/views/webhook.py:113
+msgid "Webhook updated successfully."
+msgstr "I-Webhook ibuyekeziwe ngempumelelo."
+
+#: app/views/webhook.py:142
+msgid "Webhook deleted."
+msgstr "I-Webhook isusiwe."
+
+#: app/views/webhook.py:175
+msgid "🧪 Webhook test sent successfully!"
+msgstr "🧪 Ukuhlolwa kwe-Webhook kuthunyelwe ngempumelelo!"
+
+#: app/views/webhook.py:177
+msgid "🧪 Webhook test failed: "
+msgstr "🧪 Ukuhlolwa kwe-Webhook kwehlulekile:"
+
+#: app/views/webhook.py:180
+msgid "🧪 Error sending webhook test."
+msgstr "🧪 Iphutha ekuthumeleni ukuhlolwa kwe-Webhook."
+
+#~ msgid ""
+#~ "Grylli is a secure message delivery platform designed to activate after "
+#~ "prolonged user inactivity."
+#~ msgstr ""
+#~ "I-Grylli iyinkundla yokuletha imilayezo evikelekile ehlelwe ukuvulwa ngemva "
+#~ "kokungasebenzi kahle kwesikhathi eside komsebenzisi."
+
+#~ msgid ""
+#~ "It is a modern reimplementation of Gone Man’s Switch with a refined tech "
+#~ "stack, better maintainability, and an improved user experience."
+#~ msgstr ""
+#~ "Kuyindlela yesimanjemanje yokwenza i-Gone Man's Switch efinyeziwe ene-tech "
+#~ "stack ethuthukisiwe, ukuthuthukiswa okungcono, nosizo olungcono "
+#~ "lwesisebenzi."
+
+#~ msgid "Body:"
+#~ msgstr "Umzimba:"
+
+#~ msgid "Subject:"
+#~ msgstr "Isihloko:"
+
+#~ msgid "Content:"
+#~ msgstr "Okuqukethwe:"
+
+#~ msgid "Edit SMTP"
+#~ msgstr "Hlela i-SMTP"
+
+#~ msgid ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+#~ msgstr ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+
+#~ msgid "Admin Notes"
+#~ msgstr "Amanothi e-Admin"
+
+#~ msgid "Register"
+#~ msgstr "Bhalisa"
+
+#~ msgid "View"
+#~ msgstr "Buka"
+
+#~ msgid "Schedule"
+#~ msgstr "Isheduli"
+
+#~ msgid "Message is enabled"
+#~ msgstr "Umlayezo uvuliwe"
+
+#~ msgid "Message is disabled"
+#~ msgstr "Umlayezo uvalwe"
+
+#~ msgid "No SMTP configuration selected."
+#~ msgstr "Akunasilinganiso sokulungiswa kwe-SMTP esikhethiwe."
+
+#~ msgid "Enable the message to start monitoring."
+#~ msgstr "Vumela umyalezo ukuze uqale ukubekezela."
+
+#~ msgid "✅ SMTP settings saved."
+#~ msgstr "Izilungiselelo ze-SMTP"
+
+#~ msgid "If you don’t check in, Grylli delivers the message for you."
+#~ msgstr "Uma ungabuyiselani, i-Grylli iyaletha umlayezo kuwe."
+
+#~ msgid "Fill in already discovered missing translations:"
+#~ msgstr "Gcwalisa izinguqulo ezilahlekile ezivele zitholakele:"
+
+#~ msgid "Add missing phrases in that JSON file."
+#~ msgstr "Engeza imisho elahlekile kulelo fayela le-JSON."
+
+#~ msgid "From:"
+#~ msgstr "Khona-ke:"
+
+#~ msgid ""
+#~ "Attach the updated JSON file to a new GitHub issue when submitting your "
+#~ "changes."
+#~ msgstr ""
+#~ "Namathisela ifayela le-JSON elishintshile kumcholo omusha we-GitHub uma "
+#~ "uthumela izinguquko zakho."
+
+#~ msgid "admin"
+#~ msgstr "umphathi"
+
+#~ msgid "user"
+#~ msgstr "umsebenzisi"
+
+#~ msgid "Logging in"
+#~ msgstr "Ngena ngemvume"
+
+#~ msgid "SMTP error: "
+#~ msgstr "Iphutha le-SMTP:"
+
+#~ msgid "enabled"
+#~ msgstr "kunikezwa amandla"
+
+#~ msgid "disabled"
+#~ msgstr "kukhubazekile"

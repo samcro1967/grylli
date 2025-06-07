@@ -1,0 +1,56 @@
+{# ---------------------------------------------------------------------
+  index.html
+  app/templates/admin/index.html
+  [Describe purpose or main content of this template.]
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{# =================== JINJA BLOCK ==================== #}
+{% block content %}
+    <div class="max-w-3xl mx-auto mt-12 space-y-6">
+        <h1 class="text-2xl font-bold">{{ _("Admin Panel") }}</h1>
+        <p class="text-zinc-600 dark:text-zinc-300">
+            {{ _("Welcome to the Grylli Admin Panel. Use the links below to manage the system.") }}
+        </p>
+        <ul class="list-disc list-inside space-y-1 text-zinc-700 dark:text-zinc-200">
+            <li>
+                <a href="{{ url_for("users.list_users") }}"
+                   class="text-blue-500 hover:underline">{{ _("Manage Users") }}</a>
+                — {{ _("Create, edit, enable/disable, or delete user accounts.") }}
+            </li>
+            <li>
+                <a href="{{ url_for("system_settings.view_app_config") }}"
+                   class="text-blue-500 hover:underline">{{ _("System Settings") }}</a>
+                — {{ _("View  system-wide environment values.") }}
+            </li>
+            <li>
+                <a href="{{ url_for("backups.list_backups") }}"
+                   class="text-blue-500 hover:underline">{{ _("Backups") }}</a>
+                — {{ _("Create and delete database backups.") }}
+            </li>
+            <li>
+                <a href="{{ url_for("smtp_settings_admin.view_smtp_config") }}"
+                   class="text-blue-500 hover:underline">{{ _("SMTP Settings") }}</a>
+                — {{ _("View and test global SMTP settings.") }}
+            </li>
+            <li>
+                <a href="{{ GITHUB_URL }}#readme"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="text-blue-500 hover:underline">{{ _("View Admin Guide / README on GitHub") }}</a>
+                — {{ _("Includes setup instructions, integrations, and troubleshooting.") }}
+            </li>
+        </ul>
+        <div class="mt-6 p-4 border border-yellow-400 bg-yellow-100 dark:bg-yellow-800 dark:border-yellow-600 rounded">
+            <h2 class="font-semibold text-lg">{{ _("⚠️ Admin Tips") }}</h2>
+            <ul class="list-disc list-inside mt-2 text-sm space-y-1">
+                <li>{{ _("Ensure the data folder (database) is backed up on your host") }}</li>
+                <li>
+                    {{ _("The uploads folder is not per user.  If required per user, you will ndd to create subdirectoried per user and setup permissions so users can only see their own folder.") }}
+                </li>
+                <li>
+                    {{ _("To restore a backup: stop the container, replace the data/grylli.db with one from the backups folder, and restart the container.") }}
+                </li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}

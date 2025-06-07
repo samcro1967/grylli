@@ -1,0 +1,30 @@
+{# ---------------------------------------------------------------------
+  system_settings.html
+  app/templates/admin/system_settings.html
+  [Describe purpose or main content of this template.]
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{# =================== JINJA BLOCK ==================== #}
+{% block content %}
+    <div class="max-w-2xl mx-auto mt-16 bg-white dark:bg-zinc-800 shadow-md rounded-xl p-6">
+        <h1 class="text-2xl font-semibold mb-6 text-black dark:text-white">{{ _("System Settings") }}</h1>
+        <!-- =================== TABLE START ================== -->
+        <table class="table-auto w-full text-left text-sm">
+            <thead>
+                <tr>
+                    <th class="py-2 px-4">{{ _("Key") }}</th>
+                    <th class="py-2 px-4">{{ _("Value") }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for key, value in config.items() %}
+                    <tr class="border-t border-zinc-200 dark:border-zinc-700">
+                        <td class="py-2 px-4 font-mono text-xs">{{ key }}</td>
+                        <td class="py-2 px-4 break-all">{{ value }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+            <!-- =================== TABLE END ==================== -->
+        </table>
+    </div>
+{% endblock %}

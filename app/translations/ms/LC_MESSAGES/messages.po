@@ -1,0 +1,3279 @@
+# Malay translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-06-07 15:49-0500\n"
+"PO-Revision-Date: 2025-05-25 16:45-0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: ms <LL@li.org>\n"
+"Language: ms\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: app/init_db.py:55
+#, python-format
+msgid "Tables currently in DB: %s"
+msgstr "Jadual yang kini dalam DB:"
+
+#: app/init_db.py:58
+msgid "Database or system_config table missing. Running migrations now..."
+msgstr ""
+"Jadual database atau system_config tiada. Menjalankan migrasi sekarang..."
+
+#: app/init_db.py:61
+msgid "Migrations applied successfully."
+msgstr "Migrasi diterapkan dengan jayanya."
+
+#: app/init_db.py:63
+msgid "Migration failed."
+msgstr "Migrasi gagal."
+
+#: app/init_db.py:68
+msgid "System config seeded successfully."
+msgstr "Konfigurasi sistem berjaya disemai."
+
+#: app/init_db.py:70
+msgid "Error seeding system config."
+msgstr "Ralat semasa menyemai konfigurasi sistem:"
+
+#: app/forms/mfa_form.py:15 app/templates/apprise/create_apprise.html:30
+#: app/templates/apprise/edit_apprise.html:30
+#: app/templates/apprise/list_apprise.html:60
+#: app/templates/mfa/settings.html:24 app/templates/mfa/settings.html:40
+#: app/templates/user_smtp/create_smtp.html:99
+#: app/templates/user_smtp/edit_smtp.html:114
+#: app/templates/user_smtp/list_smtp.html:57
+#: app/templates/webhook/create_webhook.html:36
+#: app/templates/webhook/edit_webhook.html:36
+#: app/templates/webhook/list_webhooks.html:61
+msgid "Enabled"
+msgstr "Didayakan"
+
+#: app/forms/mfa_form.py:16
+msgid "Authenticator Code"
+msgstr "Kod Pengesah"
+
+#: app/forms/mfa_form.py:17
+#: app/templates/admin/partials/user_instructions_and_modal.html:66
+#: app/templates/admin/partials/user_table.html:115
+#: app/templates/email/assign_smtp.html:44 app/templates/mfa/settings.html:47
+#: app/templates/user_smtp/edit_smtp.html:122
+msgid "Save"
+msgstr "Simpan"
+
+#: app/forms/mfa_form.py:27
+msgid "Authentication Code"
+msgstr "Kemaskini Notifikasi"
+
+#: app/forms/mfa_form.py:29
+msgid "Please enter your authentication code."
+msgstr "Sila masukkan kod pengesahan anda."
+
+#: app/forms/mfa_form.py:30
+msgid "Enter a valid 6-digit code or recovery code."
+msgstr "Masukkan kod 6 angka yang sah atau kod pemulihan."
+
+#: app/forms/mfa_form.py:31
+msgid "Invalid code format."
+msgstr "Format kod tidak sah."
+
+#: app/forms/mfa_form.py:35 app/templates/mfa/challenge.html:25
+msgid "Verify"
+msgstr "Versi"
+
+#: app/services/mail.py:37 app/services/system_settings_email.py:40
+msgid "Missing required config setting: "
+msgstr "Tetapan konfigurasi wajib hilang:"
+
+#: app/services/mail.py:46 app/services/system_settings_email.py:50
+#, python-format
+msgid "Failed to decrypt %(key)s: %(error)s"
+msgstr "Gagal mendekripsi %(key)s: %(error)s"
+
+#: app/services/mail.py:54
+#, python-format
+msgid "get_setting('%(key)s') -> '%(value)s' (sensitive: %(sensitive)s)"
+msgstr ""
+"get_setting('%(key)s') -> '%(value)s' (mentah: '%(raw)s', sensitif: "
+"%(sensitive)s)"
+
+#: app/services/mail.py:75
+#, python-format
+msgid "Preparing email to %(to)s"
+msgstr "Menyediakan email kepada %(to)s"
+
+#: app/services/mail.py:90
+#, python-format
+msgid ""
+"SMTP configuration: host=%(host)s (type=%(host_type)s), port=%(port)s "
+"(type=%(port_type)s)"
+msgstr ""
+"Hos SMTP = '%(host)s' (jenis: %(host_type)s), port = %(port)s (jenis: "
+"%(port_type)s)"
+
+#: app/services/mail.py:99
+#, python-format
+msgid "SMTP username: %(user)s"
+msgstr "Menggunakan pengguna: %(user)s"
+
+#: app/services/mail.py:100
+#, python-format
+msgid "TLS enabled: %(tls)s"
+msgstr "TLS diaktifkan: %(tls)s"
+
+#: app/services/mail.py:105
+msgid "Starting TLS connection..."
+msgstr "Memulakan TLS"
+
+#: app/services/mail.py:107
+msgid "Logging into SMTP server..."
+msgstr "Log masuk ke pelayan SMTP..."
+
+#: app/services/mail.py:109
+msgid "Sending email message..."
+msgstr "Jadual Mesej"
+
+#: app/services/mail.py:111
+#, python-format
+msgid "Email sent successfully to %(to)s"
+msgstr "Emel ujian dihantar dengan jayanya."
+
+#: app/services/mail.py:114
+#, python-format
+msgid "SMTP error while sending to %(to)s: %(error)s"
+msgstr "Ralat SMTP semasa menghantar kepada %(to)s: %(error)s"
+
+#: app/templates/about.html:10
+msgid "About Grylli"
+msgstr "Mengenai Grylli"
+
+#: app/templates/about.html:13
+msgid ""
+"Grylli is a secure, self-hosted message delivery platform that automatically"
+" sends pre-configured messages if a user fails to check in within a defined "
+"time period."
+msgstr ""
+"Grylli ialah platform penyampaian mesej yang selamat dan dihoskan sendiri "
+"yang secara automatik menghantar mesej yang telah dikonfigurasikan jika "
+"pengguna gagal mendaftar masuk dalam tempoh masa yang ditetapkan."
+
+#: app/templates/about.html:14
+msgid ""
+"It supports multiple users, customizable schedules, and recurring reminders."
+msgstr "Ia menyokong berbilang pengguna dan jadual yang boleh disesuaikan."
+
+#: app/templates/about.html:15
+msgid ""
+"Messages and reminders can be delivered via email, webhooks, or over 100 "
+"third-party services through Apprise."
+msgstr ""
+"Mesej boleh dihantar melalui e-mel, webhook, atau lebih 80 perkhidmatan "
+"pihak ketiga melalui Apprise."
+
+#: app/templates/about.html:16
+msgid ""
+"Users can configure their own SMTP servers to ensure emails and reminders "
+"appear to come directly from them — not from the system administrator."
+msgstr ""
+"Pengguna boleh mengkonfigurasi pelayan SMTP mereka sendiri untuk memastikan "
+"mesej kelihatan seperti datang terus daripada mereka — bukan daripada "
+"pentadbir sistem."
+
+#: app/templates/about.html:17
+msgid ""
+"Sensitive data is encrypted at rest, and all operations are secured with "
+"strong authentication and audit-friendly logging."
+msgstr ""
+"Data sensitif disulitkan semasa rehat, dan semua operasi mesej dilindungi "
+"dengan pengesahan kukuh dan log mesra audit."
+
+#: app/templates/about.html:18
+msgid ""
+"Built with a modern, reactive technology stack, Grylli is optimized for "
+"responsiveness and works seamlessly across desktop and mobile devices."
+msgstr ""
+"Dibangunkan dengan timbunan teknologi moden yang reaktif, Grylli "
+"dioptimumkan untuk responsif dan berfungsi dengan lancar di desktop dan "
+"peranti mudah alih."
+
+#: app/templates/about.html:23
+msgid "Version:"
+msgstr "Versi:"
+
+#: app/templates/about.html:26
+msgid "Repository:"
+msgstr "Repositori:"
+
+#: app/templates/about.html:30
+msgid "GitHub - samcro1967/grylli"
+msgstr "GitHub - samcro1967/grylli"
+
+#: app/templates/help.html:2 app/templates/help.html:5
+#: app/templates/partials/header.html:85
+msgid "Help"
+msgstr "Bantuan"
+
+#: app/templates/help.html:7
+msgid ""
+"Grylli includes built-in instructions throughout the app to help you "
+"configure and manage your setup."
+msgstr ""
+"Grylli termasuk arahan terbina dalam sepanjang aplikasi untuk membantu anda "
+"mengkonfigurasi dan menguruskan tetapan anda."
+
+#: app/templates/help.html:8
+msgid ""
+"This page provides an overview of key features and direct links to where "
+"they can be managed."
+msgstr ""
+"Halaman ini menyediakan gambaran keseluruhan ciri utama dan pautan langsung "
+"ke tempat di mana ia boleh diuruskan."
+
+#: app/templates/help.html:12 app/templates/messages/list_messages.html:9
+#: app/templates/partials/shared_nav.html:17
+msgid "Notifications"
+msgstr "Notifikasi"
+
+#: app/templates/help.html:14
+msgid "Create and assign messages"
+msgstr "Buat mesej atau emel."
+
+#: app/templates/admin/index.html:32 app/templates/help.html:17
+#: app/templates/partials/admin_nav.html:56
+msgid "SMTP Settings"
+msgstr "Tetapan SMTP"
+
+#: app/templates/help.html:19
+msgid "Use your own email server"
+msgstr "Gunakan pelayan e-mel anda sendiri"
+
+#: app/templates/help.html:22
+msgid "Apprise Integration"
+msgstr "Halatuju Apprise"
+
+#: app/templates/help.html:24
+msgid "Send notifications to 80+ supported services"
+msgstr "Hantar pemberitahuan kepada lebih 80 perkhidmatan yang disokong"
+
+#: app/templates/help.html:27
+#: app/templates/messages/assign_destinations.html:41
+#: app/templates/messages/view_message.html:58
+#: app/templates/partials/shared_nav.html:44
+#: app/templates/reminders/assign_destinations.html:39
+#: app/templates/reminders/view_reminder.html:69
+msgid "Webhooks"
+msgstr "Webhooks"
+
+#: app/templates/help.html:29
+msgid "Trigger actions or external workflows"
+msgstr "Mencetuskan tindakan atau aliran kerja luar"
+
+#: app/templates/email/list_emails.html:9 app/templates/help.html:32
+#: app/templates/partials/shared_nav.html:61
+msgid "Emails"
+msgstr "E-mel"
+
+#: app/templates/help.html:34
+msgid "View and manage secure email messages"
+msgstr "Gambaran mesej e-mel selamat"
+
+#: app/templates/help.html:38
+msgid "Security"
+msgstr "🔐 Keselamatan"
+
+#: app/templates/help.html:39
+msgid "Grylli encrypts sensitive data and logs all key actions for auditing."
+msgstr ""
+"Grylli menyulitkan data sensitif dan merekod semua tindakan utama untuk "
+"audit."
+
+#: app/templates/index.html:9 app/views/locale.py:95
+msgid "Welcome to Grylli"
+msgstr "Selamat datang ke Grylli"
+
+#: app/templates/index.html:11
+msgid "Pronounced"
+msgstr "Disebut"
+
+#: app/templates/index.html:11
+msgid "like “grill-ee”"
+msgstr "seperti “grill-ee”"
+
+#: app/templates/index.html:14
+msgid ""
+"Grylli is a secure message scheduling and delivery system designed to ensure"
+" your important messages are delivered — even if you can’t be there to send "
+"them."
+msgstr ""
+"Grylli adalah sistem penjadualan dan penghantaran mesej yang selamat direka "
+"untuk memastikan mesej penting anda dihantar — walaupun jika anda tidak "
+"dapat berada di sana untuk menghantarnya."
+
+#: app/templates/index.html:17
+msgid ""
+"Whether you’re planning ahead, setting up emergency communication, or "
+"building peace of mind, Grylli helps automate your message delivery via "
+"multiple channels including email, webhooks, and Apprise notifications."
+msgstr ""
+"Sama ada anda merancang ke hadapan, menyediakan komunikasi kecemasan, atau "
+"membina ketenangan fikiran, Grylli membantu mengautomasi penghantaran mesej "
+"anda melalui emel, webhooks, atau notifikasi Apprise jika anda terlepas "
+"check-in."
+
+#: app/templates/index.html:19
+msgid "Getting Started"
+msgstr "Memulakan"
+
+#: app/templates/index.html:21
+msgid "Create a message, email, or reminder."
+msgstr "Buat mesej atau emel."
+
+#: app/templates/index.html:22
+msgid "Set your check-in interval and grace period (for messages)."
+msgstr "Tetapkan selang check-in dan tempoh kelonggaran anda."
+
+#: app/templates/index.html:23
+msgid "Assign one or more delivery destinations."
+msgstr "Tetapkan satu atau lebih destinasi penghantaran."
+
+#: app/templates/index.html:24
+msgid "Optionally attach files for secure emails."
+msgstr "Secara opsional lampirkan fail untuk emel selamat."
+
+#: app/templates/index.html:25
+msgid "Schedule reminders to send at specific times or on a recurring basis."
+msgstr ""
+"Jadualkan peringatan untuk dihantar pada masa tertentu atau secara berulang."
+
+#: app/templates/index.html:26
+msgid "Enable the message or reminder to activate delivery."
+msgstr "Aktifkan mesej atau peringatan untuk mengaktifkan penghantaran."
+
+#: app/templates/index.html:28
+msgid ""
+"Regularly check in to Grylli to prevent automated delivery; miss a check-in "
+"and Grylli sends your messages as scheduled."
+msgstr ""
+"Kerap memeriksa Grylli untuk mencegah penghantaran automatik; terlepas "
+"pemeriksaan dan Grylli akan menghantar mesej anda seperti dijadualkan."
+
+#: app/templates/privacy.html:10
+msgid "Privacy Notice"
+msgstr "Notis Privasi"
+
+#: app/templates/privacy.html:13
+msgid ""
+"Grylli respects your privacy and is designed to minimize the collection and "
+"storage of personal data."
+msgstr ""
+"Grylli menghormati privasi anda dan direka untuk meminimumkan pengumpulan "
+"dan penyimpanan data peribadi."
+
+#: app/templates/privacy.html:14
+msgid ""
+"All data is encrypted where appropriate and remains fully under your control"
+" if you self-host this platform."
+msgstr ""
+"Semua data disulitkan di mana sesuai dan kekal sepenuhnya di bawah kawalan "
+"anda jika anda menghos platform ini sendiri."
+
+#: app/templates/privacy.html:17
+msgid "What Data We Collect"
+msgstr "Data Apa Yang Kami Kumpul"
+
+#: app/templates/privacy.html:19
+msgid "Email address and password hash (for authentication)"
+msgstr "Alamat emel dan hash kata laluan (untuk pengesahan)"
+
+#: app/templates/privacy.html:20
+msgid "Optional MFA secret and recovery codes (encrypted at rest)"
+msgstr "Rahsia MFA dan kod pemulihan pilihan (disulitkan semasa rehat)"
+
+#: app/templates/privacy.html:21
+msgid "Reminder and message content you configure"
+msgstr "Kandungan peringatan dan mesej yang anda konfigurasikan"
+
+#: app/templates/privacy.html:22
+msgid "User-specific settings, SMTP configuration (if provided)"
+msgstr "Tetapan khusus pengguna, konfigurasi SMTP (jika disediakan)"
+
+#: app/templates/privacy.html:25
+msgid "How Your Data Is Used"
+msgstr "Bagaimana Data Anda Digunakan"
+
+#: app/templates/privacy.html:27
+msgid ""
+"Your data is used solely for the purpose of delivering reminders and "
+"messages according to your preferences."
+msgstr ""
+"Data anda digunakan semata-mata untuk tujuan menghantar peringatan dan mesej"
+" mengikut pilihan anda."
+
+#: app/templates/privacy.html:28
+msgid ""
+"Grylli does not share, sell, or transmit your personal data to any third "
+"parties."
+msgstr ""
+"Grylli tidak berkongsi, menjual, atau menghantar data peribadi anda kepada "
+"pihak ketiga manapun."
+
+#: app/templates/privacy.html:31
+msgid "Your Rights"
+msgstr "Hak Anda"
+
+#: app/templates/privacy.html:33
+msgid ""
+"You can export all of your data at any time from the Account Settings page."
+msgstr ""
+"Anda boleh mengeksport semua data anda pada bila-bila masa dari halaman "
+"Tetapan Akaun."
+
+#: app/templates/privacy.html:34
+msgid "You may permanently delete your account and all associated data."
+msgstr ""
+"Anda tidak boleh memadam akaun anda kerana anda adalah pentadbir terakhir."
+
+#: app/templates/privacy.html:35
+msgid ""
+"If you are using a self-hosted instance, contact the instance administrator "
+"for data inquiries."
+msgstr ""
+"Jika anda menggunakan instans yang dikendalikan sendiri, hubungi pentadbir "
+"instans untuk pertanyaan data."
+
+#: app/templates/privacy.html:38
+msgid "Self-Hosting Responsibility"
+msgstr "Tanggungjawab Penghosan Sendiri"
+
+#: app/templates/privacy.html:40
+msgid ""
+"If you are running Grylli on your own server, you are responsible for the "
+"storage, processing, and lawful handling of all user data on that instance."
+msgstr ""
+"Jika anda menjalankan Grylli pada pelayan anda sendiri, anda "
+"bertanggungjawab terhadap penyimpanan, pemprosesan, dan pengendalian yang "
+"sah untuk semua data pengguna pada instans tersebut."
+
+#: app/templates/privacy.html:44
+msgid ""
+"This notice was last updated in June 2025 and may evolve to reflect changes "
+"in the software or regulatory landscape."
+msgstr ""
+"Notis ini kali terakhir dikemaskini pada Jun 2025 dan mungkin berkembang "
+"untuk menggambarkan perubahan dalam perisian atau landskap peraturan."
+
+#: app/templates/system_info.html:11
+msgid "📦 Environment Versions"
+msgstr "📦 Versi Persekitaran"
+
+#: app/templates/system_info.html:17
+msgid "Category"
+msgstr "Kategori"
+
+#: app/templates/system_info.html:18
+msgid "Tool"
+msgstr "Alat"
+
+#: app/templates/system_info.html:19
+msgid "Version"
+msgstr "Versi"
+
+#: app/templates/system_info.html:25
+msgid "🧠 Python"
+msgstr "🧠 Python"
+
+#: app/templates/system_info.html:26
+msgid "Python"
+msgstr "Python"
+
+#: app/templates/system_info.html:30
+msgid "pip"
+msgstr "pip"
+
+#: app/templates/system_info.html:34
+msgid "SQLite"
+msgstr "SQLite"
+
+#: app/templates/system_info.html:40
+msgid "⚙️ Core"
+msgstr "⚙️ Teras"
+
+#: app/templates/system_info.html:47
+msgid "🔐 Security"
+msgstr "🔐 Keselamatan"
+
+#: app/templates/system_info.html:48
+msgid "Email Validator"
+msgstr "Pengesah E-mel"
+
+#: app/templates/system_info.html:52
+msgid "Cryptography"
+msgstr "Kriptografi"
+
+#: app/templates/system_info.html:57
+msgid "🕰️ Scheduling"
+msgstr "🕰️ Penjadualan"
+
+#: app/templates/system_info.html:58
+msgid "APScheduler"
+msgstr "APScheduler"
+
+#: app/templates/system_info.html:62
+msgid "Apprise (Python)"
+msgstr "Apprise (Python)"
+
+#: app/templates/system_info.html:66
+msgid "Apprise CLI"
+msgstr "Apprise CLI"
+
+#: app/templates/system_info.html:74
+msgid "🌐 Frontend"
+msgstr "🌐 Antaramuka Depan"
+
+#: app/templates/account/manage_account.html:11
+msgid "Manage Account"
+msgstr "Urus Akaun"
+
+#: app/templates/account/manage_account.html:12
+msgid "Update your profile information and password."
+msgstr "Kemaskini maklumat profil dan kata laluan anda."
+
+#: app/templates/account/manage_account.html:41
+#: app/templates/admin/create_user.html:40
+#: app/templates/auth/bootstrap.html:43
+#: app/templates/auth/reset_password.html:42 app/templates/auth/signup.html:42
+msgid "Please enter a valid email address."
+msgstr "Sila masukkan alamat e-mel yang sah."
+
+#: app/templates/account/manage_account.html:62
+#: app/templates/account/manage_account.html:96
+#: app/templates/account/manage_account.html:127
+#: app/templates/auth/reset_password.html:66
+#: app/templates/auth/reset_password.html:97 app/templates/auth/signup.html:65
+#: app/templates/auth/signup.html:95
+msgid "Show/hide password"
+msgstr "Tahan untuk menunjukkan kata laluan"
+
+#: app/templates/account/manage_account.html:89
+#: app/templates/admin/create_user.html:53
+#: app/templates/auth/bootstrap.html:51
+#: app/templates/auth/reset_password.html:58 app/templates/auth/signup.html:58
+msgid "Password must meet all complexity requirements."
+msgstr "Kata laluan mesti memenuhi semua keperluan kerumitan."
+
+#: app/templates/account/manage_account.html:141
+#: app/templates/admin/create_user.html:72
+#: app/templates/admin/edit_user.html:67 app/templates/auth/bootstrap.html:69
+#: app/templates/auth/reset_password.html:110
+#: app/templates/auth/signup.html:108
+msgid "Passwords do not match."
+msgstr "Kata laluan tidak sepadan."
+
+#: app/templates/account/manage_account.html:147
+msgid "Update Account"
+msgstr "Kemaskini Akaun"
+
+#: app/templates/account/manage_account.html:151
+#: app/templates/admin/create_user.html:82
+#: app/templates/admin/edit_user.html:97 app/templates/admin/help_form.html:28
+#: app/templates/admin/partials/user_instructions_and_modal.html:62
+#: app/templates/admin/partials/user_table.html:113
+#: app/templates/apprise/create_apprise.html:42
+#: app/templates/apprise/edit_apprise.html:42
+#: app/templates/auth/reset_password.html:121
+#: app/templates/email/assign_smtp.html:46
+#: app/templates/email/attach_files.html:47
+#: app/templates/email/edit_message.html:54
+#: app/templates/email/schedule_email.html:84
+#: app/templates/messages/assign_destinations.html:66
+#: app/templates/messages/create_message.html:55
+#: app/templates/messages/edit_message.html:48
+#: app/templates/messages/schedule_message.html:84
+#: app/templates/mfa/challenge.html:29 app/templates/mfa/settings.html:51
+#: app/templates/reminders/assign_destinations.html:64
+#: app/templates/reminders/assign_email_reminder.html:94
+#: app/templates/reminders/create_reminder.html:49
+#: app/templates/reminders/edit_reminder.html:42
+#: app/templates/reminders/schedule_reminder.html:51
+#: app/templates/user_smtp/create_smtp.html:111
+#: app/templates/user_smtp/edit_smtp.html:125
+#: app/templates/webhook/create_webhook.html:48
+#: app/templates/webhook/edit_webhook.html:48
+msgid "Cancel"
+msgstr "Batal"
+
+#: app/templates/account/manage_account.html:159
+#: app/templates/admin/create_user.html:90
+#: app/templates/admin/edit_user.html:81 app/templates/auth/bootstrap.html:83
+#: app/templates/auth/reset_password.html:128
+#: app/templates/auth/signup.html:132
+msgid "Minimum 8 characters"
+msgstr "Minimum 8 aksara"
+
+#: app/templates/account/manage_account.html:160
+#: app/templates/admin/create_user.html:91
+#: app/templates/admin/edit_user.html:82 app/templates/auth/bootstrap.html:84
+#: app/templates/auth/reset_password.html:129
+#: app/templates/auth/signup.html:133
+msgid "At least one uppercase letter"
+msgstr "Sekurang-kurangnya satu huruf besar"
+
+#: app/templates/account/manage_account.html:161
+#: app/templates/admin/create_user.html:92
+#: app/templates/admin/edit_user.html:83 app/templates/auth/bootstrap.html:85
+#: app/templates/auth/reset_password.html:130
+#: app/templates/auth/signup.html:134
+msgid "At least one lowercase letter"
+msgstr "Sekurang-kurangnya satu huruf kecil"
+
+#: app/templates/account/manage_account.html:162
+#: app/templates/admin/create_user.html:93
+#: app/templates/admin/edit_user.html:84 app/templates/auth/bootstrap.html:86
+#: app/templates/auth/reset_password.html:131
+#: app/templates/auth/signup.html:135
+msgid "At least one number"
+msgstr "Sekurang-kurangnya satu nombor"
+
+#: app/templates/account/manage_account.html:163
+#: app/templates/admin/create_user.html:94
+#: app/templates/auth/bootstrap.html:87
+#: app/templates/auth/reset_password.html:132
+#: app/templates/auth/signup.html:136
+msgid "At least one special character (e.g., !@#$%)"
+msgstr "Sekurang-kurangnya satu aksara khas (cth., !@#$%)"
+
+#: app/templates/account/manage_account.html:169
+msgid "Download My Data"
+msgstr "Muat Turun Data Saya"
+
+#: app/templates/account/manage_account.html:171
+msgid ""
+"Download all your account data as a JSON file. This includes your reminders,"
+" messages, email settings, and more. The file is for your records only and "
+"cannot be imported back. Protect it as it may contain sensitive information."
+msgstr ""
+"Muat turun semua data akaun anda sebagai fail JSON. Ini termasuk peringatan "
+"anda, mesej, tetapan emel, dan banyak lagi. Fail ini adalah untuk rekod anda"
+" sahaja dan tidak boleh diimport semula. Lindunginya kerana ia mungkin "
+"mengandungi maklumat sensitif."
+
+#: app/templates/account/manage_account.html:175
+msgid "Download My Data (JSON)"
+msgstr "Muat Turun Data Saya (JSON)"
+
+#: app/templates/account/manage_account.html:179
+msgid "Danger Zone"
+msgstr "Zon Bahaya"
+
+#: app/templates/account/manage_account.html:180
+msgid "Deleting your account is permanent and cannot be undone."
+msgstr "Memadam akaun anda adalah kekal dan tidak boleh dibatalkan."
+
+#: app/templates/account/manage_account.html:185
+msgid "Delete My Account"
+msgstr "Kemaskini Akaun"
+
+#: app/templates/account/translations.html:8
+msgid "Translations - Grylli"
+msgstr "Terjemahan - Grylli"
+
+#: app/templates/account/translations.html:17
+#: app/templates/partials/header.html:102
+msgid "Translations"
+msgstr "Terjemahan"
+
+#: app/templates/account/translations.html:20
+msgid "Grylli currently supports multiple languages and more will be added."
+msgstr "Grylli kini menyokong pelbagai bahasa dan lebih banyak akan ditambah."
+
+#: app/templates/account/translations.html:21
+msgid "Many of the translations were performed with assistance from ChatGPT."
+msgstr "Banyak terjemahan dilakukan dengan bantuan daripada ChatGPT."
+
+#: app/templates/account/translations.html:22
+msgid ""
+"If you find a translation issue or want to suggest improvements, your input "
+"is welcome!"
+msgstr ""
+"Jika anda menemui isu terjemahan atau ingin mencadangkan penambahbaikan, "
+"sumbangan anda dialu-alukan!"
+
+#: app/templates/account/translations.html:28
+msgid "How to request translation updates"
+msgstr "Cara untuk meminta kemas kini terjemahan"
+
+#: app/templates/account/translations.html:30
+msgid "To contribute to translations, please use the following guidelines:"
+msgstr ""
+"Untuk menyumbang kepada terjemahan, sila gunakan garis panduan berikut:"
+
+#: app/templates/account/translations.html:43
+msgid "Contribute missing or improved translations:"
+msgstr "Menemui terjemahan yang hilang?"
+
+#: app/templates/account/translations.html:63
+msgid "Open the relevant .po translation file for your language."
+msgstr "Buka fail terjemahan JSON untuk bahasa anda. Sebagai contoh:"
+
+#: app/templates/account/translations.html:67
+msgid ""
+"Find untranslated or incomplete entries and add or improve translations."
+msgstr ""
+"Cari entri yang tidak diterjemah atau tidak lengkap dan tambah atau perbaiki"
+" terjemahan."
+
+#: app/templates/account/translations.html:68
+msgid "You may use a PO file editor or a text editor."
+msgstr "Anda boleh menggunakan editor fail PO atau editor teks."
+
+#: app/templates/account/translations.html:69
+msgid "Copy the file path and the snippet of your changes."
+msgstr "Salin laluan fail dan cebisan perubahan anda."
+
+#: app/templates/account/translations.html:70
+msgid "Paste the snippet directly into a new GitHub issue for review."
+msgstr "Tampal petikan yang disalin terus ke dalam komen isu GitHub."
+
+#: app/templates/account/translations.html:72
+msgid "Please do not upload the full .po file to avoid merge conflicts."
+msgstr ""
+"Jangan muat naik fail penuh .po untuk mengelakkan konflik penggabungan."
+
+#: app/templates/account/translations.html:85
+msgid "Improving existing translations:"
+msgstr "Memperbaiki terjemahan sedia ada:"
+
+#: app/templates/account/translations.html:104
+msgid "Open the relevant .po file for the translation you want to improve."
+msgstr "Buka fail .po relevan untuk terjemahan yang anda ingin perbaiki."
+
+#: app/templates/account/translations.html:106
+msgid "For example:"
+msgstr "Sebagai contoh:"
+
+#: app/templates/account/translations.html:110
+msgid ""
+"Find the phrase(s) and its existing translation(s) you want to improve."
+msgstr "Cari frasa dan terjemahan sedia ada yang anda ingin perbaiki."
+
+#: app/templates/account/translations.html:111
+msgid "Update the phrase(s)."
+msgstr "Kemas kini frasa tersebut."
+
+#: app/templates/account/translations.html:112
+msgid "Copy the file name and path into the issue."
+msgstr "Salin nama dan laluan fail ke dalam isu."
+
+#: app/templates/account/translations.html:114
+msgid "Paste the copied snippet directly into the GitHub issue comment."
+msgstr "Tampal petikan yang disalin terus ke dalam komen isu GitHub."
+
+#: app/templates/account/translations.html:115
+msgid "Do not upload the full .po file to avoid merge conflicts."
+msgstr ""
+"Jangan muat naik fail penuh .po untuk mengelakkan konflik penggabungan."
+
+#: app/templates/account/translations.html:118
+msgid "Example snippet:"
+msgstr "Petikan contoh:"
+
+#: app/templates/account/translations.html:137
+msgid "Report missing translations not yet discovered:"
+msgstr "Laporan terjemahan hilang yang belum ditemui:"
+
+#: app/templates/account/translations.html:154
+msgid ""
+"If you see text in the app that appears untranslated or missing, please "
+"report it to us."
+msgstr ""
+"Jika anda melihat teks dalam aplikasi yang kelihatan tidak diterjemahkan "
+"atau hilang, sila laporkan kepada kami."
+
+#: app/templates/account/translations.html:155
+msgid "Provide the exact English phrase as it appears on the screen."
+msgstr "Berikan frasa Inggeris tepat seperti yang tertera di skrin."
+
+#: app/templates/account/translations.html:156
+msgid ""
+"Include the page or section where you saw the phrase (e.g., Apprise page, "
+"Account Page, etc.)."
+msgstr ""
+"Termasuk halaman atau bahagian di mana anda melihat frasa tersebut (cth., "
+"halaman Tetapan, bahagian Akaun)."
+
+#: app/templates/account/translations.html:157
+msgid ""
+"Submit this information via a new GitHub issue so we can add it to the "
+"translation files"
+msgstr ""
+"Hantar maklumat ini melalui isu GitHub baru supaya kami boleh menambahkannya"
+" ke dalam fail terjemahan dan membungkusnya untuk Babel."
+
+#: app/templates/account/translations.html:166
+msgid "Found a missing translation?"
+msgstr "Menemui terjemahan yang hilang?"
+
+#: app/templates/account/translations.html:171
+msgid ""
+"This link will create a new GitHub issue pre-filled with a language code."
+msgstr ""
+"Pautan ini akan mencipta isu GitHub baharu dengan kod bahasa yang telah "
+"diisi."
+
+#: app/templates/account/translations.html:172
+msgid "Report it by opening a new GitHub issue"
+msgstr "Laporkan dengan membuka isu GitHub baru"
+
+#: app/templates/account/translations.html:175
+msgid "Please specify the language code and exact phrase when reporting."
+msgstr "Sila nyatakan kod bahasa dan frasa tepat apabila melaporkan."
+
+#: app/templates/account/translations.html:176
+msgid "Thank you for helping us make Grylli better!"
+msgstr "Terima kasih kerana membantu kami menjadikan Grylli lebih baik!"
+
+#: app/templates/admin/create_user.html:14
+msgid "Create New User"
+msgstr "Cipta Pengguna Baru"
+
+#: app/templates/admin/create_user.html:15
+msgid "Fill out the form to add a new user."
+msgstr "Isi borang untuk menambah pengguna baru."
+
+#: app/templates/admin/create_user.html:21
+#: app/templates/admin/edit_user.html:17 app/templates/auth/bootstrap.html:24
+msgid "Please fix the following errors:"
+msgstr "Sila betulkan ralat berikut:"
+
+#: app/templates/admin/create_user.html:78
+#: app/templates/admin/edit_user.html:93
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "Create User"
+msgstr "Cipta Pengguna"
+
+#: app/templates/admin/edit_user.html:10
+#: app/templates/admin/partials/user_card.html:20
+#: app/templates/admin/partials/user_table.html:26
+msgid "Edit User"
+msgstr "Edit Pengguna"
+
+#: app/templates/admin/edit_user.html:55 app/templates/admin/edit_user.html:74
+msgid "Hold to show password"
+msgstr "Tahan untuk menunjukkan kata laluan"
+
+#: app/templates/admin/edit_user.html:85
+#, python-format
+msgid "At least one special character (e.g., !@#$%%)"
+msgstr "Sekurang-kurangnya satu aksara khas (cth., !@#$%%)"
+
+#: app/templates/admin/help.html:4 app/templates/auth/login.html:72
+msgid "Admin Help"
+msgstr "Panel Pentadbir"
+
+#: app/templates/admin/help.html:7
+msgid "Reset Admin Password"
+msgstr "Tetapkan Semula Kata Laluan"
+
+#: app/templates/admin/help.html:9
+msgid ""
+"If you've forgotten the admin password, you can reset it using the following"
+" Docker command:"
+msgstr ""
+"Jika anda terlupa kata laluan admin, anda boleh menetapkannya semula "
+"menggunakan arahan Docker berikut:"
+
+#: app/templates/admin/help.html:15
+msgid ""
+"This script will prompt you to enter a new password for the admin user. You "
+"must run it from the host system where the Grylli container is running."
+msgstr ""
+"Skrip ini akan meminta anda untuk memasukkan kata laluan baru untuk pengguna"
+" admin. Anda mesti menjalankannya dari sistem hos di mana kontena Grylli "
+"sedang berjalan."
+
+#: app/templates/admin/help.html:18
+msgid "After resetting, you can log in with the new password immediately."
+msgstr ""
+"Selepas menetapkan semula, anda boleh log masuk dengan kata laluan baru "
+"serta-merta."
+
+#: app/templates/admin/help.html:24
+msgid "Return to Login"
+msgstr "Kembali ke Papan Pemuka"
+
+#: app/templates/admin/help_form.html:6
+msgid "Admin Help Access"
+msgstr "Akses Bantuan Admin"
+
+#: app/templates/admin/help_form.html:9
+msgid "Enter your Ferret Key to unlock admin-only help documentation."
+msgstr ""
+"Masukkan Kunci Ferret anda untuk membuka dokumentasi bantuan khusus admin."
+
+#: app/templates/admin/help_form.html:34
+msgid "How to Find Your FERRET_KEY"
+msgstr "Cara Mencari FERRET_KEY Anda"
+
+#: app/templates/admin/help_form.html:36
+msgid "The FERRET_KEY is set as an environment variable when running Grylli."
+msgstr ""
+"FERRET_KEY ditetapkan sebagai pembolehubah persekitaran apabila menjalankan "
+"Grylli."
+
+#: app/templates/admin/help_form.html:39
+msgid "Option 1: Check docker-compose.yml"
+msgstr "Pilihan 1: Semak docker-compose.yml"
+
+#: app/templates/admin/help_form.html:46
+msgid "Option 2: Use docker inspect"
+msgstr "Pilihan 2: Gunakan docker inspect"
+
+#: app/templates/admin/help_form.html:52
+msgid "This shows the FERRET_KEY as passed to the container at runtime."
+msgstr ""
+"Ini menunjukkan FERRET_KEY seperti yang diserahkan kepada kontena semasa "
+"runtime."
+
+#: app/templates/admin/index.html:10
+msgid "Admin Panel"
+msgstr "Panel Pentadbir"
+
+#: app/templates/admin/index.html:12
+msgid ""
+"Welcome to the Grylli Admin Panel. Use the links below to manage the system."
+msgstr ""
+"Selamat datang ke Panel Pentadbir Grylli. Gunakan pautan di bawah untuk "
+"menguruskan sistem."
+
+#: app/templates/admin/index.html:17
+msgid "Manage Users"
+msgstr "Urus Pengguna"
+
+#: app/templates/admin/index.html:18
+msgid "Create, edit, enable/disable, or delete user accounts."
+msgstr "Cipta, edit, aktifkan/nyahaktifkan, atau hapuskan akaun pengguna."
+
+#: app/templates/admin/index.html:22
+#: app/templates/admin/system_settings.html:10
+#: app/templates/partials/admin_nav.html:52
+msgid "System Settings"
+msgstr "Tetapan Sistem"
+
+#: app/templates/admin/index.html:23
+msgid "View  system-wide environment values."
+msgstr "Lihat nilai persekitaran seluruh sistem."
+
+#: app/templates/admin/index.html:27 app/templates/partials/admin_nav.html:42
+msgid "Backups"
+msgstr "Sandaran"
+
+#: app/templates/admin/index.html:28
+msgid "Create and delete database backups."
+msgstr "Sandaran Pangkalan Data"
+
+#: app/templates/admin/index.html:33
+msgid "View and test global SMTP settings."
+msgstr "Gagal menghantar emel ujian. Sila semak tetapan SMTP."
+
+#: app/templates/admin/index.html:39
+msgid "View Admin Guide / README on GitHub"
+msgstr "Lihat Panduan Pentadbir / README di GitHub"
+
+#: app/templates/admin/index.html:40
+msgid "Includes setup instructions, integrations, and troubleshooting."
+msgstr "Termasuk arahan penyediaan, integrasi, dan penyelesaian masalah."
+
+#: app/templates/admin/index.html:44
+msgid "⚠️ Admin Tips"
+msgstr "⚠️ Tip Pentadbir"
+
+#: app/templates/admin/index.html:46
+msgid "Ensure the data folder (database) is backed up on your host"
+msgstr "Pastikan folder data (database) disandarkan pada hos anda"
+
+#: app/templates/admin/index.html:48
+msgid ""
+"The uploads folder is not per user.  If required per user, you will ndd to "
+"create subdirectoried per user and setup permissions so users can only see "
+"their own folder."
+msgstr ""
+"Folder muat naik tidak per pengguna. Jika diperlukan per pengguna, anda "
+"perlu membuat subdirektori per pengguna dan menetapkan kebenaran supaya "
+"pengguna hanya boleh melihat folder mereka sendiri."
+
+#: app/templates/admin/index.html:51
+msgid ""
+"To restore a backup: stop the container, replace the data/grylli.db with one"
+" from the backups folder, and restart the container."
+msgstr ""
+"Untuk memulihkan sandaran: hentikan kontena, gantikan data/grylli.db dengan "
+"satu dari folder sandaran dan mulakan semula kontena."
+
+#: app/templates/admin/list_backups.html:11
+msgid "Database Backups"
+msgstr "Sandaran Pangkalan Data"
+
+#: app/templates/admin/list_backups.html:13
+msgid "Create Backup"
+msgstr "Buat Sandaran"
+
+#: app/templates/admin/list_backups.html:21
+msgid "Filename"
+msgstr "Nama Fail"
+
+#: app/templates/admin/list_backups.html:22
+#: app/templates/admin/partials/user_table.html:14
+#: app/templates/apprise/list_apprise.html:62
+#: app/templates/email/list_emails.html:60
+#: app/templates/messages/list_messages.html:60
+#: app/templates/reminders/list_reminders.html:60
+#: app/templates/user_smtp/list_smtp.html:59
+#: app/templates/webhook/list_webhooks.html:63
+msgid "Actions"
+msgstr "Tindakan"
+
+#: app/templates/admin/list_backups.html:32
+msgid "Delete this backup?"
+msgstr "Padam sandaran ini?"
+
+#: app/templates/admin/list_backups.html:32
+#: app/templates/apprise/list_apprise.html:95
+#: app/templates/apprise/list_apprise.html:99
+#: app/templates/apprise/list_apprise.html:150
+#: app/templates/apprise/list_apprise.html:154
+#: app/templates/email/list_emails.html:124
+#: app/templates/email/list_emails.html:128
+#: app/templates/email/list_emails.html:226
+#: app/templates/email/list_emails.html:230
+#: app/templates/messages/list_messages.html:112
+#: app/templates/messages/list_messages.html:116
+#: app/templates/messages/list_messages.html:198
+#: app/templates/messages/list_messages.html:202
+#: app/templates/reminders/list_reminders.html:107
+#: app/templates/reminders/list_reminders.html:113
+#: app/templates/reminders/list_reminders.html:192
+#: app/templates/reminders/list_reminders.html:198
+#: app/templates/user_smtp/list_smtp.html:101
+#: app/templates/user_smtp/list_smtp.html:169
+#: app/templates/webhook/list_webhooks.html:102
+#: app/templates/webhook/list_webhooks.html:161
+msgid "Delete"
+msgstr "Padam"
+
+#: app/templates/admin/list_backups.html:41
+msgid "No backups found."
+msgstr "Tiada sandaran ditemui."
+
+#: app/templates/admin/list_backups.html:44
+msgid ""
+"Backups contain your full app data. Store securely. Sensitive data is "
+"encrypted in the DB by default."
+msgstr ""
+"Sandaran mengandungi semua data aplikasi anda. Simpan dengan selamat. Data "
+"sensitif dienkripsi dalam DB secara lalai."
+
+#: app/templates/admin/smtp_config.html:28
+#: app/templates/admin/system_config.html:22
+msgid "System Configuration"
+msgstr "Konfigurasi Sistem"
+
+#: app/templates/admin/smtp_config.html:33
+#: app/templates/admin/system_config.html:26
+#: app/templates/admin/system_settings.html:15
+msgid "Key"
+msgstr "Kunci"
+
+#: app/templates/admin/smtp_config.html:34
+#: app/templates/admin/system_config.html:27
+#: app/templates/admin/system_settings.html:16
+msgid "Value"
+msgstr "Nilai"
+
+#: app/templates/admin/smtp_config.html:35
+#: app/templates/admin/system_config.html:28
+msgid "Sensitive"
+msgstr "Sensitif"
+
+#: app/templates/admin/smtp_config.html:36
+#: app/templates/admin/system_config.html:29
+msgid "Editable"
+msgstr "Boleh Diedit"
+
+#: app/templates/admin/smtp_config.html:50
+#: app/templates/admin/smtp_config.html:51
+#: app/templates/admin/system_config.html:45
+#: app/templates/admin/system_config.html:46
+#: app/templates/email/view_config.html:60
+msgid "Yes"
+msgstr "Ya"
+
+#: app/templates/admin/smtp_config.html:50
+#: app/templates/admin/smtp_config.html:51
+#: app/templates/admin/system_config.html:45
+#: app/templates/admin/system_config.html:46
+#: app/templates/email/view_config.html:60
+msgid "No"
+msgstr "Tidak"
+
+#: app/templates/admin/smtp_config.html:63
+#: app/templates/admin/system_config.html:55
+msgid "Send Test Email"
+msgstr "Hantar Emel Ujian"
+
+#: app/templates/admin/system_config.html:39
+msgid "decrypted"
+msgstr "Dicipta"
+
+#: app/templates/admin/partials/user_card.html:12
+msgid "Email:"
+msgstr "E-mel:"
+
+#: app/templates/admin/partials/user_card.html:15
+msgid "Role:"
+msgstr "Peranan:"
+
+#: app/templates/admin/partials/user_card.html:27
+#: app/templates/admin/partials/user_table.html:34
+msgid "Change Role"
+msgstr "Tukar Peranan"
+
+#: app/templates/admin/partials/user_card.html:29
+#: app/templates/admin/partials/user_table.html:36
+msgid "You cannot change your own role"
+msgstr "Anda tidak boleh menukar status diaktifkan anda sendiri."
+
+#: app/templates/admin/partials/user_card.html:36
+#: app/templates/admin/partials/user_table.html:43
+msgid "Are you sure you want to reset MFA for this user?"
+msgstr "Adakah anda pasti mahu menetapkan semula MFA untuk pengguna ini?"
+
+#: app/templates/admin/partials/user_card.html:39
+#: app/templates/admin/partials/user_table.html:46
+msgid "Reset MFA"
+msgstr "Tetapkan Semula Kata Laluan"
+
+#: app/templates/admin/partials/user_card.html:51
+#: app/templates/admin/partials/user_table.html:58
+msgid "Delete user"
+msgstr "Padam pengguna"
+
+#: app/templates/admin/partials/user_card.html:55
+#: app/templates/admin/partials/user_table.html:61
+msgid "Delete User"
+msgstr "Padam Pengguna"
+
+#: app/templates/admin/partials/user_card.html:58
+#: app/templates/admin/partials/user_table.html:65
+msgid "You cannot disable yourself"
+msgstr "Anda tidak boleh melumpuhkan diri sendiri"
+
+#: app/templates/admin/partials/user_card.html:65
+#: app/templates/admin/partials/user_table.html:72
+msgid "Disable"
+msgstr "Lumpuhkan"
+
+#: app/templates/admin/partials/user_card.html:65
+#: app/templates/admin/partials/user_table.html:72
+msgid "Enable"
+msgstr "Aktifkan"
+
+#: app/templates/admin/partials/user_header.html:6
+#: app/templates/partials/admin_nav.html:47
+msgid "Users"
+msgstr "Pengguna"
+
+#: app/templates/admin/partials/user_header.html:12
+#: app/templates/admin/partials/user_header.html:13
+#: app/templates/apprise/apprise_config.html:10
+#: app/templates/apprise/apprise_config.html:11
+#: app/templates/apprise/list_apprise.html:16
+#: app/templates/apprise/list_apprise.html:17
+#: app/templates/email/list_emails.html:15
+#: app/templates/email/list_emails.html:16
+#: app/templates/messages/list_messages.html:16
+#: app/templates/messages/list_messages.html:17
+#: app/templates/reminders/list_reminders.html:15
+#: app/templates/reminders/list_reminders.html:16
+#: app/templates/user_smtp/list_smtp.html:14
+#: app/templates/user_smtp/list_smtp.html:17
+#: app/templates/webhook/list_webhooks.html:16
+#: app/templates/webhook/list_webhooks.html:17
+#: app/templates/webhook/webhook_config.html:10
+#: app/templates/webhook/webhook_config.html:11
+msgid "Table View"
+msgstr "Paparan Jadual"
+
+#: app/templates/admin/partials/user_header.html:26
+#: app/templates/admin/partials/user_header.html:27
+#: app/templates/apprise/apprise_config.html:24
+#: app/templates/apprise/apprise_config.html:25
+#: app/templates/apprise/list_apprise.html:30
+#: app/templates/apprise/list_apprise.html:31
+#: app/templates/email/list_emails.html:29
+#: app/templates/email/list_emails.html:30
+#: app/templates/messages/list_messages.html:30
+#: app/templates/messages/list_messages.html:31
+#: app/templates/reminders/list_reminders.html:29
+#: app/templates/reminders/list_reminders.html:30
+#: app/templates/user_smtp/list_smtp.html:27
+#: app/templates/user_smtp/list_smtp.html:30
+#: app/templates/webhook/list_webhooks.html:30
+#: app/templates/webhook/list_webhooks.html:31
+#: app/templates/webhook/webhook_config.html:24
+#: app/templates/webhook/webhook_config.html:25
+msgid "Card View"
+msgstr "Paparan Kad"
+
+#: app/templates/admin/partials/user_header.html:45
+msgid "Add User"
+msgstr "Tambah Pengguna"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:9
+#: app/templates/email/attach_files.html:54
+#: app/templates/email/list_emails.html:255
+#: app/templates/messages/list_messages.html:223
+#: app/templates/reminders/list_reminders.html:218
+#: app/templates/reminders/schedule_reminder.html:56
+msgid "Hide Instructions"
+msgstr "Sembunyikan Arahan"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:9
+msgid "How to manage users"
+msgstr "Cara mengurus pengguna"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "Click"
+msgstr "Klik"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+msgid "➕ Add User"
+msgstr "➕ Tambah Pengguna"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+msgid "to open the new user form."
+msgstr "untuk membuka borang pengguna baru."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:18
+msgid "Enter a unique username, valid email address, and strong password."
+msgstr ""
+"Masukkan nama pengguna unik, alamat e-mel yang sah, dan kata laluan yang "
+"kuat."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "Select the appropriate"
+msgstr "Pilih"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "role"
+msgstr "peranan"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "or"
+msgstr "Port"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "to save."
+msgstr "untuk menyimpan."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:25
+msgid "To edit a user, click ✏️ and update their info."
+msgstr "Untuk menyunting pengguna, klik ✏️ dan kemas kini maklumat mereka."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:26
+msgid "To delete a user, click 🗑️ and confirm the deletion."
+msgstr "Untuk memadam pengguna, klik 🗑️ dan sahkan penghapusan."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:28
+msgid "To disable or enable a user, click 🔴 or 🟢."
+msgstr "Untuk melumpuhkan atau mengaktifkan pengguna, klik 🔴 atau 🟢."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:30
+msgid "🟢 = User is enabled and can log in."
+msgstr "🟢 = Pengguna diaktifkan dan boleh log masuk."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:31
+msgid "🔴 = User is disabled and cannot log in."
+msgstr "🔴 = Pengguna dinyahaktifkan dan tidak boleh log masuk."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:32
+msgid "⚪ = You cannot disable your own account."
+msgstr "⚪ = Anda tidak boleh nyahaktifkan akaun anda sendiri."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:43
+#: app/templates/admin/partials/user_table.html:91
+msgid "Assign Role for"
+msgstr "Tetapkan Destinasi untuk"
+
+#: app/templates/admin/partials/user_table.html:10
+msgid "ID"
+msgstr "ID"
+
+#: app/templates/admin/partials/user_table.html:11
+#: app/templates/user_smtp/list_smtp.html:55
+msgid "Username"
+msgstr "Nama Pengguna"
+
+#: app/templates/admin/partials/user_table.html:12
+msgid "Email"
+msgstr "E-mel"
+
+#: app/templates/admin/partials/user_table.html:13
+msgid "Role"
+msgstr "Peranan"
+
+#: app/templates/apprise/apprise_config.html:3
+#: app/templates/apprise/list_apprise.html:9
+#: app/templates/messages/assign_destinations.html:22
+#: app/templates/reminders/assign_destinations.html:20
+msgid "Apprise Destinations"
+msgstr "Halatuju Apprise"
+
+#: app/templates/apprise/apprise_config.html:43
+#: app/templates/webhook/list_webhooks.html:49
+#: app/templates/webhook/webhook_config.html:43
+msgid "Add Webhook"
+msgstr "Tambah Webhook"
+
+#: app/templates/apprise/apprise_config.html:43
+#: app/templates/apprise/list_apprise.html:49
+#: app/templates/webhook/list_webhooks.html:49
+#: app/templates/webhook/webhook_config.html:43
+msgid "Add Destination"
+msgstr "Tambah Halatuju"
+
+#: app/templates/apprise/create_apprise.html:10
+msgid "Create Apprise Destination"
+msgstr "Cipta Halatuju Apprise"
+
+#: app/templates/apprise/create_apprise.html:38
+#: app/templates/apprise/edit_apprise.html:38
+#: app/templates/user_smtp/create_smtp.html:107
+#: app/templates/webhook/create_webhook.html:44
+#: app/templates/webhook/edit_webhook.html:44
+msgid "Create Destination"
+msgstr "Cipta Halatuju"
+
+#: app/templates/apprise/create_apprise.html:47
+#: app/templates/apprise/edit_apprise.html:47
+msgid "Need help with Apprise URLs? See the"
+msgstr "Perlu bantuan dengan Apprise URL? Lihat"
+
+#: app/templates/apprise/create_apprise.html:51
+#: app/templates/apprise/edit_apprise.html:51
+msgid "Apprise Notification Services documentation"
+msgstr "Dokumentasi Perkhidmatan Pemberitahuan Apprise"
+
+#: app/templates/apprise/edit_apprise.html:10
+msgid "Edit Apprise Destination"
+msgstr "Edit Halatuju Apprise"
+
+#: app/templates/apprise/list_apprise.html:49
+msgid "Add Apprise"
+msgstr "Tambah Apprise"
+
+#: app/templates/apprise/list_apprise.html:58
+#: app/templates/email/edit_message.html:21
+#: app/templates/email/list_emails.html:56
+#: app/templates/email/view_config.html:14
+#: app/templates/messages/create_message.html:29
+#: app/templates/messages/edit_message.html:23
+#: app/templates/messages/list_messages.html:57
+#: app/templates/messages/view_message.html:14
+#: app/templates/reminders/create_reminder.html:23
+#: app/templates/reminders/edit_reminder.html:17
+#: app/templates/reminders/list_reminders.html:56
+#: app/templates/reminders/view_reminder.html:13
+#: app/templates/user_smtp/list_smtp.html:52
+#: app/templates/webhook/list_webhooks.html:58
+msgid "Label"
+msgstr "Label"
+
+#: app/templates/apprise/list_apprise.html:59
+msgid "URL"
+msgstr "URL"
+
+#: app/templates/apprise/list_apprise.html:61
+#: app/templates/email/list_emails.html:59
+#: app/templates/messages/list_messages.html:59
+#: app/templates/messages/view_message.html:36
+#: app/templates/reminders/view_reminder.html:47
+#: app/templates/webhook/list_webhooks.html:62
+msgid "Created At"
+msgstr "Dicipta Pada"
+
+#: app/templates/apprise/list_apprise.html:77
+#: app/templates/apprise/list_apprise.html:132
+#: app/templates/user_smtp/list_smtp.html:79
+#: app/templates/user_smtp/list_smtp.html:147
+#: app/templates/webhook/list_webhooks.html:79
+#: app/templates/webhook/list_webhooks.html:138
+msgid "Edit"
+msgstr "Edit"
+
+#: app/templates/apprise/list_apprise.html:80
+#: app/templates/apprise/list_apprise.html:135
+#: app/templates/user_smtp/list_smtp.html:82
+#: app/templates/user_smtp/list_smtp.html:150
+msgid "Cannot edit while in use"
+msgstr "Tidak boleh menyunting semasa dalam penggunaan"
+
+#: app/templates/apprise/list_apprise.html:88
+#: app/templates/apprise/list_apprise.html:143
+#: app/templates/webhook/list_webhooks.html:91
+#: app/templates/webhook/list_webhooks.html:150
+msgid "Test"
+msgstr "Ujian"
+
+#: app/templates/apprise/list_apprise.html:103
+#: app/templates/apprise/list_apprise.html:158
+#: app/templates/user_smtp/list_smtp.html:106
+#: app/templates/user_smtp/list_smtp.html:174
+msgid "Cannot delete while in use"
+msgstr "Tidak boleh memadam semasa dalam penggunaan"
+
+#: app/templates/apprise/list_apprise.html:119
+msgid "URL:"
+msgstr "URL:"
+
+#: app/templates/apprise/list_apprise.html:122
+#: app/templates/user_smtp/list_smtp.html:137
+#: app/templates/webhook/list_webhooks.html:128
+msgid "Enabled:"
+msgstr "Didayakan:"
+
+#: app/templates/apprise/list_apprise.html:125
+#: app/templates/user_smtp/list_smtp.html:140
+#: app/templates/webhook/list_webhooks.html:131
+msgid "Created:"
+msgstr "Dicipta:"
+
+#: app/templates/auth/bootstrap.html:14
+msgid "Create Admin Account"
+msgstr "Cipta Akaun Admin"
+
+#: app/templates/auth/bootstrap.html:16
+msgid "Let’s get started by creating your first admin account."
+msgstr "Mari mulakan dengan mencipta akaun admin pertama anda."
+
+#: app/templates/auth/bootstrap.html:75
+msgid "Create Admin"
+msgstr "Cipta Admin"
+
+#: app/templates/auth/forgot_password.html:12
+msgid "Forgot Password"
+msgstr "Lupa Kata Laluan"
+
+#: app/templates/auth/forgot_password.html:15
+msgid ""
+"Enter your username and email. We'll send you a link to reset your password."
+msgstr ""
+"Masukkan nama pengguna dan emel anda. Kami akan hantar pautan untuk set "
+"semula kata laluan anda."
+
+#: app/templates/auth/forgot_username.html:12
+msgid "Forgot Username"
+msgstr "Lupa Nama Pengguna"
+
+#: app/templates/auth/forgot_username.html:15
+msgid "Enter your email address, and we'll send you your username."
+msgstr "Masukkan alamat emel anda, dan kami akan hantar nama pengguna anda."
+
+#: app/templates/auth/forgot_username.html:40
+msgid "Send Username"
+msgstr "Hantar Nama Pengguna"
+
+#: app/templates/auth/login.html:12 app/templates/auth/login.html:54
+msgid "Log In"
+msgstr "Log Masuk"
+
+#: app/templates/auth/login.html:62
+msgid "Forgot Username?"
+msgstr "Lupa Nama Pengguna?"
+
+#: app/templates/auth/login.html:64
+msgid "Forgot Password?"
+msgstr "Lupa Kata Laluan?"
+
+#: app/templates/auth/login.html:66 app/templates/auth/signup.html:12
+msgid "Sign Up"
+msgstr "Daftar"
+
+#: app/templates/auth/rate_limit.html:9
+msgid "Hold On"
+msgstr "Sabar"
+
+#: app/templates/auth/rate_limit.html:11
+msgid "Too many failed login attempts. Please wait"
+msgstr "Terlalu banyak percubaan log masuk gagal. Sila tunggu"
+
+#: app/templates/auth/rate_limit.html:13
+msgid "seconds..."
+msgstr "saat..."
+
+#: app/templates/auth/rate_limit.html:15
+msgid "Redirecting to login..."
+msgstr "Kembali ke Papan Pemuka"
+
+#: app/templates/auth/reset_password.html:12
+#: app/templates/auth/reset_password.html:116
+msgid "Reset Password"
+msgstr "Tetapkan Semula Kata Laluan"
+
+#: app/templates/auth/reset_password.html:14
+msgid "Enter your username, email, and new password."
+msgstr "Masukkan nama pengguna, e-mel, dan kata laluan baharu anda."
+
+#: app/templates/auth/signup.html:14
+msgid "Fill out the form to create your account."
+msgstr "Isi borang untuk mencipta akaun anda."
+
+#: app/templates/checkin/already_checked_in.html:10
+msgid "Already Checked In"
+msgstr "Check-in Terakhir"
+
+#: app/templates/checkin/already_checked_in.html:12
+msgid ""
+"You have already checked in for this item. No further action is needed at "
+"this time."
+msgstr ""
+"Anda sudah mendaftar masuk untuk item ini. Tiada tindakan lanjut diperlukan "
+"pada masa ini."
+
+#: app/templates/checkin/already_checked_in.html:16
+#: app/templates/checkin/disabled.html:16
+#: app/templates/checkin/executed_disabled.html:18
+msgid "Check-in for:"
+msgstr "Daftar masuk untuk:"
+
+#: app/templates/checkin/already_checked_in.html:21
+#: app/templates/checkin/disabled.html:21
+#: app/templates/checkin/executed_disabled.html:23
+#: app/templates/checkin/thank_you.html:19
+msgid "Return to Dashboard"
+msgstr "Kembali ke Papan Pemuka"
+
+#: app/templates/checkin/disabled.html:10
+msgid "Check-In Disabled"
+msgstr "E-mel dinyahaktifkan"
+
+#: app/templates/checkin/disabled.html:12
+msgid "This check-in is currently disabled and cannot be completed."
+msgstr ""
+"Pendaftaran masuk ini sedang dinyahaktifkan dan tidak boleh diselesaikan."
+
+#: app/templates/checkin/executed_disabled.html:11
+msgid "Already Executed & Disabled"
+msgstr "Telah Dilaksanakan & Dinonaktifkan"
+
+#: app/templates/checkin/executed_disabled.html:14
+msgid ""
+"This check-in has already been executed and is now disabled. No further "
+"action is required."
+msgstr ""
+"Pendaftaran masuk ini telah dilaksanakan dan kini dinyahaktifkan. Tiada "
+"tindakan lanjut diperlukan."
+
+#: app/templates/checkin/thank_you.html:10
+msgid "Check-In Successful"
+msgstr "Daftar Masuk Berjaya"
+
+#: app/templates/checkin/thank_you.html:11
+msgid "Thank you for checking in."
+msgstr "Terima kasih kerana mendaftar masuk."
+
+#: app/templates/checkin/thank_you.html:14
+msgid "Checked in for:"
+msgstr "Daftar masuk untuk:"
+
+#: app/templates/email/assign_smtp.html:11
+msgid "📧 Assign SMTP Config to:"
+msgstr "📧 Tetapkan Konfigurasi SMTP kepada:"
+
+#: app/templates/email/assign_smtp.html:25
+msgid "No SMTP (Unassign)"
+msgstr "Tiada konfigurasi SMTP ditugaskan"
+
+#: app/templates/email/assign_smtp.html:26
+msgid "This email will not use any SMTP configuration."
+msgstr "Email ini tidak akan menggunakan sebarang konfigurasi SMTP."
+
+#: app/templates/email/attach_files.html:12
+msgid "Attach Files for:"
+msgstr "Lampirkan Fail untuk:"
+
+#: app/templates/email/attach_files.html:21
+msgid "Available Files"
+msgstr "Fail Tersedia"
+
+#: app/templates/email/attach_files.html:36
+msgid "No files found in the upload directory."
+msgstr "Tiada fail ditemui dalam direktori muat naik."
+
+#: app/templates/email/attach_files.html:44
+msgid "Save Attachments"
+msgstr "Simpan Lampiran"
+
+#: app/templates/email/attach_files.html:54
+msgid "File Attach Notes"
+msgstr "Nota Lampiran Fail"
+
+#: app/templates/email/attach_files.html:63
+msgid "Important:"
+msgstr "Port:"
+
+#: app/templates/email/attach_files.html:65
+msgid ""
+"Only files that are present in the 'uploads' folder (provided by your system"
+" administrator) will be shown here. If you do not see your file(s), please "
+"contact your Grylli administrator."
+msgstr ""
+"Hanya fail yang terdapat dalam folder 'uploads' (disediakan oleh pentadbir "
+"sistem anda) akan dipaparkan di sini. Jika anda tidak melihat fail anda, "
+"sila hubungi pentadbir Grylli anda."
+
+#: app/templates/email/attach_files.html:69
+msgid "Accepted file types:"
+msgstr "Jenis fail diterima:"
+
+#: app/templates/email/attach_files.html:71
+msgid "Documents:"
+msgstr "Dokumen:"
+
+#: app/templates/email/attach_files.html:73
+msgid "Images:"
+msgstr "Imej:"
+
+#: app/templates/email/attach_files.html:75
+msgid "Audio:"
+msgstr "Audio:"
+
+#: app/templates/email/attach_files.html:79
+msgid "Maximum file size:"
+msgstr "Saiz fail maksimum:"
+
+#: app/templates/email/attach_files.html:80
+msgid "10 MB per file"
+msgstr "10 MB setiap fail"
+
+#: app/templates/email/attach_files.html:83
+msgid "Total upload size:"
+msgstr "Jumlah saiz muat naik:"
+
+#: app/templates/email/attach_files.html:84
+msgid "20 MB (all files combined)"
+msgstr "20 MB (semua fail digabungkan)"
+
+#: app/templates/email/edit_message.html:12
+#: app/templates/email/list_emails.html:75
+#: app/templates/email/list_emails.html:177
+msgid "Edit Email"
+msgstr "Edit E-mel"
+
+#: app/templates/email/edit_message.html:12
+msgid "Create Email"
+msgstr "Cipta E-mel"
+
+#: app/templates/email/edit_message.html:28
+msgid "To (Recipient Email)"
+msgstr "Kepada (E-mel Penerima)"
+
+#: app/templates/email/edit_message.html:35
+#: app/templates/email/list_emails.html:57
+#: app/templates/email/view_config.html:18
+#: app/templates/messages/create_message.html:36
+#: app/templates/messages/edit_message.html:30
+#: app/templates/messages/list_messages.html:58
+#: app/templates/messages/view_message.html:18
+#: app/templates/reminders/create_reminder.html:30
+#: app/templates/reminders/edit_reminder.html:24
+#: app/templates/reminders/list_reminders.html:57
+#: app/templates/reminders/view_reminder.html:17
+msgid "Subject"
+msgstr "Subjek"
+
+#: app/templates/email/edit_message.html:42
+#: app/templates/email/view_config.html:28
+msgid "Body"
+msgstr "Badan"
+
+#: app/templates/email/edit_message.html:50
+msgid "Save Email"
+msgstr "Simpan E-mel"
+
+#: app/templates/email/list_emails.html:48
+msgid "Add Email"
+msgstr "Tambah E-mel"
+
+#: app/templates/email/list_emails.html:58
+#: app/templates/reminders/assign_email_reminder.html:77
+msgid "To"
+msgstr "Kepada"
+
+#: app/templates/email/list_emails.html:78
+#: app/templates/email/list_emails.html:180
+msgid "Disable to edit email"
+msgstr "Gagal menghantar emel ujian:"
+
+#: app/templates/email/list_emails.html:84
+#: app/templates/email/list_emails.html:186
+msgid "Attach Files"
+msgstr "Lampirkan Fail"
+
+#: app/templates/email/list_emails.html:87
+#: app/templates/email/list_emails.html:189
+msgid "Disable to attach files"
+msgstr "Lampirkan Fail"
+
+#: app/templates/email/list_emails.html:93
+#: app/templates/email/list_emails.html:195
+msgid "Attach SMTP Config"
+msgstr "Lampirkan Konfigurasi SMTP"
+
+#: app/templates/email/list_emails.html:96
+#: app/templates/email/list_emails.html:198
+msgid "Disable to assign SMTP"
+msgstr "Nyahaktifkan untuk menetapkan SMTP"
+
+#: app/templates/email/list_emails.html:102
+#: app/templates/email/list_emails.html:204
+msgid "Schedule Check-In"
+msgstr "Jadualkan Daftar Masuk"
+
+#: app/templates/email/list_emails.html:105
+#: app/templates/email/list_emails.html:207
+msgid "Disable to schedule check-in"
+msgstr "Jadualkan Daftar Masuk"
+
+#: app/templates/email/list_emails.html:110
+#: app/templates/email/list_emails.html:212
+#: app/templates/messages/list_messages.html:99
+#: app/templates/messages/list_messages.html:184
+#: app/templates/reminders/list_reminders.html:93
+#: app/templates/reminders/list_reminders.html:178
+msgid "View Details"
+msgstr "Lihat Butiran"
+
+#: app/templates/email/list_emails.html:118
+#: app/templates/email/list_emails.html:220
+msgid "Send this email to yourself to preview it."
+msgstr "Hantar e-mel ini kepada diri anda untuk pratontonnya."
+
+#: app/templates/email/list_emails.html:136
+#: app/templates/email/list_emails.html:238
+msgid "Toggle Email On/Off"
+msgstr "Tukar E-mel On/Off"
+
+#: app/templates/email/list_emails.html:139
+#: app/templates/email/list_emails.html:241
+msgid "Email is enabled"
+msgstr "E-mel diaktifkan"
+
+#: app/templates/email/list_emails.html:141
+#: app/templates/email/list_emails.html:243
+msgid "Email is disabled"
+msgstr "E-mel dinyahaktifkan"
+
+#: app/templates/email/list_emails.html:157
+#: app/templates/email/view_config.html:51
+#: app/templates/messages/list_messages.html:142
+#: app/templates/reminders/list_reminders.html:140
+msgid "Label:"
+msgstr "Label:"
+
+#: app/templates/email/list_emails.html:161
+#: app/templates/messages/list_messages.html:146
+#: app/templates/reminders/list_reminders.html:144
+#: app/templates/reminders/view_reminder.html:98
+msgid "Subject:"
+msgstr "Subjek"
+
+#: app/templates/email/list_emails.html:165
+msgid "To:"
+msgstr "Kepada:"
+
+#: app/templates/email/list_emails.html:169
+#: app/templates/messages/list_messages.html:150
+msgid "Created At:"
+msgstr "Dicipta Pada"
+
+#: app/templates/email/list_emails.html:255
+msgid "How to create and send an email"
+msgstr "Cara mencipta dan menghantar emel"
+
+#: app/templates/email/list_emails.html:262
+msgid ""
+"Click “Add Email” and fill out the subject, content, and recipient address."
+msgstr "Klik “Tambah Emel” dan isi subjek, kandungan, dan alamat penerima."
+
+#: app/templates/email/list_emails.html:263
+msgid "Attach any optional files (if needed)."
+msgstr "Lampirkan sebarang fail pilihan (jika perlu)."
+
+#: app/templates/email/list_emails.html:264
+msgid ""
+"Click 🧩 to assign a single SMTP configuration that will be used to send the "
+"email."
+msgstr ""
+"Klik 🧩 untuk menetapkan satu konfigurasi SMTP yang akan digunakan untuk "
+"menghantar emel."
+
+#: app/templates/email/list_emails.html:265
+msgid "Click ⏱️ to set a check-in interval and grace period for the email."
+msgstr ""
+"Klik ⏱️ untuk menetapkan interval daftar masuk dan tempoh tangguh untuk "
+"emel."
+
+#: app/templates/email/list_emails.html:266
+msgid "Enable the email using the 🔴/🟢 toggle button."
+msgstr "Aktifkan emel menggunakan butang togol 🔴/🟢."
+
+#: app/templates/email/list_emails.html:267
+msgid ""
+"Click 🧪 to test the email by sending it to yourself (not the recipient)."
+msgstr ""
+"Klik 🧪 untuk menguji emel dengan menghantarnya kepada diri sendiri (bukan "
+"kepada penerima)."
+
+#: app/templates/email/list_emails.html:268
+msgid ""
+"If you don’t check in before the grace period ends, the email will be "
+"automatically sent."
+msgstr ""
+"Jika anda tidak mendaftar masuk sebelum tempoh tangguh berakhir, emel akan "
+"dihantar secara automatik."
+
+#: app/templates/email/list_emails.html:269
+msgid "You can preview the email configuration using 🔍."
+msgstr "Anda boleh pratonton konfigurasi emel menggunakan 🔍."
+
+#: app/templates/email/list_emails.html:270
+msgid "Once a secure email is sent, it will be automatically disabled."
+msgstr ""
+"Setelah emel selamat dihantar, ia akan dinyahaktifkan secara automatik."
+
+#: app/templates/email/schedule_email.html:9
+msgid "Schedule Email"
+msgstr "Jadualkan Emel"
+
+#: app/templates/email/schedule_email.html:18
+#: app/templates/messages/schedule_message.html:18
+msgid "Years"
+msgstr "Tahun"
+
+#: app/templates/email/schedule_email.html:19
+#: app/templates/messages/schedule_message.html:19
+msgid "Months"
+msgstr "Bulan"
+
+#: app/templates/email/schedule_email.html:20
+#: app/templates/messages/schedule_message.html:20
+msgid "Weeks"
+msgstr "Minggu"
+
+#: app/templates/email/schedule_email.html:21
+#: app/templates/messages/schedule_message.html:21
+msgid "Days"
+msgstr "Hari"
+
+#: app/templates/email/schedule_email.html:22
+#: app/templates/messages/schedule_message.html:22
+msgid "Hours"
+msgstr "Jam"
+
+#: app/templates/email/schedule_email.html:23
+#: app/templates/messages/schedule_message.html:23
+msgid "Minutes"
+msgstr "Minit"
+
+#: app/templates/email/schedule_email.html:28
+#: app/templates/messages/schedule_message.html:28
+msgid "Check-in"
+msgstr "Daftar Masuk"
+
+#: app/templates/email/schedule_email.html:51
+#: app/templates/messages/schedule_message.html:51
+#: app/templates/messages/view_message.html:26
+msgid "Grace Period"
+msgstr "Tempoh Tangguh"
+
+#: app/templates/email/schedule_email.html:80
+#: app/templates/messages/schedule_message.html:80
+#: app/templates/reminders/schedule_reminder.html:47
+msgid "Save Schedule"
+msgstr "Simpan Jadual"
+
+#: app/templates/email/view_config.html:9
+msgid "Email Configuration"
+msgstr "Konfigurasi Emel"
+
+#: app/templates/email/view_config.html:22
+msgid "Recipient"
+msgstr "Penerima"
+
+#: app/templates/email/view_config.html:33
+msgid "Attached Files"
+msgstr "Fail Dilampirkan"
+
+#: app/templates/email/view_config.html:39
+msgid "No files attached"
+msgstr "Tiada fail dilampirkan"
+
+#: app/templates/email/view_config.html:46
+#: app/templates/reminders/assign_email_reminder.html:20
+msgid "SMTP Configuration"
+msgstr "Konfigurasi SMTP"
+
+#: app/templates/email/view_config.html:54
+#: app/templates/user_smtp/list_smtp.html:122
+msgid "Host:"
+msgstr "Hos:"
+
+#: app/templates/email/view_config.html:57
+#: app/templates/user_smtp/list_smtp.html:128
+msgid "Username:"
+msgstr "Nama Pengguna:"
+
+#: app/templates/email/view_config.html:60
+#: app/templates/user_smtp/list_smtp.html:134
+msgid "TLS:"
+msgstr "TLS:"
+
+#: app/templates/email/view_config.html:64
+msgid "No SMTP configuration assigned"
+msgstr "Tiada konfigurasi SMTP ditugaskan"
+
+#: app/templates/email/view_config.html:69
+msgid "Schedule Information"
+msgstr "Maklumat Jadual"
+
+#: app/templates/email/view_config.html:72
+msgid "Check-in Interval:"
+msgstr "Interval Daftar Masuk:"
+
+#: app/templates/email/view_config.html:72
+#: app/templates/email/view_config.html:75
+msgid "minutes"
+msgstr "minit"
+
+#: app/templates/email/view_config.html:75
+msgid "Grace Period:"
+msgstr "Tempoh Tangguh:"
+
+#: app/templates/email/view_config.html:79
+msgid "Last Check-in:"
+msgstr "Daftar Masuk Terakhir:"
+
+#: app/templates/email/view_config.html:82
+msgid "No check-in has occurred yet"
+msgstr "Tiada daftar masuk berlaku lagi"
+
+#: app/templates/email/view_config.html:92
+msgid "Back to Emails"
+msgstr "Kembali ke Emel"
+
+#: app/templates/errors/500.html:4
+msgid "Something went wrong"
+msgstr "Sesuatu tidak kena"
+
+#: app/templates/errors/500.html:6
+msgid ""
+"An unexpected error occurred. Please try again later or contact support."
+msgstr ""
+"Ralat yang tidak dijangka berlaku. Sila cuba lagi kemudian atau hubungi "
+"sokongan."
+
+#: app/templates/locale/redirect_after_lang_set.html:15
+msgid "Switching Language..."
+msgstr "Menukar Bahasa..."
+
+#: app/templates/locale/redirect_after_lang_set.html:18
+msgid "Applying new language..."
+msgstr "Mengaplikasikan bahasa baru..."
+
+#: app/templates/messages/assign_destinations.html:13
+#: app/templates/reminders/assign_destinations.html:12
+msgid "Assign Destinations for"
+msgstr "Tetapkan Destinasi untuk"
+
+#: app/templates/messages/assign_destinations.html:62
+#: app/templates/reminders/assign_destinations.html:60
+msgid "Save Destinations"
+msgstr "Simpan Destinasi"
+
+#: app/templates/messages/create_message.html:17
+msgid "Edit Notificaton"
+msgstr "Edit Notifikasi"
+
+#: app/templates/messages/create_message.html:19
+msgid "Create Notification"
+msgstr "Buat Notifikasi"
+
+#: app/templates/messages/create_message.html:43
+#: app/templates/messages/edit_message.html:37
+#: app/templates/messages/view_message.html:42
+#: app/templates/reminders/create_reminder.html:37
+#: app/templates/reminders/edit_reminder.html:31
+#: app/templates/reminders/view_reminder.html:53
+msgid "Content"
+msgstr "Kandungan"
+
+#: app/templates/messages/create_message.html:51
+msgid "Save Notification"
+msgstr "Simpan Notifikasi"
+
+#: app/templates/messages/edit_message.html:15
+#: app/templates/messages/list_messages.html:74
+#: app/templates/messages/list_messages.html:158
+msgid "Edit Notification"
+msgstr "Edit Notifikasi"
+
+#: app/templates/messages/edit_message.html:45
+msgid "Update Notification"
+msgstr "Kemaskini Notifikasi"
+
+#: app/templates/messages/list_messages.html:49
+msgid "Add Notification"
+msgstr "Tambah Notifikasi"
+
+#: app/templates/messages/list_messages.html:77
+#: app/templates/messages/list_messages.html:161
+msgid "Disable to edit notification"
+msgstr "Edit Notifikasi"
+
+#: app/templates/messages/list_messages.html:83
+#: app/templates/messages/list_messages.html:167
+#: app/templates/reminders/list_reminders.html:78
+#: app/templates/reminders/list_reminders.html:163
+msgid "Assign Destinations"
+msgstr "Tetapkan Destinasi"
+
+#: app/templates/messages/list_messages.html:86
+#: app/templates/messages/list_messages.html:170
+msgid "Disable to assign destinations"
+msgstr "Tetapkan Destinasi"
+
+#: app/templates/messages/list_messages.html:92
+#: app/templates/messages/list_messages.html:176
+#: app/templates/reminders/list_reminders.html:88
+#: app/templates/reminders/list_reminders.html:173
+msgid "Set Schedule"
+msgstr "Tetapkan Jadual"
+
+#: app/templates/messages/list_messages.html:95
+#: app/templates/messages/list_messages.html:179
+msgid "Disable to set schedule"
+msgstr "Tetapkan Jadual"
+
+#: app/templates/messages/list_messages.html:107
+#: app/templates/messages/list_messages.html:192
+msgid "Send Test Notification"
+msgstr "Edit Notifikasi"
+
+#: app/templates/messages/list_messages.html:122
+#: app/templates/messages/list_messages.html:209
+msgid "Toggle Message On/Off"
+msgstr "Togol Mesej Hidup/Mati"
+
+#: app/templates/messages/list_messages.html:124
+#: app/templates/messages/list_messages.html:211
+msgid "Notification is enabled"
+msgstr "Notifikasi diaktifkan"
+
+#: app/templates/messages/list_messages.html:126
+#: app/templates/messages/list_messages.html:213
+msgid "Notification is disabled"
+msgstr "Notifikasi dinyahaktifkan"
+
+#: app/templates/messages/list_messages.html:223
+msgid "How to create and send a notification"
+msgstr "Cara membuat dan menghantar notifikasi"
+
+#: app/templates/messages/list_messages.html:233
+msgid "Click “Add notification” and fill out the subject and content fields."
+msgstr "Klik \"Tambah notifikasi\" dan isikan medan subjek dan kandungan."
+
+#: app/templates/messages/list_messages.html:234
+msgid "Save the notification to return to the overview."
+msgstr "Simpan notifikasi untuk kembali ke gambaran keseluruhan."
+
+#: app/templates/messages/list_messages.html:235
+msgid "You need to create at least one apprise or webhook destination."
+msgstr ""
+"Anda perlu mencipta sekurang-kurangnya satu destinasi apprise atau webhook."
+
+#: app/templates/messages/list_messages.html:236
+msgid "You can create as many destinations as you like."
+msgstr "Anda boleh mencipta seberapa banyak destinasi yang anda suka."
+
+#: app/templates/messages/list_messages.html:237
+msgid "Click 🧩 to assign one or more Apprise and/or Webhook destinations."
+msgstr ""
+"Klik 🧩 untuk menetapkan satu atau lebih destinasi Apprise dan/atau Webhook."
+
+#: app/templates/messages/list_messages.html:238
+msgid "Click ⏱️ to set a schedule and check-in interval."
+msgstr "Klik ⏱️ untuk menetapkan jadual dan selang check-in."
+
+#: app/templates/messages/list_messages.html:239
+msgid "Enable the notification using the 🔴/🟢 toggle button."
+msgstr "Aktifkan notifikasi menggunakan butang togol 🔴/🟢."
+
+#: app/templates/messages/list_messages.html:240
+msgid ""
+"If you don’t check in before the grace period ends, the notification will be"
+" sent."
+msgstr ""
+"Jika anda tidak check-in sebelum tempoh kelonggaran tamat, notifikasi akan "
+"dihantar."
+
+#: app/templates/messages/list_messages.html:241
+msgid "You can preview the notification config using 🔍."
+msgstr "Anda boleh pratonton konfigurasi notifikasi menggunakan 🔍."
+
+#: app/templates/messages/list_messages.html:242
+msgid "Once a notification is sent, it will be automatically disabled."
+msgstr "Setelah notifikasi dihantar, ia akan dinyahaktifkan secara automatik."
+
+#: app/templates/messages/schedule_message.html:9
+msgid "Schedule Message"
+msgstr "Jadual Mesej"
+
+#: app/templates/messages/view_message.html:9
+msgid "Notifications Details"
+msgstr "Butiran Notifikasi"
+
+#: app/templates/messages/view_message.html:22
+msgid "Check-in Interval"
+msgstr "Selang Check-in"
+
+#: app/templates/messages/view_message.html:31
+msgid "Last Check-in"
+msgstr "Check-in Terakhir"
+
+#: app/templates/messages/view_message.html:48
+#: app/templates/reminders/view_reminder.html:59
+msgid "Apprise URLs"
+msgstr "URL Apprise"
+
+#: app/templates/messages/view_message.html:54
+#: app/templates/messages/view_message.html:64
+#: app/templates/reminders/view_reminder.html:65
+#: app/templates/reminders/view_reminder.html:75
+#: app/templates/reminders/view_reminder.html:85
+msgid "None assigned."
+msgstr "Tiada yang ditetapkan."
+
+#: app/templates/messages/view_message.html:73
+msgid "Back to Notifications"
+msgstr "Kembali ke Notifikasi"
+
+#: app/templates/mfa/challenge.html:5 app/templates/mfa/settings.html:5
+msgid "Two-Factor Authentication (MFA)"
+msgstr "Pengesahan Dua-Hala (MFA)"
+
+#: app/templates/mfa/recovery_codes.html:4
+msgid "Your Recovery Codes"
+msgstr "Kod Pemulihan Anda"
+
+#: app/templates/mfa/recovery_codes.html:7
+msgid "Save these recovery codes in a safe place!"
+msgstr "Simpan kod pemulihan ini di tempat yang selamat!"
+
+#: app/templates/mfa/recovery_codes.html:10
+msgid ""
+"Each code can be used once if you lose access to your authenticator. These "
+"codes will not be shown again."
+msgstr ""
+"Setiap kod boleh digunakan sekali jika anda kehilangan akses kepada pengesah"
+" anda. Kod ini tidak akan ditunjukkan semula."
+
+#: app/templates/mfa/recovery_codes.html:24
+msgid "OK, I've saved them"
+msgstr "OK, Saya telah menyimpannya"
+
+#: app/templates/mfa/settings.html:12
+msgid "MFA QR Code"
+msgstr "Kod QR MFA"
+
+#: app/templates/mfa/settings.html:15
+msgid "Manual Entry:"
+msgstr "Memasukkan Secara Manual:"
+
+#: app/templates/partials/admin_nav.html:21
+msgid "Administration"
+msgstr "Pentadbiran"
+
+#: app/templates/partials/admin_nav.html:37
+#: app/templates/partials/shared_nav.html:34
+#: app/templates/partials/shared_nav.html:78
+#: app/templates/partials/shared_nav.html:117
+msgid "Overview"
+msgstr "Gambaran Keseluruhan"
+
+#: app/templates/partials/footer.html:7
+msgid "Toggle Theme"
+msgstr "Togol Tema"
+
+#: app/templates/partials/footer.html:32
+msgid "Theme"
+msgstr "Tema"
+
+#: app/templates/partials/head.html:7
+msgid "Grylli"
+msgstr "Grylli"
+
+#: app/templates/partials/header.html:6 app/templates/partials/sidebar.html:32
+#: app/templates/partials/sidebar.html:66
+msgid "Home"
+msgstr "Rumah"
+
+#: app/templates/partials/header.html:55
+msgid "Account"
+msgstr "Akaun"
+
+#: app/templates/partials/header.html:61
+msgid "MFA"
+msgstr "MFA"
+
+#: app/templates/partials/header.html:67
+msgid "About"
+msgstr "Mengenai"
+
+#: app/templates/partials/header.html:73
+msgid "Privacy"
+msgstr "Privasi"
+
+#: app/templates/partials/header.html:79
+msgid "System Info"
+msgstr "Info Sistem"
+
+#: app/templates/partials/header.html:114
+msgid "Logout"
+msgstr "Keluar"
+
+#: app/templates/partials/shared_nav.html:33
+msgid "Overview of notification settings"
+msgstr "Gambaran tetapan notifikasi"
+
+#: app/templates/partials/shared_nav.html:38
+msgid "Configure Apprise services"
+msgstr "Konfigurasikan perkhidmatan Apprise"
+
+#: app/templates/partials/shared_nav.html:39
+msgid "Apprise"
+msgstr "Apprise"
+
+#: app/templates/partials/shared_nav.html:43
+msgid "Configure Webhook integrations"
+msgstr "Konfigurasikan integrasi Webhook"
+
+#: app/templates/partials/shared_nav.html:77
+msgid "Overview of secure email messages"
+msgstr "Gambaran mesej e-mel selamat"
+
+#: app/templates/partials/shared_nav.html:82
+msgid "Configure SMTP email settings"
+msgstr "Konfigurasikan tetapan e-mel SMTP"
+
+#: app/templates/partials/shared_nav.html:83
+#: app/templates/reminders/view_reminder.html:79
+msgid "SMTP"
+msgstr "SMTP"
+
+#: app/templates/partials/shared_nav.html:100
+#: app/templates/reminders/list_reminders.html:8
+msgid "Reminders"
+msgstr "minit"
+
+#: app/templates/partials/shared_nav.html:116
+msgid "Overview of reminders"
+msgstr "Gambaran keseluruhan peringatan"
+
+#: app/templates/partials/sidebar.html:13
+#: app/templates/partials/sidebar.html:47
+msgid "Menu"
+msgstr "Menu"
+
+#: app/templates/reminders/assign_email_reminder.html:12
+msgid "Link Email Reminder for"
+msgstr "Pautan Peringatan E-mel untuk"
+
+#: app/templates/reminders/assign_email_reminder.html:30
+#: app/templates/reminders/assign_email_reminder.html:64
+msgid "None (Unassign)"
+msgstr "Tiada konfigurasi SMTP ditugaskan"
+
+#: app/templates/reminders/assign_email_reminder.html:43
+msgid "No sender address"
+msgstr "Tiada alamat penghantar"
+
+#: app/templates/reminders/assign_email_reminder.html:54
+msgid "Email Message"
+msgstr "Jadual Mesej"
+
+#: app/templates/reminders/assign_email_reminder.html:77
+msgid "No subject"
+msgstr "Subjek"
+
+#: app/templates/reminders/assign_email_reminder.html:90
+msgid "Save Email Reminder"
+msgstr "Simpan E-mel"
+
+#: app/templates/reminders/create_reminder.html:12
+#: app/templates/reminders/edit_reminder.html:10
+#: app/templates/reminders/list_reminders.html:73
+#: app/templates/reminders/list_reminders.html:158
+msgid "Edit Reminder"
+msgstr "Edit E-mel"
+
+#: app/templates/reminders/create_reminder.html:14
+msgid "Create Reminder"
+msgstr "Cipta E-mel"
+
+#: app/templates/reminders/create_reminder.html:45
+msgid "Save Reminder"
+msgstr "Simpan E-mel"
+
+#: app/templates/reminders/edit_reminder.html:39
+msgid "Update Reminder"
+msgstr "Kemas kini Peringatan"
+
+#: app/templates/reminders/list_reminders.html:48
+msgid "Add Reminder"
+msgstr "Tambah E-mel"
+
+#: app/templates/reminders/list_reminders.html:58
+#: app/templates/reminders/view_reminder.html:21
+msgid "Start At"
+msgstr "Memulakan TLS"
+
+#: app/templates/reminders/list_reminders.html:59
+msgid "Recurrence"
+msgstr "Pengulangan"
+
+#: app/templates/reminders/list_reminders.html:69
+#: app/templates/reminders/list_reminders.html:153
+#: app/templates/reminders/view_reminder.html:26
+msgid "One-time"
+msgstr "Sekali sahaja"
+
+#: app/templates/reminders/list_reminders.html:83
+msgid "Assign Email Reminder"
+msgstr "Tetapkan Peringatan E-mel"
+
+#: app/templates/reminders/list_reminders.html:102
+#: app/templates/reminders/list_reminders.html:187
+msgid "Send Test Reminder"
+msgstr "Hantar Emel Ujian"
+
+#: app/templates/reminders/list_reminders.html:120
+#: app/templates/reminders/list_reminders.html:205
+msgid "Toggle Reminder On/Off"
+msgstr "Tukar E-mel On/Off"
+
+#: app/templates/reminders/list_reminders.html:122
+#: app/templates/reminders/list_reminders.html:207
+msgid "Reminder is enabled"
+msgstr "E-mel diaktifkan"
+
+#: app/templates/reminders/list_reminders.html:124
+#: app/templates/reminders/list_reminders.html:209
+msgid "Reminder is disabled"
+msgstr "E-mel dinyahaktifkan"
+
+#: app/templates/reminders/list_reminders.html:148
+msgid "Start At:"
+msgstr "Memulakan TLS"
+
+#: app/templates/reminders/list_reminders.html:152
+msgid "Recurrence:"
+msgstr "Pengulangan:"
+
+#: app/templates/reminders/list_reminders.html:168
+msgid "Link Email Reminder"
+msgstr "Pautan Peringatan E-mel"
+
+#: app/templates/reminders/list_reminders.html:218
+msgid "How to use reminders"
+msgstr "Cara mengurus pengguna"
+
+#: app/templates/reminders/list_reminders.html:231
+msgid "➕ Click “Add Reminder” and fill out the subject and content fields."
+msgstr "Klik \"Tambah notifikasi\" dan isikan medan subjek dan kandungan."
+
+#: app/templates/reminders/list_reminders.html:232
+msgid "💾 Save the reminder to return to the overview."
+msgstr "Simpan notifikasi untuk kembali ke gambaran keseluruhan."
+
+#: app/templates/reminders/list_reminders.html:233
+msgid ""
+"📣 Assign Apprise, 🌐 Webhook, and/or 📧 Email (SMTP) destinations as needed."
+msgstr ""
+"📣 Tetapkan Apprise, 🌐 Webhook, dan/atau 📧 destinasi E-mel (SMTP) seperti "
+"yang diperlukan."
+
+#: app/templates/reminders/list_reminders.html:234
+msgid ""
+"⏱️ Set the schedule using the schedule button to define when reminders are "
+"sent."
+msgstr ""
+"⏱️ Tetapkan jadual menggunakan butang jadual untuk menentukan bila "
+"peringatan dihantar."
+
+#: app/templates/reminders/list_reminders.html:235
+msgid ""
+"🔍 Click “View Details” to review or edit assigned destinations and other "
+"settings."
+msgstr ""
+"🔍 Klik “View Details” untuk menyemak semula atau mengedit destinasi yang "
+"ditetapkan dan tetapan lain."
+
+#: app/templates/reminders/list_reminders.html:236
+msgid ""
+"🧪 Click the Test button to verify all assigned destinations are working "
+"correctly."
+msgstr ""
+"🧪 Klik butang Ujian untuk memastikan semua destinasi yang ditetapkan "
+"berfungsi dengan betul."
+
+#: app/templates/reminders/list_reminders.html:237
+msgid "🔴/🟢 Enable or disable the reminder using the toggle button."
+msgstr "Aktifkan emel menggunakan butang togol 🔴/🟢."
+
+#: app/templates/reminders/list_reminders.html:238
+msgid "📤 Reminders will be sent as scheduled to the assigned destinations."
+msgstr ""
+"📤 Peringatan akan dihantar mengikut jadual ke destinasi yang ditetapkan."
+
+#: app/templates/reminders/schedule_reminder.html:8
+msgid "Schedule Reminder"
+msgstr "Jadualkan Emel"
+
+#: app/templates/reminders/schedule_reminder.html:15
+msgid "Start Date & Time"
+msgstr "Tarikh & Masa Mula"
+
+#: app/templates/reminders/schedule_reminder.html:22
+#: app/templates/reminders/view_reminder.html:25
+msgid "Recurrence Rule"
+msgstr "Peraturan Pengulangan"
+
+#: app/templates/reminders/schedule_reminder.html:24
+msgid "(Optional) Enter RRULE or leave blank for one-time."
+msgstr "(Pilihan) Masukkan RRULE atau biarkan kosong untuk sekali sahaja."
+
+#: app/templates/reminders/schedule_reminder.html:30
+msgid "End Date"
+msgstr "Hantar Ujian"
+
+#: app/templates/reminders/schedule_reminder.html:32
+msgid "(Optional) Stop sending after this date."
+msgstr "(Pilihan) Berhenti menghantar selepas tarikh ini."
+
+#: app/templates/reminders/schedule_reminder.html:38
+#: app/templates/reminders/view_reminder.html:36
+msgid "Max Occurrences"
+msgstr "Kejadian Maksimum"
+
+#: app/templates/reminders/schedule_reminder.html:40
+msgid "(Optional) Stop after this many reminders."
+msgstr "(Pilihan) Berhenti selepas banyak peringatan ini."
+
+#: app/templates/reminders/schedule_reminder.html:56
+msgid "Help for RRULE syntax"
+msgstr "Bantuan untuk sintaks RRULE"
+
+#: app/templates/reminders/schedule_reminder.html:66
+msgid "Several tools are available to help generate an RRULE."
+msgstr "Terdapat beberapa alat yang tersedia untuk membantu menjana RRULE."
+
+#: app/templates/reminders/schedule_reminder.html:67
+msgid "Use a search engine or AI tool to assist."
+msgstr "Gunakan enjin carian atau alat AI untuk membantu."
+
+#: app/templates/reminders/schedule_reminder.html:69
+msgid "Here is an example of one such online tool:"
+msgstr "Berikut adalah contoh salah satu alat dalam talian:"
+
+#: app/templates/reminders/schedule_reminder.html:73
+msgid "RRULE Generator Tool"
+msgstr "Alat Penjana RRULE"
+
+#: app/templates/reminders/schedule_reminder.html:77
+msgid "See here for some common examples:"
+msgstr "Lihat di sini untuk beberapa contoh biasa:"
+
+#: app/templates/reminders/schedule_reminder.html:81
+msgid "RRULE Help (GitHub)"
+msgstr "Bantuan RRULE (GitHub)"
+
+#: app/templates/reminders/view_reminder.html:8
+msgid "Reminder Details"
+msgstr "Lihat Butiran"
+
+#: app/templates/reminders/view_reminder.html:30
+msgid "End At"
+msgstr "Hantar Ujian"
+
+#: app/templates/reminders/view_reminder.html:42
+msgid "Last Sent"
+msgstr "Check-in Terakhir"
+
+#: app/templates/reminders/view_reminder.html:91
+msgid "Email Template"
+msgstr "Pengesah E-mel"
+
+#: app/templates/reminders/view_reminder.html:103
+msgid "No email linked."
+msgstr "E-mel diaktifkan"
+
+#: app/templates/reminders/view_reminder.html:111
+msgid "Back to Reminders"
+msgstr "Kembali ke Emel"
+
+#: app/templates/user_smtp/create_smtp.html:10
+msgid "Create SMTP Destination"
+msgstr "Cipta Destinasi SMTP"
+
+#: app/templates/user_smtp/create_smtp.html:69
+#: app/templates/user_smtp/edit_smtp.html:84
+msgid "Hold to reveal"
+msgstr "Tahan untuk mendedahkan"
+
+#: app/templates/user_smtp/create_smtp.html:92
+#: app/templates/user_smtp/edit_smtp.html:107
+msgid "Use TLS"
+msgstr "Guna TLS"
+
+#: app/templates/user_smtp/edit_smtp.html:10
+msgid "Edit SMTP Destination"
+msgstr "Cipta Destinasi SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:9
+msgid "SMTP Destinations"
+msgstr "Destinasi SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:44
+msgid "Add SMTP"
+msgstr "Tambah SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:53
+msgid "Host"
+msgstr "Hos"
+
+#: app/templates/user_smtp/list_smtp.html:54
+msgid "Port"
+msgstr "Port"
+
+#: app/templates/user_smtp/list_smtp.html:56
+msgid "TLS"
+msgstr "TLS"
+
+#: app/templates/user_smtp/list_smtp.html:58
+msgid "Created"
+msgstr "Dicipta"
+
+#: app/templates/user_smtp/list_smtp.html:90
+#: app/templates/user_smtp/list_smtp.html:158
+msgid "Send Test"
+msgstr "Hantar Ujian"
+
+#: app/templates/user_smtp/list_smtp.html:125
+msgid "Port:"
+msgstr "Port:"
+
+#: app/templates/user_smtp/list_smtp.html:131
+msgid "Password:"
+msgstr "Kata Laluan:"
+
+#: app/templates/user_smtp/list_smtp.html:184
+msgid "Hide SMTP Setup Help"
+msgstr "Sembunyikan Bantuan Pemediaan SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:184
+msgid "Show SMTP Setup Help"
+msgstr "Tunjukkan Bantuan Pemediaan SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:190
+msgid ""
+"Need help finding your SMTP server settings? See here for some links to "
+"common providers:"
+msgstr ""
+"Perlu bantuan mencari tetapan pelayan SMTP anda? Lihat di sini untuk "
+"beberapa pautan kepada pembekal biasa:"
+
+#: app/templates/user_smtp/list_smtp.html:194
+msgid "SMTP Server Settings Help (GitHub)"
+msgstr "Bantuan Tetapan Pelayan SMTP (GitHub)"
+
+#: app/templates/user_smtp/list_smtp.html:198
+msgid ""
+"Find official documentation links for Gmail, Outlook, Yahoo, AOL, and "
+"others."
+msgstr ""
+"Cari pautan dokumentasi rasmi untuk Gmail, Outlook, Yahoo, AOL, dan yang "
+"lain."
+
+#: app/templates/user_smtp/list_smtp.html:199
+msgid ""
+"If your provider isn’t listed, search their support site or a search engine "
+"for 'SMTP settings'."
+msgstr ""
+"Jika pembekal anda tidak tersenarai, cari laman sokongan mereka atau enjin "
+"carian untuk 'tetapan SMTP'."
+
+#: app/templates/user_smtp/list_smtp.html:200
+msgid ""
+"Some providers (like Gmail, Yahoo) require 'App Passwords' or special "
+"setup—see their docs!"
+msgstr ""
+"Beberapa pembekal (seperti Gmail, Yahoo) memerlukan 'Kata Laluan Apl' atau "
+"setup khas—lihat dokumen mereka!"
+
+#: app/templates/webhook/create_webhook.html:10
+msgid "Create Webhook"
+msgstr "Cipta Webhook"
+
+#: app/templates/webhook/edit_webhook.html:10
+msgid "Edit Webhook"
+msgstr "Edit Webhook"
+
+#: app/templates/webhook/list_webhooks.html:9
+#: app/templates/webhook/webhook_config.html:3
+msgid "Webhooks Destinations"
+msgstr "Destinasi Webhooks"
+
+#: app/templates/webhook/list_webhooks.html:59
+msgid "Endpoint"
+msgstr "Endpoint"
+
+#: app/templates/webhook/list_webhooks.html:60
+msgid "Description"
+msgstr "Penerangan"
+
+#: app/templates/webhook/list_webhooks.html:82
+#: app/templates/webhook/list_webhooks.html:141
+msgid "Cannot edit while assigned to notifications"
+msgstr "Tidak boleh menyunting semasa ditugaskan kepada pemberitahuan"
+
+#: app/templates/webhook/list_webhooks.html:106
+#: app/templates/webhook/list_webhooks.html:165
+msgid "Cannot delete while assigned to notifications"
+msgstr "Tidak boleh memadam semasa ditugaskan kepada pemberitahuan"
+
+#: app/templates/webhook/list_webhooks.html:122
+msgid "Endpoint:"
+msgstr "Endpoint:"
+
+#: app/templates/webhook/list_webhooks.html:125
+msgid "Description:"
+msgstr "Penerangan:"
+
+#: app/views/account.py:74
+msgid "Current password is required to change password."
+msgstr "Kata laluan semasa diperlukan untuk menukar kata laluan."
+
+#: app/views/account.py:78
+msgid "Current password is incorrect."
+msgstr "Kata laluan semasa tidak betul."
+
+#: app/views/account.py:94
+msgid "Account updated successfully."
+msgstr "Akaun berjaya dikemaskini."
+
+#: app/views/account.py:100
+msgid "An error occurred while updating your account."
+msgstr "Ralat berlaku semasa mengemaskini akaun anda."
+
+#: app/views/account.py:137
+msgid "You cannot delete your account because you are the last admin."
+msgstr ""
+"Anda tidak boleh memadam akaun anda kerana anda adalah pentadbir terakhir."
+
+#: app/views/account.py:146
+msgid "Your account has been permanently deleted."
+msgstr "Akaun anda telah dipadam secara kekal."
+
+#: app/views/account.py:152
+msgid "An error occurred while trying to delete your account."
+msgstr "Ralat berlaku semasa mengemaskini akaun anda."
+
+#: app/views/account.py:171
+msgid "Your account has been deleted"
+msgstr "Akaun anda telah dipadam secara kekal."
+
+#: app/views/account.py:173
+#, python-brace-format
+msgid ""
+"Hello {username},\n"
+"\n"
+"Your account on {site_name} has been deleted.Remember to delete your files from the uploads folder.If this was not you, please contact support immediately.\n"
+"\n"
+"{site_url}"
+msgstr ""
+"Helo {username},\n"
+"\n"
+"Akaun anda di {site_name} telah dipadam. Ingat untuk memadam fail anda dari folder muat naik. Jika ini bukan anda, sila hubungi sokongan segera.\n"
+"\n"
+"{site_url}"
+
+#: app/views/admin.py:59
+msgid "Invalid role."
+msgstr "Peranan tidak sah."
+
+#: app/views/apprise.py:51
+msgid "🧪 Test notification sent successfully!"
+msgstr "🧪 Pemberitahuan ujian berjaya dihantar!"
+
+#: app/views/apprise.py:56
+msgid "🧪 Failed to send test notification: "
+msgstr "🧪 Gagal menghantar pemberitahuan ujian:"
+
+#: app/views/apprise.py:62
+msgid "🧪 Error sending test notification."
+msgstr "🧪 Ralat semasa menghantar pemberitahuan ujian."
+
+#: app/views/apprise.py:101
+msgid "Apprise destination created successfully."
+msgstr "Destinasi Apprise berjaya dicipta."
+
+#: app/views/apprise.py:168
+msgid "Apprise destination updated successfully."
+msgstr "Destinasi Apprise berjaya dikemaskini."
+
+#: app/views/apprise.py:199
+msgid "Apprise destination deleted."
+msgstr "Destinasi Apprise telah dipadam."
+
+#: app/views/auth.py:95
+msgid "Admin account created successfully."
+msgstr "Akaun admin berjaya dicipta."
+
+#: app/views/auth.py:108
+msgid "An error occurred while creating the admin account."
+msgstr "Ralat berlaku semasa mencipta akaun admin."
+
+#: app/views/auth.py:141
+msgid ""
+"Your account is not activated. Please check your email for the activation "
+"link."
+msgstr ""
+"Akaun anda tidak diaktifkan. Sila semak e-mel anda untuk pautan pengaktifan."
+
+#: app/views/auth.py:157
+msgid "Multi-factor authentication required. Please enter your code."
+msgstr "Pengesahan berbilang faktor diperlukan. Sila masukkan kod anda."
+
+#: app/views/auth.py:162 app/views/mfa.py:195
+msgid "Logged in successfully."
+msgstr "Berjaya log masuk."
+
+#: app/views/auth.py:179
+msgid "Invalid username or password."
+msgstr "Nama pengguna atau kata laluan tidak sah."
+
+#: app/views/auth.py:203
+msgid "You have been logged out."
+msgstr "Anda telah log keluar."
+
+#: app/views/auth.py:239 app/views/email.py:263
+msgid "Access denied."
+msgstr "Akses dinafikan."
+
+#: app/views/auth.py:273
+msgid "If a user with that email exists, we've sent the username to them."
+msgstr ""
+"Jika pengguna dengan e-mel itu wujud, kami telah menghantar nama pengguna "
+"kepada mereka."
+
+#: app/views/auth.py:314
+msgid "A password reset link has been sent to your email."
+msgstr "Pautan menetapkan semula kata laluan telah dihantar ke e-mel anda."
+
+#: app/views/auth.py:319
+msgid "No account found matching that username and email."
+msgstr "Tiada akaun ditemui yang sepadan dengan nama pengguna dan e-mel itu."
+
+#: app/views/auth.py:389
+msgid "The reset link is invalid or has expired."
+msgstr "Pautan menetapkan semula tidak sah atau telah tamat tempoh."
+
+#: app/views/auth.py:401
+msgid "Username and email do not match."
+msgstr "Nama pengguna dan emel tidak sepadan."
+
+#: app/views/auth.py:421
+msgid "Your password has been reset. Please log in."
+msgstr "Kata laluan anda telah diset semula. Sila log masuk."
+
+#: app/views/auth.py:458
+msgid "Invalid registration PIN."
+msgstr "PIN pendaftaran tidak sah."
+
+#: app/views/auth.py:467
+msgid "Username or email already exists."
+msgstr "Nama pengguna atau emel sudah wujud."
+
+#: app/views/auth.py:492
+msgid "Activate Your Grylli Account"
+msgstr "Aktifkan Akaun Grylli Anda"
+
+#: app/views/auth.py:493
+#, python-brace-format
+msgid ""
+"Hello {username},\n"
+"\n"
+"Please activate your account by clicking..."
+msgstr ""
+"Halo {username},\n"
+"\n"
+"Sila aktifkan akaun anda dengan klik..."
+
+#: app/views/auth.py:498
+msgid "Account created! Please check your email to activate your account."
+msgstr ""
+"Akaun telah dicipta! Sila semak emel anda untuk mengaktifkan akaun anda."
+
+#: app/views/auth.py:521
+msgid "Activation link is invalid or expired."
+msgstr "Pautan pengaktifan tidak sah atau telah tamat."
+
+#: app/views/auth.py:528 app/views/users.py:76 app/views/users.py:140
+msgid "User not found."
+msgstr "Pengguna tidak ditemui."
+
+#: app/views/auth.py:532
+msgid "Account already activated. Please log in."
+msgstr "Akaun telah diaktifkan. Sila log masuk."
+
+#: app/views/auth.py:540
+msgid "Your account has been activated! You can now log in."
+msgstr "Akaun anda telah diaktifkan! Anda kini boleh log masuk."
+
+#: app/views/backups.py:72
+#, python-format
+msgid "Backup created: %(filename)s"
+msgstr "Sandaran telah dicipta: %(filename)s"
+
+#: app/views/backups.py:77
+msgid "Failed to create backup."
+msgstr "Gagal mencipta sandaran."
+
+#: app/views/backups.py:106
+#, python-format
+msgid "Backup deleted: %(filename)s"
+msgstr "Sandaran dihapuskan: %(filename)s"
+
+#: app/views/backups.py:109
+msgid "Backup file not found."
+msgstr "Fail sandaran tidak ditemui."
+
+#: app/views/backups.py:112
+msgid "Failed to delete backup."
+msgstr "Gagal menghapus sandaran."
+
+#: app/views/checkin.py:41
+msgid "Invalid check-in link."
+msgstr "Pautan daftar masuk tidak sah."
+
+#: app/views/checkin.py:48
+msgid "You are not authorized to check in for this item."
+msgstr "Anda tidak dibenarkan untuk mendaftar masuk untuk item ini."
+
+#: app/views/checkin.py:62
+msgid "Unsupported check-in type."
+msgstr "Jenis daftar masuk tidak disokong."
+
+#: app/views/checkin.py:137
+msgid "⚠️ Cannot enable reminder: Start date/time is in the past."
+msgstr ""
+"⚠️ Tidak dapat mengaktifkan peringatan: Tarikh/masa mula pada masa lalu."
+
+#: app/views/checkin.py:158
+msgid "✅ Enabled and timer started."
+msgstr "✅ Diaktifkan dan pemasa dimulakan."
+
+#: app/views/checkin.py:168
+msgid "⛔ Disabled."
+msgstr "⛔ Dinonaktifkan."
+
+#: app/views/checkin.py:170
+msgid "⚠️ Cannot toggle — missing schedule or destination."
+msgstr "⚠️ Tidak dapat menukar — jadual atau destinasi tidak ada."
+
+#: app/views/email.py:88
+msgid "Message saved."
+msgstr "Mesej disimpan."
+
+#: app/views/email.py:118 app/views/messages.py:167
+msgid "Message deleted."
+msgstr "Mesej dipadam."
+
+#: app/views/email.py:152
+msgid "Attached files updated."
+msgstr "Fail dilampirkan dikemaskini."
+
+#: app/views/email.py:200
+msgid "SMTP configuration not assigned or is disabled."
+msgstr "Konfigurasi SMTP tidak ditetapkan atau dinonaktifkan."
+
+#: app/views/email.py:234 app/views/smtp_settings_admin.py:82
+msgid "Test email sent successfully."
+msgstr "Emel ujian dihantar dengan jayanya."
+
+#: app/views/email.py:282 app/views/messages.py:305
+msgid "Schedule updated successfully."
+msgstr "Jadual berjaya dikemaskini."
+
+#: app/views/email.py:310
+msgid "SMTP configuration assigned."
+msgstr "Konfigurasi SMTP ditetapkan."
+
+#: app/views/email.py:319
+msgid "SMTP configuration removed."
+msgstr "Konfigurasi SMTP ditetapkan."
+
+#: app/views/messages.py:97
+msgid "Message created successfully."
+msgstr "Mesej berjaya dicipta."
+
+#: app/views/messages.py:133
+msgid "Message updated successfully."
+msgstr "Mesej berjaya dikemaskini."
+
+#: app/views/messages.py:223 app/views/reminders.py:240
+msgid "Destinations updated."
+msgstr "Destinasi dikemaskini."
+
+#: app/views/messages.py:441
+msgid "No destinations assigned to this message."
+msgstr "Konfigurasi SMTP tidak ditetapkan atau dinonaktifkan."
+
+#: app/views/messages.py:453
+msgid "Test message sent successfully."
+msgstr "Emel ujian dihantar dengan jayanya."
+
+#: app/views/messages.py:455
+msgid "Test message failed: "
+msgstr "Mesej disimpan."
+
+#: app/views/mfa.py:68
+msgid "You must enter a code from your authenticator."
+msgstr "Anda mesti memasukkan kod daripada pengesah anda."
+
+#: app/views/mfa.py:82 app/views/mfa.py:259
+msgid "Invalid code. Please try again."
+msgstr "Kod tidak sah. Sila cuba lagi."
+
+#: app/views/mfa.py:91
+msgid "Two-factor authentication disabled."
+msgstr "Notifikasi dinyahaktifkan"
+
+#: app/views/mfa.py:132
+msgid "Recovery codes are only shown immediately after enabling MFA."
+msgstr "Kod pemulihan hanya ditunjukkan sejurus selepas mengaktifkan MFA."
+
+#: app/views/mfa.py:142
+msgid "Could not load recovery codes."
+msgstr "Tidak dapat memuat kod pemulihan."
+
+#: app/views/mfa.py:168
+msgid "No MFA challenge in progress."
+msgstr "Tiada cabaran MFA sedang berlangsung."
+
+#: app/views/mfa.py:176
+msgid "User not found for MFA challenge."
+msgstr "Pengguna tidak ditemui."
+
+#: app/views/mfa.py:225
+msgid ""
+"You have used your last recovery code. MFA has been disabled. Please remove "
+"Grylli from your authenticator app, and re-enable MFA to protect your "
+"account."
+msgstr ""
+"Anda telah menggunakan kod pemulihan terakhir anda. MFA telah dinyahdayakan."
+" Sila keluarkan Grylli dari aplikasi autentikasi anda, dan aktifkan semula "
+"MFA untuk melindungi akaun anda."
+
+#: app/views/mfa.py:248
+#, python-brace-format
+msgid "Recovery code accepted. You have {remaining} recovery codes left."
+msgstr ""
+"Kod pemulihan diterima. Anda mempunyai {remaining} kod pemulihan yang "
+"tinggal."
+
+#: app/views/reminders.py:106
+msgid "Reminder created successfully."
+msgstr "Mesej berjaya dicipta."
+
+#: app/views/reminders.py:143
+msgid "Reminder updated successfully."
+msgstr "Pengguna berjaya dikemaskini."
+
+#: app/views/reminders.py:174
+msgid "Reminder deleted."
+msgstr "Pengguna dipadamkan."
+
+#: app/views/reminders.py:287
+msgid "No destinations assigned to this reminder."
+msgstr "Konfigurasi SMTP tidak ditetapkan atau dinonaktifkan."
+
+#: app/views/reminders.py:311
+msgid "No email message linked to this reminder."
+msgstr "Tiada mesej e-mel yang dipautkan kepada peringatan ini."
+
+#: app/views/reminders.py:314
+msgid "SMTP configuration is disabled."
+msgstr "Konfigurasi SMTP tidak ditetapkan atau dinonaktifkan."
+
+#: app/views/reminders.py:353
+msgid "Test reminder sent successfully."
+msgstr "Emel ujian dihantar dengan jayanya."
+
+#: app/views/reminders.py:356
+msgid "Test reminder failed: "
+msgstr "Mesej disimpan."
+
+#: app/views/reminders.py:430
+msgid "Reminder schedule updated successfully."
+msgstr "Jadual berjaya dikemaskini."
+
+#: app/views/reminders.py:434
+msgid "Please correct the errors below."
+msgstr "Sila betulkan kesalahan di bawah."
+
+#: app/views/reminders.py:481 app/views/reminders.py:482
+msgid "None"
+msgstr "Tidak"
+
+#: app/views/reminders.py:508
+msgid "You must select both an SMTP config and an email message, or neither."
+msgstr ""
+"Anda mesti memilih kedua-duanya konfigurasi SMTP dan mesej e-mel, atau tidak"
+" satu pun."
+
+#: app/views/reminders.py:528
+msgid "Email reminder settings updated."
+msgstr "Destinasi dikemaskini."
+
+#: app/views/smtp.py:83 app/views/user_smtp.py:80
+msgid "SMTP destination created successfully."
+msgstr "Destinasi SMTP berjaya dicipta."
+
+#: app/views/smtp.py:129 app/views/user_smtp.py:135
+msgid "SMTP destination updated."
+msgstr "Destinasi SMTP dikemaskini."
+
+#: app/views/smtp.py:160 app/views/user_smtp.py:166
+msgid "SMTP destination deleted."
+msgstr "Destinasi SMTP dipadam."
+
+#: app/views/smtp.py:191 app/views/user_smtp.py:199
+msgid "Test email sent successfully to your account email."
+msgstr "Emel ujian dihantar dengan jayanya ke emel akaun anda."
+
+#: app/views/smtp.py:196 app/views/user_smtp.py:204
+msgid "Failed to send test email. Check SMTP settings."
+msgstr "Gagal menghantar emel ujian. Sila semak tetapan SMTP."
+
+#: app/views/smtp_settings_admin.py:76
+msgid "Test Email from Grylli"
+msgstr "Emel Ujian dari Grylli"
+
+#: app/views/smtp_settings_admin.py:77
+msgid "This is a test email from the Grylli SMTP settings page."
+msgstr "Ini adalah emel ujian dari halaman tetapan SMTP Grylli."
+
+#: app/views/smtp_settings_admin.py:84
+msgid "Failed to send test email: "
+msgstr "Gagal menghantar emel ujian:"
+
+#: app/views/users.py:99
+msgid "User updated successfully."
+msgstr "Pengguna berjaya dikemaskini."
+
+#: app/views/users.py:106 app/views/users.py:327
+msgid "An error occurred while updating the user."
+msgstr "Ralat berlaku semasa mengemas kini pengguna."
+
+#: app/views/users.py:195
+msgid "User deleted."
+msgstr "Pengguna dipadamkan."
+
+#: app/views/users.py:202
+msgid "An error occurred while deleting the user."
+msgstr "Ralat berlaku semasa memadamkan pengguna."
+
+#: app/views/users.py:237
+msgid "Password is required when creating a new user."
+msgstr "Kata laluan diperlukan apabila membuat pengguna baharu."
+
+#: app/views/users.py:244
+msgid "Username already exists."
+msgstr "Nama pengguna sudah wujud."
+
+#: app/views/users.py:251
+msgid "Email already exists."
+msgstr "E-mel sudah wujud."
+
+#: app/views/users.py:268
+#, python-format
+msgid "User '%(username)s' created successfully."
+msgstr "Pengguna '%(username)s' berjaya dicipta."
+
+#: app/views/users.py:278
+msgid "Failed to create user."
+msgstr "Gagal untuk mencipta pengguna."
+
+#: app/views/users.py:305
+msgid "You cannot change your own enabled status."
+msgstr "Anda tidak boleh menukar status diaktifkan anda sendiri."
+
+#: app/views/users.py:318
+#, python-format
+msgid "User '%(username)s' has been %(status)s."
+msgstr "Pengguna '%(username)s' telah %(status)s."
+
+#: app/views/users.py:356
+msgid "You cannot reset your own MFA."
+msgstr "⚪ = Anda tidak boleh nyahaktifkan akaun anda sendiri."
+
+#: app/views/users.py:368
+#, python-format
+msgid "MFA disabled for user '%(username)s'."
+msgstr "MFA dinyahdayakan untuk pengguna '%(username)s'."
+
+#: app/views/users.py:374
+msgid "An error occurred while resetting MFA."
+msgstr "Ralat berlaku semasa memadamkan pengguna."
+
+#: app/views/webhook.py:54
+msgid "Webhook created successfully."
+msgstr "Webhook berjaya dicipta."
+
+#: app/views/webhook.py:113
+msgid "Webhook updated successfully."
+msgstr "Webhook berjaya dikemas kini."
+
+#: app/views/webhook.py:142
+msgid "Webhook deleted."
+msgstr "Webhook dipadamkan."
+
+#: app/views/webhook.py:175
+msgid "🧪 Webhook test sent successfully!"
+msgstr "🧪 Ujian webhook berjaya dihantar!"
+
+#: app/views/webhook.py:177
+msgid "🧪 Webhook test failed: "
+msgstr "🧪 Ujian webhook gagal:"
+
+#: app/views/webhook.py:180
+msgid "🧪 Error sending webhook test."
+msgstr "🧪 Ralat semasa menghantar ujian webhook."
+
+#~ msgid ""
+#~ "Grylli is a secure message delivery platform designed to activate after "
+#~ "prolonged user inactivity."
+#~ msgstr ""
+#~ "Grylli adalah platform penghantaran mesej selamat yang direka untuk "
+#~ "diaktifkan selepas ketidakaktifan pengguna yang berpanjangan."
+
+#~ msgid ""
+#~ "It is a modern reimplementation of Gone Man’s Switch with a refined tech "
+#~ "stack, better maintainability, and an improved user experience."
+#~ msgstr ""
+#~ "Ia adalah pelaksanaan semula moden Gone Man's Switch dengan tumpukan "
+#~ "teknologi yang diperhalusi, kebolehselenggaraan yang lebih baik, dan "
+#~ "pengalaman pengguna yang ditambah baik."
+
+#~ msgid "Body:"
+#~ msgstr "Badan:"
+
+#~ msgid "Subject:"
+#~ msgstr "Subjek:"
+
+#~ msgid "Content:"
+#~ msgstr "Kandungan:"
+
+#~ msgid "Edit SMTP"
+#~ msgstr "Edit SMTP"
+
+#~ msgid ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+#~ msgstr ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+
+#~ msgid "Admin Notes"
+#~ msgstr "Nota Admin"
+
+#~ msgid "Register"
+#~ msgstr "Daftar"
+
+#~ msgid "View"
+#~ msgstr "Lihat"
+
+#~ msgid "Schedule"
+#~ msgstr "Jadual"
+
+#~ msgid "Message is enabled"
+#~ msgstr "Mesej diaktifkan"
+
+#~ msgid "Message is disabled"
+#~ msgstr "Mesej dinyahaktifkan"
+
+#~ msgid "No SMTP configuration selected."
+#~ msgstr "Tiada konfigurasi SMTP dipilih."
+
+#~ msgid "Enable the message to start monitoring."
+#~ msgstr "Aktifkan mesej untuk memulakan pemantauan."
+
+#~ msgid "✅ SMTP settings saved."
+#~ msgstr "Tetapan SMTP"
+
+#~ msgid "If you don’t check in, Grylli delivers the message for you."
+#~ msgstr "Jika anda tidak check-in, Grylli menyampaikan mesej untuk anda."
+
+#~ msgid "Fill in already discovered missing translations:"
+#~ msgstr "Isi terjemahan yang sudah dikenalpasti hilang:"
+
+#~ msgid "Add missing phrases in that JSON file."
+#~ msgstr "Tambahkan frasa yang hilang dalam fail JSON tersebut."
+
+#~ msgid "From:"
+#~ msgstr "Daripada:"
+
+#~ msgid ""
+#~ "Attach the updated JSON file to a new GitHub issue when submitting your "
+#~ "changes."
+#~ msgstr ""
+#~ "Lampirkan fail JSON yang dikemas kini kepada isu GitHub baru semasa "
+#~ "menghantar perubahan anda."
+
+#~ msgid "admin"
+#~ msgstr "pentadbir"
+
+#~ msgid "user"
+#~ msgstr "pengguna"
+
+#~ msgid "Logging in"
+#~ msgstr "Log Masuk"
+
+#~ msgid "SMTP error: "
+#~ msgstr "ralat SMTP:"
+
+#~ msgid "enabled"
+#~ msgstr "diaktifkan"
+
+#~ msgid "disabled"
+#~ msgstr "dinonaktifkan"

@@ -1,0 +1,3278 @@
+# Irish translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-06-07 15:49-0500\n"
+"PO-Revision-Date: 2025-05-25 13:03-0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: ga <LL@li.org>\n"
+"Language: ga\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=5; plural=(n==1 ? 0 : n==2 ? 1 : n>=3 && n<=6 ? 2 : n>=7 && n<=10 ? 3 : 4);\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: app/init_db.py:55
+#, python-format
+msgid "Tables currently in DB: %s"
+msgstr "Táirgí atá i láthair faoi láthair sa DB:"
+
+#: app/init_db.py:58
+msgid "Database or system_config table missing. Running migrations now..."
+msgstr ""
+"Bunachar sonraí nó tábla system_config ar iarraidh. Ag rith imirce anois..."
+
+#: app/init_db.py:61
+msgid "Migrations applied successfully."
+msgstr "Míchuairteacha curtha i bhfeidhm go rathúil."
+
+#: app/init_db.py:63
+msgid "Migration failed."
+msgstr "Theip iomaíochta."
+
+#: app/init_db.py:68
+msgid "System config seeded successfully."
+msgstr "Comhéadan córais curtha i mbun go rathúil."
+
+#: app/init_db.py:70
+msgid "Error seeding system config."
+msgstr "Earráid ag síolú cumraíocht an chórais:"
+
+#: app/forms/mfa_form.py:15 app/templates/apprise/create_apprise.html:30
+#: app/templates/apprise/edit_apprise.html:30
+#: app/templates/apprise/list_apprise.html:60
+#: app/templates/mfa/settings.html:24 app/templates/mfa/settings.html:40
+#: app/templates/user_smtp/create_smtp.html:99
+#: app/templates/user_smtp/edit_smtp.html:114
+#: app/templates/user_smtp/list_smtp.html:57
+#: app/templates/webhook/create_webhook.html:36
+#: app/templates/webhook/edit_webhook.html:36
+#: app/templates/webhook/list_webhooks.html:61
+msgid "Enabled"
+msgstr "Cumasaíodh"
+
+#: app/forms/mfa_form.py:16
+msgid "Authenticator Code"
+msgstr "Sikapa Nnyeso"
+
+#: app/forms/mfa_form.py:17
+#: app/templates/admin/partials/user_instructions_and_modal.html:66
+#: app/templates/admin/partials/user_table.html:115
+#: app/templates/email/assign_smtp.html:44 app/templates/mfa/settings.html:47
+#: app/templates/user_smtp/edit_smtp.html:122
+msgid "Save"
+msgstr "Kra"
+
+#: app/forms/mfa_form.py:27
+msgid "Authentication Code"
+msgstr "Nuashonraigh Fógra"
+
+#: app/forms/mfa_form.py:29
+msgid "Please enter your authentication code."
+msgstr "Mesrɛ, kyerɛ saa sikapa nnyeso no."
+
+#: app/forms/mfa_form.py:30
+msgid "Enter a valid 6-digit code or recovery code."
+msgstr "Kyerɛ kod agyaragyan 6 nkɔ 3 constant kod no."
+
+#: app/forms/mfa_form.py:31
+msgid "Invalid code format."
+msgstr "Kod no mfata."
+
+#: app/forms/mfa_form.py:35 app/templates/mfa/challenge.html:25
+msgid "Verify"
+msgstr "Mmɜ"
+
+#: app/services/mail.py:37 app/services/system_settings_email.py:40
+msgid "Missing required config setting: "
+msgstr "Ag teastáil socrú cumraíochta atá in easnamh:"
+
+#: app/services/mail.py:46 app/services/system_settings_email.py:50
+#, python-format
+msgid "Failed to decrypt %(key)s: %(error)s"
+msgstr "Theip ar dhíchriptiú %(key)s: %(error)s"
+
+#: app/services/mail.py:54
+#, python-format
+msgid "get_setting('%(key)s') -> '%(value)s' (sensitive: %(sensitive)s)"
+msgstr ""
+"fa get_setting('%(key)s') -> '%(value)s' (ɔdɔm: '%(raw)s', sensitive: "
+"%(sensitive)s)"
+
+#: app/services/mail.py:75
+#, python-format
+msgid "Preparing email to %(to)s"
+msgstr "Ɛre pɛ krataa a wɔbɛ kɔma %(to)s"
+
+#: app/services/mail.py:90
+#, python-format
+msgid ""
+"SMTP configuration: host=%(host)s (type=%(host_type)s), port=%(port)s "
+"(type=%(port_type)s)"
+msgstr ""
+"SMTP dadeɛ = '%(host)s' (ɛdɔmmu: %(host_type)s), port = %(port)s (ɛdɔmmu: "
+"%(port_type)s)"
+
+#: app/services/mail.py:99
+#, python-format
+msgid "SMTP username: %(user)s"
+msgstr "Ɔyɛde: %(user)s"
+
+#: app/services/mail.py:100
+#, python-format
+msgid "TLS enabled: %(tls)s"
+msgstr "TLS a wɔde yɛ adwuma: %(tls)s"
+
+#: app/services/mail.py:105
+msgid "Starting TLS connection..."
+msgstr "Ɛhɔ rekɔ soɔ TLS"
+
+#: app/services/mail.py:107
+msgid "Logging into SMTP server..."
+msgstr "Retumie wɔ SMTP server..."
+
+#: app/services/mail.py:109
+msgid "Sending email message..."
+msgstr "Teachtaireacht Sceidil"
+
+#: app/services/mail.py:111
+#, python-format
+msgid "Email sent successfully to %(to)s"
+msgstr "Seoladh tástála ríomhphoist go rathúil."
+
+#: app/services/mail.py:114
+#, python-format
+msgid "SMTP error while sending to %(to)s: %(error)s"
+msgstr "SMTP mfomso wɔ bere a wɔsoma ma %(to)s: %(error)s"
+
+#: app/templates/about.html:10
+msgid "About Grylli"
+msgstr "Faoi Grylli"
+
+#: app/templates/about.html:13
+msgid ""
+"Grylli is a secure, self-hosted message delivery platform that automatically"
+" sends pre-configured messages if a user fails to check in within a defined "
+"time period."
+msgstr ""
+"Grylli yɛ yɛn ho aban a ɛyɛ ahobammɔ a wɔde som krataa no a ahorow wɔ ho a "
+"ɛsɛ sɛ ɔstedifoɔ kota wɔn nim sɛ ɔremma mmɛn ne bere ba, ɔde akyɛde so a "
+"ɛfra bɔ ne bere so sɔsia wɔne bɔ mpɔn a ɛyɛ mpim."
+
+#: app/templates/about.html:14
+msgid ""
+"It supports multiple users, customizable schedules, and recurring reminders."
+msgstr "Ɛboaboa amanfoɔ bebree na wɔde asesaɛbea sɛ nhwɛma brɛ wɔn."
+
+#: app/templates/about.html:15
+msgid ""
+"Messages and reminders can be delivered via email, webhooks, or over 100 "
+"third-party services through Apprise."
+msgstr ""
+"Mphɛsɛɛ nyinaa wɔ wɔ krataa wɔ e-mail, webhooks, anaa mpɔnsɛm a ɛyɛ mpɔnsɛ "
+"oba nyansa a ɔyɛ mfiase wɔ ne ho fa so wɔ mfirinhyira mu a ɛyɛ Apprise."
+
+#: app/templates/about.html:16
+msgid ""
+"Users can configure their own SMTP servers to ensure emails and reminders "
+"appear to come directly from them — not from the system administrator."
+msgstr ""
+"Amanfoɔ no hwehwɛ wɔn ara SMTP server sɛ wɔde bɛyɛ yɛyɛde sɛ wɔyɛ ahosɛn sɛ "
+"krataafa wɔmfrɛ nyansa wɔ afidie wɔ benya no — ɛnyɛ wɔ abɔso wura no."
+
+#: app/templates/about.html:17
+msgid ""
+"Sensitive data is encrypted at rest, and all operations are secured with "
+"strong authentication and audit-friendly logging."
+msgstr ""
+"Dihɔ yɛ kama wɔ ɔno na amane ɛyɛ akɔkranne a ɔne ɔno na ahyɛde wɔ anibere "
+"nkwanta ase."
+
+#: app/templates/about.html:18
+msgid ""
+"Built with a modern, reactive technology stack, Grylli is optimized for "
+"responsiveness and works seamlessly across desktop and mobile devices."
+msgstr ""
+"Ne ho ɔyɛfeɛ wɔ fi hɔ ɛma baabi a ɛredi mu Adwuma na ɛho wɔ sesafom a ɛsom "
+"mfirinhyira."
+
+#: app/templates/about.html:23
+msgid "Version:"
+msgstr "Leagan:"
+
+#: app/templates/about.html:26
+msgid "Repository:"
+msgstr "Taisclann:"
+
+#: app/templates/about.html:30
+msgid "GitHub - samcro1967/grylli"
+msgstr "GitHub - samcro1967/grylli"
+
+#: app/templates/help.html:2 app/templates/help.html:5
+#: app/templates/partials/header.html:85
+msgid "Help"
+msgstr "Boa"
+
+#: app/templates/help.html:7
+msgid ""
+"Grylli includes built-in instructions throughout the app to help you "
+"configure and manage your setup."
+msgstr "Grylli wɔ sɛnea yɛkbɔ ho yɛ mpɔnsɛ wɔ won sɛnea wɔde yɛ wɔ ɛna so."
+
+#: app/templates/help.html:8
+msgid ""
+"This page provides an overview of key features and direct links to where "
+"they can be managed."
+msgstr ""
+"Wɔ wɔ mpɔnɔa sɛnea ɛwɔ ne nyansa na wɔdze asɛe yɛn adwumayɛ wɔ sɛ ebiw ho "
+"nkwaohyɛnhyɛm."
+
+#: app/templates/help.html:12 app/templates/messages/list_messages.html:9
+#: app/templates/partials/shared_nav.html:17
+msgid "Notifications"
+msgstr "Amanneɛ"
+
+#: app/templates/help.html:14
+msgid "Create and assign messages"
+msgstr "Cruthaigh teachtaireacht nó ríomhphost."
+
+#: app/templates/admin/index.html:32 app/templates/help.html:17
+#: app/templates/partials/admin_nav.html:56
+msgid "SMTP Settings"
+msgstr "Socruithe SMTP"
+
+#: app/templates/help.html:19
+msgid "Use your own email server"
+msgstr "Fa wɔn ara mfirinhyira yɛ adwumayɛ wɔ email kɔda."
+
+#: app/templates/help.html:22
+msgid "Apprise Integration"
+msgstr "Ceann Scríbe Apprise"
+
+#: app/templates/help.html:24
+msgid "Send notifications to 80+ supported services"
+msgstr "Ka deɛ ɛboa wɔ sɛ wɔde yɛ mpɔnɔa 80+ so wɔ ɔmfiaye mahyia."
+
+#: app/templates/help.html:27
+#: app/templates/messages/assign_destinations.html:41
+#: app/templates/messages/view_message.html:58
+#: app/templates/partials/shared_nav.html:44
+#: app/templates/reminders/assign_destinations.html:39
+#: app/templates/reminders/view_reminder.html:69
+msgid "Webhooks"
+msgstr "Webhooks"
+
+#: app/templates/help.html:29
+msgid "Trigger actions or external workflows"
+msgstr "Ativar ações ou fluxos de trabalho externos"
+
+#: app/templates/email/list_emails.html:9 app/templates/help.html:32
+#: app/templates/partials/shared_nav.html:61
+msgid "Emails"
+msgstr "E-mail"
+
+#: app/templates/help.html:34
+msgid "View and manage secure email messages"
+msgstr "Mfananɛɛ torɔ wia email"
+
+#: app/templates/help.html:38
+msgid "Security"
+msgstr "🔐 Ankasa"
+
+#: app/templates/help.html:39
+msgid "Grylli encrypts sensitive data and logs all key actions for auditing."
+msgstr ""
+"Grylli yɛ de yɛ nyansa a wɔde yɛ mpɔnɔa sɛ wɔde yɛ mpɔnɔa ɛba hɔ wɔ nkuraso."
+
+#: app/templates/index.html:9 app/views/locale.py:95
+msgid "Welcome to Grylli"
+msgstr "Fáilte go Grylli"
+
+#: app/templates/index.html:11
+msgid "Pronounced"
+msgstr "Pronounced"
+
+#: app/templates/index.html:11
+msgid "like “grill-ee”"
+msgstr "cosúil le “grill-ee”"
+
+#: app/templates/index.html:14
+msgid ""
+"Grylli is a secure message scheduling and delivery system designed to ensure"
+" your important messages are delivered — even if you can’t be there to send "
+"them."
+msgstr ""
+"Is córas sceidealaithe agus seachadta teachtaireachtaí slán é Grylli atá "
+"deartha chun a chinntiú go seachadfar do theachtaireachtaí tábhachtacha — "
+"fiú mura bhféadann tú a bheith ann chun iad a sheoladh."
+
+#: app/templates/index.html:17
+msgid ""
+"Whether you’re planning ahead, setting up emergency communication, or "
+"building peace of mind, Grylli helps automate your message delivery via "
+"multiple channels including email, webhooks, and Apprise notifications."
+msgstr ""
+"Cibé an bhfuil tú ag pleanáil romhainn, ag bunú cumarsáide éigeandála, nó ag"
+" tógáil suaimhneas intinne, cabhraíonn Grylli le seachadadh do "
+"theachtaireachta a uathoibriú trí ríomhphost, webhooks, nó fógraí Apprise má"
+" chailleann tú seiceáil isteach."
+
+#: app/templates/index.html:19
+msgid "Getting Started"
+msgstr "Ag Tosú"
+
+#: app/templates/index.html:21
+msgid "Create a message, email, or reminder."
+msgstr "Cruthaigh teachtaireacht nó ríomhphost."
+
+#: app/templates/index.html:22
+msgid "Set your check-in interval and grace period (for messages)."
+msgstr "Socraigh do eatramh seiceáil isteach agus tréimhse grásta."
+
+#: app/templates/index.html:23
+msgid "Assign one or more delivery destinations."
+msgstr "Sann faighteanna seachadta amháin nó níos mó."
+
+#: app/templates/index.html:24
+msgid "Optionally attach files for secure emails."
+msgstr "Roghannaigh comhaid a cheangal le ríomhphoist shlán."
+
+#: app/templates/index.html:25
+msgid "Schedule reminders to send at specific times or on a recurring basis."
+msgstr ""
+"Sceideal meabhrúcháin le seoladh ag amanna sonraithe nó ar bhonn "
+"athfhillteach."
+
+#: app/templates/index.html:26
+msgid "Enable the message or reminder to activate delivery."
+msgstr ""
+"Cumasaigh an teachtaireacht nó an meabhrúchán chun seachadadh a "
+"ghníomhachtú."
+
+#: app/templates/index.html:28
+msgid ""
+"Regularly check in to Grylli to prevent automated delivery; miss a check-in "
+"and Grylli sends your messages as scheduled."
+msgstr ""
+"Nya nsɛm no wɔ Grylli no dabiara sɛnea ɛbɛyɛ a ɛrenyɛ adesua; nso, sɛ wo "
+"ngyaa ho a, Grylli bɛsom nsɛm no sɛnea wɔtrɛw."
+
+#: app/templates/privacy.html:10
+msgid "Privacy Notice"
+msgstr "Amansɛm Foforɔ"
+
+#: app/templates/privacy.html:13
+msgid ""
+"Grylli respects your privacy and is designed to minimize the collection and "
+"storage of personal data."
+msgstr ""
+"Grylli bu wo amansɛm na wɔyɛ adwuma a ɛyɛ pa ma ɛyɛ nketenkete sɛ wɔbɛboaboa"
+" ne di ɔdɔ anaa sɛ wɔbɛdaasɛdeɛ ko."
+
+#: app/templates/privacy.html:14
+msgid ""
+"All data is encrypted where appropriate and remains fully under your control"
+" if you self-host this platform."
+msgstr ""
+"Nsɛm nyinaa a ɛyɛ hyɛ yɛ pɛ sɛ wɔyɛ nhyehyɛɛ ɛne pɛpɛɛso no da wo nsam koraa"
+" sɛ wode yɛ mpɔtaṃyi asoɛe yie."
+
+#: app/templates/privacy.html:17
+msgid "What Data We Collect"
+msgstr "Nsɛm a yɛboaboa"
+
+#: app/templates/privacy.html:19
+msgid "Email address and password hash (for authentication)"
+msgstr "Email kɔbae ɛne password ho nsɛmpɔn (ɛdeɛ yɛde bɛhyehyɛ nsɛm)"
+
+#: app/templates/privacy.html:20
+msgid "Optional MFA secret and recovery codes (encrypted at rest)"
+msgstr "Ɛda MFA kɔbae ɛne ɛhyɛ mmɔ sɛnea ɛyɛ (wɔde akotɔ)"
+
+#: app/templates/privacy.html:21
+msgid "Reminder and message content you configure"
+msgstr "Kaeɛdeɛ ɛne nsɛm a yɛhyehyɛ yɛdeɛ"
+
+#: app/templates/privacy.html:22
+msgid "User-specific settings, SMTP configuration (if provided)"
+msgstr "Nsɛm a wɔfa wo no din ho, SMTP nhyehyɛɛ (sɛ wɔde wɔdeɛ yɛ)"
+
+#: app/templates/privacy.html:25
+msgid "How Your Data Is Used"
+msgstr "Ɛyɛ sɛ wɔde yɛ nsɛm"
+
+#: app/templates/privacy.html:27
+msgid ""
+"Your data is used solely for the purpose of delivering reminders and "
+"messages according to your preferences."
+msgstr ""
+"Wo nsɛm a wɔde ɛyɛ kɛ sɛ wosɛsɛ wɔsoma kaeɛdeɛ ɛne nsɛm sɛnea ɛyɛ wo "
+"abisadeɛɛ soosɔ no."
+
+#: app/templates/privacy.html:28
+msgid ""
+"Grylli does not share, sell, or transmit your personal data to any third "
+"parties."
+msgstr ""
+"Grylli nku wɔdeɛ yɛ, kwankyerɛɛ anaa sɛ wɔdeɛ yɛ nsɛmko wɔ asrama foforɔ kɔ."
+
+#: app/templates/privacy.html:31
+msgid "Your Rights"
+msgstr "Wo ɛyɛ no"
+
+#: app/templates/privacy.html:33
+msgid ""
+"You can export all of your data at any time from the Account Settings page."
+msgstr ""
+"Wo betumi de nsɛm a ɛyɛ kɛ yɛboaboa wɔ w' ho nsɛm wɔ Account Settings hɔ."
+
+#: app/templates/privacy.html:34
+msgid "You may permanently delete your account and all associated data."
+msgstr "Wuntumi mommy wo akawontafunu ase kɔ si wode biara nsɛm ni."
+
+#: app/templates/privacy.html:35
+msgid ""
+"If you are using a self-hosted instance, contact the instance administrator "
+"for data inquiries."
+msgstr ""
+"Sɛ wɔdeɛ yɛ mpɔtaṃyi yɛ, bɔ mpɔtaṃyi soɛɛfo no nyansa sɛ ɛyɛ nsɛm nsɛm no "
+"abisaɛ."
+
+#: app/templates/privacy.html:38
+msgid "Self-Hosting Responsibility"
+msgstr "Mpɔtaṃyi Foforɔ Sua"
+
+#: app/templates/privacy.html:40
+msgid ""
+"If you are running Grylli on your own server, you are responsible for the "
+"storage, processing, and lawful handling of all user data on that instance."
+msgstr ""
+"Sɛ wɔ retwi Grylli wɔ w'ara server so, wɔyɛ kɛ nsɛm hyɛ, ɛyɛ nyansa, na ɛyɛ "
+"ho nsɛm nsɛm no fodua wɔ nsɛm saa so."
+
+#: app/templates/privacy.html:44
+msgid ""
+"This notice was last updated in June 2025 and may evolve to reflect changes "
+"in the software or regulatory landscape."
+msgstr ""
+"Nsɛm a wɔantan wɔ June 2025 na ɛyɛ anaa wɔbɔ nsɛm a ɛyɛ akyɛfo deɛ ɛyɛ wɔ "
+"software anaa wɔ nsɛm a ɛyɛ fapem."
+
+#: app/templates/system_info.html:11
+msgid "📦 Environment Versions"
+msgstr "📦 Nsɛntitiriw Ankasa"
+
+#: app/templates/system_info.html:17
+msgid "Category"
+msgstr "Amansɛn"
+
+#: app/templates/system_info.html:18
+msgid "Tool"
+msgstr "Dwumadie"
+
+#: app/templates/system_info.html:19
+msgid "Version"
+msgstr "Mmɜ"
+
+#: app/templates/system_info.html:25
+msgid "🧠 Python"
+msgstr "🧠 Python"
+
+#: app/templates/system_info.html:26
+msgid "Python"
+msgstr "Python"
+
+#: app/templates/system_info.html:30
+msgid "pip"
+msgstr "pip"
+
+#: app/templates/system_info.html:34
+msgid "SQLite"
+msgstr "SQLite"
+
+#: app/templates/system_info.html:40
+msgid "⚙️ Core"
+msgstr "⚙️ Ahyɛnsode Ankasa"
+
+#: app/templates/system_info.html:47
+msgid "🔐 Security"
+msgstr "🔐 Ankasa"
+
+#: app/templates/system_info.html:48
+msgid "Email Validator"
+msgstr "Email Kyerɛwfo"
+
+#: app/templates/system_info.html:52
+msgid "Cryptography"
+msgstr "Nsɛm"
+
+#: app/templates/system_info.html:57
+msgid "🕰️ Scheduling"
+msgstr "🕰️ Nsɛm"
+
+#: app/templates/system_info.html:58
+msgid "APScheduler"
+msgstr "APScheduler"
+
+#: app/templates/system_info.html:62
+msgid "Apprise (Python)"
+msgstr "Apprise (Python)"
+
+#: app/templates/system_info.html:66
+msgid "Apprise CLI"
+msgstr "Apprise CLI"
+
+#: app/templates/system_info.html:74
+msgid "🌐 Frontend"
+msgstr "🌐 Frontend"
+
+#: app/templates/account/manage_account.html:11
+msgid "Manage Account"
+msgstr "Akonta Bɔ"
+
+#: app/templates/account/manage_account.html:12
+msgid "Update your profile information and password."
+msgstr "Nsɛm wo ho nguankwan ahyɛsɛm ne sũwu."
+
+#: app/templates/account/manage_account.html:41
+#: app/templates/admin/create_user.html:40
+#: app/templates/auth/bootstrap.html:43
+#: app/templates/auth/reset_password.html:42 app/templates/auth/signup.html:42
+msgid "Please enter a valid email address."
+msgstr "Mepa wo kyɛw fa adrɛsɛ bi a ɛyɛ nokore awo."
+
+#: app/templates/account/manage_account.html:62
+#: app/templates/account/manage_account.html:96
+#: app/templates/account/manage_account.html:127
+#: app/templates/auth/reset_password.html:66
+#: app/templates/auth/reset_password.html:97 app/templates/auth/signup.html:65
+#: app/templates/auth/signup.html:95
+msgid "Show/hide password"
+msgstr "Coinnigh chun pasfhocal a thaispeáint"
+
+#: app/templates/account/manage_account.html:89
+#: app/templates/admin/create_user.html:53
+#: app/templates/auth/bootstrap.html:51
+#: app/templates/auth/reset_password.html:58 app/templates/auth/signup.html:58
+msgid "Password must meet all complexity requirements."
+msgstr "Nsɛm no ne nneyɛyɛɛdi bɔ akwan no nyinaa mu."
+
+#: app/templates/account/manage_account.html:141
+#: app/templates/admin/create_user.html:72
+#: app/templates/admin/edit_user.html:67 app/templates/auth/bootstrap.html:69
+#: app/templates/auth/reset_password.html:110
+#: app/templates/auth/signup.html:108
+msgid "Passwords do not match."
+msgstr "Nsɛm ka no nokware di sɔ n'ani."
+
+#: app/templates/account/manage_account.html:147
+msgid "Update Account"
+msgstr "Akonta Bɔ anuonyam"
+
+#: app/templates/account/manage_account.html:151
+#: app/templates/admin/create_user.html:82
+#: app/templates/admin/edit_user.html:97 app/templates/admin/help_form.html:28
+#: app/templates/admin/partials/user_instructions_and_modal.html:62
+#: app/templates/admin/partials/user_table.html:113
+#: app/templates/apprise/create_apprise.html:42
+#: app/templates/apprise/edit_apprise.html:42
+#: app/templates/auth/reset_password.html:121
+#: app/templates/email/assign_smtp.html:46
+#: app/templates/email/attach_files.html:47
+#: app/templates/email/edit_message.html:54
+#: app/templates/email/schedule_email.html:84
+#: app/templates/messages/assign_destinations.html:66
+#: app/templates/messages/create_message.html:55
+#: app/templates/messages/edit_message.html:48
+#: app/templates/messages/schedule_message.html:84
+#: app/templates/mfa/challenge.html:29 app/templates/mfa/settings.html:51
+#: app/templates/reminders/assign_destinations.html:64
+#: app/templates/reminders/assign_email_reminder.html:94
+#: app/templates/reminders/create_reminder.html:49
+#: app/templates/reminders/edit_reminder.html:42
+#: app/templates/reminders/schedule_reminder.html:51
+#: app/templates/user_smtp/create_smtp.html:111
+#: app/templates/user_smtp/edit_smtp.html:125
+#: app/templates/webhook/create_webhook.html:48
+#: app/templates/webhook/edit_webhook.html:48
+msgid "Cancel"
+msgstr "Twiw"
+
+#: app/templates/account/manage_account.html:159
+#: app/templates/admin/create_user.html:90
+#: app/templates/admin/edit_user.html:81 app/templates/auth/bootstrap.html:83
+#: app/templates/auth/reset_password.html:128
+#: app/templates/auth/signup.html:132
+msgid "Minimum 8 characters"
+msgstr "Nhyehyɛ 8 ati"
+
+#: app/templates/account/manage_account.html:160
+#: app/templates/admin/create_user.html:91
+#: app/templates/admin/edit_user.html:82 app/templates/auth/bootstrap.html:84
+#: app/templates/auth/reset_password.html:129
+#: app/templates/auth/signup.html:133
+msgid "At least one uppercase letter"
+msgstr "Fa beae ma ɛyɛ nokware"
+
+#: app/templates/account/manage_account.html:161
+#: app/templates/admin/create_user.html:92
+#: app/templates/admin/edit_user.html:83 app/templates/auth/bootstrap.html:85
+#: app/templates/auth/reset_password.html:130
+#: app/templates/auth/signup.html:134
+msgid "At least one lowercase letter"
+msgstr "Fa sɛ aba kwankyerɛ wɔ n'adekye"
+
+#: app/templates/account/manage_account.html:162
+#: app/templates/admin/create_user.html:93
+#: app/templates/admin/edit_user.html:84 app/templates/auth/bootstrap.html:86
+#: app/templates/auth/reset_password.html:131
+#: app/templates/auth/signup.html:135
+msgid "At least one number"
+msgstr "Fa sɛ yie anaa"
+
+#: app/templates/account/manage_account.html:163
+#: app/templates/admin/create_user.html:94
+#: app/templates/auth/bootstrap.html:87
+#: app/templates/auth/reset_password.html:132
+#: app/templates/auth/signup.html:136
+msgid "At least one special character (e.g., !@#$%)"
+msgstr "Ar a laghad aon charachtar speisialta (m.sh., !@#$%)"
+
+#: app/templates/account/manage_account.html:169
+msgid "Download My Data"
+msgstr "Download Mo Nsɛm"
+
+#: app/templates/account/manage_account.html:171
+msgid ""
+"Download all your account data as a JSON file. This includes your reminders,"
+" messages, email settings, and more. The file is for your records only and "
+"cannot be imported back. Protect it as it may contain sensitive information."
+msgstr ""
+"Download nsɛm nyinaa a ɛyɛ mi nsɛm kɛ wɔ JSON file. Eyi fa kaeɛdeɛ, nsɛm, "
+"email nsɛm, ne akyedeɛ. Nsɛm saa ne ɔw' nsa hona wo bɛyɛye ne ɛnyɛ wɔntitɛm."
+
+#: app/templates/account/manage_account.html:175
+msgid "Download My Data (JSON)"
+msgstr "Download Mo Nsɛm (JSON)"
+
+#: app/templates/account/manage_account.html:179
+msgid "Danger Zone"
+msgstr "Efurum Nsaanhu"
+
+#: app/templates/account/manage_account.html:180
+msgid "Deleting your account is permanent and cannot be undone."
+msgstr "Wogyii wo akawontafunu ho tum, na wɔrentumi nsesa."
+
+#: app/templates/account/manage_account.html:185
+msgid "Delete My Account"
+msgstr "Akonta Bɔ anuonyam"
+
+#: app/templates/account/translations.html:8
+msgid "Translations - Grylli"
+msgstr "Aistriúcháin - Grylli"
+
+#: app/templates/account/translations.html:17
+#: app/templates/partials/header.html:102
+msgid "Translations"
+msgstr "Aistriúcháin"
+
+#: app/templates/account/translations.html:20
+msgid "Grylli currently supports multiple languages and more will be added."
+msgstr ""
+"Tacaíonn Grylli faoi láthair le teangacha iolracha agus cuirfear tuilleadh "
+"leo."
+
+#: app/templates/account/translations.html:21
+msgid "Many of the translations were performed with assistance from ChatGPT."
+msgstr "Tá cuid mhór de na haistriúcháin déanta le cúnamh ó ChatGPT."
+
+#: app/templates/account/translations.html:22
+msgid ""
+"If you find a translation issue or want to suggest improvements, your input "
+"is welcome!"
+msgstr ""
+"Má aimsíonn tú ceist aistriúcháin nó má theastaíonn uait feabhsuithe a "
+"mholadh, tá do ionchur fáilte roimh chách!"
+
+#: app/templates/account/translations.html:28
+msgid "How to request translation updates"
+msgstr "Conas nuashonruithe aistriúcháin a iarraidh"
+
+#: app/templates/account/translations.html:30
+msgid "To contribute to translations, please use the following guidelines:"
+msgstr ""
+"Chun cur le haistriúcháin, le do thoil bain úsáid as na treoirlínte seo a "
+"leanas:"
+
+#: app/templates/account/translations.html:43
+msgid "Contribute missing or improved translations:"
+msgstr "Aimsíodh aistriúchán ar iarraidh?"
+
+#: app/templates/account/translations.html:63
+msgid "Open the relevant .po translation file for your language."
+msgstr "Oscail an comhad aistriúcháin JSON do do theanga. Mar shampla:"
+
+#: app/templates/account/translations.html:67
+msgid ""
+"Find untranslated or incomplete entries and add or improve translations."
+msgstr ""
+"Hwehwɛ nsɛm a wonnkɔɔ nsɛm mu anaa nea esii nan so na nsiesie anaa kɔ so wɔ "
+"nsɛm no mu."
+
+#: app/templates/account/translations.html:68
+msgid "You may use a PO file editor or a text editor."
+msgstr "Wɔtumi de PO file editor anaa text editor."
+
+#: app/templates/account/translations.html:69
+msgid "Copy the file path and the snippet of your changes."
+msgstr "Kɔpyɛ fael kwan na faako a sesie mu."
+
+#: app/templates/account/translations.html:70
+msgid "Paste the snippet directly into a new GitHub issue for review."
+msgstr ""
+"Greamaigh an sliocht cóipeáilte go díreach isteach i trácht na ceiste "
+"GitHub."
+
+#: app/templates/account/translations.html:72
+msgid "Please do not upload the full .po file to avoid merge conflicts."
+msgstr ""
+"Ná uaslódáil an comhad iomlán .po chun coinbhleachtaí cumaisc a sheachaint."
+
+#: app/templates/account/translations.html:85
+msgid "Improving existing translations:"
+msgstr "Feabhsú aistriúcháin atá ann cheana:"
+
+#: app/templates/account/translations.html:104
+msgid "Open the relevant .po file for the translation you want to improve."
+msgstr ""
+"Oscail an comhad .po ábhartha don aistriúchán ar mhaith leat feabhsú air."
+
+#: app/templates/account/translations.html:106
+msgid "For example:"
+msgstr "Mar shampla:"
+
+#: app/templates/account/translations.html:110
+msgid ""
+"Find the phrase(s) and its existing translation(s) you want to improve."
+msgstr ""
+"Faigh an frása(í) agus a aistriúchán(na) atá ann cheana is mian leat a "
+"fheabhsú."
+
+#: app/templates/account/translations.html:111
+msgid "Update the phrase(s)."
+msgstr "Nuashonraigh an frása/frásaí."
+
+#: app/templates/account/translations.html:112
+msgid "Copy the file name and path into the issue."
+msgstr "Cóipeáil ainm an chomhaid agus cosán isteach san fhadhb."
+
+#: app/templates/account/translations.html:114
+msgid "Paste the copied snippet directly into the GitHub issue comment."
+msgstr ""
+"Greamaigh an sliocht cóipeáilte go díreach isteach i trácht na ceiste "
+"GitHub."
+
+#: app/templates/account/translations.html:115
+msgid "Do not upload the full .po file to avoid merge conflicts."
+msgstr ""
+"Ná uaslódáil an comhad iomlán .po chun coinbhleachtaí cumaisc a sheachaint."
+
+#: app/templates/account/translations.html:118
+msgid "Example snippet:"
+msgstr "Sampla smután:"
+
+#: app/templates/account/translations.html:137
+msgid "Report missing translations not yet discovered:"
+msgstr "Tuarascáil aistriúcháin ar iarraidh nach bhfuil faighte fós:"
+
+#: app/templates/account/translations.html:154
+msgid ""
+"If you see text in the app that appears untranslated or missing, please "
+"report it to us."
+msgstr ""
+"Má fheiceann tú téacs sa aip atá le feiceáil neamh-aistrithe nó ar iarraidh,"
+" cuir in iúl dúinn é le do thoil."
+
+#: app/templates/account/translations.html:155
+msgid "Provide the exact English phrase as it appears on the screen."
+msgstr "Tabhair an abairt Bhéarla mar a thaispeántar ar an scáileán."
+
+#: app/templates/account/translations.html:156
+msgid ""
+"Include the page or section where you saw the phrase (e.g., Apprise page, "
+"Account Page, etc.)."
+msgstr ""
+"Cuir san áireamh an leathanach nó an rannóg ina bhfaca tú an frása (m.sh., "
+"Leathanach Socruithe, Rannóg Cuntais)."
+
+#: app/templates/account/translations.html:157
+msgid ""
+"Submit this information via a new GitHub issue so we can add it to the "
+"translation files"
+msgstr ""
+"Cuir isteach an fhaisnéis seo trí **GitHub issue** nua ionas gur féidir linn"
+" í a chur leis na comhaid aistriúcháin agus í a fhoilsiú do Babel."
+
+#: app/templates/account/translations.html:166
+msgid "Found a missing translation?"
+msgstr "Aimsíodh aistriúchán ar iarraidh?"
+
+#: app/templates/account/translations.html:171
+msgid ""
+"This link will create a new GitHub issue pre-filled with a language code."
+msgstr "Sa link yi bɛbɔ GitHub isue foforɔ a wɔde kasa code a wɔdɔ ama ho."
+
+#: app/templates/account/translations.html:172
+msgid "Report it by opening a new GitHub issue"
+msgstr "Tuairisc é trí chás nua GitHub a oscailt."
+
+#: app/templates/account/translations.html:175
+msgid "Please specify the language code and exact phrase when reporting."
+msgstr "Mesrɛ fa kasa code no ne nsɛm no pɔtwerɛ ho sɛ worebɔ amanneɛ."
+
+#: app/templates/account/translations.html:176
+msgid "Thank you for helping us make Grylli better!"
+msgstr "Go raibh maith agat as cabhrú linn Grylli a dhéanamh níos fearr!"
+
+#: app/templates/admin/create_user.html:14
+msgid "Create New User"
+msgstr "Cruthaigh Úsáideoir Nua"
+
+#: app/templates/admin/create_user.html:15
+msgid "Fill out the form to add a new user."
+msgstr "Líon isteach an fhoirm chun úsáideoir nua a chur leis."
+
+#: app/templates/admin/create_user.html:21
+#: app/templates/admin/edit_user.html:17 app/templates/auth/bootstrap.html:24
+msgid "Please fix the following errors:"
+msgstr "Fíjl riyas zíven úrootx:"
+
+#: app/templates/admin/create_user.html:78
+#: app/templates/admin/edit_user.html:93
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "Create User"
+msgstr "Cruthaigh Úsáideoir"
+
+#: app/templates/admin/edit_user.html:10
+#: app/templates/admin/partials/user_card.html:20
+#: app/templates/admin/partials/user_table.html:26
+msgid "Edit User"
+msgstr "Cuir in Eagar Úsáideoir"
+
+#: app/templates/admin/edit_user.html:55 app/templates/admin/edit_user.html:74
+msgid "Hold to show password"
+msgstr "Coinnigh chun pasfhocal a thaispeáint"
+
+#: app/templates/admin/edit_user.html:85
+#, python-format
+msgid "At least one special character (e.g., !@#$%%)"
+msgstr "Ar a laghad carachtar speisialta amháin (m.sh., !@#$%%)"
+
+#: app/templates/admin/help.html:4 app/templates/auth/login.html:72
+msgid "Admin Help"
+msgstr "Painéal Riaracháin"
+
+#: app/templates/admin/help.html:7
+msgid "Reset Admin Password"
+msgstr "San Kańciel Kasa"
+
+#: app/templates/admin/help.html:9
+msgid ""
+"If you've forgotten the admin password, you can reset it using the following"
+" Docker command:"
+msgstr ""
+"Sɛ wo werɛ afi admin anaa a, wubetumi ayɛ sɛnea ɛbɛyɛ a wobɛtumi asiesie no "
+"bio deɛ edikan Docker nsɛmɛ yi wɔ mu:"
+
+#: app/templates/admin/help.html:15
+msgid ""
+"This script will prompt you to enter a new password for the admin user. You "
+"must run it from the host system where the Grylli container is running."
+msgstr ""
+"Skript yi bɛyɛ enyea wo yɛ akyire yɛne admin fɔnyin bio. Ɛsɛ sɛ woyi ehost "
+"no yɛ anaa a wɔbɛboa firi Grylli container wɔ mu."
+
+#: app/templates/admin/help.html:18
+msgid "After resetting, you can log in with the new password immediately."
+msgstr "Sɛ wobɛsan yɛ a, wobɛtumi ɛdynto wɔ adminɛ nyɔnbɔɔɔ no wɔ atra nka."
+
+#: app/templates/admin/help.html:24
+msgid "Return to Login"
+msgstr "San bra Dashboard"
+
+#: app/templates/admin/help_form.html:6
+msgid "Admin Help Access"
+msgstr "Admin Boa Access"
+
+#: app/templates/admin/help_form.html:9
+msgid "Enter your Ferret Key to unlock admin-only help documentation."
+msgstr "Fa wo Ferret Key hyew admin ntii nsɛmboa krataa werɛ fi."
+
+#: app/templates/admin/help_form.html:34
+msgid "How to Find Your FERRET_KEY"
+msgstr "Sɛn na wɔbɛ hunya wo FERRET_KEY"
+
+#: app/templates/admin/help_form.html:36
+msgid "The FERRET_KEY is set as an environment variable when running Grylli."
+msgstr "FERRET_KEY ɛ sɛɛ wɛma nni ɛyin wia honam wɔ running Grylli."
+
+#: app/templates/admin/help_form.html:39
+msgid "Option 1: Check docker-compose.yml"
+msgstr "Siberee 1: Kyerɛ docker-compose.yml"
+
+#: app/templates/admin/help_form.html:46
+msgid "Option 2: Use docker inspect"
+msgstr "Siberee 2: Di dwuma docker inspect"
+
+#: app/templates/admin/help_form.html:52
+msgid "This shows the FERRET_KEY as passed to the container at runtime."
+msgstr "Nni dɛ FERRET_KEY wɔma container wɔ ahyɛ ɛlemu so."
+
+#: app/templates/admin/index.html:10
+msgid "Admin Panel"
+msgstr "Painéal Riaracháin"
+
+#: app/templates/admin/index.html:12
+msgid ""
+"Welcome to the Grylli Admin Panel. Use the links below to manage the system."
+msgstr ""
+"Fáilte go dtí Painéal Riaracháin Grylli. Úsáid na naisc thíos chun an córas "
+"a bhainistiú."
+
+#: app/templates/admin/index.html:17
+msgid "Manage Users"
+msgstr "Bainistigh Úsáideoirí"
+
+#: app/templates/admin/index.html:18
+msgid "Create, edit, enable/disable, or delete user accounts."
+msgstr "Mpɔnɔa, siesie, wopɔnɔnɔa wɔn dɛn wɔ wɔn hu wɔ adwumayɛ."
+
+#: app/templates/admin/index.html:22
+#: app/templates/admin/system_settings.html:10
+#: app/templates/partials/admin_nav.html:52
+msgid "System Settings"
+msgstr "Socruithe Córas"
+
+#: app/templates/admin/index.html:23
+msgid "View  system-wide environment values."
+msgstr ""
+"Nneɛma wɔsystem ankosɛm ne mpɔnsɛnyansa university ɛyɛ adwumayɛ brodɔma."
+
+#: app/templates/admin/index.html:27 app/templates/partials/admin_nav.html:42
+msgid "Backups"
+msgstr "Cúltacaí"
+
+#: app/templates/admin/index.html:28
+msgid "Create and delete database backups."
+msgstr "Cúltacaí Bunachar Sonraí"
+
+#: app/templates/admin/index.html:33
+msgid "View and test global SMTP settings."
+msgstr "Theip ar sheoladh ríomhphoist tástála. Seiceáil socruithe SMTP."
+
+#: app/templates/admin/index.html:39
+msgid "View Admin Guide / README on GitHub"
+msgstr "Hu wɔn na ɔbasa ase mpɔnsɛm wɔ GitHub"
+
+#: app/templates/admin/index.html:40
+msgid "Includes setup instructions, integrations, and troubleshooting."
+msgstr "Nneɛma wɔ ɔnosɔɔ nkɔsoɔ no, yɛ akan mpoanfutre na yɛn pople."
+
+#: app/templates/admin/index.html:44
+msgid "⚠️ Admin Tips"
+msgstr "⚠️ Leideanna Riaracháin"
+
+#: app/templates/admin/index.html:46
+msgid "Ensure the data folder (database) is backed up on your host"
+msgstr ""
+"Déan cinnte go bhfuil fillteán sonraí (bunachar sonraí) tacaíocht suas ar do"
+" óstach."
+
+#: app/templates/admin/index.html:48
+msgid ""
+"The uploads folder is not per user.  If required per user, you will ndd to "
+"create subdirectoried per user and setup permissions so users can only see "
+"their own folder."
+msgstr ""
+"Níl an fillteán uaslódálacha in aghaidh úsáideora. Más gá in aghaidh "
+"úsáideora, beidh ort fo-fhillteáin a chruthú in aghaidh úsáideora agus "
+"ceadanna a chur ar bun ionas gur féidir le húsáideoirí a bhfilleán féin a "
+"fheiceáil amháin."
+
+#: app/templates/admin/index.html:51
+msgid ""
+"To restore a backup: stop the container, replace the data/grylli.db with one"
+" from the backups folder, and restart the container."
+msgstr ""
+"Chun cóip chúltaca a athbhunú: stad an coimeádán, cuir an data/grylli.db in "
+"ionad ceann ón bhfillteán cúltacaí, agus atosú an coimeádán."
+
+#: app/templates/admin/list_backups.html:11
+msgid "Database Backups"
+msgstr "Cúltacaí Bunachar Sonraí"
+
+#: app/templates/admin/list_backups.html:13
+msgid "Create Backup"
+msgstr "Cruthaigh Cúltaca"
+
+#: app/templates/admin/list_backups.html:21
+msgid "Filename"
+msgstr "Ainm comhaid"
+
+#: app/templates/admin/list_backups.html:22
+#: app/templates/admin/partials/user_table.html:14
+#: app/templates/apprise/list_apprise.html:62
+#: app/templates/email/list_emails.html:60
+#: app/templates/messages/list_messages.html:60
+#: app/templates/reminders/list_reminders.html:60
+#: app/templates/user_smtp/list_smtp.html:59
+#: app/templates/webhook/list_webhooks.html:63
+msgid "Actions"
+msgstr "Gníomhartha"
+
+#: app/templates/admin/list_backups.html:32
+msgid "Delete this backup?"
+msgstr "Scrios an cúltaca seo?"
+
+#: app/templates/admin/list_backups.html:32
+#: app/templates/apprise/list_apprise.html:95
+#: app/templates/apprise/list_apprise.html:99
+#: app/templates/apprise/list_apprise.html:150
+#: app/templates/apprise/list_apprise.html:154
+#: app/templates/email/list_emails.html:124
+#: app/templates/email/list_emails.html:128
+#: app/templates/email/list_emails.html:226
+#: app/templates/email/list_emails.html:230
+#: app/templates/messages/list_messages.html:112
+#: app/templates/messages/list_messages.html:116
+#: app/templates/messages/list_messages.html:198
+#: app/templates/messages/list_messages.html:202
+#: app/templates/reminders/list_reminders.html:107
+#: app/templates/reminders/list_reminders.html:113
+#: app/templates/reminders/list_reminders.html:192
+#: app/templates/reminders/list_reminders.html:198
+#: app/templates/user_smtp/list_smtp.html:101
+#: app/templates/user_smtp/list_smtp.html:169
+#: app/templates/webhook/list_webhooks.html:102
+#: app/templates/webhook/list_webhooks.html:161
+msgid "Delete"
+msgstr "Scrios"
+
+#: app/templates/admin/list_backups.html:41
+msgid "No backups found."
+msgstr "Níor aimsíodh cúltacaí."
+
+#: app/templates/admin/list_backups.html:44
+msgid ""
+"Backups contain your full app data. Store securely. Sensitive data is "
+"encrypted in the DB by default."
+msgstr ""
+"Tá cúltacaí ar fad de shonraí d’aip ann. Stóráil go slán. Tá sonraí íogaire "
+"criptithe sa DB de réir réamhshocraithe."
+
+#: app/templates/admin/smtp_config.html:28
+#: app/templates/admin/system_config.html:22
+msgid "System Configuration"
+msgstr "Cumraíocht an Chórais"
+
+#: app/templates/admin/smtp_config.html:33
+#: app/templates/admin/system_config.html:26
+#: app/templates/admin/system_settings.html:15
+msgid "Key"
+msgstr "Eochair"
+
+#: app/templates/admin/smtp_config.html:34
+#: app/templates/admin/system_config.html:27
+#: app/templates/admin/system_settings.html:16
+msgid "Value"
+msgstr "Luach"
+
+#: app/templates/admin/smtp_config.html:35
+#: app/templates/admin/system_config.html:28
+msgid "Sensitive"
+msgstr "Íogair"
+
+#: app/templates/admin/smtp_config.html:36
+#: app/templates/admin/system_config.html:29
+msgid "Editable"
+msgstr "In-eagarthóireacht"
+
+#: app/templates/admin/smtp_config.html:50
+#: app/templates/admin/smtp_config.html:51
+#: app/templates/admin/system_config.html:45
+#: app/templates/admin/system_config.html:46
+#: app/templates/email/view_config.html:60
+msgid "Yes"
+msgstr "Sea"
+
+#: app/templates/admin/smtp_config.html:50
+#: app/templates/admin/smtp_config.html:51
+#: app/templates/admin/system_config.html:45
+#: app/templates/admin/system_config.html:46
+#: app/templates/email/view_config.html:60
+msgid "No"
+msgstr "Níl"
+
+#: app/templates/admin/smtp_config.html:63
+#: app/templates/admin/system_config.html:55
+msgid "Send Test Email"
+msgstr "Seol Ríomhphost Tástála"
+
+#: app/templates/admin/system_config.html:39
+msgid "decrypted"
+msgstr "Cruthaithe"
+
+#: app/templates/admin/partials/user_card.html:12
+msgid "Email:"
+msgstr "Ríomhphost:"
+
+#: app/templates/admin/partials/user_card.html:15
+msgid "Role:"
+msgstr "Ról:"
+
+#: app/templates/admin/partials/user_card.html:27
+#: app/templates/admin/partials/user_table.html:34
+msgid "Change Role"
+msgstr "Sesa Akwa"
+
+#: app/templates/admin/partials/user_card.html:29
+#: app/templates/admin/partials/user_table.html:36
+msgid "You cannot change your own role"
+msgstr "Ní féidir leat do stádas cumasaithe féin a athrú."
+
+#: app/templates/admin/partials/user_card.html:36
+#: app/templates/admin/partials/user_table.html:43
+msgid "Are you sure you want to reset MFA for this user?"
+msgstr "Wote nsɛm sɛ rebue MFA ama ɔyɛfo yi no?"
+
+#: app/templates/admin/partials/user_card.html:39
+#: app/templates/admin/partials/user_table.html:46
+msgid "Reset MFA"
+msgstr "San Kańciel Kasa"
+
+#: app/templates/admin/partials/user_card.html:51
+#: app/templates/admin/partials/user_table.html:58
+msgid "Delete user"
+msgstr "Scrios úsáideoir"
+
+#: app/templates/admin/partials/user_card.html:55
+#: app/templates/admin/partials/user_table.html:61
+msgid "Delete User"
+msgstr "Scrios Úsáideoir"
+
+#: app/templates/admin/partials/user_card.html:58
+#: app/templates/admin/partials/user_table.html:65
+msgid "You cannot disable yourself"
+msgstr "Ní féidir leat tú féin a dhíchumasú."
+
+#: app/templates/admin/partials/user_card.html:65
+#: app/templates/admin/partials/user_table.html:72
+msgid "Disable"
+msgstr "Díchumasaigh"
+
+#: app/templates/admin/partials/user_card.html:65
+#: app/templates/admin/partials/user_table.html:72
+msgid "Enable"
+msgstr "Cumasaigh"
+
+#: app/templates/admin/partials/user_header.html:6
+#: app/templates/partials/admin_nav.html:47
+msgid "Users"
+msgstr "Úsáideoirí"
+
+#: app/templates/admin/partials/user_header.html:12
+#: app/templates/admin/partials/user_header.html:13
+#: app/templates/apprise/apprise_config.html:10
+#: app/templates/apprise/apprise_config.html:11
+#: app/templates/apprise/list_apprise.html:16
+#: app/templates/apprise/list_apprise.html:17
+#: app/templates/email/list_emails.html:15
+#: app/templates/email/list_emails.html:16
+#: app/templates/messages/list_messages.html:16
+#: app/templates/messages/list_messages.html:17
+#: app/templates/reminders/list_reminders.html:15
+#: app/templates/reminders/list_reminders.html:16
+#: app/templates/user_smtp/list_smtp.html:14
+#: app/templates/user_smtp/list_smtp.html:17
+#: app/templates/webhook/list_webhooks.html:16
+#: app/templates/webhook/list_webhooks.html:17
+#: app/templates/webhook/webhook_config.html:10
+#: app/templates/webhook/webhook_config.html:11
+msgid "Table View"
+msgstr "Amharc Tábla"
+
+#: app/templates/admin/partials/user_header.html:26
+#: app/templates/admin/partials/user_header.html:27
+#: app/templates/apprise/apprise_config.html:24
+#: app/templates/apprise/apprise_config.html:25
+#: app/templates/apprise/list_apprise.html:30
+#: app/templates/apprise/list_apprise.html:31
+#: app/templates/email/list_emails.html:29
+#: app/templates/email/list_emails.html:30
+#: app/templates/messages/list_messages.html:30
+#: app/templates/messages/list_messages.html:31
+#: app/templates/reminders/list_reminders.html:29
+#: app/templates/reminders/list_reminders.html:30
+#: app/templates/user_smtp/list_smtp.html:27
+#: app/templates/user_smtp/list_smtp.html:30
+#: app/templates/webhook/list_webhooks.html:30
+#: app/templates/webhook/list_webhooks.html:31
+#: app/templates/webhook/webhook_config.html:24
+#: app/templates/webhook/webhook_config.html:25
+msgid "Card View"
+msgstr "Radharc Cárta"
+
+#: app/templates/admin/partials/user_header.html:45
+msgid "Add User"
+msgstr "Cuir Úsáideoir"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:9
+#: app/templates/email/attach_files.html:54
+#: app/templates/email/list_emails.html:255
+#: app/templates/messages/list_messages.html:223
+#: app/templates/reminders/list_reminders.html:218
+#: app/templates/reminders/schedule_reminder.html:56
+msgid "Hide Instructions"
+msgstr "Fola Treoracha"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:9
+msgid "How to manage users"
+msgstr "Conas úsáideoirí a bhainistiú"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "Click"
+msgstr "Cliceáil"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+msgid "➕ Add User"
+msgstr "➕ Cuir Úsáideoir"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+msgid "to open the new user form."
+msgstr "chun an fhoirm úsáideora nua a oscailt."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:18
+msgid "Enter a unique username, valid email address, and strong password."
+msgstr ""
+"Iontráil ainm úsáideora uathúil, seoladh ríomhphoist bailí, agus focal faire"
+" láidir."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "Select the appropriate"
+msgstr "Roghnaigh an cuí"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "role"
+msgstr "ról"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "or"
+msgstr "Calafort"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "to save."
+msgstr "chun a shábháil."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:25
+msgid "To edit a user, click ✏️ and update their info."
+msgstr ""
+"Chun úsáideoir a chur in eagar, cliceáil ar ✏️ agus nuashonraigh a n-eolas."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:26
+msgid "To delete a user, click 🗑️ and confirm the deletion."
+msgstr "Chun úsáideoir a scriosadh, cliceáil 🗑️ agus deimhnigh an scriosadh."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:28
+msgid "To disable or enable a user, click 🔴 or 🟢."
+msgstr "Chun úsáideoir a dhíchumasú nó a chumasú, cliceáil 🔴 nó 🟢."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:30
+msgid "🟢 = User is enabled and can log in."
+msgstr "🟢 = Tá an t-úsáideoir cumasaithe agus is féidir leis logáil isteach."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:31
+msgid "🔴 = User is disabled and cannot log in."
+msgstr "🔴 = Tá an t-úsáideoir díchumasaithe agus ní féidir logáil isteach."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:32
+msgid "⚪ = You cannot disable your own account."
+msgstr "⚪ = Ní féidir leat do chuntas féin a dhíchumasú."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:43
+#: app/templates/admin/partials/user_table.html:91
+msgid "Assign Role for"
+msgstr "Cinn Scríbe a Chur i Leith"
+
+#: app/templates/admin/partials/user_table.html:10
+msgid "ID"
+msgstr "ID"
+
+#: app/templates/admin/partials/user_table.html:11
+#: app/templates/user_smtp/list_smtp.html:55
+msgid "Username"
+msgstr "Ainm úsáideora"
+
+#: app/templates/admin/partials/user_table.html:12
+msgid "Email"
+msgstr "Ríomhphost"
+
+#: app/templates/admin/partials/user_table.html:13
+msgid "Role"
+msgstr "Ról"
+
+#: app/templates/apprise/apprise_config.html:3
+#: app/templates/apprise/list_apprise.html:9
+#: app/templates/messages/assign_destinations.html:22
+#: app/templates/reminders/assign_destinations.html:20
+msgid "Apprise Destinations"
+msgstr "Ceann Scríbe Apprise"
+
+#: app/templates/apprise/apprise_config.html:43
+#: app/templates/webhook/list_webhooks.html:49
+#: app/templates/webhook/webhook_config.html:43
+msgid "Add Webhook"
+msgstr "Cuir Imeallbhog"
+
+#: app/templates/apprise/apprise_config.html:43
+#: app/templates/apprise/list_apprise.html:49
+#: app/templates/webhook/list_webhooks.html:49
+#: app/templates/webhook/webhook_config.html:43
+msgid "Add Destination"
+msgstr "Cuir Ceann Scríbe leis"
+
+#: app/templates/apprise/create_apprise.html:10
+msgid "Create Apprise Destination"
+msgstr "Cruthaigh Ceann Scríbe Apprise"
+
+#: app/templates/apprise/create_apprise.html:38
+#: app/templates/apprise/edit_apprise.html:38
+#: app/templates/user_smtp/create_smtp.html:107
+#: app/templates/webhook/create_webhook.html:44
+#: app/templates/webhook/edit_webhook.html:44
+msgid "Create Destination"
+msgstr "Cruthaigh Ceann Scríbe"
+
+#: app/templates/apprise/create_apprise.html:47
+#: app/templates/apprise/edit_apprise.html:47
+msgid "Need help with Apprise URLs? See the"
+msgstr "An dteastaíonn cúnamh uait le URLanna Apprise? Féach ar an"
+
+#: app/templates/apprise/create_apprise.html:51
+#: app/templates/apprise/edit_apprise.html:51
+msgid "Apprise Notification Services documentation"
+msgstr "doiciméadú ar Sheirbhísí Fógra Apprise"
+
+#: app/templates/apprise/edit_apprise.html:10
+msgid "Edit Apprise Destination"
+msgstr "Cuir Ceann Scríbe Apprise in Eagar"
+
+#: app/templates/apprise/list_apprise.html:49
+msgid "Add Apprise"
+msgstr "Cuir Apprise leis"
+
+#: app/templates/apprise/list_apprise.html:58
+#: app/templates/email/edit_message.html:21
+#: app/templates/email/list_emails.html:56
+#: app/templates/email/view_config.html:14
+#: app/templates/messages/create_message.html:29
+#: app/templates/messages/edit_message.html:23
+#: app/templates/messages/list_messages.html:57
+#: app/templates/messages/view_message.html:14
+#: app/templates/reminders/create_reminder.html:23
+#: app/templates/reminders/edit_reminder.html:17
+#: app/templates/reminders/list_reminders.html:56
+#: app/templates/reminders/view_reminder.html:13
+#: app/templates/user_smtp/list_smtp.html:52
+#: app/templates/webhook/list_webhooks.html:58
+msgid "Label"
+msgstr "Lipéad"
+
+#: app/templates/apprise/list_apprise.html:59
+msgid "URL"
+msgstr "URL"
+
+#: app/templates/apprise/list_apprise.html:61
+#: app/templates/email/list_emails.html:59
+#: app/templates/messages/list_messages.html:59
+#: app/templates/messages/view_message.html:36
+#: app/templates/reminders/view_reminder.html:47
+#: app/templates/webhook/list_webhooks.html:62
+msgid "Created At"
+msgstr "Cruthaithe Ag"
+
+#: app/templates/apprise/list_apprise.html:77
+#: app/templates/apprise/list_apprise.html:132
+#: app/templates/user_smtp/list_smtp.html:79
+#: app/templates/user_smtp/list_smtp.html:147
+#: app/templates/webhook/list_webhooks.html:79
+#: app/templates/webhook/list_webhooks.html:138
+msgid "Edit"
+msgstr "Cuir in Eagar"
+
+#: app/templates/apprise/list_apprise.html:80
+#: app/templates/apprise/list_apprise.html:135
+#: app/templates/user_smtp/list_smtp.html:82
+#: app/templates/user_smtp/list_smtp.html:150
+msgid "Cannot edit while in use"
+msgstr "Ɛnte sɛɛ a - ɛmfata sɛ wɔsesa ɛwɔ mu adwumayɛ mu"
+
+#: app/templates/apprise/list_apprise.html:88
+#: app/templates/apprise/list_apprise.html:143
+#: app/templates/webhook/list_webhooks.html:91
+#: app/templates/webhook/list_webhooks.html:150
+msgid "Test"
+msgstr "Tástáil"
+
+#: app/templates/apprise/list_apprise.html:103
+#: app/templates/apprise/list_apprise.html:158
+#: app/templates/user_smtp/list_smtp.html:106
+#: app/templates/user_smtp/list_smtp.html:174
+msgid "Cannot delete while in use"
+msgstr "Ɛnte sɛɛ a - ɛmfata sɛ wɔpɔ mu adwumayɛ mu"
+
+#: app/templates/apprise/list_apprise.html:119
+msgid "URL:"
+msgstr "URL:"
+
+#: app/templates/apprise/list_apprise.html:122
+#: app/templates/user_smtp/list_smtp.html:137
+#: app/templates/webhook/list_webhooks.html:128
+msgid "Enabled:"
+msgstr "Cumasaíodh:"
+
+#: app/templates/apprise/list_apprise.html:125
+#: app/templates/user_smtp/list_smtp.html:140
+#: app/templates/webhook/list_webhooks.html:131
+msgid "Created:"
+msgstr "Cruthaithe:"
+
+#: app/templates/auth/bootstrap.html:14
+msgid "Create Admin Account"
+msgstr "Cruthaigh Cuntas Riarthóra"
+
+#: app/templates/auth/bootstrap.html:16
+msgid "Let’s get started by creating your first admin account."
+msgstr "Tosaigh trí do chéad chuntas riarthóra a chruthú."
+
+#: app/templates/auth/bootstrap.html:75
+msgid "Create Admin"
+msgstr "Cruthaigh Riarthóir"
+
+#: app/templates/auth/forgot_password.html:12
+msgid "Forgot Password"
+msgstr "Pasfhocal Dearmadta"
+
+#: app/templates/auth/forgot_password.html:15
+msgid ""
+"Enter your username and email. We'll send you a link to reset your password."
+msgstr ""
+"Cuir isteach d'ainm úsáideora agus do r-phost. Seolfaimid nasc chugat chun "
+"do phasfhocal a athshocrú."
+
+#: app/templates/auth/forgot_username.html:12
+msgid "Forgot Username"
+msgstr "Ainm Úsáideora Dearmadta"
+
+#: app/templates/auth/forgot_username.html:15
+msgid "Enter your email address, and we'll send you your username."
+msgstr ""
+"Cuir isteach do sheoladh ríomhphoist, agus seolfaimid d'ainm úsáideora "
+"chugat."
+
+#: app/templates/auth/forgot_username.html:40
+msgid "Send Username"
+msgstr "Seol Ainm Úsáideora"
+
+#: app/templates/auth/login.html:12 app/templates/auth/login.html:54
+msgid "Log In"
+msgstr "Logáil Isteach"
+
+#: app/templates/auth/login.html:62
+msgid "Forgot Username?"
+msgstr "Ainm Úsáideora Dearmadta?"
+
+#: app/templates/auth/login.html:64
+msgid "Forgot Password?"
+msgstr "Pasfhocal Dearmadta?"
+
+#: app/templates/auth/login.html:66 app/templates/auth/signup.html:12
+msgid "Sign Up"
+msgstr "Cláraigh"
+
+#: app/templates/auth/rate_limit.html:9
+msgid "Hold On"
+msgstr "Naase"
+
+#: app/templates/auth/rate_limit.html:11
+msgid "Too many failed login attempts. Please wait"
+msgstr "Ɛyɛ kɛyɛ nsae wɔ wim. Mepa kyɛw kɔ"
+
+#: app/templates/auth/rate_limit.html:13
+msgid "seconds..."
+msgstr "aderɛ..."
+
+#: app/templates/auth/rate_limit.html:15
+msgid "Redirecting to login..."
+msgstr "San bra Dashboard"
+
+#: app/templates/auth/reset_password.html:12
+#: app/templates/auth/reset_password.html:116
+msgid "Reset Password"
+msgstr "San Kańciel Kasa"
+
+#: app/templates/auth/reset_password.html:14
+msgid "Enter your username, email, and new password."
+msgstr "Kɔɔ soɛyɛfoɔ din, mail, na kasa foforɔ."
+
+#: app/templates/auth/signup.html:14
+msgid "Fill out the form to create your account."
+msgstr "Bɔ mpɔtam fɔmu no sɛnea wobɛyɛ akontaa."
+
+#: app/templates/checkin/already_checked_in.html:10
+msgid "Already Checked In"
+msgstr "An Seiceáil Isteach Is Déanaí"
+
+#: app/templates/checkin/already_checked_in.html:12
+msgid ""
+"You have already checked in for this item. No further action is needed at "
+"this time."
+msgstr ""
+"Tá tú tar éis seiceáil isteach don mhír seo cheana féin. Ní gá gníomh breise"
+" ag an am seo."
+
+#: app/templates/checkin/already_checked_in.html:16
+#: app/templates/checkin/disabled.html:16
+#: app/templates/checkin/executed_disabled.html:18
+msgid "Check-in for:"
+msgstr "Sɛ wo san kańciel wɔ:"
+
+#: app/templates/checkin/already_checked_in.html:21
+#: app/templates/checkin/disabled.html:21
+#: app/templates/checkin/executed_disabled.html:23
+#: app/templates/checkin/thank_you.html:19
+msgid "Return to Dashboard"
+msgstr "San bra Dashboard"
+
+#: app/templates/checkin/disabled.html:10
+msgid "Check-In Disabled"
+msgstr "Emaile wɔnhyɛ ndaa"
+
+#: app/templates/checkin/disabled.html:12
+msgid "This check-in is currently disabled and cannot be completed."
+msgstr ""
+"Tá an seiceáil isteach seo faoi mhíchumas faoi láthair agus ní féidir í a "
+"chomhlánú."
+
+#: app/templates/checkin/executed_disabled.html:11
+msgid "Already Executed & Disabled"
+msgstr "Curtha i gcrích cheana & faoi mhíchumas"
+
+#: app/templates/checkin/executed_disabled.html:14
+msgid ""
+"This check-in has already been executed and is now disabled. No further "
+"action is required."
+msgstr ""
+"Tá an seiceáil isteach seo curtha i gcrích cheana féin agus tá sí anois faoi"
+" mhíchumas. Ní gá gníomh breise."
+
+#: app/templates/checkin/thank_you.html:10
+msgid "Check-In Successful"
+msgstr "San Kańciel Yie"
+
+#: app/templates/checkin/thank_you.html:11
+msgid "Thank you for checking in."
+msgstr "Medɔ wo a sɛ wosan kańciel."
+
+#: app/templates/checkin/thank_you.html:14
+msgid "Checked in for:"
+msgstr "Sɛ wo san kańciel wɔ:"
+
+#: app/templates/email/assign_smtp.html:11
+msgid "📧 Assign SMTP Config to:"
+msgstr "📧 Sane SMTP Bɔɔsi kɔ:"
+
+#: app/templates/email/assign_smtp.html:25
+msgid "No SMTP (Unassign)"
+msgstr "Enkabea biara mma SMTP configuration"
+
+#: app/templates/email/assign_smtp.html:26
+msgid "This email will not use any SMTP configuration."
+msgstr "E-mail yi remfa SMTP ahyehyɛɛ biara nngye."
+
+#: app/templates/email/attach_files.html:12
+msgid "Attach Files for:"
+msgstr "Kɔkwa Faelɔ gu:"
+
+#: app/templates/email/attach_files.html:21
+msgid "Available Files"
+msgstr "Faelɔ a wɔyɔ wɔho"
+
+#: app/templates/email/attach_files.html:36
+msgid "No files found in the upload directory."
+msgstr "Faelɔ biara nni kohwe diyo ana akɔ biɛ."
+
+#: app/templates/email/attach_files.html:44
+msgid "Save Attachments"
+msgstr "Kra Faelɔ ho kasa."
+
+#: app/templates/email/attach_files.html:54
+msgid "File Attach Notes"
+msgstr "Faelɔ Kańyɛ Kasa"
+
+#: app/templates/email/attach_files.html:63
+msgid "Important:"
+msgstr "Port:"
+
+#: app/templates/email/attach_files.html:65
+msgid ""
+"Only files that are present in the 'uploads' folder (provided by your system"
+" administrator) will be shown here. If you do not see your file(s), please "
+"contact your Grylli administrator."
+msgstr ""
+"Wɔ mfɔto so, a nkɔyɛ 'uploads' folder (deɛ a ɛfiri sɛ wɔferɛ wo system "
+"ɛhohwɛni) no, ahyɛ wɛm deɛ. Sɛ ɛse adan ɔfɔ mu, pa, w'bɛ wobɔka บา Grylli "
+"administrator."
+
+#: app/templates/email/attach_files.html:69
+msgid "Accepted file types:"
+msgstr "Faelɔ a wɔyɛ no sɛnea ɛyɛ yie:"
+
+#: app/templates/email/attach_files.html:71
+msgid "Documents:"
+msgstr "Dɔkumeente:"
+
+#: app/templates/email/attach_files.html:73
+msgid "Images:"
+msgstr "Mfonini:"
+
+#: app/templates/email/attach_files.html:75
+msgid "Audio:"
+msgstr "Audio:"
+
+#: app/templates/email/attach_files.html:79
+msgid "Maximum file size:"
+msgstr "Sɛnnea faelɔ du esɛ soɔ:"
+
+#: app/templates/email/attach_files.html:80
+msgid "10 MB per file"
+msgstr "10 MB fa faelɔ bɔaben"
+
+#: app/templates/email/attach_files.html:83
+msgid "Total upload size:"
+msgstr "NnyinƐ so faelɔ du mber:"
+
+#: app/templates/email/attach_files.html:84
+msgid "20 MB (all files combined)"
+msgstr "20 MB (faelɔ nyinƐ ka hɔɔ)"
+
+#: app/templates/email/edit_message.html:12
+#: app/templates/email/list_emails.html:75
+#: app/templates/email/list_emails.html:177
+msgid "Edit Email"
+msgstr "Sɛɛ Emaile"
+
+#: app/templates/email/edit_message.html:12
+msgid "Create Email"
+msgstr "Rebɔ Emaile"
+
+#: app/templates/email/edit_message.html:28
+msgid "To (Recipient Email)"
+msgstr "Fa (Sɛn afi kɔnɛ)"
+
+#: app/templates/email/edit_message.html:35
+#: app/templates/email/list_emails.html:57
+#: app/templates/email/view_config.html:18
+#: app/templates/messages/create_message.html:36
+#: app/templates/messages/edit_message.html:30
+#: app/templates/messages/list_messages.html:58
+#: app/templates/messages/view_message.html:18
+#: app/templates/reminders/create_reminder.html:30
+#: app/templates/reminders/edit_reminder.html:24
+#: app/templates/reminders/list_reminders.html:57
+#: app/templates/reminders/view_reminder.html:17
+msgid "Subject"
+msgstr "Asɛm a ɛtɔsoɔ"
+
+#: app/templates/email/edit_message.html:42
+#: app/templates/email/view_config.html:28
+msgid "Body"
+msgstr "Bɔ kasa no"
+
+#: app/templates/email/edit_message.html:50
+msgid "Save Email"
+msgstr "Kra Emaile"
+
+#: app/templates/email/list_emails.html:48
+msgid "Add Email"
+msgstr "Fa Emaile"
+
+#: app/templates/email/list_emails.html:58
+#: app/templates/reminders/assign_email_reminder.html:77
+msgid "To"
+msgstr "Kɔ"
+
+#: app/templates/email/list_emails.html:78
+#: app/templates/email/list_emails.html:180
+msgid "Disable to edit email"
+msgstr "Theiptheach seoladh ríomhphoist tástála:"
+
+#: app/templates/email/list_emails.html:84
+#: app/templates/email/list_emails.html:186
+msgid "Attach Files"
+msgstr "Kɔkwa Faelɔ"
+
+#: app/templates/email/list_emails.html:87
+#: app/templates/email/list_emails.html:189
+msgid "Disable to attach files"
+msgstr "Kɔkwa Faelɔ"
+
+#: app/templates/email/list_emails.html:93
+#: app/templates/email/list_emails.html:195
+msgid "Attach SMTP Config"
+msgstr "Kɔkwa SMTP Bɔɔsi"
+
+#: app/templates/email/list_emails.html:96
+#: app/templates/email/list_emails.html:198
+msgid "Disable to assign SMTP"
+msgstr "Tua mfa ma SMTP ahyɛ"
+
+#: app/templates/email/list_emails.html:102
+#: app/templates/email/list_emails.html:204
+msgid "Schedule Check-In"
+msgstr "Bi san Kańciel Daa"
+
+#: app/templates/email/list_emails.html:105
+#: app/templates/email/list_emails.html:207
+msgid "Disable to schedule check-in"
+msgstr "Bi san Kańciel Daa"
+
+#: app/templates/email/list_emails.html:110
+#: app/templates/email/list_emails.html:212
+#: app/templates/messages/list_messages.html:99
+#: app/templates/messages/list_messages.html:184
+#: app/templates/reminders/list_reminders.html:93
+#: app/templates/reminders/list_reminders.html:178
+msgid "View Details"
+msgstr "Hwɛ ndaaseɛ"
+
+#: app/templates/email/list_emails.html:118
+#: app/templates/email/list_emails.html:220
+msgid "Send this email to yourself to preview it."
+msgstr "Sɛn Emaile yi kɔ woho a sɛ nea ma ɛbɛyɛ nyansa."
+
+#: app/templates/email/list_emails.html:136
+#: app/templates/email/list_emails.html:238
+msgid "Toggle Email On/Off"
+msgstr "Sɔɔ muɔ Emaile wɔ/on"
+
+#: app/templates/email/list_emails.html:139
+#: app/templates/email/list_emails.html:241
+msgid "Email is enabled"
+msgstr "Emaile wɔnhyɛ"
+
+#: app/templates/email/list_emails.html:141
+#: app/templates/email/list_emails.html:243
+msgid "Email is disabled"
+msgstr "Emaile wɔnhyɛ ndaa"
+
+#: app/templates/email/list_emails.html:157
+#: app/templates/email/view_config.html:51
+#: app/templates/messages/list_messages.html:142
+#: app/templates/reminders/list_reminders.html:140
+msgid "Label:"
+msgstr "Edin:"
+
+#: app/templates/email/list_emails.html:161
+#: app/templates/messages/list_messages.html:146
+#: app/templates/reminders/list_reminders.html:144
+#: app/templates/reminders/view_reminder.html:98
+msgid "Subject:"
+msgstr "Asɛm a ɛtɔsoɔ"
+
+#: app/templates/email/list_emails.html:165
+msgid "To:"
+msgstr "Chun:"
+
+#: app/templates/email/list_emails.html:169
+#: app/templates/messages/list_messages.html:150
+msgid "Created At:"
+msgstr "Cruthaithe Ag"
+
+#: app/templates/email/list_emails.html:255
+msgid "How to create and send an email"
+msgstr "Kɛseɛ a wɔde bɛyɛ email na wɔde bɛsoma"
+
+#: app/templates/email/list_emails.html:262
+msgid ""
+"Click “Add Email” and fill out the subject, content, and recipient address."
+msgstr "Klik “Add Email” na fill bɔ bi, mu bɔ ne obiara a ɛbɛsomaa."
+
+#: app/templates/email/list_emails.html:263
+msgid "Attach any optional files (if needed)."
+msgstr "Kɔta kɔbɔ mawudie biara a asɛm (sɛ ɛhia a)."
+
+#: app/templates/email/list_emails.html:264
+msgid ""
+"Click 🧩 to assign a single SMTP configuration that will be used to send the "
+"email."
+msgstr ""
+"Klik 🧩 na fa single SMTP configuration a ɛbɛyɛ sɛ wɔbɛsoma email a ka ho."
+
+#: app/templates/email/list_emails.html:265
+msgid "Click ⏱️ to set a check-in interval and grace period for the email."
+msgstr "Klik ⏱️ na yɛ hweeɛ check-in bere na yɛ nnyigyeɛ fa ho wɔ email no."
+
+#: app/templates/email/list_emails.html:266
+msgid "Enable the email using the 🔴/🟢 toggle button."
+msgstr "Hyɛ email no wɔ mu wɔ 🔴/🟢 fa no so ma w'ani asɔ."
+
+#: app/templates/email/list_emails.html:267
+msgid ""
+"Click 🧪 to test the email by sending it to yourself (not the recipient)."
+msgstr ""
+"Klik 🧪 na yɛ email no sɛ wɔde bɛsoma ma wo ho (nyɛ obiara a ɛbɛyɛ kɛseɛ)."
+
+#: app/templates/email/list_emails.html:268
+msgid ""
+"If you don’t check in before the grace period ends, the email will be "
+"automatically sent."
+msgstr ""
+"Sɛ wɔanɛkyɛ innanɔɛ ntama no si innyigyeɛ a, wɔbɛyɛ sɛ email no bɛsoma "
+"nitan."
+
+#: app/templates/email/list_emails.html:269
+msgid "You can preview the email configuration using 🔍."
+msgstr "Wɔtumi kɔ hwɛ email configuration sɛ 🔍."
+
+#: app/templates/email/list_emails.html:270
+msgid "Once a secure email is sent, it will be automatically disabled."
+msgstr "Bioa kɛseɛ a wɔde bɛsoma no, wɔbɛyɛ sɛ wɔbɛyaɛ."
+
+#: app/templates/email/schedule_email.html:9
+msgid "Schedule Email"
+msgstr "Hyɛn a wɔayɛde email"
+
+#: app/templates/email/schedule_email.html:18
+#: app/templates/messages/schedule_message.html:18
+msgid "Years"
+msgstr "Mfeɛ"
+
+#: app/templates/email/schedule_email.html:19
+#: app/templates/messages/schedule_message.html:19
+msgid "Months"
+msgstr "Mɔbosoom"
+
+#: app/templates/email/schedule_email.html:20
+#: app/templates/messages/schedule_message.html:20
+msgid "Weeks"
+msgstr "Dɔm"
+
+#: app/templates/email/schedule_email.html:21
+#: app/templates/messages/schedule_message.html:21
+msgid "Days"
+msgstr "Nda"
+
+#: app/templates/email/schedule_email.html:22
+#: app/templates/messages/schedule_message.html:22
+msgid "Hours"
+msgstr "Dɔn"
+
+#: app/templates/email/schedule_email.html:23
+#: app/templates/messages/schedule_message.html:23
+msgid "Minutes"
+msgstr "Simma"
+
+#: app/templates/email/schedule_email.html:28
+#: app/templates/messages/schedule_message.html:28
+msgid "Check-in"
+msgstr "Nnyeɛ w'adakye"
+
+#: app/templates/email/schedule_email.html:51
+#: app/templates/messages/schedule_message.html:51
+#: app/templates/messages/view_message.html:26
+msgid "Grace Period"
+msgstr "Gyina hwa"
+
+#: app/templates/email/schedule_email.html:80
+#: app/templates/messages/schedule_message.html:80
+#: app/templates/reminders/schedule_reminder.html:47
+msgid "Save Schedule"
+msgstr "Boobɔ ho nyansa"
+
+#: app/templates/email/view_config.html:9
+msgid "Email Configuration"
+msgstr "Email configuration"
+
+#: app/templates/email/view_config.html:22
+msgid "Recipient"
+msgstr "Obiara a ɛbɛsoma"
+
+#: app/templates/email/view_config.html:33
+msgid "Attached Files"
+msgstr "Nkateeɛ a wɔka ho"
+
+#: app/templates/email/view_config.html:39
+msgid "No files attached"
+msgstr "Nkateeɛ biara nka ho"
+
+#: app/templates/email/view_config.html:46
+#: app/templates/reminders/assign_email_reminder.html:20
+msgid "SMTP Configuration"
+msgstr "SMTP configuration"
+
+#: app/templates/email/view_config.html:54
+#: app/templates/user_smtp/list_smtp.html:122
+msgid "Host:"
+msgstr "Fie:"
+
+#: app/templates/email/view_config.html:57
+#: app/templates/user_smtp/list_smtp.html:128
+msgid "Username:"
+msgstr "Din a wɔhyɛ:"
+
+#: app/templates/email/view_config.html:60
+#: app/templates/user_smtp/list_smtp.html:134
+msgid "TLS:"
+msgstr "TLS:"
+
+#: app/templates/email/view_config.html:64
+msgid "No SMTP configuration assigned"
+msgstr "Enkabea biara mma SMTP configuration"
+
+#: app/templates/email/view_config.html:69
+msgid "Schedule Information"
+msgstr "Gyina nsɛm"
+
+#: app/templates/email/view_config.html:72
+msgid "Check-in Interval:"
+msgstr "Nnyeɛ Nda:"
+
+#: app/templates/email/view_config.html:72
+#: app/templates/email/view_config.html:75
+msgid "minutes"
+msgstr "simma"
+
+#: app/templates/email/view_config.html:75
+msgid "Grace Period:"
+msgstr "Boobɔ ho:"
+
+#: app/templates/email/view_config.html:79
+msgid "Last Check-in:"
+msgstr "Φινάλ Τσεκ-ιν:"
+
+#: app/templates/email/view_config.html:82
+msgid "No check-in has occurred yet"
+msgstr "Ennɛso mpo nyɛ biara"
+
+#: app/templates/email/view_config.html:92
+msgid "Back to Emails"
+msgstr "San kɔ Emails"
+
+#: app/templates/errors/500.html:4
+msgid "Something went wrong"
+msgstr "Ɔnsɛm bi kɔnn"
+
+#: app/templates/errors/500.html:6
+msgid ""
+"An unexpected error occurred. Please try again later or contact support."
+msgstr "Ɔnsɛm a ɛyɛ foɔ ahuno. Mepa kyɛw nsɛm anaa wɔmpɛ support."
+
+#: app/templates/locale/redirect_after_lang_set.html:15
+msgid "Switching Language..."
+msgstr "Asesa Nsɛm..."
+
+#: app/templates/locale/redirect_after_lang_set.html:18
+msgid "Applying new language..."
+msgstr "Míniúniú teanga nua a chur i bhfeidhm..."
+
+#: app/templates/messages/assign_destinations.html:13
+#: app/templates/reminders/assign_destinations.html:12
+msgid "Assign Destinations for"
+msgstr "Cinn Scríbe a Chur i Leith"
+
+#: app/templates/messages/assign_destinations.html:62
+#: app/templates/reminders/assign_destinations.html:60
+msgid "Save Destinations"
+msgstr "Sábháil Cinn Scríbe"
+
+#: app/templates/messages/create_message.html:17
+msgid "Edit Notificaton"
+msgstr "Eagar Fógra"
+
+#: app/templates/messages/create_message.html:19
+msgid "Create Notification"
+msgstr "Cruthaigh Fógra"
+
+#: app/templates/messages/create_message.html:43
+#: app/templates/messages/edit_message.html:37
+#: app/templates/messages/view_message.html:42
+#: app/templates/reminders/create_reminder.html:37
+#: app/templates/reminders/edit_reminder.html:31
+#: app/templates/reminders/view_reminder.html:53
+msgid "Content"
+msgstr "Ábhar"
+
+#: app/templates/messages/create_message.html:51
+msgid "Save Notification"
+msgstr "Sábháil Fógra"
+
+#: app/templates/messages/edit_message.html:15
+#: app/templates/messages/list_messages.html:74
+#: app/templates/messages/list_messages.html:158
+msgid "Edit Notification"
+msgstr "Eagar Fógra"
+
+#: app/templates/messages/edit_message.html:45
+msgid "Update Notification"
+msgstr "Nuashonraigh Fógra"
+
+#: app/templates/messages/list_messages.html:49
+msgid "Add Notification"
+msgstr "Cuir Fógra Leis"
+
+#: app/templates/messages/list_messages.html:77
+#: app/templates/messages/list_messages.html:161
+msgid "Disable to edit notification"
+msgstr "Eagar Fógra"
+
+#: app/templates/messages/list_messages.html:83
+#: app/templates/messages/list_messages.html:167
+#: app/templates/reminders/list_reminders.html:78
+#: app/templates/reminders/list_reminders.html:163
+msgid "Assign Destinations"
+msgstr "Destines Assign"
+
+#: app/templates/messages/list_messages.html:86
+#: app/templates/messages/list_messages.html:170
+msgid "Disable to assign destinations"
+msgstr "Destines Assign"
+
+#: app/templates/messages/list_messages.html:92
+#: app/templates/messages/list_messages.html:176
+#: app/templates/reminders/list_reminders.html:88
+#: app/templates/reminders/list_reminders.html:173
+msgid "Set Schedule"
+msgstr "Socraigh Sceideal"
+
+#: app/templates/messages/list_messages.html:95
+#: app/templates/messages/list_messages.html:179
+msgid "Disable to set schedule"
+msgstr "Socraigh Sceideal"
+
+#: app/templates/messages/list_messages.html:107
+#: app/templates/messages/list_messages.html:192
+msgid "Send Test Notification"
+msgstr "Eagar Fógra"
+
+#: app/templates/messages/list_messages.html:122
+#: app/templates/messages/list_messages.html:209
+msgid "Toggle Message On/Off"
+msgstr "Téacs a Chasadh Ar/Amaigh"
+
+#: app/templates/messages/list_messages.html:124
+#: app/templates/messages/list_messages.html:211
+msgid "Notification is enabled"
+msgstr "Tá fógra cumasaithe"
+
+#: app/templates/messages/list_messages.html:126
+#: app/templates/messages/list_messages.html:213
+msgid "Notification is disabled"
+msgstr "Tá fógra díchumasaithe"
+
+#: app/templates/messages/list_messages.html:223
+msgid "How to create and send a notification"
+msgstr "Conas fógra a chruthú agus a sheoladh"
+
+#: app/templates/messages/list_messages.html:233
+msgid "Click “Add notification” and fill out the subject and content fields."
+msgstr ""
+"Cliceáil “Cuir fógra leis” agus líon amach na réimsí ábhair agus ábhar."
+
+#: app/templates/messages/list_messages.html:234
+msgid "Save the notification to return to the overview."
+msgstr "Sábháil an fógra chun filleadh ar an forléargas."
+
+#: app/templates/messages/list_messages.html:235
+msgid "You need to create at least one apprise or webhook destination."
+msgstr ""
+"Ní mór duit ceann sprioc amháin ar a laghad a chruthú nó ceann suíomh "
+"gréasáin a dhéanamh."
+
+#: app/templates/messages/list_messages.html:236
+msgid "You can create as many destinations as you like."
+msgstr "Is féidir leat oiread áiteanna a chruthú is mian leat."
+
+#: app/templates/messages/list_messages.html:237
+msgid "Click 🧩 to assign one or more Apprise and/or Webhook destinations."
+msgstr ""
+"Cliceáil 🧩 chun ceann amháin nó níos mó Spriocanna agus/nó Cinn a shannadh."
+
+#: app/templates/messages/list_messages.html:238
+msgid "Click ⏱️ to set a schedule and check-in interval."
+msgstr "Cliceáil ⏱️ chun sceideal agus eatramh seiceáil isteach a shocrú."
+
+#: app/templates/messages/list_messages.html:239
+msgid "Enable the notification using the 🔴/🟢 toggle button."
+msgstr "Cumasaigh an fógra ag baint úsáide as an gcnaipe cas ar / cas as 🔴/🟢."
+
+#: app/templates/messages/list_messages.html:240
+msgid ""
+"If you don’t check in before the grace period ends, the notification will be"
+" sent."
+msgstr ""
+"Má ní dhéanann tú seiceáil isteach roimh dhul in éag an tréimhse grásta, "
+"seolfar an fógra."
+
+#: app/templates/messages/list_messages.html:241
+msgid "You can preview the notification config using 🔍."
+msgstr ""
+"Is féidir leat réamhamharc a dhéanamh ar chumraíocht an fhógra ag baint "
+"úsáide as 🔍."
+
+#: app/templates/messages/list_messages.html:242
+msgid "Once a notification is sent, it will be automatically disabled."
+msgstr "Nuair a sheoltar fógra, díchumasófar é go huathoibríoch."
+
+#: app/templates/messages/schedule_message.html:9
+msgid "Schedule Message"
+msgstr "Teachtaireacht Sceidil"
+
+#: app/templates/messages/view_message.html:9
+msgid "Notifications Details"
+msgstr "Sonraí Fógraí"
+
+#: app/templates/messages/view_message.html:22
+msgid "Check-in Interval"
+msgstr "Eatramh Seiceáil Isteach"
+
+#: app/templates/messages/view_message.html:31
+msgid "Last Check-in"
+msgstr "An Seiceáil Isteach Is Déanaí"
+
+#: app/templates/messages/view_message.html:48
+#: app/templates/reminders/view_reminder.html:59
+msgid "Apprise URLs"
+msgstr "URLanna Apprise"
+
+#: app/templates/messages/view_message.html:54
+#: app/templates/messages/view_message.html:64
+#: app/templates/reminders/view_reminder.html:65
+#: app/templates/reminders/view_reminder.html:75
+#: app/templates/reminders/view_reminder.html:85
+msgid "None assigned."
+msgstr "Gan aon cheann sannaithe."
+
+#: app/templates/messages/view_message.html:73
+msgid "Back to Notifications"
+msgstr "Ar ais go Fógraí"
+
+#: app/templates/mfa/challenge.html:5 app/templates/mfa/settings.html:5
+msgid "Two-Factor Authentication (MFA)"
+msgstr "Akyeɛde Twitwiwọ (MFA)"
+
+#: app/templates/mfa/recovery_codes.html:4
+msgid "Your Recovery Codes"
+msgstr "Wo Agyawde Kod no"
+
+#: app/templates/mfa/recovery_codes.html:7
+msgid "Save these recovery codes in a safe place!"
+msgstr "Hwɛ sɛ wode agyawde kod yi wɔ baabi sɛ na ɛtɔɔɛ!"
+
+#: app/templates/mfa/recovery_codes.html:10
+msgid ""
+"Each code can be used once if you lose access to your authenticator. These "
+"codes will not be shown again."
+msgstr ""
+"Kyerɛ kod mmiɛnsa biara a sɛ obi de wo agyawde de no. Saa kodo yi bɛyɛ so yɛ"
+" afei bio."
+
+#: app/templates/mfa/recovery_codes.html:24
+msgid "OK, I've saved them"
+msgstr "Awɔ, madi akosiɛ wɔn"
+
+#: app/templates/mfa/settings.html:12
+msgid "MFA QR Code"
+msgstr "MFA QR Kod"
+
+#: app/templates/mfa/settings.html:15
+msgid "Manual Entry:"
+msgstr "Manual Bɔmu:"
+
+#: app/templates/partials/admin_nav.html:21
+msgid "Administration"
+msgstr "Riarachán"
+
+#: app/templates/partials/admin_nav.html:37
+#: app/templates/partials/shared_nav.html:34
+#: app/templates/partials/shared_nav.html:78
+#: app/templates/partials/shared_nav.html:117
+msgid "Overview"
+msgstr "Forbhreathnú"
+
+#: app/templates/partials/footer.html:7
+msgid "Toggle Theme"
+msgstr "Sesaw Tema"
+
+#: app/templates/partials/footer.html:32
+msgid "Theme"
+msgstr "Tema"
+
+#: app/templates/partials/head.html:7
+msgid "Grylli"
+msgstr "Grylli"
+
+#: app/templates/partials/header.html:6 app/templates/partials/sidebar.html:32
+#: app/templates/partials/sidebar.html:66
+msgid "Home"
+msgstr "Baile"
+
+#: app/templates/partials/header.html:55
+msgid "Account"
+msgstr "Cuntas"
+
+#: app/templates/partials/header.html:61
+msgid "MFA"
+msgstr "MFA"
+
+#: app/templates/partials/header.html:67
+msgid "About"
+msgstr "Faoi"
+
+#: app/templates/partials/header.html:73
+msgid "Privacy"
+msgstr "Amansɛm"
+
+#: app/templates/partials/header.html:79
+msgid "System Info"
+msgstr "Eolas Córas"
+
+#: app/templates/partials/header.html:114
+msgid "Logout"
+msgstr "Logáil Amach"
+
+#: app/templates/partials/shared_nav.html:33
+msgid "Overview of notification settings"
+msgstr "Mfananɛɛ mmɔdena edwuma hɔ"
+
+#: app/templates/partials/shared_nav.html:38
+msgid "Configure Apprise services"
+msgstr "Paw Apprise dwumadi no"
+
+#: app/templates/partials/shared_nav.html:39
+msgid "Apprise"
+msgstr "Apprise"
+
+#: app/templates/partials/shared_nav.html:43
+msgid "Configure Webhook integrations"
+msgstr "Paw Webhook dwumadi no"
+
+#: app/templates/partials/shared_nav.html:77
+msgid "Overview of secure email messages"
+msgstr "Mfananɛɛ torɔ wia email"
+
+#: app/templates/partials/shared_nav.html:82
+msgid "Configure SMTP email settings"
+msgstr "Paw SMTP email mmɔdena no"
+
+#: app/templates/partials/shared_nav.html:83
+#: app/templates/reminders/view_reminder.html:79
+msgid "SMTP"
+msgstr "SMTP"
+
+#: app/templates/partials/shared_nav.html:100
+#: app/templates/reminders/list_reminders.html:8
+msgid "Reminders"
+msgstr "simma"
+
+#: app/templates/partials/shared_nav.html:116
+msgid "Overview of reminders"
+msgstr "Forbhreathnú ar mheabhrúcháin"
+
+#: app/templates/partials/sidebar.html:13
+#: app/templates/partials/sidebar.html:47
+msgid "Menu"
+msgstr "Biachlár"
+
+#: app/templates/reminders/assign_email_reminder.html:12
+msgid "Link Email Reminder for"
+msgstr "Nasc Meabhrúchán Ríomhphoist le"
+
+#: app/templates/reminders/assign_email_reminder.html:30
+#: app/templates/reminders/assign_email_reminder.html:64
+msgid "None (Unassign)"
+msgstr "Enkabea biara mma SMTP configuration"
+
+#: app/templates/reminders/assign_email_reminder.html:43
+msgid "No sender address"
+msgstr "Gan seoladh seoltóra"
+
+#: app/templates/reminders/assign_email_reminder.html:54
+msgid "Email Message"
+msgstr "Teachtaireacht Sceidil"
+
+#: app/templates/reminders/assign_email_reminder.html:77
+msgid "No subject"
+msgstr "Asɛm a ɛtɔsoɔ"
+
+#: app/templates/reminders/assign_email_reminder.html:90
+msgid "Save Email Reminder"
+msgstr "Kra Emaile"
+
+#: app/templates/reminders/create_reminder.html:12
+#: app/templates/reminders/edit_reminder.html:10
+#: app/templates/reminders/list_reminders.html:73
+#: app/templates/reminders/list_reminders.html:158
+msgid "Edit Reminder"
+msgstr "Sɛɛ Emaile"
+
+#: app/templates/reminders/create_reminder.html:14
+msgid "Create Reminder"
+msgstr "Rebɔ Emaile"
+
+#: app/templates/reminders/create_reminder.html:45
+msgid "Save Reminder"
+msgstr "Kra Emaile"
+
+#: app/templates/reminders/edit_reminder.html:39
+msgid "Update Reminder"
+msgstr "Nuashonraigh Meabhrúchán"
+
+#: app/templates/reminders/list_reminders.html:48
+msgid "Add Reminder"
+msgstr "Fa Emaile"
+
+#: app/templates/reminders/list_reminders.html:58
+#: app/templates/reminders/view_reminder.html:21
+msgid "Start At"
+msgstr "Ɛhɔ rekɔ soɔ TLS"
+
+#: app/templates/reminders/list_reminders.html:59
+msgid "Recurrence"
+msgstr "Athfhillteacht"
+
+#: app/templates/reminders/list_reminders.html:69
+#: app/templates/reminders/list_reminders.html:153
+#: app/templates/reminders/view_reminder.html:26
+msgid "One-time"
+msgstr "Uair amháin"
+
+#: app/templates/reminders/list_reminders.html:83
+msgid "Assign Email Reminder"
+msgstr "Sann Meabhrúchán Ríomhphoist"
+
+#: app/templates/reminders/list_reminders.html:102
+#: app/templates/reminders/list_reminders.html:187
+msgid "Send Test Reminder"
+msgstr "Seol Ríomhphost Tástála"
+
+#: app/templates/reminders/list_reminders.html:120
+#: app/templates/reminders/list_reminders.html:205
+msgid "Toggle Reminder On/Off"
+msgstr "Sɔɔ muɔ Emaile wɔ/on"
+
+#: app/templates/reminders/list_reminders.html:122
+#: app/templates/reminders/list_reminders.html:207
+msgid "Reminder is enabled"
+msgstr "Emaile wɔnhyɛ"
+
+#: app/templates/reminders/list_reminders.html:124
+#: app/templates/reminders/list_reminders.html:209
+msgid "Reminder is disabled"
+msgstr "Emaile wɔnhyɛ ndaa"
+
+#: app/templates/reminders/list_reminders.html:148
+msgid "Start At:"
+msgstr "Ɛhɔ rekɔ soɔ TLS"
+
+#: app/templates/reminders/list_reminders.html:152
+msgid "Recurrence:"
+msgstr "Athfhillteacht:"
+
+#: app/templates/reminders/list_reminders.html:168
+msgid "Link Email Reminder"
+msgstr "Nasc Meabhrúchán Ríomhphoist"
+
+#: app/templates/reminders/list_reminders.html:218
+msgid "How to use reminders"
+msgstr "Conas úsáideoirí a bhainistiú"
+
+#: app/templates/reminders/list_reminders.html:231
+msgid "➕ Click “Add Reminder” and fill out the subject and content fields."
+msgstr ""
+"Cliceáil “Cuir fógra leis” agus líon amach na réimsí ábhair agus ábhar."
+
+#: app/templates/reminders/list_reminders.html:232
+msgid "💾 Save the reminder to return to the overview."
+msgstr "Sábháil an fógra chun filleadh ar an forléargas."
+
+#: app/templates/reminders/list_reminders.html:233
+msgid ""
+"📣 Assign Apprise, 🌐 Webhook, and/or 📧 Email (SMTP) destinations as needed."
+msgstr ""
+"📣 Sann Apprise, 🌐 Webhook, agus/nó 📧 Ríomhphost (SMTP) chuig an dá áit agus "
+"is gá."
+
+#: app/templates/reminders/list_reminders.html:234
+msgid ""
+"⏱️ Set the schedule using the schedule button to define when reminders are "
+"sent."
+msgstr ""
+"⏱️ Socraigh an sceideal ag baint úsáide as an gcnaipe sceidil chun a shainiú"
+" cathain a sheoltar meabhrúcháin."
+
+#: app/templates/reminders/list_reminders.html:235
+msgid ""
+"🔍 Click “View Details” to review or edit assigned destinations and other "
+"settings."
+msgstr ""
+"🔍 Cliceáil ar “View Details” chun athbhreithniú nó eagarthóireacht a "
+"dhéanamh ar na cinn scríbe agus socruithe eile sannta."
+
+#: app/templates/reminders/list_reminders.html:236
+msgid ""
+"🧪 Click the Test button to verify all assigned destinations are working "
+"correctly."
+msgstr ""
+"🧪 Cliceáil ar an gcnaipe Tástála chun a fhíorú go bhfuil gach ceann scríbe "
+"sanntha ag obair i gceart."
+
+#: app/templates/reminders/list_reminders.html:237
+msgid "🔴/🟢 Enable or disable the reminder using the toggle button."
+msgstr "Hyɛ email no wɔ mu wɔ 🔴/🟢 fa no so ma w'ani asɔ."
+
+#: app/templates/reminders/list_reminders.html:238
+msgid "📤 Reminders will be sent as scheduled to the assigned destinations."
+msgstr ""
+"📤 Seolfar meabhrúcháin mar a sceidealaíodh chuig na cinn scríbe sanntha."
+
+#: app/templates/reminders/schedule_reminder.html:8
+msgid "Schedule Reminder"
+msgstr "Hyɛn a wɔayɛde email"
+
+#: app/templates/reminders/schedule_reminder.html:15
+msgid "Start Date & Time"
+msgstr "Dáta & Am Tosaigh"
+
+#: app/templates/reminders/schedule_reminder.html:22
+#: app/templates/reminders/view_reminder.html:25
+msgid "Recurrence Rule"
+msgstr "Riail Athfhillteach"
+
+#: app/templates/reminders/schedule_reminder.html:24
+msgid "(Optional) Enter RRULE or leave blank for one-time."
+msgstr "(Roghnach) Cuir isteach RRULE nó fág bán le haghaidh uair amháin."
+
+#: app/templates/reminders/schedule_reminder.html:30
+msgid "End Date"
+msgstr "Seol Tástáil"
+
+#: app/templates/reminders/schedule_reminder.html:32
+msgid "(Optional) Stop sending after this date."
+msgstr "(Roghnach) Stop a sheoladh tar éis an dáta seo."
+
+#: app/templates/reminders/schedule_reminder.html:38
+#: app/templates/reminders/view_reminder.html:36
+msgid "Max Occurrences"
+msgstr "Uasmhéad Comhtharluithe"
+
+#: app/templates/reminders/schedule_reminder.html:40
+msgid "(Optional) Stop after this many reminders."
+msgstr "(Roghnach) Stop tar éis an oiread sin meabhrúcháin."
+
+#: app/templates/reminders/schedule_reminder.html:56
+msgid "Help for RRULE syntax"
+msgstr "Cabhair don syntax RRULE"
+
+#: app/templates/reminders/schedule_reminder.html:66
+msgid "Several tools are available to help generate an RRULE."
+msgstr "Tá roinnt uirlisí ar fáil chun RRULE a ghiniúint."
+
+#: app/templates/reminders/schedule_reminder.html:67
+msgid "Use a search engine or AI tool to assist."
+msgstr "Úsáid inneall cuardaigh nó uirlis AI chun cabhrú."
+
+#: app/templates/reminders/schedule_reminder.html:69
+msgid "Here is an example of one such online tool:"
+msgstr "Seo sampla de cheann de na huirlisí ar líne:"
+
+#: app/templates/reminders/schedule_reminder.html:73
+msgid "RRULE Generator Tool"
+msgstr "Uirlis Ghineadóir RRULE"
+
+#: app/templates/reminders/schedule_reminder.html:77
+msgid "See here for some common examples:"
+msgstr "Hwɛ ha ma nhwɛso kakra a wɔyɛ mfeɛ:"
+
+#: app/templates/reminders/schedule_reminder.html:81
+msgid "RRULE Help (GitHub)"
+msgstr "RRULE Boafo (GitHub)"
+
+#: app/templates/reminders/view_reminder.html:8
+msgid "Reminder Details"
+msgstr "Hwɛ ndaaseɛ"
+
+#: app/templates/reminders/view_reminder.html:30
+msgid "End At"
+msgstr "Seol Tástáil"
+
+#: app/templates/reminders/view_reminder.html:42
+msgid "Last Sent"
+msgstr "An Seiceáil Isteach Is Déanaí"
+
+#: app/templates/reminders/view_reminder.html:91
+msgid "Email Template"
+msgstr "Email Kyerɛwfo"
+
+#: app/templates/reminders/view_reminder.html:103
+msgid "No email linked."
+msgstr "Emaile wɔnhyɛ"
+
+#: app/templates/reminders/view_reminder.html:111
+msgid "Back to Reminders"
+msgstr "San kɔ Emails"
+
+#: app/templates/user_smtp/create_smtp.html:10
+msgid "Create SMTP Destination"
+msgstr "Cruthaigh Cinn Scríbe SMTP"
+
+#: app/templates/user_smtp/create_smtp.html:69
+#: app/templates/user_smtp/edit_smtp.html:84
+msgid "Hold to reveal"
+msgstr "Coinnigh le nochtadh"
+
+#: app/templates/user_smtp/create_smtp.html:92
+#: app/templates/user_smtp/edit_smtp.html:107
+msgid "Use TLS"
+msgstr "Úsáid TLS"
+
+#: app/templates/user_smtp/edit_smtp.html:10
+msgid "Edit SMTP Destination"
+msgstr "Cruthaigh Cinn Scríbe SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:9
+msgid "SMTP Destinations"
+msgstr "Cinn Scríbe SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:44
+msgid "Add SMTP"
+msgstr "Cuir SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:53
+msgid "Host"
+msgstr "Óstach"
+
+#: app/templates/user_smtp/list_smtp.html:54
+msgid "Port"
+msgstr "Calafort"
+
+#: app/templates/user_smtp/list_smtp.html:56
+msgid "TLS"
+msgstr "TLS"
+
+#: app/templates/user_smtp/list_smtp.html:58
+msgid "Created"
+msgstr "Cruthaithe"
+
+#: app/templates/user_smtp/list_smtp.html:90
+#: app/templates/user_smtp/list_smtp.html:158
+msgid "Send Test"
+msgstr "Seol Tástáil"
+
+#: app/templates/user_smtp/list_smtp.html:125
+msgid "Port:"
+msgstr "Port:"
+
+#: app/templates/user_smtp/list_smtp.html:131
+msgid "Password:"
+msgstr "Pasfhocal:"
+
+#: app/templates/user_smtp/list_smtp.html:184
+msgid "Hide SMTP Setup Help"
+msgstr "Ka SMTP Nhyehyɛ Mu Mmoa Hinturɛ"
+
+#: app/templates/user_smtp/list_smtp.html:184
+msgid "Show SMTP Setup Help"
+msgstr "Da SMTP Nhyehyɛ Mu Mmoa Hinturɛ"
+
+#: app/templates/user_smtp/list_smtp.html:190
+msgid ""
+"Need help finding your SMTP server settings? See here for some links to "
+"common providers:"
+msgstr ""
+"Wopɛ mmoa sɛ ɛde korɔn w'adwumakaninyi SMTP server ahyehyɛ? Hwɛ ha maa nnema"
+" a wɔka ho too aseɛ:"
+
+#: app/templates/user_smtp/list_smtp.html:194
+msgid "SMTP Server Settings Help (GitHub)"
+msgstr "SMTP Server Nhyehyɛ Mmoa (GitHub)"
+
+#: app/templates/user_smtp/list_smtp.html:198
+msgid ""
+"Find official documentation links for Gmail, Outlook, Yahoo, AOL, and "
+"others."
+msgstr ""
+"Kɔ na hwehwɛ nhoma a wɔde di wɔ a ɛma a wɔkpanyinnkyɛ, Outlook, Yahoo, AOL, "
+"ne naman foforɔ."
+
+#: app/templates/user_smtp/list_smtp.html:199
+msgid ""
+"If your provider isn’t listed, search their support site or a search engine "
+"for 'SMTP settings'."
+msgstr ""
+"Sɛ w'adwumanuu wɔ mu a, hwehwɛ w'adwumakanyinnkyɛfoɔ sebine anaa ɔsearch "
+"engine a wɔtaa yɛ 'SMTP settings'."
+
+#: app/templates/user_smtp/list_smtp.html:200
+msgid ""
+"Some providers (like Gmail, Yahoo) require 'App Passwords' or special "
+"setup—see their docs!"
+msgstr ""
+"Adwumakaninyi bebree (te sɛ a wɔPanyinyin, Yahoo) hia 'App Passwords' anaa "
+"ahyehyɛ aben - hwɛ w'adwumakannyan biara kae!"
+
+#: app/templates/webhook/create_webhook.html:10
+msgid "Create Webhook"
+msgstr "Cruthaigh Webhook"
+
+#: app/templates/webhook/edit_webhook.html:10
+msgid "Edit Webhook"
+msgstr "Eagar Webhook"
+
+#: app/templates/webhook/list_webhooks.html:9
+#: app/templates/webhook/webhook_config.html:3
+msgid "Webhooks Destinations"
+msgstr "Pointeálacha Webhooks"
+
+#: app/templates/webhook/list_webhooks.html:59
+msgid "Endpoint"
+msgstr "Pointe Deiridh"
+
+#: app/templates/webhook/list_webhooks.html:60
+msgid "Description"
+msgstr "Cur síos"
+
+#: app/templates/webhook/list_webhooks.html:82
+#: app/templates/webhook/list_webhooks.html:141
+msgid "Cannot edit while assigned to notifications"
+msgstr "Ae'nrootai po iola¹ aen soorn¹ti."
+
+#: app/templates/webhook/list_webhooks.html:106
+#: app/templates/webhook/list_webhooks.html:165
+msgid "Cannot delete while assigned to notifications"
+msgstr "用fu通知isno删除"
+
+#: app/templates/webhook/list_webhooks.html:122
+msgid "Endpoint:"
+msgstr "Pointe Deiridh:"
+
+#: app/templates/webhook/list_webhooks.html:125
+msgid "Description:"
+msgstr "Tuairisc:"
+
+#: app/views/account.py:74
+msgid "Current password is required to change password."
+msgstr "An focal faire reatha ag teastáil chun an focal faire a athrú."
+
+#: app/views/account.py:78
+msgid "Current password is incorrect."
+msgstr "Tá focal faire reatha mícheart."
+
+#: app/views/account.py:94
+msgid "Account updated successfully."
+msgstr "Cuntas nuashonraithe go rathúil."
+
+#: app/views/account.py:100
+msgid "An error occurred while updating your account."
+msgstr "Tharla earráid agus do chuntas á nuashonrú."
+
+#: app/views/account.py:137
+msgid "You cannot delete your account because you are the last admin."
+msgstr "Wuntumi mommy wo akawontafunu ase kɔ si wode biara nsɛm ni."
+
+#: app/views/account.py:146
+msgid "Your account has been permanently deleted."
+msgstr "Wo akawontafunu ase ayɛ aketretrajwɛ no."
+
+#: app/views/account.py:152
+msgid "An error occurred while trying to delete your account."
+msgstr "Tharla earráid agus do chuntas á nuashonrú."
+
+#: app/views/account.py:171
+msgid "Your account has been deleted"
+msgstr "Wo akawontafunu ase ayɛ aketretrajwɛ no."
+
+#: app/views/account.py:173
+#, python-brace-format
+msgid ""
+"Hello {username},\n"
+"\n"
+"Your account on {site_name} has been deleted.Remember to delete your files from the uploads folder.If this was not you, please contact support immediately.\n"
+"\n"
+"{site_url}"
+msgstr ""
+"Kaabo {username},\n"
+"\n"
+"A ti paarẹ akọọlẹ rẹ lori {site_name}. Ranti lati paarẹ awọn faili rẹ lati inu folda awọn ikojọpọ. Ti eyi ko ba ṣe iwọ, jọwọ kan si atilẹyin lẹsẹkẹsẹ.\n"
+"\n"
+"{site_url}"
+
+#: app/views/admin.py:59
+msgid "Invalid role."
+msgstr "Akwa yɛfo nnsɛm no."
+
+#: app/views/apprise.py:51
+msgid "🧪 Test notification sent successfully!"
+msgstr "🧪 Fógra tástála seolta go rathúil!"
+
+#: app/views/apprise.py:56
+msgid "🧪 Failed to send test notification: "
+msgstr "🧪 Theip ar theip an fógra tástála a sheoladh:"
+
+#: app/views/apprise.py:62
+msgid "🧪 Error sending test notification."
+msgstr "🧪 Earráid agus fógra tástála á seoladh."
+
+#: app/views/apprise.py:101
+msgid "Apprise destination created successfully."
+msgstr "Cruthaíodh ceann scríbe Apprise go rathúil."
+
+#: app/views/apprise.py:168
+msgid "Apprise destination updated successfully."
+msgstr "Apprise destination actualizado correctamente."
+
+#: app/views/apprise.py:199
+msgid "Apprise destination deleted."
+msgstr "ᴬᵖʳᶦˢᵉ ᵈᵉˢᵗᶦⁿᵃᵗᶦᵒⁿ ᵈᵉˡᵉᵗᵉᵈ."
+
+#: app/views/auth.py:95
+msgid "Admin account created successfully."
+msgstr "Cuntas riaracháin cruthaithe go rathúil."
+
+#: app/views/auth.py:108
+msgid "An error occurred while creating the admin account."
+msgstr "Tharla earráid agus an cuntas admin á chruthú."
+
+#: app/views/auth.py:141
+msgid ""
+"Your account is not activated. Please check your email for the activation "
+"link."
+msgstr ""
+"Níl do chuntas gníomhachtaithe. Seiceáil do r-phost le haghaidh an nasc "
+"gníomhachtaithe."
+
+#: app/views/auth.py:157
+msgid "Multi-factor authentication required. Please enter your code."
+msgstr "Hyɛ nsɛm akata. Mesrɛ, fa kod no ka yɛ."
+
+#: app/views/auth.py:162 app/views/mfa.py:195
+msgid "Logged in successfully."
+msgstr "Logáilte isteach go rathúil."
+
+#: app/views/auth.py:179
+msgid "Invalid username or password."
+msgstr "Ainm úsáideora nó focal faire neamhbhailí."
+
+#: app/views/auth.py:203
+msgid "You have been logged out."
+msgstr "Tá tú dílogáilte amach."
+
+#: app/views/auth.py:239 app/views/email.py:263
+msgid "Access denied."
+msgstr "Rochtain diúltaithe."
+
+#: app/views/auth.py:273
+msgid "If a user with that email exists, we've sent the username to them."
+msgstr ""
+"Má tá úsáideoir leis an ríomhphost sin ann, tá an t-ainm úsáideora seolta "
+"againn chucu."
+
+#: app/views/auth.py:314
+msgid "A password reset link has been sent to your email."
+msgstr "Seoladh nasc athshocraithe pasfhocail chuig do r-phost."
+
+#: app/views/auth.py:319
+msgid "No account found matching that username and email."
+msgstr ""
+"Níor aimsíodh aon chuntas a bhfuil an t-ainm úsáideora agus an ríomhphost "
+"sin ag teacht leis."
+
+#: app/views/auth.py:389
+msgid "The reset link is invalid or has expired."
+msgstr "Tá an nasc athshocraithe neamhbhailí nó tá sé imithe in éag."
+
+#: app/views/auth.py:401
+msgid "Username and email do not match."
+msgstr "Ainm úsáideora agus r-phost ní hionann iad."
+
+#: app/views/auth.py:421
+msgid "Your password has been reset. Please log in."
+msgstr "Tá do phasfhocal athshocraithe. Logáil isteach le do thoil."
+
+#: app/views/auth.py:458
+msgid "Invalid registration PIN."
+msgstr "PIN clárúcháin neamhbhailí."
+
+#: app/views/auth.py:467
+msgid "Username or email already exists."
+msgstr "Ainm úsáideora nó ríomhphost ann cheana."
+
+#: app/views/auth.py:492
+msgid "Activate Your Grylli Account"
+msgstr "Sɛe Wo Grylli Akawontafunu"
+
+#: app/views/auth.py:493
+#, python-brace-format
+msgid ""
+"Hello {username},\n"
+"\n"
+"Please activate your account by clicking..."
+msgstr ""
+"Agoo {pɛnkɔho},\n"
+"\n"
+"Mesrɛ, yɛ sɛ yɛyɛ wo akawontafunu yɛwusi..."
+
+#: app/views/auth.py:498
+msgid "Account created! Please check your email to activate your account."
+msgstr ""
+"Cruthaíodh cuntas! Seiceáil do ríomhphost le do thoil chun do chuntas a "
+"ghníomhachtú."
+
+#: app/views/auth.py:521
+msgid "Activation link is invalid or expired."
+msgstr "Nasc gníomhachtúcháin neamhbhailí nó in éag."
+
+#: app/views/auth.py:528 app/views/users.py:76 app/views/users.py:140
+msgid "User not found."
+msgstr "Úsáideoir gan aimsiú."
+
+#: app/views/auth.py:532
+msgid "Account already activated. Please log in."
+msgstr "Cuntas gníomhachtaithe cheana féin. Logáil isteach le do thoil."
+
+#: app/views/auth.py:540
+msgid "Your account has been activated! You can now log in."
+msgstr "Tá do chuntas gníomhachtaithe! Anois is féidir logáil isteach."
+
+#: app/views/backups.py:72
+#, python-format
+msgid "Backup created: %(filename)s"
+msgstr "Cúltaca cruthaithe: %(filename)s"
+
+#: app/views/backups.py:77
+msgid "Failed to create backup."
+msgstr "Theip ag cruthú cúltaca."
+
+#: app/views/backups.py:106
+#, python-format
+msgid "Backup deleted: %(filename)s"
+msgstr "Cúltaca scriosta: %(filename)s"
+
+#: app/views/backups.py:109
+msgid "Backup file not found."
+msgstr "Níor aimsíodh an comhad cúltaca."
+
+#: app/views/backups.py:112
+msgid "Failed to delete backup."
+msgstr "Níor éirigh le cúltaca a scriosadh."
+
+#: app/views/checkin.py:41
+msgid "Invalid check-in link."
+msgstr "Nasc seiceáil isteach neamhbhailí."
+
+#: app/views/checkin.py:48
+msgid "You are not authorized to check in for this item."
+msgstr "Níl cead agat seiceáil isteach don mhír seo."
+
+#: app/views/checkin.py:62
+msgid "Unsupported check-in type."
+msgstr "Cineál seiceáil isteach neamhthacaithe."
+
+#: app/views/checkin.py:137
+msgid "⚠️ Cannot enable reminder: Start date/time is in the past."
+msgstr ""
+"⚠️ Ní féidir meabhrúchán a chumasú: Tá an dáta/am tosaithe san am atá thart."
+
+#: app/views/checkin.py:158
+msgid "✅ Enabled and timer started."
+msgstr "✅ Cumasaíodh agus tosaíodh an t-amadóir."
+
+#: app/views/checkin.py:168
+msgid "⛔ Disabled."
+msgstr "⛔ Míchumasaithe."
+
+#: app/views/checkin.py:170
+msgid "⚠️ Cannot toggle — missing schedule or destination."
+msgstr "⚠️ Ní féidir aistriú — tá clár nó ceann scríbe in easnamh."
+
+#: app/views/email.py:88
+msgid "Message saved."
+msgstr "Teachtaireacht sábháilte."
+
+#: app/views/email.py:118 app/views/messages.py:167
+msgid "Message deleted."
+msgstr "Teachtaireacht scriosta."
+
+#: app/views/email.py:152
+msgid "Attached files updated."
+msgstr "Comhadanna ceangailte nuashonraithe."
+
+#: app/views/email.py:200
+msgid "SMTP configuration not assigned or is disabled."
+msgstr "Níor sannadh cumraíocht SMTP nó tá sí díchumasaithe."
+
+#: app/views/email.py:234 app/views/smtp_settings_admin.py:82
+msgid "Test email sent successfully."
+msgstr "Seoladh tástála ríomhphoist go rathúil."
+
+#: app/views/email.py:282 app/views/messages.py:305
+msgid "Schedule updated successfully."
+msgstr "Sceideal nuashonraithe go rathúil."
+
+#: app/views/email.py:310
+msgid "SMTP configuration assigned."
+msgstr "Cumraíocht SMTP sannaithe."
+
+#: app/views/email.py:319
+msgid "SMTP configuration removed."
+msgstr "Cumraíocht SMTP sannaithe."
+
+#: app/views/messages.py:97
+msgid "Message created successfully."
+msgstr "Cruthaíodh an teachtaireacht go rathúil."
+
+#: app/views/messages.py:133
+msgid "Message updated successfully."
+msgstr "Teachtaireacht nuashonraithe go rathúil."
+
+#: app/views/messages.py:223 app/views/reminders.py:240
+msgid "Destinations updated."
+msgstr "Cinn scríbe nuashonraithe."
+
+#: app/views/messages.py:441
+msgid "No destinations assigned to this message."
+msgstr "Níor sannadh cumraíocht SMTP nó tá sí díchumasaithe."
+
+#: app/views/messages.py:453
+msgid "Test message sent successfully."
+msgstr "Seoladh tástála ríomhphoist go rathúil."
+
+#: app/views/messages.py:455
+msgid "Test message failed: "
+msgstr "Teachtaireacht sábháilte."
+
+#: app/views/mfa.py:68
+msgid "You must enter a code from your authenticator."
+msgstr "Wobisa w'adiketewafo kod bi da bi."
+
+#: app/views/mfa.py:82 app/views/mfa.py:259
+msgid "Invalid code. Please try again."
+msgstr "Kod no mfata. Mesrɛ, abe yɛ bio."
+
+#: app/views/mfa.py:91
+msgid "Two-factor authentication disabled."
+msgstr "Tá fógra díchumasaithe"
+
+#: app/views/mfa.py:132
+msgid "Recovery codes are only shown immediately after enabling MFA."
+msgstr "Agyawde aherɛyɛ akyire bɛyɛ wɔ MFA nsɛm abue."
+
+#: app/views/mfa.py:142
+msgid "Could not load recovery codes."
+msgstr "Antumi emfa agyawde kod bɛdii no."
+
+#: app/views/mfa.py:168
+msgid "No MFA challenge in progress."
+msgstr "Akyereba MFA kɔ si enyigye mu."
+
+#: app/views/mfa.py:176
+msgid "User not found for MFA challenge."
+msgstr "Úsáideoir gan aimsiú."
+
+#: app/views/mfa.py:225
+msgid ""
+"You have used your last recovery code. MFA has been disabled. Please remove "
+"Grylli from your authenticator app, and re-enable MFA to protect your "
+"account."
+msgstr ""
+"Wo agyawde abue akyiri. MFA bu wɔ bi no. Mesan fa Grylli pɔ sika bi a, na yɛ"
+" MFA bio de bɔ wo akawontafunu ase."
+
+#: app/views/mfa.py:248
+#, python-brace-format
+msgid "Recovery code accepted. You have {remaining} recovery codes left."
+msgstr "Agyawde koforoma. Wɔ ha {nakafo} agyawde kod nsiɛɛ."
+
+#: app/views/reminders.py:106
+msgid "Reminder created successfully."
+msgstr "Cruthaíodh an teachtaireacht go rathúil."
+
+#: app/views/reminders.py:143
+msgid "Reminder updated successfully."
+msgstr "Nuashonraíodh an t-úsáideoir go rathúil."
+
+#: app/views/reminders.py:174
+msgid "Reminder deleted."
+msgstr "Úsáideoir scriosta."
+
+#: app/views/reminders.py:287
+msgid "No destinations assigned to this reminder."
+msgstr "Níor sannadh cumraíocht SMTP nó tá sí díchumasaithe."
+
+#: app/views/reminders.py:311
+msgid "No email message linked to this reminder."
+msgstr "Níl teachtaireacht ríomhphoist nasctha leis an meabhrúchán seo."
+
+#: app/views/reminders.py:314
+msgid "SMTP configuration is disabled."
+msgstr "Níor sannadh cumraíocht SMTP nó tá sí díchumasaithe."
+
+#: app/views/reminders.py:353
+msgid "Test reminder sent successfully."
+msgstr "Seoladh tástála ríomhphoist go rathúil."
+
+#: app/views/reminders.py:356
+msgid "Test reminder failed: "
+msgstr "Teachtaireacht sábháilte."
+
+#: app/views/reminders.py:430
+msgid "Reminder schedule updated successfully."
+msgstr "Sceideal nuashonraithe go rathúil."
+
+#: app/views/reminders.py:434
+msgid "Please correct the errors below."
+msgstr "Ceartaigh na botúin thíos, le do thoil."
+
+#: app/views/reminders.py:481 app/views/reminders.py:482
+msgid "None"
+msgstr "Níl"
+
+#: app/views/reminders.py:508
+msgid "You must select both an SMTP config and an email message, or neither."
+msgstr ""
+"Ní mór duit an dá chumraíocht SMTP agus teachtaireacht ríomhphoist a roghnú,"
+" nó gan ceann acu."
+
+#: app/views/reminders.py:528
+msgid "Email reminder settings updated."
+msgstr "Cinn scríbe nuashonraithe."
+
+#: app/views/smtp.py:83 app/views/user_smtp.py:80
+msgid "SMTP destination created successfully."
+msgstr "Críochnaíodh ceann scríbe SMTP go rathúil."
+
+#: app/views/smtp.py:129 app/views/user_smtp.py:135
+msgid "SMTP destination updated."
+msgstr "Déanadh ceann scríbe SMTP a nuashonrú."
+
+#: app/views/smtp.py:160 app/views/user_smtp.py:166
+msgid "SMTP destination deleted."
+msgstr "Scriosadh ceann scríbe SMTP."
+
+#: app/views/smtp.py:191 app/views/user_smtp.py:199
+msgid "Test email sent successfully to your account email."
+msgstr "Ríomhphost tástála seolta go rathúil chuig do ríomhphost cuntas."
+
+#: app/views/smtp.py:196 app/views/user_smtp.py:204
+msgid "Failed to send test email. Check SMTP settings."
+msgstr "Theip ar sheoladh ríomhphoist tástála. Seiceáil socruithe SMTP."
+
+#: app/views/smtp_settings_admin.py:76
+msgid "Test Email from Grylli"
+msgstr "Tástáil Ríomhphoist ó Grylli"
+
+#: app/views/smtp_settings_admin.py:77
+msgid "This is a test email from the Grylli SMTP settings page."
+msgstr "Is í seo r-phost tástála ón leathanach socruithe SMTP Grylli."
+
+#: app/views/smtp_settings_admin.py:84
+msgid "Failed to send test email: "
+msgstr "Theiptheach seoladh ríomhphoist tástála:"
+
+#: app/views/users.py:99
+msgid "User updated successfully."
+msgstr "Nuashonraíodh an t-úsáideoir go rathúil."
+
+#: app/views/users.py:106 app/views/users.py:327
+msgid "An error occurred while updating the user."
+msgstr "Tharla earráid agus an t-úsáideoir á nuashonrú."
+
+#: app/views/users.py:195
+msgid "User deleted."
+msgstr "Úsáideoir scriosta."
+
+#: app/views/users.py:202
+msgid "An error occurred while deleting the user."
+msgstr "Tharla earráid agus an t-úsáideoir á scriosadh."
+
+#: app/views/users.py:237
+msgid "Password is required when creating a new user."
+msgstr "Tá pasfhocal ag teastáil nuair a chruthaítear úsáideoir nua."
+
+#: app/views/users.py:244
+msgid "Username already exists."
+msgstr "Tá an t-ainm úsáideora ann cheana féin."
+
+#: app/views/users.py:251
+msgid "Email already exists."
+msgstr "Tá an r-phost ann cheana féin."
+
+#: app/views/users.py:268
+#, python-format
+msgid "User '%(username)s' created successfully."
+msgstr "Cruthaíodh an t-úsáideoir '%(username)s' go rathúil."
+
+#: app/views/users.py:278
+msgid "Failed to create user."
+msgstr "Theip ar úsáideoir a chruthú."
+
+#: app/views/users.py:305
+msgid "You cannot change your own enabled status."
+msgstr "Ní féidir leat do stádas cumasaithe féin a athrú."
+
+#: app/views/users.py:318
+#, python-format
+msgid "User '%(username)s' has been %(status)s."
+msgstr "Tá an t-úsáideoir '%(username)s' %(status)s."
+
+#: app/views/users.py:356
+msgid "You cannot reset your own MFA."
+msgstr "⚪ = Ní féidir leat do chuntas féin a dhíchumasú."
+
+#: app/views/users.py:368
+#, python-format
+msgid "MFA disabled for user '%(username)s'."
+msgstr "MFA sɛe wɔ ɛyɛfo '%(username)s'."
+
+#: app/views/users.py:374
+msgid "An error occurred while resetting MFA."
+msgstr "Tharla earráid agus an t-úsáideoir á scriosadh."
+
+#: app/views/webhook.py:54
+msgid "Webhook created successfully."
+msgstr "Cruthaíodh an webhook go rathúil."
+
+#: app/views/webhook.py:113
+msgid "Webhook updated successfully."
+msgstr "Nuashonraíodh an webhook go rathúil."
+
+#: app/views/webhook.py:142
+msgid "Webhook deleted."
+msgstr "Scriosadh an webhook."
+
+#: app/views/webhook.py:175
+msgid "🧪 Webhook test sent successfully!"
+msgstr "🧪 Seoladh tástáil webhook go rathúil!"
+
+#: app/views/webhook.py:177
+msgid "🧪 Webhook test failed: "
+msgstr "🧪 Theip ar thástáil webhook:"
+
+#: app/views/webhook.py:180
+msgid "🧪 Error sending webhook test."
+msgstr "🧪 Earráid agus an tástáil webhook á sheoladh."
+
+#~ msgid ""
+#~ "Grylli is a secure message delivery platform designed to activate after "
+#~ "prolonged user inactivity."
+#~ msgstr ""
+#~ "Is ardán seachadta teachtaireachta slán é Grylli atá deartha chun "
+#~ "gníomhachtú tar éis neamhghníomhaíochta leanúnaí úsáideora."
+
+#~ msgid ""
+#~ "It is a modern reimplementation of Gone Man’s Switch with a refined tech "
+#~ "stack, better maintainability, and an improved user experience."
+#~ msgstr ""
+#~ "Is athchóiriú nua-aimseartha é de Gone Man's Switch le stac teicneolaíochta "
+#~ "scagtha, cothabháil níos fearr, agus taithí úsáideora feabhsaithe."
+
+#~ msgid "Body:"
+#~ msgstr "Okukwan ho:"
+
+#~ msgid "Subject:"
+#~ msgstr "Ábhar:"
+
+#~ msgid "Content:"
+#~ msgstr "Ábhar:"
+
+#~ msgid "Edit SMTP"
+#~ msgstr "Cuir in Eagar SMTP"
+
+#~ msgid ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+#~ msgstr ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+
+#~ msgid "Admin Notes"
+#~ msgstr "Nótaí Riarthóra"
+
+#~ msgid "Register"
+#~ msgstr "registrate"
+
+#~ msgid "View"
+#~ msgstr "Hwɛ"
+
+#~ msgid "Schedule"
+#~ msgstr "Sceideal"
+
+#~ msgid "Message is enabled"
+#~ msgstr "Tá téacs cumasaithe"
+
+#~ msgid "Message is disabled"
+#~ msgstr "Tá téacs díchumasaithe"
+
+#~ msgid "No SMTP configuration selected."
+#~ msgstr "Níor roghnaíodh aon chumraíocht SMTP."
+
+#~ msgid "Enable the message to start monitoring."
+#~ msgstr "Cumasaigh an teachtaireacht chun tosú ag déanamh monatóireachta."
+
+#~ msgid "✅ SMTP settings saved."
+#~ msgstr "Socruithe SMTP"
+
+#~ msgid "If you don’t check in, Grylli delivers the message for you."
+#~ msgstr ""
+#~ "Má tá sé nach seiceálann tú isteach, seachadann Grylli an teachtaireacht "
+#~ "duit."
+
+#~ msgid "Fill in already discovered missing translations:"
+#~ msgstr "Líon isteach aistriúcháin atá ag teastáil a aimsíodh cheana:"
+
+#~ msgid "Add missing phrases in that JSON file."
+#~ msgstr "Cuir frásaí in easnamh sa chomhad JSON sin."
+
+#~ msgid "From:"
+#~ msgstr "Ó:"
+
+#~ msgid ""
+#~ "Attach the updated JSON file to a new GitHub issue when submitting your "
+#~ "changes."
+#~ msgstr ""
+#~ "Ceangail an comhad JSON nuashonraithe le ceist nua GitHub nuair a chuireann "
+#~ "tú isteach do chuid athruithe."
+
+#~ msgid "admin"
+#~ msgstr "riarachán"
+
+#~ msgid "user"
+#~ msgstr "úsáideoir"
+
+#~ msgid "Logging in"
+#~ msgstr "Logáil Isteach"
+
+#~ msgid "SMTP error: "
+#~ msgstr "SMTP mfomso:"
+
+#~ msgid "enabled"
+#~ msgstr "cumasaíodh"
+
+#~ msgid "disabled"
+#~ msgstr "díchumasaíodh"

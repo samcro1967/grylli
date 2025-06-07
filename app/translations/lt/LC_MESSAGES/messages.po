@@ -1,0 +1,3281 @@
+# Lithuanian translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-06-07 15:49-0500\n"
+"PO-Revision-Date: 2025-05-25 13:03-0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: lt <LL@li.org>\n"
+"Language: lt\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: app/init_db.py:55
+#, python-format
+msgid "Tables currently in DB: %s"
+msgstr "Lentelės šiuo metu DB:"
+
+#: app/init_db.py:58
+msgid "Database or system_config table missing. Running migrations now..."
+msgstr ""
+"Trūksta duomenų bazės arba system_config lentelės. Vykdome migracijas "
+"dabar..."
+
+#: app/init_db.py:61
+msgid "Migrations applied successfully."
+msgstr "Migracijos sėkmingai pritaikytos."
+
+#: app/init_db.py:63
+msgid "Migration failed."
+msgstr "Migracija nepavyko."
+
+#: app/init_db.py:68
+msgid "System config seeded successfully."
+msgstr "Sistema sukonfigūruota sėkmingai."
+
+#: app/init_db.py:70
+msgid "Error seeding system config."
+msgstr "Klaida konfigūruojant sistemą:"
+
+#: app/forms/mfa_form.py:15 app/templates/apprise/create_apprise.html:30
+#: app/templates/apprise/edit_apprise.html:30
+#: app/templates/apprise/list_apprise.html:60
+#: app/templates/mfa/settings.html:24 app/templates/mfa/settings.html:40
+#: app/templates/user_smtp/create_smtp.html:99
+#: app/templates/user_smtp/edit_smtp.html:114
+#: app/templates/user_smtp/list_smtp.html:57
+#: app/templates/webhook/create_webhook.html:36
+#: app/templates/webhook/edit_webhook.html:36
+#: app/templates/webhook/list_webhooks.html:61
+msgid "Enabled"
+msgstr "Įjungtas"
+
+#: app/forms/mfa_form.py:16
+msgid "Authenticator Code"
+msgstr "Autentifikatoriaus kodas"
+
+#: app/forms/mfa_form.py:17
+#: app/templates/admin/partials/user_instructions_and_modal.html:66
+#: app/templates/admin/partials/user_table.html:115
+#: app/templates/email/assign_smtp.html:44 app/templates/mfa/settings.html:47
+#: app/templates/user_smtp/edit_smtp.html:122
+msgid "Save"
+msgstr "Saugoti"
+
+#: app/forms/mfa_form.py:27
+msgid "Authentication Code"
+msgstr "Atnaujinti pranešimą"
+
+#: app/forms/mfa_form.py:29
+msgid "Please enter your authentication code."
+msgstr "Prašome įvesti savo autentifikavimo kodą."
+
+#: app/forms/mfa_form.py:30
+msgid "Enter a valid 6-digit code or recovery code."
+msgstr "Įveskite galiojantį 6 skaitmenų kodą arba atkūrimo kodą."
+
+#: app/forms/mfa_form.py:31
+msgid "Invalid code format."
+msgstr "Neteisingas kodo formatas."
+
+#: app/forms/mfa_form.py:35 app/templates/mfa/challenge.html:25
+msgid "Verify"
+msgstr "Versija"
+
+#: app/services/mail.py:37 app/services/system_settings_email.py:40
+msgid "Missing required config setting: "
+msgstr "Trūksta reikalingo konfigūracijos nustatymo:"
+
+#: app/services/mail.py:46 app/services/system_settings_email.py:50
+#, python-format
+msgid "Failed to decrypt %(key)s: %(error)s"
+msgstr "Nepavyko iššifruoti %(key)s: %(error)s"
+
+#: app/services/mail.py:54
+#, python-format
+msgid "get_setting('%(key)s') -> '%(value)s' (sensitive: %(sensitive)s)"
+msgstr ""
+"get_setting('%(key)s') -> '%(value)s' (raw: '%(raw)s', sensitive: "
+"%(sensitive)s)"
+
+#: app/services/mail.py:75
+#, python-format
+msgid "Preparing email to %(to)s"
+msgstr "Ruošiamas el. laiškas skirtas %(to)s"
+
+#: app/services/mail.py:90
+#, python-format
+msgid ""
+"SMTP configuration: host=%(host)s (type=%(host_type)s), port=%(port)s "
+"(type=%(port_type)s)"
+msgstr ""
+"SMTP kompiuteris = '%(host)s' (tipas: %(host_type)s), prievadas = %(port)s "
+"(tipas: %(port_type)s)"
+
+#: app/services/mail.py:99
+#, python-format
+msgid "SMTP username: %(user)s"
+msgstr "Naudojamas vartotojas: %(user)s"
+
+#: app/services/mail.py:100
+#, python-format
+msgid "TLS enabled: %(tls)s"
+msgstr "TLS įjungtas: %(tls)s"
+
+#: app/services/mail.py:105
+msgid "Starting TLS connection..."
+msgstr "Pradedamas TLS"
+
+#: app/services/mail.py:107
+msgid "Logging into SMTP server..."
+msgstr "Jungiamasi prie SMTP serverio..."
+
+#: app/services/mail.py:109
+msgid "Sending email message..."
+msgstr "Grafikas Pranešimas"
+
+#: app/services/mail.py:111
+#, python-format
+msgid "Email sent successfully to %(to)s"
+msgstr "Bandomasis el. laiškas sėkmingai išsiųstas."
+
+#: app/services/mail.py:114
+#, python-format
+msgid "SMTP error while sending to %(to)s: %(error)s"
+msgstr "SMTP klaida siunčiant %(to)s: %(error)s"
+
+#: app/templates/about.html:10
+msgid "About Grylli"
+msgstr "Apie Grylli"
+
+#: app/templates/about.html:13
+msgid ""
+"Grylli is a secure, self-hosted message delivery platform that automatically"
+" sends pre-configured messages if a user fails to check in within a defined "
+"time period."
+msgstr ""
+"Grylli yra saugi, savarankiška pranešimų siuntimo platforma, kuri "
+"automatiškai siunčia iš anksto sukonfigūruotus pranešimus, jei vartotojas "
+"nepateikia prisijungimo per nurodytą laikotarpį."
+
+#: app/templates/about.html:14
+msgid ""
+"It supports multiple users, customizable schedules, and recurring reminders."
+msgstr "Ji palaiko kelis vartotojus ir pritaikomus tvarkaraščius."
+
+#: app/templates/about.html:15
+msgid ""
+"Messages and reminders can be delivered via email, webhooks, or over 100 "
+"third-party services through Apprise."
+msgstr ""
+"Pranešimai gali būti siunčiami el. paštu, webhooks arba per daugiau nei 80 "
+"trečiųjų šalių paslaugų per Apprise."
+
+#: app/templates/about.html:16
+msgid ""
+"Users can configure their own SMTP servers to ensure emails and reminders "
+"appear to come directly from them — not from the system administrator."
+msgstr ""
+"Vartotojai gali konfigūruoti savo SMTP serverius, kad užtikrintų, jog "
+"pranešimai atrodytų siunčiami tiesiogiai iš jų, o ne iš sistemos "
+"administratoriaus."
+
+#: app/templates/about.html:17
+msgid ""
+"Sensitive data is encrypted at rest, and all operations are secured with "
+"strong authentication and audit-friendly logging."
+msgstr ""
+"Jautrūs duomenys yra užšifruoti, o visos pranešimų operacijos užtikrinamos "
+"stipria autentifikacija ir audituoti palankiu registravimu."
+
+#: app/templates/about.html:18
+msgid ""
+"Built with a modern, reactive technology stack, Grylli is optimized for "
+"responsiveness and works seamlessly across desktop and mobile devices."
+msgstr ""
+"Naudodama modernų, reaktyvų technologijų rinkinį, Grylli optimizuota "
+"atsaklumui ir veikia sklandžiai tiek staliniuose, tiek mobiliuosiuose "
+"įrenginiuose."
+
+#: app/templates/about.html:23
+msgid "Version:"
+msgstr "Versija:"
+
+#: app/templates/about.html:26
+msgid "Repository:"
+msgstr "Saugykla:"
+
+#: app/templates/about.html:30
+msgid "GitHub - samcro1967/grylli"
+msgstr "GitHub - samcro1967/grylli"
+
+#: app/templates/help.html:2 app/templates/help.html:5
+#: app/templates/partials/header.html:85
+msgid "Help"
+msgstr "Pagalba"
+
+#: app/templates/help.html:7
+msgid ""
+"Grylli includes built-in instructions throughout the app to help you "
+"configure and manage your setup."
+msgstr ""
+"Grylli turi įmontuotas instrukcijas visose programėlės dalyse, padėsiančias "
+"konfigūruoti ir valdyti jūsų nustatymus."
+
+#: app/templates/help.html:8
+msgid ""
+"This page provides an overview of key features and direct links to where "
+"they can be managed."
+msgstr ""
+"Šis puslapis pateikia pagrindinių funkcijų apžvalgą ir tiesiogines nuorodas,"
+" kur jas galima valdyti."
+
+#: app/templates/help.html:12 app/templates/messages/list_messages.html:9
+#: app/templates/partials/shared_nav.html:17
+msgid "Notifications"
+msgstr "Pranešimai"
+
+#: app/templates/help.html:14
+msgid "Create and assign messages"
+msgstr "Sukurkite žinutę arba el. laišką."
+
+#: app/templates/admin/index.html:32 app/templates/help.html:17
+#: app/templates/partials/admin_nav.html:56
+msgid "SMTP Settings"
+msgstr "SMTP nustatymai"
+
+#: app/templates/help.html:19
+msgid "Use your own email server"
+msgstr "Naudokite savo el. pašto serverį"
+
+#: app/templates/help.html:22
+msgid "Apprise Integration"
+msgstr "Apprise paskirties vietos"
+
+#: app/templates/help.html:24
+msgid "Send notifications to 80+ supported services"
+msgstr "Siųsti pranešimus į daugiau nei 80 palaikomų paslaugų"
+
+#: app/templates/help.html:27
+#: app/templates/messages/assign_destinations.html:41
+#: app/templates/messages/view_message.html:58
+#: app/templates/partials/shared_nav.html:44
+#: app/templates/reminders/assign_destinations.html:39
+#: app/templates/reminders/view_reminder.html:69
+msgid "Webhooks"
+msgstr "Webhooks"
+
+#: app/templates/help.html:29
+msgid "Trigger actions or external workflows"
+msgstr "Suaktyvinkite veiksmus ar išorinius darbo eigos procesus"
+
+#: app/templates/email/list_emails.html:9 app/templates/help.html:32
+#: app/templates/partials/shared_nav.html:61
+msgid "Emails"
+msgstr "El. laiškai"
+
+#: app/templates/help.html:34
+msgid "View and manage secure email messages"
+msgstr "Saugios el. laiškų žinutės apžvalga"
+
+#: app/templates/help.html:38
+msgid "Security"
+msgstr "🔐 Saugumas"
+
+#: app/templates/help.html:39
+msgid "Grylli encrypts sensitive data and logs all key actions for auditing."
+msgstr ""
+"Grylli šifruoja jautrius duomenis ir registruoja visus pagrindinius veiksmus"
+" audito tikslais."
+
+#: app/templates/index.html:9 app/views/locale.py:95
+msgid "Welcome to Grylli"
+msgstr "Sveiki atvykę į Grylli"
+
+#: app/templates/index.html:11
+msgid "Pronounced"
+msgstr "Tariamai"
+
+#: app/templates/index.html:11
+msgid "like “grill-ee”"
+msgstr "kaip „grill-ee“"
+
+#: app/templates/index.html:14
+msgid ""
+"Grylli is a secure message scheduling and delivery system designed to ensure"
+" your important messages are delivered — even if you can’t be there to send "
+"them."
+msgstr ""
+"Grylli yra saugi žinučių planavimo ir pristatymo sistema, skirta užtikrinti,"
+" kad jūsų svarbios žinutės būtų pristatytos — net jei negalite jų patys "
+"išsiųsti."
+
+#: app/templates/index.html:17
+msgid ""
+"Whether you’re planning ahead, setting up emergency communication, or "
+"building peace of mind, Grylli helps automate your message delivery via "
+"multiple channels including email, webhooks, and Apprise notifications."
+msgstr ""
+"Nesvarbu, ar planuojate iš anksto, nustatote skubios komunikacijos kanalą, "
+"ar siekiate nurimti, Grylli padeda automatizuoti žinučių pristatymą el. "
+"paštu, webhooks ar Apprise pranešimais, jei praleidžiate patikrinimą."
+
+#: app/templates/index.html:19
+msgid "Getting Started"
+msgstr "Pradžiai"
+
+#: app/templates/index.html:21
+msgid "Create a message, email, or reminder."
+msgstr "Sukurkite žinutę arba el. laišką."
+
+#: app/templates/index.html:22
+msgid "Set your check-in interval and grace period (for messages)."
+msgstr "Nustatykite savo patikrinimo intervalą ir tolerancijos laikotarpį."
+
+#: app/templates/index.html:23
+msgid "Assign one or more delivery destinations."
+msgstr "Priskirkite vieną arba kelias pristatymo paskirties vietas."
+
+#: app/templates/index.html:24
+msgid "Optionally attach files for secure emails."
+msgstr "Pasirinktinai pridėkite failus saugiems el. laiškams."
+
+#: app/templates/index.html:25
+msgid "Schedule reminders to send at specific times or on a recurring basis."
+msgstr "Planuokite priminimus siųsti tam tikru laiku arba reguliariai."
+
+#: app/templates/index.html:26
+msgid "Enable the message or reminder to activate delivery."
+msgstr "Įjungti pranešimą arba priminimą, kad aktyvuotumėte pristatymą."
+
+#: app/templates/index.html:28
+msgid ""
+"Regularly check in to Grylli to prevent automated delivery; miss a check-in "
+"and Grylli sends your messages as scheduled."
+msgstr ""
+"Reguliariai prisijunkite prie Grylli, kad išvengtumėte automatinių "
+"pristatymų; praleiskite registraciją, ir Grylli išsiųs jūsų žinutes kaip "
+"suplanuota."
+
+#: app/templates/privacy.html:10
+msgid "Privacy Notice"
+msgstr "Privatumo pranešimas"
+
+#: app/templates/privacy.html:13
+msgid ""
+"Grylli respects your privacy and is designed to minimize the collection and "
+"storage of personal data."
+msgstr ""
+"Grylli gerbia jūsų privatumą ir yra skirtas minimizuoti asmens duomenų "
+"rinkimą bei saugojimą."
+
+#: app/templates/privacy.html:14
+msgid ""
+"All data is encrypted where appropriate and remains fully under your control"
+" if you self-host this platform."
+msgstr ""
+"Visi duomenys tinkamai užšifruojami ir lieka visiškai jūsų kontrolėje, jei "
+"jūs patys talpinate šią platformą."
+
+#: app/templates/privacy.html:17
+msgid "What Data We Collect"
+msgstr "Kokius duomenis renkame"
+
+#: app/templates/privacy.html:19
+msgid "Email address and password hash (for authentication)"
+msgstr "El. pašto adresas ir slaptažodžio maišos (autentifikavimui)"
+
+#: app/templates/privacy.html:20
+msgid "Optional MFA secret and recovery codes (encrypted at rest)"
+msgstr ""
+"Pasirinktinis MFA slaptasis raktas ir atkūrimo kodai (užšifruoti laikant)"
+
+#: app/templates/privacy.html:21
+msgid "Reminder and message content you configure"
+msgstr "Paskyros priminimo ir pranešimų turinys, kurį konfigūruojate"
+
+#: app/templates/privacy.html:22
+msgid "User-specific settings, SMTP configuration (if provided)"
+msgstr "Vartotojo specifiniai nustatymai, SMTP konfigūracija (jei pateikta)"
+
+#: app/templates/privacy.html:25
+msgid "How Your Data Is Used"
+msgstr "Kaip naudojami jūsų duomenys"
+
+#: app/templates/privacy.html:27
+msgid ""
+"Your data is used solely for the purpose of delivering reminders and "
+"messages according to your preferences."
+msgstr ""
+"Jūsų duomenys naudojami tik tam, kad galėtumėte gauti priminimus ir "
+"pranešimus pagal savo pageidavimus."
+
+#: app/templates/privacy.html:28
+msgid ""
+"Grylli does not share, sell, or transmit your personal data to any third "
+"parties."
+msgstr ""
+"Grylli nesidalina, neparduoda ir neperduoda jūsų asmens duomenų trečiosioms "
+"šalims."
+
+#: app/templates/privacy.html:31
+msgid "Your Rights"
+msgstr "Jūsų teisės"
+
+#: app/templates/privacy.html:33
+msgid ""
+"You can export all of your data at any time from the Account Settings page."
+msgstr ""
+"Jūs galite bet kada eksportuoti visus savo duomenis iš paskyros nuostatų "
+"puslapio."
+
+#: app/templates/privacy.html:34
+msgid "You may permanently delete your account and all associated data."
+msgstr ""
+"Negalite ištrinti savo paskyros, nes esate paskutinis administratorius."
+
+#: app/templates/privacy.html:35
+msgid ""
+"If you are using a self-hosted instance, contact the instance administrator "
+"for data inquiries."
+msgstr ""
+"Jei naudojate savarankiškai talpinamą versiją, kreipkitės į administratorių "
+"dėl duomenų užklausų."
+
+#: app/templates/privacy.html:38
+msgid "Self-Hosting Responsibility"
+msgstr "Savetalpinimo atsakomybė"
+
+#: app/templates/privacy.html:40
+msgid ""
+"If you are running Grylli on your own server, you are responsible for the "
+"storage, processing, and lawful handling of all user data on that instance."
+msgstr ""
+"Jei Grylli veikia jūsų nuosavame serveryje, jūs atsakote už visų vartotojų "
+"duomenų saugojimą, tvarkymą ir teisėtą užtikrinimą toje instancijoje."
+
+#: app/templates/privacy.html:44
+msgid ""
+"This notice was last updated in June 2025 and may evolve to reflect changes "
+"in the software or regulatory landscape."
+msgstr ""
+"Šis pranešimas buvo paskutinį kartą atnaujintas 2025 m. birželį ir gali "
+"keistis atsižvelgiant į programinės įrangos ar reguliavimo kraštovaizdžio "
+"pokyčius."
+
+#: app/templates/system_info.html:11
+msgid "📦 Environment Versions"
+msgstr "📦 Aplinkos versijos"
+
+#: app/templates/system_info.html:17
+msgid "Category"
+msgstr "Kategorija"
+
+#: app/templates/system_info.html:18
+msgid "Tool"
+msgstr "Įrankis"
+
+#: app/templates/system_info.html:19
+msgid "Version"
+msgstr "Versija"
+
+#: app/templates/system_info.html:25
+msgid "🧠 Python"
+msgstr "🧠 Python"
+
+#: app/templates/system_info.html:26
+msgid "Python"
+msgstr "Python"
+
+#: app/templates/system_info.html:30
+msgid "pip"
+msgstr "pip"
+
+#: app/templates/system_info.html:34
+msgid "SQLite"
+msgstr "SQLite"
+
+#: app/templates/system_info.html:40
+msgid "⚙️ Core"
+msgstr "⚙️ Branduolys"
+
+#: app/templates/system_info.html:47
+msgid "🔐 Security"
+msgstr "🔐 Saugumas"
+
+#: app/templates/system_info.html:48
+msgid "Email Validator"
+msgstr "El. pašto tikrintojas"
+
+#: app/templates/system_info.html:52
+msgid "Cryptography"
+msgstr "Kriptografija"
+
+#: app/templates/system_info.html:57
+msgid "🕰️ Scheduling"
+msgstr "🕰️ Tvarkaraščiai"
+
+#: app/templates/system_info.html:58
+msgid "APScheduler"
+msgstr "APScheduler"
+
+#: app/templates/system_info.html:62
+msgid "Apprise (Python)"
+msgstr "Apprise (Python)"
+
+#: app/templates/system_info.html:66
+msgid "Apprise CLI"
+msgstr "Apprise CLI"
+
+#: app/templates/system_info.html:74
+msgid "🌐 Frontend"
+msgstr "🌐 Priekinės dalies sąsaja"
+
+#: app/templates/account/manage_account.html:11
+msgid "Manage Account"
+msgstr "Tvarkykite paskyrą"
+
+#: app/templates/account/manage_account.html:12
+msgid "Update your profile information and password."
+msgstr "Atnaujinkite savo profilio informaciją ir slaptažodį."
+
+#: app/templates/account/manage_account.html:41
+#: app/templates/admin/create_user.html:40
+#: app/templates/auth/bootstrap.html:43
+#: app/templates/auth/reset_password.html:42 app/templates/auth/signup.html:42
+msgid "Please enter a valid email address."
+msgstr "Prašome įvesti galiojantį el. pašo adresą."
+
+#: app/templates/account/manage_account.html:62
+#: app/templates/account/manage_account.html:96
+#: app/templates/account/manage_account.html:127
+#: app/templates/auth/reset_password.html:66
+#: app/templates/auth/reset_password.html:97 app/templates/auth/signup.html:65
+#: app/templates/auth/signup.html:95
+msgid "Show/hide password"
+msgstr "Laikykite, kad būtų rodomas slaptažodis"
+
+#: app/templates/account/manage_account.html:89
+#: app/templates/admin/create_user.html:53
+#: app/templates/auth/bootstrap.html:51
+#: app/templates/auth/reset_password.html:58 app/templates/auth/signup.html:58
+msgid "Password must meet all complexity requirements."
+msgstr "Slaptažodis turi atitikti visus sudėtingumo reikalavimus."
+
+#: app/templates/account/manage_account.html:141
+#: app/templates/admin/create_user.html:72
+#: app/templates/admin/edit_user.html:67 app/templates/auth/bootstrap.html:69
+#: app/templates/auth/reset_password.html:110
+#: app/templates/auth/signup.html:108
+msgid "Passwords do not match."
+msgstr "Slaptažodžiai nesutampa."
+
+#: app/templates/account/manage_account.html:147
+msgid "Update Account"
+msgstr "Atnaujinti paskyrą"
+
+#: app/templates/account/manage_account.html:151
+#: app/templates/admin/create_user.html:82
+#: app/templates/admin/edit_user.html:97 app/templates/admin/help_form.html:28
+#: app/templates/admin/partials/user_instructions_and_modal.html:62
+#: app/templates/admin/partials/user_table.html:113
+#: app/templates/apprise/create_apprise.html:42
+#: app/templates/apprise/edit_apprise.html:42
+#: app/templates/auth/reset_password.html:121
+#: app/templates/email/assign_smtp.html:46
+#: app/templates/email/attach_files.html:47
+#: app/templates/email/edit_message.html:54
+#: app/templates/email/schedule_email.html:84
+#: app/templates/messages/assign_destinations.html:66
+#: app/templates/messages/create_message.html:55
+#: app/templates/messages/edit_message.html:48
+#: app/templates/messages/schedule_message.html:84
+#: app/templates/mfa/challenge.html:29 app/templates/mfa/settings.html:51
+#: app/templates/reminders/assign_destinations.html:64
+#: app/templates/reminders/assign_email_reminder.html:94
+#: app/templates/reminders/create_reminder.html:49
+#: app/templates/reminders/edit_reminder.html:42
+#: app/templates/reminders/schedule_reminder.html:51
+#: app/templates/user_smtp/create_smtp.html:111
+#: app/templates/user_smtp/edit_smtp.html:125
+#: app/templates/webhook/create_webhook.html:48
+#: app/templates/webhook/edit_webhook.html:48
+msgid "Cancel"
+msgstr "Atšaukti"
+
+#: app/templates/account/manage_account.html:159
+#: app/templates/admin/create_user.html:90
+#: app/templates/admin/edit_user.html:81 app/templates/auth/bootstrap.html:83
+#: app/templates/auth/reset_password.html:128
+#: app/templates/auth/signup.html:132
+msgid "Minimum 8 characters"
+msgstr "Mažiausiai 8 simboliai"
+
+#: app/templates/account/manage_account.html:160
+#: app/templates/admin/create_user.html:91
+#: app/templates/admin/edit_user.html:82 app/templates/auth/bootstrap.html:84
+#: app/templates/auth/reset_password.html:129
+#: app/templates/auth/signup.html:133
+msgid "At least one uppercase letter"
+msgstr "Bent viena didžioji raidė"
+
+#: app/templates/account/manage_account.html:161
+#: app/templates/admin/create_user.html:92
+#: app/templates/admin/edit_user.html:83 app/templates/auth/bootstrap.html:85
+#: app/templates/auth/reset_password.html:130
+#: app/templates/auth/signup.html:134
+msgid "At least one lowercase letter"
+msgstr "Bent viena mažoji raidė"
+
+#: app/templates/account/manage_account.html:162
+#: app/templates/admin/create_user.html:93
+#: app/templates/admin/edit_user.html:84 app/templates/auth/bootstrap.html:86
+#: app/templates/auth/reset_password.html:131
+#: app/templates/auth/signup.html:135
+msgid "At least one number"
+msgstr "Bent vienas skaičius"
+
+#: app/templates/account/manage_account.html:163
+#: app/templates/admin/create_user.html:94
+#: app/templates/auth/bootstrap.html:87
+#: app/templates/auth/reset_password.html:132
+#: app/templates/auth/signup.html:136
+msgid "At least one special character (e.g., !@#$%)"
+msgstr "Bent jau vienas specialus simbolis (pvz., !@#$%)"
+
+#: app/templates/account/manage_account.html:169
+msgid "Download My Data"
+msgstr "Atsisiųsti mano duomenis"
+
+#: app/templates/account/manage_account.html:171
+msgid ""
+"Download all your account data as a JSON file. This includes your reminders,"
+" messages, email settings, and more. The file is for your records only and "
+"cannot be imported back. Protect it as it may contain sensitive information."
+msgstr ""
+"Atsisiųskite visus savo paskyros duomenis JSON failu. Čia yra jūsų "
+"priminimai, pranešimai, el. pašto nustatymai ir kt. Šis failas skirtas tik "
+"jūsų įrašams ir negali būti vėl įkeltas. Saugokite jį, nes jame gali būti "
+"jautri informacija."
+
+#: app/templates/account/manage_account.html:175
+msgid "Download My Data (JSON)"
+msgstr "Atsisiųsti mano duomenis (JSON)"
+
+#: app/templates/account/manage_account.html:179
+msgid "Danger Zone"
+msgstr "Pavojinga zona"
+
+#: app/templates/account/manage_account.html:180
+msgid "Deleting your account is permanent and cannot be undone."
+msgstr "Jūsų paskyros ištrynimas yra nuolatinis ir negali būti atšauktas."
+
+#: app/templates/account/manage_account.html:185
+msgid "Delete My Account"
+msgstr "Atnaujinti paskyrą"
+
+#: app/templates/account/translations.html:8
+msgid "Translations - Grylli"
+msgstr "Vertimai - Grylli"
+
+#: app/templates/account/translations.html:17
+#: app/templates/partials/header.html:102
+msgid "Translations"
+msgstr "Vertimai"
+
+#: app/templates/account/translations.html:20
+msgid "Grylli currently supports multiple languages and more will be added."
+msgstr "Grylli šiuo metu palaiko kelias kalbas, o daugiau bus pridėta."
+
+#: app/templates/account/translations.html:21
+msgid "Many of the translations were performed with assistance from ChatGPT."
+msgstr "Daug vertimų atlikta su ChatGPT pagalba."
+
+#: app/templates/account/translations.html:22
+msgid ""
+"If you find a translation issue or want to suggest improvements, your input "
+"is welcome!"
+msgstr ""
+"Jei pastebite vertimo klaidą ar norite pasiūlyti patobulinimus, jūsų nuomonė"
+" yra laukiama!"
+
+#: app/templates/account/translations.html:28
+msgid "How to request translation updates"
+msgstr "Kaip prašyti vertimų atnaujinimo"
+
+#: app/templates/account/translations.html:30
+msgid "To contribute to translations, please use the following guidelines:"
+msgstr "Norėdami prisidėti prie vertimų, prašome naudoti šias gaires:"
+
+#: app/templates/account/translations.html:43
+msgid "Contribute missing or improved translations:"
+msgstr "Radote trūkstamą vertimą?"
+
+#: app/templates/account/translations.html:63
+msgid "Open the relevant .po translation file for your language."
+msgstr "Atidarykite JSON vertimų failą savo kalbai. Pavyzdžiui:"
+
+#: app/templates/account/translations.html:67
+msgid ""
+"Find untranslated or incomplete entries and add or improve translations."
+msgstr ""
+"Raskite neišverstus ar nepilnus įrašus ir pridėkite arba patobulinkite "
+"vertimus."
+
+#: app/templates/account/translations.html:68
+msgid "You may use a PO file editor or a text editor."
+msgstr "Galite naudoti PO failų redaktorių arba teksto redaktorių."
+
+#: app/templates/account/translations.html:69
+msgid "Copy the file path and the snippet of your changes."
+msgstr "Nukopijuokite failo kelią ir savo pakeitimų fragmentą."
+
+#: app/templates/account/translations.html:70
+msgid "Paste the snippet directly into a new GitHub issue for review."
+msgstr ""
+"Įklijuokite nukopijuotą ištrauką tiesiogiai į GitHub problemos komentarą."
+
+#: app/templates/account/translations.html:72
+msgid "Please do not upload the full .po file to avoid merge conflicts."
+msgstr "Nepateikite viso .po failo, kad išvengtumėte susijungimo problemų."
+
+#: app/templates/account/translations.html:85
+msgid "Improving existing translations:"
+msgstr "Tobulinti esamus vertimus:"
+
+#: app/templates/account/translations.html:104
+msgid "Open the relevant .po file for the translation you want to improve."
+msgstr "Atidarykite atitinkamą .po failą, kurį norite patobulinti."
+
+#: app/templates/account/translations.html:106
+msgid "For example:"
+msgstr "Pavyzdžiui:"
+
+#: app/templates/account/translations.html:110
+msgid ""
+"Find the phrase(s) and its existing translation(s) you want to improve."
+msgstr ""
+"Raskite frazę (-es) ir jos esamą vertimą (-us), kurį norite patobulinti."
+
+#: app/templates/account/translations.html:111
+msgid "Update the phrase(s)."
+msgstr "Atnaujinkite frazę (-es)."
+
+#: app/templates/account/translations.html:112
+msgid "Copy the file name and path into the issue."
+msgstr "Kopijuokite failo pavadinimą ir kelią į problemą."
+
+#: app/templates/account/translations.html:114
+msgid "Paste the copied snippet directly into the GitHub issue comment."
+msgstr ""
+"Įklijuokite nukopijuotą ištrauką tiesiogiai į GitHub problemos komentarą."
+
+#: app/templates/account/translations.html:115
+msgid "Do not upload the full .po file to avoid merge conflicts."
+msgstr "Nepateikite viso .po failo, kad išvengtumėte susijungimo problemų."
+
+#: app/templates/account/translations.html:118
+msgid "Example snippet:"
+msgstr "Pavyzdinė ištrauka:"
+
+#: app/templates/account/translations.html:137
+msgid "Report missing translations not yet discovered:"
+msgstr "Pranešti apie dar neatrastas trūkstamas vertimas:"
+
+#: app/templates/account/translations.html:154
+msgid ""
+"If you see text in the app that appears untranslated or missing, please "
+"report it to us."
+msgstr ""
+"Jei matote tekstą aplikacijoje, kuris atrodo neišverstas ar trūksta, prašome"
+" pranešti mums."
+
+#: app/templates/account/translations.html:155
+msgid "Provide the exact English phrase as it appears on the screen."
+msgstr "Nurodykite tikslią anglišką frazę, kaip ji rodoma ekrane."
+
+#: app/templates/account/translations.html:156
+msgid ""
+"Include the page or section where you saw the phrase (e.g., Apprise page, "
+"Account Page, etc.)."
+msgstr ""
+"Pridėkite puslapį ar skyrių, kuriame matėte frazę (pvz., Nustatymų puslapis,"
+" Paskyros skyrius)."
+
+#: app/templates/account/translations.html:157
+msgid ""
+"Submit this information via a new GitHub issue so we can add it to the "
+"translation files"
+msgstr ""
+"Pateikite šią informaciją per naują GitHub problemą, kad galėtume pridėti ją"
+" prie vertimų failų ir apvynioti Babel."
+
+#: app/templates/account/translations.html:166
+msgid "Found a missing translation?"
+msgstr "Radote trūkstamą vertimą?"
+
+#: app/templates/account/translations.html:171
+msgid ""
+"This link will create a new GitHub issue pre-filled with a language code."
+msgstr ""
+"Ši nuoroda sukurs naują GitHub užklausą su iš anksto užpildytu kalbos kodu."
+
+#: app/templates/account/translations.html:172
+msgid "Report it by opening a new GitHub issue"
+msgstr "Praneškite atidarydami naują GitHub problemą"
+
+#: app/templates/account/translations.html:175
+msgid "Please specify the language code and exact phrase when reporting."
+msgstr "Prašome nurodyti kalbos kodą ir tikslią frazę pranešdami."
+
+#: app/templates/account/translations.html:176
+msgid "Thank you for helping us make Grylli better!"
+msgstr "Dėkojame, kad padedate padaryti Grylli geresnį!"
+
+#: app/templates/admin/create_user.html:14
+msgid "Create New User"
+msgstr "Sukurti naują vartotoją"
+
+#: app/templates/admin/create_user.html:15
+msgid "Fill out the form to add a new user."
+msgstr "Užpildykite formą, kad pridėtumėte naują vartotoją."
+
+#: app/templates/admin/create_user.html:21
+#: app/templates/admin/edit_user.html:17 app/templates/auth/bootstrap.html:24
+msgid "Please fix the following errors:"
+msgstr "Prašome ištaisyti šias klaidas:"
+
+#: app/templates/admin/create_user.html:78
+#: app/templates/admin/edit_user.html:93
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "Create User"
+msgstr "Sukurti vartotoją"
+
+#: app/templates/admin/edit_user.html:10
+#: app/templates/admin/partials/user_card.html:20
+#: app/templates/admin/partials/user_table.html:26
+msgid "Edit User"
+msgstr "Redaguoti vartotoją"
+
+#: app/templates/admin/edit_user.html:55 app/templates/admin/edit_user.html:74
+msgid "Hold to show password"
+msgstr "Laikykite, kad būtų rodomas slaptažodis"
+
+#: app/templates/admin/edit_user.html:85
+#, python-format
+msgid "At least one special character (e.g., !@#$%%)"
+msgstr "Bent jau vienas specialus simbolis (pvz., !@#$%%)"
+
+#: app/templates/admin/help.html:4 app/templates/auth/login.html:72
+msgid "Admin Help"
+msgstr "Administratoriaus skydelis"
+
+#: app/templates/admin/help.html:7
+msgid "Reset Admin Password"
+msgstr "Atstatyti slaptažodį"
+
+#: app/templates/admin/help.html:9
+msgid ""
+"If you've forgotten the admin password, you can reset it using the following"
+" Docker command:"
+msgstr ""
+"Jei pamiršote administratoriaus slaptažodį, galite jį iš naujo nustatyti "
+"naudodami šią Docker komandą:"
+
+#: app/templates/admin/help.html:15
+msgid ""
+"This script will prompt you to enter a new password for the admin user. You "
+"must run it from the host system where the Grylli container is running."
+msgstr ""
+"Šis scenarijus paprašys jūsų įvesti naują slaptažodį administratoriaus "
+"vartotojui. Jis turi būti vykdomas iš kompiuterio sistemos, kurioje veikia "
+"Grylli konteineris."
+
+#: app/templates/admin/help.html:18
+msgid "After resetting, you can log in with the new password immediately."
+msgstr "Po atstatymo galite prisijungti su nauju slaptažodžiu iš karto."
+
+#: app/templates/admin/help.html:24
+msgid "Return to Login"
+msgstr "Grįžti į prietaisų skydelį"
+
+#: app/templates/admin/help_form.html:6
+msgid "Admin Help Access"
+msgstr "Administratoriaus pagalbos prieiga"
+
+#: app/templates/admin/help_form.html:9
+msgid "Enter your Ferret Key to unlock admin-only help documentation."
+msgstr ""
+"Įveskite savo Ferret Key, kad atrakintumėte pagalbos dokumentaciją, skirtą "
+"tik administratoriui."
+
+#: app/templates/admin/help_form.html:34
+msgid "How to Find Your FERRET_KEY"
+msgstr "Kaip rasti savo FERRET_KEY"
+
+#: app/templates/admin/help_form.html:36
+msgid "The FERRET_KEY is set as an environment variable when running Grylli."
+msgstr ""
+"FERRET_KEY yra nustatytas kaip aplinkos kintamasis, kai veikia Grylli."
+
+#: app/templates/admin/help_form.html:39
+msgid "Option 1: Check docker-compose.yml"
+msgstr "1 variantas: Patikrinkite docker-compose.yml"
+
+#: app/templates/admin/help_form.html:46
+msgid "Option 2: Use docker inspect"
+msgstr "2 variantas: Naudokite docker inspect"
+
+#: app/templates/admin/help_form.html:52
+msgid "This shows the FERRET_KEY as passed to the container at runtime."
+msgstr "Tai rodo FERRET_KEY, kai jis perduodamas konteineriui veikimo metu."
+
+#: app/templates/admin/index.html:10
+msgid "Admin Panel"
+msgstr "Administratoriaus skydelis"
+
+#: app/templates/admin/index.html:12
+msgid ""
+"Welcome to the Grylli Admin Panel. Use the links below to manage the system."
+msgstr ""
+"Sveiki atvykę į Grylli administratoriaus skydelį. Naudokitės toliau "
+"pateiktomis nuorodomis sistemai valdyti."
+
+#: app/templates/admin/index.html:17
+msgid "Manage Users"
+msgstr "Valdyti vartotojus"
+
+#: app/templates/admin/index.html:18
+msgid "Create, edit, enable/disable, or delete user accounts."
+msgstr "Kurti, redaguoti, įjungti/išjungti arba naikinti vartotojų paskyras."
+
+#: app/templates/admin/index.html:22
+#: app/templates/admin/system_settings.html:10
+#: app/templates/partials/admin_nav.html:52
+msgid "System Settings"
+msgstr "Sistemos nustatymai"
+
+#: app/templates/admin/index.html:23
+msgid "View  system-wide environment values."
+msgstr "Peržiūrėti sistemines aplinkos vertes."
+
+#: app/templates/admin/index.html:27 app/templates/partials/admin_nav.html:42
+msgid "Backups"
+msgstr "Atsarginės kopijos"
+
+#: app/templates/admin/index.html:28
+msgid "Create and delete database backups."
+msgstr "Duomenų bazės atsarginės kopijos"
+
+#: app/templates/admin/index.html:33
+msgid "View and test global SMTP settings."
+msgstr "Nepavyko išsiųsti bandomojo el. laiško. Patikrinkite SMTP nustatymus."
+
+#: app/templates/admin/index.html:39
+msgid "View Admin Guide / README on GitHub"
+msgstr "Peržiūrėti Administratoriaus vadovą / README GitHub"
+
+#: app/templates/admin/index.html:40
+msgid "Includes setup instructions, integrations, and troubleshooting."
+msgstr "Įtraukia nustatymų instrukcijas, integracijas ir trikčių šalinimą."
+
+#: app/templates/admin/index.html:44
+msgid "⚠️ Admin Tips"
+msgstr "⚠️ Administratoriaus patarimai"
+
+#: app/templates/admin/index.html:46
+msgid "Ensure the data folder (database) is backed up on your host"
+msgstr ""
+"Įsitikinkite, kad jūsų pagrindinėje serveryje yra sukurta duomenų aplanko "
+"(duomenų bazės) atsarginė kopija."
+
+#: app/templates/admin/index.html:48
+msgid ""
+"The uploads folder is not per user.  If required per user, you will ndd to "
+"create subdirectoried per user and setup permissions so users can only see "
+"their own folder."
+msgstr ""
+"Įkėlimų aplankas nėra atskiras kiekvienam naudotojui. Jei reikia, galite "
+"sukurti poaplankius kiekvienam naudotojui ir nustatyti leidimus, kad "
+"naudotojai matytų tik savo aplanką."
+
+#: app/templates/admin/index.html:51
+msgid ""
+"To restore a backup: stop the container, replace the data/grylli.db with one"
+" from the backups folder, and restart the container."
+msgstr ""
+"Norėdami atkurti atsarginę kopiją: sustabdykite konteinerį, pakeiskite "
+"duomenų/grylli.db failą iš atsarginių kopijų aplanko ir paleiskite "
+"konteinerį iš naujo."
+
+#: app/templates/admin/list_backups.html:11
+msgid "Database Backups"
+msgstr "Duomenų bazės atsarginės kopijos"
+
+#: app/templates/admin/list_backups.html:13
+msgid "Create Backup"
+msgstr "Sukurti atsarginę kopiją"
+
+#: app/templates/admin/list_backups.html:21
+msgid "Filename"
+msgstr "Failo pavadinimas"
+
+#: app/templates/admin/list_backups.html:22
+#: app/templates/admin/partials/user_table.html:14
+#: app/templates/apprise/list_apprise.html:62
+#: app/templates/email/list_emails.html:60
+#: app/templates/messages/list_messages.html:60
+#: app/templates/reminders/list_reminders.html:60
+#: app/templates/user_smtp/list_smtp.html:59
+#: app/templates/webhook/list_webhooks.html:63
+msgid "Actions"
+msgstr "Veiksmai"
+
+#: app/templates/admin/list_backups.html:32
+msgid "Delete this backup?"
+msgstr "Ištrinti šią atsarginę kopiją?"
+
+#: app/templates/admin/list_backups.html:32
+#: app/templates/apprise/list_apprise.html:95
+#: app/templates/apprise/list_apprise.html:99
+#: app/templates/apprise/list_apprise.html:150
+#: app/templates/apprise/list_apprise.html:154
+#: app/templates/email/list_emails.html:124
+#: app/templates/email/list_emails.html:128
+#: app/templates/email/list_emails.html:226
+#: app/templates/email/list_emails.html:230
+#: app/templates/messages/list_messages.html:112
+#: app/templates/messages/list_messages.html:116
+#: app/templates/messages/list_messages.html:198
+#: app/templates/messages/list_messages.html:202
+#: app/templates/reminders/list_reminders.html:107
+#: app/templates/reminders/list_reminders.html:113
+#: app/templates/reminders/list_reminders.html:192
+#: app/templates/reminders/list_reminders.html:198
+#: app/templates/user_smtp/list_smtp.html:101
+#: app/templates/user_smtp/list_smtp.html:169
+#: app/templates/webhook/list_webhooks.html:102
+#: app/templates/webhook/list_webhooks.html:161
+msgid "Delete"
+msgstr "Ištrinti"
+
+#: app/templates/admin/list_backups.html:41
+msgid "No backups found."
+msgstr "Atsarginių kopijų nerasta."
+
+#: app/templates/admin/list_backups.html:44
+msgid ""
+"Backups contain your full app data. Store securely. Sensitive data is "
+"encrypted in the DB by default."
+msgstr ""
+"Atsarginės kopijos turinys yra visa programėlės informacija. Laikykite "
+"saugiai. Jautri informacija pagal nutylėjimą yra užšifruota duomenų bazėje."
+
+#: app/templates/admin/smtp_config.html:28
+#: app/templates/admin/system_config.html:22
+msgid "System Configuration"
+msgstr "Sistemos konfigūracija"
+
+#: app/templates/admin/smtp_config.html:33
+#: app/templates/admin/system_config.html:26
+#: app/templates/admin/system_settings.html:15
+msgid "Key"
+msgstr "Raktas"
+
+#: app/templates/admin/smtp_config.html:34
+#: app/templates/admin/system_config.html:27
+#: app/templates/admin/system_settings.html:16
+msgid "Value"
+msgstr "Reikšmė"
+
+#: app/templates/admin/smtp_config.html:35
+#: app/templates/admin/system_config.html:28
+msgid "Sensitive"
+msgstr "Jautrus"
+
+#: app/templates/admin/smtp_config.html:36
+#: app/templates/admin/system_config.html:29
+msgid "Editable"
+msgstr "Redaguojamas"
+
+#: app/templates/admin/smtp_config.html:50
+#: app/templates/admin/smtp_config.html:51
+#: app/templates/admin/system_config.html:45
+#: app/templates/admin/system_config.html:46
+#: app/templates/email/view_config.html:60
+msgid "Yes"
+msgstr "Taip"
+
+#: app/templates/admin/smtp_config.html:50
+#: app/templates/admin/smtp_config.html:51
+#: app/templates/admin/system_config.html:45
+#: app/templates/admin/system_config.html:46
+#: app/templates/email/view_config.html:60
+msgid "No"
+msgstr "Ne"
+
+#: app/templates/admin/smtp_config.html:63
+#: app/templates/admin/system_config.html:55
+msgid "Send Test Email"
+msgstr "Siųsti bandomąjį el. laišką"
+
+#: app/templates/admin/system_config.html:39
+msgid "decrypted"
+msgstr "Sukurta"
+
+#: app/templates/admin/partials/user_card.html:12
+msgid "Email:"
+msgstr "El. paštas:"
+
+#: app/templates/admin/partials/user_card.html:15
+msgid "Role:"
+msgstr "Vaidmuo:"
+
+#: app/templates/admin/partials/user_card.html:27
+#: app/templates/admin/partials/user_table.html:34
+msgid "Change Role"
+msgstr "Keisti vaidmenį"
+
+#: app/templates/admin/partials/user_card.html:29
+#: app/templates/admin/partials/user_table.html:36
+msgid "You cannot change your own role"
+msgstr "Negalite keisti savo aktyvumo būsenos."
+
+#: app/templates/admin/partials/user_card.html:36
+#: app/templates/admin/partials/user_table.html:43
+msgid "Are you sure you want to reset MFA for this user?"
+msgstr "Ar tikrai norite iš naujo nustatyti MFA šiam naudotojui?"
+
+#: app/templates/admin/partials/user_card.html:39
+#: app/templates/admin/partials/user_table.html:46
+msgid "Reset MFA"
+msgstr "Atstatyti slaptažodį"
+
+#: app/templates/admin/partials/user_card.html:51
+#: app/templates/admin/partials/user_table.html:58
+msgid "Delete user"
+msgstr "Ištrinti naudotoją"
+
+#: app/templates/admin/partials/user_card.html:55
+#: app/templates/admin/partials/user_table.html:61
+msgid "Delete User"
+msgstr "Ištrinti naudotoją"
+
+#: app/templates/admin/partials/user_card.html:58
+#: app/templates/admin/partials/user_table.html:65
+msgid "You cannot disable yourself"
+msgstr "Negalite išjungti savęs"
+
+#: app/templates/admin/partials/user_card.html:65
+#: app/templates/admin/partials/user_table.html:72
+msgid "Disable"
+msgstr "Išjungti"
+
+#: app/templates/admin/partials/user_card.html:65
+#: app/templates/admin/partials/user_table.html:72
+msgid "Enable"
+msgstr "Įjungti"
+
+#: app/templates/admin/partials/user_header.html:6
+#: app/templates/partials/admin_nav.html:47
+msgid "Users"
+msgstr "Vartotojai"
+
+#: app/templates/admin/partials/user_header.html:12
+#: app/templates/admin/partials/user_header.html:13
+#: app/templates/apprise/apprise_config.html:10
+#: app/templates/apprise/apprise_config.html:11
+#: app/templates/apprise/list_apprise.html:16
+#: app/templates/apprise/list_apprise.html:17
+#: app/templates/email/list_emails.html:15
+#: app/templates/email/list_emails.html:16
+#: app/templates/messages/list_messages.html:16
+#: app/templates/messages/list_messages.html:17
+#: app/templates/reminders/list_reminders.html:15
+#: app/templates/reminders/list_reminders.html:16
+#: app/templates/user_smtp/list_smtp.html:14
+#: app/templates/user_smtp/list_smtp.html:17
+#: app/templates/webhook/list_webhooks.html:16
+#: app/templates/webhook/list_webhooks.html:17
+#: app/templates/webhook/webhook_config.html:10
+#: app/templates/webhook/webhook_config.html:11
+msgid "Table View"
+msgstr "Lentelės rodinys"
+
+#: app/templates/admin/partials/user_header.html:26
+#: app/templates/admin/partials/user_header.html:27
+#: app/templates/apprise/apprise_config.html:24
+#: app/templates/apprise/apprise_config.html:25
+#: app/templates/apprise/list_apprise.html:30
+#: app/templates/apprise/list_apprise.html:31
+#: app/templates/email/list_emails.html:29
+#: app/templates/email/list_emails.html:30
+#: app/templates/messages/list_messages.html:30
+#: app/templates/messages/list_messages.html:31
+#: app/templates/reminders/list_reminders.html:29
+#: app/templates/reminders/list_reminders.html:30
+#: app/templates/user_smtp/list_smtp.html:27
+#: app/templates/user_smtp/list_smtp.html:30
+#: app/templates/webhook/list_webhooks.html:30
+#: app/templates/webhook/list_webhooks.html:31
+#: app/templates/webhook/webhook_config.html:24
+#: app/templates/webhook/webhook_config.html:25
+msgid "Card View"
+msgstr "Kortelės rodinys"
+
+#: app/templates/admin/partials/user_header.html:45
+msgid "Add User"
+msgstr "Pridėti naudotoją"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:9
+#: app/templates/email/attach_files.html:54
+#: app/templates/email/list_emails.html:255
+#: app/templates/messages/list_messages.html:223
+#: app/templates/reminders/list_reminders.html:218
+#: app/templates/reminders/schedule_reminder.html:56
+msgid "Hide Instructions"
+msgstr "Slėpti instrukcijas"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:9
+msgid "How to manage users"
+msgstr "Kaip valdyti naudotojus"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "Click"
+msgstr "Spustelėkite"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+msgid "➕ Add User"
+msgstr "➕ Pridėti naudotoją"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+msgid "to open the new user form."
+msgstr "norėdami atidaryti naujo naudotojo formą."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:18
+msgid "Enter a unique username, valid email address, and strong password."
+msgstr ""
+"Įveskite unikalų naudotojo vardą, galiojantį el. pašto adresą ir stiprų "
+"slaptažodį."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "Select the appropriate"
+msgstr "Pasirinkite tinkamą"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "role"
+msgstr "vaidmenį"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "or"
+msgstr "Prievadas"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "to save."
+msgstr "įrašyti."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:25
+msgid "To edit a user, click ✏️ and update their info."
+msgstr ""
+"Norėdami redaguoti naudotoją, spustelėkite ✏️ ir atnaujinkite jo "
+"informaciją."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:26
+msgid "To delete a user, click 🗑️ and confirm the deletion."
+msgstr ""
+"Norėdami ištrinti naudotoją, spustelėkite 🗑️ ir patvirtinkite ištrynimą."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:28
+msgid "To disable or enable a user, click 🔴 or 🟢."
+msgstr "Norėdami išjungti ar įjungti naudotoją, spustelėkite 🔴 arba 🟢."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:30
+msgid "🟢 = User is enabled and can log in."
+msgstr "🟢 = Naudotojas yra įjungtas ir gali prisijungti."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:31
+msgid "🔴 = User is disabled and cannot log in."
+msgstr "🔴 = Vartotojas yra išjungtas ir negali prisijungti."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:32
+msgid "⚪ = You cannot disable your own account."
+msgstr "⚪ = Negalite išjungti savo paskyros."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:43
+#: app/templates/admin/partials/user_table.html:91
+msgid "Assign Role for"
+msgstr "Priskirti tikslus"
+
+#: app/templates/admin/partials/user_table.html:10
+msgid "ID"
+msgstr "ID"
+
+#: app/templates/admin/partials/user_table.html:11
+#: app/templates/user_smtp/list_smtp.html:55
+msgid "Username"
+msgstr "Naudotojo vardas"
+
+#: app/templates/admin/partials/user_table.html:12
+msgid "Email"
+msgstr "El. paštas"
+
+#: app/templates/admin/partials/user_table.html:13
+msgid "Role"
+msgstr "Vaidmuo"
+
+#: app/templates/apprise/apprise_config.html:3
+#: app/templates/apprise/list_apprise.html:9
+#: app/templates/messages/assign_destinations.html:22
+#: app/templates/reminders/assign_destinations.html:20
+msgid "Apprise Destinations"
+msgstr "Apprise paskirties vietos"
+
+#: app/templates/apprise/apprise_config.html:43
+#: app/templates/webhook/list_webhooks.html:49
+#: app/templates/webhook/webhook_config.html:43
+msgid "Add Webhook"
+msgstr "Pridėti žiniatinklio žinutę"
+
+#: app/templates/apprise/apprise_config.html:43
+#: app/templates/apprise/list_apprise.html:49
+#: app/templates/webhook/list_webhooks.html:49
+#: app/templates/webhook/webhook_config.html:43
+msgid "Add Destination"
+msgstr "Pridėti paskirties vietą"
+
+#: app/templates/apprise/create_apprise.html:10
+msgid "Create Apprise Destination"
+msgstr "Sukurti Apprise paskirties vietą"
+
+#: app/templates/apprise/create_apprise.html:38
+#: app/templates/apprise/edit_apprise.html:38
+#: app/templates/user_smtp/create_smtp.html:107
+#: app/templates/webhook/create_webhook.html:44
+#: app/templates/webhook/edit_webhook.html:44
+msgid "Create Destination"
+msgstr "Sukurti paskirties vietą"
+
+#: app/templates/apprise/create_apprise.html:47
+#: app/templates/apprise/edit_apprise.html:47
+msgid "Need help with Apprise URLs? See the"
+msgstr "Reikia pagalbos su Apprise URL? Žr."
+
+#: app/templates/apprise/create_apprise.html:51
+#: app/templates/apprise/edit_apprise.html:51
+msgid "Apprise Notification Services documentation"
+msgstr "Apprise pranešimų paslaugų dokumentacija"
+
+#: app/templates/apprise/edit_apprise.html:10
+msgid "Edit Apprise Destination"
+msgstr "Redaguoti Apprise paskirties vietą"
+
+#: app/templates/apprise/list_apprise.html:49
+msgid "Add Apprise"
+msgstr "Pridėti Apprise"
+
+#: app/templates/apprise/list_apprise.html:58
+#: app/templates/email/edit_message.html:21
+#: app/templates/email/list_emails.html:56
+#: app/templates/email/view_config.html:14
+#: app/templates/messages/create_message.html:29
+#: app/templates/messages/edit_message.html:23
+#: app/templates/messages/list_messages.html:57
+#: app/templates/messages/view_message.html:14
+#: app/templates/reminders/create_reminder.html:23
+#: app/templates/reminders/edit_reminder.html:17
+#: app/templates/reminders/list_reminders.html:56
+#: app/templates/reminders/view_reminder.html:13
+#: app/templates/user_smtp/list_smtp.html:52
+#: app/templates/webhook/list_webhooks.html:58
+msgid "Label"
+msgstr "Etiketė"
+
+#: app/templates/apprise/list_apprise.html:59
+msgid "URL"
+msgstr "URL"
+
+#: app/templates/apprise/list_apprise.html:61
+#: app/templates/email/list_emails.html:59
+#: app/templates/messages/list_messages.html:59
+#: app/templates/messages/view_message.html:36
+#: app/templates/reminders/view_reminder.html:47
+#: app/templates/webhook/list_webhooks.html:62
+msgid "Created At"
+msgstr "Sukurta"
+
+#: app/templates/apprise/list_apprise.html:77
+#: app/templates/apprise/list_apprise.html:132
+#: app/templates/user_smtp/list_smtp.html:79
+#: app/templates/user_smtp/list_smtp.html:147
+#: app/templates/webhook/list_webhooks.html:79
+#: app/templates/webhook/list_webhooks.html:138
+msgid "Edit"
+msgstr "Redaguoti"
+
+#: app/templates/apprise/list_apprise.html:80
+#: app/templates/apprise/list_apprise.html:135
+#: app/templates/user_smtp/list_smtp.html:82
+#: app/templates/user_smtp/list_smtp.html:150
+msgid "Cannot edit while in use"
+msgstr "Negalima redaguoti naudojimo metu"
+
+#: app/templates/apprise/list_apprise.html:88
+#: app/templates/apprise/list_apprise.html:143
+#: app/templates/webhook/list_webhooks.html:91
+#: app/templates/webhook/list_webhooks.html:150
+msgid "Test"
+msgstr "Testas"
+
+#: app/templates/apprise/list_apprise.html:103
+#: app/templates/apprise/list_apprise.html:158
+#: app/templates/user_smtp/list_smtp.html:106
+#: app/templates/user_smtp/list_smtp.html:174
+msgid "Cannot delete while in use"
+msgstr "Negalima ištrinti naudojimo metu"
+
+#: app/templates/apprise/list_apprise.html:119
+msgid "URL:"
+msgstr "URL:"
+
+#: app/templates/apprise/list_apprise.html:122
+#: app/templates/user_smtp/list_smtp.html:137
+#: app/templates/webhook/list_webhooks.html:128
+msgid "Enabled:"
+msgstr "Įjungtas:"
+
+#: app/templates/apprise/list_apprise.html:125
+#: app/templates/user_smtp/list_smtp.html:140
+#: app/templates/webhook/list_webhooks.html:131
+msgid "Created:"
+msgstr "Sukurta:"
+
+#: app/templates/auth/bootstrap.html:14
+msgid "Create Admin Account"
+msgstr "Sukurti administratoriaus paskyrą"
+
+#: app/templates/auth/bootstrap.html:16
+msgid "Let’s get started by creating your first admin account."
+msgstr "Pradėkime nuo pirmosios administratoriaus paskyros kūrimo."
+
+#: app/templates/auth/bootstrap.html:75
+msgid "Create Admin"
+msgstr "Sukurti administratorių"
+
+#: app/templates/auth/forgot_password.html:12
+msgid "Forgot Password"
+msgstr "Pamiršote slaptažodį"
+
+#: app/templates/auth/forgot_password.html:15
+msgid ""
+"Enter your username and email. We'll send you a link to reset your password."
+msgstr ""
+"Įveskite savo vartotojo vardą ir el. paštą. Atsiųsime jums nuorodą "
+"slaptažodžiui atkurti."
+
+#: app/templates/auth/forgot_username.html:12
+msgid "Forgot Username"
+msgstr "Pamiršote vartotojo vardą"
+
+#: app/templates/auth/forgot_username.html:15
+msgid "Enter your email address, and we'll send you your username."
+msgstr ""
+"Įveskite savo el. pašto adresą, ir mes atsiųsime jums jūsų vartotojo vardą."
+
+#: app/templates/auth/forgot_username.html:40
+msgid "Send Username"
+msgstr "Siųsti vartotojo vardą"
+
+#: app/templates/auth/login.html:12 app/templates/auth/login.html:54
+msgid "Log In"
+msgstr "Prisijungti"
+
+#: app/templates/auth/login.html:62
+msgid "Forgot Username?"
+msgstr "Pamiršote vartotojo vardą?"
+
+#: app/templates/auth/login.html:64
+msgid "Forgot Password?"
+msgstr "Pamiršote slaptažodį?"
+
+#: app/templates/auth/login.html:66 app/templates/auth/signup.html:12
+msgid "Sign Up"
+msgstr "Registruotis"
+
+#: app/templates/auth/rate_limit.html:9
+msgid "Hold On"
+msgstr "Laikykitės"
+
+#: app/templates/auth/rate_limit.html:11
+msgid "Too many failed login attempts. Please wait"
+msgstr "Pernelyg daug nesėkmingų prisijungimo bandymų. Prašome palaukti"
+
+#: app/templates/auth/rate_limit.html:13
+msgid "seconds..."
+msgstr "sekundės..."
+
+#: app/templates/auth/rate_limit.html:15
+msgid "Redirecting to login..."
+msgstr "Grįžti į prietaisų skydelį"
+
+#: app/templates/auth/reset_password.html:12
+#: app/templates/auth/reset_password.html:116
+msgid "Reset Password"
+msgstr "Atstatyti slaptažodį"
+
+#: app/templates/auth/reset_password.html:14
+msgid "Enter your username, email, and new password."
+msgstr "Įveskite savo naudotojo vardą, el. paštą ir naują slaptažodį."
+
+#: app/templates/auth/signup.html:14
+msgid "Fill out the form to create your account."
+msgstr "Užpildykite formą, kad sukurtumėte savo paskyrą."
+
+#: app/templates/checkin/already_checked_in.html:10
+msgid "Already Checked In"
+msgstr "Paskutinė registracija"
+
+#: app/templates/checkin/already_checked_in.html:12
+msgid ""
+"You have already checked in for this item. No further action is needed at "
+"this time."
+msgstr ""
+"Jūs jau užsiregistravote šitam elementui. Šiuo metu nereikia jokių papildomų"
+" veiksmų."
+
+#: app/templates/checkin/already_checked_in.html:16
+#: app/templates/checkin/disabled.html:16
+#: app/templates/checkin/executed_disabled.html:18
+msgid "Check-in for:"
+msgstr "Užsiregistruota į:"
+
+#: app/templates/checkin/already_checked_in.html:21
+#: app/templates/checkin/disabled.html:21
+#: app/templates/checkin/executed_disabled.html:23
+#: app/templates/checkin/thank_you.html:19
+msgid "Return to Dashboard"
+msgstr "Grįžti į prietaisų skydelį"
+
+#: app/templates/checkin/disabled.html:10
+msgid "Check-In Disabled"
+msgstr "El. laiškas išjungtas"
+
+#: app/templates/checkin/disabled.html:12
+msgid "This check-in is currently disabled and cannot be completed."
+msgstr "Šis patikrinimas šiuo metu išjungtas ir negali būti baigtas."
+
+#: app/templates/checkin/executed_disabled.html:11
+msgid "Already Executed & Disabled"
+msgstr "Jau įvykdyta ir išjungta"
+
+#: app/templates/checkin/executed_disabled.html:14
+msgid ""
+"This check-in has already been executed and is now disabled. No further "
+"action is required."
+msgstr ""
+"Šis patikrinimas jau įvykdytas ir dabar išjungtas. Nereikia atlikti jokių "
+"papildomų veiksmų."
+
+#: app/templates/checkin/thank_you.html:10
+msgid "Check-In Successful"
+msgstr "Registracija sėkminga"
+
+#: app/templates/checkin/thank_you.html:11
+msgid "Thank you for checking in."
+msgstr "Ačiū, kad užsiregistravote."
+
+#: app/templates/checkin/thank_you.html:14
+msgid "Checked in for:"
+msgstr "Užsiregistruota į:"
+
+#: app/templates/email/assign_smtp.html:11
+msgid "📧 Assign SMTP Config to:"
+msgstr "📧 Paskirti SMTP konfigūraciją:"
+
+#: app/templates/email/assign_smtp.html:25
+msgid "No SMTP (Unassign)"
+msgstr "Nėra paskirta SMTP konfigūracija"
+
+#: app/templates/email/assign_smtp.html:26
+msgid "This email will not use any SMTP configuration."
+msgstr "Šis el. laiškas nenaudos jokių SMTP konfigūracijų."
+
+#: app/templates/email/attach_files.html:12
+msgid "Attach Files for:"
+msgstr "Pridėti failus:"
+
+#: app/templates/email/attach_files.html:21
+msgid "Available Files"
+msgstr "Galimi failai"
+
+#: app/templates/email/attach_files.html:36
+msgid "No files found in the upload directory."
+msgstr "Nerasta failų įkėlimo kataloge."
+
+#: app/templates/email/attach_files.html:44
+msgid "Save Attachments"
+msgstr "Išsaugoti priedus"
+
+#: app/templates/email/attach_files.html:54
+msgid "File Attach Notes"
+msgstr "Pridėti failų pastabas"
+
+#: app/templates/email/attach_files.html:63
+msgid "Important:"
+msgstr "Prievadas:"
+
+#: app/templates/email/attach_files.html:65
+msgid ""
+"Only files that are present in the 'uploads' folder (provided by your system"
+" administrator) will be shown here. If you do not see your file(s), please "
+"contact your Grylli administrator."
+msgstr ""
+"Tik failai, esantys aplanke 'uploads' (kurį pateikė jūsų sistemos "
+"administratorius), bus rodomi čia. Jei nematote savo failo(-ų), prašome "
+"susisiekti su savo Grylli administratoriumi."
+
+#: app/templates/email/attach_files.html:69
+msgid "Accepted file types:"
+msgstr "Priimtini failų tipai:"
+
+#: app/templates/email/attach_files.html:71
+msgid "Documents:"
+msgstr "Dokumentai:"
+
+#: app/templates/email/attach_files.html:73
+msgid "Images:"
+msgstr "Vaizdai:"
+
+#: app/templates/email/attach_files.html:75
+msgid "Audio:"
+msgstr "Garsas:"
+
+#: app/templates/email/attach_files.html:79
+msgid "Maximum file size:"
+msgstr "Maksimalus failo dydis:"
+
+#: app/templates/email/attach_files.html:80
+msgid "10 MB per file"
+msgstr "10 MB vienam failui"
+
+#: app/templates/email/attach_files.html:83
+msgid "Total upload size:"
+msgstr "Bendras įkėlimo dydis:"
+
+#: app/templates/email/attach_files.html:84
+msgid "20 MB (all files combined)"
+msgstr "20 MB (visi failai kartu)"
+
+#: app/templates/email/edit_message.html:12
+#: app/templates/email/list_emails.html:75
+#: app/templates/email/list_emails.html:177
+msgid "Edit Email"
+msgstr "Redaguoti el. laišką"
+
+#: app/templates/email/edit_message.html:12
+msgid "Create Email"
+msgstr "Sukurti el. laišką"
+
+#: app/templates/email/edit_message.html:28
+msgid "To (Recipient Email)"
+msgstr "Adresatas (gavėjo el. paštas)"
+
+#: app/templates/email/edit_message.html:35
+#: app/templates/email/list_emails.html:57
+#: app/templates/email/view_config.html:18
+#: app/templates/messages/create_message.html:36
+#: app/templates/messages/edit_message.html:30
+#: app/templates/messages/list_messages.html:58
+#: app/templates/messages/view_message.html:18
+#: app/templates/reminders/create_reminder.html:30
+#: app/templates/reminders/edit_reminder.html:24
+#: app/templates/reminders/list_reminders.html:57
+#: app/templates/reminders/view_reminder.html:17
+msgid "Subject"
+msgstr "Tema"
+
+#: app/templates/email/edit_message.html:42
+#: app/templates/email/view_config.html:28
+msgid "Body"
+msgstr "Turinys"
+
+#: app/templates/email/edit_message.html:50
+msgid "Save Email"
+msgstr "Išsaugoti el. laišką"
+
+#: app/templates/email/list_emails.html:48
+msgid "Add Email"
+msgstr "Pridėti el. laišką"
+
+#: app/templates/email/list_emails.html:58
+#: app/templates/reminders/assign_email_reminder.html:77
+msgid "To"
+msgstr "Adresatas"
+
+#: app/templates/email/list_emails.html:78
+#: app/templates/email/list_emails.html:180
+msgid "Disable to edit email"
+msgstr "Nepavyko išsiųsti bandomojo el. laiško:"
+
+#: app/templates/email/list_emails.html:84
+#: app/templates/email/list_emails.html:186
+msgid "Attach Files"
+msgstr "Pridėti failus"
+
+#: app/templates/email/list_emails.html:87
+#: app/templates/email/list_emails.html:189
+msgid "Disable to attach files"
+msgstr "Pridėti failus"
+
+#: app/templates/email/list_emails.html:93
+#: app/templates/email/list_emails.html:195
+msgid "Attach SMTP Config"
+msgstr "Pridėti SMTP konfigūraciją"
+
+#: app/templates/email/list_emails.html:96
+#: app/templates/email/list_emails.html:198
+msgid "Disable to assign SMTP"
+msgstr "Išjungti SMTP priskyrimui"
+
+#: app/templates/email/list_emails.html:102
+#: app/templates/email/list_emails.html:204
+msgid "Schedule Check-In"
+msgstr "Planuoti registraciją"
+
+#: app/templates/email/list_emails.html:105
+#: app/templates/email/list_emails.html:207
+msgid "Disable to schedule check-in"
+msgstr "Planuoti registraciją"
+
+#: app/templates/email/list_emails.html:110
+#: app/templates/email/list_emails.html:212
+#: app/templates/messages/list_messages.html:99
+#: app/templates/messages/list_messages.html:184
+#: app/templates/reminders/list_reminders.html:93
+#: app/templates/reminders/list_reminders.html:178
+msgid "View Details"
+msgstr "Peržiūrėti detales"
+
+#: app/templates/email/list_emails.html:118
+#: app/templates/email/list_emails.html:220
+msgid "Send this email to yourself to preview it."
+msgstr "Atsiųskite šį el. laišką sau, kad peržiūrėtumėte."
+
+#: app/templates/email/list_emails.html:136
+#: app/templates/email/list_emails.html:238
+msgid "Toggle Email On/Off"
+msgstr "Perjungti el. laišką Įjungta/Išjungta"
+
+#: app/templates/email/list_emails.html:139
+#: app/templates/email/list_emails.html:241
+msgid "Email is enabled"
+msgstr "El. laiškas įjungtas"
+
+#: app/templates/email/list_emails.html:141
+#: app/templates/email/list_emails.html:243
+msgid "Email is disabled"
+msgstr "El. laiškas išjungtas"
+
+#: app/templates/email/list_emails.html:157
+#: app/templates/email/view_config.html:51
+#: app/templates/messages/list_messages.html:142
+#: app/templates/reminders/list_reminders.html:140
+msgid "Label:"
+msgstr "Etiketė:"
+
+#: app/templates/email/list_emails.html:161
+#: app/templates/messages/list_messages.html:146
+#: app/templates/reminders/list_reminders.html:144
+#: app/templates/reminders/view_reminder.html:98
+msgid "Subject:"
+msgstr "Tema"
+
+#: app/templates/email/list_emails.html:165
+msgid "To:"
+msgstr "Į:"
+
+#: app/templates/email/list_emails.html:169
+#: app/templates/messages/list_messages.html:150
+msgid "Created At:"
+msgstr "Sukurta"
+
+#: app/templates/email/list_emails.html:255
+msgid "How to create and send an email"
+msgstr "Kaip sukurti ir išsiųsti el. laišką"
+
+#: app/templates/email/list_emails.html:262
+msgid ""
+"Click “Add Email” and fill out the subject, content, and recipient address."
+msgstr ""
+"Spustelėkite „Pridėti el. laišką“ ir užpildykite tema, turinį ir gavėjo "
+"adresą."
+
+#: app/templates/email/list_emails.html:263
+msgid "Attach any optional files (if needed)."
+msgstr "Pridėkite bet kokius papildomus failus (jei reikia)."
+
+#: app/templates/email/list_emails.html:264
+msgid ""
+"Click 🧩 to assign a single SMTP configuration that will be used to send the "
+"email."
+msgstr ""
+"Spustelėkite 🧩, kad priskirtumėte vieną SMTP konfigūraciją, kuri bus "
+"naudojama el. laiškui siųsti."
+
+#: app/templates/email/list_emails.html:265
+msgid "Click ⏱️ to set a check-in interval and grace period for the email."
+msgstr ""
+"Spustelėkite ⏱️, kad nustatytumėte registracijos intervalą ir malonės "
+"laikotarpį el. laiškui."
+
+#: app/templates/email/list_emails.html:266
+msgid "Enable the email using the 🔴/🟢 toggle button."
+msgstr "Įjungti el. laišką naudojant 🔴/🟢 perjungimo mygtuką."
+
+#: app/templates/email/list_emails.html:267
+msgid ""
+"Click 🧪 to test the email by sending it to yourself (not the recipient)."
+msgstr ""
+"Spustelėkite 🧪, kad patikrintumėte el. laišką, išsiųsdami jį sau (ne "
+"gavėjui)."
+
+#: app/templates/email/list_emails.html:268
+msgid ""
+"If you don’t check in before the grace period ends, the email will be "
+"automatically sent."
+msgstr ""
+"Jei nepasregistruojate prieš pasibaigiant malonės laikotarpiui, el. laiškas "
+"bus automatiškai išsiųstas."
+
+#: app/templates/email/list_emails.html:269
+msgid "You can preview the email configuration using 🔍."
+msgstr "Galite peržiūrėti el. laiško konfigūraciją naudodamiesi 🔍."
+
+#: app/templates/email/list_emails.html:270
+msgid "Once a secure email is sent, it will be automatically disabled."
+msgstr "Kai saugus el. laiškas išsiunčiamas, jis bus automatiškai išjungtas."
+
+#: app/templates/email/schedule_email.html:9
+msgid "Schedule Email"
+msgstr "Planinis el. laiškas"
+
+#: app/templates/email/schedule_email.html:18
+#: app/templates/messages/schedule_message.html:18
+msgid "Years"
+msgstr "Metai"
+
+#: app/templates/email/schedule_email.html:19
+#: app/templates/messages/schedule_message.html:19
+msgid "Months"
+msgstr "Mėnesiai"
+
+#: app/templates/email/schedule_email.html:20
+#: app/templates/messages/schedule_message.html:20
+msgid "Weeks"
+msgstr "Savaitės"
+
+#: app/templates/email/schedule_email.html:21
+#: app/templates/messages/schedule_message.html:21
+msgid "Days"
+msgstr "Dienos"
+
+#: app/templates/email/schedule_email.html:22
+#: app/templates/messages/schedule_message.html:22
+msgid "Hours"
+msgstr "Valandos"
+
+#: app/templates/email/schedule_email.html:23
+#: app/templates/messages/schedule_message.html:23
+msgid "Minutes"
+msgstr "Minutės"
+
+#: app/templates/email/schedule_email.html:28
+#: app/templates/messages/schedule_message.html:28
+msgid "Check-in"
+msgstr "Registracija"
+
+#: app/templates/email/schedule_email.html:51
+#: app/templates/messages/schedule_message.html:51
+#: app/templates/messages/view_message.html:26
+msgid "Grace Period"
+msgstr "Malonės laikotarpis"
+
+#: app/templates/email/schedule_email.html:80
+#: app/templates/messages/schedule_message.html:80
+#: app/templates/reminders/schedule_reminder.html:47
+msgid "Save Schedule"
+msgstr "Išsaugoti tvarkaraštį"
+
+#: app/templates/email/view_config.html:9
+msgid "Email Configuration"
+msgstr "El. laiško konfigūracija"
+
+#: app/templates/email/view_config.html:22
+msgid "Recipient"
+msgstr "Gavėjas"
+
+#: app/templates/email/view_config.html:33
+msgid "Attached Files"
+msgstr "Prieduoti failai"
+
+#: app/templates/email/view_config.html:39
+msgid "No files attached"
+msgstr "Nėra pridėtų failų"
+
+#: app/templates/email/view_config.html:46
+#: app/templates/reminders/assign_email_reminder.html:20
+msgid "SMTP Configuration"
+msgstr "SMTP konfigūracija"
+
+#: app/templates/email/view_config.html:54
+#: app/templates/user_smtp/list_smtp.html:122
+msgid "Host:"
+msgstr "Host:"
+
+#: app/templates/email/view_config.html:57
+#: app/templates/user_smtp/list_smtp.html:128
+msgid "Username:"
+msgstr "Vartotojo vardas:"
+
+#: app/templates/email/view_config.html:60
+#: app/templates/user_smtp/list_smtp.html:134
+msgid "TLS:"
+msgstr "TLS:"
+
+#: app/templates/email/view_config.html:64
+msgid "No SMTP configuration assigned"
+msgstr "Nėra paskirta SMTP konfigūracija"
+
+#: app/templates/email/view_config.html:69
+msgid "Schedule Information"
+msgstr "Tvarkaraščio informacija"
+
+#: app/templates/email/view_config.html:72
+msgid "Check-in Interval:"
+msgstr "Registracijos intervalas:"
+
+#: app/templates/email/view_config.html:72
+#: app/templates/email/view_config.html:75
+msgid "minutes"
+msgstr "minutės"
+
+#: app/templates/email/view_config.html:75
+msgid "Grace Period:"
+msgstr "Malonės laikotarpis:"
+
+#: app/templates/email/view_config.html:79
+msgid "Last Check-in:"
+msgstr "Paskutinė registracija:"
+
+#: app/templates/email/view_config.html:82
+msgid "No check-in has occurred yet"
+msgstr "Dar registracija neįvyko"
+
+#: app/templates/email/view_config.html:92
+msgid "Back to Emails"
+msgstr "Atgal į el. laiškus"
+
+#: app/templates/errors/500.html:4
+msgid "Something went wrong"
+msgstr "Kažkas negerai"
+
+#: app/templates/errors/500.html:6
+msgid ""
+"An unexpected error occurred. Please try again later or contact support."
+msgstr ""
+"Įvyko netikėta klaida. Bandykite dar kartą vėliau arba susisiekite su "
+"palaikymo komanda."
+
+#: app/templates/locale/redirect_after_lang_set.html:15
+msgid "Switching Language..."
+msgstr "Kalbos keitimas..."
+
+#: app/templates/locale/redirect_after_lang_set.html:18
+msgid "Applying new language..."
+msgstr "Taikoma nauja kalba..."
+
+#: app/templates/messages/assign_destinations.html:13
+#: app/templates/reminders/assign_destinations.html:12
+msgid "Assign Destinations for"
+msgstr "Priskirti tikslus"
+
+#: app/templates/messages/assign_destinations.html:62
+#: app/templates/reminders/assign_destinations.html:60
+msgid "Save Destinations"
+msgstr "Išsaugoti tikslus"
+
+#: app/templates/messages/create_message.html:17
+msgid "Edit Notificaton"
+msgstr "Redaguoti pranešimą"
+
+#: app/templates/messages/create_message.html:19
+msgid "Create Notification"
+msgstr "Sukurti pranešimą"
+
+#: app/templates/messages/create_message.html:43
+#: app/templates/messages/edit_message.html:37
+#: app/templates/messages/view_message.html:42
+#: app/templates/reminders/create_reminder.html:37
+#: app/templates/reminders/edit_reminder.html:31
+#: app/templates/reminders/view_reminder.html:53
+msgid "Content"
+msgstr "Turinys"
+
+#: app/templates/messages/create_message.html:51
+msgid "Save Notification"
+msgstr "Išsaugoti pranešimą"
+
+#: app/templates/messages/edit_message.html:15
+#: app/templates/messages/list_messages.html:74
+#: app/templates/messages/list_messages.html:158
+msgid "Edit Notification"
+msgstr "Redaguoti pranešimą"
+
+#: app/templates/messages/edit_message.html:45
+msgid "Update Notification"
+msgstr "Atnaujinti pranešimą"
+
+#: app/templates/messages/list_messages.html:49
+msgid "Add Notification"
+msgstr "Pridėti pranešimą"
+
+#: app/templates/messages/list_messages.html:77
+#: app/templates/messages/list_messages.html:161
+msgid "Disable to edit notification"
+msgstr "Redaguoti pranešimą"
+
+#: app/templates/messages/list_messages.html:83
+#: app/templates/messages/list_messages.html:167
+#: app/templates/reminders/list_reminders.html:78
+#: app/templates/reminders/list_reminders.html:163
+msgid "Assign Destinations"
+msgstr "Priskirti tikslus"
+
+#: app/templates/messages/list_messages.html:86
+#: app/templates/messages/list_messages.html:170
+msgid "Disable to assign destinations"
+msgstr "Priskirti tikslus"
+
+#: app/templates/messages/list_messages.html:92
+#: app/templates/messages/list_messages.html:176
+#: app/templates/reminders/list_reminders.html:88
+#: app/templates/reminders/list_reminders.html:173
+msgid "Set Schedule"
+msgstr "Nustatyti grafiką"
+
+#: app/templates/messages/list_messages.html:95
+#: app/templates/messages/list_messages.html:179
+msgid "Disable to set schedule"
+msgstr "Nustatyti grafiką"
+
+#: app/templates/messages/list_messages.html:107
+#: app/templates/messages/list_messages.html:192
+msgid "Send Test Notification"
+msgstr "Redaguoti pranešimą"
+
+#: app/templates/messages/list_messages.html:122
+#: app/templates/messages/list_messages.html:209
+msgid "Toggle Message On/Off"
+msgstr "Įjungti / išjungti pranešimą"
+
+#: app/templates/messages/list_messages.html:124
+#: app/templates/messages/list_messages.html:211
+msgid "Notification is enabled"
+msgstr "Pranešimas yra įjungtas"
+
+#: app/templates/messages/list_messages.html:126
+#: app/templates/messages/list_messages.html:213
+msgid "Notification is disabled"
+msgstr "Pranešimas yra išjungtas"
+
+#: app/templates/messages/list_messages.html:223
+msgid "How to create and send a notification"
+msgstr "Kaip sukurti ir siųsti pranešimą"
+
+#: app/templates/messages/list_messages.html:233
+msgid "Click “Add notification” and fill out the subject and content fields."
+msgstr ""
+"Spustelėkite „Pridėti pranešimą“ ir užpildykite temos ir turinio laukus."
+
+#: app/templates/messages/list_messages.html:234
+msgid "Save the notification to return to the overview."
+msgstr "Išsaugokite pranešimą, kad grįžtumėte į apžvalgą."
+
+#: app/templates/messages/list_messages.html:235
+msgid "You need to create at least one apprise or webhook destination."
+msgstr "Reikia sukurti bent vieną apprise arba webhook tikslą."
+
+#: app/templates/messages/list_messages.html:236
+msgid "You can create as many destinations as you like."
+msgstr "Galite sukurti tiek tikslų, kiek norite."
+
+#: app/templates/messages/list_messages.html:237
+msgid "Click 🧩 to assign one or more Apprise and/or Webhook destinations."
+msgstr ""
+"Spustelėkite 🧩, kad priskirtumėte vieną ar daugiau Apprise ir (arba) Webhook"
+" tikslų."
+
+#: app/templates/messages/list_messages.html:238
+msgid "Click ⏱️ to set a schedule and check-in interval."
+msgstr ""
+"Spustelėkite ⏱️, kad nustatytumėte grafiką ir registracijos intervalą."
+
+#: app/templates/messages/list_messages.html:239
+msgid "Enable the notification using the 🔴/🟢 toggle button."
+msgstr "Įjunkite pranešimą naudodami 🔴/🟢 jungiklį."
+
+#: app/templates/messages/list_messages.html:240
+msgid ""
+"If you don’t check in before the grace period ends, the notification will be"
+" sent."
+msgstr ""
+"Jei neregistruojatės iki malonės laikotarpio pabaigos, pranešimas bus "
+"išsiųstas."
+
+#: app/templates/messages/list_messages.html:241
+msgid "You can preview the notification config using 🔍."
+msgstr "Galite peržiūrėti pranešimo konfigūraciją naudodami 🔍."
+
+#: app/templates/messages/list_messages.html:242
+msgid "Once a notification is sent, it will be automatically disabled."
+msgstr "Kai pranešimas bus išsiųstas, jis bus automatiškai išjungtas."
+
+#: app/templates/messages/schedule_message.html:9
+msgid "Schedule Message"
+msgstr "Grafikas Pranešimas"
+
+#: app/templates/messages/view_message.html:9
+msgid "Notifications Details"
+msgstr "Pranešimų detalės"
+
+#: app/templates/messages/view_message.html:22
+msgid "Check-in Interval"
+msgstr "Registracijos intervalas"
+
+#: app/templates/messages/view_message.html:31
+msgid "Last Check-in"
+msgstr "Paskutinė registracija"
+
+#: app/templates/messages/view_message.html:48
+#: app/templates/reminders/view_reminder.html:59
+msgid "Apprise URLs"
+msgstr "Apprise URL"
+
+#: app/templates/messages/view_message.html:54
+#: app/templates/messages/view_message.html:64
+#: app/templates/reminders/view_reminder.html:65
+#: app/templates/reminders/view_reminder.html:75
+#: app/templates/reminders/view_reminder.html:85
+msgid "None assigned."
+msgstr "Nepriskirta."
+
+#: app/templates/messages/view_message.html:73
+msgid "Back to Notifications"
+msgstr "Atgal į Pranešimus"
+
+#: app/templates/mfa/challenge.html:5 app/templates/mfa/settings.html:5
+msgid "Two-Factor Authentication (MFA)"
+msgstr "Dviejų veiksnių autentifikavimas (MFA)"
+
+#: app/templates/mfa/recovery_codes.html:4
+msgid "Your Recovery Codes"
+msgstr "Jūsų atkūrimo kodai"
+
+#: app/templates/mfa/recovery_codes.html:7
+msgid "Save these recovery codes in a safe place!"
+msgstr "Išsaugokite šiuos atkūrimo kodus saugioje vietoje!"
+
+#: app/templates/mfa/recovery_codes.html:10
+msgid ""
+"Each code can be used once if you lose access to your authenticator. These "
+"codes will not be shown again."
+msgstr ""
+"Kiekvienas kodas gali būti panaudotas vieną kartą, jei prarandate prieigą "
+"prie savo autentifikatoriaus. Šie kodai nebebus rodomi."
+
+#: app/templates/mfa/recovery_codes.html:24
+msgid "OK, I've saved them"
+msgstr "Gerai, aš juos išsaugojau"
+
+#: app/templates/mfa/settings.html:12
+msgid "MFA QR Code"
+msgstr "MFA QR kodas"
+
+#: app/templates/mfa/settings.html:15
+msgid "Manual Entry:"
+msgstr "Rankinis įrašas:"
+
+#: app/templates/partials/admin_nav.html:21
+msgid "Administration"
+msgstr "Administravimas"
+
+#: app/templates/partials/admin_nav.html:37
+#: app/templates/partials/shared_nav.html:34
+#: app/templates/partials/shared_nav.html:78
+#: app/templates/partials/shared_nav.html:117
+msgid "Overview"
+msgstr "Apžvalga"
+
+#: app/templates/partials/footer.html:7
+msgid "Toggle Theme"
+msgstr "Perjungti temą"
+
+#: app/templates/partials/footer.html:32
+msgid "Theme"
+msgstr "Tema"
+
+#: app/templates/partials/head.html:7
+msgid "Grylli"
+msgstr "Grylli"
+
+#: app/templates/partials/header.html:6 app/templates/partials/sidebar.html:32
+#: app/templates/partials/sidebar.html:66
+msgid "Home"
+msgstr "Pradžia"
+
+#: app/templates/partials/header.html:55
+msgid "Account"
+msgstr "Paskyra"
+
+#: app/templates/partials/header.html:61
+msgid "MFA"
+msgstr "MFA"
+
+#: app/templates/partials/header.html:67
+msgid "About"
+msgstr "Apie"
+
+#: app/templates/partials/header.html:73
+msgid "Privacy"
+msgstr "Privatumas"
+
+#: app/templates/partials/header.html:79
+msgid "System Info"
+msgstr "Sisteminis informacija"
+
+#: app/templates/partials/header.html:114
+msgid "Logout"
+msgstr "Atsijungti"
+
+#: app/templates/partials/shared_nav.html:33
+msgid "Overview of notification settings"
+msgstr "Pranešimų nustatymų apžvalga"
+
+#: app/templates/partials/shared_nav.html:38
+msgid "Configure Apprise services"
+msgstr "Konfigūruoti Apprise paslaugas"
+
+#: app/templates/partials/shared_nav.html:39
+msgid "Apprise"
+msgstr "Apprise"
+
+#: app/templates/partials/shared_nav.html:43
+msgid "Configure Webhook integrations"
+msgstr "Konfigūruoti Webhook integracijas"
+
+#: app/templates/partials/shared_nav.html:77
+msgid "Overview of secure email messages"
+msgstr "Saugios el. laiškų žinutės apžvalga"
+
+#: app/templates/partials/shared_nav.html:82
+msgid "Configure SMTP email settings"
+msgstr "Konfigūruoti SMTP el. pašto nustatymus"
+
+#: app/templates/partials/shared_nav.html:83
+#: app/templates/reminders/view_reminder.html:79
+msgid "SMTP"
+msgstr "SMTP"
+
+#: app/templates/partials/shared_nav.html:100
+#: app/templates/reminders/list_reminders.html:8
+msgid "Reminders"
+msgstr "minutės"
+
+#: app/templates/partials/shared_nav.html:116
+msgid "Overview of reminders"
+msgstr "Priminimų apžvalga"
+
+#: app/templates/partials/sidebar.html:13
+#: app/templates/partials/sidebar.html:47
+msgid "Menu"
+msgstr "Meniu"
+
+#: app/templates/reminders/assign_email_reminder.html:12
+msgid "Link Email Reminder for"
+msgstr "Prijunkite el. pašto priminimą"
+
+#: app/templates/reminders/assign_email_reminder.html:30
+#: app/templates/reminders/assign_email_reminder.html:64
+msgid "None (Unassign)"
+msgstr "Nėra paskirta SMTP konfigūracija"
+
+#: app/templates/reminders/assign_email_reminder.html:43
+msgid "No sender address"
+msgstr "Nėra siuntėjo adreso"
+
+#: app/templates/reminders/assign_email_reminder.html:54
+msgid "Email Message"
+msgstr "Grafikas Pranešimas"
+
+#: app/templates/reminders/assign_email_reminder.html:77
+msgid "No subject"
+msgstr "Tema"
+
+#: app/templates/reminders/assign_email_reminder.html:90
+msgid "Save Email Reminder"
+msgstr "Išsaugoti el. laišką"
+
+#: app/templates/reminders/create_reminder.html:12
+#: app/templates/reminders/edit_reminder.html:10
+#: app/templates/reminders/list_reminders.html:73
+#: app/templates/reminders/list_reminders.html:158
+msgid "Edit Reminder"
+msgstr "Redaguoti el. laišką"
+
+#: app/templates/reminders/create_reminder.html:14
+msgid "Create Reminder"
+msgstr "Sukurti el. laišką"
+
+#: app/templates/reminders/create_reminder.html:45
+msgid "Save Reminder"
+msgstr "Išsaugoti el. laišką"
+
+#: app/templates/reminders/edit_reminder.html:39
+msgid "Update Reminder"
+msgstr "Atnaujinti priminimą"
+
+#: app/templates/reminders/list_reminders.html:48
+msgid "Add Reminder"
+msgstr "Pridėti el. laišką"
+
+#: app/templates/reminders/list_reminders.html:58
+#: app/templates/reminders/view_reminder.html:21
+msgid "Start At"
+msgstr "Pradedamas TLS"
+
+#: app/templates/reminders/list_reminders.html:59
+msgid "Recurrence"
+msgstr "Kartojimas"
+
+#: app/templates/reminders/list_reminders.html:69
+#: app/templates/reminders/list_reminders.html:153
+#: app/templates/reminders/view_reminder.html:26
+msgid "One-time"
+msgstr "Vienkartinis"
+
+#: app/templates/reminders/list_reminders.html:83
+msgid "Assign Email Reminder"
+msgstr "Priskirti el. pašto priminimą"
+
+#: app/templates/reminders/list_reminders.html:102
+#: app/templates/reminders/list_reminders.html:187
+msgid "Send Test Reminder"
+msgstr "Siųsti bandomąjį el. laišką"
+
+#: app/templates/reminders/list_reminders.html:120
+#: app/templates/reminders/list_reminders.html:205
+msgid "Toggle Reminder On/Off"
+msgstr "Perjungti el. laišką Įjungta/Išjungta"
+
+#: app/templates/reminders/list_reminders.html:122
+#: app/templates/reminders/list_reminders.html:207
+msgid "Reminder is enabled"
+msgstr "El. laiškas įjungtas"
+
+#: app/templates/reminders/list_reminders.html:124
+#: app/templates/reminders/list_reminders.html:209
+msgid "Reminder is disabled"
+msgstr "El. laiškas išjungtas"
+
+#: app/templates/reminders/list_reminders.html:148
+msgid "Start At:"
+msgstr "Pradedamas TLS"
+
+#: app/templates/reminders/list_reminders.html:152
+msgid "Recurrence:"
+msgstr "Kartojimas:"
+
+#: app/templates/reminders/list_reminders.html:168
+msgid "Link Email Reminder"
+msgstr "Prijunkite el. pašto priminimą"
+
+#: app/templates/reminders/list_reminders.html:218
+msgid "How to use reminders"
+msgstr "Kaip valdyti naudotojus"
+
+#: app/templates/reminders/list_reminders.html:231
+msgid "➕ Click “Add Reminder” and fill out the subject and content fields."
+msgstr ""
+"Spustelėkite „Pridėti pranešimą“ ir užpildykite temos ir turinio laukus."
+
+#: app/templates/reminders/list_reminders.html:232
+msgid "💾 Save the reminder to return to the overview."
+msgstr "Išsaugokite pranešimą, kad grįžtumėte į apžvalgą."
+
+#: app/templates/reminders/list_reminders.html:233
+msgid ""
+"📣 Assign Apprise, 🌐 Webhook, and/or 📧 Email (SMTP) destinations as needed."
+msgstr ""
+"📣 Priskirkite Apprise, 🌐 \"Webhook\" ir/arba 📧 el. paštą (SMTP) kaip reikia."
+
+#: app/templates/reminders/list_reminders.html:234
+msgid ""
+"⏱️ Set the schedule using the schedule button to define when reminders are "
+"sent."
+msgstr ""
+"⏱️ Nustatykite grafiką naudodami grafiko mygtuką, kad apibrėžtumėte, kada "
+"priminimai bus siunčiami."
+
+#: app/templates/reminders/list_reminders.html:235
+msgid ""
+"🔍 Click “View Details” to review or edit assigned destinations and other "
+"settings."
+msgstr ""
+"🔍 Spustelėkite “Žiūrėti Daugiau”, kad peržiūrėtumėte ar redaguotumėte "
+"priskirtas vietas ir kitus nustatymus."
+
+#: app/templates/reminders/list_reminders.html:236
+msgid ""
+"🧪 Click the Test button to verify all assigned destinations are working "
+"correctly."
+msgstr ""
+"🧪 Spustelėkite mygtuką Testas, kad patikrintumėte, ar visos priskirtos "
+"vietos veikia tinkamai."
+
+#: app/templates/reminders/list_reminders.html:237
+msgid "🔴/🟢 Enable or disable the reminder using the toggle button."
+msgstr "Įjungti el. laišką naudojant 🔴/🟢 perjungimo mygtuką."
+
+#: app/templates/reminders/list_reminders.html:238
+msgid "📤 Reminders will be sent as scheduled to the assigned destinations."
+msgstr "📤 Priminimai bus siunčiami pagal grafiką į priskirtas vietas."
+
+#: app/templates/reminders/schedule_reminder.html:8
+msgid "Schedule Reminder"
+msgstr "Planinis el. laiškas"
+
+#: app/templates/reminders/schedule_reminder.html:15
+msgid "Start Date & Time"
+msgstr "Pradžios data ir laikas"
+
+#: app/templates/reminders/schedule_reminder.html:22
+#: app/templates/reminders/view_reminder.html:25
+msgid "Recurrence Rule"
+msgstr "Kartojimo taisyklė"
+
+#: app/templates/reminders/schedule_reminder.html:24
+msgid "(Optional) Enter RRULE or leave blank for one-time."
+msgstr "(Neprivaloma) Įvesti RRULE arba palikti tuščią vienkartiniam."
+
+#: app/templates/reminders/schedule_reminder.html:30
+msgid "End Date"
+msgstr "Siųsti testą"
+
+#: app/templates/reminders/schedule_reminder.html:32
+msgid "(Optional) Stop sending after this date."
+msgstr "(Neprivaloma) Nustoti siųsti po šios datos."
+
+#: app/templates/reminders/schedule_reminder.html:38
+#: app/templates/reminders/view_reminder.html:36
+msgid "Max Occurrences"
+msgstr "Maksimalus pasikartojimų skaičius"
+
+#: app/templates/reminders/schedule_reminder.html:40
+msgid "(Optional) Stop after this many reminders."
+msgstr "(Neprivaloma) Nustoti po šių daugelio priminimų."
+
+#: app/templates/reminders/schedule_reminder.html:56
+msgid "Help for RRULE syntax"
+msgstr "Pagalba dėl RRULE sintaksės"
+
+#: app/templates/reminders/schedule_reminder.html:66
+msgid "Several tools are available to help generate an RRULE."
+msgstr "Yra keli įrankiai, kurie gali padėti sugeneruoti RRULE."
+
+#: app/templates/reminders/schedule_reminder.html:67
+msgid "Use a search engine or AI tool to assist."
+msgstr "Naudokite paieškos variklį ar AI įrankį pagalbai."
+
+#: app/templates/reminders/schedule_reminder.html:69
+msgid "Here is an example of one such online tool:"
+msgstr "Štai pavyzdys tokio internetinio įrankio:"
+
+#: app/templates/reminders/schedule_reminder.html:73
+msgid "RRULE Generator Tool"
+msgstr "RRULE Generatorius"
+
+#: app/templates/reminders/schedule_reminder.html:77
+msgid "See here for some common examples:"
+msgstr "Žiūrėkite čia keletą įprastų pavyzdžių:"
+
+#: app/templates/reminders/schedule_reminder.html:81
+msgid "RRULE Help (GitHub)"
+msgstr "RRULE pagalba (GitHub)"
+
+#: app/templates/reminders/view_reminder.html:8
+msgid "Reminder Details"
+msgstr "Peržiūrėti detales"
+
+#: app/templates/reminders/view_reminder.html:30
+msgid "End At"
+msgstr "Siųsti testą"
+
+#: app/templates/reminders/view_reminder.html:42
+msgid "Last Sent"
+msgstr "Paskutinė registracija"
+
+#: app/templates/reminders/view_reminder.html:91
+msgid "Email Template"
+msgstr "El. pašto tikrintojas"
+
+#: app/templates/reminders/view_reminder.html:103
+msgid "No email linked."
+msgstr "El. laiškas įjungtas"
+
+#: app/templates/reminders/view_reminder.html:111
+msgid "Back to Reminders"
+msgstr "Atgal į el. laiškus"
+
+#: app/templates/user_smtp/create_smtp.html:10
+msgid "Create SMTP Destination"
+msgstr "Sukurti SMTP tikslą"
+
+#: app/templates/user_smtp/create_smtp.html:69
+#: app/templates/user_smtp/edit_smtp.html:84
+msgid "Hold to reveal"
+msgstr "Laikykite, kad atskleistumėte"
+
+#: app/templates/user_smtp/create_smtp.html:92
+#: app/templates/user_smtp/edit_smtp.html:107
+msgid "Use TLS"
+msgstr "Naudoti TLS"
+
+#: app/templates/user_smtp/edit_smtp.html:10
+msgid "Edit SMTP Destination"
+msgstr "Sukurti SMTP tikslą"
+
+#: app/templates/user_smtp/list_smtp.html:9
+msgid "SMTP Destinations"
+msgstr "SMTP paskirties vietos"
+
+#: app/templates/user_smtp/list_smtp.html:44
+msgid "Add SMTP"
+msgstr "Pridėti SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:53
+msgid "Host"
+msgstr "Šeimininkas"
+
+#: app/templates/user_smtp/list_smtp.html:54
+msgid "Port"
+msgstr "Prievadas"
+
+#: app/templates/user_smtp/list_smtp.html:56
+msgid "TLS"
+msgstr "TLS"
+
+#: app/templates/user_smtp/list_smtp.html:58
+msgid "Created"
+msgstr "Sukurta"
+
+#: app/templates/user_smtp/list_smtp.html:90
+#: app/templates/user_smtp/list_smtp.html:158
+msgid "Send Test"
+msgstr "Siųsti testą"
+
+#: app/templates/user_smtp/list_smtp.html:125
+msgid "Port:"
+msgstr "Prievadas:"
+
+#: app/templates/user_smtp/list_smtp.html:131
+msgid "Password:"
+msgstr "Slaptažodis:"
+
+#: app/templates/user_smtp/list_smtp.html:184
+msgid "Hide SMTP Setup Help"
+msgstr "Slėpti SMTP nustatymų pagalbą"
+
+#: app/templates/user_smtp/list_smtp.html:184
+msgid "Show SMTP Setup Help"
+msgstr "Rodyti SMTP nustatymų pagalbą"
+
+#: app/templates/user_smtp/list_smtp.html:190
+msgid ""
+"Need help finding your SMTP server settings? See here for some links to "
+"common providers:"
+msgstr ""
+"Reikia pagalbos surandant SMTP serverio nustatymus? Žr. čia keletą nuorodų į"
+" įprastus teikėjus:"
+
+#: app/templates/user_smtp/list_smtp.html:194
+msgid "SMTP Server Settings Help (GitHub)"
+msgstr "SMTP serverio nustatymų pagalba (GitHub)"
+
+#: app/templates/user_smtp/list_smtp.html:198
+msgid ""
+"Find official documentation links for Gmail, Outlook, Yahoo, AOL, and "
+"others."
+msgstr ""
+"Raskite oficialių dokumentų nuorodas Gmail, Outlook, Yahoo, AOL ir kt."
+
+#: app/templates/user_smtp/list_smtp.html:199
+msgid ""
+"If your provider isn’t listed, search their support site or a search engine "
+"for 'SMTP settings'."
+msgstr ""
+"Jei jūsų teikėjas nėra išvardintas, ieškokite jų palaikymo svetainėje ar "
+"paieškos sistemoje „SMTP nustatymai“."
+
+#: app/templates/user_smtp/list_smtp.html:200
+msgid ""
+"Some providers (like Gmail, Yahoo) require 'App Passwords' or special "
+"setup—see their docs!"
+msgstr ""
+"Kai kuriems teikėjams (pvz., Gmail, Yahoo) reikia „programėlių slaptažodžių“"
+" arba specialaus nustatymo—žr. jų dokumentus!"
+
+#: app/templates/webhook/create_webhook.html:10
+msgid "Create Webhook"
+msgstr "Sukurti žiniatinklio žinutę"
+
+#: app/templates/webhook/edit_webhook.html:10
+msgid "Edit Webhook"
+msgstr "Redaguoti žiniatinklio žinutę"
+
+#: app/templates/webhook/list_webhooks.html:9
+#: app/templates/webhook/webhook_config.html:3
+msgid "Webhooks Destinations"
+msgstr "Žiniatinklio žinutės paskirties vietos"
+
+#: app/templates/webhook/list_webhooks.html:59
+msgid "Endpoint"
+msgstr "Pabaiga"
+
+#: app/templates/webhook/list_webhooks.html:60
+msgid "Description"
+msgstr "Aprašymas"
+
+#: app/templates/webhook/list_webhooks.html:82
+#: app/templates/webhook/list_webhooks.html:141
+msgid "Cannot edit while assigned to notifications"
+msgstr "Negalima redaguoti priskyrus pranešimams"
+
+#: app/templates/webhook/list_webhooks.html:106
+#: app/templates/webhook/list_webhooks.html:165
+msgid "Cannot delete while assigned to notifications"
+msgstr "Negalima ištrinti priskyrus pranešimams"
+
+#: app/templates/webhook/list_webhooks.html:122
+msgid "Endpoint:"
+msgstr "Pabaiga:"
+
+#: app/templates/webhook/list_webhooks.html:125
+msgid "Description:"
+msgstr "Aprašymas:"
+
+#: app/views/account.py:74
+msgid "Current password is required to change password."
+msgstr "Norint pakeisti slaptažodį reikia nurodyti dabartinį slaptažodį."
+
+#: app/views/account.py:78
+msgid "Current password is incorrect."
+msgstr "Dabartinis slaptažodis yra neteisingas."
+
+#: app/views/account.py:94
+msgid "Account updated successfully."
+msgstr "Paskyra sėkmingai atnaujinta."
+
+#: app/views/account.py:100
+msgid "An error occurred while updating your account."
+msgstr "Klaida atnaujinant paskyrą."
+
+#: app/views/account.py:137
+msgid "You cannot delete your account because you are the last admin."
+msgstr ""
+"Negalite ištrinti savo paskyros, nes esate paskutinis administratorius."
+
+#: app/views/account.py:146
+msgid "Your account has been permanently deleted."
+msgstr "Jūsų paskyra buvo visam laikui ištrinta."
+
+#: app/views/account.py:152
+msgid "An error occurred while trying to delete your account."
+msgstr "Klaida atnaujinant paskyrą."
+
+#: app/views/account.py:171
+msgid "Your account has been deleted"
+msgstr "Jūsų paskyra buvo visam laikui ištrinta."
+
+#: app/views/account.py:173
+#, python-brace-format
+msgid ""
+"Hello {username},\n"
+"\n"
+"Your account on {site_name} has been deleted.Remember to delete your files from the uploads folder.If this was not you, please contact support immediately.\n"
+"\n"
+"{site_url}"
+msgstr ""
+"Sveiki {username},\n"
+"\n"
+"Jūsų paskyra svetainėje {site_name} buvo ištrinta. Nepamirškite ištrinti failų iš įkėlimo aplanko. Jei tai nebuvo jūs, nedelsdami susisiekite su palaikymo tarnyba.\n"
+"\n"
+"{site_url}"
+
+#: app/views/admin.py:59
+msgid "Invalid role."
+msgstr "Netinkamas vaidmuo."
+
+#: app/views/apprise.py:51
+msgid "🧪 Test notification sent successfully!"
+msgstr "🧪 Bandymo pranešimas sėkmingai išsiųstas!"
+
+#: app/views/apprise.py:56
+msgid "🧪 Failed to send test notification: "
+msgstr "🧪 Nepavyko išsiųsti bandymo pranešimo:"
+
+#: app/views/apprise.py:62
+msgid "🧪 Error sending test notification."
+msgstr "🧪 Klaida siunčiant bandymo pranešimą."
+
+#: app/views/apprise.py:101
+msgid "Apprise destination created successfully."
+msgstr "Apprise paskirties vieta sukūrta sėkmingai."
+
+#: app/views/apprise.py:168
+msgid "Apprise destination updated successfully."
+msgstr "Apprise paskirties vieta atnaujinta sėkmingai."
+
+#: app/views/apprise.py:199
+msgid "Apprise destination deleted."
+msgstr "Apprise paskirties vieta ištrinta."
+
+#: app/views/auth.py:95
+msgid "Admin account created successfully."
+msgstr "Administratoriaus paskyra sėkmingai sukūrta."
+
+#: app/views/auth.py:108
+msgid "An error occurred while creating the admin account."
+msgstr "Klaida kuriant administratoriaus paskyrą."
+
+#: app/views/auth.py:141
+msgid ""
+"Your account is not activated. Please check your email for the activation "
+"link."
+msgstr ""
+"Jūsų paskyra neaktyvuota. Patikrinkite savo el. paštą aktyvavimo nuorodai."
+
+#: app/views/auth.py:157
+msgid "Multi-factor authentication required. Please enter your code."
+msgstr ""
+"Reikalingas daugiafaktoris autentifikavimas. Prašome įvesti savo kodą."
+
+#: app/views/auth.py:162 app/views/mfa.py:195
+msgid "Logged in successfully."
+msgstr "Prisijungta sėkmingai."
+
+#: app/views/auth.py:179
+msgid "Invalid username or password."
+msgstr "Neteisingas naudotojo vardas arba slaptažodis."
+
+#: app/views/auth.py:203
+msgid "You have been logged out."
+msgstr "Jūs išeidėte."
+
+#: app/views/auth.py:239 app/views/email.py:263
+msgid "Access denied."
+msgstr "Prieiga neleidžiama."
+
+#: app/views/auth.py:273
+msgid "If a user with that email exists, we've sent the username to them."
+msgstr ""
+"Jei yra naudotojas su tuo el. paštu, mes jį informavome apie jūsų naudotojo "
+"vardą."
+
+#: app/views/auth.py:314
+msgid "A password reset link has been sent to your email."
+msgstr "Slaptažodžio atstatymo nuoroda išsiųsta jūsų el. paštui."
+
+#: app/views/auth.py:319
+msgid "No account found matching that username and email."
+msgstr "Nerasta paskyra, atitinkanti tą naudotojo vardą ir el. paštą."
+
+#: app/views/auth.py:389
+msgid "The reset link is invalid or has expired."
+msgstr ""
+"Atstatymo nuoroda yra neteisinga arba pasibaigęs jos galiojimo laikas."
+
+#: app/views/auth.py:401
+msgid "Username and email do not match."
+msgstr "Vartotojo vardas ir el. paštas nesutampa."
+
+#: app/views/auth.py:421
+msgid "Your password has been reset. Please log in."
+msgstr "Jūsų slaptažodis buvo nustatytas iš naujo. Prašome prisijungti."
+
+#: app/views/auth.py:458
+msgid "Invalid registration PIN."
+msgstr "Netinkamas registracijos PIN."
+
+#: app/views/auth.py:467
+msgid "Username or email already exists."
+msgstr "Vartotojo vardas arba el. paštas jau egzistuoja."
+
+#: app/views/auth.py:492
+msgid "Activate Your Grylli Account"
+msgstr "Aktyvuokite savo Grylli paskyrą"
+
+#: app/views/auth.py:493
+#, python-brace-format
+msgid ""
+"Hello {username},\n"
+"\n"
+"Please activate your account by clicking..."
+msgstr ""
+"Sveiki {username},\n"
+"\n"
+"Prašome aktyvuoti savo paskyrą paspaudę..."
+
+#: app/views/auth.py:498
+msgid "Account created! Please check your email to activate your account."
+msgstr ""
+"Paskyra sukurta! Prašome patikrinti el. paštą, kad suaktyvintumėte savo "
+"paskyrą."
+
+#: app/views/auth.py:521
+msgid "Activation link is invalid or expired."
+msgstr "Aktyvacijos nuoroda negalioja arba yra pasibaigusi."
+
+#: app/views/auth.py:528 app/views/users.py:76 app/views/users.py:140
+msgid "User not found."
+msgstr "Vartotojas nerastas."
+
+#: app/views/auth.py:532
+msgid "Account already activated. Please log in."
+msgstr "Paskyra jau aktyvuota. Prašome prisijungti."
+
+#: app/views/auth.py:540
+msgid "Your account has been activated! You can now log in."
+msgstr "Jūsų paskyra buvo aktyvuota! Dabar galite prisijungti."
+
+#: app/views/backups.py:72
+#, python-format
+msgid "Backup created: %(filename)s"
+msgstr "Sukurtas atsarginis: %(filename)s"
+
+#: app/views/backups.py:77
+msgid "Failed to create backup."
+msgstr "Nepavyko sukurti atsarginės kopijos."
+
+#: app/views/backups.py:106
+#, python-format
+msgid "Backup deleted: %(filename)s"
+msgstr "Ištrinta atsarginė kopija: %(filename)s"
+
+#: app/views/backups.py:109
+msgid "Backup file not found."
+msgstr "Nerasta atsarginės kopijos."
+
+#: app/views/backups.py:112
+msgid "Failed to delete backup."
+msgstr "Nepavyko ištrinti atsarginės kopijos."
+
+#: app/views/checkin.py:41
+msgid "Invalid check-in link."
+msgstr "Netinkama registracijos nuoroda."
+
+#: app/views/checkin.py:48
+msgid "You are not authorized to check in for this item."
+msgstr "Jūs neturite teisės registruotis šiuo elementu."
+
+#: app/views/checkin.py:62
+msgid "Unsupported check-in type."
+msgstr "Nepalaikomas registracijos tipas."
+
+#: app/views/checkin.py:137
+msgid "⚠️ Cannot enable reminder: Start date/time is in the past."
+msgstr "⚠️ Negalima įjungti priminimo: pradžios data/laikas yra praeityje."
+
+#: app/views/checkin.py:158
+msgid "✅ Enabled and timer started."
+msgstr "✅ Įjungta ir laikmatis pradėtas."
+
+#: app/views/checkin.py:168
+msgid "⛔ Disabled."
+msgstr "⛔ Išjungta."
+
+#: app/views/checkin.py:170
+msgid "⚠️ Cannot toggle — missing schedule or destination."
+msgstr "⚠️ Negalima perjungti — trūksta tvarkaraščio arba paskirties vietos."
+
+#: app/views/email.py:88
+msgid "Message saved."
+msgstr "Pranešimas išsaugotas."
+
+#: app/views/email.py:118 app/views/messages.py:167
+msgid "Message deleted."
+msgstr "Pranešimas ištrintas."
+
+#: app/views/email.py:152
+msgid "Attached files updated."
+msgstr "Prisegti failai atnaujinti."
+
+#: app/views/email.py:200
+msgid "SMTP configuration not assigned or is disabled."
+msgstr "SMTP konfigūracija nepriskirta arba išjungta."
+
+#: app/views/email.py:234 app/views/smtp_settings_admin.py:82
+msgid "Test email sent successfully."
+msgstr "Bandomasis el. laiškas sėkmingai išsiųstas."
+
+#: app/views/email.py:282 app/views/messages.py:305
+msgid "Schedule updated successfully."
+msgstr "Tvarkaraštis sėkmingai atnaujintas."
+
+#: app/views/email.py:310
+msgid "SMTP configuration assigned."
+msgstr "SMTP konfigūracija priskirta."
+
+#: app/views/email.py:319
+msgid "SMTP configuration removed."
+msgstr "SMTP konfigūracija priskirta."
+
+#: app/views/messages.py:97
+msgid "Message created successfully."
+msgstr "Pranešimas sėkmingai sukurtas."
+
+#: app/views/messages.py:133
+msgid "Message updated successfully."
+msgstr "Pranešimas sėkmingai atnaujintas."
+
+#: app/views/messages.py:223 app/views/reminders.py:240
+msgid "Destinations updated."
+msgstr "Paskirtis atnaujinta."
+
+#: app/views/messages.py:441
+msgid "No destinations assigned to this message."
+msgstr "SMTP konfigūracija nepriskirta arba išjungta."
+
+#: app/views/messages.py:453
+msgid "Test message sent successfully."
+msgstr "Bandomasis el. laiškas sėkmingai išsiųstas."
+
+#: app/views/messages.py:455
+msgid "Test message failed: "
+msgstr "Pranešimas išsaugotas."
+
+#: app/views/mfa.py:68
+msgid "You must enter a code from your authenticator."
+msgstr "Turite įvesti kodą iš savo autentifikatoriaus."
+
+#: app/views/mfa.py:82 app/views/mfa.py:259
+msgid "Invalid code. Please try again."
+msgstr "Neteisingas kodas. Bandykite dar kartą."
+
+#: app/views/mfa.py:91
+msgid "Two-factor authentication disabled."
+msgstr "Pranešimas yra išjungtas"
+
+#: app/views/mfa.py:132
+msgid "Recovery codes are only shown immediately after enabling MFA."
+msgstr "Atkūrimo kodai rodomi tik iškart po MFA įjungimo."
+
+#: app/views/mfa.py:142
+msgid "Could not load recovery codes."
+msgstr "Nepavyko įkelti atkūrimo kodų."
+
+#: app/views/mfa.py:168
+msgid "No MFA challenge in progress."
+msgstr "Nėra vykdomo MFA iššūkio."
+
+#: app/views/mfa.py:176
+msgid "User not found for MFA challenge."
+msgstr "Vartotojas nerastas."
+
+#: app/views/mfa.py:225
+msgid ""
+"You have used your last recovery code. MFA has been disabled. Please remove "
+"Grylli from your authenticator app, and re-enable MFA to protect your "
+"account."
+msgstr ""
+"Jūs panaudojote paskutinį atkūrimo kodą. MFA buvo išjungtas. Prašome "
+"pašalinti Grylli iš savo autentifikatoriaus programos ir iš naujo įjungti "
+"MFA, kad apsaugotumėte savo paskyrą."
+
+#: app/views/mfa.py:248
+#, python-brace-format
+msgid "Recovery code accepted. You have {remaining} recovery codes left."
+msgstr "Atkūrimo kodas priimtas. Jums liko {remaining} atkūrimo kodai."
+
+#: app/views/reminders.py:106
+msgid "Reminder created successfully."
+msgstr "Pranešimas sėkmingai sukurtas."
+
+#: app/views/reminders.py:143
+msgid "Reminder updated successfully."
+msgstr "Vartotojas sėkmingai atnaujintas."
+
+#: app/views/reminders.py:174
+msgid "Reminder deleted."
+msgstr "Naudotojas ištrintas."
+
+#: app/views/reminders.py:287
+msgid "No destinations assigned to this reminder."
+msgstr "SMTP konfigūracija nepriskirta arba išjungta."
+
+#: app/views/reminders.py:311
+msgid "No email message linked to this reminder."
+msgstr "Nėra el. pašto pranešimo, susieto su šiuo priminimu."
+
+#: app/views/reminders.py:314
+msgid "SMTP configuration is disabled."
+msgstr "SMTP konfigūracija nepriskirta arba išjungta."
+
+#: app/views/reminders.py:353
+msgid "Test reminder sent successfully."
+msgstr "Bandomasis el. laiškas sėkmingai išsiųstas."
+
+#: app/views/reminders.py:356
+msgid "Test reminder failed: "
+msgstr "Pranešimas išsaugotas."
+
+#: app/views/reminders.py:430
+msgid "Reminder schedule updated successfully."
+msgstr "Tvarkaraštis sėkmingai atnaujintas."
+
+#: app/views/reminders.py:434
+msgid "Please correct the errors below."
+msgstr "Prašome pataisyti žemiau esančias klaidas."
+
+#: app/views/reminders.py:481 app/views/reminders.py:482
+msgid "None"
+msgstr "Ne"
+
+#: app/views/reminders.py:508
+msgid "You must select both an SMTP config and an email message, or neither."
+msgstr ""
+"Turite pasirinkti ir SMTP konfigūraciją, ir el. pašto pranešimą, arba nei "
+"vieno."
+
+#: app/views/reminders.py:528
+msgid "Email reminder settings updated."
+msgstr "Paskirtis atnaujinta."
+
+#: app/views/smtp.py:83 app/views/user_smtp.py:80
+msgid "SMTP destination created successfully."
+msgstr "SMTP paskirtis sukurta sėkmingai."
+
+#: app/views/smtp.py:129 app/views/user_smtp.py:135
+msgid "SMTP destination updated."
+msgstr "SMTP paskirtis atnaujinta."
+
+#: app/views/smtp.py:160 app/views/user_smtp.py:166
+msgid "SMTP destination deleted."
+msgstr "SMTP paskirtis ištrinta."
+
+#: app/views/smtp.py:191 app/views/user_smtp.py:199
+msgid "Test email sent successfully to your account email."
+msgstr "Bandomasis el. laiškas sėkmingai išsiųstas jūsų paskyros el. paštui."
+
+#: app/views/smtp.py:196 app/views/user_smtp.py:204
+msgid "Failed to send test email. Check SMTP settings."
+msgstr "Nepavyko išsiųsti bandomojo el. laiško. Patikrinkite SMTP nustatymus."
+
+#: app/views/smtp_settings_admin.py:76
+msgid "Test Email from Grylli"
+msgstr "Bandomasis el. laiškas iš Grylli"
+
+#: app/views/smtp_settings_admin.py:77
+msgid "This is a test email from the Grylli SMTP settings page."
+msgstr "Tai yra bandomasis el. laiškas iš Grylli SMTP nustatymų puslapio."
+
+#: app/views/smtp_settings_admin.py:84
+msgid "Failed to send test email: "
+msgstr "Nepavyko išsiųsti bandomojo el. laiško:"
+
+#: app/views/users.py:99
+msgid "User updated successfully."
+msgstr "Vartotojas sėkmingai atnaujintas."
+
+#: app/views/users.py:106 app/views/users.py:327
+msgid "An error occurred while updating the user."
+msgstr "Įvyko klaida atnaujinant naudotoją."
+
+#: app/views/users.py:195
+msgid "User deleted."
+msgstr "Naudotojas ištrintas."
+
+#: app/views/users.py:202
+msgid "An error occurred while deleting the user."
+msgstr "Įvyko klaida ištrinant naudotoją."
+
+#: app/views/users.py:237
+msgid "Password is required when creating a new user."
+msgstr "Slaptažodis yra privalomas kuriant naują naudotoją."
+
+#: app/views/users.py:244
+msgid "Username already exists."
+msgstr "Vartotojo vardas jau egzistuoja."
+
+#: app/views/users.py:251
+msgid "Email already exists."
+msgstr "El. paštas jau egzistuoja."
+
+#: app/views/users.py:268
+#, python-format
+msgid "User '%(username)s' created successfully."
+msgstr "Naudotojas '%(username)s' sėkmingai sukurtas."
+
+#: app/views/users.py:278
+msgid "Failed to create user."
+msgstr "Nepavyko sukurti naudotojo."
+
+#: app/views/users.py:305
+msgid "You cannot change your own enabled status."
+msgstr "Negalite keisti savo aktyvumo būsenos."
+
+#: app/views/users.py:318
+#, python-format
+msgid "User '%(username)s' has been %(status)s."
+msgstr "Naudotojas '%(username)s' buvo %(status)s."
+
+#: app/views/users.py:356
+msgid "You cannot reset your own MFA."
+msgstr "⚪ = Negalite išjungti savo paskyros."
+
+#: app/views/users.py:368
+#, python-format
+msgid "MFA disabled for user '%(username)s'."
+msgstr "MFA išjungtas vartotojui '%(username)s'."
+
+#: app/views/users.py:374
+msgid "An error occurred while resetting MFA."
+msgstr "Įvyko klaida ištrinant naudotoją."
+
+#: app/views/webhook.py:54
+msgid "Webhook created successfully."
+msgstr "Webhook sėkmingai sukurtas."
+
+#: app/views/webhook.py:113
+msgid "Webhook updated successfully."
+msgstr "Webhook sėkmingai atnaujintas."
+
+#: app/views/webhook.py:142
+msgid "Webhook deleted."
+msgstr "Webhook ištrintas."
+
+#: app/views/webhook.py:175
+msgid "🧪 Webhook test sent successfully!"
+msgstr "🧪 Webhook testas sėkmingai išsiųstas!"
+
+#: app/views/webhook.py:177
+msgid "🧪 Webhook test failed: "
+msgstr "🧪 Webhook testo nepavyko:"
+
+#: app/views/webhook.py:180
+msgid "🧪 Error sending webhook test."
+msgstr "🧪 Klaida siunčiant webhook testą."
+
+#~ msgid ""
+#~ "Grylli is a secure message delivery platform designed to activate after "
+#~ "prolonged user inactivity."
+#~ msgstr ""
+#~ "Grylli yra saugaus žinučių pristatymo platforma, sukurta veikti po ilgesnio "
+#~ "vartotojo neveiklumo."
+
+#~ msgid ""
+#~ "It is a modern reimplementation of Gone Man’s Switch with a refined tech "
+#~ "stack, better maintainability, and an improved user experience."
+#~ msgstr ""
+#~ "Tai modernus Gone Man's Switch įgyvendinimas su rafinuota technologijų baze,"
+#~ " geresniu palaikymu ir patobulinta naudotojo patirtimi."
+
+#~ msgid "Body:"
+#~ msgstr "Turinys:"
+
+#~ msgid "Subject:"
+#~ msgstr "Tema:"
+
+#~ msgid "Content:"
+#~ msgstr "Turinys:"
+
+#~ msgid "Edit SMTP"
+#~ msgstr "Redaguoti SMTP"
+
+#~ msgid ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+#~ msgstr ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+
+#~ msgid "Admin Notes"
+#~ msgstr "Administratoriaus užrašai"
+
+#~ msgid "Register"
+#~ msgstr "Registruotis"
+
+#~ msgid "View"
+#~ msgstr "Peržiūrėti"
+
+#~ msgid "Schedule"
+#~ msgstr "Grafikas"
+
+#~ msgid "Message is enabled"
+#~ msgstr "Pranešimas yra įjungtas"
+
+#~ msgid "Message is disabled"
+#~ msgstr "Pranešimas yra išjungtas"
+
+#~ msgid "No SMTP configuration selected."
+#~ msgstr "Nėra pasirinktos SMTP konfigūracijos."
+
+#~ msgid "Enable the message to start monitoring."
+#~ msgstr "Įjunkite žinutę stebėti."
+
+#~ msgid "✅ SMTP settings saved."
+#~ msgstr "SMTP nustatymai"
+
+#~ msgid "If you don’t check in, Grylli delivers the message for you."
+#~ msgstr "Jei nepasitikrinate, Grylli pristatys žinutę už jus."
+
+#~ msgid "Fill in already discovered missing translations:"
+#~ msgstr "Užpildykite jau aptiktas trūkstamas vertimas:"
+
+#~ msgid "Add missing phrases in that JSON file."
+#~ msgstr "Pridėkite trūkstamas frazes tame JSON faile."
+
+#~ msgid "From:"
+#~ msgstr "Iš:"
+
+#~ msgid ""
+#~ "Attach the updated JSON file to a new GitHub issue when submitting your "
+#~ "changes."
+#~ msgstr ""
+#~ "Pridėkite atnaujintą JSON failą prie naujos GitHub problemos, kai pateikiate"
+#~ " savo pakeitimus."
+
+#~ msgid "admin"
+#~ msgstr "admin"
+
+#~ msgid "user"
+#~ msgstr "naudotojas"
+
+#~ msgid "Logging in"
+#~ msgstr "Prisijungti"
+
+#~ msgid "SMTP error: "
+#~ msgstr "SMTP klaida:"
+
+#~ msgid "enabled"
+#~ msgstr "įjungtas"
+
+#~ msgid "disabled"
+#~ msgstr "išjungtas"

@@ -1,0 +1,229 @@
+{# ---------------------------------------------------------------------
+  list_smtp.html
+  app/templates/user_smtp/list_smtp.html
+  [Describe purpose or main content of this template.]
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{# =================== JINJA BLOCK ==================== #}
+{% block content %}
+    <h1 class="text-xl font-semibold mb-4">{{ _("SMTP Destinations") }}</h1>
+    <!-- View toggle and Add button -->
+    <div class="mb-4 flex items-center justify-between">
+        <div class="flex space-x-2">
+            <!-- Table View -->
+            <button aria-label="{{ _("Table View") }}"
+                    class="p-2 rounded bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    id="tableViewBtn"
+                    title="{{ _("Table View") }}">
+                <svg class="h-6 w-6"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2"
+                     viewBox="0 0 24 24">
+                    <path d="M4 6h16M4 10h16M4 14h16M4 18h16" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </button>
+            <!-- Card View -->
+            <button aria-label="{{ _("Card View") }}"
+                    class="p-2 rounded bg-gray-300 text-black hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    id="cardViewBtn"
+                    title="{{ _("Card View") }}">
+                <svg class="h-6 w-6"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2"
+                     viewBox="0 0 24 24">
+                    <rect x="3" y="3" width="7" height="7" />
+                    <rect x="14" y="3" width="7" height="7" />
+                    <rect x="14" y="14" width="7" height="7" />
+                    <rect x="3" y="14" width="7" height="7" />
+                </svg>
+            </button>
+        </div>
+        <a class="inline-block px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 transition"
+           href="{{ url_for("user_smtp.create") }}">➕ {{ _("Add SMTP") }}</a>
+    </div>
+    <!-- Table View -->
+    <div id="tableView">
+        <!-- =================== TABLE START ================== -->
+        <table class="table-auto w-full border-collapse border border-gray-300 dark:border-gray-700 text-sm">
+            <thead>
+                <tr>
+                    <th class="border px-4 py-2 text-left">{{ _("Label") }}</th>
+                    <th class="border px-4 py-2 text-left">{{ _("Host") }}</th>
+                    <th class="border px-4 py-2 text-center">{{ _("Port") }}</th>
+                    <th class="border px-4 py-2 text-left">{{ _("Username") }}</th>
+                    <th class="border px-4 py-2 text-center">{{ _("TLS") }}</th>
+                    <th class="border px-4 py-2 text-center">{{ _("Enabled") }}</th>
+                    <th class="border px-4 py-2 text-center">{{ _("Created") }}</th>
+                    <th class="border px-4 py-2 text-center">{{ _("Actions") }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for smtp in smtp_list %}
+                    <tr>
+                        <td class="border px-4 py-2">{{ smtp.label }}</td>
+                        <td class="border px-4 py-2">{{ smtp.smtp_host }}</td>
+                        <td class="border px-4 py-2 text-center">{{ smtp.smtp_port }}</td>
+                        <td class="border px-4 py-2">{{ smtp.smtp_username }}</td>
+                        <td class="border px-4 py-2 text-center">{{ '✅' if smtp.use_tls else '❌' }}</td>
+                        <td class="border px-4 py-2 text-center">{{ '✅' if smtp.enabled else '❌' }}</td>
+                        <td class="border px-4 py-2 text-center">
+                            {{ smtp.created_at.strftime("%Y-%m-%d %H:%M") if smtp.created_at else '' }}
+                        </td>
+                        <td class="border px-4 py-2 text-center">
+                            {# Edit button - only enabled if not in use #}
+                            {% if not smtp.linked_secure_emails %}
+                                <a class="text-blue-500 hover:underline"
+                                   href="{{ url_for('user_smtp.edit', smtp_id=smtp.id) }}"
+                                   title="{{ _("Edit") }}">✏️</a>
+                            {% else %}
+                                <span class="text-gray-400 cursor-not-allowed"
+                                      title="{{ _("Cannot edit while in use") }}">✏️</span>
+                            {% endif %}
+                            {# Send Test is always enabled #}
+                            <form action="{{ url_for('user_smtp.send_test', smtp_id=smtp.id) }}" method="post"
+                                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                                class="inline mx-2">
+                                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                                <button type="submit"
+                                        title="{{ _("Send Test") }}"
+                                        class="text-indigo-500 hover:underline">🧪</button>
+                            </form>
+                            {# Delete button - only enabled if not in use #}
+                            {% if not smtp.linked_secure_emails %}
+                                <form action="{{ url_for('user_smtp.delete', smtp_id=smtp.id) }}"
+                                      method="post"
+                                      class="inline"
+                                      onsubmit="return confirm('Delete {{ smtp.label }}?');">
+                                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                                    <button type="submit"
+                                            title="{{ _("Delete") }}"
+                                            class="text-red-500 hover:underline">🗑️</button>
+                                </form>
+                            {% else %}
+                                <span class="text-gray-400 cursor-not-allowed"
+                                      title="{{ _("Cannot delete while in use") }}">🗑️</span>
+                            {% endif %}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+            <!-- =================== TABLE END ==================== -->
+        </table>
+    </div>
+    <!-- Card View -->
+    <div class="hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4"
+         id="cardView">
+        {% for smtp in smtp_list %}
+            <div class="bg-white dark:bg-zinc-800 rounded shadow p-4 text-sm">
+                <h2 class="text-lg font-semibold mb-2">{{ smtp.label }}</h2>
+                <p>
+                    <strong>{{ _("Host:") }}</strong> {{ smtp.smtp_host }}
+                </p>
+                <p>
+                    <strong>{{ _("Port:") }}</strong> {{ smtp.smtp_port }}
+                </p>
+                <p>
+                    <strong>{{ _("Username:") }}</strong> {{ smtp.smtp_username }}
+                </p>
+                <p>
+                    <strong>{{ _("Password:") }}</strong> ••••••••
+                </p>
+                <p>
+                    <strong>{{ _("TLS:") }}</strong> {{ '✅' if smtp.use_tls else '❌' }}
+                </p>
+                <p>
+                    <strong>{{ _("Enabled:") }}</strong> {{ '✅' if smtp.enabled else '❌' }}
+                </p>
+                <p>
+                    <strong>{{ _("Created:") }}</strong> {{ smtp.created_at.strftime("%Y-%m-%d %H:%M") if smtp.created_at else '' }}
+                </p>
+                <div class="mt-2">
+                    {# Edit button - only enabled if not in use #}
+                    {% if not smtp.linked_secure_emails %}
+                        <a class="text-blue-500 hover:underline"
+                           href="{{ url_for('user_smtp.edit', smtp_id=smtp.id) }}"
+                           title="{{ _("Edit") }}">✏️</a>
+                    {% else %}
+                        <span class="text-gray-400 cursor-not-allowed"
+                              title="{{ _("Cannot edit while in use") }}">✏️</span>
+                    {% endif %}
+                    {# Send Test is always enabled #}
+                    <form action="{{ url_for('user_smtp.send_test', smtp_id=smtp.id) }}"
+                          method="post"
+                          class="inline mx-2">
+                        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                        <button type="submit"
+                                title="{{ _("Send Test") }}"
+                                class="text-indigo-500 hover:underline">🧪</button>
+                    </form>
+                    {# Delete button - only enabled if not in use #}
+                    {% if not smtp.linked_secure_emails %}
+                        <form action="{{ url_for('user_smtp.delete', smtp_id=smtp.id) }}"
+                              method="post"
+                              class="inline"
+                              onsubmit="return confirm('Delete {{ smtp.label }}?');">
+                            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                            <button type="submit"
+                                    title="{{ _("Delete") }}"
+                                    class="text-red-500 hover:underline">🗑️</button>
+                        </form>
+                    {% else %}
+                        <span class="text-gray-400 cursor-not-allowed"
+                              title="{{ _("Cannot delete while in use") }}">🗑️</span>
+                    {% endif %}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+    <!-- =================== Expandable SMTP Help =================== -->
+    <div x-data="{ showHelp: false }" class="mt-8">
+        <button @click="showHelp = !showHelp"
+                class="text-sm text-blue-600 hover:text-blue-400 underline focus:outline-none">
+            <span x-text="showHelp ? '{{ _("Hide SMTP Setup Help") }}' : '{{ _("Show SMTP Setup Help") }}'"></span>
+        </button>
+        <div x-show="showHelp"
+             x-transition
+             class="mt-4 p-4 rounded bg-zinc-800 text-sm text-zinc-100 space-y-2 shadow-md border border-zinc-700">
+            <p>
+                {{ _("Need help finding your SMTP server settings? See here for some links to common providers:") }}
+                <a href="{{ config['GITHUB_URL'] }}/blob/main/HELP_SMTP.md"
+                   target="_blank"
+                   class="text-blue-300 underline hover:text-blue-100 font-semibold">
+                    {{ _("SMTP Server Settings Help (GitHub)") }}
+                </a>
+            </p>
+            <ul class="list-disc list-inside mt-2 text-zinc-300">
+                <li>{{ _("Find official documentation links for Gmail, Outlook, Yahoo, AOL, and others.") }}</li>
+                <li>{{ _("If your provider isn’t listed, search their support site or a search engine for 'SMTP settings'.") }}</li>
+                <li>{{ _("Some providers (like Gmail, Yahoo) require 'App Passwords' or special setup—see their docs!") }}</li>
+            </ul>
+        </div>
+        <script>
+document.addEventListener('DOMContentLoaded', () => {
+  const tableBtn = document.getElementById('tableViewBtn');
+  const cardBtn = document.getElementById('cardViewBtn');
+  const tableView = document.getElementById('tableView');
+  const cardView = document.getElementById('cardView');
+
+  tableBtn.addEventListener('click', () => {
+    tableView.classList.remove('hidden');
+    cardView.classList.add('hidden');
+    tableBtn.classList.replace('bg-gray-300', 'bg-blue-600');
+    tableBtn.classList.replace('text-black', 'text-white');
+    cardBtn.classList.replace('bg-blue-600', 'bg-gray-300');
+    cardBtn.classList.replace('text-white', 'text-black');
+  });
+
+  cardBtn.addEventListener('click', () => {
+    cardView.classList.remove('hidden');
+    tableView.classList.add('hidden');
+    cardBtn.classList.replace('bg-gray-300', 'bg-blue-600');
+    cardBtn.classList.replace('text-black', 'text-white');
+    tableBtn.classList.replace('bg-blue-600', 'bg-gray-300');
+    tableBtn.classList.replace('text-white', 'text-black');
+  });
+});
+        </script>
+    {% endblock %}

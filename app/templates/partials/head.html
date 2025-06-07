@@ -1,0 +1,44 @@
+<!-- ================= META, TITLE & RESOURCES ================= -->
+<head>
+    <!-- Basic metadata for character encoding and responsive layout on mobile -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Page title shown in browser tab -->
+    <title>{{ _("Grylli") }}</title>
+    <!-- Favicon (small icon shown in browser tab) -->
+    <link rel="icon"
+          href="{{ url_for('static', filename='icons/favicon.ico') }}"
+          type="image/x-icon" />
+    <!-- Main Tailwind-based stylesheet with all app-level styling -->
+    <link href="{{ url_for('static', filename='css/styles.css') }}"
+          rel="stylesheet" />
+    <!-- Ensure Font Awesome is Available -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+          integrity="..."
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer" />
+    <!-- JavaScript to handle dark/light theme toggling using HTML class and localStorage -->
+    <script defer src="{{ url_for('static', filename='js/theme-toggle.js') }}"></script>
+    <!-- Alpine.js for lightweight declarative UI (used for toggles, dropdowns, transitions) -->
+    <script defer
+            src="https://cdn.jsdelivr.net/npm/@alpinejs/collapse@3.x.x/dist/cdn.min.js"></script>
+    <script defer
+            src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script>
+      // Prevent theme flash: set the class before CSS loads
+      (function() {
+        try {
+          var theme = localStorage.getItem('theme');
+          if (
+            theme === 'dark' ||
+            (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)
+          ) {
+            document.documentElement.classList.add('dark');
+          } else {
+            document.documentElement.classList.remove('dark');
+          }
+        } catch (e) {}
+      })();
+    </script>
+</head>

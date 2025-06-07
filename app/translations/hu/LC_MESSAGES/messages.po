@@ -1,0 +1,3303 @@
+# Hungarian translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-06-07 15:49-0500\n"
+"PO-Revision-Date: 2025-05-25 12:48-0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: hu <LL@li.org>\n"
+"Language: hu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: app/init_db.py:55
+#, python-format
+msgid "Tables currently in DB: %s"
+msgstr "Táblázatok jelenleg az adatbázisban:"
+
+#: app/init_db.py:58
+msgid "Database or system_config table missing. Running migrations now..."
+msgstr ""
+"Adatbázis vagy system_config táblázat hiányzik. Futtatjuk a migrációkat..."
+
+#: app/init_db.py:61
+msgid "Migrations applied successfully."
+msgstr "Migrációk sikeresen alkalmazva."
+
+#: app/init_db.py:63
+msgid "Migration failed."
+msgstr "A migráció sikertelen."
+
+#: app/init_db.py:68
+msgid "System config seeded successfully."
+msgstr "A rendszer konfigurációja sikeresen inicializálva."
+
+#: app/init_db.py:70
+msgid "Error seeding system config."
+msgstr "Hiba a rendszer konfigurációjának inicializálásakor:"
+
+#: app/forms/mfa_form.py:15 app/templates/apprise/create_apprise.html:30
+#: app/templates/apprise/edit_apprise.html:30
+#: app/templates/apprise/list_apprise.html:60
+#: app/templates/mfa/settings.html:24 app/templates/mfa/settings.html:40
+#: app/templates/user_smtp/create_smtp.html:99
+#: app/templates/user_smtp/edit_smtp.html:114
+#: app/templates/user_smtp/list_smtp.html:57
+#: app/templates/webhook/create_webhook.html:36
+#: app/templates/webhook/edit_webhook.html:36
+#: app/templates/webhook/list_webhooks.html:61
+msgid "Enabled"
+msgstr "Engedélyezett"
+
+#: app/forms/mfa_form.py:16
+msgid "Authenticator Code"
+msgstr "Hitelesítési kód"
+
+#: app/forms/mfa_form.py:17
+#: app/templates/admin/partials/user_instructions_and_modal.html:66
+#: app/templates/admin/partials/user_table.html:115
+#: app/templates/email/assign_smtp.html:44 app/templates/mfa/settings.html:47
+#: app/templates/user_smtp/edit_smtp.html:122
+msgid "Save"
+msgstr "Mentés"
+
+#: app/forms/mfa_form.py:27
+msgid "Authentication Code"
+msgstr "Értesítés frissítése"
+
+#: app/forms/mfa_form.py:29
+msgid "Please enter your authentication code."
+msgstr "Kérem, adja meg az authenticator kódját."
+
+#: app/forms/mfa_form.py:30
+msgid "Enter a valid 6-digit code or recovery code."
+msgstr "Adjon meg egy érvényes 6-jegyű kódot vagy helyreállítási kódot."
+
+#: app/forms/mfa_form.py:31
+msgid "Invalid code format."
+msgstr "Érvénytelen kód formátum."
+
+#: app/forms/mfa_form.py:35 app/templates/mfa/challenge.html:25
+msgid "Verify"
+msgstr "Verzió"
+
+#: app/services/mail.py:37 app/services/system_settings_email.py:40
+msgid "Missing required config setting: "
+msgstr "Hiányzó szükséges konfigurációs beállítás:"
+
+#: app/services/mail.py:46 app/services/system_settings_email.py:50
+#, python-format
+msgid "Failed to decrypt %(key)s: %(error)s"
+msgstr "Nem sikerült megfejteni %(key)s: %(error)s"
+
+#: app/services/mail.py:54
+#, python-format
+msgid "get_setting('%(key)s') -> '%(value)s' (sensitive: %(sensitive)s)"
+msgstr ""
+"get_setting('%(key)s') -> '%(value)s' (nyers: '%(raw)s', érzékeny: "
+"%(sensitive)s)"
+
+#: app/services/mail.py:75
+#, python-format
+msgid "Preparing email to %(to)s"
+msgstr "E-mail előkészítése címzett: %(to)s"
+
+#: app/services/mail.py:90
+#, python-format
+msgid ""
+"SMTP configuration: host=%(host)s (type=%(host_type)s), port=%(port)s "
+"(type=%(port_type)s)"
+msgstr ""
+"SMTP hoszt = '%(host)s' (típus: %(host_type)s), port = %(port)s (típus: "
+"%(port_type)s)"
+
+#: app/services/mail.py:99
+#, python-format
+msgid "SMTP username: %(user)s"
+msgstr "Felhasználó használata: %(user)s"
+
+#: app/services/mail.py:100
+#, python-format
+msgid "TLS enabled: %(tls)s"
+msgstr "TLS engedélyezve: %(tls)s"
+
+#: app/services/mail.py:105
+msgid "Starting TLS connection..."
+msgstr "TLS megkezdése"
+
+#: app/services/mail.py:107
+msgid "Logging into SMTP server..."
+msgstr "Bejelentkezés az SMTP szerverre..."
+
+#: app/services/mail.py:109
+msgid "Sending email message..."
+msgstr "Ütemezett üzenet"
+
+#: app/services/mail.py:111
+#, python-format
+msgid "Email sent successfully to %(to)s"
+msgstr "A teszt email sikeresen elküldve."
+
+#: app/services/mail.py:114
+#, python-format
+msgid "SMTP error while sending to %(to)s: %(error)s"
+msgstr "SMTP hiba %(to)s címre küldés közben: %(error)s"
+
+#: app/templates/about.html:10
+msgid "About Grylli"
+msgstr "Grylli-ról"
+
+#: app/templates/about.html:13
+msgid ""
+"Grylli is a secure, self-hosted message delivery platform that automatically"
+" sends pre-configured messages if a user fails to check in within a defined "
+"time period."
+msgstr ""
+"A Grylli egy biztonságos, önálló üzemeltetésű üzenetküldő platform, amely "
+"automatikusan küld előre konfigurált üzeneteket, ha a felhasználó nem "
+"jelentkezik be egy meghatározott időszakon belül."
+
+#: app/templates/about.html:14
+msgid ""
+"It supports multiple users, customizable schedules, and recurring reminders."
+msgstr "Több felhasználót és testreszabható ütemterveket támogat."
+
+#: app/templates/about.html:15
+msgid ""
+"Messages and reminders can be delivered via email, webhooks, or over 100 "
+"third-party services through Apprise."
+msgstr ""
+"Az üzenetek e-mailen, webhook-okon vagy az Apprise által támogatott több "
+"mint 80 harmadik féltől származó szolgáltatáson keresztül is kézbesíthetők."
+
+#: app/templates/about.html:16
+msgid ""
+"Users can configure their own SMTP servers to ensure emails and reminders "
+"appear to come directly from them — not from the system administrator."
+msgstr ""
+"A felhasználók beállíthatják saját SMTP szervereiket az üzenetek megjelenése"
+" érdekében, mintha közvetlenül tőlük érkeznének — nem a rendszergazdától."
+
+#: app/templates/about.html:17
+msgid ""
+"Sensitive data is encrypted at rest, and all operations are secured with "
+"strong authentication and audit-friendly logging."
+msgstr ""
+"Az érzékeny adatok nyugalmi állapotban titkosítva vannak, és minden "
+"üzenetküldési művelet erős hitelesítéssel és audit-barát naplózással van "
+"biztosítva."
+
+#: app/templates/about.html:18
+msgid ""
+"Built with a modern, reactive technology stack, Grylli is optimized for "
+"responsiveness and works seamlessly across desktop and mobile devices."
+msgstr ""
+"Modern, reaktív technológiai stackkel készült, a Grylli optimalizált a gyors"
+" reagálás érdekében, és zökkenőmentesen működik asztali és mobil eszközökön "
+"egyaránt."
+
+#: app/templates/about.html:23
+msgid "Version:"
+msgstr "Verzió:"
+
+#: app/templates/about.html:26
+msgid "Repository:"
+msgstr "Repository:"
+
+#: app/templates/about.html:30
+msgid "GitHub - samcro1967/grylli"
+msgstr "GitHub - samcro1967/grylli"
+
+#: app/templates/help.html:2 app/templates/help.html:5
+#: app/templates/partials/header.html:85
+msgid "Help"
+msgstr "Súgó"
+
+#: app/templates/help.html:7
+msgid ""
+"Grylli includes built-in instructions throughout the app to help you "
+"configure and manage your setup."
+msgstr ""
+"A Grylli beépített utasításokat tartalmaz az alkalmazás során, hogy "
+"segítséget nyújtson a beállítások konfigurálásában és kezelésében."
+
+#: app/templates/help.html:8
+msgid ""
+"This page provides an overview of key features and direct links to where "
+"they can be managed."
+msgstr ""
+"Ez az oldal áttekintést nyújt a főbb funkciókról és közvetlen linkeket "
+"tartalmaz, ahol azok kezelhetők."
+
+#: app/templates/help.html:12 app/templates/messages/list_messages.html:9
+#: app/templates/partials/shared_nav.html:17
+msgid "Notifications"
+msgstr "Értesítések"
+
+#: app/templates/help.html:14
+msgid "Create and assign messages"
+msgstr "Üzenet vagy e-mail létrehozása."
+
+#: app/templates/admin/index.html:32 app/templates/help.html:17
+#: app/templates/partials/admin_nav.html:56
+msgid "SMTP Settings"
+msgstr "SMTP beállítások"
+
+#: app/templates/help.html:19
+msgid "Use your own email server"
+msgstr "Használja saját e-mail szerverét"
+
+#: app/templates/help.html:22
+msgid "Apprise Integration"
+msgstr "Apprise célpontok"
+
+#: app/templates/help.html:24
+msgid "Send notifications to 80+ supported services"
+msgstr "Küldjön értesítéseket 80+ támogatott szolgáltatásra"
+
+#: app/templates/help.html:27
+#: app/templates/messages/assign_destinations.html:41
+#: app/templates/messages/view_message.html:58
+#: app/templates/partials/shared_nav.html:44
+#: app/templates/reminders/assign_destinations.html:39
+#: app/templates/reminders/view_reminder.html:69
+msgid "Webhooks"
+msgstr "Webhookok"
+
+#: app/templates/help.html:29
+msgid "Trigger actions or external workflows"
+msgstr "Indítson műveleteket vagy külső munkafolyamatokat"
+
+#: app/templates/email/list_emails.html:9 app/templates/help.html:32
+#: app/templates/partials/shared_nav.html:61
+msgid "Emails"
+msgstr "E-mailek"
+
+#: app/templates/help.html:34
+msgid "View and manage secure email messages"
+msgstr "Biztonságos e-mail üzenetek áttekintése"
+
+#: app/templates/help.html:38
+msgid "Security"
+msgstr "🔐 Biztonság"
+
+#: app/templates/help.html:39
+msgid "Grylli encrypts sensitive data and logs all key actions for auditing."
+msgstr ""
+"A Grylli titkosítja az érzékeny adatokat és naplózza az összes "
+"kulcsfontosságú műveletet auditálás céljából."
+
+#: app/templates/index.html:9 app/views/locale.py:95
+msgid "Welcome to Grylli"
+msgstr "Üdvözöljük a Grylliben"
+
+#: app/templates/index.html:11
+msgid "Pronounced"
+msgstr "Kiejtve"
+
+#: app/templates/index.html:11
+msgid "like “grill-ee”"
+msgstr "mint „grill-ee”"
+
+#: app/templates/index.html:14
+msgid ""
+"Grylli is a secure message scheduling and delivery system designed to ensure"
+" your important messages are delivered — even if you can’t be there to send "
+"them."
+msgstr ""
+"A Grylli egy biztonságos üzenetütemezési és kézbesítési rendszer, amely "
+"biztosítja, hogy fontos üzenetei kézbesítésre kerüljenek — még akkor is, ha "
+"nem tudja őket elküldeni."
+
+#: app/templates/index.html:17
+msgid ""
+"Whether you’re planning ahead, setting up emergency communication, or "
+"building peace of mind, Grylli helps automate your message delivery via "
+"multiple channels including email, webhooks, and Apprise notifications."
+msgstr ""
+"Akár előre tervez, akár vészhelyzeti kommunikációt állít be, akár lelki "
+"nyugalmat keres, a Grylli segít automatizálni üzenetei kézbesítését "
+"e-mailben, webhorgon vagy Apprise értesítések útján, ha elmulaszt egy "
+"bejelentkezést."
+
+#: app/templates/index.html:19
+msgid "Getting Started"
+msgstr "Kezdés"
+
+#: app/templates/index.html:21
+msgid "Create a message, email, or reminder."
+msgstr "Üzenet vagy e-mail létrehozása."
+
+#: app/templates/index.html:22
+msgid "Set your check-in interval and grace period (for messages)."
+msgstr "Bejelentkezési gyakoriság és türelmi idő beállítása."
+
+#: app/templates/index.html:23
+msgid "Assign one or more delivery destinations."
+msgstr "Egy vagy több kézbesítési cél megadása."
+
+#: app/templates/index.html:24
+msgid "Optionally attach files for secure emails."
+msgstr "Opcionálisan csatoljon fájlokat a biztonságos e-mailekhez."
+
+#: app/templates/index.html:25
+msgid "Schedule reminders to send at specific times or on a recurring basis."
+msgstr ""
+"Ütemezzen emlékeztetőket meghatározott időpontokra vagy ismétlődő alapon."
+
+#: app/templates/index.html:26
+msgid "Enable the message or reminder to activate delivery."
+msgstr "Engedélyezze az üzenet vagy emlékeztető aktiválását a kézbesítéshez."
+
+#: app/templates/index.html:28
+msgid ""
+"Regularly check in to Grylli to prevent automated delivery; miss a check-in "
+"and Grylli sends your messages as scheduled."
+msgstr ""
+"Rendszeresen jelentkezz be a Grylli-be, hogy megakadályozd az automatikus "
+"kézbesítést; ha elmulasztasz egy bejelentkezést, a Grylli a tervezett "
+"időpontban küldi el az üzeneteidet."
+
+#: app/templates/privacy.html:10
+msgid "Privacy Notice"
+msgstr "Adatvédelmi nyilatkozat"
+
+#: app/templates/privacy.html:13
+msgid ""
+"Grylli respects your privacy and is designed to minimize the collection and "
+"storage of personal data."
+msgstr ""
+"A Grylli tiszteletben tartja a magánéletét, és úgy van kialakítva, hogy "
+"minimalizálja a személyes adatok gyűjtését és tárolását."
+
+#: app/templates/privacy.html:14
+msgid ""
+"All data is encrypted where appropriate and remains fully under your control"
+" if you self-host this platform."
+msgstr ""
+"Minden adat megfelelően titkosítva van, és teljes mértékben az Ön irányítása"
+" alatt marad, ha saját hosztolású platformot használ."
+
+#: app/templates/privacy.html:17
+msgid "What Data We Collect"
+msgstr "Milyen adatokat gyűjtünk"
+
+#: app/templates/privacy.html:19
+msgid "Email address and password hash (for authentication)"
+msgstr "E-mail cím és jelszó hash (hitelesítéshez)"
+
+#: app/templates/privacy.html:20
+msgid "Optional MFA secret and recovery codes (encrypted at rest)"
+msgstr ""
+"Opcióként MFA titok és helyreállítási kódok (nyugalmi állapotban titkosítva)"
+
+#: app/templates/privacy.html:21
+msgid "Reminder and message content you configure"
+msgstr "Emlékeztető és üzenet tartalom, amit beállít"
+
+#: app/templates/privacy.html:22
+msgid "User-specific settings, SMTP configuration (if provided)"
+msgstr "Felhasználó-specifikus beállítások, SMTP konfiguráció (ha megadva)"
+
+#: app/templates/privacy.html:25
+msgid "How Your Data Is Used"
+msgstr "Adatai hogyan kerülnek felhasználásra"
+
+#: app/templates/privacy.html:27
+msgid ""
+"Your data is used solely for the purpose of delivering reminders and "
+"messages according to your preferences."
+msgstr ""
+"Adatait kizárólag arra a célra használjuk, hogy emlékeztetőket és üzeneteket"
+" küldjünk az Ön preferenciái szerint."
+
+#: app/templates/privacy.html:28
+msgid ""
+"Grylli does not share, sell, or transmit your personal data to any third "
+"parties."
+msgstr ""
+"A Grylli nem osztja meg, nem értékesíti és nem továbbítja az Ön személyes "
+"adatait harmadik feleknek."
+
+#: app/templates/privacy.html:31
+msgid "Your Rights"
+msgstr "Az Ön jogai"
+
+#: app/templates/privacy.html:33
+msgid ""
+"You can export all of your data at any time from the Account Settings page."
+msgstr "Bármikor exportálhatja az összes adatát a Fiókbeállítások oldalon."
+
+#: app/templates/privacy.html:34
+msgid "You may permanently delete your account and all associated data."
+msgstr "Nem törölheted a fiókodat, mert te vagy az utolsó adminisztrátor."
+
+#: app/templates/privacy.html:35
+msgid ""
+"If you are using a self-hosted instance, contact the instance administrator "
+"for data inquiries."
+msgstr ""
+"Ha saját hosztolt példányt használ, vegye fel a kapcsolatot a példány "
+"adminisztrátorával adatlekérdezések céljából."
+
+#: app/templates/privacy.html:38
+msgid "Self-Hosting Responsibility"
+msgstr "Saját hosztolás felelőssége"
+
+#: app/templates/privacy.html:40
+msgid ""
+"If you are running Grylli on your own server, you are responsible for the "
+"storage, processing, and lawful handling of all user data on that instance."
+msgstr ""
+"Ha a Gryllit saját szerverén futtatja, felelős a felhasználói adatok "
+"tárolásáért, feldolgozásáért és jogszerű kezeléséért az adott példányban."
+
+#: app/templates/privacy.html:44
+msgid ""
+"This notice was last updated in June 2025 and may evolve to reflect changes "
+"in the software or regulatory landscape."
+msgstr ""
+"Ez a nyilatkozat 2025 júniusában lett utoljára frissítve, és a szoftver vagy"
+" szabályozási környezet változásait tükrözve módosulhat."
+
+#: app/templates/system_info.html:11
+msgid "📦 Environment Versions"
+msgstr "📦 Környezetverziók"
+
+#: app/templates/system_info.html:17
+msgid "Category"
+msgstr "Kategória"
+
+#: app/templates/system_info.html:18
+msgid "Tool"
+msgstr "Eszköz"
+
+#: app/templates/system_info.html:19
+msgid "Version"
+msgstr "Verzió"
+
+#: app/templates/system_info.html:25
+msgid "🧠 Python"
+msgstr "🧠 Python"
+
+#: app/templates/system_info.html:26
+msgid "Python"
+msgstr "Python"
+
+#: app/templates/system_info.html:30
+msgid "pip"
+msgstr "pip"
+
+#: app/templates/system_info.html:34
+msgid "SQLite"
+msgstr "SQLite"
+
+#: app/templates/system_info.html:40
+msgid "⚙️ Core"
+msgstr "⚙️ Alapvető"
+
+#: app/templates/system_info.html:47
+msgid "🔐 Security"
+msgstr "🔐 Biztonság"
+
+#: app/templates/system_info.html:48
+msgid "Email Validator"
+msgstr "Email ellenőrző"
+
+#: app/templates/system_info.html:52
+msgid "Cryptography"
+msgstr "Kriptográfia"
+
+#: app/templates/system_info.html:57
+msgid "🕰️ Scheduling"
+msgstr "🕰️ Ütemezés"
+
+#: app/templates/system_info.html:58
+msgid "APScheduler"
+msgstr "APScheduler"
+
+#: app/templates/system_info.html:62
+msgid "Apprise (Python)"
+msgstr "Apprise (Python)"
+
+#: app/templates/system_info.html:66
+msgid "Apprise CLI"
+msgstr "Apprise CLI"
+
+#: app/templates/system_info.html:74
+msgid "🌐 Frontend"
+msgstr "🌐 Előlap"
+
+#: app/templates/account/manage_account.html:11
+msgid "Manage Account"
+msgstr "Fiók kezelése"
+
+#: app/templates/account/manage_account.html:12
+msgid "Update your profile information and password."
+msgstr "Frissítse profil adatait és jelszavát."
+
+#: app/templates/account/manage_account.html:41
+#: app/templates/admin/create_user.html:40
+#: app/templates/auth/bootstrap.html:43
+#: app/templates/auth/reset_password.html:42 app/templates/auth/signup.html:42
+msgid "Please enter a valid email address."
+msgstr "Kérjük, adjon meg egy érvényes e-mail címet."
+
+#: app/templates/account/manage_account.html:62
+#: app/templates/account/manage_account.html:96
+#: app/templates/account/manage_account.html:127
+#: app/templates/auth/reset_password.html:66
+#: app/templates/auth/reset_password.html:97 app/templates/auth/signup.html:65
+#: app/templates/auth/signup.html:95
+msgid "Show/hide password"
+msgstr "Tartsd lenyomva a jelszó megjelenítéséhez"
+
+#: app/templates/account/manage_account.html:89
+#: app/templates/admin/create_user.html:53
+#: app/templates/auth/bootstrap.html:51
+#: app/templates/auth/reset_password.html:58 app/templates/auth/signup.html:58
+msgid "Password must meet all complexity requirements."
+msgstr "A jelszónak meg kell felelnie az összes összetettségi követelménynek."
+
+#: app/templates/account/manage_account.html:141
+#: app/templates/admin/create_user.html:72
+#: app/templates/admin/edit_user.html:67 app/templates/auth/bootstrap.html:69
+#: app/templates/auth/reset_password.html:110
+#: app/templates/auth/signup.html:108
+msgid "Passwords do not match."
+msgstr "A jelszavak nem egyeznek."
+
+#: app/templates/account/manage_account.html:147
+msgid "Update Account"
+msgstr "Fiók frissítése"
+
+#: app/templates/account/manage_account.html:151
+#: app/templates/admin/create_user.html:82
+#: app/templates/admin/edit_user.html:97 app/templates/admin/help_form.html:28
+#: app/templates/admin/partials/user_instructions_and_modal.html:62
+#: app/templates/admin/partials/user_table.html:113
+#: app/templates/apprise/create_apprise.html:42
+#: app/templates/apprise/edit_apprise.html:42
+#: app/templates/auth/reset_password.html:121
+#: app/templates/email/assign_smtp.html:46
+#: app/templates/email/attach_files.html:47
+#: app/templates/email/edit_message.html:54
+#: app/templates/email/schedule_email.html:84
+#: app/templates/messages/assign_destinations.html:66
+#: app/templates/messages/create_message.html:55
+#: app/templates/messages/edit_message.html:48
+#: app/templates/messages/schedule_message.html:84
+#: app/templates/mfa/challenge.html:29 app/templates/mfa/settings.html:51
+#: app/templates/reminders/assign_destinations.html:64
+#: app/templates/reminders/assign_email_reminder.html:94
+#: app/templates/reminders/create_reminder.html:49
+#: app/templates/reminders/edit_reminder.html:42
+#: app/templates/reminders/schedule_reminder.html:51
+#: app/templates/user_smtp/create_smtp.html:111
+#: app/templates/user_smtp/edit_smtp.html:125
+#: app/templates/webhook/create_webhook.html:48
+#: app/templates/webhook/edit_webhook.html:48
+msgid "Cancel"
+msgstr "Mégse"
+
+#: app/templates/account/manage_account.html:159
+#: app/templates/admin/create_user.html:90
+#: app/templates/admin/edit_user.html:81 app/templates/auth/bootstrap.html:83
+#: app/templates/auth/reset_password.html:128
+#: app/templates/auth/signup.html:132
+msgid "Minimum 8 characters"
+msgstr "Minimum 8 karakter"
+
+#: app/templates/account/manage_account.html:160
+#: app/templates/admin/create_user.html:91
+#: app/templates/admin/edit_user.html:82 app/templates/auth/bootstrap.html:84
+#: app/templates/auth/reset_password.html:129
+#: app/templates/auth/signup.html:133
+msgid "At least one uppercase letter"
+msgstr "Legalább egy nagybetű"
+
+#: app/templates/account/manage_account.html:161
+#: app/templates/admin/create_user.html:92
+#: app/templates/admin/edit_user.html:83 app/templates/auth/bootstrap.html:85
+#: app/templates/auth/reset_password.html:130
+#: app/templates/auth/signup.html:134
+msgid "At least one lowercase letter"
+msgstr "Legalább egy kisbetű"
+
+#: app/templates/account/manage_account.html:162
+#: app/templates/admin/create_user.html:93
+#: app/templates/admin/edit_user.html:84 app/templates/auth/bootstrap.html:86
+#: app/templates/auth/reset_password.html:131
+#: app/templates/auth/signup.html:135
+msgid "At least one number"
+msgstr "Legalább egy számjegy"
+
+#: app/templates/account/manage_account.html:163
+#: app/templates/admin/create_user.html:94
+#: app/templates/auth/bootstrap.html:87
+#: app/templates/auth/reset_password.html:132
+#: app/templates/auth/signup.html:136
+msgid "At least one special character (e.g., !@#$%)"
+msgstr "Legalább egy speciális karakter (pl. !@#$%)"
+
+#: app/templates/account/manage_account.html:169
+msgid "Download My Data"
+msgstr "Adataim letöltése"
+
+#: app/templates/account/manage_account.html:171
+msgid ""
+"Download all your account data as a JSON file. This includes your reminders,"
+" messages, email settings, and more. The file is for your records only and "
+"cannot be imported back. Protect it as it may contain sensitive information."
+msgstr ""
+"Töltse le az összes fiókadatait egy JSON fájlban. Ez magában foglalja az "
+"emlékeztetőit, üzeneteit, email beállításait és egyebeket. A fájl kizárólag "
+"az Ön nyilvántartása számára készült, és nem importálható vissza. Védje meg,"
+" mivel érzékeny információkat tartalmazhat."
+
+#: app/templates/account/manage_account.html:175
+msgid "Download My Data (JSON)"
+msgstr "Adataim letöltése (JSON)"
+
+#: app/templates/account/manage_account.html:179
+msgid "Danger Zone"
+msgstr "Veszélyzóna"
+
+#: app/templates/account/manage_account.html:180
+msgid "Deleting your account is permanent and cannot be undone."
+msgstr "A fiók törlése végleges és nem visszavonható."
+
+#: app/templates/account/manage_account.html:185
+msgid "Delete My Account"
+msgstr "Fiók frissítése"
+
+#: app/templates/account/translations.html:8
+msgid "Translations - Grylli"
+msgstr "Fordítások - Grylli"
+
+#: app/templates/account/translations.html:17
+#: app/templates/partials/header.html:102
+msgid "Translations"
+msgstr "Fordítások"
+
+#: app/templates/account/translations.html:20
+msgid "Grylli currently supports multiple languages and more will be added."
+msgstr "A Grylli jelenleg több nyelvet támogat, és még többet fog hozzáadni."
+
+#: app/templates/account/translations.html:21
+msgid "Many of the translations were performed with assistance from ChatGPT."
+msgstr "A fordítások nagy részét a ChatGPT segítségével végezték."
+
+#: app/templates/account/translations.html:22
+msgid ""
+"If you find a translation issue or want to suggest improvements, your input "
+"is welcome!"
+msgstr ""
+"Ha fordítási problémát találsz, vagy javaslatot szeretnél tenni, szívesen "
+"fogadjuk a véleményed!"
+
+#: app/templates/account/translations.html:28
+msgid "How to request translation updates"
+msgstr "Hogyan kérj fordítási frissítéseket"
+
+#: app/templates/account/translations.html:30
+msgid "To contribute to translations, please use the following guidelines:"
+msgstr ""
+"Ha hozzájárulnál a fordításokhoz, kérjük, kövesd az alábbi irányelveket:"
+
+#: app/templates/account/translations.html:43
+msgid "Contribute missing or improved translations:"
+msgstr "Hiányzó fordítást találtál?"
+
+#: app/templates/account/translations.html:63
+msgid "Open the relevant .po translation file for your language."
+msgstr "Nyisd meg a saját nyelvedhez tartozó JSON fordítási fájlt. Például:"
+
+#: app/templates/account/translations.html:67
+msgid ""
+"Find untranslated or incomplete entries and add or improve translations."
+msgstr ""
+"Találd meg a lefordítatlan vagy hiányos bejegyzéseket, majd adj hozzá "
+"fordításokat vagy javítsd azokat."
+
+#: app/templates/account/translations.html:68
+msgid "You may use a PO file editor or a text editor."
+msgstr "Használhatsz PO fájl szerkesztőt vagy szövegszerkesztőt."
+
+#: app/templates/account/translations.html:69
+msgid "Copy the file path and the snippet of your changes."
+msgstr "Másold a fájl elérési útját és a módosításaid részletét."
+
+#: app/templates/account/translations.html:70
+msgid "Paste the snippet directly into a new GitHub issue for review."
+msgstr ""
+"Illeszd be a másolt részletet közvetlenül a GitHub probléma hozzászólásába."
+
+#: app/templates/account/translations.html:72
+msgid "Please do not upload the full .po file to avoid merge conflicts."
+msgstr ""
+"Ne töltsd fel a teljes .po fájlt az egyesítési konfliktusok elkerülése "
+"érdekében."
+
+#: app/templates/account/translations.html:85
+msgid "Improving existing translations:"
+msgstr "A meglévő fordítások javítása:"
+
+#: app/templates/account/translations.html:104
+msgid "Open the relevant .po file for the translation you want to improve."
+msgstr ""
+"Nyisd meg a vonatkozó .po fájlt ahhoz a fordításhoz, amit javítani "
+"szeretnél."
+
+#: app/templates/account/translations.html:106
+msgid "For example:"
+msgstr "Például:"
+
+#: app/templates/account/translations.html:110
+msgid ""
+"Find the phrase(s) and its existing translation(s) you want to improve."
+msgstr ""
+"Keresd meg a kifejezés(eke)t és a meglévő fordítás(oka)t, amit javítani "
+"szeretnél."
+
+#: app/templates/account/translations.html:111
+msgid "Update the phrase(s)."
+msgstr "Frissítsd a kifejezés(eke)t."
+
+#: app/templates/account/translations.html:112
+msgid "Copy the file name and path into the issue."
+msgstr "Másold ki a fájl nevét és elérési útját a probléma jegyzeteként."
+
+#: app/templates/account/translations.html:114
+msgid "Paste the copied snippet directly into the GitHub issue comment."
+msgstr ""
+"Illeszd be a másolt részletet közvetlenül a GitHub probléma hozzászólásába."
+
+#: app/templates/account/translations.html:115
+msgid "Do not upload the full .po file to avoid merge conflicts."
+msgstr ""
+"Ne töltsd fel a teljes .po fájlt az egyesítési konfliktusok elkerülése "
+"érdekében."
+
+#: app/templates/account/translations.html:118
+msgid "Example snippet:"
+msgstr "Példarészlet:"
+
+#: app/templates/account/translations.html:137
+msgid "Report missing translations not yet discovered:"
+msgstr "Jelentkezz hiányzó fordításokkal, amelyek még nem voltak felfedezve:"
+
+#: app/templates/account/translations.html:154
+msgid ""
+"If you see text in the app that appears untranslated or missing, please "
+"report it to us."
+msgstr ""
+"Ha olyan szöveget látsz az alkalmazásban, ami úgy tűnik, hogy nincs "
+"lefordítva vagy hiányzik, kérlek, jelezd felénk."
+
+#: app/templates/account/translations.html:155
+msgid "Provide the exact English phrase as it appears on the screen."
+msgstr "Add meg a pontos angol kifejezést, ahogy a képernyőn látod."
+
+#: app/templates/account/translations.html:156
+msgid ""
+"Include the page or section where you saw the phrase (e.g., Apprise page, "
+"Account Page, etc.)."
+msgstr ""
+"Tüntesd fel az oldalt vagy szakaszt, ahol láttad a kifejezést (pl. "
+"Beállítások oldal, Fiók szakasz)."
+
+#: app/templates/account/translations.html:157
+msgid ""
+"Submit this information via a new GitHub issue so we can add it to the "
+"translation files"
+msgstr ""
+"Küldd el ezt az információt egy új GitHub probléma keretében, hogy "
+"hozzáadhassuk a fordítási fájlokhoz és bekeretezhessük a Babelhez."
+
+#: app/templates/account/translations.html:166
+msgid "Found a missing translation?"
+msgstr "Hiányzó fordítást találtál?"
+
+#: app/templates/account/translations.html:171
+msgid ""
+"This link will create a new GitHub issue pre-filled with a language code."
+msgstr "Ez a link létrehoz egy új GitHub ügyet előre kitöltött nyelvkóddal."
+
+#: app/templates/account/translations.html:172
+msgid "Report it by opening a new GitHub issue"
+msgstr "Jelentsd új GitHub probléma megnyitásával"
+
+#: app/templates/account/translations.html:175
+msgid "Please specify the language code and exact phrase when reporting."
+msgstr "Kérjük, pontosítsd a nyelvkódot és a pontos kifejezést a jelentéskor."
+
+#: app/templates/account/translations.html:176
+msgid "Thank you for helping us make Grylli better!"
+msgstr "Köszönjük, hogy segítesz jobbá tenni a Gryllit!"
+
+#: app/templates/admin/create_user.html:14
+msgid "Create New User"
+msgstr "Új felhasználó létrehozása"
+
+#: app/templates/admin/create_user.html:15
+msgid "Fill out the form to add a new user."
+msgstr "Töltsd ki az űrlapot új felhasználó hozzáadásához."
+
+#: app/templates/admin/create_user.html:21
+#: app/templates/admin/edit_user.html:17 app/templates/auth/bootstrap.html:24
+msgid "Please fix the following errors:"
+msgstr "Kérjük, javítsa ki az alábbi hibákat:"
+
+#: app/templates/admin/create_user.html:78
+#: app/templates/admin/edit_user.html:93
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "Create User"
+msgstr "Felhasználó létrehozása"
+
+#: app/templates/admin/edit_user.html:10
+#: app/templates/admin/partials/user_card.html:20
+#: app/templates/admin/partials/user_table.html:26
+msgid "Edit User"
+msgstr "Felhasználó szerkesztése"
+
+#: app/templates/admin/edit_user.html:55 app/templates/admin/edit_user.html:74
+msgid "Hold to show password"
+msgstr "Tartsd lenyomva a jelszó megjelenítéséhez"
+
+#: app/templates/admin/edit_user.html:85
+#, python-format
+msgid "At least one special character (e.g., !@#$%%)"
+msgstr "Legalább egy speciális karakter (pl. !@#$%%)"
+
+#: app/templates/admin/help.html:4 app/templates/auth/login.html:72
+msgid "Admin Help"
+msgstr "Admin Panel"
+
+#: app/templates/admin/help.html:7
+msgid "Reset Admin Password"
+msgstr "Jelszó visszaállítása"
+
+#: app/templates/admin/help.html:9
+msgid ""
+"If you've forgotten the admin password, you can reset it using the following"
+" Docker command:"
+msgstr ""
+"Ha elfelejtette az adminisztrátori jelszót, az alábbi Docker parancs "
+"segítségével visszaállíthatja:"
+
+#: app/templates/admin/help.html:15
+msgid ""
+"This script will prompt you to enter a new password for the admin user. You "
+"must run it from the host system where the Grylli container is running."
+msgstr ""
+"Ez a szkript új jelszó megadására kéri majd az admin felhasználó számára. "
+"Ezt a gazda rendszerről kell futtatnia, ahol a Grylli konténer fut."
+
+#: app/templates/admin/help.html:18
+msgid "After resetting, you can log in with the new password immediately."
+msgstr "A visszaállítás után azonnal bejelentkezhet az új jelszóval."
+
+#: app/templates/admin/help.html:24
+msgid "Return to Login"
+msgstr "Visszatérés a Vezérlőpultra"
+
+#: app/templates/admin/help_form.html:6
+msgid "Admin Help Access"
+msgstr "Admin Segítség Elérése"
+
+#: app/templates/admin/help_form.html:9
+msgid "Enter your Ferret Key to unlock admin-only help documentation."
+msgstr ""
+"Adja meg a Ferret Kulcsot az adminisztrátori dokumentáció megnyitásához."
+
+#: app/templates/admin/help_form.html:34
+msgid "How to Find Your FERRET_KEY"
+msgstr "Hogyan találja meg a FERRET_KEY-t"
+
+#: app/templates/admin/help_form.html:36
+msgid "The FERRET_KEY is set as an environment variable when running Grylli."
+msgstr ""
+"A FERRET_KEY környezeti változóként van beállítva, amikor a Grylli fut."
+
+#: app/templates/admin/help_form.html:39
+msgid "Option 1: Check docker-compose.yml"
+msgstr "1. lehetőség: Ellenőrizze a docker-compose.yml fájlt"
+
+#: app/templates/admin/help_form.html:46
+msgid "Option 2: Use docker inspect"
+msgstr "2. lehetőség: Használja a docker inspect parancsot"
+
+#: app/templates/admin/help_form.html:52
+msgid "This shows the FERRET_KEY as passed to the container at runtime."
+msgstr ""
+"Ez mutatja a FERRET_KEY-t, amely a konténernek átadásra kerül futásidőben."
+
+#: app/templates/admin/index.html:10
+msgid "Admin Panel"
+msgstr "Admin Panel"
+
+#: app/templates/admin/index.html:12
+msgid ""
+"Welcome to the Grylli Admin Panel. Use the links below to manage the system."
+msgstr ""
+"Üdv a Grylli admin panelen. Használd az alábbi linkeket a rendszer "
+"kezeléséhez."
+
+#: app/templates/admin/index.html:17
+msgid "Manage Users"
+msgstr "Felhasználók kezelése"
+
+#: app/templates/admin/index.html:18
+msgid "Create, edit, enable/disable, or delete user accounts."
+msgstr ""
+"Felhasználói fiókok létrehozása, szerkesztése, engedélyezése/letiltása vagy "
+"törlése."
+
+#: app/templates/admin/index.html:22
+#: app/templates/admin/system_settings.html:10
+#: app/templates/partials/admin_nav.html:52
+msgid "System Settings"
+msgstr "Rendszerbeállítások"
+
+#: app/templates/admin/index.html:23
+msgid "View  system-wide environment values."
+msgstr "Rendszerszintű környezeti értékek megtekintése."
+
+#: app/templates/admin/index.html:27 app/templates/partials/admin_nav.html:42
+msgid "Backups"
+msgstr "Biztonsági mentések"
+
+#: app/templates/admin/index.html:28
+msgid "Create and delete database backups."
+msgstr "Adatbázis biztonsági mentések"
+
+#: app/templates/admin/index.html:33
+msgid "View and test global SMTP settings."
+msgstr ""
+"Nem sikerült elküldeni a teszt emailt. Ellenőrizze az SMTP beállításokat."
+
+#: app/templates/admin/index.html:39
+msgid "View Admin Guide / README on GitHub"
+msgstr "Adminisztrátori útmutató / README megtekintése a GitHub-on"
+
+#: app/templates/admin/index.html:40
+msgid "Includes setup instructions, integrations, and troubleshooting."
+msgstr ""
+"Tartalmazza a beállítási utasításokat, integrációkat és a hibaelhárítást."
+
+#: app/templates/admin/index.html:44
+msgid "⚠️ Admin Tips"
+msgstr "⚠️ Admin tippek"
+
+#: app/templates/admin/index.html:46
+msgid "Ensure the data folder (database) is backed up on your host"
+msgstr ""
+"Győződjön meg arról, hogy az adat mappa (adatbázis) biztonsági mentése "
+"megtörtént a hoszton"
+
+#: app/templates/admin/index.html:48
+msgid ""
+"The uploads folder is not per user.  If required per user, you will ndd to "
+"create subdirectoried per user and setup permissions so users can only see "
+"their own folder."
+msgstr ""
+"A feltöltési mappa nem felhasználónként van. Ha szükséges felhasználónként, "
+"hozzon létre almappákat felhasználónként, és állítson be jogosultságokat, "
+"hogy a felhasználók csak a saját mappájukat lássák."
+
+#: app/templates/admin/index.html:51
+msgid ""
+"To restore a backup: stop the container, replace the data/grylli.db with one"
+" from the backups folder, and restart the container."
+msgstr ""
+"A biztonsági mentés visszaállításához: állítsa le a konténert, cserélje le a"
+" data/grylli.db-t egy biztonsági mappa példányára, és indítsa újra a "
+"konténert."
+
+#: app/templates/admin/list_backups.html:11
+msgid "Database Backups"
+msgstr "Adatbázis biztonsági mentések"
+
+#: app/templates/admin/list_backups.html:13
+msgid "Create Backup"
+msgstr "Biztonsági mentés létrehozása"
+
+#: app/templates/admin/list_backups.html:21
+msgid "Filename"
+msgstr "Fájlnév"
+
+#: app/templates/admin/list_backups.html:22
+#: app/templates/admin/partials/user_table.html:14
+#: app/templates/apprise/list_apprise.html:62
+#: app/templates/email/list_emails.html:60
+#: app/templates/messages/list_messages.html:60
+#: app/templates/reminders/list_reminders.html:60
+#: app/templates/user_smtp/list_smtp.html:59
+#: app/templates/webhook/list_webhooks.html:63
+msgid "Actions"
+msgstr "Műveletek"
+
+#: app/templates/admin/list_backups.html:32
+msgid "Delete this backup?"
+msgstr "Törli ezt a biztonsági mentést?"
+
+#: app/templates/admin/list_backups.html:32
+#: app/templates/apprise/list_apprise.html:95
+#: app/templates/apprise/list_apprise.html:99
+#: app/templates/apprise/list_apprise.html:150
+#: app/templates/apprise/list_apprise.html:154
+#: app/templates/email/list_emails.html:124
+#: app/templates/email/list_emails.html:128
+#: app/templates/email/list_emails.html:226
+#: app/templates/email/list_emails.html:230
+#: app/templates/messages/list_messages.html:112
+#: app/templates/messages/list_messages.html:116
+#: app/templates/messages/list_messages.html:198
+#: app/templates/messages/list_messages.html:202
+#: app/templates/reminders/list_reminders.html:107
+#: app/templates/reminders/list_reminders.html:113
+#: app/templates/reminders/list_reminders.html:192
+#: app/templates/reminders/list_reminders.html:198
+#: app/templates/user_smtp/list_smtp.html:101
+#: app/templates/user_smtp/list_smtp.html:169
+#: app/templates/webhook/list_webhooks.html:102
+#: app/templates/webhook/list_webhooks.html:161
+msgid "Delete"
+msgstr "Törlés"
+
+#: app/templates/admin/list_backups.html:41
+msgid "No backups found."
+msgstr "Nem találhatók biztonsági mentések."
+
+#: app/templates/admin/list_backups.html:44
+msgid ""
+"Backups contain your full app data. Store securely. Sensitive data is "
+"encrypted in the DB by default."
+msgstr ""
+"A biztonsági mentések tartalmazzák az alkalmazás összes adatát. Tárolja őket"
+" biztonságosan. Az érzékeny adatok alapértelmezés szerint titkosítva vannak "
+"az adatbázisban."
+
+#: app/templates/admin/smtp_config.html:28
+#: app/templates/admin/system_config.html:22
+msgid "System Configuration"
+msgstr "Rendszerkonfiguráció"
+
+#: app/templates/admin/smtp_config.html:33
+#: app/templates/admin/system_config.html:26
+#: app/templates/admin/system_settings.html:15
+msgid "Key"
+msgstr "Kulcs"
+
+#: app/templates/admin/smtp_config.html:34
+#: app/templates/admin/system_config.html:27
+#: app/templates/admin/system_settings.html:16
+msgid "Value"
+msgstr "Érték"
+
+#: app/templates/admin/smtp_config.html:35
+#: app/templates/admin/system_config.html:28
+msgid "Sensitive"
+msgstr "Érzékeny"
+
+#: app/templates/admin/smtp_config.html:36
+#: app/templates/admin/system_config.html:29
+msgid "Editable"
+msgstr "Szerkeszthető"
+
+#: app/templates/admin/smtp_config.html:50
+#: app/templates/admin/smtp_config.html:51
+#: app/templates/admin/system_config.html:45
+#: app/templates/admin/system_config.html:46
+#: app/templates/email/view_config.html:60
+msgid "Yes"
+msgstr "Igen"
+
+#: app/templates/admin/smtp_config.html:50
+#: app/templates/admin/smtp_config.html:51
+#: app/templates/admin/system_config.html:45
+#: app/templates/admin/system_config.html:46
+#: app/templates/email/view_config.html:60
+msgid "No"
+msgstr "Nem"
+
+#: app/templates/admin/smtp_config.html:63
+#: app/templates/admin/system_config.html:55
+msgid "Send Test Email"
+msgstr "Teszt e-mail küldése"
+
+#: app/templates/admin/system_config.html:39
+msgid "decrypted"
+msgstr "Létrehozva"
+
+#: app/templates/admin/partials/user_card.html:12
+msgid "Email:"
+msgstr "Email:"
+
+#: app/templates/admin/partials/user_card.html:15
+msgid "Role:"
+msgstr "Szerepkör:"
+
+#: app/templates/admin/partials/user_card.html:27
+#: app/templates/admin/partials/user_table.html:34
+msgid "Change Role"
+msgstr "Szerep megváltoztatása"
+
+#: app/templates/admin/partials/user_card.html:29
+#: app/templates/admin/partials/user_table.html:36
+msgid "You cannot change your own role"
+msgstr "A saját engedélyezett státuszodat nem változtathatod meg."
+
+#: app/templates/admin/partials/user_card.html:36
+#: app/templates/admin/partials/user_table.html:43
+msgid "Are you sure you want to reset MFA for this user?"
+msgstr "Biztosan vissza szeretné állítani az MFA-t ennek a felhasználónak?"
+
+#: app/templates/admin/partials/user_card.html:39
+#: app/templates/admin/partials/user_table.html:46
+msgid "Reset MFA"
+msgstr "Jelszó visszaállítása"
+
+#: app/templates/admin/partials/user_card.html:51
+#: app/templates/admin/partials/user_table.html:58
+msgid "Delete user"
+msgstr "Felhasználó törlése"
+
+#: app/templates/admin/partials/user_card.html:55
+#: app/templates/admin/partials/user_table.html:61
+msgid "Delete User"
+msgstr "Felhasználó törlése"
+
+#: app/templates/admin/partials/user_card.html:58
+#: app/templates/admin/partials/user_table.html:65
+msgid "You cannot disable yourself"
+msgstr "Nem tudja saját magát letiltani"
+
+#: app/templates/admin/partials/user_card.html:65
+#: app/templates/admin/partials/user_table.html:72
+msgid "Disable"
+msgstr "Letiltás"
+
+#: app/templates/admin/partials/user_card.html:65
+#: app/templates/admin/partials/user_table.html:72
+msgid "Enable"
+msgstr "Engedélyezés"
+
+#: app/templates/admin/partials/user_header.html:6
+#: app/templates/partials/admin_nav.html:47
+msgid "Users"
+msgstr "Felhasználók"
+
+#: app/templates/admin/partials/user_header.html:12
+#: app/templates/admin/partials/user_header.html:13
+#: app/templates/apprise/apprise_config.html:10
+#: app/templates/apprise/apprise_config.html:11
+#: app/templates/apprise/list_apprise.html:16
+#: app/templates/apprise/list_apprise.html:17
+#: app/templates/email/list_emails.html:15
+#: app/templates/email/list_emails.html:16
+#: app/templates/messages/list_messages.html:16
+#: app/templates/messages/list_messages.html:17
+#: app/templates/reminders/list_reminders.html:15
+#: app/templates/reminders/list_reminders.html:16
+#: app/templates/user_smtp/list_smtp.html:14
+#: app/templates/user_smtp/list_smtp.html:17
+#: app/templates/webhook/list_webhooks.html:16
+#: app/templates/webhook/list_webhooks.html:17
+#: app/templates/webhook/webhook_config.html:10
+#: app/templates/webhook/webhook_config.html:11
+msgid "Table View"
+msgstr "Táblázat nézet"
+
+#: app/templates/admin/partials/user_header.html:26
+#: app/templates/admin/partials/user_header.html:27
+#: app/templates/apprise/apprise_config.html:24
+#: app/templates/apprise/apprise_config.html:25
+#: app/templates/apprise/list_apprise.html:30
+#: app/templates/apprise/list_apprise.html:31
+#: app/templates/email/list_emails.html:29
+#: app/templates/email/list_emails.html:30
+#: app/templates/messages/list_messages.html:30
+#: app/templates/messages/list_messages.html:31
+#: app/templates/reminders/list_reminders.html:29
+#: app/templates/reminders/list_reminders.html:30
+#: app/templates/user_smtp/list_smtp.html:27
+#: app/templates/user_smtp/list_smtp.html:30
+#: app/templates/webhook/list_webhooks.html:30
+#: app/templates/webhook/list_webhooks.html:31
+#: app/templates/webhook/webhook_config.html:24
+#: app/templates/webhook/webhook_config.html:25
+msgid "Card View"
+msgstr "Kártyanézet"
+
+#: app/templates/admin/partials/user_header.html:45
+msgid "Add User"
+msgstr "Felhasználó hozzáadása"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:9
+#: app/templates/email/attach_files.html:54
+#: app/templates/email/list_emails.html:255
+#: app/templates/messages/list_messages.html:223
+#: app/templates/reminders/list_reminders.html:218
+#: app/templates/reminders/schedule_reminder.html:56
+msgid "Hide Instructions"
+msgstr "Utasítások elrejtése"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:9
+msgid "How to manage users"
+msgstr "Felhasználók kezelése"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "Click"
+msgstr "Kattintson a"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+msgid "➕ Add User"
+msgstr "➕ Felhasználó hozzáadása"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+msgid "to open the new user form."
+msgstr "gombra az új felhasználó űrlap megnyitásához."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:18
+msgid "Enter a unique username, valid email address, and strong password."
+msgstr ""
+"Adjon meg egy egyedi felhasználónevet, érvényes email címet és erős jelszót."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "Select the appropriate"
+msgstr "Válassza ki a megfelelő"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "role"
+msgstr "szerepkört"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "or"
+msgstr "Port"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "to save."
+msgstr "mentéséhez."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:25
+msgid "To edit a user, click ✏️ and update their info."
+msgstr ""
+"Egy felhasználó szerkesztéséhez kattintson a ✏️ ikonra, és frissítse az "
+"adatait."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:26
+msgid "To delete a user, click 🗑️ and confirm the deletion."
+msgstr ""
+"Egy felhasználó törléséhez kattintson a 🗑️ ikonra, és erősítse meg a "
+"törlést."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:28
+msgid "To disable or enable a user, click 🔴 or 🟢."
+msgstr ""
+"Egy felhasználó le- vagy engedélyezéséhez kattintson a 🔴 vagy 🟢 ikonra."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:30
+msgid "🟢 = User is enabled and can log in."
+msgstr "🟢 = A felhasználó engedélyezett és be tud jelentkezni."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:31
+msgid "🔴 = User is disabled and cannot log in."
+msgstr "🔴 = A felhasználó le van tiltva és nem tud bejelentkezni."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:32
+msgid "⚪ = You cannot disable your own account."
+msgstr "⚪ = Nem tudod letiltani a saját fiókodat."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:43
+#: app/templates/admin/partials/user_table.html:91
+msgid "Assign Role for"
+msgstr "Hozzárendelés a célállomásokhoz"
+
+#: app/templates/admin/partials/user_table.html:10
+msgid "ID"
+msgstr "Azonosító"
+
+#: app/templates/admin/partials/user_table.html:11
+#: app/templates/user_smtp/list_smtp.html:55
+msgid "Username"
+msgstr "Felhasználónév"
+
+#: app/templates/admin/partials/user_table.html:12
+msgid "Email"
+msgstr "Email"
+
+#: app/templates/admin/partials/user_table.html:13
+msgid "Role"
+msgstr "Szerepkör"
+
+#: app/templates/apprise/apprise_config.html:3
+#: app/templates/apprise/list_apprise.html:9
+#: app/templates/messages/assign_destinations.html:22
+#: app/templates/reminders/assign_destinations.html:20
+msgid "Apprise Destinations"
+msgstr "Apprise célpontok"
+
+#: app/templates/apprise/apprise_config.html:43
+#: app/templates/webhook/list_webhooks.html:49
+#: app/templates/webhook/webhook_config.html:43
+msgid "Add Webhook"
+msgstr "Webhook hozzáadása"
+
+#: app/templates/apprise/apprise_config.html:43
+#: app/templates/apprise/list_apprise.html:49
+#: app/templates/webhook/list_webhooks.html:49
+#: app/templates/webhook/webhook_config.html:43
+msgid "Add Destination"
+msgstr "Célpont hozzáadása"
+
+#: app/templates/apprise/create_apprise.html:10
+msgid "Create Apprise Destination"
+msgstr "Apprise célpont létrehozása"
+
+#: app/templates/apprise/create_apprise.html:38
+#: app/templates/apprise/edit_apprise.html:38
+#: app/templates/user_smtp/create_smtp.html:107
+#: app/templates/webhook/create_webhook.html:44
+#: app/templates/webhook/edit_webhook.html:44
+msgid "Create Destination"
+msgstr "Célpont létrehozása"
+
+#: app/templates/apprise/create_apprise.html:47
+#: app/templates/apprise/edit_apprise.html:47
+msgid "Need help with Apprise URLs? See the"
+msgstr "Segítségre van szükséged az Apprise URL-ekhez? Lásd a"
+
+#: app/templates/apprise/create_apprise.html:51
+#: app/templates/apprise/edit_apprise.html:51
+msgid "Apprise Notification Services documentation"
+msgstr "Apprise értesítési szolgáltatások dokumentációja"
+
+#: app/templates/apprise/edit_apprise.html:10
+msgid "Edit Apprise Destination"
+msgstr "Apprise célpont szerkesztése"
+
+#: app/templates/apprise/list_apprise.html:49
+msgid "Add Apprise"
+msgstr "Apprise hozzáadása"
+
+#: app/templates/apprise/list_apprise.html:58
+#: app/templates/email/edit_message.html:21
+#: app/templates/email/list_emails.html:56
+#: app/templates/email/view_config.html:14
+#: app/templates/messages/create_message.html:29
+#: app/templates/messages/edit_message.html:23
+#: app/templates/messages/list_messages.html:57
+#: app/templates/messages/view_message.html:14
+#: app/templates/reminders/create_reminder.html:23
+#: app/templates/reminders/edit_reminder.html:17
+#: app/templates/reminders/list_reminders.html:56
+#: app/templates/reminders/view_reminder.html:13
+#: app/templates/user_smtp/list_smtp.html:52
+#: app/templates/webhook/list_webhooks.html:58
+msgid "Label"
+msgstr "Címke"
+
+#: app/templates/apprise/list_apprise.html:59
+msgid "URL"
+msgstr "URL"
+
+#: app/templates/apprise/list_apprise.html:61
+#: app/templates/email/list_emails.html:59
+#: app/templates/messages/list_messages.html:59
+#: app/templates/messages/view_message.html:36
+#: app/templates/reminders/view_reminder.html:47
+#: app/templates/webhook/list_webhooks.html:62
+msgid "Created At"
+msgstr "Létrehozva"
+
+#: app/templates/apprise/list_apprise.html:77
+#: app/templates/apprise/list_apprise.html:132
+#: app/templates/user_smtp/list_smtp.html:79
+#: app/templates/user_smtp/list_smtp.html:147
+#: app/templates/webhook/list_webhooks.html:79
+#: app/templates/webhook/list_webhooks.html:138
+msgid "Edit"
+msgstr "Szerkesztés"
+
+#: app/templates/apprise/list_apprise.html:80
+#: app/templates/apprise/list_apprise.html:135
+#: app/templates/user_smtp/list_smtp.html:82
+#: app/templates/user_smtp/list_smtp.html:150
+msgid "Cannot edit while in use"
+msgstr "Nem szerkeszthető, amíg használatban van"
+
+#: app/templates/apprise/list_apprise.html:88
+#: app/templates/apprise/list_apprise.html:143
+#: app/templates/webhook/list_webhooks.html:91
+#: app/templates/webhook/list_webhooks.html:150
+msgid "Test"
+msgstr "Teszt"
+
+#: app/templates/apprise/list_apprise.html:103
+#: app/templates/apprise/list_apprise.html:158
+#: app/templates/user_smtp/list_smtp.html:106
+#: app/templates/user_smtp/list_smtp.html:174
+msgid "Cannot delete while in use"
+msgstr "Nem törölhető, amíg használatban van"
+
+#: app/templates/apprise/list_apprise.html:119
+msgid "URL:"
+msgstr "URL:"
+
+#: app/templates/apprise/list_apprise.html:122
+#: app/templates/user_smtp/list_smtp.html:137
+#: app/templates/webhook/list_webhooks.html:128
+msgid "Enabled:"
+msgstr "Engedélyezett:"
+
+#: app/templates/apprise/list_apprise.html:125
+#: app/templates/user_smtp/list_smtp.html:140
+#: app/templates/webhook/list_webhooks.html:131
+msgid "Created:"
+msgstr "Létrehozva:"
+
+#: app/templates/auth/bootstrap.html:14
+msgid "Create Admin Account"
+msgstr "Adminisztrátor fiók létrehozása"
+
+#: app/templates/auth/bootstrap.html:16
+msgid "Let’s get started by creating your first admin account."
+msgstr "Kezdjük azzal, hogy létrehozzuk az első adminisztrátor fiókodat."
+
+#: app/templates/auth/bootstrap.html:75
+msgid "Create Admin"
+msgstr "Admin létrehozása"
+
+#: app/templates/auth/forgot_password.html:12
+msgid "Forgot Password"
+msgstr "Elfelejtett jelszó"
+
+#: app/templates/auth/forgot_password.html:15
+msgid ""
+"Enter your username and email. We'll send you a link to reset your password."
+msgstr ""
+"Add meg a felhasználóneved és e-mailed. Küldünk egy linket a jelszó "
+"visszaállításához."
+
+#: app/templates/auth/forgot_username.html:12
+msgid "Forgot Username"
+msgstr "Elfelejtett felhasználónév"
+
+#: app/templates/auth/forgot_username.html:15
+msgid "Enter your email address, and we'll send you your username."
+msgstr "Add meg az e-mail címed, és elküldjük neked a felhasználóneved."
+
+#: app/templates/auth/forgot_username.html:40
+msgid "Send Username"
+msgstr "Felhasználónév küldése"
+
+#: app/templates/auth/login.html:12 app/templates/auth/login.html:54
+msgid "Log In"
+msgstr "Bejelentkezés"
+
+#: app/templates/auth/login.html:62
+msgid "Forgot Username?"
+msgstr "Elfelejtett felhasználónév?"
+
+#: app/templates/auth/login.html:64
+msgid "Forgot Password?"
+msgstr "Elfelejtett jelszó?"
+
+#: app/templates/auth/login.html:66 app/templates/auth/signup.html:12
+msgid "Sign Up"
+msgstr "Regisztráció"
+
+#: app/templates/auth/rate_limit.html:9
+msgid "Hold On"
+msgstr "Várjon"
+
+#: app/templates/auth/rate_limit.html:11
+msgid "Too many failed login attempts. Please wait"
+msgstr "Túl sok sikertelen bejelentkezési kísérlet. Kérem, várjon"
+
+#: app/templates/auth/rate_limit.html:13
+msgid "seconds..."
+msgstr "másodpercek..."
+
+#: app/templates/auth/rate_limit.html:15
+msgid "Redirecting to login..."
+msgstr "Visszatérés a Vezérlőpultra"
+
+#: app/templates/auth/reset_password.html:12
+#: app/templates/auth/reset_password.html:116
+msgid "Reset Password"
+msgstr "Jelszó visszaállítása"
+
+#: app/templates/auth/reset_password.html:14
+msgid "Enter your username, email, and new password."
+msgstr "Írja be a felhasználónevét, e-mail címét és új jelszavát."
+
+#: app/templates/auth/signup.html:14
+msgid "Fill out the form to create your account."
+msgstr "Töltse ki az űrlapot a fiók létrehozásához."
+
+#: app/templates/checkin/already_checked_in.html:10
+msgid "Already Checked In"
+msgstr "Utolsó becsekkolás"
+
+#: app/templates/checkin/already_checked_in.html:12
+msgid ""
+"You have already checked in for this item. No further action is needed at "
+"this time."
+msgstr ""
+"Már bejelentkezett ehhez az elemhez. További intézkedésre nincs szükség "
+"ebben az időben."
+
+#: app/templates/checkin/already_checked_in.html:16
+#: app/templates/checkin/disabled.html:16
+#: app/templates/checkin/executed_disabled.html:18
+msgid "Check-in for:"
+msgstr "Bejelentkezve a következőhöz:"
+
+#: app/templates/checkin/already_checked_in.html:21
+#: app/templates/checkin/disabled.html:21
+#: app/templates/checkin/executed_disabled.html:23
+#: app/templates/checkin/thank_you.html:19
+msgid "Return to Dashboard"
+msgstr "Visszatérés a Vezérlőpultra"
+
+#: app/templates/checkin/disabled.html:10
+msgid "Check-In Disabled"
+msgstr "Az e-mail le van tiltva"
+
+#: app/templates/checkin/disabled.html:12
+msgid "This check-in is currently disabled and cannot be completed."
+msgstr "Ez a bejelentkezés jelenleg le van tiltva, és nem fejezhető be."
+
+#: app/templates/checkin/executed_disabled.html:11
+msgid "Already Executed & Disabled"
+msgstr "Már végrehajtva és letiltva"
+
+#: app/templates/checkin/executed_disabled.html:14
+msgid ""
+"This check-in has already been executed and is now disabled. No further "
+"action is required."
+msgstr ""
+"Ez a bejelentkezés már végrehajtva lett, és most le van tiltva. További "
+"intézkedésre nincs szükség."
+
+#: app/templates/checkin/thank_you.html:10
+msgid "Check-In Successful"
+msgstr "Sikeres bejelentkezés"
+
+#: app/templates/checkin/thank_you.html:11
+msgid "Thank you for checking in."
+msgstr "Köszönjük a bejelentkezést."
+
+#: app/templates/checkin/thank_you.html:14
+msgid "Checked in for:"
+msgstr "Bejelentkezve a következőhöz:"
+
+#: app/templates/email/assign_smtp.html:11
+msgid "📧 Assign SMTP Config to:"
+msgstr "📧 SMTP konfiguráció hozzárendelése a következőhöz:"
+
+#: app/templates/email/assign_smtp.html:25
+msgid "No SMTP (Unassign)"
+msgstr "Nincs SMTP konfiguráció hozzárendelve"
+
+#: app/templates/email/assign_smtp.html:26
+msgid "This email will not use any SMTP configuration."
+msgstr "Ez az e-mail nem fog használni semmilyen SMTP konfigurációt."
+
+#: app/templates/email/attach_files.html:12
+msgid "Attach Files for:"
+msgstr "Fájlok csatolása a következőhöz:"
+
+#: app/templates/email/attach_files.html:21
+msgid "Available Files"
+msgstr "Elérhető fájlok"
+
+#: app/templates/email/attach_files.html:36
+msgid "No files found in the upload directory."
+msgstr "Nincs fájl az upoad könyvtárban."
+
+#: app/templates/email/attach_files.html:44
+msgid "Save Attachments"
+msgstr "Csatolmányok mentése"
+
+#: app/templates/email/attach_files.html:54
+msgid "File Attach Notes"
+msgstr "Fájl csatolási jegyzetek"
+
+#: app/templates/email/attach_files.html:63
+msgid "Important:"
+msgstr "Port:"
+
+#: app/templates/email/attach_files.html:65
+msgid ""
+"Only files that are present in the 'uploads' folder (provided by your system"
+" administrator) will be shown here. If you do not see your file(s), please "
+"contact your Grylli administrator."
+msgstr ""
+"Csak azok a fájlok jelennek meg itt, amelyek az 'uploads' mappában vannak (a"
+" rendszergazda biztosítja). Ha nem látja a fájlját, kérjük, vegye fel a "
+"kapcsolatot a Grylli rendszergazdával."
+
+#: app/templates/email/attach_files.html:69
+msgid "Accepted file types:"
+msgstr "Elfogadott fájltípusok:"
+
+#: app/templates/email/attach_files.html:71
+msgid "Documents:"
+msgstr "Dokumentumok:"
+
+#: app/templates/email/attach_files.html:73
+msgid "Images:"
+msgstr "Képek:"
+
+#: app/templates/email/attach_files.html:75
+msgid "Audio:"
+msgstr "Audio:"
+
+#: app/templates/email/attach_files.html:79
+msgid "Maximum file size:"
+msgstr "Maximális fájlméret:"
+
+#: app/templates/email/attach_files.html:80
+msgid "10 MB per file"
+msgstr "10 MB fájlonként"
+
+#: app/templates/email/attach_files.html:83
+msgid "Total upload size:"
+msgstr "Teljes feltöltési méret:"
+
+#: app/templates/email/attach_files.html:84
+msgid "20 MB (all files combined)"
+msgstr "20 MB (összes fájl együtt)"
+
+#: app/templates/email/edit_message.html:12
+#: app/templates/email/list_emails.html:75
+#: app/templates/email/list_emails.html:177
+msgid "Edit Email"
+msgstr "E-mail szerkesztése"
+
+#: app/templates/email/edit_message.html:12
+msgid "Create Email"
+msgstr "E-mail létrehozása"
+
+#: app/templates/email/edit_message.html:28
+msgid "To (Recipient Email)"
+msgstr "Címzett (Címzett e-mail címe)"
+
+#: app/templates/email/edit_message.html:35
+#: app/templates/email/list_emails.html:57
+#: app/templates/email/view_config.html:18
+#: app/templates/messages/create_message.html:36
+#: app/templates/messages/edit_message.html:30
+#: app/templates/messages/list_messages.html:58
+#: app/templates/messages/view_message.html:18
+#: app/templates/reminders/create_reminder.html:30
+#: app/templates/reminders/edit_reminder.html:24
+#: app/templates/reminders/list_reminders.html:57
+#: app/templates/reminders/view_reminder.html:17
+msgid "Subject"
+msgstr "Tárgy"
+
+#: app/templates/email/edit_message.html:42
+#: app/templates/email/view_config.html:28
+msgid "Body"
+msgstr "Törzs"
+
+#: app/templates/email/edit_message.html:50
+msgid "Save Email"
+msgstr "E-mail mentése"
+
+#: app/templates/email/list_emails.html:48
+msgid "Add Email"
+msgstr "E-mail hozzáadása"
+
+#: app/templates/email/list_emails.html:58
+#: app/templates/reminders/assign_email_reminder.html:77
+msgid "To"
+msgstr "Címzett"
+
+#: app/templates/email/list_emails.html:78
+#: app/templates/email/list_emails.html:180
+msgid "Disable to edit email"
+msgstr "Nem sikerült elküldeni a teszt emailt:"
+
+#: app/templates/email/list_emails.html:84
+#: app/templates/email/list_emails.html:186
+msgid "Attach Files"
+msgstr "Fájlok csatolása"
+
+#: app/templates/email/list_emails.html:87
+#: app/templates/email/list_emails.html:189
+msgid "Disable to attach files"
+msgstr "Fájlok csatolása"
+
+#: app/templates/email/list_emails.html:93
+#: app/templates/email/list_emails.html:195
+msgid "Attach SMTP Config"
+msgstr "SMTP konfiguráció csatolása"
+
+#: app/templates/email/list_emails.html:96
+#: app/templates/email/list_emails.html:198
+msgid "Disable to assign SMTP"
+msgstr "SMTP hozzárendelés letiltása"
+
+#: app/templates/email/list_emails.html:102
+#: app/templates/email/list_emails.html:204
+msgid "Schedule Check-In"
+msgstr "Bejelentkezés ütemezése"
+
+#: app/templates/email/list_emails.html:105
+#: app/templates/email/list_emails.html:207
+msgid "Disable to schedule check-in"
+msgstr "Bejelentkezés ütemezése"
+
+#: app/templates/email/list_emails.html:110
+#: app/templates/email/list_emails.html:212
+#: app/templates/messages/list_messages.html:99
+#: app/templates/messages/list_messages.html:184
+#: app/templates/reminders/list_reminders.html:93
+#: app/templates/reminders/list_reminders.html:178
+msgid "View Details"
+msgstr "Részletek megtekintése"
+
+#: app/templates/email/list_emails.html:118
+#: app/templates/email/list_emails.html:220
+msgid "Send this email to yourself to preview it."
+msgstr "Küldje el ezt az e-mailt saját magának előnézetre."
+
+#: app/templates/email/list_emails.html:136
+#: app/templates/email/list_emails.html:238
+msgid "Toggle Email On/Off"
+msgstr "E-mail be/ki kapcsolása"
+
+#: app/templates/email/list_emails.html:139
+#: app/templates/email/list_emails.html:241
+msgid "Email is enabled"
+msgstr "Az e-mail engedélyezve van"
+
+#: app/templates/email/list_emails.html:141
+#: app/templates/email/list_emails.html:243
+msgid "Email is disabled"
+msgstr "Az e-mail le van tiltva"
+
+#: app/templates/email/list_emails.html:157
+#: app/templates/email/view_config.html:51
+#: app/templates/messages/list_messages.html:142
+#: app/templates/reminders/list_reminders.html:140
+msgid "Label:"
+msgstr "Címke:"
+
+#: app/templates/email/list_emails.html:161
+#: app/templates/messages/list_messages.html:146
+#: app/templates/reminders/list_reminders.html:144
+#: app/templates/reminders/view_reminder.html:98
+msgid "Subject:"
+msgstr "Tárgy"
+
+#: app/templates/email/list_emails.html:165
+msgid "To:"
+msgstr "Ide:"
+
+#: app/templates/email/list_emails.html:169
+#: app/templates/messages/list_messages.html:150
+msgid "Created At:"
+msgstr "Létrehozva"
+
+#: app/templates/email/list_emails.html:255
+msgid "How to create and send an email"
+msgstr "Hogyan hozzunk létre és küldjünk emailt"
+
+#: app/templates/email/list_emails.html:262
+msgid ""
+"Click “Add Email” and fill out the subject, content, and recipient address."
+msgstr ""
+"Kattintson az „Add Email” gombra, és töltse ki a tárgyat, tartalmat és a "
+"címzett címét."
+
+#: app/templates/email/list_emails.html:263
+msgid "Attach any optional files (if needed)."
+msgstr "Csatoljon bármilyen opcionális fájlt (ha szükséges)."
+
+#: app/templates/email/list_emails.html:264
+msgid ""
+"Click 🧩 to assign a single SMTP configuration that will be used to send the "
+"email."
+msgstr ""
+"Kattintson a 🧩 gombra, hogy hozzárendeljen egyetlen SMTP konfigurációt, "
+"amelyet az email küldéséhez használnak."
+
+#: app/templates/email/list_emails.html:265
+msgid "Click ⏱️ to set a check-in interval and grace period for the email."
+msgstr ""
+"Kattintson a ⏱️ gombra, hogy beállítson egy bejelentkezési intervallumot és "
+"türelmi időt az emailhez."
+
+#: app/templates/email/list_emails.html:266
+msgid "Enable the email using the 🔴/🟢 toggle button."
+msgstr "Engedélyezze az emailt a 🔴/🟢 kapcsolóval."
+
+#: app/templates/email/list_emails.html:267
+msgid ""
+"Click 🧪 to test the email by sending it to yourself (not the recipient)."
+msgstr ""
+"Kattintson a 🧪 gombra, hogy tesztelje az emailt, és küldje el saját magának "
+"(nem a címzettnek)."
+
+#: app/templates/email/list_emails.html:268
+msgid ""
+"If you don’t check in before the grace period ends, the email will be "
+"automatically sent."
+msgstr ""
+"Ha nem jelentkezik be a türelmi idő lejárta előtt, az email automatikusan "
+"elküldésre kerül."
+
+#: app/templates/email/list_emails.html:269
+msgid "You can preview the email configuration using 🔍."
+msgstr "Az email beállításainak előnézete 🔍 segítségével érhető el."
+
+#: app/templates/email/list_emails.html:270
+msgid "Once a secure email is sent, it will be automatically disabled."
+msgstr ""
+"Miután egy biztonságos e-mail elküldésre került, az automatikusan letiltásra"
+" kerül."
+
+#: app/templates/email/schedule_email.html:9
+msgid "Schedule Email"
+msgstr "Email ütemezése"
+
+#: app/templates/email/schedule_email.html:18
+#: app/templates/messages/schedule_message.html:18
+msgid "Years"
+msgstr "Évek"
+
+#: app/templates/email/schedule_email.html:19
+#: app/templates/messages/schedule_message.html:19
+msgid "Months"
+msgstr "Hónapok"
+
+#: app/templates/email/schedule_email.html:20
+#: app/templates/messages/schedule_message.html:20
+msgid "Weeks"
+msgstr "Hetek"
+
+#: app/templates/email/schedule_email.html:21
+#: app/templates/messages/schedule_message.html:21
+msgid "Days"
+msgstr "Napok"
+
+#: app/templates/email/schedule_email.html:22
+#: app/templates/messages/schedule_message.html:22
+msgid "Hours"
+msgstr "Órák"
+
+#: app/templates/email/schedule_email.html:23
+#: app/templates/messages/schedule_message.html:23
+msgid "Minutes"
+msgstr "Percek"
+
+#: app/templates/email/schedule_email.html:28
+#: app/templates/messages/schedule_message.html:28
+msgid "Check-in"
+msgstr "Bejelentkezés"
+
+#: app/templates/email/schedule_email.html:51
+#: app/templates/messages/schedule_message.html:51
+#: app/templates/messages/view_message.html:26
+msgid "Grace Period"
+msgstr "Türelmi idő"
+
+#: app/templates/email/schedule_email.html:80
+#: app/templates/messages/schedule_message.html:80
+#: app/templates/reminders/schedule_reminder.html:47
+msgid "Save Schedule"
+msgstr "Ütemezés mentése"
+
+#: app/templates/email/view_config.html:9
+msgid "Email Configuration"
+msgstr "Email konfiguráció"
+
+#: app/templates/email/view_config.html:22
+msgid "Recipient"
+msgstr "Címzett"
+
+#: app/templates/email/view_config.html:33
+msgid "Attached Files"
+msgstr "Csatolt fájlok"
+
+#: app/templates/email/view_config.html:39
+msgid "No files attached"
+msgstr "Nincsenek csatolt fájlok"
+
+#: app/templates/email/view_config.html:46
+#: app/templates/reminders/assign_email_reminder.html:20
+msgid "SMTP Configuration"
+msgstr "SMTP konfiguráció"
+
+#: app/templates/email/view_config.html:54
+#: app/templates/user_smtp/list_smtp.html:122
+msgid "Host:"
+msgstr "Host:"
+
+#: app/templates/email/view_config.html:57
+#: app/templates/user_smtp/list_smtp.html:128
+msgid "Username:"
+msgstr "Felhasználónév:"
+
+#: app/templates/email/view_config.html:60
+#: app/templates/user_smtp/list_smtp.html:134
+msgid "TLS:"
+msgstr "TLS:"
+
+#: app/templates/email/view_config.html:64
+msgid "No SMTP configuration assigned"
+msgstr "Nincs SMTP konfiguráció hozzárendelve"
+
+#: app/templates/email/view_config.html:69
+msgid "Schedule Information"
+msgstr "Ütemezési információk"
+
+#: app/templates/email/view_config.html:72
+msgid "Check-in Interval:"
+msgstr "Bejelentkezési intervallum:"
+
+#: app/templates/email/view_config.html:72
+#: app/templates/email/view_config.html:75
+msgid "minutes"
+msgstr "percek"
+
+#: app/templates/email/view_config.html:75
+msgid "Grace Period:"
+msgstr "Türelmi idő:"
+
+#: app/templates/email/view_config.html:79
+msgid "Last Check-in:"
+msgstr "Utolsó bejelentkezés:"
+
+#: app/templates/email/view_config.html:82
+msgid "No check-in has occurred yet"
+msgstr "Még nem történt bejelentkezés"
+
+#: app/templates/email/view_config.html:92
+msgid "Back to Emails"
+msgstr "Vissza az emailekhez"
+
+#: app/templates/errors/500.html:4
+msgid "Something went wrong"
+msgstr "Valami rosszul sült el"
+
+#: app/templates/errors/500.html:6
+msgid ""
+"An unexpected error occurred. Please try again later or contact support."
+msgstr ""
+"Váratlan hiba történt. Kérjük, próbálja újra később, vagy vegye fel a "
+"kapcsolatot a támogatással."
+
+#: app/templates/locale/redirect_after_lang_set.html:15
+msgid "Switching Language..."
+msgstr "Nyelv váltása..."
+
+#: app/templates/locale/redirect_after_lang_set.html:18
+msgid "Applying new language..."
+msgstr "Új nyelv alkalmazása..."
+
+#: app/templates/messages/assign_destinations.html:13
+#: app/templates/reminders/assign_destinations.html:12
+msgid "Assign Destinations for"
+msgstr "Hozzárendelés a célállomásokhoz"
+
+#: app/templates/messages/assign_destinations.html:62
+#: app/templates/reminders/assign_destinations.html:60
+msgid "Save Destinations"
+msgstr "Célállomások mentése"
+
+#: app/templates/messages/create_message.html:17
+msgid "Edit Notificaton"
+msgstr "Értesítés szerkesztése"
+
+#: app/templates/messages/create_message.html:19
+msgid "Create Notification"
+msgstr "Értesítés létrehozása"
+
+#: app/templates/messages/create_message.html:43
+#: app/templates/messages/edit_message.html:37
+#: app/templates/messages/view_message.html:42
+#: app/templates/reminders/create_reminder.html:37
+#: app/templates/reminders/edit_reminder.html:31
+#: app/templates/reminders/view_reminder.html:53
+msgid "Content"
+msgstr "Tartalom"
+
+#: app/templates/messages/create_message.html:51
+msgid "Save Notification"
+msgstr "Értesítés mentése"
+
+#: app/templates/messages/edit_message.html:15
+#: app/templates/messages/list_messages.html:74
+#: app/templates/messages/list_messages.html:158
+msgid "Edit Notification"
+msgstr "Értesítés szerkesztése"
+
+#: app/templates/messages/edit_message.html:45
+msgid "Update Notification"
+msgstr "Értesítés frissítése"
+
+#: app/templates/messages/list_messages.html:49
+msgid "Add Notification"
+msgstr "Értesítés hozzáadása"
+
+#: app/templates/messages/list_messages.html:77
+#: app/templates/messages/list_messages.html:161
+msgid "Disable to edit notification"
+msgstr "Értesítés szerkesztése"
+
+#: app/templates/messages/list_messages.html:83
+#: app/templates/messages/list_messages.html:167
+#: app/templates/reminders/list_reminders.html:78
+#: app/templates/reminders/list_reminders.html:163
+msgid "Assign Destinations"
+msgstr "Célállomások hozzárendelése"
+
+#: app/templates/messages/list_messages.html:86
+#: app/templates/messages/list_messages.html:170
+msgid "Disable to assign destinations"
+msgstr "Célállomások hozzárendelése"
+
+#: app/templates/messages/list_messages.html:92
+#: app/templates/messages/list_messages.html:176
+#: app/templates/reminders/list_reminders.html:88
+#: app/templates/reminders/list_reminders.html:173
+msgid "Set Schedule"
+msgstr "Ütemezés beállítása"
+
+#: app/templates/messages/list_messages.html:95
+#: app/templates/messages/list_messages.html:179
+msgid "Disable to set schedule"
+msgstr "Ütemezés beállítása"
+
+#: app/templates/messages/list_messages.html:107
+#: app/templates/messages/list_messages.html:192
+msgid "Send Test Notification"
+msgstr "Értesítés szerkesztése"
+
+#: app/templates/messages/list_messages.html:122
+#: app/templates/messages/list_messages.html:209
+msgid "Toggle Message On/Off"
+msgstr "Üzenet be-/kikapcsolása"
+
+#: app/templates/messages/list_messages.html:124
+#: app/templates/messages/list_messages.html:211
+msgid "Notification is enabled"
+msgstr "Értesítés engedélyezve van"
+
+#: app/templates/messages/list_messages.html:126
+#: app/templates/messages/list_messages.html:213
+msgid "Notification is disabled"
+msgstr "Értesítés le van tiltva"
+
+#: app/templates/messages/list_messages.html:223
+msgid "How to create and send a notification"
+msgstr "Hogyan hozzon létre és küldjön értesítést"
+
+#: app/templates/messages/list_messages.html:233
+msgid "Click “Add notification” and fill out the subject and content fields."
+msgstr ""
+"Kattintson az „Értesítés hozzáadása” gombra, és töltse ki a tárgy- és "
+"tartalommezőket."
+
+#: app/templates/messages/list_messages.html:234
+msgid "Save the notification to return to the overview."
+msgstr "Mentse az értesítést, hogy visszatérjen az áttekintéshez."
+
+#: app/templates/messages/list_messages.html:235
+msgid "You need to create at least one apprise or webhook destination."
+msgstr "Legalább egy apprise vagy webhook célállomást kell létrehoznia."
+
+#: app/templates/messages/list_messages.html:236
+msgid "You can create as many destinations as you like."
+msgstr "Annyi célállomást hozhat létre, amennyit csak szeretne."
+
+#: app/templates/messages/list_messages.html:237
+msgid "Click 🧩 to assign one or more Apprise and/or Webhook destinations."
+msgstr ""
+"Kattintson a 🧩 ikonra, hogy hozzárendeljen egy vagy több Apprise és/vagy "
+"Webhook célállomást."
+
+#: app/templates/messages/list_messages.html:238
+msgid "Click ⏱️ to set a schedule and check-in interval."
+msgstr ""
+"Kattintson a ⏱️ ikonra, hogy beállítson egy ütemezést és becsekkolási "
+"intervallumot."
+
+#: app/templates/messages/list_messages.html:239
+msgid "Enable the notification using the 🔴/🟢 toggle button."
+msgstr "Engedélyezze az értesítést a 🔴/🟢 kapcsológomb használatával."
+
+#: app/templates/messages/list_messages.html:240
+msgid ""
+"If you don’t check in before the grace period ends, the notification will be"
+" sent."
+msgstr ""
+"Ha a türelmi idő lejárta előtt nem jelentkezik be, az értesítés elküldésre "
+"kerül."
+
+#: app/templates/messages/list_messages.html:241
+msgid "You can preview the notification config using 🔍."
+msgstr ""
+"Előnézetben megtekintheti az értesítési konfigurációt a 🔍 használatával."
+
+#: app/templates/messages/list_messages.html:242
+msgid "Once a notification is sent, it will be automatically disabled."
+msgstr "Miután az értesítés elküldésre került, automatikusan le lesz tiltva."
+
+#: app/templates/messages/schedule_message.html:9
+msgid "Schedule Message"
+msgstr "Ütemezett üzenet"
+
+#: app/templates/messages/view_message.html:9
+msgid "Notifications Details"
+msgstr "Értesítések részletei"
+
+#: app/templates/messages/view_message.html:22
+msgid "Check-in Interval"
+msgstr "Becsekkolási intervallum"
+
+#: app/templates/messages/view_message.html:31
+msgid "Last Check-in"
+msgstr "Utolsó becsekkolás"
+
+#: app/templates/messages/view_message.html:48
+#: app/templates/reminders/view_reminder.html:59
+msgid "Apprise URLs"
+msgstr "Apprise URL-ek"
+
+#: app/templates/messages/view_message.html:54
+#: app/templates/messages/view_message.html:64
+#: app/templates/reminders/view_reminder.html:65
+#: app/templates/reminders/view_reminder.html:75
+#: app/templates/reminders/view_reminder.html:85
+msgid "None assigned."
+msgstr "Nincs hozzárendelve."
+
+#: app/templates/messages/view_message.html:73
+msgid "Back to Notifications"
+msgstr "Vissza az értesítésekhez"
+
+#: app/templates/mfa/challenge.html:5 app/templates/mfa/settings.html:5
+msgid "Two-Factor Authentication (MFA)"
+msgstr "Kétfaktoros hitelesítés (MFA)"
+
+#: app/templates/mfa/recovery_codes.html:4
+msgid "Your Recovery Codes"
+msgstr "A helyreállítási kódjaid"
+
+#: app/templates/mfa/recovery_codes.html:7
+msgid "Save these recovery codes in a safe place!"
+msgstr "Mentsd el ezeket a helyreállítási kódokat egy biztonságos helyre!"
+
+#: app/templates/mfa/recovery_codes.html:10
+msgid ""
+"Each code can be used once if you lose access to your authenticator. These "
+"codes will not be shown again."
+msgstr ""
+"Minden kód csak egyszer használható, ha elveszítenéd az authenticator "
+"hozzáférésed. Ezeket a kódokat nem fogják újra megjeleníteni."
+
+#: app/templates/mfa/recovery_codes.html:24
+msgid "OK, I've saved them"
+msgstr "Rendben, elmentettem őket"
+
+#: app/templates/mfa/settings.html:12
+msgid "MFA QR Code"
+msgstr "MFA QR-kód"
+
+#: app/templates/mfa/settings.html:15
+msgid "Manual Entry:"
+msgstr "Kézi bevitel:"
+
+#: app/templates/partials/admin_nav.html:21
+msgid "Administration"
+msgstr "Adminisztráció"
+
+#: app/templates/partials/admin_nav.html:37
+#: app/templates/partials/shared_nav.html:34
+#: app/templates/partials/shared_nav.html:78
+#: app/templates/partials/shared_nav.html:117
+msgid "Overview"
+msgstr "Áttekintés"
+
+#: app/templates/partials/footer.html:7
+msgid "Toggle Theme"
+msgstr "Téma átváltása"
+
+#: app/templates/partials/footer.html:32
+msgid "Theme"
+msgstr "Téma"
+
+#: app/templates/partials/head.html:7
+msgid "Grylli"
+msgstr "Grylli"
+
+#: app/templates/partials/header.html:6 app/templates/partials/sidebar.html:32
+#: app/templates/partials/sidebar.html:66
+msgid "Home"
+msgstr "Kezdőlap"
+
+#: app/templates/partials/header.html:55
+msgid "Account"
+msgstr "Fiók"
+
+#: app/templates/partials/header.html:61
+msgid "MFA"
+msgstr "MFA"
+
+#: app/templates/partials/header.html:67
+msgid "About"
+msgstr "Névjegy"
+
+#: app/templates/partials/header.html:73
+msgid "Privacy"
+msgstr "Adatvédelem"
+
+#: app/templates/partials/header.html:79
+msgid "System Info"
+msgstr "Rendszerinformációk"
+
+#: app/templates/partials/header.html:114
+msgid "Logout"
+msgstr "Kijelentkezés"
+
+#: app/templates/partials/shared_nav.html:33
+msgid "Overview of notification settings"
+msgstr "Értesítési beállítások áttekintése"
+
+#: app/templates/partials/shared_nav.html:38
+msgid "Configure Apprise services"
+msgstr "Apprise szolgáltatások konfigurálása"
+
+#: app/templates/partials/shared_nav.html:39
+msgid "Apprise"
+msgstr "Apprise"
+
+#: app/templates/partials/shared_nav.html:43
+msgid "Configure Webhook integrations"
+msgstr "Webhook integrációk konfigurálása"
+
+#: app/templates/partials/shared_nav.html:77
+msgid "Overview of secure email messages"
+msgstr "Biztonságos e-mail üzenetek áttekintése"
+
+#: app/templates/partials/shared_nav.html:82
+msgid "Configure SMTP email settings"
+msgstr "SMTP e-mail beállítások konfigurálása"
+
+#: app/templates/partials/shared_nav.html:83
+#: app/templates/reminders/view_reminder.html:79
+msgid "SMTP"
+msgstr "SMTP"
+
+#: app/templates/partials/shared_nav.html:100
+#: app/templates/reminders/list_reminders.html:8
+msgid "Reminders"
+msgstr "percek"
+
+#: app/templates/partials/shared_nav.html:116
+msgid "Overview of reminders"
+msgstr "Emlékeztetők áttekintése"
+
+#: app/templates/partials/sidebar.html:13
+#: app/templates/partials/sidebar.html:47
+msgid "Menu"
+msgstr "Menü"
+
+#: app/templates/reminders/assign_email_reminder.html:12
+msgid "Link Email Reminder for"
+msgstr "E-mail emlékeztető csatolása"
+
+#: app/templates/reminders/assign_email_reminder.html:30
+#: app/templates/reminders/assign_email_reminder.html:64
+msgid "None (Unassign)"
+msgstr "Nincs SMTP konfiguráció hozzárendelve"
+
+#: app/templates/reminders/assign_email_reminder.html:43
+msgid "No sender address"
+msgstr "Nincs küldő cím"
+
+#: app/templates/reminders/assign_email_reminder.html:54
+msgid "Email Message"
+msgstr "Ütemezett üzenet"
+
+#: app/templates/reminders/assign_email_reminder.html:77
+msgid "No subject"
+msgstr "Tárgy"
+
+#: app/templates/reminders/assign_email_reminder.html:90
+msgid "Save Email Reminder"
+msgstr "E-mail mentése"
+
+#: app/templates/reminders/create_reminder.html:12
+#: app/templates/reminders/edit_reminder.html:10
+#: app/templates/reminders/list_reminders.html:73
+#: app/templates/reminders/list_reminders.html:158
+msgid "Edit Reminder"
+msgstr "E-mail szerkesztése"
+
+#: app/templates/reminders/create_reminder.html:14
+msgid "Create Reminder"
+msgstr "E-mail létrehozása"
+
+#: app/templates/reminders/create_reminder.html:45
+msgid "Save Reminder"
+msgstr "E-mail mentése"
+
+#: app/templates/reminders/edit_reminder.html:39
+msgid "Update Reminder"
+msgstr "Emlékeztető frissítése"
+
+#: app/templates/reminders/list_reminders.html:48
+msgid "Add Reminder"
+msgstr "E-mail hozzáadása"
+
+#: app/templates/reminders/list_reminders.html:58
+#: app/templates/reminders/view_reminder.html:21
+msgid "Start At"
+msgstr "TLS megkezdése"
+
+#: app/templates/reminders/list_reminders.html:59
+msgid "Recurrence"
+msgstr "Ismétlődés"
+
+#: app/templates/reminders/list_reminders.html:69
+#: app/templates/reminders/list_reminders.html:153
+#: app/templates/reminders/view_reminder.html:26
+msgid "One-time"
+msgstr "Egyszeri"
+
+#: app/templates/reminders/list_reminders.html:83
+msgid "Assign Email Reminder"
+msgstr "E-mail emlékeztető hozzárendelése"
+
+#: app/templates/reminders/list_reminders.html:102
+#: app/templates/reminders/list_reminders.html:187
+msgid "Send Test Reminder"
+msgstr "Teszt e-mail küldése"
+
+#: app/templates/reminders/list_reminders.html:120
+#: app/templates/reminders/list_reminders.html:205
+msgid "Toggle Reminder On/Off"
+msgstr "E-mail be/ki kapcsolása"
+
+#: app/templates/reminders/list_reminders.html:122
+#: app/templates/reminders/list_reminders.html:207
+msgid "Reminder is enabled"
+msgstr "Az e-mail engedélyezve van"
+
+#: app/templates/reminders/list_reminders.html:124
+#: app/templates/reminders/list_reminders.html:209
+msgid "Reminder is disabled"
+msgstr "Az e-mail le van tiltva"
+
+#: app/templates/reminders/list_reminders.html:148
+msgid "Start At:"
+msgstr "TLS megkezdése"
+
+#: app/templates/reminders/list_reminders.html:152
+msgid "Recurrence:"
+msgstr "Ismétlődés:"
+
+#: app/templates/reminders/list_reminders.html:168
+msgid "Link Email Reminder"
+msgstr "E-mail emlékeztető csatolása"
+
+#: app/templates/reminders/list_reminders.html:218
+msgid "How to use reminders"
+msgstr "Felhasználók kezelése"
+
+#: app/templates/reminders/list_reminders.html:231
+msgid "➕ Click “Add Reminder” and fill out the subject and content fields."
+msgstr ""
+"Kattintson az „Értesítés hozzáadása” gombra, és töltse ki a tárgy- és "
+"tartalommezőket."
+
+#: app/templates/reminders/list_reminders.html:232
+msgid "💾 Save the reminder to return to the overview."
+msgstr "Mentse az értesítést, hogy visszatérjen az áttekintéshez."
+
+#: app/templates/reminders/list_reminders.html:233
+msgid ""
+"📣 Assign Apprise, 🌐 Webhook, and/or 📧 Email (SMTP) destinations as needed."
+msgstr ""
+"📣 Hozzon létre Apprise, 🌐 Webhook és/vagy 📧 Email (SMTP) célpontokat szükség"
+" szerint."
+
+#: app/templates/reminders/list_reminders.html:234
+msgid ""
+"⏱️ Set the schedule using the schedule button to define when reminders are "
+"sent."
+msgstr ""
+"⏱️ Ütemezze az ütemezési gomb használatával az emlékeztetők küldésének "
+"időpontját."
+
+#: app/templates/reminders/list_reminders.html:235
+msgid ""
+"🔍 Click “View Details” to review or edit assigned destinations and other "
+"settings."
+msgstr ""
+"🔍 Kattintson a “Részletek megtekintése” gombra, hogy áttekintse vagy "
+"szerkessze a hozzárendelt célpontokat és más beállításokat."
+
+#: app/templates/reminders/list_reminders.html:236
+msgid ""
+"🧪 Click the Test button to verify all assigned destinations are working "
+"correctly."
+msgstr ""
+"🧪 Kattintson a Teszt gombra, hogy ellenőrizze az összes hozzárendelt célpont"
+" megfelelő működését."
+
+#: app/templates/reminders/list_reminders.html:237
+msgid "🔴/🟢 Enable or disable the reminder using the toggle button."
+msgstr "Engedélyezze az emailt a 🔴/🟢 kapcsolóval."
+
+#: app/templates/reminders/list_reminders.html:238
+msgid "📤 Reminders will be sent as scheduled to the assigned destinations."
+msgstr ""
+"📤 Az emlékeztetők az ütemezett időpontokban lesznek elküldve a hozzárendelt "
+"célpontoknak."
+
+#: app/templates/reminders/schedule_reminder.html:8
+msgid "Schedule Reminder"
+msgstr "Email ütemezése"
+
+#: app/templates/reminders/schedule_reminder.html:15
+msgid "Start Date & Time"
+msgstr "Kezdő dátum és idő"
+
+#: app/templates/reminders/schedule_reminder.html:22
+#: app/templates/reminders/view_reminder.html:25
+msgid "Recurrence Rule"
+msgstr "Ismétlődési szabály"
+
+#: app/templates/reminders/schedule_reminder.html:24
+msgid "(Optional) Enter RRULE or leave blank for one-time."
+msgstr ""
+"(Választható) Adja meg az RRULE-t vagy hagyja üresen egyszeri esemény "
+"esetén."
+
+#: app/templates/reminders/schedule_reminder.html:30
+msgid "End Date"
+msgstr "Teszt küldése"
+
+#: app/templates/reminders/schedule_reminder.html:32
+msgid "(Optional) Stop sending after this date."
+msgstr "(Választható) Fejezze be a küldést ezen dátum után."
+
+#: app/templates/reminders/schedule_reminder.html:38
+#: app/templates/reminders/view_reminder.html:36
+msgid "Max Occurrences"
+msgstr "Max. előfordulások száma"
+
+#: app/templates/reminders/schedule_reminder.html:40
+msgid "(Optional) Stop after this many reminders."
+msgstr "(Választható) Fejezze be ennyi emlékeztető után."
+
+#: app/templates/reminders/schedule_reminder.html:56
+msgid "Help for RRULE syntax"
+msgstr "RRULE szintaxis segédlet"
+
+#: app/templates/reminders/schedule_reminder.html:66
+msgid "Several tools are available to help generate an RRULE."
+msgstr "Számos eszköz elérhető az RRULE létrehozásának segítésére."
+
+#: app/templates/reminders/schedule_reminder.html:67
+msgid "Use a search engine or AI tool to assist."
+msgstr "Használjon keresőt vagy AI eszközt segítséghez."
+
+#: app/templates/reminders/schedule_reminder.html:69
+msgid "Here is an example of one such online tool:"
+msgstr "Itt egy példa egy ilyen online eszközre:"
+
+#: app/templates/reminders/schedule_reminder.html:73
+msgid "RRULE Generator Tool"
+msgstr "RRULE Generátor Eszköz"
+
+#: app/templates/reminders/schedule_reminder.html:77
+msgid "See here for some common examples:"
+msgstr "Nézze meg itt néhány gyakori példát:"
+
+#: app/templates/reminders/schedule_reminder.html:81
+msgid "RRULE Help (GitHub)"
+msgstr "RRULE Súgó (GitHub)"
+
+#: app/templates/reminders/view_reminder.html:8
+msgid "Reminder Details"
+msgstr "Részletek megtekintése"
+
+#: app/templates/reminders/view_reminder.html:30
+msgid "End At"
+msgstr "Teszt küldése"
+
+#: app/templates/reminders/view_reminder.html:42
+msgid "Last Sent"
+msgstr "Utolsó becsekkolás"
+
+#: app/templates/reminders/view_reminder.html:91
+msgid "Email Template"
+msgstr "Email ellenőrző"
+
+#: app/templates/reminders/view_reminder.html:103
+msgid "No email linked."
+msgstr "Az e-mail engedélyezve van"
+
+#: app/templates/reminders/view_reminder.html:111
+msgid "Back to Reminders"
+msgstr "Vissza az emailekhez"
+
+#: app/templates/user_smtp/create_smtp.html:10
+msgid "Create SMTP Destination"
+msgstr "SMTP célállomás létrehozása"
+
+#: app/templates/user_smtp/create_smtp.html:69
+#: app/templates/user_smtp/edit_smtp.html:84
+msgid "Hold to reveal"
+msgstr "Tartsa nyomva a felfedéshez"
+
+#: app/templates/user_smtp/create_smtp.html:92
+#: app/templates/user_smtp/edit_smtp.html:107
+msgid "Use TLS"
+msgstr "TLS használata"
+
+#: app/templates/user_smtp/edit_smtp.html:10
+msgid "Edit SMTP Destination"
+msgstr "SMTP célállomás létrehozása"
+
+#: app/templates/user_smtp/list_smtp.html:9
+msgid "SMTP Destinations"
+msgstr "SMTP célok"
+
+#: app/templates/user_smtp/list_smtp.html:44
+msgid "Add SMTP"
+msgstr "SMTP hozzáadása"
+
+#: app/templates/user_smtp/list_smtp.html:53
+msgid "Host"
+msgstr "Hoszt"
+
+#: app/templates/user_smtp/list_smtp.html:54
+msgid "Port"
+msgstr "Port"
+
+#: app/templates/user_smtp/list_smtp.html:56
+msgid "TLS"
+msgstr "TLS"
+
+#: app/templates/user_smtp/list_smtp.html:58
+msgid "Created"
+msgstr "Létrehozva"
+
+#: app/templates/user_smtp/list_smtp.html:90
+#: app/templates/user_smtp/list_smtp.html:158
+msgid "Send Test"
+msgstr "Teszt küldése"
+
+#: app/templates/user_smtp/list_smtp.html:125
+msgid "Port:"
+msgstr "Port:"
+
+#: app/templates/user_smtp/list_smtp.html:131
+msgid "Password:"
+msgstr "Jelszó:"
+
+#: app/templates/user_smtp/list_smtp.html:184
+msgid "Hide SMTP Setup Help"
+msgstr "SMTP beállítási súgó elrejtése"
+
+#: app/templates/user_smtp/list_smtp.html:184
+msgid "Show SMTP Setup Help"
+msgstr "SMTP beállítási súgó megjelenítése"
+
+#: app/templates/user_smtp/list_smtp.html:190
+msgid ""
+"Need help finding your SMTP server settings? See here for some links to "
+"common providers:"
+msgstr ""
+"Segítségre van szüksége az SMTP szerver beállításainak megtalálásához? Nézze"
+" meg itt néhány linket a gyakori szolgáltatókhoz:"
+
+#: app/templates/user_smtp/list_smtp.html:194
+msgid "SMTP Server Settings Help (GitHub)"
+msgstr "SMTP szerverbekezdési segítség (GitHub)"
+
+#: app/templates/user_smtp/list_smtp.html:198
+msgid ""
+"Find official documentation links for Gmail, Outlook, Yahoo, AOL, and "
+"others."
+msgstr ""
+"Hivatalos dokumentációs linkek keresése a Gmail, Outlook, Yahoo, AOL és "
+"mások számára."
+
+#: app/templates/user_smtp/list_smtp.html:199
+msgid ""
+"If your provider isn’t listed, search their support site or a search engine "
+"for 'SMTP settings'."
+msgstr ""
+"Ha a szolgáltatója nincs felsorolva, keresse fel a támogatási webhelyüket "
+"vagy keresőmotort használjon az 'SMTP beállítások'-ra."
+
+#: app/templates/user_smtp/list_smtp.html:200
+msgid ""
+"Some providers (like Gmail, Yahoo) require 'App Passwords' or special "
+"setup—see their docs!"
+msgstr ""
+"Néhány szolgáltató (mint a Gmail, Yahoo) 'App Passwords' vagy speciális "
+"beállítást igényel—nézze meg a dokumentációjukat!"
+
+#: app/templates/webhook/create_webhook.html:10
+msgid "Create Webhook"
+msgstr "Webhook létrehozása"
+
+#: app/templates/webhook/edit_webhook.html:10
+msgid "Edit Webhook"
+msgstr "Webhook szerkesztése"
+
+#: app/templates/webhook/list_webhooks.html:9
+#: app/templates/webhook/webhook_config.html:3
+msgid "Webhooks Destinations"
+msgstr "Webhook célok"
+
+#: app/templates/webhook/list_webhooks.html:59
+msgid "Endpoint"
+msgstr "Végpont"
+
+#: app/templates/webhook/list_webhooks.html:60
+msgid "Description"
+msgstr "Leírás"
+
+#: app/templates/webhook/list_webhooks.html:82
+#: app/templates/webhook/list_webhooks.html:141
+msgid "Cannot edit while assigned to notifications"
+msgstr "Nem szerkeszthető, amíg értesítésekhez van hozzárendelve"
+
+#: app/templates/webhook/list_webhooks.html:106
+#: app/templates/webhook/list_webhooks.html:165
+msgid "Cannot delete while assigned to notifications"
+msgstr "Nem törölhető, amíg értesítésekhez van hozzárendelve"
+
+#: app/templates/webhook/list_webhooks.html:122
+msgid "Endpoint:"
+msgstr "Végpont:"
+
+#: app/templates/webhook/list_webhooks.html:125
+msgid "Description:"
+msgstr "Leírás:"
+
+#: app/views/account.py:74
+msgid "Current password is required to change password."
+msgstr "Jelenlegi jelszó szükséges a jelszó megváltoztatásához."
+
+#: app/views/account.py:78
+msgid "Current password is incorrect."
+msgstr "A jelenlegi jelszó helytelen."
+
+#: app/views/account.py:94
+msgid "Account updated successfully."
+msgstr "A fiók sikeresen frissítve."
+
+#: app/views/account.py:100
+msgid "An error occurred while updating your account."
+msgstr "Hiba történt a fiókja frissítése közben."
+
+#: app/views/account.py:137
+msgid "You cannot delete your account because you are the last admin."
+msgstr "Nem törölheted a fiókodat, mert te vagy az utolsó adminisztrátor."
+
+#: app/views/account.py:146
+msgid "Your account has been permanently deleted."
+msgstr "Fiókodat véglegesen törölték."
+
+#: app/views/account.py:152
+msgid "An error occurred while trying to delete your account."
+msgstr "Hiba történt a fiókja frissítése közben."
+
+#: app/views/account.py:171
+msgid "Your account has been deleted"
+msgstr "Fiókodat véglegesen törölték."
+
+#: app/views/account.py:173
+#, python-brace-format
+msgid ""
+"Hello {username},\n"
+"\n"
+"Your account on {site_name} has been deleted.Remember to delete your files from the uploads folder.If this was not you, please contact support immediately.\n"
+"\n"
+"{site_url}"
+msgstr ""
+"Szia {username},\n"
+"\n"
+"A(z) {site_name} fiókod törölve lett. Ne felejtsd el törölni a fájljaidat a feltöltések mappából. Ha nem te voltál, azonnal lépj kapcsolatba a támogatással.\n"
+"\n"
+"{site_url}"
+
+#: app/views/admin.py:59
+msgid "Invalid role."
+msgstr "Érvénytelen szerep."
+
+#: app/views/apprise.py:51
+msgid "🧪 Test notification sent successfully!"
+msgstr "🧪 Teszt értesítés sikeresen elküldve!"
+
+#: app/views/apprise.py:56
+msgid "🧪 Failed to send test notification: "
+msgstr "🧪 Teszt értesítés küldése sikertelen:"
+
+#: app/views/apprise.py:62
+msgid "🧪 Error sending test notification."
+msgstr "🧪 Hiba történt a teszt értesítés küldésekor."
+
+#: app/views/apprise.py:101
+msgid "Apprise destination created successfully."
+msgstr "Apprise cél sikeresen létrehozva."
+
+#: app/views/apprise.py:168
+msgid "Apprise destination updated successfully."
+msgstr "Apprise cél sikeresen frissítve."
+
+#: app/views/apprise.py:199
+msgid "Apprise destination deleted."
+msgstr "Apprise cél törölve."
+
+#: app/views/auth.py:95
+msgid "Admin account created successfully."
+msgstr "Admin fiók sikeresen létrehozva."
+
+#: app/views/auth.py:108
+msgid "An error occurred while creating the admin account."
+msgstr "Hiba történt az admin fiók létrehozása közben."
+
+#: app/views/auth.py:141
+msgid ""
+"Your account is not activated. Please check your email for the activation "
+"link."
+msgstr ""
+"A fiókja nincs aktiválva. Kérjük, ellenőrizze az e-mailjeit az aktiváló "
+"linkért."
+
+#: app/views/auth.py:157
+msgid "Multi-factor authentication required. Please enter your code."
+msgstr "Többfaktoros hitelesítés szükséges. Kérem, adja meg a kódját."
+
+#: app/views/auth.py:162 app/views/mfa.py:195
+msgid "Logged in successfully."
+msgstr "Sikeres bejelentkezés."
+
+#: app/views/auth.py:179
+msgid "Invalid username or password."
+msgstr "Érvénytelen felhasználónév vagy jelszó."
+
+#: app/views/auth.py:203
+msgid "You have been logged out."
+msgstr "Kijelentkeztették."
+
+#: app/views/auth.py:239 app/views/email.py:263
+msgid "Access denied."
+msgstr "Hozzáférés megtagadva."
+
+#: app/views/auth.py:273
+msgid "If a user with that email exists, we've sent the username to them."
+msgstr ""
+"Ha ilyen e-mail című felhasználó létezik, elküldtük neki a felhasználónevet."
+
+#: app/views/auth.py:314
+msgid "A password reset link has been sent to your email."
+msgstr "Egy jelszó-visszaállító linket küldtünk az e-mail címére."
+
+#: app/views/auth.py:319
+msgid "No account found matching that username and email."
+msgstr "Nincs a megadott felhasználónévvel és e-mail címmel egyező fiók."
+
+#: app/views/auth.py:389
+msgid "The reset link is invalid or has expired."
+msgstr "A visszaállítási link érvénytelen vagy lejárt."
+
+#: app/views/auth.py:401
+msgid "Username and email do not match."
+msgstr "A felhasználónév és az email nem egyeznek."
+
+#: app/views/auth.py:421
+msgid "Your password has been reset. Please log in."
+msgstr "A jelszó visszaállítva. Kérjük, jelentkezzen be."
+
+#: app/views/auth.py:458
+msgid "Invalid registration PIN."
+msgstr "Érvénytelen regisztrációs PIN-kód."
+
+#: app/views/auth.py:467
+msgid "Username or email already exists."
+msgstr "A felhasználónév vagy az email már létezik."
+
+#: app/views/auth.py:492
+msgid "Activate Your Grylli Account"
+msgstr "Aktiválja a Grylli fiókját"
+
+#: app/views/auth.py:493
+#, python-brace-format
+msgid ""
+"Hello {username},\n"
+"\n"
+"Please activate your account by clicking..."
+msgstr ""
+"Üdvözöljük {username},\n"
+"\n"
+"Kérem, aktiválja fiókját a gombra kattintva..."
+
+#: app/views/auth.py:498
+msgid "Account created! Please check your email to activate your account."
+msgstr ""
+"A fiók létrehozva! Kérjük, ellenőrizze az emailjét a fiók aktiválásához."
+
+#: app/views/auth.py:521
+msgid "Activation link is invalid or expired."
+msgstr "Az aktiválási link érvénytelen vagy lejárt."
+
+#: app/views/auth.py:528 app/views/users.py:76 app/views/users.py:140
+msgid "User not found."
+msgstr "A felhasználó nem található."
+
+#: app/views/auth.py:532
+msgid "Account already activated. Please log in."
+msgstr "A fiók már aktiválva van. Kérjük, jelentkezzen be."
+
+#: app/views/auth.py:540
+msgid "Your account has been activated! You can now log in."
+msgstr "A fiókja aktiválva lett! Most már bejelentkezhet."
+
+#: app/views/backups.py:72
+#, python-format
+msgid "Backup created: %(filename)s"
+msgstr "Biztonsági mentés létrehozva: %(filename)s"
+
+#: app/views/backups.py:77
+msgid "Failed to create backup."
+msgstr "Nem sikerült létrehozni a biztonsági mentést."
+
+#: app/views/backups.py:106
+#, python-format
+msgid "Backup deleted: %(filename)s"
+msgstr "Biztonsági mentés törölve: %(filename)s"
+
+#: app/views/backups.py:109
+msgid "Backup file not found."
+msgstr "Biztonsági mentés fájl nem található."
+
+#: app/views/backups.py:112
+msgid "Failed to delete backup."
+msgstr "Nem sikerült a biztonsági mentés törlése."
+
+#: app/views/checkin.py:41
+msgid "Invalid check-in link."
+msgstr "Érvénytelen bejelentkezési link."
+
+#: app/views/checkin.py:48
+msgid "You are not authorized to check in for this item."
+msgstr "Nincs jogosultsága bejelentkezni ennél az elemnél."
+
+#: app/views/checkin.py:62
+msgid "Unsupported check-in type."
+msgstr "Nem támogatott bejelentkezési típus."
+
+#: app/views/checkin.py:137
+msgid "⚠️ Cannot enable reminder: Start date/time is in the past."
+msgstr ""
+"⚠️ Nem lehet engedélyezni az emlékeztetőt: a kezdő dátum/időpont a múltban "
+"van."
+
+#: app/views/checkin.py:158
+msgid "✅ Enabled and timer started."
+msgstr "✅ Engedélyezve és az időzítő elindítva."
+
+#: app/views/checkin.py:168
+msgid "⛔ Disabled."
+msgstr "⛔ Letiltva."
+
+#: app/views/checkin.py:170
+msgid "⚠️ Cannot toggle — missing schedule or destination."
+msgstr "⚠️ Nem lehet átváltani — hiányzó ütemterv vagy célhely."
+
+#: app/views/email.py:88
+msgid "Message saved."
+msgstr "Üzenet elmentve."
+
+#: app/views/email.py:118 app/views/messages.py:167
+msgid "Message deleted."
+msgstr "Üzenet törölve."
+
+#: app/views/email.py:152
+msgid "Attached files updated."
+msgstr "Csatolt fájlok frissítve."
+
+#: app/views/email.py:200
+msgid "SMTP configuration not assigned or is disabled."
+msgstr "Az SMTP konfiguráció nincs hozzárendelve vagy le van tiltva."
+
+#: app/views/email.py:234 app/views/smtp_settings_admin.py:82
+msgid "Test email sent successfully."
+msgstr "A teszt email sikeresen elküldve."
+
+#: app/views/email.py:282 app/views/messages.py:305
+msgid "Schedule updated successfully."
+msgstr "Ütemezés sikeresen frissítve."
+
+#: app/views/email.py:310
+msgid "SMTP configuration assigned."
+msgstr "SMTP konfiguráció hozzárendelve."
+
+#: app/views/email.py:319
+msgid "SMTP configuration removed."
+msgstr "SMTP konfiguráció hozzárendelve."
+
+#: app/views/messages.py:97
+msgid "Message created successfully."
+msgstr "Üzenet sikeresen létrehozva."
+
+#: app/views/messages.py:133
+msgid "Message updated successfully."
+msgstr "Üzenet sikeresen frissítve."
+
+#: app/views/messages.py:223 app/views/reminders.py:240
+msgid "Destinations updated."
+msgstr "Célhelyek frissítve."
+
+#: app/views/messages.py:441
+msgid "No destinations assigned to this message."
+msgstr "Az SMTP konfiguráció nincs hozzárendelve vagy le van tiltva."
+
+#: app/views/messages.py:453
+msgid "Test message sent successfully."
+msgstr "A teszt email sikeresen elküldve."
+
+#: app/views/messages.py:455
+msgid "Test message failed: "
+msgstr "Üzenet elmentve."
+
+#: app/views/mfa.py:68
+msgid "You must enter a code from your authenticator."
+msgstr "Meg kell adnia egy kódot az authenticatorból."
+
+#: app/views/mfa.py:82 app/views/mfa.py:259
+msgid "Invalid code. Please try again."
+msgstr "Érvénytelen kód. Kérjük, próbálkozzon újra."
+
+#: app/views/mfa.py:91
+msgid "Two-factor authentication disabled."
+msgstr "Értesítés le van tiltva"
+
+#: app/views/mfa.py:132
+msgid "Recovery codes are only shown immediately after enabling MFA."
+msgstr ""
+"A helyreállítási kódok csak közvetlenül az MFA engedélyezése után jelennek "
+"meg."
+
+#: app/views/mfa.py:142
+msgid "Could not load recovery codes."
+msgstr "Nem sikerült betölteni a helyreállítási kódokat."
+
+#: app/views/mfa.py:168
+msgid "No MFA challenge in progress."
+msgstr "Nincs MFA kihívás folyamatban."
+
+#: app/views/mfa.py:176
+msgid "User not found for MFA challenge."
+msgstr "A felhasználó nem található."
+
+#: app/views/mfa.py:225
+msgid ""
+"You have used your last recovery code. MFA has been disabled. Please remove "
+"Grylli from your authenticator app, and re-enable MFA to protect your "
+"account."
+msgstr ""
+"Felhasználtad az utolsó helyreállítási kódodat. Az MFA le van tiltva. "
+"Kérjük, távolítsd el a Gryllit az authenticator alkalmazásodból, és ismét "
+"engedélyezd az MFA-t a fiók védelmére."
+
+#: app/views/mfa.py:248
+#, python-brace-format
+msgid "Recovery code accepted. You have {remaining} recovery codes left."
+msgstr ""
+"A helyreállítási kód elfogadva. Még {remaining} helyreállítási kód maradt."
+
+#: app/views/reminders.py:106
+msgid "Reminder created successfully."
+msgstr "Üzenet sikeresen létrehozva."
+
+#: app/views/reminders.py:143
+msgid "Reminder updated successfully."
+msgstr "A felhasználó sikeresen frissítve."
+
+#: app/views/reminders.py:174
+msgid "Reminder deleted."
+msgstr "Felhasználó törölve."
+
+#: app/views/reminders.py:287
+msgid "No destinations assigned to this reminder."
+msgstr "Az SMTP konfiguráció nincs hozzárendelve vagy le van tiltva."
+
+#: app/views/reminders.py:311
+msgid "No email message linked to this reminder."
+msgstr "Nincs e-mail üzenet csatolva ehhez az emlékeztetőhöz."
+
+#: app/views/reminders.py:314
+msgid "SMTP configuration is disabled."
+msgstr "Az SMTP konfiguráció nincs hozzárendelve vagy le van tiltva."
+
+#: app/views/reminders.py:353
+msgid "Test reminder sent successfully."
+msgstr "A teszt email sikeresen elküldve."
+
+#: app/views/reminders.py:356
+msgid "Test reminder failed: "
+msgstr "Üzenet elmentve."
+
+#: app/views/reminders.py:430
+msgid "Reminder schedule updated successfully."
+msgstr "Ütemezés sikeresen frissítve."
+
+#: app/views/reminders.py:434
+msgid "Please correct the errors below."
+msgstr "Kérjük, javítsa ki az alábbi hibákat."
+
+#: app/views/reminders.py:481 app/views/reminders.py:482
+msgid "None"
+msgstr "Nem"
+
+#: app/views/reminders.py:508
+msgid "You must select both an SMTP config and an email message, or neither."
+msgstr ""
+"Ki kell választania mind az SMTP konfigurációt, mind az e-mail üzenetet, "
+"vagy egyiket sem."
+
+#: app/views/reminders.py:528
+msgid "Email reminder settings updated."
+msgstr "Célhelyek frissítve."
+
+#: app/views/smtp.py:83 app/views/user_smtp.py:80
+msgid "SMTP destination created successfully."
+msgstr "SMTP célhely sikeresen létrehozva."
+
+#: app/views/smtp.py:129 app/views/user_smtp.py:135
+msgid "SMTP destination updated."
+msgstr "SMTP célhely frissítve."
+
+#: app/views/smtp.py:160 app/views/user_smtp.py:166
+msgid "SMTP destination deleted."
+msgstr "SMTP célhely törölve."
+
+#: app/views/smtp.py:191 app/views/user_smtp.py:199
+msgid "Test email sent successfully to your account email."
+msgstr "A teszt email sikeresen elküldve a fiók emailjére."
+
+#: app/views/smtp.py:196 app/views/user_smtp.py:204
+msgid "Failed to send test email. Check SMTP settings."
+msgstr ""
+"Nem sikerült elküldeni a teszt emailt. Ellenőrizze az SMTP beállításokat."
+
+#: app/views/smtp_settings_admin.py:76
+msgid "Test Email from Grylli"
+msgstr "Teszt Email a Grylli-től"
+
+#: app/views/smtp_settings_admin.py:77
+msgid "This is a test email from the Grylli SMTP settings page."
+msgstr "Ez egy teszt email a Grylli SMTP beállítások oldaláról."
+
+#: app/views/smtp_settings_admin.py:84
+msgid "Failed to send test email: "
+msgstr "Nem sikerült elküldeni a teszt emailt:"
+
+#: app/views/users.py:99
+msgid "User updated successfully."
+msgstr "A felhasználó sikeresen frissítve."
+
+#: app/views/users.py:106 app/views/users.py:327
+msgid "An error occurred while updating the user."
+msgstr "Hiba történt a felhasználó frissítésekor."
+
+#: app/views/users.py:195
+msgid "User deleted."
+msgstr "Felhasználó törölve."
+
+#: app/views/users.py:202
+msgid "An error occurred while deleting the user."
+msgstr "Hiba történt a felhasználó törlésekor."
+
+#: app/views/users.py:237
+msgid "Password is required when creating a new user."
+msgstr "Jelszó megadása kötelező új felhasználó létrehozásakor."
+
+#: app/views/users.py:244
+msgid "Username already exists."
+msgstr "A felhasználónév már létezik."
+
+#: app/views/users.py:251
+msgid "Email already exists."
+msgstr "Az email már létezik."
+
+#: app/views/users.py:268
+#, python-format
+msgid "User '%(username)s' created successfully."
+msgstr "A felhasználó '%(username)s' sikeresen létrehozva."
+
+#: app/views/users.py:278
+msgid "Failed to create user."
+msgstr "Nem sikerült létrehozni a felhasználót."
+
+#: app/views/users.py:305
+msgid "You cannot change your own enabled status."
+msgstr "A saját engedélyezett státuszodat nem változtathatod meg."
+
+#: app/views/users.py:318
+#, python-format
+msgid "User '%(username)s' has been %(status)s."
+msgstr "A felhasználó '%(username)s' %(status)s lett."
+
+#: app/views/users.py:356
+msgid "You cannot reset your own MFA."
+msgstr "⚪ = Nem tudod letiltani a saját fiókodat."
+
+#: app/views/users.py:368
+#, python-format
+msgid "MFA disabled for user '%(username)s'."
+msgstr "MFA letiltva '%(username)s' felhasználó számára."
+
+#: app/views/users.py:374
+msgid "An error occurred while resetting MFA."
+msgstr "Hiba történt a felhasználó törlésekor."
+
+#: app/views/webhook.py:54
+msgid "Webhook created successfully."
+msgstr "Webhook sikeresen létrehozva."
+
+#: app/views/webhook.py:113
+msgid "Webhook updated successfully."
+msgstr "Webhook sikeresen frissítve."
+
+#: app/views/webhook.py:142
+msgid "Webhook deleted."
+msgstr "Webhook törölve."
+
+#: app/views/webhook.py:175
+msgid "🧪 Webhook test sent successfully!"
+msgstr "🧪 Webhook teszt sikeresen elküldve!"
+
+#: app/views/webhook.py:177
+msgid "🧪 Webhook test failed: "
+msgstr "🧪 A webhook teszt sikertelen:"
+
+#: app/views/webhook.py:180
+msgid "🧪 Error sending webhook test."
+msgstr "🧪 Hiba történt a webhook teszt küldésekor."
+
+#~ msgid ""
+#~ "Grylli is a secure message delivery platform designed to activate after "
+#~ "prolonged user inactivity."
+#~ msgstr ""
+#~ "A Grylli egy biztonságos üzenetküldési platform, amely a felhasználó hosszas"
+#~ " inaktivitása után aktiválódik."
+
+#~ msgid ""
+#~ "It is a modern reimplementation of Gone Man’s Switch with a refined tech "
+#~ "stack, better maintainability, and an improved user experience."
+#~ msgstr ""
+#~ "Ez a Gone Man’s Switch modern újraimplementációja, finomított technológiai "
+#~ "háttérrel, jobb karbantarthatósággal és javított felhasználói élménnyel."
+
+#~ msgid "Body:"
+#~ msgstr "Törzs:"
+
+#~ msgid "Subject:"
+#~ msgstr "Tárgy:"
+
+#~ msgid "Content:"
+#~ msgstr "Tartalom:"
+
+#~ msgid "Edit SMTP"
+#~ msgstr "SMTP szerkesztése"
+
+#~ msgid ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+#~ msgstr ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+
+#~ msgid "Admin Notes"
+#~ msgstr "Adminisztrációs jegyzetek"
+
+#~ msgid "Register"
+#~ msgstr "Regisztráció"
+
+#~ msgid "View"
+#~ msgstr "Nézet"
+
+#~ msgid "Schedule"
+#~ msgstr "Ütemezés"
+
+#~ msgid "Message is enabled"
+#~ msgstr "Üzenet engedélyezve van"
+
+#~ msgid "Message is disabled"
+#~ msgstr "Üzenet le van tiltva"
+
+#~ msgid "No SMTP configuration selected."
+#~ msgstr "Nincs kiválasztva SMTP konfiguráció."
+
+#~ msgid "Enable the message to start monitoring."
+#~ msgstr "Az üzenet bekapcsolása a megfigyelés elkezdéséhez."
+
+#~ msgid "✅ SMTP settings saved."
+#~ msgstr "SMTP beállítások"
+
+#~ msgid "If you don’t check in, Grylli delivers the message for you."
+#~ msgstr "Ha nem jelentkezik be, a Grylli kézbesíti az üzenetet az Ön számára."
+
+#~ msgid "Fill in already discovered missing translations:"
+#~ msgstr "Töltsd ki a már felfedezett hiányzó fordításokat:"
+
+#~ msgid "Add missing phrases in that JSON file."
+#~ msgstr "Add hozzá a hiányzó kifejezéseket abban a JSON fájlban."
+
+#~ msgid "From:"
+#~ msgstr "Innen:"
+
+#~ msgid ""
+#~ "Attach the updated JSON file to a new GitHub issue when submitting your "
+#~ "changes."
+#~ msgstr ""
+#~ "Csatold a frissített JSON fájlt egy új GitHub probléma mellé, amikor "
+#~ "beküldöd a változtatásokat."
+
+#~ msgid "admin"
+#~ msgstr "admin"
+
+#~ msgid "user"
+#~ msgstr "felhasználó"
+
+#~ msgid "Logging in"
+#~ msgstr "Bejelentkezés"
+
+#~ msgid "SMTP error: "
+#~ msgstr "SMTP hiba:"
+
+#~ msgid "enabled"
+#~ msgstr "engedélyezve"
+
+#~ msgid "disabled"
+#~ msgstr "letiltva"

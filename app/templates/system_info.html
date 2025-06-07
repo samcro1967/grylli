@@ -1,0 +1,84 @@
+{# ---------------------------------------------------------------------
+   system_info.html
+   app/templates/system_info.html
+   Shows detailed version and environment information for Grylli.
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    <!-- ======================== Version Info Table ====================== -->
+    <main class="max-w-4xl mx-auto px-4 py-8">
+        {# --- Main Title --- #}
+        <h1 class="text-2xl font-semibold mb-6 text-white">{{ _("📦 Environment Versions") }}</h1>
+        <div class="overflow-x-auto">
+            {# --- Version Information Table --- #}
+            <table class="w-full table-auto border-collapse border border-zinc-600 text-sm">
+                <thead class="bg-zinc-800 text-white">
+                    <tr>
+                        <th class="text-left px-4 py-2 border border-zinc-600">{{ _("Category") }}</th>
+                        <th class="text-left px-4 py-2 border border-zinc-600">{{ _("Tool") }}</th>
+                        <th class="text-left px-4 py-2 border border-zinc-600">{{ _("Version") }}</th>
+                    </tr>
+                </thead>
+                <tbody class="text-zinc-200">
+                    <!-- ======================== Python Stack ======================== -->
+                    <tr class="border-t-2 border-zinc-700">
+                        <td class="px-4 py-2 font-semibold" rowspan="3">{{ _("🧠 Python") }}</td>
+                        <td class="px-4 py-2 border-t border-zinc-700">{{ _("Python") }}</td>
+                        <td class="px-4 py-2 border-t border-zinc-700">{{ stack["Python"] }}</td>
+                    </tr>
+                    <tr>
+                        <td class="px-4 py-2">{{ _("pip") }}</td>
+                        <td class="px-4 py-2">{{ stack["pip"].split(" ")[1] }}</td>
+                    </tr>
+                    <tr>
+                        <td class="px-4 py-2">{{ _("SQLite") }}</td>
+                        <td class="px-4 py-2">{{ stack["SQLite"] }}</td>
+                    </tr>
+                    <!-- =================== Core Frameworks ========================= -->
+                    {% for key in ["Flask", "Flask-WTF", "Flask-Login", "Flask-Migrate", "Flask-Babel", "Jinja2", "SQLAlchemy", "Gunicorn"] %}
+                        <tr {% if loop.first %}class="border-t-2 border-zinc-700"{% endif %}>
+                            {% if loop.first %}<td class="px-4 py-2 font-semibold" rowspan="8">{{ _("⚙️ Core") }}</td>{% endif %}
+                            <td class="px-4 py-2">{{ key }}</td>
+                            <td class="px-4 py-2">{{ stack[key] }}</td>
+                        </tr>
+                    {% endfor %}
+                    <!-- ====================== Security Stack ======================= -->
+                    <tr class="border-t-2 border-zinc-700">
+                        <td class="px-4 py-2 font-semibold" rowspan="2">{{ _("🔐 Security") }}</td>
+                        <td class="px-4 py-2">{{ _("Email Validator") }}</td>
+                        <td class="px-4 py-2">{{ stack["Email Validator"] }}</td>
+                    </tr>
+                    <tr>
+                        <td class="px-4 py-2">{{ _("Cryptography") }}</td>
+                        <td class="px-4 py-2">{{ stack["Cryptography"] }}</td>
+                    </tr>
+                    <!-- ================== Jobs & Notification Stack ================ -->
+                    <tr class="border-t-2 border-zinc-700">
+                        <td class="px-4 py-2 font-semibold" rowspan="3">{{ _("🕰️ Scheduling") }}</td>
+                        <td class="px-4 py-2">{{ _("APScheduler") }}</td>
+                        <td class="px-4 py-2">{{ stack["APScheduler"] }}</td>
+                    </tr>
+                    <tr>
+                        <td class="px-4 py-2">{{ _("Apprise (Python)") }}</td>
+                        <td class="px-4 py-2">{{ stack["Apprise (Python)"] }}</td>
+                    </tr>
+                    <tr>
+                        <td class="px-4 py-2">{{ _("Apprise CLI") }}</td>
+                        <td class="px-4 py-2">
+                            {{ stack["Apprise CLI"].split(" ")[1] if stack["Apprise CLI"] != 'Unavailable' else 'Unavailable' }}
+                        </td>
+                    </tr>
+                    <!-- =================== Frontend Build Stack =================== -->
+                    {% for key in ["Node.js", "npm", "Tailwind CSS", "PostCSS", "Autoprefixer"] %}
+                        <tr {% if loop.first %}class="border-t-2 border-zinc-700"{% endif %}>
+                            {% if loop.first %}<td class="px-4 py-2 font-semibold" rowspan="5">{{ _("🌐 Frontend") }}</td>{% endif %}
+                            <td class="px-4 py-2">{{ key }}</td>
+                            <td class="px-4 py-2">{{ stack[key] }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {# ------------------- End Version Information Table -------------- #}
+        </div>
+    </main>
+{% endblock %}

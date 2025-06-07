@@ -1,0 +1,120 @@
+{# ----------------------------------------------------------------------------
+Shared Navigation Links (visible to all authenticated users)
+---------------------------------------------------------------------------- #}
+<!-- Notifications (Collapsible Section) -->
+<div x-data="{ openNotify: true }" class="space-y-1">
+    <button @click="openNotify = !openNotify"
+            class="w-full flex items-center justify-between px-3 py-2 mt-2 rounded hover:bg-zinc-100 dark:hover:bg-zinc-700 text-zinc-800 dark:text-zinc-100 transition">
+        <div class="flex items-center space-x-3">
+            <!-- Tray icon -->
+            <svg class="w-5 h-5 flex-shrink-0"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M20 13V6a2 2 0 00-2-2H6a2 2 0 00-2 2v7m16 0h-4a4 4 0 01-8 0H4m16 0v6a2 2 0 01-2 2H6a2 2 0 01-2-2v-6" />
+            </svg>
+            <span x-show="!sidebarCollapsed" class="truncate">{{ _("Notifications") }}</span>
+        </div>
+        <svg x-show="!sidebarCollapsed"
+             :class="{ 'rotate-180': openNotify }"
+             class="w-4 h-4 transform transition-transform"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="2"
+             viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+    </button>
+    <div x-show="openNotify" x-collapse>
+        <!-- Overview -->
+        <a href="{{ url_for("messages_bp.index") }}"
+           class="flex items-center space-x-3 pl-8 pr-3 py-2 rounded hover:bg-zinc-100 dark:hover:bg-zinc-700 text-sm text-zinc-700 dark:text-zinc-300 transition"
+           title="{{ _("Overview of notification settings") }}">
+            <span x-show="!sidebarCollapsed" class="truncate">{{ _("Overview") }}</span>
+        </a>
+        <a href="{{ url_for("apprise_routes.config") }}"
+           class="flex items-center space-x-3 pl-8 pr-3 py-2 rounded hover:bg-zinc-100 dark:hover:bg-zinc-700 text-sm text-zinc-700 dark:text-zinc-300 transition"
+           title="{{ _("Configure Apprise services") }}">
+            <span x-show="!sidebarCollapsed" class="truncate">{{ _("Apprise") }}</span>
+        </a>
+        <a href="{{ url_for("webhook.config") }}"
+           class="flex items-center space-x-3 pl-8 pr-3 py-2 rounded hover:bg-zinc-100 dark:hover:bg-zinc-700 text-sm text-zinc-700 dark:text-zinc-300 transition"
+           title="{{ _("Configure Webhook integrations") }}">
+            <span x-show="!sidebarCollapsed" class="truncate">{{ _("Webhooks") }}</span>
+        </a>
+    </div>
+</div>
+<!-- Emails (Collapsible Section) -->
+<div x-data="{ openEmails: true }" class="space-y-1">
+    <button @click="openEmails = !openEmails"
+            class="w-full flex items-center justify-between px-3 py-2 mt-2 rounded hover:bg-zinc-100 dark:hover:bg-zinc-700 text-zinc-800 dark:text-zinc-100 transition">
+        <div class="flex items-center space-x-3">
+            <!-- Envelope icon -->
+            <svg class="w-5 h-5 flex-shrink-0"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8m0 8a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h14a2 2 0 012 2v8z" />
+            </svg>
+            <span x-show="!sidebarCollapsed" class="truncate">{{ _("Emails") }}</span>
+        </div>
+        <svg x-show="!sidebarCollapsed"
+             :class="{ 'rotate-180': openEmails }"
+             class="w-4 h-4 transform transition-transform"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="2"
+             viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+    </button>
+    <div x-show="openEmails" x-collapse>
+        <!-- Overview -->
+        <a href="{{ url_for("email.index") }}"
+           class="flex items-center space-x-3 pl-8 pr-3 py-2 rounded hover:bg-zinc-100 dark:hover:bg-zinc-700 text-sm text-zinc-700 dark:text-zinc-300 transition"
+           title="{{ _("Overview of secure email messages") }}">
+            <span x-show="!sidebarCollapsed" class="truncate">{{ _("Overview") }}</span>
+        </a>
+        <a href="{{ url_for("user_smtp.index") }}"
+           class="flex items-center space-x-3 pl-8 pr-3 py-2 rounded hover:bg-zinc-100 dark:hover:bg-zinc-700 text-sm text-zinc-700 dark:text-zinc-300 transition"
+           title="{{ _("Configure SMTP email settings") }}">
+            <span x-show="!sidebarCollapsed" class="truncate">{{ _("SMTP") }}</span>
+        </a>
+    </div>
+</div>
+<!-- Reminders (Collapsible Section) -->
+<div x-data="{ openReminders: true }" class="space-y-1">
+    <button @click="openReminders = !openReminders"
+            class="w-full flex items-center justify-between px-3 py-2 mt-2 rounded hover:bg-zinc-100 dark:hover:bg-zinc-700 text-zinc-800 dark:text-zinc-100 transition">
+        <div class="flex items-center space-x-3">
+            <!-- Bell icon -->
+            <svg class="w-5 h-5 flex-shrink-0"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 17h5l-1.405-1.405C18.79 15.21 19 14.11 19 13V8a7 7 0 00-14 0v5c0 1.11.21 2.21.595 3.595L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+            </svg>
+            <span x-show="!sidebarCollapsed" class="truncate">{{ _("Reminders") }}</span>
+        </div>
+        <svg x-show="!sidebarCollapsed"
+             :class="{ 'rotate-180': openReminders }"
+             class="w-4 h-4 transform transition-transform"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="2"
+             viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+    </button>
+    <div x-show="openReminders" x-collapse>
+        <!-- Overview -->
+        <a href="{{ url_for("reminders_bp.index") }}"
+           class="flex items-center space-x-3 pl-8 pr-3 py-2 rounded hover:bg-zinc-100 dark:hover:bg-zinc-700 text-sm text-zinc-700 dark:text-zinc-300 transition"
+           title="{{ _("Overview of reminders") }}">
+            <span x-show="!sidebarCollapsed" class="truncate">{{ _("Overview") }}</span>
+        </a>
+    </div>
+</div>

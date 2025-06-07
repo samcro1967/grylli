@@ -1,0 +1,48 @@
+{# ---------------------------------------------------------------------
+  list_backups.html
+  app/templates/admin/list_backups.html
+  [Describe purpose or main content of this template.]
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{# =================== JINJA BLOCK ==================== #}
+{% block content %}
+    <div class="max-w-4xl mx-auto mt-10 space-y-6">
+        <div class="flex items-center justify-between">
+            <h1 class="text-xl font-semibold text-black dark:text-white">{{ _("Database Backups") }}</h1>
+            <a href="{{ url_for("backups.create_backup_view") }}"
+               class="px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700 text-sm">➕ {{ _("Create Backup") or 'Create Backup' }}</a>
+        </div>
+        {% if backups %}
+            <div class="overflow-x-auto border border-zinc-700 rounded-lg">
+                <!-- =================== TABLE START ================== -->
+                <table class="min-w-full table-auto text-left text-sm">
+                    <thead class="bg-zinc-800 text-zinc-100">
+                        <tr>
+                            <th class="px-4 py-2">{{ _("Filename") }}</th>
+                            <th class="px-4 py-2 text-right">{{ _("Actions") }}</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-zinc-700 bg-zinc-900 text-white">
+                        {% for file in backups %}
+                            <tr>
+                                <td class="px-4 py-2 font-mono">{{ file }}</td>
+                                <td class="px-4 py-2 text-right">
+                                    <a href="{{ url_for('backups.delete_backup', filename=file) }}"
+                                       class="text-red-400 hover:text-red-200 text-sm"
+                                       onclick="return confirm('{{ _("Delete this backup?") }}');">🗑 {{ _("Delete") }}</a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                    <!-- =================== TABLE END ==================== -->
+                </table>
+            </div>
+        {% else %}
+            <p class="text-zinc-400 text-sm">{{ _("No backups found.") }}</p>
+        {% endif %}
+        <div class="text-sm text-zinc-400 mt-4">
+            ⚠️ {{ _("Backups contain your full app data. Store securely. Sensitive data is encrypted in the DB by default.") }}
+            <br>
+        </div>
+    </div>
+{% endblock %}

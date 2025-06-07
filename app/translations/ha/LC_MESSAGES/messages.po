@@ -1,0 +1,3266 @@
+# Hausa translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-06-07 15:49-0500\n"
+"PO-Revision-Date: 2025-05-25 16:45-0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: ha <LL@li.org>\n"
+"Language: ha\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: app/init_db.py:55
+#, python-format
+msgid "Tables currently in DB: %s"
+msgstr "Tebur na yanzu a cikin DB:"
+
+#: app/init_db.py:58
+msgid "Database or system_config table missing. Running migrations now..."
+msgstr ""
+"Babu Database ko teburin system_config. Ana aiwatar da sauyawa yanzu..."
+
+#: app/init_db.py:61
+msgid "Migrations applied successfully."
+msgstr "An yi nasarar aiwatar da sauyawa."
+
+#: app/init_db.py:63
+msgid "Migration failed."
+msgstr "Sauyawa ta kasa."
+
+#: app/init_db.py:68
+msgid "System config seeded successfully."
+msgstr "An samu nasarar dasa tsarin configurin."
+
+#: app/init_db.py:70
+msgid "Error seeding system config."
+msgstr "Kuskure wajen dasa tsarin configurin:"
+
+#: app/forms/mfa_form.py:15 app/templates/apprise/create_apprise.html:30
+#: app/templates/apprise/edit_apprise.html:30
+#: app/templates/apprise/list_apprise.html:60
+#: app/templates/mfa/settings.html:24 app/templates/mfa/settings.html:40
+#: app/templates/user_smtp/create_smtp.html:99
+#: app/templates/user_smtp/edit_smtp.html:114
+#: app/templates/user_smtp/list_smtp.html:57
+#: app/templates/webhook/create_webhook.html:36
+#: app/templates/webhook/edit_webhook.html:36
+#: app/templates/webhook/list_webhooks.html:61
+msgid "Enabled"
+msgstr "An kunna"
+
+#: app/forms/mfa_form.py:16
+msgid "Authenticator Code"
+msgstr "Code din tantanin"
+
+#: app/forms/mfa_form.py:17
+#: app/templates/admin/partials/user_instructions_and_modal.html:66
+#: app/templates/admin/partials/user_table.html:115
+#: app/templates/email/assign_smtp.html:44 app/templates/mfa/settings.html:47
+#: app/templates/user_smtp/edit_smtp.html:122
+msgid "Save"
+msgstr "Ajiye"
+
+#: app/forms/mfa_form.py:27
+msgid "Authentication Code"
+msgstr "Sabunta Sanarwa"
+
+#: app/forms/mfa_form.py:29
+msgid "Please enter your authentication code."
+msgstr "Da fatan shigar da lambobin tantanin ku."
+
+#: app/forms/mfa_form.py:30
+msgid "Enter a valid 6-digit code or recovery code."
+msgstr "Shigar da sahihiyar lambobin 6-ko lambobin farfadowa."
+
+#: app/forms/mfa_form.py:31
+msgid "Invalid code format."
+msgstr "Tsarin lamba mara kyau."
+
+#: app/forms/mfa_form.py:35 app/templates/mfa/challenge.html:25
+msgid "Verify"
+msgstr "Versión"
+
+#: app/services/mail.py:37 app/services/system_settings_email.py:40
+msgid "Missing required config setting: "
+msgstr "Babu saitin config da ake bukata:"
+
+#: app/services/mail.py:46 app/services/system_settings_email.py:50
+#, python-format
+msgid "Failed to decrypt %(key)s: %(error)s"
+msgstr "Kasa warware %(key)s: %(error)s"
+
+#: app/services/mail.py:54
+#, python-format
+msgid "get_setting('%(key)s') -> '%(value)s' (sensitive: %(sensitive)s)"
+msgstr ""
+"sami na koyo('%(key)s') -> '%(value)s' (asali: '%(raw)s', sirri: "
+"%(sensitive)s)"
+
+#: app/services/mail.py:75
+#, python-format
+msgid "Preparing email to %(to)s"
+msgstr "Shirya imel zuwa %(to)s"
+
+#: app/services/mail.py:90
+#, python-format
+msgid ""
+"SMTP configuration: host=%(host)s (type=%(host_type)s), port=%(port)s "
+"(type=%(port_type)s)"
+msgstr ""
+"SMTP mai masauki = '%(host)s' (nau'i: %(host_type)s), tashar = %(port)s "
+"(nau'i: %(port_type)s)"
+
+#: app/services/mail.py:99
+#, python-format
+msgid "SMTP username: %(user)s"
+msgstr "Amfani da mai amfani: %(user)s"
+
+#: app/services/mail.py:100
+#, python-format
+msgid "TLS enabled: %(tls)s"
+msgstr "TLS bật: %(tls)s"
+
+#: app/services/mail.py:105
+msgid "Starting TLS connection..."
+msgstr "Fara TLS"
+
+#: app/services/mail.py:107
+msgid "Logging into SMTP server..."
+msgstr "Đang đăng nhập vào máy chủ SMTP..."
+
+#: app/services/mail.py:109
+msgid "Sending email message..."
+msgstr "Jadawalin Sako"
+
+#: app/services/mail.py:111
+#, python-format
+msgid "Email sent successfully to %(to)s"
+msgstr "An aika imel ɗin gwaji da nasara."
+
+#: app/services/mail.py:114
+#, python-format
+msgid "SMTP error while sending to %(to)s: %(error)s"
+msgstr "Lỗi SMTP khi gửi tới %(to)s: %(error)s"
+
+#: app/templates/about.html:10
+msgid "About Grylli"
+msgstr "Game da Grylli"
+
+#: app/templates/about.html:13
+msgid ""
+"Grylli is a secure, self-hosted message delivery platform that automatically"
+" sends pre-configured messages if a user fails to check in within a defined "
+"time period."
+msgstr ""
+"Grylli yana da tsaro, dandamali mai daukar nauyin sakonni wanda ke aika "
+"saƙonni da aka tsara idan mai amfani bai yi rajista ba cikin lokaci da aka "
+"ayyana."
+
+#: app/templates/about.html:14
+msgid ""
+"It supports multiple users, customizable schedules, and recurring reminders."
+msgstr ""
+"Yana goyan bayan masu amfani da yawa da jadawalin da za a iya sarrafawa."
+
+#: app/templates/about.html:15
+msgid ""
+"Messages and reminders can be delivered via email, webhooks, or over 100 "
+"third-party services through Apprise."
+msgstr ""
+"Ana iya isar da saƙonni ta imel, webhooks, ko sama da ayyuka na ɓangare na "
+"uku 80 ta Apprise."
+
+#: app/templates/about.html:16
+msgid ""
+"Users can configure their own SMTP servers to ensure emails and reminders "
+"appear to come directly from them — not from the system administrator."
+msgstr ""
+"Masu amfani na iya tsara haɗin kai nasu na SMTP don tabbatar da saƙonni sun "
+"fito kai tsaye daga wurinsu — ba daga mai sarrafa tsarin ba."
+
+#: app/templates/about.html:17
+msgid ""
+"Sensitive data is encrypted at rest, and all operations are secured with "
+"strong authentication and audit-friendly logging."
+msgstr ""
+"Ana kare bayanan sirri lokacin ajiye su, kuma duk ayyukan saƙonni suna da "
+"tsaro da ingantaccen rajistan shiga don dubawa."
+
+#: app/templates/about.html:18
+msgid ""
+"Built with a modern, reactive technology stack, Grylli is optimized for "
+"responsiveness and works seamlessly across desktop and mobile devices."
+msgstr ""
+"An gina Kai tare da fasahar zamani, mai amsawa, Grylli an inganta shi don "
+"aiki lafiya kuma yana aiki ba tare da matsala ba a dukkan na'urorin tebur da"
+" na hannu."
+
+#: app/templates/about.html:23
+msgid "Version:"
+msgstr "Sigogi:"
+
+#: app/templates/about.html:26
+msgid "Repository:"
+msgstr "Teburin adana bayanai:"
+
+#: app/templates/about.html:30
+msgid "GitHub - samcro1967/grylli"
+msgstr "GitHub - samcro1967/grylli"
+
+#: app/templates/help.html:2 app/templates/help.html:5
+#: app/templates/partials/header.html:85
+msgid "Help"
+msgstr "Taimako"
+
+#: app/templates/help.html:7
+msgid ""
+"Grylli includes built-in instructions throughout the app to help you "
+"configure and manage your setup."
+msgstr ""
+"Grylli ya haɗa da umarni da aka saka cikin manhaja don taimakawa wajen tsara"
+" da gudanar da saitawsu."
+
+#: app/templates/help.html:8
+msgid ""
+"This page provides an overview of key features and direct links to where "
+"they can be managed."
+msgstr ""
+"Wannan shafi yana bayar da taƙaitaccen bayani na mahimman fasaloli da "
+"hanyoyin kai tsaye zuwa inda za a iya sarrafa su."
+
+#: app/templates/help.html:12 app/templates/messages/list_messages.html:9
+#: app/templates/partials/shared_nav.html:17
+msgid "Notifications"
+msgstr "Notificaciones"
+
+#: app/templates/help.html:14
+msgid "Create and assign messages"
+msgstr "Ƙirƙiri sakon ko imel."
+
+#: app/templates/admin/index.html:32 app/templates/help.html:17
+#: app/templates/partials/admin_nav.html:56
+msgid "SMTP Settings"
+msgstr "Saitunan SMTP"
+
+#: app/templates/help.html:19
+msgid "Use your own email server"
+msgstr "Yi amfani da sabar imel ɗinka"
+
+#: app/templates/help.html:22
+msgid "Apprise Integration"
+msgstr "Manufar Apprise"
+
+#: app/templates/help.html:24
+msgid "Send notifications to 80+ supported services"
+msgstr "Aika sanarwa zuwa ayyuka 80+ masu goyan baya"
+
+#: app/templates/help.html:27
+#: app/templates/messages/assign_destinations.html:41
+#: app/templates/messages/view_message.html:58
+#: app/templates/partials/shared_nav.html:44
+#: app/templates/reminders/assign_destinations.html:39
+#: app/templates/reminders/view_reminder.html:69
+msgid "Webhooks"
+msgstr "Webhooks"
+
+#: app/templates/help.html:29
+msgid "Trigger actions or external workflows"
+msgstr "Haɗa ayyuka ko workflow na waje"
+
+#: app/templates/email/list_emails.html:9 app/templates/help.html:32
+#: app/templates/partials/shared_nav.html:61
+msgid "Emails"
+msgstr "Correos electrónicos"
+
+#: app/templates/help.html:34
+msgid "View and manage secure email messages"
+msgstr "Visión general de mensajes de correo electrónico seguros"
+
+#: app/templates/help.html:38
+msgid "Security"
+msgstr "🔐 Seguridad"
+
+#: app/templates/help.html:39
+msgid "Grylli encrypts sensitive data and logs all key actions for auditing."
+msgstr ""
+"Grylli yana ƙunsar bayanan sirri da kuma rikodin duk ayyukan maɓalli don "
+"dubawa."
+
+#: app/templates/index.html:9 app/views/locale.py:95
+msgid "Welcome to Grylli"
+msgstr "Barka da zuwa Grylli"
+
+#: app/templates/index.html:11
+msgid "Pronounced"
+msgstr "Kara shi"
+
+#: app/templates/index.html:11
+msgid "like “grill-ee”"
+msgstr "kamar “grill-ee”"
+
+#: app/templates/index.html:14
+msgid ""
+"Grylli is a secure message scheduling and delivery system designed to ensure"
+" your important messages are delivered — even if you can’t be there to send "
+"them."
+msgstr ""
+"Grylli tsarin tsaro ne na tsara saƙonni da isar da su wanda aka tsara don "
+"tabbatar da cewa an isar da muhimman sakonninka — ko da ba za ka iya "
+"kasancewa wajen isar da su ba."
+
+#: app/templates/index.html:17
+msgid ""
+"Whether you’re planning ahead, setting up emergency communication, or "
+"building peace of mind, Grylli helps automate your message delivery via "
+"multiple channels including email, webhooks, and Apprise notifications."
+msgstr ""
+"Ko kana shirin gaba, saka tsarin sadarwar gaggawa, ko kuma gina natsuwa, "
+"Grylli yana taimaka maka tsara isar da saƙonka ta hanyar imel, webhooks, ko "
+"Apprise notifications idan ka rasa shiga."
+
+#: app/templates/index.html:19
+msgid "Getting Started"
+msgstr "Fara"
+
+#: app/templates/index.html:21
+msgid "Create a message, email, or reminder."
+msgstr "Ƙirƙiri sakon ko imel."
+
+#: app/templates/index.html:22
+msgid "Set your check-in interval and grace period (for messages)."
+msgstr "Saita lokacin duba ka da lokacin gafara."
+
+#: app/templates/index.html:23
+msgid "Assign one or more delivery destinations."
+msgstr "Aruutta uke me tonam ilpussolu piskatandi."
+
+#: app/templates/index.html:24
+msgid "Optionally attach files for secure emails."
+msgstr "Zaɓi loda fayiloli don imel mai tsaro."
+
+#: app/templates/index.html:25
+msgid "Schedule reminders to send at specific times or on a recurring basis."
+msgstr "Jadawalin tunatarwa don aiko a lokuta na musamman ko akai-akai."
+
+#: app/templates/index.html:26
+msgid "Enable the message or reminder to activate delivery."
+msgstr "Bada saƙo ko tunatarwa don kunnawa isarwa."
+
+#: app/templates/index.html:28
+msgid ""
+"Regularly check in to Grylli to prevent automated delivery; miss a check-in "
+"and Grylli sends your messages as scheduled."
+msgstr ""
+"Yi duba Grylli akai a kai don hana aika da sakonni ta atomatik; idan ba a "
+"duba Grylli ba, zai aika da sakonninka kamar yadda aka tsara."
+
+#: app/templates/privacy.html:10
+msgid "Privacy Notice"
+msgstr "Avisu Privasidá"
+
+#: app/templates/privacy.html:13
+msgid ""
+"Grylli respects your privacy and is designed to minimize the collection and "
+"storage of personal data."
+msgstr ""
+"Grylli tôn trọng quyền riêng tư của bạn và được thiết kế để giảm thiểu việc "
+"thu thập và lưu trữ dữ liệu cá nhân."
+
+#: app/templates/privacy.html:14
+msgid ""
+"All data is encrypted where appropriate and remains fully under your control"
+" if you self-host this platform."
+msgstr ""
+"Tất cả dữ liệu được mã hóa một cách thích hợp và bạn hoàn toàn kiểm soát nếu"
+" tự lưu trữ nền tảng này."
+
+#: app/templates/privacy.html:17
+msgid "What Data We Collect"
+msgstr "Dữ liệu chúng tôi thu thập"
+
+#: app/templates/privacy.html:19
+msgid "Email address and password hash (for authentication)"
+msgstr "Địa chỉ email và mã băm mật khẩu (dùng để xác thực)"
+
+#: app/templates/privacy.html:20
+msgid "Optional MFA secret and recovery codes (encrypted at rest)"
+msgstr "Mã MFA tuỳ chọn và mã khôi phục (được mã hóa khi lưu trữ)"
+
+#: app/templates/privacy.html:21
+msgid "Reminder and message content you configure"
+msgstr "Nội dung nhắc nhở và tin nhắn bạn cấu hình"
+
+#: app/templates/privacy.html:22
+msgid "User-specific settings, SMTP configuration (if provided)"
+msgstr "Cài đặt người dùng cụ thể, cấu hình SMTP (nếu có cung cấp)"
+
+#: app/templates/privacy.html:25
+msgid "How Your Data Is Used"
+msgstr "Cách dữ liệu của bạn được sử dụng"
+
+#: app/templates/privacy.html:27
+msgid ""
+"Your data is used solely for the purpose of delivering reminders and "
+"messages according to your preferences."
+msgstr ""
+"Dữ liệu của bạn chỉ được sử dụng để gửi nhắc nhở và tin nhắn theo tùy chọn "
+"của bạn."
+
+#: app/templates/privacy.html:28
+msgid ""
+"Grylli does not share, sell, or transmit your personal data to any third "
+"parties."
+msgstr ""
+"Grylli không chia sẻ, bán hoặc truyền dữ liệu cá nhân của bạn cho bất kỳ bên"
+" thứ ba nào."
+
+#: app/templates/privacy.html:31
+msgid "Your Rights"
+msgstr "Quyền của bạn"
+
+#: app/templates/privacy.html:33
+msgid ""
+"You can export all of your data at any time from the Account Settings page."
+msgstr ""
+"Bạn có thể xuất toàn bộ dữ liệu của mình bất kỳ lúc nào từ trang Cài đặt Tài"
+" khoản."
+
+#: app/templates/privacy.html:34
+msgid "You may permanently delete your account and all associated data."
+msgstr "Ba za ku iya goge asusunku ba saboda ku ne admin na karshe."
+
+#: app/templates/privacy.html:35
+msgid ""
+"If you are using a self-hosted instance, contact the instance administrator "
+"for data inquiries."
+msgstr ""
+"Nếu bạn đang sử dụng một phiên bản tự lưu trữ, hãy liên hệ với quản trị viên"
+" phiên bản để yêu cầu dữ liệu."
+
+#: app/templates/privacy.html:38
+msgid "Self-Hosting Responsibility"
+msgstr "Trách nhiệm tự lưu trữ"
+
+#: app/templates/privacy.html:40
+msgid ""
+"If you are running Grylli on your own server, you are responsible for the "
+"storage, processing, and lawful handling of all user data on that instance."
+msgstr ""
+"Nếu bạn đang chạy Grylli trên máy chủ của riêng mình, bạn chịu trách nhiệm "
+"về việc lưu trữ, xử lý và xử lý hợp pháp tất cả dữ liệu người dùng trên "
+"phiên bản đó."
+
+#: app/templates/privacy.html:44
+msgid ""
+"This notice was last updated in June 2025 and may evolve to reflect changes "
+"in the software or regulatory landscape."
+msgstr ""
+"Thông báo này đã được cập nhật lần cuối vào tháng 6 năm 2025 và có thể phát "
+"triển để phản ánh những thay đổi trong phần mềm hoặc bối cảnh pháp lý."
+
+#: app/templates/system_info.html:11
+msgid "📦 Environment Versions"
+msgstr "📦 Versiones del Entorno"
+
+#: app/templates/system_info.html:17
+msgid "Category"
+msgstr "Categoría"
+
+#: app/templates/system_info.html:18
+msgid "Tool"
+msgstr "Herramienta"
+
+#: app/templates/system_info.html:19
+msgid "Version"
+msgstr "Versión"
+
+#: app/templates/system_info.html:25
+msgid "🧠 Python"
+msgstr "🧠 Python"
+
+#: app/templates/system_info.html:26
+msgid "Python"
+msgstr "Python"
+
+#: app/templates/system_info.html:30
+msgid "pip"
+msgstr "pip"
+
+#: app/templates/system_info.html:34
+msgid "SQLite"
+msgstr "SQLite"
+
+#: app/templates/system_info.html:40
+msgid "⚙️ Core"
+msgstr "⚙️ Núcleo"
+
+#: app/templates/system_info.html:47
+msgid "🔐 Security"
+msgstr "🔐 Seguridad"
+
+#: app/templates/system_info.html:48
+msgid "Email Validator"
+msgstr "Validador de Correo"
+
+#: app/templates/system_info.html:52
+msgid "Cryptography"
+msgstr "Criptografía"
+
+#: app/templates/system_info.html:57
+msgid "🕰️ Scheduling"
+msgstr "🕰️ Programación"
+
+#: app/templates/system_info.html:58
+msgid "APScheduler"
+msgstr "APScheduler"
+
+#: app/templates/system_info.html:62
+msgid "Apprise (Python)"
+msgstr "Apprise (Python)"
+
+#: app/templates/system_info.html:66
+msgid "Apprise CLI"
+msgstr "Apprise CLI"
+
+#: app/templates/system_info.html:74
+msgid "🌐 Frontend"
+msgstr "🌐 Interfaz"
+
+#: app/templates/account/manage_account.html:11
+msgid "Manage Account"
+msgstr "Gestionar Cuenta"
+
+#: app/templates/account/manage_account.html:12
+msgid "Update your profile information and password."
+msgstr "Actualiza tu información de perfil y contraseña."
+
+#: app/templates/account/manage_account.html:41
+#: app/templates/admin/create_user.html:40
+#: app/templates/auth/bootstrap.html:43
+#: app/templates/auth/reset_password.html:42 app/templates/auth/signup.html:42
+msgid "Please enter a valid email address."
+msgstr "Por favor ingrese una dirección de correo electrónico válida."
+
+#: app/templates/account/manage_account.html:62
+#: app/templates/account/manage_account.html:96
+#: app/templates/account/manage_account.html:127
+#: app/templates/auth/reset_password.html:66
+#: app/templates/auth/reset_password.html:97 app/templates/auth/signup.html:65
+#: app/templates/auth/signup.html:95
+msgid "Show/hide password"
+msgstr "Riƙe don nuna kalmar wucewa"
+
+#: app/templates/account/manage_account.html:89
+#: app/templates/admin/create_user.html:53
+#: app/templates/auth/bootstrap.html:51
+#: app/templates/auth/reset_password.html:58 app/templates/auth/signup.html:58
+msgid "Password must meet all complexity requirements."
+msgstr "La contraseña debe cumplir con todos los requisitos de complejidad."
+
+#: app/templates/account/manage_account.html:141
+#: app/templates/admin/create_user.html:72
+#: app/templates/admin/edit_user.html:67 app/templates/auth/bootstrap.html:69
+#: app/templates/auth/reset_password.html:110
+#: app/templates/auth/signup.html:108
+msgid "Passwords do not match."
+msgstr "Las contraseñas no coinciden."
+
+#: app/templates/account/manage_account.html:147
+msgid "Update Account"
+msgstr "Actualizar cuenta"
+
+#: app/templates/account/manage_account.html:151
+#: app/templates/admin/create_user.html:82
+#: app/templates/admin/edit_user.html:97 app/templates/admin/help_form.html:28
+#: app/templates/admin/partials/user_instructions_and_modal.html:62
+#: app/templates/admin/partials/user_table.html:113
+#: app/templates/apprise/create_apprise.html:42
+#: app/templates/apprise/edit_apprise.html:42
+#: app/templates/auth/reset_password.html:121
+#: app/templates/email/assign_smtp.html:46
+#: app/templates/email/attach_files.html:47
+#: app/templates/email/edit_message.html:54
+#: app/templates/email/schedule_email.html:84
+#: app/templates/messages/assign_destinations.html:66
+#: app/templates/messages/create_message.html:55
+#: app/templates/messages/edit_message.html:48
+#: app/templates/messages/schedule_message.html:84
+#: app/templates/mfa/challenge.html:29 app/templates/mfa/settings.html:51
+#: app/templates/reminders/assign_destinations.html:64
+#: app/templates/reminders/assign_email_reminder.html:94
+#: app/templates/reminders/create_reminder.html:49
+#: app/templates/reminders/edit_reminder.html:42
+#: app/templates/reminders/schedule_reminder.html:51
+#: app/templates/user_smtp/create_smtp.html:111
+#: app/templates/user_smtp/edit_smtp.html:125
+#: app/templates/webhook/create_webhook.html:48
+#: app/templates/webhook/edit_webhook.html:48
+msgid "Cancel"
+msgstr "Cancelar"
+
+#: app/templates/account/manage_account.html:159
+#: app/templates/admin/create_user.html:90
+#: app/templates/admin/edit_user.html:81 app/templates/auth/bootstrap.html:83
+#: app/templates/auth/reset_password.html:128
+#: app/templates/auth/signup.html:132
+msgid "Minimum 8 characters"
+msgstr "Mínimo 8 caracteres"
+
+#: app/templates/account/manage_account.html:160
+#: app/templates/admin/create_user.html:91
+#: app/templates/admin/edit_user.html:82 app/templates/auth/bootstrap.html:84
+#: app/templates/auth/reset_password.html:129
+#: app/templates/auth/signup.html:133
+msgid "At least one uppercase letter"
+msgstr "Al menos una letra mayúscula"
+
+#: app/templates/account/manage_account.html:161
+#: app/templates/admin/create_user.html:92
+#: app/templates/admin/edit_user.html:83 app/templates/auth/bootstrap.html:85
+#: app/templates/auth/reset_password.html:130
+#: app/templates/auth/signup.html:134
+msgid "At least one lowercase letter"
+msgstr "Al menos una letra minúscula"
+
+#: app/templates/account/manage_account.html:162
+#: app/templates/admin/create_user.html:93
+#: app/templates/admin/edit_user.html:84 app/templates/auth/bootstrap.html:86
+#: app/templates/auth/reset_password.html:131
+#: app/templates/auth/signup.html:135
+msgid "At least one number"
+msgstr "Al menos un número"
+
+#: app/templates/account/manage_account.html:163
+#: app/templates/admin/create_user.html:94
+#: app/templates/auth/bootstrap.html:87
+#: app/templates/auth/reset_password.html:132
+#: app/templates/auth/signup.html:136
+msgid "At least one special character (e.g., !@#$%)"
+msgstr "A kalla ƙaramar alama ta musamman (e.g., !@#$%)"
+
+#: app/templates/account/manage_account.html:169
+msgid "Download My Data"
+msgstr "Tải xuống Dữ liệu của tôi"
+
+#: app/templates/account/manage_account.html:171
+msgid ""
+"Download all your account data as a JSON file. This includes your reminders,"
+" messages, email settings, and more. The file is for your records only and "
+"cannot be imported back. Protect it as it may contain sensitive information."
+msgstr ""
+"Tải xuống tất cả dữ liệu tài khoản của bạn dưới dạng tệp JSON. Bao gồm các "
+"nhắc nhở, tin nhắn, cài đặt email, và hơn thế nữa. Tệp này chỉ dành cho lưu "
+"trữ cá nhân và không thể nhập lại. Hãy bảo vệ nó vì có thể chứa thông tin "
+"nhạy cảm."
+
+#: app/templates/account/manage_account.html:175
+msgid "Download My Data (JSON)"
+msgstr "Tải xuống Dữ liệu của tôi (JSON)"
+
+#: app/templates/account/manage_account.html:179
+msgid "Danger Zone"
+msgstr "Yankin Hadari"
+
+#: app/templates/account/manage_account.html:180
+msgid "Deleting your account is permanent and cannot be undone."
+msgstr "Goge asusunka yana dawwama kuma ba za'a iya mayarwa ba."
+
+#: app/templates/account/manage_account.html:185
+msgid "Delete My Account"
+msgstr "Actualizar cuenta"
+
+#: app/templates/account/translations.html:8
+msgid "Translations - Grylli"
+msgstr "Fassara - Grylli"
+
+#: app/templates/account/translations.html:17
+#: app/templates/partials/header.html:102
+msgid "Translations"
+msgstr "Fassara"
+
+#: app/templates/account/translations.html:20
+msgid "Grylli currently supports multiple languages and more will be added."
+msgstr ""
+"Grylli a halin yanzu yana tallafawa harsuna da yawa kuma za a ƙara ƙarin."
+
+#: app/templates/account/translations.html:21
+msgid "Many of the translations were performed with assistance from ChatGPT."
+msgstr "Yawancin fassarorin an yi tare da taimakon ChatGPT."
+
+#: app/templates/account/translations.html:22
+msgid ""
+"If you find a translation issue or want to suggest improvements, your input "
+"is welcome!"
+msgstr ""
+"Idan ka samo matsala a fassara ko kana son bayar da shawarwari, karɓar ka "
+"yana maraba!"
+
+#: app/templates/account/translations.html:28
+msgid "How to request translation updates"
+msgstr "Yadda ake nema sabunta fassara"
+
+#: app/templates/account/translations.html:30
+msgid "To contribute to translations, please use the following guidelines:"
+msgstr "Don bayar da gudummawa ga fassara, don Allah bi waɗannan ka'idodin:"
+
+#: app/templates/account/translations.html:43
+msgid "Contribute missing or improved translations:"
+msgstr "An sami fassarar da ba ta cikakke?"
+
+#: app/templates/account/translations.html:63
+msgid "Open the relevant .po translation file for your language."
+msgstr "Bude fayil ɗin JSON na fassara don yaren ku. Misali:"
+
+#: app/templates/account/translations.html:67
+msgid ""
+"Find untranslated or incomplete entries and add or improve translations."
+msgstr ""
+"Nemo rubutun da ba a fassara ba ko waɗanda ba cikakke ba kuma ƙara ko "
+"inganta fassarar."
+
+#: app/templates/account/translations.html:68
+msgid "You may use a PO file editor or a text editor."
+msgstr "Za ka iya amfani da edita na fayil ɗin PO ko edita na rubutu."
+
+#: app/templates/account/translations.html:69
+msgid "Copy the file path and the snippet of your changes."
+msgstr "Kwafi hanyar fayil da kuma yanki na canje-canjen ka."
+
+#: app/templates/account/translations.html:70
+msgid "Paste the snippet directly into a new GitHub issue for review."
+msgstr "Manna guntuwar da aka kwafi kai tsaye a cikin sharhi na batun GitHub."
+
+#: app/templates/account/translations.html:72
+msgid "Please do not upload the full .po file to avoid merge conflicts."
+msgstr ""
+"Kada ka loda cikakken fayil ɗin .po don kauce wa rikice-rikicen haɗawa."
+
+#: app/templates/account/translations.html:85
+msgid "Improving existing translations:"
+msgstr "Inganta fassarar da ake yi:"
+
+#: app/templates/account/translations.html:104
+msgid "Open the relevant .po file for the translation you want to improve."
+msgstr "Bude fayil ɗin .po mai dacewa don fassarar da kake son inganta."
+
+#: app/templates/account/translations.html:106
+msgid "For example:"
+msgstr "Misali:"
+
+#: app/templates/account/translations.html:110
+msgid ""
+"Find the phrase(s) and its existing translation(s) you want to improve."
+msgstr "Nemo kalmar (ko kalmomi) da fassarar da kake son inganta."
+
+#: app/templates/account/translations.html:111
+msgid "Update the phrase(s)."
+msgstr "Sabunta kalmar (ko kalmomi)."
+
+#: app/templates/account/translations.html:112
+msgid "Copy the file name and path into the issue."
+msgstr "Kwafi suna da hanya na fayil ɗin a cikin batun."
+
+#: app/templates/account/translations.html:114
+msgid "Paste the copied snippet directly into the GitHub issue comment."
+msgstr "Manna guntuwar da aka kwafi kai tsaye a cikin sharhi na batun GitHub."
+
+#: app/templates/account/translations.html:115
+msgid "Do not upload the full .po file to avoid merge conflicts."
+msgstr ""
+"Kada ka loda cikakken fayil ɗin .po don kauce wa rikice-rikicen haɗawa."
+
+#: app/templates/account/translations.html:118
+msgid "Example snippet:"
+msgstr "Misalin gutsu:"
+
+#: app/templates/account/translations.html:137
+msgid "Report missing translations not yet discovered:"
+msgstr "Ruwaito fassarorin da ba a gano ba:"
+
+#: app/templates/account/translations.html:154
+msgid ""
+"If you see text in the app that appears untranslated or missing, please "
+"report it to us."
+msgstr ""
+"Idan ka ga rubutu a cikin app ɗin da bai gasha ba ko ba ya nan, don Allah "
+"ruwaito mana."
+
+#: app/templates/account/translations.html:155
+msgid "Provide the exact English phrase as it appears on the screen."
+msgstr "Ba mu daidai kalmar Ingilishi kamar yadda ta bayyana akan allo."
+
+#: app/templates/account/translations.html:156
+msgid ""
+"Include the page or section where you saw the phrase (e.g., Apprise page, "
+"Account Page, etc.)."
+msgstr ""
+"Hada shafin ko sashin da ka ga kalmar (misali, shafin Saituna, sashin "
+"Akanta)."
+
+#: app/templates/account/translations.html:157
+msgid ""
+"Submit this information via a new GitHub issue so we can add it to the "
+"translation files"
+msgstr ""
+"Bayar da wannan bayani ta hanyar sabon batun GitHub don mu iya kara ta zuwa "
+"fayilolin fassara kuma mu nannade ta don Babel."
+
+#: app/templates/account/translations.html:166
+msgid "Found a missing translation?"
+msgstr "An sami fassarar da ba ta cikakke?"
+
+#: app/templates/account/translations.html:171
+msgid ""
+"This link will create a new GitHub issue pre-filled with a language code."
+msgstr "Wannan haɗin zai ƙirƙiri sabon batu a GitHub cike da lambar yare."
+
+#: app/templates/account/translations.html:172
+msgid "Report it by opening a new GitHub issue"
+msgstr "Ruwaito ta hanyar buɗe sabon batun GitHub"
+
+#: app/templates/account/translations.html:175
+msgid "Please specify the language code and exact phrase when reporting."
+msgstr ""
+"Da fatan za a bayyana lambar yaren da kuma ainihin abin da za a bayar da "
+"rahoto."
+
+#: app/templates/account/translations.html:176
+msgid "Thank you for helping us make Grylli better!"
+msgstr "Na gode don taimaka mana inganta Grylli!"
+
+#: app/templates/admin/create_user.html:14
+msgid "Create New User"
+msgstr "Ƙirƙiri Sabon Mai Amfani"
+
+#: app/templates/admin/create_user.html:15
+msgid "Fill out the form to add a new user."
+msgstr "Cika fom ɗin don ƙara sabon mai amfani."
+
+#: app/templates/admin/create_user.html:21
+#: app/templates/admin/edit_user.html:17 app/templates/auth/bootstrap.html:24
+msgid "Please fix the following errors:"
+msgstr "Da fatan a gyara kurakuran da ke ƙasa:"
+
+#: app/templates/admin/create_user.html:78
+#: app/templates/admin/edit_user.html:93
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "Create User"
+msgstr "Ƙirƙiri Mai Amfani"
+
+#: app/templates/admin/edit_user.html:10
+#: app/templates/admin/partials/user_card.html:20
+#: app/templates/admin/partials/user_table.html:26
+msgid "Edit User"
+msgstr "Gyara Mai Amfani"
+
+#: app/templates/admin/edit_user.html:55 app/templates/admin/edit_user.html:74
+msgid "Hold to show password"
+msgstr "Riƙe don nuna kalmar wucewa"
+
+#: app/templates/admin/edit_user.html:85
+#, python-format
+msgid "At least one special character (e.g., !@#$%%)"
+msgstr "A kalla ƙaramar alama ta musamman (e.g., !@#$%%)"
+
+#: app/templates/admin/help.html:4 app/templates/auth/login.html:72
+msgid "Admin Help"
+msgstr "Taswirin Gudanarwa"
+
+#: app/templates/admin/help.html:7
+msgid "Reset Admin Password"
+msgstr "Sake Jima"
+
+#: app/templates/admin/help.html:9
+msgid ""
+"If you've forgotten the admin password, you can reset it using the following"
+" Docker command:"
+msgstr ""
+"Idan ka manta da kalmar sirri ta admin, za ka iya maye gurbin ta ta amfani "
+"da wannan umarnin na Docker:"
+
+#: app/templates/admin/help.html:15
+msgid ""
+"This script will prompt you to enter a new password for the admin user. You "
+"must run it from the host system where the Grylli container is running."
+msgstr ""
+"Wannan rubutun zai bukaci ka saka sabuwar kalmar sirri ga mai amfani da "
+"admin. Dole ka gudanar da shi daga tsarin masaukin da ke gudana da akwatin "
+"Grylli."
+
+#: app/templates/admin/help.html:18
+msgid "After resetting, you can log in with the new password immediately."
+msgstr ""
+"Bayan ka maye gurbin, za ka iya shiga tare da sabuwar kalmar sirri nan take."
+
+#: app/templates/admin/help.html:24
+msgid "Return to Login"
+msgstr "Koma zuwa Dashboard"
+
+#: app/templates/admin/help_form.html:6
+msgid "Admin Help Access"
+msgstr "Taimako na Admin"
+
+#: app/templates/admin/help_form.html:9
+msgid "Enter your Ferret Key to unlock admin-only help documentation."
+msgstr "Saka Mabudin Ferret naka don bude takardun taimako na admin kadai."
+
+#: app/templates/admin/help_form.html:34
+msgid "How to Find Your FERRET_KEY"
+msgstr "Yadda za a Nemo FERRET_KEY naka"
+
+#: app/templates/admin/help_form.html:36
+msgid "The FERRET_KEY is set as an environment variable when running Grylli."
+msgstr ""
+"FERRET_KEY an saita shi a matsayin madaidaicin yanayin lokacin gudanar da "
+"Grylli."
+
+#: app/templates/admin/help_form.html:39
+msgid "Option 1: Check docker-compose.yml"
+msgstr "Zabi na 1: Duba docker-compose.yml"
+
+#: app/templates/admin/help_form.html:46
+msgid "Option 2: Use docker inspect"
+msgstr "Zabi na 2: Yi amfani da docker inspect"
+
+#: app/templates/admin/help_form.html:52
+msgid "This shows the FERRET_KEY as passed to the container at runtime."
+msgstr ""
+"Wannan yana nuna FERRET_KEY kamar yadda aka wuce zuwa garejin a lokacin "
+"gudanar da lokaci."
+
+#: app/templates/admin/index.html:10
+msgid "Admin Panel"
+msgstr "Taswirin Gudanarwa"
+
+#: app/templates/admin/index.html:12
+msgid ""
+"Welcome to the Grylli Admin Panel. Use the links below to manage the system."
+msgstr ""
+"Barka da zuwa Grylli Taswirin Gudanarwa. Yi amfani da hanyoyin da ke ƙasa "
+"don sarrafa tsarin."
+
+#: app/templates/admin/index.html:17
+msgid "Manage Users"
+msgstr "Sarrafa Masu Amfani"
+
+#: app/templates/admin/index.html:18
+msgid "Create, edit, enable/disable, or delete user accounts."
+msgstr "Ƙirƙiri, gyara, kunna/rufe, ko goge asusun masu amfani."
+
+#: app/templates/admin/index.html:22
+#: app/templates/admin/system_settings.html:10
+#: app/templates/partials/admin_nav.html:52
+msgid "System Settings"
+msgstr "Saitunan Tsari"
+
+#: app/templates/admin/index.html:23
+msgid "View  system-wide environment values."
+msgstr "Duba ƙimomin yanayi na duk tsarin a kiyaye."
+
+#: app/templates/admin/index.html:27 app/templates/partials/admin_nav.html:42
+msgid "Backups"
+msgstr "Ajiyar Bayanai"
+
+#: app/templates/admin/index.html:28
+msgid "Create and delete database backups."
+msgstr "Madadin Database"
+
+#: app/templates/admin/index.html:33
+msgid "View and test global SMTP settings."
+msgstr "An kasa aika imel ɗin gwaji. Duba saitunan SMTP."
+
+#: app/templates/admin/index.html:39
+msgid "View Admin Guide / README on GitHub"
+msgstr "Duba Jagorar Gudanarwa / README akan GitHub"
+
+#: app/templates/admin/index.html:40
+msgid "Includes setup instructions, integrations, and troubleshooting."
+msgstr "Ya haɗa da umarnin saiti, haɗin kai da kuma gyara matsaloli."
+
+#: app/templates/admin/index.html:44
+msgid "⚠️ Admin Tips"
+msgstr "⚠️ Tukwici na Gudanarwa"
+
+#: app/templates/admin/index.html:46
+msgid "Ensure the data folder (database) is backed up on your host"
+msgstr ""
+"Tabbatar cewa folda ɗin bayanai (database) an yi ajiyar baƙin ciki a kan mai"
+" masaukinka"
+
+#: app/templates/admin/index.html:48
+msgid ""
+"The uploads folder is not per user.  If required per user, you will ndd to "
+"create subdirectoried per user and setup permissions so users can only see "
+"their own folder."
+msgstr ""
+"Akwa-kwasa ba kawai na mai amfani ba ne. Idan ana buƙatar akan kowane mai "
+"amfani, za ku ndd ku ƙirƙiri ƙananan manyan fayiloli kowane mai amfani "
+"sannan ku saita izini don masu amfani su iya ganin namu na su kawai."
+
+#: app/templates/admin/index.html:51
+msgid ""
+"To restore a backup: stop the container, replace the data/grylli.db with one"
+" from the backups folder, and restart the container."
+msgstr ""
+"Don dawo da madadin: dakatar da akwati, maye gurbin data/grylli.db da wanda "
+"ke daga manyan fayilolin madadin, sannan kuma sake kunna akwatin."
+
+#: app/templates/admin/list_backups.html:11
+msgid "Database Backups"
+msgstr "Madadin Database"
+
+#: app/templates/admin/list_backups.html:13
+msgid "Create Backup"
+msgstr "Ƙirƙiri Ajiyar Baya"
+
+#: app/templates/admin/list_backups.html:21
+msgid "Filename"
+msgstr "Sunan Fayil"
+
+#: app/templates/admin/list_backups.html:22
+#: app/templates/admin/partials/user_table.html:14
+#: app/templates/apprise/list_apprise.html:62
+#: app/templates/email/list_emails.html:60
+#: app/templates/messages/list_messages.html:60
+#: app/templates/reminders/list_reminders.html:60
+#: app/templates/user_smtp/list_smtp.html:59
+#: app/templates/webhook/list_webhooks.html:63
+msgid "Actions"
+msgstr "Ayyuka"
+
+#: app/templates/admin/list_backups.html:32
+msgid "Delete this backup?"
+msgstr "Share wannan madadin?"
+
+#: app/templates/admin/list_backups.html:32
+#: app/templates/apprise/list_apprise.html:95
+#: app/templates/apprise/list_apprise.html:99
+#: app/templates/apprise/list_apprise.html:150
+#: app/templates/apprise/list_apprise.html:154
+#: app/templates/email/list_emails.html:124
+#: app/templates/email/list_emails.html:128
+#: app/templates/email/list_emails.html:226
+#: app/templates/email/list_emails.html:230
+#: app/templates/messages/list_messages.html:112
+#: app/templates/messages/list_messages.html:116
+#: app/templates/messages/list_messages.html:198
+#: app/templates/messages/list_messages.html:202
+#: app/templates/reminders/list_reminders.html:107
+#: app/templates/reminders/list_reminders.html:113
+#: app/templates/reminders/list_reminders.html:192
+#: app/templates/reminders/list_reminders.html:198
+#: app/templates/user_smtp/list_smtp.html:101
+#: app/templates/user_smtp/list_smtp.html:169
+#: app/templates/webhook/list_webhooks.html:102
+#: app/templates/webhook/list_webhooks.html:161
+msgid "Delete"
+msgstr "Share"
+
+#: app/templates/admin/list_backups.html:41
+msgid "No backups found."
+msgstr "Babu sauran ajiyoyi da aka samu."
+
+#: app/templates/admin/list_backups.html:44
+msgid ""
+"Backups contain your full app data. Store securely. Sensitive data is "
+"encrypted in the DB by default."
+msgstr ""
+"Ajiyoyin baya suna ƙunsar dukkan bayanai na aikace-aikacenku. Ajiye a "
+"amintacce. An ɓoye mahimman bayanai a cikin DB ta tsoho."
+
+#: app/templates/admin/smtp_config.html:28
+#: app/templates/admin/system_config.html:22
+msgid "System Configuration"
+msgstr "Tsarin Tsari"
+
+#: app/templates/admin/smtp_config.html:33
+#: app/templates/admin/system_config.html:26
+#: app/templates/admin/system_settings.html:15
+msgid "Key"
+msgstr "Maɓalli"
+
+#: app/templates/admin/smtp_config.html:34
+#: app/templates/admin/system_config.html:27
+#: app/templates/admin/system_settings.html:16
+msgid "Value"
+msgstr "Kima"
+
+#: app/templates/admin/smtp_config.html:35
+#: app/templates/admin/system_config.html:28
+msgid "Sensitive"
+msgstr "Na sirri"
+
+#: app/templates/admin/smtp_config.html:36
+#: app/templates/admin/system_config.html:29
+msgid "Editable"
+msgstr "Mai gyarawa"
+
+#: app/templates/admin/smtp_config.html:50
+#: app/templates/admin/smtp_config.html:51
+#: app/templates/admin/system_config.html:45
+#: app/templates/admin/system_config.html:46
+#: app/templates/email/view_config.html:60
+msgid "Yes"
+msgstr "Ee"
+
+#: app/templates/admin/smtp_config.html:50
+#: app/templates/admin/smtp_config.html:51
+#: app/templates/admin/system_config.html:45
+#: app/templates/admin/system_config.html:46
+#: app/templates/email/view_config.html:60
+msgid "No"
+msgstr "A'a"
+
+#: app/templates/admin/smtp_config.html:63
+#: app/templates/admin/system_config.html:55
+msgid "Send Test Email"
+msgstr "Aika Wasikar Gwaji"
+
+#: app/templates/admin/system_config.html:39
+msgid "decrypted"
+msgstr "An ƙirƙira"
+
+#: app/templates/admin/partials/user_card.html:12
+msgid "Email:"
+msgstr "Imel:"
+
+#: app/templates/admin/partials/user_card.html:15
+msgid "Role:"
+msgstr "Matsayi:"
+
+#: app/templates/admin/partials/user_card.html:27
+#: app/templates/admin/partials/user_table.html:34
+msgid "Change Role"
+msgstr "Canza Matsayi"
+
+#: app/templates/admin/partials/user_card.html:29
+#: app/templates/admin/partials/user_table.html:36
+msgid "You cannot change your own role"
+msgstr "Ba za ku iya canza ikon kunnawa nawa ba."
+
+#: app/templates/admin/partials/user_card.html:36
+#: app/templates/admin/partials/user_table.html:43
+msgid "Are you sure you want to reset MFA for this user?"
+msgstr "Kuna tabbatar kuna son sake saita MFA don wannan mai amfani?"
+
+#: app/templates/admin/partials/user_card.html:39
+#: app/templates/admin/partials/user_table.html:46
+msgid "Reset MFA"
+msgstr "Sake Jima"
+
+#: app/templates/admin/partials/user_card.html:51
+#: app/templates/admin/partials/user_table.html:58
+msgid "Delete user"
+msgstr "Share mai amfani"
+
+#: app/templates/admin/partials/user_card.html:55
+#: app/templates/admin/partials/user_table.html:61
+msgid "Delete User"
+msgstr "Share Mai Amfani"
+
+#: app/templates/admin/partials/user_card.html:58
+#: app/templates/admin/partials/user_table.html:65
+msgid "You cannot disable yourself"
+msgstr "Ba za ka iya kashe kanka ba"
+
+#: app/templates/admin/partials/user_card.html:65
+#: app/templates/admin/partials/user_table.html:72
+msgid "Disable"
+msgstr "Kashe"
+
+#: app/templates/admin/partials/user_card.html:65
+#: app/templates/admin/partials/user_table.html:72
+msgid "Enable"
+msgstr "Kunna"
+
+#: app/templates/admin/partials/user_header.html:6
+#: app/templates/partials/admin_nav.html:47
+msgid "Users"
+msgstr "Masu amfani"
+
+#: app/templates/admin/partials/user_header.html:12
+#: app/templates/admin/partials/user_header.html:13
+#: app/templates/apprise/apprise_config.html:10
+#: app/templates/apprise/apprise_config.html:11
+#: app/templates/apprise/list_apprise.html:16
+#: app/templates/apprise/list_apprise.html:17
+#: app/templates/email/list_emails.html:15
+#: app/templates/email/list_emails.html:16
+#: app/templates/messages/list_messages.html:16
+#: app/templates/messages/list_messages.html:17
+#: app/templates/reminders/list_reminders.html:15
+#: app/templates/reminders/list_reminders.html:16
+#: app/templates/user_smtp/list_smtp.html:14
+#: app/templates/user_smtp/list_smtp.html:17
+#: app/templates/webhook/list_webhooks.html:16
+#: app/templates/webhook/list_webhooks.html:17
+#: app/templates/webhook/webhook_config.html:10
+#: app/templates/webhook/webhook_config.html:11
+msgid "Table View"
+msgstr "Ra'ayin Tebur"
+
+#: app/templates/admin/partials/user_header.html:26
+#: app/templates/admin/partials/user_header.html:27
+#: app/templates/apprise/apprise_config.html:24
+#: app/templates/apprise/apprise_config.html:25
+#: app/templates/apprise/list_apprise.html:30
+#: app/templates/apprise/list_apprise.html:31
+#: app/templates/email/list_emails.html:29
+#: app/templates/email/list_emails.html:30
+#: app/templates/messages/list_messages.html:30
+#: app/templates/messages/list_messages.html:31
+#: app/templates/reminders/list_reminders.html:29
+#: app/templates/reminders/list_reminders.html:30
+#: app/templates/user_smtp/list_smtp.html:27
+#: app/templates/user_smtp/list_smtp.html:30
+#: app/templates/webhook/list_webhooks.html:30
+#: app/templates/webhook/list_webhooks.html:31
+#: app/templates/webhook/webhook_config.html:24
+#: app/templates/webhook/webhook_config.html:25
+msgid "Card View"
+msgstr "Ra'ayin Katin"
+
+#: app/templates/admin/partials/user_header.html:45
+msgid "Add User"
+msgstr "Ƙara Mai Amfani"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:9
+#: app/templates/email/attach_files.html:54
+#: app/templates/email/list_emails.html:255
+#: app/templates/messages/list_messages.html:223
+#: app/templates/reminders/list_reminders.html:218
+#: app/templates/reminders/schedule_reminder.html:56
+msgid "Hide Instructions"
+msgstr "Boye Umarnin"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:9
+msgid "How to manage users"
+msgstr "Yadda ake sarrafa masu amfani"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "Click"
+msgstr "Danna"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+msgid "➕ Add User"
+msgstr "➕ Ƙara Mai Amfani"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+msgid "to open the new user form."
+msgstr "don buɗe sabon fom ɗin mai amfani."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:18
+msgid "Enter a unique username, valid email address, and strong password."
+msgstr ""
+"Shigar da sunan mai amfani mai mahimmanci, adireshin imel ɗin inganci, da "
+"ƙarin kalmar sirri."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "Select the appropriate"
+msgstr "Zaɓi daidai"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "role"
+msgstr "matsayi"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "or"
+msgstr "Tashar jiragen ruwa"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "to save."
+msgstr "don ajiye."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:25
+msgid "To edit a user, click ✏️ and update their info."
+msgstr "Don gyara mai amfani, danna ✏️ ka sabunta bayaninsu."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:26
+msgid "To delete a user, click 🗑️ and confirm the deletion."
+msgstr "Don share mai amfani, danna 🗑️ kuma tabbatar da shafewar."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:28
+msgid "To disable or enable a user, click 🔴 or 🟢."
+msgstr "Don kashe ko kunna mai amfani, danna 🔴 ko 🟢."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:30
+msgid "🟢 = User is enabled and can log in."
+msgstr "🟢 = Mai amfani yana kunnawa kuma zai iya shiga."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:31
+msgid "🔴 = User is disabled and cannot log in."
+msgstr "🔴 = An sake ba da hannu kuma ba zai iya shiga ba."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:32
+msgid "⚪ = You cannot disable your own account."
+msgstr "⚪ = Ba za ka iya sake kashe asusunka ba."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:43
+#: app/templates/admin/partials/user_table.html:91
+msgid "Assign Role for"
+msgstr "Sanya Wurare domin"
+
+#: app/templates/admin/partials/user_table.html:10
+msgid "ID"
+msgstr "ID"
+
+#: app/templates/admin/partials/user_table.html:11
+#: app/templates/user_smtp/list_smtp.html:55
+msgid "Username"
+msgstr "Sunan Mai Amfani"
+
+#: app/templates/admin/partials/user_table.html:12
+msgid "Email"
+msgstr "Imel"
+
+#: app/templates/admin/partials/user_table.html:13
+msgid "Role"
+msgstr "Matsayi"
+
+#: app/templates/apprise/apprise_config.html:3
+#: app/templates/apprise/list_apprise.html:9
+#: app/templates/messages/assign_destinations.html:22
+#: app/templates/reminders/assign_destinations.html:20
+msgid "Apprise Destinations"
+msgstr "Manufar Apprise"
+
+#: app/templates/apprise/apprise_config.html:43
+#: app/templates/webhook/list_webhooks.html:49
+#: app/templates/webhook/webhook_config.html:43
+msgid "Add Webhook"
+msgstr "Ƙara Webhook"
+
+#: app/templates/apprise/apprise_config.html:43
+#: app/templates/apprise/list_apprise.html:49
+#: app/templates/webhook/list_webhooks.html:49
+#: app/templates/webhook/webhook_config.html:43
+msgid "Add Destination"
+msgstr "Ƙara Makoma"
+
+#: app/templates/apprise/create_apprise.html:10
+msgid "Create Apprise Destination"
+msgstr "Ƙirƙiri Makoma Apprise"
+
+#: app/templates/apprise/create_apprise.html:38
+#: app/templates/apprise/edit_apprise.html:38
+#: app/templates/user_smtp/create_smtp.html:107
+#: app/templates/webhook/create_webhook.html:44
+#: app/templates/webhook/edit_webhook.html:44
+msgid "Create Destination"
+msgstr "Ƙirƙiri Makoma"
+
+#: app/templates/apprise/create_apprise.html:47
+#: app/templates/apprise/edit_apprise.html:47
+msgid "Need help with Apprise URLs? See the"
+msgstr "Kuna buƙatar taimako tare da URL na Apprise? Duba"
+
+#: app/templates/apprise/create_apprise.html:51
+#: app/templates/apprise/edit_apprise.html:51
+msgid "Apprise Notification Services documentation"
+msgstr "Takaddun Hidimar Sanarwa na Apprise"
+
+#: app/templates/apprise/edit_apprise.html:10
+msgid "Edit Apprise Destination"
+msgstr "Shirya Makoma Apprise"
+
+#: app/templates/apprise/list_apprise.html:49
+msgid "Add Apprise"
+msgstr "Ƙara Apprise"
+
+#: app/templates/apprise/list_apprise.html:58
+#: app/templates/email/edit_message.html:21
+#: app/templates/email/list_emails.html:56
+#: app/templates/email/view_config.html:14
+#: app/templates/messages/create_message.html:29
+#: app/templates/messages/edit_message.html:23
+#: app/templates/messages/list_messages.html:57
+#: app/templates/messages/view_message.html:14
+#: app/templates/reminders/create_reminder.html:23
+#: app/templates/reminders/edit_reminder.html:17
+#: app/templates/reminders/list_reminders.html:56
+#: app/templates/reminders/view_reminder.html:13
+#: app/templates/user_smtp/list_smtp.html:52
+#: app/templates/webhook/list_webhooks.html:58
+msgid "Label"
+msgstr "Suna"
+
+#: app/templates/apprise/list_apprise.html:59
+msgid "URL"
+msgstr "URL"
+
+#: app/templates/apprise/list_apprise.html:61
+#: app/templates/email/list_emails.html:59
+#: app/templates/messages/list_messages.html:59
+#: app/templates/messages/view_message.html:36
+#: app/templates/reminders/view_reminder.html:47
+#: app/templates/webhook/list_webhooks.html:62
+msgid "Created At"
+msgstr "An Halitta A"
+
+#: app/templates/apprise/list_apprise.html:77
+#: app/templates/apprise/list_apprise.html:132
+#: app/templates/user_smtp/list_smtp.html:79
+#: app/templates/user_smtp/list_smtp.html:147
+#: app/templates/webhook/list_webhooks.html:79
+#: app/templates/webhook/list_webhooks.html:138
+msgid "Edit"
+msgstr "Shirya"
+
+#: app/templates/apprise/list_apprise.html:80
+#: app/templates/apprise/list_apprise.html:135
+#: app/templates/user_smtp/list_smtp.html:82
+#: app/templates/user_smtp/list_smtp.html:150
+msgid "Cannot edit while in use"
+msgstr "Ḣnu-uw hí káubu'un iwaba🌐"
+
+#: app/templates/apprise/list_apprise.html:88
+#: app/templates/apprise/list_apprise.html:143
+#: app/templates/webhook/list_webhooks.html:91
+#: app/templates/webhook/list_webhooks.html:150
+msgid "Test"
+msgstr "Gwajewa"
+
+#: app/templates/apprise/list_apprise.html:103
+#: app/templates/apprise/list_apprise.html:158
+#: app/templates/user_smtp/list_smtp.html:106
+#: app/templates/user_smtp/list_smtp.html:174
+msgid "Cannot delete while in use"
+msgstr "Cannot delete while in use"
+
+#: app/templates/apprise/list_apprise.html:119
+msgid "URL:"
+msgstr "URL:"
+
+#: app/templates/apprise/list_apprise.html:122
+#: app/templates/user_smtp/list_smtp.html:137
+#: app/templates/webhook/list_webhooks.html:128
+msgid "Enabled:"
+msgstr "An kunna:"
+
+#: app/templates/apprise/list_apprise.html:125
+#: app/templates/user_smtp/list_smtp.html:140
+#: app/templates/webhook/list_webhooks.html:131
+msgid "Created:"
+msgstr "An kirkiro:"
+
+#: app/templates/auth/bootstrap.html:14
+msgid "Create Admin Account"
+msgstr "Ƙirƙiri Asusun Admin"
+
+#: app/templates/auth/bootstrap.html:16
+msgid "Let’s get started by creating your first admin account."
+msgstr "Bari mu fara da ƙirƙirar asusun admin dinku na farko."
+
+#: app/templates/auth/bootstrap.html:75
+msgid "Create Admin"
+msgstr "Ƙirƙiri Admin"
+
+#: app/templates/auth/forgot_password.html:12
+msgid "Forgot Password"
+msgstr "Manta Kalmar Shiga"
+
+#: app/templates/auth/forgot_password.html:15
+msgid ""
+"Enter your username and email. We'll send you a link to reset your password."
+msgstr ""
+"Shigar da sunan mai amfani da imel ɗinku. Za mu aika muku da hanyar haɗi don"
+" sake saita kalmar wucewa."
+
+#: app/templates/auth/forgot_username.html:12
+msgid "Forgot Username"
+msgstr "Manta Suna Mai Amfani"
+
+#: app/templates/auth/forgot_username.html:15
+msgid "Enter your email address, and we'll send you your username."
+msgstr ""
+"Shigar da adireshin imel ɗinku, za mu aiko muku da sunan mai amfani da ku."
+
+#: app/templates/auth/forgot_username.html:40
+msgid "Send Username"
+msgstr "Aika Suna Mai Amfani"
+
+#: app/templates/auth/login.html:12 app/templates/auth/login.html:54
+msgid "Log In"
+msgstr "Shiga"
+
+#: app/templates/auth/login.html:62
+msgid "Forgot Username?"
+msgstr "Manta Suna Mai Amfani?"
+
+#: app/templates/auth/login.html:64
+msgid "Forgot Password?"
+msgstr "Manta Kalmar Shiga?"
+
+#: app/templates/auth/login.html:66 app/templates/auth/signup.html:12
+msgid "Sign Up"
+msgstr "Yi Rijista"
+
+#: app/templates/auth/rate_limit.html:9
+msgid "Hold On"
+msgstr "Ku jira"
+
+#: app/templates/auth/rate_limit.html:11
+msgid "Too many failed login attempts. Please wait"
+msgstr "Yawon shigar da sunan mai amfani da yawa suka kasa. Don Allah jira"
+
+#: app/templates/auth/rate_limit.html:13
+msgid "seconds..."
+msgstr "darakiku..."
+
+#: app/templates/auth/rate_limit.html:15
+msgid "Redirecting to login..."
+msgstr "Koma zuwa Dashboard"
+
+#: app/templates/auth/reset_password.html:12
+#: app/templates/auth/reset_password.html:116
+msgid "Reset Password"
+msgstr "Sake Jima"
+
+#: app/templates/auth/reset_password.html:14
+msgid "Enter your username, email, and new password."
+msgstr "Shiga sunan ku, imel, da sabon kalmar shiga."
+
+#: app/templates/auth/signup.html:14
+msgid "Fill out the form to create your account."
+msgstr "Cika fam din don ƙirƙirar asusun ku."
+
+#: app/templates/checkin/already_checked_in.html:10
+msgid "Already Checked In"
+msgstr "Duba ciki na ƙarshe"
+
+#: app/templates/checkin/already_checked_in.html:12
+msgid ""
+"You have already checked in for this item. No further action is needed at "
+"this time."
+msgstr ""
+"Ka riga ka yi rajista don wannan abin. Babu sauran aikin da ake bukata a "
+"wannan lokacin."
+
+#: app/templates/checkin/already_checked_in.html:16
+#: app/templates/checkin/disabled.html:16
+#: app/templates/checkin/executed_disabled.html:18
+msgid "Check-in for:"
+msgstr "An bincika a cikin:"
+
+#: app/templates/checkin/already_checked_in.html:21
+#: app/templates/checkin/disabled.html:21
+#: app/templates/checkin/executed_disabled.html:23
+#: app/templates/checkin/thank_you.html:19
+msgid "Return to Dashboard"
+msgstr "Koma zuwa Dashboard"
+
+#: app/templates/checkin/disabled.html:10
+msgid "Check-In Disabled"
+msgstr "Imel an kashe"
+
+#: app/templates/checkin/disabled.html:12
+msgid "This check-in is currently disabled and cannot be completed."
+msgstr "Wannan rajistar a halin yanzu an katange kuma ba za a iya kammala ba."
+
+#: app/templates/checkin/executed_disabled.html:11
+msgid "Already Executed & Disabled"
+msgstr "An riga An aiwatar & An katange"
+
+#: app/templates/checkin/executed_disabled.html:14
+msgid ""
+"This check-in has already been executed and is now disabled. No further "
+"action is required."
+msgstr ""
+"Wannan rajistar tuni an aiwatar da ita yanzu kuma an katange. Babu sauran "
+"aikin da ake bukata."
+
+#: app/templates/checkin/thank_you.html:10
+msgid "Check-In Successful"
+msgstr "Binciken Nasara"
+
+#: app/templates/checkin/thank_you.html:11
+msgid "Thank you for checking in."
+msgstr "Na gode da samun shiga."
+
+#: app/templates/checkin/thank_you.html:14
+msgid "Checked in for:"
+msgstr "An bincika a cikin:"
+
+#: app/templates/email/assign_smtp.html:11
+msgid "📧 Assign SMTP Config to:"
+msgstr "📧 Sanya SMTP Config zuwa:"
+
+#: app/templates/email/assign_smtp.html:25
+msgid "No SMTP (Unassign)"
+msgstr "Babu wani tsarin SMTP da aka sanya"
+
+#: app/templates/email/assign_smtp.html:26
+msgid "This email will not use any SMTP configuration."
+msgstr "Wannan imel ba zai yi amfani da kowane tsari na SMTP ba."
+
+#: app/templates/email/attach_files.html:12
+msgid "Attach Files for:"
+msgstr "Makala Fayiloli don:"
+
+#: app/templates/email/attach_files.html:21
+msgid "Available Files"
+msgstr "Fayilolin da ake da su"
+
+#: app/templates/email/attach_files.html:36
+msgid "No files found in the upload directory."
+msgstr "Babu fayiloli da aka samu a cikin anzomulment directory."
+
+#: app/templates/email/attach_files.html:44
+msgid "Save Attachments"
+msgstr "Ajiye Makalai"
+
+#: app/templates/email/attach_files.html:54
+msgid "File Attach Notes"
+msgstr "Rubuta Lahadin Fayil"
+
+#: app/templates/email/attach_files.html:63
+msgid "Important:"
+msgstr "Tashar jiragen ruwa:"
+
+#: app/templates/email/attach_files.html:65
+msgid ""
+"Only files that are present in the 'uploads' folder (provided by your system"
+" administrator) will be shown here. If you do not see your file(s), please "
+"contact your Grylli administrator."
+msgstr ""
+"Kawai fayiloli da suke cikin babban fayil ɗin 'uploads' (samar da admin na "
+"tsarin ku) za a nuna su a nan. Idan ba ku ga fayilinku (s), da fatan za a "
+"tuntuɓi admin na Grylli."
+
+#: app/templates/email/attach_files.html:69
+msgid "Accepted file types:"
+msgstr "Nau'ikan fayil da aka karba:"
+
+#: app/templates/email/attach_files.html:71
+msgid "Documents:"
+msgstr "Takardu:"
+
+#: app/templates/email/attach_files.html:73
+msgid "Images:"
+msgstr "Hotuna:"
+
+#: app/templates/email/attach_files.html:75
+msgid "Audio:"
+msgstr "Audio:"
+
+#: app/templates/email/attach_files.html:79
+msgid "Maximum file size:"
+msgstr "Matsakaicin girman fayil:"
+
+#: app/templates/email/attach_files.html:80
+msgid "10 MB per file"
+msgstr "10 MB a kowane fayil"
+
+#: app/templates/email/attach_files.html:83
+msgid "Total upload size:"
+msgstr "Jimlar girman loda:"
+
+#: app/templates/email/attach_files.html:84
+msgid "20 MB (all files combined)"
+msgstr "20 MB (duk fayiloli an haɗa su)"
+
+#: app/templates/email/edit_message.html:12
+#: app/templates/email/list_emails.html:75
+#: app/templates/email/list_emails.html:177
+msgid "Edit Email"
+msgstr "Shirya Imel"
+
+#: app/templates/email/edit_message.html:12
+msgid "Create Email"
+msgstr "Ƙirƙirar Imel"
+
+#: app/templates/email/edit_message.html:28
+msgid "To (Recipient Email)"
+msgstr "Zu (Imel ɗin Mai Karɓa)"
+
+#: app/templates/email/edit_message.html:35
+#: app/templates/email/list_emails.html:57
+#: app/templates/email/view_config.html:18
+#: app/templates/messages/create_message.html:36
+#: app/templates/messages/edit_message.html:30
+#: app/templates/messages/list_messages.html:58
+#: app/templates/messages/view_message.html:18
+#: app/templates/reminders/create_reminder.html:30
+#: app/templates/reminders/edit_reminder.html:24
+#: app/templates/reminders/list_reminders.html:57
+#: app/templates/reminders/view_reminder.html:17
+msgid "Subject"
+msgstr "Jigo"
+
+#: app/templates/email/edit_message.html:42
+#: app/templates/email/view_config.html:28
+msgid "Body"
+msgstr "Jiki"
+
+#: app/templates/email/edit_message.html:50
+msgid "Save Email"
+msgstr "Ajiye Imel"
+
+#: app/templates/email/list_emails.html:48
+msgid "Add Email"
+msgstr "Ƙara Imel"
+
+#: app/templates/email/list_emails.html:58
+#: app/templates/reminders/assign_email_reminder.html:77
+msgid "To"
+msgstr "Zu"
+
+#: app/templates/email/list_emails.html:78
+#: app/templates/email/list_emails.html:180
+msgid "Disable to edit email"
+msgstr "An kasa aika imel ɗin gwaji:"
+
+#: app/templates/email/list_emails.html:84
+#: app/templates/email/list_emails.html:186
+msgid "Attach Files"
+msgstr "Makalai Makalai"
+
+#: app/templates/email/list_emails.html:87
+#: app/templates/email/list_emails.html:189
+msgid "Disable to attach files"
+msgstr "Makalai Makalai"
+
+#: app/templates/email/list_emails.html:93
+#: app/templates/email/list_emails.html:195
+msgid "Attach SMTP Config"
+msgstr "Haɗa SMTP Config"
+
+#: app/templates/email/list_emails.html:96
+#: app/templates/email/list_emails.html:198
+msgid "Disable to assign SMTP"
+msgstr "Kashe don nadawa SMTP"
+
+#: app/templates/email/list_emails.html:102
+#: app/templates/email/list_emails.html:204
+msgid "Schedule Check-In"
+msgstr "Jadawalin Bincike"
+
+#: app/templates/email/list_emails.html:105
+#: app/templates/email/list_emails.html:207
+msgid "Disable to schedule check-in"
+msgstr "Jadawalin Bincike"
+
+#: app/templates/email/list_emails.html:110
+#: app/templates/email/list_emails.html:212
+#: app/templates/messages/list_messages.html:99
+#: app/templates/messages/list_messages.html:184
+#: app/templates/reminders/list_reminders.html:93
+#: app/templates/reminders/list_reminders.html:178
+msgid "View Details"
+msgstr "Duba Cikakkun bayanai"
+
+#: app/templates/email/list_emails.html:118
+#: app/templates/email/list_emails.html:220
+msgid "Send this email to yourself to preview it."
+msgstr "Aika wannan imel zuwa kanka don ganin shi."
+
+#: app/templates/email/list_emails.html:136
+#: app/templates/email/list_emails.html:238
+msgid "Toggle Email On/Off"
+msgstr "Juyawa Imel A/Kashe"
+
+#: app/templates/email/list_emails.html:139
+#: app/templates/email/list_emails.html:241
+msgid "Email is enabled"
+msgstr "Imel an kunna"
+
+#: app/templates/email/list_emails.html:141
+#: app/templates/email/list_emails.html:243
+msgid "Email is disabled"
+msgstr "Imel an kashe"
+
+#: app/templates/email/list_emails.html:157
+#: app/templates/email/view_config.html:51
+#: app/templates/messages/list_messages.html:142
+#: app/templates/reminders/list_reminders.html:140
+msgid "Label:"
+msgstr "Suna:"
+
+#: app/templates/email/list_emails.html:161
+#: app/templates/messages/list_messages.html:146
+#: app/templates/reminders/list_reminders.html:144
+#: app/templates/reminders/view_reminder.html:98
+msgid "Subject:"
+msgstr "Jigo"
+
+#: app/templates/email/list_emails.html:165
+msgid "To:"
+msgstr "Zuwwa:"
+
+#: app/templates/email/list_emails.html:169
+#: app/templates/messages/list_messages.html:150
+msgid "Created At:"
+msgstr "An Halitta A"
+
+#: app/templates/email/list_emails.html:255
+msgid "How to create and send an email"
+msgstr "Yadda za a ƙirƙira da aika imel"
+
+#: app/templates/email/list_emails.html:262
+msgid ""
+"Click “Add Email” and fill out the subject, content, and recipient address."
+msgstr "Danna “Add Email” kuma cike taken, abun ciki, da adireshin mai karɓa."
+
+#: app/templates/email/list_emails.html:263
+msgid "Attach any optional files (if needed)."
+msgstr "Hada duk wani fayil na zaɓi (idan an buƙata)."
+
+#: app/templates/email/list_emails.html:264
+msgid ""
+"Click 🧩 to assign a single SMTP configuration that will be used to send the "
+"email."
+msgstr ""
+"Danna 🧩 don sanya wani ƙarfin SMTP guda ɗaya da za a yi amfani da shi don "
+"aika imel."
+
+#: app/templates/email/list_emails.html:265
+msgid "Click ⏱️ to set a check-in interval and grace period for the email."
+msgstr "Danna ⏱️ don saita tafiyar lokaci da tsawon lokaci ga imel."
+
+#: app/templates/email/list_emails.html:266
+msgid "Enable the email using the 🔴/🟢 toggle button."
+msgstr "Kunna imel ɗin ta amfani da maɓallin canji 🔴/🟢."
+
+#: app/templates/email/list_emails.html:267
+msgid ""
+"Click 🧪 to test the email by sending it to yourself (not the recipient)."
+msgstr ""
+"Danna 🧪 don gwada imel ɗin ta hanyar aika shi zuwa wajanka (ba mai karɓa "
+"ba)."
+
+#: app/templates/email/list_emails.html:268
+msgid ""
+"If you don’t check in before the grace period ends, the email will be "
+"automatically sent."
+msgstr ""
+"Idan ba ku duba kafin lokutan taƙaita ya ƙare ba, imel ɗin za a aika ta "
+"atomatik."
+
+#: app/templates/email/list_emails.html:269
+msgid "You can preview the email configuration using 🔍."
+msgstr "Kuna iya duba tsarawar imel ta amfani da 🔍."
+
+#: app/templates/email/list_emails.html:270
+msgid "Once a secure email is sent, it will be automatically disabled."
+msgstr "Da zarar an aika da imel mai aminci, za a musanya ta atomatik."
+
+#: app/templates/email/schedule_email.html:9
+msgid "Schedule Email"
+msgstr "Jadawalin Imel"
+
+#: app/templates/email/schedule_email.html:18
+#: app/templates/messages/schedule_message.html:18
+msgid "Years"
+msgstr "Shekaru"
+
+#: app/templates/email/schedule_email.html:19
+#: app/templates/messages/schedule_message.html:19
+msgid "Months"
+msgstr "Wata-wata"
+
+#: app/templates/email/schedule_email.html:20
+#: app/templates/messages/schedule_message.html:20
+msgid "Weeks"
+msgstr "Mako-mako"
+
+#: app/templates/email/schedule_email.html:21
+#: app/templates/messages/schedule_message.html:21
+msgid "Days"
+msgstr "Rana"
+
+#: app/templates/email/schedule_email.html:22
+#: app/templates/messages/schedule_message.html:22
+msgid "Hours"
+msgstr "Awanni"
+
+#: app/templates/email/schedule_email.html:23
+#: app/templates/messages/schedule_message.html:23
+msgid "Minutes"
+msgstr "Minti"
+
+#: app/templates/email/schedule_email.html:28
+#: app/templates/messages/schedule_message.html:28
+msgid "Check-in"
+msgstr "Duba cikin ciki"
+
+#: app/templates/email/schedule_email.html:51
+#: app/templates/messages/schedule_message.html:51
+#: app/templates/messages/view_message.html:26
+msgid "Grace Period"
+msgstr "Ťaƙaitan Lokaci"
+
+#: app/templates/email/schedule_email.html:80
+#: app/templates/messages/schedule_message.html:80
+#: app/templates/reminders/schedule_reminder.html:47
+msgid "Save Schedule"
+msgstr "Ajiye Tsari"
+
+#: app/templates/email/view_config.html:9
+msgid "Email Configuration"
+msgstr "Tsarin Imel"
+
+#: app/templates/email/view_config.html:22
+msgid "Recipient"
+msgstr "Mai Karɓa"
+
+#: app/templates/email/view_config.html:33
+msgid "Attached Files"
+msgstr "Fayilolin Da Aka Hada"
+
+#: app/templates/email/view_config.html:39
+msgid "No files attached"
+msgstr "Babu fayilolin da aka hade"
+
+#: app/templates/email/view_config.html:46
+#: app/templates/reminders/assign_email_reminder.html:20
+msgid "SMTP Configuration"
+msgstr "Tsarin SMTP"
+
+#: app/templates/email/view_config.html:54
+#: app/templates/user_smtp/list_smtp.html:122
+msgid "Host:"
+msgstr "Umarni:"
+
+#: app/templates/email/view_config.html:57
+#: app/templates/user_smtp/list_smtp.html:128
+msgid "Username:"
+msgstr "Sunan mai amfani:"
+
+#: app/templates/email/view_config.html:60
+#: app/templates/user_smtp/list_smtp.html:134
+msgid "TLS:"
+msgstr "TLS:"
+
+#: app/templates/email/view_config.html:64
+msgid "No SMTP configuration assigned"
+msgstr "Babu wani tsarin SMTP da aka sanya"
+
+#: app/templates/email/view_config.html:69
+msgid "Schedule Information"
+msgstr "Bayani Kan Taƙama"
+
+#: app/templates/email/view_config.html:72
+msgid "Check-in Interval:"
+msgstr "Yanayin Dubawa:"
+
+#: app/templates/email/view_config.html:72
+#: app/templates/email/view_config.html:75
+msgid "minutes"
+msgstr "minti"
+
+#: app/templates/email/view_config.html:75
+msgid "Grace Period:"
+msgstr "Ťaƙaitan Lokaci:"
+
+#: app/templates/email/view_config.html:79
+msgid "Last Check-in:"
+msgstr "Aƙalla Duba Cikin ciki:"
+
+#: app/templates/email/view_config.html:82
+msgid "No check-in has occurred yet"
+msgstr "Babu wata dubawa da ta faru a yanzu"
+
+#: app/templates/email/view_config.html:92
+msgid "Back to Emails"
+msgstr "Komawa Ga Imel"
+
+#: app/templates/errors/500.html:4
+msgid "Something went wrong"
+msgstr "Wani abu ya gaza"
+
+#: app/templates/errors/500.html:6
+msgid ""
+"An unexpected error occurred. Please try again later or contact support."
+msgstr ""
+"Wani kuskure mara tsammani ya faru. Da fatan za a sake gwadawa daga baya ko "
+"a tuntuɓi tallafi."
+
+#: app/templates/locale/redirect_after_lang_set.html:15
+msgid "Switching Language..."
+msgstr "Sauya Harshen..."
+
+#: app/templates/locale/redirect_after_lang_set.html:18
+msgid "Applying new language..."
+msgstr "Aikace sabuwar harshe..."
+
+#: app/templates/messages/assign_destinations.html:13
+#: app/templates/reminders/assign_destinations.html:12
+msgid "Assign Destinations for"
+msgstr "Sanya Wurare domin"
+
+#: app/templates/messages/assign_destinations.html:62
+#: app/templates/reminders/assign_destinations.html:60
+msgid "Save Destinations"
+msgstr "Ajiye Wurare"
+
+#: app/templates/messages/create_message.html:17
+msgid "Edit Notificaton"
+msgstr "Gyara Sanarwa"
+
+#: app/templates/messages/create_message.html:19
+msgid "Create Notification"
+msgstr "Ƙirƙiri Sanarwa"
+
+#: app/templates/messages/create_message.html:43
+#: app/templates/messages/edit_message.html:37
+#: app/templates/messages/view_message.html:42
+#: app/templates/reminders/create_reminder.html:37
+#: app/templates/reminders/edit_reminder.html:31
+#: app/templates/reminders/view_reminder.html:53
+msgid "Content"
+msgstr "Abun ciki"
+
+#: app/templates/messages/create_message.html:51
+msgid "Save Notification"
+msgstr "Ajiye Sanarwa"
+
+#: app/templates/messages/edit_message.html:15
+#: app/templates/messages/list_messages.html:74
+#: app/templates/messages/list_messages.html:158
+msgid "Edit Notification"
+msgstr "Gyara Sanarwa"
+
+#: app/templates/messages/edit_message.html:45
+msgid "Update Notification"
+msgstr "Sabunta Sanarwa"
+
+#: app/templates/messages/list_messages.html:49
+msgid "Add Notification"
+msgstr "Ƙara Sanarwa"
+
+#: app/templates/messages/list_messages.html:77
+#: app/templates/messages/list_messages.html:161
+msgid "Disable to edit notification"
+msgstr "Gyara Sanarwa"
+
+#: app/templates/messages/list_messages.html:83
+#: app/templates/messages/list_messages.html:167
+#: app/templates/reminders/list_reminders.html:78
+#: app/templates/reminders/list_reminders.html:163
+msgid "Assign Destinations"
+msgstr "Sanya Wurare"
+
+#: app/templates/messages/list_messages.html:86
+#: app/templates/messages/list_messages.html:170
+msgid "Disable to assign destinations"
+msgstr "Sanya Wurare"
+
+#: app/templates/messages/list_messages.html:92
+#: app/templates/messages/list_messages.html:176
+#: app/templates/reminders/list_reminders.html:88
+#: app/templates/reminders/list_reminders.html:173
+msgid "Set Schedule"
+msgstr "Saita Jadawali"
+
+#: app/templates/messages/list_messages.html:95
+#: app/templates/messages/list_messages.html:179
+msgid "Disable to set schedule"
+msgstr "Saita Jadawali"
+
+#: app/templates/messages/list_messages.html:107
+#: app/templates/messages/list_messages.html:192
+msgid "Send Test Notification"
+msgstr "Gyara Sanarwa"
+
+#: app/templates/messages/list_messages.html:122
+#: app/templates/messages/list_messages.html:209
+msgid "Toggle Message On/Off"
+msgstr "Canja Sako A/Kashe"
+
+#: app/templates/messages/list_messages.html:124
+#: app/templates/messages/list_messages.html:211
+msgid "Notification is enabled"
+msgstr "Sanarwa tana kunne"
+
+#: app/templates/messages/list_messages.html:126
+#: app/templates/messages/list_messages.html:213
+msgid "Notification is disabled"
+msgstr "Sanarwa an kashe"
+
+#: app/templates/messages/list_messages.html:223
+msgid "How to create and send a notification"
+msgstr "Yadda ake ƙirƙira da aika sanarwa"
+
+#: app/templates/messages/list_messages.html:233
+msgid "Click “Add notification” and fill out the subject and content fields."
+msgstr "Danna “Ƙara sanarwa” kuma cike filayen maudu'i da abun ciki."
+
+#: app/templates/messages/list_messages.html:234
+msgid "Save the notification to return to the overview."
+msgstr "Ajiye sanarwar don komawa ga dubawa."
+
+#: app/templates/messages/list_messages.html:235
+msgid "You need to create at least one apprise or webhook destination."
+msgstr "Kana bukatar ƙirƙira aƙalla wurin manaji ko adireshin webhook guda."
+
+#: app/templates/messages/list_messages.html:236
+msgid "You can create as many destinations as you like."
+msgstr "Zaka iya ƙirƙira wurare da dama yadda kake so."
+
+#: app/templates/messages/list_messages.html:237
+msgid "Click 🧩 to assign one or more Apprise and/or Webhook destinations."
+msgstr "Danna 🧩 don sanya ɗaya ko fiye na wuraren Apprise da/ko Webhook."
+
+#: app/templates/messages/list_messages.html:238
+msgid "Click ⏱️ to set a schedule and check-in interval."
+msgstr "Danna ⏱️ don saita jadawali da tazara na duba ciki."
+
+#: app/templates/messages/list_messages.html:239
+msgid "Enable the notification using the 🔴/🟢 toggle button."
+msgstr "A kunna sanarwar ta amfani da 🔴/🟢 maballin canji."
+
+#: app/templates/messages/list_messages.html:240
+msgid ""
+"If you don’t check in before the grace period ends, the notification will be"
+" sent."
+msgstr ""
+"Idan ba ka duba ciki kafin lokacin halin tausayi ya kare ba, sanarwar za ta "
+"tura."
+
+#: app/templates/messages/list_messages.html:241
+msgid "You can preview the notification config using 🔍."
+msgstr "Zaka iya duba tsarin sanarwa ta amfani da 🔍."
+
+#: app/templates/messages/list_messages.html:242
+msgid "Once a notification is sent, it will be automatically disabled."
+msgstr "Da zarar an tura sanarwa, za a kashe ta ta atomatik."
+
+#: app/templates/messages/schedule_message.html:9
+msgid "Schedule Message"
+msgstr "Jadawalin Sako"
+
+#: app/templates/messages/view_message.html:9
+msgid "Notifications Details"
+msgstr "Cikakken Sanarwa"
+
+#: app/templates/messages/view_message.html:22
+msgid "Check-in Interval"
+msgstr "Tazara duba ciki"
+
+#: app/templates/messages/view_message.html:31
+msgid "Last Check-in"
+msgstr "Duba ciki na ƙarshe"
+
+#: app/templates/messages/view_message.html:48
+#: app/templates/reminders/view_reminder.html:59
+msgid "Apprise URLs"
+msgstr "URL na Apprise"
+
+#: app/templates/messages/view_message.html:54
+#: app/templates/messages/view_message.html:64
+#: app/templates/reminders/view_reminder.html:65
+#: app/templates/reminders/view_reminder.html:75
+#: app/templates/reminders/view_reminder.html:85
+msgid "None assigned."
+msgstr "Babu da aka sanya."
+
+#: app/templates/messages/view_message.html:73
+msgid "Back to Notifications"
+msgstr "Komawa zuwa Sanarwa"
+
+#: app/templates/mfa/challenge.html:5 app/templates/mfa/settings.html:5
+msgid "Two-Factor Authentication (MFA)"
+msgstr "Tantanin Biyu (MFA)"
+
+#: app/templates/mfa/recovery_codes.html:4
+msgid "Your Recovery Codes"
+msgstr "Lambobin Farfadowa na ku"
+
+#: app/templates/mfa/recovery_codes.html:7
+msgid "Save these recovery codes in a safe place!"
+msgstr "Ajiye waɗannan lambobin farfadowa a wuri mai aminci!"
+
+#: app/templates/mfa/recovery_codes.html:10
+msgid ""
+"Each code can be used once if you lose access to your authenticator. These "
+"codes will not be shown again."
+msgstr ""
+"Kowane lamba za'a iya amfani dashi sau ɗaya idan kun rasa damar zuwa "
+"mahimman tantanin ku. Waɗannan lambobin ba za'a nuna su ba sake."
+
+#: app/templates/mfa/recovery_codes.html:24
+msgid "OK, I've saved them"
+msgstr "OK, na adana su"
+
+#: app/templates/mfa/settings.html:12
+msgid "MFA QR Code"
+msgstr "MFA QR Code"
+
+#: app/templates/mfa/settings.html:15
+msgid "Manual Entry:"
+msgstr "Shiga da hannu:"
+
+#: app/templates/partials/admin_nav.html:21
+msgid "Administration"
+msgstr "Gudanarwa"
+
+#: app/templates/partials/admin_nav.html:37
+#: app/templates/partials/shared_nav.html:34
+#: app/templates/partials/shared_nav.html:78
+#: app/templates/partials/shared_nav.html:117
+msgid "Overview"
+msgstr "Bayani"
+
+#: app/templates/partials/footer.html:7
+msgid "Toggle Theme"
+msgstr "Cambiar Tema"
+
+#: app/templates/partials/footer.html:32
+msgid "Theme"
+msgstr "Tema"
+
+#: app/templates/partials/head.html:7
+msgid "Grylli"
+msgstr "Grylli"
+
+#: app/templates/partials/header.html:6 app/templates/partials/sidebar.html:32
+#: app/templates/partials/sidebar.html:66
+msgid "Home"
+msgstr "Gida"
+
+#: app/templates/partials/header.html:55
+msgid "Account"
+msgstr "Asusu"
+
+#: app/templates/partials/header.html:61
+msgid "MFA"
+msgstr "MFA"
+
+#: app/templates/partials/header.html:67
+msgid "About"
+msgstr "Game da"
+
+#: app/templates/partials/header.html:73
+msgid "Privacy"
+msgstr "Quyền riêng tư"
+
+#: app/templates/partials/header.html:79
+msgid "System Info"
+msgstr "Bayani na Tsari"
+
+#: app/templates/partials/header.html:114
+msgid "Logout"
+msgstr "Fita"
+
+#: app/templates/partials/shared_nav.html:33
+msgid "Overview of notification settings"
+msgstr "Visión general de la configuración de notificaciones"
+
+#: app/templates/partials/shared_nav.html:38
+msgid "Configure Apprise services"
+msgstr "Configurar servicios de Apprise"
+
+#: app/templates/partials/shared_nav.html:39
+msgid "Apprise"
+msgstr "Apprise"
+
+#: app/templates/partials/shared_nav.html:43
+msgid "Configure Webhook integrations"
+msgstr "Configurar integraciones de Webhook"
+
+#: app/templates/partials/shared_nav.html:77
+msgid "Overview of secure email messages"
+msgstr "Visión general de mensajes de correo electrónico seguros"
+
+#: app/templates/partials/shared_nav.html:82
+msgid "Configure SMTP email settings"
+msgstr "Configurar configuraciones de correo SMTP"
+
+#: app/templates/partials/shared_nav.html:83
+#: app/templates/reminders/view_reminder.html:79
+msgid "SMTP"
+msgstr "SMTP"
+
+#: app/templates/partials/shared_nav.html:100
+#: app/templates/reminders/list_reminders.html:8
+msgid "Reminders"
+msgstr "minti"
+
+#: app/templates/partials/shared_nav.html:116
+msgid "Overview of reminders"
+msgstr "Bayani na tunatarwa"
+
+#: app/templates/partials/sidebar.html:13
+#: app/templates/partials/sidebar.html:47
+msgid "Menu"
+msgstr "Menu"
+
+#: app/templates/reminders/assign_email_reminder.html:12
+msgid "Link Email Reminder for"
+msgstr "Haɗa Email Tunatarwa don"
+
+#: app/templates/reminders/assign_email_reminder.html:30
+#: app/templates/reminders/assign_email_reminder.html:64
+msgid "None (Unassign)"
+msgstr "Babu wani tsarin SMTP da aka sanya"
+
+#: app/templates/reminders/assign_email_reminder.html:43
+msgid "No sender address"
+msgstr "Babu adireshin mai aika"
+
+#: app/templates/reminders/assign_email_reminder.html:54
+msgid "Email Message"
+msgstr "Jadawalin Sako"
+
+#: app/templates/reminders/assign_email_reminder.html:77
+msgid "No subject"
+msgstr "Jigo"
+
+#: app/templates/reminders/assign_email_reminder.html:90
+msgid "Save Email Reminder"
+msgstr "Ajiye Imel"
+
+#: app/templates/reminders/create_reminder.html:12
+#: app/templates/reminders/edit_reminder.html:10
+#: app/templates/reminders/list_reminders.html:73
+#: app/templates/reminders/list_reminders.html:158
+msgid "Edit Reminder"
+msgstr "Shirya Imel"
+
+#: app/templates/reminders/create_reminder.html:14
+msgid "Create Reminder"
+msgstr "Ƙirƙirar Imel"
+
+#: app/templates/reminders/create_reminder.html:45
+msgid "Save Reminder"
+msgstr "Ajiye Imel"
+
+#: app/templates/reminders/edit_reminder.html:39
+msgid "Update Reminder"
+msgstr "Sake Sabunta Tunatarwa"
+
+#: app/templates/reminders/list_reminders.html:48
+msgid "Add Reminder"
+msgstr "Ƙara Imel"
+
+#: app/templates/reminders/list_reminders.html:58
+#: app/templates/reminders/view_reminder.html:21
+msgid "Start At"
+msgstr "Fara TLS"
+
+#: app/templates/reminders/list_reminders.html:59
+msgid "Recurrence"
+msgstr "Maigirka"
+
+#: app/templates/reminders/list_reminders.html:69
+#: app/templates/reminders/list_reminders.html:153
+#: app/templates/reminders/view_reminder.html:26
+msgid "One-time"
+msgstr "Sau daya kawai"
+
+#: app/templates/reminders/list_reminders.html:83
+msgid "Assign Email Reminder"
+msgstr "Sanya Email Tunatarwa"
+
+#: app/templates/reminders/list_reminders.html:102
+#: app/templates/reminders/list_reminders.html:187
+msgid "Send Test Reminder"
+msgstr "Aika Wasikar Gwaji"
+
+#: app/templates/reminders/list_reminders.html:120
+#: app/templates/reminders/list_reminders.html:205
+msgid "Toggle Reminder On/Off"
+msgstr "Juyawa Imel A/Kashe"
+
+#: app/templates/reminders/list_reminders.html:122
+#: app/templates/reminders/list_reminders.html:207
+msgid "Reminder is enabled"
+msgstr "Imel an kunna"
+
+#: app/templates/reminders/list_reminders.html:124
+#: app/templates/reminders/list_reminders.html:209
+msgid "Reminder is disabled"
+msgstr "Imel an kashe"
+
+#: app/templates/reminders/list_reminders.html:148
+msgid "Start At:"
+msgstr "Fara TLS"
+
+#: app/templates/reminders/list_reminders.html:152
+msgid "Recurrence:"
+msgstr "Maigirka:"
+
+#: app/templates/reminders/list_reminders.html:168
+msgid "Link Email Reminder"
+msgstr "Haɗa Email Tunatarwa"
+
+#: app/templates/reminders/list_reminders.html:218
+msgid "How to use reminders"
+msgstr "Yadda ake sarrafa masu amfani"
+
+#: app/templates/reminders/list_reminders.html:231
+msgid "➕ Click “Add Reminder” and fill out the subject and content fields."
+msgstr "Danna “Ƙara sanarwa” kuma cike filayen maudu'i da abun ciki."
+
+#: app/templates/reminders/list_reminders.html:232
+msgid "💾 Save the reminder to return to the overview."
+msgstr "Ajiye sanarwar don komawa ga dubawa."
+
+#: app/templates/reminders/list_reminders.html:233
+msgid ""
+"📣 Assign Apprise, 🌐 Webhook, and/or 📧 Email (SMTP) destinations as needed."
+msgstr ""
+"📣 Sanya Apprise, 🌐 Webhook, da/ko 📧 Manufa Email (SMTP) kamar yadda ake "
+"bukata."
+
+#: app/templates/reminders/list_reminders.html:234
+msgid ""
+"⏱️ Set the schedule using the schedule button to define when reminders are "
+"sent."
+msgstr ""
+"⏱️ Sanya jadawalin ta amfani da maballin jadawali don ayyana lokacin da za a"
+" aika tunatarwa."
+
+#: app/templates/reminders/list_reminders.html:235
+msgid ""
+"🔍 Click “View Details” to review or edit assigned destinations and other "
+"settings."
+msgstr ""
+"🔍 Danna \"Duba Bayanai\" don sake dubawa ko gyara wuraren da aka sanya da "
+"sauran saituna."
+
+#: app/templates/reminders/list_reminders.html:236
+msgid ""
+"🧪 Click the Test button to verify all assigned destinations are working "
+"correctly."
+msgstr ""
+"🧪 Danna maballin Gwaji don tabbatar da duk wuraren da aka sanya suna aiki da"
+" kyau."
+
+#: app/templates/reminders/list_reminders.html:237
+msgid "🔴/🟢 Enable or disable the reminder using the toggle button."
+msgstr "Kunna imel ɗin ta amfani da maɓallin canji 🔴/🟢."
+
+#: app/templates/reminders/list_reminders.html:238
+msgid "📤 Reminders will be sent as scheduled to the assigned destinations."
+msgstr ""
+"📤 Za a aika tunatarwa kamar yadda aka tsara zuwa wuraren da aka sanya."
+
+#: app/templates/reminders/schedule_reminder.html:8
+msgid "Schedule Reminder"
+msgstr "Jadawalin Imel"
+
+#: app/templates/reminders/schedule_reminder.html:15
+msgid "Start Date & Time"
+msgstr "Ranar & Lokacin Farawa"
+
+#: app/templates/reminders/schedule_reminder.html:22
+#: app/templates/reminders/view_reminder.html:25
+msgid "Recurrence Rule"
+msgstr "Dokar Maigirka"
+
+#: app/templates/reminders/schedule_reminder.html:24
+msgid "(Optional) Enter RRULE or leave blank for one-time."
+msgstr "(Zababbun) Shigar RRULE ko barin a fili don sau daya kawai."
+
+#: app/templates/reminders/schedule_reminder.html:30
+msgid "End Date"
+msgstr "Aika Gwaji"
+
+#: app/templates/reminders/schedule_reminder.html:32
+msgid "(Optional) Stop sending after this date."
+msgstr "(Zababbun) Tsaya aika bayan wannan ranar."
+
+#: app/templates/reminders/schedule_reminder.html:38
+#: app/templates/reminders/view_reminder.html:36
+msgid "Max Occurrences"
+msgstr "Mafi yawan Lokuta"
+
+#: app/templates/reminders/schedule_reminder.html:40
+msgid "(Optional) Stop after this many reminders."
+msgstr "(Zababbun) Daina bayan tunatarwa da yawa."
+
+#: app/templates/reminders/schedule_reminder.html:56
+msgid "Help for RRULE syntax"
+msgstr "Taimako don tsarin RRULE"
+
+#: app/templates/reminders/schedule_reminder.html:66
+msgid "Several tools are available to help generate an RRULE."
+msgstr "Akwai kayan aiki da dama don taimakawa ƙirƙirar RRULE."
+
+#: app/templates/reminders/schedule_reminder.html:67
+msgid "Use a search engine or AI tool to assist."
+msgstr "Yi amfani da injin bincike ko kayan aikin AI don taimako."
+
+#: app/templates/reminders/schedule_reminder.html:69
+msgid "Here is an example of one such online tool:"
+msgstr "Ga misali daya daga irin wannan kayan aikin kan layi:"
+
+#: app/templates/reminders/schedule_reminder.html:73
+msgid "RRULE Generator Tool"
+msgstr "RRULE Kayan Aikin Ƙirƙira"
+
+#: app/templates/reminders/schedule_reminder.html:77
+msgid "See here for some common examples:"
+msgstr "Mé juma magana gama misalai:"
+
+#: app/templates/reminders/schedule_reminder.html:81
+msgid "RRULE Help (GitHub)"
+msgstr "Taimakon RRULE (GitHub)"
+
+#: app/templates/reminders/view_reminder.html:8
+msgid "Reminder Details"
+msgstr "Duba Cikakkun bayanai"
+
+#: app/templates/reminders/view_reminder.html:30
+msgid "End At"
+msgstr "Aika Gwaji"
+
+#: app/templates/reminders/view_reminder.html:42
+msgid "Last Sent"
+msgstr "Duba ciki na ƙarshe"
+
+#: app/templates/reminders/view_reminder.html:91
+msgid "Email Template"
+msgstr "Validador de Correo"
+
+#: app/templates/reminders/view_reminder.html:103
+msgid "No email linked."
+msgstr "Imel an kunna"
+
+#: app/templates/reminders/view_reminder.html:111
+msgid "Back to Reminders"
+msgstr "Komawa Ga Imel"
+
+#: app/templates/user_smtp/create_smtp.html:10
+msgid "Create SMTP Destination"
+msgstr "Ƙirƙiri Wurin SMTP"
+
+#: app/templates/user_smtp/create_smtp.html:69
+#: app/templates/user_smtp/edit_smtp.html:84
+msgid "Hold to reveal"
+msgstr "Riƙe don bayyana"
+
+#: app/templates/user_smtp/create_smtp.html:92
+#: app/templates/user_smtp/edit_smtp.html:107
+msgid "Use TLS"
+msgstr "Amfani da TLS"
+
+#: app/templates/user_smtp/edit_smtp.html:10
+msgid "Edit SMTP Destination"
+msgstr "Ƙirƙiri Wurin SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:9
+msgid "SMTP Destinations"
+msgstr "Manufar SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:44
+msgid "Add SMTP"
+msgstr "Ƙara SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:53
+msgid "Host"
+msgstr "Mai masauki"
+
+#: app/templates/user_smtp/list_smtp.html:54
+msgid "Port"
+msgstr "Tashar jiragen ruwa"
+
+#: app/templates/user_smtp/list_smtp.html:56
+msgid "TLS"
+msgstr "TLS"
+
+#: app/templates/user_smtp/list_smtp.html:58
+msgid "Created"
+msgstr "An ƙirƙira"
+
+#: app/templates/user_smtp/list_smtp.html:90
+#: app/templates/user_smtp/list_smtp.html:158
+msgid "Send Test"
+msgstr "Aika Gwaji"
+
+#: app/templates/user_smtp/list_smtp.html:125
+msgid "Port:"
+msgstr "Tashar jiragen ruwa:"
+
+#: app/templates/user_smtp/list_smtp.html:131
+msgid "Password:"
+msgstr "Kalmar sirri:"
+
+#: app/templates/user_smtp/list_smtp.html:184
+msgid "Hide SMTP Setup Help"
+msgstr "Ɓoye Taimako Saita SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:184
+msgid "Show SMTP Setup Help"
+msgstr "Nuna Taimako Saita SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:190
+msgid ""
+"Need help finding your SMTP server settings? See here for some links to "
+"common providers:"
+msgstr ""
+"Ana buƙatar taimako wajen samun saitunan uwar garken SMTP naka? Ga wasu "
+"hanyoyi zuwa masu ba da sabis na gama gari:"
+
+#: app/templates/user_smtp/list_smtp.html:194
+msgid "SMTP Server Settings Help (GitHub)"
+msgstr "Taimakon Saitunan Uwar Garken SMTP (GitHub)"
+
+#: app/templates/user_smtp/list_smtp.html:198
+msgid ""
+"Find official documentation links for Gmail, Outlook, Yahoo, AOL, and "
+"others."
+msgstr ""
+"Nemo hanyoyin haɗin da aka ambata don Gmail, Outlook, Yahoo, AOL, da sauran "
+"su."
+
+#: app/templates/user_smtp/list_smtp.html:199
+msgid ""
+"If your provider isn’t listed, search their support site or a search engine "
+"for 'SMTP settings'."
+msgstr ""
+"Idan mai ba da sabis ɗinku ba ya cikin jerin, bincika shafin tallafinsu ko "
+"na'urar bincike don 'saitunan SMTP'."
+
+#: app/templates/user_smtp/list_smtp.html:200
+msgid ""
+"Some providers (like Gmail, Yahoo) require 'App Passwords' or special "
+"setup—see their docs!"
+msgstr ""
+"Wani lokaci masu ba da sabis (kamar Gmail, Yahoo) suna buƙatar 'Kalmomin "
+"Wuce' ko tsarin saitawa na musamman—duba takardunsu!"
+
+#: app/templates/webhook/create_webhook.html:10
+msgid "Create Webhook"
+msgstr "Ƙirƙiri Webhook"
+
+#: app/templates/webhook/edit_webhook.html:10
+msgid "Edit Webhook"
+msgstr "Gyara Webhook"
+
+#: app/templates/webhook/list_webhooks.html:9
+#: app/templates/webhook/webhook_config.html:3
+msgid "Webhooks Destinations"
+msgstr "Manufar Webhooks"
+
+#: app/templates/webhook/list_webhooks.html:59
+msgid "Endpoint"
+msgstr "Mahadin"
+
+#: app/templates/webhook/list_webhooks.html:60
+msgid "Description"
+msgstr "Bayani"
+
+#: app/templates/webhook/list_webhooks.html:82
+#: app/templates/webhook/list_webhooks.html:141
+msgid "Cannot edit while assigned to notifications"
+msgstr "Ba za a iya gyara ba yayin da aka ɗora zuwa ga sanarwa"
+
+#: app/templates/webhook/list_webhooks.html:106
+#: app/templates/webhook/list_webhooks.html:165
+msgid "Cannot delete while assigned to notifications"
+msgstr "Ba za a iya share ba yayin da aka ɗora zuwa ga sanarwa"
+
+#: app/templates/webhook/list_webhooks.html:122
+msgid "Endpoint:"
+msgstr "Mahadin:"
+
+#: app/templates/webhook/list_webhooks.html:125
+msgid "Description:"
+msgstr "Bayani:"
+
+#: app/views/account.py:74
+msgid "Current password is required to change password."
+msgstr "Ana buƙatar kalmar sirri ta yanzu don canza kalmar sirri."
+
+#: app/views/account.py:78
+msgid "Current password is incorrect."
+msgstr "Kalmar sirri ta yanzu ba daidai bane."
+
+#: app/views/account.py:94
+msgid "Account updated successfully."
+msgstr "An sabunta asusu da nasara."
+
+#: app/views/account.py:100
+msgid "An error occurred while updating your account."
+msgstr "Wani kuskure ya faru yayin sabunta asusunka."
+
+#: app/views/account.py:137
+msgid "You cannot delete your account because you are the last admin."
+msgstr "Ba za ku iya goge asusunku ba saboda ku ne admin na karshe."
+
+#: app/views/account.py:146
+msgid "Your account has been permanently deleted."
+msgstr "Asusunku ya goge kuma ba za a dawo dashi ba."
+
+#: app/views/account.py:152
+msgid "An error occurred while trying to delete your account."
+msgstr "Wani kuskure ya faru yayin sabunta asusunka."
+
+#: app/views/account.py:171
+msgid "Your account has been deleted"
+msgstr "Asusunku ya goge kuma ba za a dawo dashi ba."
+
+#: app/views/account.py:173
+#, python-brace-format
+msgid ""
+"Hello {username},\n"
+"\n"
+"Your account on {site_name} has been deleted.Remember to delete your files from the uploads folder.If this was not you, please contact support immediately.\n"
+"\n"
+"{site_url}"
+msgstr ""
+"Sannu {username},\n"
+"\n"
+"An share asusunka akan {site_name}. Ka tuna ka goge fayilolin ka daga babban fayil na loda. Idan ba kai bane, da fatan a tuntuɓi ƙungiyar tallafi nan da nan.\n"
+"\n"
+"{site_url}"
+
+#: app/views/admin.py:59
+msgid "Invalid role."
+msgstr "Matsayi mara kyau."
+
+#: app/views/apprise.py:51
+msgid "🧪 Test notification sent successfully!"
+msgstr "🧪 An aika sanarwar gwaji da nasara!"
+
+#: app/views/apprise.py:56
+msgid "🧪 Failed to send test notification: "
+msgstr "🧪 An kasa aika sanarwar gwaji:"
+
+#: app/views/apprise.py:62
+msgid "🧪 Error sending test notification."
+msgstr "🧪 Kuskure wajen aika sanarwar gwaji."
+
+#: app/views/apprise.py:101
+msgid "Apprise destination created successfully."
+msgstr "An ƙirƙiri makomar Apprise da nasara."
+
+#: app/views/apprise.py:168
+msgid "Apprise destination updated successfully."
+msgstr "An sabunta makomar Apprise da nasara."
+
+#: app/views/apprise.py:199
+msgid "Apprise destination deleted."
+msgstr "An goge makomar Apprise."
+
+#: app/views/auth.py:95
+msgid "Admin account created successfully."
+msgstr "An ƙirƙiri asusun admin da nasara."
+
+#: app/views/auth.py:108
+msgid "An error occurred while creating the admin account."
+msgstr "Wani kuskure ya faru yayin ƙirƙirar asusun admin."
+
+#: app/views/auth.py:141
+msgid ""
+"Your account is not activated. Please check your email for the activation "
+"link."
+msgstr ""
+"Asusun ka bai kunna ba. Da fatan za a duba imel dinka don mahada akan "
+"kunnawa."
+
+#: app/views/auth.py:157
+msgid "Multi-factor authentication required. Please enter your code."
+msgstr "Ana buƙatar tanti mabambanta. Da fatan shigar da lambobin ku."
+
+#: app/views/auth.py:162 app/views/mfa.py:195
+msgid "Logged in successfully."
+msgstr "An shiga da nasara."
+
+#: app/views/auth.py:179
+msgid "Invalid username or password."
+msgstr "Invalid username u password."
+
+#: app/views/auth.py:203
+msgid "You have been logged out."
+msgstr "An fita."
+
+#: app/views/auth.py:239 app/views/email.py:263
+msgid "Access denied."
+msgstr "An hana samun dama."
+
+#: app/views/auth.py:273
+msgid "If a user with that email exists, we've sent the username to them."
+msgstr ""
+"Idan akwai mai amfani da wannan imel, mun aika musu da sunan mai amfani."
+
+#: app/views/auth.py:314
+msgid "A password reset link has been sent to your email."
+msgstr "An aika haɗin sake saita kalmar sirri zuwa imel ɗinka."
+
+#: app/views/auth.py:319
+msgid "No account found matching that username and email."
+msgstr "Babu asusun da ya dace da wannan sunan mai amfani da imel."
+
+#: app/views/auth.py:389
+msgid "The reset link is invalid or has expired."
+msgstr "Haɗin sake saiti bai dace ba ko ya ƙare."
+
+#: app/views/auth.py:401
+msgid "Username and email do not match."
+msgstr "Mai mai da imel ba su dace ba."
+
+#: app/views/auth.py:421
+msgid "Your password has been reset. Please log in."
+msgstr "An sake saita kalmar sirri. Da fatan shiga."
+
+#: app/views/auth.py:458
+msgid "Invalid registration PIN."
+msgstr "PIN ɗin rijista ba daidai ba ne."
+
+#: app/views/auth.py:467
+msgid "Username or email already exists."
+msgstr "Mai amfani ko imel ya riga ya wanzu."
+
+#: app/views/auth.py:492
+msgid "Activate Your Grylli Account"
+msgstr "Kun kaddamar da Asusun Grylli ɗinku"
+
+#: app/views/auth.py:493
+#, python-brace-format
+msgid ""
+"Hello {username},\n"
+"\n"
+"Please activate your account by clicking..."
+msgstr ""
+"Barka da {username},\n"
+"\n"
+"Da fatan za a kunna asusunka ta danna..."
+
+#: app/views/auth.py:498
+msgid "Account created! Please check your email to activate your account."
+msgstr ""
+"An kammala ƙirƙirar asusu! Da fatan duba imel ɗin ku don kunna asusun ku."
+
+#: app/views/auth.py:521
+msgid "Activation link is invalid or expired."
+msgstr "Mahadar kunnawa ba daidai ba ce ko ta ƙare."
+
+#: app/views/auth.py:528 app/views/users.py:76 app/views/users.py:140
+msgid "User not found."
+msgstr "Ba a sami mai amfani ba."
+
+#: app/views/auth.py:532
+msgid "Account already activated. Please log in."
+msgstr "Asusu tuni an kunna shi. Da fatan shiga."
+
+#: app/views/auth.py:540
+msgid "Your account has been activated! You can now log in."
+msgstr "An kunna asusun ku! Yanzu zaku iya shiga."
+
+#: app/views/backups.py:72
+#, python-format
+msgid "Backup created: %(filename)s"
+msgstr "An ƙirƙiri madadin: %(filename)s"
+
+#: app/views/backups.py:77
+msgid "Failed to create backup."
+msgstr "An kasa ƙirƙirar madadin."
+
+#: app/views/backups.py:106
+#, python-format
+msgid "Backup deleted: %(filename)s"
+msgstr "An share madadin: %(filename)s"
+
+#: app/views/backups.py:109
+msgid "Backup file not found."
+msgstr "Ba a sami fayil ɗin madadin ba."
+
+#: app/views/backups.py:112
+msgid "Failed to delete backup."
+msgstr "An kasa share madadin."
+
+#: app/views/checkin.py:41
+msgid "Invalid check-in link."
+msgstr "Mahadar rajista ba daidai ba ce."
+
+#: app/views/checkin.py:48
+msgid "You are not authorized to check in for this item."
+msgstr "Ba ku da izinin rajistar wannan abin."
+
+#: app/views/checkin.py:62
+msgid "Unsupported check-in type."
+msgstr "Irin rajistar da ba a tallafawa ba."
+
+#: app/views/checkin.py:137
+msgid "⚠️ Cannot enable reminder: Start date/time is in the past."
+msgstr ""
+"⚠️ Ba za a iya kunna tunatarwa ba: Ranar farawa/lokaci yana cikin baya."
+
+#: app/views/checkin.py:158
+msgid "✅ Enabled and timer started."
+msgstr "✅ An kunna kuma mai tsawo ya fara."
+
+#: app/views/checkin.py:168
+msgid "⛔ Disabled."
+msgstr "⛔ An kashe."
+
+#: app/views/checkin.py:170
+msgid "⚠️ Cannot toggle — missing schedule or destination."
+msgstr "⚠️ Ba za a iya daddawaya ba — babu jadawali ko inda za a tafi."
+
+#: app/views/email.py:88
+msgid "Message saved."
+msgstr "An adana saƙon."
+
+#: app/views/email.py:118 app/views/messages.py:167
+msgid "Message deleted."
+msgstr "An share saƙon."
+
+#: app/views/email.py:152
+msgid "Attached files updated."
+msgstr "An sabunta fayilolin da aka haɗa."
+
+#: app/views/email.py:200
+msgid "SMTP configuration not assigned or is disabled."
+msgstr "Ba a ba da SMTP ko ba a kunna ba."
+
+#: app/views/email.py:234 app/views/smtp_settings_admin.py:82
+msgid "Test email sent successfully."
+msgstr "An aika imel ɗin gwaji da nasara."
+
+#: app/views/email.py:282 app/views/messages.py:305
+msgid "Schedule updated successfully."
+msgstr "An sabunta jadawali da nasara."
+
+#: app/views/email.py:310
+msgid "SMTP configuration assigned."
+msgstr "An ba da SMTP."
+
+#: app/views/email.py:319
+msgid "SMTP configuration removed."
+msgstr "An ba da SMTP."
+
+#: app/views/messages.py:97
+msgid "Message created successfully."
+msgstr "An ƙirƙiri saƙon da nasara."
+
+#: app/views/messages.py:133
+msgid "Message updated successfully."
+msgstr "An sabunta saƙon da nasara."
+
+#: app/views/messages.py:223 app/views/reminders.py:240
+msgid "Destinations updated."
+msgstr "Destokyo tes ojadi."
+
+#: app/views/messages.py:441
+msgid "No destinations assigned to this message."
+msgstr "Ba a ba da SMTP ko ba a kunna ba."
+
+#: app/views/messages.py:453
+msgid "Test message sent successfully."
+msgstr "An aika imel ɗin gwaji da nasara."
+
+#: app/views/messages.py:455
+msgid "Test message failed: "
+msgstr "An adana saƙon."
+
+#: app/views/mfa.py:68
+msgid "You must enter a code from your authenticator."
+msgstr "Dole ne ku shigar da lamba daga tantanin ku."
+
+#: app/views/mfa.py:82 app/views/mfa.py:259
+msgid "Invalid code. Please try again."
+msgstr "Lambar ba daidai bane. Da fatan za a sake gwadawa."
+
+#: app/views/mfa.py:91
+msgid "Two-factor authentication disabled."
+msgstr "Sanarwa an kashe"
+
+#: app/views/mfa.py:132
+msgid "Recovery codes are only shown immediately after enabling MFA."
+msgstr "Ana nuna lambobin farfadowa ne kawai nan take bayan kunna MFA."
+
+#: app/views/mfa.py:142
+msgid "Could not load recovery codes."
+msgstr "Ba a iya ɗora lambobin farfadowa."
+
+#: app/views/mfa.py:168
+msgid "No MFA challenge in progress."
+msgstr "Babu kalubale na MFA a waje."
+
+#: app/views/mfa.py:176
+msgid "User not found for MFA challenge."
+msgstr "Ba a sami mai amfani ba."
+
+#: app/views/mfa.py:225
+msgid ""
+"You have used your last recovery code. MFA has been disabled. Please remove "
+"Grylli from your authenticator app, and re-enable MFA to protect your "
+"account."
+msgstr ""
+"Kun yi amfani da lambobin farfadowa na karshe. MFA an kashe. Da fatan cire "
+"Grylli daga aikace-aikacen tantanin ku, kuma sake kunnawa MFA don kare "
+"asusunka."
+
+#: app/views/mfa.py:248
+#, python-brace-format
+msgid "Recovery code accepted. You have {remaining} recovery codes left."
+msgstr ""
+"An karɓi lambar farfadowa. Kuna da {remaining} lambobin farfadowa na saura."
+
+#: app/views/reminders.py:106
+msgid "Reminder created successfully."
+msgstr "An ƙirƙiri saƙon da nasara."
+
+#: app/views/reminders.py:143
+msgid "Reminder updated successfully."
+msgstr "An sabunta mai amfani da nasara."
+
+#: app/views/reminders.py:174
+msgid "Reminder deleted."
+msgstr "An goge mai amfani."
+
+#: app/views/reminders.py:287
+msgid "No destinations assigned to this reminder."
+msgstr "Ba a ba da SMTP ko ba a kunna ba."
+
+#: app/views/reminders.py:311
+msgid "No email message linked to this reminder."
+msgstr "Babu saƙon imel da aka haɗa da wannan tunatarwa."
+
+#: app/views/reminders.py:314
+msgid "SMTP configuration is disabled."
+msgstr "Ba a ba da SMTP ko ba a kunna ba."
+
+#: app/views/reminders.py:353
+msgid "Test reminder sent successfully."
+msgstr "An aika imel ɗin gwaji da nasara."
+
+#: app/views/reminders.py:356
+msgid "Test reminder failed: "
+msgstr "An adana saƙon."
+
+#: app/views/reminders.py:430
+msgid "Reminder schedule updated successfully."
+msgstr "An sabunta jadawali da nasara."
+
+#: app/views/reminders.py:434
+msgid "Please correct the errors below."
+msgstr "Da fatan za a gyara kuskuren da ke ƙasa."
+
+#: app/views/reminders.py:481 app/views/reminders.py:482
+msgid "None"
+msgstr "A'a"
+
+#: app/views/reminders.py:508
+msgid "You must select both an SMTP config and an email message, or neither."
+msgstr "Dole ne ku zaɓi duka tsarin SMTP da saƙon imel, ko babu ɗayansu."
+
+#: app/views/reminders.py:528
+msgid "Email reminder settings updated."
+msgstr "Destokyo tes ojadi."
+
+#: app/views/smtp.py:83 app/views/user_smtp.py:80
+msgid "SMTP destination created successfully."
+msgstr "An ƙirƙiri wurin SMTP da nasara."
+
+#: app/views/smtp.py:129 app/views/user_smtp.py:135
+msgid "SMTP destination updated."
+msgstr "An sabunta wurin SMTP."
+
+#: app/views/smtp.py:160 app/views/user_smtp.py:166
+msgid "SMTP destination deleted."
+msgstr "An share wurin SMTP."
+
+#: app/views/smtp.py:191 app/views/user_smtp.py:199
+msgid "Test email sent successfully to your account email."
+msgstr "An aika imel ɗin gwaji da nasara zuwa imel ɗin asusun ku."
+
+#: app/views/smtp.py:196 app/views/user_smtp.py:204
+msgid "Failed to send test email. Check SMTP settings."
+msgstr "An kasa aika imel ɗin gwaji. Duba saitunan SMTP."
+
+#: app/views/smtp_settings_admin.py:76
+msgid "Test Email from Grylli"
+msgstr "Imel ɗin Gwaji daga Grylli"
+
+#: app/views/smtp_settings_admin.py:77
+msgid "This is a test email from the Grylli SMTP settings page."
+msgstr "Wannan imel ɗin gwaji ne daga shafin saitunan SMTP na Grylli."
+
+#: app/views/smtp_settings_admin.py:84
+msgid "Failed to send test email: "
+msgstr "An kasa aika imel ɗin gwaji:"
+
+#: app/views/users.py:99
+msgid "User updated successfully."
+msgstr "An sabunta mai amfani da nasara."
+
+#: app/views/users.py:106 app/views/users.py:327
+msgid "An error occurred while updating the user."
+msgstr "An samu kuskure yayin sabunta mai amfani."
+
+#: app/views/users.py:195
+msgid "User deleted."
+msgstr "An goge mai amfani."
+
+#: app/views/users.py:202
+msgid "An error occurred while deleting the user."
+msgstr "An samu kuskure yayin gogewa mai amfani."
+
+#: app/views/users.py:237
+msgid "Password is required when creating a new user."
+msgstr "Ana bukatar kalmar sirri lokacin ƙirƙirar sabon mai amfani."
+
+#: app/views/users.py:244
+msgid "Username already exists."
+msgstr "Sunan mai amfani ya rigaya yana wanzu."
+
+#: app/views/users.py:251
+msgid "Email already exists."
+msgstr "Imel ya rigaya yana wanzu."
+
+#: app/views/users.py:268
+#, python-format
+msgid "User '%(username)s' created successfully."
+msgstr "An ƙirƙiri mai amfani '%(username)s' cikin nasara."
+
+#: app/views/users.py:278
+msgid "Failed to create user."
+msgstr "Gaza ƙirƙiri mai amfani."
+
+#: app/views/users.py:305
+msgid "You cannot change your own enabled status."
+msgstr "Ba za ku iya canza ikon kunnawa nawa ba."
+
+#: app/views/users.py:318
+#, python-format
+msgid "User '%(username)s' has been %(status)s."
+msgstr "An iya mai amfani '%(username)s' haɓɓaka zuwa %(status)s."
+
+#: app/views/users.py:356
+msgid "You cannot reset your own MFA."
+msgstr "⚪ = Ba za ka iya sake kashe asusunka ba."
+
+#: app/views/users.py:368
+#, python-format
+msgid "MFA disabled for user '%(username)s'."
+msgstr "MFA an kashe don mai amfani '%(username)s'."
+
+#: app/views/users.py:374
+msgid "An error occurred while resetting MFA."
+msgstr "An samu kuskure yayin gogewa mai amfani."
+
+#: app/views/webhook.py:54
+msgid "Webhook created successfully."
+msgstr "An ƙirƙiri Webhook cikin nasara."
+
+#: app/views/webhook.py:113
+msgid "Webhook updated successfully."
+msgstr "An sabunta Webhook cikin nasara."
+
+#: app/views/webhook.py:142
+msgid "Webhook deleted."
+msgstr "An goge Webhook."
+
+#: app/views/webhook.py:175
+msgid "🧪 Webhook test sent successfully!"
+msgstr "🧪 An aika gwajin Webhook cikin nasara!"
+
+#: app/views/webhook.py:177
+msgid "🧪 Webhook test failed: "
+msgstr "🧪 Kasawa a gwajin Webhook:"
+
+#: app/views/webhook.py:180
+msgid "🧪 Error sending webhook test."
+msgstr "🧪 Kuskure wajen aika gwajin Webhook."
+
+#~ msgid ""
+#~ "Grylli is a secure message delivery platform designed to activate after "
+#~ "prolonged user inactivity."
+#~ msgstr ""
+#~ "Grylli wani dandamalin isar da saƙo ne mai tsaro da aka tsara don aiki bayan"
+#~ " tsawon rashin aiki na mai amfani."
+
+#~ msgid ""
+#~ "It is a modern reimplementation of Gone Man’s Switch with a refined tech "
+#~ "stack, better maintainability, and an improved user experience."
+#~ msgstr ""
+#~ "Wannan wata sabuwar sake aiwatar da Gone Man’s Switch ce tare da sabunta "
+#~ "tsarin fasaha, sauƙin gyarawa, da ingantaccen kwarewar mai amfani."
+
+#~ msgid "Body:"
+#~ msgstr "Body:"
+
+#~ msgid "Subject:"
+#~ msgstr "Maudu'i:"
+
+#~ msgid "Content:"
+#~ msgstr "Abun ciki:"
+
+#~ msgid "Edit SMTP"
+#~ msgstr "Gyara SMTP"
+
+#~ msgid ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+#~ msgstr ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+
+#~ msgid "Admin Notes"
+#~ msgstr "Rubutun Admin"
+
+#~ msgid "Register"
+#~ msgstr "Yi Rijista"
+
+#~ msgid "View"
+#~ msgstr "View"
+
+#~ msgid "Schedule"
+#~ msgstr "Jadawali"
+
+#~ msgid "Message is enabled"
+#~ msgstr "Sako yana kunne"
+
+#~ msgid "Message is disabled"
+#~ msgstr "Sako an kashe"
+
+#~ msgid "No SMTP configuration selected."
+#~ msgstr "Babu SMTP da aka zaɓa."
+
+#~ msgid "Enable the message to start monitoring."
+#~ msgstr "Bada izinin saƙon don fara duba."
+
+#~ msgid "✅ SMTP settings saved."
+#~ msgstr "Saitunan SMTP"
+
+#~ msgid "If you don’t check in, Grylli delivers the message for you."
+#~ msgstr "Idan ba ka duba ba, Grylli zai aika maka da sakon."
+
+#~ msgid "Fill in already discovered missing translations:"
+#~ msgstr "Cika fassarorin da aka gano rasa:"
+
+#~ msgid "Add missing phrases in that JSON file."
+#~ msgstr "Kara kalmomin da ba a cik a cikin wannan fayil ɗin JSON."
+
+#~ msgid "From:"
+#~ msgstr "Daga:"
+
+#~ msgid ""
+#~ "Attach the updated JSON file to a new GitHub issue when submitting your "
+#~ "changes."
+#~ msgstr ""
+#~ "Hada fayil ɗin JSON da aka sabunta zuwa sabon batun GitHub lokacin da ka "
+#~ "miƙa canje-canjenka."
+
+#~ msgid "admin"
+#~ msgstr "admin"
+
+#~ msgid "user"
+#~ msgstr "mai amfani"
+
+#~ msgid "Logging in"
+#~ msgstr "Shiga"
+
+#~ msgid "SMTP error: "
+#~ msgstr "Kuskuren SMTP:"
+
+#~ msgid "enabled"
+#~ msgstr "aka sa kunna"
+
+#~ msgid "disabled"
+#~ msgstr "dis4led"

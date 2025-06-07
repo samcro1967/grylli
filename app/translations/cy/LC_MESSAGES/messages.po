@@ -1,0 +1,3280 @@
+# Welsh translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-06-07 15:49-0500\n"
+"PO-Revision-Date: 2025-05-25 13:03-0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: cy <LL@li.org>\n"
+"Language: cy\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=5; plural=(n==1 ? 1 : n==2 ? 2 : n==3 ? 3 : n==6 ? 4 : 0);\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: app/init_db.py:55
+#, python-format
+msgid "Tables currently in DB: %s"
+msgstr "Tablau ar hyn o bryd yn y DB:"
+
+#: app/init_db.py:58
+msgid "Database or system_config table missing. Running migrations now..."
+msgstr "Colli tabl cronfa ddata neu system_config. Yn rhedeg mudo nawr..."
+
+#: app/init_db.py:61
+msgid "Migrations applied successfully."
+msgstr "Mudiadau wedi'u cymhwyso'n llwyddiannus."
+
+#: app/init_db.py:63
+msgid "Migration failed."
+msgstr "Methiant mudo."
+
+#: app/init_db.py:68
+msgid "System config seeded successfully."
+msgstr "Hadau config y system yn llwyddiannus."
+
+#: app/init_db.py:70
+msgid "Error seeding system config."
+msgstr "Gwall wrth hadu config y system:"
+
+#: app/forms/mfa_form.py:15 app/templates/apprise/create_apprise.html:30
+#: app/templates/apprise/edit_apprise.html:30
+#: app/templates/apprise/list_apprise.html:60
+#: app/templates/mfa/settings.html:24 app/templates/mfa/settings.html:40
+#: app/templates/user_smtp/create_smtp.html:99
+#: app/templates/user_smtp/edit_smtp.html:114
+#: app/templates/user_smtp/list_smtp.html:57
+#: app/templates/webhook/create_webhook.html:36
+#: app/templates/webhook/edit_webhook.html:36
+#: app/templates/webhook/list_webhooks.html:61
+msgid "Enabled"
+msgstr "Wedi'i alluogi"
+
+#: app/forms/mfa_form.py:16
+msgid "Authenticator Code"
+msgstr "Cod Dilyswr"
+
+#: app/forms/mfa_form.py:17
+#: app/templates/admin/partials/user_instructions_and_modal.html:66
+#: app/templates/admin/partials/user_table.html:115
+#: app/templates/email/assign_smtp.html:44 app/templates/mfa/settings.html:47
+#: app/templates/user_smtp/edit_smtp.html:122
+msgid "Save"
+msgstr "Cadw"
+
+#: app/forms/mfa_form.py:27
+msgid "Authentication Code"
+msgstr "Diweddaru Hysbysiad"
+
+#: app/forms/mfa_form.py:29
+msgid "Please enter your authentication code."
+msgstr "Rhowch eich cod dilysu, os gwelwch yn dda."
+
+#: app/forms/mfa_form.py:30
+msgid "Enter a valid 6-digit code or recovery code."
+msgstr "Rhowch god 6 digid dilys neu god adfer."
+
+#: app/forms/mfa_form.py:31
+msgid "Invalid code format."
+msgstr "Fformat cod annilys."
+
+#: app/forms/mfa_form.py:35 app/templates/mfa/challenge.html:25
+msgid "Verify"
+msgstr "Fersiwn"
+
+#: app/services/mail.py:37 app/services/system_settings_email.py:40
+msgid "Missing required config setting: "
+msgstr "Colli gosodiad config gofynnol:"
+
+#: app/services/mail.py:46 app/services/system_settings_email.py:50
+#, python-format
+msgid "Failed to decrypt %(key)s: %(error)s"
+msgstr "Methwyd â ddatgryptio %(key)s: %(error)s"
+
+#: app/services/mail.py:54
+#, python-format
+msgid "get_setting('%(key)s') -> '%(value)s' (sensitive: %(sensitive)s)"
+msgstr ""
+"get_setting('%(key)s') -> '%(value)s' (amrwd: '%(raw)s', sensitif: "
+"%(sensitive)s)"
+
+#: app/services/mail.py:75
+#, python-format
+msgid "Preparing email to %(to)s"
+msgstr "Paratoi e-bost i %(to)s"
+
+#: app/services/mail.py:90
+#, python-format
+msgid ""
+"SMTP configuration: host=%(host)s (type=%(host_type)s), port=%(port)s "
+"(type=%(port_type)s)"
+msgstr ""
+"Gwesteiwr SMTP = '%(host)s' (math: %(host_type)s), porth = %(port)s (math: "
+"%(port_type)s)"
+
+#: app/services/mail.py:99
+#, python-format
+msgid "SMTP username: %(user)s"
+msgstr "Defnyddio defnyddiwr: %(user)s"
+
+#: app/services/mail.py:100
+#, python-format
+msgid "TLS enabled: %(tls)s"
+msgstr "TLS wedi'i alluogi: %(tls)s"
+
+#: app/services/mail.py:105
+msgid "Starting TLS connection..."
+msgstr "Dechrau TLS"
+
+#: app/services/mail.py:107
+msgid "Logging into SMTP server..."
+msgstr "Mewngofnodi i weinydd SMTP..."
+
+#: app/services/mail.py:109
+msgid "Sending email message..."
+msgstr "Amserlen Neges"
+
+#: app/services/mail.py:111
+#, python-format
+msgid "Email sent successfully to %(to)s"
+msgstr "Anfonwyd prawf ebost yn llwyddiannus."
+
+#: app/services/mail.py:114
+#, python-format
+msgid "SMTP error while sending to %(to)s: %(error)s"
+msgstr "Gwall SMTP wrth anfon at %(to)s: %(error)s"
+
+#: app/templates/about.html:10
+msgid "About Grylli"
+msgstr "Ynglŷn â Grylli"
+
+#: app/templates/about.html:13
+msgid ""
+"Grylli is a secure, self-hosted message delivery platform that automatically"
+" sends pre-configured messages if a user fails to check in within a defined "
+"time period."
+msgstr ""
+"Mae Grylli yn blatfform cyflwyno negeseuon diogel, hunan-sefydledig sy'n "
+"anfon negeseuon wedi'u rhag-gynllunio awtomatig os yw defnyddiwr yn methu â "
+"mewngofnodi o fewn cyfnod amser penodedig."
+
+#: app/templates/about.html:14
+msgid ""
+"It supports multiple users, customizable schedules, and recurring reminders."
+msgstr "Mae'n cefnogi llu o ddefnyddwyr ac amserlenni y gellir eu haddasu."
+
+#: app/templates/about.html:15
+msgid ""
+"Messages and reminders can be delivered via email, webhooks, or over 100 "
+"third-party services through Apprise."
+msgstr ""
+"Gellir danfon negeseuon drwy ebost, gwefachau, neu dros 80 o wasanaethau "
+"trydydd parti drwy Apprise."
+
+#: app/templates/about.html:16
+msgid ""
+"Users can configure their own SMTP servers to ensure emails and reminders "
+"appear to come directly from them — not from the system administrator."
+msgstr ""
+"Gall defnyddwyr ffurfweddu eu gweinyddion SMTP eu hunain i sicrhau bod "
+"negeseuon yn ymddangos fel pe baent yn dod yn uniongyrchol oddi wrthynt hwy "
+"— nid oddi wrth weinyddwr y system."
+
+#: app/templates/about.html:17
+msgid ""
+"Sensitive data is encrypted at rest, and all operations are secured with "
+"strong authentication and audit-friendly logging."
+msgstr ""
+"Mae data sensitif yn cael ei amgryptio pan nad ydyw mewn defnydd, ac mae'r "
+"holl weithrediadau negeseuon wedi'u diogel gyda dilysu cryf a logio "
+"cyfeillgar i archwilio."
+
+#: app/templates/about.html:18
+msgid ""
+"Built with a modern, reactive technology stack, Grylli is optimized for "
+"responsiveness and works seamlessly across desktop and mobile devices."
+msgstr ""
+"Wedi'i adeiladu gyda stac technoleg adweithiol, modern, mae Grylli wedi'i "
+"optimeiddio ar gyfer ymatebolrwydd ac yn gweithio'n ddi-dor ar draws "
+"cyfrifiaduron pen desg a dyfeisiau symudol."
+
+#: app/templates/about.html:23
+msgid "Version:"
+msgstr "Fersiwn:"
+
+#: app/templates/about.html:26
+msgid "Repository:"
+msgstr "Repositori:"
+
+#: app/templates/about.html:30
+msgid "GitHub - samcro1967/grylli"
+msgstr "GitHub - samcro1967/grylli"
+
+#: app/templates/help.html:2 app/templates/help.html:5
+#: app/templates/partials/header.html:85
+msgid "Help"
+msgstr "Cymorth"
+
+#: app/templates/help.html:7
+msgid ""
+"Grylli includes built-in instructions throughout the app to help you "
+"configure and manage your setup."
+msgstr ""
+"Mae Grylli yn cynnwys cyfarwyddiadau adeiledig trwy'r ap i'ch helpu i "
+"ffurfweddu a rheoli'ch sefydliad."
+
+#: app/templates/help.html:8
+msgid ""
+"This page provides an overview of key features and direct links to where "
+"they can be managed."
+msgstr ""
+"Mae'r dudalen hon yn darparu trosolwg o nodweddion allweddol a dolenni "
+"uniongyrchol i ble gellir eu rheoli."
+
+#: app/templates/help.html:12 app/templates/messages/list_messages.html:9
+#: app/templates/partials/shared_nav.html:17
+msgid "Notifications"
+msgstr "Hysbysiadau"
+
+#: app/templates/help.html:14
+msgid "Create and assign messages"
+msgstr "Creu neges neu e-bost."
+
+#: app/templates/admin/index.html:32 app/templates/help.html:17
+#: app/templates/partials/admin_nav.html:56
+msgid "SMTP Settings"
+msgstr "Gosodiadau SMTP"
+
+#: app/templates/help.html:19
+msgid "Use your own email server"
+msgstr "Defnyddiwch eich gweinydd e-bost eich hun"
+
+#: app/templates/help.html:22
+msgid "Apprise Integration"
+msgstr "Cyrchfannau Apprise"
+
+#: app/templates/help.html:24
+msgid "Send notifications to 80+ supported services"
+msgstr "Anfonwch hysbysiadau i 80+ o wasanaethau a gefnogir"
+
+#: app/templates/help.html:27
+#: app/templates/messages/assign_destinations.html:41
+#: app/templates/messages/view_message.html:58
+#: app/templates/partials/shared_nav.html:44
+#: app/templates/reminders/assign_destinations.html:39
+#: app/templates/reminders/view_reminder.html:69
+msgid "Webhooks"
+msgstr "Webhooks"
+
+#: app/templates/help.html:29
+msgid "Trigger actions or external workflows"
+msgstr "Ysgogi gweithredoedd neu weithdrefnau allanol"
+
+#: app/templates/email/list_emails.html:9 app/templates/help.html:32
+#: app/templates/partials/shared_nav.html:61
+msgid "Emails"
+msgstr "E-byst"
+
+#: app/templates/help.html:34
+msgid "View and manage secure email messages"
+msgstr "Trosolwg o negeseuon e-bost diogel"
+
+#: app/templates/help.html:38
+msgid "Security"
+msgstr "🔐 Diogelwch"
+
+#: app/templates/help.html:39
+msgid "Grylli encrypts sensitive data and logs all key actions for auditing."
+msgstr ""
+"Mae Grylli yn amgryptio data sensitif ac yn logio'r holl weithredoedd "
+"allweddol ar gyfer archwilio."
+
+#: app/templates/index.html:9 app/views/locale.py:95
+msgid "Welcome to Grylli"
+msgstr "Croeso i Grylli"
+
+#: app/templates/index.html:11
+msgid "Pronounced"
+msgstr "Wedi'i ynganu"
+
+#: app/templates/index.html:11
+msgid "like “grill-ee”"
+msgstr "fel “grill-ee”"
+
+#: app/templates/index.html:14
+msgid ""
+"Grylli is a secure message scheduling and delivery system designed to ensure"
+" your important messages are delivered — even if you can’t be there to send "
+"them."
+msgstr ""
+"Mae Grylli yn system amserlenni a chyflwyno negeseuon diogel wedi'i "
+"gynllunio i sicrhau bod eich negeseuon pwysig yn cael eu cyflwyno — hyd yn "
+"oed os na allwch chi fod yno i'w hanfon."
+
+#: app/templates/index.html:17
+msgid ""
+"Whether you’re planning ahead, setting up emergency communication, or "
+"building peace of mind, Grylli helps automate your message delivery via "
+"multiple channels including email, webhooks, and Apprise notifications."
+msgstr ""
+"Boed yn cynllunio ymlaen llaw, yn sefydlu cyfathrebu brys, neu'n adeiladu "
+"tawelwch meddwl, mae Grylli yn helpu i awtomeiddio'ch cyflwyno negeseuon "
+"trwy e-bost, gwegliwiau, neu hysbysiadau Apprise os byddwch yn colli mewn "
+"troi mewn gwybodaeth."
+
+#: app/templates/index.html:19
+msgid "Getting Started"
+msgstr "Dechrau Arni"
+
+#: app/templates/index.html:21
+msgid "Create a message, email, or reminder."
+msgstr "Creu neges neu e-bost."
+
+#: app/templates/index.html:22
+msgid "Set your check-in interval and grace period (for messages)."
+msgstr "Gosodwch eich cyfleuthiad ac amser gras."
+
+#: app/templates/index.html:23
+msgid "Assign one or more delivery destinations."
+msgstr "Neilltuo un neu fwy o gyrchfannau cyflwyno."
+
+#: app/templates/index.html:24
+msgid "Optionally attach files for secure emails."
+msgstr "Ychwanegu ffeiliau yn ddewisol ar gyfer e-byst diogel."
+
+#: app/templates/index.html:25
+msgid "Schedule reminders to send at specific times or on a recurring basis."
+msgstr ""
+"Trefnu negeseuon atgoffa i'w hanfon ar adegau penodol neu ar sail "
+"ailadroddus."
+
+#: app/templates/index.html:26
+msgid "Enable the message or reminder to activate delivery."
+msgstr "Galluogi'r neges neu'r atgoffa i actifadu cyflwyno."
+
+#: app/templates/index.html:28
+msgid ""
+"Regularly check in to Grylli to prevent automated delivery; miss a check-in "
+"and Grylli sends your messages as scheduled."
+msgstr ""
+"Gwiriwch yn rheolaidd i Grylli i atal danfoniad awtomataidd; os gwnewch "
+"golli gwirio, bydd Grylli yn anfon eich negeseuon fel y trefnwyd."
+
+#: app/templates/privacy.html:10
+msgid "Privacy Notice"
+msgstr "Hysbysiad Preifatrwydd"
+
+#: app/templates/privacy.html:13
+msgid ""
+"Grylli respects your privacy and is designed to minimize the collection and "
+"storage of personal data."
+msgstr ""
+"Mae Grylli yn parchu eich preifatrwydd ac wedi'i gynllunio i leihau casglu a"
+" storio data personol."
+
+#: app/templates/privacy.html:14
+msgid ""
+"All data is encrypted where appropriate and remains fully under your control"
+" if you self-host this platform."
+msgstr ""
+"Mae'r holl ddata wedi'i amgryptio lle bo'n briodol ac yn aros o dan eich "
+"rheolaeth lawn os byddwch yn cynnal y llwyfan hwn eich hun."
+
+#: app/templates/privacy.html:17
+msgid "What Data We Collect"
+msgstr "Pa Ddata a Gasglwn"
+
+#: app/templates/privacy.html:19
+msgid "Email address and password hash (for authentication)"
+msgstr "Cyfeiriad e-bost a hash cyfrinair (ar gyfer dilysu)"
+
+#: app/templates/privacy.html:20
+msgid "Optional MFA secret and recovery codes (encrypted at rest)"
+msgstr ""
+"Gwahoddiad MFA dewisol a chodau adfer (wedi'u hamgryptio mewn gorffwys)"
+
+#: app/templates/privacy.html:21
+msgid "Reminder and message content you configure"
+msgstr "Cynnwys atgoffa a neges rydych yn ffurfweddu"
+
+#: app/templates/privacy.html:22
+msgid "User-specific settings, SMTP configuration (if provided)"
+msgstr "Gosodiadau-benodol i'r defnyddiwr, cyfluniad SMTP (os ddarparwyd)"
+
+#: app/templates/privacy.html:25
+msgid "How Your Data Is Used"
+msgstr "Sut Mae Eich Data'n Cael ei Ddefnyddio"
+
+#: app/templates/privacy.html:27
+msgid ""
+"Your data is used solely for the purpose of delivering reminders and "
+"messages according to your preferences."
+msgstr ""
+"Mae eich data'n cael ei ddefnyddio yn unig at ddibenion darparu atgoffa a "
+"negeseuon yn unol â'ch dewisiadau chi."
+
+#: app/templates/privacy.html:28
+msgid ""
+"Grylli does not share, sell, or transmit your personal data to any third "
+"parties."
+msgstr ""
+"Nid yw Grylli yn rhannu, gwerthu, na throsglwyddo eich data personol i "
+"drydydd parti."
+
+#: app/templates/privacy.html:31
+msgid "Your Rights"
+msgstr "Eich Hawliau"
+
+#: app/templates/privacy.html:33
+msgid ""
+"You can export all of your data at any time from the Account Settings page."
+msgstr ""
+"Gallwch allforio'ch holl ddata ar unrhyw adeg o'r Dudalen Gosodiadau Cyfrif."
+
+#: app/templates/privacy.html:34
+msgid "You may permanently delete your account and all associated data."
+msgstr "Ni allwch ddileu eich cyfrif oherwydd rydych chi'n weinyddwr olaf."
+
+#: app/templates/privacy.html:35
+msgid ""
+"If you are using a self-hosted instance, contact the instance administrator "
+"for data inquiries."
+msgstr ""
+"Os ydych chi'n defnyddio enghraifft hunan-gynnal, cysylltwch â gweinyddwr yr"
+" enghraifft am ymchwiliadau data."
+
+#: app/templates/privacy.html:38
+msgid "Self-Hosting Responsibility"
+msgstr "Atebolrwydd Hunan-Gynnal"
+
+#: app/templates/privacy.html:40
+msgid ""
+"If you are running Grylli on your own server, you are responsible for the "
+"storage, processing, and lawful handling of all user data on that instance."
+msgstr ""
+"Os ydych yn rhedeg Grylli ar eich gweinydd eich hun, rydych chi'n gyfrifol "
+"am storio, prosesu, a thrin data defnyddwyr ar yr enghraifft honno yn "
+"gyfreithlon."
+
+#: app/templates/privacy.html:44
+msgid ""
+"This notice was last updated in June 2025 and may evolve to reflect changes "
+"in the software or regulatory landscape."
+msgstr ""
+"Diweddarwyd y hysbysiad hwn ddiwethaf ym Mehefin 2025 a gall esblygu i "
+"adlewyrchu newidiadau yn y meddalwedd neu'r tirwedd rheoleiddio."
+
+#: app/templates/system_info.html:11
+msgid "📦 Environment Versions"
+msgstr "📦 Fersiynau Amgylcheddol"
+
+#: app/templates/system_info.html:17
+msgid "Category"
+msgstr "Categori"
+
+#: app/templates/system_info.html:18
+msgid "Tool"
+msgstr "Offer"
+
+#: app/templates/system_info.html:19
+msgid "Version"
+msgstr "Fersiwn"
+
+#: app/templates/system_info.html:25
+msgid "🧠 Python"
+msgstr "🧠 Phython"
+
+#: app/templates/system_info.html:26
+msgid "Python"
+msgstr "Python"
+
+#: app/templates/system_info.html:30
+msgid "pip"
+msgstr "pip"
+
+#: app/templates/system_info.html:34
+msgid "SQLite"
+msgstr "SQLite"
+
+#: app/templates/system_info.html:40
+msgid "⚙️ Core"
+msgstr "⚙️ Craidd"
+
+#: app/templates/system_info.html:47
+msgid "🔐 Security"
+msgstr "🔐 Diogelwch"
+
+#: app/templates/system_info.html:48
+msgid "Email Validator"
+msgstr "Dilysydd E-bost"
+
+#: app/templates/system_info.html:52
+msgid "Cryptography"
+msgstr "Cryptography"
+
+#: app/templates/system_info.html:57
+msgid "🕰️ Scheduling"
+msgstr "🕰️ Amserlennu"
+
+#: app/templates/system_info.html:58
+msgid "APScheduler"
+msgstr "APScheduler"
+
+#: app/templates/system_info.html:62
+msgid "Apprise (Python)"
+msgstr "Apprise (Python)"
+
+#: app/templates/system_info.html:66
+msgid "Apprise CLI"
+msgstr "Apprise CLI"
+
+#: app/templates/system_info.html:74
+msgid "🌐 Frontend"
+msgstr "🌐 Cymorth Cyntaf"
+
+#: app/templates/account/manage_account.html:11
+msgid "Manage Account"
+msgstr "Rheoli Cyfrif"
+
+#: app/templates/account/manage_account.html:12
+msgid "Update your profile information and password."
+msgstr "Diweddarwch eich gwybodaeth proffil a chyfrinair."
+
+#: app/templates/account/manage_account.html:41
+#: app/templates/admin/create_user.html:40
+#: app/templates/auth/bootstrap.html:43
+#: app/templates/auth/reset_password.html:42 app/templates/auth/signup.html:42
+msgid "Please enter a valid email address."
+msgstr "Rhowch gyfeiriad e-bost dilys."
+
+#: app/templates/account/manage_account.html:62
+#: app/templates/account/manage_account.html:96
+#: app/templates/account/manage_account.html:127
+#: app/templates/auth/reset_password.html:66
+#: app/templates/auth/reset_password.html:97 app/templates/auth/signup.html:65
+#: app/templates/auth/signup.html:95
+msgid "Show/hide password"
+msgstr "Daliwch i ddangos cyfrinair"
+
+#: app/templates/account/manage_account.html:89
+#: app/templates/admin/create_user.html:53
+#: app/templates/auth/bootstrap.html:51
+#: app/templates/auth/reset_password.html:58 app/templates/auth/signup.html:58
+msgid "Password must meet all complexity requirements."
+msgstr "Rhaid i'r cyfrinair fodloni'r holl ofynion cymhlethdod."
+
+#: app/templates/account/manage_account.html:141
+#: app/templates/admin/create_user.html:72
+#: app/templates/admin/edit_user.html:67 app/templates/auth/bootstrap.html:69
+#: app/templates/auth/reset_password.html:110
+#: app/templates/auth/signup.html:108
+msgid "Passwords do not match."
+msgstr "Nid yw'r cyfrineiriau'n cyfateb."
+
+#: app/templates/account/manage_account.html:147
+msgid "Update Account"
+msgstr "Diweddaru Cyfrif"
+
+#: app/templates/account/manage_account.html:151
+#: app/templates/admin/create_user.html:82
+#: app/templates/admin/edit_user.html:97 app/templates/admin/help_form.html:28
+#: app/templates/admin/partials/user_instructions_and_modal.html:62
+#: app/templates/admin/partials/user_table.html:113
+#: app/templates/apprise/create_apprise.html:42
+#: app/templates/apprise/edit_apprise.html:42
+#: app/templates/auth/reset_password.html:121
+#: app/templates/email/assign_smtp.html:46
+#: app/templates/email/attach_files.html:47
+#: app/templates/email/edit_message.html:54
+#: app/templates/email/schedule_email.html:84
+#: app/templates/messages/assign_destinations.html:66
+#: app/templates/messages/create_message.html:55
+#: app/templates/messages/edit_message.html:48
+#: app/templates/messages/schedule_message.html:84
+#: app/templates/mfa/challenge.html:29 app/templates/mfa/settings.html:51
+#: app/templates/reminders/assign_destinations.html:64
+#: app/templates/reminders/assign_email_reminder.html:94
+#: app/templates/reminders/create_reminder.html:49
+#: app/templates/reminders/edit_reminder.html:42
+#: app/templates/reminders/schedule_reminder.html:51
+#: app/templates/user_smtp/create_smtp.html:111
+#: app/templates/user_smtp/edit_smtp.html:125
+#: app/templates/webhook/create_webhook.html:48
+#: app/templates/webhook/edit_webhook.html:48
+msgid "Cancel"
+msgstr "Canslo"
+
+#: app/templates/account/manage_account.html:159
+#: app/templates/admin/create_user.html:90
+#: app/templates/admin/edit_user.html:81 app/templates/auth/bootstrap.html:83
+#: app/templates/auth/reset_password.html:128
+#: app/templates/auth/signup.html:132
+msgid "Minimum 8 characters"
+msgstr "Lleiafswm o 8 nod"
+
+#: app/templates/account/manage_account.html:160
+#: app/templates/admin/create_user.html:91
+#: app/templates/admin/edit_user.html:82 app/templates/auth/bootstrap.html:84
+#: app/templates/auth/reset_password.html:129
+#: app/templates/auth/signup.html:133
+msgid "At least one uppercase letter"
+msgstr "O leiaf un llythyren fawr"
+
+#: app/templates/account/manage_account.html:161
+#: app/templates/admin/create_user.html:92
+#: app/templates/admin/edit_user.html:83 app/templates/auth/bootstrap.html:85
+#: app/templates/auth/reset_password.html:130
+#: app/templates/auth/signup.html:134
+msgid "At least one lowercase letter"
+msgstr "O leiaf un llythyren fach"
+
+#: app/templates/account/manage_account.html:162
+#: app/templates/admin/create_user.html:93
+#: app/templates/admin/edit_user.html:84 app/templates/auth/bootstrap.html:86
+#: app/templates/auth/reset_password.html:131
+#: app/templates/auth/signup.html:135
+msgid "At least one number"
+msgstr "O leiaf un rhif"
+
+#: app/templates/account/manage_account.html:163
+#: app/templates/admin/create_user.html:94
+#: app/templates/auth/bootstrap.html:87
+#: app/templates/auth/reset_password.html:132
+#: app/templates/auth/signup.html:136
+msgid "At least one special character (e.g., !@#$%)"
+msgstr "O leiaf un nod arbennig (e.e., !@#$%)"
+
+#: app/templates/account/manage_account.html:169
+msgid "Download My Data"
+msgstr "Lawrlwytho Fy Ndata"
+
+#: app/templates/account/manage_account.html:171
+msgid ""
+"Download all your account data as a JSON file. This includes your reminders,"
+" messages, email settings, and more. The file is for your records only and "
+"cannot be imported back. Protect it as it may contain sensitive information."
+msgstr ""
+"Lawrlwythwch eich holl ddata cyfrif fel ffeil JSON. Mae hyn yn cynnwys eich "
+"hatgoffa, negeseuon, gosodiadau e-bost, a mwy. Mae'r ffeil ar gyfer eich "
+"cofnodion yn unig ac ni ellir ei mewnforio yn ôl. Diogelwch hi oherwydd gall"
+" gynnwys gwybodaeth sensitif."
+
+#: app/templates/account/manage_account.html:175
+msgid "Download My Data (JSON)"
+msgstr "Lawrlwytho Fy Ndata (JSON)"
+
+#: app/templates/account/manage_account.html:179
+msgid "Danger Zone"
+msgstr "Parth Perygl"
+
+#: app/templates/account/manage_account.html:180
+msgid "Deleting your account is permanent and cannot be undone."
+msgstr "Mae dileu eich cyfrif yn weithred barhaol ac ni ellir ei dadwneud."
+
+#: app/templates/account/manage_account.html:185
+msgid "Delete My Account"
+msgstr "Diweddaru Cyfrif"
+
+#: app/templates/account/translations.html:8
+msgid "Translations - Grylli"
+msgstr "Cyfieithiadau - Grylli"
+
+#: app/templates/account/translations.html:17
+#: app/templates/partials/header.html:102
+msgid "Translations"
+msgstr "Cyfieithiadau"
+
+#: app/templates/account/translations.html:20
+msgid "Grylli currently supports multiple languages and more will be added."
+msgstr ""
+"Mae Grylli ar hyn o bryd yn cefnogi nifer o ieithoedd a bydd mwy yn cael eu "
+"hychwanegu."
+
+#: app/templates/account/translations.html:21
+msgid "Many of the translations were performed with assistance from ChatGPT."
+msgstr ""
+"Cafodd llawer o'r cyfieithiadau eu perfformio gyda chymorth gan ChatGPT."
+
+#: app/templates/account/translations.html:22
+msgid ""
+"If you find a translation issue or want to suggest improvements, your input "
+"is welcome!"
+msgstr ""
+"Os dewch o hyd i fater cyfieithu neu os ydych am awgrymu gwelliannau, mae "
+"eich mewnbwn yn croesawy!"
+
+#: app/templates/account/translations.html:28
+msgid "How to request translation updates"
+msgstr "Sut i ofyn am ddiweddariadau cyfieithu"
+
+#: app/templates/account/translations.html:30
+msgid "To contribute to translations, please use the following guidelines:"
+msgstr "I gyfrannu i gyfieithiadau, defnyddiwch y canllawiau canlynol:"
+
+#: app/templates/account/translations.html:43
+msgid "Contribute missing or improved translations:"
+msgstr "Wedi dod o hyd i gyfieithiad ar goll?"
+
+#: app/templates/account/translations.html:63
+msgid "Open the relevant .po translation file for your language."
+msgstr "Agorwch y ffeil JSON cyfieithu ar gyfer eich iaith. Er enghraifft:"
+
+#: app/templates/account/translations.html:67
+msgid ""
+"Find untranslated or incomplete entries and add or improve translations."
+msgstr ""
+"Dewch o hyd i gofnodion heb eu cyfieithu neu anghyflawn a chynnwys neu wella"
+" cyfieithiadau."
+
+#: app/templates/account/translations.html:68
+msgid "You may use a PO file editor or a text editor."
+msgstr "Gallwch ddefnyddio golygydd ffeil PO neu olygydd testun."
+
+#: app/templates/account/translations.html:69
+msgid "Copy the file path and the snippet of your changes."
+msgstr "Copïwch y llwybr ffeil a'r darn o'ch newidiadau."
+
+#: app/templates/account/translations.html:70
+msgid "Paste the snippet directly into a new GitHub issue for review."
+msgstr "Gludwch y snippet copïo yn uniongyrchol i'r sylw mater GitHub."
+
+#: app/templates/account/translations.html:72
+msgid "Please do not upload the full .po file to avoid merge conflicts."
+msgstr "Peidiwch â llwytho'r ffeil .po llawn i osgoi gwrthdaro uno."
+
+#: app/templates/account/translations.html:85
+msgid "Improving existing translations:"
+msgstr "Gwella cyfieithiadau presennol:"
+
+#: app/templates/account/translations.html:104
+msgid "Open the relevant .po file for the translation you want to improve."
+msgstr ""
+"Agorwch y ffeil .po berthnasol ar gyfer y cyfieithiad rydych am ei wella."
+
+#: app/templates/account/translations.html:106
+msgid "For example:"
+msgstr "Er enghraifft:"
+
+#: app/templates/account/translations.html:110
+msgid ""
+"Find the phrase(s) and its existing translation(s) you want to improve."
+msgstr ""
+"Dewch o hyd i'r ymadrodd(ion) a'i gyfieithiad(au) presennol rydych am ei "
+"wella."
+
+#: app/templates/account/translations.html:111
+msgid "Update the phrase(s)."
+msgstr "Diweddarwch yr ymadrodd(ion)."
+
+#: app/templates/account/translations.html:112
+msgid "Copy the file name and path into the issue."
+msgstr "Copïwch enw'r ffeil a'r llwybr i'r mater."
+
+#: app/templates/account/translations.html:114
+msgid "Paste the copied snippet directly into the GitHub issue comment."
+msgstr "Gludwch y snippet copïo yn uniongyrchol i'r sylw mater GitHub."
+
+#: app/templates/account/translations.html:115
+msgid "Do not upload the full .po file to avoid merge conflicts."
+msgstr "Peidiwch â llwytho'r ffeil .po llawn i osgoi gwrthdaro uno."
+
+#: app/templates/account/translations.html:118
+msgid "Example snippet:"
+msgstr "Enghraifft snippet:"
+
+#: app/templates/account/translations.html:137
+msgid "Report missing translations not yet discovered:"
+msgstr "Adrodd cyfieithiadau coll nad ydynt eto wedi cael eu darganfod:"
+
+#: app/templates/account/translations.html:154
+msgid ""
+"If you see text in the app that appears untranslated or missing, please "
+"report it to us."
+msgstr ""
+"Os gwelwch testun yn yr ap sy'n ymddangos heb ei gyfieithu neu ar goll, "
+"rhowch wybod i ni."
+
+#: app/templates/account/translations.html:155
+msgid "Provide the exact English phrase as it appears on the screen."
+msgstr "Darparwch yr union ymadrodd Saesneg fel y mae'n ymddangos ar y sgrîn."
+
+#: app/templates/account/translations.html:156
+msgid ""
+"Include the page or section where you saw the phrase (e.g., Apprise page, "
+"Account Page, etc.)."
+msgstr ""
+"Cynnwyswch y dudalen neu'r adran lle gwelsoch yr ymadrodd (e.e., tudalen "
+"Gosodiadau, adran Cyfrif)."
+
+#: app/templates/account/translations.html:157
+msgid ""
+"Submit this information via a new GitHub issue so we can add it to the "
+"translation files"
+msgstr ""
+"Cyflwynwch yr wybodaeth hon trwy fater GitHub newydd fel y gallwn ei "
+"ychwanegu at y ffeiliau cyfieithu a'u lapio ar gyfer Babel."
+
+#: app/templates/account/translations.html:166
+msgid "Found a missing translation?"
+msgstr "Wedi dod o hyd i gyfieithiad ar goll?"
+
+#: app/templates/account/translations.html:171
+msgid ""
+"This link will create a new GitHub issue pre-filled with a language code."
+msgstr ""
+"Bydd y ddolen hon yn creu mater newydd GitHub wedi'i lenwi ymlaen llaw gyda "
+"chod iaith."
+
+#: app/templates/account/translations.html:172
+msgid "Report it by opening a new GitHub issue"
+msgstr "Adroddwch ef trwy agor mater GitHub newydd"
+
+#: app/templates/account/translations.html:175
+msgid "Please specify the language code and exact phrase when reporting."
+msgstr "Nodwch y cod iaith a'r ymadrodd union wrth adrodd."
+
+#: app/templates/account/translations.html:176
+msgid "Thank you for helping us make Grylli better!"
+msgstr "Diolch am eich help i wneud Grylli yn well!"
+
+#: app/templates/admin/create_user.html:14
+msgid "Create New User"
+msgstr "Creu Defnyddiwr Newydd"
+
+#: app/templates/admin/create_user.html:15
+msgid "Fill out the form to add a new user."
+msgstr "Llenwch y ffurflen i ychwanegu defnyddiwr newydd."
+
+#: app/templates/admin/create_user.html:21
+#: app/templates/admin/edit_user.html:17 app/templates/auth/bootstrap.html:24
+msgid "Please fix the following errors:"
+msgstr "Trwswch y gwallau canlynol os gwelwch yn dda:"
+
+#: app/templates/admin/create_user.html:78
+#: app/templates/admin/edit_user.html:93
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "Create User"
+msgstr "Creu Defnyddiwr"
+
+#: app/templates/admin/edit_user.html:10
+#: app/templates/admin/partials/user_card.html:20
+#: app/templates/admin/partials/user_table.html:26
+msgid "Edit User"
+msgstr "Golygu Defnyddiwr"
+
+#: app/templates/admin/edit_user.html:55 app/templates/admin/edit_user.html:74
+msgid "Hold to show password"
+msgstr "Daliwch i ddangos cyfrinair"
+
+#: app/templates/admin/edit_user.html:85
+#, python-format
+msgid "At least one special character (e.g., !@#$%%)"
+msgstr "O leiaf un nod arbennig (e.e., !@#$%%)"
+
+#: app/templates/admin/help.html:4 app/templates/auth/login.html:72
+msgid "Admin Help"
+msgstr "Panel Gweinyddol"
+
+#: app/templates/admin/help.html:7
+msgid "Reset Admin Password"
+msgstr "Ailosod Cyfrinair"
+
+#: app/templates/admin/help.html:9
+msgid ""
+"If you've forgotten the admin password, you can reset it using the following"
+" Docker command:"
+msgstr ""
+"Os ydych wedi anghofio'r cyfrinair gweinyddol, gallwch ei ailosod gan "
+"ddefnyddio'r gorchymyn Docker canlynol:"
+
+#: app/templates/admin/help.html:15
+msgid ""
+"This script will prompt you to enter a new password for the admin user. You "
+"must run it from the host system where the Grylli container is running."
+msgstr ""
+"Bydd y sgript hon yn eich annog i nodi cyfrinair newydd ar gyfer y "
+"defnyddiwr gweinyddol. Rhaid i chi ei redeg o'r system westeiwr lle mae'r "
+"cynhwysydd Grylli yn rhedeg."
+
+#: app/templates/admin/help.html:18
+msgid "After resetting, you can log in with the new password immediately."
+msgstr "Ar ôl ailosod, gallwch fewngofnodi gyda'r cyfrinair newydd yn syth."
+
+#: app/templates/admin/help.html:24
+msgid "Return to Login"
+msgstr "Dychwelyd i'r Dangosfwrdd"
+
+#: app/templates/admin/help_form.html:6
+msgid "Admin Help Access"
+msgstr "Mynediad Cymorth Gweinyddol"
+
+#: app/templates/admin/help_form.html:9
+msgid "Enter your Ferret Key to unlock admin-only help documentation."
+msgstr ""
+"Nodwch eich Allwedd Ferret i ddatgloi dogfennau cymorth ar gyfer gweinyddwyr"
+" yn unig."
+
+#: app/templates/admin/help_form.html:34
+msgid "How to Find Your FERRET_KEY"
+msgstr "Sut i Ddod o Hyd i'ch FERRET_KEY"
+
+#: app/templates/admin/help_form.html:36
+msgid "The FERRET_KEY is set as an environment variable when running Grylli."
+msgstr ""
+"Mae'r FERRET_KEY wedi'i osod fel amgylcheddol amrywiolyn wrth redeg Grylli."
+
+#: app/templates/admin/help_form.html:39
+msgid "Option 1: Check docker-compose.yml"
+msgstr "Opsiwn 1: Gwiriwch docker-compose.yml"
+
+#: app/templates/admin/help_form.html:46
+msgid "Option 2: Use docker inspect"
+msgstr "Opsiwn 2: Defnyddiwch docker inspect"
+
+#: app/templates/admin/help_form.html:52
+msgid "This shows the FERRET_KEY as passed to the container at runtime."
+msgstr ""
+"Mae hyn yn dangos y FERRET_KEY fel y'i pasiwyd i'r cynhwysydd ar amser "
+"rhedeg."
+
+#: app/templates/admin/index.html:10
+msgid "Admin Panel"
+msgstr "Panel Gweinyddol"
+
+#: app/templates/admin/index.html:12
+msgid ""
+"Welcome to the Grylli Admin Panel. Use the links below to manage the system."
+msgstr ""
+"Croeso i Banel Gweinyddol Grylli. Defnyddiwch y dolenni isod i reoli'r "
+"system."
+
+#: app/templates/admin/index.html:17
+msgid "Manage Users"
+msgstr "Rheoli Defnyddwyr"
+
+#: app/templates/admin/index.html:18
+msgid "Create, edit, enable/disable, or delete user accounts."
+msgstr "Creu, golygu, galluogu/analluogi neu ddileu cyfrifon defnyddwyr."
+
+#: app/templates/admin/index.html:22
+#: app/templates/admin/system_settings.html:10
+#: app/templates/partials/admin_nav.html:52
+msgid "System Settings"
+msgstr "Gosodiadau System"
+
+#: app/templates/admin/index.html:23
+msgid "View  system-wide environment values."
+msgstr "Gweld gwerthoedd amgylchedd ar draws y system gyfan."
+
+#: app/templates/admin/index.html:27 app/templates/partials/admin_nav.html:42
+msgid "Backups"
+msgstr "Copïau wrth gefn"
+
+#: app/templates/admin/index.html:28
+msgid "Create and delete database backups."
+msgstr "нема৲а жыйнимать"
+
+#: app/templates/admin/index.html:33
+msgid "View and test global SMTP settings."
+msgstr "Methwyd ag anfon prawf ebost. Gwiriwch y gosodiadau SMTP."
+
+#: app/templates/admin/index.html:39
+msgid "View Admin Guide / README on GitHub"
+msgstr "Gweld Canllaw i Weinyddwyr / README ar GitHub"
+
+#: app/templates/admin/index.html:40
+msgid "Includes setup instructions, integrations, and troubleshooting."
+msgstr ""
+"Yn cynnwys cyfarwyddiadau sefydlu, integreiddiadau a datrys problemau."
+
+#: app/templates/admin/index.html:44
+msgid "⚠️ Admin Tips"
+msgstr "⚠️ Awgrymiadau Gweinyddol"
+
+#: app/templates/admin/index.html:46
+msgid "Ensure the data folder (database) is backed up on your host"
+msgstr ""
+"Sicrhewch fod ffeil y ffolder data (cronfa ddata) wedi'i gwneud copi wrth "
+"gefn ar eich gwesteiwr"
+
+#: app/templates/admin/index.html:48
+msgid ""
+"The uploads folder is not per user.  If required per user, you will ndd to "
+"create subdirectoried per user and setup permissions so users can only see "
+"their own folder."
+msgstr ""
+"Nid yw'r ffolder 'uploads' yn benodol i ddefnyddiwr. Os oes angen y ffolder "
+"yn benodol i ddefnyddiwr, bydd angen i chi greu isgyfeiriadwyd i bob "
+"defnyddiwr a gosod caniatâu fel bod defnyddwyr ond yn gallu gweld eu ffolder"
+" eu hunain."
+
+#: app/templates/admin/index.html:51
+msgid ""
+"To restore a backup: stop the container, replace the data/grylli.db with one"
+" from the backups folder, and restart the container."
+msgstr ""
+"I adfer copi wrth gefn: stopiwch y cynhwysydd, ailosodwch data/grylli.db "
+"gyda un o'r ffolder copïau wrth gefn, a chychwyn y cynhwysydd eto."
+
+#: app/templates/admin/list_backups.html:11
+msgid "Database Backups"
+msgstr "нема৲а жыйнимать"
+
+#: app/templates/admin/list_backups.html:13
+msgid "Create Backup"
+msgstr "Creu Copi Wrth Gefn"
+
+#: app/templates/admin/list_backups.html:21
+msgid "Filename"
+msgstr "Enw'r Ffeil"
+
+#: app/templates/admin/list_backups.html:22
+#: app/templates/admin/partials/user_table.html:14
+#: app/templates/apprise/list_apprise.html:62
+#: app/templates/email/list_emails.html:60
+#: app/templates/messages/list_messages.html:60
+#: app/templates/reminders/list_reminders.html:60
+#: app/templates/user_smtp/list_smtp.html:59
+#: app/templates/webhook/list_webhooks.html:63
+msgid "Actions"
+msgstr "Gweithredoedd"
+
+#: app/templates/admin/list_backups.html:32
+msgid "Delete this backup?"
+msgstr "Dileu'r copi wrth gefn hwn?"
+
+#: app/templates/admin/list_backups.html:32
+#: app/templates/apprise/list_apprise.html:95
+#: app/templates/apprise/list_apprise.html:99
+#: app/templates/apprise/list_apprise.html:150
+#: app/templates/apprise/list_apprise.html:154
+#: app/templates/email/list_emails.html:124
+#: app/templates/email/list_emails.html:128
+#: app/templates/email/list_emails.html:226
+#: app/templates/email/list_emails.html:230
+#: app/templates/messages/list_messages.html:112
+#: app/templates/messages/list_messages.html:116
+#: app/templates/messages/list_messages.html:198
+#: app/templates/messages/list_messages.html:202
+#: app/templates/reminders/list_reminders.html:107
+#: app/templates/reminders/list_reminders.html:113
+#: app/templates/reminders/list_reminders.html:192
+#: app/templates/reminders/list_reminders.html:198
+#: app/templates/user_smtp/list_smtp.html:101
+#: app/templates/user_smtp/list_smtp.html:169
+#: app/templates/webhook/list_webhooks.html:102
+#: app/templates/webhook/list_webhooks.html:161
+msgid "Delete"
+msgstr "Dileu"
+
+#: app/templates/admin/list_backups.html:41
+msgid "No backups found."
+msgstr "Dim copïau wrth gefn wedi'u darganfod."
+
+#: app/templates/admin/list_backups.html:44
+msgid ""
+"Backups contain your full app data. Store securely. Sensitive data is "
+"encrypted in the DB by default."
+msgstr ""
+"Mae copïau wrth gefn yn cynnwys eich data app llawn. Storiwch nhw'n ddiogel."
+" Mae data sensitif wedi'i amgryptio yn y DB yn ddiofyn."
+
+#: app/templates/admin/smtp_config.html:28
+#: app/templates/admin/system_config.html:22
+msgid "System Configuration"
+msgstr "Ffurfweddiad y System"
+
+#: app/templates/admin/smtp_config.html:33
+#: app/templates/admin/system_config.html:26
+#: app/templates/admin/system_settings.html:15
+msgid "Key"
+msgstr "Allwedd"
+
+#: app/templates/admin/smtp_config.html:34
+#: app/templates/admin/system_config.html:27
+#: app/templates/admin/system_settings.html:16
+msgid "Value"
+msgstr "Gwerth"
+
+#: app/templates/admin/smtp_config.html:35
+#: app/templates/admin/system_config.html:28
+msgid "Sensitive"
+msgstr "Sensitif"
+
+#: app/templates/admin/smtp_config.html:36
+#: app/templates/admin/system_config.html:29
+msgid "Editable"
+msgstr "Golygu"
+
+#: app/templates/admin/smtp_config.html:50
+#: app/templates/admin/smtp_config.html:51
+#: app/templates/admin/system_config.html:45
+#: app/templates/admin/system_config.html:46
+#: app/templates/email/view_config.html:60
+msgid "Yes"
+msgstr "Ie"
+
+#: app/templates/admin/smtp_config.html:50
+#: app/templates/admin/smtp_config.html:51
+#: app/templates/admin/system_config.html:45
+#: app/templates/admin/system_config.html:46
+#: app/templates/email/view_config.html:60
+msgid "No"
+msgstr "Na"
+
+#: app/templates/admin/smtp_config.html:63
+#: app/templates/admin/system_config.html:55
+msgid "Send Test Email"
+msgstr "Anfon E-bost Profi"
+
+#: app/templates/admin/system_config.html:39
+msgid "decrypted"
+msgstr "Crëwyd"
+
+#: app/templates/admin/partials/user_card.html:12
+msgid "Email:"
+msgstr "E-bost:"
+
+#: app/templates/admin/partials/user_card.html:15
+msgid "Role:"
+msgstr "Rôl:"
+
+#: app/templates/admin/partials/user_card.html:27
+#: app/templates/admin/partials/user_table.html:34
+msgid "Change Role"
+msgstr "Newid Rôl"
+
+#: app/templates/admin/partials/user_card.html:29
+#: app/templates/admin/partials/user_table.html:36
+msgid "You cannot change your own role"
+msgstr "Ni allwch newid eich statws galluog eich hun."
+
+#: app/templates/admin/partials/user_card.html:36
+#: app/templates/admin/partials/user_table.html:43
+msgid "Are you sure you want to reset MFA for this user?"
+msgstr "Ydych chi'n siŵr eich bod am ailosod MFA ar gyfer y defnyddiwr hwn?"
+
+#: app/templates/admin/partials/user_card.html:39
+#: app/templates/admin/partials/user_table.html:46
+msgid "Reset MFA"
+msgstr "Ailosod Cyfrinair"
+
+#: app/templates/admin/partials/user_card.html:51
+#: app/templates/admin/partials/user_table.html:58
+msgid "Delete user"
+msgstr "Dileu defnyddiwr"
+
+#: app/templates/admin/partials/user_card.html:55
+#: app/templates/admin/partials/user_table.html:61
+msgid "Delete User"
+msgstr "Dileu Defnyddiwr"
+
+#: app/templates/admin/partials/user_card.html:58
+#: app/templates/admin/partials/user_table.html:65
+msgid "You cannot disable yourself"
+msgstr "Ni allwch analluogi eich hunan"
+
+#: app/templates/admin/partials/user_card.html:65
+#: app/templates/admin/partials/user_table.html:72
+msgid "Disable"
+msgstr "Analluogi"
+
+#: app/templates/admin/partials/user_card.html:65
+#: app/templates/admin/partials/user_table.html:72
+msgid "Enable"
+msgstr "Galluogi"
+
+#: app/templates/admin/partials/user_header.html:6
+#: app/templates/partials/admin_nav.html:47
+msgid "Users"
+msgstr "Defnyddwyr"
+
+#: app/templates/admin/partials/user_header.html:12
+#: app/templates/admin/partials/user_header.html:13
+#: app/templates/apprise/apprise_config.html:10
+#: app/templates/apprise/apprise_config.html:11
+#: app/templates/apprise/list_apprise.html:16
+#: app/templates/apprise/list_apprise.html:17
+#: app/templates/email/list_emails.html:15
+#: app/templates/email/list_emails.html:16
+#: app/templates/messages/list_messages.html:16
+#: app/templates/messages/list_messages.html:17
+#: app/templates/reminders/list_reminders.html:15
+#: app/templates/reminders/list_reminders.html:16
+#: app/templates/user_smtp/list_smtp.html:14
+#: app/templates/user_smtp/list_smtp.html:17
+#: app/templates/webhook/list_webhooks.html:16
+#: app/templates/webhook/list_webhooks.html:17
+#: app/templates/webhook/webhook_config.html:10
+#: app/templates/webhook/webhook_config.html:11
+msgid "Table View"
+msgstr "Golwg Fwrdd"
+
+#: app/templates/admin/partials/user_header.html:26
+#: app/templates/admin/partials/user_header.html:27
+#: app/templates/apprise/apprise_config.html:24
+#: app/templates/apprise/apprise_config.html:25
+#: app/templates/apprise/list_apprise.html:30
+#: app/templates/apprise/list_apprise.html:31
+#: app/templates/email/list_emails.html:29
+#: app/templates/email/list_emails.html:30
+#: app/templates/messages/list_messages.html:30
+#: app/templates/messages/list_messages.html:31
+#: app/templates/reminders/list_reminders.html:29
+#: app/templates/reminders/list_reminders.html:30
+#: app/templates/user_smtp/list_smtp.html:27
+#: app/templates/user_smtp/list_smtp.html:30
+#: app/templates/webhook/list_webhooks.html:30
+#: app/templates/webhook/list_webhooks.html:31
+#: app/templates/webhook/webhook_config.html:24
+#: app/templates/webhook/webhook_config.html:25
+msgid "Card View"
+msgstr "Golwg Cerdyn"
+
+#: app/templates/admin/partials/user_header.html:45
+msgid "Add User"
+msgstr "Ychwanegu Defnyddiwr"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:9
+#: app/templates/email/attach_files.html:54
+#: app/templates/email/list_emails.html:255
+#: app/templates/messages/list_messages.html:223
+#: app/templates/reminders/list_reminders.html:218
+#: app/templates/reminders/schedule_reminder.html:56
+msgid "Hide Instructions"
+msgstr "Cuddio Cyfarwyddiadau"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:9
+msgid "How to manage users"
+msgstr "Sut i reoli defnyddwyr"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "Click"
+msgstr "Cliciwch"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+msgid "➕ Add User"
+msgstr "➕ Ychwanegu Defnyddiwr"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+msgid "to open the new user form."
+msgstr "i agor y ffurflen defnyddiwr newydd."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:18
+msgid "Enter a unique username, valid email address, and strong password."
+msgstr ""
+"Rhowch enw defnyddiwr unigryw, cyfeiriad e-bost dilys, a chyfrinair cryf."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "Select the appropriate"
+msgstr "Dewiswch y"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "role"
+msgstr "rôl"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "or"
+msgstr "Porth"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "to save."
+msgstr "i gadw."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:25
+msgid "To edit a user, click ✏️ and update their info."
+msgstr "I olygu defnyddiwr, cliciwch ✏️ ac adnewyddu eu gwybodaeth."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:26
+msgid "To delete a user, click 🗑️ and confirm the deletion."
+msgstr "I ddileu defnyddiwr, cliciwch 🗑️ a chadarnhau'r dilead."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:28
+msgid "To disable or enable a user, click 🔴 or 🟢."
+msgstr "I analluogi neu alluogi defnyddiwr, cliciwch 🔴 neu 🟢."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:30
+msgid "🟢 = User is enabled and can log in."
+msgstr "🟢 = Mae defnyddiwr wedi'i alluogi ac yn gallu mewngofnodi."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:31
+msgid "🔴 = User is disabled and cannot log in."
+msgstr "🔴 = Mae'r defnyddiwr wedi'i anablu ac ni all fewngofnodi."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:32
+msgid "⚪ = You cannot disable your own account."
+msgstr "⚪ = Ni allwch anablu eich cyfrif eich hun."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:43
+#: app/templates/admin/partials/user_table.html:91
+msgid "Assign Role for"
+msgstr "Neilltuo Cyrchfanau ar gyfer"
+
+#: app/templates/admin/partials/user_table.html:10
+msgid "ID"
+msgstr "ID"
+
+#: app/templates/admin/partials/user_table.html:11
+#: app/templates/user_smtp/list_smtp.html:55
+msgid "Username"
+msgstr "Enw Defnyddiwr"
+
+#: app/templates/admin/partials/user_table.html:12
+msgid "Email"
+msgstr "E-bost"
+
+#: app/templates/admin/partials/user_table.html:13
+msgid "Role"
+msgstr "Rôl"
+
+#: app/templates/apprise/apprise_config.html:3
+#: app/templates/apprise/list_apprise.html:9
+#: app/templates/messages/assign_destinations.html:22
+#: app/templates/reminders/assign_destinations.html:20
+msgid "Apprise Destinations"
+msgstr "Cyrchfannau Apprise"
+
+#: app/templates/apprise/apprise_config.html:43
+#: app/templates/webhook/list_webhooks.html:49
+#: app/templates/webhook/webhook_config.html:43
+msgid "Add Webhook"
+msgstr "Ychwanegu Webhook"
+
+#: app/templates/apprise/apprise_config.html:43
+#: app/templates/apprise/list_apprise.html:49
+#: app/templates/webhook/list_webhooks.html:49
+#: app/templates/webhook/webhook_config.html:43
+msgid "Add Destination"
+msgstr "Ychwanegu Cyrchfan"
+
+#: app/templates/apprise/create_apprise.html:10
+msgid "Create Apprise Destination"
+msgstr "Creu Cyrchfan Apprise"
+
+#: app/templates/apprise/create_apprise.html:38
+#: app/templates/apprise/edit_apprise.html:38
+#: app/templates/user_smtp/create_smtp.html:107
+#: app/templates/webhook/create_webhook.html:44
+#: app/templates/webhook/edit_webhook.html:44
+msgid "Create Destination"
+msgstr "Creu Cyrchfan"
+
+#: app/templates/apprise/create_apprise.html:47
+#: app/templates/apprise/edit_apprise.html:47
+msgid "Need help with Apprise URLs? See the"
+msgstr "Angen help gyda URLs Apprise? Gweld y"
+
+#: app/templates/apprise/create_apprise.html:51
+#: app/templates/apprise/edit_apprise.html:51
+msgid "Apprise Notification Services documentation"
+msgstr "arddangosfa Gwasanaethau Hysbysu Apprise"
+
+#: app/templates/apprise/edit_apprise.html:10
+msgid "Edit Apprise Destination"
+msgstr "Golygu Cyrchfan Apprise"
+
+#: app/templates/apprise/list_apprise.html:49
+msgid "Add Apprise"
+msgstr "Ychwanegu Apprise"
+
+#: app/templates/apprise/list_apprise.html:58
+#: app/templates/email/edit_message.html:21
+#: app/templates/email/list_emails.html:56
+#: app/templates/email/view_config.html:14
+#: app/templates/messages/create_message.html:29
+#: app/templates/messages/edit_message.html:23
+#: app/templates/messages/list_messages.html:57
+#: app/templates/messages/view_message.html:14
+#: app/templates/reminders/create_reminder.html:23
+#: app/templates/reminders/edit_reminder.html:17
+#: app/templates/reminders/list_reminders.html:56
+#: app/templates/reminders/view_reminder.html:13
+#: app/templates/user_smtp/list_smtp.html:52
+#: app/templates/webhook/list_webhooks.html:58
+msgid "Label"
+msgstr "Label"
+
+#: app/templates/apprise/list_apprise.html:59
+msgid "URL"
+msgstr "URL"
+
+#: app/templates/apprise/list_apprise.html:61
+#: app/templates/email/list_emails.html:59
+#: app/templates/messages/list_messages.html:59
+#: app/templates/messages/view_message.html:36
+#: app/templates/reminders/view_reminder.html:47
+#: app/templates/webhook/list_webhooks.html:62
+msgid "Created At"
+msgstr "Wedi'i greu ar"
+
+#: app/templates/apprise/list_apprise.html:77
+#: app/templates/apprise/list_apprise.html:132
+#: app/templates/user_smtp/list_smtp.html:79
+#: app/templates/user_smtp/list_smtp.html:147
+#: app/templates/webhook/list_webhooks.html:79
+#: app/templates/webhook/list_webhooks.html:138
+msgid "Edit"
+msgstr "Golygu"
+
+#: app/templates/apprise/list_apprise.html:80
+#: app/templates/apprise/list_apprise.html:135
+#: app/templates/user_smtp/list_smtp.html:82
+#: app/templates/user_smtp/list_smtp.html:150
+msgid "Cannot edit while in use"
+msgstr "Methu golygu tra yn cael ei ddefnyddio"
+
+#: app/templates/apprise/list_apprise.html:88
+#: app/templates/apprise/list_apprise.html:143
+#: app/templates/webhook/list_webhooks.html:91
+#: app/templates/webhook/list_webhooks.html:150
+msgid "Test"
+msgstr "Prawf"
+
+#: app/templates/apprise/list_apprise.html:103
+#: app/templates/apprise/list_apprise.html:158
+#: app/templates/user_smtp/list_smtp.html:106
+#: app/templates/user_smtp/list_smtp.html:174
+msgid "Cannot delete while in use"
+msgstr "Methu dileu tra yn cael ei ddefnyddio"
+
+#: app/templates/apprise/list_apprise.html:119
+msgid "URL:"
+msgstr "URL:"
+
+#: app/templates/apprise/list_apprise.html:122
+#: app/templates/user_smtp/list_smtp.html:137
+#: app/templates/webhook/list_webhooks.html:128
+msgid "Enabled:"
+msgstr "Wedi'i alluogi:"
+
+#: app/templates/apprise/list_apprise.html:125
+#: app/templates/user_smtp/list_smtp.html:140
+#: app/templates/webhook/list_webhooks.html:131
+msgid "Created:"
+msgstr "Wedi'i greu:"
+
+#: app/templates/auth/bootstrap.html:14
+msgid "Create Admin Account"
+msgstr "Creu Cyfrif Gweinyddwr"
+
+#: app/templates/auth/bootstrap.html:16
+msgid "Let’s get started by creating your first admin account."
+msgstr "Gadewch i ni ddechrau trwy greu eich cyfrif gweinyddwr cyntaf."
+
+#: app/templates/auth/bootstrap.html:75
+msgid "Create Admin"
+msgstr "Creu Gweinyddwr"
+
+#: app/templates/auth/forgot_password.html:12
+msgid "Forgot Password"
+msgstr "Wedi anghofio'r Cyfrinair"
+
+#: app/templates/auth/forgot_password.html:15
+msgid ""
+"Enter your username and email. We'll send you a link to reset your password."
+msgstr ""
+"Rhowch eich enw defnyddiwr a'ch e-bost. Byddwn yn anfon dolen i ailosod eich"
+" cyfrinair."
+
+#: app/templates/auth/forgot_username.html:12
+msgid "Forgot Username"
+msgstr "Wedi anghofio'r Enw Defnyddiwr"
+
+#: app/templates/auth/forgot_username.html:15
+msgid "Enter your email address, and we'll send you your username."
+msgstr ""
+"Rhowch eich cyfeiriad e-bost, a byddwn yn anfon eich enw defnyddiwr atoch."
+
+#: app/templates/auth/forgot_username.html:40
+msgid "Send Username"
+msgstr "Anfon Enw Defnyddiwr"
+
+#: app/templates/auth/login.html:12 app/templates/auth/login.html:54
+msgid "Log In"
+msgstr "Mewngofnodi"
+
+#: app/templates/auth/login.html:62
+msgid "Forgot Username?"
+msgstr "Wedi anghofio’r Enw Defnyddiwr?"
+
+#: app/templates/auth/login.html:64
+msgid "Forgot Password?"
+msgstr "Wedi anghofio’r Cyfrinair?"
+
+#: app/templates/auth/login.html:66 app/templates/auth/signup.html:12
+msgid "Sign Up"
+msgstr "Cofrestru"
+
+#: app/templates/auth/rate_limit.html:9
+msgid "Hold On"
+msgstr "Dal ymlaen"
+
+#: app/templates/auth/rate_limit.html:11
+msgid "Too many failed login attempts. Please wait"
+msgstr "Gormod o geisiadau mewngofnodi aflwyddiannus. Arhoswch"
+
+#: app/templates/auth/rate_limit.html:13
+msgid "seconds..."
+msgstr "eiliadau..."
+
+#: app/templates/auth/rate_limit.html:15
+msgid "Redirecting to login..."
+msgstr "Dychwelyd i'r Dangosfwrdd"
+
+#: app/templates/auth/reset_password.html:12
+#: app/templates/auth/reset_password.html:116
+msgid "Reset Password"
+msgstr "Ailosod Cyfrinair"
+
+#: app/templates/auth/reset_password.html:14
+msgid "Enter your username, email, and new password."
+msgstr "Nodwch eich enw defnyddiwr, e-bost, a chyfrinair newydd."
+
+#: app/templates/auth/signup.html:14
+msgid "Fill out the form to create your account."
+msgstr "Llenwch y ffurflen i greu eich cyfrif."
+
+#: app/templates/checkin/already_checked_in.html:10
+msgid "Already Checked In"
+msgstr "Gwirio I Mewn Ddiwethaf"
+
+#: app/templates/checkin/already_checked_in.html:12
+msgid ""
+"You have already checked in for this item. No further action is needed at "
+"this time."
+msgstr ""
+"Rydych eisoes wedi gwirio i mewn ar gyfer yr eitem hon. Nid oes angen cymryd"
+" camau pellach ar hyn o bryd."
+
+#: app/templates/checkin/already_checked_in.html:16
+#: app/templates/checkin/disabled.html:16
+#: app/templates/checkin/executed_disabled.html:18
+msgid "Check-in for:"
+msgstr "Mewngofnodi ar gyfer:"
+
+#: app/templates/checkin/already_checked_in.html:21
+#: app/templates/checkin/disabled.html:21
+#: app/templates/checkin/executed_disabled.html:23
+#: app/templates/checkin/thank_you.html:19
+msgid "Return to Dashboard"
+msgstr "Dychwelyd i'r Dangosfwrdd"
+
+#: app/templates/checkin/disabled.html:10
+msgid "Check-In Disabled"
+msgstr "E-bost wedi'i analluogi"
+
+#: app/templates/checkin/disabled.html:12
+msgid "This check-in is currently disabled and cannot be completed."
+msgstr ""
+"Mae'r gwirio i mewn wedi'i analluogi ar hyn o bryd ac ni ellir ei gwblhau."
+
+#: app/templates/checkin/executed_disabled.html:11
+msgid "Already Executed & Disabled"
+msgstr "Gweithredu & Analluogi eisoes"
+
+#: app/templates/checkin/executed_disabled.html:14
+msgid ""
+"This check-in has already been executed and is now disabled. No further "
+"action is required."
+msgstr ""
+"Mae'r gwirio i mewn wedi'i weithredu eisoes ac mae bellach wedi'i analluogi."
+" Nid oes angen gweithredu pellach."
+
+#: app/templates/checkin/thank_you.html:10
+msgid "Check-In Successful"
+msgstr "Mewngofnodi Llwyddiannus"
+
+#: app/templates/checkin/thank_you.html:11
+msgid "Thank you for checking in."
+msgstr "Diolch am fewngofnodi."
+
+#: app/templates/checkin/thank_you.html:14
+msgid "Checked in for:"
+msgstr "Mewngofnodi ar gyfer:"
+
+#: app/templates/email/assign_smtp.html:11
+msgid "📧 Assign SMTP Config to:"
+msgstr "📧 Neilltuo Config SMTP i:"
+
+#: app/templates/email/assign_smtp.html:25
+msgid "No SMTP (Unassign)"
+msgstr "Dim cyfluniad SMTP wedi'i neilltuo"
+
+#: app/templates/email/assign_smtp.html:26
+msgid "This email will not use any SMTP configuration."
+msgstr "Ni fydd yr e-bost hwn yn defnyddio unrhyw ffurfweddiad SMTP."
+
+#: app/templates/email/attach_files.html:12
+msgid "Attach Files for:"
+msgstr "Atodi Ffeiliau ar gyfer:"
+
+#: app/templates/email/attach_files.html:21
+msgid "Available Files"
+msgstr "Ffeiliau Ar Gael"
+
+#: app/templates/email/attach_files.html:36
+msgid "No files found in the upload directory."
+msgstr "Dim ffeiliau wedi'u canfod yn y cyfeiriadur llwytho i fyny."
+
+#: app/templates/email/attach_files.html:44
+msgid "Save Attachments"
+msgstr "Cadw Atodiadau"
+
+#: app/templates/email/attach_files.html:54
+msgid "File Attach Notes"
+msgstr "Nodiadau Atod Ffeil"
+
+#: app/templates/email/attach_files.html:63
+msgid "Important:"
+msgstr "Porth:"
+
+#: app/templates/email/attach_files.html:65
+msgid ""
+"Only files that are present in the 'uploads' folder (provided by your system"
+" administrator) will be shown here. If you do not see your file(s), please "
+"contact your Grylli administrator."
+msgstr ""
+"Dim ond ffeiliau sydd yn y ffolder 'uploads' (a ddarperir gan eich "
+"gweinyddwr system) fydd yn cael eu dangos yma. Os nad ydych chi'n gweld eich"
+" ffeil(iau), cysylltwch â'ch gweinyddwr Grylli."
+
+#: app/templates/email/attach_files.html:69
+msgid "Accepted file types:"
+msgstr "Mathau o ffeil derbyniwyd:"
+
+#: app/templates/email/attach_files.html:71
+msgid "Documents:"
+msgstr "Dogfennau:"
+
+#: app/templates/email/attach_files.html:73
+msgid "Images:"
+msgstr "Delweddau:"
+
+#: app/templates/email/attach_files.html:75
+msgid "Audio:"
+msgstr "Sain:"
+
+#: app/templates/email/attach_files.html:79
+msgid "Maximum file size:"
+msgstr "Maint ffeil mwyaf:"
+
+#: app/templates/email/attach_files.html:80
+msgid "10 MB per file"
+msgstr "10 MB y ffeil"
+
+#: app/templates/email/attach_files.html:83
+msgid "Total upload size:"
+msgstr "Cyfanswm maint llwytho i fyny:"
+
+#: app/templates/email/attach_files.html:84
+msgid "20 MB (all files combined)"
+msgstr "20 MB (pob ffeil wedi'u cyfuno)"
+
+#: app/templates/email/edit_message.html:12
+#: app/templates/email/list_emails.html:75
+#: app/templates/email/list_emails.html:177
+msgid "Edit Email"
+msgstr "Golygu E-bost"
+
+#: app/templates/email/edit_message.html:12
+msgid "Create Email"
+msgstr "Creu E-bost"
+
+#: app/templates/email/edit_message.html:28
+msgid "To (Recipient Email)"
+msgstr "I (E-bost Derbynnydd)"
+
+#: app/templates/email/edit_message.html:35
+#: app/templates/email/list_emails.html:57
+#: app/templates/email/view_config.html:18
+#: app/templates/messages/create_message.html:36
+#: app/templates/messages/edit_message.html:30
+#: app/templates/messages/list_messages.html:58
+#: app/templates/messages/view_message.html:18
+#: app/templates/reminders/create_reminder.html:30
+#: app/templates/reminders/edit_reminder.html:24
+#: app/templates/reminders/list_reminders.html:57
+#: app/templates/reminders/view_reminder.html:17
+msgid "Subject"
+msgstr "Pwnc"
+
+#: app/templates/email/edit_message.html:42
+#: app/templates/email/view_config.html:28
+msgid "Body"
+msgstr "Corff"
+
+#: app/templates/email/edit_message.html:50
+msgid "Save Email"
+msgstr "Cadw E-bost"
+
+#: app/templates/email/list_emails.html:48
+msgid "Add Email"
+msgstr "Ychwanegu E-bost"
+
+#: app/templates/email/list_emails.html:58
+#: app/templates/reminders/assign_email_reminder.html:77
+msgid "To"
+msgstr "I"
+
+#: app/templates/email/list_emails.html:78
+#: app/templates/email/list_emails.html:180
+msgid "Disable to edit email"
+msgstr "Methwyd ag anfon prawf ebost:"
+
+#: app/templates/email/list_emails.html:84
+#: app/templates/email/list_emails.html:186
+msgid "Attach Files"
+msgstr "Atodi Ffeiliau"
+
+#: app/templates/email/list_emails.html:87
+#: app/templates/email/list_emails.html:189
+msgid "Disable to attach files"
+msgstr "Atodi Ffeiliau"
+
+#: app/templates/email/list_emails.html:93
+#: app/templates/email/list_emails.html:195
+msgid "Attach SMTP Config"
+msgstr "Atodi Ffurfwedd SMTP"
+
+#: app/templates/email/list_emails.html:96
+#: app/templates/email/list_emails.html:198
+msgid "Disable to assign SMTP"
+msgstr "Analluogi i aseinio SMTP"
+
+#: app/templates/email/list_emails.html:102
+#: app/templates/email/list_emails.html:204
+msgid "Schedule Check-In"
+msgstr "Trefnu Mewngofnodi"
+
+#: app/templates/email/list_emails.html:105
+#: app/templates/email/list_emails.html:207
+msgid "Disable to schedule check-in"
+msgstr "Trefnu Mewngofnodi"
+
+#: app/templates/email/list_emails.html:110
+#: app/templates/email/list_emails.html:212
+#: app/templates/messages/list_messages.html:99
+#: app/templates/messages/list_messages.html:184
+#: app/templates/reminders/list_reminders.html:93
+#: app/templates/reminders/list_reminders.html:178
+msgid "View Details"
+msgstr "Gweld Manylion"
+
+#: app/templates/email/list_emails.html:118
+#: app/templates/email/list_emails.html:220
+msgid "Send this email to yourself to preview it."
+msgstr "Anfonwch yr e-bost hwn atoch eich hun i'w ragolwg."
+
+#: app/templates/email/list_emails.html:136
+#: app/templates/email/list_emails.html:238
+msgid "Toggle Email On/Off"
+msgstr "Toglo E-bost Ymlaen/I ffwrdd"
+
+#: app/templates/email/list_emails.html:139
+#: app/templates/email/list_emails.html:241
+msgid "Email is enabled"
+msgstr "E-bost wedi'i alluogi"
+
+#: app/templates/email/list_emails.html:141
+#: app/templates/email/list_emails.html:243
+msgid "Email is disabled"
+msgstr "E-bost wedi'i analluogi"
+
+#: app/templates/email/list_emails.html:157
+#: app/templates/email/view_config.html:51
+#: app/templates/messages/list_messages.html:142
+#: app/templates/reminders/list_reminders.html:140
+msgid "Label:"
+msgstr "Label:"
+
+#: app/templates/email/list_emails.html:161
+#: app/templates/messages/list_messages.html:146
+#: app/templates/reminders/list_reminders.html:144
+#: app/templates/reminders/view_reminder.html:98
+msgid "Subject:"
+msgstr "Pwnc"
+
+#: app/templates/email/list_emails.html:165
+msgid "To:"
+msgstr "I:"
+
+#: app/templates/email/list_emails.html:169
+#: app/templates/messages/list_messages.html:150
+msgid "Created At:"
+msgstr "Wedi'i greu ar"
+
+#: app/templates/email/list_emails.html:255
+msgid "How to create and send an email"
+msgstr "Sut i greu ac anfon e-bost"
+
+#: app/templates/email/list_emails.html:262
+msgid ""
+"Click “Add Email” and fill out the subject, content, and recipient address."
+msgstr ""
+"Cliciwch “Ychwanegu E-bost” a llenwi'r pwnc, cynnwys, a chyfeiriad y "
+"derbynnydd."
+
+#: app/templates/email/list_emails.html:263
+msgid "Attach any optional files (if needed)."
+msgstr "Yn atodi unrhyw ffeiliau dewisol (os oes angen)."
+
+#: app/templates/email/list_emails.html:264
+msgid ""
+"Click 🧩 to assign a single SMTP configuration that will be used to send the "
+"email."
+msgstr ""
+"Cliciwch 🧩 i neilltuo un cyfluniad SMTP a ddefnyddir i anfon yr e-bost."
+
+#: app/templates/email/list_emails.html:265
+msgid "Click ⏱️ to set a check-in interval and grace period for the email."
+msgstr "Cliciwch ⏱️ i osod cyfwng gwirio ac amser gras ar gyfer yr e-bost."
+
+#: app/templates/email/list_emails.html:266
+msgid "Enable the email using the 🔴/🟢 toggle button."
+msgstr "Galluogi'r e-bost gan ddefnyddio'r botwm toglo 🔴/🟢."
+
+#: app/templates/email/list_emails.html:267
+msgid ""
+"Click 🧪 to test the email by sending it to yourself (not the recipient)."
+msgstr ""
+"Cliciwch 🧪 i brofi'r e-bost trwy ei anfon atoch chi'ch hun (nid y "
+"derbynnydd)."
+
+#: app/templates/email/list_emails.html:268
+msgid ""
+"If you don’t check in before the grace period ends, the email will be "
+"automatically sent."
+msgstr ""
+"Os nad ydych chi'n gwirio i mewn cyn i'r amser gras ddod i ben, bydd yr "
+"e-bost yn cael ei anfon yn awtomatig."
+
+#: app/templates/email/list_emails.html:269
+msgid "You can preview the email configuration using 🔍."
+msgstr "Gallwch ragweld cyfluniad yr e-bost gan ddefnyddio 🔍."
+
+#: app/templates/email/list_emails.html:270
+msgid "Once a secure email is sent, it will be automatically disabled."
+msgstr ""
+"Unwaith y bydd e-bost diogel wedi'i anfon, bydd yn cael ei anablu yn "
+"awtomatig."
+
+#: app/templates/email/schedule_email.html:9
+msgid "Schedule Email"
+msgstr "Trefnu E-bost"
+
+#: app/templates/email/schedule_email.html:18
+#: app/templates/messages/schedule_message.html:18
+msgid "Years"
+msgstr "Blynyddoedd"
+
+#: app/templates/email/schedule_email.html:19
+#: app/templates/messages/schedule_message.html:19
+msgid "Months"
+msgstr "Misoedd"
+
+#: app/templates/email/schedule_email.html:20
+#: app/templates/messages/schedule_message.html:20
+msgid "Weeks"
+msgstr "Wythnosau"
+
+#: app/templates/email/schedule_email.html:21
+#: app/templates/messages/schedule_message.html:21
+msgid "Days"
+msgstr "Dyddiau"
+
+#: app/templates/email/schedule_email.html:22
+#: app/templates/messages/schedule_message.html:22
+msgid "Hours"
+msgstr "Oriau"
+
+#: app/templates/email/schedule_email.html:23
+#: app/templates/messages/schedule_message.html:23
+msgid "Minutes"
+msgstr "Munudau"
+
+#: app/templates/email/schedule_email.html:28
+#: app/templates/messages/schedule_message.html:28
+msgid "Check-in"
+msgstr "Gwirio i Mewn"
+
+#: app/templates/email/schedule_email.html:51
+#: app/templates/messages/schedule_message.html:51
+#: app/templates/messages/view_message.html:26
+msgid "Grace Period"
+msgstr "Amser Gras"
+
+#: app/templates/email/schedule_email.html:80
+#: app/templates/messages/schedule_message.html:80
+#: app/templates/reminders/schedule_reminder.html:47
+msgid "Save Schedule"
+msgstr "Cadw'r Trefniant"
+
+#: app/templates/email/view_config.html:9
+msgid "Email Configuration"
+msgstr "Cyfluniad E-bost"
+
+#: app/templates/email/view_config.html:22
+msgid "Recipient"
+msgstr "Derbynnydd"
+
+#: app/templates/email/view_config.html:33
+msgid "Attached Files"
+msgstr "Ffeiliau wedi'u hatodi"
+
+#: app/templates/email/view_config.html:39
+msgid "No files attached"
+msgstr "Dim ffeiliau wedi'u hatodi"
+
+#: app/templates/email/view_config.html:46
+#: app/templates/reminders/assign_email_reminder.html:20
+msgid "SMTP Configuration"
+msgstr "Cyfluniad SMTP"
+
+#: app/templates/email/view_config.html:54
+#: app/templates/user_smtp/list_smtp.html:122
+msgid "Host:"
+msgstr "Gwesteiwr:"
+
+#: app/templates/email/view_config.html:57
+#: app/templates/user_smtp/list_smtp.html:128
+msgid "Username:"
+msgstr "Enw Defnyddiwr:"
+
+#: app/templates/email/view_config.html:60
+#: app/templates/user_smtp/list_smtp.html:134
+msgid "TLS:"
+msgstr "TLS:"
+
+#: app/templates/email/view_config.html:64
+msgid "No SMTP configuration assigned"
+msgstr "Dim cyfluniad SMTP wedi'i neilltuo"
+
+#: app/templates/email/view_config.html:69
+msgid "Schedule Information"
+msgstr "Gwybodaeth am y Trefniant"
+
+#: app/templates/email/view_config.html:72
+msgid "Check-in Interval:"
+msgstr "Cyfwng Gwirio i Mewn:"
+
+#: app/templates/email/view_config.html:72
+#: app/templates/email/view_config.html:75
+msgid "minutes"
+msgstr "munudau"
+
+#: app/templates/email/view_config.html:75
+msgid "Grace Period:"
+msgstr "Amser Gras:"
+
+#: app/templates/email/view_config.html:79
+msgid "Last Check-in:"
+msgstr "Gwirio i Mewn Diwethaf:"
+
+#: app/templates/email/view_config.html:82
+msgid "No check-in has occurred yet"
+msgstr "Nid oes unrhyw wirio i mewn wedi digwydd eto"
+
+#: app/templates/email/view_config.html:92
+msgid "Back to Emails"
+msgstr "Yn ôl i E-byst"
+
+#: app/templates/errors/500.html:4
+msgid "Something went wrong"
+msgstr "Aeth rhywbeth o'i le"
+
+#: app/templates/errors/500.html:6
+msgid ""
+"An unexpected error occurred. Please try again later or contact support."
+msgstr ""
+"Digwyddodd gwall annisgwyl. Ceisiwch eto'n ddiweddarach neu cysylltwch â "
+"chymorth."
+
+#: app/templates/locale/redirect_after_lang_set.html:15
+msgid "Switching Language..."
+msgstr "Newid Iaith..."
+
+#: app/templates/locale/redirect_after_lang_set.html:18
+msgid "Applying new language..."
+msgstr "Yn cymhwyso iaith newydd..."
+
+#: app/templates/messages/assign_destinations.html:13
+#: app/templates/reminders/assign_destinations.html:12
+msgid "Assign Destinations for"
+msgstr "Neilltuo Cyrchfanau ar gyfer"
+
+#: app/templates/messages/assign_destinations.html:62
+#: app/templates/reminders/assign_destinations.html:60
+msgid "Save Destinations"
+msgstr "Cadw Cyrchfanau"
+
+#: app/templates/messages/create_message.html:17
+msgid "Edit Notificaton"
+msgstr "Golygu Hysbysiad"
+
+#: app/templates/messages/create_message.html:19
+msgid "Create Notification"
+msgstr "Creu Hysbysiad"
+
+#: app/templates/messages/create_message.html:43
+#: app/templates/messages/edit_message.html:37
+#: app/templates/messages/view_message.html:42
+#: app/templates/reminders/create_reminder.html:37
+#: app/templates/reminders/edit_reminder.html:31
+#: app/templates/reminders/view_reminder.html:53
+msgid "Content"
+msgstr "Cynnwys"
+
+#: app/templates/messages/create_message.html:51
+msgid "Save Notification"
+msgstr "Cadw Hysbysiad"
+
+#: app/templates/messages/edit_message.html:15
+#: app/templates/messages/list_messages.html:74
+#: app/templates/messages/list_messages.html:158
+msgid "Edit Notification"
+msgstr "Golygu Hysbysiad"
+
+#: app/templates/messages/edit_message.html:45
+msgid "Update Notification"
+msgstr "Diweddaru Hysbysiad"
+
+#: app/templates/messages/list_messages.html:49
+msgid "Add Notification"
+msgstr "Ychwanegu Hysbysiad"
+
+#: app/templates/messages/list_messages.html:77
+#: app/templates/messages/list_messages.html:161
+msgid "Disable to edit notification"
+msgstr "Golygu Hysbysiad"
+
+#: app/templates/messages/list_messages.html:83
+#: app/templates/messages/list_messages.html:167
+#: app/templates/reminders/list_reminders.html:78
+#: app/templates/reminders/list_reminders.html:163
+msgid "Assign Destinations"
+msgstr "Neilltuo Cyrchfanau"
+
+#: app/templates/messages/list_messages.html:86
+#: app/templates/messages/list_messages.html:170
+msgid "Disable to assign destinations"
+msgstr "Neilltuo Cyrchfanau"
+
+#: app/templates/messages/list_messages.html:92
+#: app/templates/messages/list_messages.html:176
+#: app/templates/reminders/list_reminders.html:88
+#: app/templates/reminders/list_reminders.html:173
+msgid "Set Schedule"
+msgstr "Gosod Amserlen"
+
+#: app/templates/messages/list_messages.html:95
+#: app/templates/messages/list_messages.html:179
+msgid "Disable to set schedule"
+msgstr "Gosod Amserlen"
+
+#: app/templates/messages/list_messages.html:107
+#: app/templates/messages/list_messages.html:192
+msgid "Send Test Notification"
+msgstr "Golygu Hysbysiad"
+
+#: app/templates/messages/list_messages.html:122
+#: app/templates/messages/list_messages.html:209
+msgid "Toggle Message On/Off"
+msgstr "Troli Neges Ymlaen/I ffwrdd"
+
+#: app/templates/messages/list_messages.html:124
+#: app/templates/messages/list_messages.html:211
+msgid "Notification is enabled"
+msgstr "Hysbysiad wedi'i alluogi"
+
+#: app/templates/messages/list_messages.html:126
+#: app/templates/messages/list_messages.html:213
+msgid "Notification is disabled"
+msgstr "Hysbysiad wedi'i anablu"
+
+#: app/templates/messages/list_messages.html:223
+msgid "How to create and send a notification"
+msgstr "Sut i greu a danfon hysbysiad"
+
+#: app/templates/messages/list_messages.html:233
+msgid "Click “Add notification” and fill out the subject and content fields."
+msgstr "Cliciwch “Add notification” a llenwch y meysydd pwnc a chynnwys."
+
+#: app/templates/messages/list_messages.html:234
+msgid "Save the notification to return to the overview."
+msgstr "Cadwch yr hysbysiad i ddychwelyd i'r trosolwg."
+
+#: app/templates/messages/list_messages.html:235
+msgid "You need to create at least one apprise or webhook destination."
+msgstr "Mae angen i chi greu o leiaf un cyrchfan apprise neu webhook."
+
+#: app/templates/messages/list_messages.html:236
+msgid "You can create as many destinations as you like."
+msgstr "Gallwch greu cymaint o gyrchfanau ag y dymunwch."
+
+#: app/templates/messages/list_messages.html:237
+msgid "Click 🧩 to assign one or more Apprise and/or Webhook destinations."
+msgstr "Cliciwch 🧩 i neilltuo un neu fwy o cyrchfanau Apprise a/neu Webhook."
+
+#: app/templates/messages/list_messages.html:238
+msgid "Click ⏱️ to set a schedule and check-in interval."
+msgstr "Cliciwch ⏱️ i osod amserlen ac amser gwirio i mewn."
+
+#: app/templates/messages/list_messages.html:239
+msgid "Enable the notification using the 🔴/🟢 toggle button."
+msgstr "Galluogwch yr hysbysiad gan ddefnyddio'r botwm symudol 🔴/🟢."
+
+#: app/templates/messages/list_messages.html:240
+msgid ""
+"If you don’t check in before the grace period ends, the notification will be"
+" sent."
+msgstr ""
+"Os nad ydych yn gwirio i mewn cyn i'r cyfnod gras ddod i ben, bydd yr "
+"hysbysiad yn cael ei anfon."
+
+#: app/templates/messages/list_messages.html:241
+msgid "You can preview the notification config using 🔍."
+msgstr "Gallwch weld rhagolwg o'r ffeil config hysbysiad gan ddefnyddio 🔍."
+
+#: app/templates/messages/list_messages.html:242
+msgid "Once a notification is sent, it will be automatically disabled."
+msgstr "Ar ôl i hysbysiad gael ei anfon, bydd yn cael ei anablu'n awtomatig."
+
+#: app/templates/messages/schedule_message.html:9
+msgid "Schedule Message"
+msgstr "Amserlen Neges"
+
+#: app/templates/messages/view_message.html:9
+msgid "Notifications Details"
+msgstr "Manylion Hysbysiadau"
+
+#: app/templates/messages/view_message.html:22
+msgid "Check-in Interval"
+msgstr "Cyfnod Gwirio I Mewn"
+
+#: app/templates/messages/view_message.html:31
+msgid "Last Check-in"
+msgstr "Gwirio I Mewn Ddiwethaf"
+
+#: app/templates/messages/view_message.html:48
+#: app/templates/reminders/view_reminder.html:59
+msgid "Apprise URLs"
+msgstr "URLs Apprise"
+
+#: app/templates/messages/view_message.html:54
+#: app/templates/messages/view_message.html:64
+#: app/templates/reminders/view_reminder.html:65
+#: app/templates/reminders/view_reminder.html:75
+#: app/templates/reminders/view_reminder.html:85
+msgid "None assigned."
+msgstr "Dim wedi'i neilltuo."
+
+#: app/templates/messages/view_message.html:73
+msgid "Back to Notifications"
+msgstr "Yn ôl at Hysbysiadau"
+
+#: app/templates/mfa/challenge.html:5 app/templates/mfa/settings.html:5
+msgid "Two-Factor Authentication (MFA)"
+msgstr "Dau-Ffactor Dilysu (MFA)"
+
+#: app/templates/mfa/recovery_codes.html:4
+msgid "Your Recovery Codes"
+msgstr "Eich Codau Adfer"
+
+#: app/templates/mfa/recovery_codes.html:7
+msgid "Save these recovery codes in a safe place!"
+msgstr "Cadwch y codau adfer hyn mewn lle diogel!"
+
+#: app/templates/mfa/recovery_codes.html:10
+msgid ""
+"Each code can be used once if you lose access to your authenticator. These "
+"codes will not be shown again."
+msgstr ""
+"Gellir defnyddio pob cod unwaith os byddwch chi'n colli mynediad i'ch "
+"dilyswr. Ni fydd y codau hyn yn cael eu dangos eto."
+
+#: app/templates/mfa/recovery_codes.html:24
+msgid "OK, I've saved them"
+msgstr "Iawn, rwyf wedi eu cadw"
+
+#: app/templates/mfa/settings.html:12
+msgid "MFA QR Code"
+msgstr "Cod QR MFA"
+
+#: app/templates/mfa/settings.html:15
+msgid "Manual Entry:"
+msgstr "Cofnod Llawlyfr:"
+
+#: app/templates/partials/admin_nav.html:21
+msgid "Administration"
+msgstr "Gweinyddu"
+
+#: app/templates/partials/admin_nav.html:37
+#: app/templates/partials/shared_nav.html:34
+#: app/templates/partials/shared_nav.html:78
+#: app/templates/partials/shared_nav.html:117
+msgid "Overview"
+msgstr "Trosolwg"
+
+#: app/templates/partials/footer.html:7
+msgid "Toggle Theme"
+msgstr "Toglo Thema"
+
+#: app/templates/partials/footer.html:32
+msgid "Theme"
+msgstr "Thema"
+
+#: app/templates/partials/head.html:7
+msgid "Grylli"
+msgstr "Grylli"
+
+#: app/templates/partials/header.html:6 app/templates/partials/sidebar.html:32
+#: app/templates/partials/sidebar.html:66
+msgid "Home"
+msgstr "Cartref"
+
+#: app/templates/partials/header.html:55
+msgid "Account"
+msgstr "Cyfrif"
+
+#: app/templates/partials/header.html:61
+msgid "MFA"
+msgstr "MFA"
+
+#: app/templates/partials/header.html:67
+msgid "About"
+msgstr "Ynglŷn"
+
+#: app/templates/partials/header.html:73
+msgid "Privacy"
+msgstr "Preifatrwydd"
+
+#: app/templates/partials/header.html:79
+msgid "System Info"
+msgstr "Gwybodaeth System"
+
+#: app/templates/partials/header.html:114
+msgid "Logout"
+msgstr "Allgofnodi"
+
+#: app/templates/partials/shared_nav.html:33
+msgid "Overview of notification settings"
+msgstr "Trosolwg o osodiadau hysbysiadau"
+
+#: app/templates/partials/shared_nav.html:38
+msgid "Configure Apprise services"
+msgstr "Ffurfweddu gwasanaethau Apprise"
+
+#: app/templates/partials/shared_nav.html:39
+msgid "Apprise"
+msgstr "Apprise"
+
+#: app/templates/partials/shared_nav.html:43
+msgid "Configure Webhook integrations"
+msgstr "Ffurfweddu integreiddiadau Webhook"
+
+#: app/templates/partials/shared_nav.html:77
+msgid "Overview of secure email messages"
+msgstr "Trosolwg o negeseuon e-bost diogel"
+
+#: app/templates/partials/shared_nav.html:82
+msgid "Configure SMTP email settings"
+msgstr "Ffurfweddu gosodiadau e-bost SMTP"
+
+#: app/templates/partials/shared_nav.html:83
+#: app/templates/reminders/view_reminder.html:79
+msgid "SMTP"
+msgstr "SMTP"
+
+#: app/templates/partials/shared_nav.html:100
+#: app/templates/reminders/list_reminders.html:8
+msgid "Reminders"
+msgstr "munudau"
+
+#: app/templates/partials/shared_nav.html:116
+msgid "Overview of reminders"
+msgstr "Trosolwg o atgoffa"
+
+#: app/templates/partials/sidebar.html:13
+#: app/templates/partials/sidebar.html:47
+msgid "Menu"
+msgstr "Dewislen"
+
+#: app/templates/reminders/assign_email_reminder.html:12
+msgid "Link Email Reminder for"
+msgstr "Cysylltu Atgoffa E-bost ar gyfer"
+
+#: app/templates/reminders/assign_email_reminder.html:30
+#: app/templates/reminders/assign_email_reminder.html:64
+msgid "None (Unassign)"
+msgstr "Dim cyfluniad SMTP wedi'i neilltuo"
+
+#: app/templates/reminders/assign_email_reminder.html:43
+msgid "No sender address"
+msgstr "Dim cyfeiriad anfonwr"
+
+#: app/templates/reminders/assign_email_reminder.html:54
+msgid "Email Message"
+msgstr "Amserlen Neges"
+
+#: app/templates/reminders/assign_email_reminder.html:77
+msgid "No subject"
+msgstr "Pwnc"
+
+#: app/templates/reminders/assign_email_reminder.html:90
+msgid "Save Email Reminder"
+msgstr "Cadw E-bost"
+
+#: app/templates/reminders/create_reminder.html:12
+#: app/templates/reminders/edit_reminder.html:10
+#: app/templates/reminders/list_reminders.html:73
+#: app/templates/reminders/list_reminders.html:158
+msgid "Edit Reminder"
+msgstr "Golygu E-bost"
+
+#: app/templates/reminders/create_reminder.html:14
+msgid "Create Reminder"
+msgstr "Creu E-bost"
+
+#: app/templates/reminders/create_reminder.html:45
+msgid "Save Reminder"
+msgstr "Cadw E-bost"
+
+#: app/templates/reminders/edit_reminder.html:39
+msgid "Update Reminder"
+msgstr "Diweddaru Atgoffa"
+
+#: app/templates/reminders/list_reminders.html:48
+msgid "Add Reminder"
+msgstr "Ychwanegu E-bost"
+
+#: app/templates/reminders/list_reminders.html:58
+#: app/templates/reminders/view_reminder.html:21
+msgid "Start At"
+msgstr "Dechrau TLS"
+
+#: app/templates/reminders/list_reminders.html:59
+msgid "Recurrence"
+msgstr "Ailadroddiad"
+
+#: app/templates/reminders/list_reminders.html:69
+#: app/templates/reminders/list_reminders.html:153
+#: app/templates/reminders/view_reminder.html:26
+msgid "One-time"
+msgstr "Un-amser"
+
+#: app/templates/reminders/list_reminders.html:83
+msgid "Assign Email Reminder"
+msgstr "Neilltuo Atgoffa E-bost"
+
+#: app/templates/reminders/list_reminders.html:102
+#: app/templates/reminders/list_reminders.html:187
+msgid "Send Test Reminder"
+msgstr "Anfon E-bost Profi"
+
+#: app/templates/reminders/list_reminders.html:120
+#: app/templates/reminders/list_reminders.html:205
+msgid "Toggle Reminder On/Off"
+msgstr "Toglo E-bost Ymlaen/I ffwrdd"
+
+#: app/templates/reminders/list_reminders.html:122
+#: app/templates/reminders/list_reminders.html:207
+msgid "Reminder is enabled"
+msgstr "E-bost wedi'i alluogi"
+
+#: app/templates/reminders/list_reminders.html:124
+#: app/templates/reminders/list_reminders.html:209
+msgid "Reminder is disabled"
+msgstr "E-bost wedi'i analluogi"
+
+#: app/templates/reminders/list_reminders.html:148
+msgid "Start At:"
+msgstr "Dechrau TLS"
+
+#: app/templates/reminders/list_reminders.html:152
+msgid "Recurrence:"
+msgstr "Ailadroddiad:"
+
+#: app/templates/reminders/list_reminders.html:168
+msgid "Link Email Reminder"
+msgstr "Cysylltu Atgoffa E-bost"
+
+#: app/templates/reminders/list_reminders.html:218
+msgid "How to use reminders"
+msgstr "Sut i reoli defnyddwyr"
+
+#: app/templates/reminders/list_reminders.html:231
+msgid "➕ Click “Add Reminder” and fill out the subject and content fields."
+msgstr "Cliciwch “Add notification” a llenwch y meysydd pwnc a chynnwys."
+
+#: app/templates/reminders/list_reminders.html:232
+msgid "💾 Save the reminder to return to the overview."
+msgstr "Cadwch yr hysbysiad i ddychwelyd i'r trosolwg."
+
+#: app/templates/reminders/list_reminders.html:233
+msgid ""
+"📣 Assign Apprise, 🌐 Webhook, and/or 📧 Email (SMTP) destinations as needed."
+msgstr ""
+"📣 Penodi Apprise, 🌐 Wehook, a/neu 📧 cyrchfannau E-bost (SMTP) fel y bo "
+"angen."
+
+#: app/templates/reminders/list_reminders.html:234
+msgid ""
+"⏱️ Set the schedule using the schedule button to define when reminders are "
+"sent."
+msgstr ""
+"⏱️ Gosodwch yr amserlen gan ddefnyddio’r botwm amserlen i ddiffinio pryd mae"
+" atgoffa’n cael eu hanfon."
+
+#: app/templates/reminders/list_reminders.html:235
+msgid ""
+"🔍 Click “View Details” to review or edit assigned destinations and other "
+"settings."
+msgstr ""
+"🔍 Cliciwch “Gweld Manylion” i adolygu neu olygu cyrchfannau penodedig a "
+"gosodiadau eraill."
+
+#: app/templates/reminders/list_reminders.html:236
+msgid ""
+"🧪 Click the Test button to verify all assigned destinations are working "
+"correctly."
+msgstr ""
+"🧪 Cliciwch y botwm Profi i wirio bod pob cyrchfan benodedig yn gweithio'n "
+"gywir."
+
+#: app/templates/reminders/list_reminders.html:237
+msgid "🔴/🟢 Enable or disable the reminder using the toggle button."
+msgstr "Galluogi'r e-bost gan ddefnyddio'r botwm toglo 🔴/🟢."
+
+#: app/templates/reminders/list_reminders.html:238
+msgid "📤 Reminders will be sent as scheduled to the assigned destinations."
+msgstr ""
+"📤 Bydd atgoffa'n cael eu hanfon fel y sefydlwyd i'r cyrchfannau penodedig."
+
+#: app/templates/reminders/schedule_reminder.html:8
+msgid "Schedule Reminder"
+msgstr "Trefnu E-bost"
+
+#: app/templates/reminders/schedule_reminder.html:15
+msgid "Start Date & Time"
+msgstr "Dyddiad & Amser Dechrau"
+
+#: app/templates/reminders/schedule_reminder.html:22
+#: app/templates/reminders/view_reminder.html:25
+msgid "Recurrence Rule"
+msgstr "Rheol Ailadroddiad"
+
+#: app/templates/reminders/schedule_reminder.html:24
+msgid "(Optional) Enter RRULE or leave blank for one-time."
+msgstr "(Dewisol) Rhowch RRULE neu gadewch yn wag am un-amser."
+
+#: app/templates/reminders/schedule_reminder.html:30
+msgid "End Date"
+msgstr "Anfon Prawf"
+
+#: app/templates/reminders/schedule_reminder.html:32
+msgid "(Optional) Stop sending after this date."
+msgstr "(Dewisol) Peidiwch â chynnwys ar ôl y dyddiad hwn."
+
+#: app/templates/reminders/schedule_reminder.html:38
+#: app/templates/reminders/view_reminder.html:36
+msgid "Max Occurrences"
+msgstr "Uchafswm Digwyddiadau"
+
+#: app/templates/reminders/schedule_reminder.html:40
+msgid "(Optional) Stop after this many reminders."
+msgstr "(Dewisol) Peidiwch ar ôl cymaint o atgoffa."
+
+#: app/templates/reminders/schedule_reminder.html:56
+msgid "Help for RRULE syntax"
+msgstr "Cymorth ar gyfer cystrawen RRULE"
+
+#: app/templates/reminders/schedule_reminder.html:66
+msgid "Several tools are available to help generate an RRULE."
+msgstr "Mae sawl offeryn ar gael i helpu i gynhyrchu RRULE."
+
+#: app/templates/reminders/schedule_reminder.html:67
+msgid "Use a search engine or AI tool to assist."
+msgstr "Defnyddiwch beiriant chwilio neu offeryn AI i gynorthwyo."
+
+#: app/templates/reminders/schedule_reminder.html:69
+msgid "Here is an example of one such online tool:"
+msgstr "Dyma enghraifft o un o'r offer ar-lein hyn:"
+
+#: app/templates/reminders/schedule_reminder.html:73
+msgid "RRULE Generator Tool"
+msgstr "Offeryn Cynhyrchu RRULE"
+
+#: app/templates/reminders/schedule_reminder.html:77
+msgid "See here for some common examples:"
+msgstr "Gweler isod am rai enghreifftiau cyffredin:"
+
+#: app/templates/reminders/schedule_reminder.html:81
+msgid "RRULE Help (GitHub)"
+msgstr "Cymorth RRULE (GitHub)"
+
+#: app/templates/reminders/view_reminder.html:8
+msgid "Reminder Details"
+msgstr "Gweld Manylion"
+
+#: app/templates/reminders/view_reminder.html:30
+msgid "End At"
+msgstr "Anfon Prawf"
+
+#: app/templates/reminders/view_reminder.html:42
+msgid "Last Sent"
+msgstr "Gwirio I Mewn Ddiwethaf"
+
+#: app/templates/reminders/view_reminder.html:91
+msgid "Email Template"
+msgstr "Dilysydd E-bost"
+
+#: app/templates/reminders/view_reminder.html:103
+msgid "No email linked."
+msgstr "E-bost wedi'i alluogi"
+
+#: app/templates/reminders/view_reminder.html:111
+msgid "Back to Reminders"
+msgstr "Yn ôl i E-byst"
+
+#: app/templates/user_smtp/create_smtp.html:10
+msgid "Create SMTP Destination"
+msgstr "Creu Cyrchfan SMTP"
+
+#: app/templates/user_smtp/create_smtp.html:69
+#: app/templates/user_smtp/edit_smtp.html:84
+msgid "Hold to reveal"
+msgstr "Dal i ddatgelu"
+
+#: app/templates/user_smtp/create_smtp.html:92
+#: app/templates/user_smtp/edit_smtp.html:107
+msgid "Use TLS"
+msgstr "Defnyddio TLS"
+
+#: app/templates/user_smtp/edit_smtp.html:10
+msgid "Edit SMTP Destination"
+msgstr "Creu Cyrchfan SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:9
+msgid "SMTP Destinations"
+msgstr "Cyrchfannau SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:44
+msgid "Add SMTP"
+msgstr "Ychwanegu SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:53
+msgid "Host"
+msgstr "Gwesteiwr"
+
+#: app/templates/user_smtp/list_smtp.html:54
+msgid "Port"
+msgstr "Porth"
+
+#: app/templates/user_smtp/list_smtp.html:56
+msgid "TLS"
+msgstr "TLS"
+
+#: app/templates/user_smtp/list_smtp.html:58
+msgid "Created"
+msgstr "Crëwyd"
+
+#: app/templates/user_smtp/list_smtp.html:90
+#: app/templates/user_smtp/list_smtp.html:158
+msgid "Send Test"
+msgstr "Anfon Prawf"
+
+#: app/templates/user_smtp/list_smtp.html:125
+msgid "Port:"
+msgstr "Porth:"
+
+#: app/templates/user_smtp/list_smtp.html:131
+msgid "Password:"
+msgstr "Cyfrinair:"
+
+#: app/templates/user_smtp/list_smtp.html:184
+msgid "Hide SMTP Setup Help"
+msgstr "Cuddio Cymorth Ffurfweddu SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:184
+msgid "Show SMTP Setup Help"
+msgstr "Dangos Cymorth Ffurfweddu SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:190
+msgid ""
+"Need help finding your SMTP server settings? See here for some links to "
+"common providers:"
+msgstr ""
+"Angen help i ddod o hyd i’ch gosodiadau gweinydd SMTP? Gweler yma am rai "
+"dolenni i ddarparwyr cyffredin:"
+
+#: app/templates/user_smtp/list_smtp.html:194
+msgid "SMTP Server Settings Help (GitHub)"
+msgstr "Cymorth Gosodiadau Gweinydd SMTP (GitHub)"
+
+#: app/templates/user_smtp/list_smtp.html:198
+msgid ""
+"Find official documentation links for Gmail, Outlook, Yahoo, AOL, and "
+"others."
+msgstr ""
+"Dewch o hyd i ddolenni dogfennaeth swyddogol ar gyfer Gmail, Outlook, Yahoo,"
+" AOL, ac eraill."
+
+#: app/templates/user_smtp/list_smtp.html:199
+msgid ""
+"If your provider isn’t listed, search their support site or a search engine "
+"for 'SMTP settings'."
+msgstr ""
+"Os nad yw eich darparwr wedi’i restru, chwiliwch eu safle cymorth neu "
+"beiriant chwilio am 'gosodiadau SMTP'."
+
+#: app/templates/user_smtp/list_smtp.html:200
+msgid ""
+"Some providers (like Gmail, Yahoo) require 'App Passwords' or special "
+"setup—see their docs!"
+msgstr ""
+"Mae rhai darparwyr (fel Gmail, Yahoo) yn gofyn am 'App Passwords' neu setup "
+"arbennig—gweler eu dogfennau!"
+
+#: app/templates/webhook/create_webhook.html:10
+msgid "Create Webhook"
+msgstr "Creu Webhook"
+
+#: app/templates/webhook/edit_webhook.html:10
+msgid "Edit Webhook"
+msgstr "Golygu Webhook"
+
+#: app/templates/webhook/list_webhooks.html:9
+#: app/templates/webhook/webhook_config.html:3
+msgid "Webhooks Destinations"
+msgstr "Cyrchfannau Webhooks"
+
+#: app/templates/webhook/list_webhooks.html:59
+msgid "Endpoint"
+msgstr "Pen pwynt"
+
+#: app/templates/webhook/list_webhooks.html:60
+msgid "Description"
+msgstr "Disgrifiad"
+
+#: app/templates/webhook/list_webhooks.html:82
+#: app/templates/webhook/list_webhooks.html:141
+msgid "Cannot edit while assigned to notifications"
+msgstr "Methu golygu tra wedi’i aseinio i hysbysiadau"
+
+#: app/templates/webhook/list_webhooks.html:106
+#: app/templates/webhook/list_webhooks.html:165
+msgid "Cannot delete while assigned to notifications"
+msgstr "Methu dileu tra wedi’i aseinio i hysbysiadau"
+
+#: app/templates/webhook/list_webhooks.html:122
+msgid "Endpoint:"
+msgstr "Pen pwynt:"
+
+#: app/templates/webhook/list_webhooks.html:125
+msgid "Description:"
+msgstr "Disgrifiad:"
+
+#: app/views/account.py:74
+msgid "Current password is required to change password."
+msgstr "Mae angen y cyfrinair cyfredol i newid cyfrinair."
+
+#: app/views/account.py:78
+msgid "Current password is incorrect."
+msgstr "Nid yw'r cyfrinair cyfredol yn gywir."
+
+#: app/views/account.py:94
+msgid "Account updated successfully."
+msgstr "Diweddarwyd cyfrif yn llwyddiannus."
+
+#: app/views/account.py:100
+msgid "An error occurred while updating your account."
+msgstr "Digwyddodd gwall wrth ddiweddaru eich cyfrif."
+
+#: app/views/account.py:137
+msgid "You cannot delete your account because you are the last admin."
+msgstr "Ni allwch ddileu eich cyfrif oherwydd rydych chi'n weinyddwr olaf."
+
+#: app/views/account.py:146
+msgid "Your account has been permanently deleted."
+msgstr "Mae eich cyfrif wedi'i ddileu'n barhaol."
+
+#: app/views/account.py:152
+msgid "An error occurred while trying to delete your account."
+msgstr "Digwyddodd gwall wrth ddiweddaru eich cyfrif."
+
+#: app/views/account.py:171
+msgid "Your account has been deleted"
+msgstr "Mae eich cyfrif wedi'i ddileu'n barhaol."
+
+#: app/views/account.py:173
+#, python-brace-format
+msgid ""
+"Hello {username},\n"
+"\n"
+"Your account on {site_name} has been deleted.Remember to delete your files from the uploads folder.If this was not you, please contact support immediately.\n"
+"\n"
+"{site_url}"
+msgstr ""
+"Helo {username},\n"
+"\n"
+"Mae eich cyfrif ar {site_name} wedi cael ei ddileu. Cofiwch ddileu eich ffeiliau o'r ffolder uwchlwytho. Os nad chi oedd hyn, cysylltwch â chefnogaeth ar unwaith.\n"
+"\n"
+"{site_url}"
+
+#: app/views/admin.py:59
+msgid "Invalid role."
+msgstr "Rôl annilys."
+
+#: app/views/apprise.py:51
+msgid "🧪 Test notification sent successfully!"
+msgstr "🧪 Anfonwyd hysbysiad prawf yn llwyddiannus!"
+
+#: app/views/apprise.py:56
+msgid "🧪 Failed to send test notification: "
+msgstr "🧪 Methu anfon hysbysiad prawf:"
+
+#: app/views/apprise.py:62
+msgid "🧪 Error sending test notification."
+msgstr "🧪 Gwall wrth anfon hysbysiad prawf."
+
+#: app/views/apprise.py:101
+msgid "Apprise destination created successfully."
+msgstr "Crëwyd cyrchfan Apprise yn llwyddiannus."
+
+#: app/views/apprise.py:168
+msgid "Apprise destination updated successfully."
+msgstr "Diweddarwyd cyrchfan Apprise yn llwyddiannus."
+
+#: app/views/apprise.py:199
+msgid "Apprise destination deleted."
+msgstr "Dilewyd cyrchfan Apprise."
+
+#: app/views/auth.py:95
+msgid "Admin account created successfully."
+msgstr "Crëwyd cyfrif gweinyddwr yn llwyddiannus."
+
+#: app/views/auth.py:108
+msgid "An error occurred while creating the admin account."
+msgstr "Digwyddodd gwall wrth greu'r cyfrif gweinyddwr."
+
+#: app/views/auth.py:141
+msgid ""
+"Your account is not activated. Please check your email for the activation "
+"link."
+msgstr ""
+"Nid yw eich cyfrif wedi'i actifadu. Gwiriwch eich e-bost am y ddolen "
+"actifadu."
+
+#: app/views/auth.py:157
+msgid "Multi-factor authentication required. Please enter your code."
+msgstr "Gofynnir am ddilysu aml-ffactor. Rhowch eich cod, os gwelwch yn dda."
+
+#: app/views/auth.py:162 app/views/mfa.py:195
+msgid "Logged in successfully."
+msgstr "Mewngofnodwyd yn llwyddiannus."
+
+#: app/views/auth.py:179
+msgid "Invalid username or password."
+msgstr "Enw defnyddiwr neu gyfrinair annilys."
+
+#: app/views/auth.py:203
+msgid "You have been logged out."
+msgstr "Rydych wedi bod yn allgofnodi."
+
+#: app/views/auth.py:239 app/views/email.py:263
+msgid "Access denied."
+msgstr "Mynediad wedi'i wrthod."
+
+#: app/views/auth.py:273
+msgid "If a user with that email exists, we've sent the username to them."
+msgstr ""
+"Os oes defnyddiwr gyda'r e-bost hynny yn bodoli, rydym wedi danfon yr enw "
+"defnyddiwr atynt."
+
+#: app/views/auth.py:314
+msgid "A password reset link has been sent to your email."
+msgstr "Mae dolen ailosod cyfrinair wedi'i hanfon at eich e-bost."
+
+#: app/views/auth.py:319
+msgid "No account found matching that username and email."
+msgstr ""
+"Ni chanfuwyd unrhyw gyfrif sy'n cyfateb i'r enw defnyddiwr a'r e-bost hynny."
+
+#: app/views/auth.py:389
+msgid "The reset link is invalid or has expired."
+msgstr "Mae'r ddolen ailosod yn annilys neu wedi dod i ben."
+
+#: app/views/auth.py:401
+msgid "Username and email do not match."
+msgstr "Nid yw'r enw defnyddiwr a'r ebost yn cyfateb."
+
+#: app/views/auth.py:421
+msgid "Your password has been reset. Please log in."
+msgstr "Mae eich cyfrinair wedi'i ailosod. Mewngofnodwch os gwelwch yn dda."
+
+#: app/views/auth.py:458
+msgid "Invalid registration PIN."
+msgstr "PIN cofrestru annilys."
+
+#: app/views/auth.py:467
+msgid "Username or email already exists."
+msgstr "Mae'r enw defnyddiwr neu'r ebost eisoes yn bodoli."
+
+#: app/views/auth.py:492
+msgid "Activate Your Grylli Account"
+msgstr "Actifadu Eich Cyfrif Grylli"
+
+#: app/views/auth.py:493
+#, python-brace-format
+msgid ""
+"Hello {username},\n"
+"\n"
+"Please activate your account by clicking..."
+msgstr ""
+"Helo {username},\n"
+"\n"
+"Os gwelwch yn dda actifadu eich cyfrif trwy glicio..."
+
+#: app/views/auth.py:498
+msgid "Account created! Please check your email to activate your account."
+msgstr ""
+"Mae'r cyfrif wedi'i greu! Gwiriwch eich ebost i actifadu eich cyfrif os "
+"gwelwch yn dda."
+
+#: app/views/auth.py:521
+msgid "Activation link is invalid or expired."
+msgstr "Mae'r ddolen actifadu'n annilys neu wedi dod i ben."
+
+#: app/views/auth.py:528 app/views/users.py:76 app/views/users.py:140
+msgid "User not found."
+msgstr "Heb ddod o hyd i'r defnyddiwr."
+
+#: app/views/auth.py:532
+msgid "Account already activated. Please log in."
+msgstr "Mae'r cyfrif eisoes wedi'i actifadu. Mewngofnodwch os gwelwch yn dda."
+
+#: app/views/auth.py:540
+msgid "Your account has been activated! You can now log in."
+msgstr "Mae eich cyfrif wedi'i actifadu! Gallwch fewngofnodi nawr."
+
+#: app/views/backups.py:72
+#, python-format
+msgid "Backup created: %(filename)s"
+msgstr "Wedi creu copi wrth gefn: %(filename)s"
+
+#: app/views/backups.py:77
+msgid "Failed to create backup."
+msgstr "Methwyd â chreu copi wrth gefn."
+
+#: app/views/backups.py:106
+#, python-format
+msgid "Backup deleted: %(filename)s"
+msgstr "Wedi dileu copi wrth gefn: %(filename)s"
+
+#: app/views/backups.py:109
+msgid "Backup file not found."
+msgstr "B4kup file nawt found."
+
+#: app/views/backups.py:112
+msgid "Failed to delete backup."
+msgstr "Methwyd â dileu'r copi wrth gefn."
+
+#: app/views/checkin.py:41
+msgid "Invalid check-in link."
+msgstr "Dolen mewngofnodi annilys."
+
+#: app/views/checkin.py:48
+msgid "You are not authorized to check in for this item."
+msgstr "Does gennych chi ddim hawl i fewngofnodi am y eitem hwn."
+
+#: app/views/checkin.py:62
+msgid "Unsupported check-in type."
+msgstr "Math o fewngofnodi heb ei gefnogi."
+
+#: app/views/checkin.py:137
+msgid "⚠️ Cannot enable reminder: Start date/time is in the past."
+msgstr "⚠️ Methu galluogi atgoffa: Mae dyddiad/amser dechrau yn y gorffennol."
+
+#: app/views/checkin.py:158
+msgid "✅ Enabled and timer started."
+msgstr "✅ Wedi galluogi a dechreuodd y cloc."
+
+#: app/views/checkin.py:168
+msgid "⛔ Disabled."
+msgstr "⛔ Wedi'i analluogi."
+
+#: app/views/checkin.py:170
+msgid "⚠️ Cannot toggle — missing schedule or destination."
+msgstr "⚠️ Methu newid — amserlen neu gyrchfan ar goll."
+
+#: app/views/email.py:88
+msgid "Message saved."
+msgstr "Neges wedi'i arbed."
+
+#: app/views/email.py:118 app/views/messages.py:167
+msgid "Message deleted."
+msgstr "Neges wedi'i dileu."
+
+#: app/views/email.py:152
+msgid "Attached files updated."
+msgstr "Ffeiliau wedi'u hatodi wedi'u diweddaru."
+
+#: app/views/email.py:200
+msgid "SMTP configuration not assigned or is disabled."
+msgstr "Nid yw'r cyfluniad SMTP wedi'i aseinio neu wedi'i analluogi."
+
+#: app/views/email.py:234 app/views/smtp_settings_admin.py:82
+msgid "Test email sent successfully."
+msgstr "Anfonwyd prawf ebost yn llwyddiannus."
+
+#: app/views/email.py:282 app/views/messages.py:305
+msgid "Schedule updated successfully."
+msgstr "Diweddarwyd amserlen yn llwyddiannus."
+
+#: app/views/email.py:310
+msgid "SMTP configuration assigned."
+msgstr "Wedi aseinio'r cyfluniad SMTP."
+
+#: app/views/email.py:319
+msgid "SMTP configuration removed."
+msgstr "Wedi aseinio'r cyfluniad SMTP."
+
+#: app/views/messages.py:97
+msgid "Message created successfully."
+msgstr "Neges wedi'i chreu'n llwyddiannus."
+
+#: app/views/messages.py:133
+msgid "Message updated successfully."
+msgstr "Neges wedi'i diweddaru'n llwyddiannus."
+
+#: app/views/messages.py:223 app/views/reminders.py:240
+msgid "Destinations updated."
+msgstr "Cyrchfannau wedi'u diweddaru."
+
+#: app/views/messages.py:441
+msgid "No destinations assigned to this message."
+msgstr "Nid yw'r cyfluniad SMTP wedi'i aseinio neu wedi'i analluogi."
+
+#: app/views/messages.py:453
+msgid "Test message sent successfully."
+msgstr "Anfonwyd prawf ebost yn llwyddiannus."
+
+#: app/views/messages.py:455
+msgid "Test message failed: "
+msgstr "Neges wedi'i arbed."
+
+#: app/views/mfa.py:68
+msgid "You must enter a code from your authenticator."
+msgstr "Rhaid i chi roi cod o'ch dilyswr."
+
+#: app/views/mfa.py:82 app/views/mfa.py:259
+msgid "Invalid code. Please try again."
+msgstr "Cod annilys. Ceisiwch eto, os gwelwch yn dda."
+
+#: app/views/mfa.py:91
+msgid "Two-factor authentication disabled."
+msgstr "Hysbysiad wedi'i anablu"
+
+#: app/views/mfa.py:132
+msgid "Recovery codes are only shown immediately after enabling MFA."
+msgstr "Dim ond ar ôl galluogi MFA y dangosir codau adfer yn syth."
+
+#: app/views/mfa.py:142
+msgid "Could not load recovery codes."
+msgstr "Methu llwytho codau adfer."
+
+#: app/views/mfa.py:168
+msgid "No MFA challenge in progress."
+msgstr "Dim her MFA ar waith."
+
+#: app/views/mfa.py:176
+msgid "User not found for MFA challenge."
+msgstr "Heb ddod o hyd i'r defnyddiwr."
+
+#: app/views/mfa.py:225
+msgid ""
+"You have used your last recovery code. MFA has been disabled. Please remove "
+"Grylli from your authenticator app, and re-enable MFA to protect your "
+"account."
+msgstr ""
+"Rydych chi wedi defnyddio eich cod adfer olaf. Mae MFA wedi'i anablu. "
+"Tynnwch Grylli o'ch app dilyswr, a galluogwch MFA eto i ddiogelu eich "
+"cyfrif."
+
+#: app/views/mfa.py:248
+#, python-brace-format
+msgid "Recovery code accepted. You have {remaining} recovery codes left."
+msgstr "Derbyniwyd cod adfer. Mae gennych {remaining} codau adfer ar ôl."
+
+#: app/views/reminders.py:106
+msgid "Reminder created successfully."
+msgstr "Neges wedi'i chreu'n llwyddiannus."
+
+#: app/views/reminders.py:143
+msgid "Reminder updated successfully."
+msgstr "Diweddarwyd y defnyddiwr yn llwyddiannus."
+
+#: app/views/reminders.py:174
+msgid "Reminder deleted."
+msgstr "Defnyddiwr wedi'i ddileu."
+
+#: app/views/reminders.py:287
+msgid "No destinations assigned to this reminder."
+msgstr "Nid yw'r cyfluniad SMTP wedi'i aseinio neu wedi'i analluogi."
+
+#: app/views/reminders.py:311
+msgid "No email message linked to this reminder."
+msgstr "Dim neges e-bost wedi'i chysylltu â'r atgoffa hwn."
+
+#: app/views/reminders.py:314
+msgid "SMTP configuration is disabled."
+msgstr "Nid yw'r cyfluniad SMTP wedi'i aseinio neu wedi'i analluogi."
+
+#: app/views/reminders.py:353
+msgid "Test reminder sent successfully."
+msgstr "Anfonwyd prawf ebost yn llwyddiannus."
+
+#: app/views/reminders.py:356
+msgid "Test reminder failed: "
+msgstr "Neges wedi'i arbed."
+
+#: app/views/reminders.py:430
+msgid "Reminder schedule updated successfully."
+msgstr "Diweddarwyd amserlen yn llwyddiannus."
+
+#: app/views/reminders.py:434
+msgid "Please correct the errors below."
+msgstr "Cywirwch y camgymeriadau isod."
+
+#: app/views/reminders.py:481 app/views/reminders.py:482
+msgid "None"
+msgstr "Na"
+
+#: app/views/reminders.py:508
+msgid "You must select both an SMTP config and an email message, or neither."
+msgstr ""
+"Rhaid i chi ddewis naill ai conffig SMTP a neges e-bost, neu'r un ohonynt."
+
+#: app/views/reminders.py:528
+msgid "Email reminder settings updated."
+msgstr "Cyrchfannau wedi'u diweddaru."
+
+#: app/views/smtp.py:83 app/views/user_smtp.py:80
+msgid "SMTP destination created successfully."
+msgstr "Cyrchfan SMTP wedi'i chreu'n llwyddiannus."
+
+#: app/views/smtp.py:129 app/views/user_smtp.py:135
+msgid "SMTP destination updated."
+msgstr "Cyrchfan SMTP wedi'i diweddaru."
+
+#: app/views/smtp.py:160 app/views/user_smtp.py:166
+msgid "SMTP destination deleted."
+msgstr "Cyrchfan SMTP wedi'i dileu."
+
+#: app/views/smtp.py:191 app/views/user_smtp.py:199
+msgid "Test email sent successfully to your account email."
+msgstr "Anfonwyd prawf ebost yn llwyddiannus i ebost eich cyfrif."
+
+#: app/views/smtp.py:196 app/views/user_smtp.py:204
+msgid "Failed to send test email. Check SMTP settings."
+msgstr "Methwyd ag anfon prawf ebost. Gwiriwch y gosodiadau SMTP."
+
+#: app/views/smtp_settings_admin.py:76
+msgid "Test Email from Grylli"
+msgstr "Prawf Ebost o Grylli"
+
+#: app/views/smtp_settings_admin.py:77
+msgid "This is a test email from the Grylli SMTP settings page."
+msgstr "Neges prawf o dudalen gosodiadau SMTP Grylli yw hon."
+
+#: app/views/smtp_settings_admin.py:84
+msgid "Failed to send test email: "
+msgstr "Methwyd ag anfon prawf ebost:"
+
+#: app/views/users.py:99
+msgid "User updated successfully."
+msgstr "Diweddarwyd y defnyddiwr yn llwyddiannus."
+
+#: app/views/users.py:106 app/views/users.py:327
+msgid "An error occurred while updating the user."
+msgstr "Digwyddodd gwall wrth ddiweddaru'r defnyddiwr."
+
+#: app/views/users.py:195
+msgid "User deleted."
+msgstr "Defnyddiwr wedi'i ddileu."
+
+#: app/views/users.py:202
+msgid "An error occurred while deleting the user."
+msgstr "Digwyddodd gwall wrth ddileu'r defnyddiwr."
+
+#: app/views/users.py:237
+msgid "Password is required when creating a new user."
+msgstr "Mae angen cyfrinair wrth greu defnyddiwr newydd."
+
+#: app/views/users.py:244
+msgid "Username already exists."
+msgstr "Mae'r enw defnyddiwr eisoes yn bodoli."
+
+#: app/views/users.py:251
+msgid "Email already exists."
+msgstr "Mae'r e-bost eisoes yn bodoli."
+
+#: app/views/users.py:268
+#, python-format
+msgid "User '%(username)s' created successfully."
+msgstr "Defnyddiwr '%(username)s' wedi'i greu'n llwyddiannus."
+
+#: app/views/users.py:278
+msgid "Failed to create user."
+msgstr "Methwyd â chreu defnyddiwr."
+
+#: app/views/users.py:305
+msgid "You cannot change your own enabled status."
+msgstr "Ni allwch newid eich statws galluog eich hun."
+
+#: app/views/users.py:318
+#, python-format
+msgid "User '%(username)s' has been %(status)s."
+msgstr "Mae defnyddiwr '%(username)s' wedi bod yn %(status)s."
+
+#: app/views/users.py:356
+msgid "You cannot reset your own MFA."
+msgstr "⚪ = Ni allwch anablu eich cyfrif eich hun."
+
+#: app/views/users.py:368
+#, python-format
+msgid "MFA disabled for user '%(username)s'."
+msgstr "MFA wedi'i anablu ar gyfer defnyddiwr '%(username)s'."
+
+#: app/views/users.py:374
+msgid "An error occurred while resetting MFA."
+msgstr "Digwyddodd gwall wrth ddileu'r defnyddiwr."
+
+#: app/views/webhook.py:54
+msgid "Webhook created successfully."
+msgstr "Crog-web wedi'i greu'n llwyddiannus."
+
+#: app/views/webhook.py:113
+msgid "Webhook updated successfully."
+msgstr "Crog-web wedi'i ddiweddaru'n llwyddiannus."
+
+#: app/views/webhook.py:142
+msgid "Webhook deleted."
+msgstr "Crog-web wedi'i ddileu."
+
+#: app/views/webhook.py:175
+msgid "🧪 Webhook test sent successfully!"
+msgstr "🧪 Anfonwyd prawf crog-web yn llwyddiannus!"
+
+#: app/views/webhook.py:177
+msgid "🧪 Webhook test failed: "
+msgstr "🧪 Methiant prawf crog-web:"
+
+#: app/views/webhook.py:180
+msgid "🧪 Error sending webhook test."
+msgstr "🧪 Gwall wrth anfon prawf crog-web."
+
+#~ msgid ""
+#~ "Grylli is a secure message delivery platform designed to activate after "
+#~ "prolonged user inactivity."
+#~ msgstr ""
+#~ "Mae Grylli yn blatfform cyflwyno negeseuon diogel wedi'i gynllunio i "
+#~ "weithredu ar ôl anweithgarwch hirfaith defnyddiwr."
+
+#~ msgid ""
+#~ "It is a modern reimplementation of Gone Man’s Switch with a refined tech "
+#~ "stack, better maintainability, and an improved user experience."
+#~ msgstr ""
+#~ "Mae'n ailweithredu modern o Newid Dyn Gynt â stac tech wedi'i fireinio, "
+#~ "gwell hylawnder, a phrofiad defnyddiwr gwell."
+
+#~ msgid "Body:"
+#~ msgstr "Corff:"
+
+#~ msgid "Subject:"
+#~ msgstr "Pwnc:"
+
+#~ msgid "Content:"
+#~ msgstr "Cynnwys:"
+
+#~ msgid "Edit SMTP"
+#~ msgstr "Golygu SMTP"
+
+#~ msgid ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+#~ msgstr ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+
+#~ msgid "Admin Notes"
+#~ msgstr "Nodiadau Gweinyddwr"
+
+#~ msgid "Register"
+#~ msgstr "Cofrestrwch"
+
+#~ msgid "View"
+#~ msgstr "Gweld"
+
+#~ msgid "Schedule"
+#~ msgstr "Amserlen"
+
+#~ msgid "Message is enabled"
+#~ msgstr "Neges wedi'i alluogi"
+
+#~ msgid "Message is disabled"
+#~ msgstr "Neges wedi'i anablu"
+
+#~ msgid "No SMTP configuration selected."
+#~ msgstr "Dim cyfluniad SMTP wedi'i ddewis."
+
+#~ msgid "Enable the message to start monitoring."
+#~ msgstr "Galluogi'r neges i ddechrau monitro."
+
+#~ msgid "✅ SMTP settings saved."
+#~ msgstr "Gosodiadau SMTP"
+
+#~ msgid "If you don’t check in, Grylli delivers the message for you."
+#~ msgstr ""
+#~ "Os na fyddwch yn mewn troed, bydd Grylli yn cyflwyno'r neges ar eich rhan."
+
+#~ msgid "Fill in already discovered missing translations:"
+#~ msgstr "Llenwch gyfieithiadau sydd eisoes ar goll:"
+
+#~ msgid "Add missing phrases in that JSON file."
+#~ msgstr "Ychwanegwch ymadroddion coll yn y ffeil JSON honno."
+
+#~ msgid "From:"
+#~ msgstr "O:"
+
+#~ msgid ""
+#~ "Attach the updated JSON file to a new GitHub issue when submitting your "
+#~ "changes."
+#~ msgstr ""
+#~ "Atodwch y ffeil JSON wedi'i diweddaru i fater GitHub newydd wrth gyflwyno "
+#~ "eich newidiadau."
+
+#~ msgid "admin"
+#~ msgstr "gweinyddwr"
+
+#~ msgid "user"
+#~ msgstr "defnyddiwr"
+
+#~ msgid "Logging in"
+#~ msgstr "Mewngofnodi"
+
+#~ msgid "SMTP error: "
+#~ msgstr "Gwall SMTP:"
+
+#~ msgid "enabled"
+#~ msgstr "galluogedig"
+
+#~ msgid "disabled"
+#~ msgstr "analluogedig"

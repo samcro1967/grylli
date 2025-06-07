@@ -1,0 +1,3272 @@
+# Georgian translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-06-07 15:49-0500\n"
+"PO-Revision-Date: 2025-05-25 16:45-0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: ka <LL@li.org>\n"
+"Language: ka\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: app/init_db.py:55
+#, python-format
+msgid "Tables currently in DB: %s"
+msgstr "ტაბულები მიმდინარე მონაცემთა ბაზაში:"
+
+#: app/init_db.py:58
+msgid "Database or system_config table missing. Running migrations now..."
+msgstr ""
+"მონაცემთა ბაზა ან system_config ცხრილი არ მოიძებნა. ახლა შესრულდება "
+"მიგრაციები..."
+
+#: app/init_db.py:61
+msgid "Migrations applied successfully."
+msgstr "მიგრაციები წარმატებით იქნა გამოყენებული."
+
+#: app/init_db.py:63
+msgid "Migration failed."
+msgstr "მიგრაცია ვერ შესრულდა."
+
+#: app/init_db.py:68
+msgid "System config seeded successfully."
+msgstr "სისტემის კონფიგურაცია წარმატებით ჩაემარხა."
+
+#: app/init_db.py:70
+msgid "Error seeding system config."
+msgstr "სისტემის კონფიგურაციის ჩათესვის შეცდომა:"
+
+#: app/forms/mfa_form.py:15 app/templates/apprise/create_apprise.html:30
+#: app/templates/apprise/edit_apprise.html:30
+#: app/templates/apprise/list_apprise.html:60
+#: app/templates/mfa/settings.html:24 app/templates/mfa/settings.html:40
+#: app/templates/user_smtp/create_smtp.html:99
+#: app/templates/user_smtp/edit_smtp.html:114
+#: app/templates/user_smtp/list_smtp.html:57
+#: app/templates/webhook/create_webhook.html:36
+#: app/templates/webhook/edit_webhook.html:36
+#: app/templates/webhook/list_webhooks.html:61
+msgid "Enabled"
+msgstr "ჩართულია"
+
+#: app/forms/mfa_form.py:16
+msgid "Authenticator Code"
+msgstr "ავტენტიფიკატორის კოდი"
+
+#: app/forms/mfa_form.py:17
+#: app/templates/admin/partials/user_instructions_and_modal.html:66
+#: app/templates/admin/partials/user_table.html:115
+#: app/templates/email/assign_smtp.html:44 app/templates/mfa/settings.html:47
+#: app/templates/user_smtp/edit_smtp.html:122
+msgid "Save"
+msgstr "შენახვა"
+
+#: app/forms/mfa_form.py:27
+msgid "Authentication Code"
+msgstr "შეტყობინების განახლება"
+
+#: app/forms/mfa_form.py:29
+msgid "Please enter your authentication code."
+msgstr "გთხოვთ, შეიყვანოთ თქვენი ავტენტიფიკაციის კოდი."
+
+#: app/forms/mfa_form.py:30
+msgid "Enter a valid 6-digit code or recovery code."
+msgstr "შეიყვანეთ ვალიდური 6-ნიშნიანი კოდი ან აღდგენითი კოდი."
+
+#: app/forms/mfa_form.py:31
+msgid "Invalid code format."
+msgstr "არასწორი კოდის ფორმატი."
+
+#: app/forms/mfa_form.py:35 app/templates/mfa/challenge.html:25
+msgid "Verify"
+msgstr "ვერსია"
+
+#: app/services/mail.py:37 app/services/system_settings_email.py:40
+msgid "Missing required config setting: "
+msgstr "მოსალოდნელი კონფიგურაციის პარამეტრი ვერ მოიძებნა:"
+
+#: app/services/mail.py:46 app/services/system_settings_email.py:50
+#, python-format
+msgid "Failed to decrypt %(key)s: %(error)s"
+msgstr "ვერ მოხდა დეშიფრაცია %(key)s: %(error)s"
+
+#: app/services/mail.py:54
+#, python-format
+msgid "get_setting('%(key)s') -> '%(value)s' (sensitive: %(sensitive)s)"
+msgstr ""
+"get_setting('%(key)s') -> '%(value)s' (raw: '%(raw)s', sensitive: "
+"%(sensitive)s)"
+
+#: app/services/mail.py:75
+#, python-format
+msgid "Preparing email to %(to)s"
+msgstr "მეილის მმზამინგეთელი სია: %(to)s"
+
+#: app/services/mail.py:90
+#, python-format
+msgid ""
+"SMTP configuration: host=%(host)s (type=%(host_type)s), port=%(port)s "
+"(type=%(port_type)s)"
+msgstr ""
+"SMTP მთავარი = '%(host)s' (ტიპი: %(host_type)s), პორტი = %(port)s (ტიპი: "
+"%(port_type)s)"
+
+#: app/services/mail.py:99
+#, python-format
+msgid "SMTP username: %(user)s"
+msgstr "გამოყემარავთ მომოფიყაცვას: %(user)s"
+
+#: app/services/mail.py:100
+#, python-format
+msgid "TLS enabled: %(tls)s"
+msgstr "TLS გააქტიურებულია: %(tls)s"
+
+#: app/services/mail.py:105
+msgid "Starting TLS connection..."
+msgstr "ივანთა TLS"
+
+#: app/services/mail.py:107
+msgid "Logging into SMTP server..."
+msgstr "SMTP სერვერზე შესვლა..."
+
+#: app/services/mail.py:109
+msgid "Sending email message..."
+msgstr "გრაფიკის გაგზავნა"
+
+#: app/services/mail.py:111
+#, python-format
+msgid "Email sent successfully to %(to)s"
+msgstr "测试电子邮件已成功发送。"
+
+#: app/services/mail.py:114
+#, python-format
+msgid "SMTP error while sending to %(to)s: %(error)s"
+msgstr "SMTP შეცდომა გაგზავნისას %(to)s: %(error)s"
+
+#: app/templates/about.html:10
+msgid "About Grylli"
+msgstr "Grylli-ის შესახებ"
+
+#: app/templates/about.html:13
+msgid ""
+"Grylli is a secure, self-hosted message delivery platform that automatically"
+" sends pre-configured messages if a user fails to check in within a defined "
+"time period."
+msgstr ""
+"Grylli არის უსაფრთხო, თვითმოყვანილ შეტყობინებების მიწოდების პლატფორმა, "
+"რომელიც ავტომატურად აგზავნის წინასწარ კონფიგურირებულ შეტყობინებებს თუ "
+"მომხმარებელი არ აერთებს განსაზღვრული დროის პერიოდში."
+
+#: app/templates/about.html:14
+msgid ""
+"It supports multiple users, customizable schedules, and recurring reminders."
+msgstr "მხარს უჭერს მრავალმხარ მომხმარებლებს და მორგებულ გრაფიკებს."
+
+#: app/templates/about.html:15
+msgid ""
+"Messages and reminders can be delivered via email, webhooks, or over 100 "
+"third-party services through Apprise."
+msgstr ""
+"შეტყობინებები შეიძლება გაიგზავნოს ელფოსტის, ვებოოჰოკების ან Apprise-ს "
+"მეშვეობით 80-ზე მეტი მესამე მხარ სერვისების დახმარებით."
+
+#: app/templates/about.html:16
+msgid ""
+"Users can configure their own SMTP servers to ensure emails and reminders "
+"appear to come directly from them — not from the system administrator."
+msgstr ""
+"მომხმარებლებს შეუძლიათ კონფიგურირება გააკეთონ საკუთარ SMTP სერვერებზე, რათა "
+"შეტყობინებები სურს გამოვიდნენ მათგან ‒ არა სისტემის ადმინისტრატორიდან."
+
+#: app/templates/about.html:17
+msgid ""
+"Sensitive data is encrypted at rest, and all operations are secured with "
+"strong authentication and audit-friendly logging."
+msgstr ""
+"დაფარული მონაცემები დაშიფრულია დასვენებაზე და ყველა შეტყობინების ოპერაცია "
+"დაცულია ძლიერი ავთენტიფიკაციით და აუდიტ-გეგმის ლოგებით."
+
+#: app/templates/about.html:18
+msgid ""
+"Built with a modern, reactive technology stack, Grylli is optimized for "
+"responsiveness and works seamlessly across desktop and mobile devices."
+msgstr ""
+"მოწოდებულია თანამედროვე, რეაქტიული ტექნოლოგიური სტეკით, Grylli "
+"ოპტიმიზირებულია რეაქტიულობაზე და მუშაობს უპრობლემოდ დესკტოპისა და მობილურ "
+"მოწყობილობებზე."
+
+#: app/templates/about.html:23
+msgid "Version:"
+msgstr "ვერსია:"
+
+#: app/templates/about.html:26
+msgid "Repository:"
+msgstr "დისკრიპტორი:"
+
+#: app/templates/about.html:30
+msgid "GitHub - samcro1967/grylli"
+msgstr "GitHub - samcro1967/grylli"
+
+#: app/templates/help.html:2 app/templates/help.html:5
+#: app/templates/partials/header.html:85
+msgid "Help"
+msgstr "დახმარება"
+
+#: app/templates/help.html:7
+msgid ""
+"Grylli includes built-in instructions throughout the app to help you "
+"configure and manage your setup."
+msgstr ""
+"Grylli მოიცავს შექმნილი ინსტრუქციებს აპლიკაციაში, რათა დაგეხმაროთ "
+"კონფიგურირებასა და მართვაში."
+
+#: app/templates/help.html:8
+msgid ""
+"This page provides an overview of key features and direct links to where "
+"they can be managed."
+msgstr ""
+"ეს გვერდი აწვდის მიმოხილვას ძირითადი ფუნქციებისა და პირდაპირი ბმულები, სადაც"
+" ისინი შეიძლება მართოს."
+
+#: app/templates/help.html:12 app/templates/messages/list_messages.html:9
+#: app/templates/partials/shared_nav.html:17
+msgid "Notifications"
+msgstr "შეტყობინებები"
+
+#: app/templates/help.html:14
+msgid "Create and assign messages"
+msgstr "შექმენით მესიჯი ან ელფოსტა."
+
+#: app/templates/admin/index.html:32 app/templates/help.html:17
+#: app/templates/partials/admin_nav.html:56
+msgid "SMTP Settings"
+msgstr "SMTP პარამეტრები"
+
+#: app/templates/help.html:19
+msgid "Use your own email server"
+msgstr "გამოყენეთ თავისი ელფოსტის სერვერი"
+
+#: app/templates/help.html:22
+msgid "Apprise Integration"
+msgstr "Apprise დანიშნულებები"
+
+#: app/templates/help.html:24
+msgid "Send notifications to 80+ supported services"
+msgstr "გაუგზავნეთ შეტყობინებები 80-ზე მეტი მხარდაჭერილი სერვისებზე"
+
+#: app/templates/help.html:27
+#: app/templates/messages/assign_destinations.html:41
+#: app/templates/messages/view_message.html:58
+#: app/templates/partials/shared_nav.html:44
+#: app/templates/reminders/assign_destinations.html:39
+#: app/templates/reminders/view_reminder.html:69
+msgid "Webhooks"
+msgstr "Webhooks"
+
+#: app/templates/help.html:29
+msgid "Trigger actions or external workflows"
+msgstr "გამოიწვიოთ მოქმედებები ან გარე სამუშაოები"
+
+#: app/templates/email/list_emails.html:9 app/templates/help.html:32
+#: app/templates/partials/shared_nav.html:61
+msgid "Emails"
+msgstr "ელ.ფოსტები"
+
+#: app/templates/help.html:34
+msgid "View and manage secure email messages"
+msgstr "დაცული ელ.წერილების მიმოხილვა"
+
+#: app/templates/help.html:38
+msgid "Security"
+msgstr "🔐 უსაფრთხოება"
+
+#: app/templates/help.html:39
+msgid "Grylli encrypts sensitive data and logs all key actions for auditing."
+msgstr ""
+"Grylli დაშიფრავს სენსიტიურ მონაცემებს და ნიშნავს ყველაფერს ძირითად "
+"მოქმედებას აუდიტისთვის."
+
+#: app/templates/index.html:9 app/views/locale.py:95
+msgid "Welcome to Grylli"
+msgstr "კეთილი იყოს თქვენი მობრძანება Grylli-ში"
+
+#: app/templates/index.html:11
+msgid "Pronounced"
+msgstr "გამოლაპარაკება"
+
+#: app/templates/index.html:11
+msgid "like “grill-ee”"
+msgstr "როგორც “grill-ee”"
+
+#: app/templates/index.html:14
+msgid ""
+"Grylli is a secure message scheduling and delivery system designed to ensure"
+" your important messages are delivered — even if you can’t be there to send "
+"them."
+msgstr ""
+"Grylli არის უსაფრთხო მესიჯების დაგეგმვისა და მიწოდების სისტემა, რომელიც "
+"უზრუნველყოფს, რომ თქვენი მნიშვნელოვანი მესიჯები იქნება მიწოდებული — თუნდაც "
+"თქვენ ვერ შეძლოთ მათი გაგზავნა."
+
+#: app/templates/index.html:17
+msgid ""
+"Whether you’re planning ahead, setting up emergency communication, or "
+"building peace of mind, Grylli helps automate your message delivery via "
+"multiple channels including email, webhooks, and Apprise notifications."
+msgstr ""
+"თუ თქვენ ასპარეზობას გეგმავთ, სასწრაფო კომუნიკაციის გაწყვეტას და მშვიდობის "
+"გაკეთებას, Grylli დაგეხმარებათ ავტომატიზაციის გზით გათვლილი მოსაწოდების "
+"მიწოდებაში ელფოსტითი, ვებქოქის ან Apprise შეტყობინების მეშვეობით, თუ თქვენ "
+"განმწვრთელეთ შემოწმება."
+
+#: app/templates/index.html:19
+msgid "Getting Started"
+msgstr "დაწყება"
+
+#: app/templates/index.html:21
+msgid "Create a message, email, or reminder."
+msgstr "შექმენით მესიჯი ან ელფოსტა."
+
+#: app/templates/index.html:22
+msgid "Set your check-in interval and grace period (for messages)."
+msgstr "დააყენეთ შემოწმების ინტერვალი და გრახის პერიოდი."
+
+#: app/templates/index.html:23
+msgid "Assign one or more delivery destinations."
+msgstr "მიუერთეთ ერთი ან მეტი მიწოდების ადგილი."
+
+#: app/templates/index.html:24
+msgid "Optionally attach files for secure emails."
+msgstr "ოპციალიზურად მიუერთეთ ფაილები უსაფრთხო ელფოსტისთვის."
+
+#: app/templates/index.html:25
+msgid "Schedule reminders to send at specific times or on a recurring basis."
+msgstr "დაგეგმეთ შეხსენებები გაგზავნა კონკრეტულ დროს ან რეგულარულად."
+
+#: app/templates/index.html:26
+msgid "Enable the message or reminder to activate delivery."
+msgstr "ქმედებაში ჩასაყენებლად ჩართულეთ შეტყობინება ან შეხსენება მიწოდებაზე."
+
+#: app/templates/index.html:28
+msgid ""
+"Regularly check in to Grylli to prevent automated delivery; miss a check-in "
+"and Grylli sends your messages as scheduled."
+msgstr ""
+"როგორც წესი შეამოწმეთ Grylli რათა თავიდან აიცილოთ ავტომატური მიწოდება; თუ "
+"გამოტოვეთ შესვლა, Grylli გააგზავნა თქვენი შეტყობინებები როგორც დაგეგმილია."
+
+#: app/templates/privacy.html:10
+msgid "Privacy Notice"
+msgstr "კონფიდენციალურობის შეტყობინება"
+
+#: app/templates/privacy.html:13
+msgid ""
+"Grylli respects your privacy and is designed to minimize the collection and "
+"storage of personal data."
+msgstr ""
+"Grylli იცავს თქვენს კონფიდენციალობას და შექმნილია პირადი მონაცემების "
+"შეგროვებისა და შენახვის მინიმალიზაციის მიზნით."
+
+#: app/templates/privacy.html:14
+msgid ""
+"All data is encrypted where appropriate and remains fully under your control"
+" if you self-host this platform."
+msgstr ""
+"ყველა მონაცემი დაშიფრულია საჭიროების მიხედვით და სრულიად თქვენს კონტროლში "
+"რჩება, თუ ეს პლატფორმა თვითონ უმასპინძლებთ."
+
+#: app/templates/privacy.html:17
+msgid "What Data We Collect"
+msgstr "რა მონაცემებს ვიკრებთ"
+
+#: app/templates/privacy.html:19
+msgid "Email address and password hash (for authentication)"
+msgstr "ელექტრონული ფოსტის მისამართი და პაროლის ჰეში (ავტორიზაციისთვის)"
+
+#: app/templates/privacy.html:20
+msgid "Optional MFA secret and recovery codes (encrypted at rest)"
+msgstr ""
+"მნიშვნელოვანი MFA სექრეტები და აღდგენის კოდები (დაშიფრულია სამარადისოდ)"
+
+#: app/templates/privacy.html:21
+msgid "Reminder and message content you configure"
+msgstr "შეხსენებებისა და შეტყობინებების შინაარსი, რომელსაც კონფიგურირებთ"
+
+#: app/templates/privacy.html:22
+msgid "User-specific settings, SMTP configuration (if provided)"
+msgstr ""
+"მომხმარებლის სპეციფიური პარამეტრები, SMTP კონფიგურაცია (თუ არის მითითებული)"
+
+#: app/templates/privacy.html:25
+msgid "How Your Data Is Used"
+msgstr "როგორ გამოიყენება თქვენი მონაცემები"
+
+#: app/templates/privacy.html:27
+msgid ""
+"Your data is used solely for the purpose of delivering reminders and "
+"messages according to your preferences."
+msgstr ""
+"თქვენი მონაცემები გამოიყენება მხოლოდ იმისთვის, რომ გაგზავნოს შეხსენებები და "
+"შეტყობინებები თქვენი პრეფერენციების მიხედვით."
+
+#: app/templates/privacy.html:28
+msgid ""
+"Grylli does not share, sell, or transmit your personal data to any third "
+"parties."
+msgstr ""
+"Grylli არ გადაცემს, არ ყიდის და არ ავრცელებს თქვენს პირად მონაცემებს მესამე "
+"პირებზე."
+
+#: app/templates/privacy.html:31
+msgid "Your Rights"
+msgstr "თქვენი უფლებები"
+
+#: app/templates/privacy.html:33
+msgid ""
+"You can export all of your data at any time from the Account Settings page."
+msgstr ""
+"შეგიძლიათ თქვენი მონაცემების ექსპორტი ნებისმიერ დროს ექაუნთის პარამეტრების "
+"გვერდიდან."
+
+#: app/templates/privacy.html:34
+msgid "You may permanently delete your account and all associated data."
+msgstr ""
+"თქვენ ვერ წაშლით თქვენს ანგარიშს, რადგან თქვენ ხართ უკანასკნელი "
+"ადმინისტრატორი."
+
+#: app/templates/privacy.html:35
+msgid ""
+"If you are using a self-hosted instance, contact the instance administrator "
+"for data inquiries."
+msgstr ""
+"თუ იყენებთ თვითმომსწავლელ ინსტანციას, მონაცემთა საქმეებისათვის მიმართეთ "
+"ინსტანციის ადმინისტრატორს."
+
+#: app/templates/privacy.html:38
+msgid "Self-Hosting Responsibility"
+msgstr "თვითმომსახურების პასუხისმგებლობა"
+
+#: app/templates/privacy.html:40
+msgid ""
+"If you are running Grylli on your own server, you are responsible for the "
+"storage, processing, and lawful handling of all user data on that instance."
+msgstr ""
+"თუ Grylli-ს მართავთ საკუთარ სერვერზე, პასუხისმგებელი ხართ იმ ინსტანციაზე "
+"ყველა მომხმარებლის მონაცემების შენახვა, დამუშავება და სწორად მართვას."
+
+#: app/templates/privacy.html:44
+msgid ""
+"This notice was last updated in June 2025 and may evolve to reflect changes "
+"in the software or regulatory landscape."
+msgstr ""
+"ეს შეტყობინება ბოლოს განახლდა 2025 წლის ივნისში და შესაძლოა განახლდეს "
+"პროგრამის ან რეგულატორული გარემოს ცვლილებების ასახვისთვის."
+
+#: app/templates/system_info.html:11
+msgid "📦 Environment Versions"
+msgstr "📦 გარემოს ვერსიები"
+
+#: app/templates/system_info.html:17
+msgid "Category"
+msgstr "კატეგორია"
+
+#: app/templates/system_info.html:18
+msgid "Tool"
+msgstr "ინსტრუმენტი"
+
+#: app/templates/system_info.html:19
+msgid "Version"
+msgstr "ვერსია"
+
+#: app/templates/system_info.html:25
+msgid "🧠 Python"
+msgstr "🧠 Python"
+
+#: app/templates/system_info.html:26
+msgid "Python"
+msgstr "Python"
+
+#: app/templates/system_info.html:30
+msgid "pip"
+msgstr "pip"
+
+#: app/templates/system_info.html:34
+msgid "SQLite"
+msgstr "SQLite"
+
+#: app/templates/system_info.html:40
+msgid "⚙️ Core"
+msgstr "⚙️ ძირითადი"
+
+#: app/templates/system_info.html:47
+msgid "🔐 Security"
+msgstr "🔐 უსაფრთხოება"
+
+#: app/templates/system_info.html:48
+msgid "Email Validator"
+msgstr "ელ.ფოსტის ვერიფიკატორი"
+
+#: app/templates/system_info.html:52
+msgid "Cryptography"
+msgstr "კრიპტოგრაფია"
+
+#: app/templates/system_info.html:57
+msgid "🕰️ Scheduling"
+msgstr "🕰️ გრაფიკი"
+
+#: app/templates/system_info.html:58
+msgid "APScheduler"
+msgstr "APScheduler"
+
+#: app/templates/system_info.html:62
+msgid "Apprise (Python)"
+msgstr "Apprise (Python)"
+
+#: app/templates/system_info.html:66
+msgid "Apprise CLI"
+msgstr "Apprise CLI"
+
+#: app/templates/system_info.html:74
+msgid "🌐 Frontend"
+msgstr "🌐 წინა ინტერფეისი"
+
+#: app/templates/account/manage_account.html:11
+msgid "Manage Account"
+msgstr "ანგარიშის მართვა"
+
+#: app/templates/account/manage_account.html:12
+msgid "Update your profile information and password."
+msgstr "განაახლეთ თქვენი პროფილის ინფორმაცია და პაროლი."
+
+#: app/templates/account/manage_account.html:41
+#: app/templates/admin/create_user.html:40
+#: app/templates/auth/bootstrap.html:43
+#: app/templates/auth/reset_password.html:42 app/templates/auth/signup.html:42
+msgid "Please enter a valid email address."
+msgstr "გთხოვთ, შეიყვანოთ ვალიდური ელ.ფოსტის მისამართი."
+
+#: app/templates/account/manage_account.html:62
+#: app/templates/account/manage_account.html:96
+#: app/templates/account/manage_account.html:127
+#: app/templates/auth/reset_password.html:66
+#: app/templates/auth/reset_password.html:97 app/templates/auth/signup.html:65
+#: app/templates/auth/signup.html:95
+msgid "Show/hide password"
+msgstr "पासवर्ड दिखाने के लिए स्थिर रखें"
+
+#: app/templates/account/manage_account.html:89
+#: app/templates/admin/create_user.html:53
+#: app/templates/auth/bootstrap.html:51
+#: app/templates/auth/reset_password.html:58 app/templates/auth/signup.html:58
+msgid "Password must meet all complexity requirements."
+msgstr "პაროლი უნდა აკმაყოფილებდეს ყველა სირთულის მოთხოვნას."
+
+#: app/templates/account/manage_account.html:141
+#: app/templates/admin/create_user.html:72
+#: app/templates/admin/edit_user.html:67 app/templates/auth/bootstrap.html:69
+#: app/templates/auth/reset_password.html:110
+#: app/templates/auth/signup.html:108
+msgid "Passwords do not match."
+msgstr "პაროლები არ ემთხვევა."
+
+#: app/templates/account/manage_account.html:147
+msgid "Update Account"
+msgstr "ანგარიშის განახლება"
+
+#: app/templates/account/manage_account.html:151
+#: app/templates/admin/create_user.html:82
+#: app/templates/admin/edit_user.html:97 app/templates/admin/help_form.html:28
+#: app/templates/admin/partials/user_instructions_and_modal.html:62
+#: app/templates/admin/partials/user_table.html:113
+#: app/templates/apprise/create_apprise.html:42
+#: app/templates/apprise/edit_apprise.html:42
+#: app/templates/auth/reset_password.html:121
+#: app/templates/email/assign_smtp.html:46
+#: app/templates/email/attach_files.html:47
+#: app/templates/email/edit_message.html:54
+#: app/templates/email/schedule_email.html:84
+#: app/templates/messages/assign_destinations.html:66
+#: app/templates/messages/create_message.html:55
+#: app/templates/messages/edit_message.html:48
+#: app/templates/messages/schedule_message.html:84
+#: app/templates/mfa/challenge.html:29 app/templates/mfa/settings.html:51
+#: app/templates/reminders/assign_destinations.html:64
+#: app/templates/reminders/assign_email_reminder.html:94
+#: app/templates/reminders/create_reminder.html:49
+#: app/templates/reminders/edit_reminder.html:42
+#: app/templates/reminders/schedule_reminder.html:51
+#: app/templates/user_smtp/create_smtp.html:111
+#: app/templates/user_smtp/edit_smtp.html:125
+#: app/templates/webhook/create_webhook.html:48
+#: app/templates/webhook/edit_webhook.html:48
+msgid "Cancel"
+msgstr "გაუქმება"
+
+#: app/templates/account/manage_account.html:159
+#: app/templates/admin/create_user.html:90
+#: app/templates/admin/edit_user.html:81 app/templates/auth/bootstrap.html:83
+#: app/templates/auth/reset_password.html:128
+#: app/templates/auth/signup.html:132
+msgid "Minimum 8 characters"
+msgstr "მინიმუმ 8 სიმბოლო"
+
+#: app/templates/account/manage_account.html:160
+#: app/templates/admin/create_user.html:91
+#: app/templates/admin/edit_user.html:82 app/templates/auth/bootstrap.html:84
+#: app/templates/auth/reset_password.html:129
+#: app/templates/auth/signup.html:133
+msgid "At least one uppercase letter"
+msgstr "ნაკლებად ერთი დიდი ასო"
+
+#: app/templates/account/manage_account.html:161
+#: app/templates/admin/create_user.html:92
+#: app/templates/admin/edit_user.html:83 app/templates/auth/bootstrap.html:85
+#: app/templates/auth/reset_password.html:130
+#: app/templates/auth/signup.html:134
+msgid "At least one lowercase letter"
+msgstr "ნაკლებად ერთი პატარა ასო"
+
+#: app/templates/account/manage_account.html:162
+#: app/templates/admin/create_user.html:93
+#: app/templates/admin/edit_user.html:84 app/templates/auth/bootstrap.html:86
+#: app/templates/auth/reset_password.html:131
+#: app/templates/auth/signup.html:135
+msgid "At least one number"
+msgstr "ნაკლებად ერთი ციფრი"
+
+#: app/templates/account/manage_account.html:163
+#: app/templates/admin/create_user.html:94
+#: app/templates/auth/bootstrap.html:87
+#: app/templates/auth/reset_password.html:132
+#: app/templates/auth/signup.html:136
+msgid "At least one special character (e.g., !@#$%)"
+msgstr "कम से कम एक विशेष वर्ण (उदा., !@#$%)"
+
+#: app/templates/account/manage_account.html:169
+msgid "Download My Data"
+msgstr "ჩემი მონაცემების ჩამოტვირთვა"
+
+#: app/templates/account/manage_account.html:171
+msgid ""
+"Download all your account data as a JSON file. This includes your reminders,"
+" messages, email settings, and more. The file is for your records only and "
+"cannot be imported back. Protect it as it may contain sensitive information."
+msgstr ""
+"ჩამოტვირთეთ თქვენი ყველა ექაუნთის მონაცემი JSON ფაილის სახით. ეს მოიცავს "
+"თქვენს შეხსენებებს, შეტყობინებებს, ელფოსტის პარამეტრებს და სხვა. ფაილი "
+"მხოლოდ თქვენი ჩანაწერებისთვისაა და არ შეიძლება ექსპორტირება კვლავ. იცავენ "
+"მას რადგან შეიძლება შეიცავდეს სენსიტიურ ინფორმაციას."
+
+#: app/templates/account/manage_account.html:175
+msgid "Download My Data (JSON)"
+msgstr "ჩემი მონაცემების ჩამოტვირთვა (JSON)"
+
+#: app/templates/account/manage_account.html:179
+msgid "Danger Zone"
+msgstr "საფრთხის ზონა"
+
+#: app/templates/account/manage_account.html:180
+msgid "Deleting your account is permanent and cannot be undone."
+msgstr "თქვენი ანგარიშის წაშლა მუდმივია და მისი დაცვითი არ არსებობს."
+
+#: app/templates/account/manage_account.html:185
+msgid "Delete My Account"
+msgstr "ანგარიშის განახლება"
+
+#: app/templates/account/translations.html:8
+msgid "Translations - Grylli"
+msgstr "अनुवाद - Grylli"
+
+#: app/templates/account/translations.html:17
+#: app/templates/partials/header.html:102
+msgid "Translations"
+msgstr "თარჯიმნა"
+
+#: app/templates/account/translations.html:20
+msgid "Grylli currently supports multiple languages and more will be added."
+msgstr "Grylli वर्तमान में कई भाषाओं का समर्थन करता है और अधिक जोड़ी जाएगी।"
+
+#: app/templates/account/translations.html:21
+msgid "Many of the translations were performed with assistance from ChatGPT."
+msgstr "कई अनुवाद ChatGPT की सहायता से किए गए थे।"
+
+#: app/templates/account/translations.html:22
+msgid ""
+"If you find a translation issue or want to suggest improvements, your input "
+"is welcome!"
+msgstr ""
+"यदि आपको कोई अनुवाद समस्या मिलती है या सुधारों का सुझाव देना चाहते हैं, तो "
+"आपका इनपुट स्वागत योग्य है!"
+
+#: app/templates/account/translations.html:28
+msgid "How to request translation updates"
+msgstr "अनुवाद अपडेट का अनुरोध कैसे करें"
+
+#: app/templates/account/translations.html:30
+msgid "To contribute to translations, please use the following guidelines:"
+msgstr ""
+"अनुवादों में योगदान करने के लिए कृपया निम्नलिखित दिशानिर्देशों का उपयोग "
+"करें:"
+
+#: app/templates/account/translations.html:43
+msgid "Contribute missing or improved translations:"
+msgstr "क्या कोई गायब अनुवाद मिला?"
+
+#: app/templates/account/translations.html:63
+msgid "Open the relevant .po translation file for your language."
+msgstr "अपनी भाषा के लिए JSON अनुवाद फ़ाइल खोलें। उदाहरण के लिए:"
+
+#: app/templates/account/translations.html:67
+msgid ""
+"Find untranslated or incomplete entries and add or improve translations."
+msgstr ""
+"მოძებნეთ უთარგმნელი ან არასრული ჩანაწერები და დაამატეთ ან გააუმჯობესეთ "
+"თარგმანი."
+
+#: app/templates/account/translations.html:68
+msgid "You may use a PO file editor or a text editor."
+msgstr "თქვენ შეგიძლიათ გამოიყენოთ PO ფაილის რედაქტორი ან ტექსტ რედაქტორი."
+
+#: app/templates/account/translations.html:69
+msgid "Copy the file path and the snippet of your changes."
+msgstr "დააკოპირეთ ფაილის გზა და თქვენი ცვლილებების ფრაგმენტი."
+
+#: app/templates/account/translations.html:70
+msgid "Paste the snippet directly into a new GitHub issue for review."
+msgstr "प्रतिलिपित स्निपेट को सीधे GitHub इश्यू टिप्पणी में पेस्ट करें।"
+
+#: app/templates/account/translations.html:72
+msgid "Please do not upload the full .po file to avoid merge conflicts."
+msgstr "मर्ज संघर्षों से बचने के लिए पूरी .po फ़ाइल अपलोड न करें।"
+
+#: app/templates/account/translations.html:85
+msgid "Improving existing translations:"
+msgstr "मौजूदा अनुवादों को बेहतर बनाना:"
+
+#: app/templates/account/translations.html:104
+msgid "Open the relevant .po file for the translation you want to improve."
+msgstr "जिस अनुवाद को आप सुधारना चाहते हैं उसकी संबंधित .po फ़ाइल खोलें।"
+
+#: app/templates/account/translations.html:106
+msgid "For example:"
+msgstr "उदाहरण के लिए:"
+
+#: app/templates/account/translations.html:110
+msgid ""
+"Find the phrase(s) and its existing translation(s) you want to improve."
+msgstr ""
+"वाक्यांश(ओं) और उन पर मौजूदा अनुवाद(ओं) को जो आप सुधारना चाहते हैं ढूंढें।"
+
+#: app/templates/account/translations.html:111
+msgid "Update the phrase(s)."
+msgstr "वाक्यांश(ओं) को अपडेट करें।"
+
+#: app/templates/account/translations.html:112
+msgid "Copy the file name and path into the issue."
+msgstr "इश्यू में फ़ाइल का नाम और पथ कॉपी करें।"
+
+#: app/templates/account/translations.html:114
+msgid "Paste the copied snippet directly into the GitHub issue comment."
+msgstr "प्रतिलिपित स्निपेट को सीधे GitHub इश्यू टिप्पणी में पेस्ट करें।"
+
+#: app/templates/account/translations.html:115
+msgid "Do not upload the full .po file to avoid merge conflicts."
+msgstr "मर्ज संघर्षों से बचने के लिए पूरी .po फ़ाइल अपलोड न करें।"
+
+#: app/templates/account/translations.html:118
+msgid "Example snippet:"
+msgstr "उदाहरण स्निपेट:"
+
+#: app/templates/account/translations.html:137
+msgid "Report missing translations not yet discovered:"
+msgstr "अभी तक खोजी गई खोई हुई अनुवादों की रिपोर्ट करें:"
+
+#: app/templates/account/translations.html:154
+msgid ""
+"If you see text in the app that appears untranslated or missing, please "
+"report it to us."
+msgstr ""
+"यदि आपको ऐप में ऐसी कोई पाठ दिखता है जो अनुवादित या गायब प्रतीत होता है, तो "
+"कृपया हमें इसकी रिपोर्ट करें।"
+
+#: app/templates/account/translations.html:155
+msgid "Provide the exact English phrase as it appears on the screen."
+msgstr "स्क्रीन पर जैसे दिखता है वैसा ही सही अंग्रेज़ी वाक्यांश उपलब्ध कराएँ।"
+
+#: app/templates/account/translations.html:156
+msgid ""
+"Include the page or section where you saw the phrase (e.g., Apprise page, "
+"Account Page, etc.)."
+msgstr ""
+"वाक्यांश जहां आपने देखा उसका पृष्ठ या सेक्शन शामिल करें (उदा., सेटिंग्स "
+"पृष्ठ, खाता सेक्शन)।"
+
+#: app/templates/account/translations.html:157
+msgid ""
+"Submit this information via a new GitHub issue so we can add it to the "
+"translation files"
+msgstr ""
+"इस जानकारी को एक नए GitHub मुद्दे के माध्यम से सबमिट करें ताकि हम इसे अनुवाद"
+" फ़ाइलों में जोड़ सकें और Babel के लिए लपेट सकें।"
+
+#: app/templates/account/translations.html:166
+msgid "Found a missing translation?"
+msgstr "क्या कोई गायब अनुवाद मिला?"
+
+#: app/templates/account/translations.html:171
+msgid ""
+"This link will create a new GitHub issue pre-filled with a language code."
+msgstr "ეს ბმული შექმნის ახალ GitHub საკითხს წინასწარ შევსებული ენის კოდით."
+
+#: app/templates/account/translations.html:172
+msgid "Report it by opening a new GitHub issue"
+msgstr "इसे रिपोर्ट करें नए GitHub मुद्दे खोलकर"
+
+#: app/templates/account/translations.html:175
+msgid "Please specify the language code and exact phrase when reporting."
+msgstr "გთხოვთ მიუთითოთ ენის კოდი და ზუსტი ფრაზა შეტყობინებისას."
+
+#: app/templates/account/translations.html:176
+msgid "Thank you for helping us make Grylli better!"
+msgstr "Grylli को बेहतर बनाने में मदद करने के लिए धन्यवाद!"
+
+#: app/templates/admin/create_user.html:14
+msgid "Create New User"
+msgstr "नया उपयोगकर्ता बनाएं"
+
+#: app/templates/admin/create_user.html:15
+msgid "Fill out the form to add a new user."
+msgstr "नए उपयोगकर्ता को जोड़ने के लिए फॉर्म भरें।"
+
+#: app/templates/admin/create_user.html:21
+#: app/templates/admin/edit_user.html:17 app/templates/auth/bootstrap.html:24
+msgid "Please fix the following errors:"
+msgstr "გთხოვთ, გამოასწოროთ შემდეგი შეცდომები:"
+
+#: app/templates/admin/create_user.html:78
+#: app/templates/admin/edit_user.html:93
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "Create User"
+msgstr "उपयोगकर्ता बनाएं"
+
+#: app/templates/admin/edit_user.html:10
+#: app/templates/admin/partials/user_card.html:20
+#: app/templates/admin/partials/user_table.html:26
+msgid "Edit User"
+msgstr "उपयोगकर्ता संपादित करें"
+
+#: app/templates/admin/edit_user.html:55 app/templates/admin/edit_user.html:74
+msgid "Hold to show password"
+msgstr "पासवर्ड दिखाने के लिए स्थिर रखें"
+
+#: app/templates/admin/edit_user.html:85
+#, python-format
+msgid "At least one special character (e.g., !@#$%%)"
+msgstr "कम से कम एक विशेष वर्ण (उदा., !@#$%%)"
+
+#: app/templates/admin/help.html:4 app/templates/auth/login.html:72
+msgid "Admin Help"
+msgstr "व्यवस्थापक पैनल"
+
+#: app/templates/admin/help.html:7
+msgid "Reset Admin Password"
+msgstr "პაროლის აღდგენა"
+
+#: app/templates/admin/help.html:9
+msgid ""
+"If you've forgotten the admin password, you can reset it using the following"
+" Docker command:"
+msgstr ""
+"თუ თქვენ დაგავიწყდათ ადმინ პაროლი, შეგიძლიათ მისი აღდგენა შემდეგი Docker "
+"ბრძანების გამოყენებით:"
+
+#: app/templates/admin/help.html:15
+msgid ""
+"This script will prompt you to enter a new password for the admin user. You "
+"must run it from the host system where the Grylli container is running."
+msgstr ""
+"ეს სკრიპტი მოგთხოვთ შეიყვანოთ ახალი პაროლი ადმინ მომხმარებლისთვის. იგი უნდა "
+"გაშვებული იყოს მასპინძელ სისტემაში, სადაც Grylli კონტეინერი მუშაობს."
+
+#: app/templates/admin/help.html:18
+msgid "After resetting, you can log in with the new password immediately."
+msgstr "აღდგენის შემდეგ, შეგიძლიათ დაუყოვნებლივ შეხვიდეთ ახალ პაროლით."
+
+#: app/templates/admin/help.html:24
+msgid "Return to Login"
+msgstr "დაბრუნება დაფაზე"
+
+#: app/templates/admin/help_form.html:6
+msgid "Admin Help Access"
+msgstr "ადმინ დახმარების წვდომა"
+
+#: app/templates/admin/help_form.html:9
+msgid "Enter your Ferret Key to unlock admin-only help documentation."
+msgstr ""
+"შეიყვანეთ თქვენი Ferret Key, რათა გახსნათ მხოლოდ ადმინებისთვის "
+"გამოსაყენებელი დახმარების დოკუმენტაცია."
+
+#: app/templates/admin/help_form.html:34
+msgid "How to Find Your FERRET_KEY"
+msgstr "როგორ ვიპოვოთ თქვენი FERRET_KEY"
+
+#: app/templates/admin/help_form.html:36
+msgid "The FERRET_KEY is set as an environment variable when running Grylli."
+msgstr "FERRET_KEY დამატებულია როგორც გარემოს ცვლადი Grylli-ის გაშვებისას."
+
+#: app/templates/admin/help_form.html:39
+msgid "Option 1: Check docker-compose.yml"
+msgstr "ვარიანტი 1: შეამოწმეთ docker-compose.yml"
+
+#: app/templates/admin/help_form.html:46
+msgid "Option 2: Use docker inspect"
+msgstr "ვარიანტი 2: გამოიყენეთ docker inspect"
+
+#: app/templates/admin/help_form.html:52
+msgid "This shows the FERRET_KEY as passed to the container at runtime."
+msgstr ""
+"ეს აჩვენებს FERRET_KEY-ს, რომელიც კონტეინერში გადაეცემა გაშვების დროს."
+
+#: app/templates/admin/index.html:10
+msgid "Admin Panel"
+msgstr "व्यवस्थापक पैनल"
+
+#: app/templates/admin/index.html:12
+msgid ""
+"Welcome to the Grylli Admin Panel. Use the links below to manage the system."
+msgstr ""
+"Grylli व्यवस्थापक पैनल में आपका स्वागत है। सिस्टम प्रबंधित करने के लिए नीचे "
+"दिए गए लिंक का उपयोग करें।"
+
+#: app/templates/admin/index.html:17
+msgid "Manage Users"
+msgstr "उपयोगकर्ता प्रबंधित करें"
+
+#: app/templates/admin/index.html:18
+msgid "Create, edit, enable/disable, or delete user accounts."
+msgstr ""
+"შექმენით, რედაქტირება, ჩართვა/გამორთვა, ან წაშლა მომხმარებლის ანგარიშები."
+
+#: app/templates/admin/index.html:22
+#: app/templates/admin/system_settings.html:10
+#: app/templates/partials/admin_nav.html:52
+msgid "System Settings"
+msgstr "სისტემის პარამეტრები"
+
+#: app/templates/admin/index.html:23
+msgid "View  system-wide environment values."
+msgstr "იხილეთ სისტემის გარემოს მნიშვნელობები."
+
+#: app/templates/admin/index.html:27 app/templates/partials/admin_nav.html:42
+msgid "Backups"
+msgstr "საარქივო"
+
+#: app/templates/admin/index.html:28
+msgid "Create and delete database backups."
+msgstr "მონაცემთა ბაზის სარეზერვო ასლები"
+
+#: app/templates/admin/index.html:33
+msgid "View and test global SMTP settings."
+msgstr "测试电子邮件发送失败。检查SMTP设置。"
+
+#: app/templates/admin/index.html:39
+msgid "View Admin Guide / README on GitHub"
+msgstr "იხილეთ ადმინისტრატორის გზამკვლევი / README GitHub-ზე"
+
+#: app/templates/admin/index.html:40
+msgid "Includes setup instructions, integrations, and troubleshooting."
+msgstr ""
+"შეიცავს კონფიგურაციის ინსტრუქციებს, ინტეგრაციებს და პრობლემების გადაჭრას."
+
+#: app/templates/admin/index.html:44
+msgid "⚠️ Admin Tips"
+msgstr "⚠️ व्यवस्थापक सुझाव"
+
+#: app/templates/admin/index.html:46
+msgid "Ensure the data folder (database) is backed up on your host"
+msgstr ""
+"Დარწმუნდით, რომ მონაცემთა საქაღალდე (database) დამოწმებულია თქვენს ჰოსტზე"
+
+#: app/templates/admin/index.html:48
+msgid ""
+"The uploads folder is not per user.  If required per user, you will ndd to "
+"create subdirectoried per user and setup permissions so users can only see "
+"their own folder."
+msgstr ""
+"ატვირთვების საქაღალდე არ არის თითო მომხმარებელი. თუ საჭიროა თითო "
+"მომხმარებელი, მოგიწევთ შექმნათ ქვეჯგუფები თითო მომხმარებლისთვის და დააყენოთ "
+"უფლებები, რათა მომხმარებლებს შეეძლოთ მხოლოდ საკუთარი საქაღალდის ნახვა."
+
+#: app/templates/admin/index.html:51
+msgid ""
+"To restore a backup: stop the container, replace the data/grylli.db with one"
+" from the backups folder, and restart the container."
+msgstr ""
+"სარეზერვო ასლის აღდგენისთვის: შეაჩერეთ კონტეინერი, შეცვალეთ "
+"მონაცემები/grylli.db სარეზერვო ფოლდერიდან და დააწყეთ კონტეინერი თავიდან."
+
+#: app/templates/admin/list_backups.html:11
+msgid "Database Backups"
+msgstr "მონაცემთა ბაზის სარეზერვო ასლები"
+
+#: app/templates/admin/list_backups.html:13
+msgid "Create Backup"
+msgstr "სარეზერვო ასლის შექმნა"
+
+#: app/templates/admin/list_backups.html:21
+msgid "Filename"
+msgstr "ფაილის სახელი"
+
+#: app/templates/admin/list_backups.html:22
+#: app/templates/admin/partials/user_table.html:14
+#: app/templates/apprise/list_apprise.html:62
+#: app/templates/email/list_emails.html:60
+#: app/templates/messages/list_messages.html:60
+#: app/templates/reminders/list_reminders.html:60
+#: app/templates/user_smtp/list_smtp.html:59
+#: app/templates/webhook/list_webhooks.html:63
+msgid "Actions"
+msgstr "მოქმედებები"
+
+#: app/templates/admin/list_backups.html:32
+msgid "Delete this backup?"
+msgstr "ამ სარეზერვოს წაშლა?"
+
+#: app/templates/admin/list_backups.html:32
+#: app/templates/apprise/list_apprise.html:95
+#: app/templates/apprise/list_apprise.html:99
+#: app/templates/apprise/list_apprise.html:150
+#: app/templates/apprise/list_apprise.html:154
+#: app/templates/email/list_emails.html:124
+#: app/templates/email/list_emails.html:128
+#: app/templates/email/list_emails.html:226
+#: app/templates/email/list_emails.html:230
+#: app/templates/messages/list_messages.html:112
+#: app/templates/messages/list_messages.html:116
+#: app/templates/messages/list_messages.html:198
+#: app/templates/messages/list_messages.html:202
+#: app/templates/reminders/list_reminders.html:107
+#: app/templates/reminders/list_reminders.html:113
+#: app/templates/reminders/list_reminders.html:192
+#: app/templates/reminders/list_reminders.html:198
+#: app/templates/user_smtp/list_smtp.html:101
+#: app/templates/user_smtp/list_smtp.html:169
+#: app/templates/webhook/list_webhooks.html:102
+#: app/templates/webhook/list_webhooks.html:161
+msgid "Delete"
+msgstr "წაშლა"
+
+#: app/templates/admin/list_backups.html:41
+msgid "No backups found."
+msgstr "სარეზერვო ასლები არ მოიძებნა."
+
+#: app/templates/admin/list_backups.html:44
+msgid ""
+"Backups contain your full app data. Store securely. Sensitive data is "
+"encrypted in the DB by default."
+msgstr ""
+"სარეზერვო ასლები შეიცავს აპლიკაციის სრულ მონაცემებს. შეინახეთ უსაფრთხოდ. "
+"სენსიტიური მონაცემები შიფრირებულია მონაცემთა ბაზაში სტანდარტულად."
+
+#: app/templates/admin/smtp_config.html:28
+#: app/templates/admin/system_config.html:22
+msgid "System Configuration"
+msgstr "სისტემის კონფიგურაცია"
+
+#: app/templates/admin/smtp_config.html:33
+#: app/templates/admin/system_config.html:26
+#: app/templates/admin/system_settings.html:15
+msgid "Key"
+msgstr "გასაღები"
+
+#: app/templates/admin/smtp_config.html:34
+#: app/templates/admin/system_config.html:27
+#: app/templates/admin/system_settings.html:16
+msgid "Value"
+msgstr "მნიშვნელობა"
+
+#: app/templates/admin/smtp_config.html:35
+#: app/templates/admin/system_config.html:28
+msgid "Sensitive"
+msgstr "მგრძნობელობიანი"
+
+#: app/templates/admin/smtp_config.html:36
+#: app/templates/admin/system_config.html:29
+msgid "Editable"
+msgstr "რედაქტირებადი"
+
+#: app/templates/admin/smtp_config.html:50
+#: app/templates/admin/smtp_config.html:51
+#: app/templates/admin/system_config.html:45
+#: app/templates/admin/system_config.html:46
+#: app/templates/email/view_config.html:60
+msgid "Yes"
+msgstr "დიახ"
+
+#: app/templates/admin/smtp_config.html:50
+#: app/templates/admin/smtp_config.html:51
+#: app/templates/admin/system_config.html:45
+#: app/templates/admin/system_config.html:46
+#: app/templates/email/view_config.html:60
+msgid "No"
+msgstr "არა"
+
+#: app/templates/admin/smtp_config.html:63
+#: app/templates/admin/system_config.html:55
+msgid "Send Test Email"
+msgstr "გასინჯვის ელფოსტა"
+
+#: app/templates/admin/system_config.html:39
+msgid "decrypted"
+msgstr "შეიქმნა"
+
+#: app/templates/admin/partials/user_card.html:12
+msgid "Email:"
+msgstr "ელფოსტა:"
+
+#: app/templates/admin/partials/user_card.html:15
+msgid "Role:"
+msgstr "როლი:"
+
+#: app/templates/admin/partials/user_card.html:27
+#: app/templates/admin/partials/user_table.html:34
+msgid "Change Role"
+msgstr "როლის შეცვლა"
+
+#: app/templates/admin/partials/user_card.html:29
+#: app/templates/admin/partials/user_table.html:36
+msgid "You cannot change your own role"
+msgstr "თქვენ ვერ შეცვლით თქვენს საკუთარ გააქტიურებულ სტატუსს."
+
+#: app/templates/admin/partials/user_card.html:36
+#: app/templates/admin/partials/user_table.html:43
+msgid "Are you sure you want to reset MFA for this user?"
+msgstr "დარწმუნებული ხართ, რომ გსურთ ამ მომხმარებლის MFA-ს გადაყენება?"
+
+#: app/templates/admin/partials/user_card.html:39
+#: app/templates/admin/partials/user_table.html:46
+msgid "Reset MFA"
+msgstr "პაროლის აღდგენა"
+
+#: app/templates/admin/partials/user_card.html:51
+#: app/templates/admin/partials/user_table.html:58
+msgid "Delete user"
+msgstr "მომხმარებლის წაშლა"
+
+#: app/templates/admin/partials/user_card.html:55
+#: app/templates/admin/partials/user_table.html:61
+msgid "Delete User"
+msgstr "მომხმარებლის წაშლა"
+
+#: app/templates/admin/partials/user_card.html:58
+#: app/templates/admin/partials/user_table.html:65
+msgid "You cannot disable yourself"
+msgstr "თქვენ ვერ გათიშავთ საკუთარ თავს"
+
+#: app/templates/admin/partials/user_card.html:65
+#: app/templates/admin/partials/user_table.html:72
+msgid "Disable"
+msgstr "გათიშვა"
+
+#: app/templates/admin/partials/user_card.html:65
+#: app/templates/admin/partials/user_table.html:72
+msgid "Enable"
+msgstr "ჩართვა"
+
+#: app/templates/admin/partials/user_header.html:6
+#: app/templates/partials/admin_nav.html:47
+msgid "Users"
+msgstr "მომხმარებლები"
+
+#: app/templates/admin/partials/user_header.html:12
+#: app/templates/admin/partials/user_header.html:13
+#: app/templates/apprise/apprise_config.html:10
+#: app/templates/apprise/apprise_config.html:11
+#: app/templates/apprise/list_apprise.html:16
+#: app/templates/apprise/list_apprise.html:17
+#: app/templates/email/list_emails.html:15
+#: app/templates/email/list_emails.html:16
+#: app/templates/messages/list_messages.html:16
+#: app/templates/messages/list_messages.html:17
+#: app/templates/reminders/list_reminders.html:15
+#: app/templates/reminders/list_reminders.html:16
+#: app/templates/user_smtp/list_smtp.html:14
+#: app/templates/user_smtp/list_smtp.html:17
+#: app/templates/webhook/list_webhooks.html:16
+#: app/templates/webhook/list_webhooks.html:17
+#: app/templates/webhook/webhook_config.html:10
+#: app/templates/webhook/webhook_config.html:11
+msgid "Table View"
+msgstr "ცხრილის ხედი"
+
+#: app/templates/admin/partials/user_header.html:26
+#: app/templates/admin/partials/user_header.html:27
+#: app/templates/apprise/apprise_config.html:24
+#: app/templates/apprise/apprise_config.html:25
+#: app/templates/apprise/list_apprise.html:30
+#: app/templates/apprise/list_apprise.html:31
+#: app/templates/email/list_emails.html:29
+#: app/templates/email/list_emails.html:30
+#: app/templates/messages/list_messages.html:30
+#: app/templates/messages/list_messages.html:31
+#: app/templates/reminders/list_reminders.html:29
+#: app/templates/reminders/list_reminders.html:30
+#: app/templates/user_smtp/list_smtp.html:27
+#: app/templates/user_smtp/list_smtp.html:30
+#: app/templates/webhook/list_webhooks.html:30
+#: app/templates/webhook/list_webhooks.html:31
+#: app/templates/webhook/webhook_config.html:24
+#: app/templates/webhook/webhook_config.html:25
+msgid "Card View"
+msgstr "ბარათის ხედი"
+
+#: app/templates/admin/partials/user_header.html:45
+msgid "Add User"
+msgstr "მომხმარებლის დამატება"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:9
+#: app/templates/email/attach_files.html:54
+#: app/templates/email/list_emails.html:255
+#: app/templates/messages/list_messages.html:223
+#: app/templates/reminders/list_reminders.html:218
+#: app/templates/reminders/schedule_reminder.html:56
+msgid "Hide Instructions"
+msgstr "ინსტრუქციის დამალვა"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:9
+msgid "How to manage users"
+msgstr "როგორ ვმართოთ მომხმარებლები"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "Click"
+msgstr "კლიკი"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+msgid "➕ Add User"
+msgstr "➕ მომხმარებლის დამატება"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+msgid "to open the new user form."
+msgstr "ახალი მომხმარებლის ფორმის გახსნისთვის."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:18
+msgid "Enter a unique username, valid email address, and strong password."
+msgstr ""
+"შეიყვანეთ უნიკალური მომხმარებლის სახელი, ვალიდური ელფოსტის მისამართი და "
+"ძლიერი პაროლი."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "Select the appropriate"
+msgstr "შეარჩიეთ შესაბამისი"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "role"
+msgstr "როლი"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "or"
+msgstr "პორტი"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "to save."
+msgstr "შენახვა."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:25
+msgid "To edit a user, click ✏️ and update their info."
+msgstr ""
+"მომხმარებლის რედაქტირებისთვის, დააჭირეთ ✏️ და განაახლეთ მათი ინფორმაცია."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:26
+msgid "To delete a user, click 🗑️ and confirm the deletion."
+msgstr "მომხმარებლის წაშლისთვის, დააჭირეთ 🗑️ და დაადასტურეთ წაშლა."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:28
+msgid "To disable or enable a user, click 🔴 or 🟢."
+msgstr "მომხმარებლის გათიშვის ან ჩართვისთვის, დააჭირეთ 🔴 ან 🟢."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:30
+msgid "🟢 = User is enabled and can log in."
+msgstr "🟢 = მომხმარებელი ჩართულია და შეუძლია შესვლა."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:31
+msgid "🔴 = User is disabled and cannot log in."
+msgstr "🔴 = მომხმარებელი გათიშულია და ვერ შედის სისტემაში."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:32
+msgid "⚪ = You cannot disable your own account."
+msgstr "⚪ = თქვენ ვერ გაუთიშავთ საკუთარ ანგარიშს."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:43
+#: app/templates/admin/partials/user_table.html:91
+msgid "Assign Role for"
+msgstr "დანიშნულების ადგილის მინიჭება"
+
+#: app/templates/admin/partials/user_table.html:10
+msgid "ID"
+msgstr "ID"
+
+#: app/templates/admin/partials/user_table.html:11
+#: app/templates/user_smtp/list_smtp.html:55
+msgid "Username"
+msgstr "მოხმარებლის სახელი"
+
+#: app/templates/admin/partials/user_table.html:12
+msgid "Email"
+msgstr "ელფოსტა"
+
+#: app/templates/admin/partials/user_table.html:13
+msgid "Role"
+msgstr "როლი"
+
+#: app/templates/apprise/apprise_config.html:3
+#: app/templates/apprise/list_apprise.html:9
+#: app/templates/messages/assign_destinations.html:22
+#: app/templates/reminders/assign_destinations.html:20
+msgid "Apprise Destinations"
+msgstr "Apprise დანიშნულებები"
+
+#: app/templates/apprise/apprise_config.html:43
+#: app/templates/webhook/list_webhooks.html:49
+#: app/templates/webhook/webhook_config.html:43
+msgid "Add Webhook"
+msgstr "ვებჰუკის დამატება"
+
+#: app/templates/apprise/apprise_config.html:43
+#: app/templates/apprise/list_apprise.html:49
+#: app/templates/webhook/list_webhooks.html:49
+#: app/templates/webhook/webhook_config.html:43
+msgid "Add Destination"
+msgstr "დანიშნულების დამატება"
+
+#: app/templates/apprise/create_apprise.html:10
+msgid "Create Apprise Destination"
+msgstr "Apprise-ის დანიშნულების შექმნა"
+
+#: app/templates/apprise/create_apprise.html:38
+#: app/templates/apprise/edit_apprise.html:38
+#: app/templates/user_smtp/create_smtp.html:107
+#: app/templates/webhook/create_webhook.html:44
+#: app/templates/webhook/edit_webhook.html:44
+msgid "Create Destination"
+msgstr "დანიშნულების შექმნა"
+
+#: app/templates/apprise/create_apprise.html:47
+#: app/templates/apprise/edit_apprise.html:47
+msgid "Need help with Apprise URLs? See the"
+msgstr "გჭირდებათ დახმარება Apprise URL-ებთან დაკავშირებით? იხილეთ"
+
+#: app/templates/apprise/create_apprise.html:51
+#: app/templates/apprise/edit_apprise.html:51
+msgid "Apprise Notification Services documentation"
+msgstr "Apprise შეტყობინებების სერვისების დოკუმენტაცია"
+
+#: app/templates/apprise/edit_apprise.html:10
+msgid "Edit Apprise Destination"
+msgstr "Apprise-ის დანიშნულების რედაქტირება"
+
+#: app/templates/apprise/list_apprise.html:49
+msgid "Add Apprise"
+msgstr "დამატება Apprise"
+
+#: app/templates/apprise/list_apprise.html:58
+#: app/templates/email/edit_message.html:21
+#: app/templates/email/list_emails.html:56
+#: app/templates/email/view_config.html:14
+#: app/templates/messages/create_message.html:29
+#: app/templates/messages/edit_message.html:23
+#: app/templates/messages/list_messages.html:57
+#: app/templates/messages/view_message.html:14
+#: app/templates/reminders/create_reminder.html:23
+#: app/templates/reminders/edit_reminder.html:17
+#: app/templates/reminders/list_reminders.html:56
+#: app/templates/reminders/view_reminder.html:13
+#: app/templates/user_smtp/list_smtp.html:52
+#: app/templates/webhook/list_webhooks.html:58
+msgid "Label"
+msgstr "ლეიბლი"
+
+#: app/templates/apprise/list_apprise.html:59
+msgid "URL"
+msgstr "URL"
+
+#: app/templates/apprise/list_apprise.html:61
+#: app/templates/email/list_emails.html:59
+#: app/templates/messages/list_messages.html:59
+#: app/templates/messages/view_message.html:36
+#: app/templates/reminders/view_reminder.html:47
+#: app/templates/webhook/list_webhooks.html:62
+msgid "Created At"
+msgstr "შექმნილია"
+
+#: app/templates/apprise/list_apprise.html:77
+#: app/templates/apprise/list_apprise.html:132
+#: app/templates/user_smtp/list_smtp.html:79
+#: app/templates/user_smtp/list_smtp.html:147
+#: app/templates/webhook/list_webhooks.html:79
+#: app/templates/webhook/list_webhooks.html:138
+msgid "Edit"
+msgstr "რედაქტირება"
+
+#: app/templates/apprise/list_apprise.html:80
+#: app/templates/apprise/list_apprise.html:135
+#: app/templates/user_smtp/list_smtp.html:82
+#: app/templates/user_smtp/list_smtp.html:150
+msgid "Cannot edit while in use"
+msgstr "აშუალ რაკიძი როგორებილი რეჿიმებული"
+
+#: app/templates/apprise/list_apprise.html:88
+#: app/templates/apprise/list_apprise.html:143
+#: app/templates/webhook/list_webhooks.html:91
+#: app/templates/webhook/list_webhooks.html:150
+msgid "Test"
+msgstr "გამოცდა"
+
+#: app/templates/apprise/list_apprise.html:103
+#: app/templates/apprise/list_apprise.html:158
+#: app/templates/user_smtp/list_smtp.html:106
+#: app/templates/user_smtp/list_smtp.html:174
+msgid "Cannot delete while in use"
+msgstr "აშუალ ჩართულა როგორებილი რეჿიმებული"
+
+#: app/templates/apprise/list_apprise.html:119
+msgid "URL:"
+msgstr "URL:"
+
+#: app/templates/apprise/list_apprise.html:122
+#: app/templates/user_smtp/list_smtp.html:137
+#: app/templates/webhook/list_webhooks.html:128
+msgid "Enabled:"
+msgstr "ჩართულია:"
+
+#: app/templates/apprise/list_apprise.html:125
+#: app/templates/user_smtp/list_smtp.html:140
+#: app/templates/webhook/list_webhooks.html:131
+msgid "Created:"
+msgstr "შექმნილია:"
+
+#: app/templates/auth/bootstrap.html:14
+msgid "Create Admin Account"
+msgstr "ადმინისტრაციული ანგარიშის შექმნა"
+
+#: app/templates/auth/bootstrap.html:16
+msgid "Let’s get started by creating your first admin account."
+msgstr "დავიწყოთ თქვენი პირველი ადმინისტრატორის ანგარიშის შექმნით."
+
+#: app/templates/auth/bootstrap.html:75
+msgid "Create Admin"
+msgstr "ადმინისტრატორის შექმნა"
+
+#: app/templates/auth/forgot_password.html:12
+msgid "Forgot Password"
+msgstr "დაგავიწყდა პაროლი"
+
+#: app/templates/auth/forgot_password.html:15
+msgid ""
+"Enter your username and email. We'll send you a link to reset your password."
+msgstr ""
+"შეიყვანეთ თქვენი მომხმარებლის სახელი და ელფოსტა. ჩვენ გამოგიგზავნით ბმულს "
+"პაროლის აღსადგენად."
+
+#: app/templates/auth/forgot_username.html:12
+msgid "Forgot Username"
+msgstr "დაგავიწყდა მომხმარებელი"
+
+#: app/templates/auth/forgot_username.html:15
+msgid "Enter your email address, and we'll send you your username."
+msgstr ""
+"შეიყვანეთ თქვენი ელფოსტის მისამართი და ჩვენ გამოგიგზავნით თქვენს "
+"მომხმარებელზე."
+
+#: app/templates/auth/forgot_username.html:40
+msgid "Send Username"
+msgstr "მომხმარებლის გაგზავნა"
+
+#: app/templates/auth/login.html:12 app/templates/auth/login.html:54
+msgid "Log In"
+msgstr "შესვლა"
+
+#: app/templates/auth/login.html:62
+msgid "Forgot Username?"
+msgstr "დაგავიწყდა მომხმარებელი?"
+
+#: app/templates/auth/login.html:64
+msgid "Forgot Password?"
+msgstr "დაგავიწყდა პაროლი?"
+
+#: app/templates/auth/login.html:66 app/templates/auth/signup.html:12
+msgid "Sign Up"
+msgstr "დარეგისტრირება"
+
+#: app/templates/auth/rate_limit.html:9
+msgid "Hold On"
+msgstr "გამართეთ"
+
+#: app/templates/auth/rate_limit.html:11
+msgid "Too many failed login attempts. Please wait"
+msgstr "ძალიან ბევრი უარყოფილი შესვლის მცდელობა. გთხოვთ, მოიცადეთ"
+
+#: app/templates/auth/rate_limit.html:13
+msgid "seconds..."
+msgstr "წამები..."
+
+#: app/templates/auth/rate_limit.html:15
+msgid "Redirecting to login..."
+msgstr "დაბრუნება დაფაზე"
+
+#: app/templates/auth/reset_password.html:12
+#: app/templates/auth/reset_password.html:116
+msgid "Reset Password"
+msgstr "პაროლის აღდგენა"
+
+#: app/templates/auth/reset_password.html:14
+msgid "Enter your username, email, and new password."
+msgstr "შეიყვანეთ თქვენი მომხმარებლის სახელი, ელფოსტა და ახალი პაროლი."
+
+#: app/templates/auth/signup.html:14
+msgid "Fill out the form to create your account."
+msgstr "შეავსეთ ფორმა თქვენი ანგარიშის შესაქმნელად."
+
+#: app/templates/checkin/already_checked_in.html:10
+msgid "Already Checked In"
+msgstr "ბოლო შემოწმება"
+
+#: app/templates/checkin/already_checked_in.html:12
+msgid ""
+"You have already checked in for this item. No further action is needed at "
+"this time."
+msgstr ""
+"თქვენ უკვე შემოწმდით ამ ელემენტზე. ამ დროისთვის დამატებითი მოქმედება არ არის"
+" საჭირო."
+
+#: app/templates/checkin/already_checked_in.html:16
+#: app/templates/checkin/disabled.html:16
+#: app/templates/checkin/executed_disabled.html:18
+msgid "Check-in for:"
+msgstr "შესვლა მომხდარ:"
+
+#: app/templates/checkin/already_checked_in.html:21
+#: app/templates/checkin/disabled.html:21
+#: app/templates/checkin/executed_disabled.html:23
+#: app/templates/checkin/thank_you.html:19
+msgid "Return to Dashboard"
+msgstr "დაბრუნება დაფაზე"
+
+#: app/templates/checkin/disabled.html:10
+msgid "Check-In Disabled"
+msgstr "ელფოსტა გამორთულია"
+
+#: app/templates/checkin/disabled.html:12
+msgid "This check-in is currently disabled and cannot be completed."
+msgstr "ეს შემოწმება ამჟამად გაუქმებულია და ვერ დასრულდება."
+
+#: app/templates/checkin/executed_disabled.html:11
+msgid "Already Executed & Disabled"
+msgstr "უკვე შესრულებულია & გამორთულია"
+
+#: app/templates/checkin/executed_disabled.html:14
+msgid ""
+"This check-in has already been executed and is now disabled. No further "
+"action is required."
+msgstr ""
+"ეს შემოწმება უკვე შესრულებულია და ახლა გააქტიურებულია. დამატებითი მოქმედება "
+"საჭირო არ არის."
+
+#: app/templates/checkin/thank_you.html:10
+msgid "Check-In Successful"
+msgstr "შესვლა წარმატებით მიღწეულია"
+
+#: app/templates/checkin/thank_you.html:11
+msgid "Thank you for checking in."
+msgstr "მადლობა შესვლისათვის."
+
+#: app/templates/checkin/thank_you.html:14
+msgid "Checked in for:"
+msgstr "შესვლა მომხდარ:"
+
+#: app/templates/email/assign_smtp.html:11
+msgid "📧 Assign SMTP Config to:"
+msgstr "📧 SMTP კონფიგურაციის მიწერა:"
+
+#: app/templates/email/assign_smtp.html:25
+msgid "No SMTP (Unassign)"
+msgstr "არ არის მინიჭებული SMTP კონფიგურაცია"
+
+#: app/templates/email/assign_smtp.html:26
+msgid "This email will not use any SMTP configuration."
+msgstr "ემილი არა SMTP კონფიგურაციის გამორღერას ვინ არა!"
+
+#: app/templates/email/attach_files.html:12
+msgid "Attach Files for:"
+msgstr "ფაილების დამატება:"
+
+#: app/templates/email/attach_files.html:21
+msgid "Available Files"
+msgstr "ხელმისაწვდომი ფაილები"
+
+#: app/templates/email/attach_files.html:36
+msgid "No files found in the upload directory."
+msgstr "ატვირთვის დირექტორიაში ფაილები ვერ მოიძებნა."
+
+#: app/templates/email/attach_files.html:44
+msgid "Save Attachments"
+msgstr "დანართების შენახვა"
+
+#: app/templates/email/attach_files.html:54
+msgid "File Attach Notes"
+msgstr "ფაილების ჩანაწერი"
+
+#: app/templates/email/attach_files.html:63
+msgid "Important:"
+msgstr "პორტი:"
+
+#: app/templates/email/attach_files.html:65
+msgid ""
+"Only files that are present in the 'uploads' folder (provided by your system"
+" administrator) will be shown here. If you do not see your file(s), please "
+"contact your Grylli administrator."
+msgstr ""
+"'uploads' საქაღალდეში (შესთავაზებს თქვენი სისტემის ადმინისტრატორი) არსებული "
+"ფაილებავი გაეცემა აქ. თუ ვერ ხედავთ თქვენს ფაილ(ებ)ს, გთხოვთ, დაუკავშირდეთ "
+"Grylli-ის ადმინISTRატორს."
+
+#: app/templates/email/attach_files.html:69
+msgid "Accepted file types:"
+msgstr "მიღებული ფაილის ტიპები:"
+
+#: app/templates/email/attach_files.html:71
+msgid "Documents:"
+msgstr "დოკუმენტები:"
+
+#: app/templates/email/attach_files.html:73
+msgid "Images:"
+msgstr "სურათები:"
+
+#: app/templates/email/attach_files.html:75
+msgid "Audio:"
+msgstr "აუდიო:"
+
+#: app/templates/email/attach_files.html:79
+msgid "Maximum file size:"
+msgstr "მაქსიმალური ფაილის ზომა:"
+
+#: app/templates/email/attach_files.html:80
+msgid "10 MB per file"
+msgstr "10 მბ თითო ფაილზე"
+
+#: app/templates/email/attach_files.html:83
+msgid "Total upload size:"
+msgstr "ჯამური ატვირთვის ზომა:"
+
+#: app/templates/email/attach_files.html:84
+msgid "20 MB (all files combined)"
+msgstr "20 MB (სრული ფაილები)"
+
+#: app/templates/email/edit_message.html:12
+#: app/templates/email/list_emails.html:75
+#: app/templates/email/list_emails.html:177
+msgid "Edit Email"
+msgstr "ელფოსტის რედაქტირება"
+
+#: app/templates/email/edit_message.html:12
+msgid "Create Email"
+msgstr "ელფოსტის შექმნა"
+
+#: app/templates/email/edit_message.html:28
+msgid "To (Recipient Email)"
+msgstr "მიმღების ელფოსტა"
+
+#: app/templates/email/edit_message.html:35
+#: app/templates/email/list_emails.html:57
+#: app/templates/email/view_config.html:18
+#: app/templates/messages/create_message.html:36
+#: app/templates/messages/edit_message.html:30
+#: app/templates/messages/list_messages.html:58
+#: app/templates/messages/view_message.html:18
+#: app/templates/reminders/create_reminder.html:30
+#: app/templates/reminders/edit_reminder.html:24
+#: app/templates/reminders/list_reminders.html:57
+#: app/templates/reminders/view_reminder.html:17
+msgid "Subject"
+msgstr "საგანი"
+
+#: app/templates/email/edit_message.html:42
+#: app/templates/email/view_config.html:28
+msgid "Body"
+msgstr "ტექსტი"
+
+#: app/templates/email/edit_message.html:50
+msgid "Save Email"
+msgstr "ელფოსტის შენახვა"
+
+#: app/templates/email/list_emails.html:48
+msgid "Add Email"
+msgstr "ელფოსტის დამატება"
+
+#: app/templates/email/list_emails.html:58
+#: app/templates/reminders/assign_email_reminder.html:77
+msgid "To"
+msgstr "მი"
+
+#: app/templates/email/list_emails.html:78
+#: app/templates/email/list_emails.html:180
+msgid "Disable to edit email"
+msgstr "发送测试电子邮件失败："
+
+#: app/templates/email/list_emails.html:84
+#: app/templates/email/list_emails.html:186
+msgid "Attach Files"
+msgstr "ფაილების დანართი"
+
+#: app/templates/email/list_emails.html:87
+#: app/templates/email/list_emails.html:189
+msgid "Disable to attach files"
+msgstr "ფაილების დანართი"
+
+#: app/templates/email/list_emails.html:93
+#: app/templates/email/list_emails.html:195
+msgid "Attach SMTP Config"
+msgstr "SMTP კონფიგურაციის მიბმა"
+
+#: app/templates/email/list_emails.html:96
+#: app/templates/email/list_emails.html:198
+msgid "Disable to assign SMTP"
+msgstr "დავსილება SMTP-ს ვაჭა"
+
+#: app/templates/email/list_emails.html:102
+#: app/templates/email/list_emails.html:204
+msgid "Schedule Check-In"
+msgstr "ჩეკ-ინის განრიგი"
+
+#: app/templates/email/list_emails.html:105
+#: app/templates/email/list_emails.html:207
+msgid "Disable to schedule check-in"
+msgstr "ჩეკ-ინის განრიგი"
+
+#: app/templates/email/list_emails.html:110
+#: app/templates/email/list_emails.html:212
+#: app/templates/messages/list_messages.html:99
+#: app/templates/messages/list_messages.html:184
+#: app/templates/reminders/list_reminders.html:93
+#: app/templates/reminders/list_reminders.html:178
+msgid "View Details"
+msgstr "დეტალების ნახვა"
+
+#: app/templates/email/list_emails.html:118
+#: app/templates/email/list_emails.html:220
+msgid "Send this email to yourself to preview it."
+msgstr "გაუგზავნეთ ეს ელფოსტა საკუთარ თავს, რათა მოინახულოთ იგი."
+
+#: app/templates/email/list_emails.html:136
+#: app/templates/email/list_emails.html:238
+msgid "Toggle Email On/Off"
+msgstr "ელფოსტის ჩართვა/გამორთვა"
+
+#: app/templates/email/list_emails.html:139
+#: app/templates/email/list_emails.html:241
+msgid "Email is enabled"
+msgstr "ელფოსტა ჩართულია"
+
+#: app/templates/email/list_emails.html:141
+#: app/templates/email/list_emails.html:243
+msgid "Email is disabled"
+msgstr "ელფოსტა გამორთულია"
+
+#: app/templates/email/list_emails.html:157
+#: app/templates/email/view_config.html:51
+#: app/templates/messages/list_messages.html:142
+#: app/templates/reminders/list_reminders.html:140
+msgid "Label:"
+msgstr "წარწერა:"
+
+#: app/templates/email/list_emails.html:161
+#: app/templates/messages/list_messages.html:146
+#: app/templates/reminders/list_reminders.html:144
+#: app/templates/reminders/view_reminder.html:98
+msgid "Subject:"
+msgstr "საგანი"
+
+#: app/templates/email/list_emails.html:165
+msgid "To:"
+msgstr "तक:"
+
+#: app/templates/email/list_emails.html:169
+#: app/templates/messages/list_messages.html:150
+msgid "Created At:"
+msgstr "შექმნილია"
+
+#: app/templates/email/list_emails.html:255
+msgid "How to create and send an email"
+msgstr "როგორ შექმნათ და გაგზავნოთ ელფოსტა"
+
+#: app/templates/email/list_emails.html:262
+msgid ""
+"Click “Add Email” and fill out the subject, content, and recipient address."
+msgstr ""
+"კლიკეთ “დამატეთ ელფოსტა” და შეავსეთ თემა, შინაარსი და მიმღების მისამართი."
+
+#: app/templates/email/list_emails.html:263
+msgid "Attach any optional files (if needed)."
+msgstr "მიაწიბეთ ნებისმიერი შეჯამებული ფაილები (თუ საჭირო იქნება)."
+
+#: app/templates/email/list_emails.html:264
+msgid ""
+"Click 🧩 to assign a single SMTP configuration that will be used to send the "
+"email."
+msgstr ""
+"კლიკეთ 🧩, რომ გააჩენთ SMTP კონფიგურაცია რომელიც გამოყენებული იქნება ელფოსტის"
+" გასაგზავნად."
+
+#: app/templates/email/list_emails.html:265
+msgid "Click ⏱️ to set a check-in interval and grace period for the email."
+msgstr ""
+"კლიკეთ ⏱️, რომ დააყენოთ შემოწმების ინტერვალი და შეუქმიანი პერიოდი "
+"ელფოსტისთვის."
+
+#: app/templates/email/list_emails.html:266
+msgid "Enable the email using the 🔴/🟢 toggle button."
+msgstr "გააქტიურეთ ელფოსტა 🔴/🟢  გადამრთველ ბერკეტით."
+
+#: app/templates/email/list_emails.html:267
+msgid ""
+"Click 🧪 to test the email by sending it to yourself (not the recipient)."
+msgstr ""
+"კლიკეთ 🧪, რომ გამოსცადოთ ელფოსტა საკუთარი თავის მიმართ გაგზავნით (არა "
+"მიმღების)."
+
+#: app/templates/email/list_emails.html:268
+msgid ""
+"If you don’t check in before the grace period ends, the email will be "
+"automatically sent."
+msgstr ""
+"თუ არ შეამოწმებთ მანამდე, სანამ შეუქმიანი პერიოდი დასრულდება, ელფოსტა "
+"ავტომატურად გაიგზავნება."
+
+#: app/templates/email/list_emails.html:269
+msgid "You can preview the email configuration using 🔍."
+msgstr "შეგიძლიათ წინასწარ ნახვალოს ელფოსტის კონფიგურაცია 🔍 გამოყენებით."
+
+#: app/templates/email/list_emails.html:270
+msgid "Once a secure email is sent, it will be automatically disabled."
+msgstr "საიმედო ელფოსტის გაგზავნის შემდეგ იგი ავტომატურად გაუქმდება."
+
+#: app/templates/email/schedule_email.html:9
+msgid "Schedule Email"
+msgstr "ელფოსტის განრიგი"
+
+#: app/templates/email/schedule_email.html:18
+#: app/templates/messages/schedule_message.html:18
+msgid "Years"
+msgstr "წლები"
+
+#: app/templates/email/schedule_email.html:19
+#: app/templates/messages/schedule_message.html:19
+msgid "Months"
+msgstr "თვის"
+
+#: app/templates/email/schedule_email.html:20
+#: app/templates/messages/schedule_message.html:20
+msgid "Weeks"
+msgstr "კვირები"
+
+#: app/templates/email/schedule_email.html:21
+#: app/templates/messages/schedule_message.html:21
+msgid "Days"
+msgstr "დღეები"
+
+#: app/templates/email/schedule_email.html:22
+#: app/templates/messages/schedule_message.html:22
+msgid "Hours"
+msgstr "საათები"
+
+#: app/templates/email/schedule_email.html:23
+#: app/templates/messages/schedule_message.html:23
+msgid "Minutes"
+msgstr "წუთები"
+
+#: app/templates/email/schedule_email.html:28
+#: app/templates/messages/schedule_message.html:28
+msgid "Check-in"
+msgstr "შემოწმება"
+
+#: app/templates/email/schedule_email.html:51
+#: app/templates/messages/schedule_message.html:51
+#: app/templates/messages/view_message.html:26
+msgid "Grace Period"
+msgstr "შეუქმიანი პერიოდი"
+
+#: app/templates/email/schedule_email.html:80
+#: app/templates/messages/schedule_message.html:80
+#: app/templates/reminders/schedule_reminder.html:47
+msgid "Save Schedule"
+msgstr "განრიგის შენახვა"
+
+#: app/templates/email/view_config.html:9
+msgid "Email Configuration"
+msgstr "ელფოსტის კონფიგურაცია"
+
+#: app/templates/email/view_config.html:22
+msgid "Recipient"
+msgstr "მიმღები"
+
+#: app/templates/email/view_config.html:33
+msgid "Attached Files"
+msgstr "მიერთებული ფაილები"
+
+#: app/templates/email/view_config.html:39
+msgid "No files attached"
+msgstr "არ არის მიერთებული ფაილები"
+
+#: app/templates/email/view_config.html:46
+#: app/templates/reminders/assign_email_reminder.html:20
+msgid "SMTP Configuration"
+msgstr "SMTP კონფიგურაცია"
+
+#: app/templates/email/view_config.html:54
+#: app/templates/user_smtp/list_smtp.html:122
+msgid "Host:"
+msgstr "მასპინძელი:"
+
+#: app/templates/email/view_config.html:57
+#: app/templates/user_smtp/list_smtp.html:128
+msgid "Username:"
+msgstr "მომხმარებლის სახელი:"
+
+#: app/templates/email/view_config.html:60
+#: app/templates/user_smtp/list_smtp.html:134
+msgid "TLS:"
+msgstr "TLS:"
+
+#: app/templates/email/view_config.html:64
+msgid "No SMTP configuration assigned"
+msgstr "არ არის მინიჭებული SMTP კონფიგურაცია"
+
+#: app/templates/email/view_config.html:69
+msgid "Schedule Information"
+msgstr "განრიგის ინფორმაცია"
+
+#: app/templates/email/view_config.html:72
+msgid "Check-in Interval:"
+msgstr "შემოწმების ინტერვალი:"
+
+#: app/templates/email/view_config.html:72
+#: app/templates/email/view_config.html:75
+msgid "minutes"
+msgstr "წუთები"
+
+#: app/templates/email/view_config.html:75
+msgid "Grace Period:"
+msgstr "შეუქმიანი პერიოდი:"
+
+#: app/templates/email/view_config.html:79
+msgid "Last Check-in:"
+msgstr "ბოლო შემოწმება:"
+
+#: app/templates/email/view_config.html:82
+msgid "No check-in has occurred yet"
+msgstr "ჯერჯერობით არ მომხდარა შემოწმება"
+
+#: app/templates/email/view_config.html:92
+msgid "Back to Emails"
+msgstr "უკან ელფოსტებში"
+
+#: app/templates/errors/500.html:4
+msgid "Something went wrong"
+msgstr "რამე არასწორად მოხდა"
+
+#: app/templates/errors/500.html:6
+msgid ""
+"An unexpected error occurred. Please try again later or contact support."
+msgstr ""
+"მოულოდნელმა შეცდომამ მოახდინა. სცადეთ ხელახლა მოგვიანებით ან დაუკავშირდით "
+"მხარდაჭერას."
+
+#: app/templates/locale/redirect_after_lang_set.html:15
+msgid "Switching Language..."
+msgstr "ენაზე გადართვა..."
+
+#: app/templates/locale/redirect_after_lang_set.html:18
+msgid "Applying new language..."
+msgstr "ახალი ენის გამოყენება..."
+
+#: app/templates/messages/assign_destinations.html:13
+#: app/templates/reminders/assign_destinations.html:12
+msgid "Assign Destinations for"
+msgstr "დანიშნულების ადგილის მინიჭება"
+
+#: app/templates/messages/assign_destinations.html:62
+#: app/templates/reminders/assign_destinations.html:60
+msgid "Save Destinations"
+msgstr "დანიშნულების ადგილის შენახვა"
+
+#: app/templates/messages/create_message.html:17
+msgid "Edit Notificaton"
+msgstr "შეტყობინების რედაქტირება"
+
+#: app/templates/messages/create_message.html:19
+msgid "Create Notification"
+msgstr "შეტყობინების შექმნა"
+
+#: app/templates/messages/create_message.html:43
+#: app/templates/messages/edit_message.html:37
+#: app/templates/messages/view_message.html:42
+#: app/templates/reminders/create_reminder.html:37
+#: app/templates/reminders/edit_reminder.html:31
+#: app/templates/reminders/view_reminder.html:53
+msgid "Content"
+msgstr "შინაარსი"
+
+#: app/templates/messages/create_message.html:51
+msgid "Save Notification"
+msgstr "შეტყობინების შენახვა"
+
+#: app/templates/messages/edit_message.html:15
+#: app/templates/messages/list_messages.html:74
+#: app/templates/messages/list_messages.html:158
+msgid "Edit Notification"
+msgstr "შეტყობინების რედაქტირება"
+
+#: app/templates/messages/edit_message.html:45
+msgid "Update Notification"
+msgstr "შეტყობინების განახლება"
+
+#: app/templates/messages/list_messages.html:49
+msgid "Add Notification"
+msgstr "შეტყობინების დამატება"
+
+#: app/templates/messages/list_messages.html:77
+#: app/templates/messages/list_messages.html:161
+msgid "Disable to edit notification"
+msgstr "შეტყობინების რედაქტირება"
+
+#: app/templates/messages/list_messages.html:83
+#: app/templates/messages/list_messages.html:167
+#: app/templates/reminders/list_reminders.html:78
+#: app/templates/reminders/list_reminders.html:163
+msgid "Assign Destinations"
+msgstr "დანიშნულების ადგილის განაწილება"
+
+#: app/templates/messages/list_messages.html:86
+#: app/templates/messages/list_messages.html:170
+msgid "Disable to assign destinations"
+msgstr "დანიშნულების ადგილის განაწილება"
+
+#: app/templates/messages/list_messages.html:92
+#: app/templates/messages/list_messages.html:176
+#: app/templates/reminders/list_reminders.html:88
+#: app/templates/reminders/list_reminders.html:173
+msgid "Set Schedule"
+msgstr "გრაფიკის დაყენება"
+
+#: app/templates/messages/list_messages.html:95
+#: app/templates/messages/list_messages.html:179
+msgid "Disable to set schedule"
+msgstr "გრაფიკის დაყენება"
+
+#: app/templates/messages/list_messages.html:107
+#: app/templates/messages/list_messages.html:192
+msgid "Send Test Notification"
+msgstr "შეტყობინების რედაქტირება"
+
+#: app/templates/messages/list_messages.html:122
+#: app/templates/messages/list_messages.html:209
+msgid "Toggle Message On/Off"
+msgstr "შეტყობინების ჩართვა/გამორთვა"
+
+#: app/templates/messages/list_messages.html:124
+#: app/templates/messages/list_messages.html:211
+msgid "Notification is enabled"
+msgstr "შეტყობინება ჩართულია"
+
+#: app/templates/messages/list_messages.html:126
+#: app/templates/messages/list_messages.html:213
+msgid "Notification is disabled"
+msgstr "შეტყობინება გამორთულია"
+
+#: app/templates/messages/list_messages.html:223
+msgid "How to create and send a notification"
+msgstr "როგორ შევქმნათ და გავაგზავნოთ შეტყობინება"
+
+#: app/templates/messages/list_messages.html:233
+msgid "Click “Add notification” and fill out the subject and content fields."
+msgstr "დააჭირეთ 'შეტყობინების დამატებაზე' და შეავსეთ სათაური და შინაარსი."
+
+#: app/templates/messages/list_messages.html:234
+msgid "Save the notification to return to the overview."
+msgstr "შეინახეთ შეტყობინება დასაბრუნებლად მიმოხილვაში."
+
+#: app/templates/messages/list_messages.html:235
+msgid "You need to create at least one apprise or webhook destination."
+msgstr ""
+"თქვენ უნდა შექმნათ მინიმუმ ერთი apprise ან webhook დანიშნულების ადგილი."
+
+#: app/templates/messages/list_messages.html:236
+msgid "You can create as many destinations as you like."
+msgstr "შეგიძლიათ შექმნათ იმდენი დანიშნულების ადგილი, რამდენიც გინდათ."
+
+#: app/templates/messages/list_messages.html:237
+msgid "Click 🧩 to assign one or more Apprise and/or Webhook destinations."
+msgstr ""
+"დააჭირეთ 🧩 რომ დაავალოთ ერთი ან მეტი Apprise და/ან Webhook დანიშნულების "
+"ადგილი."
+
+#: app/templates/messages/list_messages.html:238
+msgid "Click ⏱️ to set a schedule and check-in interval."
+msgstr "დააჭირეთ ⏱️ რომ დააყენოთ გრაფიკი და შემოწმების ინტერვალი."
+
+#: app/templates/messages/list_messages.html:239
+msgid "Enable the notification using the 🔴/🟢 toggle button."
+msgstr "შეტყვინების ჩართვა 🔴/🟢 გადამრთველ ღილაკით."
+
+#: app/templates/messages/list_messages.html:240
+msgid ""
+"If you don’t check in before the grace period ends, the notification will be"
+" sent."
+msgstr ""
+"თუ შეღავათების პერიოდის დასრულებამდე არ შეამოწმეთ, შეტყობინება გაეგზავნება."
+
+#: app/templates/messages/list_messages.html:241
+msgid "You can preview the notification config using 🔍."
+msgstr "შეგიძლიათ წინასწარ დაათვალიეროთ შეტყობინების კონფიგურაცია 🔍."
+
+#: app/templates/messages/list_messages.html:242
+msgid "Once a notification is sent, it will be automatically disabled."
+msgstr "შეტყობინების გაგზავნის შემდეგ, იგი ავტომატურად გაირთვება."
+
+#: app/templates/messages/schedule_message.html:9
+msgid "Schedule Message"
+msgstr "გრაფიკის გაგზავნა"
+
+#: app/templates/messages/view_message.html:9
+msgid "Notifications Details"
+msgstr "შეტყობინების დეტალები"
+
+#: app/templates/messages/view_message.html:22
+msgid "Check-in Interval"
+msgstr "შემოწმების ინტერვალი"
+
+#: app/templates/messages/view_message.html:31
+msgid "Last Check-in"
+msgstr "ბოლო შემოწმება"
+
+#: app/templates/messages/view_message.html:48
+#: app/templates/reminders/view_reminder.html:59
+msgid "Apprise URLs"
+msgstr "Apprise URL-ები"
+
+#: app/templates/messages/view_message.html:54
+#: app/templates/messages/view_message.html:64
+#: app/templates/reminders/view_reminder.html:65
+#: app/templates/reminders/view_reminder.html:75
+#: app/templates/reminders/view_reminder.html:85
+msgid "None assigned."
+msgstr "არაფერი დანიშნული."
+
+#: app/templates/messages/view_message.html:73
+msgid "Back to Notifications"
+msgstr "დაბრუნება შეტყობინებებზე"
+
+#: app/templates/mfa/challenge.html:5 app/templates/mfa/settings.html:5
+msgid "Two-Factor Authentication (MFA)"
+msgstr "როლის გადამოწმება (MFA)"
+
+#: app/templates/mfa/recovery_codes.html:4
+msgid "Your Recovery Codes"
+msgstr "თქვენი აღდგენითი კოდები"
+
+#: app/templates/mfa/recovery_codes.html:7
+msgid "Save these recovery codes in a safe place!"
+msgstr "შეინახეთ ეს აღდგენითი კოდები უსაფრთხო ადგილას!"
+
+#: app/templates/mfa/recovery_codes.html:10
+msgid ""
+"Each code can be used once if you lose access to your authenticator. These "
+"codes will not be shown again."
+msgstr ""
+"თითოეული კოდი შეიძლება გამოყენებული იყოს ერთხელ, თუ ავტენტიფიკატორზე წვდომას"
+" დაკარგავთ. ეს კოდები აღარ გამოჩნდება."
+
+#: app/templates/mfa/recovery_codes.html:24
+msgid "OK, I've saved them"
+msgstr "კარგი, შევინახე"
+
+#: app/templates/mfa/settings.html:12
+msgid "MFA QR Code"
+msgstr "MFA QR კოდი"
+
+#: app/templates/mfa/settings.html:15
+msgid "Manual Entry:"
+msgstr "მანუალური შეყვანა:"
+
+#: app/templates/partials/admin_nav.html:21
+msgid "Administration"
+msgstr "ადმინისტრაცია"
+
+#: app/templates/partials/admin_nav.html:37
+#: app/templates/partials/shared_nav.html:34
+#: app/templates/partials/shared_nav.html:78
+#: app/templates/partials/shared_nav.html:117
+msgid "Overview"
+msgstr "მიმოხილვა"
+
+#: app/templates/partials/footer.html:7
+msgid "Toggle Theme"
+msgstr "კრებული თემის გადართვა"
+
+#: app/templates/partials/footer.html:32
+msgid "Theme"
+msgstr "თემა"
+
+#: app/templates/partials/head.html:7
+msgid "Grylli"
+msgstr "Grylli"
+
+#: app/templates/partials/header.html:6 app/templates/partials/sidebar.html:32
+#: app/templates/partials/sidebar.html:66
+msgid "Home"
+msgstr "მთავარი"
+
+#: app/templates/partials/header.html:55
+msgid "Account"
+msgstr "ანგარიში"
+
+#: app/templates/partials/header.html:61
+msgid "MFA"
+msgstr "MFA"
+
+#: app/templates/partials/header.html:67
+msgid "About"
+msgstr "შესახებ"
+
+#: app/templates/partials/header.html:73
+msgid "Privacy"
+msgstr "კონფიდენციალობა"
+
+#: app/templates/partials/header.html:79
+msgid "System Info"
+msgstr "სისტემის ინფორმაცია"
+
+#: app/templates/partials/header.html:114
+msgid "Logout"
+msgstr "გამოსვლა"
+
+#: app/templates/partials/shared_nav.html:33
+msgid "Overview of notification settings"
+msgstr "შეტყობინებების პარამეტრების მიმოხილვა"
+
+#: app/templates/partials/shared_nav.html:38
+msgid "Configure Apprise services"
+msgstr "Apprise სერვისების კონფიგურაცია"
+
+#: app/templates/partials/shared_nav.html:39
+msgid "Apprise"
+msgstr "Apprise"
+
+#: app/templates/partials/shared_nav.html:43
+msgid "Configure Webhook integrations"
+msgstr "Webhook ინტეგრაციების კონფიგურაცია"
+
+#: app/templates/partials/shared_nav.html:77
+msgid "Overview of secure email messages"
+msgstr "დაცული ელ.წერილების მიმოხილვა"
+
+#: app/templates/partials/shared_nav.html:82
+msgid "Configure SMTP email settings"
+msgstr "SMTP ელ.პარამეტრების კონფიგურაცია"
+
+#: app/templates/partials/shared_nav.html:83
+#: app/templates/reminders/view_reminder.html:79
+msgid "SMTP"
+msgstr "SMTP"
+
+#: app/templates/partials/shared_nav.html:100
+#: app/templates/reminders/list_reminders.html:8
+msgid "Reminders"
+msgstr "წუთები"
+
+#: app/templates/partials/shared_nav.html:116
+msgid "Overview of reminders"
+msgstr "შეხსენებათა მიმოხილვა"
+
+#: app/templates/partials/sidebar.html:13
+#: app/templates/partials/sidebar.html:47
+msgid "Menu"
+msgstr "მენიუ"
+
+#: app/templates/reminders/assign_email_reminder.html:12
+msgid "Link Email Reminder for"
+msgstr "ელექტრონული ფოსტის შეხსენების ბმული"
+
+#: app/templates/reminders/assign_email_reminder.html:30
+#: app/templates/reminders/assign_email_reminder.html:64
+msgid "None (Unassign)"
+msgstr "არ არის მინიჭებული SMTP კონფიგურაცია"
+
+#: app/templates/reminders/assign_email_reminder.html:43
+msgid "No sender address"
+msgstr "არ არის გამომგზავნის მისამართი"
+
+#: app/templates/reminders/assign_email_reminder.html:54
+msgid "Email Message"
+msgstr "გრაფიკის გაგზავნა"
+
+#: app/templates/reminders/assign_email_reminder.html:77
+msgid "No subject"
+msgstr "საგანი"
+
+#: app/templates/reminders/assign_email_reminder.html:90
+msgid "Save Email Reminder"
+msgstr "ელფოსტის შენახვა"
+
+#: app/templates/reminders/create_reminder.html:12
+#: app/templates/reminders/edit_reminder.html:10
+#: app/templates/reminders/list_reminders.html:73
+#: app/templates/reminders/list_reminders.html:158
+msgid "Edit Reminder"
+msgstr "ელფოსტის რედაქტირება"
+
+#: app/templates/reminders/create_reminder.html:14
+msgid "Create Reminder"
+msgstr "ელფოსტის შექმნა"
+
+#: app/templates/reminders/create_reminder.html:45
+msgid "Save Reminder"
+msgstr "ელფოსტის შენახვა"
+
+#: app/templates/reminders/edit_reminder.html:39
+msgid "Update Reminder"
+msgstr "განაახლეთ შეხსენება"
+
+#: app/templates/reminders/list_reminders.html:48
+msgid "Add Reminder"
+msgstr "ელფოსტის დამატება"
+
+#: app/templates/reminders/list_reminders.html:58
+#: app/templates/reminders/view_reminder.html:21
+msgid "Start At"
+msgstr "ივანთა TLS"
+
+#: app/templates/reminders/list_reminders.html:59
+msgid "Recurrence"
+msgstr "რეკურსია"
+
+#: app/templates/reminders/list_reminders.html:69
+#: app/templates/reminders/list_reminders.html:153
+#: app/templates/reminders/view_reminder.html:26
+msgid "One-time"
+msgstr "ერთი ჯერ"
+
+#: app/templates/reminders/list_reminders.html:83
+msgid "Assign Email Reminder"
+msgstr "გადააწყვეთ ელექტრონული ფოსტის შეხსენება"
+
+#: app/templates/reminders/list_reminders.html:102
+#: app/templates/reminders/list_reminders.html:187
+msgid "Send Test Reminder"
+msgstr "გასინჯვის ელფოსტა"
+
+#: app/templates/reminders/list_reminders.html:120
+#: app/templates/reminders/list_reminders.html:205
+msgid "Toggle Reminder On/Off"
+msgstr "ელფოსტის ჩართვა/გამორთვა"
+
+#: app/templates/reminders/list_reminders.html:122
+#: app/templates/reminders/list_reminders.html:207
+msgid "Reminder is enabled"
+msgstr "ელფოსტა ჩართულია"
+
+#: app/templates/reminders/list_reminders.html:124
+#: app/templates/reminders/list_reminders.html:209
+msgid "Reminder is disabled"
+msgstr "ელფოსტა გამორთულია"
+
+#: app/templates/reminders/list_reminders.html:148
+msgid "Start At:"
+msgstr "ივანთა TLS"
+
+#: app/templates/reminders/list_reminders.html:152
+msgid "Recurrence:"
+msgstr "რეკურსია:"
+
+#: app/templates/reminders/list_reminders.html:168
+msgid "Link Email Reminder"
+msgstr "ელექტრონული ფოსტის შეხსენების ბმული"
+
+#: app/templates/reminders/list_reminders.html:218
+msgid "How to use reminders"
+msgstr "როგორ ვმართოთ მომხმარებლები"
+
+#: app/templates/reminders/list_reminders.html:231
+msgid "➕ Click “Add Reminder” and fill out the subject and content fields."
+msgstr "დააჭირეთ 'შეტყობინების დამატებაზე' და შეავსეთ სათაური და შინაარსი."
+
+#: app/templates/reminders/list_reminders.html:232
+msgid "💾 Save the reminder to return to the overview."
+msgstr "შეინახეთ შეტყობინება დასაბრუნებლად მიმოხილვაში."
+
+#: app/templates/reminders/list_reminders.html:233
+msgid ""
+"📣 Assign Apprise, 🌐 Webhook, and/or 📧 Email (SMTP) destinations as needed."
+msgstr ""
+"📣 დანიშნული 🌐 Webhook-ის და/ან 📧 ელ.ფოსტის (SMTP) დანიშნულების სახეები "
+"საჭიროებისამებრ."
+
+#: app/templates/reminders/list_reminders.html:234
+msgid ""
+"⏱️ Set the schedule using the schedule button to define when reminders are "
+"sent."
+msgstr ""
+"⏱️ დააყენეთ გრაფიკი გრაფიკის ღილაკის გამოყენებით, რომ განსაზღვროთ როდის "
+"იგზავნება შეხსენებები."
+
+#: app/templates/reminders/list_reminders.html:235
+msgid ""
+"🔍 Click “View Details” to review or edit assigned destinations and other "
+"settings."
+msgstr ""
+"🔍 დააწკაპუნეთ “ნახვის მონაცემებზე”, რომ გადახედოთ ან რედაქტირებით დაინიშნულ "
+"დანიშნულების სახეებს და სხვა პარამეტრებს."
+
+#: app/templates/reminders/list_reminders.html:236
+msgid ""
+"🧪 Click the Test button to verify all assigned destinations are working "
+"correctly."
+msgstr ""
+"🧪 დააწკაპუნეთ სატესტო ღილაკზე დანიშნული დანიშნულების სახეები სწორად მუშაობს."
+
+#: app/templates/reminders/list_reminders.html:237
+msgid "🔴/🟢 Enable or disable the reminder using the toggle button."
+msgstr "გააქტიურეთ ელფოსტა 🔴/🟢  გადამრთველ ბერკეტით."
+
+#: app/templates/reminders/list_reminders.html:238
+msgid "📤 Reminders will be sent as scheduled to the assigned destinations."
+msgstr ""
+"📤 შეხსენებები გაიგზავნება დანიშნულ დროში მიუთითულ დანიშნულების სახეებს."
+
+#: app/templates/reminders/schedule_reminder.html:8
+msgid "Schedule Reminder"
+msgstr "ელფოსტის განრიგი"
+
+#: app/templates/reminders/schedule_reminder.html:15
+msgid "Start Date & Time"
+msgstr "დაწყება თარიღი & დრო"
+
+#: app/templates/reminders/schedule_reminder.html:22
+#: app/templates/reminders/view_reminder.html:25
+msgid "Recurrence Rule"
+msgstr "რეკურსიის წესი"
+
+#: app/templates/reminders/schedule_reminder.html:24
+msgid "(Optional) Enter RRULE or leave blank for one-time."
+msgstr "(არასავალდებულო) შეიყვანეთ RRULE ან დატოვეთ ცარიელი ერთი ჯერისთვის."
+
+#: app/templates/reminders/schedule_reminder.html:30
+msgid "End Date"
+msgstr "გაგზავნის ტესტი"
+
+#: app/templates/reminders/schedule_reminder.html:32
+msgid "(Optional) Stop sending after this date."
+msgstr "(არასავალდებულო) შეწყვიტეთ გაგზავნა ამ თარიღის შემდეგ."
+
+#: app/templates/reminders/schedule_reminder.html:38
+#: app/templates/reminders/view_reminder.html:36
+msgid "Max Occurrences"
+msgstr "მაქსიმალური შემთხვევები"
+
+#: app/templates/reminders/schedule_reminder.html:40
+msgid "(Optional) Stop after this many reminders."
+msgstr "(არასავალდებულო) შეწყვიტეთ ამდენი შეხსენების შემდეგ."
+
+#: app/templates/reminders/schedule_reminder.html:56
+msgid "Help for RRULE syntax"
+msgstr "დახმარება RRULE სითეზისთვის"
+
+#: app/templates/reminders/schedule_reminder.html:66
+msgid "Several tools are available to help generate an RRULE."
+msgstr "რამდენიმე ინსტრუმენტი ხელმისაწვდომია RRULE მშენებლობისათვის."
+
+#: app/templates/reminders/schedule_reminder.html:67
+msgid "Use a search engine or AI tool to assist."
+msgstr "მოიხმარეთ საძიებო ძრავა ან AI ინსტრუმენტი დასახმარებლად."
+
+#: app/templates/reminders/schedule_reminder.html:69
+msgid "Here is an example of one such online tool:"
+msgstr "აი, ერთ-ერთი ასეთი ონლაინ ინსტრუმენტი:"
+
+#: app/templates/reminders/schedule_reminder.html:73
+msgid "RRULE Generator Tool"
+msgstr "RRULE გენერატორის ინსტრუმენტი"
+
+#: app/templates/reminders/schedule_reminder.html:77
+msgid "See here for some common examples:"
+msgstr "ამ მაგალითების ზოგადი მაგალითები იხილეთ აქ:"
+
+#: app/templates/reminders/schedule_reminder.html:81
+msgid "RRULE Help (GitHub)"
+msgstr "RRULE დახმარება (GitHub)"
+
+#: app/templates/reminders/view_reminder.html:8
+msgid "Reminder Details"
+msgstr "დეტალების ნახვა"
+
+#: app/templates/reminders/view_reminder.html:30
+msgid "End At"
+msgstr "გაგზავნის ტესტი"
+
+#: app/templates/reminders/view_reminder.html:42
+msgid "Last Sent"
+msgstr "ბოლო შემოწმება"
+
+#: app/templates/reminders/view_reminder.html:91
+msgid "Email Template"
+msgstr "ელ.ფოსტის ვერიფიკატორი"
+
+#: app/templates/reminders/view_reminder.html:103
+msgid "No email linked."
+msgstr "ელფოსტა ჩართულია"
+
+#: app/templates/reminders/view_reminder.html:111
+msgid "Back to Reminders"
+msgstr "უკან ელფოსტებში"
+
+#: app/templates/user_smtp/create_smtp.html:10
+msgid "Create SMTP Destination"
+msgstr "SMTP დანიშნულების ადგილის შექმნა"
+
+#: app/templates/user_smtp/create_smtp.html:69
+#: app/templates/user_smtp/edit_smtp.html:84
+msgid "Hold to reveal"
+msgstr "დაჭერეთ, რათა გამოავლინოთ"
+
+#: app/templates/user_smtp/create_smtp.html:92
+#: app/templates/user_smtp/edit_smtp.html:107
+msgid "Use TLS"
+msgstr "გამოყენება TLS"
+
+#: app/templates/user_smtp/edit_smtp.html:10
+msgid "Edit SMTP Destination"
+msgstr "SMTP დანიშნულების ადგილის შექმნა"
+
+#: app/templates/user_smtp/list_smtp.html:9
+msgid "SMTP Destinations"
+msgstr "SMTP დანიშნულებები"
+
+#: app/templates/user_smtp/list_smtp.html:44
+msgid "Add SMTP"
+msgstr "SMTP დამატება"
+
+#: app/templates/user_smtp/list_smtp.html:53
+msgid "Host"
+msgstr "ჰოსტი"
+
+#: app/templates/user_smtp/list_smtp.html:54
+msgid "Port"
+msgstr "პორტი"
+
+#: app/templates/user_smtp/list_smtp.html:56
+msgid "TLS"
+msgstr "TLS"
+
+#: app/templates/user_smtp/list_smtp.html:58
+msgid "Created"
+msgstr "შეიქმნა"
+
+#: app/templates/user_smtp/list_smtp.html:90
+#: app/templates/user_smtp/list_smtp.html:158
+msgid "Send Test"
+msgstr "გაგზავნის ტესტი"
+
+#: app/templates/user_smtp/list_smtp.html:125
+msgid "Port:"
+msgstr "პორტი:"
+
+#: app/templates/user_smtp/list_smtp.html:131
+msgid "Password:"
+msgstr "პაროლი:"
+
+#: app/templates/user_smtp/list_smtp.html:184
+msgid "Hide SMTP Setup Help"
+msgstr "ინაც SMS მცლელ CURLOPT_TRIGGER_სირემარი"
+
+#: app/templates/user_smtp/list_smtp.html:184
+msgid "Show SMTP Setup Help"
+msgstr "ჩართულა SMTP-ს წამოა"
+
+#: app/templates/user_smtp/list_smtp.html:190
+msgid ""
+"Need help finding your SMTP server settings? See here for some links to "
+"common providers:"
+msgstr ""
+"გამორგ ქლავებული ყვე ქლავებული SMTP გაგეს? გაურითგა ერთი შემი საკვეთობებს:"
+
+#: app/templates/user_smtp/list_smtp.html:194
+msgid "SMTP Server Settings Help (GitHub)"
+msgstr "SMTP სამოგრხებლობებს წეყს (GitHub)"
+
+#: app/templates/user_smtp/list_smtp.html:198
+msgid ""
+"Find official documentation links for Gmail, Outlook, Yahoo, AOL, and "
+"others."
+msgstr ""
+"გაძრამღე რეჰსასწი ქლავებულებშႠ Gmail, Outlook, Yahoo, AOL და უსეს. დწეკე"
+
+#: app/templates/user_smtp/list_smtp.html:199
+msgid ""
+"If your provider isn’t listed, search their support site or a search engine "
+"for 'SMTP settings'."
+msgstr "თქვენა, როგორებელს მუტი უე SMTP ფორძიბიგრუიდი, 'SMTP settings'"
+
+#: app/templates/user_smtp/list_smtp.html:200
+msgid ""
+"Some providers (like Gmail, Yahoo) require 'App Passwords' or special "
+"setup—see their docs!"
+msgstr ""
+"არ% : al(ინადი ცრდილა SMTP მ- 'APP Passwords' (Gmail, Yahoo), special setup)"
+
+#: app/templates/webhook/create_webhook.html:10
+msgid "Create Webhook"
+msgstr "ვებჰუკის შექმნა"
+
+#: app/templates/webhook/edit_webhook.html:10
+msgid "Edit Webhook"
+msgstr "ვებჰუკის რედაქტირება"
+
+#: app/templates/webhook/list_webhooks.html:9
+#: app/templates/webhook/webhook_config.html:3
+msgid "Webhooks Destinations"
+msgstr "ვებჰუკების დანიშნულებები"
+
+#: app/templates/webhook/list_webhooks.html:59
+msgid "Endpoint"
+msgstr "ენდფოინტი"
+
+#: app/templates/webhook/list_webhooks.html:60
+msgid "Description"
+msgstr "აღწერა"
+
+#: app/templates/webhook/list_webhooks.html:82
+#: app/templates/webhook/list_webhooks.html:141
+msgid "Cannot edit while assigned to notifications"
+msgstr "აშუალ რაკიძი როგორებილი რფუႠძი"
+
+#: app/templates/webhook/list_webhooks.html:106
+#: app/templates/webhook/list_webhooks.html:165
+msgid "Cannot delete while assigned to notifications"
+msgstr "აშუალ ურციეთე ტვღა SMTP შეშური სტანდართემგა"
+
+#: app/templates/webhook/list_webhooks.html:122
+msgid "Endpoint:"
+msgstr "ენდფოინტი:"
+
+#: app/templates/webhook/list_webhooks.html:125
+msgid "Description:"
+msgstr "აღწერა:"
+
+#: app/views/account.py:74
+msgid "Current password is required to change password."
+msgstr "პაროლის შეცვლა მოითხოვს მიმდინარე პაროლს."
+
+#: app/views/account.py:78
+msgid "Current password is incorrect."
+msgstr "მიმდინარე პაროლი არასწორია."
+
+#: app/views/account.py:94
+msgid "Account updated successfully."
+msgstr "ანგარიში წარმატებით განახლდა."
+
+#: app/views/account.py:100
+msgid "An error occurred while updating your account."
+msgstr "თქვენი ანგარიშის განახლებისას შეცდომა წარმოიშვა."
+
+#: app/views/account.py:137
+msgid "You cannot delete your account because you are the last admin."
+msgstr ""
+"თქვენ ვერ წაშლით თქვენს ანგარიშს, რადგან თქვენ ხართ უკანასკნელი "
+"ადმინისტრატორი."
+
+#: app/views/account.py:146
+msgid "Your account has been permanently deleted."
+msgstr "თქვენი ანგარიში მუდმივად წაიშალა."
+
+#: app/views/account.py:152
+msgid "An error occurred while trying to delete your account."
+msgstr "თქვენი ანგარიშის განახლებისას შეცდომა წარმოიშვა."
+
+#: app/views/account.py:171
+msgid "Your account has been deleted"
+msgstr "თქვენი ანგარიში მუდმივად წაიშალა."
+
+#: app/views/account.py:173
+#, python-brace-format
+msgid ""
+"Hello {username},\n"
+"\n"
+"Your account on {site_name} has been deleted.Remember to delete your files from the uploads folder.If this was not you, please contact support immediately.\n"
+"\n"
+"{site_url}"
+msgstr ""
+"პრივეტ {username},\n"
+"\n"
+"თქვენი ანგარიში {site_name}-ზე წაიშალა. არ დაგავიწყდეთ თქვენი ფაილების წაშლა ატვირთვათა საქაღალდიდან. თუ ეს თქვენ არ იყავით, გთხოვთ დაუკავშირდეთ მხარდაჭერას დაუყოვნებლივ.\n"
+"\n"
+"{site_url}"
+
+#: app/views/admin.py:59
+msgid "Invalid role."
+msgstr "არასწორი როლი."
+
+#: app/views/apprise.py:51
+msgid "🧪 Test notification sent successfully!"
+msgstr "🧪 ტესტის შეტყობინება წარმატებით გაიგზავნა!"
+
+#: app/views/apprise.py:56
+msgid "🧪 Failed to send test notification: "
+msgstr "🧪 ტესტის შეტყიბინების გაგზავნა ჩაიშალა:"
+
+#: app/views/apprise.py:62
+msgid "🧪 Error sending test notification."
+msgstr "🧪 ტესტის შეტყობინების გაგზავნისას შეცდომა წარმოიშვა."
+
+#: app/views/apprise.py:101
+msgid "Apprise destination created successfully."
+msgstr "Apprise დანიშნულება წარმატებით შეიქმნა."
+
+#: app/views/apprise.py:168
+msgid "Apprise destination updated successfully."
+msgstr "Apprise დანიშნულება წარმატებით განახლდა."
+
+#: app/views/apprise.py:199
+msgid "Apprise destination deleted."
+msgstr "Apprise დანიშნულება წაიშალა."
+
+#: app/views/auth.py:95
+msgid "Admin account created successfully."
+msgstr "ადმინისტრატორის ანგარიში წარმატებით შეიქმნა."
+
+#: app/views/auth.py:108
+msgid "An error occurred while creating the admin account."
+msgstr "ადმინისტრატორის ანგარიშის შექმნისას შეცდომა წარმოშვა."
+
+#: app/views/auth.py:141
+msgid ""
+"Your account is not activated. Please check your email for the activation "
+"link."
+msgstr ""
+"თქვენი ანგარიში არ არის გააქტიურებული. გთხოვთ, შეამოწმოთ თქვენი ელფოსტი "
+"გააქტიურების ბმულისათვის."
+
+#: app/views/auth.py:157
+msgid "Multi-factor authentication required. Please enter your code."
+msgstr ""
+"მრავალფაქტორული ავტენტიფიკაციის შესრულება საჭიროა. გთხოვთ, შეიყვანოთ თქვენი "
+"კოდი."
+
+#: app/views/auth.py:162 app/views/mfa.py:195
+msgid "Logged in successfully."
+msgstr "შედგენილი წარმატებით."
+
+#: app/views/auth.py:179
+msgid "Invalid username or password."
+msgstr "არასწორი მომხმარებლის სახელი ან პაროლი."
+
+#: app/views/auth.py:203
+msgid "You have been logged out."
+msgstr "თქვენ გამოვიდით ანგარიშიდან."
+
+#: app/views/auth.py:239 app/views/email.py:263
+msgid "Access denied."
+msgstr "შესვლის უარყოფა."
+
+#: app/views/auth.py:273
+msgid "If a user with that email exists, we've sent the username to them."
+msgstr ""
+"თუ ამ ელფოსტით მომხმარებელი არსებობს, ჩვენ მას გავუგზავნეთ მომხმარებლის "
+"სახელი."
+
+#: app/views/auth.py:314
+msgid "A password reset link has been sent to your email."
+msgstr "პაროლის აღდგენის ბმული გაიგზავნა თქვენს ელფოსტაზე."
+
+#: app/views/auth.py:319
+msgid "No account found matching that username and email."
+msgstr "ანგარიში აღნიშნული სახელისა და ელფოსტის მიხედვით არ მოიძებნა."
+
+#: app/views/auth.py:389
+msgid "The reset link is invalid or has expired."
+msgstr "აღდგენის ბმული არასწორია ან ვადის გასულია."
+
+#: app/views/auth.py:401
+msgid "Username and email do not match."
+msgstr "用户名和电子邮件不匹配。"
+
+#: app/views/auth.py:421
+msgid "Your password has been reset. Please log in."
+msgstr "您的密码已重置。请登录。"
+
+#: app/views/auth.py:458
+msgid "Invalid registration PIN."
+msgstr "注册PIN无效。"
+
+#: app/views/auth.py:467
+msgid "Username or email already exists."
+msgstr "用户名或电子邮件已存在。"
+
+#: app/views/auth.py:492
+msgid "Activate Your Grylli Account"
+msgstr "გრილის ანგარიშის გააქტიურება"
+
+#: app/views/auth.py:493
+#, python-brace-format
+msgid ""
+"Hello {username},\n"
+"\n"
+"Please activate your account by clicking..."
+msgstr ""
+"გამარჯობა {username},\n"
+"\n"
+"გთხოვთ, გააქტიუროთ თქვენი ანგარიში დაწკაპვლით..."
+
+#: app/views/auth.py:498
+msgid "Account created! Please check your email to activate your account."
+msgstr "账户已创建！请检查您的电子邮件以激活您的账户。"
+
+#: app/views/auth.py:521
+msgid "Activation link is invalid or expired."
+msgstr "激活链接无效或已过期。"
+
+#: app/views/auth.py:528 app/views/users.py:76 app/views/users.py:140
+msgid "User not found."
+msgstr "未找到用户。"
+
+#: app/views/auth.py:532
+msgid "Account already activated. Please log in."
+msgstr "账户已激活。请登录。"
+
+#: app/views/auth.py:540
+msgid "Your account has been activated! You can now log in."
+msgstr "您的账户已激活！您现在可以登录。"
+
+#: app/views/backups.py:72
+#, python-format
+msgid "Backup created: %(filename)s"
+msgstr "备份已创建：%(filename)s"
+
+#: app/views/backups.py:77
+msgid "Failed to create backup."
+msgstr "创建备份失败。"
+
+#: app/views/backups.py:106
+#, python-format
+msgid "Backup deleted: %(filename)s"
+msgstr "备份已删除：%(filename)s"
+
+#: app/views/backups.py:109
+msgid "Backup file not found."
+msgstr "找不到备份文件。"
+
+#: app/views/backups.py:112
+msgid "Failed to delete backup."
+msgstr "删除备份失败。"
+
+#: app/views/checkin.py:41
+msgid "Invalid check-in link."
+msgstr "签到链接无效。"
+
+#: app/views/checkin.py:48
+msgid "You are not authorized to check in for this item."
+msgstr "您无权为此项目签到。"
+
+#: app/views/checkin.py:62
+msgid "Unsupported check-in type."
+msgstr "不支持的签到类型。"
+
+#: app/views/checkin.py:137
+msgid "⚠️ Cannot enable reminder: Start date/time is in the past."
+msgstr "⚠️ ვერ ჩართული შეხსენება: დასაწყისი თარიღი/დრო წარსულშია."
+
+#: app/views/checkin.py:158
+msgid "✅ Enabled and timer started."
+msgstr "✅ 已启用，并且计时器已启动。"
+
+#: app/views/checkin.py:168
+msgid "⛔ Disabled."
+msgstr "⛔ 已禁用。"
+
+#: app/views/checkin.py:170
+msgid "⚠️ Cannot toggle — missing schedule or destination."
+msgstr "⚠️ 无法切换—缺少计划或目的地。"
+
+#: app/views/email.py:88
+msgid "Message saved."
+msgstr "消息已保存。"
+
+#: app/views/email.py:118 app/views/messages.py:167
+msgid "Message deleted."
+msgstr "消息已删除。"
+
+#: app/views/email.py:152
+msgid "Attached files updated."
+msgstr "附件文件已更新。"
+
+#: app/views/email.py:200
+msgid "SMTP configuration not assigned or is disabled."
+msgstr "未分配SMTP配置或已禁用。"
+
+#: app/views/email.py:234 app/views/smtp_settings_admin.py:82
+msgid "Test email sent successfully."
+msgstr "测试电子邮件已成功发送。"
+
+#: app/views/email.py:282 app/views/messages.py:305
+msgid "Schedule updated successfully."
+msgstr "计划已成功更新。"
+
+#: app/views/email.py:310
+msgid "SMTP configuration assigned."
+msgstr "已分配SMTP配置。"
+
+#: app/views/email.py:319
+msgid "SMTP configuration removed."
+msgstr "已分配SMTP配置。"
+
+#: app/views/messages.py:97
+msgid "Message created successfully."
+msgstr "消息已成功创建。"
+
+#: app/views/messages.py:133
+msgid "Message updated successfully."
+msgstr "消息已成功更新。"
+
+#: app/views/messages.py:223 app/views/reminders.py:240
+msgid "Destinations updated."
+msgstr "目的地已更新。"
+
+#: app/views/messages.py:441
+msgid "No destinations assigned to this message."
+msgstr "未分配SMTP配置或已禁用。"
+
+#: app/views/messages.py:453
+msgid "Test message sent successfully."
+msgstr "测试电子邮件已成功发送。"
+
+#: app/views/messages.py:455
+msgid "Test message failed: "
+msgstr "消息已保存。"
+
+#: app/views/mfa.py:68
+msgid "You must enter a code from your authenticator."
+msgstr "უნდა შეიყვანოთ კოდი თქვენი ავტენტიფიკატორიდან."
+
+#: app/views/mfa.py:82 app/views/mfa.py:259
+msgid "Invalid code. Please try again."
+msgstr "არასწორი კოდი. გთხოვთ სცადოთ ისევ."
+
+#: app/views/mfa.py:91
+msgid "Two-factor authentication disabled."
+msgstr "შეტყობინება გამორთულია"
+
+#: app/views/mfa.py:132
+msgid "Recovery codes are only shown immediately after enabling MFA."
+msgstr "აღდგენითი კოდები გამოჩნდება მხოლოდ MFA-ს გააქტიურების შემდეგ."
+
+#: app/views/mfa.py:142
+msgid "Could not load recovery codes."
+msgstr "აღდგენითი კოდების ჩატვირთვა შეუძლებელია."
+
+#: app/views/mfa.py:168
+msgid "No MFA challenge in progress."
+msgstr "MFA ტესტი არ მიმდინარეობს."
+
+#: app/views/mfa.py:176
+msgid "User not found for MFA challenge."
+msgstr "未找到用户。"
+
+#: app/views/mfa.py:225
+msgid ""
+"You have used your last recovery code. MFA has been disabled. Please remove "
+"Grylli from your authenticator app, and re-enable MFA to protect your "
+"account."
+msgstr ""
+"თქვენ გამოძახეთ თქვენი უკანასკნელი აღდგენითი კოდი. MFA გამორთულია. გთხოვთ, "
+"ამოღოთ გრილი თქვენი ავტენტიფიკატორის აპიდან, და გააქტიუროთ MFA თქვენი "
+"ანგარიშის დასაცავად."
+
+#: app/views/mfa.py:248
+#, python-brace-format
+msgid "Recovery code accepted. You have {remaining} recovery codes left."
+msgstr "აღდგენითი კოდი მიღებულია. თქვენ დარჩა {remaining} აღდგენითი კოდები."
+
+#: app/views/reminders.py:106
+msgid "Reminder created successfully."
+msgstr "消息已成功创建。"
+
+#: app/views/reminders.py:143
+msgid "Reminder updated successfully."
+msgstr "用户已成功更新。"
+
+#: app/views/reminders.py:174
+msgid "Reminder deleted."
+msgstr "მომხმარებელი წაიშალა."
+
+#: app/views/reminders.py:287
+msgid "No destinations assigned to this reminder."
+msgstr "未分配SMTP配置或已禁用。"
+
+#: app/views/reminders.py:311
+msgid "No email message linked to this reminder."
+msgstr "ამ შეხსენებას არ აქვს მიკავშირებული ელ.ფოსტის შეტყობინება."
+
+#: app/views/reminders.py:314
+msgid "SMTP configuration is disabled."
+msgstr "未分配SMTP配置或已禁用。"
+
+#: app/views/reminders.py:353
+msgid "Test reminder sent successfully."
+msgstr "测试电子邮件已成功发送。"
+
+#: app/views/reminders.py:356
+msgid "Test reminder failed: "
+msgstr "消息已保存。"
+
+#: app/views/reminders.py:430
+msgid "Reminder schedule updated successfully."
+msgstr "计划已成功更新。"
+
+#: app/views/reminders.py:434
+msgid "Please correct the errors below."
+msgstr "გთხოვთ გამოსწორეთ შეცდომები ქვევით."
+
+#: app/views/reminders.py:481 app/views/reminders.py:482
+msgid "None"
+msgstr "არა"
+
+#: app/views/reminders.py:508
+msgid "You must select both an SMTP config and an email message, or neither."
+msgstr ""
+"უნდა აირჩიოთ როგორც SMTP კონფიგურაცია, ასევე ელ.ფოსტის შეტყობინება, ან "
+"არცერთი."
+
+#: app/views/reminders.py:528
+msgid "Email reminder settings updated."
+msgstr "目的地已更新。"
+
+#: app/views/smtp.py:83 app/views/user_smtp.py:80
+msgid "SMTP destination created successfully."
+msgstr "SMTP目的地已成功创建。"
+
+#: app/views/smtp.py:129 app/views/user_smtp.py:135
+msgid "SMTP destination updated."
+msgstr "SMTP目的地已更新。"
+
+#: app/views/smtp.py:160 app/views/user_smtp.py:166
+msgid "SMTP destination deleted."
+msgstr "SMTP目的地已删除。"
+
+#: app/views/smtp.py:191 app/views/user_smtp.py:199
+msgid "Test email sent successfully to your account email."
+msgstr "测试电子邮件已成功发送至您的账户邮箱。"
+
+#: app/views/smtp.py:196 app/views/user_smtp.py:204
+msgid "Failed to send test email. Check SMTP settings."
+msgstr "测试电子邮件发送失败。检查SMTP设置。"
+
+#: app/views/smtp_settings_admin.py:76
+msgid "Test Email from Grylli"
+msgstr "来自Grylli的测试电子邮件"
+
+#: app/views/smtp_settings_admin.py:77
+msgid "This is a test email from the Grylli SMTP settings page."
+msgstr "这是来自Grylli SMTP设置页面的测试电子邮件。"
+
+#: app/views/smtp_settings_admin.py:84
+msgid "Failed to send test email: "
+msgstr "发送测试电子邮件失败："
+
+#: app/views/users.py:99
+msgid "User updated successfully."
+msgstr "用户已成功更新。"
+
+#: app/views/users.py:106 app/views/users.py:327
+msgid "An error occurred while updating the user."
+msgstr "მომხმარებლის განახლებისას შეცდომა მოხდა."
+
+#: app/views/users.py:195
+msgid "User deleted."
+msgstr "მომხმარებელი წაიშალა."
+
+#: app/views/users.py:202
+msgid "An error occurred while deleting the user."
+msgstr "მომხმარებლის წაშლისას შეცდომა მოხდა."
+
+#: app/views/users.py:237
+msgid "Password is required when creating a new user."
+msgstr "პაროლი აუცილებელია ახალი მომხმარებლის შექმნისას."
+
+#: app/views/users.py:244
+msgid "Username already exists."
+msgstr "მომხმარებლის სახელი უკვე არსებობს."
+
+#: app/views/users.py:251
+msgid "Email already exists."
+msgstr "ელფოსტა უკვე არსებობს."
+
+#: app/views/users.py:268
+#, python-format
+msgid "User '%(username)s' created successfully."
+msgstr "მომხმარებელი '%(username)s' წარმატებით შეიქმნა."
+
+#: app/views/users.py:278
+msgid "Failed to create user."
+msgstr "მომხმარებლის შექმნა ვერ მოხერხდა."
+
+#: app/views/users.py:305
+msgid "You cannot change your own enabled status."
+msgstr "თქვენ ვერ შეცვლით თქვენს საკუთარ გააქტიურებულ სტატუსს."
+
+#: app/views/users.py:318
+#, python-format
+msgid "User '%(username)s' has been %(status)s."
+msgstr "მომხმარებელი '%(username)s' %(status)s."
+
+#: app/views/users.py:356
+msgid "You cannot reset your own MFA."
+msgstr "⚪ = თქვენ ვერ გაუთიშავთ საკუთარ ანგარიშს."
+
+#: app/views/users.py:368
+#, python-format
+msgid "MFA disabled for user '%(username)s'."
+msgstr "MFA გათიშული მომხმარებლისთვის '%(username)s'."
+
+#: app/views/users.py:374
+msgid "An error occurred while resetting MFA."
+msgstr "მომხმარებლის წაშლისას შეცდომა მოხდა."
+
+#: app/views/webhook.py:54
+msgid "Webhook created successfully."
+msgstr "Webhook წარმატებით შეიქმნა."
+
+#: app/views/webhook.py:113
+msgid "Webhook updated successfully."
+msgstr "Webhook წარმატებით განახლდა."
+
+#: app/views/webhook.py:142
+msgid "Webhook deleted."
+msgstr "Webhook წაიშალა."
+
+#: app/views/webhook.py:175
+msgid "🧪 Webhook test sent successfully!"
+msgstr "🧪 Webhook-ის ტესტი წარმატებით გაიგზავნა!"
+
+#: app/views/webhook.py:177
+msgid "🧪 Webhook test failed: "
+msgstr "🧪 Webhook-ის ტესტი ვერ გაიგზავნა:"
+
+#: app/views/webhook.py:180
+msgid "🧪 Error sending webhook test."
+msgstr "🧪 Webhook-ის ტესტის გაგზავის შეცდომა."
+
+#~ msgid ""
+#~ "Grylli is a secure message delivery platform designed to activate after "
+#~ "prolonged user inactivity."
+#~ msgstr ""
+#~ "Grylli არის უსაფრთხო მესიჯების მიწოდების პლატფორმა, რომელიც შემუშავებულია "
+#~ "მომხმარებლის ხანგრძლივი უკომპაქტობის შემდეგ გააქტიურებისთვის."
+
+#~ msgid ""
+#~ "It is a modern reimplementation of Gone Man’s Switch with a refined tech "
+#~ "stack, better maintainability, and an improved user experience."
+#~ msgstr ""
+#~ "ეს არის Gone Man’s Switch-ის თანამედროვე რეიმპლემენტაცია, რაფინირებული "
+#~ "ტექნოლოგიური ფენებით, უკეთესი შესანახით და გაუმჯობესებული მომხმარებლის "
+#~ "გამოცდილებით."
+
+#~ msgid "Body:"
+#~ msgstr "მთავარი:"
+
+#~ msgid "Subject:"
+#~ msgstr "სათაური:"
+
+#~ msgid "Content:"
+#~ msgstr "შინაარსი:"
+
+#~ msgid "Edit SMTP"
+#~ msgstr "SMTP რედაქტირება"
+
+#~ msgid ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+#~ msgstr ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+
+#~ msgid "Admin Notes"
+#~ msgstr "ადმინისტრატორის შენიშვნები"
+
+#~ msgid "Register"
+#~ msgstr "რეგისტრაცია"
+
+#~ msgid "View"
+#~ msgstr "ნახვა"
+
+#~ msgid "Schedule"
+#~ msgstr "გრაფიკი"
+
+#~ msgid "Message is enabled"
+#~ msgstr "შეტყობინება ჩართულია"
+
+#~ msgid "Message is disabled"
+#~ msgstr "შეტყობინება გამორთულია"
+
+#~ msgid "No SMTP configuration selected."
+#~ msgstr "未选择SMTP配置。"
+
+#~ msgid "Enable the message to start monitoring."
+#~ msgstr "გაუშვით მესიჯი მონიტორინგის დასაწყებად."
+
+#~ msgid "✅ SMTP settings saved."
+#~ msgstr "SMTP პარამეტრები"
+
+#~ msgid "If you don’t check in, Grylli delivers the message for you."
+#~ msgstr "თუ არ შეხვალთ შემოწმებაზე, Grylli თქვენთვის მიაწვდის მესიჯს."
+
+#~ msgid "Fill in already discovered missing translations:"
+#~ msgstr "पहले से खोजे गए खोए हुए अनुवादों को भरें:"
+
+#~ msgid "Add missing phrases in that JSON file."
+#~ msgstr "उस JSON फ़ाइल में गायब वाक्यांश जोड़ें।"
+
+#~ msgid "From:"
+#~ msgstr "से:"
+
+#~ msgid ""
+#~ "Attach the updated JSON file to a new GitHub issue when submitting your "
+#~ "changes."
+#~ msgstr ""
+#~ "अपडेट की गई JSON फ़ाइल को अपने परिवर्तनों को सबमिट करते समय एक नई GitHub "
+#~ "समस्या के साथ संलग्न करें।"
+
+#~ msgid "admin"
+#~ msgstr "ადმინისტრატორი"
+
+#~ msgid "user"
+#~ msgstr "მომხმარებელი"
+
+#~ msgid "Logging in"
+#~ msgstr "შესვლა"
+
+#~ msgid "SMTP error: "
+#~ msgstr "SMTP ერესო:"
+
+#~ msgid "enabled"
+#~ msgstr "გააქტიურებულია"
+
+#~ msgid "disabled"
+#~ msgstr "გაუქმებულია"

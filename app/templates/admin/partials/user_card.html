@@ -1,0 +1,76 @@
+{# ---------------------------------------------------------------------
+  user_card.html
+  app/templates/admin/partials/user_card.html
+  Card view for listing users
+--------------------------------------------------------------------- #}
+<div id="cardView"
+     class="hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    {% for user in users %}
+        <div class="bg-white dark:bg-zinc-800 rounded shadow p-4">
+            <h2 class="text-lg font-semibold mb-2">{{ user.username }}</h2>
+            <p>
+                <strong>{{ _("Email:") }}</strong> {{ user.email }}
+            </p>
+            <p>
+                <strong>{{ _("Role:") }}</strong> {{ user.role }}
+            </p>
+            <div class="mt-2">
+                <a href="{{ url_for('users.edit_user', user_id=user.id) }}"
+                   class="text-blue-500 hover:underline mr-2"
+                   title="{{ _("Edit User") }}">✏️</a>
+                {% if user.id != current_user.id %}
+                    <button type="button"
+                            class="text-indigo-400 hover:text-indigo-600 ml-1 change-role-btn"
+                            data-user-id="{{ user.id }}"
+                            data-username="{{ user.username }}"
+                            data-role="{{ user.role }}"
+                            title="{{ _("Change Role") }}">🛡️</button>
+                {% else %}
+                    <span title="{{ _("You cannot change your own role") }}"
+                          class="text-gray-400 cursor-not-allowed">🛡️</span>
+                {% endif %}
+                {% if user.id != current_user.id and user.mfa_enabled %}
+                    <form method="post"
+                          action="{{ url_for('users.reset_user_mfa', user_id=user.id) }}"
+                          class="inline"
+                          onsubmit="return confirm('{{ _("Are you sure you want to reset MFA for this user?") }}');">
+                        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                        <button type="submit"
+                                title="{{ _("Reset MFA") }}"
+                                class="text-orange-600 hover:underline mr-2"
+                                style="background: none;
+                                       border: none;
+                                       padding: 0">
+                            <i class="fas fa-key"></i>
+                        </button>
+                    </form>
+                {% endif %}
+                <form method="post"
+                      action="{{ url_for('users.delete_user', user_id=user.id) }}"
+                      class="inline"
+                      onsubmit="return confirm('{{ _("Delete user") }} {{ user.username }}?');">
+                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                    <button type="submit"
+                            class="text-red-500 hover:underline mr-2"
+                            title="{{ _("Delete User") }}">🗑️</button>
+                </form>
+                {% if user.id == current_user.id %}
+                    <span title="{{ _("You cannot disable yourself") }}" class="text-gray-400">⚪</span>
+                {% else %}
+                    <form method="post"
+                          action="{{ url_for('users.toggle_user_enabled', user_id=user.id) }}"
+                          class="inline">
+                        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                        <button type="submit"
+                                title="{{ _("Disable") if user.is_enabled else _('Enable') }}"
+                                class="text-xl leading-none"
+                                style="color: {{ 'limegreen' if user.is_enabled else 'red' }};
+                                       background: transparent;
+                                       border: none;
+                                       cursor: pointer">{{ '🟢' if user.is_enabled else '🔴' }}</button>
+                    </form>
+                {% endif %}
+            </div>
+        </div>
+    {% endfor %}
+</div>

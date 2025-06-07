@@ -1,0 +1,12 @@
+{# partials/flash_messages.html #}
+{% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        <div id="toast-container" class="fixed top-20 right-4 space-y-2 z-50">
+            {% for category, message in messages %}
+                <div class="toast px-4 py-2 rounded shadow text-white {% if category == 'success' %} bg-green-600 {% elif category == 'danger' %} bg-red-600 {% elif category == 'warning' %} bg-yellow-500 {% else %} bg-blue-500 {% endif %}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endwith %}

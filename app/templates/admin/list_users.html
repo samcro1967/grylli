@@ -1,0 +1,29 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div x-data="{ showHelp: false, showRoleModal: false, selectedRole: '', selectedUserId: null, selectedUsername: '', openRoleModal(userId, username, role) { this.selectedUserId = userId; this.selectedUsername = username; this.selectedRole = role; this.showRoleModal = true; } }"
+         @open-role-modal.window="openRoleModal($event.detail.userId, $event.detail.username, $event.detail.role)"
+         x-cloak>
+        {% include "admin/partials/user_header.html" %}
+        {% include "admin/partials/user_table.html" %}
+        {% include "admin/partials/user_card.html" %}
+        {% include "admin/partials/user_instructions_and_modal.html" %}
+    </div>
+    <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const tableBtn = document.getElementById('tableViewBtn');
+    const cardBtn = document.getElementById('cardViewBtn');
+    const tableView = document.getElementById('tableView');
+    const cardView = document.getElementById('cardView');
+
+    tableBtn?.addEventListener('click', () => {
+      tableView.classList.remove('hidden');
+      cardView.classList.add('hidden');
+    });
+
+    cardBtn?.addEventListener('click', () => {
+      cardView.classList.remove('hidden');
+      tableView.classList.add('hidden');
+    });
+  });
+    </script>
+{% endblock %}

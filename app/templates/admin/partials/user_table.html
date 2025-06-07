@@ -1,0 +1,119 @@
+{# ---------------------------------------------------------------------
+  user_table.html
+  app/templates/admin/partials/user_table.html
+  Table view for listing users
+--------------------------------------------------------------------- #}
+<div id="tableView">
+    <table class="table-auto w-full border-collapse border border-gray-300 dark:border-gray-700">
+        <thead>
+            <tr>
+                <th class="border px-4 py-2">{{ _("ID") }}</th>
+                <th class="border px-4 py-2">{{ _("Username") }}</th>
+                <th class="border px-4 py-2">{{ _("Email") }}</th>
+                <th class="border px-4 py-2">{{ _("Role") }}</th>
+                <th class="border px-4 py-2">{{ _("Actions") }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+                <tr>
+                    <td class="border px-4 py-2">{{ user.id }}</td>
+                    <td class="border px-4 py-2">{{ user.username }}</td>
+                    <td class="border px-4 py-2">{{ user.email }}</td>
+                    <td class="border px-4 py-2">{{ user.role }}</td>
+                    <td class="border px-4 py-2">
+                        <a href="{{ url_for('users.edit_user', user_id=user.id) }}"
+                           title="{{ _("Edit User") }}"
+                           class="text-blue-500 hover:underline mr-2">✏️</a>
+                        {% if user.id != current_user.id %}
+                            <button type="button"
+                                    class="text-indigo-400 hover:text-indigo-600 ml-1 change-role-btn"
+                                    data-user-id="{{ user.id }}"
+                                    data-username="{{ user.username }}"
+                                    data-role="{{ user.role }}"
+                                    title="{{ _("Change Role") }}">🛡️</button>
+                        {% else %}
+                            <span title="{{ _("You cannot change your own role") }}"
+                                  class="text-gray-400 cursor-not-allowed">🛡️</span>
+                        {% endif %}
+                        {% if user.id != current_user.id and user.mfa_enabled %}
+                            <form method="post"
+                                  action="{{ url_for('users.reset_user_mfa', user_id=user.id) }}"
+                                  class="inline"
+                                  onsubmit="return confirm('{{ _("Are you sure you want to reset MFA for this user?") }}');">
+                                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                                <button type="submit"
+                                        title="{{ _("Reset MFA") }}"
+                                        class="text-orange-600 hover:underline mr-2"
+                                        style="background: none;
+                                               border: none;
+                                               padding: 0">
+                                    <i class="fas fa-key"></i>
+                                </button>
+                            </form>
+                        {% endif %}
+                        <form method="post"
+                              action="{{ url_for('users.delete_user', user_id=user.id) }}"
+                              class="inline"
+                              onsubmit="return confirm('{{ _("Delete user") }} {{ user.username }}?');">
+                            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                            <button type="submit"
+                                    title="{{ _("Delete User") }}"
+                                    class="text-red-500 hover:underline mr-2">🗑️</button>
+                        </form>
+                        {% if user.id == current_user.id %}
+                            <span title="{{ _("You cannot disable yourself") }}" class="text-gray-400">⚪</span>
+                        {% else %}
+                            <form method="post"
+                                  action="{{ url_for('users.toggle_user_enabled', user_id=user.id) }}"
+                                  class="inline">
+                                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                                <button type="submit"
+                                        title="{{ _("Disable") if user.is_enabled else _('Enable') }}"
+                                        class="text-xl leading-none"
+                                        style="color: {{ 'limegreen' if user.is_enabled else 'red' }};
+                                               background: transparent;
+                                               border: none;
+                                               cursor: pointer">{{ '🟢' if user.is_enabled else '🔴' }}</button>
+                            </form>
+                        {% endif %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{# Modal goes OUTSIDE the table and loop, only ONCE #}
+<div id="roleModal"
+     class="fixed inset-0 hidden z-50 bg-black bg-opacity-40 flex items-center justify-center">
+    <div class="bg-zinc-800 rounded-xl p-6 w-[400px] shadow-lg">
+        <h2 class="text-xl font-semibold mb-4 text-white">
+            {{ _("Assign Role for") }}
+            <span id="roleModalUsername" class="text-blue-400 font-mono"></span>
+        </h2>
+        <form method="post" action="" id="roleModalForm">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <input type="hidden" name="user_id" id="roleModalUserId">
+            <div class="mb-6">
+                {% for role in roles %}
+                    <label class="flex items-center space-x-2 mb-2 text-white">
+                        <input type="radio"
+                               name="role"
+                               value="{{ role }}"
+                               id="roleModalRole_{{ role }}"
+                               class="accent-blue-500"
+                               {% if loop.first %}required{% endif %}>
+                        <span>{{ _(role.capitalize() ) }}</span>
+                    </label>
+                {% endfor %}
+            </div>
+            <div class="flex justify-end space-x-3">
+                <button type="button"
+                        id="roleModalCancel"
+                        class="bg-zinc-600 hover:bg-zinc-700 text-white px-4 py-2 rounded">{{ _("Cancel") }}</button>
+                <button type="submit"
+                        class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded">{{ _("Save") }}</button>
+            </div>
+        </form>
+    </div>
+</div>

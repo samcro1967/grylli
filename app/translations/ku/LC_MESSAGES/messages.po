@@ -1,0 +1,3250 @@
+# Kurdish translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-06-07 15:49-0500\n"
+"PO-Revision-Date: 2025-05-25 16:45-0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: ku <LL@li.org>\n"
+"Language: ku\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: app/init_db.py:55
+#, python-format
+msgid "Tables currently in DB: %s"
+msgstr "خشتە هەنووکە لە DB:"
+
+#: app/init_db.py:58
+msgid "Database or system_config table missing. Running migrations now..."
+msgstr ""
+"Danegeha an jadvarek system_config nehabû. Nîqaşên guherandî kanin ..."
+
+#: app/init_db.py:61
+msgid "Migrations applied successfully."
+msgstr "هێجرتەکان بە سەرکەوتوویی جێبەجێ کران."
+
+#: app/init_db.py:63
+msgid "Migration failed."
+msgstr "Veguhara şikestik."
+
+#: app/init_db.py:68
+msgid "System config seeded successfully."
+msgstr "هەستە بەنرخەکانی سیستەم سەرکەوتووانە."
+
+#: app/init_db.py:70
+msgid "Error seeding system config."
+msgstr "هەڵە بە جیاکردنەوە سیستەمی ڕێکخستن:"
+
+#: app/forms/mfa_form.py:15 app/templates/apprise/create_apprise.html:30
+#: app/templates/apprise/edit_apprise.html:30
+#: app/templates/apprise/list_apprise.html:60
+#: app/templates/mfa/settings.html:24 app/templates/mfa/settings.html:40
+#: app/templates/user_smtp/create_smtp.html:99
+#: app/templates/user_smtp/edit_smtp.html:114
+#: app/templates/user_smtp/list_smtp.html:57
+#: app/templates/webhook/create_webhook.html:36
+#: app/templates/webhook/edit_webhook.html:36
+#: app/templates/webhook/list_webhooks.html:61
+msgid "Enabled"
+msgstr "Çalak"
+
+#: app/forms/mfa_form.py:16
+msgid "Authenticator Code"
+msgstr "کۆدی دڵنیاکردنەوە"
+
+#: app/forms/mfa_form.py:17
+#: app/templates/admin/partials/user_instructions_and_modal.html:66
+#: app/templates/admin/partials/user_table.html:115
+#: app/templates/email/assign_smtp.html:44 app/templates/mfa/settings.html:47
+#: app/templates/user_smtp/edit_smtp.html:122
+msgid "Save"
+msgstr "پاشەکەوتکردن"
+
+#: app/forms/mfa_form.py:27
+msgid "Authentication Code"
+msgstr "نوێکردنەوەی هەواڵ"
+
+#: app/forms/mfa_form.py:29
+msgid "Please enter your authentication code."
+msgstr "تکایە کۆدی دڵنیاکردنەوە بنووسە."
+
+#: app/forms/mfa_form.py:30
+msgid "Enter a valid 6-digit code or recovery code."
+msgstr "کۆدی درووستە 6 ژمارەیەک بنووسە یان کۆدی گەڕاندنەوە."
+
+#: app/forms/mfa_form.py:31
+msgid "Invalid code format."
+msgstr "شێوازی کۆدی نادرووست."
+
+#: app/forms/mfa_form.py:35 app/templates/mfa/challenge.html:25
+msgid "Verify"
+msgstr "وەشان"
+
+#: app/services/mail.py:37 app/services/system_settings_email.py:40
+msgid "Missing required config setting: "
+msgstr "Têkeveya pêdivî ya sazkirinê winda:"
+
+#: app/services/mail.py:46 app/services/system_settings_email.py:50
+#, python-format
+msgid "Failed to decrypt %(key)s: %(error)s"
+msgstr "شکستخواردن لە دابڕینی %(key)s: %(error)s"
+
+#: app/services/mail.py:54
+#, python-format
+msgid "get_setting('%(key)s') -> '%(value)s' (sensitive: %(sensitive)s)"
+msgstr ""
+"get_setting('%(key)s') -> '%(value)s' (raw: '%(raw)s', sensitive: "
+"%(sensitive)s)"
+
+#: app/services/mail.py:75
+#, python-format
+msgid "Preparing email to %(to)s"
+msgstr "E-mailek amade dike bo %(to)s"
+
+#: app/services/mail.py:90
+#, python-format
+msgid ""
+"SMTP configuration: host=%(host)s (type=%(host_type)s), port=%(port)s "
+"(type=%(port_type)s)"
+msgstr ""
+"SMTP host = '%(host)s' (type: %(host_type)s), port = %(port)s (type: "
+"%(port_type)s)"
+
+#: app/services/mail.py:99
+#, python-format
+msgid "SMTP username: %(user)s"
+msgstr "Bi karhêner: %(user)s"
+
+#: app/services/mail.py:100
+#, python-format
+msgid "TLS enabled: %(tls)s"
+msgstr "TLS çalak: %(tls)s"
+
+#: app/services/mail.py:105
+msgid "Starting TLS connection..."
+msgstr "TLS dest pê dike"
+
+#: app/services/mail.py:107
+msgid "Logging into SMTP server..."
+msgstr "Hatinawa bo serwera SMTP..."
+
+#: app/services/mail.py:109
+msgid "Sending email message..."
+msgstr "خشتەکردنی پەیام"
+
+#: app/services/mail.py:111
+#, python-format
+msgid "Email sent successfully to %(to)s"
+msgstr "تاقیگرەوەی ئیمەیڵی نادیارە چۆنەڕووکەوی."
+
+#: app/services/mail.py:114
+#, python-format
+msgid "SMTP error while sending to %(to)s: %(error)s"
+msgstr "Halê SMTP dema şandina bo %(to)s: %(error)s"
+
+#: app/templates/about.html:10
+msgid "About Grylli"
+msgstr "Di derbarê Grylli de"
+
+#: app/templates/about.html:13
+msgid ""
+"Grylli is a secure, self-hosted message delivery platform that automatically"
+" sends pre-configured messages if a user fails to check in within a defined "
+"time period."
+msgstr ""
+"Grylli پلاتفۆڕمی پەیامدانانی سەلامەتی خۆییارە کە بە شێوەی ئۆتۆماتیکی پەیامە "
+"پێشاندراوەکان ناردە ئەگەر بەکارهێنەر لە ماوەیەکی دیاریکراو ناچێتە ژوورەوە."
+
+#: app/templates/about.html:14
+msgid ""
+"It supports multiple users, customizable schedules, and recurring reminders."
+msgstr "پشتیوانی لە چەند بەکارهێنەر و خولەکانی ڕێکخستنەوە دەکات."
+
+#: app/templates/about.html:15
+msgid ""
+"Messages and reminders can be delivered via email, webhooks, or over 100 "
+"third-party services through Apprise."
+msgstr ""
+"پەیامەکان دەکرێت بە هەواڵ، وێبهووک، یان زیاتر لە 80 هەریکاری سێ پارتەیەکان "
+"لە ڕێگای Apprise ناردەکرێت."
+
+#: app/templates/about.html:16
+msgid ""
+"Users can configure their own SMTP servers to ensure emails and reminders "
+"appear to come directly from them — not from the system administrator."
+msgstr ""
+"بەکارهێنەران دەتوانن ڕاژه‌سەرڤەری SMTP یان بخه‌رنە خزمەتیه‌كانی خۆیان بۆ "
+"دڵنیابوونی ئەوەی پەیامەکان وا چیبەری دەکرێت وەکەوە زیندووی لیکەری ناکرێ لە "
+"لایەن بەڕێوەبەری سیستەمەوە."
+
+#: app/templates/about.html:17
+msgid ""
+"Sensitive data is encrypted at rest, and all operations are secured with "
+"strong authentication and audit-friendly logging."
+msgstr ""
+"زانیاری هەستیار لە قەیدیدایە و هەموو کارگێڕی پەیامەکان بە پشیکەکانی بەرز و "
+"قەبارەی بەرەوچوونە سەرنجی بەەوەش دەکرێت."
+
+#: app/templates/about.html:18
+msgid ""
+"Built with a modern, reactive technology stack, Grylli is optimized for "
+"responsiveness and works seamlessly across desktop and mobile devices."
+msgstr ""
+"Grylli پەیوەندیەکی نوێ و جێکراوی ڕەنگاوەكی تایبەتی هەیە و کارەباوەیە پرەپڕ و"
+" تێیدا کە دووای گیانەشی ئەوێ دەگرێت و کارکردی پرەپسینیەکی تام لەبالا دەدات."
+
+#: app/templates/about.html:23
+msgid "Version:"
+msgstr "وەشانی:"
+
+#: app/templates/about.html:26
+msgid "Repository:"
+msgstr "خه‌زنه‌:"
+
+#: app/templates/about.html:30
+msgid "GitHub - samcro1967/grylli"
+msgstr "GitHub - samcro1967/grylli"
+
+#: app/templates/help.html:2 app/templates/help.html:5
+#: app/templates/partials/header.html:85
+msgid "Help"
+msgstr "یارمەتی"
+
+#: app/templates/help.html:7
+msgid ""
+"Grylli includes built-in instructions throughout the app to help you "
+"configure and manage your setup."
+msgstr ""
+"Grylli ڕێنماییە سەردانە خۆڕایی لە سیستەمە کە تەواودانی ڕێکخستن و ڕێکفتن بە "
+"ندازەوە دەکات."
+
+#: app/templates/help.html:8
+msgid ""
+"This page provides an overview of key features and direct links to where "
+"they can be managed."
+msgstr ""
+"ئەەم لاپەڕەیە هەڵگەیشت هیکلە ڕاسی و پیشکەشی پەیوەندێکی ڕاستەوخۆ دەکات رۆڵە "
+"جێکراون."
+
+#: app/templates/help.html:12 app/templates/messages/list_messages.html:9
+#: app/templates/partials/shared_nav.html:17
+msgid "Notifications"
+msgstr "ئاگادارکردنەوەکان"
+
+#: app/templates/help.html:14
+msgid "Create and assign messages"
+msgstr "Peyamek anî e-nameyek biafirî."
+
+#: app/templates/admin/index.html:32 app/templates/help.html:17
+#: app/templates/partials/admin_nav.html:56
+msgid "SMTP Settings"
+msgstr "SMTP Settings"
+
+#: app/templates/help.html:19
+msgid "Use your own email server"
+msgstr "کاربرد کەیتخۆیی ڕاژه‌سەرڤەری ئیمەیڵەکەت بەکاربهێنە."
+
+#: app/templates/help.html:22
+msgid "Apprise Integration"
+msgstr "Cihdestên Apprise"
+
+#: app/templates/help.html:24
+msgid "Send notifications to 80+ supported services"
+msgstr "ئاگادارکردنەوەکان بۆ 80+ هەریکاری پشتیوانیکراو بڕەوگەڕاوە."
+
+#: app/templates/help.html:27
+#: app/templates/messages/assign_destinations.html:41
+#: app/templates/messages/view_message.html:58
+#: app/templates/partials/shared_nav.html:44
+#: app/templates/reminders/assign_destinations.html:39
+#: app/templates/reminders/view_reminder.html:69
+msgid "Webhooks"
+msgstr "تێکڕای وێبخووک"
+
+#: app/templates/help.html:29
+msgid "Trigger actions or external workflows"
+msgstr "کەژنی گەربوونەوە یان کارە جیاوازگرەکانی دەرەوی گەیشتەوە کردەبەکەید."
+
+#: app/templates/email/list_emails.html:9 app/templates/help.html:32
+#: app/templates/partials/shared_nav.html:61
+msgid "Emails"
+msgstr "ئیمەیلەکان"
+
+#: app/templates/help.html:34
+msgid "View and manage secure email messages"
+msgstr "کورتەسازی پەیامە ئیمەیڵە پارێزراوەکان"
+
+#: app/templates/help.html:38
+msgid "Security"
+msgstr "🔐 پاراستن"
+
+#: app/templates/help.html:39
+msgid "Grylli encrypts sensitive data and logs all key actions for auditing."
+msgstr ""
+"Grylli زانیاریە هەستیارەکان قەبیدیو هەموو تەواوەکاریەکانی مافی بەرز بۆ بە "
+"گەردەوە."
+
+#: app/templates/index.html:9 app/views/locale.py:95
+msgid "Welcome to Grylli"
+msgstr "Bi xêr hatî Grylli"
+
+#: app/templates/index.html:11
+msgid "Pronounced"
+msgstr "Tîpnaskirin"
+
+#: app/templates/index.html:11
+msgid "like “grill-ee”"
+msgstr "wekî “grill-ee”"
+
+#: app/templates/index.html:14
+msgid ""
+"Grylli is a secure message scheduling and delivery system designed to ensure"
+" your important messages are delivered — even if you can’t be there to send "
+"them."
+msgstr ""
+"Grylli ئەمە ژمارە نێربەر ویە درۆست کرن و درێژکرنا پەیامێن ئەمنیە چ "
+"دیلاڤەرکرن دا دەتزن پەیامە تایبەتیە ژ توهنە گاڤێن نەزدیک بەنەرفێ — هەرڤەکە "
+"ئەگەر نەهات بەرپەرسین."
+
+#: app/templates/index.html:17
+msgid ""
+"Whether you’re planning ahead, setting up emergency communication, or "
+"building peace of mind, Grylli helps automate your message delivery via "
+"multiple channels including email, webhooks, and Apprise notifications."
+msgstr ""
+"Eger tu berplan dike, peyameke fêlasazî saz dike, an bi eştiya ciwan çêdike,"
+" Grylli alîkarîya xwe-yek ji bo şandina peyama te rêkizan dike bi riya "
+"email-an, webhooks-an, an agahdariyên Apprise-an ger tu çavkaniyeke bi dest "
+"pê nagirî."
+
+#: app/templates/index.html:19
+msgid "Getting Started"
+msgstr "Dest pê kirişin"
+
+#: app/templates/index.html:21
+msgid "Create a message, email, or reminder."
+msgstr "Peyamek anî e-nameyek biafirî."
+
+#: app/templates/index.html:22
+msgid "Set your check-in interval and grace period (for messages)."
+msgstr "دیاری بکە کاتژمێرەکانی چوونەژوورەوە و ماوەی بەخشین."
+
+#: app/templates/index.html:23
+msgid "Assign one or more delivery destinations."
+msgstr "نشانی-یه‌ك یان زیاتر بۆ گه‌شتن دیاری بكه‌."
+
+#: app/templates/index.html:24
+msgid "Optionally attach files for secure emails."
+msgstr "هەڵبژاردن فایلەکان ڕابگرە بۆ ئیمەیڵە پاراستەکان."
+
+#: app/templates/index.html:25
+msgid "Schedule reminders to send at specific times or on a recurring basis."
+msgstr "تایبەتمەندییەکان ڕێکببە لە کاتە بە تایبەتی یان بە شێوەیەکی داهاتی."
+
+#: app/templates/index.html:26
+msgid "Enable the message or reminder to activate delivery."
+msgstr "په‌یامەکە یان یادکردنەکە چالاک بکە بۆ بەرهەم هێنانی پەیامەکان."
+
+#: app/templates/index.html:28
+msgid ""
+"Regularly check in to Grylli to prevent automated delivery; miss a check-in "
+"and Grylli sends your messages as scheduled."
+msgstr ""
+"هەموو کات سەرکەوتنەکانیەکەت بپشکنە بۆ ئیشکردنی خۆکارکراویەکان؛ دووبارە "
+"گرانەوە ئەرشیی ئیدراککەداو هەوڵە کرابوو خوشەنیویەکانت بەلایەنەوە دەستنیشانی "
+"پەیامەکانت."
+
+#: app/templates/privacy.html:10
+msgid "Privacy Notice"
+msgstr "Ragihandinîya Taybetiyê"
+
+#: app/templates/privacy.html:13
+msgid ""
+"Grylli respects your privacy and is designed to minimize the collection and "
+"storage of personal data."
+msgstr ""
+"Grylli taybetiyeta te dihormete û ji bo kêmdi kurdina û parastina daneyên "
+"kesane tê dizaynekirin."
+
+#: app/templates/privacy.html:14
+msgid ""
+"All data is encrypted where appropriate and remains fully under your control"
+" if you self-host this platform."
+msgstr ""
+"Hemû daneyan di cîhên xuyo li ser xwe dikare mawe û li ser kontrola te "
+"dimîne ya her gav f klîbera vê platforma di ciwanekê xwe lefk bikî."
+
+#: app/templates/privacy.html:17
+msgid "What Data We Collect"
+msgstr "Çi Danean Em Berîdar dikin"
+
+#: app/templates/privacy.html:19
+msgid "Email address and password hash (for authentication)"
+msgstr "Navnîşana e-peyan û hash-a şîfre (ji bo nasnamek irin)"
+
+#: app/templates/privacy.html:20
+msgid "Optional MFA secret and recovery codes (encrypted at rest)"
+msgstr "Şîfre و هانên weşanê MFA û kodên sererê (namaşte a weşan dar)"
+
+#: app/templates/privacy.html:21
+msgid "Reminder and message content you configure"
+msgstr "Naverok û parkirina mesajên ku hûn saz dikin"
+
+#: app/templates/privacy.html:22
+msgid "User-specific settings, SMTP configuration (if provided)"
+msgstr "Sazkirina taybet ya bikaranêr, configrasyon SMTP (eger peydakir)"
+
+#: app/templates/privacy.html:25
+msgid "How Your Data Is Used"
+msgstr "Çawa Daneyên We Tiştin Dikin"
+
+#: app/templates/privacy.html:27
+msgid ""
+"Your data is used solely for the purpose of delivering reminders and "
+"messages according to your preferences."
+msgstr ""
+"Daneyên we tenê ji bo amade kirina berpirsiyarî û parkirinan bi gorîîrtyên "
+"personalyên we ye."
+
+#: app/templates/privacy.html:28
+msgid ""
+"Grylli does not share, sell, or transmit your personal data to any third "
+"parties."
+msgstr ""
+"Grylli daneyên kesayîya we ne li di darê ne firotan an dê ne peyda bikin."
+
+#: app/templates/privacy.html:31
+msgid "Your Rights"
+msgstr "Fêrê We"
+
+#: app/templates/privacy.html:33
+msgid ""
+"You can export all of your data at any time from the Account Settings page."
+msgstr ""
+"Hûn dikarin her dem hemû dane berxwiska xwe anatûnê binêne riw maksatina "
+"Hesaba xeberkirî bê biçirînin."
+
+#: app/templates/privacy.html:34
+msgid "You may permanently delete your account and all associated data."
+msgstr "ناتوانرێت ئەکاونت بسرهێنی چونکە تۆ دوایین بەڕێوەبەر یەکەی."
+
+#: app/templates/privacy.html:35
+msgid ""
+"If you are using a self-hosted instance, contact the instance administrator "
+"for data inquiries."
+msgstr ""
+"Eger hûn têvediyinên xwe ve di nav t’vedan jenan didin, têvkarê khuyik barê "
+"hundaneyên bin wanekê tevekra xuyaltin."
+
+#: app/templates/privacy.html:38
+msgid "Self-Hosting Responsibility"
+msgstr "Çaweyên Xuyaltin"
+
+#: app/templates/privacy.html:40
+msgid ""
+"If you are running Grylli on your own server, you are responsible for the "
+"storage, processing, and lawful handling of all user data on that instance."
+msgstr ""
+"Ji sêva kreyê xwe, xrê sea hê kirin; therê tenê bingehên toonon dê ne hêşman"
+" pe klistik hûn niya. Kerem kerê eve pebermayên taybetê ye."
+
+#: app/templates/privacy.html:44
+msgid ""
+"This notice was last updated in June 2025 and may evolve to reflect changes "
+"in the software or regulatory landscape."
+msgstr ""
+"Di gundariya jinpo dor dê we lêtevdan, ne bazarış bako li peydiyên hûyinayî "
+"ye."
+
+#: app/templates/system_info.html:11
+msgid "📦 Environment Versions"
+msgstr "📦 وەشانی جەوەرەکان"
+
+#: app/templates/system_info.html:17
+msgid "Category"
+msgstr "هاوپۆل"
+
+#: app/templates/system_info.html:18
+msgid "Tool"
+msgstr "ئامراز"
+
+#: app/templates/system_info.html:19
+msgid "Version"
+msgstr "وەشان"
+
+#: app/templates/system_info.html:25
+msgid "🧠 Python"
+msgstr "🧠 پایتۆن"
+
+#: app/templates/system_info.html:26
+msgid "Python"
+msgstr "پایتۆن"
+
+#: app/templates/system_info.html:30
+msgid "pip"
+msgstr "پایپ"
+
+#: app/templates/system_info.html:34
+msgid "SQLite"
+msgstr "SQLایت"
+
+#: app/templates/system_info.html:40
+msgid "⚙️ Core"
+msgstr "⚙️ گرنگ"
+
+#: app/templates/system_info.html:47
+msgid "🔐 Security"
+msgstr "🔐 پاراستن"
+
+#: app/templates/system_info.html:48
+msgid "Email Validator"
+msgstr "دڵنیابەر"
+
+#: app/templates/system_info.html:52
+msgid "Cryptography"
+msgstr "کرپتوگرافی"
+
+#: app/templates/system_info.html:57
+msgid "🕰️ Scheduling"
+msgstr "🕰️ پلاندانانی کار"
+
+#: app/templates/system_info.html:58
+msgid "APScheduler"
+msgstr "پلانکاریکاری کاریجی APScheduler"
+
+#: app/templates/system_info.html:62
+msgid "Apprise (Python)"
+msgstr "Apprise (پایتۆن)"
+
+#: app/templates/system_info.html:66
+msgid "Apprise CLI"
+msgstr "Apprise CLI"
+
+#: app/templates/system_info.html:74
+msgid "🌐 Frontend"
+msgstr "🌐 پێشەکی"
+
+#: app/templates/account/manage_account.html:11
+msgid "Manage Account"
+msgstr "ڕێکخستنی ئەکاتوونت"
+
+#: app/templates/account/manage_account.html:12
+msgid "Update your profile information and password."
+msgstr "نوێکردنەوەی زانیاریەکانی پەیڕەگەکە و وشەی تێپەڕەوە"
+
+#: app/templates/account/manage_account.html:41
+#: app/templates/admin/create_user.html:40
+#: app/templates/auth/bootstrap.html:43
+#: app/templates/auth/reset_password.html:42 app/templates/auth/signup.html:42
+msgid "Please enter a valid email address."
+msgstr "تکایە ئیمەیڵێکی دروست بنووسە"
+
+#: app/templates/account/manage_account.html:62
+#: app/templates/account/manage_account.html:96
+#: app/templates/account/manage_account.html:127
+#: app/templates/auth/reset_password.html:66
+#: app/templates/auth/reset_password.html:97 app/templates/auth/signup.html:65
+#: app/templates/auth/signup.html:95
+msgid "Show/hide password"
+msgstr "ھوڵ بکە بۆ نیشاندان وشەتێپەڕ"
+
+#: app/templates/account/manage_account.html:89
+#: app/templates/admin/create_user.html:53
+#: app/templates/auth/bootstrap.html:51
+#: app/templates/auth/reset_password.html:58 app/templates/auth/signup.html:58
+msgid "Password must meet all complexity requirements."
+msgstr "وشەی تێپەڕە‌ بەربپارێکی پێویستی پەرەپێدانەکان بەپارێزێ"
+
+#: app/templates/account/manage_account.html:141
+#: app/templates/admin/create_user.html:72
+#: app/templates/admin/edit_user.html:67 app/templates/auth/bootstrap.html:69
+#: app/templates/auth/reset_password.html:110
+#: app/templates/auth/signup.html:108
+msgid "Passwords do not match."
+msgstr "وشەگانی تێپەڕە ناتاقەنە یەک‌ تووش نەکەن"
+
+#: app/templates/account/manage_account.html:147
+msgid "Update Account"
+msgstr "نوێکردنەوەی ئەکاونت"
+
+#: app/templates/account/manage_account.html:151
+#: app/templates/admin/create_user.html:82
+#: app/templates/admin/edit_user.html:97 app/templates/admin/help_form.html:28
+#: app/templates/admin/partials/user_instructions_and_modal.html:62
+#: app/templates/admin/partials/user_table.html:113
+#: app/templates/apprise/create_apprise.html:42
+#: app/templates/apprise/edit_apprise.html:42
+#: app/templates/auth/reset_password.html:121
+#: app/templates/email/assign_smtp.html:46
+#: app/templates/email/attach_files.html:47
+#: app/templates/email/edit_message.html:54
+#: app/templates/email/schedule_email.html:84
+#: app/templates/messages/assign_destinations.html:66
+#: app/templates/messages/create_message.html:55
+#: app/templates/messages/edit_message.html:48
+#: app/templates/messages/schedule_message.html:84
+#: app/templates/mfa/challenge.html:29 app/templates/mfa/settings.html:51
+#: app/templates/reminders/assign_destinations.html:64
+#: app/templates/reminders/assign_email_reminder.html:94
+#: app/templates/reminders/create_reminder.html:49
+#: app/templates/reminders/edit_reminder.html:42
+#: app/templates/reminders/schedule_reminder.html:51
+#: app/templates/user_smtp/create_smtp.html:111
+#: app/templates/user_smtp/edit_smtp.html:125
+#: app/templates/webhook/create_webhook.html:48
+#: app/templates/webhook/edit_webhook.html:48
+msgid "Cancel"
+msgstr "ڕەتکردنەوە"
+
+#: app/templates/account/manage_account.html:159
+#: app/templates/admin/create_user.html:90
+#: app/templates/admin/edit_user.html:81 app/templates/auth/bootstrap.html:83
+#: app/templates/auth/reset_password.html:128
+#: app/templates/auth/signup.html:132
+msgid "Minimum 8 characters"
+msgstr "کەمترین 8 پیت"
+
+#: app/templates/account/manage_account.html:160
+#: app/templates/admin/create_user.html:91
+#: app/templates/admin/edit_user.html:82 app/templates/auth/bootstrap.html:84
+#: app/templates/auth/reset_password.html:129
+#: app/templates/auth/signup.html:133
+msgid "At least one uppercase letter"
+msgstr "بەلخۆری مەزنەیەکی زیاوتر"
+
+#: app/templates/account/manage_account.html:161
+#: app/templates/admin/create_user.html:92
+#: app/templates/admin/edit_user.html:83 app/templates/auth/bootstrap.html:85
+#: app/templates/auth/reset_password.html:130
+#: app/templates/auth/signup.html:134
+msgid "At least one lowercase letter"
+msgstr "بەلخۆری بچوکنەیەکی زیاوتر"
+
+#: app/templates/account/manage_account.html:162
+#: app/templates/admin/create_user.html:93
+#: app/templates/admin/edit_user.html:84 app/templates/auth/bootstrap.html:86
+#: app/templates/auth/reset_password.html:131
+#: app/templates/auth/signup.html:135
+msgid "At least one number"
+msgstr "ژمارەیەکی زیاوتر"
+
+#: app/templates/account/manage_account.html:163
+#: app/templates/admin/create_user.html:94
+#: app/templates/auth/bootstrap.html:87
+#: app/templates/auth/reset_password.html:132
+#: app/templates/auth/signup.html:136
+msgid "At least one special character (e.g., !@#$%)"
+msgstr "بەلگەیەکی تایبەتی بەلایەنی کەم (نمونە، !@#$%)"
+
+#: app/templates/account/manage_account.html:169
+msgid "Download My Data"
+msgstr "S’skane"
+
+#: app/templates/account/manage_account.html:171
+msgid ""
+"Download all your account data as a JSON file. This includes your reminders,"
+" messages, email settings, and more. The file is for your records only and "
+"cannot be imported back. Protect it as it may contain sensitive information."
+msgstr "Têvepişikê lê li dêriya şûndarî bin boyşane dear xuyçê e"
+
+#: app/templates/account/manage_account.html:175
+msgid "Download My Data (JSON)"
+msgstr "Şerê Gelek (JSON)"
+
+#: app/templates/account/manage_account.html:179
+msgid "Danger Zone"
+msgstr "ناوچەی مەترسیدار"
+
+#: app/templates/account/manage_account.html:180
+msgid "Deleting your account is permanent and cannot be undone."
+msgstr "سڕینەوەی ئەکاونت کەواتە بەردەوام و ناتوانرێت هەژماری شود."
+
+#: app/templates/account/manage_account.html:185
+msgid "Delete My Account"
+msgstr "نوێکردنەوەی ئەکاونت"
+
+#: app/templates/account/translations.html:8
+msgid "Translations - Grylli"
+msgstr "وەرگێرانەکان - Grylli"
+
+#: app/templates/account/translations.html:17
+#: app/templates/partials/header.html:102
+msgid "Translations"
+msgstr "Wergerên"
+
+#: app/templates/account/translations.html:20
+msgid "Grylli currently supports multiple languages and more will be added."
+msgstr "Grylli لە ئێستادا چەند زمانێک پاڵپشتی کردووە و زیاتر بکرێتەوە."
+
+#: app/templates/account/translations.html:21
+msgid "Many of the translations were performed with assistance from ChatGPT."
+msgstr "زۆربەی وەرگێرانەکان بە یاریدانەوەی ChatGPT کراون."
+
+#: app/templates/account/translations.html:22
+msgid ""
+"If you find a translation issue or want to suggest improvements, your input "
+"is welcome!"
+msgstr ""
+"ئەگەر کێشەیەکی وەرگێران بدۆزیوە یان ئیشارەی پێشنیار بکەیت، خێراییەکەت حەیا!"
+
+#: app/templates/account/translations.html:28
+msgid "How to request translation updates"
+msgstr "چۆن نوێکارییەکانی وەرگێران داوا بکە"
+
+#: app/templates/account/translations.html:30
+msgid "To contribute to translations, please use the following guidelines:"
+msgstr "بۆ بەشداری بە وەرگێرانەکان، تکایە ڕێنماییەکانی خوارەوە بەکاربەرە:"
+
+#: app/templates/account/translations.html:43
+msgid "Contribute missing or improved translations:"
+msgstr "ئاگاداری وەرگێری پەکگریک؟"
+
+#: app/templates/account/translations.html:63
+msgid "Open the relevant .po translation file for your language."
+msgstr "پەڕگاکانی جیسۆن بۆ وەرگێرانەکانی زمانەکەت بکەوە. نمونە:"
+
+#: app/templates/account/translations.html:67
+msgid ""
+"Find untranslated or incomplete entries and add or improve translations."
+msgstr ""
+"داخلخەین ئەنصر بێگەرەزمان یان ناقص و زۆرکردن یان چەمکواڵ کردن "
+"ناوچوونەکانتان."
+
+#: app/templates/account/translations.html:68
+msgid "You may use a PO file editor or a text editor."
+msgstr ""
+"دەتوانیت به‌ به‌رنامەی فایلی PO یان ڕیڤایئەڤینگارە فایلی بی کەڵکەودێی "
+"بیکەیت."
+
+#: app/templates/account/translations.html:69
+msgid "Copy the file path and the snippet of your changes."
+msgstr ""
+"ڕێڕەوگای فایلی کۆپی کردن و نیشانی خوێند کردنی کردی پەیوەندیت بەلایەنەوانەوە."
+
+#: app/templates/account/translations.html:70
+msgid "Paste the snippet directly into a new GitHub issue for review."
+msgstr "لابردنی تاقە نمونە ڕاستەوخۆ لە کێشەی GitHub یاندەناسە."
+
+#: app/templates/account/translations.html:72
+msgid "Please do not upload the full .po file to avoid merge conflicts."
+msgstr "پەڕگەی .po گشتی نەپوستن سند لە بەر زیانە جوتە."
+
+#: app/templates/account/translations.html:85
+msgid "Improving existing translations:"
+msgstr "چاککردنی وەرگێرانە هەنووکە:"
+
+#: app/templates/account/translations.html:104
+msgid "Open the relevant .po file for the translation you want to improve."
+msgstr "پەڕگەی .po کە باوەڕت پێکردن بەرز بکە."
+
+#: app/templates/account/translations.html:106
+msgid "For example:"
+msgstr "نمونە:"
+
+#: app/templates/account/translations.html:110
+msgid ""
+"Find the phrase(s) and its existing translation(s) you want to improve."
+msgstr "وشەکان و وەرگێرانە دانانی هەنووکەیی زانیاری بەرز بکە."
+
+#: app/templates/account/translations.html:111
+msgid "Update the phrase(s)."
+msgstr "نوێبەکرێنی وشەکان."
+
+#: app/templates/account/translations.html:112
+msgid "Copy the file name and path into the issue."
+msgstr "ناوی پەڕگە و ڕێڕەش بۆ کێشەهەریەکەکەت کافی بکە."
+
+#: app/templates/account/translations.html:114
+msgid "Paste the copied snippet directly into the GitHub issue comment."
+msgstr "لابردنی تاقە نمونە ڕاستەوخۆ لە کێشەی GitHub یاندەناسە."
+
+#: app/templates/account/translations.html:115
+msgid "Do not upload the full .po file to avoid merge conflicts."
+msgstr "پەڕگەی .po گشتی نەپوستن سند لە بەر زیانە جوتە."
+
+#: app/templates/account/translations.html:118
+msgid "Example snippet:"
+msgstr "نمونەی تاقە:"
+
+#: app/templates/account/translations.html:137
+msgid "Report missing translations not yet discovered:"
+msgstr "ڕاپۆرت کردنی وەرگێرنە بچیوە تا ئیپەڤابەنە:"
+
+#: app/templates/account/translations.html:154
+msgid ""
+"If you see text in the app that appears untranslated or missing, please "
+"report it to us."
+msgstr ""
+"ئەگەر تێکستی کە بەردەفت نەبری یا ھاوبەرپەچوکی تۆ بینیت، پەیوەندی پێکەوە بکە."
+
+#: app/templates/account/translations.html:155
+msgid "Provide the exact English phrase as it appears on the screen."
+msgstr "پەروسەیەکەوشەی ئینگلیسی بە یاری گەرانی بڵاوێستا."
+
+#: app/templates/account/translations.html:156
+msgid ""
+"Include the page or section where you saw the phrase (e.g., Apprise page, "
+"Account Page, etc.)."
+msgstr ""
+"سەردانی ئەو بەشە کە دیاری بووە (نمونە، بەشی ریزەکان، سەکشنەی ئەکاونت)."
+
+#: app/templates/account/translations.html:157
+msgid ""
+"Submit this information via a new GitHub issue so we can add it to the "
+"translation files"
+msgstr ""
+"ئەم زانیاریە بۆ رێگەی نوێی GitHub ڕاکێشەکات دەبەخشات تا بەرەزووتینا بکە."
+
+#: app/templates/account/translations.html:166
+msgid "Found a missing translation?"
+msgstr "ئاگاداری وەرگێری پەکگریک؟"
+
+#: app/templates/account/translations.html:171
+msgid ""
+"This link will create a new GitHub issue pre-filled with a language code."
+msgstr ""
+"هۆگرە کرنەی ئەو پەیوەندە پیژەیە نیشان ئەکات بەڕووکەرەکەتی سەرکاو کردنیەکی "
+"نوێ بەپێی کۆدی زمان یەکە."
+
+#: app/templates/account/translations.html:172
+msgid "Report it by opening a new GitHub issue"
+msgstr "ڕاپۆرت بکە بە کێشەی نوێی GitHub ڕاکێشە بکە"
+
+#: app/templates/account/translations.html:175
+msgid "Please specify the language code and exact phrase when reporting."
+msgstr "تکایە کۆدی زمان و وێشانیی کۆنککە بریتە بۆ بەرگەکان کە لە کێی بکەیت."
+
+#: app/templates/account/translations.html:176
+msgid "Thank you for helping us make Grylli better!"
+msgstr "سوپاس بۆ یارمەتیدانی بەرزکردنی Grylli!"
+
+#: app/templates/admin/create_user.html:14
+msgid "Create New User"
+msgstr "بکارھێنەر دسە نھا بنا"
+
+#: app/templates/admin/create_user.html:15
+msgid "Fill out the form to add a new user."
+msgstr "فۆمەکە پر بکە بۆ زیادکردنەوەی بکارھێنەر"
+
+#: app/templates/admin/create_user.html:21
+#: app/templates/admin/edit_user.html:17 app/templates/auth/bootstrap.html:24
+msgid "Please fix the following errors:"
+msgstr "تکایە هەڵەکان دواترینزانابەر بگرن."
+
+#: app/templates/admin/create_user.html:78
+#: app/templates/admin/edit_user.html:93
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "Create User"
+msgstr "بکارھێنەر درووست بکە"
+
+#: app/templates/admin/edit_user.html:10
+#: app/templates/admin/partials/user_card.html:20
+#: app/templates/admin/partials/user_table.html:26
+msgid "Edit User"
+msgstr "دەستکاری بکارھێنەر بکە"
+
+#: app/templates/admin/edit_user.html:55 app/templates/admin/edit_user.html:74
+msgid "Hold to show password"
+msgstr "ھوڵ بکە بۆ نیشاندان وشەتێپەڕ"
+
+#: app/templates/admin/edit_user.html:85
+#, python-format
+msgid "At least one special character (e.g., !@#$%%)"
+msgstr "بەلگەیەکی تایبەتی بەلایەنی کەم (نمونە، !@#$%%)"
+
+#: app/templates/admin/help.html:4 app/templates/auth/login.html:72
+msgid "Admin Help"
+msgstr "پەڕەگەی زانے کەیە"
+
+#: app/templates/admin/help.html:7
+msgid "Reset Admin Password"
+msgstr "فەرامۆشی وشەی تێپەڕکردن"
+
+#: app/templates/admin/help.html:9
+msgid ""
+"If you've forgotten the admin password, you can reset it using the following"
+" Docker command:"
+msgstr ""
+"ئەگەر تۆ وشەی نهێنی بەڕێوەبەر لەبیرکردبێت، دەتوانیت دووبارە ڕیسێت بکەیت بە "
+"بەکارهێنانی ئەم فرمانەی داخەر:"
+
+#: app/templates/admin/help.html:15
+msgid ""
+"This script will prompt you to enter a new password for the admin user. You "
+"must run it from the host system where the Grylli container is running."
+msgstr ""
+"ئەم سکریپتە پێویست دەکات بۆ داخڵکردنی وشەی نهێنی نوێ بۆ بەکارهێنەری "
+"بەڕێوەبەر. پێویستە لە سیستەمی بانگەوازەکە ڕابگریت کە گریللی لەسەر ڕابەستە."
+
+#: app/templates/admin/help.html:18
+msgid "After resetting, you can log in with the new password immediately."
+msgstr "دوای ڕیسێت، دەتوانیت بە وشەی نهێنی نوێ بە فورا داخڵی بکەیت."
+
+#: app/templates/admin/help.html:24
+msgid "Return to Login"
+msgstr "گەڕانەوە بۆ داشبۆرد"
+
+#: app/templates/admin/help_form.html:6
+msgid "Admin Help Access"
+msgstr "مەسەعدەی بەڕێوەبەر"
+
+#: app/templates/admin/help_form.html:9
+msgid "Enter your Ferret Key to unlock admin-only help documentation."
+msgstr ""
+"کلیلە چنەکی فەرەنتە دابنێ بۆ کرانەوەی بەڵگەنامەی یارمەتیدانی تایبەتی "
+"بەڕێوەبەر."
+
+#: app/templates/admin/help_form.html:34
+msgid "How to Find Your FERRET_KEY"
+msgstr "چۆن کلیلە چنە فەرەنتە خۆت بدۆزی"
+
+#: app/templates/admin/help_form.html:36
+msgid "The FERRET_KEY is set as an environment variable when running Grylli."
+msgstr "کلیلە چنە فەرەنتە وەک گۆڕانەوەی ژینگە کە گریللییەکە دەکەوێتە ژیلژینە."
+
+#: app/templates/admin/help_form.html:39
+msgid "Option 1: Check docker-compose.yml"
+msgstr "هەڵبژاردنی ١: گەرەگ لە docker-compose.yml"
+
+#: app/templates/admin/help_form.html:46
+msgid "Option 2: Use docker inspect"
+msgstr "هەڵبژاردنی ٢: بەکاربردنی docker inspect"
+
+#: app/templates/admin/help_form.html:52
+msgid "This shows the FERRET_KEY as passed to the container at runtime."
+msgstr ""
+"ئەمە کلیلە چنە فەرەنتە نیشاندەدات وەکو چەندەکەی بۆداخستنەکەانی شوێندەپەڕە."
+
+#: app/templates/admin/index.html:10
+msgid "Admin Panel"
+msgstr "پەڕەگەی زانے کەیە"
+
+#: app/templates/admin/index.html:12
+msgid ""
+"Welcome to the Grylli Admin Panel. Use the links below to manage the system."
+msgstr "بەخێربێن بە پەڕەگەی زانے کەیە Grylli. بە سەرەوە تا پەڕەی تاندت ئەکات."
+
+#: app/templates/admin/index.html:17
+msgid "Manage Users"
+msgstr "بەکارھێنەکانی زانے مدیریت بکە"
+
+#: app/templates/admin/index.html:18
+msgid "Create, edit, enable/disable, or delete user accounts."
+msgstr ""
+"دروستکردنە، دەستکاری کردنە، چالاک بوون / ناچالاک بوون یان بسڕینەوە کۆمەڵەی "
+"بەکارهێنەرەکان."
+
+#: app/templates/admin/index.html:22
+#: app/templates/admin/system_settings.html:10
+#: app/templates/partials/admin_nav.html:52
+msgid "System Settings"
+msgstr "Rêjeyên Sîstemê"
+
+#: app/templates/admin/index.html:23
+msgid "View  system-wide environment values."
+msgstr "رابەری نرخی ڕونکراو لە ئەنجامدا بەرز ببینی."
+
+#: app/templates/admin/index.html:27 app/templates/partials/admin_nav.html:42
+msgid "Backups"
+msgstr "پشتیبانەکان"
+
+#: app/templates/admin/index.html:28
+msgid "Create and delete database backups."
+msgstr "پشگری بنکەدراوە"
+
+#: app/templates/admin/index.html:33
+msgid "View and test global SMTP settings."
+msgstr "شکستی لە ناردنی تاقیگرەوەی ئەلیکترۆنی. ڕێکخستنی SMTP بپشکەوە."
+
+#: app/templates/admin/index.html:39
+msgid "View Admin Guide / README on GitHub"
+msgstr "پیشکەشی دڵنیابوونی ئەندامێت / README لە GitHub دەرهەنەوە"
+
+#: app/templates/admin/index.html:40
+msgid "Includes setup instructions, integrations, and troubleshooting."
+msgstr "ڕێکەوتەوەکانی دەرگرتاندن، لێکدان و چالاکەکاری نرمی دەکات."
+
+#: app/templates/admin/index.html:44
+msgid "⚠️ Admin Tips"
+msgstr "⚠️ ڕاشەکەەوانی پەڕەگە زانے"
+
+#: app/templates/admin/index.html:46
+msgid "Ensure the data folder (database) is backed up on your host"
+msgstr "پەڕگەی زانیاری (بنکەدراوە) دڵنیا دەبیت لەسەر هۆستەکەت پشتگریکراوە"
+
+#: app/templates/admin/index.html:48
+msgid ""
+"The uploads folder is not per user.  If required per user, you will ndd to "
+"create subdirectoried per user and setup permissions so users can only see "
+"their own folder."
+msgstr ""
+"پەڕگەی بارکردنەکان نه‌کەسییە. ئەگەر کەسییە پێویستە، پەڕگەی ژێرەوە دروست بکە "
+"پە کەسێک و مێژووەکانیان جێبەجێ بکە بۆ ئەو کەسن بەلایکەیی تەنها پەڕگەی خۆیان "
+"ببینن."
+
+#: app/templates/admin/index.html:51
+msgid ""
+"To restore a backup: stop the container, replace the data/grylli.db with one"
+" from the backups folder, and restart the container."
+msgstr ""
+"بۆ گەڕاندنەوەی پشگیری: ئامێری کیما ئێستا، پەڕگەی زانیاری/grylli.db جێبەجێ "
+"بکە بۆ ئەوە لە ناو پەڕگە پشگیری، دووبارە ئامێری کیما."
+
+#: app/templates/admin/list_backups.html:11
+msgid "Database Backups"
+msgstr "پشگری بنکەدراوە"
+
+#: app/templates/admin/list_backups.html:13
+msgid "Create Backup"
+msgstr "پشگیری دروست بکە"
+
+#: app/templates/admin/list_backups.html:21
+msgid "Filename"
+msgstr "ناویپەڕگە"
+
+#: app/templates/admin/list_backups.html:22
+#: app/templates/admin/partials/user_table.html:14
+#: app/templates/apprise/list_apprise.html:62
+#: app/templates/email/list_emails.html:60
+#: app/templates/messages/list_messages.html:60
+#: app/templates/reminders/list_reminders.html:60
+#: app/templates/user_smtp/list_smtp.html:59
+#: app/templates/webhook/list_webhooks.html:63
+msgid "Actions"
+msgstr "کردارەکان"
+
+#: app/templates/admin/list_backups.html:32
+msgid "Delete this backup?"
+msgstr "ئەم پشگیری بسڕەوە؟"
+
+#: app/templates/admin/list_backups.html:32
+#: app/templates/apprise/list_apprise.html:95
+#: app/templates/apprise/list_apprise.html:99
+#: app/templates/apprise/list_apprise.html:150
+#: app/templates/apprise/list_apprise.html:154
+#: app/templates/email/list_emails.html:124
+#: app/templates/email/list_emails.html:128
+#: app/templates/email/list_emails.html:226
+#: app/templates/email/list_emails.html:230
+#: app/templates/messages/list_messages.html:112
+#: app/templates/messages/list_messages.html:116
+#: app/templates/messages/list_messages.html:198
+#: app/templates/messages/list_messages.html:202
+#: app/templates/reminders/list_reminders.html:107
+#: app/templates/reminders/list_reminders.html:113
+#: app/templates/reminders/list_reminders.html:192
+#: app/templates/reminders/list_reminders.html:198
+#: app/templates/user_smtp/list_smtp.html:101
+#: app/templates/user_smtp/list_smtp.html:169
+#: app/templates/webhook/list_webhooks.html:102
+#: app/templates/webhook/list_webhooks.html:161
+msgid "Delete"
+msgstr "سڕینەوە"
+
+#: app/templates/admin/list_backups.html:41
+msgid "No backups found."
+msgstr "هیچ پشگیری نەدۆزرایەوە."
+
+#: app/templates/admin/list_backups.html:44
+msgid ""
+"Backups contain your full app data. Store securely. Sensitive data is "
+"encrypted in the DB by default."
+msgstr ""
+"پشگیریەکان تێکشانی تەواوی پەرەی لەبرنامە. بنەڕخوەکان لە داتا بنکەدراوە "
+"پاڵپشتی ژمارەکراون."
+
+#: app/templates/admin/smtp_config.html:28
+#: app/templates/admin/system_config.html:22
+msgid "System Configuration"
+msgstr "Veavakirina Pergalê"
+
+#: app/templates/admin/smtp_config.html:33
+#: app/templates/admin/system_config.html:26
+#: app/templates/admin/system_settings.html:15
+msgid "Key"
+msgstr "Key"
+
+#: app/templates/admin/smtp_config.html:34
+#: app/templates/admin/system_config.html:27
+#: app/templates/admin/system_settings.html:16
+msgid "Value"
+msgstr "Nirx"
+
+#: app/templates/admin/smtp_config.html:35
+#: app/templates/admin/system_config.html:28
+msgid "Sensitive"
+msgstr "Hassas"
+
+#: app/templates/admin/smtp_config.html:36
+#: app/templates/admin/system_config.html:29
+msgid "Editable"
+msgstr "Serdabir"
+
+#: app/templates/admin/smtp_config.html:50
+#: app/templates/admin/smtp_config.html:51
+#: app/templates/admin/system_config.html:45
+#: app/templates/admin/system_config.html:46
+#: app/templates/email/view_config.html:60
+msgid "Yes"
+msgstr "Erê"
+
+#: app/templates/admin/smtp_config.html:50
+#: app/templates/admin/smtp_config.html:51
+#: app/templates/admin/system_config.html:45
+#: app/templates/admin/system_config.html:46
+#: app/templates/email/view_config.html:60
+msgid "No"
+msgstr "Na"
+
+#: app/templates/admin/smtp_config.html:63
+#: app/templates/admin/system_config.html:55
+msgid "Send Test Email"
+msgstr "Emailê Testa Bişînîn"
+
+#: app/templates/admin/system_config.html:39
+msgid "decrypted"
+msgstr "دروستکرا"
+
+#: app/templates/admin/partials/user_card.html:12
+msgid "Email:"
+msgstr "ئیمەیڵ:"
+
+#: app/templates/admin/partials/user_card.html:15
+msgid "Role:"
+msgstr "نقشە:"
+
+#: app/templates/admin/partials/user_card.html:27
+#: app/templates/admin/partials/user_table.html:34
+msgid "Change Role"
+msgstr "گۆڕینی رۆڵ"
+
+#: app/templates/admin/partials/user_card.html:29
+#: app/templates/admin/partials/user_table.html:36
+msgid "You cannot change your own role"
+msgstr "ناتوانیت بارودۆخی تایبەتی خۆت بگۆڕیت."
+
+#: app/templates/admin/partials/user_card.html:36
+#: app/templates/admin/partials/user_table.html:43
+msgid "Are you sure you want to reset MFA for this user?"
+msgstr "دڵنیاییت تۆمەنی دوبارەکردنی MFA بۆ ئەم بەکارهێنەرە ئەنجامبدەیت؟"
+
+#: app/templates/admin/partials/user_card.html:39
+#: app/templates/admin/partials/user_table.html:46
+msgid "Reset MFA"
+msgstr "فەرامۆشی وشەی تێپەڕکردن"
+
+#: app/templates/admin/partials/user_card.html:51
+#: app/templates/admin/partials/user_table.html:58
+msgid "Delete user"
+msgstr "کەس بسڕەوە"
+
+#: app/templates/admin/partials/user_card.html:55
+#: app/templates/admin/partials/user_table.html:61
+msgid "Delete User"
+msgstr "کەس بسڕەوە"
+
+#: app/templates/admin/partials/user_card.html:58
+#: app/templates/admin/partials/user_table.html:65
+msgid "You cannot disable yourself"
+msgstr "تۆ ناتوانی خۆت ناچار بکەیت"
+
+#: app/templates/admin/partials/user_card.html:65
+#: app/templates/admin/partials/user_table.html:72
+msgid "Disable"
+msgstr "ناچار"
+
+#: app/templates/admin/partials/user_card.html:65
+#: app/templates/admin/partials/user_table.html:72
+msgid "Enable"
+msgstr "چەندەسازی"
+
+#: app/templates/admin/partials/user_header.html:6
+#: app/templates/partials/admin_nav.html:47
+msgid "Users"
+msgstr "Bikarhêner"
+
+#: app/templates/admin/partials/user_header.html:12
+#: app/templates/admin/partials/user_header.html:13
+#: app/templates/apprise/apprise_config.html:10
+#: app/templates/apprise/apprise_config.html:11
+#: app/templates/apprise/list_apprise.html:16
+#: app/templates/apprise/list_apprise.html:17
+#: app/templates/email/list_emails.html:15
+#: app/templates/email/list_emails.html:16
+#: app/templates/messages/list_messages.html:16
+#: app/templates/messages/list_messages.html:17
+#: app/templates/reminders/list_reminders.html:15
+#: app/templates/reminders/list_reminders.html:16
+#: app/templates/user_smtp/list_smtp.html:14
+#: app/templates/user_smtp/list_smtp.html:17
+#: app/templates/webhook/list_webhooks.html:16
+#: app/templates/webhook/list_webhooks.html:17
+#: app/templates/webhook/webhook_config.html:10
+#: app/templates/webhook/webhook_config.html:11
+msgid "Table View"
+msgstr "نمای بەرز"
+
+#: app/templates/admin/partials/user_header.html:26
+#: app/templates/admin/partials/user_header.html:27
+#: app/templates/apprise/apprise_config.html:24
+#: app/templates/apprise/apprise_config.html:25
+#: app/templates/apprise/list_apprise.html:30
+#: app/templates/apprise/list_apprise.html:31
+#: app/templates/email/list_emails.html:29
+#: app/templates/email/list_emails.html:30
+#: app/templates/messages/list_messages.html:30
+#: app/templates/messages/list_messages.html:31
+#: app/templates/reminders/list_reminders.html:29
+#: app/templates/reminders/list_reminders.html:30
+#: app/templates/user_smtp/list_smtp.html:27
+#: app/templates/user_smtp/list_smtp.html:30
+#: app/templates/webhook/list_webhooks.html:30
+#: app/templates/webhook/list_webhooks.html:31
+#: app/templates/webhook/webhook_config.html:24
+#: app/templates/webhook/webhook_config.html:25
+msgid "Card View"
+msgstr "نمای کارت"
+
+#: app/templates/admin/partials/user_header.html:45
+msgid "Add User"
+msgstr "کەس زیاد بکە"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:9
+#: app/templates/email/attach_files.html:54
+#: app/templates/email/list_emails.html:255
+#: app/templates/messages/list_messages.html:223
+#: app/templates/reminders/list_reminders.html:218
+#: app/templates/reminders/schedule_reminder.html:56
+msgid "Hide Instructions"
+msgstr "رەهەندەکان خەفی بکە"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:9
+msgid "How to manage users"
+msgstr "چۆنیەتی کارگلتەوە بە کەسەکان"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "Click"
+msgstr "کلیک"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+msgid "➕ Add User"
+msgstr "➕ کەس زیاد بکە"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+msgid "to open the new user form."
+msgstr "بە فەرمی کەسی نوێکانەوە."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:18
+msgid "Enter a unique username, valid email address, and strong password."
+msgstr "ژمارە ناسنامەی تاکەیەک و ئیماڵێکی ڕاست و وانەی بەهێز بنووسە."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "Select the appropriate"
+msgstr "بژێرەکەی خڕ"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "role"
+msgstr "نقشە"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "or"
+msgstr "نووسینەوە"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "to save."
+msgstr "بە پاشەکەوت."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:25
+msgid "To edit a user, click ✏️ and update their info."
+msgstr "بۆ دەستکاری کەس، ئوپراسیوەی ✏️ بکە و زانیاری زیادە بوە."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:26
+msgid "To delete a user, click 🗑️ and confirm the deletion."
+msgstr "بۆ سڕینەوەی کەس، ئوپراسیوەی 🗑️ بکە و ڕاستەوخۆی سڕینەوە پاسەبکە."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:28
+msgid "To disable or enable a user, click 🔴 or 🟢."
+msgstr "بۆ ناچارکردن یان چەندە سازی کەس، ئوپراسیوەی 🔴 یان 🟢 بکە."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:30
+msgid "🟢 = User is enabled and can log in."
+msgstr "🟢 = بەکارهێنەری چەندەسازی و تێکرنەوە."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:31
+msgid "🔴 = User is disabled and cannot log in."
+msgstr "🔴 = Bikarhêner qeydef dike û nikare têkeve torê."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:32
+msgid "⚪ = You cannot disable your own account."
+msgstr "⚪ = Tu nikarî hesabê xwe serqetîne."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:43
+#: app/templates/admin/partials/user_table.html:91
+msgid "Assign Role for"
+msgstr "تۆمارکردنی شوێن بۆ"
+
+#: app/templates/admin/partials/user_table.html:10
+msgid "ID"
+msgstr "ژمارەیناسنامە"
+
+#: app/templates/admin/partials/user_table.html:11
+#: app/templates/user_smtp/list_smtp.html:55
+msgid "Username"
+msgstr "ناوی بەکارهێنەر"
+
+#: app/templates/admin/partials/user_table.html:12
+msgid "Email"
+msgstr "ئیمەیڵ"
+
+#: app/templates/admin/partials/user_table.html:13
+msgid "Role"
+msgstr "نقشە"
+
+#: app/templates/apprise/apprise_config.html:3
+#: app/templates/apprise/list_apprise.html:9
+#: app/templates/messages/assign_destinations.html:22
+#: app/templates/reminders/assign_destinations.html:20
+msgid "Apprise Destinations"
+msgstr "Cihdestên Apprise"
+
+#: app/templates/apprise/apprise_config.html:43
+#: app/templates/webhook/list_webhooks.html:49
+#: app/templates/webhook/webhook_config.html:43
+msgid "Add Webhook"
+msgstr "زیادکردنی Webhook"
+
+#: app/templates/apprise/apprise_config.html:43
+#: app/templates/apprise/list_apprise.html:49
+#: app/templates/webhook/list_webhooks.html:49
+#: app/templates/webhook/webhook_config.html:43
+msgid "Add Destination"
+msgstr "Cihdestêyan Zêde Bike"
+
+#: app/templates/apprise/create_apprise.html:10
+msgid "Create Apprise Destination"
+msgstr "Cihdestêyanek Apprise Çêbike"
+
+#: app/templates/apprise/create_apprise.html:38
+#: app/templates/apprise/edit_apprise.html:38
+#: app/templates/user_smtp/create_smtp.html:107
+#: app/templates/webhook/create_webhook.html:44
+#: app/templates/webhook/edit_webhook.html:44
+msgid "Create Destination"
+msgstr "Cihdestêyanek Çêbike"
+
+#: app/templates/apprise/create_apprise.html:47
+#: app/templates/apprise/edit_apprise.html:47
+msgid "Need help with Apprise URLs? See the"
+msgstr "Pêwîstiya tekarî bi URLên Apprise heye? Binihêre"
+
+#: app/templates/apprise/create_apprise.html:51
+#: app/templates/apprise/edit_apprise.html:51
+msgid "Apprise Notification Services documentation"
+msgstr "Belgeya Xabernama Apprise"
+
+#: app/templates/apprise/edit_apprise.html:10
+msgid "Edit Apprise Destination"
+msgstr "Cihdestêyan Apprise Biguherîne"
+
+#: app/templates/apprise/list_apprise.html:49
+msgid "Add Apprise"
+msgstr "Apprise Zêde Bike"
+
+#: app/templates/apprise/list_apprise.html:58
+#: app/templates/email/edit_message.html:21
+#: app/templates/email/list_emails.html:56
+#: app/templates/email/view_config.html:14
+#: app/templates/messages/create_message.html:29
+#: app/templates/messages/edit_message.html:23
+#: app/templates/messages/list_messages.html:57
+#: app/templates/messages/view_message.html:14
+#: app/templates/reminders/create_reminder.html:23
+#: app/templates/reminders/edit_reminder.html:17
+#: app/templates/reminders/list_reminders.html:56
+#: app/templates/reminders/view_reminder.html:13
+#: app/templates/user_smtp/list_smtp.html:52
+#: app/templates/webhook/list_webhooks.html:58
+msgid "Label"
+msgstr "Label"
+
+#: app/templates/apprise/list_apprise.html:59
+msgid "URL"
+msgstr "URL"
+
+#: app/templates/apprise/list_apprise.html:61
+#: app/templates/email/list_emails.html:59
+#: app/templates/messages/list_messages.html:59
+#: app/templates/messages/view_message.html:36
+#: app/templates/reminders/view_reminder.html:47
+#: app/templates/webhook/list_webhooks.html:62
+msgid "Created At"
+msgstr "Diweroj"
+
+#: app/templates/apprise/list_apprise.html:77
+#: app/templates/apprise/list_apprise.html:132
+#: app/templates/user_smtp/list_smtp.html:79
+#: app/templates/user_smtp/list_smtp.html:147
+#: app/templates/webhook/list_webhooks.html:79
+#: app/templates/webhook/list_webhooks.html:138
+msgid "Edit"
+msgstr "Serdabîne"
+
+#: app/templates/apprise/list_apprise.html:80
+#: app/templates/apprise/list_apprise.html:135
+#: app/templates/user_smtp/list_smtp.html:82
+#: app/templates/user_smtp/list_smtp.html:150
+msgid "Cannot edit while in use"
+msgstr "Ne dibe ji nû ve bikaribe dike deye"
+
+#: app/templates/apprise/list_apprise.html:88
+#: app/templates/apprise/list_apprise.html:143
+#: app/templates/webhook/list_webhooks.html:91
+#: app/templates/webhook/list_webhooks.html:150
+msgid "Test"
+msgstr "Test"
+
+#: app/templates/apprise/list_apprise.html:103
+#: app/templates/apprise/list_apprise.html:158
+#: app/templates/user_smtp/list_smtp.html:106
+#: app/templates/user_smtp/list_smtp.html:174
+msgid "Cannot delete while in use"
+msgstr "Ne dibe ji nû ve jêbir"
+
+#: app/templates/apprise/list_apprise.html:119
+msgid "URL:"
+msgstr "URL:"
+
+#: app/templates/apprise/list_apprise.html:122
+#: app/templates/user_smtp/list_smtp.html:137
+#: app/templates/webhook/list_webhooks.html:128
+msgid "Enabled:"
+msgstr "Çalak:"
+
+#: app/templates/apprise/list_apprise.html:125
+#: app/templates/user_smtp/list_smtp.html:140
+#: app/templates/webhook/list_webhooks.html:131
+msgid "Created:"
+msgstr "Diweroj:"
+
+#: app/templates/auth/bootstrap.html:14
+msgid "Create Admin Account"
+msgstr "Hesabê Admin Çêbike"
+
+#: app/templates/auth/bootstrap.html:16
+msgid "Let’s get started by creating your first admin account."
+msgstr "Bi çêkirina hesabê admin a pêşîn dest xwe bikin."
+
+#: app/templates/auth/bootstrap.html:75
+msgid "Create Admin"
+msgstr "Admin Çêbikin"
+
+#: app/templates/auth/forgot_password.html:12
+msgid "Forgot Password"
+msgstr "Passworda xwe ji bîr kir?"
+
+#: app/templates/auth/forgot_password.html:15
+msgid ""
+"Enter your username and email. We'll send you a link to reset your password."
+msgstr ""
+"Navê Bikarhêner û Emailê te binivîse. Em ji we re girêdana nehêlebersa xwe "
+"dîn bikinin beşîninin."
+
+#: app/templates/auth/forgot_username.html:12
+msgid "Forgot Username"
+msgstr "Navê Bikarhêner ji bîr kir"
+
+#: app/templates/auth/forgot_username.html:15
+msgid "Enter your email address, and we'll send you your username."
+msgstr "Navnîşana Emailê te binivîse, em ji bike navê bikarhênere we."
+
+#: app/templates/auth/forgot_username.html:40
+msgid "Send Username"
+msgstr "Navê Bikarîbîne"
+
+#: app/templates/auth/login.html:12 app/templates/auth/login.html:54
+msgid "Log In"
+msgstr "Têkevin Torê"
+
+#: app/templates/auth/login.html:62
+msgid "Forgot Username?"
+msgstr "Navê Bikarhêner ji bîr kir?"
+
+#: app/templates/auth/login.html:64
+msgid "Forgot Password?"
+msgstr "Passworda xwe ji bîr kir?"
+
+#: app/templates/auth/login.html:66 app/templates/auth/signup.html:12
+msgid "Sign Up"
+msgstr "Têketin"
+
+#: app/templates/auth/rate_limit.html:9
+msgid "Hold On"
+msgstr "بەردەوام بە"
+
+#: app/templates/auth/rate_limit.html:11
+msgid "Too many failed login attempts. Please wait"
+msgstr "هەوڵە زۆرەکان بۆ چوونەژوورەوە نەسەرکەوتوو. تکایە چاوەڕێبە"
+
+#: app/templates/auth/rate_limit.html:13
+msgid "seconds..."
+msgstr "چرکە..."
+
+#: app/templates/auth/rate_limit.html:15
+msgid "Redirecting to login..."
+msgstr "گەڕانەوە بۆ داشبۆرد"
+
+#: app/templates/auth/reset_password.html:12
+#: app/templates/auth/reset_password.html:116
+msgid "Reset Password"
+msgstr "فەرامۆشی وشەی تێپەڕکردن"
+
+#: app/templates/auth/reset_password.html:14
+msgid "Enter your username, email, and new password."
+msgstr "ناوی بەکارھێنەر، ئیمەیڵ، و وشەی تێپەڕکردنی نوێ بنووسە."
+
+#: app/templates/auth/signup.html:14
+msgid "Fill out the form to create your account."
+msgstr "فۆڕمەکە پڕبکەوە بۆ دروستکردنی ئەژمارەکەت."
+
+#: app/templates/checkin/already_checked_in.html:10
+msgid "Already Checked In"
+msgstr "دوایین کتینەوە"
+
+#: app/templates/checkin/already_checked_in.html:12
+msgid ""
+"You have already checked in for this item. No further action is needed at "
+"this time."
+msgstr ""
+"تۆ پێشتر تێبینیی کردووە بۆ ئەم بەشە. هیچ کردارێکی تر پێویستی نییە لەم "
+"کاتانەدا."
+
+#: app/templates/checkin/already_checked_in.html:16
+#: app/templates/checkin/disabled.html:16
+#: app/templates/checkin/executed_disabled.html:18
+msgid "Check-in for:"
+msgstr "تۆمارکرا بۆ:"
+
+#: app/templates/checkin/already_checked_in.html:21
+#: app/templates/checkin/disabled.html:21
+#: app/templates/checkin/executed_disabled.html:23
+#: app/templates/checkin/thank_you.html:19
+msgid "Return to Dashboard"
+msgstr "گەڕانەوە بۆ داشبۆرد"
+
+#: app/templates/checkin/disabled.html:10
+msgid "Check-In Disabled"
+msgstr "ئیمەیڵ ناچالاککراوە"
+
+#: app/templates/checkin/disabled.html:12
+msgid "This check-in is currently disabled and cannot be completed."
+msgstr "ئەم تێبینییە بەلایەنی داخرایە و ناتوانرێت کۆتایی بپێوە."
+
+#: app/templates/checkin/executed_disabled.html:11
+msgid "Already Executed & Disabled"
+msgstr "چالاک کراوە و داخرایە پێشتر"
+
+#: app/templates/checkin/executed_disabled.html:14
+msgid ""
+"This check-in has already been executed and is now disabled. No further "
+"action is required."
+msgstr ""
+"ئەم تێبینییە پێشتر چالاک بووە و ئێستا داخرایە. هیچ کردارێکی تر پێویست نییە."
+
+#: app/templates/checkin/thank_you.html:10
+msgid "Check-In Successful"
+msgstr "تۆمارکردن سەرکەوتوو بوو"
+
+#: app/templates/checkin/thank_you.html:11
+msgid "Thank you for checking in."
+msgstr "سوپاس بۆ تۆمارکردن."
+
+#: app/templates/checkin/thank_you.html:14
+msgid "Checked in for:"
+msgstr "تۆمارکرا بۆ:"
+
+#: app/templates/email/assign_smtp.html:11
+msgid "📧 Assign SMTP Config to:"
+msgstr "📧 ڕێکخەری SMTP بەشێنە بۆ:"
+
+#: app/templates/email/assign_smtp.html:25
+msgid "No SMTP (Unassign)"
+msgstr "Konfîgûrasyona SMTP tune ye"
+
+#: app/templates/email/assign_smtp.html:26
+msgid "This email will not use any SMTP configuration."
+msgstr "Ev e-mail ne bi hîç sazîber bi SMTP destnîşan dibe."
+
+#: app/templates/email/attach_files.html:12
+msgid "Attach Files for:"
+msgstr "پەیوەندکردنی فایلەکان بۆ:"
+
+#: app/templates/email/attach_files.html:21
+msgid "Available Files"
+msgstr "فایلە ئامادەکان"
+
+#: app/templates/email/attach_files.html:36
+msgid "No files found in the upload directory."
+msgstr "هیچ فایلێک نەدۆزرایەوە لە بوخەی بارکردن."
+
+#: app/templates/email/attach_files.html:44
+msgid "Save Attachments"
+msgstr "پاشەکەوتکردنی فایلە پەیوەندکراوەکان"
+
+#: app/templates/email/attach_files.html:54
+msgid "File Attach Notes"
+msgstr "تێبینی فایلی پەیوەندکراو"
+
+#: app/templates/email/attach_files.html:63
+msgid "Important:"
+msgstr "نووسینەوە:"
+
+#: app/templates/email/attach_files.html:65
+msgid ""
+"Only files that are present in the 'uploads' folder (provided by your system"
+" administrator) will be shown here. If you do not see your file(s), please "
+"contact your Grylli administrator."
+msgstr ""
+"تەنها ئەو پەڕەکانی کە لە پوشەی 'هاورکردەکان' (بە یەکەی سیستەم بەڕێوەبەرەکەت "
+"دابینراوە) دادەرایە، ئەگەر پەڕە(کانی)ت نیشان نەدرا، تکایە پەیوەندیت بکە بە "
+"بەڕێوەبەری گریللی."
+
+#: app/templates/email/attach_files.html:69
+msgid "Accepted file types:"
+msgstr "جۆری فایلە پەسەندکراوەکان:"
+
+#: app/templates/email/attach_files.html:71
+msgid "Documents:"
+msgstr "بەلگەکان:"
+
+#: app/templates/email/attach_files.html:73
+msgid "Images:"
+msgstr "وێنەکان:"
+
+#: app/templates/email/attach_files.html:75
+msgid "Audio:"
+msgstr "دەنگ:"
+
+#: app/templates/email/attach_files.html:79
+msgid "Maximum file size:"
+msgstr "ئەوپەی وەشانی فایلی:"
+
+#: app/templates/email/attach_files.html:80
+msgid "10 MB per file"
+msgstr "10 MB بۆ پیتەکان"
+
+#: app/templates/email/attach_files.html:83
+msgid "Total upload size:"
+msgstr "قەبارەی گشتی بارکردن:"
+
+#: app/templates/email/attach_files.html:84
+msgid "20 MB (all files combined)"
+msgstr "20 MB (تەواوی فایلەکان)"
+
+#: app/templates/email/edit_message.html:12
+#: app/templates/email/list_emails.html:75
+#: app/templates/email/list_emails.html:177
+msgid "Edit Email"
+msgstr "دەستکاری ئیمەیڵ"
+
+#: app/templates/email/edit_message.html:12
+msgid "Create Email"
+msgstr "دروستکردنی ئیمەیڵ"
+
+#: app/templates/email/edit_message.html:28
+msgid "To (Recipient Email)"
+msgstr "بۆ (ئیمەیڵی وەرگر)"
+
+#: app/templates/email/edit_message.html:35
+#: app/templates/email/list_emails.html:57
+#: app/templates/email/view_config.html:18
+#: app/templates/messages/create_message.html:36
+#: app/templates/messages/edit_message.html:30
+#: app/templates/messages/list_messages.html:58
+#: app/templates/messages/view_message.html:18
+#: app/templates/reminders/create_reminder.html:30
+#: app/templates/reminders/edit_reminder.html:24
+#: app/templates/reminders/list_reminders.html:57
+#: app/templates/reminders/view_reminder.html:17
+msgid "Subject"
+msgstr "بابەت"
+
+#: app/templates/email/edit_message.html:42
+#: app/templates/email/view_config.html:28
+msgid "Body"
+msgstr "پەیوەند"
+
+#: app/templates/email/edit_message.html:50
+msgid "Save Email"
+msgstr "پاشەکەوتکردنی ئیمەیڵ"
+
+#: app/templates/email/list_emails.html:48
+msgid "Add Email"
+msgstr "زیادکردنی ئیمەیڵ"
+
+#: app/templates/email/list_emails.html:58
+#: app/templates/reminders/assign_email_reminder.html:77
+msgid "To"
+msgstr "بۆ"
+
+#: app/templates/email/list_emails.html:78
+#: app/templates/email/list_emails.html:180
+msgid "Disable to edit email"
+msgstr "شکستی لە ناردنی تاقیگرەوەی ئیمەیڵ:"
+
+#: app/templates/email/list_emails.html:84
+#: app/templates/email/list_emails.html:186
+msgid "Attach Files"
+msgstr "فایلەکان پەیوەندبکە"
+
+#: app/templates/email/list_emails.html:87
+#: app/templates/email/list_emails.html:189
+msgid "Disable to attach files"
+msgstr "فایلەکان پەیوەندبکە"
+
+#: app/templates/email/list_emails.html:93
+#: app/templates/email/list_emails.html:195
+msgid "Attach SMTP Config"
+msgstr "ڕێکخەری SMTP پەیوەند بکە"
+
+#: app/templates/email/list_emails.html:96
+#: app/templates/email/list_emails.html:198
+msgid "Disable to assign SMTP"
+msgstr "Neçar dibe bo ji bo FTP muceka necelba"
+
+#: app/templates/email/list_emails.html:102
+#: app/templates/email/list_emails.html:204
+msgid "Schedule Check-In"
+msgstr "خشتەشەکی تۆمارکردن"
+
+#: app/templates/email/list_emails.html:105
+#: app/templates/email/list_emails.html:207
+msgid "Disable to schedule check-in"
+msgstr "خشتەشەکی تۆمارکردن"
+
+#: app/templates/email/list_emails.html:110
+#: app/templates/email/list_emails.html:212
+#: app/templates/messages/list_messages.html:99
+#: app/templates/messages/list_messages.html:184
+#: app/templates/reminders/list_reminders.html:93
+#: app/templates/reminders/list_reminders.html:178
+msgid "View Details"
+msgstr "بینینی وردەکارییەکان"
+
+#: app/templates/email/list_emails.html:118
+#: app/templates/email/list_emails.html:220
+msgid "Send this email to yourself to preview it."
+msgstr "ئەم ئیمەیڵە بۆ خۆت ناردن بۆ پیشاندانی پەڕەکەی."
+
+#: app/templates/email/list_emails.html:136
+#: app/templates/email/list_emails.html:238
+msgid "Toggle Email On/Off"
+msgstr "گۆڕینی ئیمەیڵ لەسەر/خوڕی بکە"
+
+#: app/templates/email/list_emails.html:139
+#: app/templates/email/list_emails.html:241
+msgid "Email is enabled"
+msgstr "ئیمەیڵ چالاککراوە"
+
+#: app/templates/email/list_emails.html:141
+#: app/templates/email/list_emails.html:243
+msgid "Email is disabled"
+msgstr "ئیمەیڵ ناچالاککراوە"
+
+#: app/templates/email/list_emails.html:157
+#: app/templates/email/view_config.html:51
+#: app/templates/messages/list_messages.html:142
+#: app/templates/reminders/list_reminders.html:140
+msgid "Label:"
+msgstr "Etîket:"
+
+#: app/templates/email/list_emails.html:161
+#: app/templates/messages/list_messages.html:146
+#: app/templates/reminders/list_reminders.html:144
+#: app/templates/reminders/view_reminder.html:98
+msgid "Subject:"
+msgstr "بابەت"
+
+#: app/templates/email/list_emails.html:165
+msgid "To:"
+msgstr "بە:"
+
+#: app/templates/email/list_emails.html:169
+#: app/templates/messages/list_messages.html:150
+msgid "Created At:"
+msgstr "Diweroj"
+
+#: app/templates/email/list_emails.html:255
+msgid "How to create and send an email"
+msgstr "Çawa peyama e-nameyek çê û bişînin"
+
+#: app/templates/email/list_emails.html:262
+msgid ""
+"Click “Add Email” and fill out the subject, content, and recipient address."
+msgstr ""
+"Bişopînin \"Pêveka E-nameyê zêde bikin\" û mijara, kêşê û navnîşana weregerê"
+" dagirin."
+
+#: app/templates/email/list_emails.html:263
+msgid "Attach any optional files (if needed)."
+msgstr "Dosyaya bijartî binavît bikin (ger pêwîst be)."
+
+#: app/templates/email/list_emails.html:264
+msgid ""
+"Click 🧩 to assign a single SMTP configuration that will be used to send the "
+"email."
+msgstr ""
+"Bişopînin 🧩 da ku konfîgûrasyona SMTP-ya taybet bikar bînin da ku e-nameyê "
+"bişînin."
+
+#: app/templates/email/list_emails.html:265
+msgid "Click ⏱️ to set a check-in interval and grace period for the email."
+msgstr ""
+"Bişopînin ⏱️ da ku hejmara kontrolkirina dîtinê û wênejê dîtinê ji bo "
+"e-nameyê veke."
+
+#: app/templates/email/list_emails.html:266
+msgid "Enable the email using the 🔴/🟢 toggle button."
+msgstr "E-nameyê bikar bînin bi 🔴/🟢 pêvekê girtinê."
+
+#: app/templates/email/list_emails.html:267
+msgid ""
+"Click 🧪 to test the email by sending it to yourself (not the recipient)."
+msgstr ""
+"Bişopînin 🧪 da ku e-nameyê test bikar bînin herwiha da xwe bişînin (ne ji "
+"weregeraştinê)."
+
+#: app/templates/email/list_emails.html:268
+msgid ""
+"If you don’t check in before the grace period ends, the email will be "
+"automatically sent."
+msgstr ""
+"Ger hûn pêşînda dîtinê naxêrin pêş dema wênejêyê, e-nameyê xweberî "
+"veqetandinê."
+
+#: app/templates/email/list_emails.html:269
+msgid "You can preview the email configuration using 🔍."
+msgstr "Hûn dikarin konfîgûrasyona e-nameyê bi 🔍 dîtinê."
+
+#: app/templates/email/list_emails.html:270
+msgid "Once a secure email is sent, it will be automatically disabled."
+msgstr "Piştî ku e-nameyek ewlehî bişîne, ew ê piçûk bibe bixweber."
+
+#: app/templates/email/schedule_email.html:9
+msgid "Schedule Email"
+msgstr "Peyama Rojname"
+
+#: app/templates/email/schedule_email.html:18
+#: app/templates/messages/schedule_message.html:18
+msgid "Years"
+msgstr "Sal"
+
+#: app/templates/email/schedule_email.html:19
+#: app/templates/messages/schedule_message.html:19
+msgid "Months"
+msgstr "Mehan"
+
+#: app/templates/email/schedule_email.html:20
+#: app/templates/messages/schedule_message.html:20
+msgid "Weeks"
+msgstr "Hefteyan"
+
+#: app/templates/email/schedule_email.html:21
+#: app/templates/messages/schedule_message.html:21
+msgid "Days"
+msgstr "Rojan"
+
+#: app/templates/email/schedule_email.html:22
+#: app/templates/messages/schedule_message.html:22
+msgid "Hours"
+msgstr "Sateyan"
+
+#: app/templates/email/schedule_email.html:23
+#: app/templates/messages/schedule_message.html:23
+msgid "Minutes"
+msgstr "Xulek"
+
+#: app/templates/email/schedule_email.html:28
+#: app/templates/messages/schedule_message.html:28
+msgid "Check-in"
+msgstr "Dîtin"
+
+#: app/templates/email/schedule_email.html:51
+#: app/templates/messages/schedule_message.html:51
+#: app/templates/messages/view_message.html:26
+msgid "Grace Period"
+msgstr "Wênejê Dîtinê"
+
+#: app/templates/email/schedule_email.html:80
+#: app/templates/messages/schedule_message.html:80
+#: app/templates/reminders/schedule_reminder.html:47
+msgid "Save Schedule"
+msgstr "Rojname Rizgarkirin"
+
+#: app/templates/email/view_config.html:9
+msgid "Email Configuration"
+msgstr "Konfîgûrasyona E-nameyê"
+
+#: app/templates/email/view_config.html:22
+msgid "Recipient"
+msgstr "Wereger"
+
+#: app/templates/email/view_config.html:33
+msgid "Attached Files"
+msgstr "Dosyayên pîvekirî"
+
+#: app/templates/email/view_config.html:39
+msgid "No files attached"
+msgstr "Ne dosyayên pîvekirî tune ne"
+
+#: app/templates/email/view_config.html:46
+#: app/templates/reminders/assign_email_reminder.html:20
+msgid "SMTP Configuration"
+msgstr "Konfîgûrasyona SMTP"
+
+#: app/templates/email/view_config.html:54
+#: app/templates/user_smtp/list_smtp.html:122
+msgid "Host:"
+msgstr "Host:"
+
+#: app/templates/email/view_config.html:57
+#: app/templates/user_smtp/list_smtp.html:128
+msgid "Username:"
+msgstr "Navê Bikarhêner:"
+
+#: app/templates/email/view_config.html:60
+#: app/templates/user_smtp/list_smtp.html:134
+msgid "TLS:"
+msgstr "TLS:"
+
+#: app/templates/email/view_config.html:64
+msgid "No SMTP configuration assigned"
+msgstr "Konfîgûrasyona SMTP tune ye"
+
+#: app/templates/email/view_config.html:69
+msgid "Schedule Information"
+msgstr "Agahdariya Rojname"
+
+#: app/templates/email/view_config.html:72
+msgid "Check-in Interval:"
+msgstr "Navbara Dîtinê:"
+
+#: app/templates/email/view_config.html:72
+#: app/templates/email/view_config.html:75
+msgid "minutes"
+msgstr "xulek"
+
+#: app/templates/email/view_config.html:75
+msgid "Grace Period:"
+msgstr "Wênejê Dîtinê:"
+
+#: app/templates/email/view_config.html:79
+msgid "Last Check-in:"
+msgstr "Dîtina Dawîn:"
+
+#: app/templates/email/view_config.html:82
+msgid "No check-in has occurred yet"
+msgstr "Heta niha ti dîtin tune ye"
+
+#: app/templates/email/view_config.html:92
+msgid "Back to Emails"
+msgstr "Vegere e-nameyên"
+
+#: app/templates/errors/500.html:4
+msgid "Something went wrong"
+msgstr "شتێک هەڵەبوو"
+
+#: app/templates/errors/500.html:6
+msgid ""
+"An unexpected error occurred. Please try again later or contact support."
+msgstr ""
+"هەڵەیەکی نەخوێندراو رویدا. تکایە دواتر هەوڵبدەوە یان پەیوەندیدان بکە بە "
+"پشتیوانی."
+
+#: app/templates/locale/redirect_after_lang_set.html:15
+msgid "Switching Language..."
+msgstr "Guhertina Zimanê..."
+
+#: app/templates/locale/redirect_after_lang_set.html:18
+msgid "Applying new language..."
+msgstr "دانانی زمانی نوێ..."
+
+#: app/templates/messages/assign_destinations.html:13
+#: app/templates/reminders/assign_destinations.html:12
+msgid "Assign Destinations for"
+msgstr "تۆمارکردنی شوێن بۆ"
+
+#: app/templates/messages/assign_destinations.html:62
+#: app/templates/reminders/assign_destinations.html:60
+msgid "Save Destinations"
+msgstr "هەڵگرتنی شوێنەکان"
+
+#: app/templates/messages/create_message.html:17
+msgid "Edit Notificaton"
+msgstr "دەستکاری هەواڵکردنەوە"
+
+#: app/templates/messages/create_message.html:19
+msgid "Create Notification"
+msgstr "دروستکردنی هەواڵکردنەوە"
+
+#: app/templates/messages/create_message.html:43
+#: app/templates/messages/edit_message.html:37
+#: app/templates/messages/view_message.html:42
+#: app/templates/reminders/create_reminder.html:37
+#: app/templates/reminders/edit_reminder.html:31
+#: app/templates/reminders/view_reminder.html:53
+msgid "Content"
+msgstr "ناوەڕۆک"
+
+#: app/templates/messages/create_message.html:51
+msgid "Save Notification"
+msgstr "هەڵگرتنی هەواڵکردنەوە"
+
+#: app/templates/messages/edit_message.html:15
+#: app/templates/messages/list_messages.html:74
+#: app/templates/messages/list_messages.html:158
+msgid "Edit Notification"
+msgstr "دەستکاری هەواڵکردنەوە"
+
+#: app/templates/messages/edit_message.html:45
+msgid "Update Notification"
+msgstr "نوێکردنەوەی هەواڵ"
+
+#: app/templates/messages/list_messages.html:49
+msgid "Add Notification"
+msgstr "زیادکردنی هەواڵکردنەوە"
+
+#: app/templates/messages/list_messages.html:77
+#: app/templates/messages/list_messages.html:161
+msgid "Disable to edit notification"
+msgstr "دەستکاری هەواڵکردنەوە"
+
+#: app/templates/messages/list_messages.html:83
+#: app/templates/messages/list_messages.html:167
+#: app/templates/reminders/list_reminders.html:78
+#: app/templates/reminders/list_reminders.html:163
+msgid "Assign Destinations"
+msgstr "تۆمارکردنی شوێنەکانی نیشاندان"
+
+#: app/templates/messages/list_messages.html:86
+#: app/templates/messages/list_messages.html:170
+msgid "Disable to assign destinations"
+msgstr "تۆمارکردنی شوێنەکانی نیشاندان"
+
+#: app/templates/messages/list_messages.html:92
+#: app/templates/messages/list_messages.html:176
+#: app/templates/reminders/list_reminders.html:88
+#: app/templates/reminders/list_reminders.html:173
+msgid "Set Schedule"
+msgstr "دانانی خشتە"
+
+#: app/templates/messages/list_messages.html:95
+#: app/templates/messages/list_messages.html:179
+msgid "Disable to set schedule"
+msgstr "دانانی خشتە"
+
+#: app/templates/messages/list_messages.html:107
+#: app/templates/messages/list_messages.html:192
+msgid "Send Test Notification"
+msgstr "دەستکاری هەواڵکردنەوە"
+
+#: app/templates/messages/list_messages.html:122
+#: app/templates/messages/list_messages.html:209
+msgid "Toggle Message On/Off"
+msgstr "گەڕانەوەی پەیام یەک/سڕینەوە"
+
+#: app/templates/messages/list_messages.html:124
+#: app/templates/messages/list_messages.html:211
+msgid "Notification is enabled"
+msgstr "هەواڵکردنەوە چالاککرا"
+
+#: app/templates/messages/list_messages.html:126
+#: app/templates/messages/list_messages.html:213
+msgid "Notification is disabled"
+msgstr "هەواڵکردنەوە ناچالاککرا"
+
+#: app/templates/messages/list_messages.html:223
+msgid "How to create and send a notification"
+msgstr "چۆنیەتی دروستکردن و ناردنی هەواڵ"
+
+#: app/templates/messages/list_messages.html:233
+msgid "Click “Add notification” and fill out the subject and content fields."
+msgstr ""
+"کلیک بکە لەسەر “زیادکردنی هەواڵکردنەوە” و فیلدەکانی بابەت و ناوەڕۆک پڕ "
+"بکەوە."
+
+#: app/templates/messages/list_messages.html:234
+msgid "Save the notification to return to the overview."
+msgstr "هەواڵکردنەوە پارێزە بۆ پەسووە کردنەوە بۆ گشتی."
+
+#: app/templates/messages/list_messages.html:235
+msgid "You need to create at least one apprise or webhook destination."
+msgstr "پێویستە بەلایەنی کەم یەک مقصدی 'apprise' یان 'webhook' دروست بکەیت."
+
+#: app/templates/messages/list_messages.html:236
+msgid "You can create as many destinations as you like."
+msgstr "دەکرێت زۆر شوێن دروست بکەیت بەپێی پەیوەندیدانت."
+
+#: app/templates/messages/list_messages.html:237
+msgid "Click 🧩 to assign one or more Apprise and/or Webhook destinations."
+msgstr ""
+"کلیک بکە 🧩 بۆ تۆمارکردنی یەک یان زیاتر لە شوێنەکانی 'Apprise' یان 'Webhook'."
+
+#: app/templates/messages/list_messages.html:238
+msgid "Click ⏱️ to set a schedule and check-in interval."
+msgstr "کلیک بکە ⏱️ بۆ دانانی خشتە و ماوەی کتینەوە."
+
+#: app/templates/messages/list_messages.html:239
+msgid "Enable the notification using the 🔴/🟢 toggle button."
+msgstr "هەواڵکردنەوە چالاک بکە بە بەکارهێنانی دوگمەی گەڕانەوە 🔴/🟢."
+
+#: app/templates/messages/list_messages.html:240
+msgid ""
+"If you don’t check in before the grace period ends, the notification will be"
+" sent."
+msgstr ""
+"ئەگەر پێش تەواوبوونی ماوەی ئەزموون کتینەوە ناکەی، هەواڵکردنەوە ناردەبە."
+
+#: app/templates/messages/list_messages.html:241
+msgid "You can preview the notification config using 🔍."
+msgstr "دەکرێت پێشنیاری هەڕەشەی هەواڵکردنەوە بەکاربهێنیت 🔍."
+
+#: app/templates/messages/list_messages.html:242
+msgid "Once a notification is sent, it will be automatically disabled."
+msgstr "هەوڵ بۆ نەشاندانی هەواڵکردنەوە بیده، خۆی ناچالاک دەبێت."
+
+#: app/templates/messages/schedule_message.html:9
+msgid "Schedule Message"
+msgstr "خشتەکردنی پەیام"
+
+#: app/templates/messages/view_message.html:9
+msgid "Notifications Details"
+msgstr "ڕووشکاری هەواڵکردنەوەکان"
+
+#: app/templates/messages/view_message.html:22
+msgid "Check-in Interval"
+msgstr "ماوەی کتینەوە"
+
+#: app/templates/messages/view_message.html:31
+msgid "Last Check-in"
+msgstr "دوایین کتینەوە"
+
+#: app/templates/messages/view_message.html:48
+#: app/templates/reminders/view_reminder.html:59
+msgid "Apprise URLs"
+msgstr "URL-ی بەکاربردن"
+
+#: app/templates/messages/view_message.html:54
+#: app/templates/messages/view_message.html:64
+#: app/templates/reminders/view_reminder.html:65
+#: app/templates/reminders/view_reminder.html:75
+#: app/templates/reminders/view_reminder.html:85
+msgid "None assigned."
+msgstr "هیچ تۆمار نەکرا."
+
+#: app/templates/messages/view_message.html:73
+msgid "Back to Notifications"
+msgstr "گەڕانەوە بۆ هەواڵکردنەوەکان"
+
+#: app/templates/mfa/challenge.html:5 app/templates/mfa/settings.html:5
+msgid "Two-Factor Authentication (MFA)"
+msgstr "دڵنیاکردنەوەی دوو فاکتەر (MFA)"
+
+#: app/templates/mfa/recovery_codes.html:4
+msgid "Your Recovery Codes"
+msgstr "کۆدەکانی گەڕاندنەوە"
+
+#: app/templates/mfa/recovery_codes.html:7
+msgid "Save these recovery codes in a safe place!"
+msgstr "ئەم کۆدانە لە شوێنێکی ئازاد بپارێزە!"
+
+#: app/templates/mfa/recovery_codes.html:10
+msgid ""
+"Each code can be used once if you lose access to your authenticator. These "
+"codes will not be shown again."
+msgstr ""
+"هەر کۆد دەتوانرێت جارێک بەکارهێن بکرێت ئەگەر گەیشتن بە دڵنیاکردنەوە "
+"بکرێتەوە. ئەم کۆدانە بۆ جارێکی تر نیشانی نادرە."
+
+#: app/templates/mfa/recovery_codes.html:24
+msgid "OK, I've saved them"
+msgstr "باشە، من هەڵگریانە"
+
+#: app/templates/mfa/settings.html:12
+msgid "MFA QR Code"
+msgstr "QR Codeی MFA"
+
+#: app/templates/mfa/settings.html:15
+msgid "Manual Entry:"
+msgstr "تێکردنەوەی دەستکرد:"
+
+#: app/templates/partials/admin_nav.html:21
+msgid "Administration"
+msgstr "Rêvebirinî"
+
+#: app/templates/partials/admin_nav.html:37
+#: app/templates/partials/shared_nav.html:34
+#: app/templates/partials/shared_nav.html:78
+#: app/templates/partials/shared_nav.html:117
+msgid "Overview"
+msgstr "پێشبینینەکان"
+
+#: app/templates/partials/footer.html:7
+msgid "Toggle Theme"
+msgstr "گۆڕینی ڕووکار"
+
+#: app/templates/partials/footer.html:32
+msgid "Theme"
+msgstr "ڕووکار"
+
+#: app/templates/partials/head.html:7
+msgid "Grylli"
+msgstr "Grylli"
+
+#: app/templates/partials/header.html:6 app/templates/partials/sidebar.html:32
+#: app/templates/partials/sidebar.html:66
+msgid "Home"
+msgstr "ماڵەوە"
+
+#: app/templates/partials/header.html:55
+msgid "Account"
+msgstr "Hesab"
+
+#: app/templates/partials/header.html:61
+msgid "MFA"
+msgstr "MFA"
+
+#: app/templates/partials/header.html:67
+msgid "About"
+msgstr "دەربارە"
+
+#: app/templates/partials/header.html:73
+msgid "Privacy"
+msgstr "Têsbrînd Kebrî"
+
+#: app/templates/partials/header.html:79
+msgid "System Info"
+msgstr "Agahdariya Sîstemê"
+
+#: app/templates/partials/header.html:114
+msgid "Logout"
+msgstr "Logout"
+
+#: app/templates/partials/shared_nav.html:33
+msgid "Overview of notification settings"
+msgstr "کورتەسازی ڕێکەوتنەوەکانی ئاگادارکردنەکان"
+
+#: app/templates/partials/shared_nav.html:38
+msgid "Configure Apprise services"
+msgstr "ڕێکبەندکردنی خزمه‌تگوزاریه‌کانی Apprise"
+
+#: app/templates/partials/shared_nav.html:39
+msgid "Apprise"
+msgstr "Apprise"
+
+#: app/templates/partials/shared_nav.html:43
+msgid "Configure Webhook integrations"
+msgstr "ڕێکبەندکردنی تێکڕای Webhook"
+
+#: app/templates/partials/shared_nav.html:77
+msgid "Overview of secure email messages"
+msgstr "کورتەسازی پەیامە ئیمەیڵە پارێزراوەکان"
+
+#: app/templates/partials/shared_nav.html:82
+msgid "Configure SMTP email settings"
+msgstr "ڕێکبەندکردنی دانراوەکانی ئیمەیڵ SMTP"
+
+#: app/templates/partials/shared_nav.html:83
+#: app/templates/reminders/view_reminder.html:79
+msgid "SMTP"
+msgstr "SMTP"
+
+#: app/templates/partials/shared_nav.html:100
+#: app/templates/reminders/list_reminders.html:8
+msgid "Reminders"
+msgstr "xulek"
+
+#: app/templates/partials/shared_nav.html:116
+msgid "Overview of reminders"
+msgstr "پیشاندانی یادکردنەکان"
+
+#: app/templates/partials/sidebar.html:13
+#: app/templates/partials/sidebar.html:47
+msgid "Menu"
+msgstr "Menu"
+
+#: app/templates/reminders/assign_email_reminder.html:12
+msgid "Link Email Reminder for"
+msgstr "بەستەری یادکردنی ئیمەیڵ بۆ"
+
+#: app/templates/reminders/assign_email_reminder.html:30
+#: app/templates/reminders/assign_email_reminder.html:64
+msgid "None (Unassign)"
+msgstr "Konfîgûrasyona SMTP tune ye"
+
+#: app/templates/reminders/assign_email_reminder.html:43
+msgid "No sender address"
+msgstr "ئیستە نیشانی پەیوەندیکەر نییە"
+
+#: app/templates/reminders/assign_email_reminder.html:54
+msgid "Email Message"
+msgstr "خشتەکردنی پەیام"
+
+#: app/templates/reminders/assign_email_reminder.html:77
+msgid "No subject"
+msgstr "بابەت"
+
+#: app/templates/reminders/assign_email_reminder.html:90
+msgid "Save Email Reminder"
+msgstr "پاشەکەوتکردنی ئیمەیڵ"
+
+#: app/templates/reminders/create_reminder.html:12
+#: app/templates/reminders/edit_reminder.html:10
+#: app/templates/reminders/list_reminders.html:73
+#: app/templates/reminders/list_reminders.html:158
+msgid "Edit Reminder"
+msgstr "دەستکاری ئیمەیڵ"
+
+#: app/templates/reminders/create_reminder.html:14
+msgid "Create Reminder"
+msgstr "دروستکردنی ئیمەیڵ"
+
+#: app/templates/reminders/create_reminder.html:45
+msgid "Save Reminder"
+msgstr "پاشەکەوتکردنی ئیمەیڵ"
+
+#: app/templates/reminders/edit_reminder.html:39
+msgid "Update Reminder"
+msgstr "نوێکردنەوەی یادکردنەکە"
+
+#: app/templates/reminders/list_reminders.html:48
+msgid "Add Reminder"
+msgstr "زیادکردنی ئیمەیڵ"
+
+#: app/templates/reminders/list_reminders.html:58
+#: app/templates/reminders/view_reminder.html:21
+msgid "Start At"
+msgstr "TLS dest pê dike"
+
+#: app/templates/reminders/list_reminders.html:59
+msgid "Recurrence"
+msgstr "داهاتی"
+
+#: app/templates/reminders/list_reminders.html:69
+#: app/templates/reminders/list_reminders.html:153
+#: app/templates/reminders/view_reminder.html:26
+msgid "One-time"
+msgstr "تکەیەکی"
+
+#: app/templates/reminders/list_reminders.html:83
+msgid "Assign Email Reminder"
+msgstr "دیاری کردنەوەی ئیمەیڵی یادکردنەکە"
+
+#: app/templates/reminders/list_reminders.html:102
+#: app/templates/reminders/list_reminders.html:187
+msgid "Send Test Reminder"
+msgstr "Emailê Testa Bişînîn"
+
+#: app/templates/reminders/list_reminders.html:120
+#: app/templates/reminders/list_reminders.html:205
+msgid "Toggle Reminder On/Off"
+msgstr "گۆڕینی ئیمەیڵ لەسەر/خوڕی بکە"
+
+#: app/templates/reminders/list_reminders.html:122
+#: app/templates/reminders/list_reminders.html:207
+msgid "Reminder is enabled"
+msgstr "ئیمەیڵ چالاککراوە"
+
+#: app/templates/reminders/list_reminders.html:124
+#: app/templates/reminders/list_reminders.html:209
+msgid "Reminder is disabled"
+msgstr "ئیمەیڵ ناچالاککراوە"
+
+#: app/templates/reminders/list_reminders.html:148
+msgid "Start At:"
+msgstr "TLS dest pê dike"
+
+#: app/templates/reminders/list_reminders.html:152
+msgid "Recurrence:"
+msgstr "داهاتی:"
+
+#: app/templates/reminders/list_reminders.html:168
+msgid "Link Email Reminder"
+msgstr "بەستەری ئیمەیڵی یادکردنە"
+
+#: app/templates/reminders/list_reminders.html:218
+msgid "How to use reminders"
+msgstr "چۆنیەتی کارگلتەوە بە کەسەکان"
+
+#: app/templates/reminders/list_reminders.html:231
+msgid "➕ Click “Add Reminder” and fill out the subject and content fields."
+msgstr ""
+"کلیک بکە لەسەر “زیادکردنی هەواڵکردنەوە” و فیلدەکانی بابەت و ناوەڕۆک پڕ "
+"بکەوە."
+
+#: app/templates/reminders/list_reminders.html:232
+msgid "💾 Save the reminder to return to the overview."
+msgstr "هەواڵکردنەوە پارێزە بۆ پەسووە کردنەوە بۆ گشتی."
+
+#: app/templates/reminders/list_reminders.html:233
+msgid ""
+"📣 Assign Apprise, 🌐 Webhook, and/or 📧 Email (SMTP) destinations as needed."
+msgstr ""
+"🗣️ بە بڕنگ، 🌐 ڕاستەوخۆ وەب بەستەر، یان/یان 📨 ئیمەیڵی (SMTP) شتی پێویست دیاری"
+" بکە."
+
+#: app/templates/reminders/list_reminders.html:234
+msgid ""
+"⏱️ Set the schedule using the schedule button to define when reminders are "
+"sent."
+msgstr ""
+"⏱️ بەکارهێنانی دوگمەی ڕێکبەندە بۆ دیاریکردنی کاتەکەی یادکردنەکان داده‌نرێن."
+
+#: app/templates/reminders/list_reminders.html:235
+msgid ""
+"🔍 Click “View Details” to review or edit assigned destinations and other "
+"settings."
+msgstr ""
+"🔍 کلیکی \"بینینی زانیاری تری موسێڵ\" بۆ هەڵبژاردن یان تەواوکردنی بەستەرەکان "
+"و بەشە زیاتر."
+
+#: app/templates/reminders/list_reminders.html:236
+msgid ""
+"🧪 Click the Test button to verify all assigned destinations are working "
+"correctly."
+msgstr ""
+"🧪 کلیکی دوگمەی تاقیکردنەوە بکە بۆ دڵنیابوونەوە لە ئەنجامی هەموو بەستەرە "
+"دیاریکەراوەکان."
+
+#: app/templates/reminders/list_reminders.html:237
+msgid "🔴/🟢 Enable or disable the reminder using the toggle button."
+msgstr "E-nameyê bikar bînin bi 🔴/🟢 pêvekê girtinê."
+
+#: app/templates/reminders/list_reminders.html:238
+msgid "📤 Reminders will be sent as scheduled to the assigned destinations."
+msgstr "📤 یادکردنەکان بەپێی ڕێکبەندیلەداناون بۆ بەستەرە دیاریکەراوەکان."
+
+#: app/templates/reminders/schedule_reminder.html:8
+msgid "Schedule Reminder"
+msgstr "Peyama Rojname"
+
+#: app/templates/reminders/schedule_reminder.html:15
+msgid "Start Date & Time"
+msgstr "ڕۆژی دەستپێک & کات"
+
+#: app/templates/reminders/schedule_reminder.html:22
+#: app/templates/reminders/view_reminder.html:25
+msgid "Recurrence Rule"
+msgstr "یاسای داهاتی"
+
+#: app/templates/reminders/schedule_reminder.html:24
+msgid "(Optional) Enter RRULE or leave blank for one-time."
+msgstr "(هەڵبژاردە) هاوردنی RRULE یان بەجێهێشتنی بەتاڵ بۆ تکەیەکی."
+
+#: app/templates/reminders/schedule_reminder.html:30
+msgid "End Date"
+msgstr "ئەرشی تەست"
+
+#: app/templates/reminders/schedule_reminder.html:32
+msgid "(Optional) Stop sending after this date."
+msgstr "(هەڵبژاردە) هەڵاستن لە پاش ئەم ڕۆژە."
+
+#: app/templates/reminders/schedule_reminder.html:38
+#: app/templates/reminders/view_reminder.html:36
+msgid "Max Occurrences"
+msgstr "زۆوری زۆری"
+
+#: app/templates/reminders/schedule_reminder.html:40
+msgid "(Optional) Stop after this many reminders."
+msgstr "(هەڵبژاردە) وەستان لە پاش ئەم ژمارەی یادکردنەکان."
+
+#: app/templates/reminders/schedule_reminder.html:56
+msgid "Help for RRULE syntax"
+msgstr "یارمەتی بۆ زمانەوەی RRULE"
+
+#: app/templates/reminders/schedule_reminder.html:66
+msgid "Several tools are available to help generate an RRULE."
+msgstr "چەند ئامڕازەکانی هەیە بۆ ڕه‌خستنەوەی RRULE."
+
+#: app/templates/reminders/schedule_reminder.html:67
+msgid "Use a search engine or AI tool to assist."
+msgstr ""
+"دەستوکەرێکی گەڕانی یان توڵی AIی بەم بەربوونەکە یارمەتی بەپێویستدەت بە."
+
+#: app/templates/reminders/schedule_reminder.html:69
+msgid "Here is an example of one such online tool:"
+msgstr "نمونە ئەو نەبیەکی پەیوەندیدا بووە تۆڵەکەی یاساکەرەکان:"
+
+#: app/templates/reminders/schedule_reminder.html:73
+msgid "RRULE Generator Tool"
+msgstr "توڵی دامەزراندنی RRULE"
+
+#: app/templates/reminders/schedule_reminder.html:77
+msgid "See here for some common examples:"
+msgstr "ئەمە نیشانی ھەندێک نموونەی ئاساییە:"
+
+#: app/templates/reminders/schedule_reminder.html:81
+msgid "RRULE Help (GitHub)"
+msgstr "یارمەتی RRULE (GitHub)"
+
+#: app/templates/reminders/view_reminder.html:8
+msgid "Reminder Details"
+msgstr "بینینی وردەکارییەکان"
+
+#: app/templates/reminders/view_reminder.html:30
+msgid "End At"
+msgstr "ئەرشی تەست"
+
+#: app/templates/reminders/view_reminder.html:42
+msgid "Last Sent"
+msgstr "دوایین کتینەوە"
+
+#: app/templates/reminders/view_reminder.html:91
+msgid "Email Template"
+msgstr "دڵنیابەر"
+
+#: app/templates/reminders/view_reminder.html:103
+msgid "No email linked."
+msgstr "ئیمەیڵ چالاککراوە"
+
+#: app/templates/reminders/view_reminder.html:111
+msgid "Back to Reminders"
+msgstr "Vegere e-nameyên"
+
+#: app/templates/user_smtp/create_smtp.html:10
+msgid "Create SMTP Destination"
+msgstr "دروستکردنی شوێنی SMTP"
+
+#: app/templates/user_smtp/create_smtp.html:69
+#: app/templates/user_smtp/edit_smtp.html:84
+msgid "Hold to reveal"
+msgstr "بگرە بۆ بەرزکردنەوە"
+
+#: app/templates/user_smtp/create_smtp.html:92
+#: app/templates/user_smtp/edit_smtp.html:107
+msgid "Use TLS"
+msgstr "بەکار بردنی TLS"
+
+#: app/templates/user_smtp/edit_smtp.html:10
+msgid "Edit SMTP Destination"
+msgstr "دروستکردنی شوێنی SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:9
+msgid "SMTP Destinations"
+msgstr "نیشانیەکانی SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:44
+msgid "Add SMTP"
+msgstr "زیادکردنی SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:53
+msgid "Host"
+msgstr "وەرگەر"
+
+#: app/templates/user_smtp/list_smtp.html:54
+msgid "Port"
+msgstr "نووسینەوە"
+
+#: app/templates/user_smtp/list_smtp.html:56
+msgid "TLS"
+msgstr "TLS"
+
+#: app/templates/user_smtp/list_smtp.html:58
+msgid "Created"
+msgstr "دروستکرا"
+
+#: app/templates/user_smtp/list_smtp.html:90
+#: app/templates/user_smtp/list_smtp.html:158
+msgid "Send Test"
+msgstr "ئەرشی تەست"
+
+#: app/templates/user_smtp/list_smtp.html:125
+msgid "Port:"
+msgstr "نووسینەوە:"
+
+#: app/templates/user_smtp/list_smtp.html:131
+msgid "Password:"
+msgstr "وشەی تێپەڕ:"
+
+#: app/templates/user_smtp/list_smtp.html:184
+msgid "Hide SMTP Setup Help"
+msgstr "Veşartinê Alîkara Sazkerî SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:184
+msgid "Show SMTP Setup Help"
+msgstr "Pêşkîşkirina Alîkara Sazkerî SMTP nîşa deyin"
+
+#: app/templates/user_smtp/list_smtp.html:190
+msgid ""
+"Need help finding your SMTP server settings? See here for some links to "
+"common providers:"
+msgstr ""
+"Karikariya weyek da ku sazîtakî FTP de nasbikini? Binêreya wek guhyara "
+"Formewandin!"
+
+#: app/templates/user_smtp/list_smtp.html:194
+msgid "SMTP Server Settings Help (GitHub)"
+msgstr "Alîkara Sazkerî Serveta SMTP (GitHub)"
+
+#: app/templates/user_smtp/list_smtp.html:198
+msgid ""
+"Find official documentation links for Gmail, Outlook, Yahoo, AOL, and "
+"others."
+msgstr "Pêştariya wîjenî di bo Gmail, Outlook, Yahoo, AOL û yên din."
+
+#: app/templates/user_smtp/list_smtp.html:199
+msgid ""
+"If your provider isn’t listed, search their support site or a search engine "
+"for 'SMTP settings'."
+msgstr ""
+"Ger nirxandak berristan ne, legine wîçina bizine ya xalkiya eftekiribe."
+
+#: app/templates/user_smtp/list_smtp.html:200
+msgid ""
+"Some providers (like Gmail, Yahoo) require 'App Passwords' or special "
+"setup—see their docs!"
+msgstr ""
+"Tîtek dekmen lêkername yan taybet jî telek xerencî Google, Yahoo da ku "
+"lêkersa raketnîjin bibêsebinên wan!"
+
+#: app/templates/webhook/create_webhook.html:10
+msgid "Create Webhook"
+msgstr "دروستکردنی Webhook"
+
+#: app/templates/webhook/edit_webhook.html:10
+msgid "Edit Webhook"
+msgstr "دەستکاری Webhook"
+
+#: app/templates/webhook/list_webhooks.html:9
+#: app/templates/webhook/webhook_config.html:3
+msgid "Webhooks Destinations"
+msgstr "نیشانیەکانی Webhooks"
+
+#: app/templates/webhook/list_webhooks.html:59
+msgid "Endpoint"
+msgstr "متمانه"
+
+#: app/templates/webhook/list_webhooks.html:60
+msgid "Description"
+msgstr "پەسنی"
+
+#: app/templates/webhook/list_webhooks.html:82
+#: app/templates/webhook/list_webhooks.html:141
+msgid "Cannot edit while assigned to notifications"
+msgstr "Ne dibe ku nû ve bidoxin ku ji nûvek bikarenibin tê kelokandina"
+
+#: app/templates/webhook/list_webhooks.html:106
+#: app/templates/webhook/list_webhooks.html:165
+msgid "Cannot delete while assigned to notifications"
+msgstr "Ne dibe ku ji nûve ke vegel nezelên hewerek kêlekandin"
+
+#: app/templates/webhook/list_webhooks.html:122
+msgid "Endpoint:"
+msgstr "متمانه:"
+
+#: app/templates/webhook/list_webhooks.html:125
+msgid "Description:"
+msgstr "پەسنی:"
+
+#: app/views/account.py:74
+msgid "Current password is required to change password."
+msgstr "وشەی تێپەڕی ئێستا داواکراووە بۆ گۆڕینی وشەی تێپەڕ."
+
+#: app/views/account.py:78
+msgid "Current password is incorrect."
+msgstr "وشەی تێپەڕی ئێستا هەڵەیە."
+
+#: app/views/account.py:94
+msgid "Account updated successfully."
+msgstr "هەژمارەکەت بە سەرکەوتووی نوێکرایەوە."
+
+#: app/views/account.py:100
+msgid "An error occurred while updating your account."
+msgstr "هەڵەیەک ڕوویدا کاتی نوێکردنەوەی هەژمارەکەت."
+
+#: app/views/account.py:137
+msgid "You cannot delete your account because you are the last admin."
+msgstr "ناتوانرێت ئەکاونت بسرهێنی چونکە تۆ دوایین بەڕێوەبەر یەکەی."
+
+#: app/views/account.py:146
+msgid "Your account has been permanently deleted."
+msgstr "هەژمارەکەت بەردەوام بە سڕاوەتەوە."
+
+#: app/views/account.py:152
+msgid "An error occurred while trying to delete your account."
+msgstr "هەڵەیەک ڕوویدا کاتی نوێکردنەوەی هەژمارەکەت."
+
+#: app/views/account.py:171
+msgid "Your account has been deleted"
+msgstr "هەژمارەکەت بەردەوام بە سڕاوەتەوە."
+
+#: app/views/account.py:173
+#, python-brace-format
+msgid ""
+"Hello {username},\n"
+"\n"
+"Your account on {site_name} has been deleted.Remember to delete your files from the uploads folder.If this was not you, please contact support immediately.\n"
+"\n"
+"{site_url}"
+msgstr ""
+"Slaw {username},\n"
+"\n"
+"Hesabet le ser {site_name} hatwa scan akrdn.Berpirsy bit axrabei te fayl u ke le pylake bargr dane.Karikari te niye,teze re zud kat re peywendi bigre be piştegî.\n"
+"\n"
+"{site_url}"
+
+#: app/views/admin.py:59
+msgid "Invalid role."
+msgstr "رۆڵێکی نادرووستە."
+
+#: app/views/apprise.py:51
+msgid "🧪 Test notification sent successfully!"
+msgstr "🧪 پەیامی تەستی ڕەغاز بە سەرکەوتووی نێردرا!"
+
+#: app/views/apprise.py:56
+msgid "🧪 Failed to send test notification: "
+msgstr "🧪 سەرکەوتوو نەبوو بۆ ناردنی پەیامی تەست:"
+
+#: app/views/apprise.py:62
+msgid "🧪 Error sending test notification."
+msgstr "🧪 هەڵەیەک لە کاتی ناردنی پەیامی تەست ڕوویدا."
+
+#: app/views/apprise.py:101
+msgid "Apprise destination created successfully."
+msgstr "نیشانی Apprise بە سەرکەوتووی دروستکرا."
+
+#: app/views/apprise.py:168
+msgid "Apprise destination updated successfully."
+msgstr "نیشانی Apprise بە سەرکەوتووی نوێکرایەوە."
+
+#: app/views/apprise.py:199
+msgid "Apprise destination deleted."
+msgstr "نیشانی Apprise سڕایەوە."
+
+#: app/views/auth.py:95
+msgid "Admin account created successfully."
+msgstr "هەژماری بەڕێوەبەر بە سەرکەوتووی دروستکرا."
+
+#: app/views/auth.py:108
+msgid "An error occurred while creating the admin account."
+msgstr "هەڵەیەک ڕوویدا کاتی دروستکردنی هەژماری بەڕێوەبەر."
+
+#: app/views/auth.py:141
+msgid ""
+"Your account is not activated. Please check your email for the activation "
+"link."
+msgstr ""
+"هەژماری تۆ چالاک نەکراوە. تکایە پەیامی ئیمەیڵەکەت بپشکنە بۆ بەستەرە "
+"چالاککردنەوە."
+
+#: app/views/auth.py:157
+msgid "Multi-factor authentication required. Please enter your code."
+msgstr "پێویستە دڵنیاکردنەوەی جیاواز بەکارببەیت. تکایە کۆد بنووسە."
+
+#: app/views/auth.py:162 app/views/mfa.py:195
+msgid "Logged in successfully."
+msgstr "بە سەرکەوتووی بچووکَە."
+
+#: app/views/auth.py:179
+msgid "Invalid username or password."
+msgstr "ناوی بەکارهێنەر یا وشەی تێپەڕ نەگونجاوە."
+
+#: app/views/auth.py:203
+msgid "You have been logged out."
+msgstr "تۆ چوویتەدەرەوە."
+
+#: app/views/auth.py:239 app/views/email.py:263
+msgid "Access denied."
+msgstr "ڕێگەپێنەدرا."
+
+#: app/views/auth.py:273
+msgid "If a user with that email exists, we've sent the username to them."
+msgstr ""
+"ئەگەر بەکارهێنەرێک بەو ئیمەیڵە هەیە، ناوی بەکارهێنەریتی نێردراوە بۆیان."
+
+#: app/views/auth.py:314
+msgid "A password reset link has been sent to your email."
+msgstr "بەستەرێکی نوێکردنەوەی وشەی تێپەڕ بۆ ئیمەیڵەکەت نێردرا."
+
+#: app/views/auth.py:319
+msgid "No account found matching that username and email."
+msgstr ""
+"هیچ هەژماریەک نەدۆزرابوو کە ناوی بەکارهێنەر و ئیمەیڵی پەیوەندیدان تایبەتی "
+"بپەیوەندیدا."
+
+#: app/views/auth.py:389
+msgid "The reset link is invalid or has expired."
+msgstr "بەستەرەکە نادروستە یان مەودای خەتم پێکرابوو."
+
+#: app/views/auth.py:401
+msgid "Username and email do not match."
+msgstr "ناوێنە و ئیمەیڵ پەیوەندیناکە."
+
+#: app/views/auth.py:421
+msgid "Your password has been reset. Please log in."
+msgstr "تێپەڕوشەیەکەت نوێکرایەوە. تکایە بچۆ ژوورەوە."
+
+#: app/views/auth.py:458
+msgid "Invalid registration PIN."
+msgstr "پەتا پینەچونەژوورەوە نادروستە."
+
+#: app/views/auth.py:467
+msgid "Username or email already exists."
+msgstr "ناوێنە یان ئیمەیڵ پێشتر هەیە."
+
+#: app/views/auth.py:492
+msgid "Activate Your Grylli Account"
+msgstr "ئاکتیڤکردنی هەژمارەکەت بەرز بکە"
+
+#: app/views/auth.py:493
+#, python-brace-format
+msgid ""
+"Hello {username},\n"
+"\n"
+"Please activate your account by clicking..."
+msgstr ""
+"سڵاو {username},\n"
+"\n"
+"تکایە بە کرتەکردن..."
+
+#: app/views/auth.py:498
+msgid "Account created! Please check your email to activate your account."
+msgstr "حساب دروستکرا! تکایە ئیمەیڵەکە تاقی بکەوە بۆ چالاککردنی حسابەکەت."
+
+#: app/views/auth.py:521
+msgid "Activation link is invalid or expired."
+msgstr "بهێڵکەی چالاککردن نادروستە یان بەسەرچووە."
+
+#: app/views/auth.py:528 app/views/users.py:76 app/views/users.py:140
+msgid "User not found."
+msgstr "بەکارهێنەر نەدۆزرایەوە."
+
+#: app/views/auth.py:532
+msgid "Account already activated. Please log in."
+msgstr "حساب پێشتر چالاکە. تکایە بچۆ ژوورەوە."
+
+#: app/views/auth.py:540
+msgid "Your account has been activated! You can now log in."
+msgstr "حسابەکەت چالاککرایەوە! ئێستا دەتوانیت بچیتە ژوورەوە."
+
+#: app/views/backups.py:72
+#, python-format
+msgid "Backup created: %(filename)s"
+msgstr "پاشەکەوت دروستکرا: %(filename)s"
+
+#: app/views/backups.py:77
+msgid "Failed to create backup."
+msgstr "شکستی لە دروستکردنی پاشەکەوت."
+
+#: app/views/backups.py:106
+#, python-format
+msgid "Backup deleted: %(filename)s"
+msgstr "پاشەکەوت بەسڕاوە: %(filename)s"
+
+#: app/views/backups.py:109
+msgid "Backup file not found."
+msgstr "پەڕگەی پاشەکەوت نەدۆزرایەوە."
+
+#: app/views/backups.py:112
+msgid "Failed to delete backup."
+msgstr "شکستی لە سڕینەوەی پاشەکەوت."
+
+#: app/views/checkin.py:41
+msgid "Invalid check-in link."
+msgstr "بهێڵکەی پەیوەندیدان نادروستە."
+
+#: app/views/checkin.py:48
+msgid "You are not authorized to check in for this item."
+msgstr "ناتوانیت بپه‌یەندیدیت بۆ ئەمە."
+
+#: app/views/checkin.py:62
+msgid "Unsupported check-in type."
+msgstr "جۆری پەیوەندیدان پشتیوانی ناکرێ."
+
+#: app/views/checkin.py:137
+msgid "⚠️ Cannot enable reminder: Start date/time is in the past."
+msgstr "⚠️ ناتوانێت یادکردەکە چالاک بکرێت: ڕۆژ/کاتی دەستپێک لە کەلەوە."
+
+#: app/views/checkin.py:158
+msgid "✅ Enabled and timer started."
+msgstr "✅ چالاککرا و کاوەژمەرەکە دەستی پێکرد."
+
+#: app/views/checkin.py:168
+msgid "⛔ Disabled."
+msgstr "⛔ ناچالاک."
+
+#: app/views/checkin.py:170
+msgid "⚠️ Cannot toggle — missing schedule or destination."
+msgstr "⚠️ ناتوانرێ خواستنەوە — فەرامۆشی دەستوور یان ئەنجام."
+
+#: app/views/email.py:88
+msgid "Message saved."
+msgstr "پەیام پاشەکەوت کرا."
+
+#: app/views/email.py:118 app/views/messages.py:167
+msgid "Message deleted."
+msgstr "پەیامەکە سڕایەوە."
+
+#: app/views/email.py:152
+msgid "Attached files updated."
+msgstr "فایلە پەیوەندیدراوەکان نوێکرانەوە."
+
+#: app/views/email.py:200
+msgid "SMTP configuration not assigned or is disabled."
+msgstr "ڕێکخستنی SMTP هەڵبژاردن یان ناچالاکە."
+
+#: app/views/email.py:234 app/views/smtp_settings_admin.py:82
+msgid "Test email sent successfully."
+msgstr "تاقیگرەوەی ئیمەیڵی نادیارە چۆنەڕووکەوی."
+
+#: app/views/email.py:282 app/views/messages.py:305
+msgid "Schedule updated successfully."
+msgstr "پلان نوێکرا بەرکەوتوو."
+
+#: app/views/email.py:310
+msgid "SMTP configuration assigned."
+msgstr "ڕێکخستنی SMTP تۆمارەکرا."
+
+#: app/views/email.py:319
+msgid "SMTP configuration removed."
+msgstr "ڕێکخستنی SMTP تۆمارەکرا."
+
+#: app/views/messages.py:97
+msgid "Message created successfully."
+msgstr "پەیامەکە بەرکەوتوو دروستکرا."
+
+#: app/views/messages.py:133
+msgid "Message updated successfully."
+msgstr "پەیام نوێکرایەوە بەرکەوتوو."
+
+#: app/views/messages.py:223 app/views/reminders.py:240
+msgid "Destinations updated."
+msgstr "مورد دەستەکرا ."
+
+#: app/views/messages.py:441
+msgid "No destinations assigned to this message."
+msgstr "ڕێکخستنی SMTP هەڵبژاردن یان ناچالاکە."
+
+#: app/views/messages.py:453
+msgid "Test message sent successfully."
+msgstr "تاقیگرەوەی ئیمەیڵی نادیارە چۆنەڕووکەوی."
+
+#: app/views/messages.py:455
+msgid "Test message failed: "
+msgstr "پەیام پاشەکەوت کرا."
+
+#: app/views/mfa.py:68
+msgid "You must enter a code from your authenticator."
+msgstr "پێویستە کۆدێک لە دڵنیاکردنەوە بنووسیت."
+
+#: app/views/mfa.py:82 app/views/mfa.py:259
+msgid "Invalid code. Please try again."
+msgstr "کۆدی نادرووست. تکایە دووبارە هەوڵ بدە."
+
+#: app/views/mfa.py:91
+msgid "Two-factor authentication disabled."
+msgstr "هەواڵکردنەوە ناچالاککرا"
+
+#: app/views/mfa.py:132
+msgid "Recovery codes are only shown immediately after enabling MFA."
+msgstr "کۆدەکانی گەڕاندنەوە تەنها فەورای بەکاربردنی MFA پیشان دەدرێن."
+
+#: app/views/mfa.py:142
+msgid "Could not load recovery codes."
+msgstr "نەتوانرا کۆدە گەڕاندنەوەکان باربکرێن."
+
+#: app/views/mfa.py:168
+msgid "No MFA challenge in progress."
+msgstr "هیچ ڕوونکووینی MFA بەجێ نادلێت."
+
+#: app/views/mfa.py:176
+msgid "User not found for MFA challenge."
+msgstr "بەکارهێنەر نەدۆزرایەوە."
+
+#: app/views/mfa.py:225
+msgid ""
+"You have used your last recovery code. MFA has been disabled. Please remove "
+"Grylli from your authenticator app, and re-enable MFA to protect your "
+"account."
+msgstr ""
+"ئاخەری کۆدەکەیت بەکارهێنا. MFA ناچالاککرا. تکایە Grylli لە بەرنامەی "
+"دڵنیاکردنەوەتان دەربگرن و دووبارە MFA چالاک بکەن بۆ پاراستنی هەژمارەکەتان."
+
+#: app/views/mfa.py:248
+#, python-brace-format
+msgid "Recovery code accepted. You have {remaining} recovery codes left."
+msgstr ""
+"کۆدی گەڕاندنەوە بەسەرکەوتویی هەڵگرتە. {remaining} کۆدی گەڕاندنەوەیت ماوە."
+
+#: app/views/reminders.py:106
+msgid "Reminder created successfully."
+msgstr "پەیامەکە بەرکەوتوو دروستکرا."
+
+#: app/views/reminders.py:143
+msgid "Reminder updated successfully."
+msgstr "بەکارهێنەر بەسەرکەوتووی نوێکرایەوە."
+
+#: app/views/reminders.py:174
+msgid "Reminder deleted."
+msgstr "بەکارهێنەر سڕایەوە."
+
+#: app/views/reminders.py:287
+msgid "No destinations assigned to this reminder."
+msgstr "ڕێکخستنی SMTP هەڵبژاردن یان ناچالاکە."
+
+#: app/views/reminders.py:311
+msgid "No email message linked to this reminder."
+msgstr "هیچ پەیامی ئیمەیڵی پەیوەندیدا بووی بە ئەم یادکردنە."
+
+#: app/views/reminders.py:314
+msgid "SMTP configuration is disabled."
+msgstr "ڕێکخستنی SMTP هەڵبژاردن یان ناچالاکە."
+
+#: app/views/reminders.py:353
+msgid "Test reminder sent successfully."
+msgstr "تاقیگرەوەی ئیمەیڵی نادیارە چۆنەڕووکەوی."
+
+#: app/views/reminders.py:356
+msgid "Test reminder failed: "
+msgstr "پەیام پاشەکەوت کرا."
+
+#: app/views/reminders.py:430
+msgid "Reminder schedule updated successfully."
+msgstr "پلان نوێکرا بەرکەوتوو."
+
+#: app/views/reminders.py:434
+msgid "Please correct the errors below."
+msgstr "تکایە هەڵەکان لە خوارەوە ڕاست بکە."
+
+#: app/views/reminders.py:481 app/views/reminders.py:482
+msgid "None"
+msgstr "Na"
+
+#: app/views/reminders.py:508
+msgid "You must select both an SMTP config and an email message, or neither."
+msgstr ""
+"پێویستە هەردوو نموونەی SMTP و پەیامەکی ئیمەیڵ دیاری بکرێن، یان هیچ کەساوە."
+
+#: app/views/reminders.py:528
+msgid "Email reminder settings updated."
+msgstr "مورد دەستەکرا ."
+
+#: app/views/smtp.py:83 app/views/user_smtp.py:80
+msgid "SMTP destination created successfully."
+msgstr "مەبەستی SMTP بەرکەوتوو دروستکرا."
+
+#: app/views/smtp.py:129 app/views/user_smtp.py:135
+msgid "SMTP destination updated."
+msgstr "مەبەستی SMTP نوێکرایەوە."
+
+#: app/views/smtp.py:160 app/views/user_smtp.py:166
+msgid "SMTP destination deleted."
+msgstr "مەبەستی SMTP سڕایەوە."
+
+#: app/views/smtp.py:191 app/views/user_smtp.py:199
+msgid "Test email sent successfully to your account email."
+msgstr "تاقیگرەوەی ئیمەیڵی نادیارە بەرکەوتوو بۆ ئیمەیڵەکەت."
+
+#: app/views/smtp.py:196 app/views/user_smtp.py:204
+msgid "Failed to send test email. Check SMTP settings."
+msgstr "شکستی لە ناردنی تاقیگرەوەی ئەلیکترۆنی. ڕێکخستنی SMTP بپشکەوە."
+
+#: app/views/smtp_settings_admin.py:76
+msgid "Test Email from Grylli"
+msgstr "تاقیگرەوەی ئیمەیڵ لە ڕووی Grylli"
+
+#: app/views/smtp_settings_admin.py:77
+msgid "This is a test email from the Grylli SMTP settings page."
+msgstr "ئەمە تاقیگرەوەی ئیمەیڵیە لە پەڕەی ڕێکخستنی SMTP یەتی گریلی."
+
+#: app/views/smtp_settings_admin.py:84
+msgid "Failed to send test email: "
+msgstr "شکستی لە ناردنی تاقیگرەوەی ئیمەیڵ:"
+
+#: app/views/users.py:99
+msgid "User updated successfully."
+msgstr "بەکارهێنەر بەسەرکەوتووی نوێکرایەوە."
+
+#: app/views/users.py:106 app/views/users.py:327
+msgid "An error occurred while updating the user."
+msgstr "كێشەیەک ڕوویدا کاتێ پەیامی بەکارهێنەر تازە دەردەکەیە."
+
+#: app/views/users.py:195
+msgid "User deleted."
+msgstr "بەکارهێنەر سڕایەوە."
+
+#: app/views/users.py:202
+msgid "An error occurred while deleting the user."
+msgstr "کێشەیەک ڕوویدا کاتێ بەکارهێنەر دەسڕدرێتەوە."
+
+#: app/views/users.py:237
+msgid "Password is required when creating a new user."
+msgstr "پەیاموشە پێویستە کاتێ بەکارهێنەری نوێ دروست دەکەیت."
+
+#: app/views/users.py:244
+msgid "Username already exists."
+msgstr "ناوی بەکارهێنەر پێشتر بوونی هەیە."
+
+#: app/views/users.py:251
+msgid "Email already exists."
+msgstr "ئیمەیڵ پێشتر بوونی هەیە."
+
+#: app/views/users.py:268
+#, python-format
+msgid "User '%(username)s' created successfully."
+msgstr "بەکارهێنەر '%(username)s' بە سەرکەوتوویی دروست کرا."
+
+#: app/views/users.py:278
+msgid "Failed to create user."
+msgstr "شکستی لە دروستکردنی بەکارهێنەر."
+
+#: app/views/users.py:305
+msgid "You cannot change your own enabled status."
+msgstr "ناتوانیت بارودۆخی تایبەتی خۆت بگۆڕیت."
+
+#: app/views/users.py:318
+#, python-format
+msgid "User '%(username)s' has been %(status)s."
+msgstr "بەکارهێنەر '%(username)s' بەرز%(status)s."
+
+#: app/views/users.py:356
+msgid "You cannot reset your own MFA."
+msgstr "⚪ = Tu nikarî hesabê xwe serqetîne."
+
+#: app/views/users.py:368
+#, python-format
+msgid "MFA disabled for user '%(username)s'."
+msgstr "MFA بۆ بەکارهێنەر '%(username)s' ناچالاککرا."
+
+#: app/views/users.py:374
+msgid "An error occurred while resetting MFA."
+msgstr "کێشەیەک ڕوویدا کاتێ بەکارهێنەر دەسڕدرێتەوە."
+
+#: app/views/webhook.py:54
+msgid "Webhook created successfully."
+msgstr "وێبهووک بە سەرکەوتوویی دروست کرا."
+
+#: app/views/webhook.py:113
+msgid "Webhook updated successfully."
+msgstr "وێبهووک بە سەرکەوتوویی نوێکرایەوە."
+
+#: app/views/webhook.py:142
+msgid "Webhook deleted."
+msgstr "وێبهووک سڕایەوە."
+
+#: app/views/webhook.py:175
+msgid "🧪 Webhook test sent successfully!"
+msgstr "🧪 تاقیکردنەوەی وێبهووک بە سەرکەوتوویی نێردرا!"
+
+#: app/views/webhook.py:177
+msgid "🧪 Webhook test failed: "
+msgstr "🧪 شکستی لە تاقیکردنەوەی وێبهووک:"
+
+#: app/views/webhook.py:180
+msgid "🧪 Error sending webhook test."
+msgstr "🧪 کێشە لە ناردنی تاقیکردنەوەی وێبهووک."
+
+#~ msgid ""
+#~ "Grylli is a secure message delivery platform designed to activate after "
+#~ "prolonged user inactivity."
+#~ msgstr ""
+#~ "Grylli pêşeka şandina peyama ewlekayî ye ku ji bo bikaranîna piştî bêkarbûna"
+#~ " dirêj a bikarhêner hatî çêkirin."
+
+#~ msgid ""
+#~ "It is a modern reimplementation of Gone Man’s Switch with a refined tech "
+#~ "stack, better maintainability, and an improved user experience."
+#~ msgstr ""
+#~ "ئه‌وه‌ جێبه‌جێکردنه‌وه‌یه‌کی نوێیه‌ بۆ Gone Man’s Switch له‌گه‌ڵ پۆکه‌ی "
+#~ "زانستی ته‌کنه‌لۆجیاکی پشتڕاستکراوه‌وه‌، چاودێریکردنی باشتر، و به‌رهه‌مهێنانی"
+#~ " به‌کارهێنراوی باشتر."
+
+#~ msgid "Body:"
+#~ msgstr "Naverok:"
+
+#~ msgid "Subject:"
+#~ msgstr "بابەت:"
+
+#~ msgid "Content:"
+#~ msgstr "ناوەڕۆک:"
+
+#~ msgid "Edit SMTP"
+#~ msgstr "دەستکاری SMTP"
+
+#~ msgid ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+#~ msgstr ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+
+#~ msgid "Admin Notes"
+#~ msgstr "Notên Admin"
+
+#~ msgid "Register"
+#~ msgstr "تۆمارکردن"
+
+#~ msgid "View"
+#~ msgstr "Dîtin"
+
+#~ msgid "Schedule"
+#~ msgstr "خشتە"
+
+#~ msgid "Message is enabled"
+#~ msgstr "پەیام چالاککرا"
+
+#~ msgid "Message is disabled"
+#~ msgstr "پەیام ناچالاککرا"
+
+#~ msgid "No SMTP configuration selected."
+#~ msgstr "ڕێکخستنی SMTP هەڵنەبژێردرا."
+
+#~ msgid "Enable the message to start monitoring."
+#~ msgstr "Peyama çalak bike da ku bingehkirina dest pê bike."
+
+#~ msgid "✅ SMTP settings saved."
+#~ msgstr "SMTP Settings"
+
+#~ msgid "If you don’t check in, Grylli delivers the message for you."
+#~ msgstr "ئەگەر چاوپێکەوتن نەکەی، Grylli پەیامەکە بۆ تۆ دەگوازێنێت."
+
+#~ msgid "Fill in already discovered missing translations:"
+#~ msgstr "پڕکردنەوەی وەرگێرانە بچیوەکان کە پێدەستیان ھەبوو:"
+
+#~ msgid "Add missing phrases in that JSON file."
+#~ msgstr "وشەچی نوێ لە پەڕگەکەی جیسۆن زیاد بکە."
+
+#~ msgid "From:"
+#~ msgstr "لە:"
+
+#~ msgid ""
+#~ "Attach the updated JSON file to a new GitHub issue when submitting your "
+#~ "changes."
+#~ msgstr "بەستەرەکانی جیسۆنە نوێیەکەت لە کێشە تازەی GitHub ڕاکێشەکە بکە."
+
+#~ msgid "admin"
+#~ msgstr "مەزن"
+
+#~ msgid "user"
+#~ msgstr "بەکارهێنەر"
+
+#~ msgid "Logging in"
+#~ msgstr "Têkevin Torê"
+
+#~ msgid "SMTP error: "
+#~ msgstr "Xeta SMTP:"
+
+#~ msgid "enabled"
+#~ msgstr "چالاک"
+
+#~ msgid "disabled"
+#~ msgstr "ناچالاک"

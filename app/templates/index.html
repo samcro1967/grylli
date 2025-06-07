@@ -1,0 +1,32 @@
+{# ---------------------------------------------------------------------
+   index.html
+   app/templates/index.html
+   Enhanced landing page for Grylli.
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    <div class="max-w-3xl mx-auto mt-20 bg-white dark:bg-zinc-800 shadow-md rounded-xl p-6 space-y-5">
+        <h1 class="text-2xl font-semibold text-black dark:text-white">{{ _("Welcome to Grylli") }}</h1>
+        <p class="text-zinc-500 dark:text-zinc-300">
+            <strong>{{ _("Pronounced") }}:</strong> /ˈɡrɪli/ — {{ _("like “grill-ee”") }}
+        </p>
+        <p class="text-zinc-600 dark:text-zinc-300">
+            {{ _("Grylli is a secure message scheduling and delivery system designed to ensure your important messages are delivered — even if you can’t be there to send them.") }}
+        </p>
+        <p class="text-zinc-600 dark:text-zinc-300">
+            {{ _("Whether you’re planning ahead, setting up emergency communication, or building peace of mind, Grylli helps automate your message delivery via multiple channels including email, webhooks, and Apprise notifications.") }}
+        </p>
+        <h2 class="text-lg font-semibold text-zinc-800 dark:text-zinc-100 mt-4">{{ _("Getting Started") }}:</h2>
+        <ol class="list-decimal list-inside text-zinc-600 dark:text-zinc-300 space-y-1">
+            <li>{{ _("Create a message, email, or reminder.") }}</li>
+            <li>{{ _("Set your check-in interval and grace period (for messages).") }}</li>
+            <li>{{ _("Assign one or more delivery destinations.") }}</li>
+            <li>{{ _("Optionally attach files for secure emails.") }}</li>
+            <li>{{ _("Schedule reminders to send at specific times or on a recurring basis.") }}</li>
+            <li>{{ _("Enable the message or reminder to activate delivery.") }}</li>
+            <li>
+                {{ _("Regularly check in to Grylli to prevent automated delivery; miss a check-in and Grylli sends your messages as scheduled.") }}
+            </li>
+        </ol>
+    </div>
+{% endblock %}

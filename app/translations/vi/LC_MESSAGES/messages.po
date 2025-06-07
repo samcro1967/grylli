@@ -1,0 +1,3254 @@
+# Vietnamese translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-06-07 15:49-0500\n"
+"PO-Revision-Date: 2025-05-25 16:45-0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: vi <LL@li.org>\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: app/init_db.py:55
+#, python-format
+msgid "Tables currently in DB: %s"
+msgstr "Các bảng hiện có trong DB:"
+
+#: app/init_db.py:58
+msgid "Database or system_config table missing. Running migrations now..."
+msgstr ""
+"Thiếu bảng database hoặc system_config. Đang chạy các migration bây giờ..."
+
+#: app/init_db.py:61
+msgid "Migrations applied successfully."
+msgstr "Migration đã áp dụng thành công."
+
+#: app/init_db.py:63
+msgid "Migration failed."
+msgstr "Migration thất bại."
+
+#: app/init_db.py:68
+msgid "System config seeded successfully."
+msgstr "Sistem config desplemado con éxito."
+
+#: app/init_db.py:70
+msgid "Error seeding system config."
+msgstr "Lỗi khi gieo dữ liệu cấu hình hệ thống:"
+
+#: app/forms/mfa_form.py:15 app/templates/apprise/create_apprise.html:30
+#: app/templates/apprise/edit_apprise.html:30
+#: app/templates/apprise/list_apprise.html:60
+#: app/templates/mfa/settings.html:24 app/templates/mfa/settings.html:40
+#: app/templates/user_smtp/create_smtp.html:99
+#: app/templates/user_smtp/edit_smtp.html:114
+#: app/templates/user_smtp/list_smtp.html:57
+#: app/templates/webhook/create_webhook.html:36
+#: app/templates/webhook/edit_webhook.html:36
+#: app/templates/webhook/list_webhooks.html:61
+msgid "Enabled"
+msgstr "Đã bật"
+
+#: app/forms/mfa_form.py:16
+msgid "Authenticator Code"
+msgstr "Mã xác thực"
+
+#: app/forms/mfa_form.py:17
+#: app/templates/admin/partials/user_instructions_and_modal.html:66
+#: app/templates/admin/partials/user_table.html:115
+#: app/templates/email/assign_smtp.html:44 app/templates/mfa/settings.html:47
+#: app/templates/user_smtp/edit_smtp.html:122
+msgid "Save"
+msgstr "Lưu"
+
+#: app/forms/mfa_form.py:27
+msgid "Authentication Code"
+msgstr "Cập Nhật Thông Báo"
+
+#: app/forms/mfa_form.py:29
+msgid "Please enter your authentication code."
+msgstr "Vui lòng nhập mã xác thực của bạn."
+
+#: app/forms/mfa_form.py:30
+msgid "Enter a valid 6-digit code or recovery code."
+msgstr "Nhập mã 6 chữ số hợp lệ hoặc mã khôi phục."
+
+#: app/forms/mfa_form.py:31
+msgid "Invalid code format."
+msgstr "Định dạng mã không hợp lệ."
+
+#: app/forms/mfa_form.py:35 app/templates/mfa/challenge.html:25
+msgid "Verify"
+msgstr "Phiên bản"
+
+#: app/services/mail.py:37 app/services/system_settings_email.py:40
+msgid "Missing required config setting: "
+msgstr "Thiếu cài đặt cấu hình bắt buộc:"
+
+#: app/services/mail.py:46 app/services/system_settings_email.py:50
+#, python-format
+msgid "Failed to decrypt %(key)s: %(error)s"
+msgstr "Không thể giải mã %(key)s: %(error)s"
+
+#: app/services/mail.py:54
+#, python-format
+msgid "get_setting('%(key)s') -> '%(value)s' (sensitive: %(sensitive)s)"
+msgstr ""
+"get_setting('%(key)s') -> '%(value)s' (raw: '%(raw)s', sensitive: "
+"%(sensitive)s)"
+
+#: app/services/mail.py:75
+#, python-format
+msgid "Preparing email to %(to)s"
+msgstr "Chuẩn bị email tới %(to)s"
+
+#: app/services/mail.py:90
+#, python-format
+msgid ""
+"SMTP configuration: host=%(host)s (type=%(host_type)s), port=%(port)s "
+"(type=%(port_type)s)"
+msgstr ""
+"SMTP host = '%(host)s' (type: %(host_type)s), port = %(port)s (type: "
+"%(port_type)s)"
+
+#: app/services/mail.py:99
+#, python-format
+msgid "SMTP username: %(user)s"
+msgstr "Sử dụng người dùng: %(user)s"
+
+#: app/services/mail.py:100
+#, python-format
+msgid "TLS enabled: %(tls)s"
+msgstr "Kích hoạt TLS: %(tls)s"
+
+#: app/services/mail.py:105
+msgid "Starting TLS connection..."
+msgstr "Bắt đầu TLS"
+
+#: app/services/mail.py:107
+msgid "Logging into SMTP server..."
+msgstr "Đăng nhập vào máy chủ SMTP..."
+
+#: app/services/mail.py:109
+msgid "Sending email message..."
+msgstr "Lịch Trình Tin Nhắn"
+
+#: app/services/mail.py:111
+#, python-format
+msgid "Email sent successfully to %(to)s"
+msgstr "Email thử nghiệm đã gửi thành công."
+
+#: app/services/mail.py:114
+#, python-format
+msgid "SMTP error while sending to %(to)s: %(error)s"
+msgstr "Lỗi SMTP trong khi gửi đến %(to)s: %(error)s"
+
+#: app/templates/about.html:10
+msgid "About Grylli"
+msgstr "Về Grylli"
+
+#: app/templates/about.html:13
+msgid ""
+"Grylli is a secure, self-hosted message delivery platform that automatically"
+" sends pre-configured messages if a user fails to check in within a defined "
+"time period."
+msgstr ""
+"Grylli là một nền tảng gửi tin nhắn tự lưu trữ an toàn tự động gửi các tin "
+"nhắn đã cấu hình trước nếu người dùng không đăng nhập trong khoảng thời gian"
+" xác định."
+
+#: app/templates/about.html:14
+msgid ""
+"It supports multiple users, customizable schedules, and recurring reminders."
+msgstr "Nó hỗ trợ nhiều người dùng và lịch trình tùy chỉnh."
+
+#: app/templates/about.html:15
+msgid ""
+"Messages and reminders can be delivered via email, webhooks, or over 100 "
+"third-party services through Apprise."
+msgstr ""
+"Tin nhắn có thể được gửi qua email, webhooks, hoặc hơn 80 dịch vụ bên thứ ba"
+" thông qua Apprise."
+
+#: app/templates/about.html:16
+msgid ""
+"Users can configure their own SMTP servers to ensure emails and reminders "
+"appear to come directly from them — not from the system administrator."
+msgstr ""
+"Người dùng có thể cấu hình máy chủ SMTP của riêng mình để đảm bảo tin nhắn "
+"xuất hiện từ họ — không phải từ quản trị viên hệ thống."
+
+#: app/templates/about.html:17
+msgid ""
+"Sensitive data is encrypted at rest, and all operations are secured with "
+"strong authentication and audit-friendly logging."
+msgstr ""
+"Dữ liệu nhạy cảm được mã hóa khi lưu trữ và tất cả các hoạt động tin nhắn "
+"đều được bảo vệ bằng xác thực mạnh và ghi nhật ký thân thiện với kiểm toán."
+
+#: app/templates/about.html:18
+msgid ""
+"Built with a modern, reactive technology stack, Grylli is optimized for "
+"responsiveness and works seamlessly across desktop and mobile devices."
+msgstr ""
+"Được xây dựng bằng một ngăn xếp công nghệ hiện đại, phản ứng, Grylli được "
+"tối ưu hóa cho sự nhạy bén và hoạt động liền mạch trên các thiết bị để bàn "
+"và di động."
+
+#: app/templates/about.html:23
+msgid "Version:"
+msgstr "Phiên bản:"
+
+#: app/templates/about.html:26
+msgid "Repository:"
+msgstr "Kho lưu trữ:"
+
+#: app/templates/about.html:30
+msgid "GitHub - samcro1967/grylli"
+msgstr "GitHub - samcro1967/grylli"
+
+#: app/templates/help.html:2 app/templates/help.html:5
+#: app/templates/partials/header.html:85
+msgid "Help"
+msgstr "Trợ giúp"
+
+#: app/templates/help.html:7
+msgid ""
+"Grylli includes built-in instructions throughout the app to help you "
+"configure and manage your setup."
+msgstr ""
+"Grylli bao gồm hướng dẫn tích hợp trong ứng dụng để giúp bạn cấu hình và "
+"quản lý cài đặt của mình."
+
+#: app/templates/help.html:8
+msgid ""
+"This page provides an overview of key features and direct links to where "
+"they can be managed."
+msgstr ""
+"Trang này cung cấp tổng quan về các tính năng chính và liên kết trực tiếp "
+"đến nơi chúng có thể được quản lý."
+
+#: app/templates/help.html:12 app/templates/messages/list_messages.html:9
+#: app/templates/partials/shared_nav.html:17
+msgid "Notifications"
+msgstr "Thông báo"
+
+#: app/templates/help.html:14
+msgid "Create and assign messages"
+msgstr "Tạo một tin nhắn hoặc email."
+
+#: app/templates/admin/index.html:32 app/templates/help.html:17
+#: app/templates/partials/admin_nav.html:56
+msgid "SMTP Settings"
+msgstr "Cài đặt SMTP"
+
+#: app/templates/help.html:19
+msgid "Use your own email server"
+msgstr "Sử dụng máy chủ email của riêng bạn"
+
+#: app/templates/help.html:22
+msgid "Apprise Integration"
+msgstr "Điểm Đích Apprise"
+
+#: app/templates/help.html:24
+msgid "Send notifications to 80+ supported services"
+msgstr "Gửi thông báo đến hơn 80 dịch vụ được hỗ trợ"
+
+#: app/templates/help.html:27
+#: app/templates/messages/assign_destinations.html:41
+#: app/templates/messages/view_message.html:58
+#: app/templates/partials/shared_nav.html:44
+#: app/templates/reminders/assign_destinations.html:39
+#: app/templates/reminders/view_reminder.html:69
+msgid "Webhooks"
+msgstr "Webhooks"
+
+#: app/templates/help.html:29
+msgid "Trigger actions or external workflows"
+msgstr "Kích hoạt hành động hoặc quy trình công việc bên ngoài"
+
+#: app/templates/email/list_emails.html:9 app/templates/help.html:32
+#: app/templates/partials/shared_nav.html:61
+msgid "Emails"
+msgstr "Email"
+
+#: app/templates/help.html:34
+msgid "View and manage secure email messages"
+msgstr "Tổng quan về tin nhắn email bảo mật"
+
+#: app/templates/help.html:38
+msgid "Security"
+msgstr "🔐 Bảo mật"
+
+#: app/templates/help.html:39
+msgid "Grylli encrypts sensitive data and logs all key actions for auditing."
+msgstr ""
+"Grylli mã hóa dữ liệu nhạy cảm và ghi lại tất cả các hành động chính để kiểm"
+" toán."
+
+#: app/templates/index.html:9 app/views/locale.py:95
+msgid "Welcome to Grylli"
+msgstr "Chào mừng đến với Grylli"
+
+#: app/templates/index.html:11
+msgid "Pronounced"
+msgstr "Phát âm"
+
+#: app/templates/index.html:11
+msgid "like “grill-ee”"
+msgstr "như “grill-ee”"
+
+#: app/templates/index.html:14
+msgid ""
+"Grylli is a secure message scheduling and delivery system designed to ensure"
+" your important messages are delivered — even if you can’t be there to send "
+"them."
+msgstr ""
+"Grylli là một hệ thống lập lịch và gửi tin nhắn bảo mật được thiết kế để đảm"
+" bảo tin nhắn quan trọng của bạn được gửi — ngay cả khi bạn không thể có mặt"
+" để gửi chúng."
+
+#: app/templates/index.html:17
+msgid ""
+"Whether you’re planning ahead, setting up emergency communication, or "
+"building peace of mind, Grylli helps automate your message delivery via "
+"multiple channels including email, webhooks, and Apprise notifications."
+msgstr ""
+"Cho dù bạn đang lên kế hoạch trước, thiết lập liên lạc khẩn cấp, hay tạo sự "
+"an tâm, Grylli giúp tự động hóa việc gửi tin nhắn của bạn qua email, "
+"webhook, hoặc thông báo Apprise nếu bạn không nhận được tín hiệu."
+
+#: app/templates/index.html:19
+msgid "Getting Started"
+msgstr "Bắt đầu"
+
+#: app/templates/index.html:21
+msgid "Create a message, email, or reminder."
+msgstr "Tạo một tin nhắn hoặc email."
+
+#: app/templates/index.html:22
+msgid "Set your check-in interval and grace period (for messages)."
+msgstr "Thiết lập khoảng thời gian kiểm tra và thời gian ân hạn của bạn."
+
+#: app/templates/index.html:23
+msgid "Assign one or more delivery destinations."
+msgstr "Chỉ định một hoặc nhiều điểm đến gửi tin nhắn."
+
+#: app/templates/index.html:24
+msgid "Optionally attach files for secure emails."
+msgstr "Tùy chọn đính kèm tệp cho email bảo mật."
+
+#: app/templates/index.html:25
+msgid "Schedule reminders to send at specific times or on a recurring basis."
+msgstr "Lên lịch nhắc nhở để gửi vào những thời điểm cụ thể hoặc định kỳ."
+
+#: app/templates/index.html:26
+msgid "Enable the message or reminder to activate delivery."
+msgstr "Kích hoạt tin nhắn hoặc nhắc nhở để hoạt động giao hàng."
+
+#: app/templates/index.html:28
+msgid ""
+"Regularly check in to Grylli to prevent automated delivery; miss a check-in "
+"and Grylli sends your messages as scheduled."
+msgstr ""
+"Thường xuyên kiểm tra Grylli để ngăn chặn giao hàng tự động; nếu bỏ lỡ một "
+"lần kiểm tra, Grylli sẽ gửi tin nhắn của bạn theo lịch trình."
+
+#: app/templates/privacy.html:10
+msgid "Privacy Notice"
+msgstr "Thông báo quyền riêng tư"
+
+#: app/templates/privacy.html:13
+msgid ""
+"Grylli respects your privacy and is designed to minimize the collection and "
+"storage of personal data."
+msgstr ""
+"Grylli tôn trọng quyền riêng tư của bạn và được thiết kế để giảm thiểu việc "
+"thu thập và lưu trữ dữ liệu cá nhân."
+
+#: app/templates/privacy.html:14
+msgid ""
+"All data is encrypted where appropriate and remains fully under your control"
+" if you self-host this platform."
+msgstr ""
+"Tất cả dữ liệu được mã hóa khi thích hợp và hoàn toàn nằm dưới sự kiểm soát "
+"của bạn nếu bạn tự lưu trữ nền tảng này."
+
+#: app/templates/privacy.html:17
+msgid "What Data We Collect"
+msgstr "Dữ liệu Chúng tôi Thu thập"
+
+#: app/templates/privacy.html:19
+msgid "Email address and password hash (for authentication)"
+msgstr "Địa chỉ email và mã băm mật khẩu (cho xác thực)"
+
+#: app/templates/privacy.html:20
+msgid "Optional MFA secret and recovery codes (encrypted at rest)"
+msgstr "Mã bí mật MFA tùy chọn và mã khôi phục (được mã hóa khi lưu trữ)"
+
+#: app/templates/privacy.html:21
+msgid "Reminder and message content you configure"
+msgstr "Nội dung nhắc nhở và tin nhắn mà bạn cấu hình"
+
+#: app/templates/privacy.html:22
+msgid "User-specific settings, SMTP configuration (if provided)"
+msgstr "Thiết lập cụ thể cho người dùng, cấu hình SMTP (nếu có)"
+
+#: app/templates/privacy.html:25
+msgid "How Your Data Is Used"
+msgstr "Cách Dữ liệu của Bạn Được Sử Dụng"
+
+#: app/templates/privacy.html:27
+msgid ""
+"Your data is used solely for the purpose of delivering reminders and "
+"messages according to your preferences."
+msgstr ""
+"Dữ liệu của bạn chỉ được sử dụng cho mục đích gửi nhắc nhở và tin nhắn theo "
+"sở thích của bạn."
+
+#: app/templates/privacy.html:28
+msgid ""
+"Grylli does not share, sell, or transmit your personal data to any third "
+"parties."
+msgstr ""
+"Grylli không chia sẻ, bán hoặc truyền dữ liệu cá nhân của bạn cho bất kỳ bên"
+" thứ ba nào."
+
+#: app/templates/privacy.html:31
+msgid "Your Rights"
+msgstr "Quyền của Bạn"
+
+#: app/templates/privacy.html:33
+msgid ""
+"You can export all of your data at any time from the Account Settings page."
+msgstr ""
+"Bạn có thể xuất tất cả dữ liệu của mình bất kỳ lúc nào từ trang Cài đặt Tài "
+"khoản."
+
+#: app/templates/privacy.html:34
+msgid "You may permanently delete your account and all associated data."
+msgstr ""
+"Bạn không thể xóa tài khoản của mình vì bạn là quản trị viên cuối cùng."
+
+#: app/templates/privacy.html:35
+msgid ""
+"If you are using a self-hosted instance, contact the instance administrator "
+"for data inquiries."
+msgstr ""
+"Nếu bạn đang sử dụng một phiên bản tự lưu trữ, liên hệ với quản trị viên của"
+" phiên bản đó để yêu cầu dữ liệu."
+
+#: app/templates/privacy.html:38
+msgid "Self-Hosting Responsibility"
+msgstr "Trách Nhiệm Tự Lưu Trữ"
+
+#: app/templates/privacy.html:40
+msgid ""
+"If you are running Grylli on your own server, you are responsible for the "
+"storage, processing, and lawful handling of all user data on that instance."
+msgstr ""
+"Nếu bạn đang chạy Grylli trên máy chủ của riêng mình, bạn chịu trách nhiệm "
+"về việc lưu trữ, xử lý và quản lý hợp pháp tất cả dữ liệu người dùng trên "
+"phiên bản đó."
+
+#: app/templates/privacy.html:44
+msgid ""
+"This notice was last updated in June 2025 and may evolve to reflect changes "
+"in the software or regulatory landscape."
+msgstr ""
+"Thông báo này được cập nhật lần cuối vào tháng 6 năm 2025 và có thể thay đổi"
+" để phản ánh những thay đổi trong phần mềm hoặc bối cảnh pháp lý."
+
+#: app/templates/system_info.html:11
+msgid "📦 Environment Versions"
+msgstr "📦 Phiên bản môi trường"
+
+#: app/templates/system_info.html:17
+msgid "Category"
+msgstr "Danh mục"
+
+#: app/templates/system_info.html:18
+msgid "Tool"
+msgstr "Công cụ"
+
+#: app/templates/system_info.html:19
+msgid "Version"
+msgstr "Phiên bản"
+
+#: app/templates/system_info.html:25
+msgid "🧠 Python"
+msgstr "🧠 Python"
+
+#: app/templates/system_info.html:26
+msgid "Python"
+msgstr "Python"
+
+#: app/templates/system_info.html:30
+msgid "pip"
+msgstr "pip"
+
+#: app/templates/system_info.html:34
+msgid "SQLite"
+msgstr "SQLite"
+
+#: app/templates/system_info.html:40
+msgid "⚙️ Core"
+msgstr "⚙️ Lõi"
+
+#: app/templates/system_info.html:47
+msgid "🔐 Security"
+msgstr "🔐 Bảo mật"
+
+#: app/templates/system_info.html:48
+msgid "Email Validator"
+msgstr "Trình xác nhận Email"
+
+#: app/templates/system_info.html:52
+msgid "Cryptography"
+msgstr "Mật mã học"
+
+#: app/templates/system_info.html:57
+msgid "🕰️ Scheduling"
+msgstr "🕰️ Lập lịch"
+
+#: app/templates/system_info.html:58
+msgid "APScheduler"
+msgstr "APScheduler"
+
+#: app/templates/system_info.html:62
+msgid "Apprise (Python)"
+msgstr "Apprise (Python)"
+
+#: app/templates/system_info.html:66
+msgid "Apprise CLI"
+msgstr "Apprise CLI"
+
+#: app/templates/system_info.html:74
+msgid "🌐 Frontend"
+msgstr "🌐 Giao diện người dùng"
+
+#: app/templates/account/manage_account.html:11
+msgid "Manage Account"
+msgstr "Quản lý Tài khoản"
+
+#: app/templates/account/manage_account.html:12
+msgid "Update your profile information and password."
+msgstr "Cập nhật thông tin hồ sơ và mật khẩu của bạn."
+
+#: app/templates/account/manage_account.html:41
+#: app/templates/admin/create_user.html:40
+#: app/templates/auth/bootstrap.html:43
+#: app/templates/auth/reset_password.html:42 app/templates/auth/signup.html:42
+msgid "Please enter a valid email address."
+msgstr "Vui lòng nhập địa chỉ email hợp lệ."
+
+#: app/templates/account/manage_account.html:62
+#: app/templates/account/manage_account.html:96
+#: app/templates/account/manage_account.html:127
+#: app/templates/auth/reset_password.html:66
+#: app/templates/auth/reset_password.html:97 app/templates/auth/signup.html:65
+#: app/templates/auth/signup.html:95
+msgid "Show/hide password"
+msgstr "Giữ để hiển thị mật khẩu"
+
+#: app/templates/account/manage_account.html:89
+#: app/templates/admin/create_user.html:53
+#: app/templates/auth/bootstrap.html:51
+#: app/templates/auth/reset_password.html:58 app/templates/auth/signup.html:58
+msgid "Password must meet all complexity requirements."
+msgstr "Mật khẩu phải đáp ứng tất cả các yêu cầu phức tạp."
+
+#: app/templates/account/manage_account.html:141
+#: app/templates/admin/create_user.html:72
+#: app/templates/admin/edit_user.html:67 app/templates/auth/bootstrap.html:69
+#: app/templates/auth/reset_password.html:110
+#: app/templates/auth/signup.html:108
+msgid "Passwords do not match."
+msgstr "Mật khẩu không khớp."
+
+#: app/templates/account/manage_account.html:147
+msgid "Update Account"
+msgstr "Cập nhật Tài khoản"
+
+#: app/templates/account/manage_account.html:151
+#: app/templates/admin/create_user.html:82
+#: app/templates/admin/edit_user.html:97 app/templates/admin/help_form.html:28
+#: app/templates/admin/partials/user_instructions_and_modal.html:62
+#: app/templates/admin/partials/user_table.html:113
+#: app/templates/apprise/create_apprise.html:42
+#: app/templates/apprise/edit_apprise.html:42
+#: app/templates/auth/reset_password.html:121
+#: app/templates/email/assign_smtp.html:46
+#: app/templates/email/attach_files.html:47
+#: app/templates/email/edit_message.html:54
+#: app/templates/email/schedule_email.html:84
+#: app/templates/messages/assign_destinations.html:66
+#: app/templates/messages/create_message.html:55
+#: app/templates/messages/edit_message.html:48
+#: app/templates/messages/schedule_message.html:84
+#: app/templates/mfa/challenge.html:29 app/templates/mfa/settings.html:51
+#: app/templates/reminders/assign_destinations.html:64
+#: app/templates/reminders/assign_email_reminder.html:94
+#: app/templates/reminders/create_reminder.html:49
+#: app/templates/reminders/edit_reminder.html:42
+#: app/templates/reminders/schedule_reminder.html:51
+#: app/templates/user_smtp/create_smtp.html:111
+#: app/templates/user_smtp/edit_smtp.html:125
+#: app/templates/webhook/create_webhook.html:48
+#: app/templates/webhook/edit_webhook.html:48
+msgid "Cancel"
+msgstr "Hủy"
+
+#: app/templates/account/manage_account.html:159
+#: app/templates/admin/create_user.html:90
+#: app/templates/admin/edit_user.html:81 app/templates/auth/bootstrap.html:83
+#: app/templates/auth/reset_password.html:128
+#: app/templates/auth/signup.html:132
+msgid "Minimum 8 characters"
+msgstr "Tối thiểu 8 ký tự"
+
+#: app/templates/account/manage_account.html:160
+#: app/templates/admin/create_user.html:91
+#: app/templates/admin/edit_user.html:82 app/templates/auth/bootstrap.html:84
+#: app/templates/auth/reset_password.html:129
+#: app/templates/auth/signup.html:133
+msgid "At least one uppercase letter"
+msgstr "Ít nhất một chữ cái viết hoa"
+
+#: app/templates/account/manage_account.html:161
+#: app/templates/admin/create_user.html:92
+#: app/templates/admin/edit_user.html:83 app/templates/auth/bootstrap.html:85
+#: app/templates/auth/reset_password.html:130
+#: app/templates/auth/signup.html:134
+msgid "At least one lowercase letter"
+msgstr "Ít nhất một chữ cái viết thường"
+
+#: app/templates/account/manage_account.html:162
+#: app/templates/admin/create_user.html:93
+#: app/templates/admin/edit_user.html:84 app/templates/auth/bootstrap.html:86
+#: app/templates/auth/reset_password.html:131
+#: app/templates/auth/signup.html:135
+msgid "At least one number"
+msgstr "Ít nhất một chữ số"
+
+#: app/templates/account/manage_account.html:163
+#: app/templates/admin/create_user.html:94
+#: app/templates/auth/bootstrap.html:87
+#: app/templates/auth/reset_password.html:132
+#: app/templates/auth/signup.html:136
+msgid "At least one special character (e.g., !@#$%)"
+msgstr "Ít nhất một ký tự đặc biệt (ví dụ: !@#$%)"
+
+#: app/templates/account/manage_account.html:169
+msgid "Download My Data"
+msgstr "Tải Xuống Dữ Liệu Của Tôi"
+
+#: app/templates/account/manage_account.html:171
+msgid ""
+"Download all your account data as a JSON file. This includes your reminders,"
+" messages, email settings, and more. The file is for your records only and "
+"cannot be imported back. Protect it as it may contain sensitive information."
+msgstr ""
+"Tải về tất cả dữ liệu tài khoản của bạn dưới dạng tệp JSON. Tệp này bao gồm "
+"các nhắc nhở, tin nhắn, cài đặt email của bạn và hơn thế nữa. Tệp chỉ dành "
+"cho hồ sơ của bạn và không thể nhập lại. Bảo vệ nó vì nó có thể chứa thông "
+"tin nhạy cảm."
+
+#: app/templates/account/manage_account.html:175
+msgid "Download My Data (JSON)"
+msgstr "Tải Xuống Dữ Liệu Của Tôi (JSON)"
+
+#: app/templates/account/manage_account.html:179
+msgid "Danger Zone"
+msgstr "Vùng nguy hiểm"
+
+#: app/templates/account/manage_account.html:180
+msgid "Deleting your account is permanent and cannot be undone."
+msgstr "Xóa tài khoản của bạn là vĩnh viễn và không thể hoàn tác."
+
+#: app/templates/account/manage_account.html:185
+msgid "Delete My Account"
+msgstr "Cập nhật Tài khoản"
+
+#: app/templates/account/translations.html:8
+msgid "Translations - Grylli"
+msgstr "Bản dịch - Grylli"
+
+#: app/templates/account/translations.html:17
+#: app/templates/partials/header.html:102
+msgid "Translations"
+msgstr "Dịch thuật"
+
+#: app/templates/account/translations.html:20
+msgid "Grylli currently supports multiple languages and more will be added."
+msgstr "Grylli hiện hỗ trợ nhiều ngôn ngữ và sẽ được bổ sung thêm."
+
+#: app/templates/account/translations.html:21
+msgid "Many of the translations were performed with assistance from ChatGPT."
+msgstr "Nhiều bản dịch được thực hiện với sự hỗ trợ của ChatGPT."
+
+#: app/templates/account/translations.html:22
+msgid ""
+"If you find a translation issue or want to suggest improvements, your input "
+"is welcome!"
+msgstr ""
+"Nếu bạn tìm thấy vấn đề bản dịch hoặc muốn đề xuất cải tiến, ý kiến của bạn "
+"rất được hoan nghênh!"
+
+#: app/templates/account/translations.html:28
+msgid "How to request translation updates"
+msgstr "Cách yêu cầu cập nhật bản dịch"
+
+#: app/templates/account/translations.html:30
+msgid "To contribute to translations, please use the following guidelines:"
+msgstr "Để đóng góp vào các bản dịch, vui lòng sử dụng các hướng dẫn sau:"
+
+#: app/templates/account/translations.html:43
+msgid "Contribute missing or improved translations:"
+msgstr "Tìm thấy bản dịch bị thiếu?"
+
+#: app/templates/account/translations.html:63
+msgid "Open the relevant .po translation file for your language."
+msgstr "Mở tệp JSON dịch cho ngôn ngữ của bạn. Ví dụ:"
+
+#: app/templates/account/translations.html:67
+msgid ""
+"Find untranslated or incomplete entries and add or improve translations."
+msgstr ""
+"Tìm các mục chưa dịch hoặc chưa hoàn chỉnh và thêm hoặc cải thiện bản dịch."
+
+#: app/templates/account/translations.html:68
+msgid "You may use a PO file editor or a text editor."
+msgstr ""
+"Bạn có thể sử dụng trình chỉnh sửa tệp PO hoặc trình chỉnh sửa văn bản."
+
+#: app/templates/account/translations.html:69
+msgid "Copy the file path and the snippet of your changes."
+msgstr "Sao chép đường dẫn tệp và đoạn thay đổi của bạn."
+
+#: app/templates/account/translations.html:70
+msgid "Paste the snippet directly into a new GitHub issue for review."
+msgstr "Dán đoạn mã đã sao chép trực tiếp vào bình luận vấn đề trên GitHub."
+
+#: app/templates/account/translations.html:72
+msgid "Please do not upload the full .po file to avoid merge conflicts."
+msgstr "Không tải lên tệp .po đầy đủ để tránh xung đột khi hợp nhất."
+
+#: app/templates/account/translations.html:85
+msgid "Improving existing translations:"
+msgstr "Cải thiện các bản dịch hiện có:"
+
+#: app/templates/account/translations.html:104
+msgid "Open the relevant .po file for the translation you want to improve."
+msgstr "Mở tệp .po có liên quan cho bản dịch bạn muốn cải thiện."
+
+#: app/templates/account/translations.html:106
+msgid "For example:"
+msgstr "Ví dụ:"
+
+#: app/templates/account/translations.html:110
+msgid ""
+"Find the phrase(s) and its existing translation(s) you want to improve."
+msgstr "Tìm cụm từ và bản dịch hiện có mà bạn muốn cải thiện."
+
+#: app/templates/account/translations.html:111
+msgid "Update the phrase(s)."
+msgstr "Cập nhật cụm từ."
+
+#: app/templates/account/translations.html:112
+msgid "Copy the file name and path into the issue."
+msgstr "Sao chép tên tệp và đường dẫn vào vấn đề."
+
+#: app/templates/account/translations.html:114
+msgid "Paste the copied snippet directly into the GitHub issue comment."
+msgstr "Dán đoạn mã đã sao chép trực tiếp vào bình luận vấn đề trên GitHub."
+
+#: app/templates/account/translations.html:115
+msgid "Do not upload the full .po file to avoid merge conflicts."
+msgstr "Không tải lên tệp .po đầy đủ để tránh xung đột khi hợp nhất."
+
+#: app/templates/account/translations.html:118
+msgid "Example snippet:"
+msgstr "Ví dụ đoạn mã:"
+
+#: app/templates/account/translations.html:137
+msgid "Report missing translations not yet discovered:"
+msgstr "Báo cáo các bản dịch thiếu chưa được phát hiện:"
+
+#: app/templates/account/translations.html:154
+msgid ""
+"If you see text in the app that appears untranslated or missing, please "
+"report it to us."
+msgstr ""
+"Nếu bạn thấy văn bản trong ứng dụng xuất hiện chưa dịch hoặc thiếu, vui lòng"
+" báo cáo cho chúng tôi."
+
+#: app/templates/account/translations.html:155
+msgid "Provide the exact English phrase as it appears on the screen."
+msgstr "Cung cấp cụm từ tiếng Anh chính xác như nó xuất hiện trên màn hình."
+
+#: app/templates/account/translations.html:156
+msgid ""
+"Include the page or section where you saw the phrase (e.g., Apprise page, "
+"Account Page, etc.)."
+msgstr ""
+"Bao gồm trang hoặc phần nơi bạn thấy cụm từ (ví dụ: Trang Cài đặt, Phần Tài "
+"khoản)."
+
+#: app/templates/account/translations.html:157
+msgid ""
+"Submit this information via a new GitHub issue so we can add it to the "
+"translation files"
+msgstr ""
+"Gửi thông tin này qua một vấn đề GitHub mới để chúng tôi có thể thêm vào các"
+" tệp dịch và bọc cho Babel."
+
+#: app/templates/account/translations.html:166
+msgid "Found a missing translation?"
+msgstr "Tìm thấy bản dịch bị thiếu?"
+
+#: app/templates/account/translations.html:171
+msgid ""
+"This link will create a new GitHub issue pre-filled with a language code."
+msgstr ""
+"Liên kết này sẽ tạo một vấn đề GitHub mới được điền sẵn với mã ngôn ngữ."
+
+#: app/templates/account/translations.html:172
+msgid "Report it by opening a new GitHub issue"
+msgstr "Báo cáo bằng cách mở một vấn đề GitHub mới"
+
+#: app/templates/account/translations.html:175
+msgid "Please specify the language code and exact phrase when reporting."
+msgstr "Vui lòng chỉ định mã ngôn ngữ và cụm từ chính xác khi báo cáo."
+
+#: app/templates/account/translations.html:176
+msgid "Thank you for helping us make Grylli better!"
+msgstr "Cảm ơn bạn đã giúp chúng tôi làm cho Grylli tốt hơn!"
+
+#: app/templates/admin/create_user.html:14
+msgid "Create New User"
+msgstr "Tạo Người dùng Mới"
+
+#: app/templates/admin/create_user.html:15
+msgid "Fill out the form to add a new user."
+msgstr "Điền vào biểu mẫu để thêm người dùng mới."
+
+#: app/templates/admin/create_user.html:21
+#: app/templates/admin/edit_user.html:17 app/templates/auth/bootstrap.html:24
+msgid "Please fix the following errors:"
+msgstr "Vui lòng sửa các lỗi sau:"
+
+#: app/templates/admin/create_user.html:78
+#: app/templates/admin/edit_user.html:93
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "Create User"
+msgstr "Tạo Người dùng"
+
+#: app/templates/admin/edit_user.html:10
+#: app/templates/admin/partials/user_card.html:20
+#: app/templates/admin/partials/user_table.html:26
+msgid "Edit User"
+msgstr "Chỉnh sửa Người dùng"
+
+#: app/templates/admin/edit_user.html:55 app/templates/admin/edit_user.html:74
+msgid "Hold to show password"
+msgstr "Giữ để hiển thị mật khẩu"
+
+#: app/templates/admin/edit_user.html:85
+#, python-format
+msgid "At least one special character (e.g., !@#$%%)"
+msgstr "Ít nhất một ký tự đặc biệt (ví dụ: !@#$%%)"
+
+#: app/templates/admin/help.html:4 app/templates/auth/login.html:72
+msgid "Admin Help"
+msgstr "Bảng Điều Khiển Admin"
+
+#: app/templates/admin/help.html:7
+msgid "Reset Admin Password"
+msgstr "Đặt lại mật khẩu"
+
+#: app/templates/admin/help.html:9
+msgid ""
+"If you've forgotten the admin password, you can reset it using the following"
+" Docker command:"
+msgstr ""
+"Nếu bạn quên mật khẩu admin, bạn có thể đặt lại bằng cách sử dụng lệnh "
+"Docker sau:"
+
+#: app/templates/admin/help.html:15
+msgid ""
+"This script will prompt you to enter a new password for the admin user. You "
+"must run it from the host system where the Grylli container is running."
+msgstr ""
+"Kịch bản này sẽ yêu cầu bạn nhập mật khẩu mới cho người dùng admin. Bạn phải"
+" chạy nó từ hệ thống chủ nơi container Grylli đang chạy."
+
+#: app/templates/admin/help.html:18
+msgid "After resetting, you can log in with the new password immediately."
+msgstr "Sau khi đặt lại, bạn có thể đăng nhập với mật khẩu mới ngay lập tức."
+
+#: app/templates/admin/help.html:24
+msgid "Return to Login"
+msgstr "Quay lại Bảng điều khiển"
+
+#: app/templates/admin/help_form.html:6
+msgid "Admin Help Access"
+msgstr "Truy cập trợ giúp quản trị viên"
+
+#: app/templates/admin/help_form.html:9
+msgid "Enter your Ferret Key to unlock admin-only help documentation."
+msgstr ""
+"Nhập Khóa Ferret của bạn để mở khóa tài liệu trợ giúp chỉ dành cho quản trị "
+"viên."
+
+#: app/templates/admin/help_form.html:34
+msgid "How to Find Your FERRET_KEY"
+msgstr "Cách tìm khóa FERRET của bạn"
+
+#: app/templates/admin/help_form.html:36
+msgid "The FERRET_KEY is set as an environment variable when running Grylli."
+msgstr "FERRET_KEY được đặt làm biến môi trường khi chạy Grylli."
+
+#: app/templates/admin/help_form.html:39
+msgid "Option 1: Check docker-compose.yml"
+msgstr "Lựa chọn 1: Kiểm tra docker-compose.yml"
+
+#: app/templates/admin/help_form.html:46
+msgid "Option 2: Use docker inspect"
+msgstr "Lựa chọn 2: Sử dụng docker inspect"
+
+#: app/templates/admin/help_form.html:52
+msgid "This shows the FERRET_KEY as passed to the container at runtime."
+msgstr ""
+"Điều này hiển thị FERRET_KEY như được chuyển cho container tại thời điểm "
+"chạy."
+
+#: app/templates/admin/index.html:10
+msgid "Admin Panel"
+msgstr "Bảng Điều Khiển Admin"
+
+#: app/templates/admin/index.html:12
+msgid ""
+"Welcome to the Grylli Admin Panel. Use the links below to manage the system."
+msgstr ""
+"Chào mừng bạn đến với Bảng Điều Khiển Admin Grylli. Sử dụng các liên kết "
+"dưới đây để quản lý hệ thống."
+
+#: app/templates/admin/index.html:17
+msgid "Manage Users"
+msgstr "Quản lý Người dùng"
+
+#: app/templates/admin/index.html:18
+msgid "Create, edit, enable/disable, or delete user accounts."
+msgstr "Tạo, chỉnh sửa, bật/tắt hoặc xóa các tài khoản người dùng."
+
+#: app/templates/admin/index.html:22
+#: app/templates/admin/system_settings.html:10
+#: app/templates/partials/admin_nav.html:52
+msgid "System Settings"
+msgstr "Cài đặt hệ thống"
+
+#: app/templates/admin/index.html:23
+msgid "View  system-wide environment values."
+msgstr "Xem các giá trị môi trường toàn hệ thống."
+
+#: app/templates/admin/index.html:27 app/templates/partials/admin_nav.html:42
+msgid "Backups"
+msgstr "Sao lưu"
+
+#: app/templates/admin/index.html:28
+msgid "Create and delete database backups."
+msgstr "Yarimja Haldylon"
+
+#: app/templates/admin/index.html:33
+msgid "View and test global SMTP settings."
+msgstr "Gửi email thử nghiệm thất bại. Kiểm tra cài đặt SMTP."
+
+#: app/templates/admin/index.html:39
+msgid "View Admin Guide / README on GitHub"
+msgstr "Xem Hướng dẫn Quản trị / README trên GitHub"
+
+#: app/templates/admin/index.html:40
+msgid "Includes setup instructions, integrations, and troubleshooting."
+msgstr "Bao gồm hướng dẫn cài đặt, tích hợp và xử lý sự cố."
+
+#: app/templates/admin/index.html:44
+msgid "⚠️ Admin Tips"
+msgstr "⚠️ Mẹo của Admin"
+
+#: app/templates/admin/index.html:46
+msgid "Ensure the data folder (database) is backed up on your host"
+msgstr ""
+"Đảm bảo thư mục dữ liệu (cơ sở dữ liệu) được sao lưu trên máy chủ của bạn"
+
+#: app/templates/admin/index.html:48
+msgid ""
+"The uploads folder is not per user.  If required per user, you will ndd to "
+"create subdirectoried per user and setup permissions so users can only see "
+"their own folder."
+msgstr ""
+"Thư mục tải lên không dành riêng cho từng người dùng. Nếu cần riêng cho từng"
+" người dùng, bạn cần tạo thư mục con cho từng người dùng và thiết lập quyền "
+"sao cho người dùng chỉ có thể thấy thư mục của họ."
+
+#: app/templates/admin/index.html:51
+msgid ""
+"To restore a backup: stop the container, replace the data/grylli.db with one"
+" from the backups folder, and restart the container."
+msgstr ""
+"Để khôi phục bản sao lưu: dừng container, thay thế data/grylli.db bằng một "
+"cái từ thư mục sao lưu, và khởi động lại container."
+
+#: app/templates/admin/list_backups.html:11
+msgid "Database Backups"
+msgstr "Yarimja Haldylon"
+
+#: app/templates/admin/list_backups.html:13
+msgid "Create Backup"
+msgstr "Tạo bản sao lưu"
+
+#: app/templates/admin/list_backups.html:21
+msgid "Filename"
+msgstr "Tên tệp"
+
+#: app/templates/admin/list_backups.html:22
+#: app/templates/admin/partials/user_table.html:14
+#: app/templates/apprise/list_apprise.html:62
+#: app/templates/email/list_emails.html:60
+#: app/templates/messages/list_messages.html:60
+#: app/templates/reminders/list_reminders.html:60
+#: app/templates/user_smtp/list_smtp.html:59
+#: app/templates/webhook/list_webhooks.html:63
+msgid "Actions"
+msgstr "Hành động"
+
+#: app/templates/admin/list_backups.html:32
+msgid "Delete this backup?"
+msgstr "Xóa bản sao lưu này?"
+
+#: app/templates/admin/list_backups.html:32
+#: app/templates/apprise/list_apprise.html:95
+#: app/templates/apprise/list_apprise.html:99
+#: app/templates/apprise/list_apprise.html:150
+#: app/templates/apprise/list_apprise.html:154
+#: app/templates/email/list_emails.html:124
+#: app/templates/email/list_emails.html:128
+#: app/templates/email/list_emails.html:226
+#: app/templates/email/list_emails.html:230
+#: app/templates/messages/list_messages.html:112
+#: app/templates/messages/list_messages.html:116
+#: app/templates/messages/list_messages.html:198
+#: app/templates/messages/list_messages.html:202
+#: app/templates/reminders/list_reminders.html:107
+#: app/templates/reminders/list_reminders.html:113
+#: app/templates/reminders/list_reminders.html:192
+#: app/templates/reminders/list_reminders.html:198
+#: app/templates/user_smtp/list_smtp.html:101
+#: app/templates/user_smtp/list_smtp.html:169
+#: app/templates/webhook/list_webhooks.html:102
+#: app/templates/webhook/list_webhooks.html:161
+msgid "Delete"
+msgstr "Xóa"
+
+#: app/templates/admin/list_backups.html:41
+msgid "No backups found."
+msgstr "Không tìm thấy bản sao lưu."
+
+#: app/templates/admin/list_backups.html:44
+msgid ""
+"Backups contain your full app data. Store securely. Sensitive data is "
+"encrypted in the DB by default."
+msgstr ""
+"Sao lưu chứa đầy đủ dữ liệu ứng dụng của bạn. Lưu trữ an toàn. Dữ liệu nhạy "
+"cảm được mã hóa trong DB theo mặc định."
+
+#: app/templates/admin/smtp_config.html:28
+#: app/templates/admin/system_config.html:22
+msgid "System Configuration"
+msgstr "Cấu hình Hệ thống"
+
+#: app/templates/admin/smtp_config.html:33
+#: app/templates/admin/system_config.html:26
+#: app/templates/admin/system_settings.html:15
+msgid "Key"
+msgstr "Khóa"
+
+#: app/templates/admin/smtp_config.html:34
+#: app/templates/admin/system_config.html:27
+#: app/templates/admin/system_settings.html:16
+msgid "Value"
+msgstr "Giá trị"
+
+#: app/templates/admin/smtp_config.html:35
+#: app/templates/admin/system_config.html:28
+msgid "Sensitive"
+msgstr "Nhạy cảm"
+
+#: app/templates/admin/smtp_config.html:36
+#: app/templates/admin/system_config.html:29
+msgid "Editable"
+msgstr "Gafęvba"
+
+#: app/templates/admin/smtp_config.html:50
+#: app/templates/admin/smtp_config.html:51
+#: app/templates/admin/system_config.html:45
+#: app/templates/admin/system_config.html:46
+#: app/templates/email/view_config.html:60
+msgid "Yes"
+msgstr "Có"
+
+#: app/templates/admin/smtp_config.html:50
+#: app/templates/admin/smtp_config.html:51
+#: app/templates/admin/system_config.html:45
+#: app/templates/admin/system_config.html:46
+#: app/templates/email/view_config.html:60
+msgid "No"
+msgstr "Không"
+
+#: app/templates/admin/smtp_config.html:63
+#: app/templates/admin/system_config.html:55
+msgid "Send Test Email"
+msgstr "Gửi Email Thử Nghiệm"
+
+#: app/templates/admin/system_config.html:39
+msgid "decrypted"
+msgstr "Đã tạo"
+
+#: app/templates/admin/partials/user_card.html:12
+msgid "Email:"
+msgstr "Email:"
+
+#: app/templates/admin/partials/user_card.html:15
+msgid "Role:"
+msgstr "Vai trò:"
+
+#: app/templates/admin/partials/user_card.html:27
+#: app/templates/admin/partials/user_table.html:34
+msgid "Change Role"
+msgstr "Thay đổi vai trò"
+
+#: app/templates/admin/partials/user_card.html:29
+#: app/templates/admin/partials/user_table.html:36
+msgid "You cannot change your own role"
+msgstr "Bạn không thể thay đổi trạng thái kích hoạt của chính mình."
+
+#: app/templates/admin/partials/user_card.html:36
+#: app/templates/admin/partials/user_table.html:43
+msgid "Are you sure you want to reset MFA for this user?"
+msgstr "Bạn có chắc chắn muốn đặt lại MFA cho người dùng này không?"
+
+#: app/templates/admin/partials/user_card.html:39
+#: app/templates/admin/partials/user_table.html:46
+msgid "Reset MFA"
+msgstr "Đặt lại mật khẩu"
+
+#: app/templates/admin/partials/user_card.html:51
+#: app/templates/admin/partials/user_table.html:58
+msgid "Delete user"
+msgstr "Xóa người dùng"
+
+#: app/templates/admin/partials/user_card.html:55
+#: app/templates/admin/partials/user_table.html:61
+msgid "Delete User"
+msgstr "Xóa người dùng"
+
+#: app/templates/admin/partials/user_card.html:58
+#: app/templates/admin/partials/user_table.html:65
+msgid "You cannot disable yourself"
+msgstr "Bạn không thể vô hiệu hóa chính mình"
+
+#: app/templates/admin/partials/user_card.html:65
+#: app/templates/admin/partials/user_table.html:72
+msgid "Disable"
+msgstr "Vô hiệu hóa"
+
+#: app/templates/admin/partials/user_card.html:65
+#: app/templates/admin/partials/user_table.html:72
+msgid "Enable"
+msgstr "Kích hoạt"
+
+#: app/templates/admin/partials/user_header.html:6
+#: app/templates/partials/admin_nav.html:47
+msgid "Users"
+msgstr "Người dùng"
+
+#: app/templates/admin/partials/user_header.html:12
+#: app/templates/admin/partials/user_header.html:13
+#: app/templates/apprise/apprise_config.html:10
+#: app/templates/apprise/apprise_config.html:11
+#: app/templates/apprise/list_apprise.html:16
+#: app/templates/apprise/list_apprise.html:17
+#: app/templates/email/list_emails.html:15
+#: app/templates/email/list_emails.html:16
+#: app/templates/messages/list_messages.html:16
+#: app/templates/messages/list_messages.html:17
+#: app/templates/reminders/list_reminders.html:15
+#: app/templates/reminders/list_reminders.html:16
+#: app/templates/user_smtp/list_smtp.html:14
+#: app/templates/user_smtp/list_smtp.html:17
+#: app/templates/webhook/list_webhooks.html:16
+#: app/templates/webhook/list_webhooks.html:17
+#: app/templates/webhook/webhook_config.html:10
+#: app/templates/webhook/webhook_config.html:11
+msgid "Table View"
+msgstr "Chế độ xem bảng"
+
+#: app/templates/admin/partials/user_header.html:26
+#: app/templates/admin/partials/user_header.html:27
+#: app/templates/apprise/apprise_config.html:24
+#: app/templates/apprise/apprise_config.html:25
+#: app/templates/apprise/list_apprise.html:30
+#: app/templates/apprise/list_apprise.html:31
+#: app/templates/email/list_emails.html:29
+#: app/templates/email/list_emails.html:30
+#: app/templates/messages/list_messages.html:30
+#: app/templates/messages/list_messages.html:31
+#: app/templates/reminders/list_reminders.html:29
+#: app/templates/reminders/list_reminders.html:30
+#: app/templates/user_smtp/list_smtp.html:27
+#: app/templates/user_smtp/list_smtp.html:30
+#: app/templates/webhook/list_webhooks.html:30
+#: app/templates/webhook/list_webhooks.html:31
+#: app/templates/webhook/webhook_config.html:24
+#: app/templates/webhook/webhook_config.html:25
+msgid "Card View"
+msgstr "Chế độ xem thẻ"
+
+#: app/templates/admin/partials/user_header.html:45
+msgid "Add User"
+msgstr "Thêm người dùng"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:9
+#: app/templates/email/attach_files.html:54
+#: app/templates/email/list_emails.html:255
+#: app/templates/messages/list_messages.html:223
+#: app/templates/reminders/list_reminders.html:218
+#: app/templates/reminders/schedule_reminder.html:56
+msgid "Hide Instructions"
+msgstr "Ẩn hướng dẫn"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:9
+msgid "How to manage users"
+msgstr "Cách quản lý người dùng"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "Click"
+msgstr "Bấm"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+msgid "➕ Add User"
+msgstr "➕ Thêm người dùng"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+msgid "to open the new user form."
+msgstr "để mở biểu mẫu người dùng mới."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:18
+msgid "Enter a unique username, valid email address, and strong password."
+msgstr "Nhập tên người dùng duy nhất, địa chỉ email hợp lệ và mật khẩu mạnh."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "Select the appropriate"
+msgstr "Chọn"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "role"
+msgstr "vai trò"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "or"
+msgstr "Cổng"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "to save."
+msgstr "để lưu."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:25
+msgid "To edit a user, click ✏️ and update their info."
+msgstr "Để chỉnh sửa người dùng, nhấp vào ✏️ và cập nhật thông tin của họ."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:26
+msgid "To delete a user, click 🗑️ and confirm the deletion."
+msgstr "Để xóa một người dùng, nhấp vào 🗑️ và xác nhận xóa."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:28
+msgid "To disable or enable a user, click 🔴 or 🟢."
+msgstr "Để vô hiệu hóa hoặc kích hoạt người dùng, nhấp vào 🔴 hoặc 🟢."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:30
+msgid "🟢 = User is enabled and can log in."
+msgstr "🟢 = Người dùng đã được kích hoạt và có thể đăng nhập."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:31
+msgid "🔴 = User is disabled and cannot log in."
+msgstr "🔴 = Người dùng bị vô hiệu hóa và không thể đăng nhập."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:32
+msgid "⚪ = You cannot disable your own account."
+msgstr "⚪ = Bạn không thể vô hiệu hóa tài khoản của chính mình."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:43
+#: app/templates/admin/partials/user_table.html:91
+msgid "Assign Role for"
+msgstr "Gán Điểm Đến cho"
+
+#: app/templates/admin/partials/user_table.html:10
+msgid "ID"
+msgstr "ID"
+
+#: app/templates/admin/partials/user_table.html:11
+#: app/templates/user_smtp/list_smtp.html:55
+msgid "Username"
+msgstr "Tên người dùng"
+
+#: app/templates/admin/partials/user_table.html:12
+msgid "Email"
+msgstr "Email"
+
+#: app/templates/admin/partials/user_table.html:13
+msgid "Role"
+msgstr "Vai trò"
+
+#: app/templates/apprise/apprise_config.html:3
+#: app/templates/apprise/list_apprise.html:9
+#: app/templates/messages/assign_destinations.html:22
+#: app/templates/reminders/assign_destinations.html:20
+msgid "Apprise Destinations"
+msgstr "Điểm Đích Apprise"
+
+#: app/templates/apprise/apprise_config.html:43
+#: app/templates/webhook/list_webhooks.html:49
+#: app/templates/webhook/webhook_config.html:43
+msgid "Add Webhook"
+msgstr "Thêm Webhook"
+
+#: app/templates/apprise/apprise_config.html:43
+#: app/templates/apprise/list_apprise.html:49
+#: app/templates/webhook/list_webhooks.html:49
+#: app/templates/webhook/webhook_config.html:43
+msgid "Add Destination"
+msgstr "Thêm Điểm Đích"
+
+#: app/templates/apprise/create_apprise.html:10
+msgid "Create Apprise Destination"
+msgstr "Tạo Điểm Đích Apprise"
+
+#: app/templates/apprise/create_apprise.html:38
+#: app/templates/apprise/edit_apprise.html:38
+#: app/templates/user_smtp/create_smtp.html:107
+#: app/templates/webhook/create_webhook.html:44
+#: app/templates/webhook/edit_webhook.html:44
+msgid "Create Destination"
+msgstr "Tạo Điểm Đích"
+
+#: app/templates/apprise/create_apprise.html:47
+#: app/templates/apprise/edit_apprise.html:47
+msgid "Need help with Apprise URLs? See the"
+msgstr "Cần hỗ trợ với Apprise URLs? Xem"
+
+#: app/templates/apprise/create_apprise.html:51
+#: app/templates/apprise/edit_apprise.html:51
+msgid "Apprise Notification Services documentation"
+msgstr "tài liệu Dịch vụ Thông báo Apprise"
+
+#: app/templates/apprise/edit_apprise.html:10
+msgid "Edit Apprise Destination"
+msgstr "Chỉnh sửa Điểm Đích Apprise"
+
+#: app/templates/apprise/list_apprise.html:49
+msgid "Add Apprise"
+msgstr "Thêm Apprise"
+
+#: app/templates/apprise/list_apprise.html:58
+#: app/templates/email/edit_message.html:21
+#: app/templates/email/list_emails.html:56
+#: app/templates/email/view_config.html:14
+#: app/templates/messages/create_message.html:29
+#: app/templates/messages/edit_message.html:23
+#: app/templates/messages/list_messages.html:57
+#: app/templates/messages/view_message.html:14
+#: app/templates/reminders/create_reminder.html:23
+#: app/templates/reminders/edit_reminder.html:17
+#: app/templates/reminders/list_reminders.html:56
+#: app/templates/reminders/view_reminder.html:13
+#: app/templates/user_smtp/list_smtp.html:52
+#: app/templates/webhook/list_webhooks.html:58
+msgid "Label"
+msgstr "Nhãn"
+
+#: app/templates/apprise/list_apprise.html:59
+msgid "URL"
+msgstr "URL"
+
+#: app/templates/apprise/list_apprise.html:61
+#: app/templates/email/list_emails.html:59
+#: app/templates/messages/list_messages.html:59
+#: app/templates/messages/view_message.html:36
+#: app/templates/reminders/view_reminder.html:47
+#: app/templates/webhook/list_webhooks.html:62
+msgid "Created At"
+msgstr "Tạo Lúc"
+
+#: app/templates/apprise/list_apprise.html:77
+#: app/templates/apprise/list_apprise.html:132
+#: app/templates/user_smtp/list_smtp.html:79
+#: app/templates/user_smtp/list_smtp.html:147
+#: app/templates/webhook/list_webhooks.html:79
+#: app/templates/webhook/list_webhooks.html:138
+msgid "Edit"
+msgstr "Chỉnh sửa"
+
+#: app/templates/apprise/list_apprise.html:80
+#: app/templates/apprise/list_apprise.html:135
+#: app/templates/user_smtp/list_smtp.html:82
+#: app/templates/user_smtp/list_smtp.html:150
+msgid "Cannot edit while in use"
+msgstr "Không thể chỉnh sửa khi đang sử dụng"
+
+#: app/templates/apprise/list_apprise.html:88
+#: app/templates/apprise/list_apprise.html:143
+#: app/templates/webhook/list_webhooks.html:91
+#: app/templates/webhook/list_webhooks.html:150
+msgid "Test"
+msgstr "Thử nghiệm"
+
+#: app/templates/apprise/list_apprise.html:103
+#: app/templates/apprise/list_apprise.html:158
+#: app/templates/user_smtp/list_smtp.html:106
+#: app/templates/user_smtp/list_smtp.html:174
+msgid "Cannot delete while in use"
+msgstr "Không thể xóa khi đang sử dụng"
+
+#: app/templates/apprise/list_apprise.html:119
+msgid "URL:"
+msgstr "URL:"
+
+#: app/templates/apprise/list_apprise.html:122
+#: app/templates/user_smtp/list_smtp.html:137
+#: app/templates/webhook/list_webhooks.html:128
+msgid "Enabled:"
+msgstr "Đã bật:"
+
+#: app/templates/apprise/list_apprise.html:125
+#: app/templates/user_smtp/list_smtp.html:140
+#: app/templates/webhook/list_webhooks.html:131
+msgid "Created:"
+msgstr "Được tạo:"
+
+#: app/templates/auth/bootstrap.html:14
+msgid "Create Admin Account"
+msgstr "Tạo Tài khoản Admin"
+
+#: app/templates/auth/bootstrap.html:16
+msgid "Let’s get started by creating your first admin account."
+msgstr "Bắt đầu bằng cách tạo tài khoản admin đầu tiên của bạn."
+
+#: app/templates/auth/bootstrap.html:75
+msgid "Create Admin"
+msgstr "Tạo Admin"
+
+#: app/templates/auth/forgot_password.html:12
+msgid "Forgot Password"
+msgstr "Quên Mật khẩu"
+
+#: app/templates/auth/forgot_password.html:15
+msgid ""
+"Enter your username and email. We'll send you a link to reset your password."
+msgstr ""
+"Nhập tên người dùng và email của bạn. Chúng tôi sẽ gửi cho bạn một liên kết "
+"để đặt lại mật khẩu."
+
+#: app/templates/auth/forgot_username.html:12
+msgid "Forgot Username"
+msgstr "Quên Tên người dùng"
+
+#: app/templates/auth/forgot_username.html:15
+msgid "Enter your email address, and we'll send you your username."
+msgstr ""
+"Nhập địa chỉ email của bạn, và chúng tôi sẽ gửi cho bạn tên người dùng của "
+"bạn."
+
+#: app/templates/auth/forgot_username.html:40
+msgid "Send Username"
+msgstr "Gửi Tên người dùng"
+
+#: app/templates/auth/login.html:12 app/templates/auth/login.html:54
+msgid "Log In"
+msgstr "Đăng nhập"
+
+#: app/templates/auth/login.html:62
+msgid "Forgot Username?"
+msgstr "Quên Tên người dùng?"
+
+#: app/templates/auth/login.html:64
+msgid "Forgot Password?"
+msgstr "Quên Mật khẩu?"
+
+#: app/templates/auth/login.html:66 app/templates/auth/signup.html:12
+msgid "Sign Up"
+msgstr "Đăng ký"
+
+#: app/templates/auth/rate_limit.html:9
+msgid "Hold On"
+msgstr "Giữ Lại"
+
+#: app/templates/auth/rate_limit.html:11
+msgid "Too many failed login attempts. Please wait"
+msgstr "Quá nhiều lần đăng nhập thất bại. Vui lòng đợi"
+
+#: app/templates/auth/rate_limit.html:13
+msgid "seconds..."
+msgstr "giây..."
+
+#: app/templates/auth/rate_limit.html:15
+msgid "Redirecting to login..."
+msgstr "Quay lại Bảng điều khiển"
+
+#: app/templates/auth/reset_password.html:12
+#: app/templates/auth/reset_password.html:116
+msgid "Reset Password"
+msgstr "Đặt lại mật khẩu"
+
+#: app/templates/auth/reset_password.html:14
+msgid "Enter your username, email, and new password."
+msgstr "Nhập tên đăng nhập, email và mật khẩu mới của bạn."
+
+#: app/templates/auth/signup.html:14
+msgid "Fill out the form to create your account."
+msgstr "Điền vào mẫu để tạo tài khoản của bạn."
+
+#: app/templates/checkin/already_checked_in.html:10
+msgid "Already Checked In"
+msgstr "Lần Check-in Cuối"
+
+#: app/templates/checkin/already_checked_in.html:12
+msgid ""
+"You have already checked in for this item. No further action is needed at "
+"this time."
+msgstr ""
+"Bạn đã check-in cho mục này. Không cần thực hiện thêm hành động nào vào lúc "
+"này."
+
+#: app/templates/checkin/already_checked_in.html:16
+#: app/templates/checkin/disabled.html:16
+#: app/templates/checkin/executed_disabled.html:18
+msgid "Check-in for:"
+msgstr "Checked in cho:"
+
+#: app/templates/checkin/already_checked_in.html:21
+#: app/templates/checkin/disabled.html:21
+#: app/templates/checkin/executed_disabled.html:23
+#: app/templates/checkin/thank_you.html:19
+msgid "Return to Dashboard"
+msgstr "Quay lại Bảng điều khiển"
+
+#: app/templates/checkin/disabled.html:10
+msgid "Check-In Disabled"
+msgstr "Email đã bị tắt"
+
+#: app/templates/checkin/disabled.html:12
+msgid "This check-in is currently disabled and cannot be completed."
+msgstr "Check-in này hiện bị vô hiệu hóa và không thể hoàn thành."
+
+#: app/templates/checkin/executed_disabled.html:11
+msgid "Already Executed & Disabled"
+msgstr "Đã Thực Hiện & Đã Vô Hiệu Hóa"
+
+#: app/templates/checkin/executed_disabled.html:14
+msgid ""
+"This check-in has already been executed and is now disabled. No further "
+"action is required."
+msgstr ""
+"Check-in này đã được thực hiện và hiện nay đã bị vô hiệu hóa. Không cần thực"
+" hiện thêm hành động nào."
+
+#: app/templates/checkin/thank_you.html:10
+msgid "Check-In Successful"
+msgstr "Check-In thành công"
+
+#: app/templates/checkin/thank_you.html:11
+msgid "Thank you for checking in."
+msgstr "Cảm ơn bạn đã check-in."
+
+#: app/templates/checkin/thank_you.html:14
+msgid "Checked in for:"
+msgstr "Checked in cho:"
+
+#: app/templates/email/assign_smtp.html:11
+msgid "📧 Assign SMTP Config to:"
+msgstr "📧 Gán cấu hình SMTP cho:"
+
+#: app/templates/email/assign_smtp.html:25
+msgid "No SMTP (Unassign)"
+msgstr "Không có cấu hình SMTP được gán"
+
+#: app/templates/email/assign_smtp.html:26
+msgid "This email will not use any SMTP configuration."
+msgstr "Email này sẽ không sử dụng bất kỳ cấu hình SMTP nào."
+
+#: app/templates/email/attach_files.html:12
+msgid "Attach Files for:"
+msgstr "Đính kèm tệp cho:"
+
+#: app/templates/email/attach_files.html:21
+msgid "Available Files"
+msgstr "Tệp khả dụng"
+
+#: app/templates/email/attach_files.html:36
+msgid "No files found in the upload directory."
+msgstr "Không tìm thấy tệp trong thư mục tải lên."
+
+#: app/templates/email/attach_files.html:44
+msgid "Save Attachments"
+msgstr "Lưu đính kèm"
+
+#: app/templates/email/attach_files.html:54
+msgid "File Attach Notes"
+msgstr "Ghi chú đính kèm tệp"
+
+#: app/templates/email/attach_files.html:63
+msgid "Important:"
+msgstr "Cổng:"
+
+#: app/templates/email/attach_files.html:65
+msgid ""
+"Only files that are present in the 'uploads' folder (provided by your system"
+" administrator) will be shown here. If you do not see your file(s), please "
+"contact your Grylli administrator."
+msgstr ""
+"Chỉ các tệp có trong thư mục 'uploads' (do quản trị hệ thống cung cấp) mới "
+"được hiển thị ở đây. Nếu bạn không thấy tệp của mình, vui lòng liên hệ với "
+"quản trị viên Grylli của bạn."
+
+#: app/templates/email/attach_files.html:69
+msgid "Accepted file types:"
+msgstr "Chấp nhận các loại tệp:"
+
+#: app/templates/email/attach_files.html:71
+msgid "Documents:"
+msgstr "Tài liệu:"
+
+#: app/templates/email/attach_files.html:73
+msgid "Images:"
+msgstr "Hình ảnh:"
+
+#: app/templates/email/attach_files.html:75
+msgid "Audio:"
+msgstr "Âm thanh:"
+
+#: app/templates/email/attach_files.html:79
+msgid "Maximum file size:"
+msgstr "Kích thước tệp tối đa:"
+
+#: app/templates/email/attach_files.html:80
+msgid "10 MB per file"
+msgstr "10 MB mỗi tệp"
+
+#: app/templates/email/attach_files.html:83
+msgid "Total upload size:"
+msgstr "Tổng kích thước tải lên:"
+
+#: app/templates/email/attach_files.html:84
+msgid "20 MB (all files combined)"
+msgstr "20 MB (tổng cộng tất cả các tệp)"
+
+#: app/templates/email/edit_message.html:12
+#: app/templates/email/list_emails.html:75
+#: app/templates/email/list_emails.html:177
+msgid "Edit Email"
+msgstr "Chỉnh sửa Email"
+
+#: app/templates/email/edit_message.html:12
+msgid "Create Email"
+msgstr "Tạo Email"
+
+#: app/templates/email/edit_message.html:28
+msgid "To (Recipient Email)"
+msgstr "Đến (Email người nhận)"
+
+#: app/templates/email/edit_message.html:35
+#: app/templates/email/list_emails.html:57
+#: app/templates/email/view_config.html:18
+#: app/templates/messages/create_message.html:36
+#: app/templates/messages/edit_message.html:30
+#: app/templates/messages/list_messages.html:58
+#: app/templates/messages/view_message.html:18
+#: app/templates/reminders/create_reminder.html:30
+#: app/templates/reminders/edit_reminder.html:24
+#: app/templates/reminders/list_reminders.html:57
+#: app/templates/reminders/view_reminder.html:17
+msgid "Subject"
+msgstr "Chủ đề"
+
+#: app/templates/email/edit_message.html:42
+#: app/templates/email/view_config.html:28
+msgid "Body"
+msgstr "Nội dung"
+
+#: app/templates/email/edit_message.html:50
+msgid "Save Email"
+msgstr "Lưu Email"
+
+#: app/templates/email/list_emails.html:48
+msgid "Add Email"
+msgstr "Thêm Email"
+
+#: app/templates/email/list_emails.html:58
+#: app/templates/reminders/assign_email_reminder.html:77
+msgid "To"
+msgstr "Đến"
+
+#: app/templates/email/list_emails.html:78
+#: app/templates/email/list_emails.html:180
+msgid "Disable to edit email"
+msgstr "Gửi email thử nghiệm thất bại:"
+
+#: app/templates/email/list_emails.html:84
+#: app/templates/email/list_emails.html:186
+msgid "Attach Files"
+msgstr "Đính kèm tệp"
+
+#: app/templates/email/list_emails.html:87
+#: app/templates/email/list_emails.html:189
+msgid "Disable to attach files"
+msgstr "Đính kèm tệp"
+
+#: app/templates/email/list_emails.html:93
+#: app/templates/email/list_emails.html:195
+msgid "Attach SMTP Config"
+msgstr "Đính kèm cấu hình SMTP"
+
+#: app/templates/email/list_emails.html:96
+#: app/templates/email/list_emails.html:198
+msgid "Disable to assign SMTP"
+msgstr "Vô hiệu hóa để gán SMTP"
+
+#: app/templates/email/list_emails.html:102
+#: app/templates/email/list_emails.html:204
+msgid "Schedule Check-In"
+msgstr "Lên lịch Check-In"
+
+#: app/templates/email/list_emails.html:105
+#: app/templates/email/list_emails.html:207
+msgid "Disable to schedule check-in"
+msgstr "Lên lịch Check-In"
+
+#: app/templates/email/list_emails.html:110
+#: app/templates/email/list_emails.html:212
+#: app/templates/messages/list_messages.html:99
+#: app/templates/messages/list_messages.html:184
+#: app/templates/reminders/list_reminders.html:93
+#: app/templates/reminders/list_reminders.html:178
+msgid "View Details"
+msgstr "Xem chi tiết"
+
+#: app/templates/email/list_emails.html:118
+#: app/templates/email/list_emails.html:220
+msgid "Send this email to yourself to preview it."
+msgstr "Gửi email này cho chính bạn để xem trước."
+
+#: app/templates/email/list_emails.html:136
+#: app/templates/email/list_emails.html:238
+msgid "Toggle Email On/Off"
+msgstr "Chuyển Email Bật/Tắt"
+
+#: app/templates/email/list_emails.html:139
+#: app/templates/email/list_emails.html:241
+msgid "Email is enabled"
+msgstr "Email đã được bật"
+
+#: app/templates/email/list_emails.html:141
+#: app/templates/email/list_emails.html:243
+msgid "Email is disabled"
+msgstr "Email đã bị tắt"
+
+#: app/templates/email/list_emails.html:157
+#: app/templates/email/view_config.html:51
+#: app/templates/messages/list_messages.html:142
+#: app/templates/reminders/list_reminders.html:140
+msgid "Label:"
+msgstr "Nhãn:"
+
+#: app/templates/email/list_emails.html:161
+#: app/templates/messages/list_messages.html:146
+#: app/templates/reminders/list_reminders.html:144
+#: app/templates/reminders/view_reminder.html:98
+msgid "Subject:"
+msgstr "Chủ đề"
+
+#: app/templates/email/list_emails.html:165
+msgid "To:"
+msgstr "Đến:"
+
+#: app/templates/email/list_emails.html:169
+#: app/templates/messages/list_messages.html:150
+msgid "Created At:"
+msgstr "Tạo Lúc"
+
+#: app/templates/email/list_emails.html:255
+msgid "How to create and send an email"
+msgstr "Cách tạo và gửi email"
+
+#: app/templates/email/list_emails.html:262
+msgid ""
+"Click “Add Email” and fill out the subject, content, and recipient address."
+msgstr ""
+"Nhấp vào “Thêm Email” và điền tiêu đề, nội dung, và địa chỉ người nhận."
+
+#: app/templates/email/list_emails.html:263
+msgid "Attach any optional files (if needed)."
+msgstr "Đính kèm bất kỳ tệp tùy chọn nào (nếu cần)."
+
+#: app/templates/email/list_emails.html:264
+msgid ""
+"Click 🧩 to assign a single SMTP configuration that will be used to send the "
+"email."
+msgstr ""
+"Nhấp vào 🧩 để gán một cấu hình SMTP duy nhất sẽ được sử dụng để gửi email."
+
+#: app/templates/email/list_emails.html:265
+msgid "Click ⏱️ to set a check-in interval and grace period for the email."
+msgstr ""
+"Nhấp vào ⏱️ để đặt khoảng thời gian kiểm tra và thời gian gia hạn cho email."
+
+#: app/templates/email/list_emails.html:266
+msgid "Enable the email using the 🔴/🟢 toggle button."
+msgstr "Kích hoạt email bằng cách sử dụng nút gạt 🔴/🟢."
+
+#: app/templates/email/list_emails.html:267
+msgid ""
+"Click 🧪 to test the email by sending it to yourself (not the recipient)."
+msgstr ""
+"Nhấp vào 🧪 để kiểm tra email bằng cách gửi cho chính bạn (không phải người "
+"nhận)."
+
+#: app/templates/email/list_emails.html:268
+msgid ""
+"If you don’t check in before the grace period ends, the email will be "
+"automatically sent."
+msgstr ""
+"Nếu bạn không kiểm tra trước khi thời gian gia hạn kết thúc, email sẽ được "
+"gửi tự động."
+
+#: app/templates/email/list_emails.html:269
+msgid "You can preview the email configuration using 🔍."
+msgstr "Bạn có thể xem trước cấu hình email bằng 🔍."
+
+#: app/templates/email/list_emails.html:270
+msgid "Once a secure email is sent, it will be automatically disabled."
+msgstr "Khi một email bảo mật được gửi đi, nó sẽ tự động bị vô hiệu hóa."
+
+#: app/templates/email/schedule_email.html:9
+msgid "Schedule Email"
+msgstr "Lên lịch Email"
+
+#: app/templates/email/schedule_email.html:18
+#: app/templates/messages/schedule_message.html:18
+msgid "Years"
+msgstr "Năm"
+
+#: app/templates/email/schedule_email.html:19
+#: app/templates/messages/schedule_message.html:19
+msgid "Months"
+msgstr "Tháng"
+
+#: app/templates/email/schedule_email.html:20
+#: app/templates/messages/schedule_message.html:20
+msgid "Weeks"
+msgstr "Tuần"
+
+#: app/templates/email/schedule_email.html:21
+#: app/templates/messages/schedule_message.html:21
+msgid "Days"
+msgstr "Ngày"
+
+#: app/templates/email/schedule_email.html:22
+#: app/templates/messages/schedule_message.html:22
+msgid "Hours"
+msgstr "Giờ"
+
+#: app/templates/email/schedule_email.html:23
+#: app/templates/messages/schedule_message.html:23
+msgid "Minutes"
+msgstr "Phút"
+
+#: app/templates/email/schedule_email.html:28
+#: app/templates/messages/schedule_message.html:28
+msgid "Check-in"
+msgstr "Kiểm tra"
+
+#: app/templates/email/schedule_email.html:51
+#: app/templates/messages/schedule_message.html:51
+#: app/templates/messages/view_message.html:26
+msgid "Grace Period"
+msgstr "Thời gian gia hạn"
+
+#: app/templates/email/schedule_email.html:80
+#: app/templates/messages/schedule_message.html:80
+#: app/templates/reminders/schedule_reminder.html:47
+msgid "Save Schedule"
+msgstr "Lưu Lịch trình"
+
+#: app/templates/email/view_config.html:9
+msgid "Email Configuration"
+msgstr "Cấu hình Email"
+
+#: app/templates/email/view_config.html:22
+msgid "Recipient"
+msgstr "Người nhận"
+
+#: app/templates/email/view_config.html:33
+msgid "Attached Files"
+msgstr "Tệp đính kèm"
+
+#: app/templates/email/view_config.html:39
+msgid "No files attached"
+msgstr "Không có tệp đính kèm"
+
+#: app/templates/email/view_config.html:46
+#: app/templates/reminders/assign_email_reminder.html:20
+msgid "SMTP Configuration"
+msgstr "Cấu hình SMTP"
+
+#: app/templates/email/view_config.html:54
+#: app/templates/user_smtp/list_smtp.html:122
+msgid "Host:"
+msgstr "Máy chủ:"
+
+#: app/templates/email/view_config.html:57
+#: app/templates/user_smtp/list_smtp.html:128
+msgid "Username:"
+msgstr "Tên người dùng:"
+
+#: app/templates/email/view_config.html:60
+#: app/templates/user_smtp/list_smtp.html:134
+msgid "TLS:"
+msgstr "TLS:"
+
+#: app/templates/email/view_config.html:64
+msgid "No SMTP configuration assigned"
+msgstr "Không có cấu hình SMTP được gán"
+
+#: app/templates/email/view_config.html:69
+msgid "Schedule Information"
+msgstr "Thông tin Lịch trình"
+
+#: app/templates/email/view_config.html:72
+msgid "Check-in Interval:"
+msgstr "Khoảng thời gian kiểm tra:"
+
+#: app/templates/email/view_config.html:72
+#: app/templates/email/view_config.html:75
+msgid "minutes"
+msgstr "phút"
+
+#: app/templates/email/view_config.html:75
+msgid "Grace Period:"
+msgstr "Thời gian gia hạn:"
+
+#: app/templates/email/view_config.html:79
+msgid "Last Check-in:"
+msgstr "Lần kiểm tra cuối:"
+
+#: app/templates/email/view_config.html:82
+msgid "No check-in has occurred yet"
+msgstr "Chưa có lần kiểm tra nào"
+
+#: app/templates/email/view_config.html:92
+msgid "Back to Emails"
+msgstr "Trở lại Emails"
+
+#: app/templates/errors/500.html:4
+msgid "Something went wrong"
+msgstr "Có gì đó sai"
+
+#: app/templates/errors/500.html:6
+msgid ""
+"An unexpected error occurred. Please try again later or contact support."
+msgstr ""
+"Đã xảy ra lỗi không mong muốn. Vui lòng thử lại sau hoặc liên hệ hỗ trợ."
+
+#: app/templates/locale/redirect_after_lang_set.html:15
+msgid "Switching Language..."
+msgstr "Chuyển ngôn ngữ..."
+
+#: app/templates/locale/redirect_after_lang_set.html:18
+msgid "Applying new language..."
+msgstr "Áp dụng ngôn ngữ mới..."
+
+#: app/templates/messages/assign_destinations.html:13
+#: app/templates/reminders/assign_destinations.html:12
+msgid "Assign Destinations for"
+msgstr "Gán Điểm Đến cho"
+
+#: app/templates/messages/assign_destinations.html:62
+#: app/templates/reminders/assign_destinations.html:60
+msgid "Save Destinations"
+msgstr "Lưu Điểm Đến"
+
+#: app/templates/messages/create_message.html:17
+msgid "Edit Notificaton"
+msgstr "Chỉnh Sửa Thông Báo"
+
+#: app/templates/messages/create_message.html:19
+msgid "Create Notification"
+msgstr "Tạo Thông Báo"
+
+#: app/templates/messages/create_message.html:43
+#: app/templates/messages/edit_message.html:37
+#: app/templates/messages/view_message.html:42
+#: app/templates/reminders/create_reminder.html:37
+#: app/templates/reminders/edit_reminder.html:31
+#: app/templates/reminders/view_reminder.html:53
+msgid "Content"
+msgstr "Nội Dung"
+
+#: app/templates/messages/create_message.html:51
+msgid "Save Notification"
+msgstr "Lưu Thông Báo"
+
+#: app/templates/messages/edit_message.html:15
+#: app/templates/messages/list_messages.html:74
+#: app/templates/messages/list_messages.html:158
+msgid "Edit Notification"
+msgstr "Chỉnh Sửa Thông Báo"
+
+#: app/templates/messages/edit_message.html:45
+msgid "Update Notification"
+msgstr "Cập Nhật Thông Báo"
+
+#: app/templates/messages/list_messages.html:49
+msgid "Add Notification"
+msgstr "Thêm Thông Báo"
+
+#: app/templates/messages/list_messages.html:77
+#: app/templates/messages/list_messages.html:161
+msgid "Disable to edit notification"
+msgstr "Chỉnh Sửa Thông Báo"
+
+#: app/templates/messages/list_messages.html:83
+#: app/templates/messages/list_messages.html:167
+#: app/templates/reminders/list_reminders.html:78
+#: app/templates/reminders/list_reminders.html:163
+msgid "Assign Destinations"
+msgstr "Gán Điểm Đến"
+
+#: app/templates/messages/list_messages.html:86
+#: app/templates/messages/list_messages.html:170
+msgid "Disable to assign destinations"
+msgstr "Gán Điểm Đến"
+
+#: app/templates/messages/list_messages.html:92
+#: app/templates/messages/list_messages.html:176
+#: app/templates/reminders/list_reminders.html:88
+#: app/templates/reminders/list_reminders.html:173
+msgid "Set Schedule"
+msgstr "Đặt Lịch Trình"
+
+#: app/templates/messages/list_messages.html:95
+#: app/templates/messages/list_messages.html:179
+msgid "Disable to set schedule"
+msgstr "Đặt Lịch Trình"
+
+#: app/templates/messages/list_messages.html:107
+#: app/templates/messages/list_messages.html:192
+msgid "Send Test Notification"
+msgstr "Chỉnh Sửa Thông Báo"
+
+#: app/templates/messages/list_messages.html:122
+#: app/templates/messages/list_messages.html:209
+msgid "Toggle Message On/Off"
+msgstr "Chuyển Đổi Tin Nhắn Bật/Tắt"
+
+#: app/templates/messages/list_messages.html:124
+#: app/templates/messages/list_messages.html:211
+msgid "Notification is enabled"
+msgstr "Thông báo đang được bật"
+
+#: app/templates/messages/list_messages.html:126
+#: app/templates/messages/list_messages.html:213
+msgid "Notification is disabled"
+msgstr "Thông báo đang bị vô hiệu hóa"
+
+#: app/templates/messages/list_messages.html:223
+msgid "How to create and send a notification"
+msgstr "Cách tạo và gửi một thông báo"
+
+#: app/templates/messages/list_messages.html:233
+msgid "Click “Add notification” and fill out the subject and content fields."
+msgstr "Nhấn vào “Thêm thông báo” và điền vào các trường chủ đề và nội dung."
+
+#: app/templates/messages/list_messages.html:234
+msgid "Save the notification to return to the overview."
+msgstr "Lưu thông báo để quay lại tổng quan."
+
+#: app/templates/messages/list_messages.html:235
+msgid "You need to create at least one apprise or webhook destination."
+msgstr "Bạn cần tạo ít nhất một đích apprise hoặc webhook."
+
+#: app/templates/messages/list_messages.html:236
+msgid "You can create as many destinations as you like."
+msgstr "Bạn có thể tạo số điểm đến nhiều như bạn muốn."
+
+#: app/templates/messages/list_messages.html:237
+msgid "Click 🧩 to assign one or more Apprise and/or Webhook destinations."
+msgstr "Nhấn 🧩 để gán một hoặc nhiều đích Apprise và/hoặc Webhook."
+
+#: app/templates/messages/list_messages.html:238
+msgid "Click ⏱️ to set a schedule and check-in interval."
+msgstr "Nhấn ⏱️ để đặt lịch trình và khoảng thời gian check-in."
+
+#: app/templates/messages/list_messages.html:239
+msgid "Enable the notification using the 🔴/🟢 toggle button."
+msgstr "Bật thông báo bằng cách sử dụng nút chuyển 🔴/🟢."
+
+#: app/templates/messages/list_messages.html:240
+msgid ""
+"If you don’t check in before the grace period ends, the notification will be"
+" sent."
+msgstr ""
+"Nếu bạn không check-in trước khi giai đoạn ân hạn kết thúc, thông báo sẽ "
+"được gửi."
+
+#: app/templates/messages/list_messages.html:241
+msgid "You can preview the notification config using 🔍."
+msgstr "Bạn có thể xem trước cấu hình thông báo bằng cách sử dụng 🔍."
+
+#: app/templates/messages/list_messages.html:242
+msgid "Once a notification is sent, it will be automatically disabled."
+msgstr "Khi một thông báo được gửi, nó sẽ tự động bị vô hiệu hóa."
+
+#: app/templates/messages/schedule_message.html:9
+msgid "Schedule Message"
+msgstr "Lịch Trình Tin Nhắn"
+
+#: app/templates/messages/view_message.html:9
+msgid "Notifications Details"
+msgstr "Chi Tiết Thông Báo"
+
+#: app/templates/messages/view_message.html:22
+msgid "Check-in Interval"
+msgstr "Khoảng Thời Gian Check-in"
+
+#: app/templates/messages/view_message.html:31
+msgid "Last Check-in"
+msgstr "Lần Check-in Cuối"
+
+#: app/templates/messages/view_message.html:48
+#: app/templates/reminders/view_reminder.html:59
+msgid "Apprise URLs"
+msgstr "URL Apprise"
+
+#: app/templates/messages/view_message.html:54
+#: app/templates/messages/view_message.html:64
+#: app/templates/reminders/view_reminder.html:65
+#: app/templates/reminders/view_reminder.html:75
+#: app/templates/reminders/view_reminder.html:85
+msgid "None assigned."
+msgstr "Chưa được gán."
+
+#: app/templates/messages/view_message.html:73
+msgid "Back to Notifications"
+msgstr "Quay Lại Thông Báo"
+
+#: app/templates/mfa/challenge.html:5 app/templates/mfa/settings.html:5
+msgid "Two-Factor Authentication (MFA)"
+msgstr "Xác thực hai yếu tố (MFA)"
+
+#: app/templates/mfa/recovery_codes.html:4
+msgid "Your Recovery Codes"
+msgstr "Mã khôi phục của bạn"
+
+#: app/templates/mfa/recovery_codes.html:7
+msgid "Save these recovery codes in a safe place!"
+msgstr "Lưu các mã khôi phục này ở nơi an toàn!"
+
+#: app/templates/mfa/recovery_codes.html:10
+msgid ""
+"Each code can be used once if you lose access to your authenticator. These "
+"codes will not be shown again."
+msgstr ""
+"Mỗi mã có thể được sử dụng một lần nếu bạn mất quyền truy cập vào trình xác "
+"thực của mình. Các mã này sẽ không được hiển thị lại."
+
+#: app/templates/mfa/recovery_codes.html:24
+msgid "OK, I've saved them"
+msgstr "OK, tôi đã lưu chúng"
+
+#: app/templates/mfa/settings.html:12
+msgid "MFA QR Code"
+msgstr "Mã QR MFA"
+
+#: app/templates/mfa/settings.html:15
+msgid "Manual Entry:"
+msgstr "Nhập bằng tay:"
+
+#: app/templates/partials/admin_nav.html:21
+msgid "Administration"
+msgstr "Quản trị"
+
+#: app/templates/partials/admin_nav.html:37
+#: app/templates/partials/shared_nav.html:34
+#: app/templates/partials/shared_nav.html:78
+#: app/templates/partials/shared_nav.html:117
+msgid "Overview"
+msgstr "Tổng quan"
+
+#: app/templates/partials/footer.html:7
+msgid "Toggle Theme"
+msgstr "Chuyển đổi chủ đề"
+
+#: app/templates/partials/footer.html:32
+msgid "Theme"
+msgstr "Chủ đề"
+
+#: app/templates/partials/head.html:7
+msgid "Grylli"
+msgstr "Grylli"
+
+#: app/templates/partials/header.html:6 app/templates/partials/sidebar.html:32
+#: app/templates/partials/sidebar.html:66
+msgid "Home"
+msgstr "Trang chủ"
+
+#: app/templates/partials/header.html:55
+msgid "Account"
+msgstr "Tài khoản"
+
+#: app/templates/partials/header.html:61
+msgid "MFA"
+msgstr "MFA"
+
+#: app/templates/partials/header.html:67
+msgid "About"
+msgstr "Giới thiệu"
+
+#: app/templates/partials/header.html:73
+msgid "Privacy"
+msgstr "Quyền Riêng Tư"
+
+#: app/templates/partials/header.html:79
+msgid "System Info"
+msgstr "Thông tin hệ thống"
+
+#: app/templates/partials/header.html:114
+msgid "Logout"
+msgstr "Đăng xuất"
+
+#: app/templates/partials/shared_nav.html:33
+msgid "Overview of notification settings"
+msgstr "Tổng quan về cài đặt thông báo"
+
+#: app/templates/partials/shared_nav.html:38
+msgid "Configure Apprise services"
+msgstr "Cấu hình dịch vụ Apprise"
+
+#: app/templates/partials/shared_nav.html:39
+msgid "Apprise"
+msgstr "Apprise"
+
+#: app/templates/partials/shared_nav.html:43
+msgid "Configure Webhook integrations"
+msgstr "Cấu hình tích hợp Webhook"
+
+#: app/templates/partials/shared_nav.html:77
+msgid "Overview of secure email messages"
+msgstr "Tổng quan về tin nhắn email bảo mật"
+
+#: app/templates/partials/shared_nav.html:82
+msgid "Configure SMTP email settings"
+msgstr "Cấu hình cài đặt email SMTP"
+
+#: app/templates/partials/shared_nav.html:83
+#: app/templates/reminders/view_reminder.html:79
+msgid "SMTP"
+msgstr "SMTP"
+
+#: app/templates/partials/shared_nav.html:100
+#: app/templates/reminders/list_reminders.html:8
+msgid "Reminders"
+msgstr "phút"
+
+#: app/templates/partials/shared_nav.html:116
+msgid "Overview of reminders"
+msgstr "Tổng quan về nhắc nhở"
+
+#: app/templates/partials/sidebar.html:13
+#: app/templates/partials/sidebar.html:47
+msgid "Menu"
+msgstr "Menu"
+
+#: app/templates/reminders/assign_email_reminder.html:12
+msgid "Link Email Reminder for"
+msgstr "Liên kết Nhắc Nhở Email cho"
+
+#: app/templates/reminders/assign_email_reminder.html:30
+#: app/templates/reminders/assign_email_reminder.html:64
+msgid "None (Unassign)"
+msgstr "Không có cấu hình SMTP được gán"
+
+#: app/templates/reminders/assign_email_reminder.html:43
+msgid "No sender address"
+msgstr "Không có địa chỉ người gửi"
+
+#: app/templates/reminders/assign_email_reminder.html:54
+msgid "Email Message"
+msgstr "Lịch Trình Tin Nhắn"
+
+#: app/templates/reminders/assign_email_reminder.html:77
+msgid "No subject"
+msgstr "Chủ đề"
+
+#: app/templates/reminders/assign_email_reminder.html:90
+msgid "Save Email Reminder"
+msgstr "Lưu Email"
+
+#: app/templates/reminders/create_reminder.html:12
+#: app/templates/reminders/edit_reminder.html:10
+#: app/templates/reminders/list_reminders.html:73
+#: app/templates/reminders/list_reminders.html:158
+msgid "Edit Reminder"
+msgstr "Chỉnh sửa Email"
+
+#: app/templates/reminders/create_reminder.html:14
+msgid "Create Reminder"
+msgstr "Tạo Email"
+
+#: app/templates/reminders/create_reminder.html:45
+msgid "Save Reminder"
+msgstr "Lưu Email"
+
+#: app/templates/reminders/edit_reminder.html:39
+msgid "Update Reminder"
+msgstr "Cập nhật Nhắc Nhở"
+
+#: app/templates/reminders/list_reminders.html:48
+msgid "Add Reminder"
+msgstr "Thêm Email"
+
+#: app/templates/reminders/list_reminders.html:58
+#: app/templates/reminders/view_reminder.html:21
+msgid "Start At"
+msgstr "Bắt đầu TLS"
+
+#: app/templates/reminders/list_reminders.html:59
+msgid "Recurrence"
+msgstr "Chu kỳ"
+
+#: app/templates/reminders/list_reminders.html:69
+#: app/templates/reminders/list_reminders.html:153
+#: app/templates/reminders/view_reminder.html:26
+msgid "One-time"
+msgstr "Một lần"
+
+#: app/templates/reminders/list_reminders.html:83
+msgid "Assign Email Reminder"
+msgstr "Gán Nhắc Nhở Email"
+
+#: app/templates/reminders/list_reminders.html:102
+#: app/templates/reminders/list_reminders.html:187
+msgid "Send Test Reminder"
+msgstr "Gửi Email Thử Nghiệm"
+
+#: app/templates/reminders/list_reminders.html:120
+#: app/templates/reminders/list_reminders.html:205
+msgid "Toggle Reminder On/Off"
+msgstr "Chuyển Email Bật/Tắt"
+
+#: app/templates/reminders/list_reminders.html:122
+#: app/templates/reminders/list_reminders.html:207
+msgid "Reminder is enabled"
+msgstr "Email đã được bật"
+
+#: app/templates/reminders/list_reminders.html:124
+#: app/templates/reminders/list_reminders.html:209
+msgid "Reminder is disabled"
+msgstr "Email đã bị tắt"
+
+#: app/templates/reminders/list_reminders.html:148
+msgid "Start At:"
+msgstr "Bắt đầu TLS"
+
+#: app/templates/reminders/list_reminders.html:152
+msgid "Recurrence:"
+msgstr "Chu kỳ:"
+
+#: app/templates/reminders/list_reminders.html:168
+msgid "Link Email Reminder"
+msgstr "Liên kết Nhắc Nhở Email"
+
+#: app/templates/reminders/list_reminders.html:218
+msgid "How to use reminders"
+msgstr "Cách quản lý người dùng"
+
+#: app/templates/reminders/list_reminders.html:231
+msgid "➕ Click “Add Reminder” and fill out the subject and content fields."
+msgstr "Nhấn vào “Thêm thông báo” và điền vào các trường chủ đề và nội dung."
+
+#: app/templates/reminders/list_reminders.html:232
+msgid "💾 Save the reminder to return to the overview."
+msgstr "Lưu thông báo để quay lại tổng quan."
+
+#: app/templates/reminders/list_reminders.html:233
+msgid ""
+"📣 Assign Apprise, 🌐 Webhook, and/or 📧 Email (SMTP) destinations as needed."
+msgstr "📣 Gán Apprise, 🌐 Webhook và/hoặc 📧 đích Email (SMTP) khi cần."
+
+#: app/templates/reminders/list_reminders.html:234
+msgid ""
+"⏱️ Set the schedule using the schedule button to define when reminders are "
+"sent."
+msgstr "⏱️ Đặt lịch bằng nút lịch để xác định khi nào nhắc nhở được gửi."
+
+#: app/templates/reminders/list_reminders.html:235
+msgid ""
+"🔍 Click “View Details” to review or edit assigned destinations and other "
+"settings."
+msgstr ""
+"🔍 Nhấn “Xem Chi Tiết” để xem lại hoặc chỉnh sửa các đích được gán và cài đặt"
+" khác."
+
+#: app/templates/reminders/list_reminders.html:236
+msgid ""
+"🧪 Click the Test button to verify all assigned destinations are working "
+"correctly."
+msgstr ""
+"🧪 Nhấn nút Kiểm tra để xác minh tất cả các đích được gán hoạt động đúng "
+"cách."
+
+#: app/templates/reminders/list_reminders.html:237
+msgid "🔴/🟢 Enable or disable the reminder using the toggle button."
+msgstr "Kích hoạt email bằng cách sử dụng nút gạt 🔴/🟢."
+
+#: app/templates/reminders/list_reminders.html:238
+msgid "📤 Reminders will be sent as scheduled to the assigned destinations."
+msgstr "📤 Nhắc nhở sẽ được gửi theo lịch đã đặt tới các đích đã gán."
+
+#: app/templates/reminders/schedule_reminder.html:8
+msgid "Schedule Reminder"
+msgstr "Lên lịch Email"
+
+#: app/templates/reminders/schedule_reminder.html:15
+msgid "Start Date & Time"
+msgstr "Ngày & Giờ Bắt Đầu"
+
+#: app/templates/reminders/schedule_reminder.html:22
+#: app/templates/reminders/view_reminder.html:25
+msgid "Recurrence Rule"
+msgstr "Quy tắc Tái Diễn"
+
+#: app/templates/reminders/schedule_reminder.html:24
+msgid "(Optional) Enter RRULE or leave blank for one-time."
+msgstr "(Tuỳ chọn) Nhập RRULE hoặc để trống nếu một lần."
+
+#: app/templates/reminders/schedule_reminder.html:30
+msgid "End Date"
+msgstr "Gửi Thử"
+
+#: app/templates/reminders/schedule_reminder.html:32
+msgid "(Optional) Stop sending after this date."
+msgstr "(Tuỳ chọn) Ngừng gửi sau ngày này."
+
+#: app/templates/reminders/schedule_reminder.html:38
+#: app/templates/reminders/view_reminder.html:36
+msgid "Max Occurrences"
+msgstr "Số Lần Tối Đa"
+
+#: app/templates/reminders/schedule_reminder.html:40
+msgid "(Optional) Stop after this many reminders."
+msgstr "(Tuỳ chọn) Ngừng sau số lần nhắc nhở này."
+
+#: app/templates/reminders/schedule_reminder.html:56
+msgid "Help for RRULE syntax"
+msgstr "Trợ giúp cho cú pháp RRULE"
+
+#: app/templates/reminders/schedule_reminder.html:66
+msgid "Several tools are available to help generate an RRULE."
+msgstr "Có một số công cụ để giúp tạo một RRULE."
+
+#: app/templates/reminders/schedule_reminder.html:67
+msgid "Use a search engine or AI tool to assist."
+msgstr "Sử dụng công cụ tìm kiếm hoặc công cụ AI để hỗ trợ."
+
+#: app/templates/reminders/schedule_reminder.html:69
+msgid "Here is an example of one such online tool:"
+msgstr "Dưới đây là ví dụ về một công cụ trực tuyến:"
+
+#: app/templates/reminders/schedule_reminder.html:73
+msgid "RRULE Generator Tool"
+msgstr "Công Cụ Tạo RRULE"
+
+#: app/templates/reminders/schedule_reminder.html:77
+msgid "See here for some common examples:"
+msgstr "Xem ở đây để biết một số ví dụ phổ biến:"
+
+#: app/templates/reminders/schedule_reminder.html:81
+msgid "RRULE Help (GitHub)"
+msgstr "Hướng dẫn RRULE (GitHub)"
+
+#: app/templates/reminders/view_reminder.html:8
+msgid "Reminder Details"
+msgstr "Xem chi tiết"
+
+#: app/templates/reminders/view_reminder.html:30
+msgid "End At"
+msgstr "Gửi Thử"
+
+#: app/templates/reminders/view_reminder.html:42
+msgid "Last Sent"
+msgstr "Lần Check-in Cuối"
+
+#: app/templates/reminders/view_reminder.html:91
+msgid "Email Template"
+msgstr "Trình xác nhận Email"
+
+#: app/templates/reminders/view_reminder.html:103
+msgid "No email linked."
+msgstr "Email đã được bật"
+
+#: app/templates/reminders/view_reminder.html:111
+msgid "Back to Reminders"
+msgstr "Trở lại Emails"
+
+#: app/templates/user_smtp/create_smtp.html:10
+msgid "Create SMTP Destination"
+msgstr "Tạo Điểm Đến SMTP"
+
+#: app/templates/user_smtp/create_smtp.html:69
+#: app/templates/user_smtp/edit_smtp.html:84
+msgid "Hold to reveal"
+msgstr "Giữ để tiết lộ"
+
+#: app/templates/user_smtp/create_smtp.html:92
+#: app/templates/user_smtp/edit_smtp.html:107
+msgid "Use TLS"
+msgstr "Sử Dụng TLS"
+
+#: app/templates/user_smtp/edit_smtp.html:10
+msgid "Edit SMTP Destination"
+msgstr "Tạo Điểm Đến SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:9
+msgid "SMTP Destinations"
+msgstr "Điểm đến SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:44
+msgid "Add SMTP"
+msgstr "Thêm SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:53
+msgid "Host"
+msgstr "Host"
+
+#: app/templates/user_smtp/list_smtp.html:54
+msgid "Port"
+msgstr "Cổng"
+
+#: app/templates/user_smtp/list_smtp.html:56
+msgid "TLS"
+msgstr "TLS"
+
+#: app/templates/user_smtp/list_smtp.html:58
+msgid "Created"
+msgstr "Đã tạo"
+
+#: app/templates/user_smtp/list_smtp.html:90
+#: app/templates/user_smtp/list_smtp.html:158
+msgid "Send Test"
+msgstr "Gửi Thử"
+
+#: app/templates/user_smtp/list_smtp.html:125
+msgid "Port:"
+msgstr "Cổng:"
+
+#: app/templates/user_smtp/list_smtp.html:131
+msgid "Password:"
+msgstr "Mật khẩu:"
+
+#: app/templates/user_smtp/list_smtp.html:184
+msgid "Hide SMTP Setup Help"
+msgstr "Ẩn Hướng Dẫn Cài Đặt SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:184
+msgid "Show SMTP Setup Help"
+msgstr "Hiện Hướng Dẫn Cài Đặt SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:190
+msgid ""
+"Need help finding your SMTP server settings? See here for some links to "
+"common providers:"
+msgstr ""
+"Cần trợ giúp để tìm cài đặt máy chủ SMTP của bạn? Xem ở đây để tìm một số "
+"liên kết tới các nhà cung cấp phổ biến:"
+
+#: app/templates/user_smtp/list_smtp.html:194
+msgid "SMTP Server Settings Help (GitHub)"
+msgstr "Trợ Giúp Cài Đặt SMTP Server (GitHub)"
+
+#: app/templates/user_smtp/list_smtp.html:198
+msgid ""
+"Find official documentation links for Gmail, Outlook, Yahoo, AOL, and "
+"others."
+msgstr ""
+"Tìm các liên kết tài liệu chính thức cho Gmail, Outlook, Yahoo, AOL, và "
+"những nơi khác."
+
+#: app/templates/user_smtp/list_smtp.html:199
+msgid ""
+"If your provider isn’t listed, search their support site or a search engine "
+"for 'SMTP settings'."
+msgstr ""
+"Nếu nhà cung cấp của bạn không được liệt kê, hãy tìm trên trang hỗ trợ của "
+"họ hoặc dùng công cụ tìm kiếm với từ khóa 'SMTP settings'."
+
+#: app/templates/user_smtp/list_smtp.html:200
+msgid ""
+"Some providers (like Gmail, Yahoo) require 'App Passwords' or special "
+"setup—see their docs!"
+msgstr ""
+"Một số nhà cung cấp (như Gmail, Yahoo) yêu cầu 'Mật khẩu Ứng dụng' hoặc "
+"thiết lập đặc biệt—xem tài liệu của họ!"
+
+#: app/templates/webhook/create_webhook.html:10
+msgid "Create Webhook"
+msgstr "Tạo Webhook"
+
+#: app/templates/webhook/edit_webhook.html:10
+msgid "Edit Webhook"
+msgstr "Chỉnh sửa Webhook"
+
+#: app/templates/webhook/list_webhooks.html:9
+#: app/templates/webhook/webhook_config.html:3
+msgid "Webhooks Destinations"
+msgstr "Điểm đến Webhooks"
+
+#: app/templates/webhook/list_webhooks.html:59
+msgid "Endpoint"
+msgstr "Endpoint"
+
+#: app/templates/webhook/list_webhooks.html:60
+msgid "Description"
+msgstr "Mô tả"
+
+#: app/templates/webhook/list_webhooks.html:82
+#: app/templates/webhook/list_webhooks.html:141
+msgid "Cannot edit while assigned to notifications"
+msgstr "Không thể chỉnh sửa khi được gán vào thông báo"
+
+#: app/templates/webhook/list_webhooks.html:106
+#: app/templates/webhook/list_webhooks.html:165
+msgid "Cannot delete while assigned to notifications"
+msgstr "Không thể xóa khi được gán vào thông báo"
+
+#: app/templates/webhook/list_webhooks.html:122
+msgid "Endpoint:"
+msgstr "Endpoint:"
+
+#: app/templates/webhook/list_webhooks.html:125
+msgid "Description:"
+msgstr "Mô tả:"
+
+#: app/views/account.py:74
+msgid "Current password is required to change password."
+msgstr "Mật khẩu hiện tại cần thiết để đổi mật khẩu."
+
+#: app/views/account.py:78
+msgid "Current password is incorrect."
+msgstr "Mật khẩu hiện tại không đúng."
+
+#: app/views/account.py:94
+msgid "Account updated successfully."
+msgstr "Cập nhật tài khoản thành công."
+
+#: app/views/account.py:100
+msgid "An error occurred while updating your account."
+msgstr "Đã xảy ra lỗi khi cập nhật tài khoản của bạn."
+
+#: app/views/account.py:137
+msgid "You cannot delete your account because you are the last admin."
+msgstr ""
+"Bạn không thể xóa tài khoản của mình vì bạn là quản trị viên cuối cùng."
+
+#: app/views/account.py:146
+msgid "Your account has been permanently deleted."
+msgstr "Tài khoản của bạn đã bị xóa vĩnh viễn."
+
+#: app/views/account.py:152
+msgid "An error occurred while trying to delete your account."
+msgstr "Đã xảy ra lỗi khi cập nhật tài khoản của bạn."
+
+#: app/views/account.py:171
+msgid "Your account has been deleted"
+msgstr "Tài khoản của bạn đã bị xóa vĩnh viễn."
+
+#: app/views/account.py:173
+#, python-brace-format
+msgid ""
+"Hello {username},\n"
+"\n"
+"Your account on {site_name} has been deleted.Remember to delete your files from the uploads folder.If this was not you, please contact support immediately.\n"
+"\n"
+"{site_url}"
+msgstr ""
+"Xin chào {username},\n"
+"\n"
+"Tài khoản của bạn trên {site_name} đã bị xóa. Hãy nhớ xóa tệp của bạn khỏi thư mục tải lên. Nếu không phải bạn, xin liên hệ bộ phận hỗ trợ ngay lập tức.\n"
+"\n"
+"{site_url}"
+
+#: app/views/admin.py:59
+msgid "Invalid role."
+msgstr "Vai trò không hợp lệ."
+
+#: app/views/apprise.py:51
+msgid "🧪 Test notification sent successfully!"
+msgstr "🧪 Gửi thông báo thử nghiệm thành công!"
+
+#: app/views/apprise.py:56
+msgid "🧪 Failed to send test notification: "
+msgstr "🧪 Không gửi được thông báo thử nghiệm:"
+
+#: app/views/apprise.py:62
+msgid "🧪 Error sending test notification."
+msgstr "🧪 Lỗi khi gửi thông báo thử nghiệm."
+
+#: app/views/apprise.py:101
+msgid "Apprise destination created successfully."
+msgstr "Điểm đến Apprise tạo thành công."
+
+#: app/views/apprise.py:168
+msgid "Apprise destination updated successfully."
+msgstr "Điểm đến Apprise cập nhật thành công."
+
+#: app/views/apprise.py:199
+msgid "Apprise destination deleted."
+msgstr "Điểm đến Apprise đã bị xóa."
+
+#: app/views/auth.py:95
+msgid "Admin account created successfully."
+msgstr "Tạo tài khoản quản trị thành công."
+
+#: app/views/auth.py:108
+msgid "An error occurred while creating the admin account."
+msgstr "Đã xảy ra lỗi khi tạo tài khoản quản trị."
+
+#: app/views/auth.py:141
+msgid ""
+"Your account is not activated. Please check your email for the activation "
+"link."
+msgstr ""
+"Tài khoản của bạn chưa được kích hoạt. Vui lòng kiểm tra email để xem liên "
+"kết kích hoạt."
+
+#: app/views/auth.py:157
+msgid "Multi-factor authentication required. Please enter your code."
+msgstr "Yêu cầu xác thực đa yếu tố. Vui lòng nhập mã của bạn."
+
+#: app/views/auth.py:162 app/views/mfa.py:195
+msgid "Logged in successfully."
+msgstr "Đăng nhập thành công."
+
+#: app/views/auth.py:179
+msgid "Invalid username or password."
+msgstr "Tên người dùng hoặc mật khẩu không đúng."
+
+#: app/views/auth.py:203
+msgid "You have been logged out."
+msgstr "Bạn đã đăng xuất."
+
+#: app/views/auth.py:239 app/views/email.py:263
+msgid "Access denied."
+msgstr "Truy cập bị từ chối."
+
+#: app/views/auth.py:273
+msgid "If a user with that email exists, we've sent the username to them."
+msgstr ""
+"Nếu có người dùng với email đó, chúng tôi đã gửi tên người dùng cho họ."
+
+#: app/views/auth.py:314
+msgid "A password reset link has been sent to your email."
+msgstr "Một liên kết đặt lại mật khẩu đã được gửi đến email của bạn."
+
+#: app/views/auth.py:319
+msgid "No account found matching that username and email."
+msgstr "Không tìm thấy tài khoản nào khớp với tên người dùng và email này."
+
+#: app/views/auth.py:389
+msgid "The reset link is invalid or has expired."
+msgstr "Liên kết đặt lại không hợp lệ hoặc đã hết hạn."
+
+#: app/views/auth.py:401
+msgid "Username and email do not match."
+msgstr "Tên đăng nhập và email không khớp."
+
+#: app/views/auth.py:421
+msgid "Your password has been reset. Please log in."
+msgstr "Mật khẩu của bạn đã được đặt lại. Vui lòng đăng nhập."
+
+#: app/views/auth.py:458
+msgid "Invalid registration PIN."
+msgstr "Mã PIN đăng ký không hợp lệ."
+
+#: app/views/auth.py:467
+msgid "Username or email already exists."
+msgstr "Tên đăng nhập hoặc email đã tồn tại."
+
+#: app/views/auth.py:492
+msgid "Activate Your Grylli Account"
+msgstr "Kích hoạt tài khoản Grylli của bạn"
+
+#: app/views/auth.py:493
+#, python-brace-format
+msgid ""
+"Hello {username},\n"
+"\n"
+"Please activate your account by clicking..."
+msgstr ""
+"Xin chào {username},\n"
+"\n"
+"Vui lòng kích hoạt tài khoản của bạn bằng cách nhấp vào..."
+
+#: app/views/auth.py:498
+msgid "Account created! Please check your email to activate your account."
+msgstr ""
+"Tài khoản đã được tạo! Vui lòng kiểm tra email của bạn để kích hoạt tài "
+"khoản."
+
+#: app/views/auth.py:521
+msgid "Activation link is invalid or expired."
+msgstr "Liên kết kích hoạt không hợp lệ hoặc đã hết hạn."
+
+#: app/views/auth.py:528 app/views/users.py:76 app/views/users.py:140
+msgid "User not found."
+msgstr "Không tìm thấy người dùng."
+
+#: app/views/auth.py:532
+msgid "Account already activated. Please log in."
+msgstr "Tài khoản đã được kích hoạt. Vui lòng đăng nhập."
+
+#: app/views/auth.py:540
+msgid "Your account has been activated! You can now log in."
+msgstr ""
+"Tài khoản của bạn đã được kích hoạt! Bạn có thể đăng nhập ngay bây giờ."
+
+#: app/views/backups.py:72
+#, python-format
+msgid "Backup created: %(filename)s"
+msgstr "Sao lưu đã được tạo: %(filename)s"
+
+#: app/views/backups.py:77
+msgid "Failed to create backup."
+msgstr "Không tạo được sao lưu."
+
+#: app/views/backups.py:106
+#, python-format
+msgid "Backup deleted: %(filename)s"
+msgstr "Sao lưu đã bị xóa: %(filename)s"
+
+#: app/views/backups.py:109
+msgid "Backup file not found."
+msgstr "Không tìm thấy tập tin sao lưu."
+
+#: app/views/backups.py:112
+msgid "Failed to delete backup."
+msgstr "Không xóa được sao lưu."
+
+#: app/views/checkin.py:41
+msgid "Invalid check-in link."
+msgstr "Liên kết check-in không hợp lệ."
+
+#: app/views/checkin.py:48
+msgid "You are not authorized to check in for this item."
+msgstr "Bạn không được phép check in cho mặt hàng này."
+
+#: app/views/checkin.py:62
+msgid "Unsupported check-in type."
+msgstr "Loại check-in không được hỗ trợ."
+
+#: app/views/checkin.py:137
+msgid "⚠️ Cannot enable reminder: Start date/time is in the past."
+msgstr "⚠️ Không thể kích hoạt nhắc nhở: Ngày/Giờ bắt đầu nằm trong quá khứ."
+
+#: app/views/checkin.py:158
+msgid "✅ Enabled and timer started."
+msgstr "✅ Đã bật và bộ hẹn giờ đã bắt đầu."
+
+#: app/views/checkin.py:168
+msgid "⛔ Disabled."
+msgstr "⛔ Đã vô hiệu hóa."
+
+#: app/views/checkin.py:170
+msgid "⚠️ Cannot toggle — missing schedule or destination."
+msgstr "⚠️ Không thể chuyển đổi — thiếu lịch trình hoặc điểm đến."
+
+#: app/views/email.py:88
+msgid "Message saved."
+msgstr "Tin nhắn đã được lưu."
+
+#: app/views/email.py:118 app/views/messages.py:167
+msgid "Message deleted."
+msgstr "Tin nhắn đã bị xóa."
+
+#: app/views/email.py:152
+msgid "Attached files updated."
+msgstr "Tệp đính kèm đã được cập nhật."
+
+#: app/views/email.py:200
+msgid "SMTP configuration not assigned or is disabled."
+msgstr "Cấu hình SMTP chưa được gán hoặc đã bị vô hiệu hóa."
+
+#: app/views/email.py:234 app/views/smtp_settings_admin.py:82
+msgid "Test email sent successfully."
+msgstr "Email thử nghiệm đã gửi thành công."
+
+#: app/views/email.py:282 app/views/messages.py:305
+msgid "Schedule updated successfully."
+msgstr "Successfully updated datetime."
+
+#: app/views/email.py:310
+msgid "SMTP configuration assigned."
+msgstr "Cấu hình SMTP đã được gán."
+
+#: app/views/email.py:319
+msgid "SMTP configuration removed."
+msgstr "Cấu hình SMTP đã được gán."
+
+#: app/views/messages.py:97
+msgid "Message created successfully."
+msgstr "Tin nhắn đã được tạo thành công."
+
+#: app/views/messages.py:133
+msgid "Message updated successfully."
+msgstr "Message updated successfully."
+
+#: app/views/messages.py:223 app/views/reminders.py:240
+msgid "Destinations updated."
+msgstr "Destin ῧdated."
+
+#: app/views/messages.py:441
+msgid "No destinations assigned to this message."
+msgstr "Cấu hình SMTP chưa được gán hoặc đã bị vô hiệu hóa."
+
+#: app/views/messages.py:453
+msgid "Test message sent successfully."
+msgstr "Email thử nghiệm đã gửi thành công."
+
+#: app/views/messages.py:455
+msgid "Test message failed: "
+msgstr "Tin nhắn đã được lưu."
+
+#: app/views/mfa.py:68
+msgid "You must enter a code from your authenticator."
+msgstr "Bạn phải nhập mã từ trình xác thực của bạn."
+
+#: app/views/mfa.py:82 app/views/mfa.py:259
+msgid "Invalid code. Please try again."
+msgstr "Mã không hợp lệ. Vui lòng thử lại."
+
+#: app/views/mfa.py:91
+msgid "Two-factor authentication disabled."
+msgstr "Thông báo đang bị vô hiệu hóa"
+
+#: app/views/mfa.py:132
+msgid "Recovery codes are only shown immediately after enabling MFA."
+msgstr "Mã khôi phục chỉ được hiển thị ngay sau khi bật MFA."
+
+#: app/views/mfa.py:142
+msgid "Could not load recovery codes."
+msgstr "Không thể tải mã khôi phục."
+
+#: app/views/mfa.py:168
+msgid "No MFA challenge in progress."
+msgstr "Không có thử thách MFA nào đang diễn ra."
+
+#: app/views/mfa.py:176
+msgid "User not found for MFA challenge."
+msgstr "Không tìm thấy người dùng."
+
+#: app/views/mfa.py:225
+msgid ""
+"You have used your last recovery code. MFA has been disabled. Please remove "
+"Grylli from your authenticator app, and re-enable MFA to protect your "
+"account."
+msgstr ""
+"Bạn đã sử dụng mã khôi phục cuối cùng. MFA đã bị vô hiệu hóa. Vui lòng xóa "
+"Grylli khỏi ứng dụng xác thực của bạn và bật lại MFA để bảo vệ tài khoản của"
+" bạn."
+
+#: app/views/mfa.py:248
+#, python-brace-format
+msgid "Recovery code accepted. You have {remaining} recovery codes left."
+msgstr "Mã khôi phục đã được chấp nhận. Bạn còn {remaining} mã khôi phục."
+
+#: app/views/reminders.py:106
+msgid "Reminder created successfully."
+msgstr "Tin nhắn đã được tạo thành công."
+
+#: app/views/reminders.py:143
+msgid "Reminder updated successfully."
+msgstr "User anobar veatag."
+
+#: app/views/reminders.py:174
+msgid "Reminder deleted."
+msgstr "Người dùng đã bị xóa."
+
+#: app/views/reminders.py:287
+msgid "No destinations assigned to this reminder."
+msgstr "Cấu hình SMTP chưa được gán hoặc đã bị vô hiệu hóa."
+
+#: app/views/reminders.py:311
+msgid "No email message linked to this reminder."
+msgstr "Không có tin nhắn email nào được liên kết với nhắc nhở này."
+
+#: app/views/reminders.py:314
+msgid "SMTP configuration is disabled."
+msgstr "Cấu hình SMTP chưa được gán hoặc đã bị vô hiệu hóa."
+
+#: app/views/reminders.py:353
+msgid "Test reminder sent successfully."
+msgstr "Email thử nghiệm đã gửi thành công."
+
+#: app/views/reminders.py:356
+msgid "Test reminder failed: "
+msgstr "Tin nhắn đã được lưu."
+
+#: app/views/reminders.py:430
+msgid "Reminder schedule updated successfully."
+msgstr "Successfully updated datetime."
+
+#: app/views/reminders.py:434
+msgid "Please correct the errors below."
+msgstr "Vui lòng sửa các lỗi dưới đây."
+
+#: app/views/reminders.py:481 app/views/reminders.py:482
+msgid "None"
+msgstr "Không"
+
+#: app/views/reminders.py:508
+msgid "You must select both an SMTP config and an email message, or neither."
+msgstr "Bạn phải chọn cả cấu hình SMTP và tin nhắn email, hoặc không gì cả."
+
+#: app/views/reminders.py:528
+msgid "Email reminder settings updated."
+msgstr "Destin ῧdated."
+
+#: app/views/smtp.py:83 app/views/user_smtp.py:80
+msgid "SMTP destination created successfully."
+msgstr "Điểm đến SMTP đã được tạo thành công."
+
+#: app/views/smtp.py:129 app/views/user_smtp.py:135
+msgid "SMTP destination updated."
+msgstr "Điểm đến SMTP đã được cập nhật."
+
+#: app/views/smtp.py:160 app/views/user_smtp.py:166
+msgid "SMTP destination deleted."
+msgstr "Điểm đến SMTP đã bị xóa."
+
+#: app/views/smtp.py:191 app/views/user_smtp.py:199
+msgid "Test email sent successfully to your account email."
+msgstr "Email thử nghiệm đã gửi thành công tới email tài khoản của bạn."
+
+#: app/views/smtp.py:196 app/views/user_smtp.py:204
+msgid "Failed to send test email. Check SMTP settings."
+msgstr "Gửi email thử nghiệm thất bại. Kiểm tra cài đặt SMTP."
+
+#: app/views/smtp_settings_admin.py:76
+msgid "Test Email from Grylli"
+msgstr "Email Thử nghiệm từ Grylli"
+
+#: app/views/smtp_settings_admin.py:77
+msgid "This is a test email from the Grylli SMTP settings page."
+msgstr "Đây là email thử nghiệm từ trang cài đặt SMTP của Grylli."
+
+#: app/views/smtp_settings_admin.py:84
+msgid "Failed to send test email: "
+msgstr "Gửi email thử nghiệm thất bại:"
+
+#: app/views/users.py:99
+msgid "User updated successfully."
+msgstr "User anobar veatag."
+
+#: app/views/users.py:106 app/views/users.py:327
+msgid "An error occurred while updating the user."
+msgstr "Đã xảy ra lỗi khi cập nhật người dùng."
+
+#: app/views/users.py:195
+msgid "User deleted."
+msgstr "Người dùng đã bị xóa."
+
+#: app/views/users.py:202
+msgid "An error occurred while deleting the user."
+msgstr "Đã xảy ra lỗi khi xóa người dùng."
+
+#: app/views/users.py:237
+msgid "Password is required when creating a new user."
+msgstr "Mật khẩu là bắt buộc khi tạo người dùng mới."
+
+#: app/views/users.py:244
+msgid "Username already exists."
+msgstr "Tên người dùng đã tồn tại."
+
+#: app/views/users.py:251
+msgid "Email already exists."
+msgstr "Email đã tồn tại."
+
+#: app/views/users.py:268
+#, python-format
+msgid "User '%(username)s' created successfully."
+msgstr "Người dùng '%(username)s' đã được tạo thành công."
+
+#: app/views/users.py:278
+msgid "Failed to create user."
+msgstr "Không thể tạo người dùng."
+
+#: app/views/users.py:305
+msgid "You cannot change your own enabled status."
+msgstr "Bạn không thể thay đổi trạng thái kích hoạt của chính mình."
+
+#: app/views/users.py:318
+#, python-format
+msgid "User '%(username)s' has been %(status)s."
+msgstr "Người dùng '%(username)s' đã được %(status)s."
+
+#: app/views/users.py:356
+msgid "You cannot reset your own MFA."
+msgstr "⚪ = Bạn không thể vô hiệu hóa tài khoản của chính mình."
+
+#: app/views/users.py:368
+#, python-format
+msgid "MFA disabled for user '%(username)s'."
+msgstr "MFA đã bị vô hiệu hóa cho người dùng '%(username)s'."
+
+#: app/views/users.py:374
+msgid "An error occurred while resetting MFA."
+msgstr "Đã xảy ra lỗi khi xóa người dùng."
+
+#: app/views/webhook.py:54
+msgid "Webhook created successfully."
+msgstr "Webhook đã được tạo thành công."
+
+#: app/views/webhook.py:113
+msgid "Webhook updated successfully."
+msgstr "Webhook đã được cập nhật thành công."
+
+#: app/views/webhook.py:142
+msgid "Webhook deleted."
+msgstr "Webhook đã bị xóa."
+
+#: app/views/webhook.py:175
+msgid "🧪 Webhook test sent successfully!"
+msgstr "🧪 Đã gửi thử nghiệm webhook thành công!"
+
+#: app/views/webhook.py:177
+msgid "🧪 Webhook test failed: "
+msgstr "🧪 Thử nghiệm webhook thất bại:"
+
+#: app/views/webhook.py:180
+msgid "🧪 Error sending webhook test."
+msgstr "🧪 Lỗi khi gửi thử nghiệm webhook."
+
+#~ msgid ""
+#~ "Grylli is a secure message delivery platform designed to activate after "
+#~ "prolonged user inactivity."
+#~ msgstr ""
+#~ "Grylli là một nền tảng gửi tin nhắn bảo mật được thiết kế để kích hoạt sau "
+#~ "khi người dùng không hoạt động trong một thời gian dài."
+
+#~ msgid ""
+#~ "It is a modern reimplementation of Gone Man’s Switch with a refined tech "
+#~ "stack, better maintainability, and an improved user experience."
+#~ msgstr ""
+#~ "Nó là một tái triển khai hiện đại của Gone Man’s Switch với công nghệ tiên "
+#~ "tiến hơn, dễ bảo trì hơn và trải nghiệm người dùng được cải thiện."
+
+#~ msgid "Body:"
+#~ msgstr "Nội dung:"
+
+#~ msgid "Subject:"
+#~ msgstr "Chủ Đề:"
+
+#~ msgid "Content:"
+#~ msgstr "Nội Dung:"
+
+#~ msgid "Edit SMTP"
+#~ msgstr "Chỉnh sửa SMTP"
+
+#~ msgid ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+#~ msgstr ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+
+#~ msgid "Admin Notes"
+#~ msgstr "Ghi chú Admin"
+
+#~ msgid "Register"
+#~ msgstr "Đăng ký"
+
+#~ msgid "View"
+#~ msgstr "Xem"
+
+#~ msgid "Schedule"
+#~ msgstr "Lịch Trình"
+
+#~ msgid "Message is enabled"
+#~ msgstr "Tin nhắn đang được bật"
+
+#~ msgid "Message is disabled"
+#~ msgstr "Tin nhắn đang bị vô hiệu hóa"
+
+#~ msgid "No SMTP configuration selected."
+#~ msgstr "Không có cấu hình SMTP nào được chọn."
+
+#~ msgid "Enable the message to start monitoring."
+#~ msgstr "Kích hoạt tin nhắn để bắt đầu theo dõi."
+
+#~ msgid "✅ SMTP settings saved."
+#~ msgstr "Cài đặt SMTP"
+
+#~ msgid "If you don’t check in, Grylli delivers the message for you."
+#~ msgstr "Nếu bạn không kiểm tra, Grylli sẽ gửi tin nhắn cho bạn."
+
+#~ msgid "Fill in already discovered missing translations:"
+#~ msgstr "Điền vào các bản dịch còn thiếu đã được phát hiện:"
+
+#~ msgid "Add missing phrases in that JSON file."
+#~ msgstr "Thêm các cụm từ bị thiếu vào tệp JSON đó."
+
+#~ msgid "From:"
+#~ msgstr "Từ:"
+
+#~ msgid ""
+#~ "Attach the updated JSON file to a new GitHub issue when submitting your "
+#~ "changes."
+#~ msgstr ""
+#~ "Đính kèm tệp JSON đã cập nhật vào một vấn đề GitHub mới khi gửi thay đổi của"
+#~ " bạn."
+
+#~ msgid "admin"
+#~ msgstr "quản trị viên"
+
+#~ msgid "user"
+#~ msgstr "người dùng"
+
+#~ msgid "Logging in"
+#~ msgstr "Đăng nhập"
+
+#~ msgid "SMTP error: "
+#~ msgstr "Lỗi SMTP:"
+
+#~ msgid "enabled"
+#~ msgstr "đã kích hoạt"
+
+#~ msgid "disabled"
+#~ msgstr "naliwajhli"

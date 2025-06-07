@@ -1,0 +1,71 @@
+{# ---------------------------------------------------------------------
+  create_webhook.html
+  app/templates/webhook/create_webhook.html
+  [Describe purpose or main content of this template.]
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{# =================== JINJA BLOCK ==================== #}
+{% block content %}
+    <div class="max-w-md mx-auto mt-10 sm:mt-12 md:mt-16 bg-white dark:bg-zinc-800 shadow-md rounded-xl p-6 space-y-4">
+        <h1 class="text-xl font-semibold text-black dark:text-white">{{ _("Create Webhook") }}</h1>
+        <!-- =================== FORM START =================== -->
+        <form method="post">
+            {{ form.hidden_tag() }}
+            <!-- Label -->
+            <div class="mb-4">
+                {{ form.label.label(class="block text-sm font-medium mb-1 text-black dark:text-white") }}
+                {{ form.label(id="label", class="form-input w-full bg-zinc-100 dark:bg-zinc-700 text-black dark:text-white") }}
+                {% if form.label.errors %}<p class="text-red-500 text-sm mt-1">{{ form.label.errors[0] }}</p>{% endif %}
+            </div>
+            <!-- Endpoint -->
+            <div class="mb-4">
+                {{ form.endpoint.label(class="block text-sm font-medium mb-1 text-black dark:text-white") }}
+                {{ form.endpoint(id="endpoint", class="form-input w-full bg-zinc-100 dark:bg-zinc-700 text-black dark:text-white") }}
+                {% if form.endpoint.errors %}<p class="text-red-500 text-sm mt-1">{{ form.endpoint.errors[0] }}</p>{% endif %}
+            </div>
+            <!-- Description -->
+            <div class="mb-4">
+                {{ form.description.label(class="block text-sm font-medium mb-1 text-black dark:text-white") }}
+                {{ form.description(id="description", class="form-input w-full bg-zinc-100 dark:bg-zinc-700 text-black dark:text-white") }}
+                {% if form.description.errors %}<p class="text-red-500 text-sm mt-1">{{ form.description.errors[0] }}</p>{% endif %}
+            </div>
+            <!-- Enabled Checkbox -->
+            <div class="mb-4">
+                <label class="inline-flex items-center">
+                    {{ form.enabled() }}
+                    <span class="ml-2 text-sm text-black dark:text-white">{{ _("Enabled") }}</span>
+                </label>
+            </div>
+            <!-- Submit + Cancel Buttons -->
+            <div class="flex gap-4">
+                <button id="submitBtn"
+                        type="submit"
+                        class="w-1/2 bg-red-500 text-white py-2 px-4 rounded disabled:opacity-50 disabled:cursor-not-allowed transition-colors">
+                    {{ _("Create Destination") }}
+                </button>
+                <a href="{{ url_for("webhook.config") }}"
+                   class="w-1/2 text-center bg-zinc-400 text-white py-2 px-4 rounded hover:bg-zinc-500 transition-colors">
+                    {{ _("Cancel") }}
+                </a>
+            </div>
+            <!-- =================== FORM END ===================== -->
+        </form>
+    </div>
+    <script>
+  const label = document.getElementById('label');
+  const endpoint = document.getElementById('endpoint');
+  const submitBtn = document.getElementById('submitBtn');
+
+  function updateButtonState() {
+    const valid = label.value.trim() !== '' && endpoint.value.trim() !== '';
+    submitBtn.disabled = !valid;
+    submitBtn.classList.toggle("bg-green-600", valid);
+    submitBtn.classList.toggle("bg-red-500", !valid);
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    [label, endpoint].forEach(field => field.addEventListener('input', updateButtonState));
+    updateButtonState();
+  });
+    </script>
+{% endblock %}

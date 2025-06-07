@@ -1,0 +1,83 @@
+{# ---------------------------------------------------------------------
+  login.html
+  app/templates/auth/login.html
+  User login form and admin help panel.
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{# =================== CONTENT BLOCK =================== #}
+{% block content %}
+    <!-- Outer container for centering and styling -->
+    <div class="max-w-md mx-auto mt-20 bg-white dark:bg-zinc-800 shadow-md rounded-xl p-6 space-y-4">
+        {# ---------- Page Title ---------- #}
+        <h1 class="text-xl font-semibold text-black dark:text-white">{{ _("Log In") }}</h1>
+        {# ---------- Flash Messages for Login Errors ---------- #}
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div id="flash-alert"
+                         class="mb-4 p-3 rounded text-white text-sm {% if category == 'danger' %} bg-red-500 {% elif category == 'success' %} bg-green-500 {% else %} bg-zinc-500 {% endif %}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <!-- =================== FORM START =================== -->
+        <form method="post" novalidate>
+            {# ---------- Username Field ---------- #}
+            <div class="mb-4">
+                {{ form.username.label(class="block text-sm font-medium mb-1") }}
+                {{ form.username(class="form-input w-full bg-zinc-100 dark:bg-zinc-700 text-black dark:text-white",
+                                autocomplete="username",
+                                aria_invalid="true" if form.username.errors else "false") }}
+                {% if form.username.errors %}
+                    <ul class="text-red-600 text-xs mt-1" id="username-errors">
+                        {% for error in form.username.errors %}<li>{{ error }}</li>{% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+            {# ---------- Password Field ---------- #}
+            <div class="mb-4">
+                {{ form.password.label(class="block text-sm font-medium mb-1") }}
+                {{ form.password(class="form-input w-full bg-zinc-100 dark:bg-zinc-700 text-black dark:text-white",
+                                autocomplete="current-password",
+                                aria_invalid="true" if form.password.errors else "false") }}
+                {% if form.password.errors %}
+                    <ul class="text-red-600 text-xs mt-1" id="password-errors">
+                        {% for error in form.password.errors %}<li>{{ error }}</li>{% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+            {# ---------- Submit Button ---------- #}
+            <div>
+                <button type="submit"
+                        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded shadow transition duration-150">
+                    {{ _("Log In") }}
+                </button>
+            </div>
+        </form>
+        <!-- =================== FORM END ===================== -->
+        {# ---------- Password/Username Recovery Links ---------- #}
+        <div class="mt-4 text-sm text-center space-x-4">
+            <a href="{{ url_for("auth.forgot_username") }}"
+               class="text-blue-500 hover:underline">{{ _("Forgot Username?") }}</a>
+            <a href="{{ url_for("auth.forgot_password") }}"
+               class="text-blue-500 hover:underline">{{ _("Forgot Password?") }}</a>
+            <a href="{{ url_for("auth.signup") }}"
+               class="text-blue-500 hover:underline">{{ _("Sign Up") }}</a>
+        </div>
+    </div>
+    {# ---------- Admin Help ---------- #}
+    <a href="{{ url_for("admin_help.help_page") }}"
+       class="fixed bottom-4 right-4 z-50">
+        <span title="{{ _("Admin Help") }}"
+              class="inline-block w-4 h-4 bg-blue-600 rounded-full hover:bg-blue-700 transition duration-200"></span>
+    </a>
+    {# ---------- Flash Auto-hide Script ---------- #}
+    <script>
+    // Auto-hide flash alert after 5 seconds
+    setTimeout(() => {
+      const alert = document.getElementById('flash-alert');
+      if (alert) alert.style.display = 'none';
+    }, 5000);
+    </script>
+{% endblock %}

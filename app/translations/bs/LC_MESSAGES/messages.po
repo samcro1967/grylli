@@ -1,0 +1,3269 @@
+# Bosnian translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-06-07 15:49-0500\n"
+"PO-Revision-Date: 2025-05-25 13:03-0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: bs <LL@li.org>\n"
+"Language: bs\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: app/init_db.py:55
+#, python-format
+msgid "Tables currently in DB: %s"
+msgstr "Trenutne tabele u bazi podataka:"
+
+#: app/init_db.py:58
+msgid "Database or system_config table missing. Running migrations now..."
+msgstr ""
+"Nedostaje baza podataka ili tabela system_config. Pokretanje migracija..."
+
+#: app/init_db.py:61
+msgid "Migrations applied successfully."
+msgstr "Migracije uspješno primijenjene."
+
+#: app/init_db.py:63
+msgid "Migration failed."
+msgstr "Migracija nije uspjela."
+
+#: app/init_db.py:68
+msgid "System config seeded successfully."
+msgstr "Sistem konfiguracija uspješno unesena."
+
+#: app/init_db.py:70
+msgid "Error seeding system config."
+msgstr "Greška prilikom unosa sistem konfiguracije:"
+
+#: app/forms/mfa_form.py:15 app/templates/apprise/create_apprise.html:30
+#: app/templates/apprise/edit_apprise.html:30
+#: app/templates/apprise/list_apprise.html:60
+#: app/templates/mfa/settings.html:24 app/templates/mfa/settings.html:40
+#: app/templates/user_smtp/create_smtp.html:99
+#: app/templates/user_smtp/edit_smtp.html:114
+#: app/templates/user_smtp/list_smtp.html:57
+#: app/templates/webhook/create_webhook.html:36
+#: app/templates/webhook/edit_webhook.html:36
+#: app/templates/webhook/list_webhooks.html:61
+msgid "Enabled"
+msgstr "Omogućeno"
+
+#: app/forms/mfa_form.py:16
+msgid "Authenticator Code"
+msgstr "Autentifikacijski kod"
+
+#: app/forms/mfa_form.py:17
+#: app/templates/admin/partials/user_instructions_and_modal.html:66
+#: app/templates/admin/partials/user_table.html:115
+#: app/templates/email/assign_smtp.html:44 app/templates/mfa/settings.html:47
+#: app/templates/user_smtp/edit_smtp.html:122
+msgid "Save"
+msgstr "Sačuvaj"
+
+#: app/forms/mfa_form.py:27
+msgid "Authentication Code"
+msgstr "Ažuriraj obavijest"
+
+#: app/forms/mfa_form.py:29
+msgid "Please enter your authentication code."
+msgstr "Molimo unesite vaš autentifikacijski kod."
+
+#: app/forms/mfa_form.py:30
+msgid "Enter a valid 6-digit code or recovery code."
+msgstr "Unesite validan 6-cifreni kod ili kod za oporavak."
+
+#: app/forms/mfa_form.py:31
+msgid "Invalid code format."
+msgstr "Nevažeći format koda."
+
+#: app/forms/mfa_form.py:35 app/templates/mfa/challenge.html:25
+msgid "Verify"
+msgstr "Verzija"
+
+#: app/services/mail.py:37 app/services/system_settings_email.py:40
+msgid "Missing required config setting: "
+msgstr "Nedostaje potrebna konfiguracijska postavka:"
+
+#: app/services/mail.py:46 app/services/system_settings_email.py:50
+#, python-format
+msgid "Failed to decrypt %(key)s: %(error)s"
+msgstr "Neuspjelo dešifrovanje %(key)s: %(error)s"
+
+#: app/services/mail.py:54
+#, python-format
+msgid "get_setting('%(key)s') -> '%(value)s' (sensitive: %(sensitive)s)"
+msgstr ""
+"get_setting('%(key)s') -> '%(value)s' (neobrađeno: '%(raw)s', osjetljivo: "
+"%(sensitive)s)"
+
+#: app/services/mail.py:75
+#, python-format
+msgid "Preparing email to %(to)s"
+msgstr "Pripremanje emaila za %(to)s"
+
+#: app/services/mail.py:90
+#, python-format
+msgid ""
+"SMTP configuration: host=%(host)s (type=%(host_type)s), port=%(port)s "
+"(type=%(port_type)s)"
+msgstr ""
+"SMTP host = '%(host)s' (tip: %(host_type)s), port = %(port)s (tip: "
+"%(port_type)s)"
+
+#: app/services/mail.py:99
+#, python-format
+msgid "SMTP username: %(user)s"
+msgstr "Koristi korisnika: %(user)s"
+
+#: app/services/mail.py:100
+#, python-format
+msgid "TLS enabled: %(tls)s"
+msgstr "TLS omogućeno: %(tls)s"
+
+#: app/services/mail.py:105
+msgid "Starting TLS connection..."
+msgstr "Pokretanje TLS"
+
+#: app/services/mail.py:107
+msgid "Logging into SMTP server..."
+msgstr "Prijava na SMTP server..."
+
+#: app/services/mail.py:109
+msgid "Sending email message..."
+msgstr "Raspored poruke"
+
+#: app/services/mail.py:111
+#, python-format
+msgid "Email sent successfully to %(to)s"
+msgstr "Test email uspješno poslan."
+
+#: app/services/mail.py:114
+#, python-format
+msgid "SMTP error while sending to %(to)s: %(error)s"
+msgstr "SMTP greška prilikom slanja na %(to)s: %(error)s"
+
+#: app/templates/about.html:10
+msgid "About Grylli"
+msgstr "O Grylli"
+
+#: app/templates/about.html:13
+msgid ""
+"Grylli is a secure, self-hosted message delivery platform that automatically"
+" sends pre-configured messages if a user fails to check in within a defined "
+"time period."
+msgstr ""
+"Grylli je sigurna, samohostirana platforma za dostavu poruka koja automatski"
+" šalje unaprijed konfigurirane poruke ako se korisnik ne prijavi unutar "
+"definiranog vremenskog perioda."
+
+#: app/templates/about.html:14
+msgid ""
+"It supports multiple users, customizable schedules, and recurring reminders."
+msgstr "Podržava više korisnika i prilagodljive rasporede."
+
+#: app/templates/about.html:15
+msgid ""
+"Messages and reminders can be delivered via email, webhooks, or over 100 "
+"third-party services through Apprise."
+msgstr ""
+"Poruke se mogu dostaviti putem e-pošte, webhookova ili preko 80 usluga "
+"trećih strana putem Apprise."
+
+#: app/templates/about.html:16
+msgid ""
+"Users can configure their own SMTP servers to ensure emails and reminders "
+"appear to come directly from them — not from the system administrator."
+msgstr ""
+"Korisnici mogu konfigurirati vlastite SMTP servere kako bi osigurali da "
+"poruke izgledaju kao da dolaze direktno od njih — a ne od sistemskog "
+"administratora."
+
+#: app/templates/about.html:17
+msgid ""
+"Sensitive data is encrypted at rest, and all operations are secured with "
+"strong authentication and audit-friendly logging."
+msgstr ""
+"Osjetljivi podaci su šifrirani u mirovanju, a sve operacije poruka su "
+"osigurane jakom autentifikacijom i zapisima prilagođenim za reviziju."
+
+#: app/templates/about.html:18
+msgid ""
+"Built with a modern, reactive technology stack, Grylli is optimized for "
+"responsiveness and works seamlessly across desktop and mobile devices."
+msgstr ""
+"Izgrađen s modernim, reaktivnim tehnološkim stogom, Grylli je optimiziran za"
+" brzinu odgovoriranja i radi besprijekorno na stolnim i mobilnim uređajima."
+
+#: app/templates/about.html:23
+msgid "Version:"
+msgstr "Verzija:"
+
+#: app/templates/about.html:26
+msgid "Repository:"
+msgstr "Spremište:"
+
+#: app/templates/about.html:30
+msgid "GitHub - samcro1967/grylli"
+msgstr "GitHub - samcro1967/grylli"
+
+#: app/templates/help.html:2 app/templates/help.html:5
+#: app/templates/partials/header.html:85
+msgid "Help"
+msgstr "Pomoć"
+
+#: app/templates/help.html:7
+msgid ""
+"Grylli includes built-in instructions throughout the app to help you "
+"configure and manage your setup."
+msgstr ""
+"Grylli uključuje ugrađene upute unutar aplikacije kako bi vam pomogao u "
+"konfiguriranju i upravljanju postavkama."
+
+#: app/templates/help.html:8
+msgid ""
+"This page provides an overview of key features and direct links to where "
+"they can be managed."
+msgstr ""
+"Ova stranica pruža pregled ključnih funkcija i direktne veze gdje se mogu "
+"upravljati."
+
+#: app/templates/help.html:12 app/templates/messages/list_messages.html:9
+#: app/templates/partials/shared_nav.html:17
+msgid "Notifications"
+msgstr "Obavijesti"
+
+#: app/templates/help.html:14
+msgid "Create and assign messages"
+msgstr "Kreirajte poruku ili email."
+
+#: app/templates/admin/index.html:32 app/templates/help.html:17
+#: app/templates/partials/admin_nav.html:56
+msgid "SMTP Settings"
+msgstr "SMTP postavke"
+
+#: app/templates/help.html:19
+msgid "Use your own email server"
+msgstr "Koristite vlastiti email server"
+
+#: app/templates/help.html:22
+msgid "Apprise Integration"
+msgstr "Apprise odredišta"
+
+#: app/templates/help.html:24
+msgid "Send notifications to 80+ supported services"
+msgstr "Šaljite obavijesti na 80+ podržanih usluga"
+
+#: app/templates/help.html:27
+#: app/templates/messages/assign_destinations.html:41
+#: app/templates/messages/view_message.html:58
+#: app/templates/partials/shared_nav.html:44
+#: app/templates/reminders/assign_destinations.html:39
+#: app/templates/reminders/view_reminder.html:69
+msgid "Webhooks"
+msgstr "Webhooks"
+
+#: app/templates/help.html:29
+msgid "Trigger actions or external workflows"
+msgstr "Pokrenite radnje ili vanjske tijekove rada"
+
+#: app/templates/email/list_emails.html:9 app/templates/help.html:32
+#: app/templates/partials/shared_nav.html:61
+msgid "Emails"
+msgstr "E-mailovi"
+
+#: app/templates/help.html:34
+msgid "View and manage secure email messages"
+msgstr "Pregled sigurnih e-mail poruka"
+
+#: app/templates/help.html:38
+msgid "Security"
+msgstr "🔐 Sigurnost"
+
+#: app/templates/help.html:39
+msgid "Grylli encrypts sensitive data and logs all key actions for auditing."
+msgstr ""
+"Grylli šifrira osjetljive podatke i bilježi sve ključne radnje za reviziju."
+
+#: app/templates/index.html:9 app/views/locale.py:95
+msgid "Welcome to Grylli"
+msgstr "Dobrodošli u Grylli"
+
+#: app/templates/index.html:11
+msgid "Pronounced"
+msgstr "Izgovara se"
+
+#: app/templates/index.html:11
+msgid "like “grill-ee”"
+msgstr "kao “grill-ee”"
+
+#: app/templates/index.html:14
+msgid ""
+"Grylli is a secure message scheduling and delivery system designed to ensure"
+" your important messages are delivered — even if you can’t be there to send "
+"them."
+msgstr ""
+"Grylli je sistem za planiranje i dostavu sigurnih poruka dizajniran da "
+"osigura da su vaše važne poruke dostavljene - čak i ako niste tamo da ih "
+"pošaljete."
+
+#: app/templates/index.html:17
+msgid ""
+"Whether you’re planning ahead, setting up emergency communication, or "
+"building peace of mind, Grylli helps automate your message delivery via "
+"multiple channels including email, webhooks, and Apprise notifications."
+msgstr ""
+"Bilo da planirate unaprijed, postavljate hitnu komunikaciju ili gradite "
+"duševni mir, Grylli pomaže da automatizirate dostavu svojih poruka putem "
+"emaila, webhooks ili Apprise obavijesti ako propustite prijavu."
+
+#: app/templates/index.html:19
+msgid "Getting Started"
+msgstr "Započnite"
+
+#: app/templates/index.html:21
+msgid "Create a message, email, or reminder."
+msgstr "Kreirajte poruku ili email."
+
+#: app/templates/index.html:22
+msgid "Set your check-in interval and grace period (for messages)."
+msgstr "Postavite interval prijave i period odgode."
+
+#: app/templates/index.html:23
+msgid "Assign one or more delivery destinations."
+msgstr "Dodijelite jednu ili više destinacija za dostavu."
+
+#: app/templates/index.html:24
+msgid "Optionally attach files for secure emails."
+msgstr "Opcionalno priložite datoteke za sigurne emailove."
+
+#: app/templates/index.html:25
+msgid "Schedule reminders to send at specific times or on a recurring basis."
+msgstr ""
+"Zakažite podsjetnike da se šalju u određeno vrijeme ili na ponavljajućoj "
+"osnovi."
+
+#: app/templates/index.html:26
+msgid "Enable the message or reminder to activate delivery."
+msgstr "Omogućite poruku ili podsjetnik da aktivirate isporuku."
+
+#: app/templates/index.html:28
+msgid ""
+"Regularly check in to Grylli to prevent automated delivery; miss a check-in "
+"and Grylli sends your messages as scheduled."
+msgstr ""
+"Redovno se prijavljujte u Grylli kako biste spriječili automatsku isporuku; "
+"propustite li prijavu, Grylli šalje vaše poruke prema rasporedu."
+
+#: app/templates/privacy.html:10
+msgid "Privacy Notice"
+msgstr "Obavijest o privatnosti"
+
+#: app/templates/privacy.html:13
+msgid ""
+"Grylli respects your privacy and is designed to minimize the collection and "
+"storage of personal data."
+msgstr ""
+"Grylli poštuje vašu privatnost i dizajniran je da svede na minimum "
+"prikupljanje i pohranu ličnih podataka."
+
+#: app/templates/privacy.html:14
+msgid ""
+"All data is encrypted where appropriate and remains fully under your control"
+" if you self-host this platform."
+msgstr ""
+"Svi podaci su šifrirani gdje je to prikladno i ostaju u potpunosti pod vašom"
+" kontrolom ako sami hostujete ovu platformu."
+
+#: app/templates/privacy.html:17
+msgid "What Data We Collect"
+msgstr "Koje podatke prikupljamo"
+
+#: app/templates/privacy.html:19
+msgid "Email address and password hash (for authentication)"
+msgstr "Email adresa i hash lozinke (za autentifikaciju)"
+
+#: app/templates/privacy.html:20
+msgid "Optional MFA secret and recovery codes (encrypted at rest)"
+msgstr "Opcionalni MFA tajni ključevi i kodovi za oporavak (šifrirano u miru)"
+
+#: app/templates/privacy.html:21
+msgid "Reminder and message content you configure"
+msgstr "Sadržaj podsjetnika i poruka koje konfigurirate"
+
+#: app/templates/privacy.html:22
+msgid "User-specific settings, SMTP configuration (if provided)"
+msgstr ""
+"Postavke specifične za korisnika, SMTP konfiguracija (ako je navedeno)"
+
+#: app/templates/privacy.html:25
+msgid "How Your Data Is Used"
+msgstr "Kako se koriste vaši podaci"
+
+#: app/templates/privacy.html:27
+msgid ""
+"Your data is used solely for the purpose of delivering reminders and "
+"messages according to your preferences."
+msgstr ""
+"Vaši podaci se koriste isključivo za svrhu dostavljanja podsjetnika i poruka"
+" prema vašim preferencama."
+
+#: app/templates/privacy.html:28
+msgid ""
+"Grylli does not share, sell, or transmit your personal data to any third "
+"parties."
+msgstr ""
+"Grylli ne dijeli, ne prodaje niti prenosi vaše lične podatke trećim "
+"stranama."
+
+#: app/templates/privacy.html:31
+msgid "Your Rights"
+msgstr "Vaša prava"
+
+#: app/templates/privacy.html:33
+msgid ""
+"You can export all of your data at any time from the Account Settings page."
+msgstr ""
+"Možete izvesti sve svoje podatke u bilo kojem trenutku sa stranice Postavke "
+"računa."
+
+#: app/templates/privacy.html:34
+msgid "You may permanently delete your account and all associated data."
+msgstr "Ne možete izbrisati vaš nalog jer ste zadnji administrator."
+
+#: app/templates/privacy.html:35
+msgid ""
+"If you are using a self-hosted instance, contact the instance administrator "
+"for data inquiries."
+msgstr ""
+"Ako koristite instancu koja se samostalno hostira, kontaktirajte "
+"administratora instance za upite o podacima."
+
+#: app/templates/privacy.html:38
+msgid "Self-Hosting Responsibility"
+msgstr "Odgovornost za samostalno hostovanje"
+
+#: app/templates/privacy.html:40
+msgid ""
+"If you are running Grylli on your own server, you are responsible for the "
+"storage, processing, and lawful handling of all user data on that instance."
+msgstr ""
+"Ako Grylli pokrećete na vlastitom serveru, odgovorni ste za pohranu, obradu "
+"i zakonito rukovanje svim korisničkim podacima na toj instanci."
+
+#: app/templates/privacy.html:44
+msgid ""
+"This notice was last updated in June 2025 and may evolve to reflect changes "
+"in the software or regulatory landscape."
+msgstr ""
+"Ova obavijest je posljednji put ažurirana u junu 2025. godine i može se "
+"razvijati kako bi odražavala promjene u softveru ili regulatornim okvirima."
+
+#: app/templates/system_info.html:11
+msgid "📦 Environment Versions"
+msgstr "📦 Verzije okruženja"
+
+#: app/templates/system_info.html:17
+msgid "Category"
+msgstr "Kategorija"
+
+#: app/templates/system_info.html:18
+msgid "Tool"
+msgstr "Alat"
+
+#: app/templates/system_info.html:19
+msgid "Version"
+msgstr "Verzija"
+
+#: app/templates/system_info.html:25
+msgid "🧠 Python"
+msgstr "🧠 Python"
+
+#: app/templates/system_info.html:26
+msgid "Python"
+msgstr "Python"
+
+#: app/templates/system_info.html:30
+msgid "pip"
+msgstr "pip"
+
+#: app/templates/system_info.html:34
+msgid "SQLite"
+msgstr "SQLite"
+
+#: app/templates/system_info.html:40
+msgid "⚙️ Core"
+msgstr "⚙️ Jezgra"
+
+#: app/templates/system_info.html:47
+msgid "🔐 Security"
+msgstr "🔐 Sigurnost"
+
+#: app/templates/system_info.html:48
+msgid "Email Validator"
+msgstr "Validacija e-maila"
+
+#: app/templates/system_info.html:52
+msgid "Cryptography"
+msgstr "Kriptografija"
+
+#: app/templates/system_info.html:57
+msgid "🕰️ Scheduling"
+msgstr "🕰️ Raspoređivanje"
+
+#: app/templates/system_info.html:58
+msgid "APScheduler"
+msgstr "APScheduler"
+
+#: app/templates/system_info.html:62
+msgid "Apprise (Python)"
+msgstr "Apprise (Python)"
+
+#: app/templates/system_info.html:66
+msgid "Apprise CLI"
+msgstr "Apprise CLI"
+
+#: app/templates/system_info.html:74
+msgid "🌐 Frontend"
+msgstr "🌐 Prednji kraj"
+
+#: app/templates/account/manage_account.html:11
+msgid "Manage Account"
+msgstr "Upravljanje računom"
+
+#: app/templates/account/manage_account.html:12
+msgid "Update your profile information and password."
+msgstr "Ažurirajte informacije o svom profilu i lozinku."
+
+#: app/templates/account/manage_account.html:41
+#: app/templates/admin/create_user.html:40
+#: app/templates/auth/bootstrap.html:43
+#: app/templates/auth/reset_password.html:42 app/templates/auth/signup.html:42
+msgid "Please enter a valid email address."
+msgstr "Molimo unesite važeću e-mail adresu."
+
+#: app/templates/account/manage_account.html:62
+#: app/templates/account/manage_account.html:96
+#: app/templates/account/manage_account.html:127
+#: app/templates/auth/reset_password.html:66
+#: app/templates/auth/reset_password.html:97 app/templates/auth/signup.html:65
+#: app/templates/auth/signup.html:95
+msgid "Show/hide password"
+msgstr "Drži za prikaz lozinke"
+
+#: app/templates/account/manage_account.html:89
+#: app/templates/admin/create_user.html:53
+#: app/templates/auth/bootstrap.html:51
+#: app/templates/auth/reset_password.html:58 app/templates/auth/signup.html:58
+msgid "Password must meet all complexity requirements."
+msgstr "Lozinka mora ispunjavati sve zahtjeve za složenost."
+
+#: app/templates/account/manage_account.html:141
+#: app/templates/admin/create_user.html:72
+#: app/templates/admin/edit_user.html:67 app/templates/auth/bootstrap.html:69
+#: app/templates/auth/reset_password.html:110
+#: app/templates/auth/signup.html:108
+msgid "Passwords do not match."
+msgstr "Lozinke se ne podudaraju."
+
+#: app/templates/account/manage_account.html:147
+msgid "Update Account"
+msgstr "Ažuriraj račun"
+
+#: app/templates/account/manage_account.html:151
+#: app/templates/admin/create_user.html:82
+#: app/templates/admin/edit_user.html:97 app/templates/admin/help_form.html:28
+#: app/templates/admin/partials/user_instructions_and_modal.html:62
+#: app/templates/admin/partials/user_table.html:113
+#: app/templates/apprise/create_apprise.html:42
+#: app/templates/apprise/edit_apprise.html:42
+#: app/templates/auth/reset_password.html:121
+#: app/templates/email/assign_smtp.html:46
+#: app/templates/email/attach_files.html:47
+#: app/templates/email/edit_message.html:54
+#: app/templates/email/schedule_email.html:84
+#: app/templates/messages/assign_destinations.html:66
+#: app/templates/messages/create_message.html:55
+#: app/templates/messages/edit_message.html:48
+#: app/templates/messages/schedule_message.html:84
+#: app/templates/mfa/challenge.html:29 app/templates/mfa/settings.html:51
+#: app/templates/reminders/assign_destinations.html:64
+#: app/templates/reminders/assign_email_reminder.html:94
+#: app/templates/reminders/create_reminder.html:49
+#: app/templates/reminders/edit_reminder.html:42
+#: app/templates/reminders/schedule_reminder.html:51
+#: app/templates/user_smtp/create_smtp.html:111
+#: app/templates/user_smtp/edit_smtp.html:125
+#: app/templates/webhook/create_webhook.html:48
+#: app/templates/webhook/edit_webhook.html:48
+msgid "Cancel"
+msgstr "Otkaži"
+
+#: app/templates/account/manage_account.html:159
+#: app/templates/admin/create_user.html:90
+#: app/templates/admin/edit_user.html:81 app/templates/auth/bootstrap.html:83
+#: app/templates/auth/reset_password.html:128
+#: app/templates/auth/signup.html:132
+msgid "Minimum 8 characters"
+msgstr "Minimalno 8 znakova"
+
+#: app/templates/account/manage_account.html:160
+#: app/templates/admin/create_user.html:91
+#: app/templates/admin/edit_user.html:82 app/templates/auth/bootstrap.html:84
+#: app/templates/auth/reset_password.html:129
+#: app/templates/auth/signup.html:133
+msgid "At least one uppercase letter"
+msgstr "Najmanje jedno veliko slovo"
+
+#: app/templates/account/manage_account.html:161
+#: app/templates/admin/create_user.html:92
+#: app/templates/admin/edit_user.html:83 app/templates/auth/bootstrap.html:85
+#: app/templates/auth/reset_password.html:130
+#: app/templates/auth/signup.html:134
+msgid "At least one lowercase letter"
+msgstr "Najmanje jedno malo slovo"
+
+#: app/templates/account/manage_account.html:162
+#: app/templates/admin/create_user.html:93
+#: app/templates/admin/edit_user.html:84 app/templates/auth/bootstrap.html:86
+#: app/templates/auth/reset_password.html:131
+#: app/templates/auth/signup.html:135
+msgid "At least one number"
+msgstr "Najmanje jedan broj"
+
+#: app/templates/account/manage_account.html:163
+#: app/templates/admin/create_user.html:94
+#: app/templates/auth/bootstrap.html:87
+#: app/templates/auth/reset_password.html:132
+#: app/templates/auth/signup.html:136
+msgid "At least one special character (e.g., !@#$%)"
+msgstr "Najmanje jedan posebni znak (npr., !@#$%)"
+
+#: app/templates/account/manage_account.html:169
+msgid "Download My Data"
+msgstr "Preuzmi moje podatke"
+
+#: app/templates/account/manage_account.html:171
+msgid ""
+"Download all your account data as a JSON file. This includes your reminders,"
+" messages, email settings, and more. The file is for your records only and "
+"cannot be imported back. Protect it as it may contain sensitive information."
+msgstr ""
+"Preuzmite sve podatke vašeg računa kao JSON datoteku. Ovo uključuje vaše "
+"podsjetnike, poruke, postavke email-a i više. Datoteka je samo za vaše "
+"zapise i ne može se ponovo uvesti. Zaštitite je jer može sadržavati "
+"osjetljive informacije."
+
+#: app/templates/account/manage_account.html:175
+msgid "Download My Data (JSON)"
+msgstr "Preuzmi moje podatke (JSON)"
+
+#: app/templates/account/manage_account.html:179
+msgid "Danger Zone"
+msgstr "Opasna zona"
+
+#: app/templates/account/manage_account.html:180
+msgid "Deleting your account is permanent and cannot be undone."
+msgstr "Brisanje vašeg naloga je trajno i ne može se poništiti."
+
+#: app/templates/account/manage_account.html:185
+msgid "Delete My Account"
+msgstr "Ažuriraj račun"
+
+#: app/templates/account/translations.html:8
+msgid "Translations - Grylli"
+msgstr "Prijevodi - Grylli"
+
+#: app/templates/account/translations.html:17
+#: app/templates/partials/header.html:102
+msgid "Translations"
+msgstr "Prijevodi"
+
+#: app/templates/account/translations.html:20
+msgid "Grylli currently supports multiple languages and more will be added."
+msgstr "Grylli trenutno podržava više jezika i više će ih biti dodano."
+
+#: app/templates/account/translations.html:21
+msgid "Many of the translations were performed with assistance from ChatGPT."
+msgstr "Mnogi prijevodi su izvedeni uz pomoć ChatGPT-a."
+
+#: app/templates/account/translations.html:22
+msgid ""
+"If you find a translation issue or want to suggest improvements, your input "
+"is welcome!"
+msgstr ""
+"Ako pronađete problem s prijevodom ili želite predložiti poboljšanja, vaš "
+"doprinos je dobrodošao!"
+
+#: app/templates/account/translations.html:28
+msgid "How to request translation updates"
+msgstr "Kako zatražiti ažuriranja prijevoda"
+
+#: app/templates/account/translations.html:30
+msgid "To contribute to translations, please use the following guidelines:"
+msgstr ""
+"Da biste doprinijeli prijevodima, molimo vas da koristite sljedeće "
+"smjernice:"
+
+#: app/templates/account/translations.html:43
+msgid "Contribute missing or improved translations:"
+msgstr "Pronašli ste nedostajući prijevod?"
+
+#: app/templates/account/translations.html:63
+msgid "Open the relevant .po translation file for your language."
+msgstr "Otvorite JSON datoteku za prijevod vašeg jezika. Na primjer:"
+
+#: app/templates/account/translations.html:67
+msgid ""
+"Find untranslated or incomplete entries and add or improve translations."
+msgstr ""
+"Pronađite neprevedene ili nepotpune unose i dodajte ili poboljšajte "
+"prijevode."
+
+#: app/templates/account/translations.html:68
+msgid "You may use a PO file editor or a text editor."
+msgstr "Možete koristiti uređivač PO datoteka ili uređivač teksta."
+
+#: app/templates/account/translations.html:69
+msgid "Copy the file path and the snippet of your changes."
+msgstr "Kopirajte putanju datoteke i isječak vaših promjena."
+
+#: app/templates/account/translations.html:70
+msgid "Paste the snippet directly into a new GitHub issue for review."
+msgstr "Zalijepite kopirani isječak direktno u komentar GitHub prijave."
+
+#: app/templates/account/translations.html:72
+msgid "Please do not upload the full .po file to avoid merge conflicts."
+msgstr ""
+"Ne učitavajte cijelu .po datoteku kako biste izbjegli konflikte pri "
+"spajanju."
+
+#: app/templates/account/translations.html:85
+msgid "Improving existing translations:"
+msgstr "Poboljšanje postojećih prijevoda:"
+
+#: app/templates/account/translations.html:104
+msgid "Open the relevant .po file for the translation you want to improve."
+msgstr "Otvorite relevantnu .po datoteku za prijevod koji želite poboljšati."
+
+#: app/templates/account/translations.html:106
+msgid "For example:"
+msgstr "Na primjer:"
+
+#: app/templates/account/translations.html:110
+msgid ""
+"Find the phrase(s) and its existing translation(s) you want to improve."
+msgstr ""
+"Pronađite frazu(e) i njen(ih) postojeći(ih) prijevod(a) koje želite "
+"poboljšati."
+
+#: app/templates/account/translations.html:111
+msgid "Update the phrase(s)."
+msgstr "Ažurirajte frazu(e)."
+
+#: app/templates/account/translations.html:112
+msgid "Copy the file name and path into the issue."
+msgstr "Kopirajte naziv datoteke i putanju u prijavu."
+
+#: app/templates/account/translations.html:114
+msgid "Paste the copied snippet directly into the GitHub issue comment."
+msgstr "Zalijepite kopirani isječak direktno u komentar GitHub prijave."
+
+#: app/templates/account/translations.html:115
+msgid "Do not upload the full .po file to avoid merge conflicts."
+msgstr ""
+"Ne učitavajte cijelu .po datoteku kako biste izbjegli konflikte pri "
+"spajanju."
+
+#: app/templates/account/translations.html:118
+msgid "Example snippet:"
+msgstr "Primjer isječka:"
+
+#: app/templates/account/translations.html:137
+msgid "Report missing translations not yet discovered:"
+msgstr "Prijavite nedostajuće prijevode koji još nisu otkriveni:"
+
+#: app/templates/account/translations.html:154
+msgid ""
+"If you see text in the app that appears untranslated or missing, please "
+"report it to us."
+msgstr ""
+"Ako vidite tekst u aplikaciji koji se čini neprevedenim ili nedostaje, "
+"molimo vas da nam to prijavite."
+
+#: app/templates/account/translations.html:155
+msgid "Provide the exact English phrase as it appears on the screen."
+msgstr "Navedite točnu englesku frazu kako se pojavljuje na ekranu."
+
+#: app/templates/account/translations.html:156
+msgid ""
+"Include the page or section where you saw the phrase (e.g., Apprise page, "
+"Account Page, etc.)."
+msgstr ""
+"Uključite stranicu ili sekciju gdje ste vidjeli frazu (npr., stranica "
+"Postavke, sekcija Račun)."
+
+#: app/templates/account/translations.html:157
+msgid ""
+"Submit this information via a new GitHub issue so we can add it to the "
+"translation files"
+msgstr ""
+"Pošaljite ove informacije putem nove GitHub prijave kako bismo ih mogli "
+"dodati u prijevodne datoteke i pripremiti za Babel."
+
+#: app/templates/account/translations.html:166
+msgid "Found a missing translation?"
+msgstr "Pronašli ste nedostajući prijevod?"
+
+#: app/templates/account/translations.html:171
+msgid ""
+"This link will create a new GitHub issue pre-filled with a language code."
+msgstr ""
+"Ova veza će stvoriti novi GitHub problem unaprijed popunjen s jezičnim "
+"kodom."
+
+#: app/templates/account/translations.html:172
+msgid "Report it by opening a new GitHub issue"
+msgstr "Prijavite ga otvaranjem nove GitHub prijave"
+
+#: app/templates/account/translations.html:175
+msgid "Please specify the language code and exact phrase when reporting."
+msgstr "Molimo navedite jezični kod i tačan izraz prilikom prijave."
+
+#: app/templates/account/translations.html:176
+msgid "Thank you for helping us make Grylli better!"
+msgstr "Hvala vam što pomažete da Grylli bude bolji!"
+
+#: app/templates/admin/create_user.html:14
+msgid "Create New User"
+msgstr "Kreiraj novog korisnika"
+
+#: app/templates/admin/create_user.html:15
+msgid "Fill out the form to add a new user."
+msgstr "Ispunite obrazac za dodavanje novog korisnika."
+
+#: app/templates/admin/create_user.html:21
+#: app/templates/admin/edit_user.html:17 app/templates/auth/bootstrap.html:24
+msgid "Please fix the following errors:"
+msgstr "Molimo vas ispravite sljedeće greške:"
+
+#: app/templates/admin/create_user.html:78
+#: app/templates/admin/edit_user.html:93
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "Create User"
+msgstr "Kreiraj korisnika"
+
+#: app/templates/admin/edit_user.html:10
+#: app/templates/admin/partials/user_card.html:20
+#: app/templates/admin/partials/user_table.html:26
+msgid "Edit User"
+msgstr "Uredi korisnika"
+
+#: app/templates/admin/edit_user.html:55 app/templates/admin/edit_user.html:74
+msgid "Hold to show password"
+msgstr "Drži za prikaz lozinke"
+
+#: app/templates/admin/edit_user.html:85
+#, python-format
+msgid "At least one special character (e.g., !@#$%%)"
+msgstr "Najmanje jedan posebni znak (npr., !@#$%%)"
+
+#: app/templates/admin/help.html:4 app/templates/auth/login.html:72
+msgid "Admin Help"
+msgstr "Administratorski panel"
+
+#: app/templates/admin/help.html:7
+msgid "Reset Admin Password"
+msgstr "Resetuj lozinku"
+
+#: app/templates/admin/help.html:9
+msgid ""
+"If you've forgotten the admin password, you can reset it using the following"
+" Docker command:"
+msgstr ""
+"Ako ste zaboravili administratorsku lozinku, možete je resetovati koristeći "
+"sljedeću Docker komandu:"
+
+#: app/templates/admin/help.html:15
+msgid ""
+"This script will prompt you to enter a new password for the admin user. You "
+"must run it from the host system where the Grylli container is running."
+msgstr ""
+"Ovaj skript će vas zatražiti da unesete novu lozinku za admin korisnika. "
+"Morate ga pokrenuti iz host sistema gdje je Grylli kontejner pokrenut."
+
+#: app/templates/admin/help.html:18
+msgid "After resetting, you can log in with the new password immediately."
+msgstr "Nakon resetovanja, možete se odmah prijaviti s novom lozinkom."
+
+#: app/templates/admin/help.html:24
+msgid "Return to Login"
+msgstr "Povratak na komandnu tablu"
+
+#: app/templates/admin/help_form.html:6
+msgid "Admin Help Access"
+msgstr "Pristup Pomoći za Administratore"
+
+#: app/templates/admin/help_form.html:9
+msgid "Enter your Ferret Key to unlock admin-only help documentation."
+msgstr ""
+"Unesite svoj Ferret Key kako biste otključali pomoćnu dokumentaciju samo za "
+"administratore."
+
+#: app/templates/admin/help_form.html:34
+msgid "How to Find Your FERRET_KEY"
+msgstr "Kako Pronaći Vaš FERRET_KEY"
+
+#: app/templates/admin/help_form.html:36
+msgid "The FERRET_KEY is set as an environment variable when running Grylli."
+msgstr ""
+"FERRET_KEY je postavljen kao varijabla okruženja prilikom pokretanja Grylli."
+
+#: app/templates/admin/help_form.html:39
+msgid "Option 1: Check docker-compose.yml"
+msgstr "Opcija 1: Provjerite docker-compose.yml"
+
+#: app/templates/admin/help_form.html:46
+msgid "Option 2: Use docker inspect"
+msgstr "Opcija 2: Koristite docker inspect"
+
+#: app/templates/admin/help_form.html:52
+msgid "This shows the FERRET_KEY as passed to the container at runtime."
+msgstr ""
+"Ovo prikazuje FERRET_KEY kako je proslijeđen kontejneru tokom izvođenja."
+
+#: app/templates/admin/index.html:10
+msgid "Admin Panel"
+msgstr "Administratorski panel"
+
+#: app/templates/admin/index.html:12
+msgid ""
+"Welcome to the Grylli Admin Panel. Use the links below to manage the system."
+msgstr ""
+"Dobrodošli u Grylli adminsitratorski panel. Koristite linkove ispod za "
+"upravljanje sistemom."
+
+#: app/templates/admin/index.html:17
+msgid "Manage Users"
+msgstr "Upravljanje korisnicima"
+
+#: app/templates/admin/index.html:18
+msgid "Create, edit, enable/disable, or delete user accounts."
+msgstr ""
+"Kreirajte, uredite, omogućite/onemogućite ili izbrišite korisničke račune."
+
+#: app/templates/admin/index.html:22
+#: app/templates/admin/system_settings.html:10
+#: app/templates/partials/admin_nav.html:52
+msgid "System Settings"
+msgstr "Sistemske postavke"
+
+#: app/templates/admin/index.html:23
+msgid "View  system-wide environment values."
+msgstr "Pogledajte sistemske vrijednosti okoliša."
+
+#: app/templates/admin/index.html:27 app/templates/partials/admin_nav.html:42
+msgid "Backups"
+msgstr "Sigurnosne kopije"
+
+#: app/templates/admin/index.html:28
+msgid "Create and delete database backups."
+msgstr "Sigurnosne kopije baze podataka"
+
+#: app/templates/admin/index.html:33
+msgid "View and test global SMTP settings."
+msgstr "Nije uspjelo slanje testnog email-a. Provjerite SMTP postavke."
+
+#: app/templates/admin/index.html:39
+msgid "View Admin Guide / README on GitHub"
+msgstr "Pogledajte Admin vodič / README na GitHubu"
+
+#: app/templates/admin/index.html:40
+msgid "Includes setup instructions, integrations, and troubleshooting."
+msgstr "Uključuje upute za postavljanje, integracije i rješavanje problema."
+
+#: app/templates/admin/index.html:44
+msgid "⚠️ Admin Tips"
+msgstr "⚠️ Savjeti za administratora"
+
+#: app/templates/admin/index.html:46
+msgid "Ensure the data folder (database) is backed up on your host"
+msgstr ""
+"Osigurajte da je mapa podataka (baza podataka) sigurnosno kopirana na vašem "
+"hostu"
+
+#: app/templates/admin/index.html:48
+msgid ""
+"The uploads folder is not per user.  If required per user, you will ndd to "
+"create subdirectoried per user and setup permissions so users can only see "
+"their own folder."
+msgstr ""
+"Mapa za prijenose nije po korisniku. Ako je potrebna po korisniku, trebat "
+"ćete stvoriti poddirektorije po korisniku i postaviti dozvole tako da "
+"korisnici mogu vidjeti samo svoju vlastitu mapu."
+
+#: app/templates/admin/index.html:51
+msgid ""
+"To restore a backup: stop the container, replace the data/grylli.db with one"
+" from the backups folder, and restart the container."
+msgstr ""
+"Da biste vratili sigurnosnu kopiju: zaustavite kontejner, zamijenite "
+"data/grylli.db s onim iz mape s sigurnosnim kopijama, i ponovno pokrenite "
+"kontejner."
+
+#: app/templates/admin/list_backups.html:11
+msgid "Database Backups"
+msgstr "Sigurnosne kopije baze podataka"
+
+#: app/templates/admin/list_backups.html:13
+msgid "Create Backup"
+msgstr "Kreiraj sigurnosnu kopiju"
+
+#: app/templates/admin/list_backups.html:21
+msgid "Filename"
+msgstr "Naziv datoteke"
+
+#: app/templates/admin/list_backups.html:22
+#: app/templates/admin/partials/user_table.html:14
+#: app/templates/apprise/list_apprise.html:62
+#: app/templates/email/list_emails.html:60
+#: app/templates/messages/list_messages.html:60
+#: app/templates/reminders/list_reminders.html:60
+#: app/templates/user_smtp/list_smtp.html:59
+#: app/templates/webhook/list_webhooks.html:63
+msgid "Actions"
+msgstr "Akcije"
+
+#: app/templates/admin/list_backups.html:32
+msgid "Delete this backup?"
+msgstr "Obrisati ovu sigurnosnu kopiju?"
+
+#: app/templates/admin/list_backups.html:32
+#: app/templates/apprise/list_apprise.html:95
+#: app/templates/apprise/list_apprise.html:99
+#: app/templates/apprise/list_apprise.html:150
+#: app/templates/apprise/list_apprise.html:154
+#: app/templates/email/list_emails.html:124
+#: app/templates/email/list_emails.html:128
+#: app/templates/email/list_emails.html:226
+#: app/templates/email/list_emails.html:230
+#: app/templates/messages/list_messages.html:112
+#: app/templates/messages/list_messages.html:116
+#: app/templates/messages/list_messages.html:198
+#: app/templates/messages/list_messages.html:202
+#: app/templates/reminders/list_reminders.html:107
+#: app/templates/reminders/list_reminders.html:113
+#: app/templates/reminders/list_reminders.html:192
+#: app/templates/reminders/list_reminders.html:198
+#: app/templates/user_smtp/list_smtp.html:101
+#: app/templates/user_smtp/list_smtp.html:169
+#: app/templates/webhook/list_webhooks.html:102
+#: app/templates/webhook/list_webhooks.html:161
+msgid "Delete"
+msgstr "Obriši"
+
+#: app/templates/admin/list_backups.html:41
+msgid "No backups found."
+msgstr "Nema pronađenih sigurnosnih kopija."
+
+#: app/templates/admin/list_backups.html:44
+msgid ""
+"Backups contain your full app data. Store securely. Sensitive data is "
+"encrypted in the DB by default."
+msgstr ""
+"Sigurnosne kopije sadrže sve podatke vaše aplikacije. Čuvajte ih sigurno. "
+"Osjetljivi podaci su šifrirani u bazama podataka prema zadanim postavkama."
+
+#: app/templates/admin/smtp_config.html:28
+#: app/templates/admin/system_config.html:22
+msgid "System Configuration"
+msgstr "Konfiguracija sistema"
+
+#: app/templates/admin/smtp_config.html:33
+#: app/templates/admin/system_config.html:26
+#: app/templates/admin/system_settings.html:15
+msgid "Key"
+msgstr "Ključ"
+
+#: app/templates/admin/smtp_config.html:34
+#: app/templates/admin/system_config.html:27
+#: app/templates/admin/system_settings.html:16
+msgid "Value"
+msgstr "Vrijednost"
+
+#: app/templates/admin/smtp_config.html:35
+#: app/templates/admin/system_config.html:28
+msgid "Sensitive"
+msgstr "Osjetljivo"
+
+#: app/templates/admin/smtp_config.html:36
+#: app/templates/admin/system_config.html:29
+msgid "Editable"
+msgstr "Uredivo"
+
+#: app/templates/admin/smtp_config.html:50
+#: app/templates/admin/smtp_config.html:51
+#: app/templates/admin/system_config.html:45
+#: app/templates/admin/system_config.html:46
+#: app/templates/email/view_config.html:60
+msgid "Yes"
+msgstr "Da"
+
+#: app/templates/admin/smtp_config.html:50
+#: app/templates/admin/smtp_config.html:51
+#: app/templates/admin/system_config.html:45
+#: app/templates/admin/system_config.html:46
+#: app/templates/email/view_config.html:60
+msgid "No"
+msgstr "Ne"
+
+#: app/templates/admin/smtp_config.html:63
+#: app/templates/admin/system_config.html:55
+msgid "Send Test Email"
+msgstr "Pošalji testni email"
+
+#: app/templates/admin/system_config.html:39
+msgid "decrypted"
+msgstr "Kreirano"
+
+#: app/templates/admin/partials/user_card.html:12
+msgid "Email:"
+msgstr "Email:"
+
+#: app/templates/admin/partials/user_card.html:15
+msgid "Role:"
+msgstr "Uloga:"
+
+#: app/templates/admin/partials/user_card.html:27
+#: app/templates/admin/partials/user_table.html:34
+msgid "Change Role"
+msgstr "Promijeni ulogu"
+
+#: app/templates/admin/partials/user_card.html:29
+#: app/templates/admin/partials/user_table.html:36
+msgid "You cannot change your own role"
+msgstr "Ne možete promijeniti vlastiti status omogućavanja."
+
+#: app/templates/admin/partials/user_card.html:36
+#: app/templates/admin/partials/user_table.html:43
+msgid "Are you sure you want to reset MFA for this user?"
+msgstr "Jeste li sigurni da želite resetirati MFA za ovog korisnika?"
+
+#: app/templates/admin/partials/user_card.html:39
+#: app/templates/admin/partials/user_table.html:46
+msgid "Reset MFA"
+msgstr "Resetuj lozinku"
+
+#: app/templates/admin/partials/user_card.html:51
+#: app/templates/admin/partials/user_table.html:58
+msgid "Delete user"
+msgstr "Obriši korisnika"
+
+#: app/templates/admin/partials/user_card.html:55
+#: app/templates/admin/partials/user_table.html:61
+msgid "Delete User"
+msgstr "Obriši korisnika"
+
+#: app/templates/admin/partials/user_card.html:58
+#: app/templates/admin/partials/user_table.html:65
+msgid "You cannot disable yourself"
+msgstr "Ne možete onemogućiti sebe"
+
+#: app/templates/admin/partials/user_card.html:65
+#: app/templates/admin/partials/user_table.html:72
+msgid "Disable"
+msgstr "Onemogući"
+
+#: app/templates/admin/partials/user_card.html:65
+#: app/templates/admin/partials/user_table.html:72
+msgid "Enable"
+msgstr "Omogući"
+
+#: app/templates/admin/partials/user_header.html:6
+#: app/templates/partials/admin_nav.html:47
+msgid "Users"
+msgstr "Korisnici"
+
+#: app/templates/admin/partials/user_header.html:12
+#: app/templates/admin/partials/user_header.html:13
+#: app/templates/apprise/apprise_config.html:10
+#: app/templates/apprise/apprise_config.html:11
+#: app/templates/apprise/list_apprise.html:16
+#: app/templates/apprise/list_apprise.html:17
+#: app/templates/email/list_emails.html:15
+#: app/templates/email/list_emails.html:16
+#: app/templates/messages/list_messages.html:16
+#: app/templates/messages/list_messages.html:17
+#: app/templates/reminders/list_reminders.html:15
+#: app/templates/reminders/list_reminders.html:16
+#: app/templates/user_smtp/list_smtp.html:14
+#: app/templates/user_smtp/list_smtp.html:17
+#: app/templates/webhook/list_webhooks.html:16
+#: app/templates/webhook/list_webhooks.html:17
+#: app/templates/webhook/webhook_config.html:10
+#: app/templates/webhook/webhook_config.html:11
+msgid "Table View"
+msgstr "Pogled tabele"
+
+#: app/templates/admin/partials/user_header.html:26
+#: app/templates/admin/partials/user_header.html:27
+#: app/templates/apprise/apprise_config.html:24
+#: app/templates/apprise/apprise_config.html:25
+#: app/templates/apprise/list_apprise.html:30
+#: app/templates/apprise/list_apprise.html:31
+#: app/templates/email/list_emails.html:29
+#: app/templates/email/list_emails.html:30
+#: app/templates/messages/list_messages.html:30
+#: app/templates/messages/list_messages.html:31
+#: app/templates/reminders/list_reminders.html:29
+#: app/templates/reminders/list_reminders.html:30
+#: app/templates/user_smtp/list_smtp.html:27
+#: app/templates/user_smtp/list_smtp.html:30
+#: app/templates/webhook/list_webhooks.html:30
+#: app/templates/webhook/list_webhooks.html:31
+#: app/templates/webhook/webhook_config.html:24
+#: app/templates/webhook/webhook_config.html:25
+msgid "Card View"
+msgstr "Pogled kartice"
+
+#: app/templates/admin/partials/user_header.html:45
+msgid "Add User"
+msgstr "Dodaj korisnika"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:9
+#: app/templates/email/attach_files.html:54
+#: app/templates/email/list_emails.html:255
+#: app/templates/messages/list_messages.html:223
+#: app/templates/reminders/list_reminders.html:218
+#: app/templates/reminders/schedule_reminder.html:56
+msgid "Hide Instructions"
+msgstr "Sakrij upute"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:9
+msgid "How to manage users"
+msgstr "Kako upravljati korisnicima"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "Click"
+msgstr "Kliknite"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+msgid "➕ Add User"
+msgstr "➕ Dodaj korisnika"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+msgid "to open the new user form."
+msgstr "da otvorite novi obrazac za korisnika."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:18
+msgid "Enter a unique username, valid email address, and strong password."
+msgstr ""
+"Unesite jedinstveno korisničko ime, važeću email adresu i jaku lozinku."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "Select the appropriate"
+msgstr "Odaberite odgovarajuću"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "role"
+msgstr "ulogu"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "or"
+msgstr "Port"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "to save."
+msgstr "da biste sačuvali."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:25
+msgid "To edit a user, click ✏️ and update their info."
+msgstr "Da biste uredili korisnika, kliknite ✏️ i ažurirajte njegove podatke."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:26
+msgid "To delete a user, click 🗑️ and confirm the deletion."
+msgstr "Da biste obrisali korisnika, kliknite 🗑️ i potvrdite brisanje."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:28
+msgid "To disable or enable a user, click 🔴 or 🟢."
+msgstr "Da biste onemogućili ili omogućili korisnika, kliknite 🔴 ili 🟢."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:30
+msgid "🟢 = User is enabled and can log in."
+msgstr "🟢 = Korisnik je omogućen i može se prijaviti."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:31
+msgid "🔴 = User is disabled and cannot log in."
+msgstr "🔴 = Korisnik je onemogućen i ne može se prijaviti."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:32
+msgid "⚪ = You cannot disable your own account."
+msgstr "⚪ = Ne možete onemogućiti svoj vlastiti nalog."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:43
+#: app/templates/admin/partials/user_table.html:91
+msgid "Assign Role for"
+msgstr "Dodijeli destinacije za"
+
+#: app/templates/admin/partials/user_table.html:10
+msgid "ID"
+msgstr "ID"
+
+#: app/templates/admin/partials/user_table.html:11
+#: app/templates/user_smtp/list_smtp.html:55
+msgid "Username"
+msgstr "Korisničko ime"
+
+#: app/templates/admin/partials/user_table.html:12
+msgid "Email"
+msgstr "Email"
+
+#: app/templates/admin/partials/user_table.html:13
+msgid "Role"
+msgstr "Uloga"
+
+#: app/templates/apprise/apprise_config.html:3
+#: app/templates/apprise/list_apprise.html:9
+#: app/templates/messages/assign_destinations.html:22
+#: app/templates/reminders/assign_destinations.html:20
+msgid "Apprise Destinations"
+msgstr "Apprise odredišta"
+
+#: app/templates/apprise/apprise_config.html:43
+#: app/templates/webhook/list_webhooks.html:49
+#: app/templates/webhook/webhook_config.html:43
+msgid "Add Webhook"
+msgstr "Dodaj webhook"
+
+#: app/templates/apprise/apprise_config.html:43
+#: app/templates/apprise/list_apprise.html:49
+#: app/templates/webhook/list_webhooks.html:49
+#: app/templates/webhook/webhook_config.html:43
+msgid "Add Destination"
+msgstr "Dodaj odredište"
+
+#: app/templates/apprise/create_apprise.html:10
+msgid "Create Apprise Destination"
+msgstr "Kreiraj Apprise odredište"
+
+#: app/templates/apprise/create_apprise.html:38
+#: app/templates/apprise/edit_apprise.html:38
+#: app/templates/user_smtp/create_smtp.html:107
+#: app/templates/webhook/create_webhook.html:44
+#: app/templates/webhook/edit_webhook.html:44
+msgid "Create Destination"
+msgstr "Kreiraj odredište"
+
+#: app/templates/apprise/create_apprise.html:47
+#: app/templates/apprise/edit_apprise.html:47
+msgid "Need help with Apprise URLs? See the"
+msgstr "Treba vam pomoć sa Apprise URL-ovima? Pogledajte"
+
+#: app/templates/apprise/create_apprise.html:51
+#: app/templates/apprise/edit_apprise.html:51
+msgid "Apprise Notification Services documentation"
+msgstr "dokumentaciju za Apprise notifikacione usluge"
+
+#: app/templates/apprise/edit_apprise.html:10
+msgid "Edit Apprise Destination"
+msgstr "Uredi Apprise odredište"
+
+#: app/templates/apprise/list_apprise.html:49
+msgid "Add Apprise"
+msgstr "Dodaj Apprise"
+
+#: app/templates/apprise/list_apprise.html:58
+#: app/templates/email/edit_message.html:21
+#: app/templates/email/list_emails.html:56
+#: app/templates/email/view_config.html:14
+#: app/templates/messages/create_message.html:29
+#: app/templates/messages/edit_message.html:23
+#: app/templates/messages/list_messages.html:57
+#: app/templates/messages/view_message.html:14
+#: app/templates/reminders/create_reminder.html:23
+#: app/templates/reminders/edit_reminder.html:17
+#: app/templates/reminders/list_reminders.html:56
+#: app/templates/reminders/view_reminder.html:13
+#: app/templates/user_smtp/list_smtp.html:52
+#: app/templates/webhook/list_webhooks.html:58
+msgid "Label"
+msgstr "Oznaka"
+
+#: app/templates/apprise/list_apprise.html:59
+msgid "URL"
+msgstr "URL"
+
+#: app/templates/apprise/list_apprise.html:61
+#: app/templates/email/list_emails.html:59
+#: app/templates/messages/list_messages.html:59
+#: app/templates/messages/view_message.html:36
+#: app/templates/reminders/view_reminder.html:47
+#: app/templates/webhook/list_webhooks.html:62
+msgid "Created At"
+msgstr "Kreirano"
+
+#: app/templates/apprise/list_apprise.html:77
+#: app/templates/apprise/list_apprise.html:132
+#: app/templates/user_smtp/list_smtp.html:79
+#: app/templates/user_smtp/list_smtp.html:147
+#: app/templates/webhook/list_webhooks.html:79
+#: app/templates/webhook/list_webhooks.html:138
+msgid "Edit"
+msgstr "Uredi"
+
+#: app/templates/apprise/list_apprise.html:80
+#: app/templates/apprise/list_apprise.html:135
+#: app/templates/user_smtp/list_smtp.html:82
+#: app/templates/user_smtp/list_smtp.html:150
+msgid "Cannot edit while in use"
+msgstr "Ne može se uređivati dok je u upotrebi"
+
+#: app/templates/apprise/list_apprise.html:88
+#: app/templates/apprise/list_apprise.html:143
+#: app/templates/webhook/list_webhooks.html:91
+#: app/templates/webhook/list_webhooks.html:150
+msgid "Test"
+msgstr "Testiraj"
+
+#: app/templates/apprise/list_apprise.html:103
+#: app/templates/apprise/list_apprise.html:158
+#: app/templates/user_smtp/list_smtp.html:106
+#: app/templates/user_smtp/list_smtp.html:174
+msgid "Cannot delete while in use"
+msgstr "Ne može se obrisati dok je u upotrebi"
+
+#: app/templates/apprise/list_apprise.html:119
+msgid "URL:"
+msgstr "URL:"
+
+#: app/templates/apprise/list_apprise.html:122
+#: app/templates/user_smtp/list_smtp.html:137
+#: app/templates/webhook/list_webhooks.html:128
+msgid "Enabled:"
+msgstr "Omogućeno:"
+
+#: app/templates/apprise/list_apprise.html:125
+#: app/templates/user_smtp/list_smtp.html:140
+#: app/templates/webhook/list_webhooks.html:131
+msgid "Created:"
+msgstr "Kreirano:"
+
+#: app/templates/auth/bootstrap.html:14
+msgid "Create Admin Account"
+msgstr "Kreiraj administratorski nalog"
+
+#: app/templates/auth/bootstrap.html:16
+msgid "Let’s get started by creating your first admin account."
+msgstr "Počnimo s kreiranjem vašeg prvog administratorskog naloga."
+
+#: app/templates/auth/bootstrap.html:75
+msgid "Create Admin"
+msgstr "Kreiraj administratora"
+
+#: app/templates/auth/forgot_password.html:12
+msgid "Forgot Password"
+msgstr "Zaboravljena lozinka"
+
+#: app/templates/auth/forgot_password.html:15
+msgid ""
+"Enter your username and email. We'll send you a link to reset your password."
+msgstr ""
+"Unesite svoje korisničko ime i email. Poslat ćemo vam link za resetovanje "
+"lozinke."
+
+#: app/templates/auth/forgot_username.html:12
+msgid "Forgot Username"
+msgstr "Zaboravljeno korisničko ime"
+
+#: app/templates/auth/forgot_username.html:15
+msgid "Enter your email address, and we'll send you your username."
+msgstr "Unesite svoju email adresu i poslat ćemo vam vaše korisničko ime."
+
+#: app/templates/auth/forgot_username.html:40
+msgid "Send Username"
+msgstr "Pošalji korisničko ime"
+
+#: app/templates/auth/login.html:12 app/templates/auth/login.html:54
+msgid "Log In"
+msgstr "Prijavi se"
+
+#: app/templates/auth/login.html:62
+msgid "Forgot Username?"
+msgstr "Zaboravljeno korisničko ime?"
+
+#: app/templates/auth/login.html:64
+msgid "Forgot Password?"
+msgstr "Zaboravljena lozinka?"
+
+#: app/templates/auth/login.html:66 app/templates/auth/signup.html:12
+msgid "Sign Up"
+msgstr "Registruj se"
+
+#: app/templates/auth/rate_limit.html:9
+msgid "Hold On"
+msgstr "Drži se"
+
+#: app/templates/auth/rate_limit.html:11
+msgid "Too many failed login attempts. Please wait"
+msgstr "Previše neuspjelih pokušaja prijave. Molimo sačekajte"
+
+#: app/templates/auth/rate_limit.html:13
+msgid "seconds..."
+msgstr "sekundi..."
+
+#: app/templates/auth/rate_limit.html:15
+msgid "Redirecting to login..."
+msgstr "Povratak na komandnu tablu"
+
+#: app/templates/auth/reset_password.html:12
+#: app/templates/auth/reset_password.html:116
+msgid "Reset Password"
+msgstr "Resetuj lozinku"
+
+#: app/templates/auth/reset_password.html:14
+msgid "Enter your username, email, and new password."
+msgstr "Unesite svoje korisničko ime, email i novu lozinku."
+
+#: app/templates/auth/signup.html:14
+msgid "Fill out the form to create your account."
+msgstr "Popunite formular da kreirate svoj račun."
+
+#: app/templates/checkin/already_checked_in.html:10
+msgid "Already Checked In"
+msgstr "Posljednje prijavljivanje"
+
+#: app/templates/checkin/already_checked_in.html:12
+msgid ""
+"You have already checked in for this item. No further action is needed at "
+"this time."
+msgstr ""
+"Već ste se prijavili za ovu stavku. Daljnje radnje u ovom trenutku nisu "
+"potrebne."
+
+#: app/templates/checkin/already_checked_in.html:16
+#: app/templates/checkin/disabled.html:16
+#: app/templates/checkin/executed_disabled.html:18
+msgid "Check-in for:"
+msgstr "Prijavljeni ste za:"
+
+#: app/templates/checkin/already_checked_in.html:21
+#: app/templates/checkin/disabled.html:21
+#: app/templates/checkin/executed_disabled.html:23
+#: app/templates/checkin/thank_you.html:19
+msgid "Return to Dashboard"
+msgstr "Povratak na komandnu tablu"
+
+#: app/templates/checkin/disabled.html:10
+msgid "Check-In Disabled"
+msgstr "Email je onemogućen"
+
+#: app/templates/checkin/disabled.html:12
+msgid "This check-in is currently disabled and cannot be completed."
+msgstr "Ova prijava je trenutno onemogućena i ne može se dovršiti."
+
+#: app/templates/checkin/executed_disabled.html:11
+msgid "Already Executed & Disabled"
+msgstr "Već izvršeno i onemogućeno"
+
+#: app/templates/checkin/executed_disabled.html:14
+msgid ""
+"This check-in has already been executed and is now disabled. No further "
+"action is required."
+msgstr ""
+"Ova prijava je već izvršena i sada je onemogućena. Daljnje radnje nisu "
+"potrebne."
+
+#: app/templates/checkin/thank_you.html:10
+msgid "Check-In Successful"
+msgstr "Uspješna prijava"
+
+#: app/templates/checkin/thank_you.html:11
+msgid "Thank you for checking in."
+msgstr "Hvala vam na prijavi."
+
+#: app/templates/checkin/thank_you.html:14
+msgid "Checked in for:"
+msgstr "Prijavljeni ste za:"
+
+#: app/templates/email/assign_smtp.html:11
+msgid "📧 Assign SMTP Config to:"
+msgstr "📧 Dodijeli SMTP konfiguraciju za:"
+
+#: app/templates/email/assign_smtp.html:25
+msgid "No SMTP (Unassign)"
+msgstr "Nije dodijeljena SMTP konfiguracija"
+
+#: app/templates/email/assign_smtp.html:26
+msgid "This email will not use any SMTP configuration."
+msgstr "Ovaj email neće koristiti nikakvu SMTP konfiguraciju."
+
+#: app/templates/email/attach_files.html:12
+msgid "Attach Files for:"
+msgstr "Priloži fajlove za:"
+
+#: app/templates/email/attach_files.html:21
+msgid "Available Files"
+msgstr "Dostupni fajlovi"
+
+#: app/templates/email/attach_files.html:36
+msgid "No files found in the upload directory."
+msgstr "Nema pronađenih fajlova u direktoriju za učitavanje."
+
+#: app/templates/email/attach_files.html:44
+msgid "Save Attachments"
+msgstr "Sačuvaj priloge"
+
+#: app/templates/email/attach_files.html:54
+msgid "File Attach Notes"
+msgstr "Napomena o prilozima"
+
+#: app/templates/email/attach_files.html:63
+msgid "Important:"
+msgstr "Port:"
+
+#: app/templates/email/attach_files.html:65
+msgid ""
+"Only files that are present in the 'uploads' folder (provided by your system"
+" administrator) will be shown here. If you do not see your file(s), please "
+"contact your Grylli administrator."
+msgstr ""
+"Samo datoteke koje su prisutne u mapi 'uploads' (osiguranoj od strane vašeg "
+"sistemskog administratora) će biti prikazane ovdje. Ako ne vidite svoju "
+"datoteku(e), molimo kontaktirajte svog Grylli administratora."
+
+#: app/templates/email/attach_files.html:69
+msgid "Accepted file types:"
+msgstr "Prihvaćeni tipovi fajlova:"
+
+#: app/templates/email/attach_files.html:71
+msgid "Documents:"
+msgstr "Dokumenti:"
+
+#: app/templates/email/attach_files.html:73
+msgid "Images:"
+msgstr "Slike:"
+
+#: app/templates/email/attach_files.html:75
+msgid "Audio:"
+msgstr "Audio:"
+
+#: app/templates/email/attach_files.html:79
+msgid "Maximum file size:"
+msgstr "Maksimalna veličina fajla:"
+
+#: app/templates/email/attach_files.html:80
+msgid "10 MB per file"
+msgstr "10 MB po fajlu"
+
+#: app/templates/email/attach_files.html:83
+msgid "Total upload size:"
+msgstr "Ukupna veličina učitavanja:"
+
+#: app/templates/email/attach_files.html:84
+msgid "20 MB (all files combined)"
+msgstr "20 MB (svi fajlovi zajedno)"
+
+#: app/templates/email/edit_message.html:12
+#: app/templates/email/list_emails.html:75
+#: app/templates/email/list_emails.html:177
+msgid "Edit Email"
+msgstr "Uredi email"
+
+#: app/templates/email/edit_message.html:12
+msgid "Create Email"
+msgstr "Kreiraj email"
+
+#: app/templates/email/edit_message.html:28
+msgid "To (Recipient Email)"
+msgstr "Za (Email primaoca)"
+
+#: app/templates/email/edit_message.html:35
+#: app/templates/email/list_emails.html:57
+#: app/templates/email/view_config.html:18
+#: app/templates/messages/create_message.html:36
+#: app/templates/messages/edit_message.html:30
+#: app/templates/messages/list_messages.html:58
+#: app/templates/messages/view_message.html:18
+#: app/templates/reminders/create_reminder.html:30
+#: app/templates/reminders/edit_reminder.html:24
+#: app/templates/reminders/list_reminders.html:57
+#: app/templates/reminders/view_reminder.html:17
+msgid "Subject"
+msgstr "Naslov"
+
+#: app/templates/email/edit_message.html:42
+#: app/templates/email/view_config.html:28
+msgid "Body"
+msgstr "Telo"
+
+#: app/templates/email/edit_message.html:50
+msgid "Save Email"
+msgstr "Sačuvaj email"
+
+#: app/templates/email/list_emails.html:48
+msgid "Add Email"
+msgstr "Dodaj email"
+
+#: app/templates/email/list_emails.html:58
+#: app/templates/reminders/assign_email_reminder.html:77
+msgid "To"
+msgstr "Za"
+
+#: app/templates/email/list_emails.html:78
+#: app/templates/email/list_emails.html:180
+msgid "Disable to edit email"
+msgstr "Nije uspjelo slanje testnog email-a:"
+
+#: app/templates/email/list_emails.html:84
+#: app/templates/email/list_emails.html:186
+msgid "Attach Files"
+msgstr "Priloži fajlove"
+
+#: app/templates/email/list_emails.html:87
+#: app/templates/email/list_emails.html:189
+msgid "Disable to attach files"
+msgstr "Priloži fajlove"
+
+#: app/templates/email/list_emails.html:93
+#: app/templates/email/list_emails.html:195
+msgid "Attach SMTP Config"
+msgstr "Priloži SMTP konfiguraciju"
+
+#: app/templates/email/list_emails.html:96
+#: app/templates/email/list_emails.html:198
+msgid "Disable to assign SMTP"
+msgstr "Onemogući za dodjelu SMTP-a"
+
+#: app/templates/email/list_emails.html:102
+#: app/templates/email/list_emails.html:204
+msgid "Schedule Check-In"
+msgstr "Zakaži prijavu"
+
+#: app/templates/email/list_emails.html:105
+#: app/templates/email/list_emails.html:207
+msgid "Disable to schedule check-in"
+msgstr "Zakaži prijavu"
+
+#: app/templates/email/list_emails.html:110
+#: app/templates/email/list_emails.html:212
+#: app/templates/messages/list_messages.html:99
+#: app/templates/messages/list_messages.html:184
+#: app/templates/reminders/list_reminders.html:93
+#: app/templates/reminders/list_reminders.html:178
+msgid "View Details"
+msgstr "Pogledaj detalje"
+
+#: app/templates/email/list_emails.html:118
+#: app/templates/email/list_emails.html:220
+msgid "Send this email to yourself to preview it."
+msgstr "Pošalji ovaj email sebi da ga pregledaš."
+
+#: app/templates/email/list_emails.html:136
+#: app/templates/email/list_emails.html:238
+msgid "Toggle Email On/Off"
+msgstr "Prebaci email On/Off"
+
+#: app/templates/email/list_emails.html:139
+#: app/templates/email/list_emails.html:241
+msgid "Email is enabled"
+msgstr "Email je omogućen"
+
+#: app/templates/email/list_emails.html:141
+#: app/templates/email/list_emails.html:243
+msgid "Email is disabled"
+msgstr "Email je onemogućen"
+
+#: app/templates/email/list_emails.html:157
+#: app/templates/email/view_config.html:51
+#: app/templates/messages/list_messages.html:142
+#: app/templates/reminders/list_reminders.html:140
+msgid "Label:"
+msgstr "Oznaka:"
+
+#: app/templates/email/list_emails.html:161
+#: app/templates/messages/list_messages.html:146
+#: app/templates/reminders/list_reminders.html:144
+#: app/templates/reminders/view_reminder.html:98
+msgid "Subject:"
+msgstr "Naslov"
+
+#: app/templates/email/list_emails.html:165
+msgid "To:"
+msgstr "Do:"
+
+#: app/templates/email/list_emails.html:169
+#: app/templates/messages/list_messages.html:150
+msgid "Created At:"
+msgstr "Kreirano"
+
+#: app/templates/email/list_emails.html:255
+msgid "How to create and send an email"
+msgstr "Kako kreirati i poslati email"
+
+#: app/templates/email/list_emails.html:262
+msgid ""
+"Click “Add Email” and fill out the subject, content, and recipient address."
+msgstr ""
+"Kliknite “Dodaj Email” i ispunite predmet, sadržaj i adresu primatelja."
+
+#: app/templates/email/list_emails.html:263
+msgid "Attach any optional files (if needed)."
+msgstr "Priložite sve opcionalne datoteke (ako je potrebno)."
+
+#: app/templates/email/list_emails.html:264
+msgid ""
+"Click 🧩 to assign a single SMTP configuration that will be used to send the "
+"email."
+msgstr ""
+"Kliknite 🧩 kako biste dodijelili jednu SMTP konfiguraciju koja će se "
+"koristiti za slanje emaila."
+
+#: app/templates/email/list_emails.html:265
+msgid "Click ⏱️ to set a check-in interval and grace period for the email."
+msgstr ""
+"Kliknite ⏱️ da postavite interval prijave i period tolerancije za email."
+
+#: app/templates/email/list_emails.html:266
+msgid "Enable the email using the 🔴/🟢 toggle button."
+msgstr "Omogućite email koristeći 🔴/🟢 klizač."
+
+#: app/templates/email/list_emails.html:267
+msgid ""
+"Click 🧪 to test the email by sending it to yourself (not the recipient)."
+msgstr "Kliknite 🧪 da testirate email slanjem sebi (ne primatelju)."
+
+#: app/templates/email/list_emails.html:268
+msgid ""
+"If you don’t check in before the grace period ends, the email will be "
+"automatically sent."
+msgstr ""
+"Ako se ne prijavite prije kraja perioda tolerancije, email će biti "
+"automatski poslan."
+
+#: app/templates/email/list_emails.html:269
+msgid "You can preview the email configuration using 🔍."
+msgstr "Možete pregledati konfiguraciju emaila koristeći 🔍."
+
+#: app/templates/email/list_emails.html:270
+msgid "Once a secure email is sent, it will be automatically disabled."
+msgstr "Jednom kada se siguran email pošalje, automatski će biti onemogućen."
+
+#: app/templates/email/schedule_email.html:9
+msgid "Schedule Email"
+msgstr "Rasporedi Email"
+
+#: app/templates/email/schedule_email.html:18
+#: app/templates/messages/schedule_message.html:18
+msgid "Years"
+msgstr "Godine"
+
+#: app/templates/email/schedule_email.html:19
+#: app/templates/messages/schedule_message.html:19
+msgid "Months"
+msgstr "Mjeseci"
+
+#: app/templates/email/schedule_email.html:20
+#: app/templates/messages/schedule_message.html:20
+msgid "Weeks"
+msgstr "Sedmice"
+
+#: app/templates/email/schedule_email.html:21
+#: app/templates/messages/schedule_message.html:21
+msgid "Days"
+msgstr "Dani"
+
+#: app/templates/email/schedule_email.html:22
+#: app/templates/messages/schedule_message.html:22
+msgid "Hours"
+msgstr "Sati"
+
+#: app/templates/email/schedule_email.html:23
+#: app/templates/messages/schedule_message.html:23
+msgid "Minutes"
+msgstr "Minute"
+
+#: app/templates/email/schedule_email.html:28
+#: app/templates/messages/schedule_message.html:28
+msgid "Check-in"
+msgstr "Prijava"
+
+#: app/templates/email/schedule_email.html:51
+#: app/templates/messages/schedule_message.html:51
+#: app/templates/messages/view_message.html:26
+msgid "Grace Period"
+msgstr "Period Tolerancije"
+
+#: app/templates/email/schedule_email.html:80
+#: app/templates/messages/schedule_message.html:80
+#: app/templates/reminders/schedule_reminder.html:47
+msgid "Save Schedule"
+msgstr "Sačuvaj Raspored"
+
+#: app/templates/email/view_config.html:9
+msgid "Email Configuration"
+msgstr "Konfiguracija Emaila"
+
+#: app/templates/email/view_config.html:22
+msgid "Recipient"
+msgstr "Primatelj"
+
+#: app/templates/email/view_config.html:33
+msgid "Attached Files"
+msgstr "Priložene Datoteke"
+
+#: app/templates/email/view_config.html:39
+msgid "No files attached"
+msgstr "Nema priloženih datoteka"
+
+#: app/templates/email/view_config.html:46
+#: app/templates/reminders/assign_email_reminder.html:20
+msgid "SMTP Configuration"
+msgstr "SMTP Konfiguracija"
+
+#: app/templates/email/view_config.html:54
+#: app/templates/user_smtp/list_smtp.html:122
+msgid "Host:"
+msgstr "Host:"
+
+#: app/templates/email/view_config.html:57
+#: app/templates/user_smtp/list_smtp.html:128
+msgid "Username:"
+msgstr "Korisničko Ime:"
+
+#: app/templates/email/view_config.html:60
+#: app/templates/user_smtp/list_smtp.html:134
+msgid "TLS:"
+msgstr "TLS:"
+
+#: app/templates/email/view_config.html:64
+msgid "No SMTP configuration assigned"
+msgstr "Nije dodijeljena SMTP konfiguracija"
+
+#: app/templates/email/view_config.html:69
+msgid "Schedule Information"
+msgstr "Informacije o Rasporedu"
+
+#: app/templates/email/view_config.html:72
+msgid "Check-in Interval:"
+msgstr "Interval Prijave:"
+
+#: app/templates/email/view_config.html:72
+#: app/templates/email/view_config.html:75
+msgid "minutes"
+msgstr "minute"
+
+#: app/templates/email/view_config.html:75
+msgid "Grace Period:"
+msgstr "Period Tolerancije:"
+
+#: app/templates/email/view_config.html:79
+msgid "Last Check-in:"
+msgstr "Posljednja Prijava:"
+
+#: app/templates/email/view_config.html:82
+msgid "No check-in has occurred yet"
+msgstr "Još nije došlo do prijave"
+
+#: app/templates/email/view_config.html:92
+msgid "Back to Emails"
+msgstr "Nazad na Emailove"
+
+#: app/templates/errors/500.html:4
+msgid "Something went wrong"
+msgstr "Nešto je pošlo po zlu"
+
+#: app/templates/errors/500.html:6
+msgid ""
+"An unexpected error occurred. Please try again later or contact support."
+msgstr ""
+"Došlo je do neočekivane greške. Molimo pokušajte ponovo kasnije ili "
+"kontaktirajte podršku."
+
+#: app/templates/locale/redirect_after_lang_set.html:15
+msgid "Switching Language..."
+msgstr "Promjena jezika..."
+
+#: app/templates/locale/redirect_after_lang_set.html:18
+msgid "Applying new language..."
+msgstr "Primjenjivanje novog jezika..."
+
+#: app/templates/messages/assign_destinations.html:13
+#: app/templates/reminders/assign_destinations.html:12
+msgid "Assign Destinations for"
+msgstr "Dodijeli destinacije za"
+
+#: app/templates/messages/assign_destinations.html:62
+#: app/templates/reminders/assign_destinations.html:60
+msgid "Save Destinations"
+msgstr "Sačuvaj destinacije"
+
+#: app/templates/messages/create_message.html:17
+msgid "Edit Notificaton"
+msgstr "Uredi obavijest"
+
+#: app/templates/messages/create_message.html:19
+msgid "Create Notification"
+msgstr "Kreiraj obavijest"
+
+#: app/templates/messages/create_message.html:43
+#: app/templates/messages/edit_message.html:37
+#: app/templates/messages/view_message.html:42
+#: app/templates/reminders/create_reminder.html:37
+#: app/templates/reminders/edit_reminder.html:31
+#: app/templates/reminders/view_reminder.html:53
+msgid "Content"
+msgstr "Sadržaj"
+
+#: app/templates/messages/create_message.html:51
+msgid "Save Notification"
+msgstr "Sačuvaj obavijest"
+
+#: app/templates/messages/edit_message.html:15
+#: app/templates/messages/list_messages.html:74
+#: app/templates/messages/list_messages.html:158
+msgid "Edit Notification"
+msgstr "Uredi obavijest"
+
+#: app/templates/messages/edit_message.html:45
+msgid "Update Notification"
+msgstr "Ažuriraj obavijest"
+
+#: app/templates/messages/list_messages.html:49
+msgid "Add Notification"
+msgstr "Dodaj obavijest"
+
+#: app/templates/messages/list_messages.html:77
+#: app/templates/messages/list_messages.html:161
+msgid "Disable to edit notification"
+msgstr "Uredi obavijest"
+
+#: app/templates/messages/list_messages.html:83
+#: app/templates/messages/list_messages.html:167
+#: app/templates/reminders/list_reminders.html:78
+#: app/templates/reminders/list_reminders.html:163
+msgid "Assign Destinations"
+msgstr "Dodijeli destinacije"
+
+#: app/templates/messages/list_messages.html:86
+#: app/templates/messages/list_messages.html:170
+msgid "Disable to assign destinations"
+msgstr "Dodijeli destinacije"
+
+#: app/templates/messages/list_messages.html:92
+#: app/templates/messages/list_messages.html:176
+#: app/templates/reminders/list_reminders.html:88
+#: app/templates/reminders/list_reminders.html:173
+msgid "Set Schedule"
+msgstr "Postavi raspored"
+
+#: app/templates/messages/list_messages.html:95
+#: app/templates/messages/list_messages.html:179
+msgid "Disable to set schedule"
+msgstr "Postavi raspored"
+
+#: app/templates/messages/list_messages.html:107
+#: app/templates/messages/list_messages.html:192
+msgid "Send Test Notification"
+msgstr "Uredi obavijest"
+
+#: app/templates/messages/list_messages.html:122
+#: app/templates/messages/list_messages.html:209
+msgid "Toggle Message On/Off"
+msgstr "Uključi/Isključi poruku"
+
+#: app/templates/messages/list_messages.html:124
+#: app/templates/messages/list_messages.html:211
+msgid "Notification is enabled"
+msgstr "Obavijest je omogućena"
+
+#: app/templates/messages/list_messages.html:126
+#: app/templates/messages/list_messages.html:213
+msgid "Notification is disabled"
+msgstr "Obavijest je onemogućena"
+
+#: app/templates/messages/list_messages.html:223
+msgid "How to create and send a notification"
+msgstr "Kako kreirati i poslati obavijest"
+
+#: app/templates/messages/list_messages.html:233
+msgid "Click “Add notification” and fill out the subject and content fields."
+msgstr "Kliknite „Dodaj obavijest” i popunite polja za predmet i sadržaj."
+
+#: app/templates/messages/list_messages.html:234
+msgid "Save the notification to return to the overview."
+msgstr "Sačuvajte obavijest da biste se vratili na pregled."
+
+#: app/templates/messages/list_messages.html:235
+msgid "You need to create at least one apprise or webhook destination."
+msgstr "Morate kreirati barem jednu apprise ili webhook destinaciju."
+
+#: app/templates/messages/list_messages.html:236
+msgid "You can create as many destinations as you like."
+msgstr "Možete kreirati koliko želite destinacija."
+
+#: app/templates/messages/list_messages.html:237
+msgid "Click 🧩 to assign one or more Apprise and/or Webhook destinations."
+msgstr ""
+"Kliknite 🧩 da dodijelite jednu ili više Apprise i/ili Webhook destinacija."
+
+#: app/templates/messages/list_messages.html:238
+msgid "Click ⏱️ to set a schedule and check-in interval."
+msgstr "Kliknite ⏱️ da postavite raspored i interval prijavljivanja."
+
+#: app/templates/messages/list_messages.html:239
+msgid "Enable the notification using the 🔴/🟢 toggle button."
+msgstr "Omogućite obavijest pomoću dugmeta 🔴/🟢."
+
+#: app/templates/messages/list_messages.html:240
+msgid ""
+"If you don’t check in before the grace period ends, the notification will be"
+" sent."
+msgstr ""
+"Ako se ne prijavite prije završetka grace perioda, obavijest će biti "
+"poslana."
+
+#: app/templates/messages/list_messages.html:241
+msgid "You can preview the notification config using 🔍."
+msgstr "Možete pregledati konfiguraciju obavijesti pomoću 🔍."
+
+#: app/templates/messages/list_messages.html:242
+msgid "Once a notification is sent, it will be automatically disabled."
+msgstr "Kada je obavijest poslana, automatski će biti onemogućena."
+
+#: app/templates/messages/schedule_message.html:9
+msgid "Schedule Message"
+msgstr "Raspored poruke"
+
+#: app/templates/messages/view_message.html:9
+msgid "Notifications Details"
+msgstr "Detalji obavijesti"
+
+#: app/templates/messages/view_message.html:22
+msgid "Check-in Interval"
+msgstr "Interval prijavljivanja"
+
+#: app/templates/messages/view_message.html:31
+msgid "Last Check-in"
+msgstr "Posljednje prijavljivanje"
+
+#: app/templates/messages/view_message.html:48
+#: app/templates/reminders/view_reminder.html:59
+msgid "Apprise URLs"
+msgstr "Apprise URL-ovi"
+
+#: app/templates/messages/view_message.html:54
+#: app/templates/messages/view_message.html:64
+#: app/templates/reminders/view_reminder.html:65
+#: app/templates/reminders/view_reminder.html:75
+#: app/templates/reminders/view_reminder.html:85
+msgid "None assigned."
+msgstr "Nijedna nije dodijeljena."
+
+#: app/templates/messages/view_message.html:73
+msgid "Back to Notifications"
+msgstr "Nazad na obavijesti"
+
+#: app/templates/mfa/challenge.html:5 app/templates/mfa/settings.html:5
+msgid "Two-Factor Authentication (MFA)"
+msgstr "Dvofaktorska autentifikacija (MFA)"
+
+#: app/templates/mfa/recovery_codes.html:4
+msgid "Your Recovery Codes"
+msgstr "Vaši kodovi za oporavak"
+
+#: app/templates/mfa/recovery_codes.html:7
+msgid "Save these recovery codes in a safe place!"
+msgstr "Sačuvajte ove kodove za oporavak na sigurno mjesto!"
+
+#: app/templates/mfa/recovery_codes.html:10
+msgid ""
+"Each code can be used once if you lose access to your authenticator. These "
+"codes will not be shown again."
+msgstr ""
+"Svaki kod može biti korišten jednom ako izgubite pristup svom "
+"autentifikatoru. Ovi kodovi neće biti ponovo prikazani."
+
+#: app/templates/mfa/recovery_codes.html:24
+msgid "OK, I've saved them"
+msgstr "U redu, sačuvao sam ih"
+
+#: app/templates/mfa/settings.html:12
+msgid "MFA QR Code"
+msgstr "MFA QR kod"
+
+#: app/templates/mfa/settings.html:15
+msgid "Manual Entry:"
+msgstr "Ručno unošenje:"
+
+#: app/templates/partials/admin_nav.html:21
+msgid "Administration"
+msgstr "Administracija"
+
+#: app/templates/partials/admin_nav.html:37
+#: app/templates/partials/shared_nav.html:34
+#: app/templates/partials/shared_nav.html:78
+#: app/templates/partials/shared_nav.html:117
+msgid "Overview"
+msgstr "Pregled"
+
+#: app/templates/partials/footer.html:7
+msgid "Toggle Theme"
+msgstr "Prebaci temu"
+
+#: app/templates/partials/footer.html:32
+msgid "Theme"
+msgstr "Tema"
+
+#: app/templates/partials/head.html:7
+msgid "Grylli"
+msgstr "Grylli"
+
+#: app/templates/partials/header.html:6 app/templates/partials/sidebar.html:32
+#: app/templates/partials/sidebar.html:66
+msgid "Home"
+msgstr "Početna"
+
+#: app/templates/partials/header.html:55
+msgid "Account"
+msgstr "Račun"
+
+#: app/templates/partials/header.html:61
+msgid "MFA"
+msgstr "MFA"
+
+#: app/templates/partials/header.html:67
+msgid "About"
+msgstr "O"
+
+#: app/templates/partials/header.html:73
+msgid "Privacy"
+msgstr "Privatnost"
+
+#: app/templates/partials/header.html:79
+msgid "System Info"
+msgstr "Sistemske informacije"
+
+#: app/templates/partials/header.html:114
+msgid "Logout"
+msgstr "Odjava"
+
+#: app/templates/partials/shared_nav.html:33
+msgid "Overview of notification settings"
+msgstr "Pregled postavki obavijesti"
+
+#: app/templates/partials/shared_nav.html:38
+msgid "Configure Apprise services"
+msgstr "Konfigurirajte Apprise usluge"
+
+#: app/templates/partials/shared_nav.html:39
+msgid "Apprise"
+msgstr "Apprise"
+
+#: app/templates/partials/shared_nav.html:43
+msgid "Configure Webhook integrations"
+msgstr "Konfigurirajte Webhook integracije"
+
+#: app/templates/partials/shared_nav.html:77
+msgid "Overview of secure email messages"
+msgstr "Pregled sigurnih e-mail poruka"
+
+#: app/templates/partials/shared_nav.html:82
+msgid "Configure SMTP email settings"
+msgstr "Konfigurirajte SMTP postavke e-maila"
+
+#: app/templates/partials/shared_nav.html:83
+#: app/templates/reminders/view_reminder.html:79
+msgid "SMTP"
+msgstr "SMTP"
+
+#: app/templates/partials/shared_nav.html:100
+#: app/templates/reminders/list_reminders.html:8
+msgid "Reminders"
+msgstr "minute"
+
+#: app/templates/partials/shared_nav.html:116
+msgid "Overview of reminders"
+msgstr "Pregled podsjetnika"
+
+#: app/templates/partials/sidebar.html:13
+#: app/templates/partials/sidebar.html:47
+msgid "Menu"
+msgstr "Meni"
+
+#: app/templates/reminders/assign_email_reminder.html:12
+msgid "Link Email Reminder for"
+msgstr "Poveži Email Podsjetnik za"
+
+#: app/templates/reminders/assign_email_reminder.html:30
+#: app/templates/reminders/assign_email_reminder.html:64
+msgid "None (Unassign)"
+msgstr "Nije dodijeljena SMTP konfiguracija"
+
+#: app/templates/reminders/assign_email_reminder.html:43
+msgid "No sender address"
+msgstr "Nema adrese pošiljatelja"
+
+#: app/templates/reminders/assign_email_reminder.html:54
+msgid "Email Message"
+msgstr "Raspored poruke"
+
+#: app/templates/reminders/assign_email_reminder.html:77
+msgid "No subject"
+msgstr "Naslov"
+
+#: app/templates/reminders/assign_email_reminder.html:90
+msgid "Save Email Reminder"
+msgstr "Sačuvaj email"
+
+#: app/templates/reminders/create_reminder.html:12
+#: app/templates/reminders/edit_reminder.html:10
+#: app/templates/reminders/list_reminders.html:73
+#: app/templates/reminders/list_reminders.html:158
+msgid "Edit Reminder"
+msgstr "Uredi email"
+
+#: app/templates/reminders/create_reminder.html:14
+msgid "Create Reminder"
+msgstr "Kreiraj email"
+
+#: app/templates/reminders/create_reminder.html:45
+msgid "Save Reminder"
+msgstr "Sačuvaj email"
+
+#: app/templates/reminders/edit_reminder.html:39
+msgid "Update Reminder"
+msgstr "Ažuriraj Podsjetnik"
+
+#: app/templates/reminders/list_reminders.html:48
+msgid "Add Reminder"
+msgstr "Dodaj email"
+
+#: app/templates/reminders/list_reminders.html:58
+#: app/templates/reminders/view_reminder.html:21
+msgid "Start At"
+msgstr "Pokretanje TLS"
+
+#: app/templates/reminders/list_reminders.html:59
+msgid "Recurrence"
+msgstr "Ponavljanje"
+
+#: app/templates/reminders/list_reminders.html:69
+#: app/templates/reminders/list_reminders.html:153
+#: app/templates/reminders/view_reminder.html:26
+msgid "One-time"
+msgstr "Jednokratni"
+
+#: app/templates/reminders/list_reminders.html:83
+msgid "Assign Email Reminder"
+msgstr "Dodijeli Email Podsjetnik"
+
+#: app/templates/reminders/list_reminders.html:102
+#: app/templates/reminders/list_reminders.html:187
+msgid "Send Test Reminder"
+msgstr "Pošalji testni email"
+
+#: app/templates/reminders/list_reminders.html:120
+#: app/templates/reminders/list_reminders.html:205
+msgid "Toggle Reminder On/Off"
+msgstr "Prebaci email On/Off"
+
+#: app/templates/reminders/list_reminders.html:122
+#: app/templates/reminders/list_reminders.html:207
+msgid "Reminder is enabled"
+msgstr "Email je omogućen"
+
+#: app/templates/reminders/list_reminders.html:124
+#: app/templates/reminders/list_reminders.html:209
+msgid "Reminder is disabled"
+msgstr "Email je onemogućen"
+
+#: app/templates/reminders/list_reminders.html:148
+msgid "Start At:"
+msgstr "Pokretanje TLS"
+
+#: app/templates/reminders/list_reminders.html:152
+msgid "Recurrence:"
+msgstr "Ponavljanje:"
+
+#: app/templates/reminders/list_reminders.html:168
+msgid "Link Email Reminder"
+msgstr "Poveži Email Podsjetnik"
+
+#: app/templates/reminders/list_reminders.html:218
+msgid "How to use reminders"
+msgstr "Kako upravljati korisnicima"
+
+#: app/templates/reminders/list_reminders.html:231
+msgid "➕ Click “Add Reminder” and fill out the subject and content fields."
+msgstr "Kliknite „Dodaj obavijest” i popunite polja za predmet i sadržaj."
+
+#: app/templates/reminders/list_reminders.html:232
+msgid "💾 Save the reminder to return to the overview."
+msgstr "Sačuvajte obavijest da biste se vratili na pregled."
+
+#: app/templates/reminders/list_reminders.html:233
+msgid ""
+"📣 Assign Apprise, 🌐 Webhook, and/or 📧 Email (SMTP) destinations as needed."
+msgstr ""
+"📣 Dodijeli Apprise, 🌐 Webhook i/ili 📧 Email (SMTP) odredišta po potrebi."
+
+#: app/templates/reminders/list_reminders.html:234
+msgid ""
+"⏱️ Set the schedule using the schedule button to define when reminders are "
+"sent."
+msgstr ""
+"⏱️ Postavite raspored koristeći dugme za raspored kako biste definirali kada"
+" se podsjetnici šalju."
+
+#: app/templates/reminders/list_reminders.html:235
+msgid ""
+"🔍 Click “View Details” to review or edit assigned destinations and other "
+"settings."
+msgstr ""
+"🔍 Kliknite “Pogledaj detalje” za pregled ili uređivanje dodijeljenih "
+"odredišta i drugih postavki."
+
+#: app/templates/reminders/list_reminders.html:236
+msgid ""
+"🧪 Click the Test button to verify all assigned destinations are working "
+"correctly."
+msgstr ""
+"🧪 Kliknite gumb Test kako biste provjerili jesu li sva dodijeljena odredišta"
+" ispravna."
+
+#: app/templates/reminders/list_reminders.html:237
+msgid "🔴/🟢 Enable or disable the reminder using the toggle button."
+msgstr "Omogućite email koristeći 🔴/🟢 klizač."
+
+#: app/templates/reminders/list_reminders.html:238
+msgid "📤 Reminders will be sent as scheduled to the assigned destinations."
+msgstr "📤 Podsjetnici će biti poslani po rasporedu na dodijeljena odredišta."
+
+#: app/templates/reminders/schedule_reminder.html:8
+msgid "Schedule Reminder"
+msgstr "Rasporedi Email"
+
+#: app/templates/reminders/schedule_reminder.html:15
+msgid "Start Date & Time"
+msgstr "Datum i vrijeme početka"
+
+#: app/templates/reminders/schedule_reminder.html:22
+#: app/templates/reminders/view_reminder.html:25
+msgid "Recurrence Rule"
+msgstr "Pravilo ponavljanja"
+
+#: app/templates/reminders/schedule_reminder.html:24
+msgid "(Optional) Enter RRULE or leave blank for one-time."
+msgstr "(Opcionalno) Unesite RRULE ili ostavite prazno za jednokratni."
+
+#: app/templates/reminders/schedule_reminder.html:30
+msgid "End Date"
+msgstr "Pošalji test"
+
+#: app/templates/reminders/schedule_reminder.html:32
+msgid "(Optional) Stop sending after this date."
+msgstr "(Opcionalno) Prestanite slati nakon ovog datuma."
+
+#: app/templates/reminders/schedule_reminder.html:38
+#: app/templates/reminders/view_reminder.html:36
+msgid "Max Occurrences"
+msgstr "Maksimalni broj pojavljivanja"
+
+#: app/templates/reminders/schedule_reminder.html:40
+msgid "(Optional) Stop after this many reminders."
+msgstr "(Opcionalno) Prestanite nakon ovog broja podsjetnika."
+
+#: app/templates/reminders/schedule_reminder.html:56
+msgid "Help for RRULE syntax"
+msgstr "Pomoć za syntax RRULE-a"
+
+#: app/templates/reminders/schedule_reminder.html:66
+msgid "Several tools are available to help generate an RRULE."
+msgstr "Dostupno je nekoliko alata za pomoć pri generisanju RRULE."
+
+#: app/templates/reminders/schedule_reminder.html:67
+msgid "Use a search engine or AI tool to assist."
+msgstr "Koristite pretraživač ili AI alat za pomoć."
+
+#: app/templates/reminders/schedule_reminder.html:69
+msgid "Here is an example of one such online tool:"
+msgstr "Evo primjera jednog takvog online alata:"
+
+#: app/templates/reminders/schedule_reminder.html:73
+msgid "RRULE Generator Tool"
+msgstr "RRULE Generator Alat"
+
+#: app/templates/reminders/schedule_reminder.html:77
+msgid "See here for some common examples:"
+msgstr "Pogledajte ovdje za neke uobičajene primjere:"
+
+#: app/templates/reminders/schedule_reminder.html:81
+msgid "RRULE Help (GitHub)"
+msgstr "RRULE Pomoć (GitHub)"
+
+#: app/templates/reminders/view_reminder.html:8
+msgid "Reminder Details"
+msgstr "Pogledaj detalje"
+
+#: app/templates/reminders/view_reminder.html:30
+msgid "End At"
+msgstr "Pošalji test"
+
+#: app/templates/reminders/view_reminder.html:42
+msgid "Last Sent"
+msgstr "Posljednje prijavljivanje"
+
+#: app/templates/reminders/view_reminder.html:91
+msgid "Email Template"
+msgstr "Validacija e-maila"
+
+#: app/templates/reminders/view_reminder.html:103
+msgid "No email linked."
+msgstr "Email je omogućen"
+
+#: app/templates/reminders/view_reminder.html:111
+msgid "Back to Reminders"
+msgstr "Nazad na Emailove"
+
+#: app/templates/user_smtp/create_smtp.html:10
+msgid "Create SMTP Destination"
+msgstr "Kreiraj SMTP destinaciju"
+
+#: app/templates/user_smtp/create_smtp.html:69
+#: app/templates/user_smtp/edit_smtp.html:84
+msgid "Hold to reveal"
+msgstr "Držite za otkrivanje"
+
+#: app/templates/user_smtp/create_smtp.html:92
+#: app/templates/user_smtp/edit_smtp.html:107
+msgid "Use TLS"
+msgstr "Koristite TLS"
+
+#: app/templates/user_smtp/edit_smtp.html:10
+msgid "Edit SMTP Destination"
+msgstr "Kreiraj SMTP destinaciju"
+
+#: app/templates/user_smtp/list_smtp.html:9
+msgid "SMTP Destinations"
+msgstr "SMTP odredišta"
+
+#: app/templates/user_smtp/list_smtp.html:44
+msgid "Add SMTP"
+msgstr "Dodaj SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:53
+msgid "Host"
+msgstr "Host"
+
+#: app/templates/user_smtp/list_smtp.html:54
+msgid "Port"
+msgstr "Port"
+
+#: app/templates/user_smtp/list_smtp.html:56
+msgid "TLS"
+msgstr "TLS"
+
+#: app/templates/user_smtp/list_smtp.html:58
+msgid "Created"
+msgstr "Kreirano"
+
+#: app/templates/user_smtp/list_smtp.html:90
+#: app/templates/user_smtp/list_smtp.html:158
+msgid "Send Test"
+msgstr "Pošalji test"
+
+#: app/templates/user_smtp/list_smtp.html:125
+msgid "Port:"
+msgstr "Port:"
+
+#: app/templates/user_smtp/list_smtp.html:131
+msgid "Password:"
+msgstr "Lozinka:"
+
+#: app/templates/user_smtp/list_smtp.html:184
+msgid "Hide SMTP Setup Help"
+msgstr "Sakrij SMTP postavke pomoći"
+
+#: app/templates/user_smtp/list_smtp.html:184
+msgid "Show SMTP Setup Help"
+msgstr "Prikaži SMTP postavke pomoći"
+
+#: app/templates/user_smtp/list_smtp.html:190
+msgid ""
+"Need help finding your SMTP server settings? See here for some links to "
+"common providers:"
+msgstr ""
+"Trebate pomoć u pronalaženju postavki vašeg SMTP servera? Pogledajte ovdje "
+"za neke linkove do običnih provajdera:"
+
+#: app/templates/user_smtp/list_smtp.html:194
+msgid "SMTP Server Settings Help (GitHub)"
+msgstr "SMTP Server Settings Help (GitHub)"
+
+#: app/templates/user_smtp/list_smtp.html:198
+msgid ""
+"Find official documentation links for Gmail, Outlook, Yahoo, AOL, and "
+"others."
+msgstr ""
+"Pronađi linkove službene dokumentacije za Gmail, Outlook, Yahoo, AOL i "
+"druge."
+
+#: app/templates/user_smtp/list_smtp.html:199
+msgid ""
+"If your provider isn’t listed, search their support site or a search engine "
+"for 'SMTP settings'."
+msgstr ""
+"Ako vaš provajder nije naveden, pretražite njihovu stranicu za podršku ili "
+"pretraživač za 'SMTP settings'."
+
+#: app/templates/user_smtp/list_smtp.html:200
+msgid ""
+"Some providers (like Gmail, Yahoo) require 'App Passwords' or special "
+"setup—see their docs!"
+msgstr ""
+"Neki provajderi (poput Gmaila, Yahoo-a) zahtijevaju 'App Passwords' ili "
+"posebna podešenja—pogledajte njihovu dokumentaciju!"
+
+#: app/templates/webhook/create_webhook.html:10
+msgid "Create Webhook"
+msgstr "Kreiraj webhook"
+
+#: app/templates/webhook/edit_webhook.html:10
+msgid "Edit Webhook"
+msgstr "Uredi webhook"
+
+#: app/templates/webhook/list_webhooks.html:9
+#: app/templates/webhook/webhook_config.html:3
+msgid "Webhooks Destinations"
+msgstr "Webhook odredišta"
+
+#: app/templates/webhook/list_webhooks.html:59
+msgid "Endpoint"
+msgstr "Krajnja tačka"
+
+#: app/templates/webhook/list_webhooks.html:60
+msgid "Description"
+msgstr "Opis"
+
+#: app/templates/webhook/list_webhooks.html:82
+#: app/templates/webhook/list_webhooks.html:141
+msgid "Cannot edit while assigned to notifications"
+msgstr "Ne može se uređivati dok je dodijeljen obavijestima"
+
+#: app/templates/webhook/list_webhooks.html:106
+#: app/templates/webhook/list_webhooks.html:165
+msgid "Cannot delete while assigned to notifications"
+msgstr "Ne može se obrisati dok je dodijeljen obavijestima"
+
+#: app/templates/webhook/list_webhooks.html:122
+msgid "Endpoint:"
+msgstr "Krajnja tačka:"
+
+#: app/templates/webhook/list_webhooks.html:125
+msgid "Description:"
+msgstr "Opis:"
+
+#: app/views/account.py:74
+msgid "Current password is required to change password."
+msgstr "Trenutna lozinka je potrebna za promjenu lozinke."
+
+#: app/views/account.py:78
+msgid "Current password is incorrect."
+msgstr "Trenutna lozinka je netačna."
+
+#: app/views/account.py:94
+msgid "Account updated successfully."
+msgstr "Nalog je uspješno ažuriran."
+
+#: app/views/account.py:100
+msgid "An error occurred while updating your account."
+msgstr "Došlo je do greške prilikom ažuriranja vašeg naloga."
+
+#: app/views/account.py:137
+msgid "You cannot delete your account because you are the last admin."
+msgstr "Ne možete izbrisati vaš nalog jer ste zadnji administrator."
+
+#: app/views/account.py:146
+msgid "Your account has been permanently deleted."
+msgstr "Vaš nalog je trajno izbrisan."
+
+#: app/views/account.py:152
+msgid "An error occurred while trying to delete your account."
+msgstr "Došlo je do greške prilikom ažuriranja vašeg naloga."
+
+#: app/views/account.py:171
+msgid "Your account has been deleted"
+msgstr "Vaš nalog je trajno izbrisan."
+
+#: app/views/account.py:173
+#, python-brace-format
+msgid ""
+"Hello {username},\n"
+"\n"
+"Your account on {site_name} has been deleted.Remember to delete your files from the uploads folder.If this was not you, please contact support immediately.\n"
+"\n"
+"{site_url}"
+msgstr ""
+"Zdravo {username},\n"
+"\n"
+"Vaš račun na {site_name} je izbrisan. Zapamtite da izbrišete svoje datoteke iz mape za prijenos. Ako to niste bili vi, molimo kontaktirajte podršku odmah.\n"
+"\n"
+"{site_url}"
+
+#: app/views/admin.py:59
+msgid "Invalid role."
+msgstr "Nevažeća uloga."
+
+#: app/views/apprise.py:51
+msgid "🧪 Test notification sent successfully!"
+msgstr "🧪 Testna obavijest je uspješno poslana!"
+
+#: app/views/apprise.py:56
+msgid "🧪 Failed to send test notification: "
+msgstr "🧪 Neuspješno slanje testne obavijesti:"
+
+#: app/views/apprise.py:62
+msgid "🧪 Error sending test notification."
+msgstr "🧪 Greška pri slanju testne obavijesti."
+
+#: app/views/apprise.py:101
+msgid "Apprise destination created successfully."
+msgstr "Apprise odredište je uspješno kreirano."
+
+#: app/views/apprise.py:168
+msgid "Apprise destination updated successfully."
+msgstr "Apprise odredište uspješno ažurirano."
+
+#: app/views/apprise.py:199
+msgid "Apprise destination deleted."
+msgstr "Apprise odredište obrisano."
+
+#: app/views/auth.py:95
+msgid "Admin account created successfully."
+msgstr "Admin nalog uspješno kreiran."
+
+#: app/views/auth.py:108
+msgid "An error occurred while creating the admin account."
+msgstr "Došlo je do greške prilikom kreiranja admin naloga."
+
+#: app/views/auth.py:141
+msgid ""
+"Your account is not activated. Please check your email for the activation "
+"link."
+msgstr ""
+"Vaš nalog nije aktiviran. Molimo vas provjerite vaš email za aktivacijski "
+"link."
+
+#: app/views/auth.py:157
+msgid "Multi-factor authentication required. Please enter your code."
+msgstr "Potrebna je višefaktorska autentifikacija. Molimo unesite vaš kod."
+
+#: app/views/auth.py:162 app/views/mfa.py:195
+msgid "Logged in successfully."
+msgstr "Uspješno ste se prijavili."
+
+#: app/views/auth.py:179
+msgid "Invalid username or password."
+msgstr "Nevažeće korisničko ime ili lozinka."
+
+#: app/views/auth.py:203
+msgid "You have been logged out."
+msgstr "Odjavljeni ste."
+
+#: app/views/auth.py:239 app/views/email.py:263
+msgid "Access denied."
+msgstr "Pristup odbijen."
+
+#: app/views/auth.py:273
+msgid "If a user with that email exists, we've sent the username to them."
+msgstr "Ako postoji korisnik s tim emailom, poslali smo mu korisničko ime."
+
+#: app/views/auth.py:314
+msgid "A password reset link has been sent to your email."
+msgstr "Link za reset lozinke poslan je na vaš email."
+
+#: app/views/auth.py:319
+msgid "No account found matching that username and email."
+msgstr "Nije pronađen nalog koji odgovara tom korisničkom imenu i emailu."
+
+#: app/views/auth.py:389
+msgid "The reset link is invalid or has expired."
+msgstr "Link za reset lozinke je nevažeći ili istekao."
+
+#: app/views/auth.py:401
+msgid "Username and email do not match."
+msgstr "Korisničko ime i email se ne podudaraju."
+
+#: app/views/auth.py:421
+msgid "Your password has been reset. Please log in."
+msgstr "Vaša lozinka je resetirana. Molimo prijavite se."
+
+#: app/views/auth.py:458
+msgid "Invalid registration PIN."
+msgstr "Nevažeći registracijski PIN."
+
+#: app/views/auth.py:467
+msgid "Username or email already exists."
+msgstr "Korisničko ime ili email već postoje."
+
+#: app/views/auth.py:492
+msgid "Activate Your Grylli Account"
+msgstr "Aktivirajte vaš Grylli nalog"
+
+#: app/views/auth.py:493
+#, python-brace-format
+msgid ""
+"Hello {username},\n"
+"\n"
+"Please activate your account by clicking..."
+msgstr ""
+"Zdravo {username},\n"
+"\n"
+"Molimo aktivirajte vaš nalog klikom..."
+
+#: app/views/auth.py:498
+msgid "Account created! Please check your email to activate your account."
+msgstr ""
+"Račun kreiran! Molimo provjerite svoj email kako biste aktivirali svoj "
+"račun."
+
+#: app/views/auth.py:521
+msgid "Activation link is invalid or expired."
+msgstr "Aktivacijski link je nevažeći ili je istekao."
+
+#: app/views/auth.py:528 app/views/users.py:76 app/views/users.py:140
+msgid "User not found."
+msgstr "Korisnik nije pronađen."
+
+#: app/views/auth.py:532
+msgid "Account already activated. Please log in."
+msgstr "Račun je već aktiviran. Molimo prijavite se."
+
+#: app/views/auth.py:540
+msgid "Your account has been activated! You can now log in."
+msgstr "Vaš račun je aktiviran! Sada se možete prijaviti."
+
+#: app/views/backups.py:72
+#, python-format
+msgid "Backup created: %(filename)s"
+msgstr "Backup kreiran: %(filename)s"
+
+#: app/views/backups.py:77
+msgid "Failed to create backup."
+msgstr "Nije uspjelo kreiranje backup-a."
+
+#: app/views/backups.py:106
+#, python-format
+msgid "Backup deleted: %(filename)s"
+msgstr "Backup obrisan: %(filename)s"
+
+#: app/views/backups.py:109
+msgid "Backup file not found."
+msgstr "Backup datoteka nije pronađena."
+
+#: app/views/backups.py:112
+msgid "Failed to delete backup."
+msgstr "Nije uspjelo brisanje backup-a."
+
+#: app/views/checkin.py:41
+msgid "Invalid check-in link."
+msgstr "Nevažeći link za check-in."
+
+#: app/views/checkin.py:48
+msgid "You are not authorized to check in for this item."
+msgstr "Niste ovlašteni da se prijavite za ovu stavku."
+
+#: app/views/checkin.py:62
+msgid "Unsupported check-in type."
+msgstr "Nepodržavan tip check-ina."
+
+#: app/views/checkin.py:137
+msgid "⚠️ Cannot enable reminder: Start date/time is in the past."
+msgstr ""
+"⚠️ Ne može se omogućiti podsjetnik: Datum/vrijeme početka je u prošlosti."
+
+#: app/views/checkin.py:158
+msgid "✅ Enabled and timer started."
+msgstr "✅ Omogućeno i tajmer je pokrenut."
+
+#: app/views/checkin.py:168
+msgid "⛔ Disabled."
+msgstr "⛔ Onemogućeno."
+
+#: app/views/checkin.py:170
+msgid "⚠️ Cannot toggle — missing schedule or destination."
+msgstr "⚠️ Ne može se prebaciti — nedostaje raspored ili odredište."
+
+#: app/views/email.py:88
+msgid "Message saved."
+msgstr "Poruka sačuvana."
+
+#: app/views/email.py:118 app/views/messages.py:167
+msgid "Message deleted."
+msgstr "Poruka obrisana."
+
+#: app/views/email.py:152
+msgid "Attached files updated."
+msgstr "Prikačene datoteke ažurirane."
+
+#: app/views/email.py:200
+msgid "SMTP configuration not assigned or is disabled."
+msgstr "SMTP konfiguracija nije dodijeljena ili je onemogućena."
+
+#: app/views/email.py:234 app/views/smtp_settings_admin.py:82
+msgid "Test email sent successfully."
+msgstr "Test email uspješno poslan."
+
+#: app/views/email.py:282 app/views/messages.py:305
+msgid "Schedule updated successfully."
+msgstr "Raspored uspješno ažuriran."
+
+#: app/views/email.py:310
+msgid "SMTP configuration assigned."
+msgstr "SMTP konfiguracija dodijeljena."
+
+#: app/views/email.py:319
+msgid "SMTP configuration removed."
+msgstr "SMTP konfiguracija dodijeljena."
+
+#: app/views/messages.py:97
+msgid "Message created successfully."
+msgstr "Poruka uspješno kreirana."
+
+#: app/views/messages.py:133
+msgid "Message updated successfully."
+msgstr "Poruka uspješno ažurirana."
+
+#: app/views/messages.py:223 app/views/reminders.py:240
+msgid "Destinations updated."
+msgstr "Odredišta ažurirana."
+
+#: app/views/messages.py:441
+msgid "No destinations assigned to this message."
+msgstr "SMTP konfiguracija nije dodijeljena ili je onemogućena."
+
+#: app/views/messages.py:453
+msgid "Test message sent successfully."
+msgstr "Test email uspješno poslan."
+
+#: app/views/messages.py:455
+msgid "Test message failed: "
+msgstr "Poruka sačuvana."
+
+#: app/views/mfa.py:68
+msgid "You must enter a code from your authenticator."
+msgstr "Morate unijeti kod iz vašeg autentifikatora."
+
+#: app/views/mfa.py:82 app/views/mfa.py:259
+msgid "Invalid code. Please try again."
+msgstr "Nevažeći kod. Molimo pokušajte ponovo."
+
+#: app/views/mfa.py:91
+msgid "Two-factor authentication disabled."
+msgstr "Obavijest je onemogućena"
+
+#: app/views/mfa.py:132
+msgid "Recovery codes are only shown immediately after enabling MFA."
+msgstr "Kodovi za oporavak se prikazuju samo odmah nakon omogućavanja MFA."
+
+#: app/views/mfa.py:142
+msgid "Could not load recovery codes."
+msgstr "Nije moguće učitati kodove za oporavak."
+
+#: app/views/mfa.py:168
+msgid "No MFA challenge in progress."
+msgstr "Nije u toku MFA izazov."
+
+#: app/views/mfa.py:176
+msgid "User not found for MFA challenge."
+msgstr "Korisnik nije pronađen."
+
+#: app/views/mfa.py:225
+msgid ""
+"You have used your last recovery code. MFA has been disabled. Please remove "
+"Grylli from your authenticator app, and re-enable MFA to protect your "
+"account."
+msgstr ""
+"Iskoristili ste vaš zadnji kod za oporavak. MFA je onemogućen. Uklonite "
+"Grylli iz vaše autentifikatorske aplikacije, i ponovo omogućite MFA kako "
+"biste zaštitili vaš nalog."
+
+#: app/views/mfa.py:248
+#, python-brace-format
+msgid "Recovery code accepted. You have {remaining} recovery codes left."
+msgstr ""
+"Kod za oporavak prihvaćen. Imate {remaining} preostalih kodova za oporavak."
+
+#: app/views/reminders.py:106
+msgid "Reminder created successfully."
+msgstr "Poruka uspješno kreirana."
+
+#: app/views/reminders.py:143
+msgid "Reminder updated successfully."
+msgstr "Korisnik uspješno ažuriran."
+
+#: app/views/reminders.py:174
+msgid "Reminder deleted."
+msgstr "Korisnik obrisan."
+
+#: app/views/reminders.py:287
+msgid "No destinations assigned to this reminder."
+msgstr "SMTP konfiguracija nije dodijeljena ili je onemogućena."
+
+#: app/views/reminders.py:311
+msgid "No email message linked to this reminder."
+msgstr "Nema email poruke povezane s ovim podsjetnikom."
+
+#: app/views/reminders.py:314
+msgid "SMTP configuration is disabled."
+msgstr "SMTP konfiguracija nije dodijeljena ili je onemogućena."
+
+#: app/views/reminders.py:353
+msgid "Test reminder sent successfully."
+msgstr "Test email uspješno poslan."
+
+#: app/views/reminders.py:356
+msgid "Test reminder failed: "
+msgstr "Poruka sačuvana."
+
+#: app/views/reminders.py:430
+msgid "Reminder schedule updated successfully."
+msgstr "Raspored uspješno ažuriran."
+
+#: app/views/reminders.py:434
+msgid "Please correct the errors below."
+msgstr "Molimo ispravite greške ispod."
+
+#: app/views/reminders.py:481 app/views/reminders.py:482
+msgid "None"
+msgstr "Ne"
+
+#: app/views/reminders.py:508
+msgid "You must select both an SMTP config and an email message, or neither."
+msgstr ""
+"Morate odabrati i SMTP konfiguraciju i email poruku, ili nijedno od njih."
+
+#: app/views/reminders.py:528
+msgid "Email reminder settings updated."
+msgstr "Odredišta ažurirana."
+
+#: app/views/smtp.py:83 app/views/user_smtp.py:80
+msgid "SMTP destination created successfully."
+msgstr "SMTP odredište uspješno kreirano."
+
+#: app/views/smtp.py:129 app/views/user_smtp.py:135
+msgid "SMTP destination updated."
+msgstr "SMTP odredište ažurirano."
+
+#: app/views/smtp.py:160 app/views/user_smtp.py:166
+msgid "SMTP destination deleted."
+msgstr "SMTP odredište obrisano."
+
+#: app/views/smtp.py:191 app/views/user_smtp.py:199
+msgid "Test email sent successfully to your account email."
+msgstr "Test email uspješno poslan na vaš email račun."
+
+#: app/views/smtp.py:196 app/views/user_smtp.py:204
+msgid "Failed to send test email. Check SMTP settings."
+msgstr "Nije uspjelo slanje testnog email-a. Provjerite SMTP postavke."
+
+#: app/views/smtp_settings_admin.py:76
+msgid "Test Email from Grylli"
+msgstr "Test Email iz Grylli"
+
+#: app/views/smtp_settings_admin.py:77
+msgid "This is a test email from the Grylli SMTP settings page."
+msgstr "Ovo je testni email sa Grylli SMTP stranice s postavkama."
+
+#: app/views/smtp_settings_admin.py:84
+msgid "Failed to send test email: "
+msgstr "Nije uspjelo slanje testnog email-a:"
+
+#: app/views/users.py:99
+msgid "User updated successfully."
+msgstr "Korisnik uspješno ažuriran."
+
+#: app/views/users.py:106 app/views/users.py:327
+msgid "An error occurred while updating the user."
+msgstr "Došlo je do greške prilikom ažuriranja korisnika."
+
+#: app/views/users.py:195
+msgid "User deleted."
+msgstr "Korisnik obrisan."
+
+#: app/views/users.py:202
+msgid "An error occurred while deleting the user."
+msgstr "Došlo je do greške prilikom brisanja korisnika."
+
+#: app/views/users.py:237
+msgid "Password is required when creating a new user."
+msgstr "Šifra je potrebna prilikom kreiranja novog korisnika."
+
+#: app/views/users.py:244
+msgid "Username already exists."
+msgstr "Korisničko ime već postoji."
+
+#: app/views/users.py:251
+msgid "Email already exists."
+msgstr "Email već postoji."
+
+#: app/views/users.py:268
+#, python-format
+msgid "User '%(username)s' created successfully."
+msgstr "Korisnik '%(username)s' uspješno kreiran."
+
+#: app/views/users.py:278
+msgid "Failed to create user."
+msgstr "Neuspjelo kreiranje korisnika."
+
+#: app/views/users.py:305
+msgid "You cannot change your own enabled status."
+msgstr "Ne možete promijeniti vlastiti status omogućavanja."
+
+#: app/views/users.py:318
+#, python-format
+msgid "User '%(username)s' has been %(status)s."
+msgstr "Korisnik '%(username)s' je %(status)s."
+
+#: app/views/users.py:356
+msgid "You cannot reset your own MFA."
+msgstr "⚪ = Ne možete onemogućiti svoj vlastiti nalog."
+
+#: app/views/users.py:368
+#, python-format
+msgid "MFA disabled for user '%(username)s'."
+msgstr "MFA onemogućen za korisnika '%(username)s'."
+
+#: app/views/users.py:374
+msgid "An error occurred while resetting MFA."
+msgstr "Došlo je do greške prilikom brisanja korisnika."
+
+#: app/views/webhook.py:54
+msgid "Webhook created successfully."
+msgstr "Webhook uspješno kreiran."
+
+#: app/views/webhook.py:113
+msgid "Webhook updated successfully."
+msgstr "Webhook uspješno ažuriran."
+
+#: app/views/webhook.py:142
+msgid "Webhook deleted."
+msgstr "Webhook obrisan."
+
+#: app/views/webhook.py:175
+msgid "🧪 Webhook test sent successfully!"
+msgstr "🧪 Webhook test uspješno poslan!"
+
+#: app/views/webhook.py:177
+msgid "🧪 Webhook test failed: "
+msgstr "🧪 Webhook test nije uspio:"
+
+#: app/views/webhook.py:180
+msgid "🧪 Error sending webhook test."
+msgstr "🧪 Greška prilikom slanja webhook testa."
+
+#~ msgid ""
+#~ "Grylli is a secure message delivery platform designed to activate after "
+#~ "prolonged user inactivity."
+#~ msgstr ""
+#~ "Grylli je platforma za sigurno dostavljanje poruka dizajnirana da se "
+#~ "aktivira nakon produžene neaktivnosti korisnika."
+
+#~ msgid ""
+#~ "It is a modern reimplementation of Gone Man’s Switch with a refined tech "
+#~ "stack, better maintainability, and an improved user experience."
+#~ msgstr ""
+#~ "To je moderna reimplementacija Gone Man’s Switch sa unaprijeđenom tehničkom "
+#~ "osnovom, boljom održivošću i poboljšanim korisničkim iskustvom."
+
+#~ msgid "Body:"
+#~ msgstr "Tijelo:"
+
+#~ msgid "Subject:"
+#~ msgstr "Predmet:"
+
+#~ msgid "Content:"
+#~ msgstr "Sadržaj:"
+
+#~ msgid "Edit SMTP"
+#~ msgstr "Uredi SMTP"
+
+#~ msgid ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+#~ msgstr ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+
+#~ msgid "Admin Notes"
+#~ msgstr "Administrativne napomene"
+
+#~ msgid "Register"
+#~ msgstr "Registrujte se"
+
+#~ msgid "View"
+#~ msgstr "Pregledaj"
+
+#~ msgid "Schedule"
+#~ msgstr "Raspored"
+
+#~ msgid "Message is enabled"
+#~ msgstr "Poruka je omogućena"
+
+#~ msgid "Message is disabled"
+#~ msgstr "Poruka je onemogućena"
+
+#~ msgid "No SMTP configuration selected."
+#~ msgstr "Nijedna SMTP konfiguracija nije odabrana."
+
+#~ msgid "Enable the message to start monitoring."
+#~ msgstr "Omogućite poruku da započne praćenje."
+
+#~ msgid "✅ SMTP settings saved."
+#~ msgstr "SMTP postavke"
+
+#~ msgid "If you don’t check in, Grylli delivers the message for you."
+#~ msgstr "Ako se ne prijavite, Grylli će dostaviti poruku umjesto vas."
+
+#~ msgid "Fill in already discovered missing translations:"
+#~ msgstr "Ispunite već otkrivene nedostatke u prijevodu:"
+
+#~ msgid "Add missing phrases in that JSON file."
+#~ msgstr "Dodajte nedostajuće fraze u tu JSON datoteku."
+
+#~ msgid "From:"
+#~ msgstr "Od:"
+
+#~ msgid ""
+#~ "Attach the updated JSON file to a new GitHub issue when submitting your "
+#~ "changes."
+#~ msgstr ""
+#~ "Priložite ažuriranu JSON datoteku u novu GitHub prijavu prilikom slanja "
+#~ "svojih promjena."
+
+#~ msgid "admin"
+#~ msgstr "admin"
+
+#~ msgid "user"
+#~ msgstr "korisnik"
+
+#~ msgid "Logging in"
+#~ msgstr "Prijavi se"
+
+#~ msgid "SMTP error: "
+#~ msgstr "SMTP greška:"
+
+#~ msgid "enabled"
+#~ msgstr "omogućen"
+
+#~ msgid "disabled"
+#~ msgstr "onemogućen"

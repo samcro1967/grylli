@@ -1,0 +1,71 @@
+{# ---------------------------------------------------------------------
+  user_instructions_and_modal.html
+  app/templates/admin/partials/user_instructions_and_modal.html
+  User help instructions and Alpine.js-powered role modal
+--------------------------------------------------------------------- #}
+<!-- Expandable Instructions Panel -->
+<button @click="showHelp = !showHelp"
+        class="text-sm text-blue-400 hover:text-blue-200 underline focus:outline-none">
+    <span x-text="showHelp ? '{{ _("Hide Instructions") }}' : '{{ _("How to manage users") }}'"></span>
+</button>
+<div x-show="showHelp"
+     x-transition
+     class="mt-4 p-4 rounded bg-zinc-800 text-sm text-zinc-100 space-y-2 shadow-md border border-zinc-700">
+    <ol class="list-decimal list-inside space-y-1">
+        <li>
+            {{ _("Click") }} <strong>{{ _("➕ Add User") }}</strong> {{ _("to open the new user form.") }}
+        </li>
+        <li>{{ _("Enter a unique username, valid email address, and strong password.") }}</li>
+        <li>
+            {{ _("Select the appropriate") }} <strong>{{ _("role") }}</strong>: <code>admin</code> {{ _("or") }} <code>user</code>.
+        </li>
+        <li>
+            {{ _("Click") }} <strong>{{ _("Create User") }}</strong> {{ _("to save.") }}
+        </li>
+        <li>{{ _("To edit a user, click ✏️ and update their info.") }}</li>
+        <li>{{ _("To delete a user, click 🗑️ and confirm the deletion.") }}</li>
+        <li>
+            {{ _("To disable or enable a user, click 🔴 or 🟢.") }}
+            <ul class="list-disc ml-5 mt-1">
+                <li>{{ _("🟢 = User is enabled and can log in.") }}</li>
+                <li>{{ _("🔴 = User is disabled and cannot log in.") }}</li>
+                <li>{{ _("⚪ = You cannot disable your own account.") }}</li>
+            </ul>
+        </li>
+    </ol>
+</div>
+<!-- Role Change Modal (Alpine.js powered) -->
+<div x-show="showRoleModal"
+     class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50"
+     x-cloak>
+    <div class="bg-zinc-800 rounded-lg p-6 shadow-lg w-full max-w-md">
+        <h2 class="text-lg font-semibold text-white mb-4">
+            {{ _("Assign Role for") }} <span x-text="selectedUsername" class="font-mono text-blue-400"></span>
+        </h2>
+        <form method="post"
+              :action="`{{ url_for('admin.change_user_role', user_id=0) }}`.replace('0', selectedUserId)">
+            <input type="hidden" name="user_id" :value="selectedUserId">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <div class="space-y-2 text-white">
+                <label class="flex items-center space-x-2">
+                    <input type="radio" name="role" value="user" x-model="selectedRole">
+                    <span>User</span>
+                </label>
+                <label class="flex items-center space-x-2">
+                    <input type="radio" name="role" value="admin" x-model="selectedRole">
+                    <span>Admin</span>
+                </label>
+            </div>
+            <div class="mt-6 flex justify-end space-x-2">
+                <button type="button"
+                        @click="showRoleModal = false"
+                        class="bg-zinc-600 px-4 py-2 rounded text-white">{{ _("Cancel") }}</button>
+                <button type="submit"
+                        :disabled="!selectedRole"
+                        class="bg-blue-600 hover:bg-blue-700 px-4 py-2 rounded text-white disabled:opacity-50 disabled:cursor-not-allowed">
+                    {{ _("Save") }}
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,3316 @@
+# Kalaallisut translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-06-07 15:49-0500\n"
+"PO-Revision-Date: 2025-05-25 16:12-0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: kl <LL@li.org>\n"
+"Language: kl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: app/init_db.py:55
+#, python-format
+msgid "Tables currently in DB: %s"
+msgstr "Tabeller i øjeblikket i DB:"
+
+#: app/init_db.py:58
+msgid "Database or system_config table missing. Running migrations now..."
+msgstr "Database eller system_config tabel mangler. Kører migrationer nu..."
+
+#: app/init_db.py:61
+msgid "Migrations applied successfully."
+msgstr "Migrationer anvendt med succes."
+
+#: app/init_db.py:63
+msgid "Migration failed."
+msgstr "Migration mislykkedes."
+
+#: app/init_db.py:68
+msgid "System config seeded successfully."
+msgstr "Systemkonfiguration sået med succes."
+
+#: app/init_db.py:70
+msgid "Error seeding system config."
+msgstr "Fejl ved såning af systemkonfiguration:"
+
+#: app/forms/mfa_form.py:15 app/templates/apprise/create_apprise.html:30
+#: app/templates/apprise/edit_apprise.html:30
+#: app/templates/apprise/list_apprise.html:60
+#: app/templates/mfa/settings.html:24 app/templates/mfa/settings.html:40
+#: app/templates/user_smtp/create_smtp.html:99
+#: app/templates/user_smtp/edit_smtp.html:114
+#: app/templates/user_smtp/list_smtp.html:57
+#: app/templates/webhook/create_webhook.html:36
+#: app/templates/webhook/edit_webhook.html:36
+#: app/templates/webhook/list_webhooks.html:61
+msgid "Enabled"
+msgstr "Nutaarsiassaqartitsivik"
+
+#: app/forms/mfa_form.py:16
+msgid "Authenticator Code"
+msgstr "Authenticator-kode"
+
+#: app/forms/mfa_form.py:17
+#: app/templates/admin/partials/user_instructions_and_modal.html:66
+#: app/templates/admin/partials/user_table.html:115
+#: app/templates/email/assign_smtp.html:44 app/templates/mfa/settings.html:47
+#: app/templates/user_smtp/edit_smtp.html:122
+msgid "Save"
+msgstr "Ilu"
+
+#: app/forms/mfa_form.py:27
+msgid "Authentication Code"
+msgstr "Nalunaarutip nutarterneq"
+
+#: app/forms/mfa_form.py:29
+msgid "Please enter your authentication code."
+msgstr "Takornartaasiutitut koodit allaatiguk."
+
+#: app/forms/mfa_form.py:30
+msgid "Enter a valid 6-digit code or recovery code."
+msgstr ""
+"Ataasinik arfinilininngornermut imaluunniit qajannaallisaanermut koodi "
+"atuussinnaasoq allallugu."
+
+#: app/forms/mfa_form.py:31
+msgid "Invalid code format."
+msgstr "Koodi ajornartoorpoq."
+
+#: app/forms/mfa_form.py:35 app/templates/mfa/challenge.html:25
+msgid "Verify"
+msgstr "Version"
+
+#: app/services/mail.py:37 app/services/system_settings_email.py:40
+msgid "Missing required config setting: "
+msgstr "Manglende påkrævet konfigurationsindstilling:"
+
+#: app/services/mail.py:46 app/services/system_settings_email.py:50
+#, python-format
+msgid "Failed to decrypt %(key)s: %(error)s"
+msgstr "Kunne ikke dekryptere %(key)s: %(error)s"
+
+#: app/services/mail.py:54
+#, python-format
+msgid "get_setting('%(key)s') -> '%(value)s' (sensitive: %(sensitive)s)"
+msgstr ""
+"get_setting('%(key)s') -> '%(value)s' (rå: '%(raw)s', følsom: %(sensitive)s)"
+
+#: app/services/mail.py:75
+#, python-format
+msgid "Preparing email to %(to)s"
+msgstr "Klargøring af e-mail til %(to)s"
+
+#: app/services/mail.py:90
+#, python-format
+msgid ""
+"SMTP configuration: host=%(host)s (type=%(host_type)s), port=%(port)s "
+"(type=%(port_type)s)"
+msgstr ""
+"SMTP vært = '%(host)s' (type: %(host_type)s), port = %(port)s (type: "
+"%(port_type)s)"
+
+#: app/services/mail.py:99
+#, python-format
+msgid "SMTP username: %(user)s"
+msgstr "Bruger bruger: %(user)s"
+
+#: app/services/mail.py:100
+#, python-format
+msgid "TLS enabled: %(tls)s"
+msgstr "TLS aktiveret: %(tls)s"
+
+#: app/services/mail.py:105
+msgid "Starting TLS connection..."
+msgstr "Starter TLS"
+
+#: app/services/mail.py:107
+msgid "Logging into SMTP server..."
+msgstr "Logger ind på SMTP-server..."
+
+#: app/services/mail.py:109
+msgid "Sending email message..."
+msgstr "Agguagassap nalunaarsornera"
+
+#: app/services/mail.py:111
+#, python-format
+msgid "Email sent successfully to %(to)s"
+msgstr "Test e-mail sendt succesfuldt."
+
+#: app/services/mail.py:114
+#, python-format
+msgid "SMTP error while sending to %(to)s: %(error)s"
+msgstr "SMTP-fejl ved sending til %(to)s: %(error)s"
+
+#: app/templates/about.html:10
+msgid "About Grylli"
+msgstr "Om Grylli"
+
+#: app/templates/about.html:13
+msgid ""
+"Grylli is a secure, self-hosted message delivery platform that automatically"
+" sends pre-configured messages if a user fails to check in within a defined "
+"time period."
+msgstr ""
+"Grylli er en sikker, selv-hostet beskedleveringsplatform, der automatisk "
+"sender forudkonfigurerede beskeder, hvis en bruger ikke checker ind inden "
+"for en defineret tidsperiode."
+
+#: app/templates/about.html:14
+msgid ""
+"It supports multiple users, customizable schedules, and recurring reminders."
+msgstr "Den understøtter flere brugere og tilpasselige skemaer."
+
+#: app/templates/about.html:15
+msgid ""
+"Messages and reminders can be delivered via email, webhooks, or over 100 "
+"third-party services through Apprise."
+msgstr ""
+"Beskeder kan leveres via email, webhooks eller over 80 tredjepartstjenester "
+"gennem Apprise."
+
+#: app/templates/about.html:16
+msgid ""
+"Users can configure their own SMTP servers to ensure emails and reminders "
+"appear to come directly from them — not from the system administrator."
+msgstr ""
+"Brugere kan konfigurere deres egne SMTP-servere for at sikre, at beskeder "
+"ser ud til at komme direkte fra dem — ikke fra systemadministratoren."
+
+#: app/templates/about.html:17
+msgid ""
+"Sensitive data is encrypted at rest, and all operations are secured with "
+"strong authentication and audit-friendly logging."
+msgstr ""
+"Følsomme data krypteres i hvile, og alle beskedoperationer er sikret med "
+"stærk autentificering og revisionsvenlig logføring."
+
+#: app/templates/about.html:18
+msgid ""
+"Built with a modern, reactive technology stack, Grylli is optimized for "
+"responsiveness and works seamlessly across desktop and mobile devices."
+msgstr ""
+"Bygget med en moderne, reaktiv teknologisk stak, er Grylli optimeret for "
+"responsivitet og fungerer problemfrit på tværs af desktop og mobile enheder."
+
+#: app/templates/about.html:23
+msgid "Version:"
+msgstr "Version:"
+
+#: app/templates/about.html:26
+msgid "Repository:"
+msgstr "Repository:"
+
+#: app/templates/about.html:30
+msgid "GitHub - samcro1967/grylli"
+msgstr "GitHub - samcro1967/grylli"
+
+#: app/templates/help.html:2 app/templates/help.html:5
+#: app/templates/partials/header.html:85
+msgid "Help"
+msgstr "Hjælp"
+
+#: app/templates/help.html:7
+msgid ""
+"Grylli includes built-in instructions throughout the app to help you "
+"configure and manage your setup."
+msgstr ""
+"Grylli inkluderer indbyggede instruktioner i hele appen for at hjælpe dig "
+"med at konfigurere og administrere dit setup."
+
+#: app/templates/help.html:8
+msgid ""
+"This page provides an overview of key features and direct links to where "
+"they can be managed."
+msgstr ""
+"Denne side giver et overblik over nøglefunktioner og direkte links til, hvor"
+" de kan administreres."
+
+#: app/templates/help.html:12 app/templates/messages/list_messages.html:9
+#: app/templates/partials/shared_nav.html:17
+msgid "Notifications"
+msgstr "Nalunaajaasut"
+
+#: app/templates/help.html:14
+msgid "Create and assign messages"
+msgstr "Opret en besked eller email."
+
+#: app/templates/admin/index.html:32 app/templates/help.html:17
+#: app/templates/partials/admin_nav.html:56
+msgid "SMTP Settings"
+msgstr "SMTP-indstillinger"
+
+#: app/templates/help.html:19
+msgid "Use your own email server"
+msgstr "Brug din egen emailserver"
+
+#: app/templates/help.html:22
+msgid "Apprise Integration"
+msgstr "Apprise Destination-it"
+
+#: app/templates/help.html:24
+msgid "Send notifications to 80+ supported services"
+msgstr "Send notifikationer til 80+ understøttede tjenester"
+
+#: app/templates/help.html:27
+#: app/templates/messages/assign_destinations.html:41
+#: app/templates/messages/view_message.html:58
+#: app/templates/partials/shared_nav.html:44
+#: app/templates/reminders/assign_destinations.html:39
+#: app/templates/reminders/view_reminder.html:69
+msgid "Webhooks"
+msgstr "Webhooks"
+
+#: app/templates/help.html:29
+msgid "Trigger actions or external workflows"
+msgstr "Udløs handlinger eller eksterne arbejdsgange"
+
+#: app/templates/email/list_emails.html:9 app/templates/help.html:32
+#: app/templates/partials/shared_nav.html:61
+msgid "Emails"
+msgstr "Emailit"
+
+#: app/templates/help.html:34
+msgid "View and manage secure email messages"
+msgstr "Emailit isumannaatsut pillugit takussutissiat"
+
+#: app/templates/help.html:38
+msgid "Security"
+msgstr "🔐 Isumannaassuseq"
+
+#: app/templates/help.html:39
+msgid "Grylli encrypts sensitive data and logs all key actions for auditing."
+msgstr ""
+"Grylli krypterer følsomme data og logger alle nøglehandlinger for revision."
+
+#: app/templates/index.html:9 app/views/locale.py:95
+msgid "Welcome to Grylli"
+msgstr "Velkommen til Grylli"
+
+#: app/templates/index.html:11
+msgid "Pronounced"
+msgstr "Udtales"
+
+#: app/templates/index.html:11
+msgid "like “grill-ee”"
+msgstr "som “grill-ee”"
+
+#: app/templates/index.html:14
+msgid ""
+"Grylli is a secure message scheduling and delivery system designed to ensure"
+" your important messages are delivered — even if you can’t be there to send "
+"them."
+msgstr ""
+"Grylli er et sikkert beskedschedulerings- og leveringssystem designet til at"
+" sikre, at dine vigtige beskeder bliver leveret - selv hvis du ikke kan være"
+" der for at sende dem."
+
+#: app/templates/index.html:17
+msgid ""
+"Whether you’re planning ahead, setting up emergency communication, or "
+"building peace of mind, Grylli helps automate your message delivery via "
+"multiple channels including email, webhooks, and Apprise notifications."
+msgstr ""
+"Uanset om du planlægger forud, opsætter nødkommunikation eller bygger ro i "
+"sindet, hjælper Grylli med at automatisere din beskedlevering via email, "
+"webhooks eller Apprise-meddelelser, hvis du misser en check-in."
+
+#: app/templates/index.html:19
+msgid "Getting Started"
+msgstr "Kom godt i gang"
+
+#: app/templates/index.html:21
+msgid "Create a message, email, or reminder."
+msgstr "Opret en besked eller email."
+
+#: app/templates/index.html:22
+msgid "Set your check-in interval and grace period (for messages)."
+msgstr "Indstil dit check-in interval og fristperiode."
+
+#: app/templates/index.html:23
+msgid "Assign one or more delivery destinations."
+msgstr "Tildel et eller flere leveringsdestinationer."
+
+#: app/templates/index.html:24
+msgid "Optionally attach files for secure emails."
+msgstr "Tilføj eventuelt filer til sikre emails."
+
+#: app/templates/index.html:25
+msgid "Schedule reminders to send at specific times or on a recurring basis."
+msgstr ""
+"Aggersarniummik eqaatsitsit ilisarititsilersinnani imaluunniit "
+"uteqatiguusussamik."
+
+#: app/templates/index.html:26
+msgid "Enable the message or reminder to activate delivery."
+msgstr "Oqallorissaatipkket ilisarititsitiguk ikiorsiinissamut pisussanik."
+
+#: app/templates/index.html:28
+msgid ""
+"Regularly check in to Grylli to prevent automated delivery; miss a check-in "
+"and Grylli sends your messages as scheduled."
+msgstr ""
+"Tjek jævnligt ind på Grylli for at forhindre automatiseret levering; misser "
+"du en indtjekning, sender Grylli dine beskeder som planlagt."
+
+#: app/templates/privacy.html:10
+msgid "Privacy Notice"
+msgstr "Privatlivspolitik"
+
+#: app/templates/privacy.html:13
+msgid ""
+"Grylli respects your privacy and is designed to minimize the collection and "
+"storage of personal data."
+msgstr ""
+"Grylli respekterer dit privatliv og er designet til at minimere indsamling "
+"og opbevaring af personlige data."
+
+#: app/templates/privacy.html:14
+msgid ""
+"All data is encrypted where appropriate and remains fully under your control"
+" if you self-host this platform."
+msgstr ""
+"Alle data er krypteret, hvor det er passende, og forbliver fuldt under din "
+"kontrol, hvis du selv-hostede denne platform."
+
+#: app/templates/privacy.html:17
+msgid "What Data We Collect"
+msgstr "Hvilke data vi indsamler"
+
+#: app/templates/privacy.html:19
+msgid "Email address and password hash (for authentication)"
+msgstr "E-mailadresse og password hash (til autentifikation)"
+
+#: app/templates/privacy.html:20
+msgid "Optional MFA secret and recovery codes (encrypted at rest)"
+msgstr "Valgfri MFA-hemmelighed og gendannelseskoder (krypteret i ro)"
+
+#: app/templates/privacy.html:21
+msgid "Reminder and message content you configure"
+msgstr "Påmindelses- og beskedsindhold, du konfigurerer"
+
+#: app/templates/privacy.html:22
+msgid "User-specific settings, SMTP configuration (if provided)"
+msgstr "Brugerspecifikke indstillinger, SMTP-konfiguration (hvis angivet)"
+
+#: app/templates/privacy.html:25
+msgid "How Your Data Is Used"
+msgstr "Sådan bruges dine data"
+
+#: app/templates/privacy.html:27
+msgid ""
+"Your data is used solely for the purpose of delivering reminders and "
+"messages according to your preferences."
+msgstr ""
+"Dine data bruges udelukkende til det formål at levere påmindelser og "
+"beskeder i henhold til dine præferencer."
+
+#: app/templates/privacy.html:28
+msgid ""
+"Grylli does not share, sell, or transmit your personal data to any third "
+"parties."
+msgstr ""
+"Grylli deler, sælger eller sender ikke dine personlige data til nogen "
+"tredjeparter."
+
+#: app/templates/privacy.html:31
+msgid "Your Rights"
+msgstr "Dine rettigheder"
+
+#: app/templates/privacy.html:33
+msgid ""
+"You can export all of your data at any time from the Account Settings page."
+msgstr "Du kan eksportere alle dine data til enhver tid fra kontovidensiden."
+
+#: app/templates/privacy.html:34
+msgid "You may permanently delete your account and all associated data."
+msgstr ""
+"Ilinniartuuserneqariarpiuk konto tamarmi, ilanngunnikuullugu "
+"nakkutilliinermik pilersitsiarnissamik."
+
+#: app/templates/privacy.html:35
+msgid ""
+"If you are using a self-hosted instance, contact the instance administrator "
+"for data inquiries."
+msgstr ""
+"Hvis du bruger en selv-værtet instans, skal du kontakte "
+"instansadministratoren for dataforespørgsler."
+
+#: app/templates/privacy.html:38
+msgid "Self-Hosting Responsibility"
+msgstr "Ansvar for selv-hosting"
+
+#: app/templates/privacy.html:40
+msgid ""
+"If you are running Grylli on your own server, you are responsible for the "
+"storage, processing, and lawful handling of all user data on that instance."
+msgstr ""
+"Hvis du kører Grylli på din egen server, er du ansvarlig for opbevaring, "
+"behandling og lovlig håndtering af alle brugerdata på den instans."
+
+#: app/templates/privacy.html:44
+msgid ""
+"This notice was last updated in June 2025 and may evolve to reflect changes "
+"in the software or regulatory landscape."
+msgstr ""
+"Dette varsel blev senest opdateret i juni 2025 og kan udvikle sig for at "
+"afspejle ændringer i softwaren eller den lovgivningsmæssige kontekst."
+
+#: app/templates/system_info.html:11
+msgid "📦 Environment Versions"
+msgstr "📦 Avatangiisinut Versionit"
+
+#: app/templates/system_info.html:17
+msgid "Category"
+msgstr "Iliuusissaq"
+
+#: app/templates/system_info.html:18
+msgid "Tool"
+msgstr "Atorlugu"
+
+#: app/templates/system_info.html:19
+msgid "Version"
+msgstr "Version"
+
+#: app/templates/system_info.html:25
+msgid "🧠 Python"
+msgstr "🧠 Python"
+
+#: app/templates/system_info.html:26
+msgid "Python"
+msgstr "Python"
+
+#: app/templates/system_info.html:30
+msgid "pip"
+msgstr "pip"
+
+#: app/templates/system_info.html:34
+msgid "SQLite"
+msgstr "SQLite"
+
+#: app/templates/system_info.html:40
+msgid "⚙️ Core"
+msgstr "⚙️ Core"
+
+#: app/templates/system_info.html:47
+msgid "🔐 Security"
+msgstr "🔐 Isumannaassuseq"
+
+#: app/templates/system_info.html:48
+msgid "Email Validator"
+msgstr "Email Validator"
+
+#: app/templates/system_info.html:52
+msgid "Cryptography"
+msgstr "Cryptography"
+
+#: app/templates/system_info.html:57
+msgid "🕰️ Scheduling"
+msgstr "🕰️ Aggulunneq"
+
+#: app/templates/system_info.html:58
+msgid "APScheduler"
+msgstr "APScheduler"
+
+#: app/templates/system_info.html:62
+msgid "Apprise (Python)"
+msgstr "Apprise (Python)"
+
+#: app/templates/system_info.html:66
+msgid "Apprise CLI"
+msgstr "Apprise CLI"
+
+#: app/templates/system_info.html:74
+msgid "🌐 Frontend"
+msgstr "🌐 Saaqqitsineq"
+
+#: app/templates/account/manage_account.html:11
+msgid "Manage Account"
+msgstr "Aaluarutaa Konto"
+
+#: app/templates/account/manage_account.html:12
+msgid "Update your profile information and password."
+msgstr ""
+"Nalunaarsukkatit piniarlugit paasissutisseerumallu iluarsaarchimanerit."
+
+#: app/templates/account/manage_account.html:41
+#: app/templates/admin/create_user.html:40
+#: app/templates/auth/bootstrap.html:43
+#: app/templates/auth/reset_password.html:42 app/templates/auth/signup.html:42
+msgid "Please enter a valid email address."
+msgstr "Emaililimmut sunniineranngitsoq nalusoqqisismagu tigullugu."
+
+#: app/templates/account/manage_account.html:62
+#: app/templates/account/manage_account.html:96
+#: app/templates/account/manage_account.html:127
+#: app/templates/auth/reset_password.html:66
+#: app/templates/auth/reset_password.html:97 app/templates/auth/signup.html:65
+#: app/templates/auth/signup.html:95
+msgid "Show/hide password"
+msgstr "Hold at password takussutissioruk"
+
+#: app/templates/account/manage_account.html:89
+#: app/templates/admin/create_user.html:53
+#: app/templates/auth/bootstrap.html:51
+#: app/templates/auth/reset_password.html:58 app/templates/auth/signup.html:58
+msgid "Password must meet all complexity requirements."
+msgstr ""
+"Password ilkut naqqiluttumillu mianersorlitarsinnaanngitsut panguserpara."
+
+#: app/templates/account/manage_account.html:141
+#: app/templates/admin/create_user.html:72
+#: app/templates/admin/edit_user.html:67 app/templates/auth/bootstrap.html:69
+#: app/templates/auth/reset_password.html:110
+#: app/templates/auth/signup.html:108
+msgid "Passwords do not match."
+msgstr "Password ilaffianiit naapertuullugit."
+
+#: app/templates/account/manage_account.html:147
+msgid "Update Account"
+msgstr "Konto iluarsilaaqqiisarniavisillugu"
+
+#: app/templates/account/manage_account.html:151
+#: app/templates/admin/create_user.html:82
+#: app/templates/admin/edit_user.html:97 app/templates/admin/help_form.html:28
+#: app/templates/admin/partials/user_instructions_and_modal.html:62
+#: app/templates/admin/partials/user_table.html:113
+#: app/templates/apprise/create_apprise.html:42
+#: app/templates/apprise/edit_apprise.html:42
+#: app/templates/auth/reset_password.html:121
+#: app/templates/email/assign_smtp.html:46
+#: app/templates/email/attach_files.html:47
+#: app/templates/email/edit_message.html:54
+#: app/templates/email/schedule_email.html:84
+#: app/templates/messages/assign_destinations.html:66
+#: app/templates/messages/create_message.html:55
+#: app/templates/messages/edit_message.html:48
+#: app/templates/messages/schedule_message.html:84
+#: app/templates/mfa/challenge.html:29 app/templates/mfa/settings.html:51
+#: app/templates/reminders/assign_destinations.html:64
+#: app/templates/reminders/assign_email_reminder.html:94
+#: app/templates/reminders/create_reminder.html:49
+#: app/templates/reminders/edit_reminder.html:42
+#: app/templates/reminders/schedule_reminder.html:51
+#: app/templates/user_smtp/create_smtp.html:111
+#: app/templates/user_smtp/edit_smtp.html:125
+#: app/templates/webhook/create_webhook.html:48
+#: app/templates/webhook/edit_webhook.html:48
+msgid "Cancel"
+msgstr "Tunuaruk"
+
+#: app/templates/account/manage_account.html:159
+#: app/templates/admin/create_user.html:90
+#: app/templates/admin/edit_user.html:81 app/templates/auth/bootstrap.html:83
+#: app/templates/auth/reset_password.html:128
+#: app/templates/auth/signup.html:132
+msgid "Minimum 8 characters"
+msgstr "Minnerpaamik nalunaaquttallu ilaqarli ilinniarfigisinnaassavat"
+
+#: app/templates/account/manage_account.html:160
+#: app/templates/admin/create_user.html:91
+#: app/templates/admin/edit_user.html:82 app/templates/auth/bootstrap.html:84
+#: app/templates/auth/reset_password.html:129
+#: app/templates/auth/signup.html:133
+msgid "At least one uppercase letter"
+msgstr "Minnerpaamik naggarisigit naalaavialigereerpoq"
+
+#: app/templates/account/manage_account.html:161
+#: app/templates/admin/create_user.html:92
+#: app/templates/admin/edit_user.html:83 app/templates/auth/bootstrap.html:85
+#: app/templates/auth/reset_password.html:130
+#: app/templates/auth/signup.html:134
+msgid "At least one lowercase letter"
+msgstr "Minnerpaamik naggarusigalutik imminut paaqqutarli"
+
+#: app/templates/account/manage_account.html:162
+#: app/templates/admin/create_user.html:93
+#: app/templates/admin/edit_user.html:84 app/templates/auth/bootstrap.html:86
+#: app/templates/auth/reset_password.html:131
+#: app/templates/auth/signup.html:135
+msgid "At least one number"
+msgstr "Minnerpaamik ilisimatuutut naalaaviginiagaqarli"
+
+#: app/templates/account/manage_account.html:163
+#: app/templates/admin/create_user.html:94
+#: app/templates/auth/bootstrap.html:87
+#: app/templates/auth/reset_password.html:132
+#: app/templates/auth/signup.html:136
+msgid "At least one special character (e.g., !@#$%)"
+msgstr "Mindst én speciel karakter (f.eks., !@#$%)"
+
+#: app/templates/account/manage_account.html:169
+msgid "Download My Data"
+msgstr "Download mine data"
+
+#: app/templates/account/manage_account.html:171
+msgid ""
+"Download all your account data as a JSON file. This includes your reminders,"
+" messages, email settings, and more. The file is for your records only and "
+"cannot be imported back. Protect it as it may contain sensitive information."
+msgstr ""
+"Download alle dine kontodata som en JSON-fil. Dette inkluderer dine "
+"påmindelser, beskeder, e-mailindstillinger og mere. Filen er kun til dine "
+"egne optegnelser og kan ikke importeres tilbage. Beskyt den, da den kan "
+"indeholde følsomme oplysninger."
+
+#: app/templates/account/manage_account.html:175
+msgid "Download My Data (JSON)"
+msgstr "Download mine data (JSON)"
+
+#: app/templates/account/manage_account.html:179
+msgid "Danger Zone"
+msgstr "Ulussaareqartitsilaasuna"
+
+#: app/templates/account/manage_account.html:180
+msgid "Deleting your account is permanent and cannot be undone."
+msgstr ""
+"Naammassineq isumaqatigiissutigineqarpoq, ilanngunneqarsinnaanissaa "
+"arsissutigineqarpoq."
+
+#: app/templates/account/manage_account.html:185
+msgid "Delete My Account"
+msgstr "Konto iluarsilaaqqiisarniavisillugu"
+
+#: app/templates/account/translations.html:8
+msgid "Translations - Grylli"
+msgstr "Translations - Typewriter"
+
+#: app/templates/account/translations.html:17
+#: app/templates/partials/header.html:102
+msgid "Translations"
+msgstr "Oversættelser"
+
+#: app/templates/account/translations.html:20
+msgid "Grylli currently supports multiple languages and more will be added."
+msgstr ""
+"Grylli massakkut tapersortarpaat arlalissuarnik oqaatsinik amerlanerillu "
+"ilanngunneqassapput."
+
+#: app/templates/account/translations.html:21
+msgid "Many of the translations were performed with assistance from ChatGPT."
+msgstr ""
+"Ajorpaanik nutsernerit amerlanersaat ChatGPT-mik ikiorneqarlutik "
+"ingerlanneqarsimapput."
+
+#: app/templates/account/translations.html:22
+msgid ""
+"If you find a translation issue or want to suggest improvements, your input "
+"is welcome!"
+msgstr ""
+"Yu finda na translation issue o wanna suggest improvements, your input is "
+"welcome!"
+
+#: app/templates/account/translations.html:28
+msgid "How to request translation updates"
+msgstr "fopi xyje pelgena xusteo nodoantim"
+
+#: app/templates/account/translations.html:30
+msgid "To contribute to translations, please use the following guidelines:"
+msgstr ""
+"For at bidrage til oversættelser, følg venligst følgende retningslinjer:"
+
+#: app/templates/account/translations.html:43
+msgid "Contribute missing or improved translations:"
+msgstr "Sumi taannaq piariitsoq naniviuk?"
+
+#: app/templates/account/translations.html:63
+msgid "Open the relevant .po translation file for your language."
+msgstr "Åbn JSON-oversættelsesfilen for dit sprog. For eksempel:"
+
+#: app/templates/account/translations.html:67
+msgid ""
+"Find untranslated or incomplete entries and add or improve translations."
+msgstr ""
+"Find uoversatte eller ufuldstændige indgange og tilføj eller forbedr "
+"oversættelser."
+
+#: app/templates/account/translations.html:68
+msgid "You may use a PO file editor or a text editor."
+msgstr "Du kan bruge en PO-filredaktør eller en teksteditor."
+
+#: app/templates/account/translations.html:69
+msgid "Copy the file path and the snippet of your changes."
+msgstr "Kopier filstien og uddraget af dine ændringer."
+
+#: app/templates/account/translations.html:70
+msgid "Paste the snippet directly into a new GitHub issue for review."
+msgstr "Indsæt det kopierede snippet direkte i GitHub-issue kommentaren."
+
+#: app/templates/account/translations.html:72
+msgid "Please do not upload the full .po file to avoid merge conflicts."
+msgstr "Læg ikke hele .po-filen op for at undgå sammenfletningskonflikter."
+
+#: app/templates/account/translations.html:85
+msgid "Improving existing translations:"
+msgstr "Forbedre eksisterende oversættelser:"
+
+#: app/templates/account/translations.html:104
+msgid "Open the relevant .po file for the translation you want to improve."
+msgstr "Åbn den relevante .po fil for den oversættelse du vil forbedre."
+
+#: app/templates/account/translations.html:106
+msgid "For example:"
+msgstr "Til eksempel:"
+
+#: app/templates/account/translations.html:110
+msgid ""
+"Find the phrase(s) and its existing translation(s) you want to improve."
+msgstr ""
+"Qularna eqqoraagit ilitsersuut(ni) aammalu taaneqareersimasut its. "
+"najoqqutaralugit pitsanngorsarusutat."
+
+#: app/templates/account/translations.html:111
+msgid "Update the phrase(s)."
+msgstr "Opdater frase(r)."
+
+#: app/templates/account/translations.html:112
+msgid "Copy the file name and path into the issue."
+msgstr "Kopier filnavn og sti ind i problemet."
+
+#: app/templates/account/translations.html:114
+msgid "Paste the copied snippet directly into the GitHub issue comment."
+msgstr "Indsæt det kopierede snippet direkte i GitHub-issue kommentaren."
+
+#: app/templates/account/translations.html:115
+msgid "Do not upload the full .po file to avoid merge conflicts."
+msgstr "Læg ikke hele .po-filen op for at undgå sammenfletningskonflikter."
+
+#: app/templates/account/translations.html:118
+msgid "Example snippet:"
+msgstr "Example snippet:"
+
+#: app/templates/account/translations.html:137
+msgid "Report missing translations not yet discovered:"
+msgstr "Rapportér manglende oversættelser endnu ikke opdaget:"
+
+#: app/templates/account/translations.html:154
+msgid ""
+"If you see text in the app that appears untranslated or missing, please "
+"report it to us."
+msgstr ""
+"Hvis du ser tekst i appen, der vises uoversat eller manglende, bedes du "
+"rapportere det til os."
+
+#: app/templates/account/translations.html:155
+msgid "Provide the exact English phrase as it appears on the screen."
+msgstr "Provide the exact English phrase as it appears on the screen."
+
+#: app/templates/account/translations.html:156
+msgid ""
+"Include the page or section where you saw the phrase (e.g., Apprise page, "
+"Account Page, etc.)."
+msgstr ""
+"Inkludér siden eller sektionen hvor du så sætningen (f.eks., Indstillinger "
+"side, Konto sektion)."
+
+#: app/templates/account/translations.html:157
+msgid ""
+"Submit this information via a new GitHub issue so we can add it to the "
+"translation files"
+msgstr ""
+"Indsend denne information via et nyt GitHub-emne, så vi kan tilføje det til "
+"oversættelsesfilerne og pakke det til Babel."
+
+#: app/templates/account/translations.html:166
+msgid "Found a missing translation?"
+msgstr "Sumi taannaq piariitsoq naniviuk?"
+
+#: app/templates/account/translations.html:171
+msgid ""
+"This link will create a new GitHub issue pre-filled with a language code."
+msgstr ""
+"Dette link vil oprette et nyt GitHub-issue forudfyldt med en sprogkode."
+
+#: app/templates/account/translations.html:172
+msgid "Report it by opening a new GitHub issue"
+msgstr "Rapportér det ved at åbne en ny GitHub-sag"
+
+#: app/templates/account/translations.html:175
+msgid "Please specify the language code and exact phrase when reporting."
+msgstr "Angiv venligst sprogkoden og den præcise sætning ved rapportering."
+
+#: app/templates/account/translations.html:176
+msgid "Thank you for helping us make Grylli better!"
+msgstr "Takker for at hjælpe os med at gøre Grylli bedre!"
+
+#: app/templates/admin/create_user.html:14
+msgid "Create New User"
+msgstr "Opret Ny Bruger"
+
+#: app/templates/admin/create_user.html:15
+msgid "Fill out the form to add a new user."
+msgstr "Udfyld formularen for at tilføje en ny bruger."
+
+#: app/templates/admin/create_user.html:21
+#: app/templates/admin/edit_user.html:17 app/templates/auth/bootstrap.html:24
+msgid "Please fix the following errors:"
+msgstr "Ret venligst følgende fejl:"
+
+#: app/templates/admin/create_user.html:78
+#: app/templates/admin/edit_user.html:93
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "Create User"
+msgstr "Opret Bruger"
+
+#: app/templates/admin/edit_user.html:10
+#: app/templates/admin/partials/user_card.html:20
+#: app/templates/admin/partials/user_table.html:26
+msgid "Edit User"
+msgstr "Edit Bruger"
+
+#: app/templates/admin/edit_user.html:55 app/templates/admin/edit_user.html:74
+msgid "Hold to show password"
+msgstr "Hold at password takussutissioruk"
+
+#: app/templates/admin/edit_user.html:85
+#, python-format
+msgid "At least one special character (e.g., !@#$%%)"
+msgstr "Mindst en speciel karakter (f.eks., !@#$%%)"
+
+#: app/templates/admin/help.html:4 app/templates/auth/login.html:72
+msgid "Admin Help"
+msgstr "Admin Panel"
+
+#: app/templates/admin/help.html:7
+msgid "Reset Admin Password"
+msgstr "Nutaamik oqaatsit"
+
+#: app/templates/admin/help.html:9
+msgid ""
+"If you've forgotten the admin password, you can reset it using the following"
+" Docker command:"
+msgstr ""
+"Aqarniutitut admin ataatsimii arajutsisimagukku, una atorlugu taasanik "
+"atoqqiiniaraatit Docker imi vavit:"
+
+#: app/templates/admin/help.html:15
+msgid ""
+"This script will prompt you to enter a new password for the admin user. You "
+"must run it from the host system where the Grylli container is running."
+msgstr ""
+"Una script siumugutigissava illit atorlugu nutaamik tassani taasanik "
+"allattuutip nerriviani allattooq admin imaa. Asimiik qaqanga allaavoq "
+"oqalualuuartumaluguaq Grylli contenaarip pilluaavata tungaanut asimiik "
+"atuagava qannarmik."
+
+#: app/templates/admin/help.html:18
+msgid "After resetting, you can log in with the new password immediately."
+msgstr ""
+"Aaqqeriarneq kinguneqartillugu, nutaamik tassa atorlugu aariflissinnaavit."
+
+#: app/templates/admin/help.html:24
+msgid "Return to Login"
+msgstr "Takuagaq Avammut tikillugu"
+
+#: app/templates/admin/help_form.html:6
+msgid "Admin Help Access"
+msgstr "Admin ikiugaq Avatangiisikkut"
+
+#: app/templates/admin/help_form.html:9
+msgid "Enter your Ferret Key to unlock admin-only help documentation."
+msgstr ""
+"Admin ikiugaq tassa saqqummersoq allannginneqanngitsoq allattuivittullu "
+"Ferret sulelibbiusamik ukiut."
+
+#: app/templates/admin/help_form.html:34
+msgid "How to Find Your FERRET_KEY"
+msgstr "Maanerusut FERRET_KEY navigatori sinniisunnguuvoq"
+
+#: app/templates/admin/help_form.html:36
+msgid "The FERRET_KEY is set as an environment variable when running Grylli."
+msgstr ""
+"FERRET_KEY tassamaat taputaliunneqartarpoq peqatigalugu Grylli "
+"atuatilaaginnarlugu."
+
+#: app/templates/admin/help_form.html:39
+msgid "Option 1: Check docker-compose.yml"
+msgstr "Taasaq 1: docker-compose.yml analayserlugu pineqaq"
+
+#: app/templates/admin/help_form.html:46
+msgid "Option 2: Use docker inspect"
+msgstr "Taasaq 2: docker paniat qaffasisaannatsinni"
+
+#: app/templates/admin/help_form.html:52
+msgid "This shows the FERRET_KEY as passed to the container at runtime."
+msgstr ""
+"Tamaana saammaatu Ferret Key akeqartillugu nunatsinni aqqutissartaqanngilaq "
+"avamullu"
+
+#: app/templates/admin/index.html:10
+msgid "Admin Panel"
+msgstr "Admin Panel"
+
+#: app/templates/admin/index.html:12
+msgid ""
+"Welcome to the Grylli Admin Panel. Use the links below to manage the system."
+msgstr ""
+"Tikilluarit Grylli Admin Panel-imut. Atoruk linkit ataani naapertuuttumik "
+"aaqqissuussinissamut."
+
+#: app/templates/admin/index.html:17
+msgid "Manage Users"
+msgstr "Administrér Brugere"
+
+#: app/templates/admin/index.html:18
+msgid "Create, edit, enable/disable, or delete user accounts."
+msgstr "Opret, rediger, aktiver/deaktiver eller slet brugerkonti."
+
+#: app/templates/admin/index.html:22
+#: app/templates/admin/system_settings.html:10
+#: app/templates/partials/admin_nav.html:52
+msgid "System Settings"
+msgstr "Systemindstillinger"
+
+#: app/templates/admin/index.html:23
+msgid "View  system-wide environment values."
+msgstr "Vis system-dækkende miljøværdier."
+
+#: app/templates/admin/index.html:27 app/templates/partials/admin_nav.html:42
+msgid "Backups"
+msgstr "Backups"
+
+#: app/templates/admin/index.html:28
+msgid "Create and delete database backups."
+msgstr "Database Sikkerhedskopier"
+
+#: app/templates/admin/index.html:33
+msgid "View and test global SMTP settings."
+msgstr "Kunne ikke sende test e-mail. Tjek SMTP-indstillinger."
+
+#: app/templates/admin/index.html:39
+msgid "View Admin Guide / README on GitHub"
+msgstr "Vis Admin Guide / README på GitHub"
+
+#: app/templates/admin/index.html:40
+msgid "Includes setup instructions, integrations, and troubleshooting."
+msgstr "Inkluderer opsætningsinstruktioner, integrationer og fejlfinding."
+
+#: app/templates/admin/index.html:44
+msgid "⚠️ Admin Tips"
+msgstr "⚠️ Admin Råd"
+
+#: app/templates/admin/index.html:46
+msgid "Ensure the data folder (database) is backed up on your host"
+msgstr "Sikre at datafolderen (database) er sikkerhedskopieret på din vært"
+
+#: app/templates/admin/index.html:48
+msgid ""
+"The uploads folder is not per user.  If required per user, you will ndd to "
+"create subdirectoried per user and setup permissions so users can only see "
+"their own folder."
+msgstr ""
+"Uploadsmappen er ikke per bruger. Hvis det kræves per bruger, skal du "
+"oprette undermapper per bruger og opsætte tilladelser, så brugere kun kan se"
+" deres egen mappe."
+
+#: app/templates/admin/index.html:51
+msgid ""
+"To restore a backup: stop the container, replace the data/grylli.db with one"
+" from the backups folder, and restart the container."
+msgstr ""
+"For at gendanne en sikkerhedskopi: stop containeren, erstat data/grylli.db "
+"med en fra backups mappen, og genstart containeren."
+
+#: app/templates/admin/list_backups.html:11
+msgid "Database Backups"
+msgstr "Database Sikkerhedskopier"
+
+#: app/templates/admin/list_backups.html:13
+msgid "Create Backup"
+msgstr "Opret Sikkerhedskopi"
+
+#: app/templates/admin/list_backups.html:21
+msgid "Filename"
+msgstr "Filnavn"
+
+#: app/templates/admin/list_backups.html:22
+#: app/templates/admin/partials/user_table.html:14
+#: app/templates/apprise/list_apprise.html:62
+#: app/templates/email/list_emails.html:60
+#: app/templates/messages/list_messages.html:60
+#: app/templates/reminders/list_reminders.html:60
+#: app/templates/user_smtp/list_smtp.html:59
+#: app/templates/webhook/list_webhooks.html:63
+msgid "Actions"
+msgstr "Handlinger"
+
+#: app/templates/admin/list_backups.html:32
+msgid "Delete this backup?"
+msgstr "Slet denne sikkerhedskopi?"
+
+#: app/templates/admin/list_backups.html:32
+#: app/templates/apprise/list_apprise.html:95
+#: app/templates/apprise/list_apprise.html:99
+#: app/templates/apprise/list_apprise.html:150
+#: app/templates/apprise/list_apprise.html:154
+#: app/templates/email/list_emails.html:124
+#: app/templates/email/list_emails.html:128
+#: app/templates/email/list_emails.html:226
+#: app/templates/email/list_emails.html:230
+#: app/templates/messages/list_messages.html:112
+#: app/templates/messages/list_messages.html:116
+#: app/templates/messages/list_messages.html:198
+#: app/templates/messages/list_messages.html:202
+#: app/templates/reminders/list_reminders.html:107
+#: app/templates/reminders/list_reminders.html:113
+#: app/templates/reminders/list_reminders.html:192
+#: app/templates/reminders/list_reminders.html:198
+#: app/templates/user_smtp/list_smtp.html:101
+#: app/templates/user_smtp/list_smtp.html:169
+#: app/templates/webhook/list_webhooks.html:102
+#: app/templates/webhook/list_webhooks.html:161
+msgid "Delete"
+msgstr "Slet"
+
+#: app/templates/admin/list_backups.html:41
+msgid "No backups found."
+msgstr "Ingen sikkerhedskopier fundet."
+
+#: app/templates/admin/list_backups.html:44
+msgid ""
+"Backups contain your full app data. Store securely. Sensitive data is "
+"encrypted in the DB by default."
+msgstr ""
+"Sikkerhedskopier indeholder dine fulde app-data. Opbevar sikkert. Følsomme "
+"data er krypteret i DB som standard."
+
+#: app/templates/admin/smtp_config.html:28
+#: app/templates/admin/system_config.html:22
+msgid "System Configuration"
+msgstr "Systemip Aaqqissuussaanerit"
+
+#: app/templates/admin/smtp_config.html:33
+#: app/templates/admin/system_config.html:26
+#: app/templates/admin/system_settings.html:15
+msgid "Key"
+msgstr "Allunaasaq"
+
+#: app/templates/admin/smtp_config.html:34
+#: app/templates/admin/system_config.html:27
+#: app/templates/admin/system_settings.html:16
+msgid "Value"
+msgstr "Nalunaq"
+
+#: app/templates/admin/smtp_config.html:35
+#: app/templates/admin/system_config.html:28
+msgid "Sensitive"
+msgstr "Illersuutigaq"
+
+#: app/templates/admin/smtp_config.html:36
+#: app/templates/admin/system_config.html:29
+msgid "Editable"
+msgstr "Aaqqinneqarsinnaasoq"
+
+#: app/templates/admin/smtp_config.html:50
+#: app/templates/admin/smtp_config.html:51
+#: app/templates/admin/system_config.html:45
+#: app/templates/admin/system_config.html:46
+#: app/templates/email/view_config.html:60
+msgid "Yes"
+msgstr "Aap"
+
+#: app/templates/admin/smtp_config.html:50
+#: app/templates/admin/smtp_config.html:51
+#: app/templates/admin/system_config.html:45
+#: app/templates/admin/system_config.html:46
+#: app/templates/email/view_config.html:60
+msgid "No"
+msgstr "Naamik"
+
+#: app/templates/admin/smtp_config.html:63
+#: app/templates/admin/system_config.html:55
+msgid "Send Test Email"
+msgstr "Testimik Emailimik nassiussineq"
+
+#: app/templates/admin/system_config.html:39
+msgid "decrypted"
+msgstr "Құрылды"
+
+#: app/templates/admin/partials/user_card.html:12
+msgid "Email:"
+msgstr "Email:"
+
+#: app/templates/admin/partials/user_card.html:15
+msgid "Role:"
+msgstr "Rolle:"
+
+#: app/templates/admin/partials/user_card.html:27
+#: app/templates/admin/partials/user_table.html:34
+msgid "Change Role"
+msgstr "Ilinniartuni allanngortillugu"
+
+#: app/templates/admin/partials/user_card.html:29
+#: app/templates/admin/partials/user_table.html:36
+msgid "You cannot change your own role"
+msgstr ""
+"Namminerisamik atuinermut aaqqiissutissaq allanngortinneqarsinnaanngilaq."
+
+#: app/templates/admin/partials/user_card.html:36
+#: app/templates/admin/partials/user_table.html:43
+msgid "Are you sure you want to reset MFA for this user?"
+msgstr ""
+"Isumaginngivissiuserit nakkutilliinermik qajannaallisaaneq "
+"nakkutilluiviginiarpiuk?"
+
+#: app/templates/admin/partials/user_card.html:39
+#: app/templates/admin/partials/user_table.html:46
+msgid "Reset MFA"
+msgstr "Nutaamik oqaatsit"
+
+#: app/templates/admin/partials/user_card.html:51
+#: app/templates/admin/partials/user_table.html:58
+msgid "Delete user"
+msgstr "Slet bruger"
+
+#: app/templates/admin/partials/user_card.html:55
+#: app/templates/admin/partials/user_table.html:61
+msgid "Delete User"
+msgstr "Slet Bruger"
+
+#: app/templates/admin/partials/user_card.html:58
+#: app/templates/admin/partials/user_table.html:65
+msgid "You cannot disable yourself"
+msgstr "Du kan ikke deaktivere dig selv"
+
+#: app/templates/admin/partials/user_card.html:65
+#: app/templates/admin/partials/user_table.html:72
+msgid "Disable"
+msgstr "Deaktiver"
+
+#: app/templates/admin/partials/user_card.html:65
+#: app/templates/admin/partials/user_table.html:72
+msgid "Enable"
+msgstr "Aktiver"
+
+#: app/templates/admin/partials/user_header.html:6
+#: app/templates/partials/admin_nav.html:47
+msgid "Users"
+msgstr "Brugere"
+
+#: app/templates/admin/partials/user_header.html:12
+#: app/templates/admin/partials/user_header.html:13
+#: app/templates/apprise/apprise_config.html:10
+#: app/templates/apprise/apprise_config.html:11
+#: app/templates/apprise/list_apprise.html:16
+#: app/templates/apprise/list_apprise.html:17
+#: app/templates/email/list_emails.html:15
+#: app/templates/email/list_emails.html:16
+#: app/templates/messages/list_messages.html:16
+#: app/templates/messages/list_messages.html:17
+#: app/templates/reminders/list_reminders.html:15
+#: app/templates/reminders/list_reminders.html:16
+#: app/templates/user_smtp/list_smtp.html:14
+#: app/templates/user_smtp/list_smtp.html:17
+#: app/templates/webhook/list_webhooks.html:16
+#: app/templates/webhook/list_webhooks.html:17
+#: app/templates/webhook/webhook_config.html:10
+#: app/templates/webhook/webhook_config.html:11
+msgid "Table View"
+msgstr "Tabelvisning"
+
+#: app/templates/admin/partials/user_header.html:26
+#: app/templates/admin/partials/user_header.html:27
+#: app/templates/apprise/apprise_config.html:24
+#: app/templates/apprise/apprise_config.html:25
+#: app/templates/apprise/list_apprise.html:30
+#: app/templates/apprise/list_apprise.html:31
+#: app/templates/email/list_emails.html:29
+#: app/templates/email/list_emails.html:30
+#: app/templates/messages/list_messages.html:30
+#: app/templates/messages/list_messages.html:31
+#: app/templates/reminders/list_reminders.html:29
+#: app/templates/reminders/list_reminders.html:30
+#: app/templates/user_smtp/list_smtp.html:27
+#: app/templates/user_smtp/list_smtp.html:30
+#: app/templates/webhook/list_webhooks.html:30
+#: app/templates/webhook/list_webhooks.html:31
+#: app/templates/webhook/webhook_config.html:24
+#: app/templates/webhook/webhook_config.html:25
+msgid "Card View"
+msgstr "Kortvisning"
+
+#: app/templates/admin/partials/user_header.html:45
+msgid "Add User"
+msgstr "Tilføj Bruger"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:9
+#: app/templates/email/attach_files.html:54
+#: app/templates/email/list_emails.html:255
+#: app/templates/messages/list_messages.html:223
+#: app/templates/reminders/list_reminders.html:218
+#: app/templates/reminders/schedule_reminder.html:56
+msgid "Hide Instructions"
+msgstr "Skjul Instruktioner"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:9
+msgid "How to manage users"
+msgstr "Hvordan man administrerer brugere"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "Click"
+msgstr "Klik"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+msgid "➕ Add User"
+msgstr "➕ Tilføj Bruger"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+msgid "to open the new user form."
+msgstr "for at åbne den nye brugerformular."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:18
+msgid "Enter a unique username, valid email address, and strong password."
+msgstr "Indtast et unikt brugernavn, gyldig emailadresse og stærkt kodeord."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "Select the appropriate"
+msgstr "Vælg den rette"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "role"
+msgstr "rolle"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "or"
+msgstr "Порт"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "to save."
+msgstr "for at gemme."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:25
+msgid "To edit a user, click ✏️ and update their info."
+msgstr "For at redigere en bruger, klik ✏️ og opdatér deres info."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:26
+msgid "To delete a user, click 🗑️ and confirm the deletion."
+msgstr "For at slette en bruger, klik 🗑️ og bekræft sletningen."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:28
+msgid "To disable or enable a user, click 🔴 or 🟢."
+msgstr "For at deaktivere eller aktivere en bruger, klik 🔴 eller 🟢."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:30
+msgid "🟢 = User is enabled and can log in."
+msgstr "🟢 = Bruger er aktiveret og kan logge ind."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:31
+msgid "🔴 = User is disabled and cannot log in."
+msgstr "🔴 = Atuisartoq peqanngilaq isertaasinnaanngilaq."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:32
+msgid "⚪ = You cannot disable your own account."
+msgstr "⚪ = Kontoqaruit nammineq unitsissinnaanngilat."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:43
+#: app/templates/admin/partials/user_table.html:91
+msgid "Assign Role for"
+msgstr "Milleqarfiusinnaasut toqqakkit"
+
+#: app/templates/admin/partials/user_table.html:10
+msgid "ID"
+msgstr "ID"
+
+#: app/templates/admin/partials/user_table.html:11
+#: app/templates/user_smtp/list_smtp.html:55
+msgid "Username"
+msgstr "Brugernavn"
+
+#: app/templates/admin/partials/user_table.html:12
+msgid "Email"
+msgstr "Email"
+
+#: app/templates/admin/partials/user_table.html:13
+msgid "Role"
+msgstr "Rolle"
+
+#: app/templates/apprise/apprise_config.html:3
+#: app/templates/apprise/list_apprise.html:9
+#: app/templates/messages/assign_destinations.html:22
+#: app/templates/reminders/assign_destinations.html:20
+msgid "Apprise Destinations"
+msgstr "Apprise Destination-it"
+
+#: app/templates/apprise/apprise_config.html:43
+#: app/templates/webhook/list_webhooks.html:49
+#: app/templates/webhook/webhook_config.html:43
+msgid "Add Webhook"
+msgstr "Webhook Қосу"
+
+#: app/templates/apprise/apprise_config.html:43
+#: app/templates/apprise/list_apprise.html:49
+#: app/templates/webhook/list_webhooks.html:49
+#: app/templates/webhook/webhook_config.html:43
+msgid "Add Destination"
+msgstr "Destination ilanngutikkit"
+
+#: app/templates/apprise/create_apprise.html:10
+msgid "Create Apprise Destination"
+msgstr "Apprise Destination pilersiguk"
+
+#: app/templates/apprise/create_apprise.html:38
+#: app/templates/apprise/edit_apprise.html:38
+#: app/templates/user_smtp/create_smtp.html:107
+#: app/templates/webhook/create_webhook.html:44
+#: app/templates/webhook/edit_webhook.html:44
+msgid "Create Destination"
+msgstr "Destination pilersiguk"
+
+#: app/templates/apprise/create_apprise.html:47
+#: app/templates/apprise/edit_apprise.html:47
+msgid "Need help with Apprise URLs? See the"
+msgstr ""
+"Apprise URL-issaannik ikiorneqarnissat pisariaqartippiuk? Imatut "
+"takusinnaavat"
+
+#: app/templates/apprise/create_apprise.html:51
+#: app/templates/apprise/edit_apprise.html:51
+msgid "Apprise Notification Services documentation"
+msgstr "Apprise Nutaarsiassaqartitsivik dokumentaatit"
+
+#: app/templates/apprise/edit_apprise.html:10
+msgid "Edit Apprise Destination"
+msgstr "Apprise Destination aaqqissuguk"
+
+#: app/templates/apprise/list_apprise.html:49
+msgid "Add Apprise"
+msgstr "Apprise ilanngutikkit"
+
+#: app/templates/apprise/list_apprise.html:58
+#: app/templates/email/edit_message.html:21
+#: app/templates/email/list_emails.html:56
+#: app/templates/email/view_config.html:14
+#: app/templates/messages/create_message.html:29
+#: app/templates/messages/edit_message.html:23
+#: app/templates/messages/list_messages.html:57
+#: app/templates/messages/view_message.html:14
+#: app/templates/reminders/create_reminder.html:23
+#: app/templates/reminders/edit_reminder.html:17
+#: app/templates/reminders/list_reminders.html:56
+#: app/templates/reminders/view_reminder.html:13
+#: app/templates/user_smtp/list_smtp.html:52
+#: app/templates/webhook/list_webhooks.html:58
+msgid "Label"
+msgstr "Taaguut"
+
+#: app/templates/apprise/list_apprise.html:59
+msgid "URL"
+msgstr "URL"
+
+#: app/templates/apprise/list_apprise.html:61
+#: app/templates/email/list_emails.html:59
+#: app/templates/messages/list_messages.html:59
+#: app/templates/messages/view_message.html:36
+#: app/templates/reminders/view_reminder.html:47
+#: app/templates/webhook/list_webhooks.html:62
+msgid "Created At"
+msgstr "Pilersinneqartoq"
+
+#: app/templates/apprise/list_apprise.html:77
+#: app/templates/apprise/list_apprise.html:132
+#: app/templates/user_smtp/list_smtp.html:79
+#: app/templates/user_smtp/list_smtp.html:147
+#: app/templates/webhook/list_webhooks.html:79
+#: app/templates/webhook/list_webhooks.html:138
+msgid "Edit"
+msgstr "Aaqqissuguk"
+
+#: app/templates/apprise/list_apprise.html:80
+#: app/templates/apprise/list_apprise.html:135
+#: app/templates/user_smtp/list_smtp.html:82
+#: app/templates/user_smtp/list_smtp.html:150
+msgid "Cannot edit while in use"
+msgstr "Kan ikke redigere, mens den er i brug"
+
+#: app/templates/apprise/list_apprise.html:88
+#: app/templates/apprise/list_apprise.html:143
+#: app/templates/webhook/list_webhooks.html:91
+#: app/templates/webhook/list_webhooks.html:150
+msgid "Test"
+msgstr "Test"
+
+#: app/templates/apprise/list_apprise.html:103
+#: app/templates/apprise/list_apprise.html:158
+#: app/templates/user_smtp/list_smtp.html:106
+#: app/templates/user_smtp/list_smtp.html:174
+msgid "Cannot delete while in use"
+msgstr "Kan ikke slette, mens den er i brug"
+
+#: app/templates/apprise/list_apprise.html:119
+msgid "URL:"
+msgstr "URL:"
+
+#: app/templates/apprise/list_apprise.html:122
+#: app/templates/user_smtp/list_smtp.html:137
+#: app/templates/webhook/list_webhooks.html:128
+msgid "Enabled:"
+msgstr "Ikkussuunneq:"
+
+#: app/templates/apprise/list_apprise.html:125
+#: app/templates/user_smtp/list_smtp.html:140
+#: app/templates/webhook/list_webhooks.html:131
+msgid "Created:"
+msgstr "Pilersinneq:"
+
+#: app/templates/auth/bootstrap.html:14
+msgid "Create Admin Account"
+msgstr "Admin Konto pilersiguk"
+
+#: app/templates/auth/bootstrap.html:16
+msgid "Let’s get started by creating your first admin account."
+msgstr "Suliillusimaarlutit admin konto siulleq pilersitseqqaarniarlugu."
+
+#: app/templates/auth/bootstrap.html:75
+msgid "Create Admin"
+msgstr "Admin pilersiguk"
+
+#: app/templates/auth/forgot_password.html:12
+msgid "Forgot Password"
+msgstr "Qanoq ilisassaq nalunngilara"
+
+#: app/templates/auth/forgot_password.html:15
+msgid ""
+"Enter your username and email. We'll send you a link to reset your password."
+msgstr ""
+"Atit emailinnillu allassigit. Isumaqarumaarpugut isissutissanik nutaaq "
+"ilinnut toqqaannarluni nassassasugut."
+
+#: app/templates/auth/forgot_username.html:12
+msgid "Forgot Username"
+msgstr "Atit nalunngilara"
+
+#: app/templates/auth/forgot_username.html:15
+msgid "Enter your email address, and we'll send you your username."
+msgstr "Emailit allassigit, atit tamaasa nassassasugut."
+
+#: app/templates/auth/forgot_username.html:40
+msgid "Send Username"
+msgstr "Atit nassiuguk"
+
+#: app/templates/auth/login.html:12 app/templates/auth/login.html:54
+msgid "Log In"
+msgstr "Isissinnaavutit"
+
+#: app/templates/auth/login.html:62
+msgid "Forgot Username?"
+msgstr "Atit nalunngilara?"
+
+#: app/templates/auth/login.html:64
+msgid "Forgot Password?"
+msgstr "Qanoq ilisassaq nalunngilara?"
+
+#: app/templates/auth/login.html:66 app/templates/auth/signup.html:12
+msgid "Sign Up"
+msgstr "Nalunaarutiguk"
+
+#: app/templates/auth/rate_limit.html:9
+msgid "Hold On"
+msgstr "Hold On"
+
+#: app/templates/auth/rate_limit.html:11
+msgid "Too many failed login attempts. Please wait"
+msgstr "Sulluleriartortitsisoqarsimavoq. Qaaqqissinnaajunnaarlugu utaqqigit"
+
+#: app/templates/auth/rate_limit.html:13
+msgid "seconds..."
+msgstr "sekundi:.."
+
+#: app/templates/auth/rate_limit.html:15
+msgid "Redirecting to login..."
+msgstr "Takuagaq Avammut tikillugu"
+
+#: app/templates/auth/reset_password.html:12
+#: app/templates/auth/reset_password.html:116
+msgid "Reset Password"
+msgstr "Nutaamik oqaatsit"
+
+#: app/templates/auth/reset_password.html:14
+msgid "Enter your username, email, and new password."
+msgstr "Atuisorisat, emailit nutaallu ввод gbọdọ"
+
+#: app/templates/auth/signup.html:14
+msgid "Fill out the form to create your account."
+msgstr "Ilinniarfik immersoruk aallerfissaq pilersukkatut."
+
+#: app/templates/checkin/already_checked_in.html:10
+msgid "Already Checked In"
+msgstr "Ullup kingulleq nalunaarsornera"
+
+#: app/templates/checkin/already_checked_in.html:12
+msgid ""
+"You have already checked in for this item. No further action is needed at "
+"this time."
+msgstr ""
+"Una allakkiaqqat ataasiussanngormat. Allamik iliuuseqartariaqanngilatit."
+
+#: app/templates/checkin/already_checked_in.html:16
+#: app/templates/checkin/disabled.html:16
+#: app/templates/checkin/executed_disabled.html:18
+msgid "Check-in for:"
+msgstr "Nalunaarsorneqartunut:"
+
+#: app/templates/checkin/already_checked_in.html:21
+#: app/templates/checkin/disabled.html:21
+#: app/templates/checkin/executed_disabled.html:23
+#: app/templates/checkin/thank_you.html:19
+msgid "Return to Dashboard"
+msgstr "Takuagaq Avammut tikillugu"
+
+#: app/templates/checkin/disabled.html:10
+msgid "Check-In Disabled"
+msgstr "Email naatsoorpoq"
+
+#: app/templates/checkin/disabled.html:12
+msgid "This check-in is currently disabled and cannot be completed."
+msgstr ""
+"Una allakkiaqqat maanna piusissaanngilaq aammalu "
+"naammassineqarsinnaanngilaq."
+
+#: app/templates/checkin/executed_disabled.html:11
+msgid "Already Executed & Disabled"
+msgstr "Aallartitat & Piusaangitsoortut"
+
+#: app/templates/checkin/executed_disabled.html:14
+msgid ""
+"This check-in has already been executed and is now disabled. No further "
+"action is required."
+msgstr ""
+"Una allakkiaqqat aallartitaareerpoq maannakkullu piusanngornissamut. Allamik"
+" iliuuseqarnissat pisariaqartinngilat."
+
+#: app/templates/checkin/thank_you.html:10
+msgid "Check-In Successful"
+msgstr "Annikitsoq Nalunaarsats"
+
+#: app/templates/checkin/thank_you.html:11
+msgid "Thank you for checking in."
+msgstr "Qujanaq ilaajaatelernut."
+
+#: app/templates/checkin/thank_you.html:14
+msgid "Checked in for:"
+msgstr "Nalunaarsorneqartunut:"
+
+#: app/templates/email/assign_smtp.html:11
+msgid "📧 Assign SMTP Config to:"
+msgstr "📧 SMTP naqqi user sooritat:"
+
+#: app/templates/email/assign_smtp.html:25
+msgid "No SMTP (Unassign)"
+msgstr "SMTP Siumuissuata-aaqqasua peqanngilaq"
+
+#: app/templates/email/assign_smtp.html:26
+msgid "This email will not use any SMTP configuration."
+msgstr "Denne e-mail vil ikke bruge nogen SMTP-konfiguration."
+
+#: app/templates/email/attach_files.html:12
+msgid "Attach Files for:"
+msgstr "Ullormut ilaanngitsoorneq nutaat:"
+
+#: app/templates/email/attach_files.html:21
+msgid "Available Files"
+msgstr "Piiaat naatsiiarneq"
+
+#: app/templates/email/attach_files.html:36
+msgid "No files found in the upload directory."
+msgstr "Piiaat nassinneq aallerfissamut nassaarineqanngilaq."
+
+#: app/templates/email/attach_files.html:44
+msgid "Save Attachments"
+msgstr "Ilu ilaanermut"
+
+#: app/templates/email/attach_files.html:54
+msgid "File Attach Notes"
+msgstr "Naatsiiat ilaanermit"
+
+#: app/templates/email/attach_files.html:63
+msgid "Important:"
+msgstr "Порт:"
+
+#: app/templates/email/attach_files.html:65
+msgid ""
+"Only files that are present in the 'uploads' folder (provided by your system"
+" administrator) will be shown here. If you do not see your file(s), please "
+"contact your Grylli administrator."
+msgstr ""
+"Tamaani atungaaqquterassat atungaarlugit 'uploads' toorfissuarmi "
+"(iluatsitsisinnaasumik sunngitsu brugseni atuutiginneq naatillugu "
+"atuussaalluunniit) taamaalluunniit. "
+"Atuankeqataarnerulaqqaarnerulaqqaarnerulaqqaarnerulaqqaarnerulaqqaarnerulaqqaarnerulaqqaarnerulaqqaarnerulaqqaarnerulaqqaarnerulaqqaarnerulaqqaarnerulaqqaarnerulaqqaarnerulaqqaarnerulaqqaarnerulaqqaarnerulaqqaarnerulaqqaarnerulaqqaarnerulaqqaarnerulaqqaarnerulaqqaarnerulaq)"
+
+#: app/templates/email/attach_files.html:69
+msgid "Accepted file types:"
+msgstr "Nassaarineq nassutigineqartoq:"
+
+#: app/templates/email/attach_files.html:71
+msgid "Documents:"
+msgstr "Naatsiainngorlugit:"
+
+#: app/templates/email/attach_files.html:73
+msgid "Images:"
+msgstr "Assinik:"
+
+#: app/templates/email/attach_files.html:75
+msgid "Audio:"
+msgstr "Tusarnaatit:"
+
+#: app/templates/email/attach_files.html:79
+msgid "Maximum file size:"
+msgstr "Ajunngilaq aalisagaq:"
+
+#: app/templates/email/attach_files.html:80
+msgid "10 MB per file"
+msgstr "10 MB akunnerminnga"
+
+#: app/templates/email/attach_files.html:83
+msgid "Total upload size:"
+msgstr "Nassaarineq annertussusaa:"
+
+#: app/templates/email/attach_files.html:84
+msgid "20 MB (all files combined)"
+msgstr "20 MB (piiaat tamaasa ataatsikkut)"
+
+#: app/templates/email/edit_message.html:12
+#: app/templates/email/list_emails.html:75
+#: app/templates/email/list_emails.html:177
+msgid "Edit Email"
+msgstr "Editi emailit"
+
+#: app/templates/email/edit_message.html:12
+msgid "Create Email"
+msgstr "Pilersaat emailit"
+
+#: app/templates/email/edit_message.html:28
+msgid "To (Recipient Email)"
+msgstr "To (Saapisortoq email)"
+
+#: app/templates/email/edit_message.html:35
+#: app/templates/email/list_emails.html:57
+#: app/templates/email/view_config.html:18
+#: app/templates/messages/create_message.html:36
+#: app/templates/messages/edit_message.html:30
+#: app/templates/messages/list_messages.html:58
+#: app/templates/messages/view_message.html:18
+#: app/templates/reminders/create_reminder.html:30
+#: app/templates/reminders/edit_reminder.html:24
+#: app/templates/reminders/list_reminders.html:57
+#: app/templates/reminders/view_reminder.html:17
+msgid "Subject"
+msgstr "Sooq"
+
+#: app/templates/email/edit_message.html:42
+#: app/templates/email/view_config.html:28
+msgid "Body"
+msgstr "Pigisaq"
+
+#: app/templates/email/edit_message.html:50
+msgid "Save Email"
+msgstr "Ilu emailit"
+
+#: app/templates/email/list_emails.html:48
+msgid "Add Email"
+msgstr "Ilaneqar emailit"
+
+#: app/templates/email/list_emails.html:58
+#: app/templates/reminders/assign_email_reminder.html:77
+msgid "To"
+msgstr "To"
+
+#: app/templates/email/list_emails.html:78
+#: app/templates/email/list_emails.html:180
+msgid "Disable to edit email"
+msgstr "Kunne ikke sende test e-mail:"
+
+#: app/templates/email/list_emails.html:84
+#: app/templates/email/list_emails.html:186
+msgid "Attach Files"
+msgstr "Nassaarineq ilaneqar"
+
+#: app/templates/email/list_emails.html:87
+#: app/templates/email/list_emails.html:189
+msgid "Disable to attach files"
+msgstr "Nassaarineq ilaneqar"
+
+#: app/templates/email/list_emails.html:93
+#: app/templates/email/list_emails.html:195
+msgid "Attach SMTP Config"
+msgstr "SMTP sooritat ilaneqar"
+
+#: app/templates/email/list_emails.html:96
+#: app/templates/email/list_emails.html:198
+msgid "Disable to assign SMTP"
+msgstr "Deaktiver for at tildele SMTP"
+
+#: app/templates/email/list_emails.html:102
+#: app/templates/email/list_emails.html:204
+msgid "Schedule Check-In"
+msgstr "Nalunaarsorneq angussinnaq"
+
+#: app/templates/email/list_emails.html:105
+#: app/templates/email/list_emails.html:207
+msgid "Disable to schedule check-in"
+msgstr "Nalunaarsorneq angussinnaq"
+
+#: app/templates/email/list_emails.html:110
+#: app/templates/email/list_emails.html:212
+#: app/templates/messages/list_messages.html:99
+#: app/templates/messages/list_messages.html:184
+#: app/templates/reminders/list_reminders.html:93
+#: app/templates/reminders/list_reminders.html:178
+msgid "View Details"
+msgstr "Sutorneq nassiunneq"
+
+#: app/templates/email/list_emails.html:118
+#: app/templates/email/list_emails.html:220
+msgid "Send this email to yourself to preview it."
+msgstr "Email naqqittarlugu nammineq tigusangut."
+
+#: app/templates/email/list_emails.html:136
+#: app/templates/email/list_emails.html:238
+msgid "Toggle Email On/Off"
+msgstr "Email On/Off shumaavoq"
+
+#: app/templates/email/list_emails.html:139
+#: app/templates/email/list_emails.html:241
+msgid "Email is enabled"
+msgstr "Email oqaluttangut"
+
+#: app/templates/email/list_emails.html:141
+#: app/templates/email/list_emails.html:243
+msgid "Email is disabled"
+msgstr "Email naatsoorpoq"
+
+#: app/templates/email/list_emails.html:157
+#: app/templates/email/view_config.html:51
+#: app/templates/messages/list_messages.html:142
+#: app/templates/reminders/list_reminders.html:140
+msgid "Label:"
+msgstr "Label:"
+
+#: app/templates/email/list_emails.html:161
+#: app/templates/messages/list_messages.html:146
+#: app/templates/reminders/list_reminders.html:144
+#: app/templates/reminders/view_reminder.html:98
+msgid "Subject:"
+msgstr "Sooq"
+
+#: app/templates/email/list_emails.html:165
+msgid "To:"
+msgstr "Til:"
+
+#: app/templates/email/list_emails.html:169
+#: app/templates/messages/list_messages.html:150
+msgid "Created At:"
+msgstr "Pilersinneqartoq"
+
+#: app/templates/email/list_emails.html:255
+msgid "How to create and send an email"
+msgstr "E-mailimik qanoq pilersitsineq aamma nassiunneq"
+
+#: app/templates/email/list_emails.html:262
+msgid ""
+"Click “Add Email” and fill out the subject, content, and recipient address."
+msgstr ""
+"Klik “Email Ilanngutaani” kiisalu nassiussassap qulequtaa, imarisassaa, "
+"tigooqqaarfissaatalu adressia allannerlugu ilioruk."
+
+#: app/templates/email/list_emails.html:263
+msgid "Attach any optional files (if needed)."
+msgstr "Filimia pisariitsoq ilanngutassaajuk (pissutsit taamaasissappata)."
+
+#: app/templates/email/list_emails.html:264
+msgid ""
+"Click 🧩 to assign a single SMTP configuration that will be used to send the "
+"email."
+msgstr ""
+"Klik 🧩 SMTP ataqatigiinnerpaaq atussallugu ilioruktaaq emailip "
+"iliorneqarnerani."
+
+#: app/templates/email/list_emails.html:265
+msgid "Click ⏱️ to set a check-in interval and grace period for the email."
+msgstr ""
+"Klik ⏱️ emailip misissorniarlugu piffissaq piareersarfiusoq aammalu "
+"piffissami anngigaanermi taama atuutillugu."
+
+#: app/templates/email/list_emails.html:266
+msgid "Enable the email using the 🔴/🟢 toggle button."
+msgstr ""
+"Emailip periarfissaannginnissaanut tikittarneranik 🔴/🟢 aaqqissuussaasumilu "
+"ilisarnaammik paasineqarsinnaavoq."
+
+#: app/templates/email/list_emails.html:267
+msgid ""
+"Click 🧪 to test the email by sending it to yourself (not the recipient)."
+msgstr ""
+"Klik 🧪 nammineq misilittariarlugu email nassarlugu (tigooraasussamut "
+"nassiunneqassanngilaq)."
+
+#: app/templates/email/list_emails.html:268
+msgid ""
+"If you don’t check in before the grace period ends, the email will be "
+"automatically sent."
+msgstr ""
+"Piffissaq anngigaanermi aalajangiusimaneq allanngortinneqartinnagu, emailip "
+"nammassinnaavaa."
+
+#: app/templates/email/list_emails.html:269
+msgid "You can preview the email configuration using 🔍."
+msgstr "Emailip aaqqissuussinera takusinnaassavatit 🔍."
+
+#: app/templates/email/list_emails.html:270
+msgid "Once a secure email is sent, it will be automatically disabled."
+msgstr ""
+"Email nipangiutiinnartoq nassiunneqareerpat, taanna imminut "
+"aqussinnaanngilaq."
+
+#: app/templates/email/schedule_email.html:9
+msgid "Schedule Email"
+msgstr "Emailip Ullulersugaanerani suleqatigiissutaallutik"
+
+#: app/templates/email/schedule_email.html:18
+#: app/templates/messages/schedule_message.html:18
+msgid "Years"
+msgstr "Ukioqarluni"
+
+#: app/templates/email/schedule_email.html:19
+#: app/templates/messages/schedule_message.html:19
+msgid "Months"
+msgstr "Qaammatit"
+
+#: app/templates/email/schedule_email.html:20
+#: app/templates/messages/schedule_message.html:20
+msgid "Weeks"
+msgstr "Sapaatit"
+
+#: app/templates/email/schedule_email.html:21
+#: app/templates/messages/schedule_message.html:21
+msgid "Days"
+msgstr "Ullut"
+
+#: app/templates/email/schedule_email.html:22
+#: app/templates/messages/schedule_message.html:22
+msgid "Hours"
+msgstr "Nalunaaquttat"
+
+#: app/templates/email/schedule_email.html:23
+#: app/templates/messages/schedule_message.html:23
+msgid "Minutes"
+msgstr "Minutsit"
+
+#: app/templates/email/schedule_email.html:28
+#: app/templates/messages/schedule_message.html:28
+msgid "Check-in"
+msgstr "Misissoniartigit"
+
+#: app/templates/email/schedule_email.html:51
+#: app/templates/messages/schedule_message.html:51
+#: app/templates/messages/view_message.html:26
+msgid "Grace Period"
+msgstr "Allagassap Piffissaa"
+
+#: app/templates/email/schedule_email.html:80
+#: app/templates/messages/schedule_message.html:80
+#: app/templates/reminders/schedule_reminder.html:47
+msgid "Save Schedule"
+msgstr "Allagassat eqqaamasassaat"
+
+#: app/templates/email/view_config.html:9
+msgid "Email Configuration"
+msgstr "Emailip Siumuissuata-aaqqasua:"
+
+#: app/templates/email/view_config.html:22
+msgid "Recipient"
+msgstr "Tigooraasartoq"
+
+#: app/templates/email/view_config.html:33
+msgid "Attached Files"
+msgstr "Fililiat Tuusintimat"
+
+#: app/templates/email/view_config.html:39
+msgid "No files attached"
+msgstr "Filiilusoqanngilaq"
+
+#: app/templates/email/view_config.html:46
+#: app/templates/reminders/assign_email_reminder.html:20
+msgid "SMTP Configuration"
+msgstr "SMTP Siumuissuata-aaqqasua:"
+
+#: app/templates/email/view_config.html:54
+#: app/templates/user_smtp/list_smtp.html:122
+msgid "Host:"
+msgstr "Host:"
+
+#: app/templates/email/view_config.html:57
+#: app/templates/user_smtp/list_smtp.html:128
+msgid "Username:"
+msgstr "Ateqat:"
+
+#: app/templates/email/view_config.html:60
+#: app/templates/user_smtp/list_smtp.html:134
+msgid "TLS:"
+msgstr "TLS:"
+
+#: app/templates/email/view_config.html:64
+msgid "No SMTP configuration assigned"
+msgstr "SMTP Siumuissuata-aaqqasua peqanngilaq"
+
+#: app/templates/email/view_config.html:69
+msgid "Schedule Information"
+msgstr "Ullulersukkat"
+
+#: app/templates/email/view_config.html:72
+msgid "Check-in Interval:"
+msgstr "Misissoniarluni Piffissaq:"
+
+#: app/templates/email/view_config.html:72
+#: app/templates/email/view_config.html:75
+msgid "minutes"
+msgstr "minutsit"
+
+#: app/templates/email/view_config.html:75
+msgid "Grace Period:"
+msgstr "Allagassap Piffissaa:"
+
+#: app/templates/email/view_config.html:79
+msgid "Last Check-in:"
+msgstr "Misissuinerup Kingulliup Piffissaa:"
+
+#: app/templates/email/view_config.html:82
+msgid "No check-in has occurred yet"
+msgstr "Misittoqartoqanngilaq tamassa"
+
+#: app/templates/email/view_config.html:92
+msgid "Back to Emails"
+msgstr "Emailiset atuarfitaani utertuaruk"
+
+#: app/templates/errors/500.html:4
+msgid "Something went wrong"
+msgstr "Ajutoortoqarsimavoq"
+
+#: app/templates/errors/500.html:6
+msgid ""
+"An unexpected error occurred. Please try again later or contact support."
+msgstr ""
+"Nalliuttoqarsimavoq. Inaarutaasumik iluarsiutaavaanngitsoq, "
+"kingusinnerusukkut misiliigit imaluunniit ikiortiserasuaruk."
+
+#: app/templates/locale/redirect_after_lang_set.html:15
+msgid "Switching Language..."
+msgstr "Oqaluttuaannitaanermut Uneqatigiittoq..."
+
+#: app/templates/locale/redirect_after_lang_set.html:18
+msgid "Applying new language..."
+msgstr "Decipher une nutaat ilinniartitsorlugit..."
+
+#: app/templates/messages/assign_destinations.html:13
+#: app/templates/reminders/assign_destinations.html:12
+msgid "Assign Destinations for"
+msgstr "Milleqarfiusinnaasut toqqakkit"
+
+#: app/templates/messages/assign_destinations.html:62
+#: app/templates/reminders/assign_destinations.html:60
+msgid "Save Destinations"
+msgstr "Milleqarfiusinnaasut toqqakkit"
+
+#: app/templates/messages/create_message.html:17
+msgid "Edit Notificaton"
+msgstr "Nalunaarutip iluarsaassineq"
+
+#: app/templates/messages/create_message.html:19
+msgid "Create Notification"
+msgstr "Nalunaarut pilersiguk"
+
+#: app/templates/messages/create_message.html:43
+#: app/templates/messages/edit_message.html:37
+#: app/templates/messages/view_message.html:42
+#: app/templates/reminders/create_reminder.html:37
+#: app/templates/reminders/edit_reminder.html:31
+#: app/templates/reminders/view_reminder.html:53
+msgid "Content"
+msgstr "Imarisaq"
+
+#: app/templates/messages/create_message.html:51
+msgid "Save Notification"
+msgstr "Nalunaarutip toqqaannissaa"
+
+#: app/templates/messages/edit_message.html:15
+#: app/templates/messages/list_messages.html:74
+#: app/templates/messages/list_messages.html:158
+msgid "Edit Notification"
+msgstr "Nalunaarutip iluarsaassineq"
+
+#: app/templates/messages/edit_message.html:45
+msgid "Update Notification"
+msgstr "Nalunaarutip nutarterneq"
+
+#: app/templates/messages/list_messages.html:49
+msgid "Add Notification"
+msgstr "Nalunaarutip ilanngussaa"
+
+#: app/templates/messages/list_messages.html:77
+#: app/templates/messages/list_messages.html:161
+msgid "Disable to edit notification"
+msgstr "Nalunaarutip iluarsaassineq"
+
+#: app/templates/messages/list_messages.html:83
+#: app/templates/messages/list_messages.html:167
+#: app/templates/reminders/list_reminders.html:78
+#: app/templates/reminders/list_reminders.html:163
+msgid "Assign Destinations"
+msgstr "Milleqarfeqarnissamut toqqagaqarneq"
+
+#: app/templates/messages/list_messages.html:86
+#: app/templates/messages/list_messages.html:170
+msgid "Disable to assign destinations"
+msgstr "Milleqarfeqarnissamut toqqagaqarneq"
+
+#: app/templates/messages/list_messages.html:92
+#: app/templates/messages/list_messages.html:176
+#: app/templates/reminders/list_reminders.html:88
+#: app/templates/reminders/list_reminders.html:173
+msgid "Set Schedule"
+msgstr "Agguagassap aalajangersarnera"
+
+#: app/templates/messages/list_messages.html:95
+#: app/templates/messages/list_messages.html:179
+msgid "Disable to set schedule"
+msgstr "Agguagassap aalajangersarnera"
+
+#: app/templates/messages/list_messages.html:107
+#: app/templates/messages/list_messages.html:192
+msgid "Send Test Notification"
+msgstr "Nalunaarutip iluarsaassineq"
+
+#: app/templates/messages/list_messages.html:122
+#: app/templates/messages/list_messages.html:209
+msgid "Toggle Message On/Off"
+msgstr "Paasissutip On/Off allanngortillugit"
+
+#: app/templates/messages/list_messages.html:124
+#: app/templates/messages/list_messages.html:211
+msgid "Notification is enabled"
+msgstr "Nalunaarut periarfissiivoq"
+
+#: app/templates/messages/list_messages.html:126
+#: app/templates/messages/list_messages.html:213
+msgid "Notification is disabled"
+msgstr "Nalunaarut periarfissaqanngilaq"
+
+#: app/templates/messages/list_messages.html:223
+msgid "How to create and send a notification"
+msgstr "Qanoq nalunaarummik pilersitsineq nalunaarutigilu"
+
+#: app/templates/messages/list_messages.html:233
+msgid "Click “Add notification” and fill out the subject and content fields."
+msgstr ""
+"Tuutumakka “Nalunaarut ilanngussaa” kiisalu saqqaq imarissaalu immersukkit."
+
+#: app/templates/messages/list_messages.html:234
+msgid "Save the notification to return to the overview."
+msgstr "Nalunaarut toqqaannaq takussutissiinnaruk."
+
+#: app/templates/messages/list_messages.html:235
+msgid "You need to create at least one apprise or webhook destination."
+msgstr ""
+"Apprimut imaluunniit webhookikiaarfimmik minnerpaamik ataatsimik "
+"pilersitsissaasi."
+
+#: app/templates/messages/list_messages.html:236
+msgid "You can create as many destinations as you like."
+msgstr "Milleqarfeqarnissamut amerlanerpaanik toqqaarsinnaavusi."
+
+#: app/templates/messages/list_messages.html:237
+msgid "Click 🧩 to assign one or more Apprise and/or Webhook destinations."
+msgstr "Apprimut/Webhookikiaarfimmik amerlaitsumik toqqakkit 🧩-klik atorlugu."
+
+#: app/templates/messages/list_messages.html:238
+msgid "Click ⏱️ to set a schedule and check-in interval."
+msgstr ""
+"Agguagassamik check-in-ikkallunilu piffissamik toqqaasinnaavusi ⏱️-klik "
+"atorlugu."
+
+#: app/templates/messages/list_messages.html:239
+msgid "Enable the notification using the 🔴/🟢 toggle button."
+msgstr "Nalunaarut periarfissaq atorlugu 🔴/🟢-ilik aalajangiuguk."
+
+#: app/templates/messages/list_messages.html:240
+msgid ""
+"If you don’t check in before the grace period ends, the notification will be"
+" sent."
+msgstr "Unioqqutiinnanngissaangavit nalunaarut nassiunneqassanngilaq."
+
+#: app/templates/messages/list_messages.html:241
+msgid "You can preview the notification config using 🔍."
+msgstr "Nalunaarut isumaqatigiissukkamik 🔍-klik atorlugu takusinnaavat."
+
+#: app/templates/messages/list_messages.html:242
+msgid "Once a notification is sent, it will be automatically disabled."
+msgstr "Nalunaarut nassiunneqarpat namminermik periarfissaqalersaarneqarpoq."
+
+#: app/templates/messages/schedule_message.html:9
+msgid "Schedule Message"
+msgstr "Agguagassap nalunaarsornera"
+
+#: app/templates/messages/view_message.html:9
+msgid "Notifications Details"
+msgstr "Nalunaarutit pillugit paasissutissat"
+
+#: app/templates/messages/view_message.html:22
+msgid "Check-in Interval"
+msgstr "Nalunaaquttap akunnerata ingerlanerani"
+
+#: app/templates/messages/view_message.html:31
+msgid "Last Check-in"
+msgstr "Ullup kingulleq nalunaarsornera"
+
+#: app/templates/messages/view_message.html:48
+#: app/templates/reminders/view_reminder.html:59
+msgid "Apprise URLs"
+msgstr "Apprise URLs"
+
+#: app/templates/messages/view_message.html:54
+#: app/templates/messages/view_message.html:64
+#: app/templates/reminders/view_reminder.html:65
+#: app/templates/reminders/view_reminder.html:75
+#: app/templates/reminders/view_reminder.html:85
+msgid "None assigned."
+msgstr "Toqqatagaqarneqanngilaq"
+
+#: app/templates/messages/view_message.html:73
+msgid "Back to Notifications"
+msgstr "Nalunaarutinik ungasinngitsuugut"
+
+#: app/templates/mfa/challenge.html:5 app/templates/mfa/settings.html:5
+msgid "Two-Factor Authentication (MFA)"
+msgstr "Marlunnik tunngaveqartumik qajannaallisaanermi (MFA)"
+
+#: app/templates/mfa/recovery_codes.html:4
+msgid "Your Recovery Codes"
+msgstr "Qajannaallisaanermi Koodi-aniarikka"
+
+#: app/templates/mfa/recovery_codes.html:7
+msgid "Save these recovery codes in a safe place!"
+msgstr "Qajannaallisaanermi koodinik toqqorsivimmi illuperaakkit!"
+
+#: app/templates/mfa/recovery_codes.html:10
+msgid ""
+"Each code can be used once if you lose access to your authenticator. These "
+"codes will not be shown again."
+msgstr ""
+"Qanoq koodinik ataasequalsillugit atuarsinnaavatit kisianni "
+"authenticatorinni isummersinnaanatilluunniit. Koodi suut "
+"kingusinnerusugalugit takuneqarsinnaajunnaassavatit."
+
+#: app/templates/mfa/recovery_codes.html:24
+msgid "OK, I've saved them"
+msgstr "Ajunngilaq, toqqorterpara"
+
+#: app/templates/mfa/settings.html:12
+msgid "MFA QR Code"
+msgstr "MFA QR-Kodigo"
+
+#: app/templates/mfa/settings.html:15
+msgid "Manual Entry:"
+msgstr "Manulimik Aallartinnermi:"
+
+#: app/templates/partials/admin_nav.html:21
+msgid "Administration"
+msgstr "Administration"
+
+#: app/templates/partials/admin_nav.html:37
+#: app/templates/partials/shared_nav.html:34
+#: app/templates/partials/shared_nav.html:78
+#: app/templates/partials/shared_nav.html:117
+msgid "Overview"
+msgstr "Oversigt"
+
+#: app/templates/partials/footer.html:7
+msgid "Toggle Theme"
+msgstr "Paatsiveerut"
+
+#: app/templates/partials/footer.html:32
+msgid "Theme"
+msgstr "Paatsoqqissuterput"
+
+#: app/templates/partials/head.html:7
+msgid "Grylli"
+msgstr "Grylli"
+
+#: app/templates/partials/header.html:6 app/templates/partials/sidebar.html:32
+#: app/templates/partials/sidebar.html:66
+msgid "Home"
+msgstr "Hjem"
+
+#: app/templates/partials/header.html:55
+msgid "Account"
+msgstr "Konto"
+
+#: app/templates/partials/header.html:61
+msgid "MFA"
+msgstr "MFA"
+
+#: app/templates/partials/header.html:67
+msgid "About"
+msgstr "Om"
+
+#: app/templates/partials/header.html:73
+msgid "Privacy"
+msgstr "Privatliv"
+
+#: app/templates/partials/header.html:79
+msgid "System Info"
+msgstr "Systeminfo"
+
+#: app/templates/partials/header.html:114
+msgid "Logout"
+msgstr "Log ud"
+
+#: app/templates/partials/shared_nav.html:33
+msgid "Overview of notification settings"
+msgstr "Nalunaajaasutinut aaqqissugassat"
+
+#: app/templates/partials/shared_nav.html:38
+msgid "Configure Apprise services"
+msgstr "Apprise suleqatigiissutinik iluarsaaqqissaaneq"
+
+#: app/templates/partials/shared_nav.html:39
+msgid "Apprise"
+msgstr "Apprise"
+
+#: app/templates/partials/shared_nav.html:43
+msgid "Configure Webhook integrations"
+msgstr "Webhook suleqatigiissutinik iluarsaaqqissaaneq"
+
+#: app/templates/partials/shared_nav.html:77
+msgid "Overview of secure email messages"
+msgstr "Emailit isumannaatsut pillugit takussutissiat"
+
+#: app/templates/partials/shared_nav.html:82
+msgid "Configure SMTP email settings"
+msgstr "SMTP emailit aaqqissugassat iluarsaaqqissaavaat"
+
+#: app/templates/partials/shared_nav.html:83
+#: app/templates/reminders/view_reminder.html:79
+msgid "SMTP"
+msgstr "SMTP"
+
+#: app/templates/partials/shared_nav.html:100
+#: app/templates/reminders/list_reminders.html:8
+msgid "Reminders"
+msgstr "minutsit"
+
+#: app/templates/partials/shared_nav.html:116
+msgid "Overview of reminders"
+msgstr "Nalunaarisut pillugu takussutissiarneq."
+
+#: app/templates/partials/sidebar.html:13
+#: app/templates/partials/sidebar.html:47
+msgid "Menu"
+msgstr "Menu"
+
+#: app/templates/reminders/assign_email_reminder.html:12
+msgid "Link Email Reminder for"
+msgstr "Emailimut Ilisarititsineq aasiani."
+
+#: app/templates/reminders/assign_email_reminder.html:30
+#: app/templates/reminders/assign_email_reminder.html:64
+msgid "None (Unassign)"
+msgstr "SMTP Siumuissuata-aaqqasua peqanngilaq"
+
+#: app/templates/reminders/assign_email_reminder.html:43
+msgid "No sender address"
+msgstr "Assigiinngitsumik nassitsisoqanngitsoq."
+
+#: app/templates/reminders/assign_email_reminder.html:54
+msgid "Email Message"
+msgstr "Agguagassap nalunaarsornera"
+
+#: app/templates/reminders/assign_email_reminder.html:77
+msgid "No subject"
+msgstr "Sooq"
+
+#: app/templates/reminders/assign_email_reminder.html:90
+msgid "Save Email Reminder"
+msgstr "Ilu emailit"
+
+#: app/templates/reminders/create_reminder.html:12
+#: app/templates/reminders/edit_reminder.html:10
+#: app/templates/reminders/list_reminders.html:73
+#: app/templates/reminders/list_reminders.html:158
+msgid "Edit Reminder"
+msgstr "Editi emailit"
+
+#: app/templates/reminders/create_reminder.html:14
+msgid "Create Reminder"
+msgstr "Pilersaat emailit"
+
+#: app/templates/reminders/create_reminder.html:45
+msgid "Save Reminder"
+msgstr "Ilu emailit"
+
+#: app/templates/reminders/edit_reminder.html:39
+msgid "Update Reminder"
+msgstr "Ilisarititsineq nutaaq"
+
+#: app/templates/reminders/list_reminders.html:48
+msgid "Add Reminder"
+msgstr "Ilaneqar emailit"
+
+#: app/templates/reminders/list_reminders.html:58
+#: app/templates/reminders/view_reminder.html:21
+msgid "Start At"
+msgstr "Starter TLS"
+
+#: app/templates/reminders/list_reminders.html:59
+msgid "Recurrence"
+msgstr "Uteqattaarneq"
+
+#: app/templates/reminders/list_reminders.html:69
+#: app/templates/reminders/list_reminders.html:153
+#: app/templates/reminders/view_reminder.html:26
+msgid "One-time"
+msgstr "Ataasinngit"
+
+#: app/templates/reminders/list_reminders.html:83
+msgid "Assign Email Reminder"
+msgstr "Emailimut Ilisarititsineq tulluartinneq."
+
+#: app/templates/reminders/list_reminders.html:102
+#: app/templates/reminders/list_reminders.html:187
+msgid "Send Test Reminder"
+msgstr "Testimik Emailimik nassiussineq"
+
+#: app/templates/reminders/list_reminders.html:120
+#: app/templates/reminders/list_reminders.html:205
+msgid "Toggle Reminder On/Off"
+msgstr "Email On/Off shumaavoq"
+
+#: app/templates/reminders/list_reminders.html:122
+#: app/templates/reminders/list_reminders.html:207
+msgid "Reminder is enabled"
+msgstr "Email oqaluttangut"
+
+#: app/templates/reminders/list_reminders.html:124
+#: app/templates/reminders/list_reminders.html:209
+msgid "Reminder is disabled"
+msgstr "Email naatsoorpoq"
+
+#: app/templates/reminders/list_reminders.html:148
+msgid "Start At:"
+msgstr "Starter TLS"
+
+#: app/templates/reminders/list_reminders.html:152
+msgid "Recurrence:"
+msgstr "Uteqattaarneq:"
+
+#: app/templates/reminders/list_reminders.html:168
+msgid "Link Email Reminder"
+msgstr "Emailimut Ilisarititsineq aasiani."
+
+#: app/templates/reminders/list_reminders.html:218
+msgid "How to use reminders"
+msgstr "Hvordan man administrerer brugere"
+
+#: app/templates/reminders/list_reminders.html:231
+msgid "➕ Click “Add Reminder” and fill out the subject and content fields."
+msgstr ""
+"Tuutumakka “Nalunaarut ilanngussaa” kiisalu saqqaq imarissaalu immersukkit."
+
+#: app/templates/reminders/list_reminders.html:232
+msgid "💾 Save the reminder to return to the overview."
+msgstr "Nalunaarut toqqaannaq takussutissiinnaruk."
+
+#: app/templates/reminders/list_reminders.html:233
+msgid ""
+"📣 Assign Apprise, 🌐 Webhook, and/or 📧 Email (SMTP) destinations as needed."
+msgstr ""
+"📣 Apprise-nik, 🌐 Webhook-nik aammalu 📧 Email (SMTP) -imik isumassarsisutut "
+"qanoq atorneqarnissaat atugassiaavoq."
+
+#: app/templates/reminders/list_reminders.html:234
+msgid ""
+"⏱️ Set the schedule using the schedule button to define when reminders are "
+"sent."
+msgstr ""
+"⏱️ Aggersarnissap ilisarititsinissaanut qaqugu ilisarititsisoqartarnersoq "
+"ulluutit aqqutigalugu aalajangersakkat atorlugit aaqqissuguk."
+
+#: app/templates/reminders/list_reminders.html:235
+msgid ""
+"🔍 Click “View Details” to review or edit assigned destinations and other "
+"settings."
+msgstr ""
+"🔍 “Takussutissiarinerupput” tooruk aalajangersakkanut aammalu toqqagassanut "
+"allannguinissamut."
+
+#: app/templates/reminders/list_reminders.html:236
+msgid ""
+"🧪 Click the Test button to verify all assigned destinations are working "
+"correctly."
+msgstr ""
+"🧪 Misilinneq angineruartarlik isumassarsisut atorlugit qanoq "
+"atorneqarnissaat."
+
+#: app/templates/reminders/list_reminders.html:237
+msgid "🔴/🟢 Enable or disable the reminder using the toggle button."
+msgstr ""
+"Emailip periarfissaannginnissaanut tikittarneranik 🔴/🟢 aaqqissuussaasumilu "
+"ilisarnaammik paasineqarsinnaavoq."
+
+#: app/templates/reminders/list_reminders.html:238
+msgid "📤 Reminders will be sent as scheduled to the assigned destinations."
+msgstr ""
+"📤 Ilisarititsineq ingerlaartoq taanna siunertanut aallaaviini "
+"nassitsisoqartassaaq."
+
+#: app/templates/reminders/schedule_reminder.html:8
+msgid "Schedule Reminder"
+msgstr "Emailip Ullulersugaanerani suleqatigiissutaallutik"
+
+#: app/templates/reminders/schedule_reminder.html:15
+msgid "Start Date & Time"
+msgstr "Aallartinnissap Ullua & Piffissaq"
+
+#: app/templates/reminders/schedule_reminder.html:22
+#: app/templates/reminders/view_reminder.html:25
+msgid "Recurrence Rule"
+msgstr "Uteqattaarnissa isumassueqatigiissut"
+
+#: app/templates/reminders/schedule_reminder.html:24
+msgid "(Optional) Enter RRULE or leave blank for one-time."
+msgstr ""
+"(Pisariaqanngitsoq) RRULE allagit imaluunniit imaq sivisussakkut ataatsimik."
+
+#: app/templates/reminders/schedule_reminder.html:30
+msgid "End Date"
+msgstr "Тести Жіберу"
+
+#: app/templates/reminders/schedule_reminder.html:32
+msgid "(Optional) Stop sending after this date."
+msgstr ""
+"(Pisariaqanngitsoq) kinguneqartumik taamaatumimmut sumut "
+"ilisarititsinamernigussi."
+
+#: app/templates/reminders/schedule_reminder.html:38
+#: app/templates/reminders/view_reminder.html:36
+msgid "Max Occurrences"
+msgstr "Max Pisstersuit"
+
+#: app/templates/reminders/schedule_reminder.html:40
+msgid "(Optional) Stop after this many reminders."
+msgstr "(Pisariaqanngitsoq) amerlalippaa taama ilisarititsisariuk."
+
+#: app/templates/reminders/schedule_reminder.html:56
+msgid "Help for RRULE syntax"
+msgstr ""
+"RRULE imarisaqartunut taassuma sunik suliffeqarfissinnut naapertortar."
+
+#: app/templates/reminders/schedule_reminder.html:66
+msgid "Several tools are available to help generate an RRULE."
+msgstr "AA ilanngukkani misilitsinissamut aallartikkit."
+
+#: app/templates/reminders/schedule_reminder.html:67
+msgid "Use a search engine or AI tool to assist."
+msgstr "Soqarnermut imaluunniit AI atorlugu ikiorsiinissamut."
+
+#: app/templates/reminders/schedule_reminder.html:69
+msgid "Here is an example of one such online tool:"
+msgstr ""
+"Aperreriaatsit nutaap taassuma imarisaa nuna tamakkerlugu "
+"aaqqeerneriaatsikkullu ataasiinnarmik, uani:"
+
+#: app/templates/reminders/schedule_reminder.html:73
+msgid "RRULE Generator Tool"
+msgstr "RRULE Sanaartornngortoq Aaqqiissut"
+
+#: app/templates/reminders/schedule_reminder.html:77
+msgid "See here for some common examples:"
+msgstr "Assigi taamaattumik, takussutissiat nalinginnaasut ilaapput:"
+
+#: app/templates/reminders/schedule_reminder.html:81
+msgid "RRULE Help (GitHub)"
+msgstr "RRULE Ikiuutit (GitHub)"
+
+#: app/templates/reminders/view_reminder.html:8
+msgid "Reminder Details"
+msgstr "Sutorneq nassiunneq"
+
+#: app/templates/reminders/view_reminder.html:30
+msgid "End At"
+msgstr "Тести Жіберу"
+
+#: app/templates/reminders/view_reminder.html:42
+msgid "Last Sent"
+msgstr "Ullup kingulleq nalunaarsornera"
+
+#: app/templates/reminders/view_reminder.html:91
+msgid "Email Template"
+msgstr "Email Validator"
+
+#: app/templates/reminders/view_reminder.html:103
+msgid "No email linked."
+msgstr "Email oqaluttangut"
+
+#: app/templates/reminders/view_reminder.html:111
+msgid "Back to Reminders"
+msgstr "Emailiset atuarfitaani utertuaruk"
+
+#: app/templates/user_smtp/create_smtp.html:10
+msgid "Create SMTP Destination"
+msgstr "SMTP Milleqarfiusinnaasut pilersiguk"
+
+#: app/templates/user_smtp/create_smtp.html:69
+#: app/templates/user_smtp/edit_smtp.html:84
+msgid "Hold to reveal"
+msgstr "Ашу үшін ұстаңыз"
+
+#: app/templates/user_smtp/create_smtp.html:92
+#: app/templates/user_smtp/edit_smtp.html:107
+msgid "Use TLS"
+msgstr "TLS-treesineq"
+
+#: app/templates/user_smtp/edit_smtp.html:10
+msgid "Edit SMTP Destination"
+msgstr "SMTP Milleqarfiusinnaasut pilersiguk"
+
+#: app/templates/user_smtp/list_smtp.html:9
+msgid "SMTP Destinations"
+msgstr "SMTP Тағайындалғандар"
+
+#: app/templates/user_smtp/list_smtp.html:44
+msgid "Add SMTP"
+msgstr "SMTP Қосу"
+
+#: app/templates/user_smtp/list_smtp.html:53
+msgid "Host"
+msgstr "Хост"
+
+#: app/templates/user_smtp/list_smtp.html:54
+msgid "Port"
+msgstr "Порт"
+
+#: app/templates/user_smtp/list_smtp.html:56
+msgid "TLS"
+msgstr "TLS"
+
+#: app/templates/user_smtp/list_smtp.html:58
+msgid "Created"
+msgstr "Құрылды"
+
+#: app/templates/user_smtp/list_smtp.html:90
+#: app/templates/user_smtp/list_smtp.html:158
+msgid "Send Test"
+msgstr "Тести Жіберу"
+
+#: app/templates/user_smtp/list_smtp.html:125
+msgid "Port:"
+msgstr "Порт:"
+
+#: app/templates/user_smtp/list_smtp.html:131
+msgid "Password:"
+msgstr "Құпия сөз:"
+
+#: app/templates/user_smtp/list_smtp.html:184
+msgid "Hide SMTP Setup Help"
+msgstr "Skjul SMTP Opsætningshjælp"
+
+#: app/templates/user_smtp/list_smtp.html:184
+msgid "Show SMTP Setup Help"
+msgstr "Vis SMTP Opsætningshjælp"
+
+#: app/templates/user_smtp/list_smtp.html:190
+msgid ""
+"Need help finding your SMTP server settings? See here for some links to "
+"common providers:"
+msgstr ""
+"Brug for hjælp til at finde dine SMTP-serverindstillinger? Se her for nogle "
+"links til almindelige udbydere:"
+
+#: app/templates/user_smtp/list_smtp.html:194
+msgid "SMTP Server Settings Help (GitHub)"
+msgstr "SMTP Server Indstillinger Hjælp (GitHub)"
+
+#: app/templates/user_smtp/list_smtp.html:198
+msgid ""
+"Find official documentation links for Gmail, Outlook, Yahoo, AOL, and "
+"others."
+msgstr ""
+"Find officielle dokumentationslinks til Gmail, Outlook, Yahoo, AOL og andre."
+
+#: app/templates/user_smtp/list_smtp.html:199
+msgid ""
+"If your provider isn’t listed, search their support site or a search engine "
+"for 'SMTP settings'."
+msgstr ""
+"Hvis din udbyder ikke er på listen, kan du søge på deres supportsider eller "
+"en søgemaskine efter 'SMTP indstillinger'."
+
+#: app/templates/user_smtp/list_smtp.html:200
+msgid ""
+"Some providers (like Gmail, Yahoo) require 'App Passwords' or special "
+"setup—see their docs!"
+msgstr ""
+"Nogle udbydere (som Gmail, Yahoo) kræver 'Applikationsadgangskoder' eller "
+"særlig opsætning - se deres dokumenter!"
+
+#: app/templates/webhook/create_webhook.html:10
+msgid "Create Webhook"
+msgstr "Webhook Құру"
+
+#: app/templates/webhook/edit_webhook.html:10
+msgid "Edit Webhook"
+msgstr "Webhook Өңдеу"
+
+#: app/templates/webhook/list_webhooks.html:9
+#: app/templates/webhook/webhook_config.html:3
+msgid "Webhooks Destinations"
+msgstr "Webhook Тағайындалғандар"
+
+#: app/templates/webhook/list_webhooks.html:59
+msgid "Endpoint"
+msgstr "Шағала"
+
+#: app/templates/webhook/list_webhooks.html:60
+msgid "Description"
+msgstr "Сипаттама"
+
+#: app/templates/webhook/list_webhooks.html:82
+#: app/templates/webhook/list_webhooks.html:141
+msgid "Cannot edit while assigned to notifications"
+msgstr "Kan ikke redigere, mens den er tildelt til notifikationer"
+
+#: app/templates/webhook/list_webhooks.html:106
+#: app/templates/webhook/list_webhooks.html:165
+msgid "Cannot delete while assigned to notifications"
+msgstr "Kan ikke slette, mens den er tildelt til notifikationer"
+
+#: app/templates/webhook/list_webhooks.html:122
+msgid "Endpoint:"
+msgstr "Шағала:"
+
+#: app/templates/webhook/list_webhooks.html:125
+msgid "Description:"
+msgstr "Сипаттама:"
+
+#: app/views/account.py:74
+msgid "Current password is required to change password."
+msgstr "Құпия сөзді өзгерту үшін ағымдағы құпия сөз қажет."
+
+#: app/views/account.py:78
+msgid "Current password is incorrect."
+msgstr "Ағымдағы құпия сөз қате."
+
+#: app/views/account.py:94
+msgid "Account updated successfully."
+msgstr "Аккаунт сәтті жаңартылды."
+
+#: app/views/account.py:100
+msgid "An error occurred while updating your account."
+msgstr "Аккаунтты жаңарту кезінде қате пайда болды."
+
+#: app/views/account.py:137
+msgid "You cannot delete your account because you are the last admin."
+msgstr ""
+"Ilinniartuuserneqariarpiuk konto tamarmi, ilanngunnikuullugu "
+"nakkutilliinermik pilersitsiarnissamik."
+
+#: app/views/account.py:146
+msgid "Your account has been permanently deleted."
+msgstr ""
+"Konto tamarmi annertunerpaami pilersaarumigaq. Ilicuueqqittarialernerpaamik."
+
+#: app/views/account.py:152
+msgid "An error occurred while trying to delete your account."
+msgstr "Аккаунтты жаңарту кезінде қате пайда болды."
+
+#: app/views/account.py:171
+msgid "Your account has been deleted"
+msgstr ""
+"Konto tamarmi annertunerpaami pilersaarumigaq. Ilicuueqqittarialernerpaamik."
+
+#: app/views/account.py:173
+#, python-brace-format
+msgid ""
+"Hello {username},\n"
+"\n"
+"Your account on {site_name} has been deleted.Remember to delete your files from the uploads folder.If this was not you, please contact support immediately.\n"
+"\n"
+"{site_url}"
+msgstr ""
+"Halló {username},\n"
+"\n"
+"A konto-vit på {site_name} er blevet slettet. Husk at slette dine filer fra uploads-mappen. Hvis det ikke var dig, bedes du kontakte support straks.\n"
+"\n"
+"{site_url}"
+
+#: app/views/admin.py:59
+msgid "Invalid role."
+msgstr "Atuagassiaq pitsaanerpaaq."
+
+#: app/views/apprise.py:51
+msgid "🧪 Test notification sent successfully!"
+msgstr "🧪 Тесті хабарлама сәтті жіберілді!"
+
+#: app/views/apprise.py:56
+msgid "🧪 Failed to send test notification: "
+msgstr "🧪 Тесті хабарламаны жіберу сәтсіз аяқталды:"
+
+#: app/views/apprise.py:62
+msgid "🧪 Error sending test notification."
+msgstr "🧪 Тесті хабарламаны жіберу қатесі."
+
+#: app/views/apprise.py:101
+msgid "Apprise destination created successfully."
+msgstr "Apprise тағайындалғаны сәтті құрылды."
+
+#: app/views/apprise.py:168
+msgid "Apprise destination updated successfully."
+msgstr "Apprise тағайындалғаны сәтті жаңартылды."
+
+#: app/views/apprise.py:199
+msgid "Apprise destination deleted."
+msgstr "Apprise тағайындалғаны жойылды."
+
+#: app/views/auth.py:95
+msgid "Admin account created successfully."
+msgstr "Админ аккаунты сәтті құрылды."
+
+#: app/views/auth.py:108
+msgid "An error occurred while creating the admin account."
+msgstr "Админ аккаунтын құру кезінде қате пайда болды."
+
+#: app/views/auth.py:141
+msgid ""
+"Your account is not activated. Please check your email for the activation "
+"link."
+msgstr ""
+"Сіздің аккаунтыңыз белсендірілмеген. Белсендіру сілтемесі үшін электрондық "
+"поштаңызды тексеріңіз."
+
+#: app/views/auth.py:157
+msgid "Multi-factor authentication required. Please enter your code."
+msgstr ""
+"Marlunnik akuerisaariarluni qajannaallisaanermi piumasaqarneqarami. "
+"Takornartaaqusaarnerit allallugu."
+
+#: app/views/auth.py:162 app/views/mfa.py:195
+msgid "Logged in successfully."
+msgstr "Сәтті кірдіңіз."
+
+#: app/views/auth.py:179
+msgid "Invalid username or password."
+msgstr "Қате пайдаланушы аты немесе құпия сөз."
+
+#: app/views/auth.py:203
+msgid "You have been logged out."
+msgstr "Сіз жүйеден шықтыңыз."
+
+#: app/views/auth.py:239 app/views/email.py:263
+msgid "Access denied."
+msgstr "Кіру рұқсат етілмеді."
+
+#: app/views/auth.py:273
+msgid "If a user with that email exists, we've sent the username to them."
+msgstr ""
+"Егер сол электрондық поштамен пайдаланушы бар болса, біз оған пайдаланушы "
+"атын жібердік."
+
+#: app/views/auth.py:314
+msgid "A password reset link has been sent to your email."
+msgstr ""
+"Құпия сөзді қалпына келтіру сілтемесі сіздің электрондық поштаңызға "
+"жіберілді."
+
+#: app/views/auth.py:319
+msgid "No account found matching that username and email."
+msgstr "Осы пайдаланушы аты мен электрондық поштаға сәйкес аккаунт табылмады."
+
+#: app/views/auth.py:389
+msgid "The reset link is invalid or has expired."
+msgstr "Қалпына келтіру сілтемесі жарамсыз немесе мерзімі бітті."
+
+#: app/views/auth.py:401
+msgid "Username and email do not match."
+msgstr "Brugernavn og e-mail stemmer ikke overens."
+
+#: app/views/auth.py:421
+msgid "Your password has been reset. Please log in."
+msgstr "Din adgangskode er blevet nulstillet. Log venligst ind."
+
+#: app/views/auth.py:458
+msgid "Invalid registration PIN."
+msgstr "Ugyldig registrerings-PIN."
+
+#: app/views/auth.py:467
+msgid "Username or email already exists."
+msgstr "Brugernavn eller e-mail findes allerede."
+
+#: app/views/auth.py:492
+msgid "Activate Your Grylli Account"
+msgstr "Akunnermik ilissiittuneq pilersarfigeraardlit."
+
+#: app/views/auth.py:493
+#, python-brace-format
+msgid ""
+"Hello {username},\n"
+"\n"
+"Please activate your account by clicking..."
+msgstr ""
+"Halow {username},\n"
+"\n"
+"Takornartaaqusaarnerni konto silallugu atsiukohnartumik..."
+
+#: app/views/auth.py:498
+msgid "Account created! Please check your email to activate your account."
+msgstr "Konto oprettet! Tjek venligst din e-mail for at aktivere din konto."
+
+#: app/views/auth.py:521
+msgid "Activation link is invalid or expired."
+msgstr "Aktiveringslinket er ugyldigt eller udløbet."
+
+#: app/views/auth.py:528 app/views/users.py:76 app/views/users.py:140
+msgid "User not found."
+msgstr "Bruger ikke fundet."
+
+#: app/views/auth.py:532
+msgid "Account already activated. Please log in."
+msgstr "Konto allerede aktiveret. Log venligst ind."
+
+#: app/views/auth.py:540
+msgid "Your account has been activated! You can now log in."
+msgstr "Din konto er blevet aktiveret! Du kan nu logge ind."
+
+#: app/views/backups.py:72
+#, python-format
+msgid "Backup created: %(filename)s"
+msgstr "Backup oprettet: %(filename)s"
+
+#: app/views/backups.py:77
+msgid "Failed to create backup."
+msgstr "Kunne ikke oprette backup."
+
+#: app/views/backups.py:106
+#, python-format
+msgid "Backup deleted: %(filename)s"
+msgstr "Backup slettet: %(filename)s"
+
+#: app/views/backups.py:109
+msgid "Backup file not found."
+msgstr "Backupfil ikke fundet."
+
+#: app/views/backups.py:112
+msgid "Failed to delete backup."
+msgstr "Kunne ikke slette backup."
+
+#: app/views/checkin.py:41
+msgid "Invalid check-in link."
+msgstr "Ugyldigt check-in link."
+
+#: app/views/checkin.py:48
+msgid "You are not authorized to check in for this item."
+msgstr "Du er ikke autoriseret til at check-in for dette element."
+
+#: app/views/checkin.py:62
+msgid "Unsupported check-in type."
+msgstr "Ikke-understøttet check-in type."
+
+#: app/views/checkin.py:137
+msgid "⚠️ Cannot enable reminder: Start date/time is in the past."
+msgstr ""
+"⚠️ Ilisarituutigineqarsinnaanngilaq: Aallartissap ullua/piffissalerput "
+"kingornagut pisortartoqartussaajunnaarpoq."
+
+#: app/views/checkin.py:158
+msgid "✅ Enabled and timer started."
+msgstr "✅ Aktiveret og timer startet."
+
+#: app/views/checkin.py:168
+msgid "⛔ Disabled."
+msgstr "⛔ Deaktiveret."
+
+#: app/views/checkin.py:170
+msgid "⚠️ Cannot toggle — missing schedule or destination."
+msgstr "⚠️ Kan ikke skifte — mangler tidsplan eller destination."
+
+#: app/views/email.py:88
+msgid "Message saved."
+msgstr "Besked gemt."
+
+#: app/views/email.py:118 app/views/messages.py:167
+msgid "Message deleted."
+msgstr "Besked slettet."
+
+#: app/views/email.py:152
+msgid "Attached files updated."
+msgstr "Vedhæftede filer opdateret."
+
+#: app/views/email.py:200
+msgid "SMTP configuration not assigned or is disabled."
+msgstr "SMTP-konfiguration ikke tildelt eller er deaktiveret."
+
+#: app/views/email.py:234 app/views/smtp_settings_admin.py:82
+msgid "Test email sent successfully."
+msgstr "Test e-mail sendt succesfuldt."
+
+#: app/views/email.py:282 app/views/messages.py:305
+msgid "Schedule updated successfully."
+msgstr "Tidsplan opdateret succesfuldt."
+
+#: app/views/email.py:310
+msgid "SMTP configuration assigned."
+msgstr "SMTP-konfiguration tildelt."
+
+#: app/views/email.py:319
+msgid "SMTP configuration removed."
+msgstr "SMTP-konfiguration tildelt."
+
+#: app/views/messages.py:97
+msgid "Message created successfully."
+msgstr "Besked oprettet succesfuldt."
+
+#: app/views/messages.py:133
+msgid "Message updated successfully."
+msgstr "Besked opdateret succesfuldt."
+
+#: app/views/messages.py:223 app/views/reminders.py:240
+msgid "Destinations updated."
+msgstr "Destinationer opdateret."
+
+#: app/views/messages.py:441
+msgid "No destinations assigned to this message."
+msgstr "SMTP-konfiguration ikke tildelt eller er deaktiveret."
+
+#: app/views/messages.py:453
+msgid "Test message sent successfully."
+msgstr "Test e-mail sendt succesfuldt."
+
+#: app/views/messages.py:455
+msgid "Test message failed: "
+msgstr "Besked gemt."
+
+#: app/views/mfa.py:68
+msgid "You must enter a code from your authenticator."
+msgstr ""
+"Piumasariallit koodip akunneqissamik nassiunneqarumaguni ataataasunik "
+"oqaluttillugu."
+
+#: app/views/mfa.py:82 app/views/mfa.py:259
+msgid "Invalid code. Please try again."
+msgstr ""
+"Koodi kingulliorunartoorpoq. Takornartaaqusaarnerni aqqaneq "
+"pulaaraaraluanik."
+
+#: app/views/mfa.py:91
+msgid "Two-factor authentication disabled."
+msgstr "Nalunaarut periarfissaqanngilaq"
+
+#: app/views/mfa.py:132
+msgid "Recovery codes are only shown immediately after enabling MFA."
+msgstr ""
+"Qajannaallisaanermik koodinik pilersarnerorluutimmit nalilerinnarnikut "
+"takuneqarsinnaajunnaassaaq."
+
+#: app/views/mfa.py:142
+msgid "Could not load recovery codes."
+msgstr "Qajannaallisaanermik koodinik nakkutilliinikka."
+
+#: app/views/mfa.py:168
+msgid "No MFA challenge in progress."
+msgstr "Nakkutilliineq qajannaallisaaneq ingerlareerami."
+
+#: app/views/mfa.py:176
+msgid "User not found for MFA challenge."
+msgstr "Bruger ikke fundet."
+
+#: app/views/mfa.py:225
+msgid ""
+"You have used your last recovery code. MFA has been disabled. Please remove "
+"Grylli from your authenticator app, and re-enable MFA to protect your "
+"account."
+msgstr ""
+"Marlunnikalluni qimagukkumaguit pinasukugasi. Uannarmut Grylli-ni "
+"nakkutilliinerit ajoqilluunniit, tappinnik takornartaaqqasuutitsillu, "
+"qajannaallisaarnerit pilersarfigalugu."
+
+#: app/views/mfa.py:248
+#, python-brace-format
+msgid "Recovery code accepted. You have {remaining} recovery codes left."
+msgstr ""
+"Qajannaallisaanemi isumannaatsumik koodit akuersissutigilluakkat. "
+"{remaining} atuagassiap sumiginnarmik atuagarsianik koodinik."
+
+#: app/views/reminders.py:106
+msgid "Reminder created successfully."
+msgstr "Besked oprettet succesfuldt."
+
+#: app/views/reminders.py:143
+msgid "Reminder updated successfully."
+msgstr "Bruger opdateret succesfuldt."
+
+#: app/views/reminders.py:174
+msgid "Reminder deleted."
+msgstr "Atuisoq piiarneqartoq."
+
+#: app/views/reminders.py:287
+msgid "No destinations assigned to this reminder."
+msgstr "SMTP-konfiguration ikke tildelt eller er deaktiveret."
+
+#: app/views/reminders.py:311
+msgid "No email message linked to this reminder."
+msgstr "Emailinut ilisarititsilersumik ilisarititsisoqanngilaq."
+
+#: app/views/reminders.py:314
+msgid "SMTP configuration is disabled."
+msgstr "SMTP-konfiguration ikke tildelt eller er deaktiveret."
+
+#: app/views/reminders.py:353
+msgid "Test reminder sent successfully."
+msgstr "Test e-mail sendt succesfuldt."
+
+#: app/views/reminders.py:356
+msgid "Test reminder failed: "
+msgstr "Besked gemt."
+
+#: app/views/reminders.py:430
+msgid "Reminder schedule updated successfully."
+msgstr "Tidsplan opdateret succesfuldt."
+
+#: app/views/reminders.py:434
+msgid "Please correct the errors below."
+msgstr "Kukkusut ataanit iluarsiuk."
+
+#: app/views/reminders.py:481 app/views/reminders.py:482
+msgid "None"
+msgstr "Naamik"
+
+#: app/views/reminders.py:508
+msgid "You must select both an SMTP config and an email message, or neither."
+msgstr ""
+"SMTP-configemail-inik toqqaanneqarsimassaaq, email-imut, imaluunniit allaat "
+"imaassinnaasutut."
+
+#: app/views/reminders.py:528
+msgid "Email reminder settings updated."
+msgstr "Destinationer opdateret."
+
+#: app/views/smtp.py:83 app/views/user_smtp.py:80
+msgid "SMTP destination created successfully."
+msgstr "SMTP-destination oprettet succesfuldt."
+
+#: app/views/smtp.py:129 app/views/user_smtp.py:135
+msgid "SMTP destination updated."
+msgstr "SMTP-destination opdateret."
+
+#: app/views/smtp.py:160 app/views/user_smtp.py:166
+msgid "SMTP destination deleted."
+msgstr "SMTP-destination slettet."
+
+#: app/views/smtp.py:191 app/views/user_smtp.py:199
+msgid "Test email sent successfully to your account email."
+msgstr "Test e-mail sendt succesfuldt til din kontos e-mail."
+
+#: app/views/smtp.py:196 app/views/user_smtp.py:204
+msgid "Failed to send test email. Check SMTP settings."
+msgstr "Kunne ikke sende test e-mail. Tjek SMTP-indstillinger."
+
+#: app/views/smtp_settings_admin.py:76
+msgid "Test Email from Grylli"
+msgstr "Test e-mail fra Grylli"
+
+#: app/views/smtp_settings_admin.py:77
+msgid "This is a test email from the Grylli SMTP settings page."
+msgstr "Dette er en test e-mail fra Grylli SMTP-indstillingssiden."
+
+#: app/views/smtp_settings_admin.py:84
+msgid "Failed to send test email: "
+msgstr "Kunne ikke sende test e-mail:"
+
+#: app/views/users.py:99
+msgid "User updated successfully."
+msgstr "Bruger opdateret succesfuldt."
+
+#: app/views/users.py:106 app/views/users.py:327
+msgid "An error occurred while updating the user."
+msgstr "Pisiassaq nutarterinermut kukkusoqarluni."
+
+#: app/views/users.py:195
+msgid "User deleted."
+msgstr "Atuisoq piiarneqartoq."
+
+#: app/views/users.py:202
+msgid "An error occurred while deleting the user."
+msgstr "Atuisoq piiannginnermi kukkunersiortoqarluni."
+
+#: app/views/users.py:237
+msgid "Password is required when creating a new user."
+msgstr "Atuisumik nutaamik pilersitsinermi isissutissaq atorneqartariaqarpoq."
+
+#: app/views/users.py:244
+msgid "Username already exists."
+msgstr "Atuisup aqqa aatsaat atorneqartoq."
+
+#: app/views/users.py:251
+msgid "Email already exists."
+msgstr "Emaili aatsaat atorneqartoq."
+
+#: app/views/users.py:268
+#, python-format
+msgid "User '%(username)s' created successfully."
+msgstr "Atuisoq '%(username)s' pilersinneqarpoq iluatsitsilluartumik."
+
+#: app/views/users.py:278
+msgid "Failed to create user."
+msgstr "Atuisumik pilersitsineq iluatsinngitsoq."
+
+#: app/views/users.py:305
+msgid "You cannot change your own enabled status."
+msgstr ""
+"Namminerisamik atuinermut aaqqiissutissaq allanngortinneqarsinnaanngilaq."
+
+#: app/views/users.py:318
+#, python-format
+msgid "User '%(username)s' has been %(status)s."
+msgstr "Atuisoq '%(username)s' %(status)s."
+
+#: app/views/users.py:356
+msgid "You cannot reset your own MFA."
+msgstr "⚪ = Kontoqaruit nammineq unitsissinnaanngilat."
+
+#: app/views/users.py:368
+#, python-format
+msgid "MFA disabled for user '%(username)s'."
+msgstr "MFA peersitillugu pisortaq 'username%s'."
+
+#: app/views/users.py:374
+msgid "An error occurred while resetting MFA."
+msgstr "Atuisoq piiannginnermi kukkunersiortoqarluni."
+
+#: app/views/webhook.py:54
+msgid "Webhook created successfully."
+msgstr "Webhook siammasissumik pilersinneqarpoq."
+
+#: app/views/webhook.py:113
+msgid "Webhook updated successfully."
+msgstr "Webhook siammasissumik iluatsitsilluartumik nutarterineqarpoq."
+
+#: app/views/webhook.py:142
+msgid "Webhook deleted."
+msgstr "Webhook siarsiunnaavoq."
+
+#: app/views/webhook.py:175
+msgid "🧪 Webhook test sent successfully!"
+msgstr "🧪 Webhook misileraalluni nassiussaq iluatsilluarpoq!"
+
+#: app/views/webhook.py:177
+msgid "🧪 Webhook test failed: "
+msgstr "🧪 Webhook misileraalluni nassiussaq iluatsinngitsoq:"
+
+#: app/views/webhook.py:180
+msgid "🧪 Error sending webhook test."
+msgstr "🧪 Webhook misileraalluni nassiussaq kukkusoq."
+
+#~ msgid ""
+#~ "Grylli is a secure message delivery platform designed to activate after "
+#~ "prolonged user inactivity."
+#~ msgstr ""
+#~ "Grylli er en sikker beskedleveringsplatform designet til at aktivere efter "
+#~ "langvarig bruger inaktivitet."
+
+#~ msgid ""
+#~ "It is a modern reimplementation of Gone Man’s Switch with a refined tech "
+#~ "stack, better maintainability, and an improved user experience."
+#~ msgstr ""
+#~ "Det er en moderne genimplementering af Gone Man’s Switch med en raffineret "
+#~ "tech stack, bedre vedligeholdelse og en forbedret brugeroplevelse."
+
+#~ msgid "Body:"
+#~ msgstr "Saqqaa:"
+
+#~ msgid "Subject:"
+#~ msgstr "Saqqaa:"
+
+#~ msgid "Content:"
+#~ msgstr "Imarisaa:"
+
+#~ msgid "Edit SMTP"
+#~ msgstr "SMTP Өңдеу"
+
+#~ msgid ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+#~ msgstr ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+
+#~ msgid "Admin Notes"
+#~ msgstr "Admin Nalunngisat"
+
+#~ msgid "Register"
+#~ msgstr "Nalunaajaat"
+
+#~ msgid "View"
+#~ msgstr "Takujuk"
+
+#~ msgid "Schedule"
+#~ msgstr "Agguagassaq"
+
+#~ msgid "Message is enabled"
+#~ msgstr "Paasissut periarfissiivoq"
+
+#~ msgid "Message is disabled"
+#~ msgstr "Paasissut periarfissaqanngilaq"
+
+#~ msgid "No SMTP configuration selected."
+#~ msgstr "Ingen SMTP-konfiguration valgt."
+
+#~ msgid "Enable the message to start monitoring."
+#~ msgstr "Aktivér beskeden for at starte overvågning."
+
+#~ msgid "✅ SMTP settings saved."
+#~ msgstr "SMTP-indstillinger"
+
+#~ msgid "If you don’t check in, Grylli delivers the message for you."
+#~ msgstr "Hvis du ikke checker ind, leverer Grylli beskeden for dig."
+
+#~ msgid "Fill in already discovered missing translations:"
+#~ msgstr "Uummaarissaasi saxlaasarneq misilikkuminassaanik:"
+
+#~ msgid "Add missing phrases in that JSON file."
+#~ msgstr "Tilføj manglende sætninger i den JSON-fil."
+
+#~ msgid "From:"
+#~ msgstr "Fròm:"
+
+#~ msgid ""
+#~ "Attach the updated JSON file to a new GitHub issue when submitting your "
+#~ "changes."
+#~ msgstr ""
+#~ "Vedhæft den opdaterede JSON-fil til en ny GitHub-udgave, når du indsender "
+#~ "dine ændringer."
+
+#~ msgid "admin"
+#~ msgstr "admin"
+
+#~ msgid "user"
+#~ msgstr "bruger"
+
+#~ msgid "Logging in"
+#~ msgstr "Isissinnaavutit"
+
+#~ msgid "SMTP error: "
+#~ msgstr "SMTP fejl:"
+
+#~ msgid "enabled"
+#~ msgstr "atuutsinneqartoq"
+
+#~ msgid "disabled"
+#~ msgstr "unitsinneqartoq"

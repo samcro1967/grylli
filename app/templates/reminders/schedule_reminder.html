@@ -1,0 +1,87 @@
+{# ---------------------------------------------------------------------
+  schedule_reminder.html
+  app/templates/reminders/schedule_reminder.html
+  [Page to schedule or update reminder recurrence and timing.]
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    <h1 class="text-xl font-semibold mb-6">{{ _("Schedule Reminder") }}</h1>
+    <!-- =================== FORM START =================== -->
+    <form method="post" class="max-w-xl">
+        {{ form.hidden_tag() }}
+        <!-- Start Date & Time -->
+        <div class="mb-4">
+            <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300"
+                   for="start_at">{{ _("Start Date & Time") }}</label>
+            {{ form.start_at(class_="w-full mt-1 px-3 py-2 border rounded bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100", type="datetime-local") }}
+            {% for error in form.start_at.errors %}<p class="text-red-500 text-sm mt-1">{{ error }}</p>{% endfor %}
+        </div>
+        <!-- Recurrence Rule -->
+        <div class="mb-4">
+            <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300"
+                   for="recurrence_rule">{{ _("Recurrence Rule") }}</label>
+            {{ form.recurrence_rule(class_="w-full mt-1 px-3 py-2 border rounded bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100") }}
+            <small class="text-zinc-500 dark:text-zinc-400">{{ _("(Optional) Enter RRULE or leave blank for one-time.") }}</small>
+            {% for error in form.recurrence_rule.errors %}<p class="text-red-500 text-sm mt-1">{{ error }}</p>{% endfor %}
+        </div>
+        <!-- End Date -->
+        <div class="mb-4">
+            <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300"
+                   for="end_at">{{ _("End Date") }}</label>
+            {{ form.end_at(class_="w-full mt-1 px-3 py-2 border rounded bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100", type="datetime-local") }}
+            <small class="text-zinc-500 dark:text-zinc-400">{{ _("(Optional) Stop sending after this date.") }}</small>
+            {% for error in form.end_at.errors %}<p class="text-red-500 text-sm mt-1">{{ error }}</p>{% endfor %}
+        </div>
+        <!-- Max Occurrences -->
+        <div class="mb-4">
+            <label class="block text-sm font-medium text-zinc-700 dark:text-zinc-300"
+                   for="max_occurrences">{{ _("Max Occurrences") }}</label>
+            {{ form.max_occurrences(class_="w-full mt-1 px-3 py-2 border rounded bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100") }}
+            <small class="text-zinc-500 dark:text-zinc-400">{{ _("(Optional) Stop after this many reminders.") }}</small>
+            {% for error in form.max_occurrences.errors %}<p class="text-red-500 text-sm mt-1">{{ error }}</p>{% endfor %}
+        </div>
+        <!-- Action Buttons -->
+        <div class="mt-6">
+            <button type="submit"
+                    class="px-6 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">
+                {{ _("Save Schedule") }}
+            </button>
+            <a href="{{ url_for("reminders_bp.index") }}"
+               class="ml-4 text-gray-600 hover:text-black dark:text-zinc-400 dark:hover:text-white">
+                {{ _("Cancel") }}
+            </a>
+        </div>
+    </form>
+    <!-- ===================Expandable Instructions=================== Panel -->
+    <div x-data="{ showHelp: false, hideText: '{{ _("Hide Instructions") }}', showText: '{{ _("Help for RRULE syntax") }}' }"
+         class="mt-8">
+        <button @click="showHelp = !showHelp"
+                class="text-sm text-blue-400 hover:text-blue-200 underline focus:outline-none">
+            <span x-text="showHelp ? hideText : showText"></span>
+        </button>
+        <div x-show="showHelp"
+             x-transition
+             class="mt-4 p-4 rounded bg-zinc-800 text-sm text-zinc-100 space-y-2 shadow-md border border-zinc-700">
+            <ul class="list-disc list-inside space-y-1">
+                <li>{{ _("Several tools are available to help generate an RRULE.") }}</li>
+                <li>{{ _("Use a search engine or AI tool to assist.") }}</li>
+                <li>
+                    {{ _("Here is an example of one such online tool:") }}
+                    <a href="https://freetools.textmagic.com/rrule-generator"
+                       target="_blank"
+                       class="text-blue-300 underline hover:text-blue-100 font-semibold ml-1">
+                        {{ _("RRULE Generator Tool") }}
+                    </a>
+                </li>
+                <li>
+                    {{ _("See here for some common examples:") }}
+                    <a href="{{ config['GITHUB_URL'] }}/blob/main/HELP_RRULE.md"
+                       target="_blank"
+                       class="text-blue-300 underline hover:text-blue-100 font-semibold ml-1">
+                        {{ _("RRULE Help (GitHub)") }}
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}

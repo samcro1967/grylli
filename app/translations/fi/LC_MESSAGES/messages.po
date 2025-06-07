@@ -1,0 +1,3266 @@
+# Finnish translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-06-07 15:49-0500\n"
+"PO-Revision-Date: 2025-05-25 12:41-0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: fi <LL@li.org>\n"
+"Language: fi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: app/init_db.py:55
+#, python-format
+msgid "Tables currently in DB: %s"
+msgstr "Taulukot, jotka ovat tällä hetkellä tietokannassa:"
+
+#: app/init_db.py:58
+msgid "Database or system_config table missing. Running migrations now..."
+msgstr ""
+"Tietokanta tai järjestelmäasetustaulu puuttuu. Suoritetaan siirrot nyt..."
+
+#: app/init_db.py:61
+msgid "Migrations applied successfully."
+msgstr "Siirrot sovellettu onnistuneesti."
+
+#: app/init_db.py:63
+msgid "Migration failed."
+msgstr "Siirto epäonnistui."
+
+#: app/init_db.py:68
+msgid "System config seeded successfully."
+msgstr "Järjestelmäasetukset istutettu onnistuneesti."
+
+#: app/init_db.py:70
+msgid "Error seeding system config."
+msgstr "Virhe istutettaessa järjestelmäasetuksia:"
+
+#: app/forms/mfa_form.py:15 app/templates/apprise/create_apprise.html:30
+#: app/templates/apprise/edit_apprise.html:30
+#: app/templates/apprise/list_apprise.html:60
+#: app/templates/mfa/settings.html:24 app/templates/mfa/settings.html:40
+#: app/templates/user_smtp/create_smtp.html:99
+#: app/templates/user_smtp/edit_smtp.html:114
+#: app/templates/user_smtp/list_smtp.html:57
+#: app/templates/webhook/create_webhook.html:36
+#: app/templates/webhook/edit_webhook.html:36
+#: app/templates/webhook/list_webhooks.html:61
+msgid "Enabled"
+msgstr "Käytössä"
+
+#: app/forms/mfa_form.py:16
+msgid "Authenticator Code"
+msgstr "Todennuskoodi"
+
+#: app/forms/mfa_form.py:17
+#: app/templates/admin/partials/user_instructions_and_modal.html:66
+#: app/templates/admin/partials/user_table.html:115
+#: app/templates/email/assign_smtp.html:44 app/templates/mfa/settings.html:47
+#: app/templates/user_smtp/edit_smtp.html:122
+msgid "Save"
+msgstr "Tallenna"
+
+#: app/forms/mfa_form.py:27
+msgid "Authentication Code"
+msgstr "Päivitä ilmoitus"
+
+#: app/forms/mfa_form.py:29
+msgid "Please enter your authentication code."
+msgstr "Anna todennuskoodisi."
+
+#: app/forms/mfa_form.py:30
+msgid "Enter a valid 6-digit code or recovery code."
+msgstr "Anna kelvollinen 6-numeroinen koodi tai palautuskoodi."
+
+#: app/forms/mfa_form.py:31
+msgid "Invalid code format."
+msgstr "Virheellinen koodimuoto."
+
+#: app/forms/mfa_form.py:35 app/templates/mfa/challenge.html:25
+msgid "Verify"
+msgstr "Versio"
+
+#: app/services/mail.py:37 app/services/system_settings_email.py:40
+msgid "Missing required config setting: "
+msgstr "Puuttuva tarvittava asetusarvo:"
+
+#: app/services/mail.py:46 app/services/system_settings_email.py:50
+#, python-format
+msgid "Failed to decrypt %(key)s: %(error)s"
+msgstr "Tietoavaimen purku epäonnistui %(key)s: %(error)s"
+
+#: app/services/mail.py:54
+#, python-format
+msgid "get_setting('%(key)s') -> '%(value)s' (sensitive: %(sensitive)s)"
+msgstr ""
+"get_setting('%(key)s') -> '%(value)s' (raaka: '%(raw)s', arkaluontoinen: "
+"%(sensitive)s)"
+
+#: app/services/mail.py:75
+#, python-format
+msgid "Preparing email to %(to)s"
+msgstr "Valmistellaan sähköpostia: %(to)s"
+
+#: app/services/mail.py:90
+#, python-format
+msgid ""
+"SMTP configuration: host=%(host)s (type=%(host_type)s), port=%(port)s "
+"(type=%(port_type)s)"
+msgstr ""
+"SMTP-isäntä = '%(host)s' (tyyppi: %(host_type)s), portti = %(port)s (tyyppi:"
+" %(port_type)s)"
+
+#: app/services/mail.py:99
+#, python-format
+msgid "SMTP username: %(user)s"
+msgstr "Käytetään käyttäjää: %(user)s"
+
+#: app/services/mail.py:100
+#, python-format
+msgid "TLS enabled: %(tls)s"
+msgstr "TLS käytössä: %(tls)s"
+
+#: app/services/mail.py:105
+msgid "Starting TLS connection..."
+msgstr "Aloitetaan TLS"
+
+#: app/services/mail.py:107
+msgid "Logging into SMTP server..."
+msgstr "Kirjaudutaan SMTP-palvelimeen..."
+
+#: app/services/mail.py:109
+msgid "Sending email message..."
+msgstr "Aikatauluviesti"
+
+#: app/services/mail.py:111
+#, python-format
+msgid "Email sent successfully to %(to)s"
+msgstr "Testisähköposti lähetetty onnistuneesti."
+
+#: app/services/mail.py:114
+#, python-format
+msgid "SMTP error while sending to %(to)s: %(error)s"
+msgstr "SMTP-virhe lähettäessä vastaanottajalle %(to)s: %(error)s"
+
+#: app/templates/about.html:10
+msgid "About Grylli"
+msgstr "Tietoja Gryllistä"
+
+#: app/templates/about.html:13
+msgid ""
+"Grylli is a secure, self-hosted message delivery platform that automatically"
+" sends pre-configured messages if a user fails to check in within a defined "
+"time period."
+msgstr ""
+"Grylli on turvallinen, itse isännöity viestintoimitusalusta, joka lähettää "
+"ennalta määritetyt viestit automaattisesti, jos käyttäjä ei ilmoittaudu "
+"tietyn ajanjakson aikana."
+
+#: app/templates/about.html:14
+msgid ""
+"It supports multiple users, customizable schedules, and recurring reminders."
+msgstr "Se tukee useita käyttäjiä ja mukautettavia aikatauluja."
+
+#: app/templates/about.html:15
+msgid ""
+"Messages and reminders can be delivered via email, webhooks, or over 100 "
+"third-party services through Apprise."
+msgstr ""
+"Viestit voidaan toimittaa sähköpostitse, webhooksien kautta tai yli 80 "
+"kolmannen osapuolen palvelun kautta Apprisea käyttäen."
+
+#: app/templates/about.html:16
+msgid ""
+"Users can configure their own SMTP servers to ensure emails and reminders "
+"appear to come directly from them — not from the system administrator."
+msgstr ""
+"Käyttäjät voivat määrittää omat SMTP-palvelimensa, jotta viestit näyttävät "
+"tulevan suoraan heiltä — ei järjestelmänvalvojalta."
+
+#: app/templates/about.html:17
+msgid ""
+"Sensitive data is encrypted at rest, and all operations are secured with "
+"strong authentication and audit-friendly logging."
+msgstr ""
+"Luottamukselliset tiedot on salattu levossa, ja kaikki viestitoiminnot on "
+"suojattu vahvalla todennuksella ja auditointiin sopivalla lokituksella."
+
+#: app/templates/about.html:18
+msgid ""
+"Built with a modern, reactive technology stack, Grylli is optimized for "
+"responsiveness and works seamlessly across desktop and mobile devices."
+msgstr ""
+"Modernilla, reaktiivisella teknologiapinolla rakennettu Grylli on optimoitu "
+"reagoimaan nopeasti ja toimii saumattomasti pöytäkoneilla ja "
+"mobiililaitteilla."
+
+#: app/templates/about.html:23
+msgid "Version:"
+msgstr "Versio:"
+
+#: app/templates/about.html:26
+msgid "Repository:"
+msgstr "Arkisto:"
+
+#: app/templates/about.html:30
+msgid "GitHub - samcro1967/grylli"
+msgstr "GitHub - samcro1967/grylli"
+
+#: app/templates/help.html:2 app/templates/help.html:5
+#: app/templates/partials/header.html:85
+msgid "Help"
+msgstr "Apua"
+
+#: app/templates/help.html:7
+msgid ""
+"Grylli includes built-in instructions throughout the app to help you "
+"configure and manage your setup."
+msgstr ""
+"Grylli sisältää sisäänrakennettuja ohjeita, jotka auttavat sinua "
+"kokoonpanossa ja hallinnassa sovelluksen kautta."
+
+#: app/templates/help.html:8
+msgid ""
+"This page provides an overview of key features and direct links to where "
+"they can be managed."
+msgstr ""
+"Tällä sivulla annetaan yleiskatsaus keskeisiin toimintoihin ja suorat linkit"
+" niiden hallintaan."
+
+#: app/templates/help.html:12 app/templates/messages/list_messages.html:9
+#: app/templates/partials/shared_nav.html:17
+msgid "Notifications"
+msgstr "Ilmoitukset"
+
+#: app/templates/help.html:14
+msgid "Create and assign messages"
+msgstr "Luo viesti tai sähköposti."
+
+#: app/templates/admin/index.html:32 app/templates/help.html:17
+#: app/templates/partials/admin_nav.html:56
+msgid "SMTP Settings"
+msgstr "SMTP-asetukset"
+
+#: app/templates/help.html:19
+msgid "Use your own email server"
+msgstr "Käytä omaa sähköpostipalvelinta"
+
+#: app/templates/help.html:22
+msgid "Apprise Integration"
+msgstr "Apprise-kohteet"
+
+#: app/templates/help.html:24
+msgid "Send notifications to 80+ supported services"
+msgstr "Lähetä ilmoituksia yli 80 tuettuun palveluun"
+
+#: app/templates/help.html:27
+#: app/templates/messages/assign_destinations.html:41
+#: app/templates/messages/view_message.html:58
+#: app/templates/partials/shared_nav.html:44
+#: app/templates/reminders/assign_destinations.html:39
+#: app/templates/reminders/view_reminder.html:69
+msgid "Webhooks"
+msgstr "Webhooks"
+
+#: app/templates/help.html:29
+msgid "Trigger actions or external workflows"
+msgstr "Käynnistä toimintoja tai ulkoisia työnkulkuja"
+
+#: app/templates/email/list_emails.html:9 app/templates/help.html:32
+#: app/templates/partials/shared_nav.html:61
+msgid "Emails"
+msgstr "Sähköpostit"
+
+#: app/templates/help.html:34
+msgid "View and manage secure email messages"
+msgstr "Turvallisten sähköpostiviestien yleiskatsaus"
+
+#: app/templates/help.html:38
+msgid "Security"
+msgstr "🔐 Turvallisuus"
+
+#: app/templates/help.html:39
+msgid "Grylli encrypts sensitive data and logs all key actions for auditing."
+msgstr ""
+"Grylli salaa arkaluontoiset tiedot ja kirjaa kaikki tärkeät toiminnot "
+"auditointia varten."
+
+#: app/templates/index.html:9 app/views/locale.py:95
+msgid "Welcome to Grylli"
+msgstr "Tervetuloa Grylliin"
+
+#: app/templates/index.html:11
+msgid "Pronounced"
+msgstr "Ääntämys"
+
+#: app/templates/index.html:11
+msgid "like “grill-ee”"
+msgstr "kuten ”grill-ee”"
+
+#: app/templates/index.html:14
+msgid ""
+"Grylli is a secure message scheduling and delivery system designed to ensure"
+" your important messages are delivered — even if you can’t be there to send "
+"them."
+msgstr ""
+"Grylli on turvallinen viestien ajoitus- ja toimitusjärjestelmä, joka "
+"varmistaa, että tärkeät viestisi toimitetaan — vaikka et olisi siellä "
+"lähettämässä niitä."
+
+#: app/templates/index.html:17
+msgid ""
+"Whether you’re planning ahead, setting up emergency communication, or "
+"building peace of mind, Grylli helps automate your message delivery via "
+"multiple channels including email, webhooks, and Apprise notifications."
+msgstr ""
+"Riippumatta siitä, suunnitteletko etukäteen, asetatko hätäviestintää vai "
+"rakennatko mielenrauhaa, Grylli auttaa automatisoimaan viestisi toimituksen "
+"sähköpostin, verkkokoukkujen tai Apprise-ilmoitusten kautta, jos jätät "
+"kirjautumatta."
+
+#: app/templates/index.html:19
+msgid "Getting Started"
+msgstr "Aloitus"
+
+#: app/templates/index.html:21
+msgid "Create a message, email, or reminder."
+msgstr "Luo viesti tai sähköposti."
+
+#: app/templates/index.html:22
+msgid "Set your check-in interval and grace period (for messages)."
+msgstr "Aseta kirjautumisvälisi ja armahdusjakso."
+
+#: app/templates/index.html:23
+msgid "Assign one or more delivery destinations."
+msgstr "Määritä yksi tai useampi toimituskohde."
+
+#: app/templates/index.html:24
+msgid "Optionally attach files for secure emails."
+msgstr "Lisää tiedostoja turvallisiin sähköposteihin halutessasi."
+
+#: app/templates/index.html:25
+msgid "Schedule reminders to send at specific times or on a recurring basis."
+msgstr ""
+"Aikatauluta muistutukset lähetettäväksi tiettyinä aikoina tai toistuvasti."
+
+#: app/templates/index.html:26
+msgid "Enable the message or reminder to activate delivery."
+msgstr "Ota viesti tai muistutus käyttöön toimituksen aktivoimiseksi."
+
+#: app/templates/index.html:28
+msgid ""
+"Regularly check in to Grylli to prevent automated delivery; miss a check-in "
+"and Grylli sends your messages as scheduled."
+msgstr ""
+"Tarkista säännöllisesti Gryllistä estääksesi automaattisen lähetyksen; jätä "
+"tarkastus väliin ja Grylli lähettää viestisi aikataulun mukaisesti."
+
+#: app/templates/privacy.html:10
+msgid "Privacy Notice"
+msgstr "Tietosuojailmoitus"
+
+#: app/templates/privacy.html:13
+msgid ""
+"Grylli respects your privacy and is designed to minimize the collection and "
+"storage of personal data."
+msgstr ""
+"Grylli kunnioittaa yksityisyyttäsi ja on suunniteltu minimoimaan "
+"henkilötietojen keräys ja tallennus."
+
+#: app/templates/privacy.html:14
+msgid ""
+"All data is encrypted where appropriate and remains fully under your control"
+" if you self-host this platform."
+msgstr ""
+"Kaikki tiedot salataan tarvittaessa ja pysyvät täysin hallinnassasi, jos "
+"ylläpidät alustaa itse."
+
+#: app/templates/privacy.html:17
+msgid "What Data We Collect"
+msgstr "Mitä tietoja keräämme"
+
+#: app/templates/privacy.html:19
+msgid "Email address and password hash (for authentication)"
+msgstr "Sähköpostiosoite ja salasanatiiviste (autentikointia varten)"
+
+#: app/templates/privacy.html:20
+msgid "Optional MFA secret and recovery codes (encrypted at rest)"
+msgstr "Valinnainen MFA-salaisuus ja palautuskoodit (levossa salattuna)"
+
+#: app/templates/privacy.html:21
+msgid "Reminder and message content you configure"
+msgstr "Muistutukset ja viestien sisältö, jotka määrität"
+
+#: app/templates/privacy.html:22
+msgid "User-specific settings, SMTP configuration (if provided)"
+msgstr "Käyttäjäkohtaiset asetukset, SMTP-määritykset (jos annettu)"
+
+#: app/templates/privacy.html:25
+msgid "How Your Data Is Used"
+msgstr "Miten tietojasi käytetään"
+
+#: app/templates/privacy.html:27
+msgid ""
+"Your data is used solely for the purpose of delivering reminders and "
+"messages according to your preferences."
+msgstr ""
+"Tietojasi käytetään ainoastaan muistutusten ja viestien toimittamiseen "
+"mieltymystesi mukaisesti."
+
+#: app/templates/privacy.html:28
+msgid ""
+"Grylli does not share, sell, or transmit your personal data to any third "
+"parties."
+msgstr ""
+"Grylli ei jaa, myy tai siirrä henkilötietojasi kolmansille osapuolille."
+
+#: app/templates/privacy.html:31
+msgid "Your Rights"
+msgstr "Oikeutesi"
+
+#: app/templates/privacy.html:33
+msgid ""
+"You can export all of your data at any time from the Account Settings page."
+msgstr "Voit viedä kaikki tietosi milloin tahansa Tiliasetukset-sivulta."
+
+#: app/templates/privacy.html:34
+msgid "You may permanently delete your account and all associated data."
+msgstr "Et voi poistaa tiliäsi, koska olet viimeinen ylläpitäjä."
+
+#: app/templates/privacy.html:35
+msgid ""
+"If you are using a self-hosted instance, contact the instance administrator "
+"for data inquiries."
+msgstr ""
+"Jos käytät itse ylläpidettyä esiintymää, ota yhteyttä esiintymän "
+"ylläpitäjään tiedusteluja varten."
+
+#: app/templates/privacy.html:38
+msgid "Self-Hosting Responsibility"
+msgstr "Itseyllapidon vastuu"
+
+#: app/templates/privacy.html:40
+msgid ""
+"If you are running Grylli on your own server, you are responsible for the "
+"storage, processing, and lawful handling of all user data on that instance."
+msgstr ""
+"Jos käytät Grylliä omalla palvelimellasi, vastaat kyseisen esiintymän "
+"kaikkien käyttäjätietojen tallennuksesta, käsittelystä ja laillisesta "
+"käsittelystä."
+
+#: app/templates/privacy.html:44
+msgid ""
+"This notice was last updated in June 2025 and may evolve to reflect changes "
+"in the software or regulatory landscape."
+msgstr ""
+"Tätä ilmoitusta päivitettiin viimeksi kesäkuussa 2025, ja se voi muuttua "
+"heijastamaan ohjelmiston tai sääntely-ympäristön muutoksia."
+
+#: app/templates/system_info.html:11
+msgid "📦 Environment Versions"
+msgstr "📦 Ympäristöversiot"
+
+#: app/templates/system_info.html:17
+msgid "Category"
+msgstr "Luokka"
+
+#: app/templates/system_info.html:18
+msgid "Tool"
+msgstr "Työkalu"
+
+#: app/templates/system_info.html:19
+msgid "Version"
+msgstr "Versio"
+
+#: app/templates/system_info.html:25
+msgid "🧠 Python"
+msgstr "🧠 Python"
+
+#: app/templates/system_info.html:26
+msgid "Python"
+msgstr "Python"
+
+#: app/templates/system_info.html:30
+msgid "pip"
+msgstr "pip"
+
+#: app/templates/system_info.html:34
+msgid "SQLite"
+msgstr "SQLite"
+
+#: app/templates/system_info.html:40
+msgid "⚙️ Core"
+msgstr "⚙️ Ydintoiminnot"
+
+#: app/templates/system_info.html:47
+msgid "🔐 Security"
+msgstr "🔐 Turvallisuus"
+
+#: app/templates/system_info.html:48
+msgid "Email Validator"
+msgstr "Sähköpostin vahvistin"
+
+#: app/templates/system_info.html:52
+msgid "Cryptography"
+msgstr "Salaustoiminnot"
+
+#: app/templates/system_info.html:57
+msgid "🕰️ Scheduling"
+msgstr "🕰️ Aikataulutus"
+
+#: app/templates/system_info.html:58
+msgid "APScheduler"
+msgstr "APScheduler"
+
+#: app/templates/system_info.html:62
+msgid "Apprise (Python)"
+msgstr "Apprise (Python)"
+
+#: app/templates/system_info.html:66
+msgid "Apprise CLI"
+msgstr "Apprise CLI"
+
+#: app/templates/system_info.html:74
+msgid "🌐 Frontend"
+msgstr "🌐 Käyttöliittymä"
+
+#: app/templates/account/manage_account.html:11
+msgid "Manage Account"
+msgstr "Hallitse tiliä"
+
+#: app/templates/account/manage_account.html:12
+msgid "Update your profile information and password."
+msgstr "Päivitä profiilitietosi ja salasanasi."
+
+#: app/templates/account/manage_account.html:41
+#: app/templates/admin/create_user.html:40
+#: app/templates/auth/bootstrap.html:43
+#: app/templates/auth/reset_password.html:42 app/templates/auth/signup.html:42
+msgid "Please enter a valid email address."
+msgstr "Anna kelvollinen sähköpostiosoite."
+
+#: app/templates/account/manage_account.html:62
+#: app/templates/account/manage_account.html:96
+#: app/templates/account/manage_account.html:127
+#: app/templates/auth/reset_password.html:66
+#: app/templates/auth/reset_password.html:97 app/templates/auth/signup.html:65
+#: app/templates/auth/signup.html:95
+msgid "Show/hide password"
+msgstr "Pidä alhaalla näyttääksesi salasanan"
+
+#: app/templates/account/manage_account.html:89
+#: app/templates/admin/create_user.html:53
+#: app/templates/auth/bootstrap.html:51
+#: app/templates/auth/reset_password.html:58 app/templates/auth/signup.html:58
+msgid "Password must meet all complexity requirements."
+msgstr "Salasanan on täytettävä kaikki monimutkaisuusvaatimukset."
+
+#: app/templates/account/manage_account.html:141
+#: app/templates/admin/create_user.html:72
+#: app/templates/admin/edit_user.html:67 app/templates/auth/bootstrap.html:69
+#: app/templates/auth/reset_password.html:110
+#: app/templates/auth/signup.html:108
+msgid "Passwords do not match."
+msgstr "Salasanat eivät täsmää."
+
+#: app/templates/account/manage_account.html:147
+msgid "Update Account"
+msgstr "Päivitä tili"
+
+#: app/templates/account/manage_account.html:151
+#: app/templates/admin/create_user.html:82
+#: app/templates/admin/edit_user.html:97 app/templates/admin/help_form.html:28
+#: app/templates/admin/partials/user_instructions_and_modal.html:62
+#: app/templates/admin/partials/user_table.html:113
+#: app/templates/apprise/create_apprise.html:42
+#: app/templates/apprise/edit_apprise.html:42
+#: app/templates/auth/reset_password.html:121
+#: app/templates/email/assign_smtp.html:46
+#: app/templates/email/attach_files.html:47
+#: app/templates/email/edit_message.html:54
+#: app/templates/email/schedule_email.html:84
+#: app/templates/messages/assign_destinations.html:66
+#: app/templates/messages/create_message.html:55
+#: app/templates/messages/edit_message.html:48
+#: app/templates/messages/schedule_message.html:84
+#: app/templates/mfa/challenge.html:29 app/templates/mfa/settings.html:51
+#: app/templates/reminders/assign_destinations.html:64
+#: app/templates/reminders/assign_email_reminder.html:94
+#: app/templates/reminders/create_reminder.html:49
+#: app/templates/reminders/edit_reminder.html:42
+#: app/templates/reminders/schedule_reminder.html:51
+#: app/templates/user_smtp/create_smtp.html:111
+#: app/templates/user_smtp/edit_smtp.html:125
+#: app/templates/webhook/create_webhook.html:48
+#: app/templates/webhook/edit_webhook.html:48
+msgid "Cancel"
+msgstr "Peruuta"
+
+#: app/templates/account/manage_account.html:159
+#: app/templates/admin/create_user.html:90
+#: app/templates/admin/edit_user.html:81 app/templates/auth/bootstrap.html:83
+#: app/templates/auth/reset_password.html:128
+#: app/templates/auth/signup.html:132
+msgid "Minimum 8 characters"
+msgstr "Vähintään 8 merkkiä"
+
+#: app/templates/account/manage_account.html:160
+#: app/templates/admin/create_user.html:91
+#: app/templates/admin/edit_user.html:82 app/templates/auth/bootstrap.html:84
+#: app/templates/auth/reset_password.html:129
+#: app/templates/auth/signup.html:133
+msgid "At least one uppercase letter"
+msgstr "Vähintään yksi iso kirjain"
+
+#: app/templates/account/manage_account.html:161
+#: app/templates/admin/create_user.html:92
+#: app/templates/admin/edit_user.html:83 app/templates/auth/bootstrap.html:85
+#: app/templates/auth/reset_password.html:130
+#: app/templates/auth/signup.html:134
+msgid "At least one lowercase letter"
+msgstr "Vähintään yksi pieni kirjain"
+
+#: app/templates/account/manage_account.html:162
+#: app/templates/admin/create_user.html:93
+#: app/templates/admin/edit_user.html:84 app/templates/auth/bootstrap.html:86
+#: app/templates/auth/reset_password.html:131
+#: app/templates/auth/signup.html:135
+msgid "At least one number"
+msgstr "Vähintään yksi numero"
+
+#: app/templates/account/manage_account.html:163
+#: app/templates/admin/create_user.html:94
+#: app/templates/auth/bootstrap.html:87
+#: app/templates/auth/reset_password.html:132
+#: app/templates/auth/signup.html:136
+msgid "At least one special character (e.g., !@#$%)"
+msgstr "Ainakin yksi erikoismerkki (esim. !@#$%)"
+
+#: app/templates/account/manage_account.html:169
+msgid "Download My Data"
+msgstr "Lataa tietoni"
+
+#: app/templates/account/manage_account.html:171
+msgid ""
+"Download all your account data as a JSON file. This includes your reminders,"
+" messages, email settings, and more. The file is for your records only and "
+"cannot be imported back. Protect it as it may contain sensitive information."
+msgstr ""
+"Lataa kaikki tilitietosi JSON-tiedostona. Tämä sisältää muistutuksesi, "
+"viestisi, sähköpostiasetuksesi ja paljon muuta. Tiedosto on vain omia "
+"tietojasi varten, eikä sitä voida tuoda takaisin. Suojaa se, koska se voi "
+"sisältää arkaluontoisia tietoja."
+
+#: app/templates/account/manage_account.html:175
+msgid "Download My Data (JSON)"
+msgstr "Lataa tietoni (JSON)"
+
+#: app/templates/account/manage_account.html:179
+msgid "Danger Zone"
+msgstr "Vaaravyöhyke"
+
+#: app/templates/account/manage_account.html:180
+msgid "Deleting your account is permanent and cannot be undone."
+msgstr "Tilisi poistaminen on pysyvää eikä sitä voi peruuttaa."
+
+#: app/templates/account/manage_account.html:185
+msgid "Delete My Account"
+msgstr "Päivitä tili"
+
+#: app/templates/account/translations.html:8
+msgid "Translations - Grylli"
+msgstr "Käännökset - Grylli"
+
+#: app/templates/account/translations.html:17
+#: app/templates/partials/header.html:102
+msgid "Translations"
+msgstr "Käännökset"
+
+#: app/templates/account/translations.html:20
+msgid "Grylli currently supports multiple languages and more will be added."
+msgstr "Grylli tukee tällä hetkellä useita kieliä ja lisää tullaan lisäämään."
+
+#: app/templates/account/translations.html:21
+msgid "Many of the translations were performed with assistance from ChatGPT."
+msgstr "Monet käännöksistä tehtiin ChatGPT:n avustuksella."
+
+#: app/templates/account/translations.html:22
+msgid ""
+"If you find a translation issue or want to suggest improvements, your input "
+"is welcome!"
+msgstr ""
+"Jos löydät käännösongelman tai haluat ehdottaa parannuksia, palautteesi on "
+"tervetullutta!"
+
+#: app/templates/account/translations.html:28
+msgid "How to request translation updates"
+msgstr "Miten pyytää käännöspäivityksiä"
+
+#: app/templates/account/translations.html:30
+msgid "To contribute to translations, please use the following guidelines:"
+msgstr "Osallistuaksesi käännöksiin, käytä seuraavia ohjeita:"
+
+#: app/templates/account/translations.html:43
+msgid "Contribute missing or improved translations:"
+msgstr "Löydetty puuttuva käännös?"
+
+#: app/templates/account/translations.html:63
+msgid "Open the relevant .po translation file for your language."
+msgstr "Avaa kielesi JSON-käännöstiedosto. Esimerkiksi:"
+
+#: app/templates/account/translations.html:67
+msgid ""
+"Find untranslated or incomplete entries and add or improve translations."
+msgstr ""
+"Etsi kääntämättömiä tai puutteellisia merkintöjä ja lisää tai paranna "
+"käännöksiä."
+
+#: app/templates/account/translations.html:68
+msgid "You may use a PO file editor or a text editor."
+msgstr "Voit käyttää PO-tiedoston editoria tai tekstieditoria."
+
+#: app/templates/account/translations.html:69
+msgid "Copy the file path and the snippet of your changes."
+msgstr "Kopioi tiedoston polku ja muutostesi katkelma."
+
+#: app/templates/account/translations.html:70
+msgid "Paste the snippet directly into a new GitHub issue for review."
+msgstr "Liitä kopioitu katkelma suoraan GitHub-ongelmakommenttiin."
+
+#: app/templates/account/translations.html:72
+msgid "Please do not upload the full .po file to avoid merge conflicts."
+msgstr "Älä lataa koko .po-tiedostoa välttääksesi yhteenlasketut konfliktit."
+
+#: app/templates/account/translations.html:85
+msgid "Improving existing translations:"
+msgstr "Paranna olemassa olevia käännöksiä:"
+
+#: app/templates/account/translations.html:104
+msgid "Open the relevant .po file for the translation you want to improve."
+msgstr "Avaa kyseinen .po-tiedosto, jonka käännöstä haluat parantaa."
+
+#: app/templates/account/translations.html:106
+msgid "For example:"
+msgstr "Esimerkiksi:"
+
+#: app/templates/account/translations.html:110
+msgid ""
+"Find the phrase(s) and its existing translation(s) you want to improve."
+msgstr ""
+"Etsi lause(et) ja sen olemassa oleva(t) käännös/käännökset, joita haluat "
+"parantaa."
+
+#: app/templates/account/translations.html:111
+msgid "Update the phrase(s)."
+msgstr "Päivitä lause(et)."
+
+#: app/templates/account/translations.html:112
+msgid "Copy the file name and path into the issue."
+msgstr "Kopioi tiedoston nimi ja polku ongelmaan."
+
+#: app/templates/account/translations.html:114
+msgid "Paste the copied snippet directly into the GitHub issue comment."
+msgstr "Liitä kopioitu katkelma suoraan GitHub-ongelmakommenttiin."
+
+#: app/templates/account/translations.html:115
+msgid "Do not upload the full .po file to avoid merge conflicts."
+msgstr "Älä lataa koko .po-tiedostoa välttääksesi yhteenlasketut konfliktit."
+
+#: app/templates/account/translations.html:118
+msgid "Example snippet:"
+msgstr "Esimerkkikatkelma:"
+
+#: app/templates/account/translations.html:137
+msgid "Report missing translations not yet discovered:"
+msgstr "Ilmoita puuttuvista käännöksistä, joita ei vielä ole löydetty:"
+
+#: app/templates/account/translations.html:154
+msgid ""
+"If you see text in the app that appears untranslated or missing, please "
+"report it to us."
+msgstr ""
+"Jos näet sovelluksessa tekstiä, joka näyttää kääntämättömältä tai puuttuu, "
+"ilmoita siitä meille."
+
+#: app/templates/account/translations.html:155
+msgid "Provide the exact English phrase as it appears on the screen."
+msgstr "Anna tarkka englanninkielinen lause, kuinka se näkyy näytöllä."
+
+#: app/templates/account/translations.html:156
+msgid ""
+"Include the page or section where you saw the phrase (e.g., Apprise page, "
+"Account Page, etc.)."
+msgstr ""
+"Sisällytä sivu tai osio, jossa näit lauseen (esim. Asetukset-sivu, "
+"Tiliosasto)."
+
+#: app/templates/account/translations.html:157
+msgid ""
+"Submit this information via a new GitHub issue so we can add it to the "
+"translation files"
+msgstr ""
+"Lähetä nämä tiedot uuden GitHub-ongelman kautta, jotta voimme lisätä ne "
+"käännöstiedostoihin ja koota sen Babelille."
+
+#: app/templates/account/translations.html:166
+msgid "Found a missing translation?"
+msgstr "Löydetty puuttuva käännös?"
+
+#: app/templates/account/translations.html:171
+msgid ""
+"This link will create a new GitHub issue pre-filled with a language code."
+msgstr ""
+"Tämä linkki luo uuden GitHub-ongelman, jossa on valmiiksi täytetty "
+"kielikoodi."
+
+#: app/templates/account/translations.html:172
+msgid "Report it by opening a new GitHub issue"
+msgstr "Ilmoita siitä avaamalla uusi GitHub-ongelma"
+
+#: app/templates/account/translations.html:175
+msgid "Please specify the language code and exact phrase when reporting."
+msgstr "Ilmoita kielikoodi ja tarkka lause raportoitaessa."
+
+#: app/templates/account/translations.html:176
+msgid "Thank you for helping us make Grylli better!"
+msgstr "Kiitos, että autat meitä parantamaan Grylliä!"
+
+#: app/templates/admin/create_user.html:14
+msgid "Create New User"
+msgstr "Luo uusi käyttäjä"
+
+#: app/templates/admin/create_user.html:15
+msgid "Fill out the form to add a new user."
+msgstr "Täytä lomake lisätäksesi uuden käyttäjän."
+
+#: app/templates/admin/create_user.html:21
+#: app/templates/admin/edit_user.html:17 app/templates/auth/bootstrap.html:24
+msgid "Please fix the following errors:"
+msgstr "Korjaa seuraavat virheet:"
+
+#: app/templates/admin/create_user.html:78
+#: app/templates/admin/edit_user.html:93
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "Create User"
+msgstr "Luo käyttäjä"
+
+#: app/templates/admin/edit_user.html:10
+#: app/templates/admin/partials/user_card.html:20
+#: app/templates/admin/partials/user_table.html:26
+msgid "Edit User"
+msgstr "Muokkaa käyttäjää"
+
+#: app/templates/admin/edit_user.html:55 app/templates/admin/edit_user.html:74
+msgid "Hold to show password"
+msgstr "Pidä alhaalla näyttääksesi salasanan"
+
+#: app/templates/admin/edit_user.html:85
+#, python-format
+msgid "At least one special character (e.g., !@#$%%)"
+msgstr "Ainakin yksi erikoismerkki (esim. !@#$%%)"
+
+#: app/templates/admin/help.html:4 app/templates/auth/login.html:72
+msgid "Admin Help"
+msgstr "Ylläpitäjäpaneeli"
+
+#: app/templates/admin/help.html:7
+msgid "Reset Admin Password"
+msgstr "Nollaa salasana"
+
+#: app/templates/admin/help.html:9
+msgid ""
+"If you've forgotten the admin password, you can reset it using the following"
+" Docker command:"
+msgstr ""
+"Jos olet unohtanut ylläpitäjän salasanan, voit nollata sen käyttämällä "
+"seuraavaa Docker-komentoa:"
+
+#: app/templates/admin/help.html:15
+msgid ""
+"This script will prompt you to enter a new password for the admin user. You "
+"must run it from the host system where the Grylli container is running."
+msgstr ""
+"Tämä skripti kehottaa sinua syöttämään uuden salasanan "
+"ylläpitäjäkäyttäjälle. Sinun on suoritettava se isäntäjärjestelmästä, jossa "
+"Grylli-kontti on käytössä."
+
+#: app/templates/admin/help.html:18
+msgid "After resetting, you can log in with the new password immediately."
+msgstr "Nollauksen jälkeen voit kirjautua sisään uudella salasanalla heti."
+
+#: app/templates/admin/help.html:24
+msgid "Return to Login"
+msgstr "Palaa hallintapaneeliin"
+
+#: app/templates/admin/help_form.html:6
+msgid "Admin Help Access"
+msgstr "Ylläpitäjän ohjeiden käyttö"
+
+#: app/templates/admin/help_form.html:9
+msgid "Enter your Ferret Key to unlock admin-only help documentation."
+msgstr ""
+"Syötä Ferret-avain avataksesi vain ylläpitäjille tarkoitetun ohjeistuksen."
+
+#: app/templates/admin/help_form.html:34
+msgid "How to Find Your FERRET_KEY"
+msgstr "Miten löytää FERRET_KEY"
+
+#: app/templates/admin/help_form.html:36
+msgid "The FERRET_KEY is set as an environment variable when running Grylli."
+msgstr "FERRET_KEY asetetaan ympäristömuuttujana, kun Grylli ajetaan."
+
+#: app/templates/admin/help_form.html:39
+msgid "Option 1: Check docker-compose.yml"
+msgstr "Vaihtoehto 1: Tarkista docker-compose.yml"
+
+#: app/templates/admin/help_form.html:46
+msgid "Option 2: Use docker inspect"
+msgstr "Vaihtoehto 2: Käytä docker inspect"
+
+#: app/templates/admin/help_form.html:52
+msgid "This shows the FERRET_KEY as passed to the container at runtime."
+msgstr ""
+"Tämä näyttää FERRET_KEY:n sellaisena kuin se annettiin kontille ajon aikana."
+
+#: app/templates/admin/index.html:10
+msgid "Admin Panel"
+msgstr "Ylläpitäjäpaneeli"
+
+#: app/templates/admin/index.html:12
+msgid ""
+"Welcome to the Grylli Admin Panel. Use the links below to manage the system."
+msgstr ""
+"Tervetuloa Gryllin ylläpitäjäpaneeliin. Käytä alla olevia linkkejä "
+"hallitaksesi järjestelmää."
+
+#: app/templates/admin/index.html:17
+msgid "Manage Users"
+msgstr "Hallinnoi käyttäjiä"
+
+#: app/templates/admin/index.html:18
+msgid "Create, edit, enable/disable, or delete user accounts."
+msgstr "Luo, muokkaa, käytä/pois päältä tai poista käyttäjätilejä."
+
+#: app/templates/admin/index.html:22
+#: app/templates/admin/system_settings.html:10
+#: app/templates/partials/admin_nav.html:52
+msgid "System Settings"
+msgstr "Järjestelmäasetukset"
+
+#: app/templates/admin/index.html:23
+msgid "View  system-wide environment values."
+msgstr "Katso järjestelmänlaajuisia ympäristöarvoja."
+
+#: app/templates/admin/index.html:27 app/templates/partials/admin_nav.html:42
+msgid "Backups"
+msgstr "Varmuuskopiot"
+
+#: app/templates/admin/index.html:28
+msgid "Create and delete database backups."
+msgstr "Tietokannan varmuuskopiot"
+
+#: app/templates/admin/index.html:33
+msgid "View and test global SMTP settings."
+msgstr "Testisähköpostin lähetys epäonnistui. Tarkista SMTP-asetukset."
+
+#: app/templates/admin/index.html:39
+msgid "View Admin Guide / README on GitHub"
+msgstr "Katso Admin Guide / README GitHubissa"
+
+#: app/templates/admin/index.html:40
+msgid "Includes setup instructions, integrations, and troubleshooting."
+msgstr "Sisältää asennusohjeita, integrointeja ja vianmääritystä."
+
+#: app/templates/admin/index.html:44
+msgid "⚠️ Admin Tips"
+msgstr "⚠️ Ylläpitovinkkejä"
+
+#: app/templates/admin/index.html:46
+msgid "Ensure the data folder (database) is backed up on your host"
+msgstr ""
+"Varmista, että data-kansio (tietokanta) on varmuuskopioitu isännälläsi"
+
+#: app/templates/admin/index.html:48
+msgid ""
+"The uploads folder is not per user.  If required per user, you will ndd to "
+"create subdirectoried per user and setup permissions so users can only see "
+"their own folder."
+msgstr ""
+"Latauskansio ei ole käyttäjäkohtainen. Jos tarvitaan käyttäjäkohtainen, "
+"sinun tulee luoda alikansioita käyttäjää kohti ja asettaa käyttöoikeudet "
+"niin, että käyttäjät voivat nähdä vain oman kansionsa."
+
+#: app/templates/admin/index.html:51
+msgid ""
+"To restore a backup: stop the container, replace the data/grylli.db with one"
+" from the backups folder, and restart the container."
+msgstr ""
+"Palauta varmuuskopio: pysäytä kontti, korvaa data/grylli.db yhdellä "
+"varmuuskopioiden kansiosta ja käynnistä kontti uudelleen."
+
+#: app/templates/admin/list_backups.html:11
+msgid "Database Backups"
+msgstr "Tietokannan varmuuskopiot"
+
+#: app/templates/admin/list_backups.html:13
+msgid "Create Backup"
+msgstr "Luo varmuuskopio"
+
+#: app/templates/admin/list_backups.html:21
+msgid "Filename"
+msgstr "Tiedostonimi"
+
+#: app/templates/admin/list_backups.html:22
+#: app/templates/admin/partials/user_table.html:14
+#: app/templates/apprise/list_apprise.html:62
+#: app/templates/email/list_emails.html:60
+#: app/templates/messages/list_messages.html:60
+#: app/templates/reminders/list_reminders.html:60
+#: app/templates/user_smtp/list_smtp.html:59
+#: app/templates/webhook/list_webhooks.html:63
+msgid "Actions"
+msgstr "Toiminnot"
+
+#: app/templates/admin/list_backups.html:32
+msgid "Delete this backup?"
+msgstr "Poistetaanko tämä varmuuskopio?"
+
+#: app/templates/admin/list_backups.html:32
+#: app/templates/apprise/list_apprise.html:95
+#: app/templates/apprise/list_apprise.html:99
+#: app/templates/apprise/list_apprise.html:150
+#: app/templates/apprise/list_apprise.html:154
+#: app/templates/email/list_emails.html:124
+#: app/templates/email/list_emails.html:128
+#: app/templates/email/list_emails.html:226
+#: app/templates/email/list_emails.html:230
+#: app/templates/messages/list_messages.html:112
+#: app/templates/messages/list_messages.html:116
+#: app/templates/messages/list_messages.html:198
+#: app/templates/messages/list_messages.html:202
+#: app/templates/reminders/list_reminders.html:107
+#: app/templates/reminders/list_reminders.html:113
+#: app/templates/reminders/list_reminders.html:192
+#: app/templates/reminders/list_reminders.html:198
+#: app/templates/user_smtp/list_smtp.html:101
+#: app/templates/user_smtp/list_smtp.html:169
+#: app/templates/webhook/list_webhooks.html:102
+#: app/templates/webhook/list_webhooks.html:161
+msgid "Delete"
+msgstr "Poista"
+
+#: app/templates/admin/list_backups.html:41
+msgid "No backups found."
+msgstr "Ei varmuuskopioita löytynyt."
+
+#: app/templates/admin/list_backups.html:44
+msgid ""
+"Backups contain your full app data. Store securely. Sensitive data is "
+"encrypted in the DB by default."
+msgstr ""
+"Varmuuskopiot sisältävät sovelluksesi täydet tiedot. Tallenna turvallisesti."
+" Luottamukselliset tiedot on salattu tietokannassa oletuksena."
+
+#: app/templates/admin/smtp_config.html:28
+#: app/templates/admin/system_config.html:22
+msgid "System Configuration"
+msgstr "Järjestelmän asetukset"
+
+#: app/templates/admin/smtp_config.html:33
+#: app/templates/admin/system_config.html:26
+#: app/templates/admin/system_settings.html:15
+msgid "Key"
+msgstr "Avain"
+
+#: app/templates/admin/smtp_config.html:34
+#: app/templates/admin/system_config.html:27
+#: app/templates/admin/system_settings.html:16
+msgid "Value"
+msgstr "Arvo"
+
+#: app/templates/admin/smtp_config.html:35
+#: app/templates/admin/system_config.html:28
+msgid "Sensitive"
+msgstr "Arkaluontoinen"
+
+#: app/templates/admin/smtp_config.html:36
+#: app/templates/admin/system_config.html:29
+msgid "Editable"
+msgstr "Muokattavissa"
+
+#: app/templates/admin/smtp_config.html:50
+#: app/templates/admin/smtp_config.html:51
+#: app/templates/admin/system_config.html:45
+#: app/templates/admin/system_config.html:46
+#: app/templates/email/view_config.html:60
+msgid "Yes"
+msgstr "Kyllä"
+
+#: app/templates/admin/smtp_config.html:50
+#: app/templates/admin/smtp_config.html:51
+#: app/templates/admin/system_config.html:45
+#: app/templates/admin/system_config.html:46
+#: app/templates/email/view_config.html:60
+msgid "No"
+msgstr "Ei"
+
+#: app/templates/admin/smtp_config.html:63
+#: app/templates/admin/system_config.html:55
+msgid "Send Test Email"
+msgstr "Lähetä testisähköposti"
+
+#: app/templates/admin/system_config.html:39
+msgid "decrypted"
+msgstr "Luotu"
+
+#: app/templates/admin/partials/user_card.html:12
+msgid "Email:"
+msgstr "Sähköposti:"
+
+#: app/templates/admin/partials/user_card.html:15
+msgid "Role:"
+msgstr "Rooli:"
+
+#: app/templates/admin/partials/user_card.html:27
+#: app/templates/admin/partials/user_table.html:34
+msgid "Change Role"
+msgstr "Vaihda roolia"
+
+#: app/templates/admin/partials/user_card.html:29
+#: app/templates/admin/partials/user_table.html:36
+msgid "You cannot change your own role"
+msgstr "Et voi muuttaa omaa käytössä olevaa tilaasi."
+
+#: app/templates/admin/partials/user_card.html:36
+#: app/templates/admin/partials/user_table.html:43
+msgid "Are you sure you want to reset MFA for this user?"
+msgstr "Oletko varma, että haluat nollata MFA:n tältä käyttäjältä?"
+
+#: app/templates/admin/partials/user_card.html:39
+#: app/templates/admin/partials/user_table.html:46
+msgid "Reset MFA"
+msgstr "Nollaa salasana"
+
+#: app/templates/admin/partials/user_card.html:51
+#: app/templates/admin/partials/user_table.html:58
+msgid "Delete user"
+msgstr "Poista käyttäjä"
+
+#: app/templates/admin/partials/user_card.html:55
+#: app/templates/admin/partials/user_table.html:61
+msgid "Delete User"
+msgstr "Poista käyttäjä"
+
+#: app/templates/admin/partials/user_card.html:58
+#: app/templates/admin/partials/user_table.html:65
+msgid "You cannot disable yourself"
+msgstr "Et voi poistaa itseäsi käytöstä"
+
+#: app/templates/admin/partials/user_card.html:65
+#: app/templates/admin/partials/user_table.html:72
+msgid "Disable"
+msgstr "Poista käytöstä"
+
+#: app/templates/admin/partials/user_card.html:65
+#: app/templates/admin/partials/user_table.html:72
+msgid "Enable"
+msgstr "Ota käyttöön"
+
+#: app/templates/admin/partials/user_header.html:6
+#: app/templates/partials/admin_nav.html:47
+msgid "Users"
+msgstr "Käyttäjät"
+
+#: app/templates/admin/partials/user_header.html:12
+#: app/templates/admin/partials/user_header.html:13
+#: app/templates/apprise/apprise_config.html:10
+#: app/templates/apprise/apprise_config.html:11
+#: app/templates/apprise/list_apprise.html:16
+#: app/templates/apprise/list_apprise.html:17
+#: app/templates/email/list_emails.html:15
+#: app/templates/email/list_emails.html:16
+#: app/templates/messages/list_messages.html:16
+#: app/templates/messages/list_messages.html:17
+#: app/templates/reminders/list_reminders.html:15
+#: app/templates/reminders/list_reminders.html:16
+#: app/templates/user_smtp/list_smtp.html:14
+#: app/templates/user_smtp/list_smtp.html:17
+#: app/templates/webhook/list_webhooks.html:16
+#: app/templates/webhook/list_webhooks.html:17
+#: app/templates/webhook/webhook_config.html:10
+#: app/templates/webhook/webhook_config.html:11
+msgid "Table View"
+msgstr "Taulukkonäkymä"
+
+#: app/templates/admin/partials/user_header.html:26
+#: app/templates/admin/partials/user_header.html:27
+#: app/templates/apprise/apprise_config.html:24
+#: app/templates/apprise/apprise_config.html:25
+#: app/templates/apprise/list_apprise.html:30
+#: app/templates/apprise/list_apprise.html:31
+#: app/templates/email/list_emails.html:29
+#: app/templates/email/list_emails.html:30
+#: app/templates/messages/list_messages.html:30
+#: app/templates/messages/list_messages.html:31
+#: app/templates/reminders/list_reminders.html:29
+#: app/templates/reminders/list_reminders.html:30
+#: app/templates/user_smtp/list_smtp.html:27
+#: app/templates/user_smtp/list_smtp.html:30
+#: app/templates/webhook/list_webhooks.html:30
+#: app/templates/webhook/list_webhooks.html:31
+#: app/templates/webhook/webhook_config.html:24
+#: app/templates/webhook/webhook_config.html:25
+msgid "Card View"
+msgstr "Korttinäkymä"
+
+#: app/templates/admin/partials/user_header.html:45
+msgid "Add User"
+msgstr "Lisää käyttäjä"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:9
+#: app/templates/email/attach_files.html:54
+#: app/templates/email/list_emails.html:255
+#: app/templates/messages/list_messages.html:223
+#: app/templates/reminders/list_reminders.html:218
+#: app/templates/reminders/schedule_reminder.html:56
+msgid "Hide Instructions"
+msgstr "Piilota ohjeet"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:9
+msgid "How to manage users"
+msgstr "Kuinka hallita käyttäjiä"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "Click"
+msgstr "Napsauta"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+msgid "➕ Add User"
+msgstr "➕ Lisää käyttäjä"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+msgid "to open the new user form."
+msgstr "avaa uusi käyttäjälomake."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:18
+msgid "Enter a unique username, valid email address, and strong password."
+msgstr ""
+"Anna ainutlaatuinen käyttäjänimi, kelvollinen sähköpostiosoite ja vahva "
+"salasana."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "Select the appropriate"
+msgstr "Valitse sopiva"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "role"
+msgstr "rooli"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "or"
+msgstr "Portti"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "to save."
+msgstr "tallentaaksesi."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:25
+msgid "To edit a user, click ✏️ and update their info."
+msgstr "Muokataksesi käyttäjää, napsauta ✏️ ja päivitä heidän tietonsa."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:26
+msgid "To delete a user, click 🗑️ and confirm the deletion."
+msgstr "Poistaaksesi käyttäjän, napsauta 🗑️ ja vahvista poisto."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:28
+msgid "To disable or enable a user, click 🔴 or 🟢."
+msgstr "Poistaaksesi tai ottaaksesi käyttäjän käyttöön, napsauta 🔴 tai 🟢."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:30
+msgid "🟢 = User is enabled and can log in."
+msgstr "🟢 = Käyttäjä on käytössä ja voi kirjautua sisään."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:31
+msgid "🔴 = User is disabled and cannot log in."
+msgstr "🔴 = Käyttäjä on poistettu käytöstä eikä voi kirjautua sisään."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:32
+msgid "⚪ = You cannot disable your own account."
+msgstr "⚪ = Et voi poistaa omaa tiliäsi käytöstä."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:43
+#: app/templates/admin/partials/user_table.html:91
+msgid "Assign Role for"
+msgstr "Määritä kohteet"
+
+#: app/templates/admin/partials/user_table.html:10
+msgid "ID"
+msgstr "ID"
+
+#: app/templates/admin/partials/user_table.html:11
+#: app/templates/user_smtp/list_smtp.html:55
+msgid "Username"
+msgstr "Käyttäjänimi"
+
+#: app/templates/admin/partials/user_table.html:12
+msgid "Email"
+msgstr "Sähköposti"
+
+#: app/templates/admin/partials/user_table.html:13
+msgid "Role"
+msgstr "Rooli"
+
+#: app/templates/apprise/apprise_config.html:3
+#: app/templates/apprise/list_apprise.html:9
+#: app/templates/messages/assign_destinations.html:22
+#: app/templates/reminders/assign_destinations.html:20
+msgid "Apprise Destinations"
+msgstr "Apprise-kohteet"
+
+#: app/templates/apprise/apprise_config.html:43
+#: app/templates/webhook/list_webhooks.html:49
+#: app/templates/webhook/webhook_config.html:43
+msgid "Add Webhook"
+msgstr "Lisää Webhook"
+
+#: app/templates/apprise/apprise_config.html:43
+#: app/templates/apprise/list_apprise.html:49
+#: app/templates/webhook/list_webhooks.html:49
+#: app/templates/webhook/webhook_config.html:43
+msgid "Add Destination"
+msgstr "Lisää kohde"
+
+#: app/templates/apprise/create_apprise.html:10
+msgid "Create Apprise Destination"
+msgstr "Luo Apprise-kohde"
+
+#: app/templates/apprise/create_apprise.html:38
+#: app/templates/apprise/edit_apprise.html:38
+#: app/templates/user_smtp/create_smtp.html:107
+#: app/templates/webhook/create_webhook.html:44
+#: app/templates/webhook/edit_webhook.html:44
+msgid "Create Destination"
+msgstr "Luo kohde"
+
+#: app/templates/apprise/create_apprise.html:47
+#: app/templates/apprise/edit_apprise.html:47
+msgid "Need help with Apprise URLs? See the"
+msgstr "Tarvitsetko apua Apprise-URL-osoitteiden kanssa? Katso"
+
+#: app/templates/apprise/create_apprise.html:51
+#: app/templates/apprise/edit_apprise.html:51
+msgid "Apprise Notification Services documentation"
+msgstr "Apprise-ilmoituspalveluiden dokumentaatio"
+
+#: app/templates/apprise/edit_apprise.html:10
+msgid "Edit Apprise Destination"
+msgstr "Muokkaa Apprise-kohdetta"
+
+#: app/templates/apprise/list_apprise.html:49
+msgid "Add Apprise"
+msgstr "Lisää Apprise"
+
+#: app/templates/apprise/list_apprise.html:58
+#: app/templates/email/edit_message.html:21
+#: app/templates/email/list_emails.html:56
+#: app/templates/email/view_config.html:14
+#: app/templates/messages/create_message.html:29
+#: app/templates/messages/edit_message.html:23
+#: app/templates/messages/list_messages.html:57
+#: app/templates/messages/view_message.html:14
+#: app/templates/reminders/create_reminder.html:23
+#: app/templates/reminders/edit_reminder.html:17
+#: app/templates/reminders/list_reminders.html:56
+#: app/templates/reminders/view_reminder.html:13
+#: app/templates/user_smtp/list_smtp.html:52
+#: app/templates/webhook/list_webhooks.html:58
+msgid "Label"
+msgstr "Nimike"
+
+#: app/templates/apprise/list_apprise.html:59
+msgid "URL"
+msgstr "URL"
+
+#: app/templates/apprise/list_apprise.html:61
+#: app/templates/email/list_emails.html:59
+#: app/templates/messages/list_messages.html:59
+#: app/templates/messages/view_message.html:36
+#: app/templates/reminders/view_reminder.html:47
+#: app/templates/webhook/list_webhooks.html:62
+msgid "Created At"
+msgstr "Luotu"
+
+#: app/templates/apprise/list_apprise.html:77
+#: app/templates/apprise/list_apprise.html:132
+#: app/templates/user_smtp/list_smtp.html:79
+#: app/templates/user_smtp/list_smtp.html:147
+#: app/templates/webhook/list_webhooks.html:79
+#: app/templates/webhook/list_webhooks.html:138
+msgid "Edit"
+msgstr "Muokkaa"
+
+#: app/templates/apprise/list_apprise.html:80
+#: app/templates/apprise/list_apprise.html:135
+#: app/templates/user_smtp/list_smtp.html:82
+#: app/templates/user_smtp/list_smtp.html:150
+msgid "Cannot edit while in use"
+msgstr "Ei voi muokata käytön aikana"
+
+#: app/templates/apprise/list_apprise.html:88
+#: app/templates/apprise/list_apprise.html:143
+#: app/templates/webhook/list_webhooks.html:91
+#: app/templates/webhook/list_webhooks.html:150
+msgid "Test"
+msgstr "Testi"
+
+#: app/templates/apprise/list_apprise.html:103
+#: app/templates/apprise/list_apprise.html:158
+#: app/templates/user_smtp/list_smtp.html:106
+#: app/templates/user_smtp/list_smtp.html:174
+msgid "Cannot delete while in use"
+msgstr "Ei voi poistaa käytön aikana"
+
+#: app/templates/apprise/list_apprise.html:119
+msgid "URL:"
+msgstr "URL:"
+
+#: app/templates/apprise/list_apprise.html:122
+#: app/templates/user_smtp/list_smtp.html:137
+#: app/templates/webhook/list_webhooks.html:128
+msgid "Enabled:"
+msgstr "Käytössä:"
+
+#: app/templates/apprise/list_apprise.html:125
+#: app/templates/user_smtp/list_smtp.html:140
+#: app/templates/webhook/list_webhooks.html:131
+msgid "Created:"
+msgstr "Luotu:"
+
+#: app/templates/auth/bootstrap.html:14
+msgid "Create Admin Account"
+msgstr "Luo ylläpitäjän tili"
+
+#: app/templates/auth/bootstrap.html:16
+msgid "Let’s get started by creating your first admin account."
+msgstr "Aloitetaan luomalla ensimmäinen ylläpitäjätili."
+
+#: app/templates/auth/bootstrap.html:75
+msgid "Create Admin"
+msgstr "Luo ylläpitäjä"
+
+#: app/templates/auth/forgot_password.html:12
+msgid "Forgot Password"
+msgstr "Unohditko salasanan"
+
+#: app/templates/auth/forgot_password.html:15
+msgid ""
+"Enter your username and email. We'll send you a link to reset your password."
+msgstr ""
+"Syötä käyttäjänimesi ja sähköpostiosoitteesi. Lähetämme sinulle linkin "
+"salasanan nollaamiseksi."
+
+#: app/templates/auth/forgot_username.html:12
+msgid "Forgot Username"
+msgstr "Unohditko käyttäjänimen"
+
+#: app/templates/auth/forgot_username.html:15
+msgid "Enter your email address, and we'll send you your username."
+msgstr "Syötä sähköpostiosoitteesi, niin lähetämme sinulle käyttäjänimesi."
+
+#: app/templates/auth/forgot_username.html:40
+msgid "Send Username"
+msgstr "Lähetä käyttäjänimi"
+
+#: app/templates/auth/login.html:12 app/templates/auth/login.html:54
+msgid "Log In"
+msgstr "Kirjaudu sisään"
+
+#: app/templates/auth/login.html:62
+msgid "Forgot Username?"
+msgstr "Unohditko käyttäjänimen?"
+
+#: app/templates/auth/login.html:64
+msgid "Forgot Password?"
+msgstr "Unohditko salasanan?"
+
+#: app/templates/auth/login.html:66 app/templates/auth/signup.html:12
+msgid "Sign Up"
+msgstr "Rekisteröidy"
+
+#: app/templates/auth/rate_limit.html:9
+msgid "Hold On"
+msgstr "Odota"
+
+#: app/templates/auth/rate_limit.html:11
+msgid "Too many failed login attempts. Please wait"
+msgstr "Liian monta epäonnistunutta kirjautumisyritystä. Ole hyvä ja odota"
+
+#: app/templates/auth/rate_limit.html:13
+msgid "seconds..."
+msgstr "sekuntia..."
+
+#: app/templates/auth/rate_limit.html:15
+msgid "Redirecting to login..."
+msgstr "Palaa hallintapaneeliin"
+
+#: app/templates/auth/reset_password.html:12
+#: app/templates/auth/reset_password.html:116
+msgid "Reset Password"
+msgstr "Nollaa salasana"
+
+#: app/templates/auth/reset_password.html:14
+msgid "Enter your username, email, and new password."
+msgstr "Syötä käyttäjänimesi, sähköpostiosoitteesi ja uusi salasanasi."
+
+#: app/templates/auth/signup.html:14
+msgid "Fill out the form to create your account."
+msgstr "Täytä lomake luodaksesi tilisi."
+
+#: app/templates/checkin/already_checked_in.html:10
+msgid "Already Checked In"
+msgstr "Viimeinen sisäänkirjautuminen"
+
+#: app/templates/checkin/already_checked_in.html:12
+msgid ""
+"You have already checked in for this item. No further action is needed at "
+"this time."
+msgstr ""
+"Olet jo kirjautunut tähän kohteeseen. Lisätoimia ei tarvita tällä hetkellä."
+
+#: app/templates/checkin/already_checked_in.html:16
+#: app/templates/checkin/disabled.html:16
+#: app/templates/checkin/executed_disabled.html:18
+msgid "Check-in for:"
+msgstr "Sisäänkirjautuminen:"
+
+#: app/templates/checkin/already_checked_in.html:21
+#: app/templates/checkin/disabled.html:21
+#: app/templates/checkin/executed_disabled.html:23
+#: app/templates/checkin/thank_you.html:19
+msgid "Return to Dashboard"
+msgstr "Palaa hallintapaneeliin"
+
+#: app/templates/checkin/disabled.html:10
+msgid "Check-In Disabled"
+msgstr "Sähköposti on poissa käytöstä"
+
+#: app/templates/checkin/disabled.html:12
+msgid "This check-in is currently disabled and cannot be completed."
+msgstr ""
+"Tämä kirjautuminen on tällä hetkellä poissa käytöstä eikä se voi olla "
+"valmis."
+
+#: app/templates/checkin/executed_disabled.html:11
+msgid "Already Executed & Disabled"
+msgstr "Jo suoritettu & pois käytöstä"
+
+#: app/templates/checkin/executed_disabled.html:14
+msgid ""
+"This check-in has already been executed and is now disabled. No further "
+"action is required."
+msgstr ""
+"Tämä kirjautuminen on jo suoritettu ja on nyt pois käytöstä. Lisätoimia ei "
+"tarvita."
+
+#: app/templates/checkin/thank_you.html:10
+msgid "Check-In Successful"
+msgstr "Sisäänkirjautuminen onnistui"
+
+#: app/templates/checkin/thank_you.html:11
+msgid "Thank you for checking in."
+msgstr "Kiitos sisäänkirjautumisesta."
+
+#: app/templates/checkin/thank_you.html:14
+msgid "Checked in for:"
+msgstr "Sisäänkirjautuminen:"
+
+#: app/templates/email/assign_smtp.html:11
+msgid "📧 Assign SMTP Config to:"
+msgstr "📧 Liitä SMTP-asetukset:"
+
+#: app/templates/email/assign_smtp.html:25
+msgid "No SMTP (Unassign)"
+msgstr "Ei SMTP-konfiguraatiota määritetty"
+
+#: app/templates/email/assign_smtp.html:26
+msgid "This email will not use any SMTP configuration."
+msgstr "Tätä sähköpostia ei käytetä SMTP-määrityksiin."
+
+#: app/templates/email/attach_files.html:12
+msgid "Attach Files for:"
+msgstr "Liitä tiedostot:"
+
+#: app/templates/email/attach_files.html:21
+msgid "Available Files"
+msgstr "Saatavilla olevat tiedostot"
+
+#: app/templates/email/attach_files.html:36
+msgid "No files found in the upload directory."
+msgstr "Tiedostoja ei löytynyt latauskansiosta."
+
+#: app/templates/email/attach_files.html:44
+msgid "Save Attachments"
+msgstr "Tallenna liitteet"
+
+#: app/templates/email/attach_files.html:54
+msgid "File Attach Notes"
+msgstr "Lisää liitteenä huomautuksia"
+
+#: app/templates/email/attach_files.html:63
+msgid "Important:"
+msgstr "Portti:"
+
+#: app/templates/email/attach_files.html:65
+msgid ""
+"Only files that are present in the 'uploads' folder (provided by your system"
+" administrator) will be shown here. If you do not see your file(s), please "
+"contact your Grylli administrator."
+msgstr ""
+"Vain tiedostot, jotka ovat 'uploads'-kansiossa (systeemin ylläpitäjän "
+"tarjoama), näytetään täällä. Jos et näe tiedostoasi/tiedostojasi, ota "
+"yhteyttä Grylli-ylläpitäjään."
+
+#: app/templates/email/attach_files.html:69
+msgid "Accepted file types:"
+msgstr "Hyväksytyt tiedostotyypit:"
+
+#: app/templates/email/attach_files.html:71
+msgid "Documents:"
+msgstr "Asiakirjat:"
+
+#: app/templates/email/attach_files.html:73
+msgid "Images:"
+msgstr "Kuvat:"
+
+#: app/templates/email/attach_files.html:75
+msgid "Audio:"
+msgstr "Ääni:"
+
+#: app/templates/email/attach_files.html:79
+msgid "Maximum file size:"
+msgstr "Suurin tiedostokoko:"
+
+#: app/templates/email/attach_files.html:80
+msgid "10 MB per file"
+msgstr "10 MB per tiedosto"
+
+#: app/templates/email/attach_files.html:83
+msgid "Total upload size:"
+msgstr "Kokonaislatauskoko:"
+
+#: app/templates/email/attach_files.html:84
+msgid "20 MB (all files combined)"
+msgstr "20 MB (kaikki tiedostot yhteensä)"
+
+#: app/templates/email/edit_message.html:12
+#: app/templates/email/list_emails.html:75
+#: app/templates/email/list_emails.html:177
+msgid "Edit Email"
+msgstr "Muokkaa sähköpostia"
+
+#: app/templates/email/edit_message.html:12
+msgid "Create Email"
+msgstr "Luo sähköposti"
+
+#: app/templates/email/edit_message.html:28
+msgid "To (Recipient Email)"
+msgstr "Vastaanottajalle (sähköpostiosoite)"
+
+#: app/templates/email/edit_message.html:35
+#: app/templates/email/list_emails.html:57
+#: app/templates/email/view_config.html:18
+#: app/templates/messages/create_message.html:36
+#: app/templates/messages/edit_message.html:30
+#: app/templates/messages/list_messages.html:58
+#: app/templates/messages/view_message.html:18
+#: app/templates/reminders/create_reminder.html:30
+#: app/templates/reminders/edit_reminder.html:24
+#: app/templates/reminders/list_reminders.html:57
+#: app/templates/reminders/view_reminder.html:17
+msgid "Subject"
+msgstr "Aihe"
+
+#: app/templates/email/edit_message.html:42
+#: app/templates/email/view_config.html:28
+msgid "Body"
+msgstr "Viesti"
+
+#: app/templates/email/edit_message.html:50
+msgid "Save Email"
+msgstr "Tallenna sähköposti"
+
+#: app/templates/email/list_emails.html:48
+msgid "Add Email"
+msgstr "Lisää sähköposti"
+
+#: app/templates/email/list_emails.html:58
+#: app/templates/reminders/assign_email_reminder.html:77
+msgid "To"
+msgstr "Vastaanottaja"
+
+#: app/templates/email/list_emails.html:78
+#: app/templates/email/list_emails.html:180
+msgid "Disable to edit email"
+msgstr "Testisähköpostin lähetys epäonnistui:"
+
+#: app/templates/email/list_emails.html:84
+#: app/templates/email/list_emails.html:186
+msgid "Attach Files"
+msgstr "Liitä tiedostot"
+
+#: app/templates/email/list_emails.html:87
+#: app/templates/email/list_emails.html:189
+msgid "Disable to attach files"
+msgstr "Liitä tiedostot"
+
+#: app/templates/email/list_emails.html:93
+#: app/templates/email/list_emails.html:195
+msgid "Attach SMTP Config"
+msgstr "Liitä SMTP-asetukset"
+
+#: app/templates/email/list_emails.html:96
+#: app/templates/email/list_emails.html:198
+msgid "Disable to assign SMTP"
+msgstr "Poista käytöstä SMTP:n määrittäminen"
+
+#: app/templates/email/list_emails.html:102
+#: app/templates/email/list_emails.html:204
+msgid "Schedule Check-In"
+msgstr "Ajoita sisäänkirjautuminen"
+
+#: app/templates/email/list_emails.html:105
+#: app/templates/email/list_emails.html:207
+msgid "Disable to schedule check-in"
+msgstr "Ajoita sisäänkirjautuminen"
+
+#: app/templates/email/list_emails.html:110
+#: app/templates/email/list_emails.html:212
+#: app/templates/messages/list_messages.html:99
+#: app/templates/messages/list_messages.html:184
+#: app/templates/reminders/list_reminders.html:93
+#: app/templates/reminders/list_reminders.html:178
+msgid "View Details"
+msgstr "Näytä tiedot"
+
+#: app/templates/email/list_emails.html:118
+#: app/templates/email/list_emails.html:220
+msgid "Send this email to yourself to preview it."
+msgstr "Lähetä tämä sähköposti itsellesi esikatselua varten."
+
+#: app/templates/email/list_emails.html:136
+#: app/templates/email/list_emails.html:238
+msgid "Toggle Email On/Off"
+msgstr "Vaihda sähköposti päälle/pois"
+
+#: app/templates/email/list_emails.html:139
+#: app/templates/email/list_emails.html:241
+msgid "Email is enabled"
+msgstr "Sähköposti on käytössä"
+
+#: app/templates/email/list_emails.html:141
+#: app/templates/email/list_emails.html:243
+msgid "Email is disabled"
+msgstr "Sähköposti on poissa käytöstä"
+
+#: app/templates/email/list_emails.html:157
+#: app/templates/email/view_config.html:51
+#: app/templates/messages/list_messages.html:142
+#: app/templates/reminders/list_reminders.html:140
+msgid "Label:"
+msgstr "Nimike:"
+
+#: app/templates/email/list_emails.html:161
+#: app/templates/messages/list_messages.html:146
+#: app/templates/reminders/list_reminders.html:144
+#: app/templates/reminders/view_reminder.html:98
+msgid "Subject:"
+msgstr "Aihe"
+
+#: app/templates/email/list_emails.html:165
+msgid "To:"
+msgstr "To:"
+
+#: app/templates/email/list_emails.html:169
+#: app/templates/messages/list_messages.html:150
+msgid "Created At:"
+msgstr "Luotu"
+
+#: app/templates/email/list_emails.html:255
+msgid "How to create and send an email"
+msgstr "Kuinka luoda ja lähettää sähköposti"
+
+#: app/templates/email/list_emails.html:262
+msgid ""
+"Click “Add Email” and fill out the subject, content, and recipient address."
+msgstr ""
+"Napsauta “Lisää sähköposti” ja täytä aihe, sisältö ja vastaanottajan osoite."
+
+#: app/templates/email/list_emails.html:263
+msgid "Attach any optional files (if needed)."
+msgstr "Liitä valinnaiset tiedostot (jos tarpeen)."
+
+#: app/templates/email/list_emails.html:264
+msgid ""
+"Click 🧩 to assign a single SMTP configuration that will be used to send the "
+"email."
+msgstr ""
+"Napsauta 🧩 määrittääksesi yhden SMTP-konfiguraation, jota käytetään "
+"sähköpostin lähettämiseen."
+
+#: app/templates/email/list_emails.html:265
+msgid "Click ⏱️ to set a check-in interval and grace period for the email."
+msgstr ""
+"Napsauta ⏱️ asettaaksesi sisäänkirjautumisvälin ja armollisen ajan "
+"sähköpostille."
+
+#: app/templates/email/list_emails.html:266
+msgid "Enable the email using the 🔴/🟢 toggle button."
+msgstr "Ota sähköposti käyttöön 🔴/🟢 kytkimellä."
+
+#: app/templates/email/list_emails.html:267
+msgid ""
+"Click 🧪 to test the email by sending it to yourself (not the recipient)."
+msgstr ""
+"Napsauta 🧪 testataksesi sähköpostin lähettämällä sen itsellesi (ei "
+"vastaanottajalle)."
+
+#: app/templates/email/list_emails.html:268
+msgid ""
+"If you don’t check in before the grace period ends, the email will be "
+"automatically sent."
+msgstr ""
+"Jos et kirjaudu sisään ennen armollisen ajan päättymistä, sähköposti "
+"lähetetään automaattisesti."
+
+#: app/templates/email/list_emails.html:269
+msgid "You can preview the email configuration using 🔍."
+msgstr "Voit esikatsella sähköpostikonfiguraation käyttämällä 🔍."
+
+#: app/templates/email/list_emails.html:270
+msgid "Once a secure email is sent, it will be automatically disabled."
+msgstr ""
+"Kun suojattu sähköposti on lähetetty, se poistetaan automaattisesti "
+"käytöstä."
+
+#: app/templates/email/schedule_email.html:9
+msgid "Schedule Email"
+msgstr "Aikatauluta sähköposti"
+
+#: app/templates/email/schedule_email.html:18
+#: app/templates/messages/schedule_message.html:18
+msgid "Years"
+msgstr "Vuodet"
+
+#: app/templates/email/schedule_email.html:19
+#: app/templates/messages/schedule_message.html:19
+msgid "Months"
+msgstr "Kuukaudet"
+
+#: app/templates/email/schedule_email.html:20
+#: app/templates/messages/schedule_message.html:20
+msgid "Weeks"
+msgstr "Viikot"
+
+#: app/templates/email/schedule_email.html:21
+#: app/templates/messages/schedule_message.html:21
+msgid "Days"
+msgstr "Päivät"
+
+#: app/templates/email/schedule_email.html:22
+#: app/templates/messages/schedule_message.html:22
+msgid "Hours"
+msgstr "Tunnit"
+
+#: app/templates/email/schedule_email.html:23
+#: app/templates/messages/schedule_message.html:23
+msgid "Minutes"
+msgstr "Minuutit"
+
+#: app/templates/email/schedule_email.html:28
+#: app/templates/messages/schedule_message.html:28
+msgid "Check-in"
+msgstr "Sisäänkirjautuminen"
+
+#: app/templates/email/schedule_email.html:51
+#: app/templates/messages/schedule_message.html:51
+#: app/templates/messages/view_message.html:26
+msgid "Grace Period"
+msgstr "Armoaika"
+
+#: app/templates/email/schedule_email.html:80
+#: app/templates/messages/schedule_message.html:80
+#: app/templates/reminders/schedule_reminder.html:47
+msgid "Save Schedule"
+msgstr "Tallenna aikataulu"
+
+#: app/templates/email/view_config.html:9
+msgid "Email Configuration"
+msgstr "Sähköpostin konfiguraatio"
+
+#: app/templates/email/view_config.html:22
+msgid "Recipient"
+msgstr "Vastaanottaja"
+
+#: app/templates/email/view_config.html:33
+msgid "Attached Files"
+msgstr "Liitetyt tiedostot"
+
+#: app/templates/email/view_config.html:39
+msgid "No files attached"
+msgstr "Ei tiedostoja liitetty"
+
+#: app/templates/email/view_config.html:46
+#: app/templates/reminders/assign_email_reminder.html:20
+msgid "SMTP Configuration"
+msgstr "SMTP-konfiguraatio"
+
+#: app/templates/email/view_config.html:54
+#: app/templates/user_smtp/list_smtp.html:122
+msgid "Host:"
+msgstr "Isäntä:"
+
+#: app/templates/email/view_config.html:57
+#: app/templates/user_smtp/list_smtp.html:128
+msgid "Username:"
+msgstr "Käyttäjänimi:"
+
+#: app/templates/email/view_config.html:60
+#: app/templates/user_smtp/list_smtp.html:134
+msgid "TLS:"
+msgstr "TLS:"
+
+#: app/templates/email/view_config.html:64
+msgid "No SMTP configuration assigned"
+msgstr "Ei SMTP-konfiguraatiota määritetty"
+
+#: app/templates/email/view_config.html:69
+msgid "Schedule Information"
+msgstr "Aikataulutiedot"
+
+#: app/templates/email/view_config.html:72
+msgid "Check-in Interval:"
+msgstr "Sisäänkirjautumisväli:"
+
+#: app/templates/email/view_config.html:72
+#: app/templates/email/view_config.html:75
+msgid "minutes"
+msgstr "minuutit"
+
+#: app/templates/email/view_config.html:75
+msgid "Grace Period:"
+msgstr "Armoaika:"
+
+#: app/templates/email/view_config.html:79
+msgid "Last Check-in:"
+msgstr "Viimeisin sisäänkirjautuminen:"
+
+#: app/templates/email/view_config.html:82
+msgid "No check-in has occurred yet"
+msgstr "Sisäänkirjautumista ei ole vielä tapahtunut"
+
+#: app/templates/email/view_config.html:92
+msgid "Back to Emails"
+msgstr "Takaisin Sähköposteihin"
+
+#: app/templates/errors/500.html:4
+msgid "Something went wrong"
+msgstr "Jotain meni pieleen"
+
+#: app/templates/errors/500.html:6
+msgid ""
+"An unexpected error occurred. Please try again later or contact support."
+msgstr ""
+"Tapahtui odottamaton virhe. Yritä myöhemmin uudelleen tai ota yhteyttä "
+"tukeen."
+
+#: app/templates/locale/redirect_after_lang_set.html:15
+msgid "Switching Language..."
+msgstr "Vaihdetaan Kieltä..."
+
+#: app/templates/locale/redirect_after_lang_set.html:18
+msgid "Applying new language..."
+msgstr "Soveltaminen uusi kieli..."
+
+#: app/templates/messages/assign_destinations.html:13
+#: app/templates/reminders/assign_destinations.html:12
+msgid "Assign Destinations for"
+msgstr "Määritä kohteet"
+
+#: app/templates/messages/assign_destinations.html:62
+#: app/templates/reminders/assign_destinations.html:60
+msgid "Save Destinations"
+msgstr "Tallenna kohteet"
+
+#: app/templates/messages/create_message.html:17
+msgid "Edit Notificaton"
+msgstr "Muokkaa ilmoitusta"
+
+#: app/templates/messages/create_message.html:19
+msgid "Create Notification"
+msgstr "Luo ilmoitus"
+
+#: app/templates/messages/create_message.html:43
+#: app/templates/messages/edit_message.html:37
+#: app/templates/messages/view_message.html:42
+#: app/templates/reminders/create_reminder.html:37
+#: app/templates/reminders/edit_reminder.html:31
+#: app/templates/reminders/view_reminder.html:53
+msgid "Content"
+msgstr "Sisältö"
+
+#: app/templates/messages/create_message.html:51
+msgid "Save Notification"
+msgstr "Tallenna ilmoitus"
+
+#: app/templates/messages/edit_message.html:15
+#: app/templates/messages/list_messages.html:74
+#: app/templates/messages/list_messages.html:158
+msgid "Edit Notification"
+msgstr "Muokkaa ilmoitusta"
+
+#: app/templates/messages/edit_message.html:45
+msgid "Update Notification"
+msgstr "Päivitä ilmoitus"
+
+#: app/templates/messages/list_messages.html:49
+msgid "Add Notification"
+msgstr "Lisää ilmoitus"
+
+#: app/templates/messages/list_messages.html:77
+#: app/templates/messages/list_messages.html:161
+msgid "Disable to edit notification"
+msgstr "Muokkaa ilmoitusta"
+
+#: app/templates/messages/list_messages.html:83
+#: app/templates/messages/list_messages.html:167
+#: app/templates/reminders/list_reminders.html:78
+#: app/templates/reminders/list_reminders.html:163
+msgid "Assign Destinations"
+msgstr "Määritä kohteet"
+
+#: app/templates/messages/list_messages.html:86
+#: app/templates/messages/list_messages.html:170
+msgid "Disable to assign destinations"
+msgstr "Määritä kohteet"
+
+#: app/templates/messages/list_messages.html:92
+#: app/templates/messages/list_messages.html:176
+#: app/templates/reminders/list_reminders.html:88
+#: app/templates/reminders/list_reminders.html:173
+msgid "Set Schedule"
+msgstr "Aseta aikataulu"
+
+#: app/templates/messages/list_messages.html:95
+#: app/templates/messages/list_messages.html:179
+msgid "Disable to set schedule"
+msgstr "Aseta aikataulu"
+
+#: app/templates/messages/list_messages.html:107
+#: app/templates/messages/list_messages.html:192
+msgid "Send Test Notification"
+msgstr "Muokkaa ilmoitusta"
+
+#: app/templates/messages/list_messages.html:122
+#: app/templates/messages/list_messages.html:209
+msgid "Toggle Message On/Off"
+msgstr "Vaihda viesti päälle/pois"
+
+#: app/templates/messages/list_messages.html:124
+#: app/templates/messages/list_messages.html:211
+msgid "Notification is enabled"
+msgstr "Ilmoitus on käytössä"
+
+#: app/templates/messages/list_messages.html:126
+#: app/templates/messages/list_messages.html:213
+msgid "Notification is disabled"
+msgstr "Ilmoitus on pois käytöstä"
+
+#: app/templates/messages/list_messages.html:223
+msgid "How to create and send a notification"
+msgstr "Kuinka luoda ja lähettää ilmoitus"
+
+#: app/templates/messages/list_messages.html:233
+msgid "Click “Add notification” and fill out the subject and content fields."
+msgstr "Napsauta “Lisää ilmoitus” ja täytä aihe ja sisältö."
+
+#: app/templates/messages/list_messages.html:234
+msgid "Save the notification to return to the overview."
+msgstr "Tallenna ilmoitus palataksesi yleisnäkymään."
+
+#: app/templates/messages/list_messages.html:235
+msgid "You need to create at least one apprise or webhook destination."
+msgstr "Sinun on luotava vähintään yksi apprise- tai webhook-kohde."
+
+#: app/templates/messages/list_messages.html:236
+msgid "You can create as many destinations as you like."
+msgstr "Voit luoda niin monta kohdetta kuin haluat."
+
+#: app/templates/messages/list_messages.html:237
+msgid "Click 🧩 to assign one or more Apprise and/or Webhook destinations."
+msgstr ""
+"Napsauta 🧩 määrittääksesi yhden tai useamman Apprise- ja/tai Webhook-"
+"kohteen."
+
+#: app/templates/messages/list_messages.html:238
+msgid "Click ⏱️ to set a schedule and check-in interval."
+msgstr "Napsauta ⏱️ asettaaksesi aikataulun ja sisäänkirjautumisvälin."
+
+#: app/templates/messages/list_messages.html:239
+msgid "Enable the notification using the 🔴/🟢 toggle button."
+msgstr "Ota ilmoitus käyttöön 🔴/🟢 -painikkeella."
+
+#: app/templates/messages/list_messages.html:240
+msgid ""
+"If you don’t check in before the grace period ends, the notification will be"
+" sent."
+msgstr ""
+"Jos et kirjaudu sisään ennen armonajan päättymistä, ilmoitus lähetetään."
+
+#: app/templates/messages/list_messages.html:241
+msgid "You can preview the notification config using 🔍."
+msgstr "Voit esikatsella ilmoitusasetukset käyttämällä 🔍."
+
+#: app/templates/messages/list_messages.html:242
+msgid "Once a notification is sent, it will be automatically disabled."
+msgstr "Kun ilmoitus on lähetetty, se poistetaan automaattisesti käytöstä."
+
+#: app/templates/messages/schedule_message.html:9
+msgid "Schedule Message"
+msgstr "Aikatauluviesti"
+
+#: app/templates/messages/view_message.html:9
+msgid "Notifications Details"
+msgstr "Ilmoituksen tiedot"
+
+#: app/templates/messages/view_message.html:22
+msgid "Check-in Interval"
+msgstr "Sisäänkirjautumisväli"
+
+#: app/templates/messages/view_message.html:31
+msgid "Last Check-in"
+msgstr "Viimeinen sisäänkirjautuminen"
+
+#: app/templates/messages/view_message.html:48
+#: app/templates/reminders/view_reminder.html:59
+msgid "Apprise URLs"
+msgstr "Apprise URL-osoitteet"
+
+#: app/templates/messages/view_message.html:54
+#: app/templates/messages/view_message.html:64
+#: app/templates/reminders/view_reminder.html:65
+#: app/templates/reminders/view_reminder.html:75
+#: app/templates/reminders/view_reminder.html:85
+msgid "None assigned."
+msgstr "Ei määritettyjä."
+
+#: app/templates/messages/view_message.html:73
+msgid "Back to Notifications"
+msgstr "Takaisin ilmoituksiin"
+
+#: app/templates/mfa/challenge.html:5 app/templates/mfa/settings.html:5
+msgid "Two-Factor Authentication (MFA)"
+msgstr "Kaksivaiheinen todennus (MFA)"
+
+#: app/templates/mfa/recovery_codes.html:4
+msgid "Your Recovery Codes"
+msgstr "Palautuskoodisi"
+
+#: app/templates/mfa/recovery_codes.html:7
+msgid "Save these recovery codes in a safe place!"
+msgstr "Tallenna nämä palautuskoodit turvalliseen paikkaan!"
+
+#: app/templates/mfa/recovery_codes.html:10
+msgid ""
+"Each code can be used once if you lose access to your authenticator. These "
+"codes will not be shown again."
+msgstr ""
+"Jokainen koodi voidaan käyttää kerran, jos menetät pääsyn "
+"todennussovellukseesi. Näitä koodeja ei näytetä uudelleen."
+
+#: app/templates/mfa/recovery_codes.html:24
+msgid "OK, I've saved them"
+msgstr "OK, olen tallentanut ne"
+
+#: app/templates/mfa/settings.html:12
+msgid "MFA QR Code"
+msgstr "MFA QR-koodi"
+
+#: app/templates/mfa/settings.html:15
+msgid "Manual Entry:"
+msgstr "Manuaalinen syöttö:"
+
+#: app/templates/partials/admin_nav.html:21
+msgid "Administration"
+msgstr "Ylläpito"
+
+#: app/templates/partials/admin_nav.html:37
+#: app/templates/partials/shared_nav.html:34
+#: app/templates/partials/shared_nav.html:78
+#: app/templates/partials/shared_nav.html:117
+msgid "Overview"
+msgstr "Yleiskatsaus"
+
+#: app/templates/partials/footer.html:7
+msgid "Toggle Theme"
+msgstr "Vaihda teema"
+
+#: app/templates/partials/footer.html:32
+msgid "Theme"
+msgstr "Teema"
+
+#: app/templates/partials/head.html:7
+msgid "Grylli"
+msgstr "Grylli"
+
+#: app/templates/partials/header.html:6 app/templates/partials/sidebar.html:32
+#: app/templates/partials/sidebar.html:66
+msgid "Home"
+msgstr "Koti"
+
+#: app/templates/partials/header.html:55
+msgid "Account"
+msgstr "Tili"
+
+#: app/templates/partials/header.html:61
+msgid "MFA"
+msgstr "MFA"
+
+#: app/templates/partials/header.html:67
+msgid "About"
+msgstr "Tietoja"
+
+#: app/templates/partials/header.html:73
+msgid "Privacy"
+msgstr "Tietosuoja"
+
+#: app/templates/partials/header.html:79
+msgid "System Info"
+msgstr "Järjestelmän tiedot"
+
+#: app/templates/partials/header.html:114
+msgid "Logout"
+msgstr "Kirjaudu ulos"
+
+#: app/templates/partials/shared_nav.html:33
+msgid "Overview of notification settings"
+msgstr "Yleiskatsaus ilmoitusasetuksiin"
+
+#: app/templates/partials/shared_nav.html:38
+msgid "Configure Apprise services"
+msgstr "Määritä Apprise-palvelut"
+
+#: app/templates/partials/shared_nav.html:39
+msgid "Apprise"
+msgstr "Apprise"
+
+#: app/templates/partials/shared_nav.html:43
+msgid "Configure Webhook integrations"
+msgstr "Määritä Webhook-integraatiot"
+
+#: app/templates/partials/shared_nav.html:77
+msgid "Overview of secure email messages"
+msgstr "Turvallisten sähköpostiviestien yleiskatsaus"
+
+#: app/templates/partials/shared_nav.html:82
+msgid "Configure SMTP email settings"
+msgstr "Määritä SMTP-sähköpostiasetukset"
+
+#: app/templates/partials/shared_nav.html:83
+#: app/templates/reminders/view_reminder.html:79
+msgid "SMTP"
+msgstr "SMTP"
+
+#: app/templates/partials/shared_nav.html:100
+#: app/templates/reminders/list_reminders.html:8
+msgid "Reminders"
+msgstr "minuutit"
+
+#: app/templates/partials/shared_nav.html:116
+msgid "Overview of reminders"
+msgstr "Muistutusten yleiskatsaus"
+
+#: app/templates/partials/sidebar.html:13
+#: app/templates/partials/sidebar.html:47
+msgid "Menu"
+msgstr "Valikko"
+
+#: app/templates/reminders/assign_email_reminder.html:12
+msgid "Link Email Reminder for"
+msgstr "Linkitä sähköpostimuistutus kohteelle"
+
+#: app/templates/reminders/assign_email_reminder.html:30
+#: app/templates/reminders/assign_email_reminder.html:64
+msgid "None (Unassign)"
+msgstr "Ei SMTP-konfiguraatiota määritetty"
+
+#: app/templates/reminders/assign_email_reminder.html:43
+msgid "No sender address"
+msgstr "Ei lähettäjän osoitetta"
+
+#: app/templates/reminders/assign_email_reminder.html:54
+msgid "Email Message"
+msgstr "Aikatauluviesti"
+
+#: app/templates/reminders/assign_email_reminder.html:77
+msgid "No subject"
+msgstr "Aihe"
+
+#: app/templates/reminders/assign_email_reminder.html:90
+msgid "Save Email Reminder"
+msgstr "Tallenna sähköposti"
+
+#: app/templates/reminders/create_reminder.html:12
+#: app/templates/reminders/edit_reminder.html:10
+#: app/templates/reminders/list_reminders.html:73
+#: app/templates/reminders/list_reminders.html:158
+msgid "Edit Reminder"
+msgstr "Muokkaa sähköpostia"
+
+#: app/templates/reminders/create_reminder.html:14
+msgid "Create Reminder"
+msgstr "Luo sähköposti"
+
+#: app/templates/reminders/create_reminder.html:45
+msgid "Save Reminder"
+msgstr "Tallenna sähköposti"
+
+#: app/templates/reminders/edit_reminder.html:39
+msgid "Update Reminder"
+msgstr "Päivitä muistutus"
+
+#: app/templates/reminders/list_reminders.html:48
+msgid "Add Reminder"
+msgstr "Lisää sähköposti"
+
+#: app/templates/reminders/list_reminders.html:58
+#: app/templates/reminders/view_reminder.html:21
+msgid "Start At"
+msgstr "Aloitetaan TLS"
+
+#: app/templates/reminders/list_reminders.html:59
+msgid "Recurrence"
+msgstr "Toistuvuus"
+
+#: app/templates/reminders/list_reminders.html:69
+#: app/templates/reminders/list_reminders.html:153
+#: app/templates/reminders/view_reminder.html:26
+msgid "One-time"
+msgstr "Kertaluonteinen"
+
+#: app/templates/reminders/list_reminders.html:83
+msgid "Assign Email Reminder"
+msgstr "Määritä sähköpostimuistutus"
+
+#: app/templates/reminders/list_reminders.html:102
+#: app/templates/reminders/list_reminders.html:187
+msgid "Send Test Reminder"
+msgstr "Lähetä testisähköposti"
+
+#: app/templates/reminders/list_reminders.html:120
+#: app/templates/reminders/list_reminders.html:205
+msgid "Toggle Reminder On/Off"
+msgstr "Vaihda sähköposti päälle/pois"
+
+#: app/templates/reminders/list_reminders.html:122
+#: app/templates/reminders/list_reminders.html:207
+msgid "Reminder is enabled"
+msgstr "Sähköposti on käytössä"
+
+#: app/templates/reminders/list_reminders.html:124
+#: app/templates/reminders/list_reminders.html:209
+msgid "Reminder is disabled"
+msgstr "Sähköposti on poissa käytöstä"
+
+#: app/templates/reminders/list_reminders.html:148
+msgid "Start At:"
+msgstr "Aloitetaan TLS"
+
+#: app/templates/reminders/list_reminders.html:152
+msgid "Recurrence:"
+msgstr "Toistuvuus:"
+
+#: app/templates/reminders/list_reminders.html:168
+msgid "Link Email Reminder"
+msgstr "Linkitä sähköpostimuistutus"
+
+#: app/templates/reminders/list_reminders.html:218
+msgid "How to use reminders"
+msgstr "Kuinka hallita käyttäjiä"
+
+#: app/templates/reminders/list_reminders.html:231
+msgid "➕ Click “Add Reminder” and fill out the subject and content fields."
+msgstr "Napsauta “Lisää ilmoitus” ja täytä aihe ja sisältö."
+
+#: app/templates/reminders/list_reminders.html:232
+msgid "💾 Save the reminder to return to the overview."
+msgstr "Tallenna ilmoitus palataksesi yleisnäkymään."
+
+#: app/templates/reminders/list_reminders.html:233
+msgid ""
+"📣 Assign Apprise, 🌐 Webhook, and/or 📧 Email (SMTP) destinations as needed."
+msgstr ""
+"📣 Määritä Apprise, 🌐 Webhook ja/tai 📧 Email (SMTP) kohteet tarpeen mukaan."
+
+#: app/templates/reminders/list_reminders.html:234
+msgid ""
+"⏱️ Set the schedule using the schedule button to define when reminders are "
+"sent."
+msgstr ""
+"⏱️ Aseta aikataulu käyttämällä aikataulupainiketta määritelläksesi, milloin "
+"muistutukset lähetetään."
+
+#: app/templates/reminders/list_reminders.html:235
+msgid ""
+"🔍 Click “View Details” to review or edit assigned destinations and other "
+"settings."
+msgstr ""
+"🔍 Napsauta “Näytä tiedot” tarkistaaksesi tai muokataksesi määritettyjä "
+"kohteita ja muita asetuksia."
+
+#: app/templates/reminders/list_reminders.html:236
+msgid ""
+"🧪 Click the Test button to verify all assigned destinations are working "
+"correctly."
+msgstr ""
+"🧪 Napsauta Testipainiketta varmistaaksesi, että kaikki määritetyt kohteet "
+"toimivat oikein."
+
+#: app/templates/reminders/list_reminders.html:237
+msgid "🔴/🟢 Enable or disable the reminder using the toggle button."
+msgstr "Ota sähköposti käyttöön 🔴/🟢 kytkimellä."
+
+#: app/templates/reminders/list_reminders.html:238
+msgid "📤 Reminders will be sent as scheduled to the assigned destinations."
+msgstr ""
+"📤 Muistutukset lähetetään aikataulun mukaisesti määritettyihin kohteisiin."
+
+#: app/templates/reminders/schedule_reminder.html:8
+msgid "Schedule Reminder"
+msgstr "Aikatauluta sähköposti"
+
+#: app/templates/reminders/schedule_reminder.html:15
+msgid "Start Date & Time"
+msgstr "Aloituspäivämäärä & -aika"
+
+#: app/templates/reminders/schedule_reminder.html:22
+#: app/templates/reminders/view_reminder.html:25
+msgid "Recurrence Rule"
+msgstr "Toistuvuussääntö"
+
+#: app/templates/reminders/schedule_reminder.html:24
+msgid "(Optional) Enter RRULE or leave blank for one-time."
+msgstr "(Valinnainen) Syötä RRULE tai jätä tyhjäksi, jos on kertaluonteinen."
+
+#: app/templates/reminders/schedule_reminder.html:30
+msgid "End Date"
+msgstr "Lähetä testi"
+
+#: app/templates/reminders/schedule_reminder.html:32
+msgid "(Optional) Stop sending after this date."
+msgstr "(Valinnainen) Lopeta lähettäminen tämän päivämäärän jälkeen."
+
+#: app/templates/reminders/schedule_reminder.html:38
+#: app/templates/reminders/view_reminder.html:36
+msgid "Max Occurrences"
+msgstr "Maksimi esiintymät"
+
+#: app/templates/reminders/schedule_reminder.html:40
+msgid "(Optional) Stop after this many reminders."
+msgstr "(Valinnainen) Lopeta näin monen muistutuksen jälkeen."
+
+#: app/templates/reminders/schedule_reminder.html:56
+msgid "Help for RRULE syntax"
+msgstr "Apua RRULE-syntaksille"
+
+#: app/templates/reminders/schedule_reminder.html:66
+msgid "Several tools are available to help generate an RRULE."
+msgstr "Useita työkaluja on saatavilla RRULE:n luomiseksi."
+
+#: app/templates/reminders/schedule_reminder.html:67
+msgid "Use a search engine or AI tool to assist."
+msgstr "Käytä hakukonetta tai tekoälytyökalua avuksi."
+
+#: app/templates/reminders/schedule_reminder.html:69
+msgid "Here is an example of one such online tool:"
+msgstr "Tässä esimerkki yhdestä tällaisesta verkkotyökalusta:"
+
+#: app/templates/reminders/schedule_reminder.html:73
+msgid "RRULE Generator Tool"
+msgstr "RRULE Generaattorityökalu"
+
+#: app/templates/reminders/schedule_reminder.html:77
+msgid "See here for some common examples:"
+msgstr "Katso täältä joitakin yleisiä esimerkkejä:"
+
+#: app/templates/reminders/schedule_reminder.html:81
+msgid "RRULE Help (GitHub)"
+msgstr "RRULE-apu (GitHub)"
+
+#: app/templates/reminders/view_reminder.html:8
+msgid "Reminder Details"
+msgstr "Näytä tiedot"
+
+#: app/templates/reminders/view_reminder.html:30
+msgid "End At"
+msgstr "Lähetä testi"
+
+#: app/templates/reminders/view_reminder.html:42
+msgid "Last Sent"
+msgstr "Viimeinen sisäänkirjautuminen"
+
+#: app/templates/reminders/view_reminder.html:91
+msgid "Email Template"
+msgstr "Sähköpostin vahvistin"
+
+#: app/templates/reminders/view_reminder.html:103
+msgid "No email linked."
+msgstr "Sähköposti on käytössä"
+
+#: app/templates/reminders/view_reminder.html:111
+msgid "Back to Reminders"
+msgstr "Takaisin Sähköposteihin"
+
+#: app/templates/user_smtp/create_smtp.html:10
+msgid "Create SMTP Destination"
+msgstr "Luo SMTP-kohde"
+
+#: app/templates/user_smtp/create_smtp.html:69
+#: app/templates/user_smtp/edit_smtp.html:84
+msgid "Hold to reveal"
+msgstr "Pidä painettuna paljastaaksesi"
+
+#: app/templates/user_smtp/create_smtp.html:92
+#: app/templates/user_smtp/edit_smtp.html:107
+msgid "Use TLS"
+msgstr "Käytä TLS:ää"
+
+#: app/templates/user_smtp/edit_smtp.html:10
+msgid "Edit SMTP Destination"
+msgstr "Luo SMTP-kohde"
+
+#: app/templates/user_smtp/list_smtp.html:9
+msgid "SMTP Destinations"
+msgstr "SMTP-kohteet"
+
+#: app/templates/user_smtp/list_smtp.html:44
+msgid "Add SMTP"
+msgstr "Lisää SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:53
+msgid "Host"
+msgstr "Isäntä"
+
+#: app/templates/user_smtp/list_smtp.html:54
+msgid "Port"
+msgstr "Portti"
+
+#: app/templates/user_smtp/list_smtp.html:56
+msgid "TLS"
+msgstr "TLS"
+
+#: app/templates/user_smtp/list_smtp.html:58
+msgid "Created"
+msgstr "Luotu"
+
+#: app/templates/user_smtp/list_smtp.html:90
+#: app/templates/user_smtp/list_smtp.html:158
+msgid "Send Test"
+msgstr "Lähetä testi"
+
+#: app/templates/user_smtp/list_smtp.html:125
+msgid "Port:"
+msgstr "Portti:"
+
+#: app/templates/user_smtp/list_smtp.html:131
+msgid "Password:"
+msgstr "Salasana:"
+
+#: app/templates/user_smtp/list_smtp.html:184
+msgid "Hide SMTP Setup Help"
+msgstr "Piilota SMTP-asetusten apu"
+
+#: app/templates/user_smtp/list_smtp.html:184
+msgid "Show SMTP Setup Help"
+msgstr "Näytä SMTP-asetusten apu"
+
+#: app/templates/user_smtp/list_smtp.html:190
+msgid ""
+"Need help finding your SMTP server settings? See here for some links to "
+"common providers:"
+msgstr ""
+"Tarvitsetko apua SMTP-palvelimen asetusten löytämisessä? Katso täältä "
+"joitakin linkkejä yleisiin palveluihin:"
+
+#: app/templates/user_smtp/list_smtp.html:194
+msgid "SMTP Server Settings Help (GitHub)"
+msgstr "SMTP-palvelimen asetusten apu (GitHub)"
+
+#: app/templates/user_smtp/list_smtp.html:198
+msgid ""
+"Find official documentation links for Gmail, Outlook, Yahoo, AOL, and "
+"others."
+msgstr ""
+"Löydä viralliset dokumentaatio-linkit Gmailille, Outlookille, Yahoolle, "
+"AOL:lle ja muille."
+
+#: app/templates/user_smtp/list_smtp.html:199
+msgid ""
+"If your provider isn’t listed, search their support site or a search engine "
+"for 'SMTP settings'."
+msgstr ""
+"Jos palveluntarjoajaasi ei ole listattu, etsi heidän tukisivustoltaan tai "
+"hakukoneesta 'SMTP-asetukset'."
+
+#: app/templates/user_smtp/list_smtp.html:200
+msgid ""
+"Some providers (like Gmail, Yahoo) require 'App Passwords' or special "
+"setup—see their docs!"
+msgstr ""
+"Jotkut palveluntarjoajat (kuten Gmail, Yahoo) vaativat 'Sovellussalasanoja' "
+"tai erityisasetuksia – katso heidän asiakirjansa!"
+
+#: app/templates/webhook/create_webhook.html:10
+msgid "Create Webhook"
+msgstr "Luo Webhook"
+
+#: app/templates/webhook/edit_webhook.html:10
+msgid "Edit Webhook"
+msgstr "Muokkaa Webhookia"
+
+#: app/templates/webhook/list_webhooks.html:9
+#: app/templates/webhook/webhook_config.html:3
+msgid "Webhooks Destinations"
+msgstr "Webhook-kohteet"
+
+#: app/templates/webhook/list_webhooks.html:59
+msgid "Endpoint"
+msgstr "Päätepiste"
+
+#: app/templates/webhook/list_webhooks.html:60
+msgid "Description"
+msgstr "Kuvaus"
+
+#: app/templates/webhook/list_webhooks.html:82
+#: app/templates/webhook/list_webhooks.html:141
+msgid "Cannot edit while assigned to notifications"
+msgstr "Ei voi muokata ilmoituksiin osoitettuna"
+
+#: app/templates/webhook/list_webhooks.html:106
+#: app/templates/webhook/list_webhooks.html:165
+msgid "Cannot delete while assigned to notifications"
+msgstr "Ei voi poistaa ilmoituksiin osoitettuna"
+
+#: app/templates/webhook/list_webhooks.html:122
+msgid "Endpoint:"
+msgstr "Päätepiste:"
+
+#: app/templates/webhook/list_webhooks.html:125
+msgid "Description:"
+msgstr "Kuvaus:"
+
+#: app/views/account.py:74
+msgid "Current password is required to change password."
+msgstr "Nykyinen salasana vaaditaan salasanan vaihtamiseksi."
+
+#: app/views/account.py:78
+msgid "Current password is incorrect."
+msgstr "Nykyinen salasana on virheellinen."
+
+#: app/views/account.py:94
+msgid "Account updated successfully."
+msgstr "Tili päivitetty onnistuneesti."
+
+#: app/views/account.py:100
+msgid "An error occurred while updating your account."
+msgstr "Virhe tapahtui kun päivitettiin tiliä."
+
+#: app/views/account.py:137
+msgid "You cannot delete your account because you are the last admin."
+msgstr "Et voi poistaa tiliäsi, koska olet viimeinen ylläpitäjä."
+
+#: app/views/account.py:146
+msgid "Your account has been permanently deleted."
+msgstr "Tilisi on pysyvästi poistettu."
+
+#: app/views/account.py:152
+msgid "An error occurred while trying to delete your account."
+msgstr "Virhe tapahtui kun päivitettiin tiliä."
+
+#: app/views/account.py:171
+msgid "Your account has been deleted"
+msgstr "Tilisi on pysyvästi poistettu."
+
+#: app/views/account.py:173
+#, python-brace-format
+msgid ""
+"Hello {username},\n"
+"\n"
+"Your account on {site_name} has been deleted.Remember to delete your files from the uploads folder.If this was not you, please contact support immediately.\n"
+"\n"
+"{site_url}"
+msgstr ""
+"Hei {username},\n"
+"\n"
+"Tilisi sivustolla {site_name} on poistettu.Muista poistaa tiedostosi latauskansiosta.Jos tämä et ollut sinä, ota välittömästi yhteys tukeen.\n"
+"\n"
+"{site_url}"
+
+#: app/views/admin.py:59
+msgid "Invalid role."
+msgstr "Virheellinen rooli."
+
+#: app/views/apprise.py:51
+msgid "🧪 Test notification sent successfully!"
+msgstr "🧪 Testi-ilmoitus lähetetty onnistuneesti!"
+
+#: app/views/apprise.py:56
+msgid "🧪 Failed to send test notification: "
+msgstr "🧪 Testi-ilmoituksen lähettäminen epäonnistui:"
+
+#: app/views/apprise.py:62
+msgid "🧪 Error sending test notification."
+msgstr "🧪 Testi-ilmoituksen lähetyksessä tapahtui virhe."
+
+#: app/views/apprise.py:101
+msgid "Apprise destination created successfully."
+msgstr "Apprise-kohde luotu onnistuneesti."
+
+#: app/views/apprise.py:168
+msgid "Apprise destination updated successfully."
+msgstr "Apprise-kohde päivitetty onnistuneesti."
+
+#: app/views/apprise.py:199
+msgid "Apprise destination deleted."
+msgstr "Apprise-kohde poistettu."
+
+#: app/views/auth.py:95
+msgid "Admin account created successfully."
+msgstr "Ylläpitotili luotu onnistuneesti."
+
+#: app/views/auth.py:108
+msgid "An error occurred while creating the admin account."
+msgstr "Virhe tapahtui kun luotiin ylläpitotili."
+
+#: app/views/auth.py:141
+msgid ""
+"Your account is not activated. Please check your email for the activation "
+"link."
+msgstr ""
+"Tiliäsi ei ole aktivoitu. Tarkista sähköpostisi aktivointilinkin osalta."
+
+#: app/views/auth.py:157
+msgid "Multi-factor authentication required. Please enter your code."
+msgstr "Usean tekijän todennus vaaditaan. Anna koodisi."
+
+#: app/views/auth.py:162 app/views/mfa.py:195
+msgid "Logged in successfully."
+msgstr "Kirjauduttu sisään onnistuneesti."
+
+#: app/views/auth.py:179
+msgid "Invalid username or password."
+msgstr "Virheellinen käyttäjänimi tai salasana."
+
+#: app/views/auth.py:203
+msgid "You have been logged out."
+msgstr "Olet kirjautunut ulos."
+
+#: app/views/auth.py:239 app/views/email.py:263
+msgid "Access denied."
+msgstr "Pääsy evätty."
+
+#: app/views/auth.py:273
+msgid "If a user with that email exists, we've sent the username to them."
+msgstr ""
+"Jos kyseisellä sähköpostilla on käyttäjä, olemme lähettäneet käyttäjänimen "
+"hänelle."
+
+#: app/views/auth.py:314
+msgid "A password reset link has been sent to your email."
+msgstr "Salasanan palautuslinkki on lähetetty sähköpostiisi."
+
+#: app/views/auth.py:319
+msgid "No account found matching that username and email."
+msgstr "Tiliä ei löytynyt kyseisellä käyttäjänimellä ja sähköpostilla."
+
+#: app/views/auth.py:389
+msgid "The reset link is invalid or has expired."
+msgstr "Palautuslinkki on virheellinen tai vanhentunut."
+
+#: app/views/auth.py:401
+msgid "Username and email do not match."
+msgstr "Käyttäjätunnus ja sähköposti eivät täsmää."
+
+#: app/views/auth.py:421
+msgid "Your password has been reset. Please log in."
+msgstr "Salasanasi on nollattu. Kirjaudu sisään."
+
+#: app/views/auth.py:458
+msgid "Invalid registration PIN."
+msgstr "Virheellinen rekisteröintitunnus."
+
+#: app/views/auth.py:467
+msgid "Username or email already exists."
+msgstr "Käyttäjätunnus tai sähköposti on jo olemassa."
+
+#: app/views/auth.py:492
+msgid "Activate Your Grylli Account"
+msgstr "Aktivoi Grylli-tilisi"
+
+#: app/views/auth.py:493
+#, python-brace-format
+msgid ""
+"Hello {username},\n"
+"\n"
+"Please activate your account by clicking..."
+msgstr ""
+"Hei {username},\n"
+"\n"
+"Aktivoi tilisi napsauttamalla..."
+
+#: app/views/auth.py:498
+msgid "Account created! Please check your email to activate your account."
+msgstr "Tili luotu! Tarkista sähköpostisi aktivoidaksesi tilisi."
+
+#: app/views/auth.py:521
+msgid "Activation link is invalid or expired."
+msgstr "Aktivointilinkki on virheellinen tai vanhentunut."
+
+#: app/views/auth.py:528 app/views/users.py:76 app/views/users.py:140
+msgid "User not found."
+msgstr "Käyttäjää ei löydy."
+
+#: app/views/auth.py:532
+msgid "Account already activated. Please log in."
+msgstr "Tili on jo aktivoitu. Kirjaudu sisään."
+
+#: app/views/auth.py:540
+msgid "Your account has been activated! You can now log in."
+msgstr "Tilisi on aktivoitu! Voit nyt kirjautua sisään."
+
+#: app/views/backups.py:72
+#, python-format
+msgid "Backup created: %(filename)s"
+msgstr "Varmuuskopio luotu: %(filename)s"
+
+#: app/views/backups.py:77
+msgid "Failed to create backup."
+msgstr "Varmuuskopiota ei voitu luoda."
+
+#: app/views/backups.py:106
+#, python-format
+msgid "Backup deleted: %(filename)s"
+msgstr "Varmuuskopio poistettu: %(filename)s"
+
+#: app/views/backups.py:109
+msgid "Backup file not found."
+msgstr "Varmuuskopiotiedostoa ei löytynyt."
+
+#: app/views/backups.py:112
+msgid "Failed to delete backup."
+msgstr "Varmuuskopiota ei voitu poistaa."
+
+#: app/views/checkin.py:41
+msgid "Invalid check-in link."
+msgstr "Virheellinen sisäänkirjautumislinkki."
+
+#: app/views/checkin.py:48
+msgid "You are not authorized to check in for this item."
+msgstr "Sinulla ei ole oikeutta kirjautua tähän kohteeseen."
+
+#: app/views/checkin.py:62
+msgid "Unsupported check-in type."
+msgstr "Ei tuettu sisäänkirjautumistyyppi."
+
+#: app/views/checkin.py:137
+msgid "⚠️ Cannot enable reminder: Start date/time is in the past."
+msgstr ""
+"⚠️ Muistutusta ei voi ottaa käyttöön: aloituspäivämäärä/-aika on "
+"menneisyydessä."
+
+#: app/views/checkin.py:158
+msgid "✅ Enabled and timer started."
+msgstr "✅ Käytössä ja ajastin aloitettu."
+
+#: app/views/checkin.py:168
+msgid "⛔ Disabled."
+msgstr "⛔ Poistettu käytöstä."
+
+#: app/views/checkin.py:170
+msgid "⚠️ Cannot toggle — missing schedule or destination."
+msgstr "⚠️ Ei voi vaihtaa — aikataulu tai määränpää puuttuu."
+
+#: app/views/email.py:88
+msgid "Message saved."
+msgstr "Viesti tallennettu."
+
+#: app/views/email.py:118 app/views/messages.py:167
+msgid "Message deleted."
+msgstr "Viesti poistettu."
+
+#: app/views/email.py:152
+msgid "Attached files updated."
+msgstr "Liitetiedostot päivitetty."
+
+#: app/views/email.py:200
+msgid "SMTP configuration not assigned or is disabled."
+msgstr "SMTP-konfiguraatiota ei ole määritetty tai se on poistettu käytöstä."
+
+#: app/views/email.py:234 app/views/smtp_settings_admin.py:82
+msgid "Test email sent successfully."
+msgstr "Testisähköposti lähetetty onnistuneesti."
+
+#: app/views/email.py:282 app/views/messages.py:305
+msgid "Schedule updated successfully."
+msgstr "Aikataulu päivitetty onnistuneesti."
+
+#: app/views/email.py:310
+msgid "SMTP configuration assigned."
+msgstr "SMTP-konfiguraatio määritetty."
+
+#: app/views/email.py:319
+msgid "SMTP configuration removed."
+msgstr "SMTP-konfiguraatio määritetty."
+
+#: app/views/messages.py:97
+msgid "Message created successfully."
+msgstr "Viesti luotu onnistuneesti."
+
+#: app/views/messages.py:133
+msgid "Message updated successfully."
+msgstr "Viesti päivitetty onnistuneesti."
+
+#: app/views/messages.py:223 app/views/reminders.py:240
+msgid "Destinations updated."
+msgstr "Määränpäät päivitetty."
+
+#: app/views/messages.py:441
+msgid "No destinations assigned to this message."
+msgstr "SMTP-konfiguraatiota ei ole määritetty tai se on poistettu käytöstä."
+
+#: app/views/messages.py:453
+msgid "Test message sent successfully."
+msgstr "Testisähköposti lähetetty onnistuneesti."
+
+#: app/views/messages.py:455
+msgid "Test message failed: "
+msgstr "Viesti tallennettu."
+
+#: app/views/mfa.py:68
+msgid "You must enter a code from your authenticator."
+msgstr "Sinun on syötettävä koodi todennussovelluksestasi."
+
+#: app/views/mfa.py:82 app/views/mfa.py:259
+msgid "Invalid code. Please try again."
+msgstr "Virheellinen koodi. Yritä uudelleen."
+
+#: app/views/mfa.py:91
+msgid "Two-factor authentication disabled."
+msgstr "Ilmoitus on pois käytöstä"
+
+#: app/views/mfa.py:132
+msgid "Recovery codes are only shown immediately after enabling MFA."
+msgstr "Palautuskoodeja näytetään vain heti MFA:n käyttöönoton jälkeen."
+
+#: app/views/mfa.py:142
+msgid "Could not load recovery codes."
+msgstr "Palautuskoodeja ei voitu ladata."
+
+#: app/views/mfa.py:168
+msgid "No MFA challenge in progress."
+msgstr "Ei käynnissä olevaa MFA-haastetta."
+
+#: app/views/mfa.py:176
+msgid "User not found for MFA challenge."
+msgstr "Käyttäjää ei löydy."
+
+#: app/views/mfa.py:225
+msgid ""
+"You have used your last recovery code. MFA has been disabled. Please remove "
+"Grylli from your authenticator app, and re-enable MFA to protect your "
+"account."
+msgstr ""
+"Olet käyttänyt viimeisen palautuskoodisi. MFA on poistettu käytöstä. Poista "
+"Grylli todennussovelluksestasi ja ota MFA uudelleen käyttöön suojataksesi "
+"tilisi."
+
+#: app/views/mfa.py:248
+#, python-brace-format
+msgid "Recovery code accepted. You have {remaining} recovery codes left."
+msgstr ""
+"Palautuskoodi hyväksytty. Sinulla on {remaining} palautuskoodia jäljellä."
+
+#: app/views/reminders.py:106
+msgid "Reminder created successfully."
+msgstr "Viesti luotu onnistuneesti."
+
+#: app/views/reminders.py:143
+msgid "Reminder updated successfully."
+msgstr "Käyttäjä päivitetty onnistuneesti."
+
+#: app/views/reminders.py:174
+msgid "Reminder deleted."
+msgstr "Käyttäjä poistettu."
+
+#: app/views/reminders.py:287
+msgid "No destinations assigned to this reminder."
+msgstr "SMTP-konfiguraatiota ei ole määritetty tai se on poistettu käytöstä."
+
+#: app/views/reminders.py:311
+msgid "No email message linked to this reminder."
+msgstr "Ei sähköpostiviestiä linkitetty tähän muistutukseen."
+
+#: app/views/reminders.py:314
+msgid "SMTP configuration is disabled."
+msgstr "SMTP-konfiguraatiota ei ole määritetty tai se on poistettu käytöstä."
+
+#: app/views/reminders.py:353
+msgid "Test reminder sent successfully."
+msgstr "Testisähköposti lähetetty onnistuneesti."
+
+#: app/views/reminders.py:356
+msgid "Test reminder failed: "
+msgstr "Viesti tallennettu."
+
+#: app/views/reminders.py:430
+msgid "Reminder schedule updated successfully."
+msgstr "Aikataulu päivitetty onnistuneesti."
+
+#: app/views/reminders.py:434
+msgid "Please correct the errors below."
+msgstr "Korjaa alla olevat virheet."
+
+#: app/views/reminders.py:481 app/views/reminders.py:482
+msgid "None"
+msgstr "Ei"
+
+#: app/views/reminders.py:508
+msgid "You must select both an SMTP config and an email message, or neither."
+msgstr ""
+"Sinun on valittava joko SMTP-asetus ja sähköpostiviesti tai ei kumpaakaan."
+
+#: app/views/reminders.py:528
+msgid "Email reminder settings updated."
+msgstr "Määränpäät päivitetty."
+
+#: app/views/smtp.py:83 app/views/user_smtp.py:80
+msgid "SMTP destination created successfully."
+msgstr "SMTP-määränpää luotu onnistuneesti."
+
+#: app/views/smtp.py:129 app/views/user_smtp.py:135
+msgid "SMTP destination updated."
+msgstr "SMTP-määränpää päivitetty."
+
+#: app/views/smtp.py:160 app/views/user_smtp.py:166
+msgid "SMTP destination deleted."
+msgstr "SMTP-määränpää poistettu."
+
+#: app/views/smtp.py:191 app/views/user_smtp.py:199
+msgid "Test email sent successfully to your account email."
+msgstr "Testisähköposti lähetetty onnistuneesti tilisi sähköpostiin."
+
+#: app/views/smtp.py:196 app/views/user_smtp.py:204
+msgid "Failed to send test email. Check SMTP settings."
+msgstr "Testisähköpostin lähetys epäonnistui. Tarkista SMTP-asetukset."
+
+#: app/views/smtp_settings_admin.py:76
+msgid "Test Email from Grylli"
+msgstr "Testisähköposti Grylliltä"
+
+#: app/views/smtp_settings_admin.py:77
+msgid "This is a test email from the Grylli SMTP settings page."
+msgstr "Tämä on testisähköposti Gryllin SMTP-asetussivulta."
+
+#: app/views/smtp_settings_admin.py:84
+msgid "Failed to send test email: "
+msgstr "Testisähköpostin lähetys epäonnistui:"
+
+#: app/views/users.py:99
+msgid "User updated successfully."
+msgstr "Käyttäjä päivitetty onnistuneesti."
+
+#: app/views/users.py:106 app/views/users.py:327
+msgid "An error occurred while updating the user."
+msgstr "Virhe päivityksen aikana käyttäjän päivittämisessä."
+
+#: app/views/users.py:195
+msgid "User deleted."
+msgstr "Käyttäjä poistettu."
+
+#: app/views/users.py:202
+msgid "An error occurred while deleting the user."
+msgstr "Virhe poistamisen aikana käyttäjän poistamisessa."
+
+#: app/views/users.py:237
+msgid "Password is required when creating a new user."
+msgstr "Salasana vaaditaan, kun luot uuden käyttäjän."
+
+#: app/views/users.py:244
+msgid "Username already exists."
+msgstr "Käyttäjänimi on jo olemassa."
+
+#: app/views/users.py:251
+msgid "Email already exists."
+msgstr "Sähköposti on jo olemassa."
+
+#: app/views/users.py:268
+#, python-format
+msgid "User '%(username)s' created successfully."
+msgstr "Käyttäjä '%(username)s' luotu onnistuneesti."
+
+#: app/views/users.py:278
+msgid "Failed to create user."
+msgstr "Käyttäjän luominen epäonnistui."
+
+#: app/views/users.py:305
+msgid "You cannot change your own enabled status."
+msgstr "Et voi muuttaa omaa käytössä olevaa tilaasi."
+
+#: app/views/users.py:318
+#, python-format
+msgid "User '%(username)s' has been %(status)s."
+msgstr "Käyttäjä '%(username)s' on %(status)s."
+
+#: app/views/users.py:356
+msgid "You cannot reset your own MFA."
+msgstr "⚪ = Et voi poistaa omaa tiliäsi käytöstä."
+
+#: app/views/users.py:368
+#, python-format
+msgid "MFA disabled for user '%(username)s'."
+msgstr "MFA poistettu käytöstä käyttäjältä '%(username)s'."
+
+#: app/views/users.py:374
+msgid "An error occurred while resetting MFA."
+msgstr "Virhe poistamisen aikana käyttäjän poistamisessa."
+
+#: app/views/webhook.py:54
+msgid "Webhook created successfully."
+msgstr "Webhook luotiin onnistuneesti."
+
+#: app/views/webhook.py:113
+msgid "Webhook updated successfully."
+msgstr "Webhook päivitettiin onnistuneesti."
+
+#: app/views/webhook.py:142
+msgid "Webhook deleted."
+msgstr "Webhook poistettu."
+
+#: app/views/webhook.py:175
+msgid "🧪 Webhook test sent successfully!"
+msgstr "🧪 Webhook-testi lähetettiin onnistuneesti!"
+
+#: app/views/webhook.py:177
+msgid "🧪 Webhook test failed: "
+msgstr "🧪 Webhook-testi epäonnistui:"
+
+#: app/views/webhook.py:180
+msgid "🧪 Error sending webhook test."
+msgstr "🧪 Virhe lähetettäessä webhook-testiä."
+
+#~ msgid ""
+#~ "Grylli is a secure message delivery platform designed to activate after "
+#~ "prolonged user inactivity."
+#~ msgstr ""
+#~ "Grylli on turvallinen viestinvälitysalusta, joka aktivoituu käyttäjän pitkän"
+#~ " inaktiivisuuden jälkeen."
+
+#~ msgid ""
+#~ "It is a modern reimplementation of Gone Man’s Switch with a refined tech "
+#~ "stack, better maintainability, and an improved user experience."
+#~ msgstr ""
+#~ "Se on moderni uudelleentoteutus Gone Man’s Switchistä, joka tarjoaa "
+#~ "parannellun teknologisen pinon, paremman ylläpidettävyyden ja parannetun "
+#~ "käyttäjäkokemuksen."
+
+#~ msgid "Body:"
+#~ msgstr "Viestin sisältö:"
+
+#~ msgid "Subject:"
+#~ msgstr "Aihe:"
+
+#~ msgid "Content:"
+#~ msgstr "Sisältö:"
+
+#~ msgid "Edit SMTP"
+#~ msgstr "Muokkaa SMTP:tä"
+
+#~ msgid ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+#~ msgstr ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+
+#~ msgid "Admin Notes"
+#~ msgstr "Ylläpitäjän muistiinpanot"
+
+#~ msgid "Register"
+#~ msgstr "Rekisteröidy"
+
+#~ msgid "View"
+#~ msgstr "Näytä"
+
+#~ msgid "Schedule"
+#~ msgstr "Aikataulu"
+
+#~ msgid "Message is enabled"
+#~ msgstr "Viesti on käytössä"
+
+#~ msgid "Message is disabled"
+#~ msgstr "Viesti on pois käytöstä"
+
+#~ msgid "No SMTP configuration selected."
+#~ msgstr "SMTP-konfiguraatiota ei ole valittu."
+
+#~ msgid "Enable the message to start monitoring."
+#~ msgstr "Ota viesti käyttöön aloittaaksesi seurannan."
+
+#~ msgid "✅ SMTP settings saved."
+#~ msgstr "SMTP-asetukset"
+
+#~ msgid "If you don’t check in, Grylli delivers the message for you."
+#~ msgstr "Jos et kirjaudu, Grylli toimittaa viestin puolestasi."
+
+#~ msgid "Fill in already discovered missing translations:"
+#~ msgstr "Täytä jo löydetyt puuttuvat käännökset:"
+
+#~ msgid "Add missing phrases in that JSON file."
+#~ msgstr "Lisää puuttuvat lauseet siihen JSON-tiedostoon."
+
+#~ msgid "From:"
+#~ msgstr "From:"
+
+#~ msgid ""
+#~ "Attach the updated JSON file to a new GitHub issue when submitting your "
+#~ "changes."
+#~ msgstr ""
+#~ "Liitä päivitetty JSON-tiedosto uuteen GitHub-ongelmaan, kun lähetät "
+#~ "muutoksesi."
+
+#~ msgid "admin"
+#~ msgstr "admin"
+
+#~ msgid "user"
+#~ msgstr "käyttäjä"
+
+#~ msgid "Logging in"
+#~ msgstr "Kirjaudu sisään"
+
+#~ msgid "SMTP error: "
+#~ msgstr "SMTP-virhe:"
+
+#~ msgid "enabled"
+#~ msgstr "käytössä"
+
+#~ msgid "disabled"
+#~ msgstr "pois käytöstä"

@@ -1,0 +1,24 @@
+{# ---------------------------------------------------------------------
+  disabled.html
+  app/templates/checkin/disabled.html
+  [Displayed when a user tries to check in for a disabled notification or email.]
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{# =================== JINJA BLOCK ==================== #}
+{% block content %}
+    <div class="max-w-xl mx-auto mt-20 bg-white dark:bg-zinc-800 p-6 rounded shadow text-center">
+        <h1 class="text-2xl font-semibold mb-4 text-gray-500 dark:text-gray-300">⏸️ {{ _("Check-In Disabled") }}</h1>
+        <p class="text-lg mb-2 text-zinc-700 dark:text-zinc-200">
+            {{ _("This check-in is currently disabled and cannot be completed.") }}
+        </p>
+        {% if label %}
+            <p class="text-sm text-zinc-500 dark:text-zinc-400 italic mt-2">
+                {{ _("Check-in for:") }} <strong>{{ label }}</strong>
+            </p>
+        {% endif %}
+        <a href="{{ url_for("index.index") }}"
+           class="inline-block mt-6 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition">
+            {{ _("Return to Dashboard") }}
+        </a>
+    </div>
+{% endblock %}

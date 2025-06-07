@@ -1,0 +1,3251 @@
+# Gujarati translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-06-07 15:49-0500\n"
+"PO-Revision-Date: 2025-05-25 16:45-0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: gu <LL@li.org>\n"
+"Language: gu\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: app/init_db.py:55
+#, python-format
+msgid "Tables currently in DB: %s"
+msgstr "હાલમાં DBમાં ટેબલ્સ:"
+
+#: app/init_db.py:58
+msgid "Database or system_config table missing. Running migrations now..."
+msgstr ""
+"ડેટાબેઝ અથવા system_config ટેઈબલ નથી. હવે માઇગ્રેશન્સ રન કરી રહ્યાં છે..."
+
+#: app/init_db.py:61
+msgid "Migrations applied successfully."
+msgstr "માઇગ્રેશન્સ સફળતાપૂર્વક લાગુ પડ્યા."
+
+#: app/init_db.py:63
+msgid "Migration failed."
+msgstr "માઇગ્રેશન નિષ્ફળ ગયું."
+
+#: app/init_db.py:68
+msgid "System config seeded successfully."
+msgstr "સિસ્ટમ કોનફિગ સફળતાપૂર્વક સિડ કર્યું."
+
+#: app/init_db.py:70
+msgid "Error seeding system config."
+msgstr "સિસ્ટમ કોનફિગ સિડ કરવામાં ભૂલ:"
+
+#: app/forms/mfa_form.py:15 app/templates/apprise/create_apprise.html:30
+#: app/templates/apprise/edit_apprise.html:30
+#: app/templates/apprise/list_apprise.html:60
+#: app/templates/mfa/settings.html:24 app/templates/mfa/settings.html:40
+#: app/templates/user_smtp/create_smtp.html:99
+#: app/templates/user_smtp/edit_smtp.html:114
+#: app/templates/user_smtp/list_smtp.html:57
+#: app/templates/webhook/create_webhook.html:36
+#: app/templates/webhook/edit_webhook.html:36
+#: app/templates/webhook/list_webhooks.html:61
+msgid "Enabled"
+msgstr "સક્રિય"
+
+#: app/forms/mfa_form.py:16
+msgid "Authenticator Code"
+msgstr "પ્રમાણકર્તા કોડ"
+
+#: app/forms/mfa_form.py:17
+#: app/templates/admin/partials/user_instructions_and_modal.html:66
+#: app/templates/admin/partials/user_table.html:115
+#: app/templates/email/assign_smtp.html:44 app/templates/mfa/settings.html:47
+#: app/templates/user_smtp/edit_smtp.html:122
+msgid "Save"
+msgstr "સાચવો"
+
+#: app/forms/mfa_form.py:27
+msgid "Authentication Code"
+msgstr "સૂચના અપડેટ કરો"
+
+#: app/forms/mfa_form.py:29
+msgid "Please enter your authentication code."
+msgstr "કૃપા કરીને તમારો ઓથેન્ટિકેશન કોડ દાખલ કરો."
+
+#: app/forms/mfa_form.py:30
+msgid "Enter a valid 6-digit code or recovery code."
+msgstr "માન્ય 6-અંક કોડ અથવા પુનઃપ્રાપ્તિ કોડ દાખલ કરો."
+
+#: app/forms/mfa_form.py:31
+msgid "Invalid code format."
+msgstr "અમાન્ય કોડ ફોર્મેટ."
+
+#: app/forms/mfa_form.py:35 app/templates/mfa/challenge.html:25
+msgid "Verify"
+msgstr "સંસ્કરણ"
+
+#: app/services/mail.py:37 app/services/system_settings_email.py:40
+msgid "Missing required config setting: "
+msgstr "જરૂરી કોનફિગ સેટિંગ ગાયબ:"
+
+#: app/services/mail.py:46 app/services/system_settings_email.py:50
+#, python-format
+msgid "Failed to decrypt %(key)s: %(error)s"
+msgstr "ગીણું ખોલવામાં નિષ્ફળ: %(key)s: %(error)s"
+
+#: app/services/mail.py:54
+#, python-format
+msgid "get_setting('%(key)s') -> '%(value)s' (sensitive: %(sensitive)s)"
+msgstr ""
+"get_setting('%(key)s') -> '%(value)s' (raw: '%(raw)s', sensitive: "
+"%(sensitive)s)"
+
+#: app/services/mail.py:75
+#, python-format
+msgid "Preparing email to %(to)s"
+msgstr "%(to)s ને ઇમેઇલ તૈયાર કરી રહ્યું છે"
+
+#: app/services/mail.py:90
+#, python-format
+msgid ""
+"SMTP configuration: host=%(host)s (type=%(host_type)s), port=%(port)s "
+"(type=%(port_type)s)"
+msgstr ""
+"SMTP host = '%(host)s' (પ્રકાર: %(host_type)s), port = %(port)s (પ્રકાર: "
+"%(port_type)s)"
+
+#: app/services/mail.py:99
+#, python-format
+msgid "SMTP username: %(user)s"
+msgstr "વપરાશકર્તા: %(user)s નો ઉપયોગ કરી રહ્યા છે"
+
+#: app/services/mail.py:100
+#, python-format
+msgid "TLS enabled: %(tls)s"
+msgstr "TLS સક્ષમ: %(tls)s"
+
+#: app/services/mail.py:105
+msgid "Starting TLS connection..."
+msgstr "TLS શરૂ કરી રહ્યું છે"
+
+#: app/services/mail.py:107
+msgid "Logging into SMTP server..."
+msgstr "SMTP સર્વર માં પ્રવેશ કરી રહ્યો છે..."
+
+#: app/services/mail.py:109
+msgid "Sending email message..."
+msgstr "શેડ્યૂલ સંદેશ"
+
+#: app/services/mail.py:111
+#, python-format
+msgid "Email sent successfully to %(to)s"
+msgstr "પરીક્ષણ ઇમેઇલ સફળતાપૂર્વક મોકલ્યો."
+
+#: app/services/mail.py:114
+#, python-format
+msgid "SMTP error while sending to %(to)s: %(error)s"
+msgstr "SMTP ભૂલ %(to)s ને મોકલતી વખતે: %(error)s"
+
+#: app/templates/about.html:10
+msgid "About Grylli"
+msgstr "ગ્રિલી વિશે"
+
+#: app/templates/about.html:13
+msgid ""
+"Grylli is a secure, self-hosted message delivery platform that automatically"
+" sends pre-configured messages if a user fails to check in within a defined "
+"time period."
+msgstr ""
+"Grylli એ એક સુરક્ષિત, સ્વયં-હોસ્ટેડ સંદેશ આપતા પ્લેટફોર્મ છે જે સ્વચાલિત "
+"રીતે પૂર્વ-કૉન્ફિગાર્ડ સંદેશાઓ મોકલે છે જો વપરાશકર્તા એક નિર્ધારિત સમયગાળા "
+"દરમ્યાન ચેક ઇન કરવા નિષ્ફળ જાય."
+
+#: app/templates/about.html:14
+msgid ""
+"It supports multiple users, customizable schedules, and recurring reminders."
+msgstr ""
+"તે એકથી વધુ વપરાશકર્તાઓ અને કસ્ટમાઇઝ કરી શકાય તેવા શેડ્યૂલને સપોર્ટ કરે છે."
+
+#: app/templates/about.html:15
+msgid ""
+"Messages and reminders can be delivered via email, webhooks, or over 100 "
+"third-party services through Apprise."
+msgstr ""
+"સંદેશાઓ ઇમેઇલ, વેબહૂક્સ અથવા Apprise દ્વારા 80 થી વધુ તૃતીય-પક્ષ સેવાઓ મારફત"
+" પહોંચાડવામાં આવી શકે છે."
+
+#: app/templates/about.html:16
+msgid ""
+"Users can configure their own SMTP servers to ensure emails and reminders "
+"appear to come directly from them — not from the system administrator."
+msgstr ""
+"વપરાશકર્તાઓ તેમના પોતાના SMTP સર્વરો કૉન્ફિગાર કરી શકે છે જેમાંથી സന്ദેશાઓ "
+"તેઓ પાસેથી સીધા આવ્યાં લાગી તેવા બનાવો — સિસ્ટમ એડ્મિનિસ્ટ્રેટર પાસેથી નહીં."
+
+#: app/templates/about.html:17
+msgid ""
+"Sensitive data is encrypted at rest, and all operations are secured with "
+"strong authentication and audit-friendly logging."
+msgstr ""
+"સંવેદનશીલ ડેટા આરામ પર ઇન્ક્રિપ્ટ થાય છે, અને બધા સંદેશ ઓપરેશન્સ મજબૂત "
+"પ્રામાણિકતા અને ઑડિટ-ફ્રેન્ડલી લૉગિંગ સાથે સુરક્ષિત છે."
+
+#: app/templates/about.html:18
+msgid ""
+"Built with a modern, reactive technology stack, Grylli is optimized for "
+"responsiveness and works seamlessly across desktop and mobile devices."
+msgstr ""
+"આધુનિક, પ્રતિક્રિયાત્મક ટેક્નૉલોજી સ્ટેક સાથે નિર્મિત, Grylli પ્રતિસાદ માટે "
+"ઓપ્ટિમાઇઝ્ડ છે અને ડેસ્કટૉપ તેમજ મોબાઇલ ઉપકરણમાં સતત કાર્ય કરે છે."
+
+#: app/templates/about.html:23
+msgid "Version:"
+msgstr "સંકરણ:"
+
+#: app/templates/about.html:26
+msgid "Repository:"
+msgstr "સ્ટોર:"
+
+#: app/templates/about.html:30
+msgid "GitHub - samcro1967/grylli"
+msgstr "GitHub - samcro1967/grylli"
+
+#: app/templates/help.html:2 app/templates/help.html:5
+#: app/templates/partials/header.html:85
+msgid "Help"
+msgstr "સહાય"
+
+#: app/templates/help.html:7
+msgid ""
+"Grylli includes built-in instructions throughout the app to help you "
+"configure and manage your setup."
+msgstr ""
+"Grylli એપમાં દરેક જગ્યાએ નિર્મિત સૂચનાઓ શામેલ છે જેથી તમે તમારી સેટઅપ "
+"કૉન્ફિગાર અને મેનેજ કરી શકો."
+
+#: app/templates/help.html:8
+msgid ""
+"This page provides an overview of key features and direct links to where "
+"they can be managed."
+msgstr ""
+"આ પૃષ્ઠ મુખ્ય લક્ષણોનું общ સક્ષિપ્ત વર્ણન અને જ્યાં તેને મેનેજ કરી શકાય "
+"ત્યાં સીધી કડીઓ પૂરી પાડે છે."
+
+#: app/templates/help.html:12 app/templates/messages/list_messages.html:9
+#: app/templates/partials/shared_nav.html:17
+msgid "Notifications"
+msgstr "સૂચનાઓ"
+
+#: app/templates/help.html:14
+msgid "Create and assign messages"
+msgstr "મેસેજ અથવા ઇમેઇલ બનાવો."
+
+#: app/templates/admin/index.html:32 app/templates/help.html:17
+#: app/templates/partials/admin_nav.html:56
+msgid "SMTP Settings"
+msgstr "SMTP સેટિંગ્સ"
+
+#: app/templates/help.html:19
+msgid "Use your own email server"
+msgstr "તમારું પોતાનું ઇમેઇલ સર્વર વાપરો"
+
+#: app/templates/help.html:22
+msgid "Apprise Integration"
+msgstr "એપ્રાઇઝ ડેસ્ટિનેશન્સ"
+
+#: app/templates/help.html:24
+msgid "Send notifications to 80+ supported services"
+msgstr "80+ સપોર્ટેડ સેવાઓને સૂચનાઓ મોકલો"
+
+#: app/templates/help.html:27
+#: app/templates/messages/assign_destinations.html:41
+#: app/templates/messages/view_message.html:58
+#: app/templates/partials/shared_nav.html:44
+#: app/templates/reminders/assign_destinations.html:39
+#: app/templates/reminders/view_reminder.html:69
+msgid "Webhooks"
+msgstr "Webhook"
+
+#: app/templates/help.html:29
+msgid "Trigger actions or external workflows"
+msgstr "ક્રિયાઓ અથવા બાહ્ય વર્કફ્લોઝને ટ્રિગર કરો"
+
+#: app/templates/email/list_emails.html:9 app/templates/help.html:32
+#: app/templates/partials/shared_nav.html:61
+msgid "Emails"
+msgstr "ઇમેઇલ્સ"
+
+#: app/templates/help.html:34
+msgid "View and manage secure email messages"
+msgstr "સુરક્ષિત ઇમેઇલ સંદેશાવ્યવહારનું અવલોકન"
+
+#: app/templates/help.html:38
+msgid "Security"
+msgstr "🔐 સુરક્ષા"
+
+#: app/templates/help.html:39
+msgid "Grylli encrypts sensitive data and logs all key actions for auditing."
+msgstr ""
+"Grylli સંવેદનશીલ ડેટાને ઇનક્રિપ્ટ અને ઑડિટિંગ માટે તમામ મુખ્ય ક્રિયાઓને લૉગ "
+"કરે છે."
+
+#: app/templates/index.html:9 app/views/locale.py:95
+msgid "Welcome to Grylli"
+msgstr "ગ્રિલીમાં આપનું સ્વાગત છે"
+
+#: app/templates/index.html:11
+msgid "Pronounced"
+msgstr "ઉચ્ચારણ"
+
+#: app/templates/index.html:11
+msgid "like “grill-ee”"
+msgstr "“grill-ee” જેવું"
+
+#: app/templates/index.html:14
+msgid ""
+"Grylli is a secure message scheduling and delivery system designed to ensure"
+" your important messages are delivered — even if you can’t be there to send "
+"them."
+msgstr ""
+"ગ્રિલી એ સુરક્ષિત મેસેજ શેડ્યૂલિંગ અને ડિલિવરી સિસ્ટમ છે, જે તમારા "
+"મહત્વપૂર્ણ મેસેજીઝ પહુંચાડે છે — ભલે ત્યાં તમે ન હોઉ."
+
+#: app/templates/index.html:17
+msgid ""
+"Whether you’re planning ahead, setting up emergency communication, or "
+"building peace of mind, Grylli helps automate your message delivery via "
+"multiple channels including email, webhooks, and Apprise notifications."
+msgstr ""
+"તમે આગલા સમય માટે આયોજન કરી રહ્યા હૂશો, ઇમર્જન્સી કોમ્યુનિકેશન્સ સેટ કરાઈ "
+"રહી હશે, અથવા માનસિક શાંતિના આયોજન કરી રહ્યા હો તો, જો તમે ચેક-ઇન ચૂકી જાવ, "
+"તો ગ્રિલી ઇમેઇલ, વેબહૂક અથવા Apprise નોટિફિકેશન્સ દ્વારા આપમેટ ક્રિયાની "
+"ડિલિવરી કરે છે."
+
+#: app/templates/index.html:19
+msgid "Getting Started"
+msgstr "શરુઆત"
+
+#: app/templates/index.html:21
+msgid "Create a message, email, or reminder."
+msgstr "મેસેજ અથવા ઇમેઇલ બનાવો."
+
+#: app/templates/index.html:22
+msgid "Set your check-in interval and grace period (for messages)."
+msgstr "તમારી ચેક-ઇન ઇન્ટરવલ અને છૂટા સમયગાળા સેટ કરો."
+
+#: app/templates/index.html:23
+msgid "Assign one or more delivery destinations."
+msgstr "એક અથવા તેથી વધુ ડિલિવરી સ્થળો સોંપો."
+
+#: app/templates/index.html:24
+msgid "Optionally attach files for secure emails."
+msgstr "સુરક્ષિત ઇમેઇલ્સ માટે ફાઇલો જોડવા વિકલ્પ."
+
+#: app/templates/index.html:25
+msgid "Schedule reminders to send at specific times or on a recurring basis."
+msgstr ""
+"વિશિષ્ટ સમયમાં અથવા પુનરાવર્તિત આધાર પર રિમાઇન્ડર્સ મોકલવા માટે સમયપત્રક "
+"ગોઠવો."
+
+#: app/templates/index.html:26
+msgid "Enable the message or reminder to activate delivery."
+msgstr "મેસેજ અથવા રિમાઇન્ડરને ડિલિવરી સક્રિય કરવા માટે સક્ષમ કરો."
+
+#: app/templates/index.html:28
+msgid ""
+"Regularly check in to Grylli to prevent automated delivery; miss a check-in "
+"and Grylli sends your messages as scheduled."
+msgstr ""
+"Grylli પર નિયમિતતાથી ચેક ઇન કરો જેથી કરીને સ્વચાલિત ડિલિવરીને રોકી શકાય; "
+"ચેક-ઇન છૂટતા જ Grylli તમારા સંદેશાઓને મુજબ સમયે મોકલે છે."
+
+#: app/templates/privacy.html:10
+msgid "Privacy Notice"
+msgstr "ગોપનીયતા સૂચના"
+
+#: app/templates/privacy.html:13
+msgid ""
+"Grylli respects your privacy and is designed to minimize the collection and "
+"storage of personal data."
+msgstr ""
+"Grylli તમારા ગોપનીયતાનું માન રાખે છે અને વ્યક્તિગત ડેટાના સંગ્રહ અને "
+"સંગ્રહને જતાં સીમિત કરવા માટે રચાયેલ છે."
+
+#: app/templates/privacy.html:14
+msgid ""
+"All data is encrypted where appropriate and remains fully under your control"
+" if you self-host this platform."
+msgstr ""
+"બધી માહિતી યોગ્ય હોય ત્યારે એનક્રિપ્ટેડ થાય છે અને જો તમે આ પ્લેટફોર્મને "
+"સ્વ-હોસ્ટ કરો છો તો તમારા નિયંત્રણ હેઠળ પૂર્ણપણે રહે છે."
+
+#: app/templates/privacy.html:17
+msgid "What Data We Collect"
+msgstr "શું માહિતી અમે એકત્રિત કરીએ છીએ"
+
+#: app/templates/privacy.html:19
+msgid "Email address and password hash (for authentication)"
+msgstr "ઇમેઇલ સરનામું અને પાસવર્ડ હેશ (પ્રમાણિકરણ માટે)"
+
+#: app/templates/privacy.html:20
+msgid "Optional MFA secret and recovery codes (encrypted at rest)"
+msgstr ""
+"વૈકલ્પિક MFA સિક્રેટ અને પુનપ્રાપ્તી કોડ્સ (વિશ્વસનીયતા યથાવત્ એંક્રિપ્ટેડ)"
+
+#: app/templates/privacy.html:21
+msgid "Reminder and message content you configure"
+msgstr "તમે કન્ફિગર કરી છે તે રિમાઇન્ડર અને સંદેશ સામગ્રી"
+
+#: app/templates/privacy.html:22
+msgid "User-specific settings, SMTP configuration (if provided)"
+msgstr "વપરાશકર્તા-વિશિષ્ટ સેટિંગ્સ, SMTP ગોઠવણી (જો પૂરી પાડવામાં આવે)"
+
+#: app/templates/privacy.html:25
+msgid "How Your Data Is Used"
+msgstr "તમારા આંકડાનો ઉપયોગ કેવી રીતે થાય છે"
+
+#: app/templates/privacy.html:27
+msgid ""
+"Your data is used solely for the purpose of delivering reminders and "
+"messages according to your preferences."
+msgstr ""
+"તમારા આંકડાનો ઉપયોગ માત્ર તમારી પસંદગીઓ અનુસાર રિમાઇન્ડર અને સંદેશ આપવાના "
+"હેતુ માટે થાય છે."
+
+#: app/templates/privacy.html:28
+msgid ""
+"Grylli does not share, sell, or transmit your personal data to any third "
+"parties."
+msgstr ""
+"Grylli તમારું વ્યક્તિગત ડેટા કોઈપણ તૃતિય પક્ષને શેર, વેચાણ, અથવા પ્રસારિત "
+"નથી કરતો."
+
+#: app/templates/privacy.html:31
+msgid "Your Rights"
+msgstr "તમારા અધિકારો"
+
+#: app/templates/privacy.html:33
+msgid ""
+"You can export all of your data at any time from the Account Settings page."
+msgstr ""
+"તમે કોઈપણ સમયે એકાઉન્ટ સેટિંગ્સ પૃષ્ઠમાંથી તમારું બધી માહિતી નિકાસ કરી શકો "
+"છો."
+
+#: app/templates/privacy.html:34
+msgid "You may permanently delete your account and all associated data."
+msgstr "તમે તમારી ખાતું કાઢી શકતા નથી કારણ કે તમે છેલ્લે એડમિન છો."
+
+#: app/templates/privacy.html:35
+msgid ""
+"If you are using a self-hosted instance, contact the instance administrator "
+"for data inquiries."
+msgstr ""
+"જો તમે સ્વ-હોસ્ટેડ ઇન્સ્ટાન્સનો ઉપયોગ કરી રહ્યા છો, તો આંકડા પૂછપરછ માટે "
+"ઇન્સ્ટાન્સ એડમિનિસ્ટ્રેટરને સંપર્ક કરો."
+
+#: app/templates/privacy.html:38
+msgid "Self-Hosting Responsibility"
+msgstr "સ્વ-હોસ્ટિંગ જવાબદારી"
+
+#: app/templates/privacy.html:40
+msgid ""
+"If you are running Grylli on your own server, you are responsible for the "
+"storage, processing, and lawful handling of all user data on that instance."
+msgstr ""
+"જો તમે Grylliને તમારી પોતાની સર્વર પર ચલાવી રહ્યા છો, તો તે ઇન્સ્ટન્સ પર "
+"તમામ વપરાશકર્તા ડેટાનો સંગ્રહ, પ્રક્રિયા અને કાયદાકીય સંભાળ કરવાની જવાબદારી "
+"તમારી છે."
+
+#: app/templates/privacy.html:44
+msgid ""
+"This notice was last updated in June 2025 and may evolve to reflect changes "
+"in the software or regulatory landscape."
+msgstr ""
+"આ સૂચના છેલ્લે જૂન 2025માં અપડેટ કરવામાં આવી હતી અને સોફ્ટવેર અથવા નિયમનકારી"
+" લશ્કરી દ્રશ્યપટ્ટીમાં ફેરફારને પ્રતિબિંબિત કરવા માટે વિકાસમાં હોઈ શકે છે."
+
+#: app/templates/system_info.html:11
+msgid "📦 Environment Versions"
+msgstr "📦 પર્યાવરણ સંસ્કરણો"
+
+#: app/templates/system_info.html:17
+msgid "Category"
+msgstr "શ્રેણી"
+
+#: app/templates/system_info.html:18
+msgid "Tool"
+msgstr "સાધન"
+
+#: app/templates/system_info.html:19
+msgid "Version"
+msgstr "સંસ્કરણ"
+
+#: app/templates/system_info.html:25
+msgid "🧠 Python"
+msgstr "🧠 પાયથન"
+
+#: app/templates/system_info.html:26
+msgid "Python"
+msgstr "પાયથન"
+
+#: app/templates/system_info.html:30
+msgid "pip"
+msgstr "pip"
+
+#: app/templates/system_info.html:34
+msgid "SQLite"
+msgstr "SQLite"
+
+#: app/templates/system_info.html:40
+msgid "⚙️ Core"
+msgstr "⚙️ કોર"
+
+#: app/templates/system_info.html:47
+msgid "🔐 Security"
+msgstr "🔐 સુરક્ષા"
+
+#: app/templates/system_info.html:48
+msgid "Email Validator"
+msgstr "ઇમેઇલ વેલીડેટર"
+
+#: app/templates/system_info.html:52
+msgid "Cryptography"
+msgstr "ક્રિપ્ટોગ્રાફી"
+
+#: app/templates/system_info.html:57
+msgid "🕰️ Scheduling"
+msgstr "🕰️ નિર્ધારણ"
+
+#: app/templates/system_info.html:58
+msgid "APScheduler"
+msgstr "APScheduler"
+
+#: app/templates/system_info.html:62
+msgid "Apprise (Python)"
+msgstr "એપ્રાઈસ (Python)"
+
+#: app/templates/system_info.html:66
+msgid "Apprise CLI"
+msgstr "એપ્રાઈસ CLI"
+
+#: app/templates/system_info.html:74
+msgid "🌐 Frontend"
+msgstr "🌐 ફ્રન્ટએન્ડ"
+
+#: app/templates/account/manage_account.html:11
+msgid "Manage Account"
+msgstr "ખાતું મેનેજ કરો"
+
+#: app/templates/account/manage_account.html:12
+msgid "Update your profile information and password."
+msgstr "તમારી પ્રોફાઇલ માહિતી અને પાસવર્ડ અપડેટ કરો."
+
+#: app/templates/account/manage_account.html:41
+#: app/templates/admin/create_user.html:40
+#: app/templates/auth/bootstrap.html:43
+#: app/templates/auth/reset_password.html:42 app/templates/auth/signup.html:42
+msgid "Please enter a valid email address."
+msgstr "મહેરબાની કરીને માન્ય ઈમેઇલ સરનામું દાખલ કરો."
+
+#: app/templates/account/manage_account.html:62
+#: app/templates/account/manage_account.html:96
+#: app/templates/account/manage_account.html:127
+#: app/templates/auth/reset_password.html:66
+#: app/templates/auth/reset_password.html:97 app/templates/auth/signup.html:65
+#: app/templates/auth/signup.html:95
+msgid "Show/hide password"
+msgstr "પાસવર્ડ બતાવવા માટે પકડો"
+
+#: app/templates/account/manage_account.html:89
+#: app/templates/admin/create_user.html:53
+#: app/templates/auth/bootstrap.html:51
+#: app/templates/auth/reset_password.html:58 app/templates/auth/signup.html:58
+msgid "Password must meet all complexity requirements."
+msgstr "પાસવર્ડને બધી જટિલતા આવશ્યકતાઓ પૂરી કરવી પડશે."
+
+#: app/templates/account/manage_account.html:141
+#: app/templates/admin/create_user.html:72
+#: app/templates/admin/edit_user.html:67 app/templates/auth/bootstrap.html:69
+#: app/templates/auth/reset_password.html:110
+#: app/templates/auth/signup.html:108
+msgid "Passwords do not match."
+msgstr "પાસવર્ડો મેળ ખાતા નથી."
+
+#: app/templates/account/manage_account.html:147
+msgid "Update Account"
+msgstr "એકાઉન્ટ અપડેટ કરો"
+
+#: app/templates/account/manage_account.html:151
+#: app/templates/admin/create_user.html:82
+#: app/templates/admin/edit_user.html:97 app/templates/admin/help_form.html:28
+#: app/templates/admin/partials/user_instructions_and_modal.html:62
+#: app/templates/admin/partials/user_table.html:113
+#: app/templates/apprise/create_apprise.html:42
+#: app/templates/apprise/edit_apprise.html:42
+#: app/templates/auth/reset_password.html:121
+#: app/templates/email/assign_smtp.html:46
+#: app/templates/email/attach_files.html:47
+#: app/templates/email/edit_message.html:54
+#: app/templates/email/schedule_email.html:84
+#: app/templates/messages/assign_destinations.html:66
+#: app/templates/messages/create_message.html:55
+#: app/templates/messages/edit_message.html:48
+#: app/templates/messages/schedule_message.html:84
+#: app/templates/mfa/challenge.html:29 app/templates/mfa/settings.html:51
+#: app/templates/reminders/assign_destinations.html:64
+#: app/templates/reminders/assign_email_reminder.html:94
+#: app/templates/reminders/create_reminder.html:49
+#: app/templates/reminders/edit_reminder.html:42
+#: app/templates/reminders/schedule_reminder.html:51
+#: app/templates/user_smtp/create_smtp.html:111
+#: app/templates/user_smtp/edit_smtp.html:125
+#: app/templates/webhook/create_webhook.html:48
+#: app/templates/webhook/edit_webhook.html:48
+msgid "Cancel"
+msgstr "રદ કરો"
+
+#: app/templates/account/manage_account.html:159
+#: app/templates/admin/create_user.html:90
+#: app/templates/admin/edit_user.html:81 app/templates/auth/bootstrap.html:83
+#: app/templates/auth/reset_password.html:128
+#: app/templates/auth/signup.html:132
+msgid "Minimum 8 characters"
+msgstr "ઊનતમ 8 અક્ષર"
+
+#: app/templates/account/manage_account.html:160
+#: app/templates/admin/create_user.html:91
+#: app/templates/admin/edit_user.html:82 app/templates/auth/bootstrap.html:84
+#: app/templates/auth/reset_password.html:129
+#: app/templates/auth/signup.html:133
+msgid "At least one uppercase letter"
+msgstr "ઓછામાં ઓછું એકuppercase અક્ષર"
+
+#: app/templates/account/manage_account.html:161
+#: app/templates/admin/create_user.html:92
+#: app/templates/admin/edit_user.html:83 app/templates/auth/bootstrap.html:85
+#: app/templates/auth/reset_password.html:130
+#: app/templates/auth/signup.html:134
+msgid "At least one lowercase letter"
+msgstr "ઓછામાં ઓછું એક lowercase અક્ષર"
+
+#: app/templates/account/manage_account.html:162
+#: app/templates/admin/create_user.html:93
+#: app/templates/admin/edit_user.html:84 app/templates/auth/bootstrap.html:86
+#: app/templates/auth/reset_password.html:131
+#: app/templates/auth/signup.html:135
+msgid "At least one number"
+msgstr "ઓછામાં ઓછું એક નંબર"
+
+#: app/templates/account/manage_account.html:163
+#: app/templates/admin/create_user.html:94
+#: app/templates/auth/bootstrap.html:87
+#: app/templates/auth/reset_password.html:132
+#: app/templates/auth/signup.html:136
+msgid "At least one special character (e.g., !@#$%)"
+msgstr "ઓછામાં ઓછા એક વિશેષ સાહિત્ય શક્તિશાળી અક્ષર (જેમ કે, !@#$%)"
+
+#: app/templates/account/manage_account.html:169
+msgid "Download My Data"
+msgstr "મારા ડેટા ડાઉનલોડ કરો"
+
+#: app/templates/account/manage_account.html:171
+msgid ""
+"Download all your account data as a JSON file. This includes your reminders,"
+" messages, email settings, and more. The file is for your records only and "
+"cannot be imported back. Protect it as it may contain sensitive information."
+msgstr ""
+"તમારા એકાઉન્ટ ડેટાને એક JSON ફાઇલના રૂપમાં ડાઉનલોડ કરો. આમાં તમારા "
+"રિમાઇન્ડર્સ, સંદેશાઓ, ઇમેઇલ સેટિંગ્સ, અને વધુ શામેલ છે. આ ફાઇલ કેવળ તમારા "
+"રેકોર્ડ્સ માટે છે અને પાછી આયાત કરી શકાતી નથી. તેને સુરક્ષિત રાખો કારણ કે "
+"તેમાં સંવેદનસીલ માહિતી હોઈ શકે છે."
+
+#: app/templates/account/manage_account.html:175
+msgid "Download My Data (JSON)"
+msgstr "મારા ડેટા ડાઉનલોડ કરો (JSON)"
+
+#: app/templates/account/manage_account.html:179
+msgid "Danger Zone"
+msgstr "ખતરો ઝોન"
+
+#: app/templates/account/manage_account.html:180
+msgid "Deleting your account is permanent and cannot be undone."
+msgstr "તમારું ખાતું કાઢવું કાયમી છે અને તેને પાછું લઈ શકાય તેમ નથી."
+
+#: app/templates/account/manage_account.html:185
+msgid "Delete My Account"
+msgstr "એકાઉન્ટ અપડેટ કરો"
+
+#: app/templates/account/translations.html:8
+msgid "Translations - Grylli"
+msgstr "ભાષાંતરો - Grylli"
+
+#: app/templates/account/translations.html:17
+#: app/templates/partials/header.html:102
+msgid "Translations"
+msgstr "અનુવાદો"
+
+#: app/templates/account/translations.html:20
+msgid "Grylli currently supports multiple languages and more will be added."
+msgstr ""
+"Grylli હાલમાં અનેક ભાષાઓને સમર્થન આપે છે અને વધુ ભાષાઓ ઉમેરવામાં આવશે."
+
+#: app/templates/account/translations.html:21
+msgid "Many of the translations were performed with assistance from ChatGPT."
+msgstr "ઘણાં ભાષાંતરો ChatGPT ની મદદથી કરવામાં આવ્યા હતા."
+
+#: app/templates/account/translations.html:22
+msgid ""
+"If you find a translation issue or want to suggest improvements, your input "
+"is welcome!"
+msgstr ""
+"જો તમને ભાષાંતર સમસ્યા મળે અથવા સુધારો સૂચવવા માંગતા હો, તો તમારું ઇનપુટ "
+"સ્વાગત છે!"
+
+#: app/templates/account/translations.html:28
+msgid "How to request translation updates"
+msgstr "ભાષાંતર અપડેટની વિનંતી કેવી રીતે કરવી"
+
+#: app/templates/account/translations.html:30
+msgid "To contribute to translations, please use the following guidelines:"
+msgstr ""
+"ભાષાંતરોમાં યોગદાન આપવા માટે, કૃપા કરીને નીચેની માર્ગદર્શિકાઓનો ઉપયોગ કરો:"
+
+#: app/templates/account/translations.html:43
+msgid "Contribute missing or improved translations:"
+msgstr "ગાયબ થયેલી ભાષાંતર મળ્યાં?"
+
+#: app/templates/account/translations.html:63
+msgid "Open the relevant .po translation file for your language."
+msgstr "તમારી ભાષા માટેના JSON ભાષાંતર ફાઇલ ખોલો. ઉદાહરણ તરીકે:"
+
+#: app/templates/account/translations.html:67
+msgid ""
+"Find untranslated or incomplete entries and add or improve translations."
+msgstr "અનુવાદ ન કરેલી અથવા અધુરી એન્ટ્રીઓને શોધો અને આપો અથવા સુધારાઓ મેળવો."
+
+#: app/templates/account/translations.html:68
+msgid "You may use a PO file editor or a text editor."
+msgstr "તમે PO ફાઇલ એડિટર અથવા ટેક્સ્ટ એડિટરનો ઉપયોગ કરી શકો છો."
+
+#: app/templates/account/translations.html:69
+msgid "Copy the file path and the snippet of your changes."
+msgstr "ફાઇલ પાથ અને તમારા ફેરફારોના સ્નિપેટને કૉપિ કરો."
+
+#: app/templates/account/translations.html:70
+msgid "Paste the snippet directly into a new GitHub issue for review."
+msgstr "નકલ કરેલો ટુકડો સીધો GitHub ઇશ્યૂ કૉમેન્ટમાં પેસ્ટ કરો."
+
+#: app/templates/account/translations.html:72
+msgid "Please do not upload the full .po file to avoid merge conflicts."
+msgstr "મર્જ ટકરાવ ટાળવા માટે સંપૂર્ણ .po ફાઇલ અપલોડ ન કરો."
+
+#: app/templates/account/translations.html:85
+msgid "Improving existing translations:"
+msgstr "અસ્તિત્વમાં રહેલા ભાષાંતર સુધારવા:"
+
+#: app/templates/account/translations.html:104
+msgid "Open the relevant .po file for the translation you want to improve."
+msgstr "તમે સુધારો કરવા ઇચ્છતા ભાષાંતરની સંબંધિત .po ફાઇલ ખોલો."
+
+#: app/templates/account/translations.html:106
+msgid "For example:"
+msgstr "ઉદાહરણ તરીકે:"
+
+#: app/templates/account/translations.html:110
+msgid ""
+"Find the phrase(s) and its existing translation(s) you want to improve."
+msgstr "સુધારવા માટે તમારે શબ્દ(ઓ) અને તેના અસ્તિત્વમાં રહેલા ભાષાંતર શોધો."
+
+#: app/templates/account/translations.html:111
+msgid "Update the phrase(s)."
+msgstr "શબ્દ(ઓ) સુધારો."
+
+#: app/templates/account/translations.html:112
+msgid "Copy the file name and path into the issue."
+msgstr "ઇશ્યૂમાં ફાઇલ નામ અને પાથ કૉપિ કરો."
+
+#: app/templates/account/translations.html:114
+msgid "Paste the copied snippet directly into the GitHub issue comment."
+msgstr "નકલ કરેલો ટુકડો સીધો GitHub ઇશ્યૂ કૉમેન્ટમાં પેસ્ટ કરો."
+
+#: app/templates/account/translations.html:115
+msgid "Do not upload the full .po file to avoid merge conflicts."
+msgstr "મર્જ ટકરાવ ટાળવા માટે સંપૂર્ણ .po ફાઇલ અપલોડ ન કરો."
+
+#: app/templates/account/translations.html:118
+msgid "Example snippet:"
+msgstr "ઉદાહરણ ટુકડો:"
+
+#: app/templates/account/translations.html:137
+msgid "Report missing translations not yet discovered:"
+msgstr "અજાણ્યાં ગાયબ ભાષાંતર સૂચિત કરો:"
+
+#: app/templates/account/translations.html:154
+msgid ""
+"If you see text in the app that appears untranslated or missing, please "
+"report it to us."
+msgstr ""
+"જો તમે એપમાં અનઅનુવાદિત અથવા ગાયબ લાગતો લખાણ જુઓ, તો કૃપા કરીને અમને જાણ "
+"કરો."
+
+#: app/templates/account/translations.html:155
+msgid "Provide the exact English phrase as it appears on the screen."
+msgstr "અધિકૃત અંગ્રેજી વાક્ય જેવા કે તે સ્ક્રીન પર દેખાય છે તે પૂરાં પાડો."
+
+#: app/templates/account/translations.html:156
+msgid ""
+"Include the page or section where you saw the phrase (e.g., Apprise page, "
+"Account Page, etc.)."
+msgstr ""
+"આ પાનું અથવા વિભાગનો સમાવેશ કરો જ્યાં તમે વાક્ય જોયું (જેમ કે, સેટિંગ્સ પેજ,"
+" એકાઉન્ટ વિભાગ)."
+
+#: app/templates/account/translations.html:157
+msgid ""
+"Submit this information via a new GitHub issue so we can add it to the "
+"translation files"
+msgstr ""
+"આ માહિતી દ્વારા નવી GitHub ઇશ્યૂ સબમિટ કરો જેથી અમે તેને ભાષાંતર ફાઇલોમાં "
+"ઉમેળાણ કરી શકીએ અને તેને Babel માટે વરાળી શકીએ."
+
+#: app/templates/account/translations.html:166
+msgid "Found a missing translation?"
+msgstr "ગાયબ થયેલી ભાષાંતર મળ્યાં?"
+
+#: app/templates/account/translations.html:171
+msgid ""
+"This link will create a new GitHub issue pre-filled with a language code."
+msgstr ""
+"આ લિંક નવી GitHub સમસ્યા બનાવશે જેમાં ભાષા કોડ પહેલાંથી ભરીને આપ્યો છે."
+
+#: app/templates/account/translations.html:172
+msgid "Report it by opening a new GitHub issue"
+msgstr "તે નવી GitHub ઇશ્યૂ ખોળીને સૂચિત કરો"
+
+#: app/templates/account/translations.html:175
+msgid "Please specify the language code and exact phrase when reporting."
+msgstr "અહેવાલ કરતી વખતે કૃપા કરીને ભાષા કોડ અને ચોક્કસ વાક્યે સ્પષ્ટ કરો."
+
+#: app/templates/account/translations.html:176
+msgid "Thank you for helping us make Grylli better!"
+msgstr "Grylli ને વધુ ઉત્તમ બનાવવા માટે અમારી સાથે મદદ કરવા બદલ આભાર!"
+
+#: app/templates/admin/create_user.html:14
+msgid "Create New User"
+msgstr "નવા યુઝર બનાવો"
+
+#: app/templates/admin/create_user.html:15
+msgid "Fill out the form to add a new user."
+msgstr "નવા યુઝર ઉમેરવા માટે ફોર્મ ભરો."
+
+#: app/templates/admin/create_user.html:21
+#: app/templates/admin/edit_user.html:17 app/templates/auth/bootstrap.html:24
+msgid "Please fix the following errors:"
+msgstr "કૃપા કરી નીચેના ભૂલોને ઠીક કરો:"
+
+#: app/templates/admin/create_user.html:78
+#: app/templates/admin/edit_user.html:93
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "Create User"
+msgstr "યુઝર બનાવો"
+
+#: app/templates/admin/edit_user.html:10
+#: app/templates/admin/partials/user_card.html:20
+#: app/templates/admin/partials/user_table.html:26
+msgid "Edit User"
+msgstr "યુઝર સંપાદિત કરો"
+
+#: app/templates/admin/edit_user.html:55 app/templates/admin/edit_user.html:74
+msgid "Hold to show password"
+msgstr "પાસવર્ડ બતાવવા માટે પકડો"
+
+#: app/templates/admin/edit_user.html:85
+#, python-format
+msgid "At least one special character (e.g., !@#$%%)"
+msgstr "ઓછામાં ઓછા એક વિશેષ સાહિત્ય શક્તિશાળી અક્ષર (જેમ કે, !@#$%%)"
+
+#: app/templates/admin/help.html:4 app/templates/auth/login.html:72
+msgid "Admin Help"
+msgstr "એડમિન પેનલ"
+
+#: app/templates/admin/help.html:7
+msgid "Reset Admin Password"
+msgstr "પાસવર્ડ રીસેટ"
+
+#: app/templates/admin/help.html:9
+msgid ""
+"If you've forgotten the admin password, you can reset it using the following"
+" Docker command:"
+msgstr ""
+"જો તમે એડમિન પાસવર્ડ ભૂલી ગયા હોવ, તો તમે તેને નીચેના ડોકર કમાન્ડનો ઉપયોગ "
+"કરીને રીસેટ કરી શકો છો:"
+
+#: app/templates/admin/help.html:15
+msgid ""
+"This script will prompt you to enter a new password for the admin user. You "
+"must run it from the host system where the Grylli container is running."
+msgstr ""
+"આ સ્ક્રિપ્ટ તમને એડમિન યુઝર માટે નવા પાસવર્ડ દાખલ કરવા માટે કહીશે. તમારે તે "
+"હોસ્ટ સિસ્ટમ પરથી ચલાવવું પડશે જ્યાં Grylli કન્ટેનર ચલાવી રહ્યું છે."
+
+#: app/templates/admin/help.html:18
+msgid "After resetting, you can log in with the new password immediately."
+msgstr "રીસેટ કર્યા પછી, તમે તરત જ નવા પાસવર્ડ સાથે લૉગિન કરી શકો છો."
+
+#: app/templates/admin/help.html:24
+msgid "Return to Login"
+msgstr "ડેશબોર્ડ પર પાછા જાઓ"
+
+#: app/templates/admin/help_form.html:6
+msgid "Admin Help Access"
+msgstr "એડમિન સહાય ઍક્સેસ"
+
+#: app/templates/admin/help_form.html:9
+msgid "Enter your Ferret Key to unlock admin-only help documentation."
+msgstr ""
+"એડમિન-માત્ર સહાય દસ્તાવેજીકરણ અનલોક કરવા માટે તમારું Ferret Key દાખલ કરો."
+
+#: app/templates/admin/help_form.html:34
+msgid "How to Find Your FERRET_KEY"
+msgstr "તમારો FERRET_KEY કેવી રીતે શોધવો"
+
+#: app/templates/admin/help_form.html:36
+msgid "The FERRET_KEY is set as an environment variable when running Grylli."
+msgstr ""
+"Grylli ચલાવતી વખતે FERRET_KEY એક એન્વાયર્નમેન્ટ વેરિયેબલ તરીકે સેટ થાય છે."
+
+#: app/templates/admin/help_form.html:39
+msgid "Option 1: Check docker-compose.yml"
+msgstr "વિકલ્પ 1: docker-compose.yml તપાસો"
+
+#: app/templates/admin/help_form.html:46
+msgid "Option 2: Use docker inspect"
+msgstr "વિકલ્પ 2: docker inspect નો ઉપયોગ કરો"
+
+#: app/templates/admin/help_form.html:52
+msgid "This shows the FERRET_KEY as passed to the container at runtime."
+msgstr "આ FERRET_KEY બતાવે છે જે કન્ટેનર પર રનટાઈમમાં પસાર થાય છે."
+
+#: app/templates/admin/index.html:10
+msgid "Admin Panel"
+msgstr "એડમિન પેનલ"
+
+#: app/templates/admin/index.html:12
+msgid ""
+"Welcome to the Grylli Admin Panel. Use the links below to manage the system."
+msgstr ""
+"Grylli એડમિન પેનલમાં આપનું સ્વાગત છે. સિસ્ટમ મેનેજ કરવા માટે નીચેની "
+"લિંક્સનું ઉપયોગ કરો."
+
+#: app/templates/admin/index.html:17
+msgid "Manage Users"
+msgstr "યુઝર મેનેજ કરો"
+
+#: app/templates/admin/index.html:18
+msgid "Create, edit, enable/disable, or delete user accounts."
+msgstr ""
+"વપરાશકર્તા ખાતાઓ બનાવો, સંપાદિત કરો, સક્રિય/નિષ્ક્રિય કરો અથવા કાઢી નાંખો."
+
+#: app/templates/admin/index.html:22
+#: app/templates/admin/system_settings.html:10
+#: app/templates/partials/admin_nav.html:52
+msgid "System Settings"
+msgstr "સિસ્ટમ સેટિંગ્સ"
+
+#: app/templates/admin/index.html:23
+msgid "View  system-wide environment values."
+msgstr "સિસ્ટમ-વાઇડ એન્વાયર્નમેન્ટ મૂલ્યો જુઓ."
+
+#: app/templates/admin/index.html:27 app/templates/partials/admin_nav.html:42
+msgid "Backups"
+msgstr "બેકઅપ્સ"
+
+#: app/templates/admin/index.html:28
+msgid "Create and delete database backups."
+msgstr "ડેટાબેઝ બેકઅપ્સ"
+
+#: app/templates/admin/index.html:33
+msgid "View and test global SMTP settings."
+msgstr "પરીક્ષણ ઇમેઇલ મોકલવામાં નિષ્ફળ. SMTP સેટિંગ્સ તપાસો."
+
+#: app/templates/admin/index.html:39
+msgid "View Admin Guide / README on GitHub"
+msgstr "GitHub પર એડમિન ગાઇડ / README જુઓ"
+
+#: app/templates/admin/index.html:40
+msgid "Includes setup instructions, integrations, and troubleshooting."
+msgstr "સેટઅપની સૂચનાઓ, ઇન્ટિગ્રેશન્સ અને નિરાકરણ-કુશળતા શામેલ છે."
+
+#: app/templates/admin/index.html:44
+msgid "⚠️ Admin Tips"
+msgstr "⚠️ એડમિન ટિપ્સ"
+
+#: app/templates/admin/index.html:46
+msgid "Ensure the data folder (database) is backed up on your host"
+msgstr "ખાતરી કરો કે ડેટા ફોલ્ડર (ડેટાબેઝ) તમારા હોસ્ટ પર બેકઅપ છે"
+
+#: app/templates/admin/index.html:48
+msgid ""
+"The uploads folder is not per user.  If required per user, you will ndd to "
+"create subdirectoried per user and setup permissions so users can only see "
+"their own folder."
+msgstr ""
+"અપલોડ ફોલ્ડર પ્રતિ વપરાશકર્તા નથી. જો પ્રતિ વપરાશકર્તા આવશ્યક હોય, તો તમારે "
+"દરેક વપરાશકર્તા માટે ઉપફોલ્ડર્સ બનાવવાની જરૂર પડશે અને પરવાનગી સમસ્યા કરવાની"
+" જરૂર પડશે જેથી વપરાશકર્તાઓ માત્ર પોતાનો ફોલ્ડર જ જોઇ શકે."
+
+#: app/templates/admin/index.html:51
+msgid ""
+"To restore a backup: stop the container, replace the data/grylli.db with one"
+" from the backups folder, and restart the container."
+msgstr ""
+"બેકઅપ પુનઃસ્થાપિત કરવા માટે: કન્ટેનર રોકો, બેકઅપ ફોલ્ડરમાંથી એ "
+"ડેટા/grylli.db ને બદલો, અને કન્ટેનર ફરી શરૂ કરો."
+
+#: app/templates/admin/list_backups.html:11
+msgid "Database Backups"
+msgstr "ડેટાબેઝ બેકઅપ્સ"
+
+#: app/templates/admin/list_backups.html:13
+msgid "Create Backup"
+msgstr "બેકઅપ બનાવો"
+
+#: app/templates/admin/list_backups.html:21
+msgid "Filename"
+msgstr "ફાઇલનામ"
+
+#: app/templates/admin/list_backups.html:22
+#: app/templates/admin/partials/user_table.html:14
+#: app/templates/apprise/list_apprise.html:62
+#: app/templates/email/list_emails.html:60
+#: app/templates/messages/list_messages.html:60
+#: app/templates/reminders/list_reminders.html:60
+#: app/templates/user_smtp/list_smtp.html:59
+#: app/templates/webhook/list_webhooks.html:63
+msgid "Actions"
+msgstr "ક્રિયાઓ"
+
+#: app/templates/admin/list_backups.html:32
+msgid "Delete this backup?"
+msgstr "આ બેકઅપ કાઢી નાખવું?"
+
+#: app/templates/admin/list_backups.html:32
+#: app/templates/apprise/list_apprise.html:95
+#: app/templates/apprise/list_apprise.html:99
+#: app/templates/apprise/list_apprise.html:150
+#: app/templates/apprise/list_apprise.html:154
+#: app/templates/email/list_emails.html:124
+#: app/templates/email/list_emails.html:128
+#: app/templates/email/list_emails.html:226
+#: app/templates/email/list_emails.html:230
+#: app/templates/messages/list_messages.html:112
+#: app/templates/messages/list_messages.html:116
+#: app/templates/messages/list_messages.html:198
+#: app/templates/messages/list_messages.html:202
+#: app/templates/reminders/list_reminders.html:107
+#: app/templates/reminders/list_reminders.html:113
+#: app/templates/reminders/list_reminders.html:192
+#: app/templates/reminders/list_reminders.html:198
+#: app/templates/user_smtp/list_smtp.html:101
+#: app/templates/user_smtp/list_smtp.html:169
+#: app/templates/webhook/list_webhooks.html:102
+#: app/templates/webhook/list_webhooks.html:161
+msgid "Delete"
+msgstr "કાઢી નાખો"
+
+#: app/templates/admin/list_backups.html:41
+msgid "No backups found."
+msgstr "કોઈ બેકઅપ નથી મળ્યા."
+
+#: app/templates/admin/list_backups.html:44
+msgid ""
+"Backups contain your full app data. Store securely. Sensitive data is "
+"encrypted in the DB by default."
+msgstr ""
+"બેકઅપમાં તમારી સંપૂર્ણ એપ્લિકેશન ડેટા છે. સુરક્ષિત રીતે સાચવો. ડિફૉલ્ટ "
+"દ્વારા DB મા સંવેદનશીલ ડેટા એન્ક્રિપ્ટ કરવામાં આવે છે."
+
+#: app/templates/admin/smtp_config.html:28
+#: app/templates/admin/system_config.html:22
+msgid "System Configuration"
+msgstr "સિસ્ટમ કૉન્ફિગ્યુરેશન"
+
+#: app/templates/admin/smtp_config.html:33
+#: app/templates/admin/system_config.html:26
+#: app/templates/admin/system_settings.html:15
+msgid "Key"
+msgstr "કી"
+
+#: app/templates/admin/smtp_config.html:34
+#: app/templates/admin/system_config.html:27
+#: app/templates/admin/system_settings.html:16
+msgid "Value"
+msgstr "મૂલ્ય"
+
+#: app/templates/admin/smtp_config.html:35
+#: app/templates/admin/system_config.html:28
+msgid "Sensitive"
+msgstr "સંવેદનશીલ"
+
+#: app/templates/admin/smtp_config.html:36
+#: app/templates/admin/system_config.html:29
+msgid "Editable"
+msgstr "Editable"
+
+#: app/templates/admin/smtp_config.html:50
+#: app/templates/admin/smtp_config.html:51
+#: app/templates/admin/system_config.html:45
+#: app/templates/admin/system_config.html:46
+#: app/templates/email/view_config.html:60
+msgid "Yes"
+msgstr "હા"
+
+#: app/templates/admin/smtp_config.html:50
+#: app/templates/admin/smtp_config.html:51
+#: app/templates/admin/system_config.html:45
+#: app/templates/admin/system_config.html:46
+#: app/templates/email/view_config.html:60
+msgid "No"
+msgstr "ના"
+
+#: app/templates/admin/smtp_config.html:63
+#: app/templates/admin/system_config.html:55
+msgid "Send Test Email"
+msgstr "ટેસ્ટ ઈમેલ મોકલો"
+
+#: app/templates/admin/system_config.html:39
+msgid "decrypted"
+msgstr "બનાવ્યું"
+
+#: app/templates/admin/partials/user_card.html:12
+msgid "Email:"
+msgstr "ઇમેઇલ:"
+
+#: app/templates/admin/partials/user_card.html:15
+msgid "Role:"
+msgstr "ભૂમિકા:"
+
+#: app/templates/admin/partials/user_card.html:27
+#: app/templates/admin/partials/user_table.html:34
+msgid "Change Role"
+msgstr "ભૂમિકા બદલો"
+
+#: app/templates/admin/partials/user_card.html:29
+#: app/templates/admin/partials/user_table.html:36
+msgid "You cannot change your own role"
+msgstr "તમે તમારો પોતાનો સક્ષમ સ્થિતિ બદલી શકતા નથી."
+
+#: app/templates/admin/partials/user_card.html:36
+#: app/templates/admin/partials/user_table.html:43
+msgid "Are you sure you want to reset MFA for this user?"
+msgstr "શું તમે આ વપરાશકર્તા માટે MFA ફરીથી સેટ કરવા માટે ખાતરી કરો છો?"
+
+#: app/templates/admin/partials/user_card.html:39
+#: app/templates/admin/partials/user_table.html:46
+msgid "Reset MFA"
+msgstr "પાસવર્ડ રીસેટ"
+
+#: app/templates/admin/partials/user_card.html:51
+#: app/templates/admin/partials/user_table.html:58
+msgid "Delete user"
+msgstr "વપરાશકર્તા કાઢી નાખો"
+
+#: app/templates/admin/partials/user_card.html:55
+#: app/templates/admin/partials/user_table.html:61
+msgid "Delete User"
+msgstr "વપરાશકર્તા કાઢી નાખો"
+
+#: app/templates/admin/partials/user_card.html:58
+#: app/templates/admin/partials/user_table.html:65
+msgid "You cannot disable yourself"
+msgstr "તમે તમારા જાતને નિષ્ક્રિય કરી શકતા નથી"
+
+#: app/templates/admin/partials/user_card.html:65
+#: app/templates/admin/partials/user_table.html:72
+msgid "Disable"
+msgstr "નિષ્ક્રિય"
+
+#: app/templates/admin/partials/user_card.html:65
+#: app/templates/admin/partials/user_table.html:72
+msgid "Enable"
+msgstr "સક્રિય"
+
+#: app/templates/admin/partials/user_header.html:6
+#: app/templates/partials/admin_nav.html:47
+msgid "Users"
+msgstr "વપરાશકો"
+
+#: app/templates/admin/partials/user_header.html:12
+#: app/templates/admin/partials/user_header.html:13
+#: app/templates/apprise/apprise_config.html:10
+#: app/templates/apprise/apprise_config.html:11
+#: app/templates/apprise/list_apprise.html:16
+#: app/templates/apprise/list_apprise.html:17
+#: app/templates/email/list_emails.html:15
+#: app/templates/email/list_emails.html:16
+#: app/templates/messages/list_messages.html:16
+#: app/templates/messages/list_messages.html:17
+#: app/templates/reminders/list_reminders.html:15
+#: app/templates/reminders/list_reminders.html:16
+#: app/templates/user_smtp/list_smtp.html:14
+#: app/templates/user_smtp/list_smtp.html:17
+#: app/templates/webhook/list_webhooks.html:16
+#: app/templates/webhook/list_webhooks.html:17
+#: app/templates/webhook/webhook_config.html:10
+#: app/templates/webhook/webhook_config.html:11
+msgid "Table View"
+msgstr "ટેબલ દ્રશ્ય"
+
+#: app/templates/admin/partials/user_header.html:26
+#: app/templates/admin/partials/user_header.html:27
+#: app/templates/apprise/apprise_config.html:24
+#: app/templates/apprise/apprise_config.html:25
+#: app/templates/apprise/list_apprise.html:30
+#: app/templates/apprise/list_apprise.html:31
+#: app/templates/email/list_emails.html:29
+#: app/templates/email/list_emails.html:30
+#: app/templates/messages/list_messages.html:30
+#: app/templates/messages/list_messages.html:31
+#: app/templates/reminders/list_reminders.html:29
+#: app/templates/reminders/list_reminders.html:30
+#: app/templates/user_smtp/list_smtp.html:27
+#: app/templates/user_smtp/list_smtp.html:30
+#: app/templates/webhook/list_webhooks.html:30
+#: app/templates/webhook/list_webhooks.html:31
+#: app/templates/webhook/webhook_config.html:24
+#: app/templates/webhook/webhook_config.html:25
+msgid "Card View"
+msgstr "કાર્ડ દ્રશ્ય"
+
+#: app/templates/admin/partials/user_header.html:45
+msgid "Add User"
+msgstr "વપરાશકર્તા ઉમેરો"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:9
+#: app/templates/email/attach_files.html:54
+#: app/templates/email/list_emails.html:255
+#: app/templates/messages/list_messages.html:223
+#: app/templates/reminders/list_reminders.html:218
+#: app/templates/reminders/schedule_reminder.html:56
+msgid "Hide Instructions"
+msgstr "સૂચનો છુપાવો"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:9
+msgid "How to manage users"
+msgstr "વપરાશકર્તાઓ કેમ મેનેજ કરવું"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "Click"
+msgstr "ક્લિક કરો"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+msgid "➕ Add User"
+msgstr "➕ વપરાશકર્તા ઉમેરો"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+msgid "to open the new user form."
+msgstr "આ નવો વપરાશકર્તા ફોરમ ખોલવા માટે."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:18
+msgid "Enter a unique username, valid email address, and strong password."
+msgstr "અનન્ય વપરાશકર્તાનામ, માન્ય ઇમેઇલ સરનામું અને મજબૂત પાસવર્ડ દાખલ કરો."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "Select the appropriate"
+msgstr "લાયક"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "role"
+msgstr "ભૂમિકા"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "or"
+msgstr "પોર્ટ"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "to save."
+msgstr "સાચવો."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:25
+msgid "To edit a user, click ✏️ and update their info."
+msgstr ""
+"વપરાશકર્તાને સંપાદિત કરવા માટે, ✏️ પર ક્લિક કરો અને તેમની માહિતી અપડેટ કરો."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:26
+msgid "To delete a user, click 🗑️ and confirm the deletion."
+msgstr ""
+"વપરાશકર્તાને કાઢી નાખવા માટે, 🗑️ પર ક્લિક કરો અને કાઢી નાખવાની પુષ્ટિ કરો."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:28
+msgid "To disable or enable a user, click 🔴 or 🟢."
+msgstr "વપરાશકર્તાને નિષ્ક્રિય અથવા સક્રિય કરવા માટે, 🔴 અથવા 🟢 પર ક્લિક કરો."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:30
+msgid "🟢 = User is enabled and can log in."
+msgstr "🟢 = વપરાશકર્તા સક્રિય છે અને લોગ ઇન કરી શકે છે."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:31
+msgid "🔴 = User is disabled and cannot log in."
+msgstr "🔴 = વપરાશકર્તા અક્ષમ છે અને લૉગ ઇન કરી શકતી નથી."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:32
+msgid "⚪ = You cannot disable your own account."
+msgstr "⚪ = તમે તમારી પોતાની એકાઉન્ટ અક્ષમ કરી શકતા નથી."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:43
+#: app/templates/admin/partials/user_table.html:91
+msgid "Assign Role for"
+msgstr "માટે ગંતવ્યોésie જોવા માટે સોંપો"
+
+#: app/templates/admin/partials/user_table.html:10
+msgid "ID"
+msgstr "આઇડી"
+
+#: app/templates/admin/partials/user_table.html:11
+#: app/templates/user_smtp/list_smtp.html:55
+msgid "Username"
+msgstr "વપરાશકર્તાનામ"
+
+#: app/templates/admin/partials/user_table.html:12
+msgid "Email"
+msgstr "ઇમેઇલ"
+
+#: app/templates/admin/partials/user_table.html:13
+msgid "Role"
+msgstr "ભૂમિકા"
+
+#: app/templates/apprise/apprise_config.html:3
+#: app/templates/apprise/list_apprise.html:9
+#: app/templates/messages/assign_destinations.html:22
+#: app/templates/reminders/assign_destinations.html:20
+msgid "Apprise Destinations"
+msgstr "એપ્રાઇઝ ડેસ્ટિનેશન્સ"
+
+#: app/templates/apprise/apprise_config.html:43
+#: app/templates/webhook/list_webhooks.html:49
+#: app/templates/webhook/webhook_config.html:43
+msgid "Add Webhook"
+msgstr "વેબહૂક ઉમેરો"
+
+#: app/templates/apprise/apprise_config.html:43
+#: app/templates/apprise/list_apprise.html:49
+#: app/templates/webhook/list_webhooks.html:49
+#: app/templates/webhook/webhook_config.html:43
+msgid "Add Destination"
+msgstr "ડેસ્ટિનેશન ઉમેરો"
+
+#: app/templates/apprise/create_apprise.html:10
+msgid "Create Apprise Destination"
+msgstr "એપ્રાઇઝ ડેસ્ટિનેશન બનાવો"
+
+#: app/templates/apprise/create_apprise.html:38
+#: app/templates/apprise/edit_apprise.html:38
+#: app/templates/user_smtp/create_smtp.html:107
+#: app/templates/webhook/create_webhook.html:44
+#: app/templates/webhook/edit_webhook.html:44
+msgid "Create Destination"
+msgstr "ડેસ્ટિનેશન બનાવો"
+
+#: app/templates/apprise/create_apprise.html:47
+#: app/templates/apprise/edit_apprise.html:47
+msgid "Need help with Apprise URLs? See the"
+msgstr "એપ્રાઇઝ URL માટે મદદની જરૂર છે? જોવા માટે"
+
+#: app/templates/apprise/create_apprise.html:51
+#: app/templates/apprise/edit_apprise.html:51
+msgid "Apprise Notification Services documentation"
+msgstr "એપ્રાઇઝ સૂચના સેવાઓ દસ્તાવેજીકરણ"
+
+#: app/templates/apprise/edit_apprise.html:10
+msgid "Edit Apprise Destination"
+msgstr "એપ્રાઇઝ ડેસ્ટિનેશન સંપાદિત કરો"
+
+#: app/templates/apprise/list_apprise.html:49
+msgid "Add Apprise"
+msgstr "એપ્રાઇઝ ઉમેરો"
+
+#: app/templates/apprise/list_apprise.html:58
+#: app/templates/email/edit_message.html:21
+#: app/templates/email/list_emails.html:56
+#: app/templates/email/view_config.html:14
+#: app/templates/messages/create_message.html:29
+#: app/templates/messages/edit_message.html:23
+#: app/templates/messages/list_messages.html:57
+#: app/templates/messages/view_message.html:14
+#: app/templates/reminders/create_reminder.html:23
+#: app/templates/reminders/edit_reminder.html:17
+#: app/templates/reminders/list_reminders.html:56
+#: app/templates/reminders/view_reminder.html:13
+#: app/templates/user_smtp/list_smtp.html:52
+#: app/templates/webhook/list_webhooks.html:58
+msgid "Label"
+msgstr "લેબલ"
+
+#: app/templates/apprise/list_apprise.html:59
+msgid "URL"
+msgstr "URL"
+
+#: app/templates/apprise/list_apprise.html:61
+#: app/templates/email/list_emails.html:59
+#: app/templates/messages/list_messages.html:59
+#: app/templates/messages/view_message.html:36
+#: app/templates/reminders/view_reminder.html:47
+#: app/templates/webhook/list_webhooks.html:62
+msgid "Created At"
+msgstr "બનાવેલ સમય"
+
+#: app/templates/apprise/list_apprise.html:77
+#: app/templates/apprise/list_apprise.html:132
+#: app/templates/user_smtp/list_smtp.html:79
+#: app/templates/user_smtp/list_smtp.html:147
+#: app/templates/webhook/list_webhooks.html:79
+#: app/templates/webhook/list_webhooks.html:138
+msgid "Edit"
+msgstr "ફેરફાર"
+
+#: app/templates/apprise/list_apprise.html:80
+#: app/templates/apprise/list_apprise.html:135
+#: app/templates/user_smtp/list_smtp.html:82
+#: app/templates/user_smtp/list_smtp.html:150
+msgid "Cannot edit while in use"
+msgstr "ઉપયોગમાં હોય ત્યારે સંપાદિત કરી શકતા નથી"
+
+#: app/templates/apprise/list_apprise.html:88
+#: app/templates/apprise/list_apprise.html:143
+#: app/templates/webhook/list_webhooks.html:91
+#: app/templates/webhook/list_webhooks.html:150
+msgid "Test"
+msgstr "ટેસ્ટ"
+
+#: app/templates/apprise/list_apprise.html:103
+#: app/templates/apprise/list_apprise.html:158
+#: app/templates/user_smtp/list_smtp.html:106
+#: app/templates/user_smtp/list_smtp.html:174
+msgid "Cannot delete while in use"
+msgstr "ઉપયોગમાં હોય ત્યારે કાઢી શકતા નથી"
+
+#: app/templates/apprise/list_apprise.html:119
+msgid "URL:"
+msgstr "URL:"
+
+#: app/templates/apprise/list_apprise.html:122
+#: app/templates/user_smtp/list_smtp.html:137
+#: app/templates/webhook/list_webhooks.html:128
+msgid "Enabled:"
+msgstr "સક્રિય:"
+
+#: app/templates/apprise/list_apprise.html:125
+#: app/templates/user_smtp/list_smtp.html:140
+#: app/templates/webhook/list_webhooks.html:131
+msgid "Created:"
+msgstr "બનાવેલ:"
+
+#: app/templates/auth/bootstrap.html:14
+msgid "Create Admin Account"
+msgstr "એડમિન એકાઉન્ટ બનાવો"
+
+#: app/templates/auth/bootstrap.html:16
+msgid "Let’s get started by creating your first admin account."
+msgstr "તમારું પ્રથમ એડમિન એકાઉન્ટ બનાવીને શરૂઆત કરીએ."
+
+#: app/templates/auth/bootstrap.html:75
+msgid "Create Admin"
+msgstr "એડમિન બનાવો"
+
+#: app/templates/auth/forgot_password.html:12
+msgid "Forgot Password"
+msgstr "પાસવર્ડ ભૂલાયા"
+
+#: app/templates/auth/forgot_password.html:15
+msgid ""
+"Enter your username and email. We'll send you a link to reset your password."
+msgstr ""
+"તમારું વપરાશકર્તા નામ અને ઇમેઇલ દાખલ કરો. અમે તમને તમારો પાસવર્ડ રીસેટ કરવા "
+"માટે લીંક મોકલીએશુ."
+
+#: app/templates/auth/forgot_username.html:12
+msgid "Forgot Username"
+msgstr "વપરાશકર્તા નામ ભૂલ્યા"
+
+#: app/templates/auth/forgot_username.html:15
+msgid "Enter your email address, and we'll send you your username."
+msgstr ""
+"તમારા ઇમેલ સરનામું દાખલ કરો, અને અમે તમને તમારું વપરાશકર્તા નામ મોકલીએ."
+
+#: app/templates/auth/forgot_username.html:40
+msgid "Send Username"
+msgstr "વપરાશકર્તા નામ મોકલો"
+
+#: app/templates/auth/login.html:12 app/templates/auth/login.html:54
+msgid "Log In"
+msgstr "લૉગ ઇન"
+
+#: app/templates/auth/login.html:62
+msgid "Forgot Username?"
+msgstr "વપરાશકર્તા નામ ભૂલ્યા?"
+
+#: app/templates/auth/login.html:64
+msgid "Forgot Password?"
+msgstr "પાસવર્ડ ભૂલાયા?"
+
+#: app/templates/auth/login.html:66 app/templates/auth/signup.html:12
+msgid "Sign Up"
+msgstr "સાઇન અપ"
+
+#: app/templates/auth/rate_limit.html:9
+msgid "Hold On"
+msgstr "રોકો"
+
+#: app/templates/auth/rate_limit.html:11
+msgid "Too many failed login attempts. Please wait"
+msgstr "ખૂબ બધા નિષ્ફળ લૉગિન પ્રયાસો. કૃપા કરીને રાહ જુઓ"
+
+#: app/templates/auth/rate_limit.html:13
+msgid "seconds..."
+msgstr "સેકંડ્સ..."
+
+#: app/templates/auth/rate_limit.html:15
+msgid "Redirecting to login..."
+msgstr "ડેશબોર્ડ પર પાછા જાઓ"
+
+#: app/templates/auth/reset_password.html:12
+#: app/templates/auth/reset_password.html:116
+msgid "Reset Password"
+msgstr "પાસવર્ડ રીસેટ"
+
+#: app/templates/auth/reset_password.html:14
+msgid "Enter your username, email, and new password."
+msgstr "તમારું યુઝરનેમ, ઇમેઈલ, અને નવો પાસવર્ડ દાખલ કરો."
+
+#: app/templates/auth/signup.html:14
+msgid "Fill out the form to create your account."
+msgstr "તમારું એકાઉન્ટ બનાવવા માટે ફોર્મ ભરો."
+
+#: app/templates/checkin/already_checked_in.html:10
+msgid "Already Checked In"
+msgstr "છેલ્લું ચેક-ઇન"
+
+#: app/templates/checkin/already_checked_in.html:12
+msgid ""
+"You have already checked in for this item. No further action is needed at "
+"this time."
+msgstr ""
+"તમે આ આઇટમ માટે પહેલેથી જ ચેક ઇન કર્યું છે. આ સમયે અન્ય કોઈ કાર્યવાહી જરૂરી "
+"નથી."
+
+#: app/templates/checkin/already_checked_in.html:16
+#: app/templates/checkin/disabled.html:16
+#: app/templates/checkin/executed_disabled.html:18
+msgid "Check-in for:"
+msgstr "માટે ચેક-ઇન:"
+
+#: app/templates/checkin/already_checked_in.html:21
+#: app/templates/checkin/disabled.html:21
+#: app/templates/checkin/executed_disabled.html:23
+#: app/templates/checkin/thank_you.html:19
+msgid "Return to Dashboard"
+msgstr "ડેશબોર્ડ પર પાછા જાઓ"
+
+#: app/templates/checkin/disabled.html:10
+msgid "Check-In Disabled"
+msgstr "ઈમેઈલ નિષ્ક्रिय છે"
+
+#: app/templates/checkin/disabled.html:12
+msgid "This check-in is currently disabled and cannot be completed."
+msgstr "આ ચેક-ઇન હાલમાં નિષ્ક્રિય છે અને પૂર્ણ થવું શક્ય નથી."
+
+#: app/templates/checkin/executed_disabled.html:11
+msgid "Already Executed & Disabled"
+msgstr "પહેલેથી જ અંજામ આપ્યું અને નિષ્ક્રિય"
+
+#: app/templates/checkin/executed_disabled.html:14
+msgid ""
+"This check-in has already been executed and is now disabled. No further "
+"action is required."
+msgstr ""
+"આ ચેક-ઇન પહેલાથી જ પૂર્ણ થયું છે અને હવે નિષ્ક્રિય છે. કોઈ વધુ કાર્યવાહી "
+"આવશ્યક નથી."
+
+#: app/templates/checkin/thank_you.html:10
+msgid "Check-In Successful"
+msgstr "ચેક-ઇન સફળ"
+
+#: app/templates/checkin/thank_you.html:11
+msgid "Thank you for checking in."
+msgstr "ચેક-ઇન કરવા માટે આભાર."
+
+#: app/templates/checkin/thank_you.html:14
+msgid "Checked in for:"
+msgstr "માટે ચેક-ઇન:"
+
+#: app/templates/email/assign_smtp.html:11
+msgid "📧 Assign SMTP Config to:"
+msgstr "📧 SMTP કન્ફિગ સોંપો:"
+
+#: app/templates/email/assign_smtp.html:25
+msgid "No SMTP (Unassign)"
+msgstr "કોઈ SMTP રૂપરેખાંકન સોંપવામાં આવ્યું નથી"
+
+#: app/templates/email/assign_smtp.html:26
+msgid "This email will not use any SMTP configuration."
+msgstr "આ ઇમેઇલ કોઈપણ SMTP રૂપરેખાંકનનો ઉપયોગ કરશે નહીં."
+
+#: app/templates/email/attach_files.html:12
+msgid "Attach Files for:"
+msgstr "માટે ફાઇલ્સ જોડી:"
+
+#: app/templates/email/attach_files.html:21
+msgid "Available Files"
+msgstr "ઉપલબ્ધ ફાઇલ્સ"
+
+#: app/templates/email/attach_files.html:36
+msgid "No files found in the upload directory."
+msgstr "અપલોડ ડિરેક્ટરીમાં કોઈ ફાઇલ્સ મળ્યાં નથી."
+
+#: app/templates/email/attach_files.html:44
+msgid "Save Attachments"
+msgstr "એટેચમેન્ટ્સ સાચવો"
+
+#: app/templates/email/attach_files.html:54
+msgid "File Attach Notes"
+msgstr "ફાઇલ એટેચ નોંધો"
+
+#: app/templates/email/attach_files.html:63
+msgid "Important:"
+msgstr "પોર્ટ:"
+
+#: app/templates/email/attach_files.html:65
+msgid ""
+"Only files that are present in the 'uploads' folder (provided by your system"
+" administrator) will be shown here. If you do not see your file(s), please "
+"contact your Grylli administrator."
+msgstr ""
+"'uploads' ફોલ્ડરમાં હાજર ફાઈલો (તમારા સિસ્ટમ એડમિનિસ્ટ્રેટર દ્વારા પ્રદાન "
+"કરાયેલ) કે જેઓ જ અહીં દર્શાવવામાં આવશે. જો તમે તમારી ફાઇલ(ઓ)ને નહીં જુઓ, તો "
+"કૃપા કરીને તમારા Grylli એડમિનિસ્ટ્રેટરનો સંપર્ક કરો."
+
+#: app/templates/email/attach_files.html:69
+msgid "Accepted file types:"
+msgstr "સ્વીકારેલી ફાઇલ પ્રકારો:"
+
+#: app/templates/email/attach_files.html:71
+msgid "Documents:"
+msgstr "દસ્તાવેજો:"
+
+#: app/templates/email/attach_files.html:73
+msgid "Images:"
+msgstr "છબીઓ:"
+
+#: app/templates/email/attach_files.html:75
+msgid "Audio:"
+msgstr "ઑડિયો:"
+
+#: app/templates/email/attach_files.html:79
+msgid "Maximum file size:"
+msgstr "મહત્તમ ફાઇલ સાઇઝ:"
+
+#: app/templates/email/attach_files.html:80
+msgid "10 MB per file"
+msgstr "દરેક ફાઇલ માટે 10 MB"
+
+#: app/templates/email/attach_files.html:83
+msgid "Total upload size:"
+msgstr "કુલ અપલોડ સાઇઝ:"
+
+#: app/templates/email/attach_files.html:84
+msgid "20 MB (all files combined)"
+msgstr "20 MB (બધી ફાઇલો જોડીને)"
+
+#: app/templates/email/edit_message.html:12
+#: app/templates/email/list_emails.html:75
+#: app/templates/email/list_emails.html:177
+msgid "Edit Email"
+msgstr "ઈમેઈલ સંપાદિત કરો"
+
+#: app/templates/email/edit_message.html:12
+msgid "Create Email"
+msgstr "ઈમેઈલ બનાવો"
+
+#: app/templates/email/edit_message.html:28
+msgid "To (Recipient Email)"
+msgstr "તમારા માટે (પ્રાપ્તકર્તા ઈમેઈલ)"
+
+#: app/templates/email/edit_message.html:35
+#: app/templates/email/list_emails.html:57
+#: app/templates/email/view_config.html:18
+#: app/templates/messages/create_message.html:36
+#: app/templates/messages/edit_message.html:30
+#: app/templates/messages/list_messages.html:58
+#: app/templates/messages/view_message.html:18
+#: app/templates/reminders/create_reminder.html:30
+#: app/templates/reminders/edit_reminder.html:24
+#: app/templates/reminders/list_reminders.html:57
+#: app/templates/reminders/view_reminder.html:17
+msgid "Subject"
+msgstr "વિષય"
+
+#: app/templates/email/edit_message.html:42
+#: app/templates/email/view_config.html:28
+msgid "Body"
+msgstr "મુખ્ય ભાગ"
+
+#: app/templates/email/edit_message.html:50
+msgid "Save Email"
+msgstr "ઇમેઈલ સંગ્રહો"
+
+#: app/templates/email/list_emails.html:48
+msgid "Add Email"
+msgstr "ઇમેઈલ ઉમેરો"
+
+#: app/templates/email/list_emails.html:58
+#: app/templates/reminders/assign_email_reminder.html:77
+msgid "To"
+msgstr "તમારા માટે"
+
+#: app/templates/email/list_emails.html:78
+#: app/templates/email/list_emails.html:180
+msgid "Disable to edit email"
+msgstr "પરીક્ષણ ઇમેઇલ મોકલવામાં નિષ્ફળ:"
+
+#: app/templates/email/list_emails.html:84
+#: app/templates/email/list_emails.html:186
+msgid "Attach Files"
+msgstr "ફાઇલ્સ જોડો"
+
+#: app/templates/email/list_emails.html:87
+#: app/templates/email/list_emails.html:189
+msgid "Disable to attach files"
+msgstr "ફાઇલ્સ જોડો"
+
+#: app/templates/email/list_emails.html:93
+#: app/templates/email/list_emails.html:195
+msgid "Attach SMTP Config"
+msgstr "SMTP કન્ફિગ જોડો"
+
+#: app/templates/email/list_emails.html:96
+#: app/templates/email/list_emails.html:198
+msgid "Disable to assign SMTP"
+msgstr "SMTP ફાળવવા માટે નિષ્ક્રિય કરો"
+
+#: app/templates/email/list_emails.html:102
+#: app/templates/email/list_emails.html:204
+msgid "Schedule Check-In"
+msgstr "ચેક-ઇન શેડ્યુલ કરો"
+
+#: app/templates/email/list_emails.html:105
+#: app/templates/email/list_emails.html:207
+msgid "Disable to schedule check-in"
+msgstr "ચેક-ઇન શેડ્યુલ કરો"
+
+#: app/templates/email/list_emails.html:110
+#: app/templates/email/list_emails.html:212
+#: app/templates/messages/list_messages.html:99
+#: app/templates/messages/list_messages.html:184
+#: app/templates/reminders/list_reminders.html:93
+#: app/templates/reminders/list_reminders.html:178
+msgid "View Details"
+msgstr "વિગતો જુઓ"
+
+#: app/templates/email/list_emails.html:118
+#: app/templates/email/list_emails.html:220
+msgid "Send this email to yourself to preview it."
+msgstr "આ ઇમેઈલને અગાઉથી જુઓ માટે આપને મોકલવું."
+
+#: app/templates/email/list_emails.html:136
+#: app/templates/email/list_emails.html:238
+msgid "Toggle Email On/Off"
+msgstr "ઇમેઈલ ઓન/ઓફ કરો"
+
+#: app/templates/email/list_emails.html:139
+#: app/templates/email/list_emails.html:241
+msgid "Email is enabled"
+msgstr "ઈમેઈલ સક્રિય છે"
+
+#: app/templates/email/list_emails.html:141
+#: app/templates/email/list_emails.html:243
+msgid "Email is disabled"
+msgstr "ઈમેઈલ નિષ્ક्रिय છે"
+
+#: app/templates/email/list_emails.html:157
+#: app/templates/email/view_config.html:51
+#: app/templates/messages/list_messages.html:142
+#: app/templates/reminders/list_reminders.html:140
+msgid "Label:"
+msgstr "લેબલ:"
+
+#: app/templates/email/list_emails.html:161
+#: app/templates/messages/list_messages.html:146
+#: app/templates/reminders/list_reminders.html:144
+#: app/templates/reminders/view_reminder.html:98
+msgid "Subject:"
+msgstr "વિષય"
+
+#: app/templates/email/list_emails.html:165
+msgid "To:"
+msgstr "ને:"
+
+#: app/templates/email/list_emails.html:169
+#: app/templates/messages/list_messages.html:150
+msgid "Created At:"
+msgstr "બનાવેલ સમય"
+
+#: app/templates/email/list_emails.html:255
+msgid "How to create and send an email"
+msgstr "ઈમેઈલ કેવી રીતે બનાવી અને મોકલી શકાય"
+
+#: app/templates/email/list_emails.html:262
+msgid ""
+"Click “Add Email” and fill out the subject, content, and recipient address."
+msgstr "ક્લિક કરો \"Add Email\" અને વિષય, સામગ્રી, અને પ્રાપ્તકનું સરનામું ભરો."
+
+#: app/templates/email/list_emails.html:263
+msgid "Attach any optional files (if needed)."
+msgstr "કોઈપણ વૈકલ્પિક ફાઈલો જોડો (જો જરૂરી હોય તો)."
+
+#: app/templates/email/list_emails.html:264
+msgid ""
+"Click 🧩 to assign a single SMTP configuration that will be used to send the "
+"email."
+msgstr ""
+"ક્લિક કરો 🧩 માટે એકમાત્ર SMTP રૂપરેખાંકન સોંપવા જે ઈમેઈલ મોકલવા માટે વપરાશે."
+
+#: app/templates/email/list_emails.html:265
+msgid "Click ⏱️ to set a check-in interval and grace period for the email."
+msgstr "ક્લિક કરો ⏱️ ચકાસણી અંતરાલ અને અનુગ્રહ અવધિ સેટ કરવા માટે."
+
+#: app/templates/email/list_emails.html:266
+msgid "Enable the email using the 🔴/🟢 toggle button."
+msgstr "ઇમેઇલને 🔴/🟢 ટોગલ બટનનો ઉપયોગ કરીને સક્રિય કરો."
+
+#: app/templates/email/list_emails.html:267
+msgid ""
+"Click 🧪 to test the email by sending it to yourself (not the recipient)."
+msgstr ""
+"ક્લિક કરો 🧪 ઇમેઈલને તમારી જાતને મોકલીને ટેસ્ટ કરવા માટે (પ્રાપ્તકને નહીં)."
+
+#: app/templates/email/list_emails.html:268
+msgid ""
+"If you don’t check in before the grace period ends, the email will be "
+"automatically sent."
+msgstr ""
+"જો તમે અનુગ્રહ અવધિ પૂરી થવા સુધી ચકાસણી નહીં કરો તો ઇમેઇલ આપમેળે મોકલાશે."
+
+#: app/templates/email/list_emails.html:269
+msgid "You can preview the email configuration using 🔍."
+msgstr "તમે ઇમેઇલ રૂપરેખાંકન પૂર્વાવલોકન કરી શકો છો 🔍 નો ઉપયોગ કરીને."
+
+#: app/templates/email/list_emails.html:270
+msgid "Once a secure email is sent, it will be automatically disabled."
+msgstr ""
+"જ્યારે સુરક્ષિત ઇમેઇલ મોકલવામાં આવે છે, તે આપમેળે નિષ્ક્રિય કરવામાં આવશે."
+
+#: app/templates/email/schedule_email.html:9
+msgid "Schedule Email"
+msgstr "સમયসূচિ ઈમેઈલ"
+
+#: app/templates/email/schedule_email.html:18
+#: app/templates/messages/schedule_message.html:18
+msgid "Years"
+msgstr "વર્ષો"
+
+#: app/templates/email/schedule_email.html:19
+#: app/templates/messages/schedule_message.html:19
+msgid "Months"
+msgstr "મહિના"
+
+#: app/templates/email/schedule_email.html:20
+#: app/templates/messages/schedule_message.html:20
+msgid "Weeks"
+msgstr "અઠવાડિયા"
+
+#: app/templates/email/schedule_email.html:21
+#: app/templates/messages/schedule_message.html:21
+msgid "Days"
+msgstr "દિવસો"
+
+#: app/templates/email/schedule_email.html:22
+#: app/templates/messages/schedule_message.html:22
+msgid "Hours"
+msgstr "કલાકો"
+
+#: app/templates/email/schedule_email.html:23
+#: app/templates/messages/schedule_message.html:23
+msgid "Minutes"
+msgstr "મિનિટો"
+
+#: app/templates/email/schedule_email.html:28
+#: app/templates/messages/schedule_message.html:28
+msgid "Check-in"
+msgstr "ચકાસણી"
+
+#: app/templates/email/schedule_email.html:51
+#: app/templates/messages/schedule_message.html:51
+#: app/templates/messages/view_message.html:26
+msgid "Grace Period"
+msgstr "અનુગ્રહ અવધિ"
+
+#: app/templates/email/schedule_email.html:80
+#: app/templates/messages/schedule_message.html:80
+#: app/templates/reminders/schedule_reminder.html:47
+msgid "Save Schedule"
+msgstr "સમયસૂચિ સાચવો"
+
+#: app/templates/email/view_config.html:9
+msgid "Email Configuration"
+msgstr "ઇમેઇલ રૂપરેખાંકન"
+
+#: app/templates/email/view_config.html:22
+msgid "Recipient"
+msgstr "પ્રાપ્તક"
+
+#: app/templates/email/view_config.html:33
+msgid "Attached Files"
+msgstr "જોડાયેલ ફાઈલો"
+
+#: app/templates/email/view_config.html:39
+msgid "No files attached"
+msgstr "કોઈ ફાઇલો જોડાયેલ નથી"
+
+#: app/templates/email/view_config.html:46
+#: app/templates/reminders/assign_email_reminder.html:20
+msgid "SMTP Configuration"
+msgstr "SMTP રૂપરેખાંકન"
+
+#: app/templates/email/view_config.html:54
+#: app/templates/user_smtp/list_smtp.html:122
+msgid "Host:"
+msgstr "હોસ્ટ:"
+
+#: app/templates/email/view_config.html:57
+#: app/templates/user_smtp/list_smtp.html:128
+msgid "Username:"
+msgstr "વપરાશકર્તા નામ:"
+
+#: app/templates/email/view_config.html:60
+#: app/templates/user_smtp/list_smtp.html:134
+msgid "TLS:"
+msgstr "TLS:"
+
+#: app/templates/email/view_config.html:64
+msgid "No SMTP configuration assigned"
+msgstr "કોઈ SMTP રૂપરેખાંકન સોંપવામાં આવ્યું નથી"
+
+#: app/templates/email/view_config.html:69
+msgid "Schedule Information"
+msgstr "સમયસૂચિ માહિતી"
+
+#: app/templates/email/view_config.html:72
+msgid "Check-in Interval:"
+msgstr "ચકાસણી અંતરાલ:"
+
+#: app/templates/email/view_config.html:72
+#: app/templates/email/view_config.html:75
+msgid "minutes"
+msgstr "મિનિટો"
+
+#: app/templates/email/view_config.html:75
+msgid "Grace Period:"
+msgstr "અનુગ્રહ અવધિ:"
+
+#: app/templates/email/view_config.html:79
+msgid "Last Check-in:"
+msgstr "છેલ્લી ચકાસણી:"
+
+#: app/templates/email/view_config.html:82
+msgid "No check-in has occurred yet"
+msgstr "હજી સુધી કોઇ ચકાસણી થઈ નથી"
+
+#: app/templates/email/view_config.html:92
+msgid "Back to Emails"
+msgstr "પાછા ઈમેઈલ્સ પર"
+
+#: app/templates/errors/500.html:4
+msgid "Something went wrong"
+msgstr "કઈંક ખોટું છે"
+
+#: app/templates/errors/500.html:6
+msgid ""
+"An unexpected error occurred. Please try again later or contact support."
+msgstr ""
+"અન્ય અપેક્ષિત ભૂલ આવી. કૃપા કરીને પાછા પ્રયત્ન કરો અથવા ટેકનિકલ સહાયથી "
+"સંપર્ક કરો."
+
+#: app/templates/locale/redirect_after_lang_set.html:15
+msgid "Switching Language..."
+msgstr "ભાષા સ્વીચ કરી રહ્યાં છે..."
+
+#: app/templates/locale/redirect_after_lang_set.html:18
+msgid "Applying new language..."
+msgstr "નવી ભાષા લાગુ..."
+
+#: app/templates/messages/assign_destinations.html:13
+#: app/templates/reminders/assign_destinations.html:12
+msgid "Assign Destinations for"
+msgstr "માટે ગંતવ્યોésie જોવા માટે સોંપો"
+
+#: app/templates/messages/assign_destinations.html:62
+#: app/templates/reminders/assign_destinations.html:60
+msgid "Save Destinations"
+msgstr "ગંતવ્યો સેવે કરો"
+
+#: app/templates/messages/create_message.html:17
+msgid "Edit Notificaton"
+msgstr "સૂચના એડિટ કરો"
+
+#: app/templates/messages/create_message.html:19
+msgid "Create Notification"
+msgstr "સૂચના બનાવો"
+
+#: app/templates/messages/create_message.html:43
+#: app/templates/messages/edit_message.html:37
+#: app/templates/messages/view_message.html:42
+#: app/templates/reminders/create_reminder.html:37
+#: app/templates/reminders/edit_reminder.html:31
+#: app/templates/reminders/view_reminder.html:53
+msgid "Content"
+msgstr "સામગ્રી"
+
+#: app/templates/messages/create_message.html:51
+msgid "Save Notification"
+msgstr "સૂચના સંગ્રહ કરો"
+
+#: app/templates/messages/edit_message.html:15
+#: app/templates/messages/list_messages.html:74
+#: app/templates/messages/list_messages.html:158
+msgid "Edit Notification"
+msgstr "સૂચના એડિટ કરો"
+
+#: app/templates/messages/edit_message.html:45
+msgid "Update Notification"
+msgstr "સૂચના અપડેટ કરો"
+
+#: app/templates/messages/list_messages.html:49
+msgid "Add Notification"
+msgstr "સૂચના ઉમેરો"
+
+#: app/templates/messages/list_messages.html:77
+#: app/templates/messages/list_messages.html:161
+msgid "Disable to edit notification"
+msgstr "સૂચના એડિટ કરો"
+
+#: app/templates/messages/list_messages.html:83
+#: app/templates/messages/list_messages.html:167
+#: app/templates/reminders/list_reminders.html:78
+#: app/templates/reminders/list_reminders.html:163
+msgid "Assign Destinations"
+msgstr "ગંતવ્યો એસાઇન કરો"
+
+#: app/templates/messages/list_messages.html:86
+#: app/templates/messages/list_messages.html:170
+msgid "Disable to assign destinations"
+msgstr "ગંતવ્યો એસાઇન કરો"
+
+#: app/templates/messages/list_messages.html:92
+#: app/templates/messages/list_messages.html:176
+#: app/templates/reminders/list_reminders.html:88
+#: app/templates/reminders/list_reminders.html:173
+msgid "Set Schedule"
+msgstr "શેડ્યૂલ સેટ કરો"
+
+#: app/templates/messages/list_messages.html:95
+#: app/templates/messages/list_messages.html:179
+msgid "Disable to set schedule"
+msgstr "શેડ્યૂલ સેટ કરો"
+
+#: app/templates/messages/list_messages.html:107
+#: app/templates/messages/list_messages.html:192
+msgid "Send Test Notification"
+msgstr "સૂચના એડિટ કરો"
+
+#: app/templates/messages/list_messages.html:122
+#: app/templates/messages/list_messages.html:209
+msgid "Toggle Message On/Off"
+msgstr "સંદેશને ચાલુ/બંધ કરો"
+
+#: app/templates/messages/list_messages.html:124
+#: app/templates/messages/list_messages.html:211
+msgid "Notification is enabled"
+msgstr "સૂચના સક્ષમ છે"
+
+#: app/templates/messages/list_messages.html:126
+#: app/templates/messages/list_messages.html:213
+msgid "Notification is disabled"
+msgstr "સૂચના નિષ્ક્રિય છે"
+
+#: app/templates/messages/list_messages.html:223
+msgid "How to create and send a notification"
+msgstr "કેસ રીતે બનાવવી અને મોકલવી"
+
+#: app/templates/messages/list_messages.html:233
+msgid "Click “Add notification” and fill out the subject and content fields."
+msgstr "“સૂચના ઉમેરો” પર ક્લિક કરો અને વિષય અને સામગ્રી ફીલ્ડસ મૂર્લ કરવા."
+
+#: app/templates/messages/list_messages.html:234
+msgid "Save the notification to return to the overview."
+msgstr "ઝાંઝીલે જમ્પ કરો."
+
+#: app/templates/messages/list_messages.html:235
+msgid "You need to create at least one apprise or webhook destination."
+msgstr "તમે ઓછામાં ઓછી એક એપ્રાઇઝ અથવા વેબહૂક ગંતવ્ય બનાવવું જ જોઈએ."
+
+#: app/templates/messages/list_messages.html:236
+msgid "You can create as many destinations as you like."
+msgstr "તમે ઇચ્છિત તેટલા ગંતવ્યો બનાવી શકો છો."
+
+#: app/templates/messages/list_messages.html:237
+msgid "Click 🧩 to assign one or more Apprise and/or Webhook destinations."
+msgstr "🧩 પર ક્લિક કરો để એક અથવા વધુ એપ્રીસ અને/અથવા વેબહૂક ગંતવ્યો સોંપો."
+
+#: app/templates/messages/list_messages.html:238
+msgid "Click ⏱️ to set a schedule and check-in interval."
+msgstr "⏱️ પર ક્લિક કરો כדי શેડ્યુલ અને ચેક-ઇન અંતરાલ સેટ કરો."
+
+#: app/templates/messages/list_messages.html:239
+msgid "Enable the notification using the 🔴/🟢 toggle button."
+msgstr "🔴/🟢 ટોગલ બટનનો ઉપયોગ કરીને સૂચના સક્રિય કરો."
+
+#: app/templates/messages/list_messages.html:240
+msgid ""
+"If you don’t check in before the grace period ends, the notification will be"
+" sent."
+msgstr ""
+"જો તમે અનુક્રમણિકા સમયગાળા પૂરો થયા પહેલાં તો ચેક ઇન ન કરો, તો સૂચના "
+"મોકલવામાં આવશે."
+
+#: app/templates/messages/list_messages.html:241
+msgid "You can preview the notification config using 🔍."
+msgstr "તમે 🔍 વડે સૂચનાની રૂપરેખા પૂર્વદર્શન કરી શકો."
+
+#: app/templates/messages/list_messages.html:242
+msgid "Once a notification is sent, it will be automatically disabled."
+msgstr "એકવાર સૂચના મોકલવામાં આવે છે, તે આપોઆપ નિષ્ક્રિય થઈ જશે."
+
+#: app/templates/messages/schedule_message.html:9
+msgid "Schedule Message"
+msgstr "શેડ્યૂલ સંદેશ"
+
+#: app/templates/messages/view_message.html:9
+msgid "Notifications Details"
+msgstr "સૂચનાઓનું વિગત"
+
+#: app/templates/messages/view_message.html:22
+msgid "Check-in Interval"
+msgstr "ચેક-ઇન ઈન્ટરવલ"
+
+#: app/templates/messages/view_message.html:31
+msgid "Last Check-in"
+msgstr "છેલ્લું ચેક-ઇન"
+
+#: app/templates/messages/view_message.html:48
+#: app/templates/reminders/view_reminder.html:59
+msgid "Apprise URLs"
+msgstr "એપ્રાઇઝ URLs"
+
+#: app/templates/messages/view_message.html:54
+#: app/templates/messages/view_message.html:64
+#: app/templates/reminders/view_reminder.html:65
+#: app/templates/reminders/view_reminder.html:75
+#: app/templates/reminders/view_reminder.html:85
+msgid "None assigned."
+msgstr "કોઈ સોંપેલા નથી."
+
+#: app/templates/messages/view_message.html:73
+msgid "Back to Notifications"
+msgstr "સૂચનાઓ પર પાછા"
+
+#: app/templates/mfa/challenge.html:5 app/templates/mfa/settings.html:5
+msgid "Two-Factor Authentication (MFA)"
+msgstr "ટુ-ફેક્ટર ઓથેન્ટિકેશન (MFA)"
+
+#: app/templates/mfa/recovery_codes.html:4
+msgid "Your Recovery Codes"
+msgstr "તમારા પુનઃપ્રાપ્તિ કોડ્સ"
+
+#: app/templates/mfa/recovery_codes.html:7
+msgid "Save these recovery codes in a safe place!"
+msgstr "આ પુનઃપ્રાપ્તિ કોડ્સ સુરક્ષિત સ્થળે સાચવો!"
+
+#: app/templates/mfa/recovery_codes.html:10
+msgid ""
+"Each code can be used once if you lose access to your authenticator. These "
+"codes will not be shown again."
+msgstr ""
+"જો તમે તમારીપ્રમોતકર્તા સુધીની ઍક્સેસ ગુમાવો છો, તો દરેક કોડનો એકવાર ઉપયોગ "
+"કરી શકાય છે. આ કોડ્સ ફરીથી બતાવવામાં નહીં આવે."
+
+#: app/templates/mfa/recovery_codes.html:24
+msgid "OK, I've saved them"
+msgstr "ઠીક છે, મેં તેમને સાચવી લીધાં છે"
+
+#: app/templates/mfa/settings.html:12
+msgid "MFA QR Code"
+msgstr "MFA QR કોડ"
+
+#: app/templates/mfa/settings.html:15
+msgid "Manual Entry:"
+msgstr "મેન્યુઅલ એન્ટ્રી:"
+
+#: app/templates/partials/admin_nav.html:21
+msgid "Administration"
+msgstr "વહીવટ"
+
+#: app/templates/partials/admin_nav.html:37
+#: app/templates/partials/shared_nav.html:34
+#: app/templates/partials/shared_nav.html:78
+#: app/templates/partials/shared_nav.html:117
+msgid "Overview"
+msgstr "અવલોકન"
+
+#: app/templates/partials/footer.html:7
+msgid "Toggle Theme"
+msgstr "થીમ બદલવા"
+
+#: app/templates/partials/footer.html:32
+msgid "Theme"
+msgstr "થીમ"
+
+#: app/templates/partials/head.html:7
+msgid "Grylli"
+msgstr "ગ્રિલી"
+
+#: app/templates/partials/header.html:6 app/templates/partials/sidebar.html:32
+#: app/templates/partials/sidebar.html:66
+msgid "Home"
+msgstr "હોમ"
+
+#: app/templates/partials/header.html:55
+msgid "Account"
+msgstr "એકાઉન્ટ"
+
+#: app/templates/partials/header.html:61
+msgid "MFA"
+msgstr "MFA"
+
+#: app/templates/partials/header.html:67
+msgid "About"
+msgstr "વિશે"
+
+#: app/templates/partials/header.html:73
+msgid "Privacy"
+msgstr "ગોપનીયતા"
+
+#: app/templates/partials/header.html:79
+msgid "System Info"
+msgstr "સિસ્ટમ માહિતી"
+
+#: app/templates/partials/header.html:114
+msgid "Logout"
+msgstr "લૉગઆઉટ"
+
+#: app/templates/partials/shared_nav.html:33
+msgid "Overview of notification settings"
+msgstr "સૂચના સેટિંગ્સનું અવલોકન"
+
+#: app/templates/partials/shared_nav.html:38
+msgid "Configure Apprise services"
+msgstr "એપ્રાઈસ સેવાઓને કન્ફિગર કરો"
+
+#: app/templates/partials/shared_nav.html:39
+msgid "Apprise"
+msgstr "એપ્રાઈસ"
+
+#: app/templates/partials/shared_nav.html:43
+msgid "Configure Webhook integrations"
+msgstr "Webhook એકીકરણોને કન્ફિગર કરો"
+
+#: app/templates/partials/shared_nav.html:77
+msgid "Overview of secure email messages"
+msgstr "સુરક્ષિત ઇમેઇલ સંદેશાવ્યવહારનું અવલોકન"
+
+#: app/templates/partials/shared_nav.html:82
+msgid "Configure SMTP email settings"
+msgstr "SMTP ઇમેઇલ સેટિંગ્સને કન્ફિગર કરો"
+
+#: app/templates/partials/shared_nav.html:83
+#: app/templates/reminders/view_reminder.html:79
+msgid "SMTP"
+msgstr "SMTP"
+
+#: app/templates/partials/shared_nav.html:100
+#: app/templates/reminders/list_reminders.html:8
+msgid "Reminders"
+msgstr "મિનિટો"
+
+#: app/templates/partials/shared_nav.html:116
+msgid "Overview of reminders"
+msgstr "રિમાઇન્ડર્સનો સમીક્ષા"
+
+#: app/templates/partials/sidebar.html:13
+#: app/templates/partials/sidebar.html:47
+msgid "Menu"
+msgstr "મેનુ"
+
+#: app/templates/reminders/assign_email_reminder.html:12
+msgid "Link Email Reminder for"
+msgstr "લિંક્સ ઇમેઇલ રિમાઇન્ડર માટે"
+
+#: app/templates/reminders/assign_email_reminder.html:30
+#: app/templates/reminders/assign_email_reminder.html:64
+msgid "None (Unassign)"
+msgstr "કોઈ SMTP રૂપરેખાંકન સોંપવામાં આવ્યું નથી"
+
+#: app/templates/reminders/assign_email_reminder.html:43
+msgid "No sender address"
+msgstr "કોઈ મોકલનારાના સરનામું નથી"
+
+#: app/templates/reminders/assign_email_reminder.html:54
+msgid "Email Message"
+msgstr "શેડ્યૂલ સંદેશ"
+
+#: app/templates/reminders/assign_email_reminder.html:77
+msgid "No subject"
+msgstr "વિષય"
+
+#: app/templates/reminders/assign_email_reminder.html:90
+msgid "Save Email Reminder"
+msgstr "ઇમેઈલ સંગ્રહો"
+
+#: app/templates/reminders/create_reminder.html:12
+#: app/templates/reminders/edit_reminder.html:10
+#: app/templates/reminders/list_reminders.html:73
+#: app/templates/reminders/list_reminders.html:158
+msgid "Edit Reminder"
+msgstr "ઈમેઈલ સંપાદિત કરો"
+
+#: app/templates/reminders/create_reminder.html:14
+msgid "Create Reminder"
+msgstr "ઈમેઈલ બનાવો"
+
+#: app/templates/reminders/create_reminder.html:45
+msgid "Save Reminder"
+msgstr "ઇમેઈલ સંગ્રહો"
+
+#: app/templates/reminders/edit_reminder.html:39
+msgid "Update Reminder"
+msgstr "અપડેટ રિમાઇન્ડર"
+
+#: app/templates/reminders/list_reminders.html:48
+msgid "Add Reminder"
+msgstr "ઇમેઈલ ઉમેરો"
+
+#: app/templates/reminders/list_reminders.html:58
+#: app/templates/reminders/view_reminder.html:21
+msgid "Start At"
+msgstr "TLS શરૂ કરી રહ્યું છે"
+
+#: app/templates/reminders/list_reminders.html:59
+msgid "Recurrence"
+msgstr "પુનરાવૃત્તિ"
+
+#: app/templates/reminders/list_reminders.html:69
+#: app/templates/reminders/list_reminders.html:153
+#: app/templates/reminders/view_reminder.html:26
+msgid "One-time"
+msgstr "એક વખત"
+
+#: app/templates/reminders/list_reminders.html:83
+msgid "Assign Email Reminder"
+msgstr "મિસ્કરી ઇમેઇલ રિમાઇન્ડર"
+
+#: app/templates/reminders/list_reminders.html:102
+#: app/templates/reminders/list_reminders.html:187
+msgid "Send Test Reminder"
+msgstr "ટેસ્ટ ઈમેલ મોકલો"
+
+#: app/templates/reminders/list_reminders.html:120
+#: app/templates/reminders/list_reminders.html:205
+msgid "Toggle Reminder On/Off"
+msgstr "ઇમેઈલ ઓન/ઓફ કરો"
+
+#: app/templates/reminders/list_reminders.html:122
+#: app/templates/reminders/list_reminders.html:207
+msgid "Reminder is enabled"
+msgstr "ઈમેઈલ સક્રિય છે"
+
+#: app/templates/reminders/list_reminders.html:124
+#: app/templates/reminders/list_reminders.html:209
+msgid "Reminder is disabled"
+msgstr "ઈમેઈલ નિષ્ક्रिय છે"
+
+#: app/templates/reminders/list_reminders.html:148
+msgid "Start At:"
+msgstr "TLS શરૂ કરી રહ્યું છે"
+
+#: app/templates/reminders/list_reminders.html:152
+msgid "Recurrence:"
+msgstr "પુનરાવૃત્તિ:"
+
+#: app/templates/reminders/list_reminders.html:168
+msgid "Link Email Reminder"
+msgstr "લિંક ઇમેઇલ રિમાઇન્ડર"
+
+#: app/templates/reminders/list_reminders.html:218
+msgid "How to use reminders"
+msgstr "વપરાશકર્તાઓ કેમ મેનેજ કરવું"
+
+#: app/templates/reminders/list_reminders.html:231
+msgid "➕ Click “Add Reminder” and fill out the subject and content fields."
+msgstr "“સૂચના ઉમેરો” પર ક્લિક કરો અને વિષય અને સામગ્રી ફીલ્ડસ મૂર્લ કરવા."
+
+#: app/templates/reminders/list_reminders.html:232
+msgid "💾 Save the reminder to return to the overview."
+msgstr "ઝાંઝીલે જમ્પ કરો."
+
+#: app/templates/reminders/list_reminders.html:233
+msgid ""
+"📣 Assign Apprise, 🌐 Webhook, and/or 📧 Email (SMTP) destinations as needed."
+msgstr ""
+"📣 જરૂરી સમજ અપાવવી, 🌐 વેબહૂક, અને/અથવા 📧 ઇમેઇલ (SMTP) સ્થળોને નિમણૂક કરવા "
+"માટે."
+
+#: app/templates/reminders/list_reminders.html:234
+msgid ""
+"⏱️ Set the schedule using the schedule button to define when reminders are "
+"sent."
+msgstr ""
+"⏱️ રિમાઇન્ડર્સ ક્યારે મોકલવા તેનો અવધિ બટનનો ઉપયોગ કરીને શેડ્યૂલ સેટ કરો."
+
+#: app/templates/reminders/list_reminders.html:235
+msgid ""
+"🔍 Click “View Details” to review or edit assigned destinations and other "
+"settings."
+msgstr ""
+"🔍 સમરિતીઓ અથવા અન્ય સેટિંગ્સની સમીક્ષા અથવા સંપાદન માટે “વિહંગાવલોકન જુઓ” પર"
+" ક્લિક કરો."
+
+#: app/templates/reminders/list_reminders.html:236
+msgid ""
+"🧪 Click the Test button to verify all assigned destinations are working "
+"correctly."
+msgstr ""
+"🧪 નિમણૂક કરેલ સ્થળો બધું સારી રીતે કામ કરી રહ્યું છે તેની ખાતરી કરવા માટે "
+"પરીક્ષણ બટન ક્લિક કરો."
+
+#: app/templates/reminders/list_reminders.html:237
+msgid "🔴/🟢 Enable or disable the reminder using the toggle button."
+msgstr "ઇમેઇલને 🔴/🟢 ટોગલ બટનનો ઉપયોગ કરીને સક્રિય કરો."
+
+#: app/templates/reminders/list_reminders.html:238
+msgid "📤 Reminders will be sent as scheduled to the assigned destinations."
+msgstr "📤 રિમાઇન્ડર્સ સમયાનુસાર નિમણૂક કરેલ સ્થળો પર મોકલી શકાય છે."
+
+#: app/templates/reminders/schedule_reminder.html:8
+msgid "Schedule Reminder"
+msgstr "સમયসূচિ ઈમેઈલ"
+
+#: app/templates/reminders/schedule_reminder.html:15
+msgid "Start Date & Time"
+msgstr "પ્રારંભ તારીખ અને સમય"
+
+#: app/templates/reminders/schedule_reminder.html:22
+#: app/templates/reminders/view_reminder.html:25
+msgid "Recurrence Rule"
+msgstr "પુનરાવૃત્તિ નિયમ"
+
+#: app/templates/reminders/schedule_reminder.html:24
+msgid "(Optional) Enter RRULE or leave blank for one-time."
+msgstr "(વૈકલ્પિક) RRULE દાખલ કરો અથવા એક વખત માટે ખાલી રાખો."
+
+#: app/templates/reminders/schedule_reminder.html:30
+msgid "End Date"
+msgstr "ટેસ્ટ મોકલો"
+
+#: app/templates/reminders/schedule_reminder.html:32
+msgid "(Optional) Stop sending after this date."
+msgstr "(વૈકલ્પિક) આ તારીખ પછી મોકલવાનું બંધ કરો."
+
+#: app/templates/reminders/schedule_reminder.html:38
+#: app/templates/reminders/view_reminder.html:36
+msgid "Max Occurrences"
+msgstr "મહત્તમ ઘટનાઓ"
+
+#: app/templates/reminders/schedule_reminder.html:40
+msgid "(Optional) Stop after this many reminders."
+msgstr "(વૈકલ્પિક) આ ઘણી બધી યાદીઓ પછી બંધ કરો."
+
+#: app/templates/reminders/schedule_reminder.html:56
+msgid "Help for RRULE syntax"
+msgstr "RRULE વાક્યરચનાની મદદ"
+
+#: app/templates/reminders/schedule_reminder.html:66
+msgid "Several tools are available to help generate an RRULE."
+msgstr "RRULE જનરેટ કરવા મદદ માટે અનેક ટૂલ્સ ઉપલબ્ધ છે."
+
+#: app/templates/reminders/schedule_reminder.html:67
+msgid "Use a search engine or AI tool to assist."
+msgstr "મદદ માટે શોધ એન્જિન અથવા AI ટૂલનો ઉપયોગ કરો."
+
+#: app/templates/reminders/schedule_reminder.html:69
+msgid "Here is an example of one such online tool:"
+msgstr "અહી છે એક એવા ઑનલાઇન ટૂલનું ઉદાહરણ:"
+
+#: app/templates/reminders/schedule_reminder.html:73
+msgid "RRULE Generator Tool"
+msgstr "RRULE જનરેટર ટૂલ"
+
+#: app/templates/reminders/schedule_reminder.html:77
+msgid "See here for some common examples:"
+msgstr "અહિ કેટલાક સામાન્ય ઉદાહરણો જુઓ:"
+
+#: app/templates/reminders/schedule_reminder.html:81
+msgid "RRULE Help (GitHub)"
+msgstr "RRULE મદદ (GitHub)"
+
+#: app/templates/reminders/view_reminder.html:8
+msgid "Reminder Details"
+msgstr "વિગતો જુઓ"
+
+#: app/templates/reminders/view_reminder.html:30
+msgid "End At"
+msgstr "ટેસ્ટ મોકલો"
+
+#: app/templates/reminders/view_reminder.html:42
+msgid "Last Sent"
+msgstr "છેલ્લું ચેક-ઇન"
+
+#: app/templates/reminders/view_reminder.html:91
+msgid "Email Template"
+msgstr "ઇમેઇલ વેલીડેટર"
+
+#: app/templates/reminders/view_reminder.html:103
+msgid "No email linked."
+msgstr "ઈમેઈલ સક્રિય છે"
+
+#: app/templates/reminders/view_reminder.html:111
+msgid "Back to Reminders"
+msgstr "પાછા ઈમેઈલ્સ પર"
+
+#: app/templates/user_smtp/create_smtp.html:10
+msgid "Create SMTP Destination"
+msgstr "SMTP ગંતવ્ય બનાવો"
+
+#: app/templates/user_smtp/create_smtp.html:69
+#: app/templates/user_smtp/edit_smtp.html:84
+msgid "Hold to reveal"
+msgstr "ખુલાસો કરવા માટે પકડી રાખો"
+
+#: app/templates/user_smtp/create_smtp.html:92
+#: app/templates/user_smtp/edit_smtp.html:107
+msgid "Use TLS"
+msgstr "_TLS નો ઉપયોગ કરો"
+
+#: app/templates/user_smtp/edit_smtp.html:10
+msgid "Edit SMTP Destination"
+msgstr "SMTP ગંતવ્ય બનાવો"
+
+#: app/templates/user_smtp/list_smtp.html:9
+msgid "SMTP Destinations"
+msgstr "SMTP મંજિલો"
+
+#: app/templates/user_smtp/list_smtp.html:44
+msgid "Add SMTP"
+msgstr "SMTP ઉમેરો"
+
+#: app/templates/user_smtp/list_smtp.html:53
+msgid "Host"
+msgstr "હોસ્ટ"
+
+#: app/templates/user_smtp/list_smtp.html:54
+msgid "Port"
+msgstr "પોર્ટ"
+
+#: app/templates/user_smtp/list_smtp.html:56
+msgid "TLS"
+msgstr "TLS"
+
+#: app/templates/user_smtp/list_smtp.html:58
+msgid "Created"
+msgstr "બનાવ્યું"
+
+#: app/templates/user_smtp/list_smtp.html:90
+#: app/templates/user_smtp/list_smtp.html:158
+msgid "Send Test"
+msgstr "ટેસ્ટ મોકલો"
+
+#: app/templates/user_smtp/list_smtp.html:125
+msgid "Port:"
+msgstr "પોર્ટ:"
+
+#: app/templates/user_smtp/list_smtp.html:131
+msgid "Password:"
+msgstr "પાસવર્ડ:"
+
+#: app/templates/user_smtp/list_smtp.html:184
+msgid "Hide SMTP Setup Help"
+msgstr "SMTP સેટઅપ સહાય છુપાવો"
+
+#: app/templates/user_smtp/list_smtp.html:184
+msgid "Show SMTP Setup Help"
+msgstr "SMTP સેટઅપ સહાય બતાવો"
+
+#: app/templates/user_smtp/list_smtp.html:190
+msgid ""
+"Need help finding your SMTP server settings? See here for some links to "
+"common providers:"
+msgstr ""
+"તમારા SMTP સર્વર સેટિંગ્સ શોધવામાં મદદની જરૂર છે? સામાન્ય પ્રદાતાઓ માટે的一ા "
+"લિંક અહીં જુઓ:"
+
+#: app/templates/user_smtp/list_smtp.html:194
+msgid "SMTP Server Settings Help (GitHub)"
+msgstr "SMTP સર્વર સેટિંગ્સ મદદ (GitHub)"
+
+#: app/templates/user_smtp/list_smtp.html:198
+msgid ""
+"Find official documentation links for Gmail, Outlook, Yahoo, AOL, and "
+"others."
+msgstr ""
+"Gmail, Outlook, Yahoo, AOL, અને અન્ય માટે સત્તાવાર દસ્તાવેજી લિંક શોધો."
+
+#: app/templates/user_smtp/list_smtp.html:199
+msgid ""
+"If your provider isn’t listed, search their support site or a search engine "
+"for 'SMTP settings'."
+msgstr ""
+"જો તમારો પ્રદાતા યાદીબદ્ધ નથી, તો તેમની સમર્થન સાઇટ અથવા 'SMTP સેટિંગ્સ' "
+"માટે શોધ એન્જિન શોધો."
+
+#: app/templates/user_smtp/list_smtp.html:200
+msgid ""
+"Some providers (like Gmail, Yahoo) require 'App Passwords' or special "
+"setup—see their docs!"
+msgstr ""
+"કેટલાક પ્રદાતા (જેમકે Gmail, Yahoo) 'એપ પાસવર્ડ' અથવા વિશિષ્ટ સેટઅપ જરૂરી "
+"હોય છે — તેમની દસ્તાવેજો જુઓ!"
+
+#: app/templates/webhook/create_webhook.html:10
+msgid "Create Webhook"
+msgstr "વેબહૂક બનાવો"
+
+#: app/templates/webhook/edit_webhook.html:10
+msgid "Edit Webhook"
+msgstr "વેબહૂક સંપાદિત કરો"
+
+#: app/templates/webhook/list_webhooks.html:9
+#: app/templates/webhook/webhook_config.html:3
+msgid "Webhooks Destinations"
+msgstr "વેબહૂક મંજિલો"
+
+#: app/templates/webhook/list_webhooks.html:59
+msgid "Endpoint"
+msgstr "એન્ડપોઇન્ટ"
+
+#: app/templates/webhook/list_webhooks.html:60
+msgid "Description"
+msgstr "વર્ણન"
+
+#: app/templates/webhook/list_webhooks.html:82
+#: app/templates/webhook/list_webhooks.html:141
+msgid "Cannot edit while assigned to notifications"
+msgstr "સૂચનાઓમાં નિમણૂક કરેલી હોય ત્યારે સુધારી શકતા નથી"
+
+#: app/templates/webhook/list_webhooks.html:106
+#: app/templates/webhook/list_webhooks.html:165
+msgid "Cannot delete while assigned to notifications"
+msgstr "સૂચનાઓમાં નિમણૂક કરેલી હોય ત્યારે દૂર કરી શકતા નથી"
+
+#: app/templates/webhook/list_webhooks.html:122
+msgid "Endpoint:"
+msgstr "એન્ડપોઇન્ટ:"
+
+#: app/templates/webhook/list_webhooks.html:125
+msgid "Description:"
+msgstr "વર્ણન:"
+
+#: app/views/account.py:74
+msgid "Current password is required to change password."
+msgstr "પાસવર્ડ બદલવા માટે વર્તમાન પાસવર્ડની જરૂર છે."
+
+#: app/views/account.py:78
+msgid "Current password is incorrect."
+msgstr "વર્તમાન પાસવર્ડ ખોટો છે."
+
+#: app/views/account.py:94
+msgid "Account updated successfully."
+msgstr "ખાતું સફળતાપૂર્વક અપડેટ થયું છે."
+
+#: app/views/account.py:100
+msgid "An error occurred while updating your account."
+msgstr "તમારું ખાતું અપડેટ કરતી વખતે એક ભૂલ આવી."
+
+#: app/views/account.py:137
+msgid "You cannot delete your account because you are the last admin."
+msgstr "તમે તમારી ખાતું કાઢી શકતા નથી કારણ કે તમે છેલ્લે એડમિન છો."
+
+#: app/views/account.py:146
+msgid "Your account has been permanently deleted."
+msgstr "તમારું ખાતું કાયમ માટે કાઢવામાં આવ્યું છે."
+
+#: app/views/account.py:152
+msgid "An error occurred while trying to delete your account."
+msgstr "તમારું ખાતું અપડેટ કરતી વખતે એક ભૂલ આવી."
+
+#: app/views/account.py:171
+msgid "Your account has been deleted"
+msgstr "તમારું ખાતું કાયમ માટે કાઢવામાં આવ્યું છે."
+
+#: app/views/account.py:173
+#, python-brace-format
+msgid ""
+"Hello {username},\n"
+"\n"
+"Your account on {site_name} has been deleted.Remember to delete your files from the uploads folder.If this was not you, please contact support immediately.\n"
+"\n"
+"{site_url}"
+msgstr ""
+"હેલો {username},\n"
+"\n"
+"તમારું ખાતા {site_name} પર ડિલીટ કરવામાં આવ્યું છે. અપલોડ્સ ફોલ્ડરમાંથી તમારી ફાઇલો ડિલીટ કરવાનું યાદ કરશો. જો આ તમે નહીં હોય, તો કૃપા કરીને तાત્કાળ સમર્થનનો સંપર્ક કરો.\n"
+"\n"
+"{site_url}"
+
+#: app/views/admin.py:59
+msgid "Invalid role."
+msgstr "અમાન્ય ભૂમિકા."
+
+#: app/views/apprise.py:51
+msgid "🧪 Test notification sent successfully!"
+msgstr "🧪 ટેસ્ટ સૂચના સફળતાપૂર્વક મોકલાઈ!"
+
+#: app/views/apprise.py:56
+msgid "🧪 Failed to send test notification: "
+msgstr "🧪 ટેસ્ટ સૂચના મોકલવામાં નિષ્ફળ:"
+
+#: app/views/apprise.py:62
+msgid "🧪 Error sending test notification."
+msgstr "🧪 ટેસ્ટ સૂચના મોકલવામાં ભૂલ."
+
+#: app/views/apprise.py:101
+msgid "Apprise destination created successfully."
+msgstr "અપ્રાઇઝ મંજિલ સફળતાપૂર્વક બનાવવામાં આવ્યું છે."
+
+#: app/views/apprise.py:168
+msgid "Apprise destination updated successfully."
+msgstr "અપ્રાઇઝ મંજિલ સફળતાપૂર્વક અપડેટ કર્યું."
+
+#: app/views/apprise.py:199
+msgid "Apprise destination deleted."
+msgstr "અપ્રાઇઝ મંજિલ કાઢી ફેંકાઇ."
+
+#: app/views/auth.py:95
+msgid "Admin account created successfully."
+msgstr "એડમિન ખાતું સફળતાપૂર્વક બનાવવામાં આવ્યું."
+
+#: app/views/auth.py:108
+msgid "An error occurred while creating the admin account."
+msgstr "એડમિન ખાતું બનાવતી વખતે એક ભૂલ આવી."
+
+#: app/views/auth.py:141
+msgid ""
+"Your account is not activated. Please check your email for the activation "
+"link."
+msgstr ""
+"તમારું ખાતું સક્રિય કરેલ નથી. સક્રિયકરણ કડી માટે કૃપા કરીને તમારું ઇમેઇલ "
+"તપાસો."
+
+#: app/views/auth.py:157
+msgid "Multi-factor authentication required. Please enter your code."
+msgstr "મલ્ટિ-ફેક્ટર ઓથેન્ટિકેશન જરૂરી છે. કૃપા કરીને તમારો કોડ દાખલ કરો."
+
+#: app/views/auth.py:162 app/views/mfa.py:195
+msgid "Logged in successfully."
+msgstr "સફળતાપૂર્વક લૉગ ઇન કર્યું."
+
+#: app/views/auth.py:179
+msgid "Invalid username or password."
+msgstr "અમાન્ય યુઝરનામ અથવા પાસવર્ડ."
+
+#: app/views/auth.py:203
+msgid "You have been logged out."
+msgstr "તમે લૉગઆઉટ થઈ ગયા છો."
+
+#: app/views/auth.py:239 app/views/email.py:263
+msgid "Access denied."
+msgstr "પ્રવેશ નકારવામાં આવ્યો."
+
+#: app/views/auth.py:273
+msgid "If a user with that email exists, we've sent the username to them."
+msgstr ""
+"જો તે ઇમેઇલ સાથે યુઝર હાજર હોય તો, અમે યુઝરનેમ તેમના સુધી મોકલી દીધું છે."
+
+#: app/views/auth.py:314
+msgid "A password reset link has been sent to your email."
+msgstr "પાસવર્ડ રીસેટ કડી તમારું ઇમેઇલ પર મોકલવામાં આવી છે."
+
+#: app/views/auth.py:319
+msgid "No account found matching that username and email."
+msgstr "તે યુઝરનામ અને ઇમેઇલ સાથેનું કોઈ ખાતું મળ્યું નથી."
+
+#: app/views/auth.py:389
+msgid "The reset link is invalid or has expired."
+msgstr "રીસેટ કડી અમાન્ય છે અથવા તેની મિયાદ ખૂટી ગઈ છે."
+
+#: app/views/auth.py:401
+msgid "Username and email do not match."
+msgstr "વપરાશકર્તા નામ અને ઇમેઇલ મેચ થતી નથી."
+
+#: app/views/auth.py:421
+msgid "Your password has been reset. Please log in."
+msgstr "તમારો પાસવર્ડ પુન:સ્થાપિત થયો છે. કૃપા કરીને લોગિન કરો."
+
+#: app/views/auth.py:458
+msgid "Invalid registration PIN."
+msgstr "અમાન્ય નોંધણી PIN."
+
+#: app/views/auth.py:467
+msgid "Username or email already exists."
+msgstr "વપરાશકર્તા નામ અથવા ઇમેઇલ પહેલેથી જ અસ્તિત્વમાં છે."
+
+#: app/views/auth.py:492
+msgid "Activate Your Grylli Account"
+msgstr "તમે તમારું Grylli ખાતું સક્રિય કરો"
+
+#: app/views/auth.py:493
+#, python-brace-format
+msgid ""
+"Hello {username},\n"
+"\n"
+"Please activate your account by clicking..."
+msgstr ""
+"હેલો {username},\n"
+"\n"
+"કૃપા કરીને ક્લિક કરીને તમારું ખાતું સક્રિય કરો..."
+
+#: app/views/auth.py:498
+msgid "Account created! Please check your email to activate your account."
+msgstr "ખાતું બનાવ્યું! કૃપા કરીને તમારું ખાતું સક્રિય કરવા માટે ઇમેઇલ તપાસો."
+
+#: app/views/auth.py:521
+msgid "Activation link is invalid or expired."
+msgstr "સક્રિયકરણ લિંક અમાન્ય છે અથવા સમાપ્ત થઈ ગઈ છે."
+
+#: app/views/auth.py:528 app/views/users.py:76 app/views/users.py:140
+msgid "User not found."
+msgstr "વપરાશકર્તા મળ્યો નથી."
+
+#: app/views/auth.py:532
+msgid "Account already activated. Please log in."
+msgstr "ખાતું પહેલેથી જ સક્રિય છે. કૃપા કરીને લોગ ઇન કરો."
+
+#: app/views/auth.py:540
+msgid "Your account has been activated! You can now log in."
+msgstr "તમારું ખાતું સક્રિય કરવામાં આવ્યું છે! હવે તમે લોગ ઇન કરી શકો છો."
+
+#: app/views/backups.py:72
+#, python-format
+msgid "Backup created: %(filename)s"
+msgstr "બેકઅપ બનાવ્યું: %(filename)s"
+
+#: app/views/backups.py:77
+msgid "Failed to create backup."
+msgstr "બેકઅપ બનાવવા નિષ્ફળ."
+
+#: app/views/backups.py:106
+#, python-format
+msgid "Backup deleted: %(filename)s"
+msgstr "બેકઅપ ડિલીટ થયું: %(filename)s"
+
+#: app/views/backups.py:109
+msgid "Backup file not found."
+msgstr "બેકઅપ ફાઇલ મળી નથી."
+
+#: app/views/backups.py:112
+msgid "Failed to delete backup."
+msgstr "બેકઅપ ડિલીટ કરવામાં નિષ્ફળ."
+
+#: app/views/checkin.py:41
+msgid "Invalid check-in link."
+msgstr "અમાન્ય ચેક-ઇન લિંક."
+
+#: app/views/checkin.py:48
+msgid "You are not authorized to check in for this item."
+msgstr "આ આઇટમ માટે ચેક-ઇન માટે તમે અધિકૃત નથી."
+
+#: app/views/checkin.py:62
+msgid "Unsupported check-in type."
+msgstr "અસમર્થિત ચેક-ઇન પ્રકાર."
+
+#: app/views/checkin.py:137
+msgid "⚠️ Cannot enable reminder: Start date/time is in the past."
+msgstr "⚠️ રિમાઇન્ડર સક્રિય કરી શકાયું નથી: પ્રારંભ તારીખ/સમય ભૂતકાળમાં છે."
+
+#: app/views/checkin.py:158
+msgid "✅ Enabled and timer started."
+msgstr "✅ સક્રિય અને સમયપત્રક શરૂ."
+
+#: app/views/checkin.py:168
+msgid "⛔ Disabled."
+msgstr "⛔ નિષ્ક્રિય."
+
+#: app/views/checkin.py:170
+msgid "⚠️ Cannot toggle — missing schedule or destination."
+msgstr "⚠️ ટૉગલ કરી શકાતું નથી — સમયપત્રક અથવા ગંતવ્ય ગુમ છે."
+
+#: app/views/email.py:88
+msgid "Message saved."
+msgstr "સંદેશ સાચવ્યો."
+
+#: app/views/email.py:118 app/views/messages.py:167
+msgid "Message deleted."
+msgstr "સંદેશ ડિલીટ થયો."
+
+#: app/views/email.py:152
+msgid "Attached files updated."
+msgstr "જોડાયેલ ફાઇલો અપડેટ થઈ."
+
+#: app/views/email.py:200
+msgid "SMTP configuration not assigned or is disabled."
+msgstr "SMTP વિન્ધાન સ્થાપિત નથી અથવા નિષ્ક્રિય છે."
+
+#: app/views/email.py:234 app/views/smtp_settings_admin.py:82
+msgid "Test email sent successfully."
+msgstr "પરીક્ષણ ઇમેઇલ સફળતાપૂર્વક મોકલ્યો."
+
+#: app/views/email.py:282 app/views/messages.py:305
+msgid "Schedule updated successfully."
+msgstr "સમયપત્રક સફળતાપૂર્વક અપડેટ થયું."
+
+#: app/views/email.py:310
+msgid "SMTP configuration assigned."
+msgstr "SMTP વિન્ધાન નિર્ધારિત."
+
+#: app/views/email.py:319
+msgid "SMTP configuration removed."
+msgstr "SMTP વિન્ધાન નિર્ધારિત."
+
+#: app/views/messages.py:97
+msgid "Message created successfully."
+msgstr "સંદેશ સફળતાપૂર્વક બનાવ્યું."
+
+#: app/views/messages.py:133
+msgid "Message updated successfully."
+msgstr "સંદેશ સફળતાપૂર્વક અપડેટ થયો."
+
+#: app/views/messages.py:223 app/views/reminders.py:240
+msgid "Destinations updated."
+msgstr "ગંતવ્ય અપડેટ કરવામાં આવ્યું."
+
+#: app/views/messages.py:441
+msgid "No destinations assigned to this message."
+msgstr "SMTP વિન્ધાન સ્થાપિત નથી અથવા નિષ્ક્રિય છે."
+
+#: app/views/messages.py:453
+msgid "Test message sent successfully."
+msgstr "પરીક્ષણ ઇમેઇલ સફળતાપૂર્વક મોકલ્યો."
+
+#: app/views/messages.py:455
+msgid "Test message failed: "
+msgstr "સંદેશ સાચવ્યો."
+
+#: app/views/mfa.py:68
+msgid "You must enter a code from your authenticator."
+msgstr "તમારે તમારું ઓથેન્ટિકેટર પરથી કોડ દાખલ કરવો આવશ્યક છે."
+
+#: app/views/mfa.py:82 app/views/mfa.py:259
+msgid "Invalid code. Please try again."
+msgstr "અમાન્ય કોડ. કૃપા કરીને ફરી પ્રયાસ કરો."
+
+#: app/views/mfa.py:91
+msgid "Two-factor authentication disabled."
+msgstr "સૂચના નિષ્ક્રિય છે"
+
+#: app/views/mfa.py:132
+msgid "Recovery codes are only shown immediately after enabling MFA."
+msgstr "પુનઃપ્રાપ્તિ કોડ્સ માત્ર MFA સક્રિય કર્યા પછી તરત જ બતાવવામાં આવે છે."
+
+#: app/views/mfa.py:142
+msgid "Could not load recovery codes."
+msgstr "પુનઃપ્રાપ્તિ કોડ્સ લોડ કરી શકાયાં ન હતા."
+
+#: app/views/mfa.py:168
+msgid "No MFA challenge in progress."
+msgstr "કોઈ MFA પડકાર પ્રગતિમાં નથી."
+
+#: app/views/mfa.py:176
+msgid "User not found for MFA challenge."
+msgstr "વપરાશકર્તા મળ્યો નથી."
+
+#: app/views/mfa.py:225
+msgid ""
+"You have used your last recovery code. MFA has been disabled. Please remove "
+"Grylli from your authenticator app, and re-enable MFA to protect your "
+"account."
+msgstr ""
+"તમે તમારો છેલ્લો પુનઃપ્રાપ્તિ કોડ વાપરી લીધો છે. MFA નિષ્ક્રિય કરી દેવામાં "
+"આવ્યું છે. કૃપા કરીને Grylliને તમારી ઑથેન્ટિકેટર એપમાંથી દૂર કરો, અને તમારા "
+"ખાતાની સુરક્ષા માટે MFA ફરીથી સક્રિય કરો."
+
+#: app/views/mfa.py:248
+#, python-brace-format
+msgid "Recovery code accepted. You have {remaining} recovery codes left."
+msgstr ""
+"પુનઃપ્રાપ્તિ કોડ સ્વીકાર્યો. તમારી પાસે {remaining} પુનઃપ્રાપ્તિ કોડ્સ બાકી "
+"છે."
+
+#: app/views/reminders.py:106
+msgid "Reminder created successfully."
+msgstr "સંદેશ સફળતાપૂર્વક બનાવ્યું."
+
+#: app/views/reminders.py:143
+msgid "Reminder updated successfully."
+msgstr "વપરાશકર્તા સફળતાપૂર્વક અપડેટ થયો."
+
+#: app/views/reminders.py:174
+msgid "Reminder deleted."
+msgstr "વપરાશકર્તા ડિલીટ થયો."
+
+#: app/views/reminders.py:287
+msgid "No destinations assigned to this reminder."
+msgstr "SMTP વિન્ધાન સ્થાપિત નથી અથવા નિષ્ક્રિય છે."
+
+#: app/views/reminders.py:311
+msgid "No email message linked to this reminder."
+msgstr "આ રિમાઈન્ડર સાથે કોઈ ઇમેઇલ મેસેજ જોડાયેલું નથી."
+
+#: app/views/reminders.py:314
+msgid "SMTP configuration is disabled."
+msgstr "SMTP વિન્ધાન સ્થાપિત નથી અથવા નિષ્ક્રિય છે."
+
+#: app/views/reminders.py:353
+msgid "Test reminder sent successfully."
+msgstr "પરીક્ષણ ઇમેઇલ સફળતાપૂર્વક મોકલ્યો."
+
+#: app/views/reminders.py:356
+msgid "Test reminder failed: "
+msgstr "સંદેશ સાચવ્યો."
+
+#: app/views/reminders.py:430
+msgid "Reminder schedule updated successfully."
+msgstr "સમયપત્રક સફળતાપૂર્વક અપડેટ થયું."
+
+#: app/views/reminders.py:434
+msgid "Please correct the errors below."
+msgstr "કૃપા કરીને નીચેના ભૂલો સુધારો."
+
+#: app/views/reminders.py:481 app/views/reminders.py:482
+msgid "None"
+msgstr "ના"
+
+#: app/views/reminders.py:508
+msgid "You must select both an SMTP config and an email message, or neither."
+msgstr "તમે બોધપাঠ SMTP કોન્ફિગ અને ઇમેઇલ મેસેજ, અથવા બંને પસંદ કરો."
+
+#: app/views/reminders.py:528
+msgid "Email reminder settings updated."
+msgstr "ગંતવ્ય અપડેટ કરવામાં આવ્યું."
+
+#: app/views/smtp.py:83 app/views/user_smtp.py:80
+msgid "SMTP destination created successfully."
+msgstr "SMTP ગંતવ્ય સફળતાપૂર્વક બનાવ્યું."
+
+#: app/views/smtp.py:129 app/views/user_smtp.py:135
+msgid "SMTP destination updated."
+msgstr "SMTP ગંતવ્ય અપડેટ કરવામાં આવ્યું."
+
+#: app/views/smtp.py:160 app/views/user_smtp.py:166
+msgid "SMTP destination deleted."
+msgstr "SMTP ગંતવ્ય ડિલીટ થયો."
+
+#: app/views/smtp.py:191 app/views/user_smtp.py:199
+msgid "Test email sent successfully to your account email."
+msgstr "પરીક્ષણ ઇમેઇલ સફળતાપૂર્વક તમારા ખાતાના ઇમેઇલ પર મોકલ્યો."
+
+#: app/views/smtp.py:196 app/views/user_smtp.py:204
+msgid "Failed to send test email. Check SMTP settings."
+msgstr "પરીક્ષણ ઇમેઇલ મોકલવામાં નિષ્ફળ. SMTP સેટિંગ્સ તપાસો."
+
+#: app/views/smtp_settings_admin.py:76
+msgid "Test Email from Grylli"
+msgstr "Grylli માંથી પરીક્ષણ ઇમેઇલ"
+
+#: app/views/smtp_settings_admin.py:77
+msgid "This is a test email from the Grylli SMTP settings page."
+msgstr "આ Grylli SMTP સેટિંગ્સ પેજ પરથી એક પરીક્ષણ ઇમેઇલ છે."
+
+#: app/views/smtp_settings_admin.py:84
+msgid "Failed to send test email: "
+msgstr "પરીક્ષણ ઇમેઇલ મોકલવામાં નિષ્ફળ:"
+
+#: app/views/users.py:99
+msgid "User updated successfully."
+msgstr "વપરાશકર્તા સફળતાપૂર્વક અપડેટ થયો."
+
+#: app/views/users.py:106 app/views/users.py:327
+msgid "An error occurred while updating the user."
+msgstr "વપરાશકર્તાને અપડેટ કરતી વખતે ભૂલ આવી."
+
+#: app/views/users.py:195
+msgid "User deleted."
+msgstr "વપરાશકર્તા ડિલીટ થયો."
+
+#: app/views/users.py:202
+msgid "An error occurred while deleting the user."
+msgstr "વપરાશકર્તાને ડિલીટ કરતી વખતે ભૂલ આવી."
+
+#: app/views/users.py:237
+msgid "Password is required when creating a new user."
+msgstr "નવો વપરાશકર્તા બનાવતા સમયે પાસવર્ડ આવશ્યક છે."
+
+#: app/views/users.py:244
+msgid "Username already exists."
+msgstr "વપરાશકર્તાનામ પહેલેથી જ અસ્તિત્વમાં છે."
+
+#: app/views/users.py:251
+msgid "Email already exists."
+msgstr "ઇમેઇલ પહેલેથી જ અસ્તિત્વમાં છે."
+
+#: app/views/users.py:268
+#, python-format
+msgid "User '%(username)s' created successfully."
+msgstr "વપરાશકર્તા '%(username)s' સફળતાપૂર્વક બનાવાયો."
+
+#: app/views/users.py:278
+msgid "Failed to create user."
+msgstr "વપરાશકર્તા બનાવવા નિષ્ફળ."
+
+#: app/views/users.py:305
+msgid "You cannot change your own enabled status."
+msgstr "તમે તમારો પોતાનો સક્ષમ સ્થિતિ બદલી શકતા નથી."
+
+#: app/views/users.py:318
+#, python-format
+msgid "User '%(username)s' has been %(status)s."
+msgstr "વપરાશકર્તા '%(username)s' ને %(status)s કરવામાં આવ્યો છે."
+
+#: app/views/users.py:356
+msgid "You cannot reset your own MFA."
+msgstr "⚪ = તમે તમારી પોતાની એકાઉન્ટ અક્ષમ કરી શકતા નથી."
+
+#: app/views/users.py:368
+#, python-format
+msgid "MFA disabled for user '%(username)s'."
+msgstr "વપરાશકર્તા '%(username)s' માટે MFA નિષ્ક્રિય કરી દેવામાં આવ્યું છે."
+
+#: app/views/users.py:374
+msgid "An error occurred while resetting MFA."
+msgstr "વપરાશકર્તાને ડિલીટ કરતી વખતે ભૂલ આવી."
+
+#: app/views/webhook.py:54
+msgid "Webhook created successfully."
+msgstr "Webhook સફળતાપૂર્વક બનાવાયો."
+
+#: app/views/webhook.py:113
+msgid "Webhook updated successfully."
+msgstr "Webhook સફળતાપૂર્વક અપડેટ થયો."
+
+#: app/views/webhook.py:142
+msgid "Webhook deleted."
+msgstr "Webhook ડિલીટ થયો."
+
+#: app/views/webhook.py:175
+msgid "🧪 Webhook test sent successfully!"
+msgstr "🧪 Webhook ટેસ્ટ સફળતાપૂર્વક મોકલ્યો!"
+
+#: app/views/webhook.py:177
+msgid "🧪 Webhook test failed: "
+msgstr "🧪 Webhook ટેસ્ટ નિષ્ફળ:"
+
+#: app/views/webhook.py:180
+msgid "🧪 Error sending webhook test."
+msgstr "🧪 Webhook ટેસ્ટ મોકલવામાં ભૂલ."
+
+#~ msgid ""
+#~ "Grylli is a secure message delivery platform designed to activate after "
+#~ "prolonged user inactivity."
+#~ msgstr ""
+#~ "ગ્રિલી એ એક સુરક્ષિત મેસેજ ડિલિવરી પ્લેટફોર્મ છે, જે લાંબા સમયના યુઝર "
+#~ "વ્યક્તિગત મુલતવી બાદ નિષ્ક્રિય થવાના ઉત્પાદન માટે બનાવાયું છે."
+
+#~ msgid ""
+#~ "It is a modern reimplementation of Gone Man’s Switch with a refined tech "
+#~ "stack, better maintainability, and an improved user experience."
+#~ msgstr ""
+#~ "તે Gone Man's Switch નું આવર્તન છે આધુનિક ટેક સ્ટેક, સારા જાળવણી, અને "
+#~ "સુધારેલી યુઝર નો અનુભવ સાથે."
+
+#~ msgid "Body:"
+#~ msgstr "શરીર:"
+
+#~ msgid "Subject:"
+#~ msgstr "વિષય:"
+
+#~ msgid "Content:"
+#~ msgstr "સામગ્રી:"
+
+#~ msgid "Edit SMTP"
+#~ msgstr "SMTP સંપાદિત કરો"
+
+#~ msgid ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+#~ msgstr "ડોકર એકઝેક -ઇટ કન્ટાઈનર_નામ બાશ \"python3 tools/reset_admin_password.py\""
+
+#~ msgid "Admin Notes"
+#~ msgstr "એડમિન નોંધો"
+
+#~ msgid "Register"
+#~ msgstr "રજિસ્ટર"
+
+#~ msgid "View"
+#~ msgstr "જુઓ"
+
+#~ msgid "Schedule"
+#~ msgstr "શેડ્યૂલ"
+
+#~ msgid "Message is enabled"
+#~ msgstr "સંદેશ સક્ષમ છે"
+
+#~ msgid "Message is disabled"
+#~ msgstr "સંદેશ નિષ્ક્રિય છે"
+
+#~ msgid "No SMTP configuration selected."
+#~ msgstr "કોઈ SMTP વિન્ધાન પસંદ કર્યું નથી."
+
+#~ msgid "Enable the message to start monitoring."
+#~ msgstr "મોનીટરિંગ શરૂ કરવા માટે મેસેજને સક્રિય કરો."
+
+#~ msgid "✅ SMTP settings saved."
+#~ msgstr "SMTP સેટિંગ્સ"
+
+#~ msgid "If you don’t check in, Grylli delivers the message for you."
+#~ msgstr "જો તમે ચેક-ઇન ન કરશો, તો ગ્રિલી તમારા માટે મેસેજ પહોંચાડશે."
+
+#~ msgid "Fill in already discovered missing translations:"
+#~ msgstr "પહેલું શોધાયેલ ગાયબ ભાષાંતર ભરો:"
+
+#~ msgid "Add missing phrases in that JSON file."
+#~ msgstr "આ JSON ફાઇલમાં ગાયબ વાક્યમાળો ઉમેરો."
+
+#~ msgid "From:"
+#~ msgstr "થી:"
+
+#~ msgid ""
+#~ "Attach the updated JSON file to a new GitHub issue when submitting your "
+#~ "changes."
+#~ msgstr ""
+#~ "તમારા ફેરફારો સંરક્ષણ કરવાના સમયે નવી GitHub ઇશ્યૂમાં અપડેટ કરેલા JSON ફાઇલ "
+#~ "જોડશો."
+
+#~ msgid "admin"
+#~ msgstr "એડમિન"
+
+#~ msgid "user"
+#~ msgstr "વપરાશકર્તા"
+
+#~ msgid "Logging in"
+#~ msgstr "લૉગ ઇન"
+
+#~ msgid "SMTP error: "
+#~ msgstr "SMTP ભૂલ:"
+
+#~ msgid "enabled"
+#~ msgstr "સક્ષમ"
+
+#~ msgid "disabled"
+#~ msgstr "નિષ્ક્રિય"

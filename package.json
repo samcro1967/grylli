@@ -1,0 +1,28 @@
+{
+  "name": "grylli",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "NODE_ENV=production npx tailwindcss -i app/static/css/tailwind.css -o app/static/css/output.css --minify",
+    "build:css": "tailwindcss -i ./app/static/css/tailwind.css -o ./app/static/css/styles.css --minify",
+    "dev:css": "NODE_OPTIONS='--max-old-space-size=4096' tailwindcss -i ./app/static/css/tailwind.css -o ./app/static/css/styles.css --watch",
+    "generate:versions": "node scripts/generate_versions.js",
+    "build:all": "npm run generate:versions && npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.4",
+    "tailwindcss": "^3.4.1"
+  },
+  "dependencies": {
+    "@alpinejs/collapse": "^3.14.9"
+  }
+}

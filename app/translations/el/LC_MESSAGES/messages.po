@@ -1,0 +1,3337 @@
+# Greek translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-06-07 15:49-0500\n"
+"PO-Revision-Date: 2025-05-25 13:03-0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: el <LL@li.org>\n"
+"Language: el\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: app/init_db.py:55
+#, python-format
+msgid "Tables currently in DB: %s"
+msgstr "Πίνακες που υπάρχουν αυτή τη στιγμή στη βάση δεδομένων:"
+
+#: app/init_db.py:58
+msgid "Database or system_config table missing. Running migrations now..."
+msgstr ""
+"Η βάση δεδομένων ή ο πίνακας system_config λείπει. Εκτέλεση μεταναστεύσεων "
+"τώρα..."
+
+#: app/init_db.py:61
+msgid "Migrations applied successfully."
+msgstr "Οι μεταναστεύσεις εφαρμόστηκαν με επιτυχία."
+
+#: app/init_db.py:63
+msgid "Migration failed."
+msgstr "Η μεταναστεύση απέτυχε."
+
+#: app/init_db.py:68
+msgid "System config seeded successfully."
+msgstr "Η διαμόρφωση συστήματος εμφυτεύτηκε με επιτυχία."
+
+#: app/init_db.py:70
+msgid "Error seeding system config."
+msgstr "Σφάλμα κατά την εμφύτευση της διαμόρφωσης συστήματος:"
+
+#: app/forms/mfa_form.py:15 app/templates/apprise/create_apprise.html:30
+#: app/templates/apprise/edit_apprise.html:30
+#: app/templates/apprise/list_apprise.html:60
+#: app/templates/mfa/settings.html:24 app/templates/mfa/settings.html:40
+#: app/templates/user_smtp/create_smtp.html:99
+#: app/templates/user_smtp/edit_smtp.html:114
+#: app/templates/user_smtp/list_smtp.html:57
+#: app/templates/webhook/create_webhook.html:36
+#: app/templates/webhook/edit_webhook.html:36
+#: app/templates/webhook/list_webhooks.html:61
+msgid "Enabled"
+msgstr "Ενεργοποιημένο"
+
+#: app/forms/mfa_form.py:16
+msgid "Authenticator Code"
+msgstr "Κωδικός Αυθεντικοποίησης"
+
+#: app/forms/mfa_form.py:17
+#: app/templates/admin/partials/user_instructions_and_modal.html:66
+#: app/templates/admin/partials/user_table.html:115
+#: app/templates/email/assign_smtp.html:44 app/templates/mfa/settings.html:47
+#: app/templates/user_smtp/edit_smtp.html:122
+msgid "Save"
+msgstr "Αποθήκευση"
+
+#: app/forms/mfa_form.py:27
+msgid "Authentication Code"
+msgstr "Ενημέρωση Ειδοποίησης"
+
+#: app/forms/mfa_form.py:29
+msgid "Please enter your authentication code."
+msgstr "Παρακαλώ εισάγετε τον κωδικό αυθεντικοποίησης σας."
+
+#: app/forms/mfa_form.py:30
+msgid "Enter a valid 6-digit code or recovery code."
+msgstr "Εισάγετε έναν έγκυρο 6-ψήφιο κωδικό ή κωδικό ανάκτησης."
+
+#: app/forms/mfa_form.py:31
+msgid "Invalid code format."
+msgstr "Μη έγκυρη μορφή κωδικού."
+
+#: app/forms/mfa_form.py:35 app/templates/mfa/challenge.html:25
+msgid "Verify"
+msgstr "Έκδοση"
+
+#: app/services/mail.py:37 app/services/system_settings_email.py:40
+msgid "Missing required config setting: "
+msgstr "Απαιτείται ελλείπων ρυθμιστικός πόρος:"
+
+#: app/services/mail.py:46 app/services/system_settings_email.py:50
+#, python-format
+msgid "Failed to decrypt %(key)s: %(error)s"
+msgstr "Αποτυχία αποκρυπτογράφησης %(key)s: %(error)s"
+
+#: app/services/mail.py:54
+#, python-format
+msgid "get_setting('%(key)s') -> '%(value)s' (sensitive: %(sensitive)s)"
+msgstr ""
+"get_setting('%(key)s') -> '%(value)s' (raw: '%(raw)s', sensitive: "
+"%(sensitive)s)"
+
+#: app/services/mail.py:75
+#, python-format
+msgid "Preparing email to %(to)s"
+msgstr "Προετοιμασία email προς %(to)s"
+
+#: app/services/mail.py:90
+#, python-format
+msgid ""
+"SMTP configuration: host=%(host)s (type=%(host_type)s), port=%(port)s "
+"(type=%(port_type)s)"
+msgstr ""
+"SMTP host = '%(host)s' (type: %(host_type)s), port = %(port)s (type: "
+"%(port_type)s)"
+
+#: app/services/mail.py:99
+#, python-format
+msgid "SMTP username: %(user)s"
+msgstr "Χρήση χρήστη: %(user)s"
+
+#: app/services/mail.py:100
+#, python-format
+msgid "TLS enabled: %(tls)s"
+msgstr "Ενεργοποιημένο TLS: %(tls)s"
+
+#: app/services/mail.py:105
+msgid "Starting TLS connection..."
+msgstr "Έναρξη TLS"
+
+#: app/services/mail.py:107
+msgid "Logging into SMTP server..."
+msgstr "Σύνδεση στον SMTP διακομιστή..."
+
+#: app/services/mail.py:109
+msgid "Sending email message..."
+msgstr "Πρόγραμμα Μηνύματος"
+
+#: app/services/mail.py:111
+#, python-format
+msgid "Email sent successfully to %(to)s"
+msgstr "Το δοκιμαστικό email στάλθηκε με επιτυχία."
+
+#: app/services/mail.py:114
+#, python-format
+msgid "SMTP error while sending to %(to)s: %(error)s"
+msgstr "Σφάλμα SMTP κατά την αποστολή στο %(to)s: %(error)s"
+
+#: app/templates/about.html:10
+msgid "About Grylli"
+msgstr "Σχετικά με το Grylli"
+
+#: app/templates/about.html:13
+msgid ""
+"Grylli is a secure, self-hosted message delivery platform that automatically"
+" sends pre-configured messages if a user fails to check in within a defined "
+"time period."
+msgstr ""
+"Το Grylli είναι μια ασφαλής, αυτο-φιλοξενούμενη πλατφόρμα παράδοσης "
+"μηνυμάτων που στέλνει αυτόματα προρυθμισμένα μηνύματα εάν ένας χρήστης "
+"αποτύχει να κάνει check in σε καθορισμένη χρονική περίοδο."
+
+#: app/templates/about.html:14
+msgid ""
+"It supports multiple users, customizable schedules, and recurring reminders."
+msgstr "Υποστηρίζει πολλούς χρήστες και προσαρμοζόμενα χρονοδιαγράμματα."
+
+#: app/templates/about.html:15
+msgid ""
+"Messages and reminders can be delivered via email, webhooks, or over 100 "
+"third-party services through Apprise."
+msgstr ""
+"Τα μηνύματα μπορούν να παραδοθούν μέσω email, webhooks ή πάνω από 80 τρίτες "
+"υπηρεσίες μέσω του Apprise."
+
+#: app/templates/about.html:16
+msgid ""
+"Users can configure their own SMTP servers to ensure emails and reminders "
+"appear to come directly from them — not from the system administrator."
+msgstr ""
+"Οι χρήστες μπορούν να διαμορφώσουν τους δικούς τους διακομιστές SMTP για να "
+"διασφαλίσουν ότι τα μηνύματα φαίνονται να έρχονται απευθείας από αυτούς — "
+"όχι από τον διαχειριστή συστήματος."
+
+#: app/templates/about.html:17
+msgid ""
+"Sensitive data is encrypted at rest, and all operations are secured with "
+"strong authentication and audit-friendly logging."
+msgstr ""
+"Τα ευαίσθητα δεδομένα κρυπτογραφούνται ενώ βρίσκονται σε ανάπαυση, και όλες "
+"οι λειτουργίες των μηνυμάτων είναι ασφαλισμένες με ισχυρό έλεγχο ταυτότητας "
+"και καταγραφή φιλική προς την επαλήθευση."
+
+#: app/templates/about.html:18
+msgid ""
+"Built with a modern, reactive technology stack, Grylli is optimized for "
+"responsiveness and works seamlessly across desktop and mobile devices."
+msgstr ""
+"Χτισμένο με μια σύγχρονη, αντιδραστική τεχνολογική στοίβα, το Grylli είναι "
+"βελτιστοποιημένο για ανταποκρισιμότητα και λειτουργεί απρόσκοπτα σε "
+"επιτραπέζιες και κινητές συσκευές."
+
+#: app/templates/about.html:23
+msgid "Version:"
+msgstr "Έκδοση:"
+
+#: app/templates/about.html:26
+msgid "Repository:"
+msgstr "Αποθετήριο:"
+
+#: app/templates/about.html:30
+msgid "GitHub - samcro1967/grylli"
+msgstr "GitHub - samcro1967/grylli"
+
+#: app/templates/help.html:2 app/templates/help.html:5
+#: app/templates/partials/header.html:85
+msgid "Help"
+msgstr "Βοήθεια"
+
+#: app/templates/help.html:7
+msgid ""
+"Grylli includes built-in instructions throughout the app to help you "
+"configure and manage your setup."
+msgstr ""
+"Το Grylli περιλαμβάνει ενσωματωμένες οδηγίες σε όλη την εφαρμογή για να σας "
+"βοηθήσει να διαμορφώσετε και να διαχειριστείτε τη ρύθμισή σας."
+
+#: app/templates/help.html:8
+msgid ""
+"This page provides an overview of key features and direct links to where "
+"they can be managed."
+msgstr ""
+"Αυτή η σελίδα παρέχει μια επισκόπηση βασικών χαρακτηριστικών και άμεσων "
+"συνδέσεων για το που μπορούν να διαχειριστούν."
+
+#: app/templates/help.html:12 app/templates/messages/list_messages.html:9
+#: app/templates/partials/shared_nav.html:17
+msgid "Notifications"
+msgstr "Ειδοποιήσεις"
+
+#: app/templates/help.html:14
+msgid "Create and assign messages"
+msgstr "Δημιουργήστε ένα μήνυμα ή ένα email."
+
+#: app/templates/admin/index.html:32 app/templates/help.html:17
+#: app/templates/partials/admin_nav.html:56
+msgid "SMTP Settings"
+msgstr "Ρυθμίσεις SMTP"
+
+#: app/templates/help.html:19
+msgid "Use your own email server"
+msgstr "Χρησιμοποιήστε τον δικό σας διακομιστή email"
+
+#: app/templates/help.html:22
+msgid "Apprise Integration"
+msgstr "Προορισμοί Apprise"
+
+#: app/templates/help.html:24
+msgid "Send notifications to 80+ supported services"
+msgstr "Στείλτε ειδοποιήσεις σε πάνω από 80 υποστηριζόμενες υπηρεσίες"
+
+#: app/templates/help.html:27
+#: app/templates/messages/assign_destinations.html:41
+#: app/templates/messages/view_message.html:58
+#: app/templates/partials/shared_nav.html:44
+#: app/templates/reminders/assign_destinations.html:39
+#: app/templates/reminders/view_reminder.html:69
+msgid "Webhooks"
+msgstr "Webhooks"
+
+#: app/templates/help.html:29
+msgid "Trigger actions or external workflows"
+msgstr "Προκαλέστε ενέργειες ή εξωτερικές ροές εργασίας"
+
+#: app/templates/email/list_emails.html:9 app/templates/help.html:32
+#: app/templates/partials/shared_nav.html:61
+msgid "Emails"
+msgstr "Emails"
+
+#: app/templates/help.html:34
+msgid "View and manage secure email messages"
+msgstr "Επισκόπηση ασφαλών email μηνυμάτων"
+
+#: app/templates/help.html:38
+msgid "Security"
+msgstr "🔐 Ασφάλεια"
+
+#: app/templates/help.html:39
+msgid "Grylli encrypts sensitive data and logs all key actions for auditing."
+msgstr ""
+"Το Grylli κρυπτογραφεί ευαίσθητα δεδομένα και καταγράφει όλες τις βασικές "
+"ενέργειες για επαλήθευση."
+
+#: app/templates/index.html:9 app/views/locale.py:95
+msgid "Welcome to Grylli"
+msgstr "Καλώς ήρθατε στο Grylli"
+
+#: app/templates/index.html:11
+msgid "Pronounced"
+msgstr "Προφέρεται"
+
+#: app/templates/index.html:11
+msgid "like “grill-ee”"
+msgstr "σαν «γρίλλ-ι»"
+
+#: app/templates/index.html:14
+msgid ""
+"Grylli is a secure message scheduling and delivery system designed to ensure"
+" your important messages are delivered — even if you can’t be there to send "
+"them."
+msgstr ""
+"Το Grylli είναι ένα ασφαλές σύστημα προγραμματισμού και παράδοσης μηνυμάτων "
+"που έχει σχεδιαστεί για να διασφαλίσει ότι τα σημαντικά μήνυματά σας θα "
+"παραδοθούν — ακόμη κι αν δεν μπορείτε να τα στείλετε εσείς οι ίδιοι."
+
+#: app/templates/index.html:17
+msgid ""
+"Whether you’re planning ahead, setting up emergency communication, or "
+"building peace of mind, Grylli helps automate your message delivery via "
+"multiple channels including email, webhooks, and Apprise notifications."
+msgstr ""
+"Είτε κάνετε σχέδια, είτε οργανώνετε επείγουσα επικοινωνία, είτε διασφαλίζετε"
+" την ηρεμία σας, το Grylli βοηθά αυτοματοποιώντας την παράδοση των μηνυμάτων"
+" σας μέσω email, webhooks, ή ειδοποιήσεων Apprise αν χάσετε μια επιβεβαίωση."
+
+#: app/templates/index.html:19
+msgid "Getting Started"
+msgstr "Ξεκινώντας"
+
+#: app/templates/index.html:21
+msgid "Create a message, email, or reminder."
+msgstr "Δημιουργήστε ένα μήνυμα ή ένα email."
+
+#: app/templates/index.html:22
+msgid "Set your check-in interval and grace period (for messages)."
+msgstr "Ορίστε την περίοδο επιβεβαίωσης και χάριτος."
+
+#: app/templates/index.html:23
+msgid "Assign one or more delivery destinations."
+msgstr "Εκχωρήστε έναν ή περισσότερους προορισμούς παράδοσης."
+
+#: app/templates/index.html:24
+msgid "Optionally attach files for secure emails."
+msgstr "Προαιρετικά επισυνάψτε αρχεία για ασφαλή email."
+
+#: app/templates/index.html:25
+msgid "Schedule reminders to send at specific times or on a recurring basis."
+msgstr ""
+"Προγραμματίστε υπενθυμίσεις να αποστέλλονται σε συγκεκριμένες ώρες ή "
+"επαναλαμβανόμενα."
+
+#: app/templates/index.html:26
+msgid "Enable the message or reminder to activate delivery."
+msgstr ""
+"Ενεργοποιήστε το μήνυμα ή την υπενθύμιση για να ενεργοποιηθεί η παράδοση."
+
+#: app/templates/index.html:28
+msgid ""
+"Regularly check in to Grylli to prevent automated delivery; miss a check-in "
+"and Grylli sends your messages as scheduled."
+msgstr ""
+"Ελέγχετε τακτικά το Grylli για να αποτρέψετε αυτόματες παραδόσεις· αν χάσετε"
+" έναν έλεγχο, το Grylli στέλνει τα μηνύματά σας όπως είναι προγραμματισμένα."
+
+#: app/templates/privacy.html:10
+msgid "Privacy Notice"
+msgstr "Ειδοποίηση Απορρήτου"
+
+#: app/templates/privacy.html:13
+msgid ""
+"Grylli respects your privacy and is designed to minimize the collection and "
+"storage of personal data."
+msgstr ""
+"Η Grylli σέβεται την ιδιωτικότητά σας και έχει σχεδιαστεί για να "
+"ελαχιστοποιεί τη συλλογή και αποθήκευση προσωπικών δεδομένων."
+
+#: app/templates/privacy.html:14
+msgid ""
+"All data is encrypted where appropriate and remains fully under your control"
+" if you self-host this platform."
+msgstr ""
+"Όλα τα δεδομένα είναι κρυπτογραφημένα όπου απαιτείται και παραμένουν πλήρως "
+"υπό τον έλεγχό σας εάν φιλοξενείτε αυτήν την πλατφόρμα μόνοι σας."
+
+#: app/templates/privacy.html:17
+msgid "What Data We Collect"
+msgstr "Ποια Δεδομένα Συλλέγουμε"
+
+#: app/templates/privacy.html:19
+msgid "Email address and password hash (for authentication)"
+msgstr "Διεύθυνση email και κώδικας πρόσβασης (για αυθεντικοποίηση)"
+
+#: app/templates/privacy.html:20
+msgid "Optional MFA secret and recovery codes (encrypted at rest)"
+msgstr ""
+"Προαιρετικό MFA μυστικό και κωδικοί ανάκτησης (κρυπτογραφημένοι κατά την "
+"αποθήκευση)"
+
+#: app/templates/privacy.html:21
+msgid "Reminder and message content you configure"
+msgstr "Περιεχόμενο υπενθυμίσεων και μηνυμάτων που διαμορφώνετε"
+
+#: app/templates/privacy.html:22
+msgid "User-specific settings, SMTP configuration (if provided)"
+msgstr "Ρυθμίσεις χρήστη, διαμόρφωση SMTP (αν παρεχθεί)"
+
+#: app/templates/privacy.html:25
+msgid "How Your Data Is Used"
+msgstr "Πώς Χρησιμοποιούνται τα Δεδομένα Σας"
+
+#: app/templates/privacy.html:27
+msgid ""
+"Your data is used solely for the purpose of delivering reminders and "
+"messages according to your preferences."
+msgstr ""
+"Τα δεδομένα σας χρησιμοποιούνται αποκλειστικά για την παράδοση υπενθυμίσεων "
+"και μηνυμάτων σύμφωνα με τις προτιμήσεις σας."
+
+#: app/templates/privacy.html:28
+msgid ""
+"Grylli does not share, sell, or transmit your personal data to any third "
+"parties."
+msgstr ""
+"Η Grylli δεν μοιράζεται, δεν πωλεί ούτε μεταδίδει τα προσωπικά σας δεδομένα "
+"σε τρίτους."
+
+#: app/templates/privacy.html:31
+msgid "Your Rights"
+msgstr "Τα Δικαιώματά Σας"
+
+#: app/templates/privacy.html:33
+msgid ""
+"You can export all of your data at any time from the Account Settings page."
+msgstr ""
+"Μπορείτε να εξάγετε όλα τα δεδομένα σας οποιαδήποτε στιγμή από τη σελίδα "
+"Ρυθμίσεων Λογαριασμού."
+
+#: app/templates/privacy.html:34
+msgid "You may permanently delete your account and all associated data."
+msgstr ""
+"Δεν μπορείτε να διαγράψετε το λογαριασμό σας επειδή είστε ο τελευταίος "
+"διαχειριστής."
+
+#: app/templates/privacy.html:35
+msgid ""
+"If you are using a self-hosted instance, contact the instance administrator "
+"for data inquiries."
+msgstr ""
+"Αν χρησιμοποιείτε μια αυτό-φιλοξενούμενη εγκατάσταση, επικοινωνήστε με τον "
+"διαχειριστή της για ερωτήματα σχετικά με τα δεδομένα."
+
+#: app/templates/privacy.html:38
+msgid "Self-Hosting Responsibility"
+msgstr "Ευθύνη Αυτό-Φιλοξενίας"
+
+#: app/templates/privacy.html:40
+msgid ""
+"If you are running Grylli on your own server, you are responsible for the "
+"storage, processing, and lawful handling of all user data on that instance."
+msgstr ""
+"Εάν λειτουργείτε τη Grylli στον δικό σας διακομιστή, είστε υπεύθυνοι για την"
+" αποθήκευση, επεξεργασία και νόμιμη διαχείριση όλων των δεδομένων χρηστών σε"
+" αυτήν την εγκατάσταση."
+
+#: app/templates/privacy.html:44
+msgid ""
+"This notice was last updated in June 2025 and may evolve to reflect changes "
+"in the software or regulatory landscape."
+msgstr ""
+"Αυτή η ειδοποίηση ενημερώθηκε τελευταία φορά τον Ιούνιο 2025 και μπορεί να "
+"εξελιχθεί για να αντανακλά αλλαγές στο λογισμικό ή το κανονιστικό πλαίσιο."
+
+#: app/templates/system_info.html:11
+msgid "📦 Environment Versions"
+msgstr "📦 Εκδόσεις Περιβάλλοντος"
+
+#: app/templates/system_info.html:17
+msgid "Category"
+msgstr "Κατηγορία"
+
+#: app/templates/system_info.html:18
+msgid "Tool"
+msgstr "Εργαλείο"
+
+#: app/templates/system_info.html:19
+msgid "Version"
+msgstr "Έκδοση"
+
+#: app/templates/system_info.html:25
+msgid "🧠 Python"
+msgstr "🧠 Python"
+
+#: app/templates/system_info.html:26
+msgid "Python"
+msgstr "Python"
+
+#: app/templates/system_info.html:30
+msgid "pip"
+msgstr "pip"
+
+#: app/templates/system_info.html:34
+msgid "SQLite"
+msgstr "SQLite"
+
+#: app/templates/system_info.html:40
+msgid "⚙️ Core"
+msgstr "⚙️ Πυρήνας"
+
+#: app/templates/system_info.html:47
+msgid "🔐 Security"
+msgstr "🔐 Ασφάλεια"
+
+#: app/templates/system_info.html:48
+msgid "Email Validator"
+msgstr "Έλεγχος εγκυρότητας Email"
+
+#: app/templates/system_info.html:52
+msgid "Cryptography"
+msgstr "Κρυπτογραφία"
+
+#: app/templates/system_info.html:57
+msgid "🕰️ Scheduling"
+msgstr "🕰️ Προγραμματισμός"
+
+#: app/templates/system_info.html:58
+msgid "APScheduler"
+msgstr "APScheduler"
+
+#: app/templates/system_info.html:62
+msgid "Apprise (Python)"
+msgstr "Apprise (Python)"
+
+#: app/templates/system_info.html:66
+msgid "Apprise CLI"
+msgstr "Apprise CLI"
+
+#: app/templates/system_info.html:74
+msgid "🌐 Frontend"
+msgstr "🌐 Διεπαφή"
+
+#: app/templates/account/manage_account.html:11
+msgid "Manage Account"
+msgstr "Διαχείριση Λογαριασμού"
+
+#: app/templates/account/manage_account.html:12
+msgid "Update your profile information and password."
+msgstr "Ενημέρωση πληροφοριών προφίλ και κωδικού πρόσβασης."
+
+#: app/templates/account/manage_account.html:41
+#: app/templates/admin/create_user.html:40
+#: app/templates/auth/bootstrap.html:43
+#: app/templates/auth/reset_password.html:42 app/templates/auth/signup.html:42
+msgid "Please enter a valid email address."
+msgstr "Παρακαλώ εισάγετε έγκυρη διεύθυνση email."
+
+#: app/templates/account/manage_account.html:62
+#: app/templates/account/manage_account.html:96
+#: app/templates/account/manage_account.html:127
+#: app/templates/auth/reset_password.html:66
+#: app/templates/auth/reset_password.html:97 app/templates/auth/signup.html:65
+#: app/templates/auth/signup.html:95
+msgid "Show/hide password"
+msgstr "Κρατήστε για να εμφανιστεί ο κωδικός πρόσβασης"
+
+#: app/templates/account/manage_account.html:89
+#: app/templates/admin/create_user.html:53
+#: app/templates/auth/bootstrap.html:51
+#: app/templates/auth/reset_password.html:58 app/templates/auth/signup.html:58
+msgid "Password must meet all complexity requirements."
+msgstr "Ο κωδικός πρέπει να πληροί όλες τις απαιτήσεις πολυπλοκότητας."
+
+#: app/templates/account/manage_account.html:141
+#: app/templates/admin/create_user.html:72
+#: app/templates/admin/edit_user.html:67 app/templates/auth/bootstrap.html:69
+#: app/templates/auth/reset_password.html:110
+#: app/templates/auth/signup.html:108
+msgid "Passwords do not match."
+msgstr "Οι κωδικοί πρόσβασης δεν ταιριάζουν."
+
+#: app/templates/account/manage_account.html:147
+msgid "Update Account"
+msgstr "Ενημέρωση Λογαριασμού"
+
+#: app/templates/account/manage_account.html:151
+#: app/templates/admin/create_user.html:82
+#: app/templates/admin/edit_user.html:97 app/templates/admin/help_form.html:28
+#: app/templates/admin/partials/user_instructions_and_modal.html:62
+#: app/templates/admin/partials/user_table.html:113
+#: app/templates/apprise/create_apprise.html:42
+#: app/templates/apprise/edit_apprise.html:42
+#: app/templates/auth/reset_password.html:121
+#: app/templates/email/assign_smtp.html:46
+#: app/templates/email/attach_files.html:47
+#: app/templates/email/edit_message.html:54
+#: app/templates/email/schedule_email.html:84
+#: app/templates/messages/assign_destinations.html:66
+#: app/templates/messages/create_message.html:55
+#: app/templates/messages/edit_message.html:48
+#: app/templates/messages/schedule_message.html:84
+#: app/templates/mfa/challenge.html:29 app/templates/mfa/settings.html:51
+#: app/templates/reminders/assign_destinations.html:64
+#: app/templates/reminders/assign_email_reminder.html:94
+#: app/templates/reminders/create_reminder.html:49
+#: app/templates/reminders/edit_reminder.html:42
+#: app/templates/reminders/schedule_reminder.html:51
+#: app/templates/user_smtp/create_smtp.html:111
+#: app/templates/user_smtp/edit_smtp.html:125
+#: app/templates/webhook/create_webhook.html:48
+#: app/templates/webhook/edit_webhook.html:48
+msgid "Cancel"
+msgstr "Ακύρωση"
+
+#: app/templates/account/manage_account.html:159
+#: app/templates/admin/create_user.html:90
+#: app/templates/admin/edit_user.html:81 app/templates/auth/bootstrap.html:83
+#: app/templates/auth/reset_password.html:128
+#: app/templates/auth/signup.html:132
+msgid "Minimum 8 characters"
+msgstr "Τουλάχιστον 8 χαρακτήρες"
+
+#: app/templates/account/manage_account.html:160
+#: app/templates/admin/create_user.html:91
+#: app/templates/admin/edit_user.html:82 app/templates/auth/bootstrap.html:84
+#: app/templates/auth/reset_password.html:129
+#: app/templates/auth/signup.html:133
+msgid "At least one uppercase letter"
+msgstr "Τουλάχιστον ένα κεφαλαίο γράμμα"
+
+#: app/templates/account/manage_account.html:161
+#: app/templates/admin/create_user.html:92
+#: app/templates/admin/edit_user.html:83 app/templates/auth/bootstrap.html:85
+#: app/templates/auth/reset_password.html:130
+#: app/templates/auth/signup.html:134
+msgid "At least one lowercase letter"
+msgstr "Τουλάχιστον ένα πεζό γράμμα"
+
+#: app/templates/account/manage_account.html:162
+#: app/templates/admin/create_user.html:93
+#: app/templates/admin/edit_user.html:84 app/templates/auth/bootstrap.html:86
+#: app/templates/auth/reset_password.html:131
+#: app/templates/auth/signup.html:135
+msgid "At least one number"
+msgstr "Τουλάχιστον ένας αριθμός"
+
+#: app/templates/account/manage_account.html:163
+#: app/templates/admin/create_user.html:94
+#: app/templates/auth/bootstrap.html:87
+#: app/templates/auth/reset_password.html:132
+#: app/templates/auth/signup.html:136
+msgid "At least one special character (e.g., !@#$%)"
+msgstr "Τουλάχιστον ένα ειδικό χαρακτήρα (π.χ., !@#$%)"
+
+#: app/templates/account/manage_account.html:169
+msgid "Download My Data"
+msgstr "Λήψη των Δεδομένων Μου"
+
+#: app/templates/account/manage_account.html:171
+msgid ""
+"Download all your account data as a JSON file. This includes your reminders,"
+" messages, email settings, and more. The file is for your records only and "
+"cannot be imported back. Protect it as it may contain sensitive information."
+msgstr ""
+"Κατεβάστε όλα τα δεδομένα του λογαριασμού σας ως αρχείο JSON. Σε αυτό "
+"περιλαμβάνονται οι υπενθυμίσεις, τα μηνύματα, οι ρυθμίσεις email και άλλα. "
+"Το αρχείο προορίζεται μόνο για προσωπική χρήση και δεν μπορεί να εισαχθεί εκ"
+" νέου. Προστατέψτε το, καθώς μπορεί να περιέχει ευαίσθητες πληροφορίες."
+
+#: app/templates/account/manage_account.html:175
+msgid "Download My Data (JSON)"
+msgstr "Λήψη των Δεδομένων Μου (JSON)"
+
+#: app/templates/account/manage_account.html:179
+msgid "Danger Zone"
+msgstr "Περιοχή Κινδύνου"
+
+#: app/templates/account/manage_account.html:180
+msgid "Deleting your account is permanent and cannot be undone."
+msgstr ""
+"Η διαγραφή του λογαριασμού σας είναι μόνιμη και δεν μπορεί να αναιρεθεί."
+
+#: app/templates/account/manage_account.html:185
+msgid "Delete My Account"
+msgstr "Ενημέρωση Λογαριασμού"
+
+#: app/templates/account/translations.html:8
+msgid "Translations - Grylli"
+msgstr "Μεταφράσεις - Grylli"
+
+#: app/templates/account/translations.html:17
+#: app/templates/partials/header.html:102
+msgid "Translations"
+msgstr "Μεταφράσεις"
+
+#: app/templates/account/translations.html:20
+msgid "Grylli currently supports multiple languages and more will be added."
+msgstr ""
+"Το Grylli υποστηρίζει αυτή τη στιγμή πολλές γλώσσες και θα προστεθούν "
+"περισσότερες."
+
+#: app/templates/account/translations.html:21
+msgid "Many of the translations were performed with assistance from ChatGPT."
+msgstr ""
+"Πολλές από τις μεταφράσεις πραγματοποιήθηκαν με τη βοήθεια του ChatGPT."
+
+#: app/templates/account/translations.html:22
+msgid ""
+"If you find a translation issue or want to suggest improvements, your input "
+"is welcome!"
+msgstr ""
+"Αν βρείτε κάποιο ζήτημα μετάφρασης ή θέλετε να προτείνετε βελτιώσεις, η "
+"συμβολή σας είναι ευπρόσδεκτη!"
+
+#: app/templates/account/translations.html:28
+msgid "How to request translation updates"
+msgstr "Πώς να ζητήσετε ενημερώσεις μεταφράσεων"
+
+#: app/templates/account/translations.html:30
+msgid "To contribute to translations, please use the following guidelines:"
+msgstr ""
+"Για να συνεισφέρετε στις μεταφράσεις, παρακαλώ ακολουθήστε τις ακόλουθες "
+"οδηγίες:"
+
+#: app/templates/account/translations.html:43
+msgid "Contribute missing or improved translations:"
+msgstr "Βρέθηκε ανύπαρκτη μετάφραση;"
+
+#: app/templates/account/translations.html:63
+msgid "Open the relevant .po translation file for your language."
+msgstr "Ανοίξτε το αρχείο JSON μετάφρασης για τη γλώσσα σας. Για παράδειγμα:"
+
+#: app/templates/account/translations.html:67
+msgid ""
+"Find untranslated or incomplete entries and add or improve translations."
+msgstr ""
+"Βρείτε μη μεταφρασμένες ή ελλιπείς καταχωρίσεις και προσθέστε ή βελτιώστε "
+"τις μεταφράσεις."
+
+#: app/templates/account/translations.html:68
+msgid "You may use a PO file editor or a text editor."
+msgstr ""
+"Μπορείτε να χρησιμοποιήσετε έναν επεξεργαστή αρχείων PO ή έναν επεξεργαστή "
+"κειμένου."
+
+#: app/templates/account/translations.html:69
+msgid "Copy the file path and the snippet of your changes."
+msgstr "Αντιγράψτε τη διαδρομή του αρχείου και το απόσπασμα των αλλαγών σας."
+
+#: app/templates/account/translations.html:70
+msgid "Paste the snippet directly into a new GitHub issue for review."
+msgstr ""
+"Επικολλήστε το αντιγραμμένο απόσπασμα απευθείας στο σχόλιο του ζητήματος στο"
+" GitHub."
+
+#: app/templates/account/translations.html:72
+msgid "Please do not upload the full .po file to avoid merge conflicts."
+msgstr ""
+"Μην ανεβάσετε το πλήρες αρχείο .po για να αποφύγετε συγκρούσεις συγχώνευσης."
+
+#: app/templates/account/translations.html:85
+msgid "Improving existing translations:"
+msgstr "Βελτίωση υπαρχουσών μεταφράσεων:"
+
+#: app/templates/account/translations.html:104
+msgid "Open the relevant .po file for the translation you want to improve."
+msgstr ""
+"Ανοίξτε το αντίστοιχο αρχείο .po για τη μετάφραση που θέλετε να βελτιώσετε."
+
+#: app/templates/account/translations.html:106
+msgid "For example:"
+msgstr "Για παράδειγμα:"
+
+#: app/templates/account/translations.html:110
+msgid ""
+"Find the phrase(s) and its existing translation(s) you want to improve."
+msgstr ""
+"Βρείτε τις φράσεις και τις υπάρχουσες μεταφράσεις που θέλετε να βελτιώσετε."
+
+#: app/templates/account/translations.html:111
+msgid "Update the phrase(s)."
+msgstr "Ενημερώστε τις φράσεις."
+
+#: app/templates/account/translations.html:112
+msgid "Copy the file name and path into the issue."
+msgstr "Αντιγράψτε το όνομα και το μονοπάτι του αρχείου στο ζήτημα."
+
+#: app/templates/account/translations.html:114
+msgid "Paste the copied snippet directly into the GitHub issue comment."
+msgstr ""
+"Επικολλήστε το αντιγραμμένο απόσπασμα απευθείας στο σχόλιο του ζητήματος στο"
+" GitHub."
+
+#: app/templates/account/translations.html:115
+msgid "Do not upload the full .po file to avoid merge conflicts."
+msgstr ""
+"Μην ανεβάσετε το πλήρες αρχείο .po για να αποφύγετε συγκρούσεις συγχώνευσης."
+
+#: app/templates/account/translations.html:118
+msgid "Example snippet:"
+msgstr "Παράδειγμα αποσπάσματος:"
+
+#: app/templates/account/translations.html:137
+msgid "Report missing translations not yet discovered:"
+msgstr "Αναφορά ανύπαρκτων μεταφράσεων που δεν έχουν ανακαλυφθεί:"
+
+#: app/templates/account/translations.html:154
+msgid ""
+"If you see text in the app that appears untranslated or missing, please "
+"report it to us."
+msgstr ""
+"Αν δείτε κείμενο στην εφαρμογή που φαίνεται να μην έχει μεταφραστεί ή να "
+"λείπει, παρακαλώ αναφέρετε το σε εμάς."
+
+#: app/templates/account/translations.html:155
+msgid "Provide the exact English phrase as it appears on the screen."
+msgstr "Παρέχετε την ακριβή αγγλική φράση όπως εμφανίζεται στην οθόνη."
+
+#: app/templates/account/translations.html:156
+msgid ""
+"Include the page or section where you saw the phrase (e.g., Apprise page, "
+"Account Page, etc.)."
+msgstr ""
+"Συμπεριλάβετε τη σελίδα ή το τμήμα όπου είδατε τη φράση (π.χ., σελίδα "
+"ρυθμίσεων, τμήμα λογαριασμού)."
+
+#: app/templates/account/translations.html:157
+msgid ""
+"Submit this information via a new GitHub issue so we can add it to the "
+"translation files"
+msgstr ""
+"Υποβάλετε αυτές τις πληροφορίες μέσω ενός νέου ζητήματος GitHub ώστε να "
+"μπορούμε να την προσθέσουμε στα αρχεία μετάφρασης και να την τυλίξουμε για "
+"Babel."
+
+#: app/templates/account/translations.html:166
+msgid "Found a missing translation?"
+msgstr "Βρέθηκε ανύπαρκτη μετάφραση;"
+
+#: app/templates/account/translations.html:171
+msgid ""
+"This link will create a new GitHub issue pre-filled with a language code."
+msgstr ""
+"Αυτός ο σύνδεσμος θα δημιουργήσει ένα νέο θέμα στο GitHub προ-συμπληρωμένο "
+"με κωδικό γλώσσας."
+
+#: app/templates/account/translations.html:172
+msgid "Report it by opening a new GitHub issue"
+msgstr "Αναφέρετέ την ανοίγοντας ένα νέο ζήτημα στο GitHub"
+
+#: app/templates/account/translations.html:175
+msgid "Please specify the language code and exact phrase when reporting."
+msgstr ""
+"Παρακαλώ προσδιορίστε τον κωδικό γλώσσας και τη συγκεκριμένη φράση όταν "
+"κάνετε αναφορά."
+
+#: app/templates/account/translations.html:176
+msgid "Thank you for helping us make Grylli better!"
+msgstr "Σας ευχαριστούμε που βοηθάτε να κάνουμε το Grylli καλύτερο!"
+
+#: app/templates/admin/create_user.html:14
+msgid "Create New User"
+msgstr "Δημιουργία νέου χρήστη"
+
+#: app/templates/admin/create_user.html:15
+msgid "Fill out the form to add a new user."
+msgstr "Συμπληρώστε τη φόρμα για να προσθέσετε έναν νέο χρήστη."
+
+#: app/templates/admin/create_user.html:21
+#: app/templates/admin/edit_user.html:17 app/templates/auth/bootstrap.html:24
+msgid "Please fix the following errors:"
+msgstr "Παρακαλώ διορθώστε τα ακόλουθα σφάλματα:"
+
+#: app/templates/admin/create_user.html:78
+#: app/templates/admin/edit_user.html:93
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "Create User"
+msgstr "Δημιουργία χρήστη"
+
+#: app/templates/admin/edit_user.html:10
+#: app/templates/admin/partials/user_card.html:20
+#: app/templates/admin/partials/user_table.html:26
+msgid "Edit User"
+msgstr "Επεξεργασία χρήστη"
+
+#: app/templates/admin/edit_user.html:55 app/templates/admin/edit_user.html:74
+msgid "Hold to show password"
+msgstr "Κρατήστε για να εμφανιστεί ο κωδικός πρόσβασης"
+
+#: app/templates/admin/edit_user.html:85
+#, python-format
+msgid "At least one special character (e.g., !@#$%%)"
+msgstr "Τουλάχιστον ένα ειδικό χαρακτήρα (π.χ., !@#$%%)"
+
+#: app/templates/admin/help.html:4 app/templates/auth/login.html:72
+msgid "Admin Help"
+msgstr "Πίνακας διαχείρισης"
+
+#: app/templates/admin/help.html:7
+msgid "Reset Admin Password"
+msgstr "Επαναφορά Κωδικού"
+
+#: app/templates/admin/help.html:9
+msgid ""
+"If you've forgotten the admin password, you can reset it using the following"
+" Docker command:"
+msgstr ""
+"Εάν έχετε ξεχάσει τον κωδικό πρόσβασης του διαχειριστή, μπορείτε να τον "
+"επαναφέρετε χρησιμοποιώντας την ακόλουθη εντολή Docker:"
+
+#: app/templates/admin/help.html:15
+msgid ""
+"This script will prompt you to enter a new password for the admin user. You "
+"must run it from the host system where the Grylli container is running."
+msgstr ""
+"Αυτό το script θα σας ζητήσει να εισαγάγετε έναν νέο κωδικό πρόσβασης για "
+"τον χρήστη διαχειριστή. Πρέπει να το εκτελέσετε από το σύστημα υποδοχής όπου"
+" εκτελείται το κοντέινερ Grylli."
+
+#: app/templates/admin/help.html:18
+msgid "After resetting, you can log in with the new password immediately."
+msgstr ""
+"Μετά την επαναφορά, μπορείτε να συνδεθείτε αμέσως με τον νέο κωδικό "
+"πρόσβασης."
+
+#: app/templates/admin/help.html:24
+msgid "Return to Login"
+msgstr "Επιστροφή στον Πίνακα Ελέγχου"
+
+#: app/templates/admin/help_form.html:6
+msgid "Admin Help Access"
+msgstr "Πρόσβαση Βοήθειας Διαχειριστή"
+
+#: app/templates/admin/help_form.html:9
+msgid "Enter your Ferret Key to unlock admin-only help documentation."
+msgstr ""
+"Εισαγάγετε το Ferret Key σας για να ξεκλειδώσετε την τεκμηρίωση βοήθειας "
+"μόνο για διαχειριστές."
+
+#: app/templates/admin/help_form.html:34
+msgid "How to Find Your FERRET_KEY"
+msgstr "Πώς να Βρείτε το FERRET_KEY σας"
+
+#: app/templates/admin/help_form.html:36
+msgid "The FERRET_KEY is set as an environment variable when running Grylli."
+msgstr ""
+"Το FERRET_KEY είναι ρυθμισμένο ως μια μεταβλητή περιβάλλοντος κατά την "
+"εκτέλεση του Grylli."
+
+#: app/templates/admin/help_form.html:39
+msgid "Option 1: Check docker-compose.yml"
+msgstr "Επιλογή 1: Ελέγξτε το docker-compose.yml"
+
+#: app/templates/admin/help_form.html:46
+msgid "Option 2: Use docker inspect"
+msgstr "Επιλογή 2: Χρησιμοποιήστε το docker inspect"
+
+#: app/templates/admin/help_form.html:52
+msgid "This shows the FERRET_KEY as passed to the container at runtime."
+msgstr ""
+"Αυτό δείχνει το FERRET_KEY όπως πέρασε στο κοντέινερ κατά την εκτέλεση."
+
+#: app/templates/admin/index.html:10
+msgid "Admin Panel"
+msgstr "Πίνακας διαχείρισης"
+
+#: app/templates/admin/index.html:12
+msgid ""
+"Welcome to the Grylli Admin Panel. Use the links below to manage the system."
+msgstr ""
+"Καλώς ήρθατε στον Πίνακα Διαχείρισης Grylli. Χρησιμοποιήστε τους παρακάτω "
+"συνδέσμους για να διαχειριστείτε το σύστημα."
+
+#: app/templates/admin/index.html:17
+msgid "Manage Users"
+msgstr "Διαχείριση χρηστών"
+
+#: app/templates/admin/index.html:18
+msgid "Create, edit, enable/disable, or delete user accounts."
+msgstr ""
+"Δημιουργία, επεξεργασία, ενεργοποίηση/απενεργοποίηση ή διαγραφή λογαριασμών "
+"χρηστών."
+
+#: app/templates/admin/index.html:22
+#: app/templates/admin/system_settings.html:10
+#: app/templates/partials/admin_nav.html:52
+msgid "System Settings"
+msgstr "Ρυθμίσεις Συστήματος"
+
+#: app/templates/admin/index.html:23
+msgid "View  system-wide environment values."
+msgstr "Δείτε τις τιμές περιβάλλοντος του συστήματος."
+
+#: app/templates/admin/index.html:27 app/templates/partials/admin_nav.html:42
+msgid "Backups"
+msgstr "Αντίγραφα Ασφαλείας"
+
+#: app/templates/admin/index.html:28
+msgid "Create and delete database backups."
+msgstr "Αντίγραφα Ασφαλείας Βάσης Δεδομένων"
+
+#: app/templates/admin/index.html:33
+msgid "View and test global SMTP settings."
+msgstr "Αποτυχία αποστολής δοκιμαστικού email. Ελέγξτε τις ρυθμίσεις SMTP."
+
+#: app/templates/admin/index.html:39
+msgid "View Admin Guide / README on GitHub"
+msgstr "Δείτε τον Οδηγό Διαχείρισης / README στο GitHub"
+
+#: app/templates/admin/index.html:40
+msgid "Includes setup instructions, integrations, and troubleshooting."
+msgstr ""
+"Περιλαμβάνει οδηγίες ρύθμισης, ενσωματώσεις και αντιμετώπιση προβλημάτων."
+
+#: app/templates/admin/index.html:44
+msgid "⚠️ Admin Tips"
+msgstr "⚠️ Συμβουλές Διαχείρισης"
+
+#: app/templates/admin/index.html:46
+msgid "Ensure the data folder (database) is backed up on your host"
+msgstr ""
+"Βεβαιωθείτε ότι ο φάκελος δεδομένων (βάση δεδομένων) είναι αποθηκευμένος "
+"στον κεντρικό σας υπολογιστή"
+
+#: app/templates/admin/index.html:48
+msgid ""
+"The uploads folder is not per user.  If required per user, you will ndd to "
+"create subdirectoried per user and setup permissions so users can only see "
+"their own folder."
+msgstr ""
+"Ο φάκελος μεταφορτώσεων δεν είναι ανά χρήστη. Εάν απαιτείται ανά χρήστη, θα "
+"χρειαστεί να δημιουργήσετε υποκαταλόγους ανά χρήστη και να ρυθμίσετε τα "
+"δικαιώματα ώστε οι χρήστες να μπορούν να βλέπουν μόνο το δικό τους φάκελο."
+
+#: app/templates/admin/index.html:51
+msgid ""
+"To restore a backup: stop the container, replace the data/grylli.db with one"
+" from the backups folder, and restart the container."
+msgstr ""
+"Για να επαναφέρετε ένα αντίγραφο ασφαλείας: σταματήστε το container, "
+"αντικαταστήστε το data/grylli.db με ένα από το φάκελο των αντιγράφων "
+"ασφαλείας και επανεκκινήστε το container."
+
+#: app/templates/admin/list_backups.html:11
+msgid "Database Backups"
+msgstr "Αντίγραφα Ασφαλείας Βάσης Δεδομένων"
+
+#: app/templates/admin/list_backups.html:13
+msgid "Create Backup"
+msgstr "Δημιουργία Αντιγράφου Ασφαλείας"
+
+#: app/templates/admin/list_backups.html:21
+msgid "Filename"
+msgstr "Όνομα Αρχείου"
+
+#: app/templates/admin/list_backups.html:22
+#: app/templates/admin/partials/user_table.html:14
+#: app/templates/apprise/list_apprise.html:62
+#: app/templates/email/list_emails.html:60
+#: app/templates/messages/list_messages.html:60
+#: app/templates/reminders/list_reminders.html:60
+#: app/templates/user_smtp/list_smtp.html:59
+#: app/templates/webhook/list_webhooks.html:63
+msgid "Actions"
+msgstr "Ενέργειες"
+
+#: app/templates/admin/list_backups.html:32
+msgid "Delete this backup?"
+msgstr "Διαγραφή αυτού του αντιγράφου ασφαλείας;"
+
+#: app/templates/admin/list_backups.html:32
+#: app/templates/apprise/list_apprise.html:95
+#: app/templates/apprise/list_apprise.html:99
+#: app/templates/apprise/list_apprise.html:150
+#: app/templates/apprise/list_apprise.html:154
+#: app/templates/email/list_emails.html:124
+#: app/templates/email/list_emails.html:128
+#: app/templates/email/list_emails.html:226
+#: app/templates/email/list_emails.html:230
+#: app/templates/messages/list_messages.html:112
+#: app/templates/messages/list_messages.html:116
+#: app/templates/messages/list_messages.html:198
+#: app/templates/messages/list_messages.html:202
+#: app/templates/reminders/list_reminders.html:107
+#: app/templates/reminders/list_reminders.html:113
+#: app/templates/reminders/list_reminders.html:192
+#: app/templates/reminders/list_reminders.html:198
+#: app/templates/user_smtp/list_smtp.html:101
+#: app/templates/user_smtp/list_smtp.html:169
+#: app/templates/webhook/list_webhooks.html:102
+#: app/templates/webhook/list_webhooks.html:161
+msgid "Delete"
+msgstr "Διαγραφή"
+
+#: app/templates/admin/list_backups.html:41
+msgid "No backups found."
+msgstr "Δεν βρέθηκαν αντίγραφα ασφαλείας."
+
+#: app/templates/admin/list_backups.html:44
+msgid ""
+"Backups contain your full app data. Store securely. Sensitive data is "
+"encrypted in the DB by default."
+msgstr ""
+"Τα αντίγραφα ασφαλείας περιέχουν όλα τα δεδομένα της εφαρμογής σας. "
+"Αποθηκεύστε τα με ασφάλεια. Τα ευαίσθητα δεδομένα είναι κρυπτογραφημένα στη "
+"ΒΔ από προεπιλογή."
+
+#: app/templates/admin/smtp_config.html:28
+#: app/templates/admin/system_config.html:22
+msgid "System Configuration"
+msgstr "Διαμόρφωση Συστήματος"
+
+#: app/templates/admin/smtp_config.html:33
+#: app/templates/admin/system_config.html:26
+#: app/templates/admin/system_settings.html:15
+msgid "Key"
+msgstr "Κλειδί"
+
+#: app/templates/admin/smtp_config.html:34
+#: app/templates/admin/system_config.html:27
+#: app/templates/admin/system_settings.html:16
+msgid "Value"
+msgstr "Τιμή"
+
+#: app/templates/admin/smtp_config.html:35
+#: app/templates/admin/system_config.html:28
+msgid "Sensitive"
+msgstr "Ευαίσθητο"
+
+#: app/templates/admin/smtp_config.html:36
+#: app/templates/admin/system_config.html:29
+msgid "Editable"
+msgstr "Επεξεργάσιμο"
+
+#: app/templates/admin/smtp_config.html:50
+#: app/templates/admin/smtp_config.html:51
+#: app/templates/admin/system_config.html:45
+#: app/templates/admin/system_config.html:46
+#: app/templates/email/view_config.html:60
+msgid "Yes"
+msgstr "Ναι"
+
+#: app/templates/admin/smtp_config.html:50
+#: app/templates/admin/smtp_config.html:51
+#: app/templates/admin/system_config.html:45
+#: app/templates/admin/system_config.html:46
+#: app/templates/email/view_config.html:60
+msgid "No"
+msgstr "Όχι"
+
+#: app/templates/admin/smtp_config.html:63
+#: app/templates/admin/system_config.html:55
+msgid "Send Test Email"
+msgstr "Αποστολή Δοκιμαστικού Email"
+
+#: app/templates/admin/system_config.html:39
+msgid "decrypted"
+msgstr "Δημιουργήθηκε"
+
+#: app/templates/admin/partials/user_card.html:12
+msgid "Email:"
+msgstr "Email:"
+
+#: app/templates/admin/partials/user_card.html:15
+msgid "Role:"
+msgstr "Ρόλος:"
+
+#: app/templates/admin/partials/user_card.html:27
+#: app/templates/admin/partials/user_table.html:34
+msgid "Change Role"
+msgstr "Αλλαγή Ρόλου"
+
+#: app/templates/admin/partials/user_card.html:29
+#: app/templates/admin/partials/user_table.html:36
+msgid "You cannot change your own role"
+msgstr "Δεν μπορείτε να αλλάξετε την ενεργοποιημένη κατάσταση σας."
+
+#: app/templates/admin/partials/user_card.html:36
+#: app/templates/admin/partials/user_table.html:43
+msgid "Are you sure you want to reset MFA for this user?"
+msgstr "Είστε σίγουροι ότι θέλετε να επαναφέρετε το MFA για αυτόν τον χρήστη;"
+
+#: app/templates/admin/partials/user_card.html:39
+#: app/templates/admin/partials/user_table.html:46
+msgid "Reset MFA"
+msgstr "Επαναφορά Κωδικού"
+
+#: app/templates/admin/partials/user_card.html:51
+#: app/templates/admin/partials/user_table.html:58
+msgid "Delete user"
+msgstr "Διαγραφή χρήστη"
+
+#: app/templates/admin/partials/user_card.html:55
+#: app/templates/admin/partials/user_table.html:61
+msgid "Delete User"
+msgstr "Διαγραφή Χρήστη"
+
+#: app/templates/admin/partials/user_card.html:58
+#: app/templates/admin/partials/user_table.html:65
+msgid "You cannot disable yourself"
+msgstr "Δεν μπορείτε να απενεργοποιήσετε τον εαυτό σας"
+
+#: app/templates/admin/partials/user_card.html:65
+#: app/templates/admin/partials/user_table.html:72
+msgid "Disable"
+msgstr "Απενεργοποίηση"
+
+#: app/templates/admin/partials/user_card.html:65
+#: app/templates/admin/partials/user_table.html:72
+msgid "Enable"
+msgstr "Ενεργοποίηση"
+
+#: app/templates/admin/partials/user_header.html:6
+#: app/templates/partials/admin_nav.html:47
+msgid "Users"
+msgstr "Χρήστες"
+
+#: app/templates/admin/partials/user_header.html:12
+#: app/templates/admin/partials/user_header.html:13
+#: app/templates/apprise/apprise_config.html:10
+#: app/templates/apprise/apprise_config.html:11
+#: app/templates/apprise/list_apprise.html:16
+#: app/templates/apprise/list_apprise.html:17
+#: app/templates/email/list_emails.html:15
+#: app/templates/email/list_emails.html:16
+#: app/templates/messages/list_messages.html:16
+#: app/templates/messages/list_messages.html:17
+#: app/templates/reminders/list_reminders.html:15
+#: app/templates/reminders/list_reminders.html:16
+#: app/templates/user_smtp/list_smtp.html:14
+#: app/templates/user_smtp/list_smtp.html:17
+#: app/templates/webhook/list_webhooks.html:16
+#: app/templates/webhook/list_webhooks.html:17
+#: app/templates/webhook/webhook_config.html:10
+#: app/templates/webhook/webhook_config.html:11
+msgid "Table View"
+msgstr "Προβολή Πίνακα"
+
+#: app/templates/admin/partials/user_header.html:26
+#: app/templates/admin/partials/user_header.html:27
+#: app/templates/apprise/apprise_config.html:24
+#: app/templates/apprise/apprise_config.html:25
+#: app/templates/apprise/list_apprise.html:30
+#: app/templates/apprise/list_apprise.html:31
+#: app/templates/email/list_emails.html:29
+#: app/templates/email/list_emails.html:30
+#: app/templates/messages/list_messages.html:30
+#: app/templates/messages/list_messages.html:31
+#: app/templates/reminders/list_reminders.html:29
+#: app/templates/reminders/list_reminders.html:30
+#: app/templates/user_smtp/list_smtp.html:27
+#: app/templates/user_smtp/list_smtp.html:30
+#: app/templates/webhook/list_webhooks.html:30
+#: app/templates/webhook/list_webhooks.html:31
+#: app/templates/webhook/webhook_config.html:24
+#: app/templates/webhook/webhook_config.html:25
+msgid "Card View"
+msgstr "Προβολή Κάρτας"
+
+#: app/templates/admin/partials/user_header.html:45
+msgid "Add User"
+msgstr "Προσθήκη Χρήστη"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:9
+#: app/templates/email/attach_files.html:54
+#: app/templates/email/list_emails.html:255
+#: app/templates/messages/list_messages.html:223
+#: app/templates/reminders/list_reminders.html:218
+#: app/templates/reminders/schedule_reminder.html:56
+msgid "Hide Instructions"
+msgstr "Απόκρυψη Οδηγιών"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:9
+msgid "How to manage users"
+msgstr "Πώς να διαχειριστείτε τους χρήστες"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "Click"
+msgstr "Κάντε κλικ στο"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+msgid "➕ Add User"
+msgstr "➕ Προσθήκη Χρήστη"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+msgid "to open the new user form."
+msgstr "για να ανοίξετε τη φόρμα νέου χρήστη."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:18
+msgid "Enter a unique username, valid email address, and strong password."
+msgstr ""
+"Εισάγετε μοναδικό όνομα χρήστη, έγκυρη διεύθυνση email και ισχυρό κωδικό "
+"πρόσβασης."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "Select the appropriate"
+msgstr "Επιλέξτε τον κατάλληλο"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "role"
+msgstr "ρόλο"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "or"
+msgstr "Θύρα"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "to save."
+msgstr "για να αποθηκεύσετε."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:25
+msgid "To edit a user, click ✏️ and update their info."
+msgstr ""
+"Για να επεξεργαστείτε έναν χρήστη, κάντε κλικ στο ✏️ και ενημερώστε τις "
+"πληροφορίες του."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:26
+msgid "To delete a user, click 🗑️ and confirm the deletion."
+msgstr ""
+"Για να διαγράψετε έναν χρήστη, κάντε κλικ στο 🗑️ και επιβεβαιώστε τη "
+"διαγραφή."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:28
+msgid "To disable or enable a user, click 🔴 or 🟢."
+msgstr ""
+"Για να απενεργοποιήσετε ή να ενεργοποιήσετε έναν χρήστη, κάντε κλικ στο 🔴 ή "
+"🟢."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:30
+msgid "🟢 = User is enabled and can log in."
+msgstr "🟢 = Ο χρήστης είναι ενεργοποιημένος και μπορεί να συνδεθεί."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:31
+msgid "🔴 = User is disabled and cannot log in."
+msgstr "🔴 = Ο χρήστης είναι απενεργοποιημένος και δεν μπορεί να συνδεθεί."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:32
+msgid "⚪ = You cannot disable your own account."
+msgstr "⚪ = Δεν μπορείτε να απενεργοποιήσετε τον δικό σας λογαριασμό."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:43
+#: app/templates/admin/partials/user_table.html:91
+msgid "Assign Role for"
+msgstr "Καθορισμός Προορισμών για"
+
+#: app/templates/admin/partials/user_table.html:10
+msgid "ID"
+msgstr "ID"
+
+#: app/templates/admin/partials/user_table.html:11
+#: app/templates/user_smtp/list_smtp.html:55
+msgid "Username"
+msgstr "Όνομα Χρήστη"
+
+#: app/templates/admin/partials/user_table.html:12
+msgid "Email"
+msgstr "Διεύθυνση Email"
+
+#: app/templates/admin/partials/user_table.html:13
+msgid "Role"
+msgstr "Ρόλος"
+
+#: app/templates/apprise/apprise_config.html:3
+#: app/templates/apprise/list_apprise.html:9
+#: app/templates/messages/assign_destinations.html:22
+#: app/templates/reminders/assign_destinations.html:20
+msgid "Apprise Destinations"
+msgstr "Προορισμοί Apprise"
+
+#: app/templates/apprise/apprise_config.html:43
+#: app/templates/webhook/list_webhooks.html:49
+#: app/templates/webhook/webhook_config.html:43
+msgid "Add Webhook"
+msgstr "Προσθήκη Webhook"
+
+#: app/templates/apprise/apprise_config.html:43
+#: app/templates/apprise/list_apprise.html:49
+#: app/templates/webhook/list_webhooks.html:49
+#: app/templates/webhook/webhook_config.html:43
+msgid "Add Destination"
+msgstr "Προσθήκη Προορισμού"
+
+#: app/templates/apprise/create_apprise.html:10
+msgid "Create Apprise Destination"
+msgstr "Δημιουργία Προορισμού Apprise"
+
+#: app/templates/apprise/create_apprise.html:38
+#: app/templates/apprise/edit_apprise.html:38
+#: app/templates/user_smtp/create_smtp.html:107
+#: app/templates/webhook/create_webhook.html:44
+#: app/templates/webhook/edit_webhook.html:44
+msgid "Create Destination"
+msgstr "Δημιουργία Προορισμού"
+
+#: app/templates/apprise/create_apprise.html:47
+#: app/templates/apprise/edit_apprise.html:47
+msgid "Need help with Apprise URLs? See the"
+msgstr "Χρειάζεστε βοήθεια με Apprise URLs; Δείτε το"
+
+#: app/templates/apprise/create_apprise.html:51
+#: app/templates/apprise/edit_apprise.html:51
+msgid "Apprise Notification Services documentation"
+msgstr "τεκμηρίωση Υπηρεσιών Ειδοποίησης Apprise"
+
+#: app/templates/apprise/edit_apprise.html:10
+msgid "Edit Apprise Destination"
+msgstr "Επεξεργασία Προορισμού Apprise"
+
+#: app/templates/apprise/list_apprise.html:49
+msgid "Add Apprise"
+msgstr "Προσθήκη Apprise"
+
+#: app/templates/apprise/list_apprise.html:58
+#: app/templates/email/edit_message.html:21
+#: app/templates/email/list_emails.html:56
+#: app/templates/email/view_config.html:14
+#: app/templates/messages/create_message.html:29
+#: app/templates/messages/edit_message.html:23
+#: app/templates/messages/list_messages.html:57
+#: app/templates/messages/view_message.html:14
+#: app/templates/reminders/create_reminder.html:23
+#: app/templates/reminders/edit_reminder.html:17
+#: app/templates/reminders/list_reminders.html:56
+#: app/templates/reminders/view_reminder.html:13
+#: app/templates/user_smtp/list_smtp.html:52
+#: app/templates/webhook/list_webhooks.html:58
+msgid "Label"
+msgstr "Ετικέτα"
+
+#: app/templates/apprise/list_apprise.html:59
+msgid "URL"
+msgstr "URL"
+
+#: app/templates/apprise/list_apprise.html:61
+#: app/templates/email/list_emails.html:59
+#: app/templates/messages/list_messages.html:59
+#: app/templates/messages/view_message.html:36
+#: app/templates/reminders/view_reminder.html:47
+#: app/templates/webhook/list_webhooks.html:62
+msgid "Created At"
+msgstr "Δημιουργήθηκε Στις"
+
+#: app/templates/apprise/list_apprise.html:77
+#: app/templates/apprise/list_apprise.html:132
+#: app/templates/user_smtp/list_smtp.html:79
+#: app/templates/user_smtp/list_smtp.html:147
+#: app/templates/webhook/list_webhooks.html:79
+#: app/templates/webhook/list_webhooks.html:138
+msgid "Edit"
+msgstr "Επεξεργασία"
+
+#: app/templates/apprise/list_apprise.html:80
+#: app/templates/apprise/list_apprise.html:135
+#: app/templates/user_smtp/list_smtp.html:82
+#: app/templates/user_smtp/list_smtp.html:150
+msgid "Cannot edit while in use"
+msgstr "Δεν είναι δυνατή η επεξεργασία ενώ χρησιμοποιείται"
+
+#: app/templates/apprise/list_apprise.html:88
+#: app/templates/apprise/list_apprise.html:143
+#: app/templates/webhook/list_webhooks.html:91
+#: app/templates/webhook/list_webhooks.html:150
+msgid "Test"
+msgstr "Δοκιμή"
+
+#: app/templates/apprise/list_apprise.html:103
+#: app/templates/apprise/list_apprise.html:158
+#: app/templates/user_smtp/list_smtp.html:106
+#: app/templates/user_smtp/list_smtp.html:174
+msgid "Cannot delete while in use"
+msgstr "Δεν είναι δυνατή η διαγραφή ενώ χρησιμοποιείται"
+
+#: app/templates/apprise/list_apprise.html:119
+msgid "URL:"
+msgstr "URL:"
+
+#: app/templates/apprise/list_apprise.html:122
+#: app/templates/user_smtp/list_smtp.html:137
+#: app/templates/webhook/list_webhooks.html:128
+msgid "Enabled:"
+msgstr "Ενεργοποιημένο:"
+
+#: app/templates/apprise/list_apprise.html:125
+#: app/templates/user_smtp/list_smtp.html:140
+#: app/templates/webhook/list_webhooks.html:131
+msgid "Created:"
+msgstr "Δημιουργήθηκε:"
+
+#: app/templates/auth/bootstrap.html:14
+msgid "Create Admin Account"
+msgstr "Δημιουργία Λογαριασμού Διαχειριστή"
+
+#: app/templates/auth/bootstrap.html:16
+msgid "Let’s get started by creating your first admin account."
+msgstr ""
+"Ας ξεκινήσουμε με τη δημιουργία του πρώτου σας λογαριασμού διαχειριστή."
+
+#: app/templates/auth/bootstrap.html:75
+msgid "Create Admin"
+msgstr "Δημιουργία Διαχειριστή"
+
+#: app/templates/auth/forgot_password.html:12
+msgid "Forgot Password"
+msgstr "Ξεχάσατε τον Κωδικό;"
+
+#: app/templates/auth/forgot_password.html:15
+msgid ""
+"Enter your username and email. We'll send you a link to reset your password."
+msgstr ""
+"Εισάγετε το όνομα χρήστη και το email σας. Θα σας στείλουμε έναν σύνδεσμο "
+"για να επαναφέρετε τον κωδικό σας."
+
+#: app/templates/auth/forgot_username.html:12
+msgid "Forgot Username"
+msgstr "Ξεχάσατε το Όνομα Χρήστη;"
+
+#: app/templates/auth/forgot_username.html:15
+msgid "Enter your email address, and we'll send you your username."
+msgstr ""
+"Εισάγετε τη διεύθυνση email σας, και θα σας στείλουμε το όνομα χρήστη σας."
+
+#: app/templates/auth/forgot_username.html:40
+msgid "Send Username"
+msgstr "Αποστολή Ονόματος Χρήστη"
+
+#: app/templates/auth/login.html:12 app/templates/auth/login.html:54
+msgid "Log In"
+msgstr "Σύνδεση"
+
+#: app/templates/auth/login.html:62
+msgid "Forgot Username?"
+msgstr "Ξεχάσατε το Όνομα Χρήστη;"
+
+#: app/templates/auth/login.html:64
+msgid "Forgot Password?"
+msgstr "Ξεχάσατε τον Κωδικό;"
+
+#: app/templates/auth/login.html:66 app/templates/auth/signup.html:12
+msgid "Sign Up"
+msgstr "Εγγραφή"
+
+#: app/templates/auth/rate_limit.html:9
+msgid "Hold On"
+msgstr "Κρατήστε"
+
+#: app/templates/auth/rate_limit.html:11
+msgid "Too many failed login attempts. Please wait"
+msgstr "Πάρα πολλές αποτυχημένες προσπάθειες σύνδεσης. Παρακαλώ περιμένετε"
+
+#: app/templates/auth/rate_limit.html:13
+msgid "seconds..."
+msgstr "δευτερόλεπτα..."
+
+#: app/templates/auth/rate_limit.html:15
+msgid "Redirecting to login..."
+msgstr "Επιστροφή στον Πίνακα Ελέγχου"
+
+#: app/templates/auth/reset_password.html:12
+#: app/templates/auth/reset_password.html:116
+msgid "Reset Password"
+msgstr "Επαναφορά Κωδικού"
+
+#: app/templates/auth/reset_password.html:14
+msgid "Enter your username, email, and new password."
+msgstr "Εισάγετε το όνομα χρήστη σας, το email και τον νέο κωδικό."
+
+#: app/templates/auth/signup.html:14
+msgid "Fill out the form to create your account."
+msgstr "Συμπληρώστε τη φόρμα για να δημιουργήσετε τον λογαριασμό σας."
+
+#: app/templates/checkin/already_checked_in.html:10
+msgid "Already Checked In"
+msgstr "Τελευταίο Check-in"
+
+#: app/templates/checkin/already_checked_in.html:12
+msgid ""
+"You have already checked in for this item. No further action is needed at "
+"this time."
+msgstr ""
+"Έχετε ήδη επισημάνει αυτό το στοιχείο. Δεν απαιτείται περαιτέρω ενέργεια "
+"αυτή τη στιγμή."
+
+#: app/templates/checkin/already_checked_in.html:16
+#: app/templates/checkin/disabled.html:16
+#: app/templates/checkin/executed_disabled.html:18
+msgid "Check-in for:"
+msgstr "Εισαγωγή για:"
+
+#: app/templates/checkin/already_checked_in.html:21
+#: app/templates/checkin/disabled.html:21
+#: app/templates/checkin/executed_disabled.html:23
+#: app/templates/checkin/thank_you.html:19
+msgid "Return to Dashboard"
+msgstr "Επιστροφή στον Πίνακα Ελέγχου"
+
+#: app/templates/checkin/disabled.html:10
+msgid "Check-In Disabled"
+msgstr "Το Email είναι απενεργοποιημένο"
+
+#: app/templates/checkin/disabled.html:12
+msgid "This check-in is currently disabled and cannot be completed."
+msgstr ""
+"Αυτή η επισημανση είναι προσωρινά ανενεργή και δεν μπορεί να ολοκληρωθεί."
+
+#: app/templates/checkin/executed_disabled.html:11
+msgid "Already Executed & Disabled"
+msgstr "Ήδη Εκτελεσμένο & Ανενεργό"
+
+#: app/templates/checkin/executed_disabled.html:14
+msgid ""
+"This check-in has already been executed and is now disabled. No further "
+"action is required."
+msgstr ""
+"Αυτή η επισημανση έχει ήδη εκτελεστεί και είναι πλέον ανενεργή. Δεν "
+"απαιτείται περαιτέρω ενέργεια."
+
+#: app/templates/checkin/thank_you.html:10
+msgid "Check-In Successful"
+msgstr "Επιτυχής Εισαγωγή"
+
+#: app/templates/checkin/thank_you.html:11
+msgid "Thank you for checking in."
+msgstr "Σας ευχαριστούμε που κάνατε check-in."
+
+#: app/templates/checkin/thank_you.html:14
+msgid "Checked in for:"
+msgstr "Εισαγωγή για:"
+
+#: app/templates/email/assign_smtp.html:11
+msgid "📧 Assign SMTP Config to:"
+msgstr "📧 Ανάθεση Διαμόρφωσης SMTP σε:"
+
+#: app/templates/email/assign_smtp.html:25
+msgid "No SMTP (Unassign)"
+msgstr "Δεν έχει εκχωρηθεί διαμόρφωση SMTP"
+
+#: app/templates/email/assign_smtp.html:26
+msgid "This email will not use any SMTP configuration."
+msgstr "Αυτό το email δεν θα χρησιμοποιήσει καμία ρύθμιση SMTP."
+
+#: app/templates/email/attach_files.html:12
+msgid "Attach Files for:"
+msgstr "Επισύναψη Αρχείων για:"
+
+#: app/templates/email/attach_files.html:21
+msgid "Available Files"
+msgstr "Διαθέσιμα Αρχεία"
+
+#: app/templates/email/attach_files.html:36
+msgid "No files found in the upload directory."
+msgstr "Δεν βρέθηκαν αρχεία στον φάκελο μεταφόρτωσης."
+
+#: app/templates/email/attach_files.html:44
+msgid "Save Attachments"
+msgstr "Αποθήκευση Επισυναπτόμενων"
+
+#: app/templates/email/attach_files.html:54
+msgid "File Attach Notes"
+msgstr "Σημειώσεις Επισύναψης Αρχείων"
+
+#: app/templates/email/attach_files.html:63
+msgid "Important:"
+msgstr "Θύρα:"
+
+#: app/templates/email/attach_files.html:65
+msgid ""
+"Only files that are present in the 'uploads' folder (provided by your system"
+" administrator) will be shown here. If you do not see your file(s), please "
+"contact your Grylli administrator."
+msgstr ""
+"Μόνο αρχεία που υπάρχουν στον φάκελο 'uploads' (παρέχεται από τον "
+"διαχειριστή του συστήματός σας) θα εμφανίζονται εδώ. Εάν δεν βλέπετε το/τα "
+"αρχείο/α σας, παρακαλείσθε να επικοινωνήσετε με τον διαχειριστή του Grylli."
+
+#: app/templates/email/attach_files.html:69
+msgid "Accepted file types:"
+msgstr "Αποδεκτοί τύποι αρχείων:"
+
+#: app/templates/email/attach_files.html:71
+msgid "Documents:"
+msgstr "Έγγραφα:"
+
+#: app/templates/email/attach_files.html:73
+msgid "Images:"
+msgstr "Εικόνες:"
+
+#: app/templates/email/attach_files.html:75
+msgid "Audio:"
+msgstr "Ήχος:"
+
+#: app/templates/email/attach_files.html:79
+msgid "Maximum file size:"
+msgstr "Μέγιστο μέγεθος αρχείου:"
+
+#: app/templates/email/attach_files.html:80
+msgid "10 MB per file"
+msgstr "10 MB ανά αρχείο"
+
+#: app/templates/email/attach_files.html:83
+msgid "Total upload size:"
+msgstr "Συνολικό μέγεθος μεταφόρτωσης:"
+
+#: app/templates/email/attach_files.html:84
+msgid "20 MB (all files combined)"
+msgstr "20 MB (όλα τα αρχεία συνολικά)"
+
+#: app/templates/email/edit_message.html:12
+#: app/templates/email/list_emails.html:75
+#: app/templates/email/list_emails.html:177
+msgid "Edit Email"
+msgstr "Επεξεργασία Email"
+
+#: app/templates/email/edit_message.html:12
+msgid "Create Email"
+msgstr "Δημιουργία Email"
+
+#: app/templates/email/edit_message.html:28
+msgid "To (Recipient Email)"
+msgstr "Προς (Email Παραλήπτη)"
+
+#: app/templates/email/edit_message.html:35
+#: app/templates/email/list_emails.html:57
+#: app/templates/email/view_config.html:18
+#: app/templates/messages/create_message.html:36
+#: app/templates/messages/edit_message.html:30
+#: app/templates/messages/list_messages.html:58
+#: app/templates/messages/view_message.html:18
+#: app/templates/reminders/create_reminder.html:30
+#: app/templates/reminders/edit_reminder.html:24
+#: app/templates/reminders/list_reminders.html:57
+#: app/templates/reminders/view_reminder.html:17
+msgid "Subject"
+msgstr "Θέμα"
+
+#: app/templates/email/edit_message.html:42
+#: app/templates/email/view_config.html:28
+msgid "Body"
+msgstr "Κείμενο"
+
+#: app/templates/email/edit_message.html:50
+msgid "Save Email"
+msgstr "Αποθήκευση Email"
+
+#: app/templates/email/list_emails.html:48
+msgid "Add Email"
+msgstr "Προσθήκη Email"
+
+#: app/templates/email/list_emails.html:58
+#: app/templates/reminders/assign_email_reminder.html:77
+msgid "To"
+msgstr "Προς"
+
+#: app/templates/email/list_emails.html:78
+#: app/templates/email/list_emails.html:180
+msgid "Disable to edit email"
+msgstr "Αποτυχία αποστολής δοκιμαστικού email:"
+
+#: app/templates/email/list_emails.html:84
+#: app/templates/email/list_emails.html:186
+msgid "Attach Files"
+msgstr "Επισύναψη Αρχείων"
+
+#: app/templates/email/list_emails.html:87
+#: app/templates/email/list_emails.html:189
+msgid "Disable to attach files"
+msgstr "Επισύναψη Αρχείων"
+
+#: app/templates/email/list_emails.html:93
+#: app/templates/email/list_emails.html:195
+msgid "Attach SMTP Config"
+msgstr "Επισύναψη Διαμόρφωσης SMTP"
+
+#: app/templates/email/list_emails.html:96
+#: app/templates/email/list_emails.html:198
+msgid "Disable to assign SMTP"
+msgstr "Απενεργοποιήστε για να εκχωρήσετε SMTP"
+
+#: app/templates/email/list_emails.html:102
+#: app/templates/email/list_emails.html:204
+msgid "Schedule Check-In"
+msgstr "Προγραμματισμός Εισαγωγής"
+
+#: app/templates/email/list_emails.html:105
+#: app/templates/email/list_emails.html:207
+msgid "Disable to schedule check-in"
+msgstr "Προγραμματισμός Εισαγωγής"
+
+#: app/templates/email/list_emails.html:110
+#: app/templates/email/list_emails.html:212
+#: app/templates/messages/list_messages.html:99
+#: app/templates/messages/list_messages.html:184
+#: app/templates/reminders/list_reminders.html:93
+#: app/templates/reminders/list_reminders.html:178
+msgid "View Details"
+msgstr "Προβολή Λεπτομερειών"
+
+#: app/templates/email/list_emails.html:118
+#: app/templates/email/list_emails.html:220
+msgid "Send this email to yourself to preview it."
+msgstr "Στείλτε αυτό το email στον εαυτό σας για προεπισκόπηση."
+
+#: app/templates/email/list_emails.html:136
+#: app/templates/email/list_emails.html:238
+msgid "Toggle Email On/Off"
+msgstr "Εναλλαγή Email Ενεργό/Ανενεργό"
+
+#: app/templates/email/list_emails.html:139
+#: app/templates/email/list_emails.html:241
+msgid "Email is enabled"
+msgstr "Το Email είναι ενεργοποιημένο"
+
+#: app/templates/email/list_emails.html:141
+#: app/templates/email/list_emails.html:243
+msgid "Email is disabled"
+msgstr "Το Email είναι απενεργοποιημένο"
+
+#: app/templates/email/list_emails.html:157
+#: app/templates/email/view_config.html:51
+#: app/templates/messages/list_messages.html:142
+#: app/templates/reminders/list_reminders.html:140
+msgid "Label:"
+msgstr "Ετικέτα:"
+
+#: app/templates/email/list_emails.html:161
+#: app/templates/messages/list_messages.html:146
+#: app/templates/reminders/list_reminders.html:144
+#: app/templates/reminders/view_reminder.html:98
+msgid "Subject:"
+msgstr "Θέμα"
+
+#: app/templates/email/list_emails.html:165
+msgid "To:"
+msgstr "Προς:"
+
+#: app/templates/email/list_emails.html:169
+#: app/templates/messages/list_messages.html:150
+msgid "Created At:"
+msgstr "Δημιουργήθηκε Στις"
+
+#: app/templates/email/list_emails.html:255
+msgid "How to create and send an email"
+msgstr "Πώς να δημιουργήσετε και να στείλετε ένα email"
+
+#: app/templates/email/list_emails.html:262
+msgid ""
+"Click “Add Email” and fill out the subject, content, and recipient address."
+msgstr ""
+"Κάντε κλικ στο “Add Email” και συμπληρώστε το θέμα, το περιεχόμενο και τη "
+"διεύθυνση παραλήπτη."
+
+#: app/templates/email/list_emails.html:263
+msgid "Attach any optional files (if needed)."
+msgstr "Συνδέστε τυχόν προαιρετικά αρχεία (αν χρειάζεται)."
+
+#: app/templates/email/list_emails.html:264
+msgid ""
+"Click 🧩 to assign a single SMTP configuration that will be used to send the "
+"email."
+msgstr ""
+"Κάντε κλικ στο 🧩 για να ορίσετε μια μοναδική διαμόρφωση SMTP που θα "
+"χρησιμοποιηθεί για την αποστολή του email."
+
+#: app/templates/email/list_emails.html:265
+msgid "Click ⏱️ to set a check-in interval and grace period for the email."
+msgstr ""
+"Κάντε κλικ στο ⏱️ για να ορίσετε ένα διάστημα check-in και περίοδο χάριτος "
+"για το email."
+
+#: app/templates/email/list_emails.html:266
+msgid "Enable the email using the 🔴/🟢 toggle button."
+msgstr "Ενεργοποιήστε το email χρησιμοποιώντας το διακόπτη 🔴/🟢."
+
+#: app/templates/email/list_emails.html:267
+msgid ""
+"Click 🧪 to test the email by sending it to yourself (not the recipient)."
+msgstr ""
+"Κάντε κλικ στο 🧪 για να δοκιμάσετε το email στέλνοντάς το στον εαυτό σας "
+"(όχι στον παραλήπτη)."
+
+#: app/templates/email/list_emails.html:268
+msgid ""
+"If you don’t check in before the grace period ends, the email will be "
+"automatically sent."
+msgstr ""
+"Αν δεν κάνετε check in πριν λήξει η περίοδος χάριτος, το email θα σταλεί "
+"αυτόματα."
+
+#: app/templates/email/list_emails.html:269
+msgid "You can preview the email configuration using 🔍."
+msgstr "Μπορείτε να προεπισκοπήσετε τη διαμόρφωση email χρησιμοποιώντας 🔍."
+
+#: app/templates/email/list_emails.html:270
+msgid "Once a secure email is sent, it will be automatically disabled."
+msgstr "Μόλις σταλεί ένα ασφαλές email, θα απενεργοποιηθεί αυτόματα."
+
+#: app/templates/email/schedule_email.html:9
+msgid "Schedule Email"
+msgstr "Προγραμματισμός Εmail"
+
+#: app/templates/email/schedule_email.html:18
+#: app/templates/messages/schedule_message.html:18
+msgid "Years"
+msgstr "Έτη"
+
+#: app/templates/email/schedule_email.html:19
+#: app/templates/messages/schedule_message.html:19
+msgid "Months"
+msgstr "Μήνες"
+
+#: app/templates/email/schedule_email.html:20
+#: app/templates/messages/schedule_message.html:20
+msgid "Weeks"
+msgstr "Εβδομάδες"
+
+#: app/templates/email/schedule_email.html:21
+#: app/templates/messages/schedule_message.html:21
+msgid "Days"
+msgstr "Ημέρες"
+
+#: app/templates/email/schedule_email.html:22
+#: app/templates/messages/schedule_message.html:22
+msgid "Hours"
+msgstr "Ώρες"
+
+#: app/templates/email/schedule_email.html:23
+#: app/templates/messages/schedule_message.html:23
+msgid "Minutes"
+msgstr "Λεπτά"
+
+#: app/templates/email/schedule_email.html:28
+#: app/templates/messages/schedule_message.html:28
+msgid "Check-in"
+msgstr "Check-in"
+
+#: app/templates/email/schedule_email.html:51
+#: app/templates/messages/schedule_message.html:51
+#: app/templates/messages/view_message.html:26
+msgid "Grace Period"
+msgstr "Περίοδος Χάριτος"
+
+#: app/templates/email/schedule_email.html:80
+#: app/templates/messages/schedule_message.html:80
+#: app/templates/reminders/schedule_reminder.html:47
+msgid "Save Schedule"
+msgstr "Αποθήκευση Προγράμματος"
+
+#: app/templates/email/view_config.html:9
+msgid "Email Configuration"
+msgstr "Διαμόρφωση Email"
+
+#: app/templates/email/view_config.html:22
+msgid "Recipient"
+msgstr "Παραλήπτης"
+
+#: app/templates/email/view_config.html:33
+msgid "Attached Files"
+msgstr "Συνδεδεμένα Αρχεία"
+
+#: app/templates/email/view_config.html:39
+msgid "No files attached"
+msgstr "Δεν έχουν συνδεθεί αρχεία"
+
+#: app/templates/email/view_config.html:46
+#: app/templates/reminders/assign_email_reminder.html:20
+msgid "SMTP Configuration"
+msgstr "Διαμόρφωση SMTP"
+
+#: app/templates/email/view_config.html:54
+#: app/templates/user_smtp/list_smtp.html:122
+msgid "Host:"
+msgstr "Κεντρικός διακομιστής:"
+
+#: app/templates/email/view_config.html:57
+#: app/templates/user_smtp/list_smtp.html:128
+msgid "Username:"
+msgstr "Όνομα χρήστη:"
+
+#: app/templates/email/view_config.html:60
+#: app/templates/user_smtp/list_smtp.html:134
+msgid "TLS:"
+msgstr "TLS:"
+
+#: app/templates/email/view_config.html:64
+msgid "No SMTP configuration assigned"
+msgstr "Δεν έχει εκχωρηθεί διαμόρφωση SMTP"
+
+#: app/templates/email/view_config.html:69
+msgid "Schedule Information"
+msgstr "Πληροφορίες Προγράμματος"
+
+#: app/templates/email/view_config.html:72
+msgid "Check-in Interval:"
+msgstr "Διάστημα Check-in:"
+
+#: app/templates/email/view_config.html:72
+#: app/templates/email/view_config.html:75
+msgid "minutes"
+msgstr "λεπτά"
+
+#: app/templates/email/view_config.html:75
+msgid "Grace Period:"
+msgstr "Περίοδος Χάριτος:"
+
+#: app/templates/email/view_config.html:79
+msgid "Last Check-in:"
+msgstr "Τελευταίο Check-in:"
+
+#: app/templates/email/view_config.html:82
+msgid "No check-in has occurred yet"
+msgstr "Δεν έχει γίνει check-in ακόμα"
+
+#: app/templates/email/view_config.html:92
+msgid "Back to Emails"
+msgstr "Επιστροφή στα Emails"
+
+#: app/templates/errors/500.html:4
+msgid "Something went wrong"
+msgstr "Κάτι πήγε στραβά"
+
+#: app/templates/errors/500.html:6
+msgid ""
+"An unexpected error occurred. Please try again later or contact support."
+msgstr ""
+"Παρουσιάστηκε ένα απρόσμενο σφάλμα. Παρακαλώ δοκιμάστε ξανά αργότερα ή "
+"επικοινωνήστε με την υποστήριξη."
+
+#: app/templates/locale/redirect_after_lang_set.html:15
+msgid "Switching Language..."
+msgstr "Αλλαγή Γλώσσας..."
+
+#: app/templates/locale/redirect_after_lang_set.html:18
+msgid "Applying new language..."
+msgstr "Εφαρμογή νέας γλώσσας..."
+
+#: app/templates/messages/assign_destinations.html:13
+#: app/templates/reminders/assign_destinations.html:12
+msgid "Assign Destinations for"
+msgstr "Καθορισμός Προορισμών για"
+
+#: app/templates/messages/assign_destinations.html:62
+#: app/templates/reminders/assign_destinations.html:60
+msgid "Save Destinations"
+msgstr "Αποθήκευση Προορισμών"
+
+#: app/templates/messages/create_message.html:17
+msgid "Edit Notificaton"
+msgstr "Επεξεργασία Ειδοποίησης"
+
+#: app/templates/messages/create_message.html:19
+msgid "Create Notification"
+msgstr "Δημιουργία Ειδοποίησης"
+
+#: app/templates/messages/create_message.html:43
+#: app/templates/messages/edit_message.html:37
+#: app/templates/messages/view_message.html:42
+#: app/templates/reminders/create_reminder.html:37
+#: app/templates/reminders/edit_reminder.html:31
+#: app/templates/reminders/view_reminder.html:53
+msgid "Content"
+msgstr "Περιεχόμενο"
+
+#: app/templates/messages/create_message.html:51
+msgid "Save Notification"
+msgstr "Αποθήκευση Ειδοποίησης"
+
+#: app/templates/messages/edit_message.html:15
+#: app/templates/messages/list_messages.html:74
+#: app/templates/messages/list_messages.html:158
+msgid "Edit Notification"
+msgstr "Επεξεργασία Ειδοποίησης"
+
+#: app/templates/messages/edit_message.html:45
+msgid "Update Notification"
+msgstr "Ενημέρωση Ειδοποίησης"
+
+#: app/templates/messages/list_messages.html:49
+msgid "Add Notification"
+msgstr "Προσθήκη Ειδοποίησης"
+
+#: app/templates/messages/list_messages.html:77
+#: app/templates/messages/list_messages.html:161
+msgid "Disable to edit notification"
+msgstr "Επεξεργασία Ειδοποίησης"
+
+#: app/templates/messages/list_messages.html:83
+#: app/templates/messages/list_messages.html:167
+#: app/templates/reminders/list_reminders.html:78
+#: app/templates/reminders/list_reminders.html:163
+msgid "Assign Destinations"
+msgstr "Καθορισμός Προορισμών"
+
+#: app/templates/messages/list_messages.html:86
+#: app/templates/messages/list_messages.html:170
+msgid "Disable to assign destinations"
+msgstr "Καθορισμός Προορισμών"
+
+#: app/templates/messages/list_messages.html:92
+#: app/templates/messages/list_messages.html:176
+#: app/templates/reminders/list_reminders.html:88
+#: app/templates/reminders/list_reminders.html:173
+msgid "Set Schedule"
+msgstr "Ορισμός Προγράμματος"
+
+#: app/templates/messages/list_messages.html:95
+#: app/templates/messages/list_messages.html:179
+msgid "Disable to set schedule"
+msgstr "Ορισμός Προγράμματος"
+
+#: app/templates/messages/list_messages.html:107
+#: app/templates/messages/list_messages.html:192
+msgid "Send Test Notification"
+msgstr "Επεξεργασία Ειδοποίησης"
+
+#: app/templates/messages/list_messages.html:122
+#: app/templates/messages/list_messages.html:209
+msgid "Toggle Message On/Off"
+msgstr "Εναλλαγή Μηνύματος Ενεργό/Ανενεργό"
+
+#: app/templates/messages/list_messages.html:124
+#: app/templates/messages/list_messages.html:211
+msgid "Notification is enabled"
+msgstr "Η ειδοποίηση είναι ενεργοποιημένη"
+
+#: app/templates/messages/list_messages.html:126
+#: app/templates/messages/list_messages.html:213
+msgid "Notification is disabled"
+msgstr "Η ειδοποίηση είναι απενεργοποιημένη"
+
+#: app/templates/messages/list_messages.html:223
+msgid "How to create and send a notification"
+msgstr "Πώς να δημιουργήσετε και να στείλετε μια ειδοποίηση"
+
+#: app/templates/messages/list_messages.html:233
+msgid "Click “Add notification” and fill out the subject and content fields."
+msgstr ""
+"Κάντε κλικ στο «Προσθήκη ειδοποίησης» και συμπληρώστε τα πεδία θέματος και "
+"περιεχομένου."
+
+#: app/templates/messages/list_messages.html:234
+msgid "Save the notification to return to the overview."
+msgstr "Αποθηκεύστε την ειδοποίηση για να επιστρέψετε στη σύνοψη."
+
+#: app/templates/messages/list_messages.html:235
+msgid "You need to create at least one apprise or webhook destination."
+msgstr "Πρέπει να δημιουργήσετε τουλάχιστον έναν προορισμό apprise ή webhook."
+
+#: app/templates/messages/list_messages.html:236
+msgid "You can create as many destinations as you like."
+msgstr "Μπορείτε να δημιουργήσετε όσους προορισμούς θέλετε."
+
+#: app/templates/messages/list_messages.html:237
+msgid "Click 🧩 to assign one or more Apprise and/or Webhook destinations."
+msgstr ""
+"Κάντε κλικ στο 🧩 για να καθορίσετε έναν ή περισσότερους προορισμούς Apprise "
+"και/ή Webhook."
+
+#: app/templates/messages/list_messages.html:238
+msgid "Click ⏱️ to set a schedule and check-in interval."
+msgstr "Κάντε κλικ στο ⏱️ για να ορίσετε πρόγραμμα και διάστημα check-in."
+
+#: app/templates/messages/list_messages.html:239
+msgid "Enable the notification using the 🔴/🟢 toggle button."
+msgstr "Ενεργοποιήστε την ειδοποίηση χρησιμοποιώντας το κουμπί εναλλαγής 🔴/🟢."
+
+#: app/templates/messages/list_messages.html:240
+msgid ""
+"If you don’t check in before the grace period ends, the notification will be"
+" sent."
+msgstr ""
+"Αν δεν κάνετε check-in πριν τελειώσει η περίοδος χάριτος, η ειδοποίηση θα "
+"σταλεί."
+
+#: app/templates/messages/list_messages.html:241
+msgid "You can preview the notification config using 🔍."
+msgstr ""
+"Μπορείτε να προβάλετε τη ρύθμιση της ειδοποίησης χρησιμοποιώντας το 🔍."
+
+#: app/templates/messages/list_messages.html:242
+msgid "Once a notification is sent, it will be automatically disabled."
+msgstr "Μόλις σταλεί μια ειδοποίηση, θα απενεργοποιηθεί αυτόματα."
+
+#: app/templates/messages/schedule_message.html:9
+msgid "Schedule Message"
+msgstr "Πρόγραμμα Μηνύματος"
+
+#: app/templates/messages/view_message.html:9
+msgid "Notifications Details"
+msgstr "Λεπτομέρειες Ειδοποιήσεων"
+
+#: app/templates/messages/view_message.html:22
+msgid "Check-in Interval"
+msgstr "Διάστημα Check-in"
+
+#: app/templates/messages/view_message.html:31
+msgid "Last Check-in"
+msgstr "Τελευταίο Check-in"
+
+#: app/templates/messages/view_message.html:48
+#: app/templates/reminders/view_reminder.html:59
+msgid "Apprise URLs"
+msgstr "Apprise URLs"
+
+#: app/templates/messages/view_message.html:54
+#: app/templates/messages/view_message.html:64
+#: app/templates/reminders/view_reminder.html:65
+#: app/templates/reminders/view_reminder.html:75
+#: app/templates/reminders/view_reminder.html:85
+msgid "None assigned."
+msgstr "Κανείς δεν έχει οριστεί."
+
+#: app/templates/messages/view_message.html:73
+msgid "Back to Notifications"
+msgstr "Επιστροφή στις Ειδοποιήσεις"
+
+#: app/templates/mfa/challenge.html:5 app/templates/mfa/settings.html:5
+msgid "Two-Factor Authentication (MFA)"
+msgstr "Αυθεντικοποίηση Δύο Παραγόντων (MFA)"
+
+#: app/templates/mfa/recovery_codes.html:4
+msgid "Your Recovery Codes"
+msgstr "Οι Κωδικοί Ανάκτησης σας"
+
+#: app/templates/mfa/recovery_codes.html:7
+msgid "Save these recovery codes in a safe place!"
+msgstr "Αποθηκεύστε αυτούς τους κωδικούς ανάκτησης σε ασφαλές μέρος!"
+
+#: app/templates/mfa/recovery_codes.html:10
+msgid ""
+"Each code can be used once if you lose access to your authenticator. These "
+"codes will not be shown again."
+msgstr ""
+"Κάθε κωδικός μπορεί να χρησιμοποιηθεί μία φορά αν χάσετε πρόσβαση στον "
+"αυθεντικοποιητή σας. Αυτοί οι κωδικοί δεν θα εμφανιστούν ξανά."
+
+#: app/templates/mfa/recovery_codes.html:24
+msgid "OK, I've saved them"
+msgstr "Εντάξει, τους έχω αποθηκεύσει"
+
+#: app/templates/mfa/settings.html:12
+msgid "MFA QR Code"
+msgstr "Κωδικός QR MFA"
+
+#: app/templates/mfa/settings.html:15
+msgid "Manual Entry:"
+msgstr "Χειροκίνητη Εισαγωγή:"
+
+#: app/templates/partials/admin_nav.html:21
+msgid "Administration"
+msgstr "Διαχείριση"
+
+#: app/templates/partials/admin_nav.html:37
+#: app/templates/partials/shared_nav.html:34
+#: app/templates/partials/shared_nav.html:78
+#: app/templates/partials/shared_nav.html:117
+msgid "Overview"
+msgstr "Επισκόπηση"
+
+#: app/templates/partials/footer.html:7
+msgid "Toggle Theme"
+msgstr "Αλλαγή Θέματος"
+
+#: app/templates/partials/footer.html:32
+msgid "Theme"
+msgstr "Θέμα"
+
+#: app/templates/partials/head.html:7
+msgid "Grylli"
+msgstr "Grylli"
+
+#: app/templates/partials/header.html:6 app/templates/partials/sidebar.html:32
+#: app/templates/partials/sidebar.html:66
+msgid "Home"
+msgstr "Αρχική"
+
+#: app/templates/partials/header.html:55
+msgid "Account"
+msgstr "Λογαριασμός"
+
+#: app/templates/partials/header.html:61
+msgid "MFA"
+msgstr "MFA"
+
+#: app/templates/partials/header.html:67
+msgid "About"
+msgstr "Σχετικά"
+
+#: app/templates/partials/header.html:73
+msgid "Privacy"
+msgstr "Απόρρητο"
+
+#: app/templates/partials/header.html:79
+msgid "System Info"
+msgstr "Πληροφορίες Συστήματος"
+
+#: app/templates/partials/header.html:114
+msgid "Logout"
+msgstr "Αποσύνδεση"
+
+#: app/templates/partials/shared_nav.html:33
+msgid "Overview of notification settings"
+msgstr "Επισκόπηση ρυθμίσεων ειδοποιήσεων"
+
+#: app/templates/partials/shared_nav.html:38
+msgid "Configure Apprise services"
+msgstr "Διαμόρφωση υπηρεσιών Apprise"
+
+#: app/templates/partials/shared_nav.html:39
+msgid "Apprise"
+msgstr "Apprise"
+
+#: app/templates/partials/shared_nav.html:43
+msgid "Configure Webhook integrations"
+msgstr "Διαμόρφωση ενσωμάτωσης Webhook"
+
+#: app/templates/partials/shared_nav.html:77
+msgid "Overview of secure email messages"
+msgstr "Επισκόπηση ασφαλών email μηνυμάτων"
+
+#: app/templates/partials/shared_nav.html:82
+msgid "Configure SMTP email settings"
+msgstr "Διαμόρφωση ρυθμίσεων email SMTP"
+
+#: app/templates/partials/shared_nav.html:83
+#: app/templates/reminders/view_reminder.html:79
+msgid "SMTP"
+msgstr "SMTP"
+
+#: app/templates/partials/shared_nav.html:100
+#: app/templates/reminders/list_reminders.html:8
+msgid "Reminders"
+msgstr "λεπτά"
+
+#: app/templates/partials/shared_nav.html:116
+msgid "Overview of reminders"
+msgstr "Επισκόπηση των υπενθυμίσεων"
+
+#: app/templates/partials/sidebar.html:13
+#: app/templates/partials/sidebar.html:47
+msgid "Menu"
+msgstr "Μενού"
+
+#: app/templates/reminders/assign_email_reminder.html:12
+msgid "Link Email Reminder for"
+msgstr "Σύνδεση Υπενθύμισης Email για"
+
+#: app/templates/reminders/assign_email_reminder.html:30
+#: app/templates/reminders/assign_email_reminder.html:64
+msgid "None (Unassign)"
+msgstr "Δεν έχει εκχωρηθεί διαμόρφωση SMTP"
+
+#: app/templates/reminders/assign_email_reminder.html:43
+msgid "No sender address"
+msgstr "Χωρίς διεύθυνση αποστολέα"
+
+#: app/templates/reminders/assign_email_reminder.html:54
+msgid "Email Message"
+msgstr "Πρόγραμμα Μηνύματος"
+
+#: app/templates/reminders/assign_email_reminder.html:77
+msgid "No subject"
+msgstr "Θέμα"
+
+#: app/templates/reminders/assign_email_reminder.html:90
+msgid "Save Email Reminder"
+msgstr "Αποθήκευση Email"
+
+#: app/templates/reminders/create_reminder.html:12
+#: app/templates/reminders/edit_reminder.html:10
+#: app/templates/reminders/list_reminders.html:73
+#: app/templates/reminders/list_reminders.html:158
+msgid "Edit Reminder"
+msgstr "Επεξεργασία Email"
+
+#: app/templates/reminders/create_reminder.html:14
+msgid "Create Reminder"
+msgstr "Δημιουργία Email"
+
+#: app/templates/reminders/create_reminder.html:45
+msgid "Save Reminder"
+msgstr "Αποθήκευση Email"
+
+#: app/templates/reminders/edit_reminder.html:39
+msgid "Update Reminder"
+msgstr "Ενημέρωση Υπενθύμισης"
+
+#: app/templates/reminders/list_reminders.html:48
+msgid "Add Reminder"
+msgstr "Προσθήκη Email"
+
+#: app/templates/reminders/list_reminders.html:58
+#: app/templates/reminders/view_reminder.html:21
+msgid "Start At"
+msgstr "Έναρξη TLS"
+
+#: app/templates/reminders/list_reminders.html:59
+msgid "Recurrence"
+msgstr "Επαναληπτικότητα"
+
+#: app/templates/reminders/list_reminders.html:69
+#: app/templates/reminders/list_reminders.html:153
+#: app/templates/reminders/view_reminder.html:26
+msgid "One-time"
+msgstr "Μια φορά"
+
+#: app/templates/reminders/list_reminders.html:83
+msgid "Assign Email Reminder"
+msgstr "Αντιστοίχιση Υπενθύμισης Email"
+
+#: app/templates/reminders/list_reminders.html:102
+#: app/templates/reminders/list_reminders.html:187
+msgid "Send Test Reminder"
+msgstr "Αποστολή Δοκιμαστικού Email"
+
+#: app/templates/reminders/list_reminders.html:120
+#: app/templates/reminders/list_reminders.html:205
+msgid "Toggle Reminder On/Off"
+msgstr "Εναλλαγή Email Ενεργό/Ανενεργό"
+
+#: app/templates/reminders/list_reminders.html:122
+#: app/templates/reminders/list_reminders.html:207
+msgid "Reminder is enabled"
+msgstr "Το Email είναι ενεργοποιημένο"
+
+#: app/templates/reminders/list_reminders.html:124
+#: app/templates/reminders/list_reminders.html:209
+msgid "Reminder is disabled"
+msgstr "Το Email είναι απενεργοποιημένο"
+
+#: app/templates/reminders/list_reminders.html:148
+msgid "Start At:"
+msgstr "Έναρξη TLS"
+
+#: app/templates/reminders/list_reminders.html:152
+msgid "Recurrence:"
+msgstr "Επαναληπτικότητα:"
+
+#: app/templates/reminders/list_reminders.html:168
+msgid "Link Email Reminder"
+msgstr "Σύνδεση Υπενθύμισης Email"
+
+#: app/templates/reminders/list_reminders.html:218
+msgid "How to use reminders"
+msgstr "Πώς να διαχειριστείτε τους χρήστες"
+
+#: app/templates/reminders/list_reminders.html:231
+msgid "➕ Click “Add Reminder” and fill out the subject and content fields."
+msgstr ""
+"Κάντε κλικ στο «Προσθήκη ειδοποίησης» και συμπληρώστε τα πεδία θέματος και "
+"περιεχομένου."
+
+#: app/templates/reminders/list_reminders.html:232
+msgid "💾 Save the reminder to return to the overview."
+msgstr "Αποθηκεύστε την ειδοποίηση για να επιστρέψετε στη σύνοψη."
+
+#: app/templates/reminders/list_reminders.html:233
+msgid ""
+"📣 Assign Apprise, 🌐 Webhook, and/or 📧 Email (SMTP) destinations as needed."
+msgstr ""
+"📣 Εκχωρήστε Apprise, 🌐 Webhook, και/ή 📧 Email (SMTP) προορισμούς όπως "
+"χρειάζεται."
+
+#: app/templates/reminders/list_reminders.html:234
+msgid ""
+"⏱️ Set the schedule using the schedule button to define when reminders are "
+"sent."
+msgstr ""
+"⏱️ Ορίστε το πρόγραμμα χρησιμοποιώντας το κουμπί προγράμματος για τον "
+"καθορισμό της αποστολής υπενθυμίσεων."
+
+#: app/templates/reminders/list_reminders.html:235
+msgid ""
+"🔍 Click “View Details” to review or edit assigned destinations and other "
+"settings."
+msgstr ""
+"🔍 Κάντε κλικ στο “Προβολή Λεπτομερειών” για αναθεώρηση ή επεξεργασία των "
+"εκχωρημένων προορισμών και άλλων ρυθμίσεων."
+
+#: app/templates/reminders/list_reminders.html:236
+msgid ""
+"🧪 Click the Test button to verify all assigned destinations are working "
+"correctly."
+msgstr ""
+"🧪 Κάντε κλικ στο κουμπί Ελέγχου για να επαληθεύσετε ότι όλοι οι εκχωρημένοι "
+"προορισμοί λειτουργούν σωστά."
+
+#: app/templates/reminders/list_reminders.html:237
+msgid "🔴/🟢 Enable or disable the reminder using the toggle button."
+msgstr "Ενεργοποιήστε το email χρησιμοποιώντας το διακόπτη 🔴/🟢."
+
+#: app/templates/reminders/list_reminders.html:238
+msgid "📤 Reminders will be sent as scheduled to the assigned destinations."
+msgstr ""
+"📤 Οι υπενθυμίσεις θα αποσταλούν σύμφωνα με το πρόγραμμα στους εκχωρημένους "
+"προορισμούς."
+
+#: app/templates/reminders/schedule_reminder.html:8
+msgid "Schedule Reminder"
+msgstr "Προγραμματισμός Εmail"
+
+#: app/templates/reminders/schedule_reminder.html:15
+msgid "Start Date & Time"
+msgstr "Ημερομηνία & Ώρα Έναρξης"
+
+#: app/templates/reminders/schedule_reminder.html:22
+#: app/templates/reminders/view_reminder.html:25
+msgid "Recurrence Rule"
+msgstr "Κανόνας Επαναληπτικότητας"
+
+#: app/templates/reminders/schedule_reminder.html:24
+msgid "(Optional) Enter RRULE or leave blank for one-time."
+msgstr "(Προαιρετικό) Εισαγάγετε RRULE ή αφήστε κενό για μια φορά."
+
+#: app/templates/reminders/schedule_reminder.html:30
+msgid "End Date"
+msgstr "Αποστολή Δοκιμαστικού"
+
+#: app/templates/reminders/schedule_reminder.html:32
+msgid "(Optional) Stop sending after this date."
+msgstr "(Προαιρετικό) Σταματήστε την αποστολή μετά από αυτή την ημερομηνία."
+
+#: app/templates/reminders/schedule_reminder.html:38
+#: app/templates/reminders/view_reminder.html:36
+msgid "Max Occurrences"
+msgstr "Μέγιστες Εμφανίσεις"
+
+#: app/templates/reminders/schedule_reminder.html:40
+msgid "(Optional) Stop after this many reminders."
+msgstr "(Προαιρετικό) Σταματήστε μετά από αυτόν τον αριθμό υπενθυμίσεων."
+
+#: app/templates/reminders/schedule_reminder.html:56
+msgid "Help for RRULE syntax"
+msgstr "Βοήθεια για τη σύνταξη RRULE"
+
+#: app/templates/reminders/schedule_reminder.html:66
+msgid "Several tools are available to help generate an RRULE."
+msgstr "Διατίθενται διάφορα εργαλεία για βοήθεια στη δημιουργία RRULE."
+
+#: app/templates/reminders/schedule_reminder.html:67
+msgid "Use a search engine or AI tool to assist."
+msgstr "Χρησιμοποιήστε μια μηχανή αναζήτησης ή εργαλείο AI για βοήθεια."
+
+#: app/templates/reminders/schedule_reminder.html:69
+msgid "Here is an example of one such online tool:"
+msgstr "Εδώ είναι ένα παράδειγμα ενός τέτοιου διαδικτυακού εργαλείου:"
+
+#: app/templates/reminders/schedule_reminder.html:73
+msgid "RRULE Generator Tool"
+msgstr "Εργαλείο Δημιουργίας RRULE"
+
+#: app/templates/reminders/schedule_reminder.html:77
+msgid "See here for some common examples:"
+msgstr "Δείτε εδώ μερικά συνηθισμένα παραδείγματα:"
+
+#: app/templates/reminders/schedule_reminder.html:81
+msgid "RRULE Help (GitHub)"
+msgstr "RRULE Βοήθεια (GitHub)"
+
+#: app/templates/reminders/view_reminder.html:8
+msgid "Reminder Details"
+msgstr "Προβολή Λεπτομερειών"
+
+#: app/templates/reminders/view_reminder.html:30
+msgid "End At"
+msgstr "Αποστολή Δοκιμαστικού"
+
+#: app/templates/reminders/view_reminder.html:42
+msgid "Last Sent"
+msgstr "Τελευταίο Check-in"
+
+#: app/templates/reminders/view_reminder.html:91
+msgid "Email Template"
+msgstr "Έλεγχος εγκυρότητας Email"
+
+#: app/templates/reminders/view_reminder.html:103
+msgid "No email linked."
+msgstr "Το Email είναι ενεργοποιημένο"
+
+#: app/templates/reminders/view_reminder.html:111
+msgid "Back to Reminders"
+msgstr "Επιστροφή στα Emails"
+
+#: app/templates/user_smtp/create_smtp.html:10
+msgid "Create SMTP Destination"
+msgstr "Δημιουργία Προορισμού SMTP"
+
+#: app/templates/user_smtp/create_smtp.html:69
+#: app/templates/user_smtp/edit_smtp.html:84
+msgid "Hold to reveal"
+msgstr "Κρατήστε πατημένο για εμφάνιση"
+
+#: app/templates/user_smtp/create_smtp.html:92
+#: app/templates/user_smtp/edit_smtp.html:107
+msgid "Use TLS"
+msgstr "Χρήση TLS"
+
+#: app/templates/user_smtp/edit_smtp.html:10
+msgid "Edit SMTP Destination"
+msgstr "Δημιουργία Προορισμού SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:9
+msgid "SMTP Destinations"
+msgstr "Προορισμοί SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:44
+msgid "Add SMTP"
+msgstr "Προσθήκη SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:53
+msgid "Host"
+msgstr "Κεντρικός υπολογιστής"
+
+#: app/templates/user_smtp/list_smtp.html:54
+msgid "Port"
+msgstr "Θύρα"
+
+#: app/templates/user_smtp/list_smtp.html:56
+msgid "TLS"
+msgstr "TLS"
+
+#: app/templates/user_smtp/list_smtp.html:58
+msgid "Created"
+msgstr "Δημιουργήθηκε"
+
+#: app/templates/user_smtp/list_smtp.html:90
+#: app/templates/user_smtp/list_smtp.html:158
+msgid "Send Test"
+msgstr "Αποστολή Δοκιμαστικού"
+
+#: app/templates/user_smtp/list_smtp.html:125
+msgid "Port:"
+msgstr "Θύρα:"
+
+#: app/templates/user_smtp/list_smtp.html:131
+msgid "Password:"
+msgstr "Κωδικός πρόσβασης:"
+
+#: app/templates/user_smtp/list_smtp.html:184
+msgid "Hide SMTP Setup Help"
+msgstr "Απόκρυψη Βοήθειας Ρύθμισης SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:184
+msgid "Show SMTP Setup Help"
+msgstr "Προβολή Βοήθειας Ρύθμισης SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:190
+msgid ""
+"Need help finding your SMTP server settings? See here for some links to "
+"common providers:"
+msgstr ""
+"Χρειάζεστε βοήθεια για να βρείτε τις ρυθμίσεις διακομιστή SMTP; Δείτε εδώ "
+"για κάποιους συνδέσμους σε κοινούς παρόχους:"
+
+#: app/templates/user_smtp/list_smtp.html:194
+msgid "SMTP Server Settings Help (GitHub)"
+msgstr "Βοήθεια Ρυθμίσεων Διακομιστή SMTP (GitHub)"
+
+#: app/templates/user_smtp/list_smtp.html:198
+msgid ""
+"Find official documentation links for Gmail, Outlook, Yahoo, AOL, and "
+"others."
+msgstr ""
+"Βρείτε συνδέσμους στην επίσημη τεκμηρίωση για Gmail, Outlook, Yahoo, AOL και"
+" άλλους."
+
+#: app/templates/user_smtp/list_smtp.html:199
+msgid ""
+"If your provider isn’t listed, search their support site or a search engine "
+"for 'SMTP settings'."
+msgstr ""
+"Αν ο πάροχός σας δεν είναι στη λίστα, αναζητήστε στον ιστότοπο υποστήριξής "
+"τους ή στη μηχανή αναζήτησης 'ρυθμίσεις SMTP'."
+
+#: app/templates/user_smtp/list_smtp.html:200
+msgid ""
+"Some providers (like Gmail, Yahoo) require 'App Passwords' or special "
+"setup—see their docs!"
+msgstr ""
+"Ορισμένοι πάροχοι (όπως το Gmail, το Yahoo) απαιτούν 'App Passwords' ή "
+"ειδική ρύθμιση—δείτε την τεκμηρίωσή τους!"
+
+#: app/templates/webhook/create_webhook.html:10
+msgid "Create Webhook"
+msgstr "Δημιουργία Webhook"
+
+#: app/templates/webhook/edit_webhook.html:10
+msgid "Edit Webhook"
+msgstr "Επεξεργασία Webhook"
+
+#: app/templates/webhook/list_webhooks.html:9
+#: app/templates/webhook/webhook_config.html:3
+msgid "Webhooks Destinations"
+msgstr "Προορισμοί Webhooks"
+
+#: app/templates/webhook/list_webhooks.html:59
+msgid "Endpoint"
+msgstr "Σημείο τερματισμού"
+
+#: app/templates/webhook/list_webhooks.html:60
+msgid "Description"
+msgstr "Περιγραφή"
+
+#: app/templates/webhook/list_webhooks.html:82
+#: app/templates/webhook/list_webhooks.html:141
+msgid "Cannot edit while assigned to notifications"
+msgstr "Δεν είναι δυνατή η επεξεργασία ενώ έχει εκχωρηθεί σε ειδοποιήσεις"
+
+#: app/templates/webhook/list_webhooks.html:106
+#: app/templates/webhook/list_webhooks.html:165
+msgid "Cannot delete while assigned to notifications"
+msgstr "Δεν είναι δυνατή η διαγραφή ενώ έχει εκχωρηθεί σε ειδοποιήσεις"
+
+#: app/templates/webhook/list_webhooks.html:122
+msgid "Endpoint:"
+msgstr "Σημείο τερματισμού:"
+
+#: app/templates/webhook/list_webhooks.html:125
+msgid "Description:"
+msgstr "Περιγραφή:"
+
+#: app/views/account.py:74
+msgid "Current password is required to change password."
+msgstr "Απαιτείται ο τρέχων κωδικός πρόσβασης για την αλλαγή κωδικού."
+
+#: app/views/account.py:78
+msgid "Current password is incorrect."
+msgstr "Ο τρέχων κωδικός πρόσβασης είναι λανθασμένος."
+
+#: app/views/account.py:94
+msgid "Account updated successfully."
+msgstr "Ο λογαριασμός ενημερώθηκε με επιτυχία."
+
+#: app/views/account.py:100
+msgid "An error occurred while updating your account."
+msgstr "Προέκυψε σφάλμα κατά την ενημέρωση του λογαριασμού σας."
+
+#: app/views/account.py:137
+msgid "You cannot delete your account because you are the last admin."
+msgstr ""
+"Δεν μπορείτε να διαγράψετε το λογαριασμό σας επειδή είστε ο τελευταίος "
+"διαχειριστής."
+
+#: app/views/account.py:146
+msgid "Your account has been permanently deleted."
+msgstr "Ο λογαριασμός σας διαγράφηκε μόνιμα."
+
+#: app/views/account.py:152
+msgid "An error occurred while trying to delete your account."
+msgstr "Προέκυψε σφάλμα κατά την ενημέρωση του λογαριασμού σας."
+
+#: app/views/account.py:171
+msgid "Your account has been deleted"
+msgstr "Ο λογαριασμός σας διαγράφηκε μόνιμα."
+
+#: app/views/account.py:173
+#, python-brace-format
+msgid ""
+"Hello {username},\n"
+"\n"
+"Your account on {site_name} has been deleted.Remember to delete your files from the uploads folder.If this was not you, please contact support immediately.\n"
+"\n"
+"{site_url}"
+msgstr ""
+"Γεια σου {username},\n"
+"\n"
+"Ο λογαριασμός σου στο {site_name} έχει διαγραφεί. Θυμήσου να διαγράψεις τα αρχεία σου από το φάκελο μεταφορτώσεων. Αν δεν ήσουν εσύ, παρακαλώ επικοινώνησε άμεσα με την υποστήριξη.\n"
+"\n"
+"{site_url}"
+
+#: app/views/admin.py:59
+msgid "Invalid role."
+msgstr "Μη έγκυρος ρόλος."
+
+#: app/views/apprise.py:51
+msgid "🧪 Test notification sent successfully!"
+msgstr "🧪 Δοκιμαστική ειδοποίηση εστάλη με επιτυχία!"
+
+#: app/views/apprise.py:56
+msgid "🧪 Failed to send test notification: "
+msgstr "🧪 Αποτυχία αποστολής δοκιμαστικής ειδοποίησης:"
+
+#: app/views/apprise.py:62
+msgid "🧪 Error sending test notification."
+msgstr "🧪 Σφάλμα κατά την αποστολή δοκιμαστικής ειδοποίησης."
+
+#: app/views/apprise.py:101
+msgid "Apprise destination created successfully."
+msgstr "Ο προορισμός Apprise δημιουργήθηκε με επιτυχία."
+
+#: app/views/apprise.py:168
+msgid "Apprise destination updated successfully."
+msgstr "Ο προορισμός Apprise ενημερώθηκε με επιτυχία."
+
+#: app/views/apprise.py:199
+msgid "Apprise destination deleted."
+msgstr "Ο προορισμός Apprise διαγράφηκε."
+
+#: app/views/auth.py:95
+msgid "Admin account created successfully."
+msgstr "Ο λογαριασμός διαχειριστή δημιουργήθηκε με επιτυχία."
+
+#: app/views/auth.py:108
+msgid "An error occurred while creating the admin account."
+msgstr "Προέκυψε σφάλμα κατά τη δημιουργία του λογαριασμού διαχειριστή."
+
+#: app/views/auth.py:141
+msgid ""
+"Your account is not activated. Please check your email for the activation "
+"link."
+msgstr ""
+"Ο λογαριασμός σας δεν έχει ενεργοποιηθεί. Ελέγξτε το email σας για τον "
+"σύνδεσμο ενεργοποίησης."
+
+#: app/views/auth.py:157
+msgid "Multi-factor authentication required. Please enter your code."
+msgstr ""
+"Απαιτείται πολυπαραγοντική αυθεντικοποίηση. Παρακαλώ εισάγετε τον κωδικό "
+"σας."
+
+#: app/views/auth.py:162 app/views/mfa.py:195
+msgid "Logged in successfully."
+msgstr "Συνδεθήκατε με επιτυχία."
+
+#: app/views/auth.py:179
+msgid "Invalid username or password."
+msgstr "Άκυρο όνομα χρήστη ή κωδικός πρόσβασης."
+
+#: app/views/auth.py:203
+msgid "You have been logged out."
+msgstr "Αποσυνδεθήκατε."
+
+#: app/views/auth.py:239 app/views/email.py:263
+msgid "Access denied."
+msgstr "Η πρόσβαση απαγορεύεται."
+
+#: app/views/auth.py:273
+msgid "If a user with that email exists, we've sent the username to them."
+msgstr ""
+"Αν υπάρχει χρήστης με αυτό το email, έχουμε στείλει το όνομα χρήστη του."
+
+#: app/views/auth.py:314
+msgid "A password reset link has been sent to your email."
+msgstr "Ένας σύνδεσμος επαναφοράς κωδικού έχει σταλεί στο email σας."
+
+#: app/views/auth.py:319
+msgid "No account found matching that username and email."
+msgstr ""
+"Δεν βρέθηκε λογαριασμός που να ταιριάζει με αυτό το όνομα χρήστη και email."
+
+#: app/views/auth.py:389
+msgid "The reset link is invalid or has expired."
+msgstr "Ο σύνδεσμος επαναφοράς είναι άκυρος ή έχει λήξει."
+
+#: app/views/auth.py:401
+msgid "Username and email do not match."
+msgstr "Το όνομα χρήστη και το email δεν ταιριάζουν."
+
+#: app/views/auth.py:421
+msgid "Your password has been reset. Please log in."
+msgstr "Ο κωδικός πρόσβασής σας έχει επαναφερθεί. Παρακαλώ συνδεθείτε."
+
+#: app/views/auth.py:458
+msgid "Invalid registration PIN."
+msgstr "Μη έγκυρος κωδικός εγγραφής (PIN)."
+
+#: app/views/auth.py:467
+msgid "Username or email already exists."
+msgstr "Το όνομα χρήστη ή το email υπάρχει ήδη."
+
+#: app/views/auth.py:492
+msgid "Activate Your Grylli Account"
+msgstr "Ενεργοποιήστε το Λογαριασμό Grylli σας"
+
+#: app/views/auth.py:493
+#, python-brace-format
+msgid ""
+"Hello {username},\n"
+"\n"
+"Please activate your account by clicking..."
+msgstr ""
+"Γεια σας {username},\n"
+"\n"
+"Παρακαλώ ενεργοποιήστε το λογαριασμό σας κάνοντας κλικ..."
+
+#: app/views/auth.py:498
+msgid "Account created! Please check your email to activate your account."
+msgstr ""
+"Ο λογαριασμός δημιουργήθηκε! Παρακαλώ ελέγξτε το email σας για να "
+"ενεργοποιήσετε τον λογαριασμό σας."
+
+#: app/views/auth.py:521
+msgid "Activation link is invalid or expired."
+msgstr "Ο σύνδεσμος ενεργοποίησης δεν είναι έγκυρος ή έχει λήξει."
+
+#: app/views/auth.py:528 app/views/users.py:76 app/views/users.py:140
+msgid "User not found."
+msgstr "Ο χρήστης δεν βρέθηκε."
+
+#: app/views/auth.py:532
+msgid "Account already activated. Please log in."
+msgstr "Ο λογαριασμός είναι ήδη ενεργοποιημένος. Παρακαλώ συνδεθείτε."
+
+#: app/views/auth.py:540
+msgid "Your account has been activated! You can now log in."
+msgstr "Ο λογαριασμός σας έχει ενεργοποιηθεί! Μπορείτε τώρα να συνδεθείτε."
+
+#: app/views/backups.py:72
+#, python-format
+msgid "Backup created: %(filename)s"
+msgstr "Δημιουργήθηκε αντίγραφο ασφαλείας: %(filename)s"
+
+#: app/views/backups.py:77
+msgid "Failed to create backup."
+msgstr "Αποτυχία δημιουργίας αντιγράφου ασφαλείας."
+
+#: app/views/backups.py:106
+#, python-format
+msgid "Backup deleted: %(filename)s"
+msgstr "Διαγράφηκε το αντίγραφο ασφαλείας: %(filename)s"
+
+#: app/views/backups.py:109
+msgid "Backup file not found."
+msgstr "Το αρχείο αντιγράφου ασφαλείας δεν βρέθηκε."
+
+#: app/views/backups.py:112
+msgid "Failed to delete backup."
+msgstr "Αποτυχία διαγραφής αντιγράφου ασφαλείας."
+
+#: app/views/checkin.py:41
+msgid "Invalid check-in link."
+msgstr "Μη έγκυρος σύνδεσμος check-in."
+
+#: app/views/checkin.py:48
+msgid "You are not authorized to check in for this item."
+msgstr ""
+"Δεν είστε εξουσιοδοτημένοι να κάνετε check-in για αυτό το αντικείμενο."
+
+#: app/views/checkin.py:62
+msgid "Unsupported check-in type."
+msgstr "Μη υποστηριζόμενος τύπος check-in."
+
+#: app/views/checkin.py:137
+msgid "⚠️ Cannot enable reminder: Start date/time is in the past."
+msgstr ""
+"⚠️ Δεν είναι δυνατή η ενεργοποίηση της υπενθύμισης: Η ημερομηνία/ώρα έναρξης"
+" είναι στο παρελθόν."
+
+#: app/views/checkin.py:158
+msgid "✅ Enabled and timer started."
+msgstr "✅ Ενεργοποιήθηκε και η χρονομέτρηση ξεκίνησε."
+
+#: app/views/checkin.py:168
+msgid "⛔ Disabled."
+msgstr "⛔ Απενεργοποιήθηκε."
+
+#: app/views/checkin.py:170
+msgid "⚠️ Cannot toggle — missing schedule or destination."
+msgstr ""
+"⚠️ Δεν μπορεί να ενεργοποιηθεί/απενεργοποιηθεί — λείπει πρόγραμμα ή "
+"προορισμός."
+
+#: app/views/email.py:88
+msgid "Message saved."
+msgstr "Το μήνυμα αποθηκεύτηκε."
+
+#: app/views/email.py:118 app/views/messages.py:167
+msgid "Message deleted."
+msgstr "Το μήνυμα διαγράφηκε."
+
+#: app/views/email.py:152
+msgid "Attached files updated."
+msgstr "Τα συνημμένα αρχεία ενημερώθηκαν."
+
+#: app/views/email.py:200
+msgid "SMTP configuration not assigned or is disabled."
+msgstr "Η διαμόρφωση SMTP δεν έχει ανατεθεί ή είναι απενεργοποιημένη."
+
+#: app/views/email.py:234 app/views/smtp_settings_admin.py:82
+msgid "Test email sent successfully."
+msgstr "Το δοκιμαστικό email στάλθηκε με επιτυχία."
+
+#: app/views/email.py:282 app/views/messages.py:305
+msgid "Schedule updated successfully."
+msgstr "Το πρόγραμμα ενημερώθηκε με επιτυχία."
+
+#: app/views/email.py:310
+msgid "SMTP configuration assigned."
+msgstr "Η διαμόρφωση SMTP εκχωρήθηκε."
+
+#: app/views/email.py:319
+msgid "SMTP configuration removed."
+msgstr "Η διαμόρφωση SMTP εκχωρήθηκε."
+
+#: app/views/messages.py:97
+msgid "Message created successfully."
+msgstr "Το μήνυμα δημιουργήθηκε με επιτυχία."
+
+#: app/views/messages.py:133
+msgid "Message updated successfully."
+msgstr "Το μήνυμα ενημερώθηκε με επιτυχία."
+
+#: app/views/messages.py:223 app/views/reminders.py:240
+msgid "Destinations updated."
+msgstr "Οι προορισμοί ενημερώθηκαν."
+
+#: app/views/messages.py:441
+msgid "No destinations assigned to this message."
+msgstr "Η διαμόρφωση SMTP δεν έχει ανατεθεί ή είναι απενεργοποιημένη."
+
+#: app/views/messages.py:453
+msgid "Test message sent successfully."
+msgstr "Το δοκιμαστικό email στάλθηκε με επιτυχία."
+
+#: app/views/messages.py:455
+msgid "Test message failed: "
+msgstr "Το μήνυμα αποθηκεύτηκε."
+
+#: app/views/mfa.py:68
+msgid "You must enter a code from your authenticator."
+msgstr "Πρέπει να εισάγετε έναν κωδικό από τον αυθεντικοποιητή σας."
+
+#: app/views/mfa.py:82 app/views/mfa.py:259
+msgid "Invalid code. Please try again."
+msgstr "Μη έγκυρος κωδικός. Παρακαλώ δοκιμάστε ξανά."
+
+#: app/views/mfa.py:91
+msgid "Two-factor authentication disabled."
+msgstr "Η ειδοποίηση είναι απενεργοποιημένη"
+
+#: app/views/mfa.py:132
+msgid "Recovery codes are only shown immediately after enabling MFA."
+msgstr ""
+"Οι κωδικοί ανάκτησης εμφανίζονται μόνο αμέσως μετά την ενεργοποίηση του MFA."
+
+#: app/views/mfa.py:142
+msgid "Could not load recovery codes."
+msgstr "Δεν ήταν δυνατό να φορτωθούν οι κωδικοί ανάκτησης."
+
+#: app/views/mfa.py:168
+msgid "No MFA challenge in progress."
+msgstr "Καμία πρόκληση MFA δεν είναι σε εξέλιξη."
+
+#: app/views/mfa.py:176
+msgid "User not found for MFA challenge."
+msgstr "Ο χρήστης δεν βρέθηκε."
+
+#: app/views/mfa.py:225
+msgid ""
+"You have used your last recovery code. MFA has been disabled. Please remove "
+"Grylli from your authenticator app, and re-enable MFA to protect your "
+"account."
+msgstr ""
+"Έχετε χρησιμοποιήσει τον τελευταίο κωδικό ανάκτησης σας. Το MFA έχει "
+"απενεργοποιηθεί. Παρακαλώ αφαιρέστε το Grylli από την εφαρμογή "
+"αυθεντικοποίησης, και επανενεργοποιήστε το MFA για να προστατεύσετε το "
+"λογαριασμό σας."
+
+#: app/views/mfa.py:248
+#, python-brace-format
+msgid "Recovery code accepted. You have {remaining} recovery codes left."
+msgstr ""
+"Ο κωδικός ανάκτησης έγινε αποδεκτός. Έχετε {remaining} κωδικούς ανάκτησης "
+"απομένουν."
+
+#: app/views/reminders.py:106
+msgid "Reminder created successfully."
+msgstr "Το μήνυμα δημιουργήθηκε με επιτυχία."
+
+#: app/views/reminders.py:143
+msgid "Reminder updated successfully."
+msgstr "Ο χρήστης ενημερώθηκε με επιτυχία."
+
+#: app/views/reminders.py:174
+msgid "Reminder deleted."
+msgstr "Χρήστης διαγράφηκε."
+
+#: app/views/reminders.py:287
+msgid "No destinations assigned to this reminder."
+msgstr "Η διαμόρφωση SMTP δεν έχει ανατεθεί ή είναι απενεργοποιημένη."
+
+#: app/views/reminders.py:311
+msgid "No email message linked to this reminder."
+msgstr ""
+"Δεν υπάρχει σύνδεση για το μήνυμα ηλεκτρονικού ταχυδρομείου σε αυτή την "
+"υπενθύμιση."
+
+#: app/views/reminders.py:314
+msgid "SMTP configuration is disabled."
+msgstr "Η διαμόρφωση SMTP δεν έχει ανατεθεί ή είναι απενεργοποιημένη."
+
+#: app/views/reminders.py:353
+msgid "Test reminder sent successfully."
+msgstr "Το δοκιμαστικό email στάλθηκε με επιτυχία."
+
+#: app/views/reminders.py:356
+msgid "Test reminder failed: "
+msgstr "Το μήνυμα αποθηκεύτηκε."
+
+#: app/views/reminders.py:430
+msgid "Reminder schedule updated successfully."
+msgstr "Το πρόγραμμα ενημερώθηκε με επιτυχία."
+
+#: app/views/reminders.py:434
+msgid "Please correct the errors below."
+msgstr "Διορθώστε τα παρακάτω σφάλματα."
+
+#: app/views/reminders.py:481 app/views/reminders.py:482
+msgid "None"
+msgstr "Όχι"
+
+#: app/views/reminders.py:508
+msgid "You must select both an SMTP config and an email message, or neither."
+msgstr ""
+"Πρέπει να επιλέξετε τόσο μια διαμόρφωση SMTP και ένα μήνυμα email, ή κανένα "
+"από αυτά."
+
+#: app/views/reminders.py:528
+msgid "Email reminder settings updated."
+msgstr "Οι προορισμοί ενημερώθηκαν."
+
+#: app/views/smtp.py:83 app/views/user_smtp.py:80
+msgid "SMTP destination created successfully."
+msgstr "Ο προορισμός SMTP δημιουργήθηκε με επιτυχία."
+
+#: app/views/smtp.py:129 app/views/user_smtp.py:135
+msgid "SMTP destination updated."
+msgstr "Ο προορισμός SMTP ενημερώθηκε."
+
+#: app/views/smtp.py:160 app/views/user_smtp.py:166
+msgid "SMTP destination deleted."
+msgstr "Ο προορισμός SMTP διαγράφηκε."
+
+#: app/views/smtp.py:191 app/views/user_smtp.py:199
+msgid "Test email sent successfully to your account email."
+msgstr ""
+"Το δοκιμαστικό email στάλθηκε με επιτυχία στο email του λογαριασμού σας."
+
+#: app/views/smtp.py:196 app/views/user_smtp.py:204
+msgid "Failed to send test email. Check SMTP settings."
+msgstr "Αποτυχία αποστολής δοκιμαστικού email. Ελέγξτε τις ρυθμίσεις SMTP."
+
+#: app/views/smtp_settings_admin.py:76
+msgid "Test Email from Grylli"
+msgstr "Δοκιμαστικό Email από το Grylli"
+
+#: app/views/smtp_settings_admin.py:77
+msgid "This is a test email from the Grylli SMTP settings page."
+msgstr "Αυτό είναι ένα δοκιμαστικό email από τη σελίδα ρυθμίσεων Grylli SMTP."
+
+#: app/views/smtp_settings_admin.py:84
+msgid "Failed to send test email: "
+msgstr "Αποτυχία αποστολής δοκιμαστικού email:"
+
+#: app/views/users.py:99
+msgid "User updated successfully."
+msgstr "Ο χρήστης ενημερώθηκε με επιτυχία."
+
+#: app/views/users.py:106 app/views/users.py:327
+msgid "An error occurred while updating the user."
+msgstr "Προέκυψε σφάλμα κατά την ενημέρωση του χρήστη."
+
+#: app/views/users.py:195
+msgid "User deleted."
+msgstr "Χρήστης διαγράφηκε."
+
+#: app/views/users.py:202
+msgid "An error occurred while deleting the user."
+msgstr "Προέκυψε σφάλμα κατά τη διαγραφή του χρήστη."
+
+#: app/views/users.py:237
+msgid "Password is required when creating a new user."
+msgstr ""
+"Ο κωδικός πρόσβασης είναι απαραίτητος κατά τη δημιουργία ενός νέου χρήστη."
+
+#: app/views/users.py:244
+msgid "Username already exists."
+msgstr "Το όνομα χρήστη υπάρχει ήδη."
+
+#: app/views/users.py:251
+msgid "Email already exists."
+msgstr "Το email υπάρχει ήδη."
+
+#: app/views/users.py:268
+#, python-format
+msgid "User '%(username)s' created successfully."
+msgstr "Ο χρήστης '%(username)s' δημιουργήθηκε επιτυχώς."
+
+#: app/views/users.py:278
+msgid "Failed to create user."
+msgstr "Απέτυχε η δημιουργία χρήστη."
+
+#: app/views/users.py:305
+msgid "You cannot change your own enabled status."
+msgstr "Δεν μπορείτε να αλλάξετε την ενεργοποιημένη κατάσταση σας."
+
+#: app/views/users.py:318
+#, python-format
+msgid "User '%(username)s' has been %(status)s."
+msgstr "Ο χρήστης '%(username)s' βρίσκεται σε κατάσταση %(status)s."
+
+#: app/views/users.py:356
+msgid "You cannot reset your own MFA."
+msgstr "⚪ = Δεν μπορείτε να απενεργοποιήσετε τον δικό σας λογαριασμό."
+
+#: app/views/users.py:368
+#, python-format
+msgid "MFA disabled for user '%(username)s'."
+msgstr "Το MFA απενεργοποιήθηκε για το χρήστη '%(username)s'."
+
+#: app/views/users.py:374
+msgid "An error occurred while resetting MFA."
+msgstr "Προέκυψε σφάλμα κατά τη διαγραφή του χρήστη."
+
+#: app/views/webhook.py:54
+msgid "Webhook created successfully."
+msgstr "Το webhook δημιουργήθηκε επιτυχώς."
+
+#: app/views/webhook.py:113
+msgid "Webhook updated successfully."
+msgstr "Το webhook ενημερώθηκε επιτυχώς."
+
+#: app/views/webhook.py:142
+msgid "Webhook deleted."
+msgstr "Το webhook διαγράφηκε."
+
+#: app/views/webhook.py:175
+msgid "🧪 Webhook test sent successfully!"
+msgstr "🧪 Η δοκιμή webhook στάλθηκε επιτυχώς!"
+
+#: app/views/webhook.py:177
+msgid "🧪 Webhook test failed: "
+msgstr "🧪 Απέτυχε η δοκιμή webhook:"
+
+#: app/views/webhook.py:180
+msgid "🧪 Error sending webhook test."
+msgstr "🧪 Σφάλμα κατά την αποστολή της δοκιμής webhook."
+
+#~ msgid ""
+#~ "Grylli is a secure message delivery platform designed to activate after "
+#~ "prolonged user inactivity."
+#~ msgstr ""
+#~ "Το Grylli είναι μια ασφαλής πλατφόρμα παράδοσης μηνυμάτων, σχεδιασμένη να "
+#~ "ενεργοποιείται μετά από παρατεταμένη αδράνεια χρήστη."
+
+#~ msgid ""
+#~ "It is a modern reimplementation of Gone Man’s Switch with a refined tech "
+#~ "stack, better maintainability, and an improved user experience."
+#~ msgstr ""
+#~ "Είναι μια σύγχρονη επαναληπτική ανάπτυξη του Gone Man’s Switch με βελτιωμένη"
+#~ " τεχνική στοίβα, καλύτερη συντηρησιμότητα και βελτιωμένη εμπειρία χρήστη."
+
+#~ msgid "Body:"
+#~ msgstr "Σώμα:"
+
+#~ msgid "Subject:"
+#~ msgstr "Θέμα:"
+
+#~ msgid "Content:"
+#~ msgstr "Περιεχόμενο:"
+
+#~ msgid "Edit SMTP"
+#~ msgstr "Επεξεργασία SMTP"
+
+#~ msgid ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+#~ msgstr ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+
+#~ msgid "Admin Notes"
+#~ msgstr "Σημειώσεις Διαχειριστή"
+
+#~ msgid "Register"
+#~ msgstr "Εγγραφή"
+
+#~ msgid "View"
+#~ msgstr "Προβολή"
+
+#~ msgid "Schedule"
+#~ msgstr "Πρόγραμμα"
+
+#~ msgid "Message is enabled"
+#~ msgstr "Το μήνυμα είναι ενεργοποιημένο"
+
+#~ msgid "Message is disabled"
+#~ msgstr "Το μήνυμα είναι απενεργοποιημένο"
+
+#~ msgid "No SMTP configuration selected."
+#~ msgstr "Δεν επιλέχθηκε καμία διαμόρφωση SMTP."
+
+#~ msgid "Enable the message to start monitoring."
+#~ msgstr "Ενεργοποιήστε το μήνυμα για να ξεκινήσει η παρακολούθηση."
+
+#~ msgid "✅ SMTP settings saved."
+#~ msgstr "Ρυθμίσεις SMTP"
+
+#~ msgid "If you don’t check in, Grylli delivers the message for you."
+#~ msgstr "Αν δεν κάνετε επιβεβαίωση, το Grylli παραδίδει το μήνυμα για εσάς."
+
+#~ msgid "Fill in already discovered missing translations:"
+#~ msgstr "Συμπληρώστε ήδη ανακαλυφθέντες ελλείψεις μεταφράσεων:"
+
+#~ msgid "Add missing phrases in that JSON file."
+#~ msgstr "Προσθέστε φράσεις που λείπουν σε αυτό το αρχείο JSON."
+
+#~ msgid "From:"
+#~ msgstr "Από:"
+
+#~ msgid ""
+#~ "Attach the updated JSON file to a new GitHub issue when submitting your "
+#~ "changes."
+#~ msgstr ""
+#~ "Συμβολίστε το ενημερωμένο αρχείο JSON σε ένα νέο ζήτημα GitHub όταν "
+#~ "υποβάλλετε τις αλλαγές σας."
+
+#~ msgid "admin"
+#~ msgstr "διαχειριστή"
+
+#~ msgid "user"
+#~ msgstr "χρήστη"
+
+#~ msgid "Logging in"
+#~ msgstr "Σύνδεση"
+
+#~ msgid "SMTP error: "
+#~ msgstr "Σφάλμα SMTP:"
+
+#~ msgid "enabled"
+#~ msgstr "ενεργοποιημένο"
+
+#~ msgid "disabled"
+#~ msgstr "απενεργοποιημένο"

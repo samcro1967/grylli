@@ -1,0 +1,3287 @@
+# Dutch translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-06-07 15:49-0500\n"
+"PO-Revision-Date: 2025-05-25 12:41-0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: nl <LL@li.org>\n"
+"Language: nl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: app/init_db.py:55
+#, python-format
+msgid "Tables currently in DB: %s"
+msgstr "Tabels momenteel in DB:"
+
+#: app/init_db.py:58
+msgid "Database or system_config table missing. Running migrations now..."
+msgstr "Database of system_config tabel ontbreekt. Voer nu migraties uit..."
+
+#: app/init_db.py:61
+msgid "Migrations applied successfully."
+msgstr "Migraties succesvol toegepast."
+
+#: app/init_db.py:63
+msgid "Migration failed."
+msgstr "Migratie mislukt."
+
+#: app/init_db.py:68
+msgid "System config seeded successfully."
+msgstr "Systeemconfiguratie succesvol ingevoerd."
+
+#: app/init_db.py:70
+msgid "Error seeding system config."
+msgstr "Fout bij het invoeren van de systeemconfiguratie:"
+
+#: app/forms/mfa_form.py:15 app/templates/apprise/create_apprise.html:30
+#: app/templates/apprise/edit_apprise.html:30
+#: app/templates/apprise/list_apprise.html:60
+#: app/templates/mfa/settings.html:24 app/templates/mfa/settings.html:40
+#: app/templates/user_smtp/create_smtp.html:99
+#: app/templates/user_smtp/edit_smtp.html:114
+#: app/templates/user_smtp/list_smtp.html:57
+#: app/templates/webhook/create_webhook.html:36
+#: app/templates/webhook/edit_webhook.html:36
+#: app/templates/webhook/list_webhooks.html:61
+msgid "Enabled"
+msgstr "Ingeschakeld"
+
+#: app/forms/mfa_form.py:16
+msgid "Authenticator Code"
+msgstr "Authenticator Code"
+
+#: app/forms/mfa_form.py:17
+#: app/templates/admin/partials/user_instructions_and_modal.html:66
+#: app/templates/admin/partials/user_table.html:115
+#: app/templates/email/assign_smtp.html:44 app/templates/mfa/settings.html:47
+#: app/templates/user_smtp/edit_smtp.html:122
+msgid "Save"
+msgstr "Opslaan"
+
+#: app/forms/mfa_form.py:27
+msgid "Authentication Code"
+msgstr "Melding bijwerken"
+
+#: app/forms/mfa_form.py:29
+msgid "Please enter your authentication code."
+msgstr "Voer uw authenticatiecode in."
+
+#: app/forms/mfa_form.py:30
+msgid "Enter a valid 6-digit code or recovery code."
+msgstr "Voer een geldige 6-cijferige code of herstelcode in."
+
+#: app/forms/mfa_form.py:31
+msgid "Invalid code format."
+msgstr "Ongeldig codeformaat."
+
+#: app/forms/mfa_form.py:35 app/templates/mfa/challenge.html:25
+msgid "Verify"
+msgstr "Versie"
+
+#: app/services/mail.py:37 app/services/system_settings_email.py:40
+msgid "Missing required config setting: "
+msgstr "Vereiste configuratie-instelling ontbreekt:"
+
+#: app/services/mail.py:46 app/services/system_settings_email.py:50
+#, python-format
+msgid "Failed to decrypt %(key)s: %(error)s"
+msgstr "Mislukt om %(key)s te ontsleutelen: %(error)s"
+
+#: app/services/mail.py:54
+#, python-format
+msgid "get_setting('%(key)s') -> '%(value)s' (sensitive: %(sensitive)s)"
+msgstr ""
+"get_setting('%(key)s') -> '%(value)s' (raw: '%(raw)s', aanstootgevend: "
+"%(sensitive)s)"
+
+#: app/services/mail.py:75
+#, python-format
+msgid "Preparing email to %(to)s"
+msgstr "E-mail voorbereiden aan %(to)s"
+
+#: app/services/mail.py:90
+#, python-format
+msgid ""
+"SMTP configuration: host=%(host)s (type=%(host_type)s), port=%(port)s "
+"(type=%(port_type)s)"
+msgstr ""
+"SMTP host = '%(host)s' (type: %(host_type)s), poort = %(port)s (type: "
+"%(port_type)s)"
+
+#: app/services/mail.py:99
+#, python-format
+msgid "SMTP username: %(user)s"
+msgstr "Gebruiker gebruiken: %(user)s"
+
+#: app/services/mail.py:100
+#, python-format
+msgid "TLS enabled: %(tls)s"
+msgstr "TLS ingeschakeld: %(tls)s"
+
+#: app/services/mail.py:105
+msgid "Starting TLS connection..."
+msgstr "TLS starten"
+
+#: app/services/mail.py:107
+msgid "Logging into SMTP server..."
+msgstr "Inloggen bij SMTP-server..."
+
+#: app/services/mail.py:109
+msgid "Sending email message..."
+msgstr "Bericht plannen"
+
+#: app/services/mail.py:111
+#, python-format
+msgid "Email sent successfully to %(to)s"
+msgstr "Test-e-mail succesvol verzonden."
+
+#: app/services/mail.py:114
+#, python-format
+msgid "SMTP error while sending to %(to)s: %(error)s"
+msgstr "SMTP-fout bij verzenden naar %(to)s: %(error)s"
+
+#: app/templates/about.html:10
+msgid "About Grylli"
+msgstr "Over Grylli"
+
+#: app/templates/about.html:13
+msgid ""
+"Grylli is a secure, self-hosted message delivery platform that automatically"
+" sends pre-configured messages if a user fails to check in within a defined "
+"time period."
+msgstr ""
+"Grylli is een veilig, zelf-gehost berichtverzendplatform dat automatisch "
+"voorgeconfigureerde berichten verzendt als een gebruiker niet binnen een "
+"gedefinieerde periode incheckt."
+
+#: app/templates/about.html:14
+msgid ""
+"It supports multiple users, customizable schedules, and recurring reminders."
+msgstr "Het ondersteunt meerdere gebruikers en aanpasbare schema's."
+
+#: app/templates/about.html:15
+msgid ""
+"Messages and reminders can be delivered via email, webhooks, or over 100 "
+"third-party services through Apprise."
+msgstr ""
+"Berichten kunnen worden bezorgd via e-mail, webhooks, of meer dan 80 derde-"
+"partij diensten via Apprise."
+
+#: app/templates/about.html:16
+msgid ""
+"Users can configure their own SMTP servers to ensure emails and reminders "
+"appear to come directly from them — not from the system administrator."
+msgstr ""
+"Gebruikers kunnen hun eigen SMTP-servers configureren om ervoor te zorgen "
+"dat berichten direct van hen lijken te komen — niet van de systeembeheerder."
+
+#: app/templates/about.html:17
+msgid ""
+"Sensitive data is encrypted at rest, and all operations are secured with "
+"strong authentication and audit-friendly logging."
+msgstr ""
+"Gevoelige gegevens worden in rust versleuteld en alle berichtoperaties zijn "
+"beveiligd met sterke authenticatie en audit-vriendelijke logging."
+
+#: app/templates/about.html:18
+msgid ""
+"Built with a modern, reactive technology stack, Grylli is optimized for "
+"responsiveness and works seamlessly across desktop and mobile devices."
+msgstr ""
+"Gebouwd met een moderne, reactieve technologiestapel, is Grylli "
+"geoptimaliseerd voor responsiviteit en werkt naadloos op desktop en mobiele "
+"apparaten."
+
+#: app/templates/about.html:23
+msgid "Version:"
+msgstr "Versie:"
+
+#: app/templates/about.html:26
+msgid "Repository:"
+msgstr "Repository:"
+
+#: app/templates/about.html:30
+msgid "GitHub - samcro1967/grylli"
+msgstr "GitHub - samcro1967/grylli"
+
+#: app/templates/help.html:2 app/templates/help.html:5
+#: app/templates/partials/header.html:85
+msgid "Help"
+msgstr "Help"
+
+#: app/templates/help.html:7
+msgid ""
+"Grylli includes built-in instructions throughout the app to help you "
+"configure and manage your setup."
+msgstr ""
+"Grylli bevat ingebouwde instructies door de hele app heen om u te helpen uw "
+"configuratie te beheren."
+
+#: app/templates/help.html:8
+msgid ""
+"This page provides an overview of key features and direct links to where "
+"they can be managed."
+msgstr ""
+"Deze pagina biedt een overzicht van belangrijke functies en directe links "
+"naar waar ze beheerd kunnen worden."
+
+#: app/templates/help.html:12 app/templates/messages/list_messages.html:9
+#: app/templates/partials/shared_nav.html:17
+msgid "Notifications"
+msgstr "Meldingen"
+
+#: app/templates/help.html:14
+msgid "Create and assign messages"
+msgstr "Maak een bericht of e-mail."
+
+#: app/templates/admin/index.html:32 app/templates/help.html:17
+#: app/templates/partials/admin_nav.html:56
+msgid "SMTP Settings"
+msgstr "SMTP-instellingen"
+
+#: app/templates/help.html:19
+msgid "Use your own email server"
+msgstr "Gebruik uw eigen e-mailserver"
+
+#: app/templates/help.html:22
+msgid "Apprise Integration"
+msgstr "Apprise-bestemmingen"
+
+#: app/templates/help.html:24
+msgid "Send notifications to 80+ supported services"
+msgstr "Stuur notificaties naar meer dan 80 ondersteunde diensten"
+
+#: app/templates/help.html:27
+#: app/templates/messages/assign_destinations.html:41
+#: app/templates/messages/view_message.html:58
+#: app/templates/partials/shared_nav.html:44
+#: app/templates/reminders/assign_destinations.html:39
+#: app/templates/reminders/view_reminder.html:69
+msgid "Webhooks"
+msgstr "Webhooks"
+
+#: app/templates/help.html:29
+msgid "Trigger actions or external workflows"
+msgstr "Handelingen of externe workflows activeren"
+
+#: app/templates/email/list_emails.html:9 app/templates/help.html:32
+#: app/templates/partials/shared_nav.html:61
+msgid "Emails"
+msgstr "E-mails"
+
+#: app/templates/help.html:34
+msgid "View and manage secure email messages"
+msgstr "Overzicht van beveiligde e-mailberichten"
+
+#: app/templates/help.html:38
+msgid "Security"
+msgstr "🔐 Beveiliging"
+
+#: app/templates/help.html:39
+msgid "Grylli encrypts sensitive data and logs all key actions for auditing."
+msgstr ""
+"Grylli versleutelt gevoelige gegevens en logt alle belangrijke acties voor "
+"auditing."
+
+#: app/templates/index.html:9 app/views/locale.py:95
+msgid "Welcome to Grylli"
+msgstr "Welkom bij Grylli"
+
+#: app/templates/index.html:11
+msgid "Pronounced"
+msgstr "Uitgesproken"
+
+#: app/templates/index.html:11
+msgid "like “grill-ee”"
+msgstr "als \"grill-ee\""
+
+#: app/templates/index.html:14
+msgid ""
+"Grylli is a secure message scheduling and delivery system designed to ensure"
+" your important messages are delivered — even if you can’t be there to send "
+"them."
+msgstr ""
+"Grylli is een veilig berichtenplannings- en bezorgsysteem dat is ontworpen "
+"om ervoor te zorgen dat je belangrijke berichten worden bezorgd - zelfs als "
+"je er niet bent om ze te versturen."
+
+#: app/templates/index.html:17
+msgid ""
+"Whether you’re planning ahead, setting up emergency communication, or "
+"building peace of mind, Grylli helps automate your message delivery via "
+"multiple channels including email, webhooks, and Apprise notifications."
+msgstr ""
+"Of je nu vooruit plant, noodcommunicatie opzet, of gemoedsrust bouwt, Grylli"
+" helpt je bij het automatiseren van je berichtbezorging via e-mail, webhooks"
+" of Apprise-meldingen als je een check-in mist."
+
+#: app/templates/index.html:19
+msgid "Getting Started"
+msgstr "Aan de slag"
+
+#: app/templates/index.html:21
+msgid "Create a message, email, or reminder."
+msgstr "Maak een bericht of e-mail."
+
+#: app/templates/index.html:22
+msgid "Set your check-in interval and grace period (for messages)."
+msgstr "Stel je check-in-interval en respijtperiode in."
+
+#: app/templates/index.html:23
+msgid "Assign one or more delivery destinations."
+msgstr "Wijs een of meer bezorgbestemmingen toe."
+
+#: app/templates/index.html:24
+msgid "Optionally attach files for secure emails."
+msgstr "Optioneel bestanden toevoegen voor veilige e-mails."
+
+#: app/templates/index.html:25
+msgid "Schedule reminders to send at specific times or on a recurring basis."
+msgstr ""
+"Planningsherinneringen versturen op specifieke tijden of op een terugkerende"
+" basis."
+
+#: app/templates/index.html:26
+msgid "Enable the message or reminder to activate delivery."
+msgstr "Schakel het bericht of de herinnering in om bezorging te activeren."
+
+#: app/templates/index.html:28
+msgid ""
+"Regularly check in to Grylli to prevent automated delivery; miss a check-in "
+"and Grylli sends your messages as scheduled."
+msgstr ""
+"Controleer regelmatig bij Grylli om geautomatiseerde levering te voorkomen; "
+"mis een check-in en Grylli stuurt je berichten zoals gepland."
+
+#: app/templates/privacy.html:10
+msgid "Privacy Notice"
+msgstr "Privacyverklaring"
+
+#: app/templates/privacy.html:13
+msgid ""
+"Grylli respects your privacy and is designed to minimize the collection and "
+"storage of personal data."
+msgstr ""
+"Grylli respecteert uw privacy en is ontworpen om het verzamelen en opslaan "
+"van persoonlijke gegevens tot een minimum te beperken."
+
+#: app/templates/privacy.html:14
+msgid ""
+"All data is encrypted where appropriate and remains fully under your control"
+" if you self-host this platform."
+msgstr ""
+"Alle gegevens worden waar nodig versleuteld en blijven volledig onder uw "
+"controle als u dit platform zelf host."
+
+#: app/templates/privacy.html:17
+msgid "What Data We Collect"
+msgstr "Welke gegevens we verzamelen"
+
+#: app/templates/privacy.html:19
+msgid "Email address and password hash (for authentication)"
+msgstr "E-mailadres en wachtwoordhash (voor authenticatie)"
+
+#: app/templates/privacy.html:20
+msgid "Optional MFA secret and recovery codes (encrypted at rest)"
+msgstr "Optionele MFA-geheim en herstelcodes (versleuteld in rust)"
+
+#: app/templates/privacy.html:21
+msgid "Reminder and message content you configure"
+msgstr "Herinnering- en berichtinhoud die u configureert"
+
+#: app/templates/privacy.html:22
+msgid "User-specific settings, SMTP configuration (if provided)"
+msgstr ""
+"Gebruikersspecifieke instellingen, SMTP-configuratie (indien verstrekt)"
+
+#: app/templates/privacy.html:25
+msgid "How Your Data Is Used"
+msgstr "Hoe uw gegevens worden gebruikt"
+
+#: app/templates/privacy.html:27
+msgid ""
+"Your data is used solely for the purpose of delivering reminders and "
+"messages according to your preferences."
+msgstr ""
+"Uw gegevens worden uitsluitend gebruikt voor het leveren van herinneringen "
+"en berichten volgens uw voorkeuren."
+
+#: app/templates/privacy.html:28
+msgid ""
+"Grylli does not share, sell, or transmit your personal data to any third "
+"parties."
+msgstr ""
+"Grylli deelt, verkoopt of verzendt uw persoonlijke gegevens niet aan derden."
+
+#: app/templates/privacy.html:31
+msgid "Your Rights"
+msgstr "Uw rechten"
+
+#: app/templates/privacy.html:33
+msgid ""
+"You can export all of your data at any time from the Account Settings page."
+msgstr ""
+"U kunt op elk moment al uw gegevens exporteren vanaf de pagina "
+"Accountinstellingen."
+
+#: app/templates/privacy.html:34
+msgid "You may permanently delete your account and all associated data."
+msgstr "U kunt uw account niet verwijderen omdat u de laatste beheerder bent."
+
+#: app/templates/privacy.html:35
+msgid ""
+"If you are using a self-hosted instance, contact the instance administrator "
+"for data inquiries."
+msgstr ""
+"Als u een zelf-gehoste instantie gebruikt, neem dan contact op met de "
+"instantiebeheerder voor gegevensvragen."
+
+#: app/templates/privacy.html:38
+msgid "Self-Hosting Responsibility"
+msgstr "Verantwoordelijkheid bij zelfhosting"
+
+#: app/templates/privacy.html:40
+msgid ""
+"If you are running Grylli on your own server, you are responsible for the "
+"storage, processing, and lawful handling of all user data on that instance."
+msgstr ""
+"Als u Grylli op uw eigen server uitvoert, bent u verantwoordelijk voor de "
+"opslag, verwerking en wettige behandeling van alle gebruikersgegevens op die"
+" instantie."
+
+#: app/templates/privacy.html:44
+msgid ""
+"This notice was last updated in June 2025 and may evolve to reflect changes "
+"in the software or regulatory landscape."
+msgstr ""
+"Deze verklaring is voor het laatst bijgewerkt in juni 2025 en kan evolueren "
+"om veranderingen in de software of het regelgevingslandschap te "
+"weerspiegelen."
+
+#: app/templates/system_info.html:11
+msgid "📦 Environment Versions"
+msgstr "📦 Omgevingsversies"
+
+#: app/templates/system_info.html:17
+msgid "Category"
+msgstr "Categorie"
+
+#: app/templates/system_info.html:18
+msgid "Tool"
+msgstr "Tool"
+
+#: app/templates/system_info.html:19
+msgid "Version"
+msgstr "Versie"
+
+#: app/templates/system_info.html:25
+msgid "🧠 Python"
+msgstr "🧠 Python"
+
+#: app/templates/system_info.html:26
+msgid "Python"
+msgstr "Python"
+
+#: app/templates/system_info.html:30
+msgid "pip"
+msgstr "pip"
+
+#: app/templates/system_info.html:34
+msgid "SQLite"
+msgstr "SQLite"
+
+#: app/templates/system_info.html:40
+msgid "⚙️ Core"
+msgstr "⚙️ Kern"
+
+#: app/templates/system_info.html:47
+msgid "🔐 Security"
+msgstr "🔐 Beveiliging"
+
+#: app/templates/system_info.html:48
+msgid "Email Validator"
+msgstr "E-mail Validator"
+
+#: app/templates/system_info.html:52
+msgid "Cryptography"
+msgstr "Cryptografie"
+
+#: app/templates/system_info.html:57
+msgid "🕰️ Scheduling"
+msgstr "🕰️ Planning"
+
+#: app/templates/system_info.html:58
+msgid "APScheduler"
+msgstr "APScheduler"
+
+#: app/templates/system_info.html:62
+msgid "Apprise (Python)"
+msgstr "Apprise (Python)"
+
+#: app/templates/system_info.html:66
+msgid "Apprise CLI"
+msgstr "Apprise CLI"
+
+#: app/templates/system_info.html:74
+msgid "🌐 Frontend"
+msgstr "🌐 Frontend"
+
+#: app/templates/account/manage_account.html:11
+msgid "Manage Account"
+msgstr "Beheer Account"
+
+#: app/templates/account/manage_account.html:12
+msgid "Update your profile information and password."
+msgstr "Werk uw profielinformatie en wachtwoord bij."
+
+#: app/templates/account/manage_account.html:41
+#: app/templates/admin/create_user.html:40
+#: app/templates/auth/bootstrap.html:43
+#: app/templates/auth/reset_password.html:42 app/templates/auth/signup.html:42
+msgid "Please enter a valid email address."
+msgstr "Voer een geldig e-mailadres in."
+
+#: app/templates/account/manage_account.html:62
+#: app/templates/account/manage_account.html:96
+#: app/templates/account/manage_account.html:127
+#: app/templates/auth/reset_password.html:66
+#: app/templates/auth/reset_password.html:97 app/templates/auth/signup.html:65
+#: app/templates/auth/signup.html:95
+msgid "Show/hide password"
+msgstr "Houd vast om wachtwoord te tonen"
+
+#: app/templates/account/manage_account.html:89
+#: app/templates/admin/create_user.html:53
+#: app/templates/auth/bootstrap.html:51
+#: app/templates/auth/reset_password.html:58 app/templates/auth/signup.html:58
+msgid "Password must meet all complexity requirements."
+msgstr "Het wachtwoord moet aan alle complexiteitseisen voldoen."
+
+#: app/templates/account/manage_account.html:141
+#: app/templates/admin/create_user.html:72
+#: app/templates/admin/edit_user.html:67 app/templates/auth/bootstrap.html:69
+#: app/templates/auth/reset_password.html:110
+#: app/templates/auth/signup.html:108
+msgid "Passwords do not match."
+msgstr "Wachtwoorden komen niet overeen."
+
+#: app/templates/account/manage_account.html:147
+msgid "Update Account"
+msgstr "Update Account"
+
+#: app/templates/account/manage_account.html:151
+#: app/templates/admin/create_user.html:82
+#: app/templates/admin/edit_user.html:97 app/templates/admin/help_form.html:28
+#: app/templates/admin/partials/user_instructions_and_modal.html:62
+#: app/templates/admin/partials/user_table.html:113
+#: app/templates/apprise/create_apprise.html:42
+#: app/templates/apprise/edit_apprise.html:42
+#: app/templates/auth/reset_password.html:121
+#: app/templates/email/assign_smtp.html:46
+#: app/templates/email/attach_files.html:47
+#: app/templates/email/edit_message.html:54
+#: app/templates/email/schedule_email.html:84
+#: app/templates/messages/assign_destinations.html:66
+#: app/templates/messages/create_message.html:55
+#: app/templates/messages/edit_message.html:48
+#: app/templates/messages/schedule_message.html:84
+#: app/templates/mfa/challenge.html:29 app/templates/mfa/settings.html:51
+#: app/templates/reminders/assign_destinations.html:64
+#: app/templates/reminders/assign_email_reminder.html:94
+#: app/templates/reminders/create_reminder.html:49
+#: app/templates/reminders/edit_reminder.html:42
+#: app/templates/reminders/schedule_reminder.html:51
+#: app/templates/user_smtp/create_smtp.html:111
+#: app/templates/user_smtp/edit_smtp.html:125
+#: app/templates/webhook/create_webhook.html:48
+#: app/templates/webhook/edit_webhook.html:48
+msgid "Cancel"
+msgstr "Annuleren"
+
+#: app/templates/account/manage_account.html:159
+#: app/templates/admin/create_user.html:90
+#: app/templates/admin/edit_user.html:81 app/templates/auth/bootstrap.html:83
+#: app/templates/auth/reset_password.html:128
+#: app/templates/auth/signup.html:132
+msgid "Minimum 8 characters"
+msgstr "Minimaal 8 tekens"
+
+#: app/templates/account/manage_account.html:160
+#: app/templates/admin/create_user.html:91
+#: app/templates/admin/edit_user.html:82 app/templates/auth/bootstrap.html:84
+#: app/templates/auth/reset_password.html:129
+#: app/templates/auth/signup.html:133
+msgid "At least one uppercase letter"
+msgstr "Minimaal één hoofdletter"
+
+#: app/templates/account/manage_account.html:161
+#: app/templates/admin/create_user.html:92
+#: app/templates/admin/edit_user.html:83 app/templates/auth/bootstrap.html:85
+#: app/templates/auth/reset_password.html:130
+#: app/templates/auth/signup.html:134
+msgid "At least one lowercase letter"
+msgstr "Minimaal één kleine letter"
+
+#: app/templates/account/manage_account.html:162
+#: app/templates/admin/create_user.html:93
+#: app/templates/admin/edit_user.html:84 app/templates/auth/bootstrap.html:86
+#: app/templates/auth/reset_password.html:131
+#: app/templates/auth/signup.html:135
+msgid "At least one number"
+msgstr "Minimaal één nummer"
+
+#: app/templates/account/manage_account.html:163
+#: app/templates/admin/create_user.html:94
+#: app/templates/auth/bootstrap.html:87
+#: app/templates/auth/reset_password.html:132
+#: app/templates/auth/signup.html:136
+msgid "At least one special character (e.g., !@#$%)"
+msgstr "Minstens één speciaal teken (bijv. !@#$%)"
+
+#: app/templates/account/manage_account.html:169
+msgid "Download My Data"
+msgstr "Download mijn gegevens"
+
+#: app/templates/account/manage_account.html:171
+msgid ""
+"Download all your account data as a JSON file. This includes your reminders,"
+" messages, email settings, and more. The file is for your records only and "
+"cannot be imported back. Protect it as it may contain sensitive information."
+msgstr ""
+"Download al uw accountgegevens als een JSON-bestand. Dit omvat uw "
+"herinneringen, berichten, e-mailinstellingen en meer. Het bestand is alleen "
+"voor uw eigen administratie en kan niet worden geïmporteerd. Bescherm het "
+"aangezien het gevoelige informatie kan bevatten."
+
+#: app/templates/account/manage_account.html:175
+msgid "Download My Data (JSON)"
+msgstr "Download mijn gegevens (JSON)"
+
+#: app/templates/account/manage_account.html:179
+msgid "Danger Zone"
+msgstr "Gevarenzone"
+
+#: app/templates/account/manage_account.html:180
+msgid "Deleting your account is permanent and cannot be undone."
+msgstr ""
+"Het verwijderen van uw account is permanent en kan niet ongedaan worden "
+"gemaakt."
+
+#: app/templates/account/manage_account.html:185
+msgid "Delete My Account"
+msgstr "Update Account"
+
+#: app/templates/account/translations.html:8
+msgid "Translations - Grylli"
+msgstr "Vertalingen - Grylli"
+
+#: app/templates/account/translations.html:17
+#: app/templates/partials/header.html:102
+msgid "Translations"
+msgstr "Vertalingen"
+
+#: app/templates/account/translations.html:20
+msgid "Grylli currently supports multiple languages and more will be added."
+msgstr ""
+"Grylli ondersteunt momenteel meerdere talen en er zullen meer worden "
+"toegevoegd."
+
+#: app/templates/account/translations.html:21
+msgid "Many of the translations were performed with assistance from ChatGPT."
+msgstr "Veel van de vertalingen werden uitgevoerd met hulp van ChatGPT."
+
+#: app/templates/account/translations.html:22
+msgid ""
+"If you find a translation issue or want to suggest improvements, your input "
+"is welcome!"
+msgstr ""
+"Als je een vertaalprobleem vindt of verbeteringen wilt voorstellen, is je "
+"input welkom!"
+
+#: app/templates/account/translations.html:28
+msgid "How to request translation updates"
+msgstr "Hoe vertaalupdates aan te vragen"
+
+#: app/templates/account/translations.html:30
+msgid "To contribute to translations, please use the following guidelines:"
+msgstr ""
+"Om bij te dragen aan vertalingen, gebruik alstublieft de volgende "
+"richtlijnen:"
+
+#: app/templates/account/translations.html:43
+msgid "Contribute missing or improved translations:"
+msgstr "Een ontbrekende vertaling gevonden?"
+
+#: app/templates/account/translations.html:63
+msgid "Open the relevant .po translation file for your language."
+msgstr "Open het JSON vertalingsbestand voor jouw taal. Bijvoorbeeld:"
+
+#: app/templates/account/translations.html:67
+msgid ""
+"Find untranslated or incomplete entries and add or improve translations."
+msgstr ""
+"Vind niet-vertalen of onvolledige vermeldingen en voeg vertalingen toe of "
+"verbeter ze."
+
+#: app/templates/account/translations.html:68
+msgid "You may use a PO file editor or a text editor."
+msgstr "Je mag een PO-bestandeditor of een tekstbewerker gebruiken."
+
+#: app/templates/account/translations.html:69
+msgid "Copy the file path and the snippet of your changes."
+msgstr "Kopieer het bestandspad en het fragment van je wijzigingen."
+
+#: app/templates/account/translations.html:70
+msgid "Paste the snippet directly into a new GitHub issue for review."
+msgstr "Plak het gekopieerde fragment direct in de GitHub issue-comment."
+
+#: app/templates/account/translations.html:72
+msgid "Please do not upload the full .po file to avoid merge conflicts."
+msgstr ""
+"Upload het volledige .po-bestand niet om samenvoegconflicten te vermijden."
+
+#: app/templates/account/translations.html:85
+msgid "Improving existing translations:"
+msgstr "Bestaande vertalingen verbeteren:"
+
+#: app/templates/account/translations.html:104
+msgid "Open the relevant .po file for the translation you want to improve."
+msgstr ""
+"Open het relevante .po-bestand voor de vertaling die je wilt verbeteren."
+
+#: app/templates/account/translations.html:106
+msgid "For example:"
+msgstr "Bijvoorbeeld:"
+
+#: app/templates/account/translations.html:110
+msgid ""
+"Find the phrase(s) and its existing translation(s) you want to improve."
+msgstr ""
+"Zoek de zin(nen) en de bestaande vertaling(en) die je wilt verbeteren."
+
+#: app/templates/account/translations.html:111
+msgid "Update the phrase(s)."
+msgstr "Werk de zin(nen) bij."
+
+#: app/templates/account/translations.html:112
+msgid "Copy the file name and path into the issue."
+msgstr "Kopieer de bestandsnaam en het pad naar het issue."
+
+#: app/templates/account/translations.html:114
+msgid "Paste the copied snippet directly into the GitHub issue comment."
+msgstr "Plak het gekopieerde fragment direct in de GitHub issue-comment."
+
+#: app/templates/account/translations.html:115
+msgid "Do not upload the full .po file to avoid merge conflicts."
+msgstr ""
+"Upload het volledige .po-bestand niet om samenvoegconflicten te vermijden."
+
+#: app/templates/account/translations.html:118
+msgid "Example snippet:"
+msgstr "Voorbeeldfragment:"
+
+#: app/templates/account/translations.html:137
+msgid "Report missing translations not yet discovered:"
+msgstr "Rapporteer ontbrekende vertalingen die nog niet ontdekt zijn:"
+
+#: app/templates/account/translations.html:154
+msgid ""
+"If you see text in the app that appears untranslated or missing, please "
+"report it to us."
+msgstr ""
+"Als je tekst in de app ziet die onvertaald of ontbrekend lijkt, meld het ons"
+" dan."
+
+#: app/templates/account/translations.html:155
+msgid "Provide the exact English phrase as it appears on the screen."
+msgstr "Geef de exacte Engelse zin zoals die op het scherm verschijnt."
+
+#: app/templates/account/translations.html:156
+msgid ""
+"Include the page or section where you saw the phrase (e.g., Apprise page, "
+"Account Page, etc.)."
+msgstr ""
+"Vermeld de pagina of sectie waar je de zin zag (bijv. Instellingenpagina, "
+"Accountsectie)."
+
+#: app/templates/account/translations.html:157
+msgid ""
+"Submit this information via a new GitHub issue so we can add it to the "
+"translation files"
+msgstr ""
+"Stuur deze informatie via een nieuw GitHub-issue zodat we het aan de "
+"vertaalbestanden kunnen toevoegen en het voor Babel kunnen inpakken."
+
+#: app/templates/account/translations.html:166
+msgid "Found a missing translation?"
+msgstr "Een ontbrekende vertaling gevonden?"
+
+#: app/templates/account/translations.html:171
+msgid ""
+"This link will create a new GitHub issue pre-filled with a language code."
+msgstr ""
+"Deze link zal een nieuw GitHub-probleem aanmaken dat vooraf is ingevuld met "
+"een taalcode."
+
+#: app/templates/account/translations.html:172
+msgid "Report it by opening a new GitHub issue"
+msgstr "Rapporteer het door een nieuw GitHub-issue te openen"
+
+#: app/templates/account/translations.html:175
+msgid "Please specify the language code and exact phrase when reporting."
+msgstr ""
+"Specificeer alstublieft de taalcode en exacte zin bij het rapporteren."
+
+#: app/templates/account/translations.html:176
+msgid "Thank you for helping us make Grylli better!"
+msgstr "Bedankt dat je helpt om Grylli beter te maken!"
+
+#: app/templates/admin/create_user.html:14
+msgid "Create New User"
+msgstr "Nieuwe gebruiker aanmaken"
+
+#: app/templates/admin/create_user.html:15
+msgid "Fill out the form to add a new user."
+msgstr "Vul het formulier in om een nieuwe gebruiker toe te voegen."
+
+#: app/templates/admin/create_user.html:21
+#: app/templates/admin/edit_user.html:17 app/templates/auth/bootstrap.html:24
+msgid "Please fix the following errors:"
+msgstr "Corrigeer de volgende fouten:"
+
+#: app/templates/admin/create_user.html:78
+#: app/templates/admin/edit_user.html:93
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "Create User"
+msgstr "Gebruiker aanmaken"
+
+#: app/templates/admin/edit_user.html:10
+#: app/templates/admin/partials/user_card.html:20
+#: app/templates/admin/partials/user_table.html:26
+msgid "Edit User"
+msgstr "Gebruiker bewerken"
+
+#: app/templates/admin/edit_user.html:55 app/templates/admin/edit_user.html:74
+msgid "Hold to show password"
+msgstr "Houd vast om wachtwoord te tonen"
+
+#: app/templates/admin/edit_user.html:85
+#, python-format
+msgid "At least one special character (e.g., !@#$%%)"
+msgstr "Minstens één speciaal teken (bijv. !@#$%%)"
+
+#: app/templates/admin/help.html:4 app/templates/auth/login.html:72
+msgid "Admin Help"
+msgstr "Beheerder Paneel"
+
+#: app/templates/admin/help.html:7
+msgid "Reset Admin Password"
+msgstr "Wachtwoord Resetten"
+
+#: app/templates/admin/help.html:9
+msgid ""
+"If you've forgotten the admin password, you can reset it using the following"
+" Docker command:"
+msgstr ""
+"Als u het beheerderswachtwoord bent vergeten, kunt u het opnieuw instellen "
+"met behulp van het volgende Docker-commando:"
+
+#: app/templates/admin/help.html:15
+msgid ""
+"This script will prompt you to enter a new password for the admin user. You "
+"must run it from the host system where the Grylli container is running."
+msgstr ""
+"Dit script zal u vragen om een nieuw wachtwoord voor de beheerder in te "
+"voeren. U moet het uitvoeren vanaf het hostsysteem waar de Grylli-container "
+"actief is."
+
+#: app/templates/admin/help.html:18
+msgid "After resetting, you can log in with the new password immediately."
+msgstr ""
+"Na het opnieuw instellen kunt u onmiddellijk inloggen met het nieuwe "
+"wachtwoord."
+
+#: app/templates/admin/help.html:24
+msgid "Return to Login"
+msgstr "Terug naar Dashboard"
+
+#: app/templates/admin/help_form.html:6
+msgid "Admin Help Access"
+msgstr "Beheer Help Toegang"
+
+#: app/templates/admin/help_form.html:9
+msgid "Enter your Ferret Key to unlock admin-only help documentation."
+msgstr ""
+"Voer uw Ferret Key in om beheerdersspecifieke helpdocumentatie te "
+"ontgrendelen."
+
+#: app/templates/admin/help_form.html:34
+msgid "How to Find Your FERRET_KEY"
+msgstr "Hoe vind je je FERRET_KEY"
+
+#: app/templates/admin/help_form.html:36
+msgid "The FERRET_KEY is set as an environment variable when running Grylli."
+msgstr ""
+"De FERRET_KEY wordt ingesteld als een omgevingsvariabele bij het uitvoeren "
+"van Grylli."
+
+#: app/templates/admin/help_form.html:39
+msgid "Option 1: Check docker-compose.yml"
+msgstr "Optie 1: Controleer docker-compose.yml"
+
+#: app/templates/admin/help_form.html:46
+msgid "Option 2: Use docker inspect"
+msgstr "Optie 2: Gebruik docker inspect"
+
+#: app/templates/admin/help_form.html:52
+msgid "This shows the FERRET_KEY as passed to the container at runtime."
+msgstr ""
+"Dit toont de FERRET_KEY zoals deze tijdens runtime aan de container is "
+"doorgegeven."
+
+#: app/templates/admin/index.html:10
+msgid "Admin Panel"
+msgstr "Beheerder Paneel"
+
+#: app/templates/admin/index.html:12
+msgid ""
+"Welcome to the Grylli Admin Panel. Use the links below to manage the system."
+msgstr ""
+"Welkom bij het Grylli Beheerder Paneel. Gebruik de onderstaande links om het"
+" systeem te beheren."
+
+#: app/templates/admin/index.html:17
+msgid "Manage Users"
+msgstr "Beheer Gebruikers"
+
+#: app/templates/admin/index.html:18
+msgid "Create, edit, enable/disable, or delete user accounts."
+msgstr "Creëer, bewerk, schakel in/uit, of verwijder gebruikersaccounts."
+
+#: app/templates/admin/index.html:22
+#: app/templates/admin/system_settings.html:10
+#: app/templates/partials/admin_nav.html:52
+msgid "System Settings"
+msgstr "Systeeminstellingen"
+
+#: app/templates/admin/index.html:23
+msgid "View  system-wide environment values."
+msgstr "Bekijk systeemwijde omgevingswaarden."
+
+#: app/templates/admin/index.html:27 app/templates/partials/admin_nav.html:42
+msgid "Backups"
+msgstr "Back-ups"
+
+#: app/templates/admin/index.html:28
+msgid "Create and delete database backups."
+msgstr "Databank Back-ups"
+
+#: app/templates/admin/index.html:33
+msgid "View and test global SMTP settings."
+msgstr "Verzenden van test-e-mail mislukt. Controleer SMTP-instellingen."
+
+#: app/templates/admin/index.html:39
+msgid "View Admin Guide / README on GitHub"
+msgstr "Bekijk Admin Guide / README op GitHub"
+
+#: app/templates/admin/index.html:40
+msgid "Includes setup instructions, integrations, and troubleshooting."
+msgstr "Bevat installatie-instructies, integraties en probleemoplossing."
+
+#: app/templates/admin/index.html:44
+msgid "⚠️ Admin Tips"
+msgstr "⚠️ Beheerders Tips"
+
+#: app/templates/admin/index.html:46
+msgid "Ensure the data folder (database) is backed up on your host"
+msgstr "Zorg ervoor dat de gegevensmap (database) wordt gebackupt op uw host"
+
+#: app/templates/admin/index.html:48
+msgid ""
+"The uploads folder is not per user.  If required per user, you will ndd to "
+"create subdirectoried per user and setup permissions so users can only see "
+"their own folder."
+msgstr ""
+"De uploadmap is niet per gebruiker. Als dit per gebruiker vereist is, moet u"
+" submappen maken per gebruiker en de rechten instellen, zodat gebruikers "
+"alleen hun eigen map kunnen zien."
+
+#: app/templates/admin/index.html:51
+msgid ""
+"To restore a backup: stop the container, replace the data/grylli.db with one"
+" from the backups folder, and restart the container."
+msgstr ""
+"Om een back-up te herstellen: stop de container, vervang de data/grylli.db "
+"met een uit de back-upmap, en start de container opnieuw."
+
+#: app/templates/admin/list_backups.html:11
+msgid "Database Backups"
+msgstr "Databank Back-ups"
+
+#: app/templates/admin/list_backups.html:13
+msgid "Create Backup"
+msgstr "Back-up maken"
+
+#: app/templates/admin/list_backups.html:21
+msgid "Filename"
+msgstr "Bestandsnaam"
+
+#: app/templates/admin/list_backups.html:22
+#: app/templates/admin/partials/user_table.html:14
+#: app/templates/apprise/list_apprise.html:62
+#: app/templates/email/list_emails.html:60
+#: app/templates/messages/list_messages.html:60
+#: app/templates/reminders/list_reminders.html:60
+#: app/templates/user_smtp/list_smtp.html:59
+#: app/templates/webhook/list_webhooks.html:63
+msgid "Actions"
+msgstr "Acties"
+
+#: app/templates/admin/list_backups.html:32
+msgid "Delete this backup?"
+msgstr "Deze back-up verwijderen?"
+
+#: app/templates/admin/list_backups.html:32
+#: app/templates/apprise/list_apprise.html:95
+#: app/templates/apprise/list_apprise.html:99
+#: app/templates/apprise/list_apprise.html:150
+#: app/templates/apprise/list_apprise.html:154
+#: app/templates/email/list_emails.html:124
+#: app/templates/email/list_emails.html:128
+#: app/templates/email/list_emails.html:226
+#: app/templates/email/list_emails.html:230
+#: app/templates/messages/list_messages.html:112
+#: app/templates/messages/list_messages.html:116
+#: app/templates/messages/list_messages.html:198
+#: app/templates/messages/list_messages.html:202
+#: app/templates/reminders/list_reminders.html:107
+#: app/templates/reminders/list_reminders.html:113
+#: app/templates/reminders/list_reminders.html:192
+#: app/templates/reminders/list_reminders.html:198
+#: app/templates/user_smtp/list_smtp.html:101
+#: app/templates/user_smtp/list_smtp.html:169
+#: app/templates/webhook/list_webhooks.html:102
+#: app/templates/webhook/list_webhooks.html:161
+msgid "Delete"
+msgstr "Verwijderen"
+
+#: app/templates/admin/list_backups.html:41
+msgid "No backups found."
+msgstr "Geen back-ups gevonden."
+
+#: app/templates/admin/list_backups.html:44
+msgid ""
+"Backups contain your full app data. Store securely. Sensitive data is "
+"encrypted in the DB by default."
+msgstr ""
+"Back-ups bevatten uw volledige app-gegevens. Bewaar veilig. Gevoelige "
+"gegevens zijn standaard versleuteld in de database."
+
+#: app/templates/admin/smtp_config.html:28
+#: app/templates/admin/system_config.html:22
+msgid "System Configuration"
+msgstr "Systeemconfiguratie"
+
+#: app/templates/admin/smtp_config.html:33
+#: app/templates/admin/system_config.html:26
+#: app/templates/admin/system_settings.html:15
+msgid "Key"
+msgstr "Sleutel"
+
+#: app/templates/admin/smtp_config.html:34
+#: app/templates/admin/system_config.html:27
+#: app/templates/admin/system_settings.html:16
+msgid "Value"
+msgstr "Waarde"
+
+#: app/templates/admin/smtp_config.html:35
+#: app/templates/admin/system_config.html:28
+msgid "Sensitive"
+msgstr "Gevoelig"
+
+#: app/templates/admin/smtp_config.html:36
+#: app/templates/admin/system_config.html:29
+msgid "Editable"
+msgstr "Bewerkbaar"
+
+#: app/templates/admin/smtp_config.html:50
+#: app/templates/admin/smtp_config.html:51
+#: app/templates/admin/system_config.html:45
+#: app/templates/admin/system_config.html:46
+#: app/templates/email/view_config.html:60
+msgid "Yes"
+msgstr "Ja"
+
+#: app/templates/admin/smtp_config.html:50
+#: app/templates/admin/smtp_config.html:51
+#: app/templates/admin/system_config.html:45
+#: app/templates/admin/system_config.html:46
+#: app/templates/email/view_config.html:60
+msgid "No"
+msgstr "Nee"
+
+#: app/templates/admin/smtp_config.html:63
+#: app/templates/admin/system_config.html:55
+msgid "Send Test Email"
+msgstr "Verstuur test-e-mail"
+
+#: app/templates/admin/system_config.html:39
+msgid "decrypted"
+msgstr "Gemaakt"
+
+#: app/templates/admin/partials/user_card.html:12
+msgid "Email:"
+msgstr "Email:"
+
+#: app/templates/admin/partials/user_card.html:15
+msgid "Role:"
+msgstr "Rol:"
+
+#: app/templates/admin/partials/user_card.html:27
+#: app/templates/admin/partials/user_table.html:34
+msgid "Change Role"
+msgstr "Rol wijzigen"
+
+#: app/templates/admin/partials/user_card.html:29
+#: app/templates/admin/partials/user_table.html:36
+msgid "You cannot change your own role"
+msgstr "Je kunt je eigen ingeschakelde status niet wijzigen."
+
+#: app/templates/admin/partials/user_card.html:36
+#: app/templates/admin/partials/user_table.html:43
+msgid "Are you sure you want to reset MFA for this user?"
+msgstr "Weet u zeker dat u MFA voor deze gebruiker wilt resetten?"
+
+#: app/templates/admin/partials/user_card.html:39
+#: app/templates/admin/partials/user_table.html:46
+msgid "Reset MFA"
+msgstr "Wachtwoord Resetten"
+
+#: app/templates/admin/partials/user_card.html:51
+#: app/templates/admin/partials/user_table.html:58
+msgid "Delete user"
+msgstr "Gebruiker verwijderen"
+
+#: app/templates/admin/partials/user_card.html:55
+#: app/templates/admin/partials/user_table.html:61
+msgid "Delete User"
+msgstr "Gebruiker verwijderen"
+
+#: app/templates/admin/partials/user_card.html:58
+#: app/templates/admin/partials/user_table.html:65
+msgid "You cannot disable yourself"
+msgstr "U kunt uzelf niet uitschakelen"
+
+#: app/templates/admin/partials/user_card.html:65
+#: app/templates/admin/partials/user_table.html:72
+msgid "Disable"
+msgstr "Uitschakelen"
+
+#: app/templates/admin/partials/user_card.html:65
+#: app/templates/admin/partials/user_table.html:72
+msgid "Enable"
+msgstr "Inschakelen"
+
+#: app/templates/admin/partials/user_header.html:6
+#: app/templates/partials/admin_nav.html:47
+msgid "Users"
+msgstr "Gebruikers"
+
+#: app/templates/admin/partials/user_header.html:12
+#: app/templates/admin/partials/user_header.html:13
+#: app/templates/apprise/apprise_config.html:10
+#: app/templates/apprise/apprise_config.html:11
+#: app/templates/apprise/list_apprise.html:16
+#: app/templates/apprise/list_apprise.html:17
+#: app/templates/email/list_emails.html:15
+#: app/templates/email/list_emails.html:16
+#: app/templates/messages/list_messages.html:16
+#: app/templates/messages/list_messages.html:17
+#: app/templates/reminders/list_reminders.html:15
+#: app/templates/reminders/list_reminders.html:16
+#: app/templates/user_smtp/list_smtp.html:14
+#: app/templates/user_smtp/list_smtp.html:17
+#: app/templates/webhook/list_webhooks.html:16
+#: app/templates/webhook/list_webhooks.html:17
+#: app/templates/webhook/webhook_config.html:10
+#: app/templates/webhook/webhook_config.html:11
+msgid "Table View"
+msgstr "Tabelweergave"
+
+#: app/templates/admin/partials/user_header.html:26
+#: app/templates/admin/partials/user_header.html:27
+#: app/templates/apprise/apprise_config.html:24
+#: app/templates/apprise/apprise_config.html:25
+#: app/templates/apprise/list_apprise.html:30
+#: app/templates/apprise/list_apprise.html:31
+#: app/templates/email/list_emails.html:29
+#: app/templates/email/list_emails.html:30
+#: app/templates/messages/list_messages.html:30
+#: app/templates/messages/list_messages.html:31
+#: app/templates/reminders/list_reminders.html:29
+#: app/templates/reminders/list_reminders.html:30
+#: app/templates/user_smtp/list_smtp.html:27
+#: app/templates/user_smtp/list_smtp.html:30
+#: app/templates/webhook/list_webhooks.html:30
+#: app/templates/webhook/list_webhooks.html:31
+#: app/templates/webhook/webhook_config.html:24
+#: app/templates/webhook/webhook_config.html:25
+msgid "Card View"
+msgstr "Kaartweergave"
+
+#: app/templates/admin/partials/user_header.html:45
+msgid "Add User"
+msgstr "Gebruiker toevoegen"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:9
+#: app/templates/email/attach_files.html:54
+#: app/templates/email/list_emails.html:255
+#: app/templates/messages/list_messages.html:223
+#: app/templates/reminders/list_reminders.html:218
+#: app/templates/reminders/schedule_reminder.html:56
+msgid "Hide Instructions"
+msgstr "Instructies verbergen"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:9
+msgid "How to manage users"
+msgstr "Hoe gebruikers te beheren"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "Click"
+msgstr "Klik"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+msgid "➕ Add User"
+msgstr "➕ Gebruiker toevoegen"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+msgid "to open the new user form."
+msgstr "om het nieuwe gebruikersformulier te openen."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:18
+msgid "Enter a unique username, valid email address, and strong password."
+msgstr ""
+"Voer een unieke gebruikersnaam, geldig e-mailadres en sterk wachtwoord in."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "Select the appropriate"
+msgstr "Selecteer de juiste"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "role"
+msgstr "rol"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "or"
+msgstr "Poort"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "to save."
+msgstr "om op te slaan."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:25
+msgid "To edit a user, click ✏️ and update their info."
+msgstr "Om een gebruiker te bewerken, klik ✏️ en update hun informatie."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:26
+msgid "To delete a user, click 🗑️ and confirm the deletion."
+msgstr "Om een gebruiker te verwijderen, klik 🗑️ en bevestig de verwijdering."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:28
+msgid "To disable or enable a user, click 🔴 or 🟢."
+msgstr "Om een gebruiker uit te schakelen of in te schakelen, klik 🔴 of 🟢."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:30
+msgid "🟢 = User is enabled and can log in."
+msgstr "🟢 = Gebruiker is ingeschakeld en kan inloggen."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:31
+msgid "🔴 = User is disabled and cannot log in."
+msgstr "🔴 = Gebruiker is uitgeschakeld en kan niet inloggen."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:32
+msgid "⚪ = You cannot disable your own account."
+msgstr "⚪ = U kunt uw eigen account niet uitschakelen."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:43
+#: app/templates/admin/partials/user_table.html:91
+msgid "Assign Role for"
+msgstr "Bestemmingen toewijzen voor"
+
+#: app/templates/admin/partials/user_table.html:10
+msgid "ID"
+msgstr "ID"
+
+#: app/templates/admin/partials/user_table.html:11
+#: app/templates/user_smtp/list_smtp.html:55
+msgid "Username"
+msgstr "Gebruikersnaam"
+
+#: app/templates/admin/partials/user_table.html:12
+msgid "Email"
+msgstr "Email"
+
+#: app/templates/admin/partials/user_table.html:13
+msgid "Role"
+msgstr "Rol"
+
+#: app/templates/apprise/apprise_config.html:3
+#: app/templates/apprise/list_apprise.html:9
+#: app/templates/messages/assign_destinations.html:22
+#: app/templates/reminders/assign_destinations.html:20
+msgid "Apprise Destinations"
+msgstr "Apprise-bestemmingen"
+
+#: app/templates/apprise/apprise_config.html:43
+#: app/templates/webhook/list_webhooks.html:49
+#: app/templates/webhook/webhook_config.html:43
+msgid "Add Webhook"
+msgstr "Webhook toevoegen"
+
+#: app/templates/apprise/apprise_config.html:43
+#: app/templates/apprise/list_apprise.html:49
+#: app/templates/webhook/list_webhooks.html:49
+#: app/templates/webhook/webhook_config.html:43
+msgid "Add Destination"
+msgstr "Voeg bestemming toe"
+
+#: app/templates/apprise/create_apprise.html:10
+msgid "Create Apprise Destination"
+msgstr "Maak Apprise-bestemming"
+
+#: app/templates/apprise/create_apprise.html:38
+#: app/templates/apprise/edit_apprise.html:38
+#: app/templates/user_smtp/create_smtp.html:107
+#: app/templates/webhook/create_webhook.html:44
+#: app/templates/webhook/edit_webhook.html:44
+msgid "Create Destination"
+msgstr "Maak bestemming"
+
+#: app/templates/apprise/create_apprise.html:47
+#: app/templates/apprise/edit_apprise.html:47
+msgid "Need help with Apprise URLs? See the"
+msgstr "Hulp nodig met Apprise-URL's? Zie de"
+
+#: app/templates/apprise/create_apprise.html:51
+#: app/templates/apprise/edit_apprise.html:51
+msgid "Apprise Notification Services documentation"
+msgstr "Apprise Notification Services documentatie"
+
+#: app/templates/apprise/edit_apprise.html:10
+msgid "Edit Apprise Destination"
+msgstr "Bewerk Apprise-bestemming"
+
+#: app/templates/apprise/list_apprise.html:49
+msgid "Add Apprise"
+msgstr "Voeg Apprise toe"
+
+#: app/templates/apprise/list_apprise.html:58
+#: app/templates/email/edit_message.html:21
+#: app/templates/email/list_emails.html:56
+#: app/templates/email/view_config.html:14
+#: app/templates/messages/create_message.html:29
+#: app/templates/messages/edit_message.html:23
+#: app/templates/messages/list_messages.html:57
+#: app/templates/messages/view_message.html:14
+#: app/templates/reminders/create_reminder.html:23
+#: app/templates/reminders/edit_reminder.html:17
+#: app/templates/reminders/list_reminders.html:56
+#: app/templates/reminders/view_reminder.html:13
+#: app/templates/user_smtp/list_smtp.html:52
+#: app/templates/webhook/list_webhooks.html:58
+msgid "Label"
+msgstr "Label"
+
+#: app/templates/apprise/list_apprise.html:59
+msgid "URL"
+msgstr "URL"
+
+#: app/templates/apprise/list_apprise.html:61
+#: app/templates/email/list_emails.html:59
+#: app/templates/messages/list_messages.html:59
+#: app/templates/messages/view_message.html:36
+#: app/templates/reminders/view_reminder.html:47
+#: app/templates/webhook/list_webhooks.html:62
+msgid "Created At"
+msgstr "Aangemaakt op"
+
+#: app/templates/apprise/list_apprise.html:77
+#: app/templates/apprise/list_apprise.html:132
+#: app/templates/user_smtp/list_smtp.html:79
+#: app/templates/user_smtp/list_smtp.html:147
+#: app/templates/webhook/list_webhooks.html:79
+#: app/templates/webhook/list_webhooks.html:138
+msgid "Edit"
+msgstr "Bewerken"
+
+#: app/templates/apprise/list_apprise.html:80
+#: app/templates/apprise/list_apprise.html:135
+#: app/templates/user_smtp/list_smtp.html:82
+#: app/templates/user_smtp/list_smtp.html:150
+msgid "Cannot edit while in use"
+msgstr "Kan niet bewerken terwijl in gebruik"
+
+#: app/templates/apprise/list_apprise.html:88
+#: app/templates/apprise/list_apprise.html:143
+#: app/templates/webhook/list_webhooks.html:91
+#: app/templates/webhook/list_webhooks.html:150
+msgid "Test"
+msgstr "Test"
+
+#: app/templates/apprise/list_apprise.html:103
+#: app/templates/apprise/list_apprise.html:158
+#: app/templates/user_smtp/list_smtp.html:106
+#: app/templates/user_smtp/list_smtp.html:174
+msgid "Cannot delete while in use"
+msgstr "Kan niet verwijderen terwijl in gebruik"
+
+#: app/templates/apprise/list_apprise.html:119
+msgid "URL:"
+msgstr "URL:"
+
+#: app/templates/apprise/list_apprise.html:122
+#: app/templates/user_smtp/list_smtp.html:137
+#: app/templates/webhook/list_webhooks.html:128
+msgid "Enabled:"
+msgstr "Ingeschakeld:"
+
+#: app/templates/apprise/list_apprise.html:125
+#: app/templates/user_smtp/list_smtp.html:140
+#: app/templates/webhook/list_webhooks.html:131
+msgid "Created:"
+msgstr "Aangemaakt:"
+
+#: app/templates/auth/bootstrap.html:14
+msgid "Create Admin Account"
+msgstr "Maak een beheerdersaccount"
+
+#: app/templates/auth/bootstrap.html:16
+msgid "Let’s get started by creating your first admin account."
+msgstr "Laten we beginnen met het maken van uw eerste beheerdersaccount."
+
+#: app/templates/auth/bootstrap.html:75
+msgid "Create Admin"
+msgstr "Maak Admin"
+
+#: app/templates/auth/forgot_password.html:12
+msgid "Forgot Password"
+msgstr "Wachtwoord vergeten"
+
+#: app/templates/auth/forgot_password.html:15
+msgid ""
+"Enter your username and email. We'll send you a link to reset your password."
+msgstr ""
+"Voer uw gebruikersnaam en e-mail in. We sturen u een link om uw wachtwoord "
+"te resetten."
+
+#: app/templates/auth/forgot_username.html:12
+msgid "Forgot Username"
+msgstr "Gebruikersnaam vergeten"
+
+#: app/templates/auth/forgot_username.html:15
+msgid "Enter your email address, and we'll send you your username."
+msgstr "Voer uw e-mailadres in, en we sturen u uw gebruikersnaam."
+
+#: app/templates/auth/forgot_username.html:40
+msgid "Send Username"
+msgstr "Stuur Gebruikersnaam"
+
+#: app/templates/auth/login.html:12 app/templates/auth/login.html:54
+msgid "Log In"
+msgstr "Inloggen"
+
+#: app/templates/auth/login.html:62
+msgid "Forgot Username?"
+msgstr "Gebruikersnaam vergeten?"
+
+#: app/templates/auth/login.html:64
+msgid "Forgot Password?"
+msgstr "Wachtwoord vergeten?"
+
+#: app/templates/auth/login.html:66 app/templates/auth/signup.html:12
+msgid "Sign Up"
+msgstr "Aanmelden"
+
+#: app/templates/auth/rate_limit.html:9
+msgid "Hold On"
+msgstr "Even geduld"
+
+#: app/templates/auth/rate_limit.html:11
+msgid "Too many failed login attempts. Please wait"
+msgstr "Te veel mislukte inlogpogingen. Wacht alstublieft"
+
+#: app/templates/auth/rate_limit.html:13
+msgid "seconds..."
+msgstr "seconden..."
+
+#: app/templates/auth/rate_limit.html:15
+msgid "Redirecting to login..."
+msgstr "Terug naar Dashboard"
+
+#: app/templates/auth/reset_password.html:12
+#: app/templates/auth/reset_password.html:116
+msgid "Reset Password"
+msgstr "Wachtwoord Resetten"
+
+#: app/templates/auth/reset_password.html:14
+msgid "Enter your username, email, and new password."
+msgstr "Voer uw gebruikersnaam, e-mail en nieuw wachtwoord in."
+
+#: app/templates/auth/signup.html:14
+msgid "Fill out the form to create your account."
+msgstr "Vul het formulier in om uw account aan te maken."
+
+#: app/templates/checkin/already_checked_in.html:10
+msgid "Already Checked In"
+msgstr "Laatste incheck"
+
+#: app/templates/checkin/already_checked_in.html:12
+msgid ""
+"You have already checked in for this item. No further action is needed at "
+"this time."
+msgstr ""
+"U heeft al ingecheckt voor dit item. Er zijn momenteel geen verdere acties "
+"nodig."
+
+#: app/templates/checkin/already_checked_in.html:16
+#: app/templates/checkin/disabled.html:16
+#: app/templates/checkin/executed_disabled.html:18
+msgid "Check-in for:"
+msgstr "Ingecheckt voor:"
+
+#: app/templates/checkin/already_checked_in.html:21
+#: app/templates/checkin/disabled.html:21
+#: app/templates/checkin/executed_disabled.html:23
+#: app/templates/checkin/thank_you.html:19
+msgid "Return to Dashboard"
+msgstr "Terug naar Dashboard"
+
+#: app/templates/checkin/disabled.html:10
+msgid "Check-In Disabled"
+msgstr "E-mail is uitgeschakeld"
+
+#: app/templates/checkin/disabled.html:12
+msgid "This check-in is currently disabled and cannot be completed."
+msgstr "Deze check-in is momenteel uitgeschakeld en kan niet worden voltooid."
+
+#: app/templates/checkin/executed_disabled.html:11
+msgid "Already Executed & Disabled"
+msgstr "Al Uitgevoerd & Uitgeschakeld"
+
+#: app/templates/checkin/executed_disabled.html:14
+msgid ""
+"This check-in has already been executed and is now disabled. No further "
+"action is required."
+msgstr ""
+"Deze check-in is al uitgevoerd en is nu uitgeschakeld. Er is geen verdere "
+"actie vereist."
+
+#: app/templates/checkin/thank_you.html:10
+msgid "Check-In Successful"
+msgstr "Inchecken Succesvol"
+
+#: app/templates/checkin/thank_you.html:11
+msgid "Thank you for checking in."
+msgstr "Bedankt voor het inchecken."
+
+#: app/templates/checkin/thank_you.html:14
+msgid "Checked in for:"
+msgstr "Ingecheckt voor:"
+
+#: app/templates/email/assign_smtp.html:11
+msgid "📧 Assign SMTP Config to:"
+msgstr "📧 SMTP-configuratie toewijzen aan:"
+
+#: app/templates/email/assign_smtp.html:25
+msgid "No SMTP (Unassign)"
+msgstr "Geen SMTP-configuratie toegewezen"
+
+#: app/templates/email/assign_smtp.html:26
+msgid "This email will not use any SMTP configuration."
+msgstr "Deze e-mail zal geen enkele SMTP-configuratie gebruiken."
+
+#: app/templates/email/attach_files.html:12
+msgid "Attach Files for:"
+msgstr "Bestanden bijvoegen voor:"
+
+#: app/templates/email/attach_files.html:21
+msgid "Available Files"
+msgstr "Beschikbare Bestanden"
+
+#: app/templates/email/attach_files.html:36
+msgid "No files found in the upload directory."
+msgstr "Geen bestanden gevonden in de uploadmap."
+
+#: app/templates/email/attach_files.html:44
+msgid "Save Attachments"
+msgstr "Bijlagen Opslaan"
+
+#: app/templates/email/attach_files.html:54
+msgid "File Attach Notes"
+msgstr "Bijlage Notities"
+
+#: app/templates/email/attach_files.html:63
+msgid "Important:"
+msgstr "Poort:"
+
+#: app/templates/email/attach_files.html:65
+msgid ""
+"Only files that are present in the 'uploads' folder (provided by your system"
+" administrator) will be shown here. If you do not see your file(s), please "
+"contact your Grylli administrator."
+msgstr ""
+"Alleen bestanden die aanwezig zijn in de 'uploads'-map (geleverd door uw "
+"systeembeheerder) worden hier getoond. Als u uw bestand(en) niet ziet, neem "
+"dan contact op met uw Grylli-beheerder."
+
+#: app/templates/email/attach_files.html:69
+msgid "Accepted file types:"
+msgstr "Geaccepteerde bestandstypen:"
+
+#: app/templates/email/attach_files.html:71
+msgid "Documents:"
+msgstr "Documenten:"
+
+#: app/templates/email/attach_files.html:73
+msgid "Images:"
+msgstr "Afbeeldingen:"
+
+#: app/templates/email/attach_files.html:75
+msgid "Audio:"
+msgstr "Audio:"
+
+#: app/templates/email/attach_files.html:79
+msgid "Maximum file size:"
+msgstr "Maximale bestandsgrootte:"
+
+#: app/templates/email/attach_files.html:80
+msgid "10 MB per file"
+msgstr "10 MB per bestand"
+
+#: app/templates/email/attach_files.html:83
+msgid "Total upload size:"
+msgstr "Totale uploadgrootte:"
+
+#: app/templates/email/attach_files.html:84
+msgid "20 MB (all files combined)"
+msgstr "20 MB (alle bestanden samen)"
+
+#: app/templates/email/edit_message.html:12
+#: app/templates/email/list_emails.html:75
+#: app/templates/email/list_emails.html:177
+msgid "Edit Email"
+msgstr "E-mail Bewerken"
+
+#: app/templates/email/edit_message.html:12
+msgid "Create Email"
+msgstr "E-mail Maken"
+
+#: app/templates/email/edit_message.html:28
+msgid "To (Recipient Email)"
+msgstr "Aan (Ontvanger e-mail)"
+
+#: app/templates/email/edit_message.html:35
+#: app/templates/email/list_emails.html:57
+#: app/templates/email/view_config.html:18
+#: app/templates/messages/create_message.html:36
+#: app/templates/messages/edit_message.html:30
+#: app/templates/messages/list_messages.html:58
+#: app/templates/messages/view_message.html:18
+#: app/templates/reminders/create_reminder.html:30
+#: app/templates/reminders/edit_reminder.html:24
+#: app/templates/reminders/list_reminders.html:57
+#: app/templates/reminders/view_reminder.html:17
+msgid "Subject"
+msgstr "Onderwerp"
+
+#: app/templates/email/edit_message.html:42
+#: app/templates/email/view_config.html:28
+msgid "Body"
+msgstr "Inhoud"
+
+#: app/templates/email/edit_message.html:50
+msgid "Save Email"
+msgstr "E-mail Opslaan"
+
+#: app/templates/email/list_emails.html:48
+msgid "Add Email"
+msgstr "E-mail Toevoegen"
+
+#: app/templates/email/list_emails.html:58
+#: app/templates/reminders/assign_email_reminder.html:77
+msgid "To"
+msgstr "Aan"
+
+#: app/templates/email/list_emails.html:78
+#: app/templates/email/list_emails.html:180
+msgid "Disable to edit email"
+msgstr "Verzenden van test-e-mail mislukt:"
+
+#: app/templates/email/list_emails.html:84
+#: app/templates/email/list_emails.html:186
+msgid "Attach Files"
+msgstr "Bestanden Bijvoegen"
+
+#: app/templates/email/list_emails.html:87
+#: app/templates/email/list_emails.html:189
+msgid "Disable to attach files"
+msgstr "Bestanden Bijvoegen"
+
+#: app/templates/email/list_emails.html:93
+#: app/templates/email/list_emails.html:195
+msgid "Attach SMTP Config"
+msgstr "SMTP-configuratie Bijvoegen"
+
+#: app/templates/email/list_emails.html:96
+#: app/templates/email/list_emails.html:198
+msgid "Disable to assign SMTP"
+msgstr "Uitschakelen om SMTP toe te wijzen"
+
+#: app/templates/email/list_emails.html:102
+#: app/templates/email/list_emails.html:204
+msgid "Schedule Check-In"
+msgstr "Inchecken Inplannen"
+
+#: app/templates/email/list_emails.html:105
+#: app/templates/email/list_emails.html:207
+msgid "Disable to schedule check-in"
+msgstr "Inchecken Inplannen"
+
+#: app/templates/email/list_emails.html:110
+#: app/templates/email/list_emails.html:212
+#: app/templates/messages/list_messages.html:99
+#: app/templates/messages/list_messages.html:184
+#: app/templates/reminders/list_reminders.html:93
+#: app/templates/reminders/list_reminders.html:178
+msgid "View Details"
+msgstr "Details Bekijken"
+
+#: app/templates/email/list_emails.html:118
+#: app/templates/email/list_emails.html:220
+msgid "Send this email to yourself to preview it."
+msgstr "Stuur deze e-mail naar uzelf om een voorbeeld te bekijken."
+
+#: app/templates/email/list_emails.html:136
+#: app/templates/email/list_emails.html:238
+msgid "Toggle Email On/Off"
+msgstr "E-mail In-/Uitschakelen"
+
+#: app/templates/email/list_emails.html:139
+#: app/templates/email/list_emails.html:241
+msgid "Email is enabled"
+msgstr "E-mail is ingeschakeld"
+
+#: app/templates/email/list_emails.html:141
+#: app/templates/email/list_emails.html:243
+msgid "Email is disabled"
+msgstr "E-mail is uitgeschakeld"
+
+#: app/templates/email/list_emails.html:157
+#: app/templates/email/view_config.html:51
+#: app/templates/messages/list_messages.html:142
+#: app/templates/reminders/list_reminders.html:140
+msgid "Label:"
+msgstr "Label:"
+
+#: app/templates/email/list_emails.html:161
+#: app/templates/messages/list_messages.html:146
+#: app/templates/reminders/list_reminders.html:144
+#: app/templates/reminders/view_reminder.html:98
+msgid "Subject:"
+msgstr "Onderwerp"
+
+#: app/templates/email/list_emails.html:165
+msgid "To:"
+msgstr "Naar:"
+
+#: app/templates/email/list_emails.html:169
+#: app/templates/messages/list_messages.html:150
+msgid "Created At:"
+msgstr "Aangemaakt op"
+
+#: app/templates/email/list_emails.html:255
+msgid "How to create and send an email"
+msgstr "Hoe maak je een e-mail en stuur je deze"
+
+#: app/templates/email/list_emails.html:262
+msgid ""
+"Click “Add Email” and fill out the subject, content, and recipient address."
+msgstr ""
+"Klik op “E-mail toevoegen” en vul het onderwerp, de inhoud en het "
+"ontvangeradres in."
+
+#: app/templates/email/list_emails.html:263
+msgid "Attach any optional files (if needed)."
+msgstr "Voeg eventuele optionele bestanden toe (indien nodig)."
+
+#: app/templates/email/list_emails.html:264
+msgid ""
+"Click 🧩 to assign a single SMTP configuration that will be used to send the "
+"email."
+msgstr ""
+"Klik op 🧩 om een enkele SMTP-configuratie toe te wijzen die gebruikt zal "
+"worden om de e-mail te verzenden."
+
+#: app/templates/email/list_emails.html:265
+msgid "Click ⏱️ to set a check-in interval and grace period for the email."
+msgstr ""
+"Klik op ⏱️ om een incheckinterval en respijtperiode voor de e-mail in te "
+"stellen."
+
+#: app/templates/email/list_emails.html:266
+msgid "Enable the email using the 🔴/🟢 toggle button."
+msgstr "Schakel de e-mail in met de 🔴/🟢 schakelknop."
+
+#: app/templates/email/list_emails.html:267
+msgid ""
+"Click 🧪 to test the email by sending it to yourself (not the recipient)."
+msgstr ""
+"Klik op 🧪 om de e-mail te testen door deze naar jezelf te sturen (niet naar "
+"de ontvanger)."
+
+#: app/templates/email/list_emails.html:268
+msgid ""
+"If you don’t check in before the grace period ends, the email will be "
+"automatically sent."
+msgstr ""
+"Als je niet incheckt voordat de respijtperiode eindigt, wordt de e-mail "
+"automatisch verzonden."
+
+#: app/templates/email/list_emails.html:269
+msgid "You can preview the email configuration using 🔍."
+msgstr "Je kunt de e-mailconfiguratie bekijken met 🔍."
+
+#: app/templates/email/list_emails.html:270
+msgid "Once a secure email is sent, it will be automatically disabled."
+msgstr ""
+"Zodra een beveiligde e-mail is verzonden, wordt deze automatisch "
+"uitgeschakeld."
+
+#: app/templates/email/schedule_email.html:9
+msgid "Schedule Email"
+msgstr "E-mail inplannen"
+
+#: app/templates/email/schedule_email.html:18
+#: app/templates/messages/schedule_message.html:18
+msgid "Years"
+msgstr "Jaren"
+
+#: app/templates/email/schedule_email.html:19
+#: app/templates/messages/schedule_message.html:19
+msgid "Months"
+msgstr "Maanden"
+
+#: app/templates/email/schedule_email.html:20
+#: app/templates/messages/schedule_message.html:20
+msgid "Weeks"
+msgstr "Weken"
+
+#: app/templates/email/schedule_email.html:21
+#: app/templates/messages/schedule_message.html:21
+msgid "Days"
+msgstr "Dagen"
+
+#: app/templates/email/schedule_email.html:22
+#: app/templates/messages/schedule_message.html:22
+msgid "Hours"
+msgstr "Uren"
+
+#: app/templates/email/schedule_email.html:23
+#: app/templates/messages/schedule_message.html:23
+msgid "Minutes"
+msgstr "Minuten"
+
+#: app/templates/email/schedule_email.html:28
+#: app/templates/messages/schedule_message.html:28
+msgid "Check-in"
+msgstr "Inchecken"
+
+#: app/templates/email/schedule_email.html:51
+#: app/templates/messages/schedule_message.html:51
+#: app/templates/messages/view_message.html:26
+msgid "Grace Period"
+msgstr "Respijtperiode"
+
+#: app/templates/email/schedule_email.html:80
+#: app/templates/messages/schedule_message.html:80
+#: app/templates/reminders/schedule_reminder.html:47
+msgid "Save Schedule"
+msgstr "Opslaan planning"
+
+#: app/templates/email/view_config.html:9
+msgid "Email Configuration"
+msgstr "E-mailconfiguratie"
+
+#: app/templates/email/view_config.html:22
+msgid "Recipient"
+msgstr "Ontvanger"
+
+#: app/templates/email/view_config.html:33
+msgid "Attached Files"
+msgstr "Bijgevoegde bestanden"
+
+#: app/templates/email/view_config.html:39
+msgid "No files attached"
+msgstr "Geen bestanden bijgevoegd"
+
+#: app/templates/email/view_config.html:46
+#: app/templates/reminders/assign_email_reminder.html:20
+msgid "SMTP Configuration"
+msgstr "SMTP-configuratie"
+
+#: app/templates/email/view_config.html:54
+#: app/templates/user_smtp/list_smtp.html:122
+msgid "Host:"
+msgstr "Host:"
+
+#: app/templates/email/view_config.html:57
+#: app/templates/user_smtp/list_smtp.html:128
+msgid "Username:"
+msgstr "Gebruikersnaam:"
+
+#: app/templates/email/view_config.html:60
+#: app/templates/user_smtp/list_smtp.html:134
+msgid "TLS:"
+msgstr "TLS:"
+
+#: app/templates/email/view_config.html:64
+msgid "No SMTP configuration assigned"
+msgstr "Geen SMTP-configuratie toegewezen"
+
+#: app/templates/email/view_config.html:69
+msgid "Schedule Information"
+msgstr "Informatie over planning"
+
+#: app/templates/email/view_config.html:72
+msgid "Check-in Interval:"
+msgstr "Incheckinterval:"
+
+#: app/templates/email/view_config.html:72
+#: app/templates/email/view_config.html:75
+msgid "minutes"
+msgstr "minuten"
+
+#: app/templates/email/view_config.html:75
+msgid "Grace Period:"
+msgstr "Respijtperiode:"
+
+#: app/templates/email/view_config.html:79
+msgid "Last Check-in:"
+msgstr "Laatste check-in:"
+
+#: app/templates/email/view_config.html:82
+msgid "No check-in has occurred yet"
+msgstr "Er heeft nog geen check-in plaatsgevonden"
+
+#: app/templates/email/view_config.html:92
+msgid "Back to Emails"
+msgstr "Terug naar e-mails"
+
+#: app/templates/errors/500.html:4
+msgid "Something went wrong"
+msgstr "Er ging iets mis"
+
+#: app/templates/errors/500.html:6
+msgid ""
+"An unexpected error occurred. Please try again later or contact support."
+msgstr ""
+"Er is een onverwachte fout opgetreden. Probeer het later opnieuw of neem "
+"contact op met ondersteuning."
+
+#: app/templates/locale/redirect_after_lang_set.html:15
+msgid "Switching Language..."
+msgstr "Taal wijzigen..."
+
+#: app/templates/locale/redirect_after_lang_set.html:18
+msgid "Applying new language..."
+msgstr "Nieuwe taal toepassen..."
+
+#: app/templates/messages/assign_destinations.html:13
+#: app/templates/reminders/assign_destinations.html:12
+msgid "Assign Destinations for"
+msgstr "Bestemmingen toewijzen voor"
+
+#: app/templates/messages/assign_destinations.html:62
+#: app/templates/reminders/assign_destinations.html:60
+msgid "Save Destinations"
+msgstr "Bestemmingen opslaan"
+
+#: app/templates/messages/create_message.html:17
+msgid "Edit Notificaton"
+msgstr "Melding bewerken"
+
+#: app/templates/messages/create_message.html:19
+msgid "Create Notification"
+msgstr "Melding aanmaken"
+
+#: app/templates/messages/create_message.html:43
+#: app/templates/messages/edit_message.html:37
+#: app/templates/messages/view_message.html:42
+#: app/templates/reminders/create_reminder.html:37
+#: app/templates/reminders/edit_reminder.html:31
+#: app/templates/reminders/view_reminder.html:53
+msgid "Content"
+msgstr "Inhoud"
+
+#: app/templates/messages/create_message.html:51
+msgid "Save Notification"
+msgstr "Melding opslaan"
+
+#: app/templates/messages/edit_message.html:15
+#: app/templates/messages/list_messages.html:74
+#: app/templates/messages/list_messages.html:158
+msgid "Edit Notification"
+msgstr "Melding bewerken"
+
+#: app/templates/messages/edit_message.html:45
+msgid "Update Notification"
+msgstr "Melding bijwerken"
+
+#: app/templates/messages/list_messages.html:49
+msgid "Add Notification"
+msgstr "Melding toevoegen"
+
+#: app/templates/messages/list_messages.html:77
+#: app/templates/messages/list_messages.html:161
+msgid "Disable to edit notification"
+msgstr "Melding bewerken"
+
+#: app/templates/messages/list_messages.html:83
+#: app/templates/messages/list_messages.html:167
+#: app/templates/reminders/list_reminders.html:78
+#: app/templates/reminders/list_reminders.html:163
+msgid "Assign Destinations"
+msgstr "Bestemmingen toewijzen"
+
+#: app/templates/messages/list_messages.html:86
+#: app/templates/messages/list_messages.html:170
+msgid "Disable to assign destinations"
+msgstr "Bestemmingen toewijzen"
+
+#: app/templates/messages/list_messages.html:92
+#: app/templates/messages/list_messages.html:176
+#: app/templates/reminders/list_reminders.html:88
+#: app/templates/reminders/list_reminders.html:173
+msgid "Set Schedule"
+msgstr "Planning instellen"
+
+#: app/templates/messages/list_messages.html:95
+#: app/templates/messages/list_messages.html:179
+msgid "Disable to set schedule"
+msgstr "Planning instellen"
+
+#: app/templates/messages/list_messages.html:107
+#: app/templates/messages/list_messages.html:192
+msgid "Send Test Notification"
+msgstr "Melding bewerken"
+
+#: app/templates/messages/list_messages.html:122
+#: app/templates/messages/list_messages.html:209
+msgid "Toggle Message On/Off"
+msgstr "Bericht in-/uitschakelen"
+
+#: app/templates/messages/list_messages.html:124
+#: app/templates/messages/list_messages.html:211
+msgid "Notification is enabled"
+msgstr "Melding is ingeschakeld"
+
+#: app/templates/messages/list_messages.html:126
+#: app/templates/messages/list_messages.html:213
+msgid "Notification is disabled"
+msgstr "Melding is uitgeschakeld"
+
+#: app/templates/messages/list_messages.html:223
+msgid "How to create and send a notification"
+msgstr "Hoe een melding te maken en te verzenden"
+
+#: app/templates/messages/list_messages.html:233
+msgid "Click “Add notification” and fill out the subject and content fields."
+msgstr ""
+"Klik op “Melding toevoegen” en vul de velden voor onderwerp en inhoud in."
+
+#: app/templates/messages/list_messages.html:234
+msgid "Save the notification to return to the overview."
+msgstr "Sla de melding op om terug te keren naar het overzicht."
+
+#: app/templates/messages/list_messages.html:235
+msgid "You need to create at least one apprise or webhook destination."
+msgstr "U moet ten minste één apprise- of webhookbestemming maken."
+
+#: app/templates/messages/list_messages.html:236
+msgid "You can create as many destinations as you like."
+msgstr "U kunt zoveel bestemmingen maken als u wilt."
+
+#: app/templates/messages/list_messages.html:237
+msgid "Click 🧩 to assign one or more Apprise and/or Webhook destinations."
+msgstr ""
+"Klik op 🧩 om een of meer Apprise- en/of Webhook-bestemmingen toe te wijzen."
+
+#: app/templates/messages/list_messages.html:238
+msgid "Click ⏱️ to set a schedule and check-in interval."
+msgstr "Klik op ⏱️ om een planning en incheckinterval in te stellen."
+
+#: app/templates/messages/list_messages.html:239
+msgid "Enable the notification using the 🔴/🟢 toggle button."
+msgstr "Schakel de melding in met de 🔴/🟢 toggleknop."
+
+#: app/templates/messages/list_messages.html:240
+msgid ""
+"If you don’t check in before the grace period ends, the notification will be"
+" sent."
+msgstr ""
+"Als u niet incheckt voordat de respijtperiode eindigt, wordt de melding "
+"verzonden."
+
+#: app/templates/messages/list_messages.html:241
+msgid "You can preview the notification config using 🔍."
+msgstr "U kunt de meldingconfiguratie bekijken met 🔍."
+
+#: app/templates/messages/list_messages.html:242
+msgid "Once a notification is sent, it will be automatically disabled."
+msgstr "Zodra een melding is verzonden, wordt deze automatisch uitgeschakeld."
+
+#: app/templates/messages/schedule_message.html:9
+msgid "Schedule Message"
+msgstr "Bericht plannen"
+
+#: app/templates/messages/view_message.html:9
+msgid "Notifications Details"
+msgstr "Meldingsdetails"
+
+#: app/templates/messages/view_message.html:22
+msgid "Check-in Interval"
+msgstr "Incheckinterval"
+
+#: app/templates/messages/view_message.html:31
+msgid "Last Check-in"
+msgstr "Laatste incheck"
+
+#: app/templates/messages/view_message.html:48
+#: app/templates/reminders/view_reminder.html:59
+msgid "Apprise URLs"
+msgstr "Apprise-URLs"
+
+#: app/templates/messages/view_message.html:54
+#: app/templates/messages/view_message.html:64
+#: app/templates/reminders/view_reminder.html:65
+#: app/templates/reminders/view_reminder.html:75
+#: app/templates/reminders/view_reminder.html:85
+msgid "None assigned."
+msgstr "Geen toegewezen."
+
+#: app/templates/messages/view_message.html:73
+msgid "Back to Notifications"
+msgstr "Terug naar meldingen"
+
+#: app/templates/mfa/challenge.html:5 app/templates/mfa/settings.html:5
+msgid "Two-Factor Authentication (MFA)"
+msgstr "Twee-factor authenticatie (MFA)"
+
+#: app/templates/mfa/recovery_codes.html:4
+msgid "Your Recovery Codes"
+msgstr "Uw herstelcodes"
+
+#: app/templates/mfa/recovery_codes.html:7
+msgid "Save these recovery codes in a safe place!"
+msgstr "Bewaar deze herstelcodes op een veilige plaats!"
+
+#: app/templates/mfa/recovery_codes.html:10
+msgid ""
+"Each code can be used once if you lose access to your authenticator. These "
+"codes will not be shown again."
+msgstr ""
+"Elke code kan eenmalig worden gebruikt als u de toegang tot uw authenticator"
+" verliest. Deze codes worden niet opnieuw getoond."
+
+#: app/templates/mfa/recovery_codes.html:24
+msgid "OK, I've saved them"
+msgstr "OK, ik heb ze opgeslagen"
+
+#: app/templates/mfa/settings.html:12
+msgid "MFA QR Code"
+msgstr "MFA QR-code"
+
+#: app/templates/mfa/settings.html:15
+msgid "Manual Entry:"
+msgstr "Handmatige invoer:"
+
+#: app/templates/partials/admin_nav.html:21
+msgid "Administration"
+msgstr "Administratie"
+
+#: app/templates/partials/admin_nav.html:37
+#: app/templates/partials/shared_nav.html:34
+#: app/templates/partials/shared_nav.html:78
+#: app/templates/partials/shared_nav.html:117
+msgid "Overview"
+msgstr "Overzicht"
+
+#: app/templates/partials/footer.html:7
+msgid "Toggle Theme"
+msgstr "Thema wisselen"
+
+#: app/templates/partials/footer.html:32
+msgid "Theme"
+msgstr "Thema"
+
+#: app/templates/partials/head.html:7
+msgid "Grylli"
+msgstr "Grylli"
+
+#: app/templates/partials/header.html:6 app/templates/partials/sidebar.html:32
+#: app/templates/partials/sidebar.html:66
+msgid "Home"
+msgstr "Startpagina"
+
+#: app/templates/partials/header.html:55
+msgid "Account"
+msgstr "Account"
+
+#: app/templates/partials/header.html:61
+msgid "MFA"
+msgstr "MFA"
+
+#: app/templates/partials/header.html:67
+msgid "About"
+msgstr "Over"
+
+#: app/templates/partials/header.html:73
+msgid "Privacy"
+msgstr "Privacy"
+
+#: app/templates/partials/header.html:79
+msgid "System Info"
+msgstr "Systeeminfo"
+
+#: app/templates/partials/header.html:114
+msgid "Logout"
+msgstr "Uitloggen"
+
+#: app/templates/partials/shared_nav.html:33
+msgid "Overview of notification settings"
+msgstr "Overzicht van meldingsinstellingen"
+
+#: app/templates/partials/shared_nav.html:38
+msgid "Configure Apprise services"
+msgstr "Apprise-services configureren"
+
+#: app/templates/partials/shared_nav.html:39
+msgid "Apprise"
+msgstr "Apprise"
+
+#: app/templates/partials/shared_nav.html:43
+msgid "Configure Webhook integrations"
+msgstr "Webhook-integraties configureren"
+
+#: app/templates/partials/shared_nav.html:77
+msgid "Overview of secure email messages"
+msgstr "Overzicht van beveiligde e-mailberichten"
+
+#: app/templates/partials/shared_nav.html:82
+msgid "Configure SMTP email settings"
+msgstr "SMTP-e-mailinstellingen configureren"
+
+#: app/templates/partials/shared_nav.html:83
+#: app/templates/reminders/view_reminder.html:79
+msgid "SMTP"
+msgstr "SMTP"
+
+#: app/templates/partials/shared_nav.html:100
+#: app/templates/reminders/list_reminders.html:8
+msgid "Reminders"
+msgstr "minuten"
+
+#: app/templates/partials/shared_nav.html:116
+msgid "Overview of reminders"
+msgstr "Overzicht van herinneringen"
+
+#: app/templates/partials/sidebar.html:13
+#: app/templates/partials/sidebar.html:47
+msgid "Menu"
+msgstr "Menu"
+
+#: app/templates/reminders/assign_email_reminder.html:12
+msgid "Link Email Reminder for"
+msgstr "Koppel E-mailherinnering voor"
+
+#: app/templates/reminders/assign_email_reminder.html:30
+#: app/templates/reminders/assign_email_reminder.html:64
+msgid "None (Unassign)"
+msgstr "Geen SMTP-configuratie toegewezen"
+
+#: app/templates/reminders/assign_email_reminder.html:43
+msgid "No sender address"
+msgstr "Geen afzenderadres"
+
+#: app/templates/reminders/assign_email_reminder.html:54
+msgid "Email Message"
+msgstr "Bericht plannen"
+
+#: app/templates/reminders/assign_email_reminder.html:77
+msgid "No subject"
+msgstr "Onderwerp"
+
+#: app/templates/reminders/assign_email_reminder.html:90
+msgid "Save Email Reminder"
+msgstr "E-mail Opslaan"
+
+#: app/templates/reminders/create_reminder.html:12
+#: app/templates/reminders/edit_reminder.html:10
+#: app/templates/reminders/list_reminders.html:73
+#: app/templates/reminders/list_reminders.html:158
+msgid "Edit Reminder"
+msgstr "E-mail Bewerken"
+
+#: app/templates/reminders/create_reminder.html:14
+msgid "Create Reminder"
+msgstr "E-mail Maken"
+
+#: app/templates/reminders/create_reminder.html:45
+msgid "Save Reminder"
+msgstr "E-mail Opslaan"
+
+#: app/templates/reminders/edit_reminder.html:39
+msgid "Update Reminder"
+msgstr "Herinnering bijwerken"
+
+#: app/templates/reminders/list_reminders.html:48
+msgid "Add Reminder"
+msgstr "E-mail Toevoegen"
+
+#: app/templates/reminders/list_reminders.html:58
+#: app/templates/reminders/view_reminder.html:21
+msgid "Start At"
+msgstr "TLS starten"
+
+#: app/templates/reminders/list_reminders.html:59
+msgid "Recurrence"
+msgstr "Herhaling"
+
+#: app/templates/reminders/list_reminders.html:69
+#: app/templates/reminders/list_reminders.html:153
+#: app/templates/reminders/view_reminder.html:26
+msgid "One-time"
+msgstr "Eenmalig"
+
+#: app/templates/reminders/list_reminders.html:83
+msgid "Assign Email Reminder"
+msgstr "Wijs E-mailherinnering toe"
+
+#: app/templates/reminders/list_reminders.html:102
+#: app/templates/reminders/list_reminders.html:187
+msgid "Send Test Reminder"
+msgstr "Verstuur test-e-mail"
+
+#: app/templates/reminders/list_reminders.html:120
+#: app/templates/reminders/list_reminders.html:205
+msgid "Toggle Reminder On/Off"
+msgstr "E-mail In-/Uitschakelen"
+
+#: app/templates/reminders/list_reminders.html:122
+#: app/templates/reminders/list_reminders.html:207
+msgid "Reminder is enabled"
+msgstr "E-mail is ingeschakeld"
+
+#: app/templates/reminders/list_reminders.html:124
+#: app/templates/reminders/list_reminders.html:209
+msgid "Reminder is disabled"
+msgstr "E-mail is uitgeschakeld"
+
+#: app/templates/reminders/list_reminders.html:148
+msgid "Start At:"
+msgstr "TLS starten"
+
+#: app/templates/reminders/list_reminders.html:152
+msgid "Recurrence:"
+msgstr "Herhaling:"
+
+#: app/templates/reminders/list_reminders.html:168
+msgid "Link Email Reminder"
+msgstr "Koppel E-mailherinnering"
+
+#: app/templates/reminders/list_reminders.html:218
+msgid "How to use reminders"
+msgstr "Hoe gebruikers te beheren"
+
+#: app/templates/reminders/list_reminders.html:231
+msgid "➕ Click “Add Reminder” and fill out the subject and content fields."
+msgstr ""
+"Klik op “Melding toevoegen” en vul de velden voor onderwerp en inhoud in."
+
+#: app/templates/reminders/list_reminders.html:232
+msgid "💾 Save the reminder to return to the overview."
+msgstr "Sla de melding op om terug te keren naar het overzicht."
+
+#: app/templates/reminders/list_reminders.html:233
+msgid ""
+"📣 Assign Apprise, 🌐 Webhook, and/or 📧 Email (SMTP) destinations as needed."
+msgstr ""
+"📣 Wijs Apprise, 🌐 Webhook en/of 📧 E-mail (SMTP)-bestemmingen toe indien "
+"nodig."
+
+#: app/templates/reminders/list_reminders.html:234
+msgid ""
+"⏱️ Set the schedule using the schedule button to define when reminders are "
+"sent."
+msgstr ""
+"⏱️ Stel het schema in met de schema-knop om te bepalen wanneer herinneringen"
+" worden verzonden."
+
+#: app/templates/reminders/list_reminders.html:235
+msgid ""
+"🔍 Click “View Details” to review or edit assigned destinations and other "
+"settings."
+msgstr ""
+"🔍 Klik op “Details bekijken” om toegewezen bestemmingen en andere "
+"instellingen te bekijken of te bewerken."
+
+#: app/templates/reminders/list_reminders.html:236
+msgid ""
+"🧪 Click the Test button to verify all assigned destinations are working "
+"correctly."
+msgstr ""
+"🧪 Klik op de Test-knop om te controleren of alle toegewezen bestemmingen "
+"correct werken."
+
+#: app/templates/reminders/list_reminders.html:237
+msgid "🔴/🟢 Enable or disable the reminder using the toggle button."
+msgstr "Schakel de e-mail in met de 🔴/🟢 schakelknop."
+
+#: app/templates/reminders/list_reminders.html:238
+msgid "📤 Reminders will be sent as scheduled to the assigned destinations."
+msgstr ""
+"📤 Herinneringen worden volgens schema naar de toegewezen bestemmingen "
+"verzonden."
+
+#: app/templates/reminders/schedule_reminder.html:8
+msgid "Schedule Reminder"
+msgstr "E-mail inplannen"
+
+#: app/templates/reminders/schedule_reminder.html:15
+msgid "Start Date & Time"
+msgstr "Startdatum & Tijd"
+
+#: app/templates/reminders/schedule_reminder.html:22
+#: app/templates/reminders/view_reminder.html:25
+msgid "Recurrence Rule"
+msgstr "Herhalingsregel"
+
+#: app/templates/reminders/schedule_reminder.html:24
+msgid "(Optional) Enter RRULE or leave blank for one-time."
+msgstr "(Optioneel) Voer RRULE in of laat leeg voor eenmalig."
+
+#: app/templates/reminders/schedule_reminder.html:30
+msgid "End Date"
+msgstr "Verstuur test"
+
+#: app/templates/reminders/schedule_reminder.html:32
+msgid "(Optional) Stop sending after this date."
+msgstr "(Optioneel) Stop met verzenden na deze datum."
+
+#: app/templates/reminders/schedule_reminder.html:38
+#: app/templates/reminders/view_reminder.html:36
+msgid "Max Occurrences"
+msgstr "Maximale Voorkomens"
+
+#: app/templates/reminders/schedule_reminder.html:40
+msgid "(Optional) Stop after this many reminders."
+msgstr "(Optioneel) Stop na dit aantal herinneringen."
+
+#: app/templates/reminders/schedule_reminder.html:56
+msgid "Help for RRULE syntax"
+msgstr "Hulp voor RRULE-syntaxis"
+
+#: app/templates/reminders/schedule_reminder.html:66
+msgid "Several tools are available to help generate an RRULE."
+msgstr "Er zijn verschillende tools beschikbaar om een RRULE te genereren."
+
+#: app/templates/reminders/schedule_reminder.html:67
+msgid "Use a search engine or AI tool to assist."
+msgstr "Gebruik een zoekmachine of AI-tool voor hulp."
+
+#: app/templates/reminders/schedule_reminder.html:69
+msgid "Here is an example of one such online tool:"
+msgstr "Hier is een voorbeeld van zo'n online tool:"
+
+#: app/templates/reminders/schedule_reminder.html:73
+msgid "RRULE Generator Tool"
+msgstr "RRULE Generator Tool"
+
+#: app/templates/reminders/schedule_reminder.html:77
+msgid "See here for some common examples:"
+msgstr "Zie hier enkele veelvoorkomende voorbeelden:"
+
+#: app/templates/reminders/schedule_reminder.html:81
+msgid "RRULE Help (GitHub)"
+msgstr "RRULE Help (GitHub)"
+
+#: app/templates/reminders/view_reminder.html:8
+msgid "Reminder Details"
+msgstr "Details Bekijken"
+
+#: app/templates/reminders/view_reminder.html:30
+msgid "End At"
+msgstr "Verstuur test"
+
+#: app/templates/reminders/view_reminder.html:42
+msgid "Last Sent"
+msgstr "Laatste incheck"
+
+#: app/templates/reminders/view_reminder.html:91
+msgid "Email Template"
+msgstr "E-mail Validator"
+
+#: app/templates/reminders/view_reminder.html:103
+msgid "No email linked."
+msgstr "E-mail is ingeschakeld"
+
+#: app/templates/reminders/view_reminder.html:111
+msgid "Back to Reminders"
+msgstr "Terug naar e-mails"
+
+#: app/templates/user_smtp/create_smtp.html:10
+msgid "Create SMTP Destination"
+msgstr "Maak SMTP-bestemming"
+
+#: app/templates/user_smtp/create_smtp.html:69
+#: app/templates/user_smtp/edit_smtp.html:84
+msgid "Hold to reveal"
+msgstr "Vasthouden om te onthullen"
+
+#: app/templates/user_smtp/create_smtp.html:92
+#: app/templates/user_smtp/edit_smtp.html:107
+msgid "Use TLS"
+msgstr "Gebruik TLS"
+
+#: app/templates/user_smtp/edit_smtp.html:10
+msgid "Edit SMTP Destination"
+msgstr "Maak SMTP-bestemming"
+
+#: app/templates/user_smtp/list_smtp.html:9
+msgid "SMTP Destinations"
+msgstr "SMTP-bestemmingen"
+
+#: app/templates/user_smtp/list_smtp.html:44
+msgid "Add SMTP"
+msgstr "SMTP toevoegen"
+
+#: app/templates/user_smtp/list_smtp.html:53
+msgid "Host"
+msgstr "Host"
+
+#: app/templates/user_smtp/list_smtp.html:54
+msgid "Port"
+msgstr "Poort"
+
+#: app/templates/user_smtp/list_smtp.html:56
+msgid "TLS"
+msgstr "TLS"
+
+#: app/templates/user_smtp/list_smtp.html:58
+msgid "Created"
+msgstr "Gemaakt"
+
+#: app/templates/user_smtp/list_smtp.html:90
+#: app/templates/user_smtp/list_smtp.html:158
+msgid "Send Test"
+msgstr "Verstuur test"
+
+#: app/templates/user_smtp/list_smtp.html:125
+msgid "Port:"
+msgstr "Poort:"
+
+#: app/templates/user_smtp/list_smtp.html:131
+msgid "Password:"
+msgstr "Wachtwoord:"
+
+#: app/templates/user_smtp/list_smtp.html:184
+msgid "Hide SMTP Setup Help"
+msgstr "SMTP Installatie Hulp verbergen"
+
+#: app/templates/user_smtp/list_smtp.html:184
+msgid "Show SMTP Setup Help"
+msgstr "SMTP Installatie Hulp weergeven"
+
+#: app/templates/user_smtp/list_smtp.html:190
+msgid ""
+"Need help finding your SMTP server settings? See here for some links to "
+"common providers:"
+msgstr ""
+"Hulp nodig bij het vinden van je SMTP-serverinstellingen? Zie hier voor "
+"enkele links naar veelgebruikte providers:"
+
+#: app/templates/user_smtp/list_smtp.html:194
+msgid "SMTP Server Settings Help (GitHub)"
+msgstr "SMTP Server Instellingen Hulp (GitHub)"
+
+#: app/templates/user_smtp/list_smtp.html:198
+msgid ""
+"Find official documentation links for Gmail, Outlook, Yahoo, AOL, and "
+"others."
+msgstr ""
+"Vind officiële documentatielinks voor Gmail, Outlook, Yahoo, AOL en anderen."
+
+#: app/templates/user_smtp/list_smtp.html:199
+msgid ""
+"If your provider isn’t listed, search their support site or a search engine "
+"for 'SMTP settings'."
+msgstr ""
+"Als je provider niet wordt vermeld, zoek dan op hun ondersteuningssite of "
+"een zoekmachine naar 'SMTP-instellingen'."
+
+#: app/templates/user_smtp/list_smtp.html:200
+msgid ""
+"Some providers (like Gmail, Yahoo) require 'App Passwords' or special "
+"setup—see their docs!"
+msgstr ""
+"Sommige providers (zoals Gmail, Yahoo) vereisen 'App Wachtwoorden' of "
+"speciale installatie—zie hun documentatie!"
+
+#: app/templates/webhook/create_webhook.html:10
+msgid "Create Webhook"
+msgstr "Webhook aanmaken"
+
+#: app/templates/webhook/edit_webhook.html:10
+msgid "Edit Webhook"
+msgstr "Webhook bewerken"
+
+#: app/templates/webhook/list_webhooks.html:9
+#: app/templates/webhook/webhook_config.html:3
+msgid "Webhooks Destinations"
+msgstr "Webhooks-bestemmingen"
+
+#: app/templates/webhook/list_webhooks.html:59
+msgid "Endpoint"
+msgstr "Endpoint"
+
+#: app/templates/webhook/list_webhooks.html:60
+msgid "Description"
+msgstr "Beschrijving"
+
+#: app/templates/webhook/list_webhooks.html:82
+#: app/templates/webhook/list_webhooks.html:141
+msgid "Cannot edit while assigned to notifications"
+msgstr "Kan niet bewerken terwijl toegewezen aan meldingen"
+
+#: app/templates/webhook/list_webhooks.html:106
+#: app/templates/webhook/list_webhooks.html:165
+msgid "Cannot delete while assigned to notifications"
+msgstr "Kan niet verwijderen terwijl toegewezen aan meldingen"
+
+#: app/templates/webhook/list_webhooks.html:122
+msgid "Endpoint:"
+msgstr "Endpoint:"
+
+#: app/templates/webhook/list_webhooks.html:125
+msgid "Description:"
+msgstr "Beschrijving:"
+
+#: app/views/account.py:74
+msgid "Current password is required to change password."
+msgstr "Huidig wachtwoord is vereist om wachtwoord te veranderen."
+
+#: app/views/account.py:78
+msgid "Current password is incorrect."
+msgstr "Huidig wachtwoord is onjuist."
+
+#: app/views/account.py:94
+msgid "Account updated successfully."
+msgstr "Account succesvol bijgewerkt."
+
+#: app/views/account.py:100
+msgid "An error occurred while updating your account."
+msgstr "Er is een fout opgetreden bij het bijwerken van uw account."
+
+#: app/views/account.py:137
+msgid "You cannot delete your account because you are the last admin."
+msgstr "U kunt uw account niet verwijderen omdat u de laatste beheerder bent."
+
+#: app/views/account.py:146
+msgid "Your account has been permanently deleted."
+msgstr "Uw account is permanent verwijderd."
+
+#: app/views/account.py:152
+msgid "An error occurred while trying to delete your account."
+msgstr "Er is een fout opgetreden bij het bijwerken van uw account."
+
+#: app/views/account.py:171
+msgid "Your account has been deleted"
+msgstr "Uw account is permanent verwijderd."
+
+#: app/views/account.py:173
+#, python-brace-format
+msgid ""
+"Hello {username},\n"
+"\n"
+"Your account on {site_name} has been deleted.Remember to delete your files from the uploads folder.If this was not you, please contact support immediately.\n"
+"\n"
+"{site_url}"
+msgstr ""
+"Hallo {username},\n"
+"\n"
+"Je account op {site_name} is verwijderd. Vergeet niet je bestanden uit de uploads map te verwijderen. Als jij dit niet was, neem dan onmiddellijk contact op met de ondersteuning.\n"
+"\n"
+"{site_url}"
+
+#: app/views/admin.py:59
+msgid "Invalid role."
+msgstr "Ongeldige rol."
+
+#: app/views/apprise.py:51
+msgid "🧪 Test notification sent successfully!"
+msgstr "🧪 Testmelding succesvol verzonden!"
+
+#: app/views/apprise.py:56
+msgid "🧪 Failed to send test notification: "
+msgstr "🧪 Versturen van testmelding is mislukt:"
+
+#: app/views/apprise.py:62
+msgid "🧪 Error sending test notification."
+msgstr "🧪 Fout bij verzenden testmelding."
+
+#: app/views/apprise.py:101
+msgid "Apprise destination created successfully."
+msgstr "Apprise-bestemming succesvol aangemaakt."
+
+#: app/views/apprise.py:168
+msgid "Apprise destination updated successfully."
+msgstr "Apprise-bestemming succesvol bijgewerkt."
+
+#: app/views/apprise.py:199
+msgid "Apprise destination deleted."
+msgstr "Apprise-bestemming verwijderd."
+
+#: app/views/auth.py:95
+msgid "Admin account created successfully."
+msgstr "Beheerdersaccount succesvol aangemaakt."
+
+#: app/views/auth.py:108
+msgid "An error occurred while creating the admin account."
+msgstr "Er is een fout opgetreden bij het aanmaken van het beheerdersaccount."
+
+#: app/views/auth.py:141
+msgid ""
+"Your account is not activated. Please check your email for the activation "
+"link."
+msgstr ""
+"Uw account is niet geactiveerd. Controleer uw e-mail voor de activatielink."
+
+#: app/views/auth.py:157
+msgid "Multi-factor authentication required. Please enter your code."
+msgstr "Meervoudige authenticatie vereist. Voer uw code in."
+
+#: app/views/auth.py:162 app/views/mfa.py:195
+msgid "Logged in successfully."
+msgstr "Succesvol ingelogd."
+
+#: app/views/auth.py:179
+msgid "Invalid username or password."
+msgstr "Ongeldige gebruikersnaam of wachtwoord."
+
+#: app/views/auth.py:203
+msgid "You have been logged out."
+msgstr "U bent uitgelogd."
+
+#: app/views/auth.py:239 app/views/email.py:263
+msgid "Access denied."
+msgstr "Toegang geweigerd."
+
+#: app/views/auth.py:273
+msgid "If a user with that email exists, we've sent the username to them."
+msgstr ""
+"Als er een gebruiker met die e-mail bestaat, hebben we de gebruikersnaam "
+"naar hen gestuurd."
+
+#: app/views/auth.py:314
+msgid "A password reset link has been sent to your email."
+msgstr ""
+"Een link voor het opnieuw instellen van het wachtwoord is naar uw e-mail "
+"gestuurd."
+
+#: app/views/auth.py:319
+msgid "No account found matching that username and email."
+msgstr ""
+"Er is geen account gevonden dat overeenkomt met die gebruikersnaam en "
+"e-mail."
+
+#: app/views/auth.py:389
+msgid "The reset link is invalid or has expired."
+msgstr "De resetlink is ongeldig of verlopen."
+
+#: app/views/auth.py:401
+msgid "Username and email do not match."
+msgstr "Gebruikersnaam en e-mail komen niet overeen."
+
+#: app/views/auth.py:421
+msgid "Your password has been reset. Please log in."
+msgstr "Je wachtwoord is opnieuw ingesteld. Log alstublieft in."
+
+#: app/views/auth.py:458
+msgid "Invalid registration PIN."
+msgstr "Ongeldige registratie-PIN."
+
+#: app/views/auth.py:467
+msgid "Username or email already exists."
+msgstr "Gebruikersnaam of e-mail bestaat al."
+
+#: app/views/auth.py:492
+msgid "Activate Your Grylli Account"
+msgstr "Activeer uw Grylli-account"
+
+#: app/views/auth.py:493
+#, python-brace-format
+msgid ""
+"Hello {username},\n"
+"\n"
+"Please activate your account by clicking..."
+msgstr ""
+"Hallo {username},\n"
+"\n"
+"Activeer alstublieft uw account door te klikken..."
+
+#: app/views/auth.py:498
+msgid "Account created! Please check your email to activate your account."
+msgstr "Account aangemaakt! Controleer je e-mail om je account te activeren."
+
+#: app/views/auth.py:521
+msgid "Activation link is invalid or expired."
+msgstr "Activatielink is ongeldig of verlopen."
+
+#: app/views/auth.py:528 app/views/users.py:76 app/views/users.py:140
+msgid "User not found."
+msgstr "Gebruiker niet gevonden."
+
+#: app/views/auth.py:532
+msgid "Account already activated. Please log in."
+msgstr "Account al geactiveerd. Log alstublieft in."
+
+#: app/views/auth.py:540
+msgid "Your account has been activated! You can now log in."
+msgstr "Je account is geactiveerd! Je kunt nu inloggen."
+
+#: app/views/backups.py:72
+#, python-format
+msgid "Backup created: %(filename)s"
+msgstr "Backup gemaakt: %(filename)s"
+
+#: app/views/backups.py:77
+msgid "Failed to create backup."
+msgstr "Maken van backup mislukt."
+
+#: app/views/backups.py:106
+#, python-format
+msgid "Backup deleted: %(filename)s"
+msgstr "Backup verwijderd: %(filename)s"
+
+#: app/views/backups.py:109
+msgid "Backup file not found."
+msgstr "Backupbestand niet gevonden."
+
+#: app/views/backups.py:112
+msgid "Failed to delete backup."
+msgstr "Verwijderen van backup mislukt."
+
+#: app/views/checkin.py:41
+msgid "Invalid check-in link."
+msgstr "Ongeldige check-in link."
+
+#: app/views/checkin.py:48
+msgid "You are not authorized to check in for this item."
+msgstr "Je bent niet gemachtigd om voor dit item in te checken."
+
+#: app/views/checkin.py:62
+msgid "Unsupported check-in type."
+msgstr "Niet-ondersteund check-in type."
+
+#: app/views/checkin.py:137
+msgid "⚠️ Cannot enable reminder: Start date/time is in the past."
+msgstr ""
+"⚠️ Kan herinnering niet inschakelen: Startdatum/-tijd ligt in het verleden."
+
+#: app/views/checkin.py:158
+msgid "✅ Enabled and timer started."
+msgstr "✅ Ingeschakeld en timer gestart."
+
+#: app/views/checkin.py:168
+msgid "⛔ Disabled."
+msgstr "⛔ Uitgeschakeld."
+
+#: app/views/checkin.py:170
+msgid "⚠️ Cannot toggle — missing schedule or destination."
+msgstr "⚠️ Kan niet schakelen — ontbrekend schema of bestemming."
+
+#: app/views/email.py:88
+msgid "Message saved."
+msgstr "Bericht opgeslagen."
+
+#: app/views/email.py:118 app/views/messages.py:167
+msgid "Message deleted."
+msgstr "Bericht verwijderd."
+
+#: app/views/email.py:152
+msgid "Attached files updated."
+msgstr "Bijgevoegde bestanden bijgewerkt."
+
+#: app/views/email.py:200
+msgid "SMTP configuration not assigned or is disabled."
+msgstr "SMTP-configuratie niet toegewezen of is uitgeschakeld."
+
+#: app/views/email.py:234 app/views/smtp_settings_admin.py:82
+msgid "Test email sent successfully."
+msgstr "Test-e-mail succesvol verzonden."
+
+#: app/views/email.py:282 app/views/messages.py:305
+msgid "Schedule updated successfully."
+msgstr "Schema succesvol bijgewerkt."
+
+#: app/views/email.py:310
+msgid "SMTP configuration assigned."
+msgstr "SMTP-configuratie toegewezen."
+
+#: app/views/email.py:319
+msgid "SMTP configuration removed."
+msgstr "SMTP-configuratie toegewezen."
+
+#: app/views/messages.py:97
+msgid "Message created successfully."
+msgstr "Bericht succesvol aangemaakt."
+
+#: app/views/messages.py:133
+msgid "Message updated successfully."
+msgstr "Bericht succesvol bijgewerkt."
+
+#: app/views/messages.py:223 app/views/reminders.py:240
+msgid "Destinations updated."
+msgstr "Bestemmingen bijgewerkt."
+
+#: app/views/messages.py:441
+msgid "No destinations assigned to this message."
+msgstr "SMTP-configuratie niet toegewezen of is uitgeschakeld."
+
+#: app/views/messages.py:453
+msgid "Test message sent successfully."
+msgstr "Test-e-mail succesvol verzonden."
+
+#: app/views/messages.py:455
+msgid "Test message failed: "
+msgstr "Bericht opgeslagen."
+
+#: app/views/mfa.py:68
+msgid "You must enter a code from your authenticator."
+msgstr "U moet een code van uw authenticator invoeren."
+
+#: app/views/mfa.py:82 app/views/mfa.py:259
+msgid "Invalid code. Please try again."
+msgstr "Ongeldige code. Probeer het opnieuw."
+
+#: app/views/mfa.py:91
+msgid "Two-factor authentication disabled."
+msgstr "Melding is uitgeschakeld"
+
+#: app/views/mfa.py:132
+msgid "Recovery codes are only shown immediately after enabling MFA."
+msgstr "Herstelcodes worden alleen meteen na het inschakelen van MFA getoond."
+
+#: app/views/mfa.py:142
+msgid "Could not load recovery codes."
+msgstr "Kon herstelcodes niet laden."
+
+#: app/views/mfa.py:168
+msgid "No MFA challenge in progress."
+msgstr "Geen MFA-uitdaging gaande."
+
+#: app/views/mfa.py:176
+msgid "User not found for MFA challenge."
+msgstr "Gebruiker niet gevonden."
+
+#: app/views/mfa.py:225
+msgid ""
+"You have used your last recovery code. MFA has been disabled. Please remove "
+"Grylli from your authenticator app, and re-enable MFA to protect your "
+"account."
+msgstr ""
+"U heeft uw laatste herstelcode gebruikt. MFA is uitgeschakeld. Verwijder "
+"Grylli uit uw authenticator-app en stel MFA opnieuw in om uw account te "
+"beveiligen."
+
+#: app/views/mfa.py:248
+#, python-brace-format
+msgid "Recovery code accepted. You have {remaining} recovery codes left."
+msgstr "Herstelcode geaccepteerd. U heeft nog {remaining} herstelcodes over."
+
+#: app/views/reminders.py:106
+msgid "Reminder created successfully."
+msgstr "Bericht succesvol aangemaakt."
+
+#: app/views/reminders.py:143
+msgid "Reminder updated successfully."
+msgstr "Gebruiker succesvol bijgewerkt."
+
+#: app/views/reminders.py:174
+msgid "Reminder deleted."
+msgstr "Gebruiker verwijderd."
+
+#: app/views/reminders.py:287
+msgid "No destinations assigned to this reminder."
+msgstr "SMTP-configuratie niet toegewezen of is uitgeschakeld."
+
+#: app/views/reminders.py:311
+msgid "No email message linked to this reminder."
+msgstr "Geen e-mailbericht gekoppeld aan deze herinnering."
+
+#: app/views/reminders.py:314
+msgid "SMTP configuration is disabled."
+msgstr "SMTP-configuratie niet toegewezen of is uitgeschakeld."
+
+#: app/views/reminders.py:353
+msgid "Test reminder sent successfully."
+msgstr "Test-e-mail succesvol verzonden."
+
+#: app/views/reminders.py:356
+msgid "Test reminder failed: "
+msgstr "Bericht opgeslagen."
+
+#: app/views/reminders.py:430
+msgid "Reminder schedule updated successfully."
+msgstr "Schema succesvol bijgewerkt."
+
+#: app/views/reminders.py:434
+msgid "Please correct the errors below."
+msgstr "Corrigeer de onderstaande fouten."
+
+#: app/views/reminders.py:481 app/views/reminders.py:482
+msgid "None"
+msgstr "Nee"
+
+#: app/views/reminders.py:508
+msgid "You must select both an SMTP config and an email message, or neither."
+msgstr ""
+"U moet zowel een SMTP-configuratie als een e-mailbericht selecteren, of geen"
+" van beide."
+
+#: app/views/reminders.py:528
+msgid "Email reminder settings updated."
+msgstr "Bestemmingen bijgewerkt."
+
+#: app/views/smtp.py:83 app/views/user_smtp.py:80
+msgid "SMTP destination created successfully."
+msgstr "SMTP-bestemming succesvol aangemaakt."
+
+#: app/views/smtp.py:129 app/views/user_smtp.py:135
+msgid "SMTP destination updated."
+msgstr "SMTP-bestemming bijgewerkt."
+
+#: app/views/smtp.py:160 app/views/user_smtp.py:166
+msgid "SMTP destination deleted."
+msgstr "SMTP-bestemming verwijderd."
+
+#: app/views/smtp.py:191 app/views/user_smtp.py:199
+msgid "Test email sent successfully to your account email."
+msgstr "Test-e-mail succesvol verzonden naar je account e-mail."
+
+#: app/views/smtp.py:196 app/views/user_smtp.py:204
+msgid "Failed to send test email. Check SMTP settings."
+msgstr "Verzenden van test-e-mail mislukt. Controleer SMTP-instellingen."
+
+#: app/views/smtp_settings_admin.py:76
+msgid "Test Email from Grylli"
+msgstr "Test-e-mail van Grylli"
+
+#: app/views/smtp_settings_admin.py:77
+msgid "This is a test email from the Grylli SMTP settings page."
+msgstr "Dit is een test-e-mail vanaf de Grylli SMTP-instellingenpagina."
+
+#: app/views/smtp_settings_admin.py:84
+msgid "Failed to send test email: "
+msgstr "Verzenden van test-e-mail mislukt:"
+
+#: app/views/users.py:99
+msgid "User updated successfully."
+msgstr "Gebruiker succesvol bijgewerkt."
+
+#: app/views/users.py:106 app/views/users.py:327
+msgid "An error occurred while updating the user."
+msgstr "Er is een fout opgetreden bij het bijwerken van de gebruiker."
+
+#: app/views/users.py:195
+msgid "User deleted."
+msgstr "Gebruiker verwijderd."
+
+#: app/views/users.py:202
+msgid "An error occurred while deleting the user."
+msgstr "Er is een fout opgetreden bij het verwijderen van de gebruiker."
+
+#: app/views/users.py:237
+msgid "Password is required when creating a new user."
+msgstr "Wachtwoord is vereist bij het aanmaken van een nieuwe gebruiker."
+
+#: app/views/users.py:244
+msgid "Username already exists."
+msgstr "Gebruikersnaam bestaat al."
+
+#: app/views/users.py:251
+msgid "Email already exists."
+msgstr "Email bestaat al."
+
+#: app/views/users.py:268
+#, python-format
+msgid "User '%(username)s' created successfully."
+msgstr "Gebruiker '%(username)s' succesvol aangemaakt."
+
+#: app/views/users.py:278
+msgid "Failed to create user."
+msgstr "Het maken van de gebruiker is mislukt."
+
+#: app/views/users.py:305
+msgid "You cannot change your own enabled status."
+msgstr "Je kunt je eigen ingeschakelde status niet wijzigen."
+
+#: app/views/users.py:318
+#, python-format
+msgid "User '%(username)s' has been %(status)s."
+msgstr "Gebruiker '%(username)s' is %(status)s."
+
+#: app/views/users.py:356
+msgid "You cannot reset your own MFA."
+msgstr "⚪ = U kunt uw eigen account niet uitschakelen."
+
+#: app/views/users.py:368
+#, python-format
+msgid "MFA disabled for user '%(username)s'."
+msgstr "MFA is uitgeschakeld voor gebruiker '%(username)s'."
+
+#: app/views/users.py:374
+msgid "An error occurred while resetting MFA."
+msgstr "Er is een fout opgetreden bij het verwijderen van de gebruiker."
+
+#: app/views/webhook.py:54
+msgid "Webhook created successfully."
+msgstr "Webhook succesvol aangemaakt."
+
+#: app/views/webhook.py:113
+msgid "Webhook updated successfully."
+msgstr "Webhook succesvol bijgewerkt."
+
+#: app/views/webhook.py:142
+msgid "Webhook deleted."
+msgstr "Webhook verwijderd."
+
+#: app/views/webhook.py:175
+msgid "🧪 Webhook test sent successfully!"
+msgstr "🧪 Webhook-test succesvol verzonden!"
+
+#: app/views/webhook.py:177
+msgid "🧪 Webhook test failed: "
+msgstr "🧪 Webhook-test mislukt:"
+
+#: app/views/webhook.py:180
+msgid "🧪 Error sending webhook test."
+msgstr "🧪 Fout bij het verzenden van de webhook-test."
+
+#~ msgid ""
+#~ "Grylli is a secure message delivery platform designed to activate after "
+#~ "prolonged user inactivity."
+#~ msgstr ""
+#~ "Grylli is een veilig berichtbezorgingsplatform dat is ontworpen om te "
+#~ "activeren na langdurige gebruikersinactiviteit."
+
+#~ msgid ""
+#~ "It is a modern reimplementation of Gone Man’s Switch with a refined tech "
+#~ "stack, better maintainability, and an improved user experience."
+#~ msgstr ""
+#~ "Het is een moderne herimplementatie van Gone Man's Switch met een verfijnde "
+#~ "tech stack, betere onderhoudbaarheid en een verbeterde gebruikerservaring."
+
+#~ msgid "Body:"
+#~ msgstr "Body:"
+
+#~ msgid "Subject:"
+#~ msgstr "Onderwerp:"
+
+#~ msgid "Content:"
+#~ msgstr "Inhoud:"
+
+#~ msgid "Edit SMTP"
+#~ msgstr "SMTP bewerken"
+
+#~ msgid ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+#~ msgstr ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+
+#~ msgid "Admin Notes"
+#~ msgstr "Beheerdersnotities"
+
+#~ msgid "Register"
+#~ msgstr "Registreren"
+
+#~ msgid "View"
+#~ msgstr "Bekijk"
+
+#~ msgid "Schedule"
+#~ msgstr "Planning"
+
+#~ msgid "Message is enabled"
+#~ msgstr "Bericht is ingeschakeld"
+
+#~ msgid "Message is disabled"
+#~ msgstr "Bericht is uitgeschakeld"
+
+#~ msgid "No SMTP configuration selected."
+#~ msgstr "Geen SMTP-configuratie geselecteerd."
+
+#~ msgid "Enable the message to start monitoring."
+#~ msgstr "Schakel het bericht in om te beginnen met monitoren."
+
+#~ msgid "✅ SMTP settings saved."
+#~ msgstr "SMTP-instellingen"
+
+#~ msgid "If you don’t check in, Grylli delivers the message for you."
+#~ msgstr "Als je niet incheckt, bezorgt Grylli het bericht voor je."
+
+#~ msgid "Fill in already discovered missing translations:"
+#~ msgstr "Vul al ontdekte ontbrekende vertalingen in:"
+
+#~ msgid "Add missing phrases in that JSON file."
+#~ msgstr "Voeg ontbrekende zinnen toe in dat JSON-bestand."
+
+#~ msgid "From:"
+#~ msgstr "Van:"
+
+#~ msgid ""
+#~ "Attach the updated JSON file to a new GitHub issue when submitting your "
+#~ "changes."
+#~ msgstr ""
+#~ "Voeg het bijgewerkte JSON-bestand toe aan een nieuw GitHub-issue wanneer je "
+#~ "je wijzigingen indient."
+
+#~ msgid "admin"
+#~ msgstr "beheerder"
+
+#~ msgid "user"
+#~ msgstr "gebruiker"
+
+#~ msgid "Logging in"
+#~ msgstr "Inloggen"
+
+#~ msgid "SMTP error: "
+#~ msgstr "SMTP fout:"
+
+#~ msgid "enabled"
+#~ msgstr "ingeschakeld"
+
+#~ msgid "disabled"
+#~ msgstr "uitgeschakeld"

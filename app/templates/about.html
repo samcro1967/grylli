@@ -1,0 +1,39 @@
+{# ---------------------------------------------------------------------
+   about.html
+   app/templates/about.html
+   Styled about page rendered within the Grylli layout.
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    <div class="max-w-3xl mx-auto bg-white dark:bg-zinc-800 shadow-md rounded-xl p-6 space-y-4">
+        {# ------------------- Page Heading ------------------------------- #}
+        <h1 class="text-2xl font-bold">{{ _("About Grylli") }}</h1>
+        {# ------------------- Description Paragraph ---------------------- #}
+        <p class="text-sm leading-relaxed text-zinc-600 dark:text-zinc-300">
+            {{ _("Grylli is a secure, self-hosted message delivery platform that automatically sends pre-configured messages if a user fails to check in within a defined time period.") }}
+            {{ _("It supports multiple users, customizable schedules, and recurring reminders.") }}
+            {{ _("Messages and reminders can be delivered via email, webhooks, or over 100 third-party services through Apprise.") }}
+            {{ _("Users can configure their own SMTP servers to ensure emails and reminders appear to come directly from them — not from the system administrator.") }}
+            {{ _("Sensitive data is encrypted at rest, and all operations are secured with strong authentication and audit-friendly logging.") }}
+            {{ _("Built with a modern, reactive technology stack, Grylli is optimized for responsiveness and works seamlessly across desktop and mobile devices.") }}
+        </p>
+        {# ------------------- Details List: Version & Repo --------------- #}
+        <ul class="text-sm list-disc pl-6 space-y-1">
+            <li>
+                <strong>{{ _("Version:") }}</strong> {{ app_version }}
+            </li>
+            <li>
+                <strong>{{ _("Repository:") }}</strong>
+                <a href="https://github.com/samcro1967/grylli"
+                   class="text-blue-600 dark:text-blue-400 underline"
+                   target="_blank"
+                   rel="noopener">{{ _("GitHub - samcro1967/grylli") }}</a>
+            </li>
+        </ul>
+        {# ------------------- Copyright & License Notice ------------------ #}
+        <p class="text-xs text-zinc-500 dark:text-zinc-400">
+            &copy; 2025 Samcro1967 — MIT License.
+            <br>
+        </p>
+    </div>
+{% endblock %}

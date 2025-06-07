@@ -1,0 +1,3331 @@
+# Uzbek translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-06-07 15:49-0500\n"
+"PO-Revision-Date: 2025-05-25 16:45-0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: uz <LL@li.org>\n"
+"Language: uz\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: app/init_db.py:55
+#, python-format
+msgid "Tables currently in DB: %s"
+msgstr "Joriy DB dagi jadvallar:"
+
+#: app/init_db.py:58
+msgid "Database or system_config table missing. Running migrations now..."
+msgstr ""
+"Ma'lumotlar bazasi yoki system_config jadvali yo'q. Endi migratsiyalarni "
+"ishlatmoq."
+
+#: app/init_db.py:61
+msgid "Migrations applied successfully."
+msgstr "Migratsiyalar muvaffaqiyatli qo'llandi."
+
+#: app/init_db.py:63
+msgid "Migration failed."
+msgstr "Migratsiya muvaffaqiyatsiz tugadi."
+
+#: app/init_db.py:68
+msgid "System config seeded successfully."
+msgstr "Tizim konfiguratsiyasi muvaffaqiyatli urug'langan."
+
+#: app/init_db.py:70
+msgid "Error seeding system config."
+msgstr "Tizim konfiguratsiyasini urug'lashda xatolik:"
+
+#: app/forms/mfa_form.py:15 app/templates/apprise/create_apprise.html:30
+#: app/templates/apprise/edit_apprise.html:30
+#: app/templates/apprise/list_apprise.html:60
+#: app/templates/mfa/settings.html:24 app/templates/mfa/settings.html:40
+#: app/templates/user_smtp/create_smtp.html:99
+#: app/templates/user_smtp/edit_smtp.html:114
+#: app/templates/user_smtp/list_smtp.html:57
+#: app/templates/webhook/create_webhook.html:36
+#: app/templates/webhook/edit_webhook.html:36
+#: app/templates/webhook/list_webhooks.html:61
+msgid "Enabled"
+msgstr "Faollashtirilgan"
+
+#: app/forms/mfa_form.py:16
+msgid "Authenticator Code"
+msgstr "Autentifikatsiya kodi"
+
+#: app/forms/mfa_form.py:17
+#: app/templates/admin/partials/user_instructions_and_modal.html:66
+#: app/templates/admin/partials/user_table.html:115
+#: app/templates/email/assign_smtp.html:44 app/templates/mfa/settings.html:47
+#: app/templates/user_smtp/edit_smtp.html:122
+msgid "Save"
+msgstr "Saqlash"
+
+#: app/forms/mfa_form.py:27
+msgid "Authentication Code"
+msgstr "Bildirishnomani yangilash"
+
+#: app/forms/mfa_form.py:29
+msgid "Please enter your authentication code."
+msgstr "Iltimos, autentifikatsiya kodingizni kiriting."
+
+#: app/forms/mfa_form.py:30
+msgid "Enter a valid 6-digit code or recovery code."
+msgstr "Yaroqli 6 xonali kod yoki qayta tiklash kodini kiriting."
+
+#: app/forms/mfa_form.py:31
+msgid "Invalid code format."
+msgstr "Noto‘g‘ri kod formati."
+
+#: app/forms/mfa_form.py:35 app/templates/mfa/challenge.html:25
+msgid "Verify"
+msgstr "Versiya"
+
+#: app/services/mail.py:37 app/services/system_settings_email.py:40
+msgid "Missing required config setting: "
+msgstr "Zaruriy konfiguratsiya sozlamasi yo'q:"
+
+#: app/services/mail.py:46 app/services/system_settings_email.py:50
+#, python-format
+msgid "Failed to decrypt %(key)s: %(error)s"
+msgstr "Decrypt qilishda muvaffaqiyatsizlikka uchradi: %(key)s: %(error)s"
+
+#: app/services/mail.py:54
+#, python-format
+msgid "get_setting('%(key)s') -> '%(value)s' (sensitive: %(sensitive)s)"
+msgstr ""
+"get_setting('%(key)s') -> '%(value)s' (xom: '%(raw)s', maxfiy: "
+"%(sensitive)s)"
+
+#: app/services/mail.py:75
+#, python-format
+msgid "Preparing email to %(to)s"
+msgstr "Elektron pochta tayyorlanmoqda %(to)s"
+
+#: app/services/mail.py:90
+#, python-format
+msgid ""
+"SMTP configuration: host=%(host)s (type=%(host_type)s), port=%(port)s "
+"(type=%(port_type)s)"
+msgstr ""
+"SMTP host = '%(host)s' (tur: %(host_type)s), port = %(port)s (tur: "
+"%(port_type)s)"
+
+#: app/services/mail.py:99
+#, python-format
+msgid "SMTP username: %(user)s"
+msgstr "Foydalanuvchi foydalanilmoqda: %(user)s"
+
+#: app/services/mail.py:100
+#, python-format
+msgid "TLS enabled: %(tls)s"
+msgstr "TLS yoqilgan: %(tls)s"
+
+#: app/services/mail.py:105
+msgid "Starting TLS connection..."
+msgstr "TLS boshlanmoqda"
+
+#: app/services/mail.py:107
+msgid "Logging into SMTP server..."
+msgstr "SMTP serveriga kirish..."
+
+#: app/services/mail.py:109
+msgid "Sending email message..."
+msgstr "Jadval xabari"
+
+#: app/services/mail.py:111
+#, python-format
+msgid "Email sent successfully to %(to)s"
+msgstr "Sinov elektron posti muvaffaqiyatli yuborildi."
+
+#: app/services/mail.py:114
+#, python-format
+msgid "SMTP error while sending to %(to)s: %(error)s"
+msgstr "SMTP xatosi %(to)s ga yuborishda: %(error)s"
+
+#: app/templates/about.html:10
+msgid "About Grylli"
+msgstr "Grylli haqida"
+
+#: app/templates/about.html:13
+msgid ""
+"Grylli is a secure, self-hosted message delivery platform that automatically"
+" sends pre-configured messages if a user fails to check in within a defined "
+"time period."
+msgstr ""
+"Grylli - bu xavfsiz, o'z-o'zini joylashtiruvchi xabar yetkazib berish "
+"platformasi bo'lib, foydalanuvchi belgilangan vaqt ichida tasdiqdan o'tmasa,"
+" oldindan sozlangan xabarlarni avtomatik yuboradi."
+
+#: app/templates/about.html:14
+msgid ""
+"It supports multiple users, customizable schedules, and recurring reminders."
+msgstr ""
+"Bu bir nechta foydalanuvchilar va sozlanadigan jadvallarni qo'llab-"
+"quvvatlaydi."
+
+#: app/templates/about.html:15
+msgid ""
+"Messages and reminders can be delivered via email, webhooks, or over 100 "
+"third-party services through Apprise."
+msgstr ""
+"Xabarlar elektron pochta, webhooklar yoki Apprise orqali 80 dan ortiq "
+"uchinchi tomon xizmatlari orqali yetkazilishi mumkin."
+
+#: app/templates/about.html:16
+msgid ""
+"Users can configure their own SMTP servers to ensure emails and reminders "
+"appear to come directly from them — not from the system administrator."
+msgstr ""
+"Foydalanuvchilar xabarlar to'liq ular tomonidan yuborilgan ko'rinishi uchun "
+"o'z SMTP serverlarini sozlashlari mumkin — tizim administratori tomonidan "
+"emas."
+
+#: app/templates/about.html:17
+msgid ""
+"Sensitive data is encrypted at rest, and all operations are secured with "
+"strong authentication and audit-friendly logging."
+msgstr ""
+"Maxfiy ma'lumotlar alohida shifrlangan va barcha xabar amaliyotlari kuchli "
+"autentifikatsiya va audit uchun qulay loglash bilan himoyalangan."
+
+#: app/templates/about.html:18
+msgid ""
+"Built with a modern, reactive technology stack, Grylli is optimized for "
+"responsiveness and works seamlessly across desktop and mobile devices."
+msgstr ""
+"Zamonaviy, reaktiv texnologiya stacki bilan qurilgan Grylli javob berish "
+"tezligi uchun optimallashtirilgan va ish stolida ham, mobil qurilmalarda ham"
+" uzluksiz ishlaydi."
+
+#: app/templates/about.html:23
+msgid "Version:"
+msgstr "Versiya:"
+
+#: app/templates/about.html:26
+msgid "Repository:"
+msgstr "Resurs ombori:"
+
+#: app/templates/about.html:30
+msgid "GitHub - samcro1967/grylli"
+msgstr "GitHub - samcro1967/grylli"
+
+#: app/templates/help.html:2 app/templates/help.html:5
+#: app/templates/partials/header.html:85
+msgid "Help"
+msgstr "Yordam"
+
+#: app/templates/help.html:7
+msgid ""
+"Grylli includes built-in instructions throughout the app to help you "
+"configure and manage your setup."
+msgstr ""
+"Grylli sizga sozlamalarni tuzish va boshqarishda yordam berish uchun dastur "
+"bo'ylab o'rnatilgan ko'rsatmalarni o'z ichiga oladi."
+
+#: app/templates/help.html:8
+msgid ""
+"This page provides an overview of key features and direct links to where "
+"they can be managed."
+msgstr ""
+"Ushbu sahifa asosiy funksiyalar ko'rinishini taqdim etadi va ularni qayerda "
+"boshqarilishi mumkin bo'lgan to'g'ridan-to'g'ri havolalar mavjud."
+
+#: app/templates/help.html:12 app/templates/messages/list_messages.html:9
+#: app/templates/partials/shared_nav.html:17
+msgid "Notifications"
+msgstr "Bildirishnomalar"
+
+#: app/templates/help.html:14
+msgid "Create and assign messages"
+msgstr "Xabar yoki elektron pochta yarating."
+
+#: app/templates/admin/index.html:32 app/templates/help.html:17
+#: app/templates/partials/admin_nav.html:56
+msgid "SMTP Settings"
+msgstr "SMTP sozlamalari"
+
+#: app/templates/help.html:19
+msgid "Use your own email server"
+msgstr "O'z email serveringizdan foydalaning"
+
+#: app/templates/help.html:22
+msgid "Apprise Integration"
+msgstr "Apprise Manzillari"
+
+#: app/templates/help.html:24
+msgid "Send notifications to 80+ supported services"
+msgstr "80+ qo'llab-quvvatlanadigan xizmatlarga bildirishnomalar yuboring"
+
+#: app/templates/help.html:27
+#: app/templates/messages/assign_destinations.html:41
+#: app/templates/messages/view_message.html:58
+#: app/templates/partials/shared_nav.html:44
+#: app/templates/reminders/assign_destinations.html:39
+#: app/templates/reminders/view_reminder.html:69
+msgid "Webhooks"
+msgstr "Webhooks"
+
+#: app/templates/help.html:29
+msgid "Trigger actions or external workflows"
+msgstr "Amallarni yoki tashqi ish jarayonlarini ishga tushiring"
+
+#: app/templates/email/list_emails.html:9 app/templates/help.html:32
+#: app/templates/partials/shared_nav.html:61
+msgid "Emails"
+msgstr "Elektron pochta"
+
+#: app/templates/help.html:34
+msgid "View and manage secure email messages"
+msgstr "Himoyalangan elektron pochta xabarlari haqida umumiy ma'lumot"
+
+#: app/templates/help.html:38
+msgid "Security"
+msgstr "🔐 Xavfsizlik"
+
+#: app/templates/help.html:39
+msgid "Grylli encrypts sensitive data and logs all key actions for auditing."
+msgstr ""
+"Grylli maxfiy ma'lumotlarni shifrlaydi va audit uchun barcha kalit amallarni"
+" loglaydi."
+
+#: app/templates/index.html:9 app/views/locale.py:95
+msgid "Welcome to Grylli"
+msgstr "Grylliga xush kelibsiz"
+
+#: app/templates/index.html:11
+msgid "Pronounced"
+msgstr "Aytiladi"
+
+#: app/templates/index.html:11
+msgid "like “grill-ee”"
+msgstr "“grill-ee” kabi"
+
+#: app/templates/index.html:14
+msgid ""
+"Grylli is a secure message scheduling and delivery system designed to ensure"
+" your important messages are delivered — even if you can’t be there to send "
+"them."
+msgstr ""
+"Grylli - bu muhim xabarlaringiz etkazilishini ta'minlash uchun ishlab "
+"chiqilgan xavfsiz xabarlarni rejalashtirish va etkazib berish tizimi, hatto "
+"siz ularni yuborolmasangiz ham."
+
+#: app/templates/index.html:17
+msgid ""
+"Whether you’re planning ahead, setting up emergency communication, or "
+"building peace of mind, Grylli helps automate your message delivery via "
+"multiple channels including email, webhooks, and Apprise notifications."
+msgstr ""
+"Oldindan rejalashtirayotgan bo'lsangiz, favqulodda aloqa o'rnatishni yoki "
+"xotirjamlik yaratishni rejalashtirayotgan bo'lsangiz, Grylli sizning xabar "
+"yetkazib berishni avtomatlashtirishga yordam beradi, agar siz dastlabki "
+"kuzatuvni o'tkazib yuborsangiz, elektron pochta, webhooks yoki Apprise "
+"xabarnomalari orqali."
+
+#: app/templates/index.html:19
+msgid "Getting Started"
+msgstr "Boshlash"
+
+#: app/templates/index.html:21
+msgid "Create a message, email, or reminder."
+msgstr "Xabar yoki elektron pochta yarating."
+
+#: app/templates/index.html:22
+msgid "Set your check-in interval and grace period (for messages)."
+msgstr "Kuzatuv intervali va tan olingan muddatni belgilang."
+
+#: app/templates/index.html:23
+msgid "Assign one or more delivery destinations."
+msgstr "Bitta yoki bir nechta yetkazish manzillarini tayinlang."
+
+#: app/templates/index.html:24
+msgid "Optionally attach files for secure emails."
+msgstr ""
+"Xavfsiz elektron pochtalar uchun fayllarni qo'shishni ixtiyoriy ravishda "
+"amalga oshiring."
+
+#: app/templates/index.html:25
+msgid "Schedule reminders to send at specific times or on a recurring basis."
+msgstr ""
+"Eslatmalarni ma'lum vaqtlarda yoki qayta-qayta yuborish uchun "
+"rejalashtiring."
+
+#: app/templates/index.html:26
+msgid "Enable the message or reminder to activate delivery."
+msgstr "Xabar yoki eslatmani faollashtirish uchun yetkazib berishni yoqish."
+
+#: app/templates/index.html:28
+msgid ""
+"Regularly check in to Grylli to prevent automated delivery; miss a check-in "
+"and Grylli sends your messages as scheduled."
+msgstr ""
+"Automatlashtirilgan yetkazib berishni oldini olish uchun Grylliga muntazam "
+"ravishda tekshirib turing; tekshirishni o'tkazib yuboring va Grylli "
+"xabarlaringizni jadvalga muvofiq yuboradi."
+
+#: app/templates/privacy.html:10
+msgid "Privacy Notice"
+msgstr "Maxfiylik haqida bildirishnoma"
+
+#: app/templates/privacy.html:13
+msgid ""
+"Grylli respects your privacy and is designed to minimize the collection and "
+"storage of personal data."
+msgstr ""
+"Grylli sizning maxfiyligingizni hurmat qiladi va shaxsiy ma'lumotlarni "
+"to'plash va saqlashni minimallashtirish uchun mo'ljallangan."
+
+#: app/templates/privacy.html:14
+msgid ""
+"All data is encrypted where appropriate and remains fully under your control"
+" if you self-host this platform."
+msgstr ""
+"Barcha ma'lumotlar tegishli joyda shifrlangan va agar siz ushbu platformani "
+"o'zingiz o'rnatgan bo'lsangiz, to'liq nazorat ostida bo'ladi."
+
+#: app/templates/privacy.html:17
+msgid "What Data We Collect"
+msgstr "Biz qanday ma'lumotlarni to'playmiz"
+
+#: app/templates/privacy.html:19
+msgid "Email address and password hash (for authentication)"
+msgstr "Elektron pochta manzili va parol hesh (autentifikatsiya uchun)"
+
+#: app/templates/privacy.html:20
+msgid "Optional MFA secret and recovery codes (encrypted at rest)"
+msgstr "Majburiy emas MFA sir va tiklash kodlari (tinch holatda shifrlangan)"
+
+#: app/templates/privacy.html:21
+msgid "Reminder and message content you configure"
+msgstr "Siz belgilagan eslatma va xabar mazmuni"
+
+#: app/templates/privacy.html:22
+msgid "User-specific settings, SMTP configuration (if provided)"
+msgstr ""
+"Foydalanuvchiga xos sozlamalar, SMTP konfiguratsiyasi (agar mavjud bo'lsa)"
+
+#: app/templates/privacy.html:25
+msgid "How Your Data Is Used"
+msgstr "Sizning ma'lumotlaringiz qanday ishlatiladi"
+
+#: app/templates/privacy.html:27
+msgid ""
+"Your data is used solely for the purpose of delivering reminders and "
+"messages according to your preferences."
+msgstr ""
+"Sizning ma'lumotlaringiz faqat xohishingizga ko'ra eslatmalar va xabarlar "
+"yetkazib berish maqsadida ishlatiladi."
+
+#: app/templates/privacy.html:28
+msgid ""
+"Grylli does not share, sell, or transmit your personal data to any third "
+"parties."
+msgstr ""
+"Grylli sizning shaxsiy ma'lumotlaringizni uchinchi tomonlarga ulashmaydi, "
+"sotmaydi yoki yubormaydi."
+
+#: app/templates/privacy.html:31
+msgid "Your Rights"
+msgstr "Sizning huquqlaringiz"
+
+#: app/templates/privacy.html:33
+msgid ""
+"You can export all of your data at any time from the Account Settings page."
+msgstr ""
+"Hisob sozlamalari sahifasidan istalgan vaqtda barcha ma'lumotlaringizni "
+"eksport qilishingiz mumkin."
+
+#: app/templates/privacy.html:34
+msgid "You may permanently delete your account and all associated data."
+msgstr ""
+"Siz hisobingizni o‘chira olmaysiz, chunki siz oxirgi administratorsiz."
+
+#: app/templates/privacy.html:35
+msgid ""
+"If you are using a self-hosted instance, contact the instance administrator "
+"for data inquiries."
+msgstr ""
+"Agar siz o'zingizga tegishli nusxadan foydalansangiz, ma'lumot so'rovlari "
+"uchun nusxa ma'muriga murojaat qiling."
+
+#: app/templates/privacy.html:38
+msgid "Self-Hosting Responsibility"
+msgstr "O'z-o'zini joylashtirish mas'uliyati"
+
+#: app/templates/privacy.html:40
+msgid ""
+"If you are running Grylli on your own server, you are responsible for the "
+"storage, processing, and lawful handling of all user data on that instance."
+msgstr ""
+"Agar Gryllini o'z serveringizda ishlatsangiz, siz ushbu nusxadagi barcha "
+"foydalanuvchi ma'lumotlarini saqlash, qayta ishlash va qonuniy boshqarish "
+"uchun mas'ulsiz."
+
+#: app/templates/privacy.html:44
+msgid ""
+"This notice was last updated in June 2025 and may evolve to reflect changes "
+"in the software or regulatory landscape."
+msgstr ""
+"Ushbu bildirishnoma 2025 yil iyun oyida oxirgi marta yangilangan va dasturiy"
+" ta'minot yoki tartibga solishning o'zgarishlarini aks ettirish uchun "
+"rivojlanishi mumkin."
+
+#: app/templates/system_info.html:11
+msgid "📦 Environment Versions"
+msgstr "📦 Atrof-muhit versiyalari"
+
+#: app/templates/system_info.html:17
+msgid "Category"
+msgstr "Kategoriya"
+
+#: app/templates/system_info.html:18
+msgid "Tool"
+msgstr "Asbob"
+
+#: app/templates/system_info.html:19
+msgid "Version"
+msgstr "Versiya"
+
+#: app/templates/system_info.html:25
+msgid "🧠 Python"
+msgstr "🧠 Python"
+
+#: app/templates/system_info.html:26
+msgid "Python"
+msgstr "Python"
+
+#: app/templates/system_info.html:30
+msgid "pip"
+msgstr "pip"
+
+#: app/templates/system_info.html:34
+msgid "SQLite"
+msgstr "SQLite"
+
+#: app/templates/system_info.html:40
+msgid "⚙️ Core"
+msgstr "⚙️ Asosiy"
+
+#: app/templates/system_info.html:47
+msgid "🔐 Security"
+msgstr "🔐 Xavfsizlik"
+
+#: app/templates/system_info.html:48
+msgid "Email Validator"
+msgstr "Elektron pochta tekshirgichi"
+
+#: app/templates/system_info.html:52
+msgid "Cryptography"
+msgstr "Kriptografiya"
+
+#: app/templates/system_info.html:57
+msgid "🕰️ Scheduling"
+msgstr "🕰️ Raspisanie"
+
+#: app/templates/system_info.html:58
+msgid "APScheduler"
+msgstr "APScheduler"
+
+#: app/templates/system_info.html:62
+msgid "Apprise (Python)"
+msgstr "Apprise (Python)"
+
+#: app/templates/system_info.html:66
+msgid "Apprise CLI"
+msgstr "Apprise CLI"
+
+#: app/templates/system_info.html:74
+msgid "🌐 Frontend"
+msgstr "🌐 Frontal"
+
+#: app/templates/account/manage_account.html:11
+msgid "Manage Account"
+msgstr "Hisobni boshqarish"
+
+#: app/templates/account/manage_account.html:12
+msgid "Update your profile information and password."
+msgstr "Profil ma'lumotingiz va parolingizni yangilang."
+
+#: app/templates/account/manage_account.html:41
+#: app/templates/admin/create_user.html:40
+#: app/templates/auth/bootstrap.html:43
+#: app/templates/auth/reset_password.html:42 app/templates/auth/signup.html:42
+msgid "Please enter a valid email address."
+msgstr "Iltimos, to'g'ri elektron pochta manzilini kiriting."
+
+#: app/templates/account/manage_account.html:62
+#: app/templates/account/manage_account.html:96
+#: app/templates/account/manage_account.html:127
+#: app/templates/auth/reset_password.html:66
+#: app/templates/auth/reset_password.html:97 app/templates/auth/signup.html:65
+#: app/templates/auth/signup.html:95
+msgid "Show/hide password"
+msgstr "Parolni ko'rsatish uchun turing"
+
+#: app/templates/account/manage_account.html:89
+#: app/templates/admin/create_user.html:53
+#: app/templates/auth/bootstrap.html:51
+#: app/templates/auth/reset_password.html:58 app/templates/auth/signup.html:58
+msgid "Password must meet all complexity requirements."
+msgstr "Parol barcha murakkablik talablariga javob berishi kerak."
+
+#: app/templates/account/manage_account.html:141
+#: app/templates/admin/create_user.html:72
+#: app/templates/admin/edit_user.html:67 app/templates/auth/bootstrap.html:69
+#: app/templates/auth/reset_password.html:110
+#: app/templates/auth/signup.html:108
+msgid "Passwords do not match."
+msgstr "Parollar mos kelmaydi."
+
+#: app/templates/account/manage_account.html:147
+msgid "Update Account"
+msgstr "Hisobni yangilash"
+
+#: app/templates/account/manage_account.html:151
+#: app/templates/admin/create_user.html:82
+#: app/templates/admin/edit_user.html:97 app/templates/admin/help_form.html:28
+#: app/templates/admin/partials/user_instructions_and_modal.html:62
+#: app/templates/admin/partials/user_table.html:113
+#: app/templates/apprise/create_apprise.html:42
+#: app/templates/apprise/edit_apprise.html:42
+#: app/templates/auth/reset_password.html:121
+#: app/templates/email/assign_smtp.html:46
+#: app/templates/email/attach_files.html:47
+#: app/templates/email/edit_message.html:54
+#: app/templates/email/schedule_email.html:84
+#: app/templates/messages/assign_destinations.html:66
+#: app/templates/messages/create_message.html:55
+#: app/templates/messages/edit_message.html:48
+#: app/templates/messages/schedule_message.html:84
+#: app/templates/mfa/challenge.html:29 app/templates/mfa/settings.html:51
+#: app/templates/reminders/assign_destinations.html:64
+#: app/templates/reminders/assign_email_reminder.html:94
+#: app/templates/reminders/create_reminder.html:49
+#: app/templates/reminders/edit_reminder.html:42
+#: app/templates/reminders/schedule_reminder.html:51
+#: app/templates/user_smtp/create_smtp.html:111
+#: app/templates/user_smtp/edit_smtp.html:125
+#: app/templates/webhook/create_webhook.html:48
+#: app/templates/webhook/edit_webhook.html:48
+msgid "Cancel"
+msgstr "Bekor qilish"
+
+#: app/templates/account/manage_account.html:159
+#: app/templates/admin/create_user.html:90
+#: app/templates/admin/edit_user.html:81 app/templates/auth/bootstrap.html:83
+#: app/templates/auth/reset_password.html:128
+#: app/templates/auth/signup.html:132
+msgid "Minimum 8 characters"
+msgstr "Kamida 8 ta belgi"
+
+#: app/templates/account/manage_account.html:160
+#: app/templates/admin/create_user.html:91
+#: app/templates/admin/edit_user.html:82 app/templates/auth/bootstrap.html:84
+#: app/templates/auth/reset_password.html:129
+#: app/templates/auth/signup.html:133
+msgid "At least one uppercase letter"
+msgstr "Kamida bitta katta harf"
+
+#: app/templates/account/manage_account.html:161
+#: app/templates/admin/create_user.html:92
+#: app/templates/admin/edit_user.html:83 app/templates/auth/bootstrap.html:85
+#: app/templates/auth/reset_password.html:130
+#: app/templates/auth/signup.html:134
+msgid "At least one lowercase letter"
+msgstr "Kamida bitta kichik harf"
+
+#: app/templates/account/manage_account.html:162
+#: app/templates/admin/create_user.html:93
+#: app/templates/admin/edit_user.html:84 app/templates/auth/bootstrap.html:86
+#: app/templates/auth/reset_password.html:131
+#: app/templates/auth/signup.html:135
+msgid "At least one number"
+msgstr "Kamida bitta raqam"
+
+#: app/templates/account/manage_account.html:163
+#: app/templates/admin/create_user.html:94
+#: app/templates/auth/bootstrap.html:87
+#: app/templates/auth/reset_password.html:132
+#: app/templates/auth/signup.html:136
+msgid "At least one special character (e.g., !@#$%)"
+msgstr "Hech bo'lmaganda bitta maxsus belgini kiriting (masalan, !@#$%)"
+
+#: app/templates/account/manage_account.html:169
+msgid "Download My Data"
+msgstr "Ma'lumotlarimni yuklab oling"
+
+#: app/templates/account/manage_account.html:171
+msgid ""
+"Download all your account data as a JSON file. This includes your reminders,"
+" messages, email settings, and more. The file is for your records only and "
+"cannot be imported back. Protect it as it may contain sensitive information."
+msgstr ""
+"Hisob ma'lumotlaringizning barchasini JSON fayli sifatida yuklab oling. Bu "
+"sizning eslatmalaringiz, xabarlaringiz, elektron pochta sozlamalaringiz va "
+"boshqalarni o'z ichiga oladi. Fayl faqat sizning yozuvlaringiz uchun "
+"mo'ljallangan va qayta import qilinishi mumkin emas. Ushbu ma'lumotlar "
+"maxfiy ma'lumotlarni o'z ichiga olishi mumkin va uni himoya qiling."
+
+#: app/templates/account/manage_account.html:175
+msgid "Download My Data (JSON)"
+msgstr "Ma'lumotlarimni yuklab oling (JSON)"
+
+#: app/templates/account/manage_account.html:179
+msgid "Danger Zone"
+msgstr "Xavf zonasi"
+
+#: app/templates/account/manage_account.html:180
+msgid "Deleting your account is permanent and cannot be undone."
+msgstr "Hisobingizni o‘chirish doimiy va bekor qilib bo‘lmaydi."
+
+#: app/templates/account/manage_account.html:185
+msgid "Delete My Account"
+msgstr "Hisobni yangilash"
+
+#: app/templates/account/translations.html:8
+msgid "Translations - Grylli"
+msgstr "Tarjima - Grylli"
+
+#: app/templates/account/translations.html:17
+#: app/templates/partials/header.html:102
+msgid "Translations"
+msgstr "Tarjimalar"
+
+#: app/templates/account/translations.html:20
+msgid "Grylli currently supports multiple languages and more will be added."
+msgstr ""
+"Grylli hozirda bir nechta tillarni qo'llab-quvvatlaydi va yana qo'shiladi."
+
+#: app/templates/account/translations.html:21
+msgid "Many of the translations were performed with assistance from ChatGPT."
+msgstr "Ko'plab tarjimalar ChatGPT yordamida amalga oshirildi."
+
+#: app/templates/account/translations.html:22
+msgid ""
+"If you find a translation issue or want to suggest improvements, your input "
+"is welcome!"
+msgstr ""
+"Agar tarjimada muammo topsangiz yoki yaxshilashni taklif qilmoqchi "
+"bo'lsangiz, sizning takliflaringizni kutib qolamiz!"
+
+#: app/templates/account/translations.html:28
+msgid "How to request translation updates"
+msgstr "Tarjima yangilanishlarini qanday so'rash mumkin"
+
+#: app/templates/account/translations.html:30
+msgid "To contribute to translations, please use the following guidelines:"
+msgstr ""
+"Tarjimalarga hissa qo'shish uchun quyidagi ko'rsatmalardan foydalaning:"
+
+#: app/templates/account/translations.html:43
+msgid "Contribute missing or improved translations:"
+msgstr "Tarjimasi topilmaganini topdingizmi?"
+
+#: app/templates/account/translations.html:63
+msgid "Open the relevant .po translation file for your language."
+msgstr "O'zingizning tilingiz uchun JSON tarjima faylini oching. Masalan:"
+
+#: app/templates/account/translations.html:67
+msgid ""
+"Find untranslated or incomplete entries and add or improve translations."
+msgstr ""
+"Tarjima qilinmagan yoki to'liq bo'lmagan yozuvlarni toping va tarjimalarni "
+"qo'shing yoki yaxshilang."
+
+#: app/templates/account/translations.html:68
+msgid "You may use a PO file editor or a text editor."
+msgstr "Siz PO fayl muharriri yoki matn muharriridan foydalanishingiz mumkin."
+
+#: app/templates/account/translations.html:69
+msgid "Copy the file path and the snippet of your changes."
+msgstr "Fayl yo'lini va o'zgartirishlaringiz bo'lakchasini nusxalang."
+
+#: app/templates/account/translations.html:70
+msgid "Paste the snippet directly into a new GitHub issue for review."
+msgstr ""
+"Nusxalangan parchani to'g'ridan-to'g'ri GitHub muammo sharhiga "
+"joylashtiring."
+
+#: app/templates/account/translations.html:72
+msgid "Please do not upload the full .po file to avoid merge conflicts."
+msgstr ""
+"Birlashtirish muammolaridan qochish uchun to'liq .po faylni yuklamang."
+
+#: app/templates/account/translations.html:85
+msgid "Improving existing translations:"
+msgstr "Mavjud tarjimalarni yaxshilash:"
+
+#: app/templates/account/translations.html:104
+msgid "Open the relevant .po file for the translation you want to improve."
+msgstr "Yaxshilamoqchi bo'lgan tarjima uchun tegishli .po faylni oching."
+
+#: app/templates/account/translations.html:106
+msgid "For example:"
+msgstr "Masalan:"
+
+#: app/templates/account/translations.html:110
+msgid ""
+"Find the phrase(s) and its existing translation(s) you want to improve."
+msgstr ""
+"Yaxshilamoqchi bo'lgan ibora(lar)ni va uning mavjud tarjimasini toping."
+
+#: app/templates/account/translations.html:111
+msgid "Update the phrase(s)."
+msgstr "Iborani yangilang."
+
+#: app/templates/account/translations.html:112
+msgid "Copy the file name and path into the issue."
+msgstr "Muammoda fayl nomi va yo'lini nusxa oling."
+
+#: app/templates/account/translations.html:114
+msgid "Paste the copied snippet directly into the GitHub issue comment."
+msgstr ""
+"Nusxalangan parchani to'g'ridan-to'g'ri GitHub muammo sharhiga "
+"joylashtiring."
+
+#: app/templates/account/translations.html:115
+msgid "Do not upload the full .po file to avoid merge conflicts."
+msgstr ""
+"Birlashtirish muammolaridan qochish uchun to'liq .po faylni yuklamang."
+
+#: app/templates/account/translations.html:118
+msgid "Example snippet:"
+msgstr "Misol parchasi:"
+
+#: app/templates/account/translations.html:137
+msgid "Report missing translations not yet discovered:"
+msgstr "Hali topilmagan yetishmayotgan tarjimalarni xabar qiling:"
+
+#: app/templates/account/translations.html:154
+msgid ""
+"If you see text in the app that appears untranslated or missing, please "
+"report it to us."
+msgstr ""
+"Agar ilovada tarjima qilinmagan yoki yetishmayotgan matnni ko'rsangiz, bizga"
+" xabar bering."
+
+#: app/templates/account/translations.html:155
+msgid "Provide the exact English phrase as it appears on the screen."
+msgstr "Ekranda paydo bo'lgan aniq ingliz tilidagi iborani taqdim eting."
+
+#: app/templates/account/translations.html:156
+msgid ""
+"Include the page or section where you saw the phrase (e.g., Apprise page, "
+"Account Page, etc.)."
+msgstr ""
+"Ibora qayerda ko'rganingizni ko'rsating (masalan, Sozlamalar sahifasi, Hisob"
+" bo'limi)."
+
+#: app/templates/account/translations.html:157
+msgid ""
+"Submit this information via a new GitHub issue so we can add it to the "
+"translation files"
+msgstr ""
+"Ushbu ma'lumotni yangi GitHub muammosi orqali yuboring, shunda biz uni "
+"tarjima fayllariga qo'sha olamiz va Babel uchun tayyorlaymiz."
+
+#: app/templates/account/translations.html:166
+msgid "Found a missing translation?"
+msgstr "Tarjimasi topilmaganini topdingizmi?"
+
+#: app/templates/account/translations.html:171
+msgid ""
+"This link will create a new GitHub issue pre-filled with a language code."
+msgstr ""
+"Ushbu havola oldindan to‘ldirilgan til kodi bilan yangi GitHub muammosini "
+"yaratadi."
+
+#: app/templates/account/translations.html:172
+msgid "Report it by opening a new GitHub issue"
+msgstr "Yangi GitHub muammosi ochib xabar bering"
+
+#: app/templates/account/translations.html:175
+msgid "Please specify the language code and exact phrase when reporting."
+msgstr "Iltimos, xabar berishda til kodini va aniq iborani ko'rsating."
+
+#: app/templates/account/translations.html:176
+msgid "Thank you for helping us make Grylli better!"
+msgstr "Gryllini yaxshilashga yordam berganingiz uchun rahmat!"
+
+#: app/templates/admin/create_user.html:14
+msgid "Create New User"
+msgstr "Yangi Foydalanuvchi yaratish"
+
+#: app/templates/admin/create_user.html:15
+msgid "Fill out the form to add a new user."
+msgstr "Yangi foydalanuvchi qo'shish uchun shaklni to'ldiring."
+
+#: app/templates/admin/create_user.html:21
+#: app/templates/admin/edit_user.html:17 app/templates/auth/bootstrap.html:24
+msgid "Please fix the following errors:"
+msgstr "Iltimos, quyidagi xatolarni tuzating:"
+
+#: app/templates/admin/create_user.html:78
+#: app/templates/admin/edit_user.html:93
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "Create User"
+msgstr "Foydalanuvchi yaratish"
+
+#: app/templates/admin/edit_user.html:10
+#: app/templates/admin/partials/user_card.html:20
+#: app/templates/admin/partials/user_table.html:26
+msgid "Edit User"
+msgstr "Foydalanuvchini tahrirlash"
+
+#: app/templates/admin/edit_user.html:55 app/templates/admin/edit_user.html:74
+msgid "Hold to show password"
+msgstr "Parolni ko'rsatish uchun turing"
+
+#: app/templates/admin/edit_user.html:85
+#, python-format
+msgid "At least one special character (e.g., !@#$%%)"
+msgstr "Hech bo'lmaganda bitta maxsus belgini kiriting (masalan, !@#$%%)"
+
+#: app/templates/admin/help.html:4 app/templates/auth/login.html:72
+msgid "Admin Help"
+msgstr "Admin Panel"
+
+#: app/templates/admin/help.html:7
+msgid "Reset Admin Password"
+msgstr "Parolni tiklash"
+
+#: app/templates/admin/help.html:9
+msgid ""
+"If you've forgotten the admin password, you can reset it using the following"
+" Docker command:"
+msgstr ""
+"Agar admin parolini unutgan bo'lsangiz, quyidagi Docker buyrug'idan "
+"foydalangan holda uni tiklashingiz mumkin:"
+
+#: app/templates/admin/help.html:15
+msgid ""
+"This script will prompt you to enter a new password for the admin user. You "
+"must run it from the host system where the Grylli container is running."
+msgstr ""
+"Ushbu skript sizni admin foydalanuvchisi uchun yangi parol kiritish so'rovi "
+"bilan murojaat qiladi. Uni Grylli konteynerini ishlayotgan xost tizimida "
+"ishga tushirishingiz kerak."
+
+#: app/templates/admin/help.html:18
+msgid "After resetting, you can log in with the new password immediately."
+msgstr ""
+"Parolni tiklagandan so'ng, siz darhol yangi parol bilan tizimga kirishingiz "
+"mumkin."
+
+#: app/templates/admin/help.html:24
+msgid "Return to Login"
+msgstr "Boshqaruv paneliga qaytish"
+
+#: app/templates/admin/help_form.html:6
+msgid "Admin Help Access"
+msgstr "Admin Yordam Kirish"
+
+#: app/templates/admin/help_form.html:9
+msgid "Enter your Ferret Key to unlock admin-only help documentation."
+msgstr ""
+"Faqat admin uchun yordam hujjatlarini ochish uchun Ferret Kalitini kiriting."
+
+#: app/templates/admin/help_form.html:34
+msgid "How to Find Your FERRET_KEY"
+msgstr "FERRET_KEY-ni qanday topish mumkin"
+
+#: app/templates/admin/help_form.html:36
+msgid "The FERRET_KEY is set as an environment variable when running Grylli."
+msgstr ""
+"FERRET_KEY Grylli ishlayotganida muhit o'zgaruvchisi sifatida o'rnatiladi."
+
+#: app/templates/admin/help_form.html:39
+msgid "Option 1: Check docker-compose.yml"
+msgstr "1-variant: docker-compose.yml ni tekshiring"
+
+#: app/templates/admin/help_form.html:46
+msgid "Option 2: Use docker inspect"
+msgstr "2-variant: docker inspect dan foydalaning"
+
+#: app/templates/admin/help_form.html:52
+msgid "This shows the FERRET_KEY as passed to the container at runtime."
+msgstr ""
+"Bu FERRET_KEY ni ish vaqti davomida konteynerga uzatish usulini ko'rsatadi."
+
+#: app/templates/admin/index.html:10
+msgid "Admin Panel"
+msgstr "Admin Panel"
+
+#: app/templates/admin/index.html:12
+msgid ""
+"Welcome to the Grylli Admin Panel. Use the links below to manage the system."
+msgstr ""
+"Grylli Admin Paneliga xush kelibsiz. Tizimni boshqarish uchun quyidagi "
+"havolalardan foydalaning."
+
+#: app/templates/admin/index.html:17
+msgid "Manage Users"
+msgstr "Foydalanuvchilarni boshqarish"
+
+#: app/templates/admin/index.html:18
+msgid "Create, edit, enable/disable, or delete user accounts."
+msgstr ""
+"Foydalanuvchi hisoblarini yarating, tahrir qiling, faollashtiring/yosmayin "
+"yoki o'chiring."
+
+#: app/templates/admin/index.html:22
+#: app/templates/admin/system_settings.html:10
+#: app/templates/partials/admin_nav.html:52
+msgid "System Settings"
+msgstr "Tizim sozlamalari"
+
+#: app/templates/admin/index.html:23
+msgid "View  system-wide environment values."
+msgstr "Tizim bo'ylab muhit qiymatlarini ko'ring."
+
+#: app/templates/admin/index.html:27 app/templates/partials/admin_nav.html:42
+msgid "Backups"
+msgstr "Zaxiralar"
+
+#: app/templates/admin/index.html:28
+msgid "Create and delete database backups."
+msgstr "Ma'lumotlar bazasi zaxiralari"
+
+#: app/templates/admin/index.html:33
+msgid "View and test global SMTP settings."
+msgstr ""
+"Sinov elektron postini yuborishda xatolik yuz berdi. SMTP sozlamalarini "
+"tekshiring."
+
+#: app/templates/admin/index.html:39
+msgid "View Admin Guide / README on GitHub"
+msgstr "GitHub-da Admin Guide / README-ni ko'rish"
+
+#: app/templates/admin/index.html:40
+msgid "Includes setup instructions, integrations, and troubleshooting."
+msgstr ""
+"O'rnatish ko'rsatmalari, integratsiyalar va nosozliklarni tuzatish kiradi."
+
+#: app/templates/admin/index.html:44
+msgid "⚠️ Admin Tips"
+msgstr "⚠️ Admin maslahatlari"
+
+#: app/templates/admin/index.html:46
+msgid "Ensure the data folder (database) is backed up on your host"
+msgstr ""
+"Ma'lumotlar papkasining (bazasi) xostda zaxira nusxasi yaratilganligiga "
+"ishonch hosil qiling"
+
+#: app/templates/admin/index.html:48
+msgid ""
+"The uploads folder is not per user.  If required per user, you will ndd to "
+"create subdirectoried per user and setup permissions so users can only see "
+"their own folder."
+msgstr ""
+"Yuklamalar papkasi foydalanuvchilar uchun alohida emas. Agar foydalanuvchi "
+"uchun alohida kerak bo'lsa, har bir foydalanuvchi uchun kichik papkalar "
+"yaratib, foydalanuvchilar faqat o'z papkalarini ko'ra olishlari uchun "
+"ruxsatlarni sozlashingiz kerak bo'ladi."
+
+#: app/templates/admin/index.html:51
+msgid ""
+"To restore a backup: stop the container, replace the data/grylli.db with one"
+" from the backups folder, and restart the container."
+msgstr ""
+"Zaxira nusxasini tiklash uchun konteynerni to'xtating, data/grylli.db "
+"faylini zaxira papkasidan olingan nusxasi bilan almashtiring va konteynerni "
+"qayta ishga tushiring."
+
+#: app/templates/admin/list_backups.html:11
+msgid "Database Backups"
+msgstr "Ma'lumotlar bazasi zaxiralari"
+
+#: app/templates/admin/list_backups.html:13
+msgid "Create Backup"
+msgstr "Zaxira nusxasini yaratish"
+
+#: app/templates/admin/list_backups.html:21
+msgid "Filename"
+msgstr "Fayl nomi"
+
+#: app/templates/admin/list_backups.html:22
+#: app/templates/admin/partials/user_table.html:14
+#: app/templates/apprise/list_apprise.html:62
+#: app/templates/email/list_emails.html:60
+#: app/templates/messages/list_messages.html:60
+#: app/templates/reminders/list_reminders.html:60
+#: app/templates/user_smtp/list_smtp.html:59
+#: app/templates/webhook/list_webhooks.html:63
+msgid "Actions"
+msgstr "Amallar"
+
+#: app/templates/admin/list_backups.html:32
+msgid "Delete this backup?"
+msgstr "Ushbu zaxirani o'chirish?"
+
+#: app/templates/admin/list_backups.html:32
+#: app/templates/apprise/list_apprise.html:95
+#: app/templates/apprise/list_apprise.html:99
+#: app/templates/apprise/list_apprise.html:150
+#: app/templates/apprise/list_apprise.html:154
+#: app/templates/email/list_emails.html:124
+#: app/templates/email/list_emails.html:128
+#: app/templates/email/list_emails.html:226
+#: app/templates/email/list_emails.html:230
+#: app/templates/messages/list_messages.html:112
+#: app/templates/messages/list_messages.html:116
+#: app/templates/messages/list_messages.html:198
+#: app/templates/messages/list_messages.html:202
+#: app/templates/reminders/list_reminders.html:107
+#: app/templates/reminders/list_reminders.html:113
+#: app/templates/reminders/list_reminders.html:192
+#: app/templates/reminders/list_reminders.html:198
+#: app/templates/user_smtp/list_smtp.html:101
+#: app/templates/user_smtp/list_smtp.html:169
+#: app/templates/webhook/list_webhooks.html:102
+#: app/templates/webhook/list_webhooks.html:161
+msgid "Delete"
+msgstr "O'chirish"
+
+#: app/templates/admin/list_backups.html:41
+msgid "No backups found."
+msgstr "Zaxira nusxalari topilmadi."
+
+#: app/templates/admin/list_backups.html:44
+msgid ""
+"Backups contain your full app data. Store securely. Sensitive data is "
+"encrypted in the DB by default."
+msgstr ""
+"Zaxiralar barcha ilova ma'lumotlaringizni o'z ichiga oladi. Ularni xavfsiz "
+"joyda saqlang. Maxfiy ma'lumotlar DB da standart holatda shifrlangan."
+
+#: app/templates/admin/smtp_config.html:28
+#: app/templates/admin/system_config.html:22
+msgid "System Configuration"
+msgstr "Tizim sozlamalari"
+
+#: app/templates/admin/smtp_config.html:33
+#: app/templates/admin/system_config.html:26
+#: app/templates/admin/system_settings.html:15
+msgid "Key"
+msgstr "Kalit"
+
+#: app/templates/admin/smtp_config.html:34
+#: app/templates/admin/system_config.html:27
+#: app/templates/admin/system_settings.html:16
+msgid "Value"
+msgstr "Qiymat"
+
+#: app/templates/admin/smtp_config.html:35
+#: app/templates/admin/system_config.html:28
+msgid "Sensitive"
+msgstr "Hissiyotli"
+
+#: app/templates/admin/smtp_config.html:36
+#: app/templates/admin/system_config.html:29
+msgid "Editable"
+msgstr "Tahrirlanadigan"
+
+#: app/templates/admin/smtp_config.html:50
+#: app/templates/admin/smtp_config.html:51
+#: app/templates/admin/system_config.html:45
+#: app/templates/admin/system_config.html:46
+#: app/templates/email/view_config.html:60
+msgid "Yes"
+msgstr "Ha"
+
+#: app/templates/admin/smtp_config.html:50
+#: app/templates/admin/smtp_config.html:51
+#: app/templates/admin/system_config.html:45
+#: app/templates/admin/system_config.html:46
+#: app/templates/email/view_config.html:60
+msgid "No"
+msgstr "Yo'q"
+
+#: app/templates/admin/smtp_config.html:63
+#: app/templates/admin/system_config.html:55
+msgid "Send Test Email"
+msgstr "Sinovchi Elektron Xatni Yuborish"
+
+#: app/templates/admin/system_config.html:39
+msgid "decrypted"
+msgstr "Yaratilgan"
+
+#: app/templates/admin/partials/user_card.html:12
+msgid "Email:"
+msgstr "Email:"
+
+#: app/templates/admin/partials/user_card.html:15
+msgid "Role:"
+msgstr "Roli:"
+
+#: app/templates/admin/partials/user_card.html:27
+#: app/templates/admin/partials/user_table.html:34
+msgid "Change Role"
+msgstr "Rolni o‘zgartirish"
+
+#: app/templates/admin/partials/user_card.html:29
+#: app/templates/admin/partials/user_table.html:36
+msgid "You cannot change your own role"
+msgstr "Siz o'z imkoniyatlaringizni o'zgartira olmaysiz."
+
+#: app/templates/admin/partials/user_card.html:36
+#: app/templates/admin/partials/user_table.html:43
+msgid "Are you sure you want to reset MFA for this user?"
+msgstr ""
+"Ushbu foydalanuvchi uchun MFAni qayta o‘rnatishga ishonchingiz komilmi?"
+
+#: app/templates/admin/partials/user_card.html:39
+#: app/templates/admin/partials/user_table.html:46
+msgid "Reset MFA"
+msgstr "Parolni tiklash"
+
+#: app/templates/admin/partials/user_card.html:51
+#: app/templates/admin/partials/user_table.html:58
+msgid "Delete user"
+msgstr "Foydalanuvchini o'chirish"
+
+#: app/templates/admin/partials/user_card.html:55
+#: app/templates/admin/partials/user_table.html:61
+msgid "Delete User"
+msgstr "Foydalanuvchini o'chirish"
+
+#: app/templates/admin/partials/user_card.html:58
+#: app/templates/admin/partials/user_table.html:65
+msgid "You cannot disable yourself"
+msgstr "O'zingizni o'chirib qo'yolmaysiz"
+
+#: app/templates/admin/partials/user_card.html:65
+#: app/templates/admin/partials/user_table.html:72
+msgid "Disable"
+msgstr "O'chirish"
+
+#: app/templates/admin/partials/user_card.html:65
+#: app/templates/admin/partials/user_table.html:72
+msgid "Enable"
+msgstr "Yo'q qilish"
+
+#: app/templates/admin/partials/user_header.html:6
+#: app/templates/partials/admin_nav.html:47
+msgid "Users"
+msgstr "Foydalanuvchilar"
+
+#: app/templates/admin/partials/user_header.html:12
+#: app/templates/admin/partials/user_header.html:13
+#: app/templates/apprise/apprise_config.html:10
+#: app/templates/apprise/apprise_config.html:11
+#: app/templates/apprise/list_apprise.html:16
+#: app/templates/apprise/list_apprise.html:17
+#: app/templates/email/list_emails.html:15
+#: app/templates/email/list_emails.html:16
+#: app/templates/messages/list_messages.html:16
+#: app/templates/messages/list_messages.html:17
+#: app/templates/reminders/list_reminders.html:15
+#: app/templates/reminders/list_reminders.html:16
+#: app/templates/user_smtp/list_smtp.html:14
+#: app/templates/user_smtp/list_smtp.html:17
+#: app/templates/webhook/list_webhooks.html:16
+#: app/templates/webhook/list_webhooks.html:17
+#: app/templates/webhook/webhook_config.html:10
+#: app/templates/webhook/webhook_config.html:11
+msgid "Table View"
+msgstr "Jadval ko'rinishi"
+
+#: app/templates/admin/partials/user_header.html:26
+#: app/templates/admin/partials/user_header.html:27
+#: app/templates/apprise/apprise_config.html:24
+#: app/templates/apprise/apprise_config.html:25
+#: app/templates/apprise/list_apprise.html:30
+#: app/templates/apprise/list_apprise.html:31
+#: app/templates/email/list_emails.html:29
+#: app/templates/email/list_emails.html:30
+#: app/templates/messages/list_messages.html:30
+#: app/templates/messages/list_messages.html:31
+#: app/templates/reminders/list_reminders.html:29
+#: app/templates/reminders/list_reminders.html:30
+#: app/templates/user_smtp/list_smtp.html:27
+#: app/templates/user_smtp/list_smtp.html:30
+#: app/templates/webhook/list_webhooks.html:30
+#: app/templates/webhook/list_webhooks.html:31
+#: app/templates/webhook/webhook_config.html:24
+#: app/templates/webhook/webhook_config.html:25
+msgid "Card View"
+msgstr "Karta ko'rinishi"
+
+#: app/templates/admin/partials/user_header.html:45
+msgid "Add User"
+msgstr "Foydalanuvchi qo'shish"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:9
+#: app/templates/email/attach_files.html:54
+#: app/templates/email/list_emails.html:255
+#: app/templates/messages/list_messages.html:223
+#: app/templates/reminders/list_reminders.html:218
+#: app/templates/reminders/schedule_reminder.html:56
+msgid "Hide Instructions"
+msgstr "Ko'rsatmalarni yashirish"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:9
+msgid "How to manage users"
+msgstr "Foydalanuvchilarni qanday boshqarish mumkin"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "Click"
+msgstr "Bosing"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+msgid "➕ Add User"
+msgstr "➕ Foydalanuvchi qo'shish"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+msgid "to open the new user form."
+msgstr "yangi foydalanuvchi shaklini ochish uchun."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:18
+msgid "Enter a unique username, valid email address, and strong password."
+msgstr ""
+"Noyob foydalanuvchi nomi, haqiqiy email manzilini va kuchli parolni "
+"kiriting."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "Select the appropriate"
+msgstr "Tegishli"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "role"
+msgstr "rol"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "or"
+msgstr "Port"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "to save."
+msgstr "saqlash."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:25
+msgid "To edit a user, click ✏️ and update their info."
+msgstr ""
+"Foydalanuvchini tahrirlash uchun ✏️ bosib, ularning ma'lumotlarini "
+"yangilang."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:26
+msgid "To delete a user, click 🗑️ and confirm the deletion."
+msgstr "Foydalanuvchini o'chirish uchun 🗑️ bosib, o'chirishni tasdiqlang."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:28
+msgid "To disable or enable a user, click 🔴 or 🟢."
+msgstr "Foydalanuvchini o'chirish yoki yoqish uchun 🔴 yoki 🟢 bosib turing."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:30
+msgid "🟢 = User is enabled and can log in."
+msgstr "🟢 = Foydalanuvchi yoqilgan va tizimga kirishi mumkin."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:31
+msgid "🔴 = User is disabled and cannot log in."
+msgstr "🔴 = Foydalanuvchi o'chirilgan va tizimga kirishi mumkin emas."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:32
+msgid "⚪ = You cannot disable your own account."
+msgstr "⚪ = Siz o'z hisobingizni o'chira olmaysiz."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:43
+#: app/templates/admin/partials/user_table.html:91
+msgid "Assign Role for"
+msgstr "Manzillarni tayinlash"
+
+#: app/templates/admin/partials/user_table.html:10
+msgid "ID"
+msgstr "ID"
+
+#: app/templates/admin/partials/user_table.html:11
+#: app/templates/user_smtp/list_smtp.html:55
+msgid "Username"
+msgstr "Foydalanuvchi nomi"
+
+#: app/templates/admin/partials/user_table.html:12
+msgid "Email"
+msgstr "Email"
+
+#: app/templates/admin/partials/user_table.html:13
+msgid "Role"
+msgstr "Roli"
+
+#: app/templates/apprise/apprise_config.html:3
+#: app/templates/apprise/list_apprise.html:9
+#: app/templates/messages/assign_destinations.html:22
+#: app/templates/reminders/assign_destinations.html:20
+msgid "Apprise Destinations"
+msgstr "Apprise Manzillari"
+
+#: app/templates/apprise/apprise_config.html:43
+#: app/templates/webhook/list_webhooks.html:49
+#: app/templates/webhook/webhook_config.html:43
+msgid "Add Webhook"
+msgstr "Webhook qo'shish"
+
+#: app/templates/apprise/apprise_config.html:43
+#: app/templates/apprise/list_apprise.html:49
+#: app/templates/webhook/list_webhooks.html:49
+#: app/templates/webhook/webhook_config.html:43
+msgid "Add Destination"
+msgstr "Manzil Qo'shish"
+
+#: app/templates/apprise/create_apprise.html:10
+msgid "Create Apprise Destination"
+msgstr "Apprise Manzilini Yaratish"
+
+#: app/templates/apprise/create_apprise.html:38
+#: app/templates/apprise/edit_apprise.html:38
+#: app/templates/user_smtp/create_smtp.html:107
+#: app/templates/webhook/create_webhook.html:44
+#: app/templates/webhook/edit_webhook.html:44
+msgid "Create Destination"
+msgstr "Manzilni Yaratish"
+
+#: app/templates/apprise/create_apprise.html:47
+#: app/templates/apprise/edit_apprise.html:47
+msgid "Need help with Apprise URLs? See the"
+msgstr "Apprise URL yordam kerakmi? Ko'ring"
+
+#: app/templates/apprise/create_apprise.html:51
+#: app/templates/apprise/edit_apprise.html:51
+msgid "Apprise Notification Services documentation"
+msgstr "Apprise Bildirish Xizmatlari hujjatlari"
+
+#: app/templates/apprise/edit_apprise.html:10
+msgid "Edit Apprise Destination"
+msgstr "Apprise Manzilini Tahrirlash"
+
+#: app/templates/apprise/list_apprise.html:49
+msgid "Add Apprise"
+msgstr "Apprise Qo'shish"
+
+#: app/templates/apprise/list_apprise.html:58
+#: app/templates/email/edit_message.html:21
+#: app/templates/email/list_emails.html:56
+#: app/templates/email/view_config.html:14
+#: app/templates/messages/create_message.html:29
+#: app/templates/messages/edit_message.html:23
+#: app/templates/messages/list_messages.html:57
+#: app/templates/messages/view_message.html:14
+#: app/templates/reminders/create_reminder.html:23
+#: app/templates/reminders/edit_reminder.html:17
+#: app/templates/reminders/list_reminders.html:56
+#: app/templates/reminders/view_reminder.html:13
+#: app/templates/user_smtp/list_smtp.html:52
+#: app/templates/webhook/list_webhooks.html:58
+msgid "Label"
+msgstr "Yorliq"
+
+#: app/templates/apprise/list_apprise.html:59
+msgid "URL"
+msgstr "URL"
+
+#: app/templates/apprise/list_apprise.html:61
+#: app/templates/email/list_emails.html:59
+#: app/templates/messages/list_messages.html:59
+#: app/templates/messages/view_message.html:36
+#: app/templates/reminders/view_reminder.html:47
+#: app/templates/webhook/list_webhooks.html:62
+msgid "Created At"
+msgstr "Yaratilgan Vaqti"
+
+#: app/templates/apprise/list_apprise.html:77
+#: app/templates/apprise/list_apprise.html:132
+#: app/templates/user_smtp/list_smtp.html:79
+#: app/templates/user_smtp/list_smtp.html:147
+#: app/templates/webhook/list_webhooks.html:79
+#: app/templates/webhook/list_webhooks.html:138
+msgid "Edit"
+msgstr "Tahrirlash"
+
+#: app/templates/apprise/list_apprise.html:80
+#: app/templates/apprise/list_apprise.html:135
+#: app/templates/user_smtp/list_smtp.html:82
+#: app/templates/user_smtp/list_smtp.html:150
+msgid "Cannot edit while in use"
+msgstr "Foydalanganda tahrir qilib bo'lmaydi"
+
+#: app/templates/apprise/list_apprise.html:88
+#: app/templates/apprise/list_apprise.html:143
+#: app/templates/webhook/list_webhooks.html:91
+#: app/templates/webhook/list_webhooks.html:150
+msgid "Test"
+msgstr "Sinov"
+
+#: app/templates/apprise/list_apprise.html:103
+#: app/templates/apprise/list_apprise.html:158
+#: app/templates/user_smtp/list_smtp.html:106
+#: app/templates/user_smtp/list_smtp.html:174
+msgid "Cannot delete while in use"
+msgstr "Foydalanganda o'chirib bo'lmaydi"
+
+#: app/templates/apprise/list_apprise.html:119
+msgid "URL:"
+msgstr "URL:"
+
+#: app/templates/apprise/list_apprise.html:122
+#: app/templates/user_smtp/list_smtp.html:137
+#: app/templates/webhook/list_webhooks.html:128
+msgid "Enabled:"
+msgstr "Faollashtirilgan:"
+
+#: app/templates/apprise/list_apprise.html:125
+#: app/templates/user_smtp/list_smtp.html:140
+#: app/templates/webhook/list_webhooks.html:131
+msgid "Created:"
+msgstr "Yaratilgan:"
+
+#: app/templates/auth/bootstrap.html:14
+msgid "Create Admin Account"
+msgstr "Admin Hisob Yaratish"
+
+#: app/templates/auth/bootstrap.html:16
+msgid "Let’s get started by creating your first admin account."
+msgstr "Keling, birinchi admin hisobingizni yaratish bilan boshlaymiz."
+
+#: app/templates/auth/bootstrap.html:75
+msgid "Create Admin"
+msgstr "Admin Yaratish"
+
+#: app/templates/auth/forgot_password.html:12
+msgid "Forgot Password"
+msgstr "Parolni Unutdingiz"
+
+#: app/templates/auth/forgot_password.html:15
+msgid ""
+"Enter your username and email. We'll send you a link to reset your password."
+msgstr ""
+"Foydalanuvchi nomingiz va elektron pochtangizni kiriting. Parolni tiklash "
+"uchun sizga havola yuboramiz."
+
+#: app/templates/auth/forgot_username.html:12
+msgid "Forgot Username"
+msgstr "Foydalanuvchi nomini unutdingiz"
+
+#: app/templates/auth/forgot_username.html:15
+msgid "Enter your email address, and we'll send you your username."
+msgstr ""
+"Elektron pochta manzilingizni kiriting, sizga foydalanuvchi nomingizni "
+"yuboramiz."
+
+#: app/templates/auth/forgot_username.html:40
+msgid "Send Username"
+msgstr "Foydalanuvchi Nomi Yuborish"
+
+#: app/templates/auth/login.html:12 app/templates/auth/login.html:54
+msgid "Log In"
+msgstr "Kirish"
+
+#: app/templates/auth/login.html:62
+msgid "Forgot Username?"
+msgstr "Foydalanuvchi nomini unutdingizmi?"
+
+#: app/templates/auth/login.html:64
+msgid "Forgot Password?"
+msgstr "Parolni unutdingizmi?"
+
+#: app/templates/auth/login.html:66 app/templates/auth/signup.html:12
+msgid "Sign Up"
+msgstr "Hisob Ochildi"
+
+#: app/templates/auth/rate_limit.html:9
+msgid "Hold On"
+msgstr "Kutib turing"
+
+#: app/templates/auth/rate_limit.html:11
+msgid "Too many failed login attempts. Please wait"
+msgstr "Juda ko'p muvaffaqiyatsiz kirish urinishlari. Iltimos, kuting"
+
+#: app/templates/auth/rate_limit.html:13
+msgid "seconds..."
+msgstr "soniyalar..."
+
+#: app/templates/auth/rate_limit.html:15
+msgid "Redirecting to login..."
+msgstr "Boshqaruv paneliga qaytish"
+
+#: app/templates/auth/reset_password.html:12
+#: app/templates/auth/reset_password.html:116
+msgid "Reset Password"
+msgstr "Parolni tiklash"
+
+#: app/templates/auth/reset_password.html:14
+msgid "Enter your username, email, and new password."
+msgstr ""
+"Foydalanuvchi nomingizni, elektron pochtangizni va yangi parolingizni "
+"kiriting."
+
+#: app/templates/auth/signup.html:14
+msgid "Fill out the form to create your account."
+msgstr "Hisobingizni yaratish uchun formani to'ldiring."
+
+#: app/templates/checkin/already_checked_in.html:10
+msgid "Already Checked In"
+msgstr "Oxirgi yoqilgan vaqti"
+
+#: app/templates/checkin/already_checked_in.html:12
+msgid ""
+"You have already checked in for this item. No further action is needed at "
+"this time."
+msgstr ""
+"Siz allaqachon bu element uchun kirgan siz. Hozirgi vaqtda boshqa harakat "
+"talab qilinmaydi."
+
+#: app/templates/checkin/already_checked_in.html:16
+#: app/templates/checkin/disabled.html:16
+#: app/templates/checkin/executed_disabled.html:18
+msgid "Check-in for:"
+msgstr "Uchun ro'yxatdan o'tildi:"
+
+#: app/templates/checkin/already_checked_in.html:21
+#: app/templates/checkin/disabled.html:21
+#: app/templates/checkin/executed_disabled.html:23
+#: app/templates/checkin/thank_you.html:19
+msgid "Return to Dashboard"
+msgstr "Boshqaruv paneliga qaytish"
+
+#: app/templates/checkin/disabled.html:10
+msgid "Check-In Disabled"
+msgstr "Elektron pochta o'chirilgan"
+
+#: app/templates/checkin/disabled.html:12
+msgid "This check-in is currently disabled and cannot be completed."
+msgstr ""
+"Bu ro'yxatga olish ayni paytda o'chirilgan va tugatilishi mumkin emas."
+
+#: app/templates/checkin/executed_disabled.html:11
+msgid "Already Executed & Disabled"
+msgstr "Allaqachon bajarilgan va o'chirilgan"
+
+#: app/templates/checkin/executed_disabled.html:14
+msgid ""
+"This check-in has already been executed and is now disabled. No further "
+"action is required."
+msgstr ""
+"Bu ro'yxatga olish allaqachon bajarilgan va hozir o'chirilgan. Boshqa "
+"harakat talab etilmaydi."
+
+#: app/templates/checkin/thank_you.html:10
+msgid "Check-In Successful"
+msgstr "Ro'yxatga olish muvaffaqiyatli"
+
+#: app/templates/checkin/thank_you.html:11
+msgid "Thank you for checking in."
+msgstr "Ro'yxatdan o'tganingiz uchun tashakkur."
+
+#: app/templates/checkin/thank_you.html:14
+msgid "Checked in for:"
+msgstr "Uchun ro'yxatdan o'tildi:"
+
+#: app/templates/email/assign_smtp.html:11
+msgid "📧 Assign SMTP Config to:"
+msgstr "📧 SMTP konfiguratsiyasini tayinlang:"
+
+#: app/templates/email/assign_smtp.html:25
+msgid "No SMTP (Unassign)"
+msgstr "SMTP konfiguratsiyasi tayinlanmagan"
+
+#: app/templates/email/assign_smtp.html:26
+msgid "This email will not use any SMTP configuration."
+msgstr "Bu elektron pochta SMTP konfiguratsiyasidan foydalanmaydi."
+
+#: app/templates/email/attach_files.html:12
+msgid "Attach Files for:"
+msgstr "Fayllarni qo'shish uchun:"
+
+#: app/templates/email/attach_files.html:21
+msgid "Available Files"
+msgstr "Mavjud fayllar"
+
+#: app/templates/email/attach_files.html:36
+msgid "No files found in the upload directory."
+msgstr "Yuklash katalogida fayllar topilmadi."
+
+#: app/templates/email/attach_files.html:44
+msgid "Save Attachments"
+msgstr "Qo'shimchalarni saqlash"
+
+#: app/templates/email/attach_files.html:54
+msgid "File Attach Notes"
+msgstr "Fayl qo'shish eslatmalari"
+
+#: app/templates/email/attach_files.html:63
+msgid "Important:"
+msgstr "Port:"
+
+#: app/templates/email/attach_files.html:65
+msgid ""
+"Only files that are present in the 'uploads' folder (provided by your system"
+" administrator) will be shown here. If you do not see your file(s), please "
+"contact your Grylli administrator."
+msgstr ""
+"Faqatgina (sistemangiz boshqaruvchisi tomonidan taqdim etilgan) 'uploads' "
+"papkasida mavjud fayllar bu yerda ko'rsatiladi. Agar faylingizni "
+"ko'rolmasangiz, iltimos Grylli boshqaruvchingiz bilan bog'laning."
+
+#: app/templates/email/attach_files.html:69
+msgid "Accepted file types:"
+msgstr "Qabul qilingan fayl turlari:"
+
+#: app/templates/email/attach_files.html:71
+msgid "Documents:"
+msgstr "Hujjatlar:"
+
+#: app/templates/email/attach_files.html:73
+msgid "Images:"
+msgstr "Rasmlar:"
+
+#: app/templates/email/attach_files.html:75
+msgid "Audio:"
+msgstr "Audio:"
+
+#: app/templates/email/attach_files.html:79
+msgid "Maximum file size:"
+msgstr "Maksimal fayl hajmi:"
+
+#: app/templates/email/attach_files.html:80
+msgid "10 MB per file"
+msgstr "Har bir fayl uchun 10 MB"
+
+#: app/templates/email/attach_files.html:83
+msgid "Total upload size:"
+msgstr "Umumiy yuklab olish hajmi:"
+
+#: app/templates/email/attach_files.html:84
+msgid "20 MB (all files combined)"
+msgstr "20 MB (barcha fayllar birgalikda)"
+
+#: app/templates/email/edit_message.html:12
+#: app/templates/email/list_emails.html:75
+#: app/templates/email/list_emails.html:177
+msgid "Edit Email"
+msgstr "Elektron pochtani tahrirlash"
+
+#: app/templates/email/edit_message.html:12
+msgid "Create Email"
+msgstr "Elektron pochta yaratish"
+
+#: app/templates/email/edit_message.html:28
+msgid "To (Recipient Email)"
+msgstr "Kimga (Oluvchi elektron pochtasi)"
+
+#: app/templates/email/edit_message.html:35
+#: app/templates/email/list_emails.html:57
+#: app/templates/email/view_config.html:18
+#: app/templates/messages/create_message.html:36
+#: app/templates/messages/edit_message.html:30
+#: app/templates/messages/list_messages.html:58
+#: app/templates/messages/view_message.html:18
+#: app/templates/reminders/create_reminder.html:30
+#: app/templates/reminders/edit_reminder.html:24
+#: app/templates/reminders/list_reminders.html:57
+#: app/templates/reminders/view_reminder.html:17
+msgid "Subject"
+msgstr "Mavzu"
+
+#: app/templates/email/edit_message.html:42
+#: app/templates/email/view_config.html:28
+msgid "Body"
+msgstr "Matn"
+
+#: app/templates/email/edit_message.html:50
+msgid "Save Email"
+msgstr "Elektron pochtani saqlash"
+
+#: app/templates/email/list_emails.html:48
+msgid "Add Email"
+msgstr "Elektron pochta qo'shish"
+
+#: app/templates/email/list_emails.html:58
+#: app/templates/reminders/assign_email_reminder.html:77
+msgid "To"
+msgstr "Kimga"
+
+#: app/templates/email/list_emails.html:78
+#: app/templates/email/list_emails.html:180
+msgid "Disable to edit email"
+msgstr "Sinov elektron postini yuborishda xatolik yuz berdi:"
+
+#: app/templates/email/list_emails.html:84
+#: app/templates/email/list_emails.html:186
+msgid "Attach Files"
+msgstr "Fayllarni qo'shish"
+
+#: app/templates/email/list_emails.html:87
+#: app/templates/email/list_emails.html:189
+msgid "Disable to attach files"
+msgstr "Fayllarni qo'shish"
+
+#: app/templates/email/list_emails.html:93
+#: app/templates/email/list_emails.html:195
+msgid "Attach SMTP Config"
+msgstr "SMTP konfiguratsiyasini qo'shish"
+
+#: app/templates/email/list_emails.html:96
+#: app/templates/email/list_emails.html:198
+msgid "Disable to assign SMTP"
+msgstr "SMTP tayinlashni o'chirish"
+
+#: app/templates/email/list_emails.html:102
+#: app/templates/email/list_emails.html:204
+msgid "Schedule Check-In"
+msgstr "Ro'yxatga olish jadvalini tuzish"
+
+#: app/templates/email/list_emails.html:105
+#: app/templates/email/list_emails.html:207
+msgid "Disable to schedule check-in"
+msgstr "Ro'yxatga olish jadvalini tuzish"
+
+#: app/templates/email/list_emails.html:110
+#: app/templates/email/list_emails.html:212
+#: app/templates/messages/list_messages.html:99
+#: app/templates/messages/list_messages.html:184
+#: app/templates/reminders/list_reminders.html:93
+#: app/templates/reminders/list_reminders.html:178
+msgid "View Details"
+msgstr "Tafsilotlarni ko'rish"
+
+#: app/templates/email/list_emails.html:118
+#: app/templates/email/list_emails.html:220
+msgid "Send this email to yourself to preview it."
+msgstr ""
+"Uni oldindan ko'rish uchun ushbu elektron pochtani o'zingizga yuboring."
+
+#: app/templates/email/list_emails.html:136
+#: app/templates/email/list_emails.html:238
+msgid "Toggle Email On/Off"
+msgstr "Elektron pochtani yoqish/o'chirish"
+
+#: app/templates/email/list_emails.html:139
+#: app/templates/email/list_emails.html:241
+msgid "Email is enabled"
+msgstr "Elektron pochta yoqilgan"
+
+#: app/templates/email/list_emails.html:141
+#: app/templates/email/list_emails.html:243
+msgid "Email is disabled"
+msgstr "Elektron pochta o'chirilgan"
+
+#: app/templates/email/list_emails.html:157
+#: app/templates/email/view_config.html:51
+#: app/templates/messages/list_messages.html:142
+#: app/templates/reminders/list_reminders.html:140
+msgid "Label:"
+msgstr "Yorliq:"
+
+#: app/templates/email/list_emails.html:161
+#: app/templates/messages/list_messages.html:146
+#: app/templates/reminders/list_reminders.html:144
+#: app/templates/reminders/view_reminder.html:98
+msgid "Subject:"
+msgstr "Mavzu"
+
+#: app/templates/email/list_emails.html:165
+msgid "To:"
+msgstr "Ga:"
+
+#: app/templates/email/list_emails.html:169
+#: app/templates/messages/list_messages.html:150
+msgid "Created At:"
+msgstr "Yaratilgan Vaqti"
+
+#: app/templates/email/list_emails.html:255
+msgid "How to create and send an email"
+msgstr "Elektron pochta yaratish va jo'natish"
+
+#: app/templates/email/list_emails.html:262
+msgid ""
+"Click “Add Email” and fill out the subject, content, and recipient address."
+msgstr ""
+"\"Elektron pochta qo'shish\" tugmasini bosing va mavzu, mazmun va qabul "
+"qiluvchining manzilini to'ldiring."
+
+#: app/templates/email/list_emails.html:263
+msgid "Attach any optional files (if needed)."
+msgstr "Ixtiyoriy fayllarni biriktiring (agar kerak bo'lsa)."
+
+#: app/templates/email/list_emails.html:264
+msgid ""
+"Click 🧩 to assign a single SMTP configuration that will be used to send the "
+"email."
+msgstr ""
+"Elektron pochtani jo'natish uchun ishlatiladigan yagona SMTP "
+"konfiguratsiyasini belgilash uchun 🧩 tugmasini bosing."
+
+#: app/templates/email/list_emails.html:265
+msgid "Click ⏱️ to set a check-in interval and grace period for the email."
+msgstr ""
+"Elektron pochta uchun tekshirish vaqti va imtiyoz muddatini belgilash uchun "
+"⏱️ tugmasini bosing."
+
+#: app/templates/email/list_emails.html:266
+msgid "Enable the email using the 🔴/🟢 toggle button."
+msgstr "Elektron pochtani 🔴/🟢 almashtirish tugmasi yordamida yoqing."
+
+#: app/templates/email/list_emails.html:267
+msgid ""
+"Click 🧪 to test the email by sending it to yourself (not the recipient)."
+msgstr ""
+"Elektron pochtani o'zingizga (qabul qiluvchiga emas) jo'natib sinash uchun 🧪"
+" tugmasini bosing."
+
+#: app/templates/email/list_emails.html:268
+msgid ""
+"If you don’t check in before the grace period ends, the email will be "
+"automatically sent."
+msgstr ""
+"Imtiyoz muddati tugashidan oldin tekshirmasangiz, elektron pochta avtomatik "
+"ravishda jo'natiladi."
+
+#: app/templates/email/list_emails.html:269
+msgid "You can preview the email configuration using 🔍."
+msgstr ""
+"Elektron pochta konfiguratsiyasini 🔍 yordamida oldindan ko'rishingiz mumkin."
+
+#: app/templates/email/list_emails.html:270
+msgid "Once a secure email is sent, it will be automatically disabled."
+msgstr ""
+"Xavfsiz elektron pochta jo'natilganidan so'ng, u avtomatik ravishda "
+"o'chiriladi."
+
+#: app/templates/email/schedule_email.html:9
+msgid "Schedule Email"
+msgstr "Elektron pochta rejalashtirish"
+
+#: app/templates/email/schedule_email.html:18
+#: app/templates/messages/schedule_message.html:18
+msgid "Years"
+msgstr "Yillar"
+
+#: app/templates/email/schedule_email.html:19
+#: app/templates/messages/schedule_message.html:19
+msgid "Months"
+msgstr "Oylik"
+
+#: app/templates/email/schedule_email.html:20
+#: app/templates/messages/schedule_message.html:20
+msgid "Weeks"
+msgstr "Haftalar"
+
+#: app/templates/email/schedule_email.html:21
+#: app/templates/messages/schedule_message.html:21
+msgid "Days"
+msgstr "Kunlar"
+
+#: app/templates/email/schedule_email.html:22
+#: app/templates/messages/schedule_message.html:22
+msgid "Hours"
+msgstr "Soatlar"
+
+#: app/templates/email/schedule_email.html:23
+#: app/templates/messages/schedule_message.html:23
+msgid "Minutes"
+msgstr "Daqiqalar"
+
+#: app/templates/email/schedule_email.html:28
+#: app/templates/messages/schedule_message.html:28
+msgid "Check-in"
+msgstr "Tekshirish"
+
+#: app/templates/email/schedule_email.html:51
+#: app/templates/messages/schedule_message.html:51
+#: app/templates/messages/view_message.html:26
+msgid "Grace Period"
+msgstr "Imtiyoz Muddat"
+
+#: app/templates/email/schedule_email.html:80
+#: app/templates/messages/schedule_message.html:80
+#: app/templates/reminders/schedule_reminder.html:47
+msgid "Save Schedule"
+msgstr "Rejani saqlash"
+
+#: app/templates/email/view_config.html:9
+msgid "Email Configuration"
+msgstr "Elektron pochta konfiguratsiyasi"
+
+#: app/templates/email/view_config.html:22
+msgid "Recipient"
+msgstr "Qabul qiluvchi"
+
+#: app/templates/email/view_config.html:33
+msgid "Attached Files"
+msgstr "Biriktirilgan fayllar"
+
+#: app/templates/email/view_config.html:39
+msgid "No files attached"
+msgstr "Fayllar yo'q"
+
+#: app/templates/email/view_config.html:46
+#: app/templates/reminders/assign_email_reminder.html:20
+msgid "SMTP Configuration"
+msgstr "SMTP konfiguratsiyasi"
+
+#: app/templates/email/view_config.html:54
+#: app/templates/user_smtp/list_smtp.html:122
+msgid "Host:"
+msgstr "Host:"
+
+#: app/templates/email/view_config.html:57
+#: app/templates/user_smtp/list_smtp.html:128
+msgid "Username:"
+msgstr "Foydalanuvchi nomi:"
+
+#: app/templates/email/view_config.html:60
+#: app/templates/user_smtp/list_smtp.html:134
+msgid "TLS:"
+msgstr "TLS:"
+
+#: app/templates/email/view_config.html:64
+msgid "No SMTP configuration assigned"
+msgstr "SMTP konfiguratsiyasi tayinlanmagan"
+
+#: app/templates/email/view_config.html:69
+msgid "Schedule Information"
+msgstr "Reja ma'lumotlari"
+
+#: app/templates/email/view_config.html:72
+msgid "Check-in Interval:"
+msgstr "Tekshirish vaqti:"
+
+#: app/templates/email/view_config.html:72
+#: app/templates/email/view_config.html:75
+msgid "minutes"
+msgstr "daqiqa"
+
+#: app/templates/email/view_config.html:75
+msgid "Grace Period:"
+msgstr "Imtiyoz Muddat:"
+
+#: app/templates/email/view_config.html:79
+msgid "Last Check-in:"
+msgstr "Oxirgi tekshirish:"
+
+#: app/templates/email/view_config.html:82
+msgid "No check-in has occurred yet"
+msgstr "Hali tekshirilgani yo'q"
+
+#: app/templates/email/view_config.html:92
+msgid "Back to Emails"
+msgstr "Elektron pochtalarga qaytish"
+
+#: app/templates/errors/500.html:4
+msgid "Something went wrong"
+msgstr "Nimadir xato bo'ldi"
+
+#: app/templates/errors/500.html:6
+msgid ""
+"An unexpected error occurred. Please try again later or contact support."
+msgstr ""
+"Kutilmagan xato yuz berdi. Iltimos, keyinroq qayta urinib ko'ring yoki "
+"qo'llab-quvvatlash xizmati bilan bog'laning."
+
+#: app/templates/locale/redirect_after_lang_set.html:15
+msgid "Switching Language..."
+msgstr "Tilni almashtirish..."
+
+#: app/templates/locale/redirect_after_lang_set.html:18
+msgid "Applying new language..."
+msgstr "Yangi tilni qo'llash..."
+
+#: app/templates/messages/assign_destinations.html:13
+#: app/templates/reminders/assign_destinations.html:12
+msgid "Assign Destinations for"
+msgstr "Manzillarni tayinlash"
+
+#: app/templates/messages/assign_destinations.html:62
+#: app/templates/reminders/assign_destinations.html:60
+msgid "Save Destinations"
+msgstr "Manzillarni saqlash"
+
+#: app/templates/messages/create_message.html:17
+msgid "Edit Notificaton"
+msgstr "Bildirishnomani tahrirlash"
+
+#: app/templates/messages/create_message.html:19
+msgid "Create Notification"
+msgstr "Bildirishnoma yaratish"
+
+#: app/templates/messages/create_message.html:43
+#: app/templates/messages/edit_message.html:37
+#: app/templates/messages/view_message.html:42
+#: app/templates/reminders/create_reminder.html:37
+#: app/templates/reminders/edit_reminder.html:31
+#: app/templates/reminders/view_reminder.html:53
+msgid "Content"
+msgstr "Mazmuni"
+
+#: app/templates/messages/create_message.html:51
+msgid "Save Notification"
+msgstr "Bildirishnomani saqlash"
+
+#: app/templates/messages/edit_message.html:15
+#: app/templates/messages/list_messages.html:74
+#: app/templates/messages/list_messages.html:158
+msgid "Edit Notification"
+msgstr "Bildirishnomani tahrirlash"
+
+#: app/templates/messages/edit_message.html:45
+msgid "Update Notification"
+msgstr "Bildirishnomani yangilash"
+
+#: app/templates/messages/list_messages.html:49
+msgid "Add Notification"
+msgstr "Bildirishnoma qo'shish"
+
+#: app/templates/messages/list_messages.html:77
+#: app/templates/messages/list_messages.html:161
+msgid "Disable to edit notification"
+msgstr "Bildirishnomani tahrirlash"
+
+#: app/templates/messages/list_messages.html:83
+#: app/templates/messages/list_messages.html:167
+#: app/templates/reminders/list_reminders.html:78
+#: app/templates/reminders/list_reminders.html:163
+msgid "Assign Destinations"
+msgstr "Manzillarni tayinlash"
+
+#: app/templates/messages/list_messages.html:86
+#: app/templates/messages/list_messages.html:170
+msgid "Disable to assign destinations"
+msgstr "Manzillarni tayinlash"
+
+#: app/templates/messages/list_messages.html:92
+#: app/templates/messages/list_messages.html:176
+#: app/templates/reminders/list_reminders.html:88
+#: app/templates/reminders/list_reminders.html:173
+msgid "Set Schedule"
+msgstr "Jadvalni sozlash"
+
+#: app/templates/messages/list_messages.html:95
+#: app/templates/messages/list_messages.html:179
+msgid "Disable to set schedule"
+msgstr "Jadvalni sozlash"
+
+#: app/templates/messages/list_messages.html:107
+#: app/templates/messages/list_messages.html:192
+msgid "Send Test Notification"
+msgstr "Bildirishnomani tahrirlash"
+
+#: app/templates/messages/list_messages.html:122
+#: app/templates/messages/list_messages.html:209
+msgid "Toggle Message On/Off"
+msgstr "Xabarni yoqish/o‘chirish"
+
+#: app/templates/messages/list_messages.html:124
+#: app/templates/messages/list_messages.html:211
+msgid "Notification is enabled"
+msgstr "Bildirishnoma yoqilgan"
+
+#: app/templates/messages/list_messages.html:126
+#: app/templates/messages/list_messages.html:213
+msgid "Notification is disabled"
+msgstr "Bildirishnoma o‘chirilgan"
+
+#: app/templates/messages/list_messages.html:223
+msgid "How to create and send a notification"
+msgstr "Qanday qilib bildirishnoma yaratish va yuborish"
+
+#: app/templates/messages/list_messages.html:233
+msgid "Click “Add notification” and fill out the subject and content fields."
+msgstr ""
+"“Bildirishnoma qo'shish” tugmasini bosing va mavzu va mazmun maydonlarini "
+"toʻldiring."
+
+#: app/templates/messages/list_messages.html:234
+msgid "Save the notification to return to the overview."
+msgstr "Sharhga qaytish uchun bildirishnomani saqlang."
+
+#: app/templates/messages/list_messages.html:235
+msgid "You need to create at least one apprise or webhook destination."
+msgstr ""
+"Kamida bir marta apprise yoki veb-kancal manzilini yaratishingiz kerak."
+
+#: app/templates/messages/list_messages.html:236
+msgid "You can create as many destinations as you like."
+msgstr "Istagancha manzil yaratishingiz mumkin."
+
+#: app/templates/messages/list_messages.html:237
+msgid "Click 🧩 to assign one or more Apprise and/or Webhook destinations."
+msgstr ""
+"Bir yoki bir nechta Apprise va/yoki Webhook manzillarini taklifi bosing."
+
+#: app/templates/messages/list_messages.html:238
+msgid "Click ⏱️ to set a schedule and check-in interval."
+msgstr ""
+"Jadvalni sozlash va check-in intervalini belgilash uchun ⏱️ tugmasini "
+"bosing."
+
+#: app/templates/messages/list_messages.html:239
+msgid "Enable the notification using the 🔴/🟢 toggle button."
+msgstr "Bildirishnomani 🔴/🟢 tugmasi yordamida yoqing."
+
+#: app/templates/messages/list_messages.html:240
+msgid ""
+"If you don’t check in before the grace period ends, the notification will be"
+" sent."
+msgstr ""
+"Muddati tugamasdan check-in qilishni amalga oshirmasangiz, bildirishnoma "
+"yuboriladi."
+
+#: app/templates/messages/list_messages.html:241
+msgid "You can preview the notification config using 🔍."
+msgstr "Bildirishnoma konfiguratsiyasini 🔍 yordamida ko'rishingiz mumkin."
+
+#: app/templates/messages/list_messages.html:242
+msgid "Once a notification is sent, it will be automatically disabled."
+msgstr "Bildirishnoma yuborilgandan so'ng, u avtomatik ravishda o‘chiriladi."
+
+#: app/templates/messages/schedule_message.html:9
+msgid "Schedule Message"
+msgstr "Jadval xabari"
+
+#: app/templates/messages/view_message.html:9
+msgid "Notifications Details"
+msgstr "Bildirishnoma tafsilotlari"
+
+#: app/templates/messages/view_message.html:22
+msgid "Check-in Interval"
+msgstr "Check-in oraliqligi"
+
+#: app/templates/messages/view_message.html:31
+msgid "Last Check-in"
+msgstr "Oxirgi yoqilgan vaqti"
+
+#: app/templates/messages/view_message.html:48
+#: app/templates/reminders/view_reminder.html:59
+msgid "Apprise URLs"
+msgstr "Apprise URLlar"
+
+#: app/templates/messages/view_message.html:54
+#: app/templates/messages/view_message.html:64
+#: app/templates/reminders/view_reminder.html:65
+#: app/templates/reminders/view_reminder.html:75
+#: app/templates/reminders/view_reminder.html:85
+msgid "None assigned."
+msgstr "Hech biri tayinlanmagan."
+
+#: app/templates/messages/view_message.html:73
+msgid "Back to Notifications"
+msgstr "Bildirishnomalarga qaytish"
+
+#: app/templates/mfa/challenge.html:5 app/templates/mfa/settings.html:5
+msgid "Two-Factor Authentication (MFA)"
+msgstr "Ikki faktorli autentifikatsiya (MFA)"
+
+#: app/templates/mfa/recovery_codes.html:4
+msgid "Your Recovery Codes"
+msgstr "Sizning qayta tiklash kodlaringiz"
+
+#: app/templates/mfa/recovery_codes.html:7
+msgid "Save these recovery codes in a safe place!"
+msgstr "Ushbu qayta tiklash kodlarini xavfsiz joyda saqlang!"
+
+#: app/templates/mfa/recovery_codes.html:10
+msgid ""
+"Each code can be used once if you lose access to your authenticator. These "
+"codes will not be shown again."
+msgstr ""
+"Agar autentifikatoringizga kirishni yo'qotsangiz, har bir kod bir marta "
+"ishlatilishi mumkin. Ushbu kodlar yana ko‘rsatilmaydi."
+
+#: app/templates/mfa/recovery_codes.html:24
+msgid "OK, I've saved them"
+msgstr "Yaxshi, men ularni saqladim"
+
+#: app/templates/mfa/settings.html:12
+msgid "MFA QR Code"
+msgstr "MFA QR kodi"
+
+#: app/templates/mfa/settings.html:15
+msgid "Manual Entry:"
+msgstr "Qo‘lda kiriting:"
+
+#: app/templates/partials/admin_nav.html:21
+msgid "Administration"
+msgstr "Boshqaruv"
+
+#: app/templates/partials/admin_nav.html:37
+#: app/templates/partials/shared_nav.html:34
+#: app/templates/partials/shared_nav.html:78
+#: app/templates/partials/shared_nav.html:117
+msgid "Overview"
+msgstr "Umumiy ko'rinish"
+
+#: app/templates/partials/footer.html:7
+msgid "Toggle Theme"
+msgstr "Mavzuni almashtirish"
+
+#: app/templates/partials/footer.html:32
+msgid "Theme"
+msgstr "Mavzu"
+
+#: app/templates/partials/head.html:7
+msgid "Grylli"
+msgstr "Grylli"
+
+#: app/templates/partials/header.html:6 app/templates/partials/sidebar.html:32
+#: app/templates/partials/sidebar.html:66
+msgid "Home"
+msgstr "Bosh sahifa"
+
+#: app/templates/partials/header.html:55
+msgid "Account"
+msgstr "Hisob"
+
+#: app/templates/partials/header.html:61
+msgid "MFA"
+msgstr "MFA"
+
+#: app/templates/partials/header.html:67
+msgid "About"
+msgstr "Haqida"
+
+#: app/templates/partials/header.html:73
+msgid "Privacy"
+msgstr "Maxfiylik"
+
+#: app/templates/partials/header.html:79
+msgid "System Info"
+msgstr "Tizim ma'lumoti"
+
+#: app/templates/partials/header.html:114
+msgid "Logout"
+msgstr "Chiqish"
+
+#: app/templates/partials/shared_nav.html:33
+msgid "Overview of notification settings"
+msgstr "Bildirishnoma sozlamalari haqida umumiy ma'lumot"
+
+#: app/templates/partials/shared_nav.html:38
+msgid "Configure Apprise services"
+msgstr "Apprise xizmatlarini sozlang"
+
+#: app/templates/partials/shared_nav.html:39
+msgid "Apprise"
+msgstr "Apprise"
+
+#: app/templates/partials/shared_nav.html:43
+msgid "Configure Webhook integrations"
+msgstr "Webhook integratsiyalarini sozlash"
+
+#: app/templates/partials/shared_nav.html:77
+msgid "Overview of secure email messages"
+msgstr "Himoyalangan elektron pochta xabarlari haqida umumiy ma'lumot"
+
+#: app/templates/partials/shared_nav.html:82
+msgid "Configure SMTP email settings"
+msgstr "SMTP elektron pochta sozlamalarini sozlash"
+
+#: app/templates/partials/shared_nav.html:83
+#: app/templates/reminders/view_reminder.html:79
+msgid "SMTP"
+msgstr "SMTP"
+
+#: app/templates/partials/shared_nav.html:100
+#: app/templates/reminders/list_reminders.html:8
+msgid "Reminders"
+msgstr "daqiqa"
+
+#: app/templates/partials/shared_nav.html:116
+msgid "Overview of reminders"
+msgstr "Eslatmalarning umumiy ko'rinishi"
+
+#: app/templates/partials/sidebar.html:13
+#: app/templates/partials/sidebar.html:47
+msgid "Menu"
+msgstr "Menyu"
+
+#: app/templates/reminders/assign_email_reminder.html:12
+msgid "Link Email Reminder for"
+msgstr "Email eslatmasini bog'lash"
+
+#: app/templates/reminders/assign_email_reminder.html:30
+#: app/templates/reminders/assign_email_reminder.html:64
+msgid "None (Unassign)"
+msgstr "SMTP konfiguratsiyasi tayinlanmagan"
+
+#: app/templates/reminders/assign_email_reminder.html:43
+msgid "No sender address"
+msgstr "Jo‘natuvchi manzili yo‘q"
+
+#: app/templates/reminders/assign_email_reminder.html:54
+msgid "Email Message"
+msgstr "Jadval xabari"
+
+#: app/templates/reminders/assign_email_reminder.html:77
+msgid "No subject"
+msgstr "Mavzu"
+
+#: app/templates/reminders/assign_email_reminder.html:90
+msgid "Save Email Reminder"
+msgstr "Elektron pochtani saqlash"
+
+#: app/templates/reminders/create_reminder.html:12
+#: app/templates/reminders/edit_reminder.html:10
+#: app/templates/reminders/list_reminders.html:73
+#: app/templates/reminders/list_reminders.html:158
+msgid "Edit Reminder"
+msgstr "Elektron pochtani tahrirlash"
+
+#: app/templates/reminders/create_reminder.html:14
+msgid "Create Reminder"
+msgstr "Elektron pochta yaratish"
+
+#: app/templates/reminders/create_reminder.html:45
+msgid "Save Reminder"
+msgstr "Elektron pochtani saqlash"
+
+#: app/templates/reminders/edit_reminder.html:39
+msgid "Update Reminder"
+msgstr "Eslatmani yangilash"
+
+#: app/templates/reminders/list_reminders.html:48
+msgid "Add Reminder"
+msgstr "Elektron pochta qo'shish"
+
+#: app/templates/reminders/list_reminders.html:58
+#: app/templates/reminders/view_reminder.html:21
+msgid "Start At"
+msgstr "TLS boshlanmoqda"
+
+#: app/templates/reminders/list_reminders.html:59
+msgid "Recurrence"
+msgstr "Qayta takrorlanish"
+
+#: app/templates/reminders/list_reminders.html:69
+#: app/templates/reminders/list_reminders.html:153
+#: app/templates/reminders/view_reminder.html:26
+msgid "One-time"
+msgstr "Bir martalik"
+
+#: app/templates/reminders/list_reminders.html:83
+msgid "Assign Email Reminder"
+msgstr "Email eslatmasini tayinlash"
+
+#: app/templates/reminders/list_reminders.html:102
+#: app/templates/reminders/list_reminders.html:187
+msgid "Send Test Reminder"
+msgstr "Sinovchi Elektron Xatni Yuborish"
+
+#: app/templates/reminders/list_reminders.html:120
+#: app/templates/reminders/list_reminders.html:205
+msgid "Toggle Reminder On/Off"
+msgstr "Elektron pochtani yoqish/o'chirish"
+
+#: app/templates/reminders/list_reminders.html:122
+#: app/templates/reminders/list_reminders.html:207
+msgid "Reminder is enabled"
+msgstr "Elektron pochta yoqilgan"
+
+#: app/templates/reminders/list_reminders.html:124
+#: app/templates/reminders/list_reminders.html:209
+msgid "Reminder is disabled"
+msgstr "Elektron pochta o'chirilgan"
+
+#: app/templates/reminders/list_reminders.html:148
+msgid "Start At:"
+msgstr "TLS boshlanmoqda"
+
+#: app/templates/reminders/list_reminders.html:152
+msgid "Recurrence:"
+msgstr "Qayta takrorlanish:"
+
+#: app/templates/reminders/list_reminders.html:168
+msgid "Link Email Reminder"
+msgstr "Email eslatmasini bog'lash"
+
+#: app/templates/reminders/list_reminders.html:218
+msgid "How to use reminders"
+msgstr "Foydalanuvchilarni qanday boshqarish mumkin"
+
+#: app/templates/reminders/list_reminders.html:231
+msgid "➕ Click “Add Reminder” and fill out the subject and content fields."
+msgstr ""
+"“Bildirishnoma qo'shish” tugmasini bosing va mavzu va mazmun maydonlarini "
+"toʻldiring."
+
+#: app/templates/reminders/list_reminders.html:232
+msgid "💾 Save the reminder to return to the overview."
+msgstr "Sharhga qaytish uchun bildirishnomani saqlang."
+
+#: app/templates/reminders/list_reminders.html:233
+msgid ""
+"📣 Assign Apprise, 🌐 Webhook, and/or 📧 Email (SMTP) destinations as needed."
+msgstr ""
+"📣 Apprise, 🌐 Webhook va/yoki 📧 Email (SMTP) manzillarini kerak bo'lganda "
+"tayinlang."
+
+#: app/templates/reminders/list_reminders.html:234
+msgid ""
+"⏱️ Set the schedule using the schedule button to define when reminders are "
+"sent."
+msgstr ""
+"⏱️ Eslatmalar qachon yuborilishini belgilash uchun jadval tugmasidan "
+"foydalanib jadvalni tuzing."
+
+#: app/templates/reminders/list_reminders.html:235
+msgid ""
+"🔍 Click “View Details” to review or edit assigned destinations and other "
+"settings."
+msgstr ""
+"🔍 \"Tafsilotlarni ko'rish\" tugmasini bosib tanlangan manzillar va boshqa "
+"sozlamalarni ko'rib chiqish yoki tahrirlash uchun bosing."
+
+#: app/templates/reminders/list_reminders.html:236
+msgid ""
+"🧪 Click the Test button to verify all assigned destinations are working "
+"correctly."
+msgstr ""
+"🧪 Sinov tugmasini bosib barcha tayinlangan manzillar to'g'ri "
+"ishlayotganligini tekshiring."
+
+#: app/templates/reminders/list_reminders.html:237
+msgid "🔴/🟢 Enable or disable the reminder using the toggle button."
+msgstr "Elektron pochtani 🔴/🟢 almashtirish tugmasi yordamida yoqing."
+
+#: app/templates/reminders/list_reminders.html:238
+msgid "📤 Reminders will be sent as scheduled to the assigned destinations."
+msgstr ""
+"📤 Eslatmalar rejalashtirilgan holda tayinlangan manzillarga yuboriladi."
+
+#: app/templates/reminders/schedule_reminder.html:8
+msgid "Schedule Reminder"
+msgstr "Elektron pochta rejalashtirish"
+
+#: app/templates/reminders/schedule_reminder.html:15
+msgid "Start Date & Time"
+msgstr "Boshlanish sanasi va vaqti"
+
+#: app/templates/reminders/schedule_reminder.html:22
+#: app/templates/reminders/view_reminder.html:25
+msgid "Recurrence Rule"
+msgstr "Takrorlanish qoidasi"
+
+#: app/templates/reminders/schedule_reminder.html:24
+msgid "(Optional) Enter RRULE or leave blank for one-time."
+msgstr ""
+"(Majburiy emas) RRULE kiriting yoki bir martalik uchun bo'sh qoldiring."
+
+#: app/templates/reminders/schedule_reminder.html:30
+msgid "End Date"
+msgstr "Sinov yuborish"
+
+#: app/templates/reminders/schedule_reminder.html:32
+msgid "(Optional) Stop sending after this date."
+msgstr "(Majburiy emas) Bu sanadan keyin yuborishni to'xtating."
+
+#: app/templates/reminders/schedule_reminder.html:38
+#: app/templates/reminders/view_reminder.html:36
+msgid "Max Occurrences"
+msgstr "Maksimal takrorlanishlar"
+
+#: app/templates/reminders/schedule_reminder.html:40
+msgid "(Optional) Stop after this many reminders."
+msgstr "(Majburiy emas) Shuncha eslatmadan keyin to'xtating."
+
+#: app/templates/reminders/schedule_reminder.html:56
+msgid "Help for RRULE syntax"
+msgstr "RRULE sintaksisi uchun yordam"
+
+#: app/templates/reminders/schedule_reminder.html:66
+msgid "Several tools are available to help generate an RRULE."
+msgstr "RRULE yaratish uchun bir nechta vositalar mavjud."
+
+#: app/templates/reminders/schedule_reminder.html:67
+msgid "Use a search engine or AI tool to assist."
+msgstr "Qidiruv tizimi yoki AI vositasidan yordam oling."
+
+#: app/templates/reminders/schedule_reminder.html:69
+msgid "Here is an example of one such online tool:"
+msgstr "Mana shunday onlayn vositalardan biriga misol:"
+
+#: app/templates/reminders/schedule_reminder.html:73
+msgid "RRULE Generator Tool"
+msgstr "RRULE Generator Tool"
+
+#: app/templates/reminders/schedule_reminder.html:77
+msgid "See here for some common examples:"
+msgstr "Ba'zi keng tarqalgan misollarni bu yerda ko'ring:"
+
+#: app/templates/reminders/schedule_reminder.html:81
+msgid "RRULE Help (GitHub)"
+msgstr "RRULE Yordam (GitHub)"
+
+#: app/templates/reminders/view_reminder.html:8
+msgid "Reminder Details"
+msgstr "Tafsilotlarni ko'rish"
+
+#: app/templates/reminders/view_reminder.html:30
+msgid "End At"
+msgstr "Sinov yuborish"
+
+#: app/templates/reminders/view_reminder.html:42
+msgid "Last Sent"
+msgstr "Oxirgi yoqilgan vaqti"
+
+#: app/templates/reminders/view_reminder.html:91
+msgid "Email Template"
+msgstr "Elektron pochta tekshirgichi"
+
+#: app/templates/reminders/view_reminder.html:103
+msgid "No email linked."
+msgstr "Elektron pochta yoqilgan"
+
+#: app/templates/reminders/view_reminder.html:111
+msgid "Back to Reminders"
+msgstr "Elektron pochtalarga qaytish"
+
+#: app/templates/user_smtp/create_smtp.html:10
+msgid "Create SMTP Destination"
+msgstr "SMTP manzilini yaratish"
+
+#: app/templates/user_smtp/create_smtp.html:69
+#: app/templates/user_smtp/edit_smtp.html:84
+msgid "Hold to reveal"
+msgstr "Ochish uchun bosing"
+
+#: app/templates/user_smtp/create_smtp.html:92
+#: app/templates/user_smtp/edit_smtp.html:107
+msgid "Use TLS"
+msgstr "TLS dan foydalaning"
+
+#: app/templates/user_smtp/edit_smtp.html:10
+msgid "Edit SMTP Destination"
+msgstr "SMTP manzilini yaratish"
+
+#: app/templates/user_smtp/list_smtp.html:9
+msgid "SMTP Destinations"
+msgstr "SMTP manzillari"
+
+#: app/templates/user_smtp/list_smtp.html:44
+msgid "Add SMTP"
+msgstr "SMTP qo'shish"
+
+#: app/templates/user_smtp/list_smtp.html:53
+msgid "Host"
+msgstr "Xost"
+
+#: app/templates/user_smtp/list_smtp.html:54
+msgid "Port"
+msgstr "Port"
+
+#: app/templates/user_smtp/list_smtp.html:56
+msgid "TLS"
+msgstr "TLS"
+
+#: app/templates/user_smtp/list_smtp.html:58
+msgid "Created"
+msgstr "Yaratilgan"
+
+#: app/templates/user_smtp/list_smtp.html:90
+#: app/templates/user_smtp/list_smtp.html:158
+msgid "Send Test"
+msgstr "Sinov yuborish"
+
+#: app/templates/user_smtp/list_smtp.html:125
+msgid "Port:"
+msgstr "Port:"
+
+#: app/templates/user_smtp/list_smtp.html:131
+msgid "Password:"
+msgstr "Parol:"
+
+#: app/templates/user_smtp/list_smtp.html:184
+msgid "Hide SMTP Setup Help"
+msgstr "SMTP sozlash yordamini yashirish"
+
+#: app/templates/user_smtp/list_smtp.html:184
+msgid "Show SMTP Setup Help"
+msgstr "SMTP sozlash yordamni ko'rsatish"
+
+#: app/templates/user_smtp/list_smtp.html:190
+msgid ""
+"Need help finding your SMTP server settings? See here for some links to "
+"common providers:"
+msgstr ""
+"SMTP server sozlamalarini topishga yordam kerakmi? Ommabop provayderlar "
+"uchun ba'zi havolalar uchun bu yerga qarang:"
+
+#: app/templates/user_smtp/list_smtp.html:194
+msgid "SMTP Server Settings Help (GitHub)"
+msgstr "SMTP Server Sozlamalar Yordam (GitHub)"
+
+#: app/templates/user_smtp/list_smtp.html:198
+msgid ""
+"Find official documentation links for Gmail, Outlook, Yahoo, AOL, and "
+"others."
+msgstr ""
+"Gmail, Outlook, Yahoo, AOL va boshqalar uchun rasmiy hujjatlar havolalarini "
+"toping."
+
+#: app/templates/user_smtp/list_smtp.html:199
+msgid ""
+"If your provider isn’t listed, search their support site or a search engine "
+"for 'SMTP settings'."
+msgstr ""
+"Agar sizning provayderingiz ro'yxatda bo'lmasa, ularning yordamchi saytida "
+"yoki qidiruv tizimida 'SMTP sozlamalari'ni qidirib toping."
+
+#: app/templates/user_smtp/list_smtp.html:200
+msgid ""
+"Some providers (like Gmail, Yahoo) require 'App Passwords' or special "
+"setup—see their docs!"
+msgstr ""
+"Ba'zi provayderlar (masalan, Gmail, Yahoo) 'App Parollar' yoki maxsus "
+"sozlashni talab qilishi mumkin—ularning hujjatlariga qarang!"
+
+#: app/templates/webhook/create_webhook.html:10
+msgid "Create Webhook"
+msgstr "Webhook yaratish"
+
+#: app/templates/webhook/edit_webhook.html:10
+msgid "Edit Webhook"
+msgstr "Webhook tahrirlash"
+
+#: app/templates/webhook/list_webhooks.html:9
+#: app/templates/webhook/webhook_config.html:3
+msgid "Webhooks Destinations"
+msgstr "Webhook manzillari"
+
+#: app/templates/webhook/list_webhooks.html:59
+msgid "Endpoint"
+msgstr "Endpoint"
+
+#: app/templates/webhook/list_webhooks.html:60
+msgid "Description"
+msgstr "Tavsif"
+
+#: app/templates/webhook/list_webhooks.html:82
+#: app/templates/webhook/list_webhooks.html:141
+msgid "Cannot edit while assigned to notifications"
+msgstr "Bildirishnomalarga tayinlanganda tahrir qilib bo'lmaydi"
+
+#: app/templates/webhook/list_webhooks.html:106
+#: app/templates/webhook/list_webhooks.html:165
+msgid "Cannot delete while assigned to notifications"
+msgstr "Bildirishnomalarga tayinlanganda o'chirib bo'lmaydi"
+
+#: app/templates/webhook/list_webhooks.html:122
+msgid "Endpoint:"
+msgstr "Endpoint:"
+
+#: app/templates/webhook/list_webhooks.html:125
+msgid "Description:"
+msgstr "Tavsif:"
+
+#: app/views/account.py:74
+msgid "Current password is required to change password."
+msgstr "Parolni o'zgartirish uchun joriy parol talab qilinadi."
+
+#: app/views/account.py:78
+msgid "Current password is incorrect."
+msgstr "Joriy parol noto'g'ri."
+
+#: app/views/account.py:94
+msgid "Account updated successfully."
+msgstr "Hisob muvaffaqiyatli yangilandi."
+
+#: app/views/account.py:100
+msgid "An error occurred while updating your account."
+msgstr "Hisobingizni yangilashda xatolik yuz berdi."
+
+#: app/views/account.py:137
+msgid "You cannot delete your account because you are the last admin."
+msgstr ""
+"Siz hisobingizni o‘chira olmaysiz, chunki siz oxirgi administratorsiz."
+
+#: app/views/account.py:146
+msgid "Your account has been permanently deleted."
+msgstr "Hisobingiz doimiy ravishda o‘chirildi."
+
+#: app/views/account.py:152
+msgid "An error occurred while trying to delete your account."
+msgstr "Hisobingizni yangilashda xatolik yuz berdi."
+
+#: app/views/account.py:171
+msgid "Your account has been deleted"
+msgstr "Hisobingiz doimiy ravishda o‘chirildi."
+
+#: app/views/account.py:173
+#, python-brace-format
+msgid ""
+"Hello {username},\n"
+"\n"
+"Your account on {site_name} has been deleted.Remember to delete your files from the uploads folder.If this was not you, please contact support immediately.\n"
+"\n"
+"{site_url}"
+msgstr ""
+"Salom {username},\n"
+"\n"
+"{site_name} dagi hisobingiz o'chirildi. Yuklangan fayllarni papkadan o'chirishni unutmang. Agar bu siz bo'lmasangiz, darhol qo'llab-quvvatlash bilan bog'laning.\n"
+"\n"
+"{site_url}"
+
+#: app/views/admin.py:59
+msgid "Invalid role."
+msgstr "Noto'g'ri rol."
+
+#: app/views/apprise.py:51
+msgid "🧪 Test notification sent successfully!"
+msgstr "🧪 Sinov xabarnomasi muvaffaqiyatli yuborildi!"
+
+#: app/views/apprise.py:56
+msgid "🧪 Failed to send test notification: "
+msgstr "🧪 Sinov xabarnomasini yuborishda muvaffaqiyatsizlik:"
+
+#: app/views/apprise.py:62
+msgid "🧪 Error sending test notification."
+msgstr "🧪 Sinov xabarnomasini yuborishda xatolik."
+
+#: app/views/apprise.py:101
+msgid "Apprise destination created successfully."
+msgstr "Apprise manzili muvaffaqiyatli yaratildi."
+
+#: app/views/apprise.py:168
+msgid "Apprise destination updated successfully."
+msgstr "Apprise manzili muvaffaqiyatli yangilandi."
+
+#: app/views/apprise.py:199
+msgid "Apprise destination deleted."
+msgstr "Apprise manzili o'chirildi."
+
+#: app/views/auth.py:95
+msgid "Admin account created successfully."
+msgstr "Admin hisobi muvaffaqiyatli yaratildi."
+
+#: app/views/auth.py:108
+msgid "An error occurred while creating the admin account."
+msgstr "Admin hisobi yaratishda xatolik yuz berdi."
+
+#: app/views/auth.py:141
+msgid ""
+"Your account is not activated. Please check your email for the activation "
+"link."
+msgstr ""
+"Hisobingiz faollashtirilmagan. Iltimos, elektron pochtangizni faollashtirish"
+" havolasi uchun tekshiring."
+
+#: app/views/auth.py:157
+msgid "Multi-factor authentication required. Please enter your code."
+msgstr ""
+"Ko‘p faktorli autentifikatsiya talab qilinadi. Iltimos, kodingizni kiriting."
+
+#: app/views/auth.py:162 app/views/mfa.py:195
+msgid "Logged in successfully."
+msgstr "Muvaffaqiyatli tizimga kirdingiz."
+
+#: app/views/auth.py:179
+msgid "Invalid username or password."
+msgstr "Noto'g'ri foydalanuvchi nomi yoki parol."
+
+#: app/views/auth.py:203
+msgid "You have been logged out."
+msgstr "Tizimdan chiqdingiz."
+
+#: app/views/auth.py:239 app/views/email.py:263
+msgid "Access denied."
+msgstr "Ruxsat berilmagan kirish."
+
+#: app/views/auth.py:273
+msgid "If a user with that email exists, we've sent the username to them."
+msgstr ""
+"Agar ushbu email manzili bilan foydalanuvchi mavjud bo'lsa, biz ularga "
+"foydalanuvchi nomini yubordik."
+
+#: app/views/auth.py:314
+msgid "A password reset link has been sent to your email."
+msgstr "Parolni tiklash havolasi elektron pochtangizga yuborildi."
+
+#: app/views/auth.py:319
+msgid "No account found matching that username and email."
+msgstr ""
+"Ushbu foydalanuvchi nomi va elektron pochta manziliga mos keladigan hisob "
+"topilmadi."
+
+#: app/views/auth.py:389
+msgid "The reset link is invalid or has expired."
+msgstr "Tiklanuvchi havola yaroqsiz yoki muddati o'tgan."
+
+#: app/views/auth.py:401
+msgid "Username and email do not match."
+msgstr "Foydalanuvchi nomi va elektron pochta mos kelmaydi."
+
+#: app/views/auth.py:421
+msgid "Your password has been reset. Please log in."
+msgstr "Parolingiz tiklandi. Iltimos, tizimga kiring."
+
+#: app/views/auth.py:458
+msgid "Invalid registration PIN."
+msgstr "Noto'g'ri ro'yxatdan o'tish PIN."
+
+#: app/views/auth.py:467
+msgid "Username or email already exists."
+msgstr "Foydalanuvchi nomi yoki elektron pochta allaqachon mavjud."
+
+#: app/views/auth.py:492
+msgid "Activate Your Grylli Account"
+msgstr "Grylli hisobingizni faollashtiring"
+
+#: app/views/auth.py:493
+#, python-brace-format
+msgid ""
+"Hello {username},\n"
+"\n"
+"Please activate your account by clicking..."
+msgstr ""
+"Salom {username},\n"
+"\n"
+"Iltimos, hisobingizni faollashtirish uchun bosing..."
+
+#: app/views/auth.py:498
+msgid "Account created! Please check your email to activate your account."
+msgstr ""
+"Hisob yaratildi! Hisobingizni faollashtirish uchun elektron pochtangizni "
+"tekshiring."
+
+#: app/views/auth.py:521
+msgid "Activation link is invalid or expired."
+msgstr "Faollashtirish havolasi noto'g'ri yoki muddati o'tgan."
+
+#: app/views/auth.py:528 app/views/users.py:76 app/views/users.py:140
+msgid "User not found."
+msgstr "Foydalanuvchi topilmadi."
+
+#: app/views/auth.py:532
+msgid "Account already activated. Please log in."
+msgstr "Hisob allaqachon faollashtirilgan. Iltimos, tizimga kiring."
+
+#: app/views/auth.py:540
+msgid "Your account has been activated! You can now log in."
+msgstr "Hisobingiz faollashtirildi! Endi tizimga kirishingiz mumkin."
+
+#: app/views/backups.py:72
+#, python-format
+msgid "Backup created: %(filename)s"
+msgstr "Zaxira nusxasi yaratildi: %(filename)s"
+
+#: app/views/backups.py:77
+msgid "Failed to create backup."
+msgstr "Zaxira nusxasini yaratishda xatolik yuz berdi."
+
+#: app/views/backups.py:106
+#, python-format
+msgid "Backup deleted: %(filename)s"
+msgstr "Zaxira nusxasi o'chirildi: %(filename)s"
+
+#: app/views/backups.py:109
+msgid "Backup file not found."
+msgstr "Zaxira fayli topilmadi."
+
+#: app/views/backups.py:112
+msgid "Failed to delete backup."
+msgstr "Zaxira nusxasini o'chira olmadi."
+
+#: app/views/checkin.py:41
+msgid "Invalid check-in link."
+msgstr "Noto'g'ri kirish havolasi."
+
+#: app/views/checkin.py:48
+msgid "You are not authorized to check in for this item."
+msgstr "Ushbu element uchun kirishga ruxsatingiz yo'q."
+
+#: app/views/checkin.py:62
+msgid "Unsupported check-in type."
+msgstr "Qo'llab-quvvatlanmaydigan kirish turi."
+
+#: app/views/checkin.py:137
+msgid "⚠️ Cannot enable reminder: Start date/time is in the past."
+msgstr "⚠️ Eslatmani yoqib bo'lmaydi: Boshlanish sanasi/vaqti o'tmishda."
+
+#: app/views/checkin.py:158
+msgid "✅ Enabled and timer started."
+msgstr "✅ Yoqildi va timer boshlandi."
+
+#: app/views/checkin.py:168
+msgid "⛔ Disabled."
+msgstr "⛔ O'chirib qo'yildi."
+
+#: app/views/checkin.py:170
+msgid "⚠️ Cannot toggle — missing schedule or destination."
+msgstr "⚠️ O'zgarib bo'lmaydi — jadval yoki manzil yo'q."
+
+#: app/views/email.py:88
+msgid "Message saved."
+msgstr "Xabar saqlandi."
+
+#: app/views/email.py:118 app/views/messages.py:167
+msgid "Message deleted."
+msgstr "Xabar o'chirildi."
+
+#: app/views/email.py:152
+msgid "Attached files updated."
+msgstr "Ilova qilingan fayllar yangilandi."
+
+#: app/views/email.py:200
+msgid "SMTP configuration not assigned or is disabled."
+msgstr "SMTP sozlamalari tayinlanmagan yoki o'chirilgan."
+
+#: app/views/email.py:234 app/views/smtp_settings_admin.py:82
+msgid "Test email sent successfully."
+msgstr "Sinov elektron posti muvaffaqiyatli yuborildi."
+
+#: app/views/email.py:282 app/views/messages.py:305
+msgid "Schedule updated successfully."
+msgstr "Jadval muvaffaqiyatli yangilandi."
+
+#: app/views/email.py:310
+msgid "SMTP configuration assigned."
+msgstr "SMTP sozlamalari tayinlandi."
+
+#: app/views/email.py:319
+msgid "SMTP configuration removed."
+msgstr "SMTP sozlamalari tayinlandi."
+
+#: app/views/messages.py:97
+msgid "Message created successfully."
+msgstr "Xabar muvaffaqiyatli yaratildi."
+
+#: app/views/messages.py:133
+msgid "Message updated successfully."
+msgstr "Xabar muvaffaqiyatli yangilandi."
+
+#: app/views/messages.py:223 app/views/reminders.py:240
+msgid "Destinations updated."
+msgstr "Manzillar yangilandi."
+
+#: app/views/messages.py:441
+msgid "No destinations assigned to this message."
+msgstr "SMTP sozlamalari tayinlanmagan yoki o'chirilgan."
+
+#: app/views/messages.py:453
+msgid "Test message sent successfully."
+msgstr "Sinov elektron posti muvaffaqiyatli yuborildi."
+
+#: app/views/messages.py:455
+msgid "Test message failed: "
+msgstr "Xabar saqlandi."
+
+#: app/views/mfa.py:68
+msgid "You must enter a code from your authenticator."
+msgstr "Autentifikatoringizdan kod kiritishingiz kerak."
+
+#: app/views/mfa.py:82 app/views/mfa.py:259
+msgid "Invalid code. Please try again."
+msgstr "Noto‘g‘ri kod. Iltimos, qayta urining."
+
+#: app/views/mfa.py:91
+msgid "Two-factor authentication disabled."
+msgstr "Bildirishnoma o‘chirilgan"
+
+#: app/views/mfa.py:132
+msgid "Recovery codes are only shown immediately after enabling MFA."
+msgstr ""
+"Qayta tiklash kodlari faqat MFA yoqilgandan so‘ng darhol ko‘rsatiladi."
+
+#: app/views/mfa.py:142
+msgid "Could not load recovery codes."
+msgstr "Qayta tiklash kodlarini yuklab bo‘lmadi."
+
+#: app/views/mfa.py:168
+msgid "No MFA challenge in progress."
+msgstr "MFA muammosi jarayoni mavjud emas."
+
+#: app/views/mfa.py:176
+msgid "User not found for MFA challenge."
+msgstr "Foydalanuvchi topilmadi."
+
+#: app/views/mfa.py:225
+msgid ""
+"You have used your last recovery code. MFA has been disabled. Please remove "
+"Grylli from your authenticator app, and re-enable MFA to protect your "
+"account."
+msgstr ""
+"Siz so‘nggi qayta tiklash kodingizni ishlatdingiz. MFA o'chirildi. Iltimos, "
+"Gryllini autentifikator ilovangizdan o'chiring va hisobingizni himoya qilish"
+" uchun MFAni qayta yoqing."
+
+#: app/views/mfa.py:248
+#, python-brace-format
+msgid "Recovery code accepted. You have {remaining} recovery codes left."
+msgstr ""
+"Qayta tiklash kodi qabul qilindi. Sizda {remaining} qayta tiklash kodlari "
+"qoldi."
+
+#: app/views/reminders.py:106
+msgid "Reminder created successfully."
+msgstr "Xabar muvaffaqiyatli yaratildi."
+
+#: app/views/reminders.py:143
+msgid "Reminder updated successfully."
+msgstr "Foydalanuvchi muvaffaqiyatli yangilandi."
+
+#: app/views/reminders.py:174
+msgid "Reminder deleted."
+msgstr "Foydalanuvchi o'chirildi."
+
+#: app/views/reminders.py:287
+msgid "No destinations assigned to this reminder."
+msgstr "SMTP sozlamalari tayinlanmagan yoki o'chirilgan."
+
+#: app/views/reminders.py:311
+msgid "No email message linked to this reminder."
+msgstr "Bu eslatmaga hech qanday email xabari bog'lanmagan."
+
+#: app/views/reminders.py:314
+msgid "SMTP configuration is disabled."
+msgstr "SMTP sozlamalari tayinlanmagan yoki o'chirilgan."
+
+#: app/views/reminders.py:353
+msgid "Test reminder sent successfully."
+msgstr "Sinov elektron posti muvaffaqiyatli yuborildi."
+
+#: app/views/reminders.py:356
+msgid "Test reminder failed: "
+msgstr "Xabar saqlandi."
+
+#: app/views/reminders.py:430
+msgid "Reminder schedule updated successfully."
+msgstr "Jadval muvaffaqiyatli yangilandi."
+
+#: app/views/reminders.py:434
+msgid "Please correct the errors below."
+msgstr "Iltimos, quyidagi xatolarni to'g'rilang."
+
+#: app/views/reminders.py:481 app/views/reminders.py:482
+msgid "None"
+msgstr "Yo'q"
+
+#: app/views/reminders.py:508
+msgid "You must select both an SMTP config and an email message, or neither."
+msgstr ""
+"Siz SMTP konfiguratsiyasi va email xabarini tanlashingiz kerak, yoki hech "
+"qaysi birini tanlamasligingiz kerak."
+
+#: app/views/reminders.py:528
+msgid "Email reminder settings updated."
+msgstr "Manzillar yangilandi."
+
+#: app/views/smtp.py:83 app/views/user_smtp.py:80
+msgid "SMTP destination created successfully."
+msgstr "SMTP manzili muvaffaqiyatli yaratildi."
+
+#: app/views/smtp.py:129 app/views/user_smtp.py:135
+msgid "SMTP destination updated."
+msgstr "SMTP manzili yangilandi."
+
+#: app/views/smtp.py:160 app/views/user_smtp.py:166
+msgid "SMTP destination deleted."
+msgstr "SMTP manzili o'chirildi."
+
+#: app/views/smtp.py:191 app/views/user_smtp.py:199
+msgid "Test email sent successfully to your account email."
+msgstr ""
+"Sinov elektron posti hisobingizning elektron pochtasi bilan muvaffaqiyatli "
+"yuborildi."
+
+#: app/views/smtp.py:196 app/views/user_smtp.py:204
+msgid "Failed to send test email. Check SMTP settings."
+msgstr ""
+"Sinov elektron postini yuborishda xatolik yuz berdi. SMTP sozlamalarini "
+"tekshiring."
+
+#: app/views/smtp_settings_admin.py:76
+msgid "Test Email from Grylli"
+msgstr "Grylli dan sinov elektron pochtasi"
+
+#: app/views/smtp_settings_admin.py:77
+msgid "This is a test email from the Grylli SMTP settings page."
+msgstr "Bu Grylli SMTP sozlamalari sahifasidan sinov elektron pochtasi."
+
+#: app/views/smtp_settings_admin.py:84
+msgid "Failed to send test email: "
+msgstr "Sinov elektron postini yuborishda xatolik yuz berdi:"
+
+#: app/views/users.py:99
+msgid "User updated successfully."
+msgstr "Foydalanuvchi muvaffaqiyatli yangilandi."
+
+#: app/views/users.py:106 app/views/users.py:327
+msgid "An error occurred while updating the user."
+msgstr "Foydalanuvchini yangilashda xatolik yuz berdi."
+
+#: app/views/users.py:195
+msgid "User deleted."
+msgstr "Foydalanuvchi o'chirildi."
+
+#: app/views/users.py:202
+msgid "An error occurred while deleting the user."
+msgstr "Foydalanuvchini o'chirishda xatolik yuz berdi."
+
+#: app/views/users.py:237
+msgid "Password is required when creating a new user."
+msgstr "Yangi foydalanuvchi yaratishda parol talab qilinadi."
+
+#: app/views/users.py:244
+msgid "Username already exists."
+msgstr "Foydalanuvchi nomi allaqachon mavjud."
+
+#: app/views/users.py:251
+msgid "Email already exists."
+msgstr "Email allaqachon mavjud."
+
+#: app/views/users.py:268
+#, python-format
+msgid "User '%(username)s' created successfully."
+msgstr "Foydalanuvchi '%(username)s' muvaffaqiyatli yaratildi."
+
+#: app/views/users.py:278
+msgid "Failed to create user."
+msgstr "Foydalanuvchini yaratib bo'lmadi."
+
+#: app/views/users.py:305
+msgid "You cannot change your own enabled status."
+msgstr "Siz o'z imkoniyatlaringizni o'zgartira olmaysiz."
+
+#: app/views/users.py:318
+#, python-format
+msgid "User '%(username)s' has been %(status)s."
+msgstr "Foydalanuvchi '%(username)s' %(status)s qilib qo'yildi."
+
+#: app/views/users.py:356
+msgid "You cannot reset your own MFA."
+msgstr "⚪ = Siz o'z hisobingizni o'chira olmaysiz."
+
+#: app/views/users.py:368
+#, python-format
+msgid "MFA disabled for user '%(username)s'."
+msgstr "Foydalanuvchi '%(username)s' uchun MFA o‘chirildi."
+
+#: app/views/users.py:374
+msgid "An error occurred while resetting MFA."
+msgstr "Foydalanuvchini o'chirishda xatolik yuz berdi."
+
+#: app/views/webhook.py:54
+msgid "Webhook created successfully."
+msgstr "Webhook muvaffaqiyatli yaratildi."
+
+#: app/views/webhook.py:113
+msgid "Webhook updated successfully."
+msgstr "Webhook muvaffaqiyatli yangilandi."
+
+#: app/views/webhook.py:142
+msgid "Webhook deleted."
+msgstr "Webhook o'chirildi."
+
+#: app/views/webhook.py:175
+msgid "🧪 Webhook test sent successfully!"
+msgstr "🧪 Webhook testi muvaffaqiyatli yuborildi!"
+
+#: app/views/webhook.py:177
+msgid "🧪 Webhook test failed: "
+msgstr "🧪 Webhook testi bajarilmadi:"
+
+#: app/views/webhook.py:180
+msgid "🧪 Error sending webhook test."
+msgstr "🧪 Webhook testini yuborishda xatolik."
+
+#~ msgid ""
+#~ "Grylli is a secure message delivery platform designed to activate after "
+#~ "prolonged user inactivity."
+#~ msgstr ""
+#~ "Grylli - bu uzoq muddatli foydalanuvchi faoliyatidan keyin ishga tushadigan "
+#~ "xavfsiz xabar yetkazib berish platformasi."
+
+#~ msgid ""
+#~ "It is a modern reimplementation of Gone Man’s Switch with a refined tech "
+#~ "stack, better maintainability, and an improved user experience."
+#~ msgstr ""
+#~ "Bu Zgone Man Switch-ning zamonaviy qayta ijrosi bo'lib, yaxshilangan "
+#~ "texnologiya steki, yaxshiroq saqlanishi va foydalanuvchi tajribasini "
+#~ "yaxshilash bilan ajralib turadi."
+
+#~ msgid "Body:"
+#~ msgstr "Tana:"
+
+#~ msgid "Subject:"
+#~ msgstr "Mavzu:"
+
+#~ msgid "Content:"
+#~ msgstr "Mazmun:"
+
+#~ msgid "Edit SMTP"
+#~ msgstr "SMTP-ni tahrirlash"
+
+#~ msgid ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+#~ msgstr ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+
+#~ msgid "Admin Notes"
+#~ msgstr "Admin Eslatmalari"
+
+#~ msgid "Register"
+#~ msgstr "Ro'yxatdan o'tish"
+
+#~ msgid "View"
+#~ msgstr "Ko'rish"
+
+#~ msgid "Schedule"
+#~ msgstr "Jadval"
+
+#~ msgid "Message is enabled"
+#~ msgstr "Xabar yoqilgan"
+
+#~ msgid "Message is disabled"
+#~ msgstr "Xabar o‘chirilgan"
+
+#~ msgid "No SMTP configuration selected."
+#~ msgstr "SMTP sozlamalari tanlanmagan."
+
+#~ msgid "Enable the message to start monitoring."
+#~ msgstr "Monitoringni boshlash uchun xabarni faollashtiring."
+
+#~ msgid "✅ SMTP settings saved."
+#~ msgstr "SMTP sozlamalari"
+
+#~ msgid "If you don’t check in, Grylli delivers the message for you."
+#~ msgstr "Agar siz kuzatilmasa, Grylli xabarni siz uchun yetkazadi."
+
+#~ msgid "Fill in already discovered missing translations:"
+#~ msgstr "Allaqachon topilgan yetishmaydigan tarjimalarni to'ldiring:"
+
+#~ msgid "Add missing phrases in that JSON file."
+#~ msgstr "O'sha JSON faylga yetishmayotgan so'zlarni qo'shing."
+
+#~ msgid "From:"
+#~ msgstr "Dan:"
+
+#~ msgid ""
+#~ "Attach the updated JSON file to a new GitHub issue when submitting your "
+#~ "changes."
+#~ msgstr ""
+#~ "O'zgartirishlarni yuborishda yangilangan JSON faylni yangi GitHub muammosiga"
+#~ " qo'shing."
+
+#~ msgid "admin"
+#~ msgstr "admin"
+
+#~ msgid "user"
+#~ msgstr "foydalanuvchi"
+
+#~ msgid "Logging in"
+#~ msgstr "Kirish"
+
+#~ msgid "SMTP error: "
+#~ msgstr "SMTP xatosi:"
+
+#~ msgid "enabled"
+#~ msgstr "faol"
+
+#~ msgid "disabled"
+#~ msgstr "faolsiz"

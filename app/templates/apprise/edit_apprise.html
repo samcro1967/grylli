@@ -1,0 +1,74 @@
+{# ---------------------------------------------------------------------
+  edit_apprise.html
+  app/templates/apprise/edit_apprise.html
+  [Describe purpose or main content of this template.]
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{# =================== JINJA BLOCK ==================== #}
+{% block content %}
+    <div class="max-w-md mx-auto mt-20 bg-white dark:bg-zinc-800 shadow-md rounded-xl p-6 space-y-4">
+        <h1 class="text-xl font-semibold text-black dark:text-white">{{ _("Edit Apprise Destination") }}</h1>
+        <!-- =================== FORM START =================== -->
+        <form method="post">
+            {{ form.hidden_tag() }}
+            <!-- Label -->
+            <div class="mb-4">
+                {{ form.label.label(class="block text-sm font-medium mb-1 text-black dark:text-white") }}
+                {{ form.label(id="label", class="form-input w-full bg-zinc-100 dark:bg-zinc-700 text-black dark:text-white") }}
+                {% if form.label.errors %}<p class="text-red-500 text-sm mt-1">{{ form.label.errors[0] }}</p>{% endif %}
+            </div>
+            <!-- URL -->
+            <div class="mb-4">
+                {{ form.url.label(class="block text-sm font-medium mb-1 text-black dark:text-white") }}
+                {{ form.url(id="url", class="form-input w-full bg-zinc-100 dark:bg-zinc-700 text-black dark:text-white") }}
+                {% if form.url.errors %}<p class="text-red-500 text-sm mt-1">{{ form.url.errors[0] }}</p>{% endif %}
+            </div>
+            <!-- Enabled -->
+            <div class="mb-4">
+                <label class="inline-flex items-center">
+                    {{ form.enabled() }}
+                    <span class="ml-2 text-sm text-black dark:text-white">{{ _("Enabled") }}</span>
+                </label>
+            </div>
+            <!-- Submit + Cancel Buttons -->
+            <div class="flex gap-4">
+                <button id="submitBtn"
+                        type="submit"
+                        class="w-1/2 bg-red-500 text-white py-2 px-4 rounded disabled:opacity-50 disabled:cursor-not-allowed transition-colors">
+                    {{ _("Create Destination") }}
+                </button>
+                <a href="{{ url_for("apprise_routes.config") }}"
+                   class="w-1/2 text-center bg-zinc-400 text-white py-2 px-4 rounded hover:bg-zinc-500 transition-colors">
+                    {{ _("Cancel") }}
+                </a>
+            </div>
+            <!-- Apprise Docs -->
+            <div class="mt-4 text-sm text-zinc-600 dark:text-zinc-300">
+                📚 {{ _("Need help with Apprise URLs? See the") }}
+                <a href="https://github.com/caronc/apprise/wiki#notification-services"
+                   target="_blank"
+                   class="text-blue-600 dark:text-blue-400 underline hover:text-blue-800">
+                    {{ _("Apprise Notification Services documentation") }}
+                </a>.
+            </div>
+            <!-- =================== FORM END ===================== -->
+        </form>
+    </div>
+    <script>
+  const label = document.getElementById('label');
+  const url = document.getElementById('url');
+  const submitBtn = document.getElementById('submitBtn');
+
+  function updateButtonState() {
+    const valid = label.value.trim() !== '' && url.value.trim() !== '';
+    submitBtn.disabled = !valid;
+    submitBtn.classList.toggle("bg-green-600", valid);
+    submitBtn.classList.toggle("bg-red-500", !valid);
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    [label, url].forEach(el => el.addEventListener('input', updateButtonState));
+    updateButtonState();
+  });
+    </script>
+{% endblock %}

@@ -1,0 +1,60 @@
+{# ----------------------------------------------------------------------------
+ Admin-only Navigation Links
+ Only visible to authenticated users with role "admin"
+ ---------------------------------------------------------------------------- #}
+{% if current_user.role == 'admin' %}
+    <!-- Administration (Collapsible Section) -->
+    <div x-data="{ openAdmin: true }" class="space-y-1">
+        <button @click="openAdmin = !openAdmin"
+                class="w-full flex items-center justify-between px-3 py-2 rounded hover:bg-zinc-100 dark:hover:bg-zinc-700 text-zinc-800 dark:text-zinc-100 transition">
+            <div class="flex items-center space-x-3">
+                <svg class="w-5 h-5"
+                     fill="none"
+                     stroke="currentColor"
+                     stroke-width="2"
+                     viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+                <span x-show="!sidebarCollapsed"
+                      class="truncate"
+                      x-show="!sidebarCollapsed"
+                      class="truncate">{{ _("Administration") }}</span>
+            </div>
+            <svg x-show="!sidebarCollapsed"
+                 :class="{ 'rotate-180': openAdmin }"
+                 class="w-4 h-4 transform transition-transform"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+        </button>
+        <div x-show="openAdmin" x-collapse>
+            <!-- Overview -->
+            <a href="{{ url_for("admin.admin_landing") }}"
+               class="flex items-center space-x-3 pl-8 pr-3 py-2 rounded hover:bg-zinc-100 dark:hover:bg-zinc-700 text-sm text-zinc-700 dark:text-zinc-300 transition">
+                <span x-show="!sidebarCollapsed" class="truncate">{{ _("Overview") }}</span>
+            </a>
+            <!-- Backups -->
+            <a href="{{ url_for("backups.list_backups") }}"
+               class="flex items-center space-x-3 pl-8 pr-3 py-2 rounded hover:bg-zinc-100 dark:hover:bg-zinc-700 text-sm text-zinc-700 dark:text-zinc-300 transition">
+                <span x-show="!sidebarCollapsed" class="truncate">{{ _("Backups") }}</span>
+            </a>
+            <!-- Users -->
+            <a href="{{ url_for("users.list_users") }}"
+               class="flex items-center space-x-3 pl-8 pr-3 py-2 rounded hover:bg-zinc-100 dark:hover:bg-zinc-700 text-sm text-zinc-700 dark:text-zinc-300 transition">
+                <span x-show="!sidebarCollapsed" class="truncate">{{ _("Users") }}</span>
+            </a>
+            <!-- System Settings -->
+            <a href="{{ url_for("system_settings.view_app_config") }}"
+               class="flex items-center space-x-3 pl-8 pr-3 py-2 rounded hover:bg-zinc-100 dark:hover:bg-zinc-700 text-sm text-zinc-700 dark:text-zinc-300 transition">
+                <span x-show="!sidebarCollapsed" class="truncate">{{ _("System Settings") }}</span>
+            </a>
+            <a href="{{ url_for("smtp_settings_admin.view_smtp_config") }}"
+               class="flex items-center space-x-3 pl-8 pr-3 py-2 rounded hover:bg-zinc-100 dark:hover:bg-zinc-700 text-sm text-zinc-700 dark:text-zinc-300 transition">
+                <span x-show="!sidebarCollapsed" class="truncate">{{ _("SMTP Settings") }}</span>
+            </a>
+        </div>
+    </div>
+{% endif %}

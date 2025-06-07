@@ -1,0 +1,3297 @@
+# Romanian translations for PROJECT.
+# Copyright (C) 2025 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2025.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2025-06-07 15:49-0500\n"
+"PO-Revision-Date: 2025-05-25 12:48-0500\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: ro <LL@li.org>\n"
+"Language: ro\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : (n==0 || (n%100 > 0 && n%100 < 20)) ? 1 : 2);\n"
+"Generated-By: Babel 2.17.0\n"
+
+#: app/init_db.py:55
+#, python-format
+msgid "Tables currently in DB: %s"
+msgstr "Tabelele aflate în prezent în BD:"
+
+#: app/init_db.py:58
+msgid "Database or system_config table missing. Running migrations now..."
+msgstr ""
+"Lipsă bază de date sau tabel system_config. Se rulează acum migrațiile..."
+
+#: app/init_db.py:61
+msgid "Migrations applied successfully."
+msgstr "Migrațiile au fost aplicate cu succes."
+
+#: app/init_db.py:63
+msgid "Migration failed."
+msgstr "Migrarea a eșuat."
+
+#: app/init_db.py:68
+msgid "System config seeded successfully."
+msgstr "Configurarea sistemului a fost sădită cu succes."
+
+#: app/init_db.py:70
+msgid "Error seeding system config."
+msgstr "Eroare la sădirea configurării sistemului:"
+
+#: app/forms/mfa_form.py:15 app/templates/apprise/create_apprise.html:30
+#: app/templates/apprise/edit_apprise.html:30
+#: app/templates/apprise/list_apprise.html:60
+#: app/templates/mfa/settings.html:24 app/templates/mfa/settings.html:40
+#: app/templates/user_smtp/create_smtp.html:99
+#: app/templates/user_smtp/edit_smtp.html:114
+#: app/templates/user_smtp/list_smtp.html:57
+#: app/templates/webhook/create_webhook.html:36
+#: app/templates/webhook/edit_webhook.html:36
+#: app/templates/webhook/list_webhooks.html:61
+msgid "Enabled"
+msgstr "Activat"
+
+#: app/forms/mfa_form.py:16
+msgid "Authenticator Code"
+msgstr "Codul autentificatorului"
+
+#: app/forms/mfa_form.py:17
+#: app/templates/admin/partials/user_instructions_and_modal.html:66
+#: app/templates/admin/partials/user_table.html:115
+#: app/templates/email/assign_smtp.html:44 app/templates/mfa/settings.html:47
+#: app/templates/user_smtp/edit_smtp.html:122
+msgid "Save"
+msgstr "Salvează"
+
+#: app/forms/mfa_form.py:27
+msgid "Authentication Code"
+msgstr "Actualizează notificarea"
+
+#: app/forms/mfa_form.py:29
+msgid "Please enter your authentication code."
+msgstr "Vă rugăm să introduceți codul de autentificare."
+
+#: app/forms/mfa_form.py:30
+msgid "Enter a valid 6-digit code or recovery code."
+msgstr "Introduceți un cod valid de 6 cifre sau un cod de recuperare."
+
+#: app/forms/mfa_form.py:31
+msgid "Invalid code format."
+msgstr "Format de cod invalid."
+
+#: app/forms/mfa_form.py:35 app/templates/mfa/challenge.html:25
+msgid "Verify"
+msgstr "Versiune"
+
+#: app/services/mail.py:37 app/services/system_settings_email.py:40
+msgid "Missing required config setting: "
+msgstr "Lipsa setării de configurare obligatorie:"
+
+#: app/services/mail.py:46 app/services/system_settings_email.py:50
+#, python-format
+msgid "Failed to decrypt %(key)s: %(error)s"
+msgstr "Eșuare la decriptarea %(key)s: %(error)s"
+
+#: app/services/mail.py:54
+#, python-format
+msgid "get_setting('%(key)s') -> '%(value)s' (sensitive: %(sensitive)s)"
+msgstr ""
+"get_setting('%(key)s') -> '%(value)s' (brut: '%(raw)s', sensibil: "
+"%(sensitive)s)"
+
+#: app/services/mail.py:75
+#, python-format
+msgid "Preparing email to %(to)s"
+msgstr "Pregătire email către %(to)s"
+
+#: app/services/mail.py:90
+#, python-format
+msgid ""
+"SMTP configuration: host=%(host)s (type=%(host_type)s), port=%(port)s "
+"(type=%(port_type)s)"
+msgstr ""
+"Gazdă SMTP = '%(host)s' (tip: %(host_type)s), port = %(port)s (tip: "
+"%(port_type)s)"
+
+#: app/services/mail.py:99
+#, python-format
+msgid "SMTP username: %(user)s"
+msgstr "Folosind utilizator: %(user)s"
+
+#: app/services/mail.py:100
+#, python-format
+msgid "TLS enabled: %(tls)s"
+msgstr "TLS activat: %(tls)s"
+
+#: app/services/mail.py:105
+msgid "Starting TLS connection..."
+msgstr "Pornind TLS"
+
+#: app/services/mail.py:107
+msgid "Logging into SMTP server..."
+msgstr "Autentificare în serverul SMTP..."
+
+#: app/services/mail.py:109
+msgid "Sending email message..."
+msgstr "Programează mesajul"
+
+#: app/services/mail.py:111
+#, python-format
+msgid "Email sent successfully to %(to)s"
+msgstr "Emailul de testare a fost trimis cu succes."
+
+#: app/services/mail.py:114
+#, python-format
+msgid "SMTP error while sending to %(to)s: %(error)s"
+msgstr "Eroare SMTP la trimitere către %(to)s: %(error)s"
+
+#: app/templates/about.html:10
+msgid "About Grylli"
+msgstr "Despre Grylli"
+
+#: app/templates/about.html:13
+msgid ""
+"Grylli is a secure, self-hosted message delivery platform that automatically"
+" sends pre-configured messages if a user fails to check in within a defined "
+"time period."
+msgstr ""
+"Grylli este o platformă sigură, auto-găzduită, de livrare a mesajelor care "
+"trimite automat mesaje preconfigurate dacă un utilizator nu se conectează "
+"într-o perioadă de timp definită."
+
+#: app/templates/about.html:14
+msgid ""
+"It supports multiple users, customizable schedules, and recurring reminders."
+msgstr "Suportă utilizatori multipli și programe personalizabile."
+
+#: app/templates/about.html:15
+msgid ""
+"Messages and reminders can be delivered via email, webhooks, or over 100 "
+"third-party services through Apprise."
+msgstr ""
+"Mesajele pot fi livrate prin email, webhooks sau prin peste 80 de servicii "
+"terțe prin Apprise."
+
+#: app/templates/about.html:16
+msgid ""
+"Users can configure their own SMTP servers to ensure emails and reminders "
+"appear to come directly from them — not from the system administrator."
+msgstr ""
+"Utilizatorii își pot configura propriile servere SMTP pentru a se asigura că"
+" mesajele par să vină direct de la ei — nu de la administratorul sistemului."
+
+#: app/templates/about.html:17
+msgid ""
+"Sensitive data is encrypted at rest, and all operations are secured with "
+"strong authentication and audit-friendly logging."
+msgstr ""
+"Datele sensibile sunt criptate în repaus, iar toate operațiunile de mesaje "
+"sunt securizate cu autentificare puternică și jurnalizare compatibilă cu "
+"audit."
+
+#: app/templates/about.html:18
+msgid ""
+"Built with a modern, reactive technology stack, Grylli is optimized for "
+"responsiveness and works seamlessly across desktop and mobile devices."
+msgstr ""
+"Construit cu un stack tehnologic modern, reactiv, Grylli este optimizat "
+"pentru receptivitate și funcționează perfect pe dispozitive desktop și "
+"mobile."
+
+#: app/templates/about.html:23
+msgid "Version:"
+msgstr "Versiune:"
+
+#: app/templates/about.html:26
+msgid "Repository:"
+msgstr "Depozit:"
+
+#: app/templates/about.html:30
+msgid "GitHub - samcro1967/grylli"
+msgstr "GitHub - samcro1967/grylli"
+
+#: app/templates/help.html:2 app/templates/help.html:5
+#: app/templates/partials/header.html:85
+msgid "Help"
+msgstr "Ajutor"
+
+#: app/templates/help.html:7
+msgid ""
+"Grylli includes built-in instructions throughout the app to help you "
+"configure and manage your setup."
+msgstr ""
+"Grylli include instrucțiuni integrate în întreaga aplicație pentru a vă "
+"ajuta să vă configurați și să gestionați instalarea."
+
+#: app/templates/help.html:8
+msgid ""
+"This page provides an overview of key features and direct links to where "
+"they can be managed."
+msgstr ""
+"Această pagină oferă o imagine de ansamblu asupra funcțiilor cheie și "
+"legături directe către locurile unde pot fi gestionate."
+
+#: app/templates/help.html:12 app/templates/messages/list_messages.html:9
+#: app/templates/partials/shared_nav.html:17
+msgid "Notifications"
+msgstr "Notificări"
+
+#: app/templates/help.html:14
+msgid "Create and assign messages"
+msgstr "Creează un mesaj sau email."
+
+#: app/templates/admin/index.html:32 app/templates/help.html:17
+#: app/templates/partials/admin_nav.html:56
+msgid "SMTP Settings"
+msgstr "Setări SMTP"
+
+#: app/templates/help.html:19
+msgid "Use your own email server"
+msgstr "Folosește propriul server de email"
+
+#: app/templates/help.html:22
+msgid "Apprise Integration"
+msgstr "Destinații Apprise"
+
+#: app/templates/help.html:24
+msgid "Send notifications to 80+ supported services"
+msgstr "Trimite notificări la peste 80 de servicii compatibile"
+
+#: app/templates/help.html:27
+#: app/templates/messages/assign_destinations.html:41
+#: app/templates/messages/view_message.html:58
+#: app/templates/partials/shared_nav.html:44
+#: app/templates/reminders/assign_destinations.html:39
+#: app/templates/reminders/view_reminder.html:69
+msgid "Webhooks"
+msgstr "Webhooks"
+
+#: app/templates/help.html:29
+msgid "Trigger actions or external workflows"
+msgstr "Declanșează acțiuni sau fluxuri de lucru externe"
+
+#: app/templates/email/list_emails.html:9 app/templates/help.html:32
+#: app/templates/partials/shared_nav.html:61
+msgid "Emails"
+msgstr "Emailuri"
+
+#: app/templates/help.html:34
+msgid "View and manage secure email messages"
+msgstr "Prezentare generală a mesajelor de email securizate"
+
+#: app/templates/help.html:38
+msgid "Security"
+msgstr "🔐 Securitate"
+
+#: app/templates/help.html:39
+msgid "Grylli encrypts sensitive data and logs all key actions for auditing."
+msgstr ""
+"Grylli criptează datele sensibile și înregistrează toate acțiunile cheie "
+"pentru audit."
+
+#: app/templates/index.html:9 app/views/locale.py:95
+msgid "Welcome to Grylli"
+msgstr "Bun venit la Grylli"
+
+#: app/templates/index.html:11
+msgid "Pronounced"
+msgstr "Pronunțat"
+
+#: app/templates/index.html:11
+msgid "like “grill-ee”"
+msgstr "ca „grill-ee”"
+
+#: app/templates/index.html:14
+msgid ""
+"Grylli is a secure message scheduling and delivery system designed to ensure"
+" your important messages are delivered — even if you can’t be there to send "
+"them."
+msgstr ""
+"Grylli este un sistem de programare și livrare a mesajelor securizate "
+"proiectat să asigure că mesajele tale importante sunt livrate — chiar dacă "
+"nu poți fi acolo să le trimiți."
+
+#: app/templates/index.html:17
+msgid ""
+"Whether you’re planning ahead, setting up emergency communication, or "
+"building peace of mind, Grylli helps automate your message delivery via "
+"multiple channels including email, webhooks, and Apprise notifications."
+msgstr ""
+"Indiferent dacă planifici din timp, configurezi comunicații de urgență sau "
+"dorești liniște sufletească, Grylli te ajută să automatizezi livrarea "
+"mesajelor tale prin e-mail, webhook-uri sau notificări Apprise dacă lipsești"
+" la un check-in."
+
+#: app/templates/index.html:19
+msgid "Getting Started"
+msgstr "Începe"
+
+#: app/templates/index.html:21
+msgid "Create a message, email, or reminder."
+msgstr "Creează un mesaj sau email."
+
+#: app/templates/index.html:22
+msgid "Set your check-in interval and grace period (for messages)."
+msgstr "Setează intervalul de check-in și perioada de grație."
+
+#: app/templates/index.html:23
+msgid "Assign one or more delivery destinations."
+msgstr "Asignează una sau mai multe destinații de livrare."
+
+#: app/templates/index.html:24
+msgid "Optionally attach files for secure emails."
+msgstr "Atașează opțional fișiere pentru emailuri securizate."
+
+#: app/templates/index.html:25
+msgid "Schedule reminders to send at specific times or on a recurring basis."
+msgstr ""
+"Programați mementourile să fie trimise la ore specifice sau pe o bază "
+"recurentă."
+
+#: app/templates/index.html:26
+msgid "Enable the message or reminder to activate delivery."
+msgstr "Activați mesajul sau mementoul pentru a activa livrarea."
+
+#: app/templates/index.html:28
+msgid ""
+"Regularly check in to Grylli to prevent automated delivery; miss a check-in "
+"and Grylli sends your messages as scheduled."
+msgstr ""
+"Verifică regulat în Grylli pentru a preveni livrarea automată; ratează o "
+"verificare și Grylli trimite mesajele tale conform programării."
+
+#: app/templates/privacy.html:10
+msgid "Privacy Notice"
+msgstr "Notificare de confidențialitate"
+
+#: app/templates/privacy.html:13
+msgid ""
+"Grylli respects your privacy and is designed to minimize the collection and "
+"storage of personal data."
+msgstr ""
+"Grylli respectă confidențialitatea dumneavoastră și este conceput pentru a "
+"minimiza colectarea și stocarea datelor personale."
+
+#: app/templates/privacy.html:14
+msgid ""
+"All data is encrypted where appropriate and remains fully under your control"
+" if you self-host this platform."
+msgstr ""
+"Toate datele sunt criptate acolo unde este cazul și rămân pe deplin sub "
+"controlul dumneavoastră dacă găzduiți această platformă."
+
+#: app/templates/privacy.html:17
+msgid "What Data We Collect"
+msgstr "Ce date colectăm"
+
+#: app/templates/privacy.html:19
+msgid "Email address and password hash (for authentication)"
+msgstr "Adresă de email și hash-ul de parolă (pentru autentificare)"
+
+#: app/templates/privacy.html:20
+msgid "Optional MFA secret and recovery codes (encrypted at rest)"
+msgstr "Secret de MFA opțional și coduri de recuperare (criptate în repaus)"
+
+#: app/templates/privacy.html:21
+msgid "Reminder and message content you configure"
+msgstr "Conținutul de memento-uri și mesaje pe care îl configurați"
+
+#: app/templates/privacy.html:22
+msgid "User-specific settings, SMTP configuration (if provided)"
+msgstr ""
+"Setări specifice utilizatorului, configurația SMTP (dacă este furnizată)"
+
+#: app/templates/privacy.html:25
+msgid "How Your Data Is Used"
+msgstr "Cum sunt folosite datele dumneavoastră"
+
+#: app/templates/privacy.html:27
+msgid ""
+"Your data is used solely for the purpose of delivering reminders and "
+"messages according to your preferences."
+msgstr ""
+"Datele dumneavoastră sunt folosite exclusiv pentru a livra memento-uri și "
+"mesaje conform preferințelor dumneavoastră."
+
+#: app/templates/privacy.html:28
+msgid ""
+"Grylli does not share, sell, or transmit your personal data to any third "
+"parties."
+msgstr ""
+"Grylli nu distribuie, vinde sau transmite datele dumneavoastră personale "
+"către terțe părți."
+
+#: app/templates/privacy.html:31
+msgid "Your Rights"
+msgstr "Drepturile dumneavoastră"
+
+#: app/templates/privacy.html:33
+msgid ""
+"You can export all of your data at any time from the Account Settings page."
+msgstr ""
+"Puteți exporta toate datele dumneavoastră în orice moment din pagina de "
+"Setări ale contului."
+
+#: app/templates/privacy.html:34
+msgid "You may permanently delete your account and all associated data."
+msgstr "Nu vă puteți șterge contul pentru că sunteți ultimul administrator."
+
+#: app/templates/privacy.html:35
+msgid ""
+"If you are using a self-hosted instance, contact the instance administrator "
+"for data inquiries."
+msgstr ""
+"Dacă utilizați o instanță găzduită de dumneavoastră, contactați "
+"administratorul instanței pentru cereri legate de date."
+
+#: app/templates/privacy.html:38
+msgid "Self-Hosting Responsibility"
+msgstr "Responsabilitatea găzduirii proprii"
+
+#: app/templates/privacy.html:40
+msgid ""
+"If you are running Grylli on your own server, you are responsible for the "
+"storage, processing, and lawful handling of all user data on that instance."
+msgstr ""
+"Dacă rulați Grylli pe propriul server, sunteți responsabil pentru stocarea, "
+"procesarea și gestionarea legală a tuturor datelor utilizatorilor pe acea "
+"instanță."
+
+#: app/templates/privacy.html:44
+msgid ""
+"This notice was last updated in June 2025 and may evolve to reflect changes "
+"in the software or regulatory landscape."
+msgstr ""
+"Această notificare a fost actualizată ultima dată în iunie 2025 și poate "
+"evolua pentru a reflecta modificările în software sau peisajul de "
+"reglementare."
+
+#: app/templates/system_info.html:11
+msgid "📦 Environment Versions"
+msgstr "📦 Versiuni de Mediu"
+
+#: app/templates/system_info.html:17
+msgid "Category"
+msgstr "Categorie"
+
+#: app/templates/system_info.html:18
+msgid "Tool"
+msgstr "Instrument"
+
+#: app/templates/system_info.html:19
+msgid "Version"
+msgstr "Versiune"
+
+#: app/templates/system_info.html:25
+msgid "🧠 Python"
+msgstr "🧠 Python"
+
+#: app/templates/system_info.html:26
+msgid "Python"
+msgstr "Python"
+
+#: app/templates/system_info.html:30
+msgid "pip"
+msgstr "pip"
+
+#: app/templates/system_info.html:34
+msgid "SQLite"
+msgstr "SQLite"
+
+#: app/templates/system_info.html:40
+msgid "⚙️ Core"
+msgstr "⚙️ Core"
+
+#: app/templates/system_info.html:47
+msgid "🔐 Security"
+msgstr "🔐 Securitate"
+
+#: app/templates/system_info.html:48
+msgid "Email Validator"
+msgstr "Validare Email"
+
+#: app/templates/system_info.html:52
+msgid "Cryptography"
+msgstr "Criptografie"
+
+#: app/templates/system_info.html:57
+msgid "🕰️ Scheduling"
+msgstr "🕰️ Programare"
+
+#: app/templates/system_info.html:58
+msgid "APScheduler"
+msgstr "APScheduler"
+
+#: app/templates/system_info.html:62
+msgid "Apprise (Python)"
+msgstr "Apprise (Python)"
+
+#: app/templates/system_info.html:66
+msgid "Apprise CLI"
+msgstr "Apprise CLI"
+
+#: app/templates/system_info.html:74
+msgid "🌐 Frontend"
+msgstr "🌐 Interfață"
+
+#: app/templates/account/manage_account.html:11
+msgid "Manage Account"
+msgstr "Gestionează Cont"
+
+#: app/templates/account/manage_account.html:12
+msgid "Update your profile information and password."
+msgstr "Actualizează informațiile profilului și parola."
+
+#: app/templates/account/manage_account.html:41
+#: app/templates/admin/create_user.html:40
+#: app/templates/auth/bootstrap.html:43
+#: app/templates/auth/reset_password.html:42 app/templates/auth/signup.html:42
+msgid "Please enter a valid email address."
+msgstr "Vă rugăm să introduceți o adresă de email validă."
+
+#: app/templates/account/manage_account.html:62
+#: app/templates/account/manage_account.html:96
+#: app/templates/account/manage_account.html:127
+#: app/templates/auth/reset_password.html:66
+#: app/templates/auth/reset_password.html:97 app/templates/auth/signup.html:65
+#: app/templates/auth/signup.html:95
+msgid "Show/hide password"
+msgstr "Țineți apăsat pentru a arăta parola"
+
+#: app/templates/account/manage_account.html:89
+#: app/templates/admin/create_user.html:53
+#: app/templates/auth/bootstrap.html:51
+#: app/templates/auth/reset_password.html:58 app/templates/auth/signup.html:58
+msgid "Password must meet all complexity requirements."
+msgstr "Parola trebuie să îndeplinească toate cerințele de complexitate."
+
+#: app/templates/account/manage_account.html:141
+#: app/templates/admin/create_user.html:72
+#: app/templates/admin/edit_user.html:67 app/templates/auth/bootstrap.html:69
+#: app/templates/auth/reset_password.html:110
+#: app/templates/auth/signup.html:108
+msgid "Passwords do not match."
+msgstr "Parolele nu se potrivesc."
+
+#: app/templates/account/manage_account.html:147
+msgid "Update Account"
+msgstr "Actualizează Contul"
+
+#: app/templates/account/manage_account.html:151
+#: app/templates/admin/create_user.html:82
+#: app/templates/admin/edit_user.html:97 app/templates/admin/help_form.html:28
+#: app/templates/admin/partials/user_instructions_and_modal.html:62
+#: app/templates/admin/partials/user_table.html:113
+#: app/templates/apprise/create_apprise.html:42
+#: app/templates/apprise/edit_apprise.html:42
+#: app/templates/auth/reset_password.html:121
+#: app/templates/email/assign_smtp.html:46
+#: app/templates/email/attach_files.html:47
+#: app/templates/email/edit_message.html:54
+#: app/templates/email/schedule_email.html:84
+#: app/templates/messages/assign_destinations.html:66
+#: app/templates/messages/create_message.html:55
+#: app/templates/messages/edit_message.html:48
+#: app/templates/messages/schedule_message.html:84
+#: app/templates/mfa/challenge.html:29 app/templates/mfa/settings.html:51
+#: app/templates/reminders/assign_destinations.html:64
+#: app/templates/reminders/assign_email_reminder.html:94
+#: app/templates/reminders/create_reminder.html:49
+#: app/templates/reminders/edit_reminder.html:42
+#: app/templates/reminders/schedule_reminder.html:51
+#: app/templates/user_smtp/create_smtp.html:111
+#: app/templates/user_smtp/edit_smtp.html:125
+#: app/templates/webhook/create_webhook.html:48
+#: app/templates/webhook/edit_webhook.html:48
+msgid "Cancel"
+msgstr "Anulează"
+
+#: app/templates/account/manage_account.html:159
+#: app/templates/admin/create_user.html:90
+#: app/templates/admin/edit_user.html:81 app/templates/auth/bootstrap.html:83
+#: app/templates/auth/reset_password.html:128
+#: app/templates/auth/signup.html:132
+msgid "Minimum 8 characters"
+msgstr "Minim 8 caractere"
+
+#: app/templates/account/manage_account.html:160
+#: app/templates/admin/create_user.html:91
+#: app/templates/admin/edit_user.html:82 app/templates/auth/bootstrap.html:84
+#: app/templates/auth/reset_password.html:129
+#: app/templates/auth/signup.html:133
+msgid "At least one uppercase letter"
+msgstr "Cel puțin o literă majusculă"
+
+#: app/templates/account/manage_account.html:161
+#: app/templates/admin/create_user.html:92
+#: app/templates/admin/edit_user.html:83 app/templates/auth/bootstrap.html:85
+#: app/templates/auth/reset_password.html:130
+#: app/templates/auth/signup.html:134
+msgid "At least one lowercase letter"
+msgstr "Cel puțin o literă minusculă"
+
+#: app/templates/account/manage_account.html:162
+#: app/templates/admin/create_user.html:93
+#: app/templates/admin/edit_user.html:84 app/templates/auth/bootstrap.html:86
+#: app/templates/auth/reset_password.html:131
+#: app/templates/auth/signup.html:135
+msgid "At least one number"
+msgstr "Cel puțin un număr"
+
+#: app/templates/account/manage_account.html:163
+#: app/templates/admin/create_user.html:94
+#: app/templates/auth/bootstrap.html:87
+#: app/templates/auth/reset_password.html:132
+#: app/templates/auth/signup.html:136
+msgid "At least one special character (e.g., !@#$%)"
+msgstr "Cel puțin un caracter special (de exemplu, !@#$%)"
+
+#: app/templates/account/manage_account.html:169
+msgid "Download My Data"
+msgstr "Descarcă datele mele"
+
+#: app/templates/account/manage_account.html:171
+msgid ""
+"Download all your account data as a JSON file. This includes your reminders,"
+" messages, email settings, and more. The file is for your records only and "
+"cannot be imported back. Protect it as it may contain sensitive information."
+msgstr ""
+"Descarcă toate datele contului tău ca un fișier JSON. Aceasta include "
+"memento-urile, mesajele, setările de email și altele. Fișierul este destinat"
+" doar pentru înregistrările dumneavoastră și nu poate fi importat înapoi. "
+"Protejați-l deoarece poate conține informații sensibile."
+
+#: app/templates/account/manage_account.html:175
+msgid "Download My Data (JSON)"
+msgstr "Descarcă datele mele (JSON)"
+
+#: app/templates/account/manage_account.html:179
+msgid "Danger Zone"
+msgstr "Zonă de pericol"
+
+#: app/templates/account/manage_account.html:180
+msgid "Deleting your account is permanent and cannot be undone."
+msgstr "Ștergerea contului dvs. este permanentă și nu poate fi anulată."
+
+#: app/templates/account/manage_account.html:185
+msgid "Delete My Account"
+msgstr "Actualizează Contul"
+
+#: app/templates/account/translations.html:8
+msgid "Translations - Grylli"
+msgstr "Traduceri - Grylli"
+
+#: app/templates/account/translations.html:17
+#: app/templates/partials/header.html:102
+msgid "Translations"
+msgstr "Traduceri"
+
+#: app/templates/account/translations.html:20
+msgid "Grylli currently supports multiple languages and more will be added."
+msgstr ""
+"Grylli acceptă în prezent mai multe limbi și vor fi adăugate mai multe."
+
+#: app/templates/account/translations.html:21
+msgid "Many of the translations were performed with assistance from ChatGPT."
+msgstr "Multe dintre traduceri au fost efectuate cu asistența de la ChatGPT."
+
+#: app/templates/account/translations.html:22
+msgid ""
+"If you find a translation issue or want to suggest improvements, your input "
+"is welcome!"
+msgstr ""
+"Dacă găsiți o problemă de traducere sau doriți să sugerați îmbunătățiri, "
+"contribuția dvs. este binevenită!"
+
+#: app/templates/account/translations.html:28
+msgid "How to request translation updates"
+msgstr "Cum să solicitați actualizări de traduceri"
+
+#: app/templates/account/translations.html:30
+msgid "To contribute to translations, please use the following guidelines:"
+msgstr ""
+"Pentru a contribui la traduceri, vă rugăm să utilizați următoarele linii "
+"directoare:"
+
+#: app/templates/account/translations.html:43
+msgid "Contribute missing or improved translations:"
+msgstr "Ați găsit o traducere lipsă?"
+
+#: app/templates/account/translations.html:63
+msgid "Open the relevant .po translation file for your language."
+msgstr "Deschideți fișierul JSON de traducere pentru limba dvs. De exemplu:"
+
+#: app/templates/account/translations.html:67
+msgid ""
+"Find untranslated or incomplete entries and add or improve translations."
+msgstr ""
+"Găsește înregistrări netraduse sau incomplete și adaugă sau îmbunătățește "
+"traducerile."
+
+#: app/templates/account/translations.html:68
+msgid "You may use a PO file editor or a text editor."
+msgstr "Poți folosi un editor de fișiere PO sau un editor de text."
+
+#: app/templates/account/translations.html:69
+msgid "Copy the file path and the snippet of your changes."
+msgstr "Copiază calea fișierului și fragmentul modificărilor tale."
+
+#: app/templates/account/translations.html:70
+msgid "Paste the snippet directly into a new GitHub issue for review."
+msgstr "Lipiți fragmentul copiat direct în comentariul issue-ului pe GitHub."
+
+#: app/templates/account/translations.html:72
+msgid "Please do not upload the full .po file to avoid merge conflicts."
+msgstr ""
+"Nu încărcați fișierul .po complet pentru a evita conflictele de îmbinare."
+
+#: app/templates/account/translations.html:85
+msgid "Improving existing translations:"
+msgstr "Îmbunătățirea traducerilor existente:"
+
+#: app/templates/account/translations.html:104
+msgid "Open the relevant .po file for the translation you want to improve."
+msgstr ""
+"Deschideți fișierul .po relevant pentru traducerea pe care doriți să o "
+"îmbunătățiți."
+
+#: app/templates/account/translations.html:106
+msgid "For example:"
+msgstr "De exemplu:"
+
+#: app/templates/account/translations.html:110
+msgid ""
+"Find the phrase(s) and its existing translation(s) you want to improve."
+msgstr ""
+"Găsiți fraza(ele) și traducerea(ile) existentă(e) pe care doriți să le "
+"îmbunătățiți."
+
+#: app/templates/account/translations.html:111
+msgid "Update the phrase(s)."
+msgstr "Actualizați fraza(ele)."
+
+#: app/templates/account/translations.html:112
+msgid "Copy the file name and path into the issue."
+msgstr "Copiați numele și calea fișierului în issue."
+
+#: app/templates/account/translations.html:114
+msgid "Paste the copied snippet directly into the GitHub issue comment."
+msgstr "Lipiți fragmentul copiat direct în comentariul issue-ului pe GitHub."
+
+#: app/templates/account/translations.html:115
+msgid "Do not upload the full .po file to avoid merge conflicts."
+msgstr ""
+"Nu încărcați fișierul .po complet pentru a evita conflictele de îmbinare."
+
+#: app/templates/account/translations.html:118
+msgid "Example snippet:"
+msgstr "Fragment exemplar:"
+
+#: app/templates/account/translations.html:137
+msgid "Report missing translations not yet discovered:"
+msgstr "Raportați traducerile lipsă încă nedescoperite:"
+
+#: app/templates/account/translations.html:154
+msgid ""
+"If you see text in the app that appears untranslated or missing, please "
+"report it to us."
+msgstr ""
+"Dacă vedeți text în aplicație care pare netradus sau care lipsește, vă rugăm"
+" să ne raportați."
+
+#: app/templates/account/translations.html:155
+msgid "Provide the exact English phrase as it appears on the screen."
+msgstr "Oferiți fraza exactă în engleză așa cum apare pe ecran."
+
+#: app/templates/account/translations.html:156
+msgid ""
+"Include the page or section where you saw the phrase (e.g., Apprise page, "
+"Account Page, etc.)."
+msgstr ""
+"Includeți pagina sau secțiunea unde ați văzut fraza (de exemplu, pagina "
+"Setări, secțiunea Cont)."
+
+#: app/templates/account/translations.html:157
+msgid ""
+"Submit this information via a new GitHub issue so we can add it to the "
+"translation files"
+msgstr ""
+"Trimiteți aceste informații printr-un nou issue pe GitHub astfel încât să-l "
+"putem adăuga la fișierele de traducere și să-l înfășurăm pentru Babel."
+
+#: app/templates/account/translations.html:166
+msgid "Found a missing translation?"
+msgstr "Ați găsit o traducere lipsă?"
+
+#: app/templates/account/translations.html:171
+msgid ""
+"This link will create a new GitHub issue pre-filled with a language code."
+msgstr ""
+"Acest link va crea o nouă problemă pe GitHub completată automat cu un cod de"
+" limbă."
+
+#: app/templates/account/translations.html:172
+msgid "Report it by opening a new GitHub issue"
+msgstr "Raportați-o deschizând un nou issue pe GitHub"
+
+#: app/templates/account/translations.html:175
+msgid "Please specify the language code and exact phrase when reporting."
+msgstr "Te rog să specifici codul limbii și fraza exactă când raportezi."
+
+#: app/templates/account/translations.html:176
+msgid "Thank you for helping us make Grylli better!"
+msgstr "Vă mulțumim pentru ajutorul acordat la îmbunătățirea Grylli!"
+
+#: app/templates/admin/create_user.html:14
+msgid "Create New User"
+msgstr "Creați Utilizator Nou"
+
+#: app/templates/admin/create_user.html:15
+msgid "Fill out the form to add a new user."
+msgstr "Completați formularul pentru a adăuga un utilizator nou."
+
+#: app/templates/admin/create_user.html:21
+#: app/templates/admin/edit_user.html:17 app/templates/auth/bootstrap.html:24
+msgid "Please fix the following errors:"
+msgstr "Vă rugăm să corectați următoarele erori:"
+
+#: app/templates/admin/create_user.html:78
+#: app/templates/admin/edit_user.html:93
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "Create User"
+msgstr "Creați Utilizator"
+
+#: app/templates/admin/edit_user.html:10
+#: app/templates/admin/partials/user_card.html:20
+#: app/templates/admin/partials/user_table.html:26
+msgid "Edit User"
+msgstr "Editați Utilizator"
+
+#: app/templates/admin/edit_user.html:55 app/templates/admin/edit_user.html:74
+msgid "Hold to show password"
+msgstr "Țineți apăsat pentru a arăta parola"
+
+#: app/templates/admin/edit_user.html:85
+#, python-format
+msgid "At least one special character (e.g., !@#$%%)"
+msgstr "Cel puțin un caracter special (de exemplu, !@#$%%)"
+
+#: app/templates/admin/help.html:4 app/templates/auth/login.html:72
+msgid "Admin Help"
+msgstr "Panou de Administrare"
+
+#: app/templates/admin/help.html:7
+msgid "Reset Admin Password"
+msgstr "Resetează parola"
+
+#: app/templates/admin/help.html:9
+msgid ""
+"If you've forgotten the admin password, you can reset it using the following"
+" Docker command:"
+msgstr ""
+"Dacă ai uitat parola de administrator, o poți reseta folosind următoarea "
+"comandă Docker:"
+
+#: app/templates/admin/help.html:15
+msgid ""
+"This script will prompt you to enter a new password for the admin user. You "
+"must run it from the host system where the Grylli container is running."
+msgstr ""
+"Acest script te va solicita să introduci o nouă parolă pentru utilizatorul "
+"admin. Trebuie să-l rulezi de pe sistemul gazdă unde rulează containerul "
+"Grylli."
+
+#: app/templates/admin/help.html:18
+msgid "After resetting, you can log in with the new password immediately."
+msgstr "După resetare, te poți autentifica imediat cu noua parolă."
+
+#: app/templates/admin/help.html:24
+msgid "Return to Login"
+msgstr "Întoarcere la Tablou de Bord"
+
+#: app/templates/admin/help_form.html:6
+msgid "Admin Help Access"
+msgstr "Acces Ajutor Admin"
+
+#: app/templates/admin/help_form.html:9
+msgid "Enter your Ferret Key to unlock admin-only help documentation."
+msgstr ""
+"Introdu cheia ta Ferret pentru a debloca documentația de ajutor destinată "
+"doar administratorilor."
+
+#: app/templates/admin/help_form.html:34
+msgid "How to Find Your FERRET_KEY"
+msgstr "Cum să-ți găsești FERRET_KEY"
+
+#: app/templates/admin/help_form.html:36
+msgid "The FERRET_KEY is set as an environment variable when running Grylli."
+msgstr "FERRET_KEY este setat ca o variabilă de mediu când rulează Grylli."
+
+#: app/templates/admin/help_form.html:39
+msgid "Option 1: Check docker-compose.yml"
+msgstr "Opțiunea 1: Verifică docker-compose.yml"
+
+#: app/templates/admin/help_form.html:46
+msgid "Option 2: Use docker inspect"
+msgstr "Opțiunea 2: Folosește docker inspect"
+
+#: app/templates/admin/help_form.html:52
+msgid "This shows the FERRET_KEY as passed to the container at runtime."
+msgstr ""
+"Aceasta arată FERRET_KEY așa cum este transmis la container la runtime."
+
+#: app/templates/admin/index.html:10
+msgid "Admin Panel"
+msgstr "Panou de Administrare"
+
+#: app/templates/admin/index.html:12
+msgid ""
+"Welcome to the Grylli Admin Panel. Use the links below to manage the system."
+msgstr ""
+"Bine ați venit în Panoul de Administrare Grylli. Folosiți linkurile de mai "
+"jos pentru a gestiona sistemul."
+
+#: app/templates/admin/index.html:17
+msgid "Manage Users"
+msgstr "Gestionați Utilizatorii"
+
+#: app/templates/admin/index.html:18
+msgid "Create, edit, enable/disable, or delete user accounts."
+msgstr ""
+"Creați, editați, activați/dezactivați sau ștergeți conturi de utilizator."
+
+#: app/templates/admin/index.html:22
+#: app/templates/admin/system_settings.html:10
+#: app/templates/partials/admin_nav.html:52
+msgid "System Settings"
+msgstr "Setări sistem"
+
+#: app/templates/admin/index.html:23
+msgid "View  system-wide environment values."
+msgstr "Vizualizați valorile mediului la nivel de sistem."
+
+#: app/templates/admin/index.html:27 app/templates/partials/admin_nav.html:42
+msgid "Backups"
+msgstr "Backup-uri"
+
+#: app/templates/admin/index.html:28
+msgid "Create and delete database backups."
+msgstr "Backup-uri de Bază de Date"
+
+#: app/templates/admin/index.html:33
+msgid "View and test global SMTP settings."
+msgstr "Trimiterea emailului de testare a eșuat. Verifică setările SMTP."
+
+#: app/templates/admin/index.html:39
+msgid "View Admin Guide / README on GitHub"
+msgstr "Vizualizați Ghidul Administratorului / README pe GitHub"
+
+#: app/templates/admin/index.html:40
+msgid "Includes setup instructions, integrations, and troubleshooting."
+msgstr "Include instrucțiuni de configurare, integrări și depanare."
+
+#: app/templates/admin/index.html:44
+msgid "⚠️ Admin Tips"
+msgstr "⚠️ Sfaturi pentru Admin"
+
+#: app/templates/admin/index.html:46
+msgid "Ensure the data folder (database) is backed up on your host"
+msgstr ""
+"Asigurați-vă că folderul de date (baza de date) este salvat la gazda dvs."
+
+#: app/templates/admin/index.html:48
+msgid ""
+"The uploads folder is not per user.  If required per user, you will ndd to "
+"create subdirectoried per user and setup permissions so users can only see "
+"their own folder."
+msgstr ""
+"Folderul de încărcări nu este per utilizator. Dacă este necesar per "
+"utilizator, va trebui să creați subdirectoare per utilizator și să setați "
+"permisiuni astfel încât utilizatorii să poată vedea doar propriul folder."
+
+#: app/templates/admin/index.html:51
+msgid ""
+"To restore a backup: stop the container, replace the data/grylli.db with one"
+" from the backups folder, and restart the container."
+msgstr ""
+"Pentru a restaura un backup: opriți containerul, înlocuiți data/grylli.db cu"
+" unul din folderul de backup-uri și reporniți containerul."
+
+#: app/templates/admin/list_backups.html:11
+msgid "Database Backups"
+msgstr "Backup-uri de Bază de Date"
+
+#: app/templates/admin/list_backups.html:13
+msgid "Create Backup"
+msgstr "Creați Backup"
+
+#: app/templates/admin/list_backups.html:21
+msgid "Filename"
+msgstr "Nume fișier"
+
+#: app/templates/admin/list_backups.html:22
+#: app/templates/admin/partials/user_table.html:14
+#: app/templates/apprise/list_apprise.html:62
+#: app/templates/email/list_emails.html:60
+#: app/templates/messages/list_messages.html:60
+#: app/templates/reminders/list_reminders.html:60
+#: app/templates/user_smtp/list_smtp.html:59
+#: app/templates/webhook/list_webhooks.html:63
+msgid "Actions"
+msgstr "Acțiuni"
+
+#: app/templates/admin/list_backups.html:32
+msgid "Delete this backup?"
+msgstr "Ștergeți acest backup?"
+
+#: app/templates/admin/list_backups.html:32
+#: app/templates/apprise/list_apprise.html:95
+#: app/templates/apprise/list_apprise.html:99
+#: app/templates/apprise/list_apprise.html:150
+#: app/templates/apprise/list_apprise.html:154
+#: app/templates/email/list_emails.html:124
+#: app/templates/email/list_emails.html:128
+#: app/templates/email/list_emails.html:226
+#: app/templates/email/list_emails.html:230
+#: app/templates/messages/list_messages.html:112
+#: app/templates/messages/list_messages.html:116
+#: app/templates/messages/list_messages.html:198
+#: app/templates/messages/list_messages.html:202
+#: app/templates/reminders/list_reminders.html:107
+#: app/templates/reminders/list_reminders.html:113
+#: app/templates/reminders/list_reminders.html:192
+#: app/templates/reminders/list_reminders.html:198
+#: app/templates/user_smtp/list_smtp.html:101
+#: app/templates/user_smtp/list_smtp.html:169
+#: app/templates/webhook/list_webhooks.html:102
+#: app/templates/webhook/list_webhooks.html:161
+msgid "Delete"
+msgstr "Ștergeți"
+
+#: app/templates/admin/list_backups.html:41
+msgid "No backups found."
+msgstr "Niciun backup găsit."
+
+#: app/templates/admin/list_backups.html:44
+msgid ""
+"Backups contain your full app data. Store securely. Sensitive data is "
+"encrypted in the DB by default."
+msgstr ""
+"Backup-urile conțin toate datele aplicației dvs. Stocați-le în siguranță. "
+"Datele sensibile sunt criptate în mod implicit în DB."
+
+#: app/templates/admin/smtp_config.html:28
+#: app/templates/admin/system_config.html:22
+msgid "System Configuration"
+msgstr "Configurare sistem"
+
+#: app/templates/admin/smtp_config.html:33
+#: app/templates/admin/system_config.html:26
+#: app/templates/admin/system_settings.html:15
+msgid "Key"
+msgstr "Cheie"
+
+#: app/templates/admin/smtp_config.html:34
+#: app/templates/admin/system_config.html:27
+#: app/templates/admin/system_settings.html:16
+msgid "Value"
+msgstr "Valoare"
+
+#: app/templates/admin/smtp_config.html:35
+#: app/templates/admin/system_config.html:28
+msgid "Sensitive"
+msgstr "Sensibil"
+
+#: app/templates/admin/smtp_config.html:36
+#: app/templates/admin/system_config.html:29
+msgid "Editable"
+msgstr "Editabil"
+
+#: app/templates/admin/smtp_config.html:50
+#: app/templates/admin/smtp_config.html:51
+#: app/templates/admin/system_config.html:45
+#: app/templates/admin/system_config.html:46
+#: app/templates/email/view_config.html:60
+msgid "Yes"
+msgstr "Da"
+
+#: app/templates/admin/smtp_config.html:50
+#: app/templates/admin/smtp_config.html:51
+#: app/templates/admin/system_config.html:45
+#: app/templates/admin/system_config.html:46
+#: app/templates/email/view_config.html:60
+msgid "No"
+msgstr "Nu"
+
+#: app/templates/admin/smtp_config.html:63
+#: app/templates/admin/system_config.html:55
+msgid "Send Test Email"
+msgstr "Trimiteți email de test"
+
+#: app/templates/admin/system_config.html:39
+msgid "decrypted"
+msgstr "Creat"
+
+#: app/templates/admin/partials/user_card.html:12
+msgid "Email:"
+msgstr "Email:"
+
+#: app/templates/admin/partials/user_card.html:15
+msgid "Role:"
+msgstr "Rol:"
+
+#: app/templates/admin/partials/user_card.html:27
+#: app/templates/admin/partials/user_table.html:34
+msgid "Change Role"
+msgstr "Schimbare rol"
+
+#: app/templates/admin/partials/user_card.html:29
+#: app/templates/admin/partials/user_table.html:36
+msgid "You cannot change your own role"
+msgstr "Nu vă puteți schimba propria stare de activare."
+
+#: app/templates/admin/partials/user_card.html:36
+#: app/templates/admin/partials/user_table.html:43
+msgid "Are you sure you want to reset MFA for this user?"
+msgstr "Sunteți sigur că doriți să resetați MFA pentru acest utilizator?"
+
+#: app/templates/admin/partials/user_card.html:39
+#: app/templates/admin/partials/user_table.html:46
+msgid "Reset MFA"
+msgstr "Resetează parola"
+
+#: app/templates/admin/partials/user_card.html:51
+#: app/templates/admin/partials/user_table.html:58
+msgid "Delete user"
+msgstr "Ștergeți utilizatorul"
+
+#: app/templates/admin/partials/user_card.html:55
+#: app/templates/admin/partials/user_table.html:61
+msgid "Delete User"
+msgstr "Ștergeți Utilizator"
+
+#: app/templates/admin/partials/user_card.html:58
+#: app/templates/admin/partials/user_table.html:65
+msgid "You cannot disable yourself"
+msgstr "Nu vă puteți dezactiva pe dvs."
+
+#: app/templates/admin/partials/user_card.html:65
+#: app/templates/admin/partials/user_table.html:72
+msgid "Disable"
+msgstr "Dezactivați"
+
+#: app/templates/admin/partials/user_card.html:65
+#: app/templates/admin/partials/user_table.html:72
+msgid "Enable"
+msgstr "Activați"
+
+#: app/templates/admin/partials/user_header.html:6
+#: app/templates/partials/admin_nav.html:47
+msgid "Users"
+msgstr "Utilizatori"
+
+#: app/templates/admin/partials/user_header.html:12
+#: app/templates/admin/partials/user_header.html:13
+#: app/templates/apprise/apprise_config.html:10
+#: app/templates/apprise/apprise_config.html:11
+#: app/templates/apprise/list_apprise.html:16
+#: app/templates/apprise/list_apprise.html:17
+#: app/templates/email/list_emails.html:15
+#: app/templates/email/list_emails.html:16
+#: app/templates/messages/list_messages.html:16
+#: app/templates/messages/list_messages.html:17
+#: app/templates/reminders/list_reminders.html:15
+#: app/templates/reminders/list_reminders.html:16
+#: app/templates/user_smtp/list_smtp.html:14
+#: app/templates/user_smtp/list_smtp.html:17
+#: app/templates/webhook/list_webhooks.html:16
+#: app/templates/webhook/list_webhooks.html:17
+#: app/templates/webhook/webhook_config.html:10
+#: app/templates/webhook/webhook_config.html:11
+msgid "Table View"
+msgstr "Vizualizare Tabel"
+
+#: app/templates/admin/partials/user_header.html:26
+#: app/templates/admin/partials/user_header.html:27
+#: app/templates/apprise/apprise_config.html:24
+#: app/templates/apprise/apprise_config.html:25
+#: app/templates/apprise/list_apprise.html:30
+#: app/templates/apprise/list_apprise.html:31
+#: app/templates/email/list_emails.html:29
+#: app/templates/email/list_emails.html:30
+#: app/templates/messages/list_messages.html:30
+#: app/templates/messages/list_messages.html:31
+#: app/templates/reminders/list_reminders.html:29
+#: app/templates/reminders/list_reminders.html:30
+#: app/templates/user_smtp/list_smtp.html:27
+#: app/templates/user_smtp/list_smtp.html:30
+#: app/templates/webhook/list_webhooks.html:30
+#: app/templates/webhook/list_webhooks.html:31
+#: app/templates/webhook/webhook_config.html:24
+#: app/templates/webhook/webhook_config.html:25
+msgid "Card View"
+msgstr "Vizualizare Card"
+
+#: app/templates/admin/partials/user_header.html:45
+msgid "Add User"
+msgstr "Adăugați Utilizator"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:9
+#: app/templates/email/attach_files.html:54
+#: app/templates/email/list_emails.html:255
+#: app/templates/messages/list_messages.html:223
+#: app/templates/reminders/list_reminders.html:218
+#: app/templates/reminders/schedule_reminder.html:56
+msgid "Hide Instructions"
+msgstr "Ascundeți Instrucțiunile"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:9
+msgid "How to manage users"
+msgstr "Cum să gestionați utilizatorii"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "Click"
+msgstr "Apăsați"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+msgid "➕ Add User"
+msgstr "➕ Adăugați Utilizator"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:16
+msgid "to open the new user form."
+msgstr "pentru a deschide formularul noului utilizator."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:18
+msgid "Enter a unique username, valid email address, and strong password."
+msgstr ""
+"Introduceți un nume de utilizator unic, o adresă de email validă și o parolă"
+" puternică."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "Select the appropriate"
+msgstr "Selectați"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "role"
+msgstr "rolul"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:20
+msgid "or"
+msgstr "Port"
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:23
+msgid "to save."
+msgstr "pentru a salva."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:25
+msgid "To edit a user, click ✏️ and update their info."
+msgstr ""
+"Pentru a edita un utilizator, apăsați pe ✏️ și actualizați informațiile "
+"acestuia."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:26
+msgid "To delete a user, click 🗑️ and confirm the deletion."
+msgstr "Pentru a șterge un utilizator, apăsați pe 🗑️ și confirmați ștergerea."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:28
+msgid "To disable or enable a user, click 🔴 or 🟢."
+msgstr "Pentru a dezactiva sau activa un utilizator, apăsați pe 🔴 sau 🟢."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:30
+msgid "🟢 = User is enabled and can log in."
+msgstr "🟢 = Utilizatorul este activat și se poate conecta."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:31
+msgid "🔴 = User is disabled and cannot log in."
+msgstr "🔴 = Utilizatorul este dezactivat și nu poate să se conecteze."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:32
+msgid "⚪ = You cannot disable your own account."
+msgstr "⚪ = Nu vă puteți dezactiva propriul cont."
+
+#: app/templates/admin/partials/user_instructions_and_modal.html:43
+#: app/templates/admin/partials/user_table.html:91
+msgid "Assign Role for"
+msgstr "Alocare destinații pentru"
+
+#: app/templates/admin/partials/user_table.html:10
+msgid "ID"
+msgstr "ID"
+
+#: app/templates/admin/partials/user_table.html:11
+#: app/templates/user_smtp/list_smtp.html:55
+msgid "Username"
+msgstr "Nume utilizator"
+
+#: app/templates/admin/partials/user_table.html:12
+msgid "Email"
+msgstr "Email"
+
+#: app/templates/admin/partials/user_table.html:13
+msgid "Role"
+msgstr "Rol"
+
+#: app/templates/apprise/apprise_config.html:3
+#: app/templates/apprise/list_apprise.html:9
+#: app/templates/messages/assign_destinations.html:22
+#: app/templates/reminders/assign_destinations.html:20
+msgid "Apprise Destinations"
+msgstr "Destinații Apprise"
+
+#: app/templates/apprise/apprise_config.html:43
+#: app/templates/webhook/list_webhooks.html:49
+#: app/templates/webhook/webhook_config.html:43
+msgid "Add Webhook"
+msgstr "Adaugă Webhook"
+
+#: app/templates/apprise/apprise_config.html:43
+#: app/templates/apprise/list_apprise.html:49
+#: app/templates/webhook/list_webhooks.html:49
+#: app/templates/webhook/webhook_config.html:43
+msgid "Add Destination"
+msgstr "Adăugați Destinație"
+
+#: app/templates/apprise/create_apprise.html:10
+msgid "Create Apprise Destination"
+msgstr "Creați Destinație Apprise"
+
+#: app/templates/apprise/create_apprise.html:38
+#: app/templates/apprise/edit_apprise.html:38
+#: app/templates/user_smtp/create_smtp.html:107
+#: app/templates/webhook/create_webhook.html:44
+#: app/templates/webhook/edit_webhook.html:44
+msgid "Create Destination"
+msgstr "Creați Destinație"
+
+#: app/templates/apprise/create_apprise.html:47
+#: app/templates/apprise/edit_apprise.html:47
+msgid "Need help with Apprise URLs? See the"
+msgstr "Aveți nevoie de ajutor cu URL-urile Apprise? Consultați"
+
+#: app/templates/apprise/create_apprise.html:51
+#: app/templates/apprise/edit_apprise.html:51
+msgid "Apprise Notification Services documentation"
+msgstr "documentația Serviciilor de Notificare Apprise"
+
+#: app/templates/apprise/edit_apprise.html:10
+msgid "Edit Apprise Destination"
+msgstr "Editați Destinație Apprise"
+
+#: app/templates/apprise/list_apprise.html:49
+msgid "Add Apprise"
+msgstr "Adăugați Apprise"
+
+#: app/templates/apprise/list_apprise.html:58
+#: app/templates/email/edit_message.html:21
+#: app/templates/email/list_emails.html:56
+#: app/templates/email/view_config.html:14
+#: app/templates/messages/create_message.html:29
+#: app/templates/messages/edit_message.html:23
+#: app/templates/messages/list_messages.html:57
+#: app/templates/messages/view_message.html:14
+#: app/templates/reminders/create_reminder.html:23
+#: app/templates/reminders/edit_reminder.html:17
+#: app/templates/reminders/list_reminders.html:56
+#: app/templates/reminders/view_reminder.html:13
+#: app/templates/user_smtp/list_smtp.html:52
+#: app/templates/webhook/list_webhooks.html:58
+msgid "Label"
+msgstr "Etichetă"
+
+#: app/templates/apprise/list_apprise.html:59
+msgid "URL"
+msgstr "URL"
+
+#: app/templates/apprise/list_apprise.html:61
+#: app/templates/email/list_emails.html:59
+#: app/templates/messages/list_messages.html:59
+#: app/templates/messages/view_message.html:36
+#: app/templates/reminders/view_reminder.html:47
+#: app/templates/webhook/list_webhooks.html:62
+msgid "Created At"
+msgstr "Creat La"
+
+#: app/templates/apprise/list_apprise.html:77
+#: app/templates/apprise/list_apprise.html:132
+#: app/templates/user_smtp/list_smtp.html:79
+#: app/templates/user_smtp/list_smtp.html:147
+#: app/templates/webhook/list_webhooks.html:79
+#: app/templates/webhook/list_webhooks.html:138
+msgid "Edit"
+msgstr "Editați"
+
+#: app/templates/apprise/list_apprise.html:80
+#: app/templates/apprise/list_apprise.html:135
+#: app/templates/user_smtp/list_smtp.html:82
+#: app/templates/user_smtp/list_smtp.html:150
+msgid "Cannot edit while in use"
+msgstr "Nu se poate edita în timpul utilizării"
+
+#: app/templates/apprise/list_apprise.html:88
+#: app/templates/apprise/list_apprise.html:143
+#: app/templates/webhook/list_webhooks.html:91
+#: app/templates/webhook/list_webhooks.html:150
+msgid "Test"
+msgstr "Test"
+
+#: app/templates/apprise/list_apprise.html:103
+#: app/templates/apprise/list_apprise.html:158
+#: app/templates/user_smtp/list_smtp.html:106
+#: app/templates/user_smtp/list_smtp.html:174
+msgid "Cannot delete while in use"
+msgstr "Nu se poate șterge în timpul utilizării"
+
+#: app/templates/apprise/list_apprise.html:119
+msgid "URL:"
+msgstr "URL:"
+
+#: app/templates/apprise/list_apprise.html:122
+#: app/templates/user_smtp/list_smtp.html:137
+#: app/templates/webhook/list_webhooks.html:128
+msgid "Enabled:"
+msgstr "Activat:"
+
+#: app/templates/apprise/list_apprise.html:125
+#: app/templates/user_smtp/list_smtp.html:140
+#: app/templates/webhook/list_webhooks.html:131
+msgid "Created:"
+msgstr "Creat:"
+
+#: app/templates/auth/bootstrap.html:14
+msgid "Create Admin Account"
+msgstr "Creați cont de administrator"
+
+#: app/templates/auth/bootstrap.html:16
+msgid "Let’s get started by creating your first admin account."
+msgstr "Să începem prin a crea primul dvs. cont de administrator."
+
+#: app/templates/auth/bootstrap.html:75
+msgid "Create Admin"
+msgstr "Creați Administrator"
+
+#: app/templates/auth/forgot_password.html:12
+msgid "Forgot Password"
+msgstr "Ați uitat parola"
+
+#: app/templates/auth/forgot_password.html:15
+msgid ""
+"Enter your username and email. We'll send you a link to reset your password."
+msgstr ""
+"Introduceți numele de utilizator și emailul. Vă vom trimite un link pentru a"
+" reseta parola."
+
+#: app/templates/auth/forgot_username.html:12
+msgid "Forgot Username"
+msgstr "Ați uitat numele de utilizator"
+
+#: app/templates/auth/forgot_username.html:15
+msgid "Enter your email address, and we'll send you your username."
+msgstr "Introduceți adresa de email, și vă vom trimite numele de utilizator."
+
+#: app/templates/auth/forgot_username.html:40
+msgid "Send Username"
+msgstr "Trimiteți Nume de Utilizator"
+
+#: app/templates/auth/login.html:12 app/templates/auth/login.html:54
+msgid "Log In"
+msgstr "Autentificare"
+
+#: app/templates/auth/login.html:62
+msgid "Forgot Username?"
+msgstr "Ați uitat numele de utilizator?"
+
+#: app/templates/auth/login.html:64
+msgid "Forgot Password?"
+msgstr "Ați uitat parola?"
+
+#: app/templates/auth/login.html:66 app/templates/auth/signup.html:12
+msgid "Sign Up"
+msgstr "Înregistrare"
+
+#: app/templates/auth/rate_limit.html:9
+msgid "Hold On"
+msgstr "Ține-te bine"
+
+#: app/templates/auth/rate_limit.html:11
+msgid "Too many failed login attempts. Please wait"
+msgstr "Prea multe încercări de autentificare eșuate. Vă rugăm să așteptați"
+
+#: app/templates/auth/rate_limit.html:13
+msgid "seconds..."
+msgstr "secunde..."
+
+#: app/templates/auth/rate_limit.html:15
+msgid "Redirecting to login..."
+msgstr "Întoarcere la Tablou de Bord"
+
+#: app/templates/auth/reset_password.html:12
+#: app/templates/auth/reset_password.html:116
+msgid "Reset Password"
+msgstr "Resetează parola"
+
+#: app/templates/auth/reset_password.html:14
+msgid "Enter your username, email, and new password."
+msgstr "Introduceți numele de utilizator, emailul și noua parolă."
+
+#: app/templates/auth/signup.html:14
+msgid "Fill out the form to create your account."
+msgstr "Completați formularul pentru a vă crea contul."
+
+#: app/templates/checkin/already_checked_in.html:10
+msgid "Already Checked In"
+msgstr "Ultima verificare"
+
+#: app/templates/checkin/already_checked_in.html:12
+msgid ""
+"You have already checked in for this item. No further action is needed at "
+"this time."
+msgstr ""
+"Ați făcut deja check-in pentru acest articol. Nu este nevoie de alte acțiuni"
+" în acest moment."
+
+#: app/templates/checkin/already_checked_in.html:16
+#: app/templates/checkin/disabled.html:16
+#: app/templates/checkin/executed_disabled.html:18
+msgid "Check-in for:"
+msgstr "Înregistrat pentru:"
+
+#: app/templates/checkin/already_checked_in.html:21
+#: app/templates/checkin/disabled.html:21
+#: app/templates/checkin/executed_disabled.html:23
+#: app/templates/checkin/thank_you.html:19
+msgid "Return to Dashboard"
+msgstr "Întoarcere la Tablou de Bord"
+
+#: app/templates/checkin/disabled.html:10
+msgid "Check-In Disabled"
+msgstr "Emailul este dezactivat"
+
+#: app/templates/checkin/disabled.html:12
+msgid "This check-in is currently disabled and cannot be completed."
+msgstr "Acest check-in este dezactivat în prezent și nu poate fi completat."
+
+#: app/templates/checkin/executed_disabled.html:11
+msgid "Already Executed & Disabled"
+msgstr "Deja executat și dezactivat"
+
+#: app/templates/checkin/executed_disabled.html:14
+msgid ""
+"This check-in has already been executed and is now disabled. No further "
+"action is required."
+msgstr ""
+"Acest check-in a fost deja executat și acum este dezactivat. Nu este "
+"necesară nicio altă acțiune."
+
+#: app/templates/checkin/thank_you.html:10
+msgid "Check-In Successful"
+msgstr "Check-In reușit"
+
+#: app/templates/checkin/thank_you.html:11
+msgid "Thank you for checking in."
+msgstr "Mulțumim că v-ați înregistrat."
+
+#: app/templates/checkin/thank_you.html:14
+msgid "Checked in for:"
+msgstr "Înregistrat pentru:"
+
+#: app/templates/email/assign_smtp.html:11
+msgid "📧 Assign SMTP Config to:"
+msgstr "📧 Atribuiți Configurația SMTP pentru:"
+
+#: app/templates/email/assign_smtp.html:25
+msgid "No SMTP (Unassign)"
+msgstr "Nicio configurație SMTP atribuită"
+
+#: app/templates/email/assign_smtp.html:26
+msgid "This email will not use any SMTP configuration."
+msgstr "Acest email nu va folosi nicio configurație SMTP."
+
+#: app/templates/email/attach_files.html:12
+msgid "Attach Files for:"
+msgstr "Atașați fișiere pentru:"
+
+#: app/templates/email/attach_files.html:21
+msgid "Available Files"
+msgstr "Fișiere disponibile"
+
+#: app/templates/email/attach_files.html:36
+msgid "No files found in the upload directory."
+msgstr "Nu s-au găsit fișiere în directorul de încărcare."
+
+#: app/templates/email/attach_files.html:44
+msgid "Save Attachments"
+msgstr "Salvați atașamentele"
+
+#: app/templates/email/attach_files.html:54
+msgid "File Attach Notes"
+msgstr "Note de atașament fișier"
+
+#: app/templates/email/attach_files.html:63
+msgid "Important:"
+msgstr "Port:"
+
+#: app/templates/email/attach_files.html:65
+msgid ""
+"Only files that are present in the 'uploads' folder (provided by your system"
+" administrator) will be shown here. If you do not see your file(s), please "
+"contact your Grylli administrator."
+msgstr ""
+"Doar fișierele care sunt prezente în dosarul 'uploads' (furnizat de "
+"administratorul sistemului) vor fi afișate aici. Dacă nu vezi "
+"fișierul/fișierele tale, te rugăm să contactezi administratorul Grylli."
+
+#: app/templates/email/attach_files.html:69
+msgid "Accepted file types:"
+msgstr "Tipuri de fișiere acceptate:"
+
+#: app/templates/email/attach_files.html:71
+msgid "Documents:"
+msgstr "Documente:"
+
+#: app/templates/email/attach_files.html:73
+msgid "Images:"
+msgstr "Imagini:"
+
+#: app/templates/email/attach_files.html:75
+msgid "Audio:"
+msgstr "Audio:"
+
+#: app/templates/email/attach_files.html:79
+msgid "Maximum file size:"
+msgstr "Dimensiunea maximă a fișierului:"
+
+#: app/templates/email/attach_files.html:80
+msgid "10 MB per file"
+msgstr "10 MB pe fișier"
+
+#: app/templates/email/attach_files.html:83
+msgid "Total upload size:"
+msgstr "Dimensiunea totală de încărcare:"
+
+#: app/templates/email/attach_files.html:84
+msgid "20 MB (all files combined)"
+msgstr "20 MB (toate fișierele combinate)"
+
+#: app/templates/email/edit_message.html:12
+#: app/templates/email/list_emails.html:75
+#: app/templates/email/list_emails.html:177
+msgid "Edit Email"
+msgstr "Editează Email"
+
+#: app/templates/email/edit_message.html:12
+msgid "Create Email"
+msgstr "Creează Email"
+
+#: app/templates/email/edit_message.html:28
+msgid "To (Recipient Email)"
+msgstr "Către (Email destinat)"
+
+#: app/templates/email/edit_message.html:35
+#: app/templates/email/list_emails.html:57
+#: app/templates/email/view_config.html:18
+#: app/templates/messages/create_message.html:36
+#: app/templates/messages/edit_message.html:30
+#: app/templates/messages/list_messages.html:58
+#: app/templates/messages/view_message.html:18
+#: app/templates/reminders/create_reminder.html:30
+#: app/templates/reminders/edit_reminder.html:24
+#: app/templates/reminders/list_reminders.html:57
+#: app/templates/reminders/view_reminder.html:17
+msgid "Subject"
+msgstr "Subiect"
+
+#: app/templates/email/edit_message.html:42
+#: app/templates/email/view_config.html:28
+msgid "Body"
+msgstr "Corp"
+
+#: app/templates/email/edit_message.html:50
+msgid "Save Email"
+msgstr "Salvează Email"
+
+#: app/templates/email/list_emails.html:48
+msgid "Add Email"
+msgstr "Adaugă Email"
+
+#: app/templates/email/list_emails.html:58
+#: app/templates/reminders/assign_email_reminder.html:77
+msgid "To"
+msgstr "Către"
+
+#: app/templates/email/list_emails.html:78
+#: app/templates/email/list_emails.html:180
+msgid "Disable to edit email"
+msgstr "Trimiterea emailului de test a eșuat:"
+
+#: app/templates/email/list_emails.html:84
+#: app/templates/email/list_emails.html:186
+msgid "Attach Files"
+msgstr "Atașează fișiere"
+
+#: app/templates/email/list_emails.html:87
+#: app/templates/email/list_emails.html:189
+msgid "Disable to attach files"
+msgstr "Atașează fișiere"
+
+#: app/templates/email/list_emails.html:93
+#: app/templates/email/list_emails.html:195
+msgid "Attach SMTP Config"
+msgstr "Atașează Configurația SMTP"
+
+#: app/templates/email/list_emails.html:96
+#: app/templates/email/list_emails.html:198
+msgid "Disable to assign SMTP"
+msgstr "Dezactivează pentru a atribui SMTP"
+
+#: app/templates/email/list_emails.html:102
+#: app/templates/email/list_emails.html:204
+msgid "Schedule Check-In"
+msgstr "Programează Check-In"
+
+#: app/templates/email/list_emails.html:105
+#: app/templates/email/list_emails.html:207
+msgid "Disable to schedule check-in"
+msgstr "Programează Check-In"
+
+#: app/templates/email/list_emails.html:110
+#: app/templates/email/list_emails.html:212
+#: app/templates/messages/list_messages.html:99
+#: app/templates/messages/list_messages.html:184
+#: app/templates/reminders/list_reminders.html:93
+#: app/templates/reminders/list_reminders.html:178
+msgid "View Details"
+msgstr "Vezi Detalii"
+
+#: app/templates/email/list_emails.html:118
+#: app/templates/email/list_emails.html:220
+msgid "Send this email to yourself to preview it."
+msgstr "Trimite acest email către tine pentru a-l previzualiza."
+
+#: app/templates/email/list_emails.html:136
+#: app/templates/email/list_emails.html:238
+msgid "Toggle Email On/Off"
+msgstr "Comută Email On/Off"
+
+#: app/templates/email/list_emails.html:139
+#: app/templates/email/list_emails.html:241
+msgid "Email is enabled"
+msgstr "Emailul este activat"
+
+#: app/templates/email/list_emails.html:141
+#: app/templates/email/list_emails.html:243
+msgid "Email is disabled"
+msgstr "Emailul este dezactivat"
+
+#: app/templates/email/list_emails.html:157
+#: app/templates/email/view_config.html:51
+#: app/templates/messages/list_messages.html:142
+#: app/templates/reminders/list_reminders.html:140
+msgid "Label:"
+msgstr "Etichetă:"
+
+#: app/templates/email/list_emails.html:161
+#: app/templates/messages/list_messages.html:146
+#: app/templates/reminders/list_reminders.html:144
+#: app/templates/reminders/view_reminder.html:98
+msgid "Subject:"
+msgstr "Subiect"
+
+#: app/templates/email/list_emails.html:165
+msgid "To:"
+msgstr "La:"
+
+#: app/templates/email/list_emails.html:169
+#: app/templates/messages/list_messages.html:150
+msgid "Created At:"
+msgstr "Creat La"
+
+#: app/templates/email/list_emails.html:255
+msgid "How to create and send an email"
+msgstr "Cum să creezi și să trimiți un email"
+
+#: app/templates/email/list_emails.html:262
+msgid ""
+"Click “Add Email” and fill out the subject, content, and recipient address."
+msgstr ""
+"Clic pe „Adaugă Email” și completează subiectul, conținutul și adresa "
+"destinatarului."
+
+#: app/templates/email/list_emails.html:263
+msgid "Attach any optional files (if needed)."
+msgstr "Atașează orice fișiere opționale (dacă este necesar)."
+
+#: app/templates/email/list_emails.html:264
+msgid ""
+"Click 🧩 to assign a single SMTP configuration that will be used to send the "
+"email."
+msgstr ""
+"Clic 🧩 pentru a atribui o singură configurație SMTP care va fi folosită "
+"pentru a trimite emailul."
+
+#: app/templates/email/list_emails.html:265
+msgid "Click ⏱️ to set a check-in interval and grace period for the email."
+msgstr ""
+"Clic ⏱️ pentru a seta un interval de check-in și o perioadă de grație pentru"
+" email."
+
+#: app/templates/email/list_emails.html:266
+msgid "Enable the email using the 🔴/🟢 toggle button."
+msgstr "Activează emailul folosind butonul de comutare 🔴/🟢."
+
+#: app/templates/email/list_emails.html:267
+msgid ""
+"Click 🧪 to test the email by sending it to yourself (not the recipient)."
+msgstr ""
+"Clic 🧪 pentru a testa emailul trimițându-l către tine (nu către destinatar)."
+
+#: app/templates/email/list_emails.html:268
+msgid ""
+"If you don’t check in before the grace period ends, the email will be "
+"automatically sent."
+msgstr ""
+"Dacă nu efectuezi check-inul înainte de sfârșitul perioadei de grație, "
+"emailul va fi trimis automat."
+
+#: app/templates/email/list_emails.html:269
+msgid "You can preview the email configuration using 🔍."
+msgstr "Poți previzualiza configurația emailului folosind 🔍."
+
+#: app/templates/email/list_emails.html:270
+msgid "Once a secure email is sent, it will be automatically disabled."
+msgstr ""
+"Odată ce un email securizat este trimis, acesta va fi dezactivat automat."
+
+#: app/templates/email/schedule_email.html:9
+msgid "Schedule Email"
+msgstr "Programează Email"
+
+#: app/templates/email/schedule_email.html:18
+#: app/templates/messages/schedule_message.html:18
+msgid "Years"
+msgstr "Ani"
+
+#: app/templates/email/schedule_email.html:19
+#: app/templates/messages/schedule_message.html:19
+msgid "Months"
+msgstr "Luni"
+
+#: app/templates/email/schedule_email.html:20
+#: app/templates/messages/schedule_message.html:20
+msgid "Weeks"
+msgstr "Săptămâni"
+
+#: app/templates/email/schedule_email.html:21
+#: app/templates/messages/schedule_message.html:21
+msgid "Days"
+msgstr "Zile"
+
+#: app/templates/email/schedule_email.html:22
+#: app/templates/messages/schedule_message.html:22
+msgid "Hours"
+msgstr "Ore"
+
+#: app/templates/email/schedule_email.html:23
+#: app/templates/messages/schedule_message.html:23
+msgid "Minutes"
+msgstr "Minute"
+
+#: app/templates/email/schedule_email.html:28
+#: app/templates/messages/schedule_message.html:28
+msgid "Check-in"
+msgstr "Check-in"
+
+#: app/templates/email/schedule_email.html:51
+#: app/templates/messages/schedule_message.html:51
+#: app/templates/messages/view_message.html:26
+msgid "Grace Period"
+msgstr "Perioada de Grație"
+
+#: app/templates/email/schedule_email.html:80
+#: app/templates/messages/schedule_message.html:80
+#: app/templates/reminders/schedule_reminder.html:47
+msgid "Save Schedule"
+msgstr "Salvează Programarea"
+
+#: app/templates/email/view_config.html:9
+msgid "Email Configuration"
+msgstr "Configurația Emailului"
+
+#: app/templates/email/view_config.html:22
+msgid "Recipient"
+msgstr "Destinatar"
+
+#: app/templates/email/view_config.html:33
+msgid "Attached Files"
+msgstr "Fișiere Atașate"
+
+#: app/templates/email/view_config.html:39
+msgid "No files attached"
+msgstr "Niciun fișier atașat"
+
+#: app/templates/email/view_config.html:46
+#: app/templates/reminders/assign_email_reminder.html:20
+msgid "SMTP Configuration"
+msgstr "Configurația SMTP"
+
+#: app/templates/email/view_config.html:54
+#: app/templates/user_smtp/list_smtp.html:122
+msgid "Host:"
+msgstr "Gazdă:"
+
+#: app/templates/email/view_config.html:57
+#: app/templates/user_smtp/list_smtp.html:128
+msgid "Username:"
+msgstr "Nume utilizator:"
+
+#: app/templates/email/view_config.html:60
+#: app/templates/user_smtp/list_smtp.html:134
+msgid "TLS:"
+msgstr "TLS:"
+
+#: app/templates/email/view_config.html:64
+msgid "No SMTP configuration assigned"
+msgstr "Nicio configurație SMTP atribuită"
+
+#: app/templates/email/view_config.html:69
+msgid "Schedule Information"
+msgstr "Informații Programare"
+
+#: app/templates/email/view_config.html:72
+msgid "Check-in Interval:"
+msgstr "Intervalul de Check-in:"
+
+#: app/templates/email/view_config.html:72
+#: app/templates/email/view_config.html:75
+msgid "minutes"
+msgstr "minute"
+
+#: app/templates/email/view_config.html:75
+msgid "Grace Period:"
+msgstr "Perioada de Grație:"
+
+#: app/templates/email/view_config.html:79
+msgid "Last Check-in:"
+msgstr "Ultimul Check-in:"
+
+#: app/templates/email/view_config.html:82
+msgid "No check-in has occurred yet"
+msgstr "Nu a avut loc încă niciun check-in"
+
+#: app/templates/email/view_config.html:92
+msgid "Back to Emails"
+msgstr "Înapoi la Emailuri"
+
+#: app/templates/errors/500.html:4
+msgid "Something went wrong"
+msgstr "Ceva a mers prost"
+
+#: app/templates/errors/500.html:6
+msgid ""
+"An unexpected error occurred. Please try again later or contact support."
+msgstr ""
+"A apărut o eroare neașteptată. Vă rugăm să încercați din nou mai târziu sau "
+"să contactați suportul."
+
+#: app/templates/locale/redirect_after_lang_set.html:15
+msgid "Switching Language..."
+msgstr "Schimbare Limbă..."
+
+#: app/templates/locale/redirect_after_lang_set.html:18
+msgid "Applying new language..."
+msgstr "Aplicarea unei limbi noi..."
+
+#: app/templates/messages/assign_destinations.html:13
+#: app/templates/reminders/assign_destinations.html:12
+msgid "Assign Destinations for"
+msgstr "Alocare destinații pentru"
+
+#: app/templates/messages/assign_destinations.html:62
+#: app/templates/reminders/assign_destinations.html:60
+msgid "Save Destinations"
+msgstr "Salvează destinațiile"
+
+#: app/templates/messages/create_message.html:17
+msgid "Edit Notificaton"
+msgstr "Editează notificarea"
+
+#: app/templates/messages/create_message.html:19
+msgid "Create Notification"
+msgstr "Creează notificare"
+
+#: app/templates/messages/create_message.html:43
+#: app/templates/messages/edit_message.html:37
+#: app/templates/messages/view_message.html:42
+#: app/templates/reminders/create_reminder.html:37
+#: app/templates/reminders/edit_reminder.html:31
+#: app/templates/reminders/view_reminder.html:53
+msgid "Content"
+msgstr "Conținut"
+
+#: app/templates/messages/create_message.html:51
+msgid "Save Notification"
+msgstr "Salvează notificarea"
+
+#: app/templates/messages/edit_message.html:15
+#: app/templates/messages/list_messages.html:74
+#: app/templates/messages/list_messages.html:158
+msgid "Edit Notification"
+msgstr "Editează notificarea"
+
+#: app/templates/messages/edit_message.html:45
+msgid "Update Notification"
+msgstr "Actualizează notificarea"
+
+#: app/templates/messages/list_messages.html:49
+msgid "Add Notification"
+msgstr "Adaugă notificare"
+
+#: app/templates/messages/list_messages.html:77
+#: app/templates/messages/list_messages.html:161
+msgid "Disable to edit notification"
+msgstr "Editează notificarea"
+
+#: app/templates/messages/list_messages.html:83
+#: app/templates/messages/list_messages.html:167
+#: app/templates/reminders/list_reminders.html:78
+#: app/templates/reminders/list_reminders.html:163
+msgid "Assign Destinations"
+msgstr "Alocă destinații"
+
+#: app/templates/messages/list_messages.html:86
+#: app/templates/messages/list_messages.html:170
+msgid "Disable to assign destinations"
+msgstr "Alocă destinații"
+
+#: app/templates/messages/list_messages.html:92
+#: app/templates/messages/list_messages.html:176
+#: app/templates/reminders/list_reminders.html:88
+#: app/templates/reminders/list_reminders.html:173
+msgid "Set Schedule"
+msgstr "Setează programul"
+
+#: app/templates/messages/list_messages.html:95
+#: app/templates/messages/list_messages.html:179
+msgid "Disable to set schedule"
+msgstr "Setează programul"
+
+#: app/templates/messages/list_messages.html:107
+#: app/templates/messages/list_messages.html:192
+msgid "Send Test Notification"
+msgstr "Editează notificarea"
+
+#: app/templates/messages/list_messages.html:122
+#: app/templates/messages/list_messages.html:209
+msgid "Toggle Message On/Off"
+msgstr "Activează/Dezactivează mesajul"
+
+#: app/templates/messages/list_messages.html:124
+#: app/templates/messages/list_messages.html:211
+msgid "Notification is enabled"
+msgstr "Notificarea este activată"
+
+#: app/templates/messages/list_messages.html:126
+#: app/templates/messages/list_messages.html:213
+msgid "Notification is disabled"
+msgstr "Notificarea este dezactivată"
+
+#: app/templates/messages/list_messages.html:223
+msgid "How to create and send a notification"
+msgstr "Cum să creezi și să trimiți o notificare"
+
+#: app/templates/messages/list_messages.html:233
+msgid "Click “Add notification” and fill out the subject and content fields."
+msgstr ""
+"Dă clic pe „Adaugă notificare” și completează câmpurile pentru subiect și "
+"conținut."
+
+#: app/templates/messages/list_messages.html:234
+msgid "Save the notification to return to the overview."
+msgstr "Salvează notificarea pentru a reveni la prezentare generală."
+
+#: app/templates/messages/list_messages.html:235
+msgid "You need to create at least one apprise or webhook destination."
+msgstr "Trebuie să creezi cel puțin o destinație apprise sau webhook."
+
+#: app/templates/messages/list_messages.html:236
+msgid "You can create as many destinations as you like."
+msgstr "Poți crea câte destinații dorești."
+
+#: app/templates/messages/list_messages.html:237
+msgid "Click 🧩 to assign one or more Apprise and/or Webhook destinations."
+msgstr ""
+"Apasă pe 🧩 pentru a aloca una sau mai multe destinații Apprise și/sau "
+"Webhook."
+
+#: app/templates/messages/list_messages.html:238
+msgid "Click ⏱️ to set a schedule and check-in interval."
+msgstr "Apasă pe ⏱️ pentru a seta un program și un interval de verificare."
+
+#: app/templates/messages/list_messages.html:239
+msgid "Enable the notification using the 🔴/🟢 toggle button."
+msgstr "Activează notificarea folosind butonul 🔴/🟢."
+
+#: app/templates/messages/list_messages.html:240
+msgid ""
+"If you don’t check in before the grace period ends, the notification will be"
+" sent."
+msgstr ""
+"Dacă nu te verifici înainte de sfârșitul perioadei de grație, notificarea va"
+" fi trimisă."
+
+#: app/templates/messages/list_messages.html:241
+msgid "You can preview the notification config using 🔍."
+msgstr "Poți previzualiza configurația notificării folosind 🔍."
+
+#: app/templates/messages/list_messages.html:242
+msgid "Once a notification is sent, it will be automatically disabled."
+msgstr "O dată ce o notificare este trimisă, va fi dezactivată automat."
+
+#: app/templates/messages/schedule_message.html:9
+msgid "Schedule Message"
+msgstr "Programează mesajul"
+
+#: app/templates/messages/view_message.html:9
+msgid "Notifications Details"
+msgstr "Detalii notificări"
+
+#: app/templates/messages/view_message.html:22
+msgid "Check-in Interval"
+msgstr "Interval de verificare"
+
+#: app/templates/messages/view_message.html:31
+msgid "Last Check-in"
+msgstr "Ultima verificare"
+
+#: app/templates/messages/view_message.html:48
+#: app/templates/reminders/view_reminder.html:59
+msgid "Apprise URLs"
+msgstr "URL-uri Apprise"
+
+#: app/templates/messages/view_message.html:54
+#: app/templates/messages/view_message.html:64
+#: app/templates/reminders/view_reminder.html:65
+#: app/templates/reminders/view_reminder.html:75
+#: app/templates/reminders/view_reminder.html:85
+msgid "None assigned."
+msgstr "Niciuna alocată."
+
+#: app/templates/messages/view_message.html:73
+msgid "Back to Notifications"
+msgstr "Înapoi la notificări"
+
+#: app/templates/mfa/challenge.html:5 app/templates/mfa/settings.html:5
+msgid "Two-Factor Authentication (MFA)"
+msgstr "Autentificare cu doi factori (MFA)"
+
+#: app/templates/mfa/recovery_codes.html:4
+msgid "Your Recovery Codes"
+msgstr "Codurile dumneavoastră de recuperare"
+
+#: app/templates/mfa/recovery_codes.html:7
+msgid "Save these recovery codes in a safe place!"
+msgstr "Salvați aceste coduri de recuperare într-un loc sigur!"
+
+#: app/templates/mfa/recovery_codes.html:10
+msgid ""
+"Each code can be used once if you lose access to your authenticator. These "
+"codes will not be shown again."
+msgstr ""
+"Fiecare cod poate fi utilizat o singură dată dacă pierdeți accesul la "
+"autentificatorul dvs. Aceste coduri nu vor fi arătate din nou."
+
+#: app/templates/mfa/recovery_codes.html:24
+msgid "OK, I've saved them"
+msgstr "OK, le-am salvat"
+
+#: app/templates/mfa/settings.html:12
+msgid "MFA QR Code"
+msgstr "Cod QR MFA"
+
+#: app/templates/mfa/settings.html:15
+msgid "Manual Entry:"
+msgstr "Intrare manuală:"
+
+#: app/templates/partials/admin_nav.html:21
+msgid "Administration"
+msgstr "Administrare"
+
+#: app/templates/partials/admin_nav.html:37
+#: app/templates/partials/shared_nav.html:34
+#: app/templates/partials/shared_nav.html:78
+#: app/templates/partials/shared_nav.html:117
+msgid "Overview"
+msgstr "Prezentare generală"
+
+#: app/templates/partials/footer.html:7
+msgid "Toggle Theme"
+msgstr "Comutare Temă"
+
+#: app/templates/partials/footer.html:32
+msgid "Theme"
+msgstr "Tema"
+
+#: app/templates/partials/head.html:7
+msgid "Grylli"
+msgstr "Grylli"
+
+#: app/templates/partials/header.html:6 app/templates/partials/sidebar.html:32
+#: app/templates/partials/sidebar.html:66
+msgid "Home"
+msgstr "Acasă"
+
+#: app/templates/partials/header.html:55
+msgid "Account"
+msgstr "Cont"
+
+#: app/templates/partials/header.html:61
+msgid "MFA"
+msgstr "MFA"
+
+#: app/templates/partials/header.html:67
+msgid "About"
+msgstr "Despre"
+
+#: app/templates/partials/header.html:73
+msgid "Privacy"
+msgstr "Confidențialitate"
+
+#: app/templates/partials/header.html:79
+msgid "System Info"
+msgstr "Informații despre sistem"
+
+#: app/templates/partials/header.html:114
+msgid "Logout"
+msgstr "Deconectare"
+
+#: app/templates/partials/shared_nav.html:33
+msgid "Overview of notification settings"
+msgstr "Prezentare generală a setărilor de notificare"
+
+#: app/templates/partials/shared_nav.html:38
+msgid "Configure Apprise services"
+msgstr "Configurare servicii Apprise"
+
+#: app/templates/partials/shared_nav.html:39
+msgid "Apprise"
+msgstr "Apprise"
+
+#: app/templates/partials/shared_nav.html:43
+msgid "Configure Webhook integrations"
+msgstr "Configurare integrări Webhook"
+
+#: app/templates/partials/shared_nav.html:77
+msgid "Overview of secure email messages"
+msgstr "Prezentare generală a mesajelor de email securizate"
+
+#: app/templates/partials/shared_nav.html:82
+msgid "Configure SMTP email settings"
+msgstr "Configurare setări email SMTP"
+
+#: app/templates/partials/shared_nav.html:83
+#: app/templates/reminders/view_reminder.html:79
+msgid "SMTP"
+msgstr "SMTP"
+
+#: app/templates/partials/shared_nav.html:100
+#: app/templates/reminders/list_reminders.html:8
+msgid "Reminders"
+msgstr "minute"
+
+#: app/templates/partials/shared_nav.html:116
+msgid "Overview of reminders"
+msgstr "Prezentare generală a mementourilor"
+
+#: app/templates/partials/sidebar.html:13
+#: app/templates/partials/sidebar.html:47
+msgid "Menu"
+msgstr "Meniu"
+
+#: app/templates/reminders/assign_email_reminder.html:12
+msgid "Link Email Reminder for"
+msgstr "Leagă mementou prin email pentru"
+
+#: app/templates/reminders/assign_email_reminder.html:30
+#: app/templates/reminders/assign_email_reminder.html:64
+msgid "None (Unassign)"
+msgstr "Nicio configurație SMTP atribuită"
+
+#: app/templates/reminders/assign_email_reminder.html:43
+msgid "No sender address"
+msgstr "Nicio adresă expeditor"
+
+#: app/templates/reminders/assign_email_reminder.html:54
+msgid "Email Message"
+msgstr "Programează mesajul"
+
+#: app/templates/reminders/assign_email_reminder.html:77
+msgid "No subject"
+msgstr "Subiect"
+
+#: app/templates/reminders/assign_email_reminder.html:90
+msgid "Save Email Reminder"
+msgstr "Salvează Email"
+
+#: app/templates/reminders/create_reminder.html:12
+#: app/templates/reminders/edit_reminder.html:10
+#: app/templates/reminders/list_reminders.html:73
+#: app/templates/reminders/list_reminders.html:158
+msgid "Edit Reminder"
+msgstr "Editează Email"
+
+#: app/templates/reminders/create_reminder.html:14
+msgid "Create Reminder"
+msgstr "Creează Email"
+
+#: app/templates/reminders/create_reminder.html:45
+msgid "Save Reminder"
+msgstr "Salvează Email"
+
+#: app/templates/reminders/edit_reminder.html:39
+msgid "Update Reminder"
+msgstr "Actualizează mementoul"
+
+#: app/templates/reminders/list_reminders.html:48
+msgid "Add Reminder"
+msgstr "Adaugă Email"
+
+#: app/templates/reminders/list_reminders.html:58
+#: app/templates/reminders/view_reminder.html:21
+msgid "Start At"
+msgstr "Pornind TLS"
+
+#: app/templates/reminders/list_reminders.html:59
+msgid "Recurrence"
+msgstr "Recurență"
+
+#: app/templates/reminders/list_reminders.html:69
+#: app/templates/reminders/list_reminders.html:153
+#: app/templates/reminders/view_reminder.html:26
+msgid "One-time"
+msgstr "O singură dată"
+
+#: app/templates/reminders/list_reminders.html:83
+msgid "Assign Email Reminder"
+msgstr "Atribuie mementou prin email"
+
+#: app/templates/reminders/list_reminders.html:102
+#: app/templates/reminders/list_reminders.html:187
+msgid "Send Test Reminder"
+msgstr "Trimiteți email de test"
+
+#: app/templates/reminders/list_reminders.html:120
+#: app/templates/reminders/list_reminders.html:205
+msgid "Toggle Reminder On/Off"
+msgstr "Comută Email On/Off"
+
+#: app/templates/reminders/list_reminders.html:122
+#: app/templates/reminders/list_reminders.html:207
+msgid "Reminder is enabled"
+msgstr "Emailul este activat"
+
+#: app/templates/reminders/list_reminders.html:124
+#: app/templates/reminders/list_reminders.html:209
+msgid "Reminder is disabled"
+msgstr "Emailul este dezactivat"
+
+#: app/templates/reminders/list_reminders.html:148
+msgid "Start At:"
+msgstr "Pornind TLS"
+
+#: app/templates/reminders/list_reminders.html:152
+msgid "Recurrence:"
+msgstr "Recurrencesa:"
+
+#: app/templates/reminders/list_reminders.html:168
+msgid "Link Email Reminder"
+msgstr "Leagă mementou prin email"
+
+#: app/templates/reminders/list_reminders.html:218
+msgid "How to use reminders"
+msgstr "Cum să gestionați utilizatorii"
+
+#: app/templates/reminders/list_reminders.html:231
+msgid "➕ Click “Add Reminder” and fill out the subject and content fields."
+msgstr ""
+"Dă clic pe „Adaugă notificare” și completează câmpurile pentru subiect și "
+"conținut."
+
+#: app/templates/reminders/list_reminders.html:232
+msgid "💾 Save the reminder to return to the overview."
+msgstr "Salvează notificarea pentru a reveni la prezentare generală."
+
+#: app/templates/reminders/list_reminders.html:233
+msgid ""
+"📣 Assign Apprise, 🌐 Webhook, and/or 📧 Email (SMTP) destinations as needed."
+msgstr ""
+"📣 Atribuie Apprise, 🌐 Webhook și/sau destinații prin email (SMTP) după "
+"necesitate."
+
+#: app/templates/reminders/list_reminders.html:234
+msgid ""
+"⏱️ Set the schedule using the schedule button to define when reminders are "
+"sent."
+msgstr ""
+"⏱️ Setează programul folosind butonul de programare pentru a defini când "
+"sunt trimise mementourile."
+
+#: app/templates/reminders/list_reminders.html:235
+msgid ""
+"🔍 Click “View Details” to review or edit assigned destinations and other "
+"settings."
+msgstr ""
+"🔍 Apasă „Vezi detalii” pentru a revizui sau edita destinațiile atribuite și "
+"alte setări."
+
+#: app/templates/reminders/list_reminders.html:236
+msgid ""
+"🧪 Click the Test button to verify all assigned destinations are working "
+"correctly."
+msgstr ""
+"🧪 Apasă butonul de test pentru a verifica dacă toate destinațiile atribuite "
+"funcționează corect."
+
+#: app/templates/reminders/list_reminders.html:237
+msgid "🔴/🟢 Enable or disable the reminder using the toggle button."
+msgstr "Activează emailul folosind butonul de comutare 🔴/🟢."
+
+#: app/templates/reminders/list_reminders.html:238
+msgid "📤 Reminders will be sent as scheduled to the assigned destinations."
+msgstr ""
+"📤 Mementourile vor fi trimise conform programului către destinațiile "
+"atribuite."
+
+#: app/templates/reminders/schedule_reminder.html:8
+msgid "Schedule Reminder"
+msgstr "Programează Email"
+
+#: app/templates/reminders/schedule_reminder.html:15
+msgid "Start Date & Time"
+msgstr "Data și ora de începere"
+
+#: app/templates/reminders/schedule_reminder.html:22
+#: app/templates/reminders/view_reminder.html:25
+msgid "Recurrence Rule"
+msgstr "Regulă de recurență"
+
+#: app/templates/reminders/schedule_reminder.html:24
+msgid "(Optional) Enter RRULE or leave blank for one-time."
+msgstr "(Opțional) Introduceți RRULE sau lăsați gol pentru o singură dată."
+
+#: app/templates/reminders/schedule_reminder.html:30
+msgid "End Date"
+msgstr "Trimite test"
+
+#: app/templates/reminders/schedule_reminder.html:32
+msgid "(Optional) Stop sending after this date."
+msgstr "(Opțional) Opriți trimiterea după această dată."
+
+#: app/templates/reminders/schedule_reminder.html:38
+#: app/templates/reminders/view_reminder.html:36
+msgid "Max Occurrences"
+msgstr "Număr maxim de apariții"
+
+#: app/templates/reminders/schedule_reminder.html:40
+msgid "(Optional) Stop after this many reminders."
+msgstr "(Opțional) Opriți după acest număr de mementouri."
+
+#: app/templates/reminders/schedule_reminder.html:56
+msgid "Help for RRULE syntax"
+msgstr "Ajutor pentru sintaxa RRULE"
+
+#: app/templates/reminders/schedule_reminder.html:66
+msgid "Several tools are available to help generate an RRULE."
+msgstr ""
+"Sunt disponibile mai multe instrumente pentru a ajuta la generarea unui "
+"RRULE."
+
+#: app/templates/reminders/schedule_reminder.html:67
+msgid "Use a search engine or AI tool to assist."
+msgstr "Folosiți un motor de căutare sau un instrument AI pentru a asista."
+
+#: app/templates/reminders/schedule_reminder.html:69
+msgid "Here is an example of one such online tool:"
+msgstr "Iată un exemplu pentru un astfel de instrument online:"
+
+#: app/templates/reminders/schedule_reminder.html:73
+msgid "RRULE Generator Tool"
+msgstr "Instrument de generare RRULE"
+
+#: app/templates/reminders/schedule_reminder.html:77
+msgid "See here for some common examples:"
+msgstr "Vezi aici câteva exemple comune:"
+
+#: app/templates/reminders/schedule_reminder.html:81
+msgid "RRULE Help (GitHub)"
+msgstr "Ajutor RRULE (GitHub)"
+
+#: app/templates/reminders/view_reminder.html:8
+msgid "Reminder Details"
+msgstr "Vezi Detalii"
+
+#: app/templates/reminders/view_reminder.html:30
+msgid "End At"
+msgstr "Trimite test"
+
+#: app/templates/reminders/view_reminder.html:42
+msgid "Last Sent"
+msgstr "Ultima verificare"
+
+#: app/templates/reminders/view_reminder.html:91
+msgid "Email Template"
+msgstr "Validare Email"
+
+#: app/templates/reminders/view_reminder.html:103
+msgid "No email linked."
+msgstr "Emailul este activat"
+
+#: app/templates/reminders/view_reminder.html:111
+msgid "Back to Reminders"
+msgstr "Înapoi la Emailuri"
+
+#: app/templates/user_smtp/create_smtp.html:10
+msgid "Create SMTP Destination"
+msgstr "Creează destinație SMTP"
+
+#: app/templates/user_smtp/create_smtp.html:69
+#: app/templates/user_smtp/edit_smtp.html:84
+msgid "Hold to reveal"
+msgstr "Țineți apăsat pentru a dezvălui"
+
+#: app/templates/user_smtp/create_smtp.html:92
+#: app/templates/user_smtp/edit_smtp.html:107
+msgid "Use TLS"
+msgstr "Folosește TLS"
+
+#: app/templates/user_smtp/edit_smtp.html:10
+msgid "Edit SMTP Destination"
+msgstr "Creează destinație SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:9
+msgid "SMTP Destinations"
+msgstr "Destinații SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:44
+msgid "Add SMTP"
+msgstr "Adaugă SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:53
+msgid "Host"
+msgstr "Gazdă"
+
+#: app/templates/user_smtp/list_smtp.html:54
+msgid "Port"
+msgstr "Port"
+
+#: app/templates/user_smtp/list_smtp.html:56
+msgid "TLS"
+msgstr "TLS"
+
+#: app/templates/user_smtp/list_smtp.html:58
+msgid "Created"
+msgstr "Creat"
+
+#: app/templates/user_smtp/list_smtp.html:90
+#: app/templates/user_smtp/list_smtp.html:158
+msgid "Send Test"
+msgstr "Trimite test"
+
+#: app/templates/user_smtp/list_smtp.html:125
+msgid "Port:"
+msgstr "Port:"
+
+#: app/templates/user_smtp/list_smtp.html:131
+msgid "Password:"
+msgstr "Parolă:"
+
+#: app/templates/user_smtp/list_smtp.html:184
+msgid "Hide SMTP Setup Help"
+msgstr "Ascunde Help Configurare SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:184
+msgid "Show SMTP Setup Help"
+msgstr "Arată Help Configurare SMTP"
+
+#: app/templates/user_smtp/list_smtp.html:190
+msgid ""
+"Need help finding your SMTP server settings? See here for some links to "
+"common providers:"
+msgstr ""
+"Ai nevoie de ajutor pentru a găsi setările serverului tău SMTP? Vezi aici "
+"câteva linkuri către furnizori comuni:"
+
+#: app/templates/user_smtp/list_smtp.html:194
+msgid "SMTP Server Settings Help (GitHub)"
+msgstr "Ajutor pentru Setări Server SMTP (GitHub)"
+
+#: app/templates/user_smtp/list_smtp.html:198
+msgid ""
+"Find official documentation links for Gmail, Outlook, Yahoo, AOL, and "
+"others."
+msgstr ""
+"Găsește linkuri către documentația oficială pentru Gmail, Outlook, Yahoo, "
+"AOL și altele."
+
+#: app/templates/user_smtp/list_smtp.html:199
+msgid ""
+"If your provider isn’t listed, search their support site or a search engine "
+"for 'SMTP settings'."
+msgstr ""
+"Dacă furnizorul tău nu este listat, caută pe site-ul lor de suport sau într-"
+"un motor de căutare pentru 'setări SMTP'."
+
+#: app/templates/user_smtp/list_smtp.html:200
+msgid ""
+"Some providers (like Gmail, Yahoo) require 'App Passwords' or special "
+"setup—see their docs!"
+msgstr ""
+"Anumiți furnizori (precum Gmail, Yahoo) necesită 'Parole de aplicație' sau o"
+" configurare specială—vezi documentația lor!"
+
+#: app/templates/webhook/create_webhook.html:10
+msgid "Create Webhook"
+msgstr "Creează Webhook"
+
+#: app/templates/webhook/edit_webhook.html:10
+msgid "Edit Webhook"
+msgstr "Editează Webhook"
+
+#: app/templates/webhook/list_webhooks.html:9
+#: app/templates/webhook/webhook_config.html:3
+msgid "Webhooks Destinations"
+msgstr "Destinații Webhook"
+
+#: app/templates/webhook/list_webhooks.html:59
+msgid "Endpoint"
+msgstr "Punct de final"
+
+#: app/templates/webhook/list_webhooks.html:60
+msgid "Description"
+msgstr "Descriere"
+
+#: app/templates/webhook/list_webhooks.html:82
+#: app/templates/webhook/list_webhooks.html:141
+msgid "Cannot edit while assigned to notifications"
+msgstr "Nu se poate edita în timp ce este atribuit notificărilor"
+
+#: app/templates/webhook/list_webhooks.html:106
+#: app/templates/webhook/list_webhooks.html:165
+msgid "Cannot delete while assigned to notifications"
+msgstr "Nu se poate șterge în timp ce este atribuit notificărilor"
+
+#: app/templates/webhook/list_webhooks.html:122
+msgid "Endpoint:"
+msgstr "Punct de final:"
+
+#: app/templates/webhook/list_webhooks.html:125
+msgid "Description:"
+msgstr "Descriere:"
+
+#: app/views/account.py:74
+msgid "Current password is required to change password."
+msgstr "Parola actuală este necesară pentru a schimba parola."
+
+#: app/views/account.py:78
+msgid "Current password is incorrect."
+msgstr "Parola actuală este incorectă."
+
+#: app/views/account.py:94
+msgid "Account updated successfully."
+msgstr "Contul a fost actualizat cu succes."
+
+#: app/views/account.py:100
+msgid "An error occurred while updating your account."
+msgstr "A apărut o eroare la actualizarea contului."
+
+#: app/views/account.py:137
+msgid "You cannot delete your account because you are the last admin."
+msgstr "Nu vă puteți șterge contul pentru că sunteți ultimul administrator."
+
+#: app/views/account.py:146
+msgid "Your account has been permanently deleted."
+msgstr "Contul dumneavoastră a fost șters permanent."
+
+#: app/views/account.py:152
+msgid "An error occurred while trying to delete your account."
+msgstr "A apărut o eroare la actualizarea contului."
+
+#: app/views/account.py:171
+msgid "Your account has been deleted"
+msgstr "Contul dumneavoastră a fost șters permanent."
+
+#: app/views/account.py:173
+#, python-brace-format
+msgid ""
+"Hello {username},\n"
+"\n"
+"Your account on {site_name} has been deleted.Remember to delete your files from the uploads folder.If this was not you, please contact support immediately.\n"
+"\n"
+"{site_url}"
+msgstr ""
+"Bună {username},\n"
+"\n"
+"Contul tău de pe {site_name} a fost șters. Amintește-ți să ștergi fișierele din folderul uploads. Dacă nu tu ai făcut asta, te rog contactează suportul imediat.\n"
+"\n"
+"{site_url}"
+
+#: app/views/admin.py:59
+msgid "Invalid role."
+msgstr "Rol invalid."
+
+#: app/views/apprise.py:51
+msgid "🧪 Test notification sent successfully!"
+msgstr "🧪 Notificare de test trimisă cu succes!"
+
+#: app/views/apprise.py:56
+msgid "🧪 Failed to send test notification: "
+msgstr "🧪 Eșec la trimiterea notificării de test:"
+
+#: app/views/apprise.py:62
+msgid "🧪 Error sending test notification."
+msgstr "🧪 Eroare la trimiterea notificării de test."
+
+#: app/views/apprise.py:101
+msgid "Apprise destination created successfully."
+msgstr "Destinația Apprise creată cu succes."
+
+#: app/views/apprise.py:168
+msgid "Apprise destination updated successfully."
+msgstr "Destinația Apprise a fost actualizată cu succes."
+
+#: app/views/apprise.py:199
+msgid "Apprise destination deleted."
+msgstr "Destinația Apprise a fost ștearsă."
+
+#: app/views/auth.py:95
+msgid "Admin account created successfully."
+msgstr "Cont de administrator creat cu succes."
+
+#: app/views/auth.py:108
+msgid "An error occurred while creating the admin account."
+msgstr "A apărut o eroare la crearea contului de administrator."
+
+#: app/views/auth.py:141
+msgid ""
+"Your account is not activated. Please check your email for the activation "
+"link."
+msgstr ""
+"Contul dvs. nu este activat. Vă rugăm să verificați e-mailul pentru linkul "
+"de activare."
+
+#: app/views/auth.py:157
+msgid "Multi-factor authentication required. Please enter your code."
+msgstr ""
+"Este necesară autentificarea multifactor. Vă rugăm să introduceți codul dvs."
+
+#: app/views/auth.py:162 app/views/mfa.py:195
+msgid "Logged in successfully."
+msgstr "Autentificare reușită."
+
+#: app/views/auth.py:179
+msgid "Invalid username or password."
+msgstr "Nume de utilizator sau parolă invalidă."
+
+#: app/views/auth.py:203
+msgid "You have been logged out."
+msgstr "Ați fost deconectat."
+
+#: app/views/auth.py:239 app/views/email.py:263
+msgid "Access denied."
+msgstr "Acces refuzat."
+
+#: app/views/auth.py:273
+msgid "If a user with that email exists, we've sent the username to them."
+msgstr ""
+"Dacă un utilizator cu acel e-mail există, i-am trimis numele de utilizator."
+
+#: app/views/auth.py:314
+msgid "A password reset link has been sent to your email."
+msgstr "Un link pentru resetarea parolei a fost trimis pe e-mailul tău."
+
+#: app/views/auth.py:319
+msgid "No account found matching that username and email."
+msgstr ""
+"Nu a fost găsit niciun cont care să corespundă cu numele de utilizator și "
+"e-mailul respectiv."
+
+#: app/views/auth.py:389
+msgid "The reset link is invalid or has expired."
+msgstr "Linkul de resetare nu este valid sau a expirat."
+
+#: app/views/auth.py:401
+msgid "Username and email do not match."
+msgstr "Numele de utilizator și email-ul nu se potrivesc."
+
+#: app/views/auth.py:421
+msgid "Your password has been reset. Please log in."
+msgstr "Parola ta a fost resetată. Te rugăm să te autentifici."
+
+#: app/views/auth.py:458
+msgid "Invalid registration PIN."
+msgstr "PIN de înregistrare invalid."
+
+#: app/views/auth.py:467
+msgid "Username or email already exists."
+msgstr "Numele de utilizator sau email-ul există deja."
+
+#: app/views/auth.py:492
+msgid "Activate Your Grylli Account"
+msgstr "Activați contul dumneavoastră Grylli"
+
+#: app/views/auth.py:493
+#, python-brace-format
+msgid ""
+"Hello {username},\n"
+"\n"
+"Please activate your account by clicking..."
+msgstr ""
+"Salut {username},\n"
+"\n"
+"Vă rugăm să vă activați contul făcând clic..."
+
+#: app/views/auth.py:498
+msgid "Account created! Please check your email to activate your account."
+msgstr ""
+"Contul a fost creat! Te rugăm să-ți verifici email-ul pentru a-ți activa "
+"contul."
+
+#: app/views/auth.py:521
+msgid "Activation link is invalid or expired."
+msgstr "Linkul de activare este invalid sau expirat."
+
+#: app/views/auth.py:528 app/views/users.py:76 app/views/users.py:140
+msgid "User not found."
+msgstr "Utilizatorul nu a fost găsit."
+
+#: app/views/auth.py:532
+msgid "Account already activated. Please log in."
+msgstr "Contul este deja activat. Te rugăm să te autentifici."
+
+#: app/views/auth.py:540
+msgid "Your account has been activated! You can now log in."
+msgstr "Contul tău a fost activat! Acum te poți autentifica."
+
+#: app/views/backups.py:72
+#, python-format
+msgid "Backup created: %(filename)s"
+msgstr "Backup creat: %(filename)s"
+
+#: app/views/backups.py:77
+msgid "Failed to create backup."
+msgstr "Crearea backup-ului a eșuat."
+
+#: app/views/backups.py:106
+#, python-format
+msgid "Backup deleted: %(filename)s"
+msgstr "Backup șters: %(filename)s"
+
+#: app/views/backups.py:109
+msgid "Backup file not found."
+msgstr "Fișierul de backup nu a fost găsit."
+
+#: app/views/backups.py:112
+msgid "Failed to delete backup."
+msgstr "Ștergerea backup-ului a eșuat."
+
+#: app/views/checkin.py:41
+msgid "Invalid check-in link."
+msgstr "Link-ul de check-in invalid."
+
+#: app/views/checkin.py:48
+msgid "You are not authorized to check in for this item."
+msgstr "Nu ești autorizat să te înregistrezi pentru acest element."
+
+#: app/views/checkin.py:62
+msgid "Unsupported check-in type."
+msgstr "Tip de check-in neacceptat."
+
+#: app/views/checkin.py:137
+msgid "⚠️ Cannot enable reminder: Start date/time is in the past."
+msgstr "⚠️ Nu se poate activa mementoul: Data/ora de început este în trecut."
+
+#: app/views/checkin.py:158
+msgid "✅ Enabled and timer started."
+msgstr "✅ Activat și temporizatorul a început."
+
+#: app/views/checkin.py:168
+msgid "⛔ Disabled."
+msgstr "⛔ Dezactivat."
+
+#: app/views/checkin.py:170
+msgid "⚠️ Cannot toggle — missing schedule or destination."
+msgstr "⚠️ Nu se poate comuta — lipsesc programul sau destinația."
+
+#: app/views/email.py:88
+msgid "Message saved."
+msgstr "Mesaj salvat."
+
+#: app/views/email.py:118 app/views/messages.py:167
+msgid "Message deleted."
+msgstr "Mesaj șters."
+
+#: app/views/email.py:152
+msgid "Attached files updated."
+msgstr "Fișierele atașate au fost actualizate."
+
+#: app/views/email.py:200
+msgid "SMTP configuration not assigned or is disabled."
+msgstr "Configurația SMTP nu este asignată sau este dezactivată."
+
+#: app/views/email.py:234 app/views/smtp_settings_admin.py:82
+msgid "Test email sent successfully."
+msgstr "Emailul de testare a fost trimis cu succes."
+
+#: app/views/email.py:282 app/views/messages.py:305
+msgid "Schedule updated successfully."
+msgstr "Program actualizat cu succes."
+
+#: app/views/email.py:310
+msgid "SMTP configuration assigned."
+msgstr "Configurația SMTP a fost asignată."
+
+#: app/views/email.py:319
+msgid "SMTP configuration removed."
+msgstr "Configurația SMTP a fost asignată."
+
+#: app/views/messages.py:97
+msgid "Message created successfully."
+msgstr "Mesaj creat cu succes."
+
+#: app/views/messages.py:133
+msgid "Message updated successfully."
+msgstr "Mesaj actualizat cu succes."
+
+#: app/views/messages.py:223 app/views/reminders.py:240
+msgid "Destinations updated."
+msgstr "Destinațiile au fost actualizate."
+
+#: app/views/messages.py:441
+msgid "No destinations assigned to this message."
+msgstr "Configurația SMTP nu este asignată sau este dezactivată."
+
+#: app/views/messages.py:453
+msgid "Test message sent successfully."
+msgstr "Emailul de testare a fost trimis cu succes."
+
+#: app/views/messages.py:455
+msgid "Test message failed: "
+msgstr "Mesaj salvat."
+
+#: app/views/mfa.py:68
+msgid "You must enter a code from your authenticator."
+msgstr "Trebuie să introduceți un cod din autentificatorul dvs."
+
+#: app/views/mfa.py:82 app/views/mfa.py:259
+msgid "Invalid code. Please try again."
+msgstr "Cod invalid. Vă rugăm să încercați din nou."
+
+#: app/views/mfa.py:91
+msgid "Two-factor authentication disabled."
+msgstr "Notificarea este dezactivată"
+
+#: app/views/mfa.py:132
+msgid "Recovery codes are only shown immediately after enabling MFA."
+msgstr "Codurile de recuperare sunt afișate doar imediat după activarea MFA."
+
+#: app/views/mfa.py:142
+msgid "Could not load recovery codes."
+msgstr "Nu s-au putut încărca codurile de recuperare."
+
+#: app/views/mfa.py:168
+msgid "No MFA challenge in progress."
+msgstr "Nici o provocare MFA în desfășurare."
+
+#: app/views/mfa.py:176
+msgid "User not found for MFA challenge."
+msgstr "Utilizatorul nu a fost găsit."
+
+#: app/views/mfa.py:225
+msgid ""
+"You have used your last recovery code. MFA has been disabled. Please remove "
+"Grylli from your authenticator app, and re-enable MFA to protect your "
+"account."
+msgstr ""
+"Ați folosit ultimul cod de recuperare. MFA a fost dezactivat. Vă rugăm să "
+"eliminați Grylli din aplicația dvs. de autentificare și să reactivați MFA "
+"pentru a vă proteja contul."
+
+#: app/views/mfa.py:248
+#, python-brace-format
+msgid "Recovery code accepted. You have {remaining} recovery codes left."
+msgstr ""
+"Cod de recuperare acceptat. Aveți {remaining} coduri de recuperare rămase."
+
+#: app/views/reminders.py:106
+msgid "Reminder created successfully."
+msgstr "Mesaj creat cu succes."
+
+#: app/views/reminders.py:143
+msgid "Reminder updated successfully."
+msgstr "Utilizator actualizat cu succes."
+
+#: app/views/reminders.py:174
+msgid "Reminder deleted."
+msgstr "Utilizator șters."
+
+#: app/views/reminders.py:287
+msgid "No destinations assigned to this reminder."
+msgstr "Configurația SMTP nu este asignată sau este dezactivată."
+
+#: app/views/reminders.py:311
+msgid "No email message linked to this reminder."
+msgstr "Niciun mesaj de email asociat acestui mementou."
+
+#: app/views/reminders.py:314
+msgid "SMTP configuration is disabled."
+msgstr "Configurația SMTP nu este asignată sau este dezactivată."
+
+#: app/views/reminders.py:353
+msgid "Test reminder sent successfully."
+msgstr "Emailul de testare a fost trimis cu succes."
+
+#: app/views/reminders.py:356
+msgid "Test reminder failed: "
+msgstr "Mesaj salvat."
+
+#: app/views/reminders.py:430
+msgid "Reminder schedule updated successfully."
+msgstr "Program actualizat cu succes."
+
+#: app/views/reminders.py:434
+msgid "Please correct the errors below."
+msgstr "Vă rugăm să corectați erorile de mai jos."
+
+#: app/views/reminders.py:481 app/views/reminders.py:482
+msgid "None"
+msgstr "Nu"
+
+#: app/views/reminders.py:508
+msgid "You must select both an SMTP config and an email message, or neither."
+msgstr ""
+"Trebuie să selectați atât o configurație SMTP, cât și un mesaj de email, sau"
+" niciunul."
+
+#: app/views/reminders.py:528
+msgid "Email reminder settings updated."
+msgstr "Destinațiile au fost actualizate."
+
+#: app/views/smtp.py:83 app/views/user_smtp.py:80
+msgid "SMTP destination created successfully."
+msgstr "Destinația SMTP creată cu succes."
+
+#: app/views/smtp.py:129 app/views/user_smtp.py:135
+msgid "SMTP destination updated."
+msgstr "Destinația SMTP actualizată."
+
+#: app/views/smtp.py:160 app/views/user_smtp.py:166
+msgid "SMTP destination deleted."
+msgstr "Destinația SMTP ștearsă."
+
+#: app/views/smtp.py:191 app/views/user_smtp.py:199
+msgid "Test email sent successfully to your account email."
+msgstr ""
+"Emailul de testare a fost trimis cu succes la adresa de email a contului "
+"tău."
+
+#: app/views/smtp.py:196 app/views/user_smtp.py:204
+msgid "Failed to send test email. Check SMTP settings."
+msgstr "Trimiterea emailului de testare a eșuat. Verifică setările SMTP."
+
+#: app/views/smtp_settings_admin.py:76
+msgid "Test Email from Grylli"
+msgstr "Email de testare de la Grylli"
+
+#: app/views/smtp_settings_admin.py:77
+msgid "This is a test email from the Grylli SMTP settings page."
+msgstr "Acesta este un email de testare de pe pagina setărilor SMTP Grylli."
+
+#: app/views/smtp_settings_admin.py:84
+msgid "Failed to send test email: "
+msgstr "Trimiterea emailului de test a eșuat:"
+
+#: app/views/users.py:99
+msgid "User updated successfully."
+msgstr "Utilizator actualizat cu succes."
+
+#: app/views/users.py:106 app/views/users.py:327
+msgid "An error occurred while updating the user."
+msgstr "A apărut o eroare în timpul actualizării utilizatorului."
+
+#: app/views/users.py:195
+msgid "User deleted."
+msgstr "Utilizator șters."
+
+#: app/views/users.py:202
+msgid "An error occurred while deleting the user."
+msgstr "A apărut o eroare în timpul ștergerii utilizatorului."
+
+#: app/views/users.py:237
+msgid "Password is required when creating a new user."
+msgstr "Parola este necesară la crearea unui utilizator nou."
+
+#: app/views/users.py:244
+msgid "Username already exists."
+msgstr "Numele de utilizator există deja."
+
+#: app/views/users.py:251
+msgid "Email already exists."
+msgstr "Emailul există deja."
+
+#: app/views/users.py:268
+#, python-format
+msgid "User '%(username)s' created successfully."
+msgstr "Utilizatorul '%(username)s' a fost creat cu succes."
+
+#: app/views/users.py:278
+msgid "Failed to create user."
+msgstr "Crearea utilizatorului a eșuat."
+
+#: app/views/users.py:305
+msgid "You cannot change your own enabled status."
+msgstr "Nu vă puteți schimba propria stare de activare."
+
+#: app/views/users.py:318
+#, python-format
+msgid "User '%(username)s' has been %(status)s."
+msgstr "Utilizatorul '%(username)s' a fost %(status)s."
+
+#: app/views/users.py:356
+msgid "You cannot reset your own MFA."
+msgstr "⚪ = Nu vă puteți dezactiva propriul cont."
+
+#: app/views/users.py:368
+#, python-format
+msgid "MFA disabled for user '%(username)s'."
+msgstr "MFA dezactivat pentru utilizatorul '%(username)s'."
+
+#: app/views/users.py:374
+msgid "An error occurred while resetting MFA."
+msgstr "A apărut o eroare în timpul ștergerii utilizatorului."
+
+#: app/views/webhook.py:54
+msgid "Webhook created successfully."
+msgstr "Webhook creat cu succes."
+
+#: app/views/webhook.py:113
+msgid "Webhook updated successfully."
+msgstr "Webhook actualizat cu succes."
+
+#: app/views/webhook.py:142
+msgid "Webhook deleted."
+msgstr "Webhook șters."
+
+#: app/views/webhook.py:175
+msgid "🧪 Webhook test sent successfully!"
+msgstr "🧪 Testul de webhook a fost trimis cu succes!"
+
+#: app/views/webhook.py:177
+msgid "🧪 Webhook test failed: "
+msgstr "🧪 Testul de webhook a eșuat:"
+
+#: app/views/webhook.py:180
+msgid "🧪 Error sending webhook test."
+msgstr "🧪 Eroare la trimiterea testului webhook."
+
+#~ msgid ""
+#~ "Grylli is a secure message delivery platform designed to activate after "
+#~ "prolonged user inactivity."
+#~ msgstr ""
+#~ "Grylli este o platformă de livrare a mesajelor securizate, proiectată să se "
+#~ "activeze după o inactivitate prelungită a utilizatorului."
+
+#~ msgid ""
+#~ "It is a modern reimplementation of Gone Man’s Switch with a refined tech "
+#~ "stack, better maintainability, and an improved user experience."
+#~ msgstr ""
+#~ "Este o reimplementare modernă a Gone Man’s Switch cu un stack tehnologic "
+#~ "îmbunătățit, o mai bună întreținere și o experiență îmbunătățită a "
+#~ "utilizatorului."
+
+#~ msgid "Body:"
+#~ msgstr "Corpul:"
+
+#~ msgid "Subject:"
+#~ msgstr "Subiect:"
+
+#~ msgid "Content:"
+#~ msgstr "Conținut:"
+
+#~ msgid "Edit SMTP"
+#~ msgstr "Editează SMTP"
+
+#~ msgid ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+#~ msgstr ""
+#~ "docker exec -it container_name bash \"python3 "
+#~ "tools/reset_admin_password.py\""
+
+#~ msgid "Admin Notes"
+#~ msgstr "Note de administrator"
+
+#~ msgid "Register"
+#~ msgstr "Înregistrare"
+
+#~ msgid "View"
+#~ msgstr "Vizualizare"
+
+#~ msgid "Schedule"
+#~ msgstr "Program"
+
+#~ msgid "Message is enabled"
+#~ msgstr "Mesajul este activat"
+
+#~ msgid "Message is disabled"
+#~ msgstr "Mesajul este dezactivat"
+
+#~ msgid "No SMTP configuration selected."
+#~ msgstr "Nu a fost selectată nicio configurație SMTP."
+
+#~ msgid "Enable the message to start monitoring."
+#~ msgstr "Activează mesajul pentru a începe monitorizarea."
+
+#~ msgid "✅ SMTP settings saved."
+#~ msgstr "Setări SMTP"
+
+#~ msgid "If you don’t check in, Grylli delivers the message for you."
+#~ msgstr "Dacă nu faci check-in, Grylli livrează mesajul pentru tine."
+
+#~ msgid "Fill in already discovered missing translations:"
+#~ msgstr "Completați traducerile lipsă deja descoperite:"
+
+#~ msgid "Add missing phrases in that JSON file."
+#~ msgstr "Adăugați fraze lipsă în acel fișier JSON."
+
+#~ msgid "From:"
+#~ msgstr "De la:"
+
+#~ msgid ""
+#~ "Attach the updated JSON file to a new GitHub issue when submitting your "
+#~ "changes."
+#~ msgstr ""
+#~ "Atașați fișierul JSON actualizat la un nou issue pe GitHub când trimiteți "
+#~ "modificările dvs."
+
+#~ msgid "admin"
+#~ msgstr "admin"
+
+#~ msgid "user"
+#~ msgstr "utilizator"
+
+#~ msgid "Logging in"
+#~ msgstr "Autentificare"
+
+#~ msgid "SMTP error: "
+#~ msgstr "Eroare SMTP:"
+
+#~ msgid "enabled"
+#~ msgstr "activat"
+
+#~ msgid "disabled"
+#~ msgstr "dezactivat"
