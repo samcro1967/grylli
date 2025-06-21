@@ -1,0 +1,99 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="max-w-md mx-auto mt-20 bg-white dark:bg-white dark:bg-zinc-800 dark:bg-white dark:bg-zinc-800 shadow-md rounded-xl p-6 space-y-4"
+         data-controller="bootstrap-form">
+        <h1 class="text-xl font-semibold text-zinc-800 dark:text-zinc-100">{{ _("Create Admin Account") }}</h1>
+        <p class="text-sm text-zinc-800 dark:text-zinc-700">
+            {{ _("Let’s get started by creating your first admin account.") }}
+        </p>
+        <form method="post" novalidate>
+            {{ form.hidden_tag() }}
+            {% if form.errors %}
+                <div class="mb-4 p-2 bg-red-100 border border-red-400 text-red-800 rounded">
+                    <strong>{{ _("Please fix the following errors:") }}</strong>
+                    <ul class="list-disc pl-5">
+                        {% for field, errors in form.errors.items() %}
+                            {% for error in errors %}<li>{{ error }}</li>{% endfor %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+            <div class="mb-4">
+                {{ form.username.label(class="block text-sm font-medium mb-1") }}
+                {{ form.username(id="username", class="form-input w-full bg-zinc-200 dark:bg-zinc-200 dark:bg-zinc-700 text-zinc-800 dark:text-zinc-100", autocomplete="username", **{"data-bootstrap-form-target": "username"}) }}
+                {% for error in form.username.errors %}<div class="text-red-800 text-xs mt-1">{{ error }}</div>{% endfor %}
+            </div>
+            <div class="mb-4">
+                {{ form.email.label(class="block text-sm font-medium mb-1") }}
+                {{ form.email(id="email", class="form-input w-full bg-zinc-200 dark:bg-zinc-200 dark:bg-zinc-700 text-zinc-800 dark:text-zinc-100", autocomplete="email", **{"data-bootstrap-form-target": "email"}) }}
+                {% for error in form.email.errors %}<div class="text-red-800 text-xs mt-1">{{ error }}</div>{% endfor %}
+                <p id="emailWarning"
+                   class="text-red-800 text-sm hidden"
+                   data-bootstrap-form-target="emailWarning">{{ _("Please enter a valid email address.") }}</p>
+            </div>
+            <!-- Password -->
+            <div class="mb-4" data-controller="reveal-password">
+                {{ form.password.label(class="block text-sm font-medium mb-1") }}
+                <div class="relative">
+                    {{ form.password(id="password",
+                                        class="form-input w-full pr-10 bg-zinc-200 dark:bg-zinc-200 dark:bg-zinc-700 text-zinc-800 dark:text-zinc-100",
+                                        autocomplete="new-password",
+                                        **{ "data-bootstrap-form-target": "password" }) }}
+                    <div class="absolute inset-y-0 right-0 flex items-center pr-3">
+                        <button type="button"
+                                class="focus:outline-none text-gray-800 hover:text-gray-700 dark:hover:text-gray-300"
+                                data-action="mousedown->reveal-password#show mouseup->reveal-password#hide mouseleave->reveal-password#hide"
+                                aria-label="{{ _("Hold to reveal password") }}">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                {% for error in form.password.errors %}<div class="text-red-800 text-xs mt-1">{{ error }}</div>{% endfor %}
+                <p id="complexityWarning"
+                   class="text-red-800 text-sm"
+                   data-bootstrap-form-target="complexityWarning">
+                    {{ _("Password must meet all complexity requirements.") }}
+                </p>
+            </div>
+            <!-- Confirm Password -->
+            <div class="mb-4" data-controller="reveal-password">
+                {{ form.confirm_password.label(class="block text-sm font-medium mb-1") }}
+                <div class="relative">
+                    {{ form.confirm_password(id="confirmPassword",
+                                        class="form-input w-full pr-10 bg-zinc-200 dark:bg-zinc-200 dark:bg-zinc-700 text-zinc-800 dark:text-zinc-100",
+                                        autocomplete="new-password",
+                                        **{ "data-bootstrap-form-target": "confirmPassword" }) }}
+                    <div class="absolute inset-y-0 right-0 flex items-center pr-3">
+                        <button type="button"
+                                class="focus:outline-none text-gray-800 hover:text-gray-700 dark:hover:text-gray-300"
+                                data-action="mousedown->reveal-password#show mouseup->reveal-password#hide mouseleave->reveal-password#hide"
+                                aria-label="{{ _("Hold to reveal confirm password") }}">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                {% for error in form.confirm_password.errors %}<div class="text-red-800 text-xs mt-1">{{ error }}</div>{% endfor %}
+                <p id="passwordMismatchWarning"
+                   class="text-sm text-red-800 hidden mt-1"
+                   data-bootstrap-form-target="mismatchWarning">{{ _("Passwords do not match.") }}</p>
+            </div>
+            <!-- Submit Button -->
+            <div>
+                <button id="submitBtn"
+                        type="submit"
+                        class="w-full bg-red-500 bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition py-2 px-4 rounded disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                        data-bootstrap-form-target="submitButton"
+                        disabled>{{ _("Create Admin") }}</button>
+            </div>
+        </form>
+        <div class="text-sm text-zinc-800 dark:text-zinc-700 mt-1">
+            <ul class="list-disc list-inside space-y-1">
+                <li>{{ _("Minimum 8 characters") }}</li>
+                <li>{{ _("At least one uppercase letter") }}</li>
+                <li>{{ _("At least one lowercase letter") }}</li>
+                <li>{{ _("At least one number") }}</li>
+                <li>{{ _("At least one special character (e.g., !@#$%)") }}</li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}

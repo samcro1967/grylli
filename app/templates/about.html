@@ -1,0 +1,40 @@
+{# ---------------------------------------------------------------------
+   about.html
+   app/templates/about.html
+   Public-facing "About Grylli" page
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    <div class="max-w-3xl mx-auto mt-20 bg-white dark:bg-zinc-800 shadow-md rounded-xl p-6 space-y-5">
+        <!-- Page Title -->
+        <h1 class="text-2xl font-bold text-zinc-900 dark:text-zinc-100">{{ _("Welcome to Grylli") }}</h1>
+        <!-- Pronunciation -->
+        <p class="text-zinc-900 dark:text-zinc-200">
+            <strong>{{ _("Pronounced") }}:</strong> /ˈɡrɪli/ — {{ _("like “grill-ee”") }}
+        </p>
+        <!-- Introductory Paragraphs -->
+        <p class="text-zinc-800 dark:text-zinc-200">
+            {{ _("Grylli is a secure message scheduling and delivery system designed to ensure your important messages are sent — even if you’re unable to check in.") }}
+        </p>
+        <p class="text-zinc-800 dark:text-zinc-200">
+            {{ _("With support for email, webhooks, and over 100 third-party services via Apprise, Grylli gives you full control over how and when messages are delivered.") }}
+            {{ _("You can also configure your own SMTP settings to ensure messages appear to come from your personal address.") }}
+        </p>
+        <!-- Getting Started -->
+        <h2 class="text-lg font-semibold text-zinc-800 dark:text-zinc-100 mt-4">{{ _("Getting Started") }}</h2>
+        <ol class="list-decimal list-inside text-zinc-800 dark:text-zinc-200 space-y-1">
+            <li>{{ _("Create a message, email, or reminder.") }}</li>
+            <li>{{ _("Set a check-in interval and grace period for your messages.") }}</li>
+            <li>{{ _("Choose one or more delivery destinations (email, webhook, Apprise).") }}</li>
+            <li>{{ _("Attach optional files for email delivery.") }}</li>
+            <li>{{ _("Use test-send to validate your destination setup.") }}</li>
+            <li>{{ _("Schedule your reminder: once, daily, weekly, or custom.") }}</li>
+            <li>{{ _("Enable the item to activate automatic delivery logic.") }}</li>
+            <li>{{ _("Check in regularly to prevent automated sends.") }}</li>
+        </ol>
+        <!-- Footer Note -->
+        <p class="text-sm text-zinc-900 dark:text-zinc-300">
+            {{ _("Your data is encrypted at rest, messages are only sent if you miss a check-in, and you can export or delete your account at any time.") }}
+        </p>
+    </div>
+{% endblock %}

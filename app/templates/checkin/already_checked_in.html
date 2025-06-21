@@ -1,0 +1,24 @@
+{# ---------------------------------------------------------------------
+  already_checked_in.html
+  app/templates/checkin/already_checked_in.html
+  [Displayed when a user tries to check in again for the same cycle.]
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{# =================== JINJA BLOCK ==================== #}
+{% block content %}
+    <div class="max-w-xl mx-auto mt-20 bg-white dark:bg-white dark:bg-zinc-800 dark:bg-white dark:bg-zinc-800 p-6 rounded shadow text-center">
+        <h1 class="text-2xl font-semibold mb-4 text-blue-800 dark:text-blue-800">ℹ️ {{ _("Already Checked In") }}</h1>
+        <p class="text-lg mb-2 text-zinc-900 dark:text-zinc-200">
+            {{ _("You have already checked in for this item. No further action is needed at this time.") }}
+        </p>
+        {% if label %}
+            <p class="text-sm text-zinc-900 dark:text-zinc-900 italic mt-2">
+                {{ _("Check-in for:") }} <strong>{{ label }}</strong>
+            </p>
+        {% endif %}
+        <a href="{{ url_for("index.index") }}"
+           class="inline-block mt-6 px-4 py-2 bg-blue-600 bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition rounded hover:bg-blue-700 transition">
+            {{ _("Return to Dashboard") }}
+        </a>
+    </div>
+{% endblock %}

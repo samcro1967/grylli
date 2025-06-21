@@ -1,0 +1,54 @@
+{# ---------------------------------------------------------------------
+  desktop_footer.html
+  Fixed footer with working theme + language controls.
+--------------------------------------------------------------------- #}
+<div data-sidebar-target="footer"
+     class="sidebar-footer flex flex-col justify-between border-t border-zinc-200 dark:border-zinc-700 bg-white dark:bg-white dark:bg-zinc-800 dark:bg-white dark:bg-zinc-800 px-2 py-2 space-y-2">
+    <!-- Version Status -->
+    <div id="sidebar-version-status"
+         data-controller="version-check"
+         data-version-check-status-url-value="{{ url_for("meta.version_status") }}"
+         class="text-xs hidden text-center px-2 py-1 whitespace-nowrap"></div>
+    <!-- Theme Toggle -->
+    <button data-controller="theme"
+            data-action="click->theme#toggle"
+            type="button"
+            class="flex items-center space-x-1 text-sm text-zinc-900 dark:text-zinc-100">
+        <!-- Sun/Moon icons -->
+        <svg data-theme-target="knob"
+             id="sun-icon"
+             xmlns="http://www.w3.org/2000/svg"
+             class="w-4 h-4"
+             fill="none"
+             viewBox="0 0 24 24"
+             stroke="currentColor"
+             stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v1m0 16v1m8.485-8.485h-1M4.515 12.515h-1 M16.95 7.05l-.707.707M7.757 16.243l-.707.707 M16.95 16.95l-.707-.707M7.757 7.757l-.707-.707 M12 5a7 7 0 100 14 7 7 0 000-14z" />
+        </svg>
+        <svg id="moon-icon"
+             xmlns="http://www.w3.org/2000/svg"
+             class="w-4 h-4 hidden"
+             fill="none"
+             viewBox="0 0 24 24"
+             stroke="currentColor"
+             stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+        </svg>
+        <span data-sidebar-target="label" class="truncate">{{ _("Theme") }}</span>
+    </button>
+    <!-- Language Selector -->
+    <div data-controller="lang">
+        <label for="lang-select" class="sr-only">{{ _("Select language") }}</label>
+        <select id="lang-select"
+                data-lang-target="select"
+                data-action="change->lang#change"
+                data-base-url="{{ url_for('locale.set_language', lang_code='') }}"
+                name="lang"
+                aria-label="{{ _("Select language") }}"
+                class="w-full text-sm rounded bg-white text-zinc-800 dark:bg-zinc-700 dark:text-zinc-100 border border-zinc-300 dark:border-zinc-600 px-1 py-1 focus:outline-none focus:ring-2 focus:ring-blue-400 transition">
+            {% for code, label in config['SUPPORTED_LANGUAGES'].items() %}
+                <option value="{{ code }}" {% if get_locale() == code %}selected{% endif %}>{{ _(label) }}</option>
+            {% endfor %}
+        </select>
+    </div>
+</div>

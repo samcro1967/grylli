@@ -1,0 +1,79 @@
+{# ---------------------------------------------------------------------
+  list_messages.html
+  app/templates/messages/list_messages.html
+  Notifications overview: view toggle, add button, list display, help.
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    <div class="w-full max-w-full px-4 sm:px-6 lg:px-8 mt-20 space-y-6"
+         data-controller="list-toggle"
+         data-list-toggle-storage-key-value="messageListView"
+         data-list-toggle-show-label-value="{{ _("How to create and send a notification") }}"
+         data-list-toggle-hide-label-value="{{ _("Hide Instructions") }}">
+        <!-- Page Header -->
+        <div>
+            <h1 class="text-xl font-semibold text-zinc-800 dark:text-zinc-100">{{ _("Notifications") }}</h1>
+            <p class="text-sm text-zinc-600 dark:text-zinc-300 mt-1">
+                {{ _("Manage and send user notifications from the system.") }}
+            </p>
+        </div>
+        <!-- View Toggle + Add -->
+        <div class="flex items-center justify-between flex-wrap sm:flex-nowrap gap-2">
+            <div class="flex space-x-2">
+                <!-- Table View -->
+                <button data-list-toggle-target="tableBtn"
+                        data-action="click->list-toggle#showTable"
+                        aria-label="{{ _("Table View") }}"
+                        title="{{ _("Table View") }}"
+                        class="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         class="h-5 w-5"
+                         fill="currentColor"
+                         viewBox="0 0 24 24">
+                        <path d="M3 6h18v2H3V6zm0 5h18v2H3v-2zm0 5h18v2H3v-2z" />
+                    </svg>
+                </button>
+                <!-- Card View -->
+                <button data-list-toggle-target="cardBtn"
+                        data-action="click->list-toggle#showCard"
+                        aria-label="{{ _("Card View") }}"
+                        title="{{ _("Card View") }}"
+                        class="p-2 rounded bg-gray-700 text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         class="h-5 w-5"
+                         fill="currentColor"
+                         viewBox="0 0 24 24">
+                        <path d="M3 3h8v8H3V3zm10 0h8v8h-8V3zM3 13h8v8H3v-8zm10 0h8v8h-8v-8z" />
+                    </svg>
+                </button>
+            </div>
+            <a href="{{ url_for("messages_bp.create_message") }}"
+               class="shrink-0 whitespace-nowrap px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition">
+                ➕ {{ _("Add Notification") }}
+            </a>
+        </div>
+        <!-- Table View (responsive wrapper added) -->
+        <div id="messageTableView"
+             class="overflow-x-auto w-full"
+             data-list-toggle-target="tableView">{% include "messages/partials/table_view.html" %}</div>
+        <!-- Card View -->
+        <div id="cardView" class="hidden" data-list-toggle-target="cardView">
+            {% include "messages/partials/card_view.html" %}
+        </div>
+        <!-- Help Panel -->
+        <div class="pt-4">
+            <button type="button"
+                    data-action="click->list-toggle#toggleInstructions"
+                    class="text-sm text-blue-800 dark:text-blue-400 hover:underline focus:outline-none">
+                <span data-list-toggle-target="toggleText">{{ _("How to create and send a notification") }}</span>
+            </button>
+            <div class="hidden mt-4 p-4 rounded bg-white dark:bg-zinc-800 text-sm text-zinc-800 dark:text-zinc-200 space-y-2 shadow-md border border-zinc-700"
+                 data-list-toggle-target="instructions">{% include "messages/partials/help_panel.html" %}</div>
+        </div>
+        {% if debug %}
+            {% set debug_label = _('List Notifications') %}
+            {% include "partials/_debug_register.html" %}
+            {% include "partials/_layout_debug_targets.html" %}
+        {% endif %}
+    </div>
+{% endblock %}

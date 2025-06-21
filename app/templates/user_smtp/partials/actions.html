@@ -1,0 +1,35 @@
+{# ---------------------------------------------------------------------
+  user_smtp/partials/actions.html
+  CSP-compliant SMTP action buttons
+--------------------------------------------------------------------- #}
+{% if not smtp.linked_secure_emails %}
+    <a class="text-blue-800 hover:underline"
+       href="{{ url_for('user_smtp.edit', smtp_id=smtp.id) }}"
+       title="{{ _("Edit") }}">✏️</a>
+{% else %}
+    <span class="text-zinc-900 cursor-not-allowed"
+          title="{{ _("Cannot edit while in use") }}">✏️</span>
+{% endif %}
+<form action="{{ url_for('user_smtp.send_test', smtp_id=smtp.id) }}"
+      method="post"
+      class="inline mx-2">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <button type="submit"
+            title="{{ _("Send Test") }}"
+            class="text-indigo-800 hover:underline">🧪</button>
+</form>
+{% if not smtp.linked_secure_emails %}
+    <form action="{{ url_for('user_smtp.delete', smtp_id=smtp.id) }}"
+          method="post"
+          class="inline"
+          data-controller="confirm"
+          data-confirm-message-value="Delete {{ smtp.label }}?">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <button type="submit"
+                title="{{ _("Delete") }}"
+                class="text-red-800 hover:underline">🗑️</button>
+    </form>
+{% else %}
+    <span class="text-zinc-900 cursor-not-allowed"
+          title="{{ _("Cannot delete while in use") }}">🗑️</span>
+{% endif %}

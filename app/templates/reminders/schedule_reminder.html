@@ -1,0 +1,81 @@
+{# ---------------------------------------------------------------------
+  schedule_reminder.html
+  app/templates/reminders/schedule_reminder.html
+  CSP-compliant scheduling form with reusable help panel toggle
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    <div class="max-w-xl mx-auto px-4 py-8 mt-20">
+        <h1 class="text-xl font-semibold mb-6 text-zinc-900 dark:text-zinc-100">{{ _("Schedule Reminder") }}</h1>
+        <!-- =================== FORM START =================== -->
+        <form method="post"
+              class="space-y-6 bg-white dark:bg-zinc-800 p-6 rounded shadow">
+            {{ form.hidden_tag() }}
+            <!-- Start Date & Time -->
+            <div>
+                <label for="start_at"
+                       class="block text-sm font-medium text-zinc-900 dark:text-zinc-100">
+                    {{ _("Start Date & Time") }}
+                </label>
+                {{ form.start_at(class_="w-full mt-1 px-3 py-2 border rounded bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100", type="datetime-local") }}
+                {% for error in form.start_at.errors %}<p class="text-red-800 text-sm mt-1">{{ error }}</p>{% endfor %}
+            </div>
+            <!-- Recurrence Rule -->
+            <div>
+                <label for="recurrence_rule"
+                       class="block text-sm font-medium text-zinc-900 dark:text-zinc-100">
+                    {{ _("Recurrence Rule") }}
+                </label>
+                {{ form.recurrence_rule(class_="w-full mt-1 px-3 py-2 border rounded bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100") }}
+                <small class="text-sm text-zinc-700 dark:text-zinc-300">
+                    {{ _("(Optional) Enter RRULE or leave blank for one-time.") }}
+                </small>
+                {% for error in form.recurrence_rule.errors %}<p class="text-red-800 text-sm mt-1">{{ error }}</p>{% endfor %}
+            </div>
+            <!-- End Date -->
+            <div>
+                <label for="end_at"
+                       class="block text-sm font-medium text-zinc-900 dark:text-zinc-100">{{ _("End Date") }}</label>
+                {{ form.end_at(class_="w-full mt-1 px-3 py-2 border rounded bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100", type="datetime-local") }}
+                <small class="text-sm text-zinc-700 dark:text-zinc-300">{{ _("(Optional) Stop sending after this date.") }}</small>
+                {% for error in form.end_at.errors %}<p class="text-red-800 text-sm mt-1">{{ error }}</p>{% endfor %}
+            </div>
+            <!-- Max Occurrences -->
+            <div>
+                <label for="max_occurrences"
+                       class="block text-sm font-medium text-zinc-900 dark:text-zinc-100">
+                    {{ _("Max Occurrences") }}
+                </label>
+                {{ form.max_occurrences(class_="w-full mt-1 px-3 py-2 border rounded bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100") }}
+                <small class="text-sm text-zinc-700 dark:text-zinc-300">{{ _("(Optional) Stop after this many reminders.") }}</small>
+                {% for error in form.max_occurrences.errors %}<p class="text-red-800 text-sm mt-1">{{ error }}</p>{% endfor %}
+            </div>
+            <!-- Action Buttons -->
+            <div class="flex justify-end gap-4 pt-4">
+                <button type="submit"
+                        class="w-1/2 bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition">
+                    {{ _("Save Schedule") }}
+                </button>
+                <a href="{{ url_for("reminders_bp.index") }}"
+                   class="w-1/2 text-center bg-zinc-400 text-white py-2 px-4 rounded hover:bg-zinc-500 focus:outline-none focus:ring-2 focus:ring-zinc-300 transition">
+                    {{ _("Cancel") }}
+                </a>
+            </div>
+        </form>
+        <!-- =================== RRULE Help Panel =================== -->
+        <div data-controller="toggle-help"
+             data-toggle-help-show-label-value="{{ _("Help for RRULE syntax") }}"
+             data-toggle-help-hide-label-value="{{ _("Hide Instructions") }}"
+             class="mt-8">
+            <button type="button"
+                    class="text-sm text-blue-800 dark:text-blue-400 hover:underline focus:outline-none"
+                    data-action="toggle-help#toggle">
+                <span data-toggle-help-target="label">{{ _("Help for RRULE syntax") }}</span>
+            </button>
+            <div data-toggle-help-target="panel"
+                 class="hidden mt-4 p-4 rounded bg-white dark:bg-zinc-800 text-sm text-zinc-900 dark:text-zinc-100 shadow-md border border-zinc-300 dark:border-zinc-700">
+                {% include "reminders/partials/rrule_help_panel.html" %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

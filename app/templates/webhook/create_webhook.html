@@ -1,0 +1,73 @@
+{# ---------------------------------------------------------------------
+  create_webhook.html
+  app/templates/webhook/create_webhook.html
+  CSP-compliant form to create a new webhook destination
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    <div class="max-w-md mx-auto mt-20 bg-white dark:bg-zinc-800 shadow-md rounded-xl p-6 space-y-4"
+         data-controller="webhook-form">
+        <!-- Page Title -->
+        <h1 class="text-xl font-semibold text-zinc-800 dark:text-zinc-100">{{ _("Create Webhook") }}</h1>
+        <!-- Instructions -->
+        <p class="text-sm text-zinc-600 dark:text-zinc-300">{{ _("Fill out the form to add a new webhook destination.") }}</p>
+        <!-- Form Start -->
+        <form method="post" novalidate>
+            {{ form.hidden_tag() }}
+            <!-- Label -->
+            <div>
+                <label for="label"
+                       class="block text-sm font-medium text-zinc-800 dark:text-zinc-200">
+                    {{ form.label.label.text }}
+                </label>
+                {{ form.label(id="label",
+                                class="w-full mt-1 px-3 py-2 border rounded bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100",
+                                data_webhook_form_target="label",
+                                data_action="input->webhook-form#validate") }}
+                {% if form.label.errors %}<p class="text-red-700 text-sm mt-1">{{ form.label.errors[0] }}</p>{% endif %}
+            </div>
+            <!-- Endpoint -->
+            <div>
+                <label for="endpoint"
+                       class="block text-sm font-medium text-zinc-800 dark:text-zinc-200">
+                    {{ form.endpoint.label.text }}
+                </label>
+                {{ form.endpoint(id="endpoint",
+                                class="w-full mt-1 px-3 py-2 border rounded bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100",
+                                data_webhook_form_target="endpoint",
+                                data_action="input->webhook-form#validate") }}
+                {% if form.endpoint.errors %}<p class="text-red-700 text-sm mt-1">{{ form.endpoint.errors[0] }}</p>{% endif %}
+            </div>
+            <!-- Description -->
+            <div>
+                <label for="description"
+                       class="block text-sm font-medium text-zinc-800 dark:text-zinc-200">
+                    {{ form.description.label.text }}
+                </label>
+                {{ form.description(id="description",
+                                class="w-full mt-1 px-3 py-2 border rounded bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100",
+                                data_webhook_form_target="description") }}
+                {% if form.description.errors %}<p class="text-red-700 text-sm mt-1">{{ form.description.errors[0] }}</p>{% endif %}
+            </div>
+            <!-- Enabled Checkbox -->
+            <div>
+                <label class="inline-flex items-center">
+                    {{ form.enabled() }}
+                    <span class="ml-2 text-sm text-zinc-800 dark:text-zinc-200">{{ _("Enabled") }}</span>
+                </label>
+            </div>
+            <!-- Submit / Cancel Buttons -->
+            <div class="flex gap-4 mt-4">
+                <button id="submitBtn"
+                        type="submit"
+                        data-webhook-form-target="submit"
+                        class="w-1/2 bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                        disabled>{{ _("Create Destination") }}</button>
+                <a href="{{ url_for("webhook.config") }}"
+                   class="w-1/2 text-center bg-zinc-400 text-white py-2 px-4 rounded hover:bg-zinc-500 transition-colors">
+                    {{ _("Cancel") }}
+                </a>
+            </div>
+        </form>
+    </div>
+{% endblock %}

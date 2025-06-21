@@ -1,0 +1,36 @@
+{# user_smtp/partials/table_view.html #}
+<div id="tableView">
+    <table class="table-auto w-full border-collapse border border-gray-300 dark:border-gray-700 text-sm">
+        <thead>
+            <tr>
+                <th class="border px-4 py-2 text-left">{{ _("Label") }}</th>
+                <th class="border px-4 py-2 text-left">{{ _("Host") }}</th>
+                <th class="border px-4 py-2 text-center">{{ _("Port") }}</th>
+                <th class="border px-4 py-2 text-left">{{ _("Username") }}</th>
+                <th class="border px-4 py-2 text-center">{{ _("TLS") }}</th>
+                <th class="border px-4 py-2 text-center">{{ _("Enabled") }}</th>
+                <th class="border px-4 py-2 text-center">{{ _("Created") }}</th>
+                <th class="border px-4 py-2 text-center">{{ _("Actions") }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for smtp in smtp_list %}
+                <tr>
+                    <td class="border px-4 py-2">{{ smtp.label }}</td>
+                    <td class="border px-4 py-2">{{ smtp.smtp_host }}</td>
+                    <td class="border px-4 py-2 text-center">{{ smtp.smtp_port }}</td>
+                    <td class="border px-4 py-2">{{ smtp.smtp_username }}</td>
+                    <td class="border px-4 py-2 text-center">{{ '✅' if smtp.use_tls else '❌' }}</td>
+                    <td class="border px-4 py-2 text-center">{{ '✅' if smtp.enabled else '❌' }}</td>
+                    <td class="border px-4 py-2 text-center">
+                        {{ smtp.created_at.strftime("%Y-%m-%d %H:%M") if smtp.created_at else '' }}
+                    </td>
+                    <td class="border px-4 py-2 text-center">
+                        {% set smtp = smtp %}
+                        {% include "user_smtp/partials/actions.html" %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,69 @@
+{% extends "layout.html" %}
+{% block content %}
+    <!-- Centered compact container -->
+    <div class="max-w-md mx-auto mt-12 bg-white dark:bg-white dark:bg-zinc-800 dark:bg-white dark:bg-zinc-800 shadow-md rounded-xl p-5 space-y-4">
+        <!-- Title -->
+        <h1 class="text-lg font-semibold text-zinc-800 dark:text-zinc-100">{{ _("Admin Help Access") }}</h1>
+        <!-- Description -->
+        <p class="text-sm text-zinc-800 dark:text-zinc-700">
+            {{ _("Enter your Ferret Key to unlock admin-only help documentation.") }}
+        </p>
+        <!-- Form -->
+        <form method="post" novalidate>
+            {{ form.hidden_tag() }}
+            <!-- Hidden username for accessibility -->
+            <input type="text"
+                   name="fake_username"
+                   id="fake_username"
+                   autocomplete="username"
+                   class="hidden"
+                   tabindex="-1"
+                   aria-hidden="true">
+            {% set ferret_invalid = 'true' if form.ferret_key.errors else 'false' %}
+            <div>
+                {{ form.ferret_key.label(class="block text-sm font-medium mb-1") }}
+                {{ form.ferret_key(id="ferret_key",
+                                class="form-input w-full bg-zinc-200 dark:bg-zinc-200 dark:bg-zinc-700 text-zinc-800 dark:text-zinc-100",
+                                required=True,
+                                type="password",
+                                autocomplete="new-password",
+                                **{"aria-invalid": ferret_invalid}) }}
+                {% if form.ferret_key.errors %}
+                    <ul class="text-red-800 text-xs mt-1">
+                        {% for error in form.ferret_key.errors %}<li>{{ error }}</li>{% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+            <div class="flex gap-2 mt-3">
+                {{ form.submit(class="flex-1 bg-blue-600 hover:bg-blue-700 bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition font-semibold py-2 px-4 rounded shadow") }}
+                <a href="{{ url_for("auth.login") }}"
+                   class="flex-1 bg-gray-700 dark:bg-zinc-600 text-zinc-950 dark:bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition font-semibold py-2 px-4 rounded shadow text-center">
+                    {{ _("Cancel") }}
+                </a>
+            </div>
+        </form>
+        <!-- FERRET_KEY Help -->
+        <div class="border-t border-zinc-300 dark:border-zinc-700 pt-3 text-sm space-y-3">
+            <h2 class="text-base font-medium text-zinc-800 dark:text-zinc-100">{{ _("How to Find Your FERRET_KEY") }}</h2>
+            <p class="text-zinc-800 dark:text-zinc-900">
+                {{ _("The FERRET_KEY is set as an environment variable when running Grylli.") }}
+            </p>
+            <div>
+                <p class="font-semibold text-zinc-800 dark:text-zinc-100">{{ _("Option 1: Check docker-compose.yml") }}</p>
+                <pre class="bg-zinc-200 dark:bg-white dark:bg-zinc-800 text-zinc-800 dark:text-zinc-100 rounded p-2 overflow-x-auto text-xs">
+environment:
+  - FERRET_KEY=your-secret-ferret-key
+      </pre>
+            </div>
+            <div>
+                <p class="font-semibold text-zinc-800 dark:text-zinc-100">{{ _("Option 2: Use docker inspect") }}</p>
+                <pre class="bg-zinc-200 dark:bg-white dark:bg-zinc-800 text-zinc-800 dark:text-zinc-100 rounded p-2 overflow-x-auto text-xs">
+docker inspect grylli | grep FERRET_KEY
+      </pre>
+            </div>
+            <p class="text-zinc-800 dark:text-zinc-900">
+                {{ _("This shows the FERRET_KEY as passed to the container at runtime.") }}
+            </p>
+        </div>
+    </div>
+{% endblock %}

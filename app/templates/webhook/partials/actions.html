@@ -1,0 +1,39 @@
+{# ---------------------------------------------------------------------
+  actions.html
+  app/templates/webhook/partials/actions.html
+  Shared actions for both card and table views.
+--------------------------------------------------------------------- #}
+{# Edit (disabled if in use) #}
+{% if webhook.messages|length == 0 %}
+    <a href="{{ url_for('webhook.edit_webhook', id=webhook.id) }}"
+       class="text-blue-800 hover:underline"
+       title="{{ _("Edit") }}">✏️</a>
+{% else %}
+    <span class="text-zinc-900 cursor-not-allowed"
+          title="{{ _("Cannot edit while assigned to notifications") }}">✏️</span>
+{% endif %}
+{# Test button is always enabled #}
+<form method="post"
+      action="{{ url_for('webhook.test_webhook', id=webhook.id) }}"
+      class="inline mx-2">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <button type="submit"
+            class="text-indigo-800 hover:underline"
+            title="{{ _("Test") }}">🧪</button>
+</form>
+{# Delete (disabled if in use) #}
+{% if webhook.messages|length == 0 %}
+    <form method="post"
+          action="{{ url_for('webhook.delete_webhook', id=webhook.id) }}"
+          class="inline"
+          data-controller="confirm"
+          data-confirm-message-value="{{ _("Delete") }} {{ webhook.label }}?">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <button type="submit"
+                class="text-red-800 hover:underline"
+                title="{{ _("Delete") }}">🗑️</button>
+    </form>
+{% else %}
+    <span class="text-zinc-900 cursor-not-allowed"
+          title="{{ _("Cannot delete while assigned to notifications") }}">🗑️</span>
+{% endif %}

@@ -1,0 +1,87 @@
+# ──────────────────────────────────────────────────────────────
+# Personal & local project files
+# ──────────────────────────────────────────────────────────────
+*.docx
+Notes.txt
+git.sh
+uploads/*
+!uploads/.keep
+data/*
+!data/.keep
+data/backups/*
+!data/backups/.keep
+docker-compose.yml
+Dockerfile_full_image
+tools/translate_all.sh
+app/pre_translations.py
+app/post_translations.py
+Makefile
+pyproject.toml
+app/babel.cfg
+.grylli_aliases
+grylli.sh
+requirements-dev.in
+requirements-dev.txt
+requirements.in
+pa11y_reports/
+tools/pa11y_*
+tools/summarize_pa11y.py
+tools/lighthouse_*
+tools/summarize_*
+lighthouse_reports/
+
+# ──────────────────────────────────────────────────────────────
+# Python-related
+# ──────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+
+# ──────────────────────────────────────────────────────────────
+# Virtual environments
+# ──────────────────────────────────────────────────────────────
+.venv/
+venv/
+.env/
+*.env
+.grylli/
+site-packages/
+
+# ──────────────────────────────────────────────────────────────
+# SQLite & other development databases
+# ──────────────────────────────────────────────────────────────
+*.sqlite3
+*.db
+patches/
+
+# ──────────────────────────────────────────────────────────────
+# Ignore minified build artifacts
+# ──────────────────────────────────────────────────────────────
+*.min.js
+*.min.css
+
+# ──────────────────────────────────────────────────────────────
+# Flask-Migrate
+# ──────────────────────────────────────────────────────────────
+migrations/
+
+# ──────────────────────────────────────────────────────────────
+# Node + TailwindCSS build system
+# ──────────────────────────────────────────────────────────────
+node_modules/
+.vite/
+.postcss-cache/
+.parcel-cache/
+dist/
+build/
+app/static/css/output.css
+app/static/css/styles.css
+tailwind.config.js
+postcss.config.js
+
+# ──────────────────────────────────────────────────────────────
+# Logs, crash dumps, etc.
+# ──────────────────────────────────────────────────────────────
+*.log
+*.bak
+*.tmp
+*.orig

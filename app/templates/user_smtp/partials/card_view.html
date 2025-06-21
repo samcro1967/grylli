@@ -1,0 +1,33 @@
+{# user_smtp/partials/card_view.html #}
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    {% for smtp in smtp_list %}
+        <div class="bg-white dark:bg-white dark:bg-zinc-800 dark:bg-white dark:bg-zinc-800 rounded shadow p-4 text-sm">
+            <h2 class="text-lg font-semibold mb-2">{{ smtp.label }}</h2>
+            <p>
+                <strong>{{ _("Host:") }}</strong> {{ smtp.smtp_host }}
+            </p>
+            <p>
+                <strong>{{ _("Port:") }}</strong> {{ smtp.smtp_port }}
+            </p>
+            <p>
+                <strong>{{ _("Username:") }}</strong> {{ smtp.smtp_username }}
+            </p>
+            <p>
+                <strong>{{ _("Password:") }}</strong> ••••••••
+            </p>
+            <p>
+                <strong>{{ _("TLS:") }}</strong> {{ '✅' if smtp.use_tls else '❌' }}
+            </p>
+            <p>
+                <strong>{{ _("Enabled:") }}</strong> {{ '✅' if smtp.enabled else '❌' }}
+            </p>
+            <p>
+                <strong>{{ _("Created:") }}</strong> {{ smtp.created_at.strftime("%Y-%m-%d %H:%M") if smtp.created_at else '' }}
+            </p>
+            <div class="mt-2">
+                {% set smtp = smtp %}
+                {% include "user_smtp/partials/actions.html" %}
+            </div>
+        </div>
+    {% endfor %}
+</div>

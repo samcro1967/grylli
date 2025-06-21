@@ -1,0 +1,61 @@
+{# ---------------------------------------------------------------------
+  messages/partials/actions.html
+  CSP-compliant notification actions partial
+--------------------------------------------------------------------- #}
+{% if not message.is_enabled %}
+    <a href="{{ url_for('messages_bp.edit_message', message_id=message.id) }}"
+       class="text-blue-800 hover:underline"
+       title="{{ _("Edit Notification") }}">✏️</a>
+{% else %}
+    <span class="text-zinc-900 cursor-not-allowed"
+          title="{{ _("Disable to edit notification") }}">✏️</span>
+{% endif %}
+{% if not message.is_enabled %}
+    <a href="{{ url_for('messages_bp.assign_destinations', message_id=message.id) }}"
+       class="text-purple-800 hover:underline ml-2"
+       title="{{ _("Assign Destinations") }}">🧩</a>
+{% else %}
+    <span class="text-zinc-900 cursor-not-allowed ml-2"
+          title="{{ _("Disable to assign destinations") }}">🧩</span>
+{% endif %}
+{% if not message.is_enabled %}
+    <a href="{{ url_for('messages_bp.schedule_message', message_id=message.id) }}"
+       class="text-yellow-800 hover:underline ml-2"
+       title="{{ _("Set Schedule") }}">⏱️</a>
+{% else %}
+    <span class="text-zinc-900 cursor-not-allowed ml-2"
+          title="{{ _("Disable to set schedule") }}">⏱️</span>
+{% endif %}
+<a href="{{ url_for('messages_bp.view_message', message_id=message.id) }}"
+   class="text-gray-800 hover:underline ml-2"
+   title="{{ _("View Details") }}">🔍</a>
+<form method="post"
+      action="{{ url_for('messages_bp.send_test_message', message_id=message.id) }}"
+      class="inline ml-2">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <button type="submit"
+            class="text-indigo-900 hover:underline"
+            title="{{ _("Send Test Notification") }}">🧪</button>
+</form>
+<form method="post"
+      action="{{ url_for('messages_bp.delete_message', message_id=message.id) }}"
+      class="inline ml-2"
+      data-controller="confirm"
+      data-confirm-message-value="{{ _("Delete") }} {{ message.label or message.subject }}?">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <button type="submit"
+            class="text-red-800 hover:underline"
+            title="{{ _("Delete") }}">🗑️</button>
+</form>
+<form method="post"
+      action="{{ url_for('checkin.toggle_enabled', type='message', id=message.id) }}"
+      class="inline ml-2">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <button type="submit" title="{{ _("Toggle Message On/Off") }}">
+        {% if message.is_enabled %}
+            <span class="text-green-700" title="{{ _("Notification is enabled") }}">🟢</span>
+        {% else %}
+            <span class="text-red-800" title="{{ _("Notification is disabled") }}">🔴</span>
+        {% endif %}
+    </button>
+</form>

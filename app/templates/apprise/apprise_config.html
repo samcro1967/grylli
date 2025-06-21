@@ -1,0 +1,110 @@
+{# ---------------------------------------------------------------------
+  apprise_config.html
+  app/templates/apprise/apprise_config.html
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    <div data-controller="list-toggle"
+         data-list-toggle-storage-key-value="appriseView"
+         data-list-toggle-show-label-value="{{ _("Show help") }}"
+         data-list-toggle-hide-label-value="{{ _("Hide help") }}">
+        <h1 class="text-xl font-semibold mb-4">{{ _("Apprise Destinations") }}</h1>
+        <!-- View toggle and Add button -->
+        <div class="mb-4 flex items-center justify-between">
+            <!-- Toggle Buttons -->
+            <div class="flex space-x-2">
+                <button type="button"
+                        data-action="list-toggle#showTable"
+                        data-list-toggle-target="tableBtn"
+                        aria-label="{{ _("Table View") }}"
+                        title="{{ _("Table View") }}"
+                        class="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition">
+                    <i class="fas fa-table"></i>
+                </button>
+                <button type="button"
+                        data-action="list-toggle#showCard"
+                        data-list-toggle-target="cardBtn"
+                        aria-label="{{ _("Card View") }}"
+                        title="{{ _("Card View") }}"
+                        class="p-2 rounded bg-gray-700 text-zinc-950 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <i class="fas fa-th"></i>
+                </button>
+            </div>
+            <!-- Add Button -->
+            <a href="{{ url_for("apprise_bp.create_apprise") if 'apprise' in request.path else url_for('webhook_bp.create_webhook') }}"
+               class="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition">
+                ➕ {{ _("Add Webhook") if 'webhook' in request.path else _('Add Destination') }}
+            </a>
+        </div>
+        <!-- Table View -->
+        <div data-list-toggle-target="tableView">
+            <table class="table-auto w-full border-collapse border border-gray-300 dark:border-gray-700">
+                <thead>
+                    <tr>
+                        <th class="border px-4 py-2">Label</th>
+                        <th class="border px-4 py-2">URL</th>
+                        <th class="border px-4 py-2">Enabled</th>
+                        <th class="border px-4 py-2">Created At</th>
+                        <th class="border px-4 py-2">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for destination in destinations %}
+                        <tr>
+                            <td class="border px-4 py-2">{{ destination.label }}</td>
+                            <td class="border px-4 py-2">{{ destination.url }}</td>
+                            <td class="border px-4 py-2">{{ '✅' if destination.enabled else '❌' }}</td>
+                            <td class="border px-4 py-2">{{ destination.created_at.strftime("%Y-%m-%d %H:%M") }}</td>
+                            <td class="border px-4 py-2">
+                                <a href="{{ url_for('apprise_bp.edit_apprise', id=destination.id) }}"
+                                   class="text-blue-800 hover:underline"
+                                   title="Edit">✏️</a>
+                                <form method="POST"
+                                      action="{{ url_for('apprise_bp.test_apprise', id=destination.id) }}"
+                                      class="inline mx-2">
+                                    <button type="submit" class="text-indigo-800 hover:underline" title="Test">🧪</button>
+                                </form>
+                                <form method="POST"
+                                      action="{{ url_for('apprise_bp.delete_apprise', id=destination.id) }}"
+                                      class="inline"
+                                      data-controller="confirm"
+                                      data-confirm-message="{{ _("Delete") }} {{ destination.label }}?">
+                                    <button type="submit" class="text-red-800 hover:underline" title="Delete">🗑️</button>
+                                </form>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <!-- Card View -->
+        <div data-list-toggle-target="cardView"
+             class="hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {% for destination in destinations %}
+                <div class="bg-white dark:bg-white dark:bg-zinc-800 dark:bg-white dark:bg-zinc-800 rounded shadow p-4">
+                    <h2 class="text-lg font-semibold mb-2">{{ destination.label }}</h2>
+                    <p>
+                        <strong>URL:</strong> {{ destination.url }}
+                    </p>
+                    <p>
+                        <strong>Enabled:</strong> {{ '✅' if destination.enabled else '❌' }}
+                    </p>
+                    <p>
+                        <strong>Created:</strong> {{ destination.created_at.strftime("%Y-%m-%d %H:%M") }}
+                    </p>
+                    <div class="mt-2">
+                        <a href="{{ url_for('apprise_bp.edit_apprise', id=destination.id) }}"
+                           class="text-blue-800 hover:underline mr-4">✏️</a>
+                        <form method="POST"
+                              action="{{ url_for('apprise_bp.delete_apprise', id=destination.id) }}"
+                              class="inline"
+                              data-controller="confirm"
+                              data-confirm-message="{{ _("Delete") }} {{ destination.label }}?">
+                            <button type="submit" class="text-red-800 hover:underline">🗑️</button>
+                        </form>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

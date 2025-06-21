@@ -1,0 +1,97 @@
+{# ---------------------------------------------------------------------
+  schedule_message.html
+  app/templates/messages/schedule_message.html
+  CSP-compliant form to schedule a message (check-in + grace)
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    <div class="max-w-4xl mx-auto mt-20 bg-white dark:bg-zinc-800 shadow-md rounded-xl p-6 space-y-6">
+        <!-- Title -->
+        <h1 class="text-xl font-semibold text-zinc-800 dark:text-zinc-100">{{ _("Schedule Message") }}</h1>
+        <!-- Instructions -->
+        <p class="text-sm text-zinc-600 dark:text-zinc-300">
+            {{ _("Set how long until check-in is expected and how much grace time is allowed.") }}
+        </p>
+        <!-- Form Start -->
+        <form method="post" novalidate>
+            {{ form.hidden_tag() }}
+            <!-- Schedule Table -->
+            <div class="overflow-x-auto">
+                <table class="table-auto w-full text-sm text-left border-collapse">
+                    <thead>
+                        <tr class="text-zinc-700 dark:text-zinc-300">
+                            <th class="px-4 py-2"></th>
+                            <th class="px-4 py-2">{{ _("Years") }}</th>
+                            <th class="px-4 py-2">{{ _("Months") }}</th>
+                            <th class="px-4 py-2">{{ _("Weeks") }}</th>
+                            <th class="px-4 py-2">{{ _("Days") }}</th>
+                            <th class="px-4 py-2">{{ _("Hours") }}</th>
+                            {% if debug_mode %}<th class="px-4 py-2">{{ _("Minutes") }}</th>{% endif %}
+                        </tr>
+                    </thead>
+                    <tbody class="text-zinc-800 dark:text-zinc-100">
+                        <!-- Check-in Row -->
+                        <tr>
+                            <th class="px-4 py-2 text-right font-medium">{{ _("Check-in") }}</th>
+                            <td class="px-2 py-2">
+                                {{ form.checkin_years(class="w-20 px-2 py-1 border rounded bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100") }}
+                            </td>
+                            <td class="px-2 py-2">
+                                {{ form.checkin_months(class="w-20 px-2 py-1 border rounded bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100") }}
+                            </td>
+                            <td class="px-2 py-2">
+                                {{ form.checkin_weeks(class="w-20 px-2 py-1 border rounded bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100") }}
+                            </td>
+                            <td class="px-2 py-2">
+                                {{ form.checkin_days(class="w-20 px-2 py-1 border rounded bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100") }}
+                            </td>
+                            <td class="px-2 py-2">
+                                {{ form.checkin_hours(class="w-20 px-2 py-1 border rounded bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100") }}
+                            </td>
+                            {% if debug_mode %}
+                                <td class="px-2 py-2">
+                                    {{ form.checkin_minutes(class="w-20 px-2 py-1 border rounded bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100") }}
+                                </td>
+                            {% endif %}
+                        </tr>
+                        <!-- Grace Period Row -->
+                        <tr>
+                            <th class="px-4 py-2 text-right font-medium">{{ _("Grace Period") }}</th>
+                            <td class="px-2 py-2">
+                                {{ form.grace_years(class="w-20 px-2 py-1 border rounded bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100") }}
+                            </td>
+                            <td class="px-2 py-2">
+                                {{ form.grace_months(class="w-20 px-2 py-1 border rounded bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100") }}
+                            </td>
+                            <td class="px-2 py-2">
+                                {{ form.grace_weeks(class="w-20 px-2 py-1 border rounded bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100") }}
+                            </td>
+                            <td class="px-2 py-2">
+                                {{ form.grace_days(class="w-20 px-2 py-1 border rounded bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100") }}
+                            </td>
+                            <td class="px-2 py-2">
+                                {{ form.grace_hours(class="w-20 px-2 py-1 border rounded bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100") }}
+                            </td>
+                            {% if debug_mode %}
+                                <td class="px-2 py-2">
+                                    {{ form.grace_minutes(class="w-20 px-2 py-1 border rounded bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100") }}
+                                </td>
+                            {% endif %}
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- Buttons -->
+            <div class="flex gap-4 mt-6">
+                <button type="submit"
+                        class="w-1/2 bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors">
+                    {{ _("Save Schedule") }}
+                </button>
+                <a href="{{ url_for("messages_bp.index") }}"
+                   class="w-1/2 text-center bg-zinc-400 text-white py-2 px-4 rounded hover:bg-zinc-500 transition-colors">
+                    {{ _("Cancel") }}
+                </a>
+            </div>
+        </form>
+    </div>
+{% endblock %}

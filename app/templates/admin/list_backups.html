@@ -1,0 +1,62 @@
+{# ---------------------------------------------------------------------
+  list_backups.html
+  app/templates/admin/list_backups.html
+  View and manage database backups.
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    <div class="w-full max-w-full px-4 sm:px-6 lg:px-8 mt-20 space-y-6">
+        <!-- Page Header -->
+        <div>
+            <h1 class="text-xl font-semibold text-zinc-800 dark:text-zinc-100">{{ _("Database Backups") }}</h1>
+            <p class="text-sm text-zinc-600 dark:text-zinc-300 mt-1">
+                {{ _("Manage encrypted backups of your Grylli database. Only admins can create or delete backups.") }}
+            </p>
+        </div>
+        <!-- Create Backup Button -->
+        <div class="flex justify-end flex-wrap sm:flex-nowrap gap-2">
+            <a href="{{ url_for("backups.create_backup_view") }}"
+               class="shrink-0 whitespace-nowrap px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition">
+                ➕ {{ _("Create Backup") }}
+            </a>
+        </div>
+        <!-- Backup Table -->
+        {% if backups %}
+            <div class="overflow-x-auto border border-zinc-300 dark:border-zinc-700 rounded-lg">
+                <table class="min-w-full table-auto text-left text-sm">
+                    <thead class="bg-blue-600 text-white">
+                        <tr>
+                            <th class="px-4 py-2">{{ _("Filename") }}</th>
+                            <th class="px-4 py-2 text-right">{{ _("Actions") }}</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-zinc-200 dark:divide-zinc-700 bg-white dark:bg-zinc-800 text-zinc-800 dark:text-zinc-100">
+                        {% for file in backups %}
+                            <tr>
+                                <td class="px-4 py-2 font-mono">{{ file }}</td>
+                                <td class="px-4 py-2 text-right">
+                                    <form method="post"
+                                          action="{{ url_for('backups.delete_backup', filename=file) }}"
+                                          class="inline"
+                                          data-controller="confirm"
+                                          data-confirm-message-value="{{ _("Delete") }} {{ file }}?">
+                                        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                                        <button type="submit"
+                                                class="text-red-800 hover:underline"
+                                                title="{{ _("Delete") }}">🗑️</button>
+                                    </form>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        {% else %}
+            <p class="text-zinc-800 dark:text-zinc-400 text-sm">{{ _("No backups found.") }}</p>
+        {% endif %}
+        <!-- Footer Notice -->
+        <div class="text-sm text-zinc-800 dark:text-zinc-400 mt-4">
+            ⚠️ {{ _("Backups contain your full app data. Store securely. Sensitive data is encrypted in the DB by default.") }}
+        </div>
+    </div>
+{% endblock %}

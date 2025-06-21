@@ -1,0 +1,33 @@
+{# ---------------------------------------------------------------------
+  verify_security_questions.html
+  app/templates/auth/verify_security_question.html
+  Challenge step in the forgot password flow to verify user identity.
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    <div class="max-w-md mx-auto mt-20 bg-white dark:bg-white dark:bg-zinc-800 dark:bg-white dark:bg-zinc-800 shadow-md rounded-xl p-6 space-y-6">
+        <h1 class="text-xl font-semibold text-zinc-800 dark:text-zinc-100">{{ _("Answer Your Security Question") }}</h1>
+        <p class="text-sm text-zinc-800 dark:text-zinc-700">
+            {{ _("Please answer the question below to verify your identity before resetting your password.") }}
+        </p>
+        <form method="post" novalidate>
+            {{ form.hidden_tag() }}
+            <div class="space-y-2">
+                <label class="block text-sm font-medium text-zinc-900 dark:text-zinc-700">{{ _("Security Question") }}</label>
+                {{ form.question(class="w-full border rounded px-3 py-2 text-sm bg-zinc-200 dark:bg-zinc-900 text-zinc-800 dark:text-zinc-900", readonly=true) }}
+                <label for="answer"
+                       class="block text-sm font-medium text-zinc-900 dark:text-zinc-700 mt-4">
+                    {{ _("Your Answer") }}
+                </label>
+                {{ form.answer(class="w-full border rounded px-3 py-2 text-sm bg-white dark:bg-white dark:bg-zinc-800 dark:bg-zinc-900 dark:bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition") }}
+                {% if form.answer.errors %}<div class="text-red-800 text-sm mt-1">{{ form.answer.errors[0] }}</div>{% endif %}
+            </div>
+            <div class="mt-6 flex justify-end">
+                <button type="submit"
+                        class="bg-blue-600 hover:bg-blue-700 bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition font-semibold py-2 px-4 rounded shadow transition">
+                    {{ _("Verify and Continue") }}
+                </button>
+            </div>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,64 @@
+{# ---------------------------------------------------------------------
+  index.html
+  app/templates/admin/index.html
+  Grylli Admin Panel — entry point for managing users, system settings, backups, and SMTP.
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    <div class="max-w-3xl mx-auto mt-20 space-y-6">
+        <h1 class="text-2xl font-bold">{{ _("Admin Panel") }}</h1>
+        <p class="text-zinc-800 dark:text-zinc-300">
+            {{ _("Welcome to the Grylli Admin Panel. Use the tools below to manage users, configuration, and infrastructure-related settings.") }}
+        </p>
+        <ul class="list-disc list-inside space-y-1 text-zinc-900 dark:text-zinc-200">
+            <li>
+                <span class="text-blue-800 dark:text-blue-400">{{ _("Manage Users") }}</span>
+                — {{ _("Create, edit, enable/disable, or delete user accounts. Control MFA, roles, and recovery access.") }}
+            </li>
+            <li>
+                <span class="text-blue-800 dark:text-blue-400">{{ _("System Settings") }}</span>
+                — {{ _("View environment configuration, default language, and public base URL.") }}
+            </li>
+            <li>
+                <span class="text-blue-800 dark:text-blue-400">{{ _("Backups") }}</span>
+                — {{ _("Trigger or delete encrypted database backups.") }}
+            </li>
+            <li>
+                <span class="text-blue-800 dark:text-blue-400">{{ _("SMTP Settings") }}</span>
+                — {{ _("View and test the global SMTP configuration used for system-level emails.") }}
+            </li>
+            <li>
+                <span class="text-blue-800 dark:text-blue-400">{{ _("View Admin Guide / README") }}</span>
+                — {{ _("Detailed setup, upgrade, and deployment instructions are available in the repository.") }}
+            </li>
+            <li>
+                <span class="text-blue-800 dark:text-blue-400">{{ _("Manual Version Check") }}</span>
+                — {{ _("Run this command from the host to manually check for new Grylli releases:") }}
+                <pre class="bg-zinc-100 dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100 rounded p-3 overflow-x-auto text-sm mt-2">
+            docker exec -it grylli python3 -m app.services.scheduler.version_check
+                </pre>
+            </li>
+        </ul>
+        <div class="mt-6 p-4 border border-yellow-400 bg-yellow-100 dark:bg-yellow-800 dark:border-yellow-600 rounded">
+            <h2 class="font-semibold text-lg text-yellow-900 dark:text-yellow-100">{{ _("⚠️ Admin Tips") }}</h2>
+            <ul class="list-disc list-inside mt-2 text-sm space-y-1 text-zinc-900 dark:text-zinc-200">
+                <li>{{ _("Never run in production with DEBUG enabled. Debug mode exposes internal details and stack traces.") }}</li>
+                <li>
+                    {{ _("Always deploy Grylli behind a reverse proxy (e.g. Caddy, Nginx, or Traefik) and serve it over HTTPS. Sensitive user data must be encrypted in transit.") }}
+                </li>
+                <li>
+                    {{ _("Ensure the data folder (database) is backed up regularly. Backups are stored in the 'backups' folder.") }}
+                </li>
+                <li>
+                    {{ _("The uploads folder is shared. To isolate attachments per user, configure host-level directories and access controls.") }}
+                </li>
+                <li>{{ _("To restore a backup: stop the container, replace the grylli.db file from a backup, and restart.") }}</li>
+                <li>{{ _("Admins cannot remove their own admin role to prevent accidental lockout.") }}</li>
+                <li>
+                    {{ _("Rate limits and automatic account lockouts are enforced to protect against brute-force login attempts.") }}
+                </li>
+                <li>{{ _("Passwords, SMTP credentials, and API tokens are encrypted at rest using Fernet.") }}</li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}

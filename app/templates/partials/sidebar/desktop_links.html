@@ -1,0 +1,15 @@
+{# ---------------------------------------------------------------------
+  desktop_links.html
+  Shared nav links with collapsible Admin section and valid routes
+--------------------------------------------------------------------- #}
+<nav class="flex flex-col px-2 py-4 space-y-2 text-sm text-zinc-800 dark:text-zinc-100">
+    <!-- Home link -->
+    <a href="{{ url_for("index.index") }}"
+       class="flex items-center space-x-3 px-3 py-2 rounded hover:bg-zinc-200 dark:hover:bg-zinc-600">
+        <span data-sidebar-target="label" class="truncate">{{ _("Home") }}</span>
+    </a>
+    <!-- Collapsible: Administration -->
+    {% include "partials/admin_nav.html" %}
+    <!-- Shared user nav (includes emails, smtp, reminders, etc.) -->
+    {% include "partials/shared_nav.html" %}
+</nav>

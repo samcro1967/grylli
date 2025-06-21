@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="mt-20 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-md mx-auto bg-white dark:bg-zinc-800 shadow-md rounded-xl p-6 space-y-4">
+            <h1 class="text-xl font-semibold text-zinc-800 dark:text-zinc-100 text-center mb-2">
+                {{ _("Two-Factor Authentication (MFA)") }}
+            </h1>
+            <form method="post" novalidate>
+                {{ form.hidden_tag() }}
+                {% if not mfa_enabled %}
+                    <div class="flex flex-col items-center space-y-4 mb-4">
+                        <img src="data:image/png;base64,{{ qr_b64 }}"
+                             alt="{{ _("MFA QR Code") }}"
+                             class="w-52 h-52 max-w-full rounded border shadow" />
+                        <div class="w-full flex flex-col items-center">
+                            <span class="font-semibold text-zinc-800 dark:text-zinc-100">{{ _("Manual Entry:") }}</span>
+                            <span class="font-mono text-base bg-zinc-200 dark:bg-zinc-700 rounded px-2 py-1 mt-1 select-all break-all text-zinc-900 dark:text-zinc-100">
+                                {{ secret }}
+                            </span>
+                        </div>
+                    </div>
+                    <div class="mb-4">
+                        <label class="inline-flex items-center">
+                            {{ form.enabled() }}
+                            <span class="ml-2 text-sm text-zinc-800 dark:text-zinc-100">{{ _("Enabled") }}</span>
+                        </label>
+                    </div>
+                    <div class="mb-4">
+                        {{ form.code.label(class="block text-sm font-medium mb-1 text-zinc-800 dark:text-zinc-100") }}
+                        {{ form.code(class="form-input w-full bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 border border-zinc-300 dark:border-zinc-600 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-400", autocomplete="off", autofocus=True) }}
+                        {% if form.code.errors %}
+                            <ul class="text-red-800 text-xs mt-1">
+                                {% for error in form.code.errors %}<li>{{ error }}</li>{% endfor %}
+                            </ul>
+                        {% endif %}
+                    </div>
+                {% else %}
+                    <div class="mb-4">
+                        <label class="inline-flex items-center">
+                            {{ form.enabled() }}
+                            <span class="ml-2 text-sm text-zinc-800 dark:text-zinc-100">{{ _("Enabled") }}</span>
+                        </label>
+                    </div>
+                {% endif %}
+                <div class="flex gap-4">
+                    <button type="submit"
+                            class="w-1/2 bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition py-2 px-4 rounded font-semibold transition-colors">
+                        {{ _("Save") }}
+                    </button>
+                    <a href="{{ url_for("index.index") }}"
+                       class="w-1/2 text-center bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition py-2 px-4 rounded font-semibold transition-colors">
+                        {{ _("Cancel") }}
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

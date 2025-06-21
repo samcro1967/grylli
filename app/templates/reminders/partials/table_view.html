@@ -1,0 +1,28 @@
+{# reminders/partials/table_view.html #}
+<div id="tableView" class="overflow-x-auto w-full">
+    <table class="min-w-[640px] w-full table-auto border-collapse border border-gray-300 dark:border-gray-700 text-sm">
+        <thead>
+            <tr>
+                <th class="border px-4 py-2 text-left">{{ _("Label") }}</th>
+                <th class="border px-4 py-2 text-left">{{ _("Subject") }}</th>
+                <th class="border px-4 py-2 text-left">{{ _("Start At") }}</th>
+                <th class="border px-4 py-2 text-left">{{ _("Recurrence") }}</th>
+                <th class="border px-4 py-2 text-left">{{ _("Actions") }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for reminder in reminders %}
+                <tr>
+                    <td class="border px-4 py-2">{{ reminder.label }}</td>
+                    <td class="border px-4 py-2">{{ reminder.subject }}</td>
+                    <td class="border px-4 py-2">{{ reminder.start_at.strftime("%Y-%m-%d %H:%M") if reminder.start_at else "" }}</td>
+                    <td class="border px-4 py-2">{{ reminder.recurrence_rule or _("One-time") }}</td>
+                    <td class="border px-4 py-2">
+                        {% set reminder = reminder %}
+                        {% include "reminders/partials/actions.html" %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>

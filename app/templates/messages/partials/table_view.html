@@ -1,0 +1,26 @@
+<!-- =================== TABLE VIEW =================== -->
+<div id="tableView">
+    <table class="table-auto w-full border-collapse border border-gray-300 dark:border-gray-700">
+        <thead>
+            <tr>
+                <th class="border px-4 py-2">{{ _("Label") }}</th>
+                <th class="border px-4 py-2">{{ _("Subject") }}</th>
+                <th class="border px-4 py-2">{{ _("Created At") }}</th>
+                <th class="border px-4 py-2">{{ _("Actions") }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for message in messages %}
+                <tr>
+                    <td class="border px-4 py-2">{{ message.label }}</td>
+                    <td class="border px-4 py-2">{{ message.subject }}</td>
+                    <td class="border px-4 py-2">{{ message.created_at.strftime("%Y-%m-%d %H:%M") }}</td>
+                    <td class="border px-4 py-2">
+                        {% set message = message %}
+                        {% include "messages/partials/actions.html" %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>

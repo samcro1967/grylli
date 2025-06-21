@@ -1,0 +1,84 @@
+{# ---------------------------------------------------------------------
+  schedule_email.html
+  app/templates/email/schedule_email.html
+  Set check-in and grace schedule for an email
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    <h1 class="text-xl font-semibold mb-6 text-zinc-900 dark:text-zinc-100">{{ _("Schedule Email") }}</h1>
+    <form method="post">
+        {{ form.hidden_tag() }}
+        <table class="table-auto w-full text-sm text-left border-collapse">
+            <thead>
+                <tr class="text-zinc-800 dark:text-zinc-200">
+                    <th class="px-4 py-2"></th>
+                    <th class="px-4 py-2">{{ _("Years") }}</th>
+                    <th class="px-4 py-2">{{ _("Months") }}</th>
+                    <th class="px-4 py-2">{{ _("Weeks") }}</th>
+                    <th class="px-4 py-2">{{ _("Days") }}</th>
+                    <th class="px-4 py-2">{{ _("Hours") }}</th>
+                    {% if debug_mode %}<th class="px-4 py-2">{{ _("Minutes") }}</th>{% endif %}
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th class="px-4 py-2 text-right text-zinc-800 dark:text-zinc-100">{{ _("Check-in") }}</th>
+                    <td class="px-2 py-2">
+                        {{ form.checkin_years(class="w-20 px-2 py-1 border rounded text-zinc-800 dark:text-zinc-100 bg-white dark:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-blue-400 transition") }}
+                    </td>
+                    <td class="px-2 py-2">
+                        {{ form.checkin_months(class="w-20 px-2 py-1 border rounded text-zinc-800 dark:text-zinc-100 bg-white dark:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-blue-400 transition") }}
+                    </td>
+                    <td class="px-2 py-2">
+                        {{ form.checkin_weeks(class="w-20 px-2 py-1 border rounded text-zinc-800 dark:text-zinc-100 bg-white dark:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-blue-400 transition") }}
+                    </td>
+                    <td class="px-2 py-2">
+                        {{ form.checkin_days(class="w-20 px-2 py-1 border rounded text-zinc-800 dark:text-zinc-100 bg-white dark:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-blue-400 transition") }}
+                    </td>
+                    <td class="px-2 py-2">
+                        {{ form.checkin_hours(class="w-20 px-2 py-1 border rounded text-zinc-800 dark:text-zinc-100 bg-white dark:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-blue-400 transition") }}
+                    </td>
+                    {% if debug_mode %}
+                        <td class="px-2 py-2">
+                            {{ form.checkin_minutes(class="w-20 px-2 py-1 border rounded text-zinc-800 dark:text-zinc-100 bg-white dark:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-blue-400 transition") }}
+                        </td>
+                    {% endif %}
+                </tr>
+                <tr>
+                    <th class="px-4 py-2 text-right text-zinc-800 dark:text-zinc-100">{{ _("Grace Period") }}</th>
+                    <td class="px-2 py-2">
+                        {{ form.grace_years(class="w-20 px-2 py-1 border rounded text-zinc-800 dark:text-zinc-100 bg-white dark:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-blue-400 transition") }}
+                    </td>
+                    <td class="px-2 py-2">
+                        {{ form.grace_months(class="w-20 px-2 py-1 border rounded text-zinc-800 dark:text-zinc-100 bg-white dark:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-blue-400 transition") }}
+                    </td>
+                    <td class="px-2 py-2">
+                        {{ form.grace_weeks(class="w-20 px-2 py-1 border rounded text-zinc-800 dark:text-zinc-100 bg-white dark:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-blue-400 transition") }}
+                    </td>
+                    <td class="px-2 py-2">
+                        {{ form.grace_days(class="w-20 px-2 py-1 border rounded text-zinc-800 dark:text-zinc-100 bg-white dark:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-blue-400 transition") }}
+                    </td>
+                    <td class="px-2 py-2">
+                        {{ form.grace_hours(class="w-20 px-2 py-1 border rounded text-zinc-800 dark:text-zinc-100 bg-white dark:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-blue-400 transition") }}
+                    </td>
+                    {% if debug_mode %}
+                        <td class="px-2 py-2">
+                            {{ form.grace_minutes(class="w-20 px-2 py-1 border rounded text-zinc-800 dark:text-zinc-100 bg-white dark:bg-zinc-800 focus:outline-none focus:ring-2 focus:ring-blue-400 transition") }}
+                        </td>
+                    {% endif %}
+                </tr>
+            </tbody>
+        </table>
+        <!-- Action Buttons -->
+        <div class="mt-6 flex gap-4">
+            <button type="submit"
+                    class="w-1/2 text-center bg-blue-600 text-white font-semibold py-2 px-4 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition">
+                {{ _("Save Schedule") }}
+            </button>
+            <a href="{{ url_for("email.index") }}"
+               class="w-1/2 text-center bg-zinc-400 text-white font-semibold py-2 px-4 rounded hover:bg-zinc-500 focus:outline-none focus:ring-2 focus:ring-zinc-300 transition">
+                {{ _("Cancel") }}
+            </a>
+        </div>
+    </form>
+{% endblock %}

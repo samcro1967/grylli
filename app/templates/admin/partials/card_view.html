@@ -1,0 +1,17 @@
+{# ---------------------------------------------------------------------
+  card_view.html
+  app/templates/admin/partials/card_view.html
+  Card-style user list (uses shared actions partial)
+--------------------------------------------------------------------- #}
+{% for user in users %}
+    <div class="bg-white dark:bg-white dark:bg-zinc-800 dark:bg-white dark:bg-zinc-800 rounded-lg shadow p-4 border border-zinc-200 dark:border-zinc-700">
+        <h2 class="text-lg font-semibold mb-2">{{ user.username }}</h2>
+        <p>
+            <strong>{{ _("Email:") }}</strong> {{ user.email }}
+        </p>
+        <p>
+            <strong>{{ _("Role:") }}</strong> {{ user.role }}
+        </p>
+        <div class="mt-3">{% include "admin/partials/actions.html" %}</div>
+    </div>
+{% endfor %}

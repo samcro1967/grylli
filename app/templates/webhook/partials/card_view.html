@@ -1,0 +1,25 @@
+{# ---------------------------------------------------------------------
+  card_view.html
+  app/templates/webhook/partials/card_view.html
+  Card view of webhook destinations.
+--------------------------------------------------------------------- #}
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    {% for webhook in webhooks %}
+        <div class="bg-white dark:bg-white dark:bg-zinc-800 dark:bg-white dark:bg-zinc-800 rounded shadow p-4">
+            <h2 class="text-lg font-semibold mb-2">{{ webhook.label }}</h2>
+            <p>
+                <strong>{{ _("Endpoint:") }}</strong> {{ webhook.endpoint }}
+            </p>
+            <p>
+                <strong>{{ _("Description:") }}</strong> {{ webhook.description or '-' }}
+            </p>
+            <p>
+                <strong>{{ _("Enabled:") }}</strong> {{ '✅' if webhook.enabled else '❌' }}
+            </p>
+            <p>
+                <strong>{{ _("Created:") }}</strong> {{ webhook.created_at.strftime("%Y-%m-%d %H:%M") }}
+            </p>
+            <div class="mt-2">{% include "webhook/partials/actions.html" %}</div>
+        </div>
+    {% endfor %}
+</div>

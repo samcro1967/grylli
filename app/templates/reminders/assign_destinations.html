@@ -1,0 +1,69 @@
+{# ---------------------------------------------------------------------
+  assign_destinations.html
+  app/templates/reminders/assign_destinations.html
+  Assign Apprise, Webhook, and SMTP destinations for a reminder.
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    <div class="max-w-2xl mx-auto px-4 py-8 mt-20">
+        <!-- Title -->
+        <h1 class="text-2xl font-semibold mb-6 text-zinc-900 dark:text-zinc-100 flex items-center space-x-2">
+            <span>🧩</span>
+            <span>{{ _("Assign Destinations for") }}: <span class="font-mono">{{ reminder.label }}</span></span>
+        </h1>
+        <!-- Form -->
+        <form method="post"
+              class="bg-zinc-100 dark:bg-zinc-800 rounded p-6 space-y-8 shadow">
+            {{ form.hidden_tag() }}
+            <!-- Apprise Destinations -->
+            <div>
+                <h2 class="text-lg font-medium mb-2 text-orange-800 dark:text-orange-300">📣 {{ _("Apprise Destinations") }}</h2>
+                <div class="space-y-2">
+                    {% for apprise in apprise_options %}
+                        <label class="flex items-start space-x-2">
+                            <input type="checkbox"
+                                   name="apprise_destinations"
+                                   value="{{ apprise.id }}"
+                                   {% if apprise in reminder.apprise_destinations %}checked{% endif %}
+                                   class="accent-blue-600 mt-1">
+                            <div>
+                                <div class="font-medium text-zinc-800 dark:text-zinc-100">{{ apprise.label }}</div>
+                                <div class="text-sm text-zinc-700 dark:text-zinc-400">{{ apprise.url }}</div>
+                            </div>
+                        </label>
+                    {% endfor %}
+                </div>
+            </div>
+            <!-- Webhook Destinations -->
+            <div>
+                <h2 class="text-lg font-medium mb-2 text-indigo-800 dark:text-indigo-300">🔗 {{ _("Webhooks") }}</h2>
+                <div class="space-y-2">
+                    {% for hook in webhook_options %}
+                        <label class="flex items-start space-x-2">
+                            <input type="checkbox"
+                                   name="webhooks"
+                                   value="{{ hook.id }}"
+                                   {% if hook in reminder.webhooks %}checked{% endif %}
+                                   class="accent-purple-600 mt-1">
+                            <div>
+                                <div class="font-medium text-zinc-800 dark:text-zinc-100">{{ hook.label }}</div>
+                                <div class="text-sm text-zinc-700 dark:text-zinc-400">{{ hook.endpoint }}</div>
+                            </div>
+                        </label>
+                    {% endfor %}
+                </div>
+            </div>
+            <!-- Buttons -->
+            <div class="flex justify-end space-x-4 pt-4">
+                <button type="submit"
+                        class="px-4 py-2 bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded transition">
+                    {{ _("Save Destinations") }}
+                </button>
+                <a href="{{ url_for("reminders_bp.index") }}"
+                   class="px-4 py-2 bg-zinc-400 text-white hover:bg-zinc-500 focus:outline-none focus:ring-2 focus:ring-zinc-300 rounded text-center">
+                    {{ _("Cancel") }}
+                </a>
+            </div>
+        </form>
+    </div>
+{% endblock %}

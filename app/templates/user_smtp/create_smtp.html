@@ -1,0 +1,126 @@
+{# ---------------------------------------------------------------------
+  create_smtp.html
+  app/templates/user_smtp/create_smtp.html
+  CSP-compliant form to create an SMTP destination
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    <div class="max-w-md mx-auto mt-20 bg-white dark:bg-zinc-800 shadow-md rounded-xl p-6 space-y-4"
+         data-controller="smtp-form">
+        <!-- Page Title -->
+        <h1 class="text-xl font-semibold text-zinc-800 dark:text-zinc-100">{{ _("Create SMTP Destination") }}</h1>
+        <!-- Instructions -->
+        <p class="text-sm text-zinc-600 dark:text-zinc-300">
+            {{ _("Fill out the form to configure a new SMTP destination.") }}
+        </p>
+        <form method="post" novalidate>
+            {{ form.hidden_tag() }}
+            <!-- Label -->
+            <div>
+                <label for="label"
+                       class="block text-sm font-medium text-zinc-800 dark:text-zinc-200">
+                    {{ form.label.label.text }}
+                </label>
+                {{ form.label(id="label",
+                                class="w-full mt-1 px-3 py-2 border rounded bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100",
+                                autocomplete="off") }}
+                <div id="label-client-error" class="text-red-700 text-xs mt-1"></div>
+                {% if form.label.errors %}
+                    <ul class="text-red-700 text-xs mt-1" id="label-errors">
+                        {% for error in form.label.errors %}<li>{{ error }}</li>{% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+            <!-- SMTP Host -->
+            <div>
+                <label for="smtp_host"
+                       class="block text-sm font-medium text-zinc-800 dark:text-zinc-200">
+                    {{ form.smtp_host.label.text }}
+                </label>
+                {{ form.smtp_host(id="smtp_host",
+                                class="w-full mt-1 px-3 py-2 border rounded bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100",
+                                autocomplete="off") }}
+                <div id="smtp_host-client-error" class="text-red-700 text-xs mt-1"></div>
+                {% if form.smtp_host.errors %}
+                    <ul class="text-red-700 text-xs mt-1" id="smtp_host-errors">
+                        {% for error in form.smtp_host.errors %}<li>{{ error }}</li>{% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+            <!-- SMTP Port -->
+            <div>
+                <label for="smtp_port"
+                       class="block text-sm font-medium text-zinc-800 dark:text-zinc-200">
+                    {{ form.smtp_port.label.text }}
+                </label>
+                {{ form.smtp_port(id="smtp_port",
+                                class="w-full mt-1 px-3 py-2 border rounded bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100",
+                                autocomplete="off") }}
+                <div id="smtp_port-client-error" class="text-red-700 text-xs mt-1"></div>
+                {% if form.smtp_port.errors %}
+                    <ul class="text-red-700 text-xs mt-1" id="smtp_port-errors">
+                        {% for error in form.smtp_port.errors %}<li>{{ error }}</li>{% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+            <!-- SMTP Username -->
+            <div>
+                <label for="smtp_username"
+                       class="block text-sm font-medium text-zinc-800 dark:text-zinc-200">
+                    {{ form.smtp_username.label.text }}
+                </label>
+                {{ form.smtp_username(id="smtp_username",
+                                class="w-full mt-1 px-3 py-2 border rounded bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100",
+                                autocomplete="username") }}
+                <div id="smtp_username-client-error" class="text-red-700 text-xs mt-1"></div>
+                {% if form.smtp_username.errors %}
+                    <ul class="text-red-700 text-xs mt-1" id="smtp_username-errors">
+                        {% for error in form.smtp_username.errors %}<li>{{ error }}</li>{% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+            <!-- SMTP Password -->
+            <div>
+                <label for="smtp_password"
+                       class="block text-sm font-medium text-zinc-800 dark:text-zinc-200">
+                    {{ form.smtp_password.label.text }}
+                </label>
+                {{ form.smtp_password(id="smtp_password",
+                                class="w-full mt-1 px-3 py-2 border rounded bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100",
+                                autocomplete="new-password") }}
+                <div id="smtp_password-client-error" class="text-red-700 text-xs mt-1"></div>
+                {% if form.smtp_password.errors %}
+                    <ul class="text-red-700 text-xs mt-1" id="smtp_password-errors">
+                        {% for error in form.smtp_password.errors %}<li>{{ error }}</li>{% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+            <!-- TLS -->
+            <div>
+                <label class="inline-flex items-center">
+                    {{ form.use_tls() }}
+                    <span class="ml-2 text-sm text-zinc-800 dark:text-zinc-200">{{ _("Use TLS") }}</span>
+                </label>
+            </div>
+            <!-- Enabled -->
+            <div>
+                <label class="inline-flex items-center">
+                    {{ form.enabled() }}
+                    <span class="ml-2 text-sm text-zinc-800 dark:text-zinc-200">{{ _("Enabled") }}</span>
+                </label>
+            </div>
+            <!-- Submit + Cancel -->
+            <div class="flex gap-4 mt-4">
+                <button id="submitBtn"
+                        type="submit"
+                        class="w-1/2 bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+                    {{ _("Create Destination") }}
+                </button>
+                <a href="{{ url_for("user_smtp.index") }}"
+                   class="w-1/2 text-center bg-zinc-400 text-white py-2 px-4 rounded hover:bg-zinc-500 transition-colors">
+                    {{ _("Cancel") }}
+                </a>
+            </div>
+        </form>
+    </div>
+{% endblock %}

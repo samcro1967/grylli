@@ -1,0 +1,57 @@
+{# ---------------------------------------------------------------------
+  list_apprise.html
+  Modular, CSP-compliant view for managing Apprise destinations.
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    <div class="w-full max-w-full px-4 sm:px-6 lg:px-8 mt-20 space-y-6"
+         data-controller="list-toggle"
+         data-list-toggle-storage-key-value="appriseListView"
+         data-list-toggle-show-label-value="{{ _("How to configure Apprise") }}"
+         data-list-toggle-hide-label-value="{{ _("Hide Instructions") }}">
+        <!-- Page Header -->
+        <div>
+            <h1 class="text-xl font-semibold text-zinc-800 dark:text-zinc-100">{{ _("Apprise Destinations") }}</h1>
+            <p class="text-sm text-zinc-600 dark:text-zinc-300 mt-1">{{ _("Manage your Apprise notification endpoints.") }}</p>
+        </div>
+        <!-- View Toggle + Add Button -->
+        <div class="flex items-center justify-between flex-wrap sm:flex-nowrap gap-2">
+            <div class="flex space-x-2">
+                <button data-list-toggle-target="tableBtn"
+                        data-action="click->list-toggle#showTable"
+                        aria-label="{{ _("Table View") }}"
+                        class="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <button data-list-toggle-target="cardBtn"
+                        data-action="click->list-toggle#showCard"
+                        aria-label="{{ _("Card View") }}"
+                        class="p-2 rounded bg-gray-700 text-white hover:bg-gray-800 focus:ring-2 focus:ring-blue-500">
+                    <i class="fa-solid fa-th-large"></i>
+                </button>
+            </div>
+            <a href="{{ url_for("apprise_routes.create_apprise") }}"
+               class="shrink-0 whitespace-nowrap px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition">
+                ➕ {{ _("Add Apprise") }}
+            </a>
+        </div>
+        <!-- Table View -->
+        <div id="appriseTableView"
+             class="overflow-x-auto w-full"
+             data-list-toggle-target="tableView">{% include "apprise/partials/table_view.html" %}</div>
+        <!-- Card View -->
+        <div id="cardView" class="hidden" data-list-toggle-target="cardView">
+            {% include "apprise/partials/card_view.html" %}
+        </div>
+        <!-- Help Panel -->
+        <div class="pt-4">
+            <button type="button"
+                    class="text-sm text-blue-800 dark:text-blue-400 hover:underline focus:outline-none"
+                    data-action="click->list-toggle#toggleInstructions">
+                <span data-list-toggle-target="toggleText">{{ _("How to configure Apprise") }}</span>
+            </button>
+            <div class="hidden mt-4 p-4 rounded bg-white dark:bg-zinc-800 text-sm text-zinc-800 dark:text-zinc-100 shadow-md border border-zinc-700"
+                 data-list-toggle-target="instructions">{% include "apprise/partials/help_panel.html" %}</div>
+        </div>
+    </div>
+{% endblock %}

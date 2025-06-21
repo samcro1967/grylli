@@ -1,0 +1,23 @@
+{# email/partials/card_view.html #}
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    {% for email in emails %}
+        <div class="bg-white dark:bg-white dark:bg-zinc-800 dark:bg-white dark:bg-zinc-800 rounded shadow p-4 flex flex-col gap-1">
+            <div>
+                <span class="font-semibold">{{ _("Label:") }}</span> {{ email.label }}
+            </div>
+            <div>
+                <span class="font-semibold">{{ _("Subject:") }}</span> {{ email.subject }}
+            </div>
+            <div>
+                <span class="font-semibold">{{ _("To:") }}</span> {{ email.recipient }}
+            </div>
+            <div>
+                <span class="font-semibold">{{ _("Created At:") }}</span> {{ email.created_at.strftime("%Y-%m-%d %H:%M") }}
+            </div>
+            <div class="flex flex-wrap gap-2 mt-2">
+                {% set email = email %}
+                {% include "email/partials/actions.html" %}
+            </div>
+        </div>
+    {% endfor %}
+</div>
