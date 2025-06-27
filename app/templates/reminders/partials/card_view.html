@@ -1,0 +1,27 @@
+{# reminders/partials/card_view.html #}
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    {% for reminder in reminders %}
+        <div class="bg-white dark:bg-white dark:bg-zinc-800 dark:bg-white dark:bg-zinc-800 rounded shadow p-4 flex flex-col gap-1">
+            <div>
+                <span class="font-semibold">{{ _("Label:") }}</span>
+                <span>{{ reminder.label }}</span>
+            </div>
+            <div>
+                <span class="font-semibold">{{ _("Subject:") }}</span>
+                <span>{{ reminder.subject }}</span>
+            </div>
+            <div>
+                <span class="font-semibold">{{ _("Start At:") }}</span>
+                <span>{{ reminder.start_at.strftime("%Y-%m-%d %H:%M") if reminder.start_at else "" }}</span>
+            </div>
+            <div>
+                <span class="font-semibold">{{ _("Recurrence:") }}</span>
+                <span>{{ reminder.recurrence_rule or _("One-time") }}</span>
+            </div>
+            <div class="flex flex-wrap gap-2 mt-2">
+                {% set reminder = reminder %}
+                {% include "reminders/partials/actions.html" %}
+            </div>
+        </div>
+    {% endfor %}
+</div>

@@ -1,0 +1,62 @@
+{# ---------------------------------------------------------------------
+  reminders/partials/actions.html
+  CSP-compliant reminder actions partial with Stimulus confirm controller
+--------------------------------------------------------------------- #}
+<a href="{{ url_for('reminders_bp.edit_reminder', reminder_id=reminder.id) }}"
+   class="text-blue-800 hover:underline"
+   title="{{ _("Edit Reminder") }}"
+   data-action="edit"
+   data-href="{{ url_for('reminders_bp.edit_reminder', reminder_id=reminder.id) }}">✏️</a>
+<a href="{{ url_for('reminders_bp.assign_destinations', reminder_id=reminder.id) }}"
+   class="text-purple-800 hover:underline ml-2"
+   title="{{ _("Assign Destinations") }}"
+   data-action="assign"
+   data-href="{{ url_for('reminders_bp.assign_destinations', reminder_id=reminder.id) }}">🧩</a>
+<a href="{{ url_for('reminders_bp.assign_email_to_reminder', reminder_id=reminder.id) }}"
+   class="text-pink-800 hover:underline ml-2"
+   title="{{ _("Assign Email Reminder") }}"
+   data-action="email"
+   data-href="{{ url_for('reminders_bp.assign_email_to_reminder', reminder_id=reminder.id) }}">📧</a>
+<a href="{{ url_for('reminders_bp.schedule_reminder', reminder_id=reminder.id) }}"
+   class="text-yellow-800 hover:underline ml-2"
+   title="{{ _("Set Schedule") }}"
+   data-action="schedule"
+   data-href="{{ url_for('reminders_bp.schedule_reminder', reminder_id=reminder.id) }}">⏱️</a>
+<a href="{{ url_for('reminders_bp.view_reminder', reminder_id=reminder.id) }}"
+   class="text-gray-800 hover:underline ml-2"
+   title="{{ _("View Details") }}">🔍</a>
+<form method="post"
+      action="{{ url_for('reminders_bp.send_test_reminder', reminder_id=reminder.id) }}"
+      class="inline ml-2"
+      data-action="test"
+      data-href="{{ url_for('reminders_bp.send_test_reminder', reminder_id=reminder.id) }}">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <button type="submit"
+            class="text-indigo-900 hover:underline"
+            title="{{ _("Send Test Reminder") }}">🧪</button>
+</form>
+<form method="post"
+      action="{{ url_for('reminders_bp.delete_reminder', reminder_id=reminder.id) }}"
+      class="inline ml-2"
+      data-controller="confirm"
+      data-confirm-message-value="{{ _("Delete") }} {{ reminder.label or reminder.subject }}?"
+      data-action="delete"
+      data-href="{{ url_for('reminders_bp.delete_reminder', reminder_id=reminder.id) }}">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <button type="submit"
+            class="text-red-800 hover:underline"
+            title="{{ _("Delete") }}">🗑️</button>
+</form>
+<form method="post"
+      action="{{ url_for('checkin.toggle_enabled', type='reminder', id=reminder.id) }}"
+      class="inline ml-2 reminder-toggle"
+      data-id="{{ reminder.id }}">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <button type="submit" title="{{ _("Toggle Reminder On/Off") }}">
+        {% if reminder.is_enabled %}
+            <span class="text-green-700" title="{{ _("Reminder is enabled") }}">🟢</span>
+        {% else %}
+            <span class="text-red-800" title="{{ _("Reminder is disabled") }}">🔴</span>
+        {% endif %}
+    </button>
+</form>

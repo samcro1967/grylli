@@ -1,0 +1,136 @@
+{# ---------------------------------------------------------------------
+  signup.html
+  app/templates/auth/signup.html
+  CSP-compliant user signup form aligned with create_user.html
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    <div class="max-w-md mx-auto mt-20 bg-white dark:bg-white dark:bg-zinc-800 dark:bg-white dark:bg-zinc-800 shadow-md rounded-xl p-6 space-y-4"
+         data-controller="user-form">
+        <h1 class="text-xl font-semibold text-zinc-800 dark:text-zinc-100">{{ _("Sign Up") }}</h1>
+        <p class="text-sm text-zinc-800 dark:text-zinc-700">{{ _("Fill out the form to create your account.") }}</p>
+        <form method="post" novalidate>
+            {{ form.hidden_tag() }}
+            {% if form.errors %}
+                <div class="mb-4 p-2 bg-red-100 border border-red-400 text-red-800 rounded">
+                    <strong>{{ _("Please fix the following errors:") }}</strong>
+                    <ul class="list-disc pl-5">
+                        {% for field, errors in form.errors.items() %}
+                            {% for error in errors %}<li>{{ error }}</li>{% endfor %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+            <!-- Username -->
+            <div class="mb-4">
+                {{ form.username.label(class="block text-sm font-medium mb-1") }}
+                {{ form.username(id="username",
+                                class="form-input w-full bg-zinc-200 dark:bg-zinc-200 dark:bg-zinc-700 text-zinc-800 dark:text-zinc-100",
+                                autocomplete="username",
+                                **{"data-user-form-target": "username"}) }}
+                {% for error in form.username.errors %}<div class="text-red-800 text-xs mt-1">{{ error }}</div>{% endfor %}
+            </div>
+            <!-- Email -->
+            <div class="mb-4">
+                {{ form.email.label(class="block text-sm font-medium mb-1") }}
+                {{ form.email(id="email",
+                                class="form-input w-full bg-zinc-200 dark:bg-zinc-200 dark:bg-zinc-700 text-zinc-800 dark:text-zinc-100",
+                                autocomplete="email",
+                                **{"data-user-form-target": "email"}) }}
+                {% for error in form.email.errors %}<div class="text-red-800 text-xs mt-1">{{ error }}</div>{% endfor %}
+                <p class="text-red-800 text-sm hidden"
+                   data-user-form-target="emailWarning">{{ _("Please enter a valid email address.") }}</p>
+            </div>
+            <!-- Password -->
+            <div class="mb-4">
+                {{ form.password.label(class="block text-sm font-medium mb-1") }}
+                <div class="relative" data-controller="reveal-password">
+                    {{ form.password(id="password",
+                                        class="form-input w-full pr-10 bg-zinc-200 dark:bg-zinc-200 dark:bg-zinc-700 text-zinc-800 dark:text-zinc-100",
+                                        autocomplete="new-password",
+                                        **{"data-user-form-target": "password"}) }}
+                    <div class="absolute inset-y-0 right-0 flex items-center px-3">
+                        <button type="button"
+                                data-action="mousedown->reveal-password#show mouseup->reveal-password#hide mouseleave->reveal-password#hide"
+                                class="focus:outline-none text-zinc-900 hover:text-zinc-900 dark:hover:text-zinc-700"
+                                aria-label="{{ _("Hold to reveal") }}">
+                            <svg class="h-5 w-5"
+                                 fill="none"
+                                 stroke="currentColor"
+                                 stroke-width="2"
+                                 viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5 c4.478 0 8.268 2.943 9.542 7 -1.274 4.057-5.064 7-9.542 7 -4.477 0-8.268-2.943-9.542-7z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <p class="text-red-800 text-sm hidden"
+                   data-user-form-target="complexityWarning">
+                    {{ _("Password must meet all complexity requirements.") }}
+                </p>
+                {% for error in form.password.errors %}<div class="text-red-800 text-xs mt-1">{{ error }}</div>{% endfor %}
+            </div>
+            <!-- Confirm Password -->
+            <div class="mb-4">
+                {{ form.confirm_password.label(class="block text-sm font-medium mb-1", for="confirm_password") }}
+                <div class="relative" data-controller="reveal-password">
+                    {{ form.confirm_password(id="confirm_password",
+                                        class="form-input w-full pr-10 bg-zinc-200 dark:bg-zinc-700 text-zinc-800 dark:text-zinc-100",
+                                        autocomplete="new-password",
+                                        required=True,
+                                        **{"data-user-form-target": "confirmPassword"}) }}
+                    <div class="absolute inset-y-0 right-0 flex items-center px-3">
+                        <button type="button"
+                                data-action="mousedown->reveal-password#show mouseup->reveal-password#hide mouseleave->reveal-password#hide"
+                                class="focus:outline-none text-zinc-900 hover:text-zinc-900 dark:hover:text-zinc-300"
+                                aria-label="{{ _("Hold to reveal") }}">
+                            <svg class="h-5 w-5"
+                                 fill="none"
+                                 stroke="currentColor"
+                                 stroke-width="2"
+                                 viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5 c4.478 0 8.268 2.943 9.542 7 -1.274 4.057-5.064 7-9.542 7 -4.477 0-8.268-2.943-9.542-7z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div id="passwordMismatchWarning" class="text-red-800 text-sm hidden">{{ _("Passwords do not match.") }}</div>
+                {% for error in form.confirm_password.errors %}<div class="text-red-800 text-xs mt-1">{{ error }}</div>{% endfor %}
+            </div>
+            <!-- Registration PIN -->
+            <div class="mb-4">
+                {{ form.registration_pin.label(class="block text-sm font-medium mb-1", for="pin") }}
+                {{ form.registration_pin(id="pin",
+                                class="form-input w-full bg-zinc-200 dark:bg-zinc-700 text-zinc-800 dark:text-zinc-100",
+                                autocomplete="one-time-code",
+                                maxlength="64",
+                                minlength="6",
+                                required=True,
+                                **{"data-user-form-target": "pin"}) }}
+                {% for error in form.registration_pin.errors %}<div class="text-red-800 text-xs mt-1">{{ error }}</div>{% endfor %}
+            </div>
+            <!-- Submit + Cancel -->
+            <div class="flex gap-4 mt-4">
+                <button id="submitBtn"
+                        type="submit"
+                        class="w-1/2 bg-red-500 bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition py-2 px-4 rounded disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                        data-user-form-target="submitButton"
+                        disabled>{{ _("Create Account") }}</button>
+                {{ form.cancel(class="w-1/2 text-center bg-zinc-400 text-white font-semibold py-2 px-4 rounded hover:bg-zinc-500 focus:outline-none focus:ring-2 focus:ring-zinc-300 transition",
+                                formnovalidate=True) }}
+            </div>
+        </form>
+        <!-- Password Requirements -->
+        <div class="text-sm text-zinc-800 dark:text-zinc-700 mt-1">
+            <ul class="list-disc list-inside space-y-1">
+                <li>{{ _("Minimum 8 characters") }}</li>
+                <li>{{ _("At least one uppercase letter") }}</li>
+                <li>{{ _("At least one lowercase letter") }}</li>
+                <li>{{ _("At least one number") }}</li>
+                <li>{{ _("At least one special character (e.g., !@#$%)") }}</li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{# ---------------------------------------------------------------------
+  table_view.html
+  app/templates/admin/partials/table_view.html
+  Table-style user list (uses shared actions partial)
+--------------------------------------------------------------------- #}
+<div data-list-toggle-target="tableView">
+    <table class="table-auto w-full border-collapse border border-gray-300 dark:border-gray-700">
+        <thead>
+            <tr>
+                <th class="border px-4 py-2">{{ _("ID") }}</th>
+                <th class="border px-4 py-2">{{ _("Username") }}</th>
+                <th class="border px-4 py-2">{{ _("Email") }}</th>
+                <th class="border px-4 py-2">{{ _("Role") }}</th>
+                <th class="border px-4 py-2">{{ _("Actions") }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+                <tr>
+                    <td class="border px-4 py-2">{{ user.id }}</td>
+                    <td class="border px-4 py-2">{{ user.username }}</td>
+                    <td class="border px-4 py-2">{{ user.email }}</td>
+                    <td class="border px-4 py-2">{{ user.role }}</td>
+                    <td class="border px-4 py-2">{% include "admin/partials/actions.html" %}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>

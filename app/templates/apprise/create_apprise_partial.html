@@ -1,0 +1,70 @@
+{# ---------------------------------------------------------------------
+  create_apprise_partial.html
+  app/templates/apprise/create_apprise_partial.html
+  CSP-compliant form to create a new Apprise notification destination
+--------------------------------------------------------------------- #}
+    <div class="max-w-md mx-auto mt-20 bg-white dark:bg-zinc-800 shadow-md rounded-xl p-6 space-y-4"
+         data-controller="apprise-form">
+        <!-- Page Title -->
+        <h1 class="text-xl font-semibold text-zinc-800 dark:text-zinc-100">{{ _("Create Apprise Destination") }}</h1>
+        <!-- Instructions -->
+        <p class="text-sm text-zinc-600 dark:text-zinc-300">
+            {{ _("Enter a label and the Apprise URL to create a new destination.") }}
+        </p>
+        <!-- Form -->
+        <form method="post" novalidate>
+            {{ form.hidden_tag() }}
+            <!-- Label -->
+            <div>
+                <label for="label"
+                       class="block text-sm font-medium text-zinc-800 dark:text-zinc-200">
+                    {{ form.label.label.text }}
+                </label>
+                {{ form.label(id="label",
+                                class="w-full mt-1 px-3 py-2 border rounded bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100",
+                                **{"data-apprise-form-target": "label"}) }}
+                {% if form.label.errors %}<p class="text-red-700 text-sm mt-1">{{ form.label.errors[0] }}</p>{% endif %}
+            </div>
+            <!-- URL -->
+            <div>
+                <label for="url"
+                       class="block text-sm font-medium text-zinc-800 dark:text-zinc-200">
+                    {{ form.url.label.text }}
+                </label>
+                {{ form.url(id="url",
+                                class="w-full mt-1 px-3 py-2 border rounded bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100",
+                                **{"data-apprise-form-target": "url"}) }}
+                {% if form.url.errors %}<p class="text-red-700 text-sm mt-1">{{ form.url.errors[0] }}</p>{% endif %}
+            </div>
+            <!-- Enabled Checkbox -->
+            <div>
+                <label class="inline-flex items-center">
+                    {{ form.enabled() }}
+                    <span class="ml-2 text-sm text-zinc-800 dark:text-zinc-200">{{ _("Enabled") }}</span>
+                </label>
+            </div>
+            <!-- Submit / Cancel Buttons -->
+            <div class="flex gap-4 mt-4">
+                <button id="submitBtn"
+                        type="submit"
+                        data-apprise-form-target="submit"
+                        class="w-1/2 bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed">
+                    {{ _("Create Destination") }}
+                </button>
+                <a href="{{ url_for("apprise_routes.config") }}"
+                   class="w-1/2 text-center bg-zinc-400 text-white py-2 px-4 rounded hover:bg-zinc-500 transition-colors">
+                    {{ _("Cancel") }}
+                </a>
+            </div>
+            <!-- Apprise Documentation -->
+            <div class="mt-4 text-sm text-zinc-600 dark:text-zinc-400">
+                📚 {{ _("Need help with Apprise URLs? See the") }}
+                <a href="https://github.com/caronc/apprise/wiki#notification-services"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="text-blue-700 dark:text-blue-400 underline hover:text-blue-900">
+                    {{ _("Apprise Notification Services documentation") }}
+                </a>.
+            </div>
+        </form>
+    </div>

@@ -1,0 +1,28 @@
+{# ---------------------------------------------------------------------
+  config_view.html
+  app/templates/admin/partials/config_view.html
+  Partial view for system settings (HTMX response)
+--------------------------------------------------------------------- #}
+<div class="w-full max-w-full px-4 sm:px-6 lg:px-8 mt-16 bg-white dark:bg-zinc-800 shadow-md rounded-xl p-6">
+    <h1 class="text-2xl font-semibold mb-6 text-zinc-800 dark:text-zinc-100">{{ _("System Settings") }}</h1>
+
+    <!-- Table Wrapper -->
+    <div class="overflow-x-auto w-full">
+        <table class="table-auto w-full text-left text-sm">
+            <thead class="border-b border-zinc-300 dark:border-zinc-700 text-zinc-900 dark:text-zinc-100">
+                <tr>
+                    <th class="py-2 px-4 font-semibold">{{ _("Key") }}</th>
+                    <th class="py-2 px-4 font-semibold">{{ _("Value") }}</th>
+                </tr>
+            </thead>
+            <tbody class="text-zinc-800 dark:text-zinc-100">
+                {% for key, value in config.items() %}
+                    <tr class="border-t border-zinc-200 dark:border-zinc-700">
+                        <td class="py-2 px-4 font-mono text-xs">{{ key }}</td>
+                        <td class="py-2 px-4 break-words">{{ value }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>

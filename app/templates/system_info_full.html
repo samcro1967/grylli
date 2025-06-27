@@ -1,0 +1,10 @@
+{# ---------------------------------------------------------------------
+   system_info_full.html
+   app/templates/system_info_full.html
+   Shows detailed version and environment information for Grylli.
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block title %}{{ _("System Info") }}{% endblock %}
+{% block content %}
+    {% include "system_info_partial.html" %}
+{% endblock %}

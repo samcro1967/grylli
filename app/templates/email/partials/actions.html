@@ -1,0 +1,62 @@
+{# ---------------------------------------------------------------------
+  email/partials/actions.html
+  CSP-compliant email actions partial with Stimulus confirm controller
+--------------------------------------------------------------------- #}
+{% if not email.is_enabled %}
+    <a href="{{ url_for('email.edit_message', message_id=email.id) }}"
+       class="text-blue-800 hover:underline"
+       title="{{ _("Edit Email") }}">✏️</a>
+    <a href="{{ url_for('email.attach_files', message_id=email.id) }}"
+       class="text-green-700 hover:underline ml-2"
+       title="{{ _("Attach Files") }}">📎</a>
+    <a href="{{ url_for('email.assign_smtp', message_id=email.id) }}"
+       class="text-sky-500 hover:underline ml-2"
+       title="{{ _("Attach SMTP Config") }}">🧩</a>
+    <a href="{{ url_for('email.schedule', message_id=email.id) }}"
+       class="text-yellow-800 hover:underline ml-2"
+       title="{{ _("Schedule Check-In") }}">⏱️</a>
+{% else %}
+    <span class="text-zinc-900 cursor-not-allowed"
+          title="{{ _("Disable to edit email") }}">✏️</span>
+    <span class="text-zinc-900 cursor-not-allowed ml-2"
+          title="{{ _("Disable to attach files") }}">📎</span>
+    <span class="text-zinc-900 cursor-not-allowed ml-2"
+          title="{{ _("Disable to assign SMTP") }}">🧩</span>
+    <span class="text-zinc-900 cursor-not-allowed ml-2"
+          title="{{ _("Disable to schedule check-in") }}">⏱️</span>
+{% endif %}
+<a href="{{ url_for('email.view_config', message_id=email.id) }}"
+   class="text-gray-800 hover:underline ml-2"
+   title="{{ _("View Details") }}">🔍</a>
+<form method="post"
+      action="{{ url_for('email.send_test', message_id=email.id) }}"
+      class="inline ml-2">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <button type="submit"
+            class="text-indigo-800 hover:underline"
+            title="{{ _("Send this email to yourself to preview it.") }}">🧪</button>
+</form>
+<form method="post"
+      action="{{ url_for('email.delete_message', message_id=email.id) }}"
+      class="inline ml-2"
+      data-controller="confirm"
+      data-confirm-message="{{ _("Delete") }} {{ email.subject }}?">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <button type="submit"
+            class="text-red-800 hover:underline"
+            title="{{ _("Delete") }}">🗑️</button>
+</form>
+<form method="post"
+      action="{{ url_for('checkin.toggle_enabled', type='email', id=email.id) }}"
+      class="inline ml-2">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <button type="submit"
+            title="{{ _("Toggle Email On/Off") }}"
+            class="text-xl {% if email.is_enabled %}text-green-800{% else %}text-red-800{% endif %} hover:scale-110 transition">
+        {% if email.is_enabled %}
+            <span class="text-green-600" title="{{ _("Email is enabled") }}">🟢</span>
+        {% else %}
+            <span class="text-red-800" title="{{ _("Email is disabled") }}">🔴</span>
+        {% endif %}
+    </button>
+</form>

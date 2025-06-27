@@ -1,0 +1,39 @@
+{# ---------------------------------------------------------------------
+  backup_table.html
+  app/templates/admin/partials/backup_table.html
+  Partial for rendering the backup table or fallback message.
+--------------------------------------------------------------------- #}
+{% if backups %}
+  <div class="overflow-x-auto border border-zinc-300 dark:border-zinc-700 rounded-lg">
+    <table class="min-w-full table-auto text-left text-sm">
+      <thead class="bg-blue-600 text-white">
+        <tr>
+          <th class="px-4 py-2">{{ _("Filename") }}</th>
+          <th class="px-4 py-2 text-right">{{ _("Actions") }}</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-zinc-200 dark:divide-zinc-700 bg-white dark:bg-zinc-800 text-zinc-800 dark:text-zinc-100">
+        {% for file in backups %}
+          <tr>
+            <td class="px-4 py-2 font-mono">{{ file }}</td>
+            <td class="px-4 py-2 text-right">
+            <form method="post"
+                  hx-post="{{ url_for('backups.delete_backup', filename=file) }}"
+                  hx-target="#backup-table"
+                  hx-swap="innerHTML"
+                  data-controller="confirm"
+                  data-confirm-message-value="{{ _('Delete') }} {{ file }}?">
+                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                <button type="submit"
+                        class="text-red-800 hover:underline"
+                        title="{{ _('Delete') }}">🗑️</button>
+              </form>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+{% else %}
+  <p class="text-zinc-800 dark:text-zinc-400 text-sm">{{ _("No backups found.") }}</p>
+{% endif %}

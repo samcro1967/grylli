@@ -1,0 +1,55 @@
+{# ---------------------------------------------------------------------
+  edit_message_partial.html
+  app/templates/email/edit_message_partial.html
+  Main Email Create & Edit page
+--------------------------------------------------------------------- #}
+    <div class="max-w-2xl mx-auto px-4 py-8 mt-20">
+        <!-- Page Title -->
+        <h1 class="text-2xl font-semibold mb-6 text-zinc-900 dark:text-zinc-100">
+            ✉️ {{ _("Edit Email") if message.id else _('Create Email') }}
+        </h1>
+        <!-- =================== FORM START =================== -->
+        <form method="post" class="space-y-6">
+            {{ form.hidden_tag() }}
+            <!-- Label -->
+            <div>
+                <label class="block text-sm font-medium text-zinc-800 dark:text-zinc-100"
+                       for="label">{{ _("Label") }}</label>
+                {{ form.label(class_="w-full mt-1 px-3 py-2 border rounded bg-white dark:bg-zinc-800 text-zinc-800 dark:text-zinc-100") }}
+                {% for error in form.label.errors %}<p class="text-red-800 text-sm mt-1">{{ error }}</p>{% endfor %}
+            </div>
+            <!-- Recipient -->
+            <div>
+                <label class="block text-sm font-medium text-zinc-800 dark:text-zinc-100"
+                       for="recipient">{{ _("To (Recipient Email)") }}</label>
+                {{ form.recipient(class_="w-full mt-1 px-3 py-2 border rounded bg-white dark:bg-zinc-800 text-zinc-800 dark:text-zinc-100") }}
+                {% for error in form.recipient.errors %}<p class="text-red-800 text-sm mt-1">{{ error }}</p>{% endfor %}
+            </div>
+            <!-- Subject -->
+            <div>
+                <label class="block text-sm font-medium text-zinc-800 dark:text-zinc-100"
+                       for="subject">{{ _("Subject") }}</label>
+                {{ form.subject(class_="w-full mt-1 px-3 py-2 border rounded bg-white dark:bg-zinc-800 text-zinc-800 dark:text-zinc-100") }}
+                {% for error in form.subject.errors %}<p class="text-red-800 text-sm mt-1">{{ error }}</p>{% endfor %}
+            </div>
+            <!-- Body -->
+            <div>
+                <label class="block text-sm font-medium text-zinc-800 dark:text-zinc-100"
+                       for="body">{{ _("Body") }}</label>
+                {{ form.body(rows=6, class_="w-full mt-1 px-3 py-2 border rounded bg-white dark:bg-zinc-800 text-zinc-800 dark:text-zinc-100") }}
+                {% for error in form.body.errors %}<p class="text-red-800 text-sm mt-1">{{ error }}</p>{% endfor %}
+            </div>
+            <!-- Submit / Cancel -->
+            <div class="flex gap-4">
+                <button type="submit"
+                        class="w-1/2 text-center bg-blue-600 text-white font-semibold py-2 px-4 rounded hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition">
+                    {{ _("Save Email") }}
+                </button>
+                <a href="{{ url_for("email.index") }}"
+                   class="w-1/2 text-center bg-zinc-400 text-white font-semibold py-2 px-4 rounded hover:bg-zinc-500 focus:outline-none focus:ring-2 focus:ring-zinc-300 transition">
+                    {{ _("Cancel") }}
+                </a>
+            </div>
+            <!-- =================== FORM END ===================== -->
+        </form>
+    </div>

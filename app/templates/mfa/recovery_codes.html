@@ -1,0 +1,34 @@
+{# ---------------------------------------------------------------------
+   recovery_codes.html
+   app/templates/mfa/recovery_codes.html
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    <div class="max-w-md mx-auto mt-20 bg-white dark:bg-white dark:bg-zinc-800 dark:bg-white dark:bg-zinc-800 shadow-md rounded-xl p-6">
+        <h1 class="text-2xl font-semibold mb-6 text-zinc-950 dark:bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition text-center">
+            {{ _("Your Recovery Codes") }}
+        </h1>
+        <div class="rounded-lg border border-yellow-300 bg-yellow-50 dark:bg-yellow-900/40 dark:border-yellow-700 p-4 mb-6 text-center">
+            <span class="block font-semibold text-yellow-800 dark:text-yellow-200 mb-1">
+                {{ _("Save these recovery codes in a safe place!") }}
+            </span>
+            <span class="block text-yellow-800 dark:text-yellow-200 text-sm">
+                {{ _("Each code can be used once if you lose access to your authenticator. These codes will not be shown again.") }}
+            </span>
+        </div>
+        <div class="space-y-2 mb-10">
+            {% for code in recovery_codes %}
+                <div class="font-mono text-lg bg-zinc-200 dark:bg-zinc-200 dark:bg-zinc-700 rounded-lg px-4 py-2 text-zinc-900 dark:text-zinc-100 tracking-widest shadow-sm">
+                    {{ code }}
+                </div>
+            {% endfor %}
+        </div>
+        <form method="post" class="flex justify-center">
+            {{ form.hidden_tag() }}
+            <button type="submit"
+                    class="bg-blue-600 hover:bg-blue-700 bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition py-2 px-6 rounded font-semibold text-base shadow transition-colors">
+                {{ _("OK, I've saved them") }}
+            </button>
+        </form>
+    </div>
+{% endblock %}

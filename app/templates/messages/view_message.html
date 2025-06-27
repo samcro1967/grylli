@@ -1,0 +1,78 @@
+{# ---------------------------------------------------------------------
+  view_message.html
+  app/templates/messages/view_message.html
+  CSP-compliant read-only detail view for a notification message
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    <div class="max-w-4xl mx-auto mt-20 bg-white dark:bg-zinc-800 shadow-md rounded-xl p-6 space-y-6">
+        <!-- Page Title -->
+        <h1 class="text-xl font-semibold text-zinc-800 dark:text-zinc-100">{{ _("Notification Details") }}</h1>
+        <!-- Meta Details Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+                <h2 class="text-sm font-medium text-zinc-700 dark:text-zinc-300">{{ _("Label") }}</h2>
+                <p class="text-lg text-zinc-900 dark:text-zinc-100">{{ message.label }}</p>
+            </div>
+            <div>
+                <h2 class="text-sm font-medium text-zinc-700 dark:text-zinc-300">{{ _("Subject") }}</h2>
+                <p class="text-lg text-zinc-900 dark:text-zinc-100">{{ message.subject }}</p>
+            </div>
+            <div>
+                <h2 class="text-sm font-medium text-zinc-700 dark:text-zinc-300">{{ _("Check-in Interval") }}</h2>
+                <p class="text-lg text-zinc-900 dark:text-zinc-100">{{ checkin_human }}</p>
+            </div>
+            <div>
+                <h2 class="text-sm font-medium text-zinc-700 dark:text-zinc-300">{{ _("Grace Period") }}</h2>
+                <p class="text-lg text-zinc-900 dark:text-zinc-100">{{ grace_human }}</p>
+            </div>
+            {% if message.last_checkin %}
+                <div>
+                    <h2 class="text-sm font-medium text-zinc-700 dark:text-zinc-300">{{ _("Last Check-in") }}</h2>
+                    <p class="text-lg text-zinc-900 dark:text-zinc-100">{{ message.last_checkin.strftime("%Y-%m-%d %H:%M") }}</p>
+                </div>
+            {% endif %}
+            <div>
+                <h2 class="text-sm font-medium text-zinc-700 dark:text-zinc-300">{{ _("Created At") }}</h2>
+                <p class="text-lg text-zinc-900 dark:text-zinc-100">{{ message.created_at.strftime("%Y-%m-%d %H:%M") }}</p>
+            </div>
+        </div>
+        <!-- Content Section -->
+        <div>
+            <h2 class="text-sm font-medium text-zinc-700 dark:text-zinc-300">{{ _("Content") }}</h2>
+            <pre class="whitespace-pre-wrap bg-zinc-100 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100 p-3 rounded">
+{{ message.content }}
+    </pre>
+        </div>
+        <!-- Destinations Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div>
+                <h2 class="text-sm font-medium text-zinc-700 dark:text-zinc-300">{{ _("Apprise URLs") }}</h2>
+                {% if message.apprise_destinations %}
+                    <ul class="list-disc list-inside text-sm text-zinc-900 dark:text-zinc-100">
+                        {% for apprise in message.apprise_destinations %}<li>{{ apprise.label }}</li>{% endfor %}
+                    </ul>
+                {% else %}
+                    <p class="italic text-sm text-zinc-500">{{ _("None assigned.") }}</p>
+                {% endif %}
+            </div>
+            <div>
+                <h2 class="text-sm font-medium text-zinc-700 dark:text-zinc-300">{{ _("Webhooks") }}</h2>
+                {% if message.webhooks %}
+                    <ul class="list-disc list-inside text-sm text-zinc-900 dark:text-zinc-100">
+                        {% for webhook in message.webhooks %}<li>{{ webhook.label }}</li>{% endfor %}
+                    </ul>
+                {% else %}
+                    <p class="italic text-sm text-zinc-500">{{ _("None assigned.") }}</p>
+                {% endif %}
+            </div>
+        </div>
+        <!-- Back Button -->
+        <div class="pt-4">
+            <a href="{{ url_for("messages_bp.overview") }}"
+               class="inline-block w-full sm:w-auto px-4 py-2 bg-blue-600 text-white text-center rounded hover:bg-blue-700 transition-colors">
+                ← {{ _("Back to Notifications") }}
+            </a>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,16 @@
+{# partials/flash_messages.html #}
+{% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        <div id="toast-container"
+             class="fixed bottom-4 right-4 space-y-2 z-50"
+             aria-live="assertive"
+             aria-atomic="true">
+            {% for category, message in messages %}
+                <div role="alert"
+                     class="toast px-4 py-2 rounded shadow bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition {% if category == 'success' %} bg-green-700 {% elif category == 'danger' %} bg-red-600 {% elif category == 'warning' %} bg-yellow-700 {% else %} bg-blue-600 {% endif %}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        </div>
+    {% endif %}
+{% endwith %}

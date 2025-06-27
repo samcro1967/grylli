@@ -1,0 +1,99 @@
+{# ---------------------------------------------------------------------
+  edit_smtp.html
+  app/templates/user_smtp/edit_smtp.html
+  CSP-compliant edit SMTP form
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    <div class="max-w-md mx-auto mt-20 bg-white dark:bg-zinc-800 shadow-md rounded-xl p-6 space-y-4"
+         data-controller="smtp-form">
+        <h1 class="text-xl font-semibold text-zinc-900 dark:text-zinc-100">{{ _("Edit SMTP Destination") }}</h1>
+        <form method="post" novalidate data-action="input->smtp-form#validate">
+            {{ form.hidden_tag() }}
+            {% for field in [form.label, form.smtp_host, form.smtp_port, form.smtp_username] %}
+                <div class="mb-4">
+                    {{ field.label(class="block text-sm font-medium mb-1 text-zinc-800 dark:text-zinc-100") }}
+                    {{ field(id=field.id,
+                                        class="form-input w-full bg-white dark:bg-zinc-900 text-zinc-900 dark:text-white px-3 py-2 rounded border border-zinc-300 dark:border-zinc-600 focus:outline-none focus:ring-2 focus:ring-blue-400 transition",
+                                        autocomplete="off",
+                                        **{
+                                        "aria-invalid": "true" if field.errors else "false",
+                                        "data-smtp-form-target": field.name
+                                        }) }}
+                    <div class="text-red-800 text-xs mt-1"
+                         data-smtp-form-target="{{ field.name }}Error"
+                         id="{{ field.id }}-client-error"></div>
+                    {% if field.errors %}
+                        <ul class="text-red-800 text-xs mt-1">
+                            {% for error in field.errors %}<li>{{ error }}</li>{% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+            {% endfor %}
+            <!-- SMTP Password -->
+            <div class="mb-4 relative">
+                {{ form.smtp_password.label(class="block text-sm font-medium mb-1 text-zinc-800 dark:text-zinc-100") }}
+                <div class="relative">
+                    {{ form.smtp_password(id="smtp_password",
+                                        class="form-input w-full pr-10 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-white px-3 py-2 rounded border border-zinc-300 dark:border-zinc-600 focus:outline-none focus:ring-2 focus:ring-blue-400 transition",
+                                        autocomplete="new-password",
+                                        **{
+                                        "aria-invalid": "true" if form.smtp_password.errors else "false",
+                                        "data-password-toggle-target": "input",
+                                        "data-smtp-form-target": "password"
+                                        }) }}
+                    <div class="absolute inset-y-0 right-0 flex items-center px-3">
+                        <button type="button"
+                                data-controller="password-toggle"
+                                data-action="mousedown->password-toggle#reveal mouseup->password-toggle#hide mouseleave->password-toggle#hide"
+                                class="focus:outline-none text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-white"
+                                title="{{ _("Hold to reveal") }}">
+                            <svg class="h-5 w-5"
+                                 fill="none"
+                                 stroke="currentColor"
+                                 stroke-width="2"
+                                 viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="text-red-800 text-xs mt-1"
+                     data-smtp-form-target="passwordError"
+                     id="smtp_password-client-error"></div>
+                {% if form.smtp_password.errors %}
+                    <ul class="text-red-800 text-xs mt-1">
+                        {% for error in form.smtp_password.errors %}<li>{{ error }}</li>{% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+            <!-- Use TLS -->
+            <div class="mb-4">
+                <label class="inline-flex items-center">
+                    {{ form.use_tls() }}
+                    <span class="ml-2 text-sm text-zinc-800 dark:text-zinc-100">{{ _("Use TLS") }}</span>
+                </label>
+            </div>
+            <!-- Enabled -->
+            <div class="mb-4">
+                <label class="inline-flex items-center">
+                    {{ form.enabled() }}
+                    <span class="ml-2 text-sm text-zinc-800 dark:text-zinc-100">{{ _("Enabled") }}</span>
+                </label>
+            </div>
+            <!-- Submit / Cancel -->
+            <div class="flex gap-4 mt-6">
+                <button id="submitBtn"
+                        type="submit"
+                        class="w-1/2 bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition py-2 px-4 rounded disabled:opacity-50 disabled:cursor-not-allowed"
+                        data-smtp-form-target="submit"
+                        disabled>{{ _("Save") }}</button>
+                <a href="{{ url_for("user_smtp.overview") }}"
+                   class="w-1/2 text-center bg-zinc-400 text-white hover:bg-zinc-500 focus:outline-none focus:ring-2 focus:ring-zinc-300 py-2 px-4 rounded transition">
+                    {{ _("Cancel") }}
+                </a>
+            </div>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,55 @@
+{# ---------------------------------------------------------------------
+  edit_message.html
+  app/templates/messages/edit_message.html
+  CSP-compliant form to edit an existing message (submit always enabled)
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    <div class="max-w-md mx-auto mt-20 bg-white dark:bg-zinc-800 shadow-md rounded-xl p-6 space-y-4">
+        <!-- Page Title -->
+        <h1 class="text-xl font-semibold text-zinc-800 dark:text-zinc-100">✏️ {{ _("Edit Notification") }}</h1>
+        <!-- Instructions -->
+        <p class="text-sm text-zinc-600 dark:text-zinc-300">
+            {{ _("Update the label, subject, and content of your notification.") }}
+        </p>
+        <!-- Form -->
+        <form method="post" novalidate>
+            {{ form.hidden_tag() }}
+            <!-- Label -->
+            <div>
+                <label for="label"
+                       class="block text-sm font-medium text-zinc-800 dark:text-zinc-200">{{ _("Label") }}</label>
+                {{ form.label(id="label",
+                                class="w-full mt-1 px-3 py-2 border rounded bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100") }}
+                {% for error in form.label.errors %}<p class="text-red-700 text-sm mt-1">{{ error }}</p>{% endfor %}
+            </div>
+            <!-- Subject -->
+            <div>
+                <label for="subject"
+                       class="block text-sm font-medium text-zinc-800 dark:text-zinc-200">{{ _("Subject") }}</label>
+                {{ form.subject(id="subject",
+                                class="w-full mt-1 px-3 py-2 border rounded bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100") }}
+                {% for error in form.subject.errors %}<p class="text-red-700 text-sm mt-1">{{ error }}</p>{% endfor %}
+            </div>
+            <!-- Content -->
+            <div>
+                <label for="content"
+                       class="block text-sm font-medium text-zinc-800 dark:text-zinc-200">{{ _("Content") }}</label>
+                {{ form.content(id="content", rows=6,
+                                class="w-full mt-1 px-3 py-2 border rounded bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100") }}
+                {% for error in form.content.errors %}<p class="text-red-700 text-sm mt-1">{{ error }}</p>{% endfor %}
+            </div>
+            <!-- Submit / Cancel -->
+            <div class="flex gap-4 mt-6">
+                <button type="submit"
+                        class="w-1/2 bg-blue-600 text-white py-2 px-4 rounded hover:bg-blue-700 transition-colors">
+                    {{ _("Update Notification") }}
+                </button>
+                <a href="{{ url_for("messages_bp.overview") }}"
+                   class="w-1/2 text-center bg-zinc-400 text-white py-2 px-4 rounded hover:bg-zinc-500 transition-colors">
+                    {{ _("Cancel") }}
+                </a>
+            </div>
+        </form>
+    </div>
+{% endblock %}

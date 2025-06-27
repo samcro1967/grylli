@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div data-controller="rate-limit-redirect"
+         data-rate-limit-redirect-delay-value="{{ delay|round }}"
+         data-rate-limit-redirect-url-value="{{ url_for("auth.login") }}"
+         class="max-w-md mx-auto mt-20 bg-white dark:bg-white dark:bg-zinc-800 dark:bg-white dark:bg-zinc-800 shadow-md rounded-xl p-6 space-y-4 text-center">
+        <h1 class="text-xl font-semibold text-zinc-800 dark:text-zinc-100">{{ _("Please Wait") }}</h1>
+        <p class="text-zinc-900 dark:text-zinc-200">
+            {{ _("Too many attempts. Please try again in") }}
+            <span id="delay">{{ delay|round }}</span>
+            {{ _("seconds.") }}
+        </p>
+        <p class="mt-4 text-sm text-zinc-800 dark:text-zinc-900">{{ _("Redirecting to login...") }}</p>
+    </div>
+{% endblock %}

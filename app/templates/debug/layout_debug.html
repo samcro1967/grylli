@@ -1,0 +1,192 @@
+{# ---------------------------------------------------------------------
+   layout_debug.html
+   app/templates/debug/layout_debug.html
+   Debug view for front end
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    <!-- Register this page in the debug dropdown -->
+    <!-- <div data-debug-label="{{ _('Layout Debug') }}" class="hidden"></div> -->
+    <!-- Inject Flask context for the JS controller -->
+    <script nonce="{{ nonce }}">
+  (function () {
+    const el = document.querySelector('[data-debug-label]');
+    if (!el) return;
+    const label = el.dataset.debugLabel;
+
+    const pageEntry = {
+      label: label,
+      url: window.location.pathname
+    };
+
+    const key = "__GrylliDebugPages";
+    let pages = [];
+
+    try {
+      pages = JSON.parse(localStorage.getItem(key)) || [];
+      if (!pages.some(p => p.url === pageEntry.url)) {
+        pages.push(pageEntry);
+        localStorage.setItem(key, JSON.stringify(pages));
+      }
+    } catch (e) {
+      console.warn("⚠️ Failed to update debug page registry", e);
+    }
+  })();
+    </script>
+    <!-- Layout Debug Page -->
+    <div data-controller="layout-debug"
+         class="max-w-6xl mx-auto my-8 space-y-6 pt-20">
+        <h1 class="text-2xl font-bold text-center text-white dark:text-white mt-20">Grylli Full Layout Debug Page</h1>
+        <!-- Page selection and export buttons -->
+        <div class="space-y-4">
+            <div class="flex items-center gap-2">
+                <label for="debugPageDropdown"
+                       class="text-sm font-medium text-zinc-700 dark:text-zinc-200">
+                    {{ _("Select Page to Debug") }}:
+                </label>
+                <select id="debugPageDropdown"
+                        data-layout-debug-target="debugPageDropdown"
+                        class="bg-zinc-100 dark:bg-zinc-700 text-sm text-black dark:text-white px-3 py-2 rounded border border-zinc-300 dark:border-zinc-600">
+                    <option value="">{{ _("Choose a Page...") }}</option>
+                </select>
+                <button type="button"
+                        data-action="layout-debug#exportIframe"
+                        class="px-3 py-2 text-sm rounded bg-blue-600 text-white hover:bg-blue-700">
+                    {{ _("Export Selected Page") }}
+                </button>
+            </div>
+            <div class="flex flex-wrap items-center gap-2">
+                <button type="button"
+                        class="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
+                        data-action="click->layout-debug#exportDebug">{{ _("Export Layout Debug") }}</button>
+                <button type="button"
+                        class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700"
+                        data-action="click->layout-debug#clearAllDebug">{{ _("Clear Storage & Cookies") }}</button>
+                <button type="button"
+                        class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700"
+                        data-action="click->layout-debug#logAllDebug">{{ _("Refresh Debug Info") }}</button>
+            </div>
+        </div>
+        <!-- Theme & Layout State -->
+        <section class="border border-blue-400 rounded p-4 bg-blue-50 dark:bg-blue-900 space-y-2">
+            <h2 class="font-semibold text-lg text-blue-800 dark:text-blue-200">Theme & DOM State</h2>
+            <pre data-layout-debug-target="themeDebug"
+                 class="bg-zinc-800 text-white dark:bg-zinc-800 dark:text-white p-2 rounded text-xs whitespace-pre-wrap break-words font-mono"></pre>
+            <pre data-layout-debug-target="viewportDebug"
+                 class="bg-zinc-800 text-white dark:bg-zinc-800 dark:text-white p-2 rounded text-xs whitespace-pre-wrap break-words font-mono"></pre>
+            <pre data-layout-debug-target="layoutMetricsDebug"
+                 class="bg-zinc-800 text-white dark:bg-zinc-800 dark:text-white p-2 rounded text-xs whitespace-pre-wrap break-words font-mono"></pre>
+            <pre data-layout-debug-target="localStorageDebug"
+                 class="bg-zinc-800 text-white dark:bg-zinc-800 dark:text-white p-2 rounded text-xs whitespace-pre-wrap break-words font-mono"></pre>
+            <pre data-layout-debug-target="cookiesDebug"
+                 class="bg-zinc-800 text-white dark:bg-zinc-800 dark:text-white p-2 rounded text-xs whitespace-pre-wrap break-words font-mono"></pre>
+            <pre data-layout-debug-target="performanceDebug"
+                 class="bg-zinc-800 text-white dark:bg-zinc-800 dark:text-white p-2 rounded text-xs whitespace-pre-wrap break-words font-mono"></pre>
+            <pre data-layout-debug-target="userAgentDebug"
+                 class="bg-zinc-800 text-white dark:bg-zinc-800 dark:text-white p-2 rounded text-xs whitespace-pre-wrap break-words font-mono"></pre>
+        </section>
+        <!-- Stimulus & Events -->
+        <section class="border border-green-400 rounded p-4 bg-green-50 dark:bg-green-900 space-y-2">
+            <h2 class="font-semibold text-lg text-green-800 dark:text-green-200">Stimulus & Event Listeners</h2>
+            <pre data-layout-debug-target="stimulusControllersDebug"
+                 class="bg-zinc-800 text-white dark:bg-zinc-800 dark:text-white p-2 rounded text-xs whitespace-pre-wrap break-words font-mono"></pre>
+            <pre data-layout-debug-target="stimulusTargetsDebug"
+                 class="bg-zinc-800 text-white dark:bg-zinc-800 dark:text-white p-2 rounded text-xs whitespace-pre-wrap break-words font-mono"></pre>
+            <pre data-layout-debug-target="eventListenersDebug"
+                 class="bg-zinc-800 text-white dark:bg-zinc-800 dark:text-white p-2 rounded text-xs whitespace-pre-wrap break-words font-mono"></pre>
+        </section>
+        <!-- Accessibility -->
+        <section class="border border-yellow-400 rounded p-4 bg-yellow-50 dark:bg-yellow-900 space-y-2">
+            <h2 class="font-semibold text-lg text-yellow-800 dark:text-yellow-200">Accessibility & Focus</h2>
+            <pre data-layout-debug-target="ariaDebug"
+                 class="bg-zinc-800 text-white dark:bg-zinc-800 dark:text-white p-2 rounded text-xs whitespace-pre-wrap break-words font-mono"></pre>
+            <pre data-layout-debug-target="focusedElementDebug"
+                 class="bg-zinc-800 text-white dark:bg-zinc-800 dark:text-white p-2 rounded text-xs whitespace-pre-wrap break-words font-mono"></pre>
+        </section>
+        <!-- Scroll/Overflow/Visibility -->
+        <section class="border border-red-400 rounded p-4 bg-red-50 dark:bg-red-900 space-y-2">
+            <h2 class="font-semibold text-lg text-red-800 dark:text-red-200">Scroll, Overflow & Visibility</h2>
+            <pre data-layout-debug-target="scrollDebug"
+                 class="bg-zinc-800 text-white dark:bg-zinc-800 dark:text-white p-2 rounded text-xs whitespace-pre-wrap break-words font-mono"></pre>
+            <pre data-layout-debug-target="visibilityDebug"
+                 class="bg-zinc-800 text-white dark:bg-zinc-800 dark:text-white p-2 rounded text-xs whitespace-pre-wrap break-words font-mono"></pre>
+        </section>
+        <!-- Sidebar -->
+        <section class="border border-purple-400 rounded p-4 bg-purple-50 dark:bg-purple-900 space-y-2">
+            <h2 class="font-semibold text-lg text-purple-800 dark:text-purple-200">Sidebar Debug</h2>
+            <pre data-layout-debug-target="sidebarDebug"
+                 class="bg-zinc-800 text-white dark:bg-zinc-800 dark:text-white p-2 rounded text-xs whitespace-pre-wrap break-words font-mono"></pre>
+            <pre data-layout-debug-target="collapseDebug"
+                 class="bg-zinc-800 text-white dark:bg-zinc-800 dark:text-white p-2 rounded text-xs whitespace-pre-wrap break-words font-mono"></pre>
+            <pre data-layout-debug-target="footerDebug"
+                 class="bg-zinc-800 text-white dark:bg-zinc-800 dark:text-white p-2 rounded text-xs whitespace-pre-wrap break-words font-mono"></pre>
+            <pre data-layout-debug-target="sidebarDom"
+                 class="bg-zinc-800 text-white dark:bg-zinc-800 dark:text-white p-2 rounded text-xs whitespace-pre-wrap break-words font-mono max-h-96 overflow-y-auto"></pre>
+        </section>
+        <!-- Header -->
+        <section class="border border-purple-400 rounded p-4 bg-purple-50 dark:bg-purple-900 space-y-2">
+            <h2 class="font-semibold text-lg text-purple-800 dark:text-purple-200">Header Debug</h2>
+            <pre data-layout-debug-target="headerDebug"
+                 class="bg-zinc-800 text-white dark:bg-zinc-800 dark:text-white p-2 rounded text-xs whitespace-pre-wrap break-words font-mono"></pre>
+            <pre data-layout-debug-target="themeToggleDebug"
+                 class="bg-zinc-800 text-white dark:bg-zinc-800 dark:text-white p-2 rounded text-xs whitespace-pre-wrap break-words font-mono"></pre>
+            <pre data-layout-debug-target="languageToggleDebug"
+                 class="bg-zinc-800 text-white dark:bg-zinc-800 dark:text-white p-2 rounded text-xs whitespace-pre-wrap break-words font-mono"></pre>
+            <pre data-layout-debug-target="profileDropdownDebug"
+                 class="bg-zinc-800 text-white dark:bg-zinc-800 dark:text-white p-2 rounded text-xs whitespace-pre-wrap break-words font-mono"></pre>
+        </section>
+        <!-- Footer -->
+        <section class="border border-purple-400 rounded p-4 bg-purple-50 dark:bg-purple-900 space-y-2">
+            <h2 class="font-semibold text-lg text-purple-800 dark:text-purple-200">Footer DOM Snapshot</h2>
+            <pre data-layout-debug-target="footerDom"
+                 class="bg-zinc-800 text-white dark:bg-zinc-800 dark:text-white p-2 rounded text-xs whitespace-pre-wrap break-words font-mono max-h-96 overflow-y-auto"></pre>
+        </section>
+        <!-- Computed Styles -->
+        <section class="border border-pink-400 rounded p-4 bg-pink-50 dark:bg-pink-900 space-y-2">
+            <h2 class="font-semibold text-lg text-pink-800 dark:text-pink-200">Computed Styles & CSS Variables</h2>
+            <pre data-layout-debug-target="computedStylesDebug"
+                 class="bg-zinc-800 text-white dark:bg-zinc-800 dark:text-white p-2 rounded text-xs whitespace-pre-wrap break-words font-mono"></pre>
+        </section>
+        <!-- Scripts, Styles, Route, Templates -->
+        <section class="border border-cyan-400 rounded p-4 bg-cyan-50 dark:bg-cyan-900 space-y-2">
+            <h2 class="font-semibold text-lg text-cyan-800 dark:text-cyan-200">Page Assets & Context</h2>
+            <pre data-layout-debug-target="scriptDebug"
+                 class="bg-zinc-800 text-white dark:bg-zinc-800 dark:text-white p-2 rounded text-xs whitespace-pre-wrap break-words font-mono"></pre>
+            <pre data-layout-debug-target="styleDebug"
+                 class="bg-zinc-800 text-white dark:bg-zinc-800 dark:text-white p-2 rounded text-xs whitespace-pre-wrap break-words font-mono"></pre>
+            <pre data-layout-debug-target="routeDebug"
+                 class="bg-zinc-800 text-white dark:bg-zinc-800 dark:text-white p-2 rounded text-xs whitespace-pre-wrap break-words font-mono"></pre>
+        </section>
+        <!-- Forms & Inputs -->
+        <section class="border border-indigo-400 rounded p-4 bg-indigo-50 dark:bg-indigo-900 space-y-2">
+            <h2 class="font-semibold text-lg text-indigo-800 dark:text-indigo-200">Forms & Inputs</h2>
+            <pre data-layout-debug-target="formDebug"
+                 class="bg-zinc-800 text-white dark:bg-zinc-800 dark:text-white p-2 rounded text-xs whitespace-pre-wrap break-words font-mono"></pre>
+        </section>
+        <!-- Memory Usage -->
+        <section class="border border-lime-400 rounded p-4 bg-lime-50 dark:bg-lime-900 space-y-2">
+            <h2 class="font-semibold text-lg text-lime-800 dark:text-lime-200">Memory Usage (Experimental)</h2>
+            <pre data-layout-debug-target="memoryDebug"
+                 class="bg-zinc-800 text-white dark:bg-zinc-800 dark:text-white p-2 rounded text-xs whitespace-pre-wrap break-words font-mono"></pre>
+        </section>
+        <!-- Current User Info -->
+        <section class="border border-gray-500 rounded p-4 bg-gray-50 dark:bg-gray-900 space-y-2">
+            <h2 class="font-semibold text-lg text-gray-800 dark:text-gray-200">Current User (Sanitized)</h2>
+            <pre class="bg-zinc-800 text-white dark:bg-zinc-800 dark:text-white p-2 rounded text-xs whitespace-pre-wrap break-words font-mono">
+  Email: {{ current_user.email if current_user else "Anonymous" }}
+  Role: {{ current_user.role if current_user and current_user.role else "N/A" }}
+  Authenticated: {{ current_user.is_authenticated if current_user else "False" }}
+    </pre>
+        </section>
+        <!-- Raw Rendered HTML Snapshot -->
+        <section class="border border-fuchsia-400 rounded p-4 bg-fuchsia-50 dark:bg-fuchsia-900 space-y-2">
+            <h2 class="font-semibold text-lg text-fuchsia-800 dark:text-fuchsia-200">Rendered HTML Snapshot</h2>
+            <pre data-layout-debug-target="rawHtmlDebug"
+                 class="debug-pre max-h-96 overflow-y-auto"></pre>
+        </section>
+        <!-- Hidden iframe to load selected debug page -->
+        <iframe id="debugPreviewIframe"
+                class="w-full h-[600px] border border-zinc-400 rounded bg-white dark:bg-zinc-900"
+                loading="lazy"></iframe>
+    </div>
+{% endblock %}

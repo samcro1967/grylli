@@ -1,0 +1,51 @@
+{# ---------------------------------------------------------------------
+  create_reminder_partial.html
+  app/templates/reminders/create_reminder_partial.html
+  [Page to create a new reminder.]
+--------------------------------------------------------------------- #}
+    <div class="max-w-2xl mx-auto px-4 py-8 mt-20">
+        <!-- Page Title -->
+        <h1 class="text-2xl font-semibold mb-6 text-zinc-900 dark:text-zinc-100">
+            {% if reminder %}
+                ✏️ {{ _("Edit Reminder") }}
+            {% else %}
+                ➕ {{ _("Create Reminder") }}
+            {% endif %}
+        </h1>
+        <!-- Reminder Form -->
+        <form method="post" class="space-y-6">
+            {{ form.hidden_tag() }}
+            <!-- Label -->
+            <div>
+                <label class="block text-sm font-medium text-zinc-900 dark:text-zinc-700"
+                       for="label">{{ _("Label") }}</label>
+                {{ form.label(class_="w-full mt-1 px-3 py-2 border rounded bg-white dark:bg-white dark:bg-zinc-800 dark:bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100") }}
+                {% for error in form.label.errors %}<p class="text-red-800 text-sm mt-1">{{ error }}</p>{% endfor %}
+            </div>
+            <!-- Subject -->
+            <div>
+                <label class="block text-sm font-medium text-zinc-900 dark:text-zinc-700"
+                       for="subject">{{ _("Subject") }}</label>
+                {{ form.subject(class_="w-full mt-1 px-3 py-2 border rounded bg-white dark:bg-white dark:bg-zinc-800 dark:bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100") }}
+                {% for error in form.subject.errors %}<p class="text-red-800 text-sm mt-1">{{ error }}</p>{% endfor %}
+            </div>
+            <!-- Content -->
+            <div>
+                <label class="block text-sm font-medium text-zinc-900 dark:text-zinc-700"
+                       for="content">{{ _("Content") }}</label>
+                {{ form.content(rows=5, class_="w-full mt-1 px-3 py-2 border rounded bg-white dark:bg-white dark:bg-zinc-800 dark:bg-white dark:bg-zinc-800 text-zinc-900 dark:text-zinc-100") }}
+                {% for error in form.content.errors %}<p class="text-red-800 text-sm mt-1">{{ error }}</p>{% endfor %}
+            </div>
+            <!-- Submit -->
+            <div>
+                <button type="submit"
+                        class="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition">
+                    {{ _("Save Reminder") }}
+                </button>
+                <a href="{{ url_for("reminders_bp.overview") }}"
+                   class="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition">
+                    {{ _("Cancel") }}
+                </a>
+            </div>
+        </form>
+    </div>

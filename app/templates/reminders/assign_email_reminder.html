@@ -1,0 +1,99 @@
+{# ---------------------------------------------------------------------
+  assign_email_reminder.html
+  app/templates/reminders/assign_email_reminder.html
+  Styled form for linking a Reminder to an EmailMessage and SMTP config.
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    <div class="max-w-2xl mx-auto px-4 py-8 mt-20">
+        <!-- Title -->
+        <h1 class="text-2xl font-semibold mb-6 text-zinc-900 dark:text-zinc-100 flex items-center space-x-2">
+            <span>📧</span>
+            <span>{{ _("Link Email Reminder for") }}: <span class="font-mono">{{ reminder.label }}</span></span>
+        </h1>
+        <!-- Form Container -->
+        <form method="post"
+              class="bg-zinc-100 dark:bg-zinc-800 rounded p-6 space-y-6 shadow">
+            {{ form.hidden_tag() }}
+            <!-- SMTP Configuration -->
+            <div>
+                <h2 class="text-lg font-medium mb-2 text-blue-800 dark:text-blue-300">📨 {{ _("SMTP Configuration") }}</h2>
+                <div class="space-y-2">
+                    {% for value, label in form.smtp_config.choices %}
+                        {% if value == "none" %}
+                            <label class="flex items-start space-x-2">
+                                <input type="radio"
+                                       name="{{ form.smtp_config.name }}"
+                                       value="none"
+                                       {% if form.smtp_config.data == "none" %}checked{% endif %}
+                                       class="accent-blue-600 mt-1">
+                                <div class="font-medium italic text-zinc-800 dark:text-zinc-100">🚫 {{ _("None (Unassign)") }}</div>
+                            </label>
+                        {% else %}
+                            {% set smtp = smtp_config_map[value] %}
+                            <label class="flex items-start space-x-2">
+                                <input type="radio"
+                                       name="{{ form.smtp_config.name }}"
+                                       value="{{ value }}"
+                                       {% if form.smtp_config.data == value %}checked{% endif %}
+                                       class="accent-blue-600 mt-1">
+                                <div>
+                                    <div class="font-medium text-zinc-800 dark:text-zinc-100">{{ smtp.label }}</div>
+                                    <div class="text-sm text-zinc-700 dark:text-zinc-400">
+                                        {{ smtp.from_address or smtp.smtp_username or _("No sender address") }}
+                                    </div>
+                                </div>
+                            </label>
+                        {% endif %}
+                    {% endfor %}
+                    {% for error in form.smtp_config.errors %}<p class="text-red-800 text-sm mt-1">{{ error }}</p>{% endfor %}
+                </div>
+            </div>
+            <!-- Email Message -->
+            <div>
+                <h2 class="text-lg font-medium mb-2 text-teal-700 dark:text-teal-400">✉️ {{ _("Email Message") }}</h2>
+                <div class="space-y-2">
+                    {% for value, label in form.message.choices %}
+                        {% if value == "none" %}
+                            <label class="flex items-start space-x-2">
+                                <input type="radio"
+                                       name="{{ form.message.name }}"
+                                       value="none"
+                                       {% if form.message.data == "none" %}checked{% endif %}
+                                       class="accent-teal-600 mt-1">
+                                <div class="font-medium italic text-zinc-800 dark:text-zinc-100">🚫 {{ _("None (Unassign)") }}</div>
+                            </label>
+                        {% else %}
+                            {% set msg = email_messages_map[value] %}
+                            <label class="flex items-start space-x-2">
+                                <input type="radio"
+                                       name="{{ form.message.name }}"
+                                       value="{{ value }}"
+                                       {% if form.message.data == value %}checked{% endif %}
+                                       class="accent-teal-600 mt-1">
+                                <div>
+                                    <div class="font-medium text-zinc-800 dark:text-zinc-100">{{ msg.label }}</div>
+                                    <div class="text-sm text-zinc-700 dark:text-zinc-400">
+                                        {{ _("To") }}: {{ msg.recipient or "—" }} | {{ msg.subject or _("No subject") }}
+                                    </div>
+                                </div>
+                            </label>
+                        {% endif %}
+                    {% endfor %}
+                    {% for error in form.message.errors %}<p class="text-red-800 text-sm mt-1">{{ error }}</p>{% endfor %}
+                </div>
+            </div>
+            <!-- Buttons -->
+            <div class="flex justify-end space-x-4 pt-4">
+                <button type="submit"
+                        class="px-4 py-2 bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 rounded transition">
+                    {{ _("Save Email Reminder") }}
+                </button>
+                <a href="{{ url_for("reminders_bp.overview") }}"
+                   class="px-4 py-2 bg-zinc-400 text-white hover:bg-zinc-500 focus:outline-none focus:ring-2 focus:ring-zinc-300 rounded text-center">
+                    {{ _("Cancel") }}
+                </a>
+            </div>
+        </form>
+    </div>
+{% endblock %}

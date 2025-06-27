@@ -1,0 +1,17 @@
+{# ---------------------------------------------------------------------
+  redirect_after_lang_set.html
+  app/templates/locale/redirect_after_lang_set.html
+  CSP-compliant redirect page after language set
+--------------------------------------------------------------------- #}
+<!DOCTYPE html>
+<html lang="en" data-controller="redirect">
+    <head>
+        <title>{{ _("Switching Language...") }}</title>
+        <meta charset="UTF-8" />
+    </head>
+    <body class="p-4 text-center">
+        <p>{{ _("Applying new language...") }}</p>
+        <script type="module"
+                src="{{ url_for('static', filename='js/controllers/redirect_controller.js') }}"></script>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<table class="table-auto w-full border-collapse border border-gray-300 dark:border-gray-700">
+    <thead>
+        <tr>
+            <th class="border px-4 py-2">{{ _("Label") }}</th>
+            <th class="border px-4 py-2">{{ _("URL") }}</th>
+            <th class="border px-4 py-2">{{ _("Enabled") }}</th>
+            <th class="border px-4 py-2">{{ _("Created At") }}</th>
+            <th class="border px-4 py-2">{{ _("Actions") }}</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for destination in destinations %}
+            <tr>
+                <td class="border px-4 py-2">{{ destination.label }}</td>
+                <td class="border px-4 py-2">{{ destination.url }}</td>
+                <td class="border px-4 py-2">{{ '✅' if destination.enabled else '❌' }}</td>
+                <td class="border px-4 py-2">{{ destination.created_at.strftime("%Y-%m-%d %H:%M") }}</td>
+                <td class="border px-4 py-2">{% include "apprise/partials/actions.html" %}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>

@@ -1,0 +1,39 @@
+{# ---------------------------------------------------------------------
+   challenge.html
+   app/templates/mfa/challenge.html
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    <div class="max-w-md mx-auto mt-10 bg-white dark:bg-white dark:bg-zinc-800 shadow-md rounded-xl p-6 space-y-4">
+        <h1 class="text-xl font-semibold text-zinc-950 dark:bg-blue-600 text-white text-center mb-2">
+            {{ _("Two-Factor Authentication (MFA)") }}
+        </h1>
+        {% if error %}
+            <div class="mb-4 text-red-700 text-sm font-medium bg-red-100 rounded p-2 border border-red-400">
+                {{ error | safe }}
+            </div>
+        {% endif %}
+        <form method="post" novalidate>
+            {{ form.hidden_tag() }}
+            <div class="mb-4">
+                {{ form.code.label(class="block text-sm font-medium mb-1 text-zinc-950 dark:text-white") }}
+                {{ form.code(class="form-input w-full bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition", autocomplete="one-time-code", autofocus=True) }}
+                {% if form.code.errors %}
+                    <ul class="text-red-800 text-xs mt-1">
+                        {% for error in form.code.errors %}<li>{{ error }}</li>{% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+            <div class="flex gap-4">
+                <button type="submit"
+                        class="w-1/2 bg-blue-600 hover:bg-blue-700 text-white focus:outline-none focus:ring-2 focus:ring-blue-400 transition py-2 px-4 rounded font-semibold">
+                    {{ _("Verify") }}
+                </button>
+                <a href="{{ url_for("auth.login") }}"
+                   class="w-1/2 text-center bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition py-2 px-4 rounded font-semibold">
+                    {{ _("Cancel") }}
+                </a>
+            </div>
+        </form>
+    </div>
+{% endblock %}

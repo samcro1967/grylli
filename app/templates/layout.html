@@ -1,0 +1,48 @@
+{# ---------------------------------------------------------------------
+  layout.html
+  app/templates/layout.html
+  Main layout: header, sidebar (desktop + mobile), main content.
+--------------------------------------------------------------------- #}
+<!DOCTYPE html>
+<html lang="{{ get_locale() or 'en' }}"
+      class="{% if request.cookies.theme == 'dark' %}dark {% endif %}scroll-smooth bg-zinc-200 dark:bg-zinc-900 text-zinc-800 dark:text-zinc-100 h-screen overflow-hidden">
+    {% include "partials/head.html" %}
+    <body hx-ext="safe-nonce"
+          class="h-screen overflow-hidden flex flex-col text-zinc-800 dark:text-zinc-100"
+          data-role-change-base="{{ url_for('users.change_role', user_id=0) }}">
+        <!-- Flash message controller -->
+        <div data-controller="flash-message"
+             data-flash-message-messages-value='{{ get_flashed_messages(with_categories=true) | map(attribute=1) | list | tojson | safe }}'>
+        </div>
+
+        <!-- Header (fixed height) -->
+        {% include "partials/header.html" %}
+
+        <!-- Layout below header: sidebar + main content -->
+        <div class="flex flex-grow h-0">
+            <!-- Sidebar: Desktop -->
+            {% include "partials/sidebar_desktop.html" %}
+
+            <!-- Main content (scrollable + HTMX target) -->
+            <main id="main-content"
+                  class="flex-grow overflow-y-auto p-6 bg-zinc-50 dark:bg-zinc-900"
+                  hx-target="this"
+                  hx-swap="innerHTML">
+                {% block content %}{% endblock %}
+            </main>
+        </div>
+
+        <!-- Service Worker -->
+        <script src="{{ url_for('static', filename='js/register-sw.js') }}" defer></script>
+
+        <!-- Modal container for dynamic HTMX content -->
+        <div id="modal-container" data-controller="modal"></div>
+
+        <!-- HTMX must come first -->
+        <script src="{{ url_for('static', filename='js/htmx.min.js') }}"></script>
+
+        <!-- Safe Nonce Extension must come after HTMX -->
+        <script src="{{ url_for('static', filename='js/safe-nonce.min.js') }}"></script>
+
+    </body>
+</html>

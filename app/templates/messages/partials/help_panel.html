@@ -1,0 +1,17 @@
+{# ---------------------------------------------------------------------
+  help_panel.html
+  app/templates/messages/partials/help_panel.html
+  Instructions content only — no toggle logic. Controlled by parent.
+--------------------------------------------------------------------- #}
+<ol class="list-decimal list-inside space-y-1">
+    <li>{{ _("Click “Add notification” and fill out the subject and content fields.") }}</li>
+    <li>{{ _("Save the notification to return to the overview.") }}</li>
+    <li>{{ _("You need to create at least one apprise or webhook destination.") }}</li>
+    <li>{{ _("You can create as many destinations as you like.") }}</li>
+    <li>{{ _("Click 🧩 to assign one or more Apprise and/or Webhook destinations.") }}</li>
+    <li>{{ _("Click ⏱️ to set a schedule and check-in interval.") }}</li>
+    <li>{{ _("Enable the notification using the 🔴/🟢 toggle button.") }}</li>
+    <li>{{ _("If you don’t check in before the grace period ends, the notification will be sent.") }}</li>
+    <li>{{ _("You can preview the notification config using 🔍.") }}</li>
+    <li>{{ _("Once a notification is sent, it will be automatically disabled.") }}</li>
+</ol>

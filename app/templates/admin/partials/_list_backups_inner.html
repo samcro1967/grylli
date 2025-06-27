@@ -1,0 +1,33 @@
+{# ---------------------------------------------------------------------
+  _list_backups_inner.html
+  app/templates/admin/partials/_list_backups_inner.html
+  Inner partial for rendering the backup table or fallback message.
+--------------------------------------------------------------------- #}
+<div class="w-full max-w-full px-4 sm:px-6 lg:px-8 mt-20 space-y-6">
+  <!-- Page Header -->
+  <div>
+    <h1 class="text-xl font-semibold text-zinc-800 dark:text-zinc-100">{{ _("Database Backups") }}</h1>
+    <p class="text-sm text-zinc-600 dark:text-zinc-300 mt-1">
+      {{ _("Manage encrypted backups of your Grylli database. Only admins can create or delete backups.") }}
+    </p>
+  </div>
+
+  <!-- Create Backup Button -->
+  <div class="flex justify-end flex-wrap sm:flex-nowrap gap-2">
+    <button
+      hx-post="{{ url_for('backups.create_backup_view') }}"
+      hx-target="#backup-table"
+      hx-swap="outerHTML"
+      class="shrink-0 whitespace-nowrap px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 transition">
+      ➕ {{ _("Create Backup") }}
+    </button>
+  </div>
+
+  <!-- HTMX Targetable Backup Table -->
+  {% include "admin/partials/backup_table_wrapper.html" %}
+
+  <!-- Footer Notice -->
+  <div class="text-sm text-zinc-800 dark:text-zinc-400 mt-4">
+    ⚠️ {{ _("Backups contain your full app data. Store securely. Sensitive data is encrypted in the DB by default.") }}
+  </div>
+</div>

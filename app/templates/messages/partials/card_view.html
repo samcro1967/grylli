@@ -1,0 +1,24 @@
+{# messages/partials/card_view.html #}
+<!-- Only the layout, no ID, no hidden -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    {% for message in messages %}
+        <div class="bg-white dark:bg-white dark:bg-zinc-800 dark:bg-white dark:bg-zinc-800 rounded shadow p-4 flex flex-col gap-1">
+            <div>
+                <span class="font-semibold">{{ _("Label:") }}</span>
+                <span>{{ message.label }}</span>
+            </div>
+            <div>
+                <span class="font-semibold">{{ _("Subject:") }}</span>
+                <span>{{ message.subject }}</span>
+            </div>
+            <div>
+                <span class="font-semibold">{{ _("Created At:") }}</span>
+                <span>{{ message.created_at.strftime("%Y-%m-%d %H:%M") }}</span>
+            </div>
+            <div class="flex flex-wrap gap-2 mt-2">
+                {% set message = message %}
+                {% include "messages/partials/actions.html" %}
+            </div>
+        </div>
+    {% endfor %}
+</div>
