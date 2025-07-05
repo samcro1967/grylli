@@ -1,0 +1,80 @@
+{# ---------------------------------------------------------------------
+  reminders/partials/actions.html
+  CSP-compliant reminder actions partial with DaisyUI utility classes only
+--------------------------------------------------------------------- #}
+<div class="flex items-center gap-2">
+    <!-- Edit Reminder -->
+    <a href="{{ url_for('reminders_bp.edit_reminder', reminder_id=reminder.id) }}"
+       hx-get="{{ url_for('reminders_bp.edit_reminder', reminder_id=reminder.id) }}"
+       hx-target="#main-content"
+       hx-swap="innerHTML"
+       hx-push-url="true"
+       class="btn btn-ghost btn-sm"
+       title="{{ _("Edit Reminder") }}">✏️</a>
+    <!-- Assign Destinations -->
+    <a href="{{ url_for('reminders_bp.assign_destinations', reminder_id=reminder.id) }}"
+       hx-get="{{ url_for('reminders_bp.assign_destinations', reminder_id=reminder.id) }}"
+       hx-target="#main-content"
+       hx-swap="innerHTML"
+       hx-push-url="true"
+       class="btn btn-ghost btn-sm"
+       title="{{ _("Assign Destinations") }}">🧩</a>
+    <!-- Assign Email Reminder -->
+    <a href="{{ url_for('reminders_bp.assign_email_to_reminder', reminder_id=reminder.id) }}"
+       hx-get="{{ url_for('reminders_bp.assign_email_to_reminder', reminder_id=reminder.id) }}"
+       hx-target="#main-content"
+       hx-swap="innerHTML"
+       hx-push-url="true"
+       class="btn btn-ghost btn-sm"
+       title="{{ _("Assign Email Reminder") }}">📧</a>
+    <!-- Set Schedule -->
+    <a href="{{ url_for('reminders_bp.schedule_reminder', reminder_id=reminder.id) }}"
+       hx-get="{{ url_for('reminders_bp.schedule_reminder', reminder_id=reminder.id) }}"
+       hx-target="#main-content"
+       hx-swap="innerHTML"
+       hx-push-url="true"
+       class="btn btn-ghost btn-sm"
+       title="{{ _("Set Schedule") }}">⏱️</a>
+    <!-- View Details -->
+    <a href="{{ url_for('reminders_bp.view_reminder', reminder_id=reminder.id) }}"
+       hx-get="{{ url_for('reminders_bp.view_reminder', reminder_id=reminder.id) }}"
+       hx-target="#main-content"
+       hx-swap="innerHTML"
+       hx-push-url="true"
+       class="btn btn-ghost btn-sm"
+       title="{{ _("View Details") }}">🔍</a>
+    <!-- Send Test Reminder -->
+    <form method="post"
+          action="{{ url_for('reminders_bp.send_test_reminder', reminder_id=reminder.id) }}"
+          class="inline"
+          hx-post="{{ url_for('reminders_bp.send_test_reminder', reminder_id=reminder.id) }}"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          hx-push-url="true">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <button type="submit"
+                class="btn btn-sm btn-ghost text-info"
+                title="{{ _("Send Test Reminder") }}">🧪</button>
+    </form>
+    <!-- Delete Reminder -->
+    <form method="post" action="{{ url_for('reminders_bp.delete_reminder', reminder_id=reminder.id) }}" class="inline" data-controller="confirm" data-confirm-message-value="{{ _("Delete reminder") }} {{ reminder.label or reminder.subject }}?"
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <!-- Delete Button -->
+        <button type="submit"
+                class="btn btn-ghost text-error hover:bg-error-focus"
+                title="{{ _("Delete Reminder") }}">🗑️</button>
+    </form>
+    <!-- Toggle Reminder Enabled/Disabled -->
+    <form method="post" action="{{ url_for('checkin.toggle_enabled', type='reminder', id=reminder.id) }}" class="inline"
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <button type="submit"
+                class="btn btn-ghost text-primary"
+                title="{{ _("Toggle Reminder On/Off") }}">
+            {% if reminder.is_enabled %}
+                <span class="text-success">🟢</span>
+            {% else %}
+                <span class="text-error">🔴</span>
+            {% endif %}
+        </button>
+    </form>
+</div>

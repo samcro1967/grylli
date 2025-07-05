@@ -1,0 +1,46 @@
+services:
+  grylli:
+    image: ghcr.io/samcro1967/grylli
+    container_name: grylli
+    ports:
+      - "5069:5069"  # Expose Grylli on port 5069
+    volumes:
+      - ./grylli/data:/data         # Persistent data
+      - ./grylli/uploads:/uploads   # Uploaded files
+    environment:
+      - TZ=America/Chicago
+      - PUID=1000
+      - PGID=1000
+      # Core settings
+      - GRYLLI_DATA_DIR=/data
+      - DEBUG=False
+      - FQDN=http://your.domain.com:5069
+      - BASE_URL=/grylli
+      - FLASK_APP_PORT=5069
+
+      # python3 -c 'import secrets; print(secrets.token_hex(32))'
+      FLASK_APP_KEY=changeme-supersecret-key
+
+      # python3 -c "from cryptography.fernet import Fernet; print(Fernet.generate_key().decode())"
+      FERRET_KEY=changeme-fernet-key
+
+      # Signup registration code
+      SIGNUP_CODE=YourSuperSecretCode123!
+
+      # App defaults
+      - DEFAULT_LANGUAGE=en
+
+      # Example SMTP configuration (use real values in deployment)
+      - SMTP_HOST=smtp.example.com
+      - SMTP_PORT=587
+      - SMTP_USE_TLS=1
+      - EMAIL_FROM=you@example.com
+      - SMTP_USER=you@example.com
+      - SMTP_PASS=your_password_or_app_token
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "/healthcheck"]
+      interval: 60s
+      retries: 5
+      start_period: 20s
+      timeout: 10s

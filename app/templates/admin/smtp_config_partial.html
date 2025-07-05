@@ -1,0 +1,45 @@
+{# ---------------------------------------------------------------------
+  smtp_config_partial.html
+  app/templates/admin/partials/smtp_config_partial.html
+  Partial content: SMTP settings summary.
+--------------------------------------------------------------------- #}
+<div class="w-full max-w-full px-4 sm:px-6 lg:px-8 mt-5">
+    <!-- Title -->
+    <h1 class="text-2xl font-bold text-base-content mb-4">{{ _("System SMTP Configuration") }}</h1>
+    <!-- Table -->
+    <div class="overflow-x-auto rounded-box border border-base-300 dark:border-base-700">
+        <table class="table table-zebra w-full text-sm">
+            <thead class="bg-primary text-primary-content">
+                <tr>
+                    <th>{{ _("Key") }}</th>
+                    <th>{{ _("Value") }}</th>
+                    <th>{{ _("Sensitive") }}</th>
+                    <th>{{ _("Editable") }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for setting in settings %}
+                    <tr class="hover">
+                        <td class="font-mono text-xs align-top">{{ setting.key }}</td>
+                        <td class="break-words align-top">
+                            {% if setting.is_sensitive %}
+                                <span class="italic text-base-content/50" aria-hidden="true">••••••••••</span>
+                                <span class="sr-only">{{ _("Hidden sensitive value") }}</span>
+                            {% else %}
+                                {{ setting.value }}
+                            {% endif %}
+                        </td>
+                        <td class="align-top">{{ _("Yes") if setting.is_sensitive else _("No") }}</td>
+                        <td class="align-top">{{ _("Yes") if setting.editable else _("No") }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <!-- Send Test Email Button -->
+    <form method="post"
+          action="{{ url_for("smtp_settings_admin.send_test_email") }}">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <button type="submit" class="btn btn-primary mt-4">{{ _("Send Test Email") }}</button>
+    </form>
+</div>

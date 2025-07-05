@@ -1,0 +1,94 @@
+{# ---------------------------------------------------------------------
+  actions.html
+  app/templates/email/partials/actions.html
+  DaisyUI-styled email actions partial
+--------------------------------------------------------------------- #}
+<div class="flex items-center justify-start gap-4">
+    <!-- Edit Email -->
+    {% if not email.is_enabled %}
+        <a href="{{ url_for('email.edit_email', email_id=email.id) }}"
+           hx-get="{{ url_for('email.edit_email', email_id=email.id) }}"
+           hx-target="#main-content"
+           hx-swap="innerHTML"
+           hx-push-url="true"
+           class="text-primary hover:underline"
+           title="{{ _("Edit Email") }}">✏️</a>
+    {% else %}
+        <span class="text-base-content opacity-50 cursor-not-allowed"
+              title="{{ _("Cannot edit while enabled") }}">✏️</span>
+    {% endif %}
+    <!-- Attach Files -->
+    <form method="get"
+          action="{{ url_for('email.attach_files', message_id=email.id) }}"
+          hx-get="{{ url_for('email.attach_files', message_id=email.id) }}"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          hx-push-url="true"
+          class="inline flex">
+        <button type="submit"
+                class="text-secondary hover:underline"
+                title="{{ _("Attach Files") }}">📎</button>
+    </form>
+    <!-- Assign SMTP -->
+    <form method="get"
+          hx-get="{{ url_for('email.assign_smtp_to_email', email_id=email.id) }}"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          hx-push-url="true"
+          class="inline flex">
+        <button type="submit"
+                class="text-accent hover:underline"
+                title="{{ _("Assign SMTP Config") }}">🧩</button>
+    </form>
+    <!-- Schedule Email -->
+    <form method="get"
+          hx-get="{{ url_for('email.schedule_email', email_id=email.id) }}"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          hx-push-url="true"
+          class="inline flex">
+        <button type="submit"
+                class="text-warning hover:underline"
+                title="{{ _("Schedule Check-In") }}">⏱️</button>
+    </form>
+    <!-- View Email Config -->
+    <a href="{{ url_for('email.view_email_config', email_id=email.id) }}"
+       hx-get="{{ url_for('email.view_email_config', email_id=email.id) }}"
+       hx-target="#main-content"
+       hx-swap="innerHTML"
+       hx-push-url="true"
+       class="text-neutral hover:underline"
+       title="{{ _("View Email Details") }}">🔍</a>
+    <form method="post"
+          action="{{ url_for('email.send_test_email', email_id=email.id) }}"
+          class="inline flex">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <button type="submit"
+                class="btn btn-ghost text-info hover:bg-info-focus"
+                title="{{ _("Send Test Email") }}">🧪</button>
+    </form>
+    <!-- Delete Email -->
+    <form method="post"
+          action="{{ url_for('email.delete_email', email_id=email.id) }}"
+          class="inline flex"
+          data-controller="confirm"
+          data-confirm-message="{{ _("Delete") }} {{ email.subject }}?">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <button type="submit"
+                class="btn btn-ghost text-error hover:bg-error-focus"
+                title="{{ _("Delete") }}">🗑️</button>
+    </form>
+    <!-- Toggle Email -->
+    <form method="post"
+          action="{{ url_for('checkin.toggle_enabled', type='email', id=email.id) }}"
+          class="inline flex">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <button type="submit" title="{{ _("Toggle Email On/Off") }}">
+            {% if email.is_enabled %}
+                <span class="text-success" title="{{ _("Email is enabled") }}">🟢</span>
+            {% else %}
+                <span class="text-error" title="{{ _("Email is disabled") }}">🔴</span>
+            {% endif %}
+        </button>
+    </form>
+</div>

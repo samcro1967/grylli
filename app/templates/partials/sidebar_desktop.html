@@ -1,0 +1,22 @@
+{# ---------------------------------------------------------------------
+  sidebar_desktop.html
+  Desktop sidebar layout with fixed header/footer and scrollable middle
+--------------------------------------------------------------------- #}
+<aside class="flex flex-col min-h-0 h-[calc(100vh-4rem)] mt-16 transition-all duration-200 ease-in-out overflow-hidden w-64 min-w-[4rem] max-w-[16rem] flex-shrink-0 bg-base-100 dark:bg-base-300 border-r border-base-300 dark:border-base-700"
+       data-controller="sidebar"
+       data-sidebar-target="desktop">
+    <!-- Fixed header -->
+    <div class="shrink-0">
+        {% if current_user.is_authenticated %}
+            {% include "partials/sidebar/desktop_header.html" %}
+        {% endif %}
+    </div>
+    <!-- Scrollable middle -->
+    <div class="flex-1 min-h-0 overflow-y-auto" data-sidebar-target="middle">
+        {% if current_user.is_authenticated %}
+            {% include "partials/sidebar/desktop_links.html" %}
+        {% endif %}
+    </div>
+    <!-- Fixed footer -->
+    <div class="shrink-0">{% include "partials/sidebar/desktop_footer.html" %}</div>
+</aside>

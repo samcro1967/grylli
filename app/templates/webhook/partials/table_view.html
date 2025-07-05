@@ -1,0 +1,29 @@
+{# ---------------------------------------------------------------------
+  table_view.html
+  app/templates/webhook/partials/table_view.html
+  DaisyUI-compliant table view of webhook destinations
+--------------------------------------------------------------------- #}
+<div class="overflow-x-auto rounded-box border border-base-300 dark:border-base-700">
+    <table class="table table-zebra w-full text-sm">
+        <thead class="bg-primary text-primary-content">
+            <tr>
+                <th class="px-4 py-2">{{ _("Label") }}</th>
+                <th class="px-4 py-2">{{ _("URL") }}</th>
+                <th class="px-4 py-2">{{ _("Enabled") }}</th>
+                <th class="px-4 py-2">{{ _("Created At") }}</th>
+                <th class="px-4 py-2 text-right">{{ _("Actions") }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for webhook in webhooks %}
+                <tr class="hover:bg-base-200 dark:hover:bg-base-700">
+                    <td class="px-4 py-2 text-base-content">{{ webhook.label }}</td>
+                    <td class="px-4 py-2 text-base-content">{{ webhook.endpoint }}</td>
+                    <td class="px-4 py-2 text-base-content">{{ '✅' if webhook.enabled else '❌' }}</td>
+                    <td class="px-4 py-2 text-base-content">{{ webhook.created_at.strftime("%Y-%m-%d %H:%M") }}</td>
+                    <td class="px-4 py-2 text-right text-base-content">{% include "webhook/partials/actions.html" %}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>

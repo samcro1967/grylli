@@ -1,0 +1,32 @@
+{# ---------------------------------------------------------------------
+  help_panel.html
+  app/templates/admin/partials/help_panel.html
+  Static help instructions for user management (always displayed)
+--------------------------------------------------------------------- #}
+<ol class="list-decimal list-inside space-y-1 text-sm text-base-content">
+    <li>{{ _("Click ➕ Add User to create a new account.") }}</li>
+    <li>{{ _("Fill in a unique username, valid email, and strong password.") }}</li>
+    <li>
+        {{ _("Assign a role:") }} <code>admin</code> {{ _("or") }} <code>user</code>.
+        {{ _("Admins can manage users and settings. Users can only manage their own content.") }}
+    </li>
+    <li>{{ _("Click Create User to save the new account.") }}</li>
+    <li>{{ _("Click ✏️ to edit a user's information.") }}</li>
+    <li>{{ _("Click 🗑️ to delete a user (confirmation required).") }}</li>
+    <li>
+        {{ _("Click 🔴 or 🟢 to disable or enable a user account.") }}
+        <ul class="list-disc ml-5 mt-1">
+            <li>{{ _("🟢 = Active: user can log in.") }}</li>
+            <li>{{ _("🔴 = Disabled: user is locked out.") }}</li>
+            <li>{{ _("⚪ = You cannot disable your own admin account.") }}</li>
+        </ul>
+    </li>
+    <li>{{ _("Click 🛡️ to change a user’s role (admin ↔ user).") }}</li>
+    <li>{{ _("Click 🔑 to reset MFA (only shown if MFA is active for that user).") }}</li>
+    <li>
+        {{ _("Accounts are automatically locked after repeated failed login attempts.") }}
+        {{ _("To unlock an account immediately, click 🔓 next to the user’s row.") }}
+        {{ _("Accounts will also unlock automatically after a short delay.") }}
+    </li>
+    <li>{{ _("All actions are logged for accountability. Passwords and secrets are never visible.") }}</li>
+</ol>

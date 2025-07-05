@@ -1,0 +1,39 @@
+<div class="flex justify-between items-center gap-2">
+    {# Edit (if not in use) #}
+    {% if destination.messages|length == 0 %}
+        <a href="{{ url_for('apprise_routes.edit_apprise', id=destination.id) }}"
+           hx-get="{{ url_for('apprise_routes.edit_apprise', id=destination.id) }}"
+           hx-target="#main-content"
+           hx-swap="innerHTML"
+           hx-push-url="true"
+           class="text-blue-800 hover:underline"
+           title="{{ _("Edit") }}">✏️</a>
+    {% else %}
+        <span class="text-zinc-900 cursor-not-allowed"
+              title="{{ _("Cannot edit while in use") }}">✏️</span>
+    {% endif %}
+    {# Test (always allowed) #}
+    <form method="post"
+          action="{{ url_for('apprise_routes.test_apprise', id=destination.id) }}"
+          class="inline">
+        <button type="submit"
+                class="text-indigo-800 hover:underline"
+                title="{{ _("Test") }}">🧪</button>
+    </form>
+    {# Delete (if not in use) #}
+    {% if destination.messages|length == 0 %}
+        <form method="post"
+              action="{{ url_for('apprise_routes.delete_apprise', id=destination.id) }}"
+              class="inline"
+              data-controller="confirm"
+              data-confirm-message-value="{{ _("Delete") }} {{ destination.label }}?">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <button type="submit"
+                    class="text-red-800 hover:underline"
+                    title="{{ _("Delete") }}">🗑️</button>
+        </form>
+    {% else %}
+        <span class="text-zinc-900 cursor-not-allowed"
+              title="{{ _("Cannot delete while in use") }}">🗑️</span>
+    {% endif %}
+</div>

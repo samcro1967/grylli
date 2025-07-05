@@ -1,0 +1,122 @@
+{# ----------------------------------------------------------------------------
+  admin_nav.html
+  app/templates/partials/admin_nav.html
+  Admin-only Navigation Links
+  Only visible to authenticated users with role "admin"
+ ---------------------------------------------------------------------------- #}
+{% if current_user.role == 'admin' %}
+    <!-- Administration (Collapsible Section) -->
+    <div data-controller="collapse"
+         data-collapse-id-value="administration"
+         class="space-y-1">
+        <button data-action="collapse#toggle"
+                class="w-full flex items-center justify-between px-3 py-2 rounded hover:bg-base-200 dark:hover:bg-base-700 text-base-content dark:text-base-content transition">
+            <div class="flex items-center space-x-3">
+                <!-- Shield icon -->
+                <i class="fas fa-shield-alt w-5"></i>
+                <span data-sidebar-target="label" class="truncate">{{ _("Administration") }}</span>
+            </div>
+            <svg data-collapse-target="icon"
+                 class="w-4 h-4 transform transition-transform"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 viewBox="0 0 24 24"
+                 aria-hidden="true"
+                 focusable="false">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+        </button>
+        <!-- Active link highlighter controller -->
+        <div data-controller="sidebar-active"
+             data-collapse-target="content"
+             class="space-y-1">
+            <!-- Admin Overview -->
+            <a href="{{ url_for("admin.admin_landing") }}"
+               data-sidebar-active-target="link"
+               data-path-prefix="{{ url_for("admin.admin_landing").rstrip('/') + '/' }}"
+               hx-get="{{ url_for("admin.admin_landing") }}"
+               hx-target="#main-content"
+               hx-swap="innerHTML"
+               hx-push-url="true"
+               class="icon-wrapper flex items-center space-x-3 pl-8 pr-3 py-2 rounded transition hover:bg-base-200 dark:hover:bg-base-700 text-sm text-base-content dark:text-base-content">
+                <i class="fas fa-clipboard-list w-4"></i>
+                <span data-sidebar-target="label" class="truncate">{{ _("Overview") }}</span>
+            </a>
+            <!-- Backups Overview -->
+            <a href="{{ url_for("backups.list_backups") }}"
+               data-sidebar-active-target="link"
+               data-path-prefix="{{ url_for("backups.list_backups").rstrip('/') + '/' }}"
+               hx-get="{{ url_for("backups.list_backups") }}"
+               hx-target="#main-content"
+               hx-swap="innerHTML"
+               hx-push-url="true"
+               class="icon-wrapper flex items-center space-x-3 pl-8 pr-3 py-2 rounded transition hover:bg-base-200 dark:hover:bg-base-700 text-sm text-base-content dark:text-base-content">
+                <i class="fas fa-database w-4"></i>
+                <span data-sidebar-target="label" class="truncate">{{ _("Backups") }}</span>
+            </a>
+            <!-- View Logs -->
+            <a href="{{ url_for("logs.view_logs") }}"
+               data-sidebar-active-target="link"
+               data-path-prefix="{{ url_for("logs.view_logs").rstrip('/') + '/' }}"
+               hx-get="{{ url_for("logs.view_logs") }}"
+               hx-target="#main-content"
+               hx-swap="innerHTML"
+               hx-push-url="true"
+               hx-history="false"
+               class="icon-wrapper flex items-center space-x-3 pl-8 pr-3 py-2 rounded transition hover:bg-base-200 dark:hover:bg-base-700 text-sm text-base-content dark:text-base-content"
+               title="{{ _("View recent application logs") }}">
+                <i class="fas fa-scroll w-4"></i>
+                <span data-sidebar-target="label" class="truncate">{{ _("Logs") }}</span>
+            </a>
+            <!-- System Settings -->
+            <a href="{{ url_for("system_settings.view_app_config") }}"
+               data-sidebar-active-target="link"
+               data-path-prefix="{{ url_for("system_settings.view_app_config").rstrip('/') + '/' }}"
+               hx-get="{{ url_for("system_settings.view_app_config") }}"
+               hx-target="#main-content"
+               hx-swap="innerHTML"
+               hx-push-url="true"
+               class="icon-wrapper flex items-center space-x-3 pl-8 pr-3 py-2 rounded transition hover:bg-base-200 dark:hover:bg-base-700 text-sm text-base-content dark:text-base-content">
+                <i class="fas fa-sliders-h w-4"></i>
+                <span data-sidebar-target="label" class="truncate">{{ _("System Settings") }}</span>
+            </a>
+            <!-- SMTP Settings -->
+            <a href="{{ url_for("smtp_settings_admin.view_smtp_config") }}"
+               data-sidebar-active-target="link"
+               data-path-prefix="{{ url_for("smtp_settings_admin.view_smtp_config").rstrip('/') + '/' }}"
+               hx-get="{{ url_for("smtp_settings_admin.view_smtp_config") }}"
+               hx-target="#main-content"
+               hx-swap="innerHTML"
+               hx-push-url="true"
+               class="icon-wrapper flex items-center space-x-3 pl-8 pr-3 py-2 rounded transition hover:bg-base-200 dark:hover:bg-base-700 text-sm text-base-content dark:text-base-content">
+                <i class="fas fa-envelope w-4"></i>
+                <span data-sidebar-target="label" class="truncate">{{ _("SMTP Settings") }}</span>
+            </a>
+            <!-- Tasks -->
+            <a href="{{ url_for("tasks.task_overview") }}"
+               data-sidebar-active-target="link"
+               data-path-prefix="{{ url_for("tasks.task_overview").rstrip('/') + '/' }}"
+               hx-get="{{ url_for("tasks.task_overview") }}"
+               hx-target="#main-content"
+               hx-swap="innerHTML"
+               hx-push-url="true"
+               class="icon-wrapper flex items-center space-x-3 pl-8 pr-3 py-2 rounded transition hover:bg-base-200 dark:hover:bg-base-700 text-sm text-base-content dark:text-base-content">
+                <i class="fas fa-clipboard-list w-4"></i>
+                <span data-sidebar-target="label" class="truncate">{{ _("Tasks") }}</span>
+            </a>
+            <!-- Users -->
+            <a href="{{ url_for("users.list_users") }}"
+               data-sidebar-active-target="link"
+               data-path-prefix="{{ url_for("users.list_users").rstrip('/') + '/' }}"
+               hx-get="{{ url_for("users.list_users") }}"
+               hx-target="#main-content"
+               hx-swap="innerHTML"
+               hx-push-url="true"
+               class="icon-wrapper flex items-center space-x-3 pl-8 pr-3 py-2 rounded transition hover:bg-base-200 dark:hover:bg-base-700 text-sm text-base-content dark:text-base-content">
+                <i class="fas fa-users w-4"></i>
+                <span data-sidebar-target="label" class="truncate">{{ _("Users") }}</span>
+            </a>
+        </div>
+    </div>
+{% endif %}

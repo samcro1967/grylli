@@ -1,0 +1,145 @@
+{# ---------------------------------------------------------------------
+  create_user_partial.html
+  app/templates/admin/create_user_partial.html
+  Create User Form - DaisyUI Compliant Version
+--------------------------------------------------------------------- #}
+<div class="max-w-md mx-auto mt-5 bg-base-100 dark:bg-base-800 shadow-md rounded-xl p-6 space-y-4">
+    <h1 class="text-xl font-semibold text-base-content dark:text-base-100">{{ _("Create New User") }}</h1>
+    <p class="text-sm text-base-content dark:text-base-400">{{ _("Fill out the form to add a new user.") }}</p>
+    <form method="post" class="space-y-6">
+        {{ form.hidden_tag() }}
+        {% if form.errors %}
+            <div role="alert" class="alert alert-error">
+                <div>
+                    <span class="font-semibold">{{ _("Please fix the following errors:") }}</span>
+                    <ul class="list-disc pl-5 text-sm">
+                        {% for field, errors in form.errors.items() %}
+                            {% for error in errors %}<li class="text-error">{{ error }}</li>{% endfor %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        {% endif %}
+        <!-- Username -->
+        <div>
+            <label for="username"
+                   class="block text-sm font-medium text-base-content dark:text-base-300">{{ _("Username") }}</label>
+            {{ form.username(id="username",
+                        class="input input-bordered w-full",
+                        autocomplete="username",
+                        **{"data-user-form-target": "username"}) }}
+            {% for error in form.username.errors %}<p class="text-error text-sm mt-1">{{ error }}</p>{% endfor %}
+        </div>
+        <!-- Email -->
+        <div>
+            <label for="email"
+                   class="block text-sm font-medium text-base-content dark:text-base-300">{{ _("Email") }}</label>
+            {{ form.email(id="email",
+                        class="input input-bordered w-full",
+                        autocomplete="email",
+                        **{"data-user-form-target": "email"}) }}
+            {% for error in form.email.errors %}<p class="text-error text-sm mt-1">{{ error }}</p>{% endfor %}
+            <p id="emailWarning"
+               data-user-form-target="emailWarning"
+               class="text-error text-sm hidden">{{ _("Please enter a valid email address.") }}</p>
+        </div>
+        <!-- Role -->
+        <div>
+            <label for="role"
+                   class="block text-sm font-medium text-base-content dark:text-base-300">{{ _("Role") }}</label>
+            {{ form.role(id="role",
+                        class="input input-bordered w-full",
+                        **{"data-user-form-target": "role"}) }}
+            {% for error in form.role.errors %}<p class="text-error text-sm mt-1">{{ error }}</p>{% endfor %}
+        </div>
+        <!-- New Password -->
+        <div>
+            <label for="new_password"
+                   class="block text-sm font-medium text-base-content dark:text-base-300">
+                {{ _("New Password") }}
+            </label>
+            <div class="relative" data-controller="reveal-password">
+                {{ form.new_password(id="new_password",
+                                class="input input-bordered w-full pr-10",
+                                autocomplete="new-password",
+                                required=True,
+                                minlength=8,
+                                **{"data-user-form-target": "password"}) }}
+                <button type="button"
+                        class="btn btn-ghost btn-sm absolute right-0 top-1/2 -translate-y-1/2 rounded-l-none"
+                        data-action="mousedown->reveal-password#show mouseup->reveal-password#hide mouseleave->reveal-password#hide"
+                        aria-label="{{ _("Hold to reveal") }}">
+                    <svg class="h-5 w-5"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="2"
+                         viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7 -1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                    </svg>
+                </button>
+            </div>
+            <p id="complexityWarning"
+               data-user-form-target="complexityWarning"
+               class="text-error text-sm hidden">{{ _("Password must meet all complexity requirements.") }}</p>
+            {% for error in form.new_password.errors %}<p class="text-error text-sm mt-1">{{ error }}</p>{% endfor %}
+        </div>
+        <!-- Confirm Password -->
+        <div>
+            <label for="confirm_password"
+                   class="block text-sm font-medium text-base-content dark:text-base-300">
+                {{ _("Confirm Password") }}
+            </label>
+            <div class="relative" data-controller="reveal-password">
+                {{ form.confirm_password(id="confirm_password",
+                                class="input input-bordered w-full pr-10",
+                                autocomplete="new-password",
+                                required=True,
+                                **{"data-user-form-target": "confirmPassword"}) }}
+                <button type="button"
+                        class="btn btn-ghost btn-sm absolute right-0 top-1/2 -translate-y-1/2 rounded-l-none"
+                        data-action="mousedown->reveal-password#show mouseup->reveal-password#hide mouseleave->reveal-password#hide"
+                        aria-label="{{ _("Hold to reveal") }}">
+                    <svg class="h-5 w-5"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="2"
+                         viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7 -1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                    </svg>
+                </button>
+            </div>
+            {% for error in form.confirm_password.errors %}<p class="text-error text-sm mt-1">{{ error }}</p>{% endfor %}
+        </div>
+        <!-- Mismatch Warning -->
+        <div id="passwordMismatchWarning"
+             data-user-form-target="mismatchWarning"
+             class="text-error text-sm hidden">{{ _("Passwords do not match.") }}</div>
+        <!-- Submit + Cancel -->
+        <div class="flex gap-6 mt-6">
+            <button type="button"
+                    hx-post="{{ url_for("users.create_user") }}"
+                    hx-target="#main-content"
+                    hx-swap="innerHTML"
+                    hx-push-url="true"
+                    class="btn btn-primary w-full sm:w-auto max-w-xs">{{ _("Create User") }}</button>
+            <a href="{{ url_for("users.list_users") }}"
+               hx-get="{{ url_for("users.list_users") }}"
+               hx-target="#main-content"
+               hx-swap="innerHTML"
+               hx-push-url="true"
+               class="btn btn-secondary w-full sm:w-auto max-w-xs">{{ _("Cancel") }}</a>
+        </div>
+    </form>
+    <!-- Password Requirements -->
+    <div class="alert alert-info mt-6 text-sm">
+        <ul class="list-disc list-inside space-y-1">
+            <li>{{ _("Minimum 8 characters") }}</li>
+            <li>{{ _("At least one uppercase letter") }}</li>
+            <li>{{ _("At least one lowercase letter") }}</li>
+            <li>{{ _("At least one number") }}</li>
+            <li>{{ _("At least one special character (e.g., !@#$%)") }}</li>
+        </ul>
+    </div>
+</div>

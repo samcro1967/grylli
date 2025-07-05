@@ -1,0 +1,31 @@
+{# ---------------------------------------------------------------------
+   recovery_codes.html
+   app/templates/mfa/recovery_codes.html
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    <div class="max-w-md mx-auto mt-5 p-6 bg-base-100 dark:bg-base-800 shadow-md rounded-xl">
+        <h1 class="text-2xl font-semibold mb-6 text-base-content dark:text-base-100 text-center">
+            {{ _("Your Recovery Codes") }}
+        </h1>
+        <div class="rounded-lg border border-warning/50 bg-warning/10 dark:bg-warning/40 dark:border-warning p-4 mb-6 text-center">
+            <span class="block font-semibold text-warning dark:text-warning-focus mb-1">
+                {{ _("Save these recovery codes in a safe place!") }}
+            </span>
+            <span class="block text-warning dark:text-warning-focus text-sm">
+                {{ _("Each code can be used once if you lose access to your authenticator. These codes will not be shown again.") }}
+            </span>
+        </div>
+        <div class="space-y-2 mb-10">
+            {% for code in recovery_codes %}
+                <div class="font-mono text-lg bg-base-200 dark:bg-base-700 rounded-lg px-4 py-2 text-base-content dark:text-base-100 tracking-widest shadow-sm">
+                    {{ code }}
+                </div>
+            {% endfor %}
+        </div>
+        <form method="post" class="flex justify-center">
+            {{ form.hidden_tag() }}
+            <button type="submit" class="btn btn-primary w-full md:w-auto">{{ _("OK, I've saved them") }}</button>
+        </form>
+    </div>
+{% endblock %}

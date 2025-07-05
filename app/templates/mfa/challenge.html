@@ -1,0 +1,33 @@
+{# ---------------------------------------------------------------------
+   challenge.html
+   app/templates/mfa/challenge.html
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    <div class="max-w-md mx-auto mt-10 p-6 space-y-4 bg-base-100 dark:bg-base-800 shadow-md rounded-xl">
+        <h1 class="text-xl font-semibold text-base-content dark:text-base-100 text-center mb-2">
+            {{ _("Two-Factor Authentication (MFA)") }}
+        </h1>
+        {% if error %}
+            <div class="mb-4 text-error dark:text-error-focus text-sm font-medium bg-error/10 dark:bg-error/40 border border-error text-error-focus p-2 rounded">
+                {{ error | safe }}
+            </div>
+        {% endif %}
+        <form method="post" novalidate>
+            {{ form.hidden_tag() }}
+            <div class="mb-4">
+                {{ form.code.label(class="block text-sm font-medium mb-1 text-base-content dark:text-base-100") }}
+                {{ form.code(class="input input-bordered w-full bg-base-200 dark:bg-base-700 text-base-content dark:text-base-100 focus:ring-2 focus:ring-primary/50", autocomplete="one-time-code", autofocus=True) }}
+                {% if form.code.errors %}
+                    <ul class="text-error text-xs mt-1">
+                        {% for error in form.code.errors %}<li>{{ error }}</li>{% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+            <div class="flex gap-4">
+                <button type="submit" class="btn btn-primary w-1/2">{{ _("Verify") }}</button>
+                <a href="{{ url_for("auth.login") }}" class="btn btn-secondary w-1/2">{{ _("Cancel") }}</a>
+            </div>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,65 @@
+{# ---------------------------------------------------------------------
+  login.html
+  app/templates/auth/login.html
+  User login form and admin help panel.
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    <!-- Centered Login Box -->
+    <div class="max-w-md mx-auto mt-5 bg-base-100 dark:bg-base-800 shadow-md rounded-xl p-6 space-y-4">
+        <!-- Page Title with fixed contrast -->
+        <h1 class="text-xl font-semibold text-base-content dark:text-base-100">{{ _("Log In") }}</h1>
+        <!-- Login Form -->
+        <form method="post" novalidate>
+            <!-- Username Field -->
+            <div class="mb-4">
+                {{ form.username.label(class="block text-sm font-medium mb-1 text-base-content dark:text-base-100") }}
+                {{ form.username(class="input input-bordered w-full bg-base-200 dark:bg-base-700 text-base-content dark:text-base-100 focus:ring-2 focus:ring-primary transition",
+                                autocomplete="username",
+                                aria_invalid="true" if form.username.errors else "false") }}
+                {% if form.username.errors %}
+                    <ul class="text-error text-xs mt-1" id="username-errors">
+                        {% for error in form.username.errors %}<li>{{ error }}</li>{% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+            <!-- Password Field -->
+            <div class="mb-4">
+                {{ form.password.label(class="block text-sm font-medium mb-1 text-base-content dark:text-base-100") }}
+                {{ form.password(class="input input-bordered w-full bg-base-200 dark:bg-base-700 text-base-content dark:text-base-100 focus:ring-2 focus:ring-primary transition",
+                                autocomplete="current-password",
+                                aria_invalid="true" if form.password.errors else "false") }}
+                {% if form.password.errors %}
+                    <ul class="text-error text-xs mt-1" id="password-errors">
+                        {% for error in form.password.errors %}<li>{{ error }}</li>{% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+            <!-- Submit Button -->
+            <div>
+                <button type="submit" class="btn btn-primary w-full">{{ _("Log In") }}</button>
+            </div>
+        </form>
+        <!-- Links -->
+        <div class="mt-4 text-sm text-center space-x-4">
+            <a href="{{ url_for("auth.forgot_username") }}"
+               class="text-primary hover:underline">{{ _("Forgot Username?") }}</a>
+            <a href="{{ url_for("auth.forgot_password") }}"
+               class="text-primary hover:underline">{{ _("Forgot Password?") }}</a>
+            <a href="{{ url_for("auth.signup") }}"
+               class="text-primary hover:underline">{{ _("Sign Up") }}</a>
+        </div>
+    </div>
+    <!-- Admin Help Button (subtle '?' icon) -->
+    <a href="{{ url_for("admin_help.help_page") }}"
+       class="fixed bottom-4 right-4 z-50 bg-base-100 dark:bg-base-800 hover:bg-base-200 dark:hover:bg-base-700 text-base-content dark:text-base-300 p-2 rounded-full transition-colors"
+       title="{{ _("Admin Help") }}"
+       aria-label="{{ _("Admin Help") }}">
+        <svg xmlns="http://www.w3.org/2000/svg"
+             class="w-4 h-4"
+             viewBox="0 0 24 24"
+             fill="currentColor">
+            <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm.25 15a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0zm1.55-6.6c-.33.32-.6.62-.6 1.35v.25a.75.75 0 11-1.5 0v-.25c0-1.17.52-1.83 1.02-2.3.43-.41.73-.7.73-1.15 0-.72-.58-1.25-1.4-1.25-.73 0-1.26.41-1.38 1.01a.75.75 0 11-1.47-.27c.25-1.36 1.5-2.24 2.85-2.24 1.63 0 2.9 1.2 2.9 2.75 0 1.11-.61 1.72-1.15 2.3z" />
+        </svg>
+    </a>
+{% endblock %}

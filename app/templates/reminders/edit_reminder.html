@@ -1,0 +1,10 @@
+{# ---------------------------------------------------------------------
+  edit_reminder.html
+  app/templates/reminders/edit_reminder.html
+  CSP-compliant edit form for a scheduled reminder (matches webhook form style)
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    {% set is_edit = true %}
+    {% include "reminders/reminder_form_partial.html" %}
+{% endblock %}

@@ -1,0 +1,10 @@
+{# ---------------------------------------------------------------------
+  create_webhook.html
+  app/templates/webhook/create_webhook.html
+  CSP-compliant form to create a new webhook destination
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    {% set is_edit = false %}
+    {% include "webhook/webhook_form_partial.html" %}
+{% endblock %}

@@ -1,0 +1,19 @@
+{# ---------------------------------------------------------------------
+  rate_limit.html
+  app/templates/auth/rate_limit.html
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    <div data-controller="rate-limit-redirect"
+         data-rate-limit-redirect-delay-value="{{ delay|round }}"
+         data-rate-limit-redirect-url-value="{{ url_for("auth.login") }}"
+         class="max-w-md mx-auto mt-5 bg-base-100 dark:bg-base-800 shadow-md rounded-xl p-6 space-y-4 text-center">
+        <h1 class="text-xl font-semibold text-base-content dark:text-base-100">{{ _("Please Wait") }}</h1>
+        <p class="text-base-content dark:text-base-200">
+            {{ _("Too many attempts. Please try again in") }}
+            <span id="delay" class="font-semibold">{{ delay|round }}</span>
+            {{ _("seconds.") }}
+        </p>
+        <p class="mt-4 text-sm text-base-content dark:text-base-100">{{ _("Redirecting to login...") }}</p>
+    </div>
+{% endblock %}

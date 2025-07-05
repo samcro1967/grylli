@@ -1,0 +1,10 @@
+{# ---------------------------------------------------------------------
+  view_reminder_full.html
+  app/templates/reminders/view_reminder_full.html
+  CSP-compliant reminder detail view (matches webhook style)
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    {% set is_edit = false %}
+    {% include "reminders/view_reminder_partial.html" %}
+{% endblock %}

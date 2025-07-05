@@ -1,0 +1,18 @@
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    {% for destination in destinations %}
+        <div class="card bg-base-100 dark:bg-base-800 shadow-md hover:shadow-lg transition-all duration-200 ease-in-out rounded-xl p-4 border border-base-300 dark:border-base-700">
+            <h2 class="text-lg font-semibold mb-2 text-base-content">{{ destination.label }}</h2>
+            <p class="text-base-content dark:text-base-300">
+                <strong>{{ _("URL:") }}</strong> {{ destination.url }}
+            </p>
+            <p class="text-base-content dark:text-base-300">
+                <strong>{{ _("Enabled:") }}</strong> {{ '✅' if destination.enabled else '❌' }}
+            </p>
+            <p class="text-base-content dark:text-base-300">
+                <strong>{{ _("Created:") }}</strong> {{ destination.created_at.strftime("%Y-%m-%d %H:%M") }}
+            </p>
+            <!-- Consistent action buttons -->
+            <div class="flex gap-2 mt-4">{% include "apprise/partials/actions.html" %}</div>
+        </div>
+    {% endfor %}
+</div>

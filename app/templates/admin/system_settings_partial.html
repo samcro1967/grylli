@@ -1,0 +1,26 @@
+{# ---------------------------------------------------------------------
+  system_settings_partial.html
+  app/templates/admin/partials/system_settings_partial.html
+  Partial view for system settings (HTMX response)
+--------------------------------------------------------------------- #}
+<div class="w-full max-w-full px-4 sm:px-6 lg:px-8 mt-5">
+    <h1 class="text-2xl font-bold text-base-content mb-4">{{ _("System Settings") }}</h1>
+    <div class="overflow-x-auto rounded-box border border-base-300 dark:border-base-700">
+        <table class="table table-zebra w-full text-sm">
+            <thead class="bg-primary text-primary-content">
+                <tr>
+                    <th class="whitespace-nowrap">{{ _("Key") }}</th>
+                    <th class="whitespace-nowrap">{{ _("Value") }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for key, value in config.items() %}
+                    <tr class="hover">
+                        <td class="font-mono text-xs align-top">{{ key }}</td>
+                        <td class="break-words align-top">{{ value }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>

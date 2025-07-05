@@ -1,0 +1,39 @@
+{# ---------------------------------------------------------------------
+  table_view.html
+  app/templates/email/partials/table_view.html
+  DaisyUI-compliant table view for emails
+--------------------------------------------------------------------- #}
+<div class="overflow-x-auto rounded-box border border-base-300 dark:border-base-700">
+    <table class="table table-zebra w-full text-sm">
+        <thead class="bg-primary text-primary-content">
+            <tr>
+                <th class="px-4 py-2">{{ _("Label") }}</th>
+                <th class="px-4 py-2">{{ _("Subject") }}</th>
+                <th class="px-4 py-2">{{ _("To") }}</th>
+                <th class="px-4 py-2">{{ _("Created At") }}</th>
+                <th class="px-4 py-2 text-right">{{ _("Actions") }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for email in emails %}
+                <tr class="hover:bg-base-200 dark:hover:bg-base-700">
+                    <td class="px-4 py-2 text-base-content">{{ email.label }}</td>
+                    <td class="px-4 py-2 text-base-content">{{ email.subject }}</td>
+                    <td class="px-4 py-2 text-base-content">{{ email.recipient }}</td>
+                    <td class="px-4 py-2 text-base-content">{{ email.created_at.strftime("%Y-%m-%d %H:%M") }}</td>
+                    <td class="px-4 py-2 text-right text-base-content">
+                        {% set email = email %}
+                        {% include "email/partials/actions.html" %}
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="5"
+                        class="text-center py-4 text-base-content dark:text-base-100">
+                        {{ _("No emails available.") }}
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>

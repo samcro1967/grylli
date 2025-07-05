@@ -1,0 +1,43 @@
+{# ---------------------------------------------------------------------
+  emails_card.html
+  app/templates/dashboard/partials/emails_card.html
+  Summary card for the user's configured secure email messages
+--------------------------------------------------------------------- #}
+<div class="card card-compact bg-base-100 dark:bg-base-800 border border-base-300 dark:border-base-700 shadow w-auto max-w-xs">
+    <div class="card-body p-4 text-sm">
+        <h2 class="card-title text-base-content text-lg">✉️ {{ _("Emails") }}</h2>
+        {% set emails = stats.emails %}
+        {% set enabled_count = emails | selectattr('is_enabled') | list | length %}
+        {% set total = emails | length %}
+        <p class="text-base-content">
+            {{ total }} {{ _("configured") }},
+            {{ enabled_count }} {{ _("enabled") }}
+        </p>
+        {% if total == 0 %}
+            <p class="text-warning text-sm mt-2">{{ _("You haven't created any email messages yet.") }}</p>
+        {% else %}
+            <ul class="mt-2 space-y-1 text-sm text-base-content">
+                {% for email in emails[:3] %}
+                    <li class="flex items-center justify-between">
+                        <a href="{{ url_for('email.edit_email', email_id=email.id) }}"
+                           class="truncate text-primary hover:underline focus:outline-none focus-visible:ring focus-visible:ring-primary rounded"
+                           title="{{ email.label or email.subject }}">{{ email.label or email.subject }}</a>
+                        {% if email.is_enabled %}
+                            <span class="badge badge-success badge-sm">{{ _("Enabled") }}</span>
+                        {% else %}
+                            <span class="badge badge-neutral badge-sm">{{ _("Disabled") }}</span>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+                {% if total > 3 %}
+                    <li class="text-xs text-right text-base-content opacity-70">{{ _("+ %(count)s more", count=total - 3) }}</li>
+                {% endif %}
+            </ul>
+        {% endif %}
+        <div class="card-actions justify-end mt-4">
+            <a href="{{ url_for("email.index") }}" class="btn btn-outline btn-sm">{{ _("View All") }}</a>
+            <a href="{{ url_for("email.edit_email") }}"
+               class="btn btn-primary btn-sm">{{ _("New Email") }}</a>
+        </div>
+    </div>
+</div>
