@@ -1,0 +1,26 @@
+{# ---------------------------------------------------------------------
+  desktop_links.html
+  app/templates/partials/desktop_links.html
+  Shared nav links with collapsible Admin section and valid routes
+--------------------------------------------------------------------- #}
+<nav class="flex flex-col px-2 py-4 space-y-2 text-sm text-base-content"
+     data-controller="sidebar-active">
+    <!-- Home link -->
+    <a href="{{ url_for('home.index', tab='config') }}"
+       data-sidebar-active-target="link"
+       data-path-prefix="{{ url_for("home.index").rsplit('/', 1)[0] + '/' }}"
+       class="flex items-center space-x-3 px-3 py-2 rounded hover:bg-base-200 dark:hover:bg-base-700 transition"
+       role="link"
+       tabindex="0"
+       aria-label="{{ _("Home") }}"
+       hx-get="{{ url_for('home.index', tab='config') }}"
+       hx-target="#main-content"
+       hx-swap="innerHTML"
+       hx-push-url="{{ url_for('home.config_tab') }}">
+        <span data-sidebar-target="label" class="truncate">{{ _("Home") }}</span>
+    </a>
+    <!-- Collapsible: Administration -->
+    {% include "partials/admin_nav.html" %}
+    <!-- Shared user nav (includes emails, smtp, reminders, etc.) -->
+    {% include "partials/shared_nav.html" %}
+</nav>

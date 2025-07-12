@@ -1,0 +1,53 @@
+{# ---------------------------------------------------------------------
+  settings_tabs.html
+  app/templates/admin/settings/settings_tabs.html
+  HTMX-based tab loader for admin Settings (System + SMTP).
+--------------------------------------------------------------------- #}
+
+<h1 class="text-2xl font-semibold text-base-content mb-6">{{ _("Grylli System Settings") }}</h1>
+
+<div class="space-y-4"
+     data-controller="tabs"
+     data-tabs-active-tab-value="{{ active_tab }}">
+    <!-- Tab Headers -->
+    <nav class="tabs tabs-bordered text-base-content">
+        <!-- System Settings -->
+        <a class="tab tab-bordered text-primary hover:underline cursor-pointer {% if active_tab == 'system' %}tab-active{% endif %}"
+           data-action="click->tabs#activate"
+           data-tabs-target="tab"
+           data-tabs-name="system"
+           data-tabs-title="{{ _('Grylli | Settings | System') }}"
+           hx-get="{{ url_for("settings_bp.system_tab") }}"
+           hx-target="#settings-tab-content"
+           hx-swap="innerHTML"
+           hx-push-url="true"
+           id="tab-system">{{ _("System") }}
+        </a>
+
+        <!-- SMTP Settings -->
+        <a class="tab tab-bordered text-primary hover:underline cursor-pointer {% if active_tab == 'smtp' %}tab-active{% endif %}"
+           data-action="click->tabs#activate"
+           data-tabs-target="tab"
+           data-tabs-name="smtp"
+           data-tabs-title="{{ _('Grylli | Settings | SMTP') }}"
+           hx-get="{{ url_for("settings_bp.smtp_tab") }}"
+           hx-target="#settings-tab-content"
+           hx-swap="innerHTML"
+           hx-push-url="true"
+           id="tab-smtp">{{ _("SMTP") }}
+         </a>
+    </nav>
+
+    <!-- Tab Content -->
+    <div id="settings-tab-content"
+         hx-get="{% if active_tab == 'smtp' %}
+                   {{ url_for("settings_bp.smtp_tab") }}
+                 {% else %}
+                   {{ url_for("settings_bp.system_tab") }}
+                 {% endif %}"
+         hx-trigger="load"
+         hx-target="this"
+         hx-swap="innerHTML">
+     </div>
+
+</div>

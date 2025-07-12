@@ -1,0 +1,40 @@
+{# ---------------------------------------------------------------------
+  _layout_debug_targets.html
+  Hidden debug target block for use on any page
+--------------------------------------------------------------------- #}
+<!-- Register this debug label so the dropdown knows about this page -->
+<div data-debug-label="{{ debug_label|default("Unnamed Debug Page") }}"
+     class="hidden"></div>
+<!-- Hidden controller that collects debug info -->
+<div data-controller="layout-debug" class="hidden">
+    <pre data-layout-debug-target="themeDebug"></pre>
+    <pre data-layout-debug-target="viewportDebug"></pre>
+    <pre data-layout-debug-target="layoutMetricsDebug"></pre>
+    <pre data-layout-debug-target="localStorageDebug"></pre>
+    <pre data-layout-debug-target="cookiesDebug"></pre>
+    <pre data-layout-debug-target="performanceDebug"></pre>
+    <pre data-layout-debug-target="userAgentDebug"></pre>
+    <pre data-layout-debug-target="stimulusControllersDebug"></pre>
+    <pre data-layout-debug-target="stimulusTargetsDebug"></pre>
+    <pre data-layout-debug-target="eventListenersDebug"></pre>
+    <pre data-layout-debug-target="ariaDebug"></pre>
+    <pre data-layout-debug-target="focusedElementDebug"></pre>
+    <pre data-layout-debug-target="scrollDebug"></pre>
+    <pre data-layout-debug-target="sidebarDebug"></pre>
+    <pre data-layout-debug-target="collapseDebug"></pre>
+    <pre data-layout-debug-target="footerDebug"></pre>
+    <pre data-layout-debug-target="sidebarDom"></pre>
+    <pre data-layout-debug-target="headerDebug"></pre>
+    <pre data-layout-debug-target="themeToggleDebug"></pre>
+    <pre data-layout-debug-target="languageToggleDebug"></pre>
+    <pre data-layout-debug-target="profileDropdownDebug"></pre>
+    <pre data-layout-debug-target="footerDom"></pre>
+    <pre data-layout-debug-target="computedStylesDebug"></pre>
+    <pre data-layout-debug-target="scriptDebug"></pre>
+    <pre data-layout-debug-target="styleDebug"></pre>
+    <pre data-layout-debug-target="routeDebug"></pre>
+    <pre data-layout-debug-target="formDebug"></pre>
+    <pre data-layout-debug-target="memoryDebug"></pre>
+    <pre data-layout-debug-target="visibilityDebug"></pre>
+    <pre data-layout-debug-target="rawHtmlDebug"></pre>
+</div>

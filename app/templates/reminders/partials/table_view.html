@@ -1,0 +1,34 @@
+{# ---------------------------------------------------------------------
+  table_view.html
+  app/templates/reminders/partials/table_view.html
+  DaisyUI-compliant table view for scheduled reminders
+--------------------------------------------------------------------- #}
+<div class="overflow-x-auto rounded-box border border-base-300 dark:border-base-700">
+    <table class="table table-zebra w-full text-sm">
+        <thead class="bg-primary text-primary-content">
+            <tr>
+                <th class="px-4 py-2">{{ _("Label") }}</th>
+                <th class="px-4 py-2">{{ _("Subject") }}</th>
+                <th class="px-4 py-2">{{ _("Start At") }}</th>
+                <th class="px-4 py-2">{{ _("Recurrence") }}</th>
+                <th class="px-4 py-2 text-right">{{ _("Actions") }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for reminder in reminders %}
+                <tr class="hover:bg-base-200 dark:hover:bg-base-700">
+                    <td class="px-4 py-2 text-base-content">{{ reminder.label }}</td>
+                    <td class="px-4 py-2 text-base-content">{{ reminder.subject }}</td>
+                    <td class="px-4 py-2 text-base-content">
+                        {{ reminder.start_at.strftime("%Y-%m-%d %H:%M") if reminder.start_at else "—" }}
+                    </td>
+                    <td class="px-4 py-2 text-base-content">{{ reminder.recurrence_rule or _("One-time") }}</td>
+                    <td class="px-4 py-2 text-right text-base-content">
+                        {% set reminder = reminder %}
+                        {% include "reminders/partials/actions.html" %}
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>

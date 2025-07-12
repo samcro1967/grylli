@@ -1,0 +1,140 @@
+{# ---------------------------------------------------------------------
+  webhook_config.html
+  app/templates/webhook/webhook_config.html
+  CSP-compliant, DaisyUI version of webhook list view.
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    <div data-controller="list-toggle"
+         data-list-toggle-storage-key-value="webhookListView"
+         data-list-toggle-show-label-value="{{ _("Show Help") }}"
+         data-list-toggle-hide-label-value="{{ _("Hide Help") }}"
+         class="space-y-4">
+        <!-- Page Title and Add Button -->
+        <div class="flex items-center justify-between">
+            <h1 class="text-xl font-semibold text-base-content dark:text-base-100">{{ _("Webhooks Destinations") }}</h1>
+            <a href="{{ url_for('webhook_bp.create_webhook') }}"
+               hx-get="{{ url_for('webhook_bp.create_webhook') }}"
+               hx-target="#main-content"
+               hx-swap="innerHTML"
+               hx-push-url="true"
+               data-controller="action-title"
+               data-action-title-title-value="Grylli | Webhook | Create"
+               data-action="htmx:afterOnLoad->action-title#setTitle"
+               class="btn btn-primary">➕ {{ _("Add Webhook") }}</a>
+        </div>
+
+        <!-- View Toggle Buttons -->
+        <div class="flex space-x-2">
+            <button type="button"
+                    data-list-toggle-target="tableBtn"
+                    data-action="click->list-toggle#showTable"
+                    aria-label="{{ _("Table View") }}"
+                    title="{{ _("Table View") }}"
+                    class="btn btn-primary px-4 py-2">
+                <i class="fa-solid fa-table"></i>
+            </button>
+            <button type="button"
+                    data-list-toggle-target="cardBtn"
+                    data-action="click->list-toggle#showCard"
+                    aria-label="{{ _("Card View") }}"
+                    title="{{ _("Card View") }}"
+                    class="btn btn-secondary p-2">
+                <i class="fa-solid fa-th-large"></i>
+            </button>
+        </div>
+
+        <!-- Table View -->
+        <div data-list-toggle-target="tableView">
+            <table class="table-auto w-full border-collapse border border-base-300 dark:border-base-700">
+                <thead class="bg-primary text-base-content dark:text-base-100">
+                    <tr>
+                        <th class="border px-4 py-2">{{ _("Label") }}</th>
+                        <th class="border px-4 py-2">{{ _("Endpoint") }}</th>
+                        <th class="border px-4 py-2">{{ _("Description") }}</th>
+                        <th class="border px-4 py-2">{{ _("Enabled") }}</th>
+                        <th class="border px-4 py-2">{{ _("Created At") }}</th>
+                        <th class="border px-4 py-2">{{ _("Actions") }}</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-base-200 dark:divide-base-700">
+                    {% for webhook in webhooks %}
+                        <tr>
+                            <td class="border px-4 py-2 text-base-content">{{ webhook.label }}</td>
+                            <td class="border px-4 py-2 text-base-content">{{ webhook.endpoint }}</td>
+                            <td class="border px-4 py-2 text-base-content">{{ webhook.description or '-' }}</td>
+                            <td class="border px-4 py-2 text-base-content">{{ '✅' if webhook.enabled else '❌' }}</td>
+                            <td class="border px-4 py-2 text-base-content">{{ webhook.created_at.strftime("%Y-%m-%d %H:%M") }}</td>
+                            <td class="border px-4 py-2 text-base-content">
+                                <a href="{{ url_for('webhook_bp.edit_webhook', id=webhook.id) }}"
+                                   hx-get="{{ url_for('webhook_bp.edit_webhook', id=webhook.id) }}"
+                                   hx-target="#main-content"
+                                   hx-swap="innerHTML"
+                                   hx-push-url="true"
+                                   data-controller="action-title"
+                                   data-action-title-title-value="Grylli | Webhook | Edit"
+                                   data-action="htmx:afterOnLoad->action-title#setTitle"
+                                   class="text-primary hover:underline"
+                                   title="Edit">✏️</a>
+                                <form method="POST"
+                                      action="{{ url_for('webhook_bp.test_webhook', id=webhook.id) }}"
+                                      class="inline mx-2">
+                                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                                    <button type="submit" class="btn btn-sm btn-ghost text-primary" title="Test">🧪</button>
+                                </form>
+                                <form method="POST"
+                                      action="{{ url_for('webhook_bp.delete_webhook', id=webhook.id) }}"
+                                      class="inline"
+                                      data-controller="confirm"
+                                      data-confirm-message="Delete {{ webhook.label }}?">
+                                    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                                    <button type="submit" class="btn btn-sm btn-ghost text-error" title="Delete">🗑️</button>
+                                </form>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Card View -->
+        <div data-list-toggle-target="cardView"
+             class="hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {% for webhook in webhooks %}
+                <div class="bg-base-100 dark:bg-base-800 rounded shadow p-4">
+                    <h2 class="text-lg font-semibold mb-2 text-base-content">{{ webhook.label }}</h2>
+                    <p class="text-base-content"><strong>{{ _("Endpoint:") }}</strong> {{ webhook.endpoint }}</p>
+                    <p class="text-base-content"><strong>{{ _("Description:") }}</strong> {{ webhook.description or '-' }}</p>
+                    <p class="text-base-content"><strong>{{ _("Enabled:") }}</strong> {{ '✅' if webhook.enabled else '❌' }}</p>
+                    <p class="text-base-content"><strong>{{ _("Created:") }}</strong> {{ webhook.created_at.strftime("%Y-%m-%d %H:%M") }}</p>
+                    <div class="mt-2 flex gap-2 items-center">
+                        <a href="{{ url_for('webhook_bp.edit_webhook', id=webhook.id) }}"
+                           hx-get="{{ url_for('webhook_bp.edit_webhook', id=webhook.id) }}"
+                           hx-target="#main-content"
+                           hx-swap="innerHTML"
+                           hx-push-url="true"
+                           data-controller="action-title"
+                           data-action-title-title-value="Grylli | Webhook | Edit"
+                           data-action="htmx:afterOnLoad->action-title#setTitle"
+                           class="text-primary hover:underline"
+                           title="Edit">✏️</a>
+                        <form method="POST"
+                              action="{{ url_for('webhook_bp.test_webhook', id=webhook.id) }}"
+                              class="inline">
+                            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                            <button type="submit" class="btn btn-sm btn-ghost text-primary" title="Test">🧪</button>
+                        </form>
+                        <form method="POST"
+                              action="{{ url_for('webhook_bp.delete_webhook', id=webhook.id) }}"
+                              class="inline"
+                              data-controller="confirm"
+                              data-confirm-message="Delete {{ webhook.label }}?">
+                            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                            <button type="submit" class="btn btn-sm btn-ghost text-error" title="Delete">🗑️</button>
+                        </form>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

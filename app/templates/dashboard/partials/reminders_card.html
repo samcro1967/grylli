@@ -1,0 +1,48 @@
+{# ---------------------------------------------------------------------
+  reminders_card.html
+  app/templates/dashboard/partials/reminders_card.html
+  Summary card for the user's configured reminders
+--------------------------------------------------------------------- #}
+<div class="card card-compact bg-base-100 dark:bg-base-800 border border-base-300 dark:border-base-700 shadow w-auto max-w-xs">
+    <div class="card-body p-4 text-sm">
+        <h2 class="card-title text-base-content text-lg">🕒 {{ _("Reminders") }}</h2>
+        {% set reminders = stats.reminders %}
+        {% set enabled_count = reminders | selectattr('is_enabled') | list | length %}
+        {% set total = reminders | length %}
+        <p class="text-base-content">
+            {{ total }} {{ _("configured") }},
+            {{ enabled_count }} {{ _("enabled") }}
+        </p>
+        {% if total == 0 %}
+            <p class="text-warning text-sm mt-2">{{ _("You haven't created any reminders yet.") }}</p>
+        {% else %}
+            <ul class="mt-2 space-y-1 text-sm text-base-content">
+                {% for reminder in reminders[:3] %}
+                    <li class="flex items-center justify-between">
+                        <a href="{{ url_for('reminders_bp.edit_reminder', reminder_id=reminder.id) }}"
+                           class="truncate text-primary hover:underline focus:outline-none focus-visible:ring focus-visible:ring-primary rounded"
+                           title="{{ reminder.label or reminder.subject }}">
+                            {{ reminder.label or reminder.subject }}
+                        </a>
+                        {% if reminder.is_enabled %}
+                            <span class="badge badge-success badge-sm">{{ _("Enabled") }}</span>
+                        {% else %}
+                            <span class="badge badge-neutral badge-sm">{{ _("Disabled") }}</span>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+                {% if reminders|length > 3 %}
+                    <li class="text-xs text-right text-base-content opacity-70">
+                        {{ _("+ %(count)s more", count=reminders|length - 3) }}
+                    </li>
+                {% endif %}
+            </ul>
+        {% endif %}
+        <div class="card-actions justify-end mt-4">
+            <a href="{{ url_for("reminders_bp.overview") }}"
+               class="btn btn-outline btn-sm">{{ _("View All") }}</a>
+            <a href="{{ url_for("reminders_bp.create_reminder") }}"
+               class="btn btn-primary btn-sm">{{ _("New Reminder") }}</a>
+        </div>
+    </div>
+</div>

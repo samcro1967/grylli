@@ -1,0 +1,108 @@
+{# ---------------------------------------------------------------------
+  profile_dropdown_menu.html
+  app/templates/partials/profile_dropdown_menu.html
+  Modular dropdown menu for authenticated user profile
+--------------------------------------------------------------------- #}
+<!-- Account -->
+<a href="{{ url_for("account.manage_account") }}"
+   data-hx-get="{{ url_for("account.manage_account") }}"
+   data-hx-target="#main-content"
+   data-hx-push-url="true"
+   class="flex items-center space-x-2 px-4 py-2 text-sm rounded hover:bg-base-200 dark:hover:bg-base-700 text-base-content dark:text-base-content transition">
+    <i class="fas fa-user-cog w-4 h-4"></i>
+    <span class="truncate">{{ _("Account") }}</span>
+</a>
+<!-- Security Questions -->
+<a href="{{ url_for("account.set_security_questions") }}"
+   data-hx-get="{{ url_for("account.set_security_questions") }}"
+   data-hx-target="#main-content"
+   data-hx-push-url="true"
+   class="flex items-center space-x-2 px-4 py-2 text-sm rounded hover:bg-base-200 dark:hover:bg-base-700 text-base-content dark:text-base-content transition">
+    <i class="fas fa-shield-alt w-4 h-4"></i>
+    <span class="truncate">{{ _("Security") }}</span>
+</a>
+<!-- MFA -->
+<a href="{{ url_for("mfa.mfa_settings") }}"
+   data-hx-get="{{ url_for("mfa.mfa_settings") }}"
+   data-hx-target="#main-content"
+   data-hx-push-url="true"
+   class="flex items-center space-x-2 px-4 py-2 text-sm rounded hover:bg-base-200 dark:hover:bg-base-700 text-base-content dark:text-base-content transition">
+    <i class="fas fa-key w-4 h-4"></i>
+    <span class="truncate">{{ _("MFA") }}</span>
+</a>
+<!-- About -->
+<a href="{{ url_for("about.show_about") }}"
+   data-hx-get="{{ url_for("about.show_about") }}"
+   data-hx-target="#main-content"
+   data-hx-push-url="true"
+   class="flex items-center space-x-2 px-4 py-2 text-sm rounded hover:bg-base-200 dark:hover:bg-base-700 text-base-content dark:text-base-content transition">
+    <i class="fas fa-circle-info w-4 h-4"></i>
+    <span class="truncate">{{ _("About") }}</span>
+</a>
+<!-- GitHub Repository -->
+<a href="https://github.com/samcro1967/grylli"
+   target="_blank"
+   rel="noopener noreferrer"
+   class="flex items-center space-x-2 px-4 py-2 text-sm rounded hover:bg-base-200 dark:hover:bg-base-700 text-base-content dark:text-base-content transition">
+    <i class="fab fa-github w-4 h-4"></i>
+    <span class="truncate">{{ _("GitHub") }}</span>
+</a>
+<!-- Help -->
+<a href="{{ url_for("help.show_help") }}"
+   data-hx-get="{{ url_for("help.show_help") }}"
+   data-hx-target="#main-content"
+   data-hx-push-url="true"
+   class="flex items-center space-x-2 px-4 py-2 text-sm rounded hover:bg-base-200 dark:hover:bg-base-700 text-base-content dark:text-base-content transition">
+    <i class="fas fa-question-circle w-4 h-4"></i>
+    <span class="truncate">{{ _("Help") }}</span>
+</a>
+<!-- Privacy -->
+<a href="{{ url_for("privacy.show_privacy") }}"
+   data-hx-get="{{ url_for("privacy.show_privacy") }}"
+   data-hx-target="#main-content"
+   data-hx-push-url="true"
+   class="flex items-center space-x-2 px-4 py-2 text-sm rounded hover:bg-base-200 dark:hover:bg-base-700 text-base-content dark:text-base-content transition">
+    <i class="fas fa-user-shield w-4 h-4"></i>
+    <span class="truncate">{{ _("Privacy") }}</span>
+</a>
+<!-- System Info -->
+<a href="{{ url_for("system_info.index") }}"
+   data-hx-get="{{ url_for("system_info.index") }}"
+   data-hx-target="#main-content"
+   data-hx-push-url="true"
+   class="flex items-center space-x-2 px-4 py-2 text-sm rounded hover:bg-base-200 dark:hover:bg-base-700 text-base-content dark:text-base-content transition">
+    <i class="fas fa-microchip w-4 h-4"></i>
+    <span class="truncate">{{ _("System Info") }}</span>
+</a>
+<!-- Translations -->
+<a href="{{ url_for("account.translations_info") }}"
+   data-hx-get="{{ url_for("account.translations_info") }}"
+   data-hx-target="#main-content"
+   data-hx-push-url="true"
+   class="flex items-center space-x-2 px-4 py-2 text-sm rounded hover:bg-base-200 dark:hover:bg-base-700 text-base-content dark:text-base-content transition">
+    <svg fill="none"
+         stroke="currentColor"
+         stroke-width="2"
+         viewBox="0 0 24 24"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         class="w-4 h-4">
+        <circle cx="12" cy="12" r="10" />
+        <line x1="2" y1="12" x2="22" y2="12" />
+        <path d="M12 2a15 15 0 0 1 0 20" />
+        <path d="M12 2a15 15 0 0 0 0 20" />
+    </svg>
+    <span class="truncate">{{ _("Translations") }}</span>
+</a>
+<!-- Logout -->
+<a href="{{ url_for("auth.logout") }}"
+   class="flex items-center space-x-2 px-4 py-2 text-sm rounded text-error hover:bg-error-focus dark:hover:bg-error-focus transition">
+    <svg class="w-4 h-4"
+         fill="none"
+         stroke="currentColor"
+         stroke-width="2"
+         viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a2 2 0 01-2 2H7a2 2 0 01-2-2V7a2 2 0 012-2h4a2 2 0 012 2v1" />
+    </svg>
+    <span class="truncate">{{ _("Logout") }}</span>
+</a>

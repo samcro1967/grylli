@@ -1,0 +1,10 @@
+{# ---------------------------------------------------------------------
+  assign_smtp_to_email_full.html
+  app/templates/email/assign_smtp_to_email_full.html
+  Assign a specific SMTP configuration to an email message
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    {% set is_edit = false %}
+    {% include "email/assign_smtp_to_email_partial.html" %}
+{% endblock %}

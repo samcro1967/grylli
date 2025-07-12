@@ -1,0 +1,10 @@
+{# ---------------------------------------------------------------------
+  edit_webhook.html
+  app/templates/webhook/edit_webhook.html
+  CSP-compliant form to edit an existing Webhook destination
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    {% set is_edit = true %}
+    {% include "webhook/webhook_form_partial.html" %}
+{% endblock %}

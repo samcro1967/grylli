@@ -1,0 +1,30 @@
+{# ---------------------------------------------------------------------
+  _system_settings_partial.html
+  app/templates/admin/settings/partials/_system_settings_partial.html
+  HTMX-compatible partial for system-level config values (read-only).
+--------------------------------------------------------------------- #}
+
+<div class="overflow-x-auto border border-base-300 dark:border-base-300 rounded-lg">
+    <table class="table w-full text-sm text-left text-base-content dark:text-base-content">
+        <thead class="bg-primary text-primary-content">
+            <tr>
+                <th class="px-4 py-2">{{ _("Key") }}</th>
+                <th class="px-4 py-2">{{ _("Value") }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for key, value in config.items() %}
+                <tr class="hover:bg-base-200 dark:hover:bg-base-700 transition-colors">
+                    <td class="px-4 py-2 font-mono">{{ key }}</td>
+                    <td class="px-4 py-2 font-mono break-all">{{ value }}</td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="2" class="text-center py-4 text-base-content dark:text-base-100">
+                        {{ _("No configuration values found.") }}
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>

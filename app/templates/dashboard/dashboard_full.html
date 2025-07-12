@@ -1,0 +1,9 @@
+{# ---------------------------------------------------------------------
+  dashboard_full.html
+  app/templates/dashboard/dashboard_full.html
+  Full page layout for dashboard (includes layout)
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    {% include "dashboard/dashboard_tabs.html" with context %}
+{% endblock %}

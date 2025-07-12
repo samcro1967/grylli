@@ -1,0 +1,70 @@
+{# ---------------------------------------------------------------------
+  header.html
+  app/templates/header.html
+  Header for main layout
+--------------------------------------------------------------------- #}
+<header class="fixed top-0 left-0 right-0 h-16 z-20 bg-base-100 dark:bg-base-300 border-b border-base-300 dark:border-base-700 flex items-center justify-between px-6 shadow-sm">
+    <!-- Left group: Logo + Badge -->
+    <div class="flex items-center space-x-2">
+        <!-- Logo -->
+        <a href="{{ url_for("home.index") }}"
+           title="{{ _("Home") }}"
+           class="btn btn-ghost btn-circle">
+            <img src="{{ url_for('static', filename='icons/grylli_icon_light.png') }}"
+                 class="h-10 w-10 dark:hidden"
+                 alt="Logo" />
+            <img src="{{ url_for('static', filename='icons/grylli_icon_dark.png') }}"
+                 class="h-10 w-10 hidden dark:inline"
+                 alt="Logo" />
+        </a>
+        <!-- Inline badge (in same flex row) -->
+        {% if has_due_checkins %}
+            <a href="{{ url_for('home.schedule_tab') }}"
+               class="btn btn-xs btn-info animate-pulse">
+              ⏰ {{ _("Check-ins Due") }}
+              <span class="ml-1 badge badge-sm">{{ due_checkin_count }}</span>
+            </a>
+        {% endif %}
+    </div>
+    <!-- Center: Title and optional debug warning -->
+    <div class="absolute left-1/2 transform -translate-x-1/2 top-1 flex flex-col items-center gap-1">
+        <div class="text-xl font-bold text-base-content dark:text-base-100">Grylli</div>
+        {% if debug %}
+            <div class="badge badge-error text-base-content dark:text-base-100 text-sm font-semibold rounded px-1 py-1 shadow-md">
+                ⚠️ Debug mode enabled.
+            </div>
+        {% endif %}
+    </div>
+    <!-- Right: Clock and Profile -->
+    <div class="flex items-center space-x-4 text-sm text-base-content dark:text-base-100">
+        <!-- Clock -->
+        {% set now = now or none %}  {# fallback for robustness #}
+        {% include "partials/server_time.html" %}
+        <!-- Profile -->
+        {% if current_user.is_authenticated %}
+            <div data-controller="profile-dropdown"
+                 data-profile-dropdown-target="container"
+                 class="relative">
+                <button aria-label="Toggle profile menu"
+                        data-action="click->profile-dropdown#toggle"
+                        data-profile-dropdown-target="button"
+                        class="btn btn-ghost btn-circle text-base-content dark:text-base-100 hover:text-primary dark:hover:text-primary">
+                    <svg class="w-10 h-10"
+                         fill="none"
+                         stroke="currentColor"
+                         stroke-width="2"
+                         viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M5.121 17.804A4 4 0 018 16h8a4 4 0 012.879 1.804M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                </button>
+                <div data-profile-dropdown-target="menu"
+                     class="absolute right-0 mt-2 w-40 bg-base-100 dark:bg-base-300 border border-base-300 dark:border-base-700 rounded-lg shadow-lg hidden">
+                    {% include "partials/profile_dropdown_menu.html" %}
+                </div>
+            </div>
+        {% else %}
+            <!-- Invisible placeholder to balance layout -->
+            <div class="w-10 h-10 invisible"></div>
+        {% endif %}
+    </div>
+</header>

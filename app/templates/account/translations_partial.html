@@ -1,0 +1,99 @@
+{# ---------------------------------------------------------------------
+   translations_partial.html
+   app/templates/account/translations_partial.html
+   Shows how to contribute and report translations in Grylli.
+--------------------------------------------------------------------- #}
+<div class="mt-5 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-2xl mx-auto p-6 bg-base-100 dark:bg-base-800 dark:bg-base-900 rounded-2xl shadow space-y-4">
+        <h1 class="text-2xl font-bold text-base-content">{{ _("Translations") }}</h1>
+        <p class="text-base-content">
+            {{ _("Grylli currently supports multiple languages and more will be added.") }}
+            {{ _("Many of the translations were performed with assistance from ChatGPT.") }}
+            {{ _("If you find a translation issue or want to suggest improvements, your input is welcome!") }}
+        </p>
+        <h2 class="text-xl font-semibold text-base-content">{{ _("How to request translation updates") }}</h2>
+        <p>{{ _("To contribute to translations, please use the following guidelines:") }}</p>
+        <ul class="list-disc pl-6 space-y-4">
+            {% for item in [
+                {
+                "title": _("Contribute missing or improved translations:"),
+                "body": [
+                _("Open the relevant .po translation file for your language."),
+                "<code>app/translations/de/LC_MESSAGES/messages.po</code>",
+                _("Find untranslated or incomplete entries and add or improve translations."),
+                _("You may use a PO file editor or a text editor."),
+                _("Copy the file path and the snippet of your changes."),
+                _("Paste the snippet directly into a new GitHub issue for review."),
+                _("<strong>Please do not upload the full .po file to avoid merge conflicts.</strong>")
+                ]
+                },
+                {
+                "title": _("Improving existing translations:"),
+                "body": [
+                _("Open the relevant .po file for the translation you want to improve."),
+                "<code>app/translations/de/LC_MESSAGES/messages.po</code>",
+                _("Find the phrase(s) and its existing translation(s) you want to improve."),
+                _("Update the phrase(s)."),
+                _("Copy the file name and path into the issue."),
+                _("Paste the copied snippet directly into the GitHub issue comment."),
+                _("<strong>Do not upload the full .po file to avoid merge conflicts.</strong>"),
+                _("<strong>Example snippet:</strong>") +
+                "<pre class=\"bg-primary text-base-content dark:text-base-100 p-3 rounded mt-2 overflow-x-auto\">" +
+                        "app/translations/de/LC_MESSAGES/messages.po\n" +
+                        "#: app/init_db.py:59\n" +
+                        "msgid \"Migrations applied successfully.\"\n" +
+                        "msgstr \"Migrationen erfolgreich durchgeführt.\"" +
+"</pre>"
+                ]
+                },
+                {
+                "title": _("Report missing translations not yet discovered:"),
+                "body": [
+                _("If you see text in the app that appears untranslated or missing, please report it to us."),
+                _("Provide the exact English phrase as it appears on the screen."),
+                _("Include the page or section where you saw the phrase (e.g., Apprise page, Account Page, etc.)."),
+                _("Submit this information via a new GitHub issue so we can add it to the translation files.")
+                ]
+                }
+                ] %}
+                <li data-controller="collapsible-item">
+                    <button type="button"
+                            data-action="collapsible-item#toggle"
+                            class="font-bold text-left w-full flex items-center space-x-2"
+                            aria-expanded="false">
+                        <span>{{ item.title | safe }}</span>
+                        <svg data-collapsible-item-target="icon"
+                             class="w-4 h-4 transition-transform"
+                             fill="none"
+                             stroke="currentColor"
+                             stroke-width="2"
+                             viewBox="0 0 24 24"
+                             stroke-linecap="round"
+                             stroke-linejoin="round"
+                             aria-hidden="true">
+                            <path d="M9 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                    <div data-collapsible-item-target="content"
+                         class="hidden mt-2 ml-6 space-y-2 text-sm">
+                        {% for line in item.body %}<div>{{ line | safe }}</div>{% endfor %}
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+        <p class="mt-4">
+            {{ _("Found a missing translation?") }}
+            <a href="{{ github_url }}/issues/new?title=Missing%20Translation%20Report:%20{{ lang_code|urlencode }}"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="text-primary hover:underline"
+               title="{{ _("This link will create a new GitHub issue pre-filled with a language code.") }}">
+                {{ _("Report it by opening a new GitHub issue") }}
+            </a>.
+        </p>
+        <p class="text-xs text-base-content mt-1">
+            {{ _("Please specify the language code and exact phrase when reporting.") }}
+        </p>
+        <p class="text-sm text-base-content">{{ _("Thank you for helping us make Grylli better!") }}</p>
+    </div>
+</div>

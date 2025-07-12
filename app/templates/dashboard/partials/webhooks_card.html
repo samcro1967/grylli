@@ -1,0 +1,43 @@
+{# ---------------------------------------------------------------------
+  webhooks_card.html
+  app/templates/dashboard/partials/webhooks_card.html
+  Summary card for the user's Webhook configurations
+--------------------------------------------------------------------- #}
+<div class="card card-compact bg-base-100 dark:bg-base-800 border border-base-300 dark:border-base-700 shadow w-auto max-w-xs">
+    <div class="card-body p-4 text-sm">
+        <h2 class="card-title text-base-content text-lg">🔗 {{ _("Webhooks") }}</h2>
+        {% set webhooks = stats.webhooks %}
+        {% set enabled_count = webhooks | selectattr('enabled') | list | length %}
+        {% set total = webhooks | length %}
+        <p class="text-base-content">
+            {{ total }} {{ _("configured") }},
+            {{ enabled_count }} {{ _("enabled") }}
+        </p>
+        {% if total == 0 %}
+            <p class="text-warning text-sm mt-2">{{ _("No webhooks have been configured yet.") }}</p>
+        {% else %}
+            <ul class="mt-2 space-y-1 text-sm text-base-content">
+                {% for hook in webhooks[:3] %}
+                    <li class="flex items-center justify-between">
+                        <a href="{{ url_for('webhook.edit_webhook', id=hook.id) }}"
+                           class="truncate hover:underline text-primary"
+                           title="{{ hook.label or hook.url }}">{{ hook.label or hook.url }}</a>
+                        {% if hook.enabled %}
+                            <span class="badge badge-success badge-sm">{{ _("Enabled") }}</span>
+                        {% else %}
+                            <span class="badge badge-neutral badge-sm">{{ _("Disabled") }}</span>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+                {% if total > 3 %}
+                    <li class="text-xs text-right text-base-content opacity-70">{{ _("+ %(count)s more", count=total - 3) }}</li>
+                {% endif %}
+            </ul>
+        {% endif %}
+        <div class="card-actions justify-end mt-4">
+            <a href="{{ url_for("webhook.config") }}" class="btn btn-outline btn-sm">{{ _("View All") }}</a>
+            <a href="{{ url_for("webhook.create_webhook") }}"
+               class="btn btn-primary btn-sm">{{ _("New Webhook") }}</a>
+        </div>
+    </div>
+</div>

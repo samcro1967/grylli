@@ -1,0 +1,38 @@
+{# ---------------------------------------------------------------------
+  _debug_register.html
+  Safe debug page registration using localStorage.
+--------------------------------------------------------------------- #}
+<script nonce="{{ nonce }}">
+  document.addEventListener("DOMContentLoaded", function () {
+    requestAnimationFrame(() => {
+      const el = document.querySelector('[data-debug-label]');
+      if (!el) {
+        console.info("📭 No debug label found on this page.");
+        return;
+      }
+
+      const label = el.dataset.debugLabel;
+
+      const pageEntry = {
+        label: label,
+        url: window.location.pathname
+      };
+
+      const key = "__GrylliDebugPages";
+      let pages = [];
+
+      try {
+        pages = JSON.parse(localStorage.getItem(key)) || [];
+        if (!pages.some(p => p.url === pageEntry.url)) {
+          pages.push(pageEntry);
+          localStorage.setItem(key, JSON.stringify(pages));
+          console.info(`✅ Debug page registered: ${label} (${pageEntry.url})`);
+        } else {
+          console.info(`ℹ️ Debug page already registered: ${label}`);
+        }
+      } catch (e) {
+        console.warn("⚠️ Failed to update debug page registry", e);
+      }
+    });
+  });
+</script>

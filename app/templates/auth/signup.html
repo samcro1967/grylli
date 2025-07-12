@@ -1,0 +1,123 @@
+{# ---------------------------------------------------------------------
+  signup.html
+  app/templates/auth/signup.html
+  CSP-compliant user signup form aligned with create_user.html
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    <div class="max-w-md mx-auto mt-5 text-center p-6 rounded-xl bg-base-100 dark:bg-base-800 shadow-md space-y-4"
+         data-controller="user-form">
+        <h1 class="text-xl font-semibold text-base-content dark:text-base-100">{{ _("Sign Up") }}</h1>
+        <p class="text-sm text-base-content dark:text-base-200">{{ _("Fill out the form to create your account.") }}</p>
+        <form method="post" novalidate id="userForm">
+            {{ form.hidden_tag() }}
+            {% if form.errors %}
+                <div class="mb-4 p-2 bg-error/10 border border-error text-error-focus rounded">
+                    <strong>{{ _("Please fix the following errors:") }}</strong>
+                    <ul class="list-disc pl-5">
+                        {% for field, errors in form.errors.items() %}
+                            {% for error in errors %}<li>{{ error }}</li>{% endfor %}
+                        {% endfor %}
+                    </ul>
+                </div>
+            {% endif %}
+            <!-- Username -->
+            <div class="mb-4">
+                {{ form.username.label(class="block text-sm font-medium mb-1 text-base-content dark:text-base-100") }}
+                {{ form.username(id="username",
+                                class="input input-bordered w-full bg-base-200 dark:bg-base-700 text-base-content dark:text-base-100",
+                                autocomplete="username",
+                                required=True,
+                                data_user_form_target="username") }}
+                {% for error in form.username.errors %}<div class="text-error text-xs mt-1">{{ error }}</div>{% endfor %}
+            </div>
+            <!-- Email -->
+            <div class="mb-4">
+                {{ form.email.label(class="block text-sm font-medium mb-1 text-base-content dark:text-base-100") }}
+                {{ form.email(id="email",
+                                class="input input-bordered w-full bg-base-200 dark:bg-base-700 text-base-content dark:text-base-100",
+                                autocomplete="email",
+                                required=True,
+                                data_user_form_target="email") }}
+                {% for error in form.email.errors %}<div class="text-error text-xs mt-1">{{ error }}</div>{% endfor %}
+                <p class="text-error text-sm hidden"
+                   data-user-form-target="emailWarning">{{ _("Please enter a valid email address.") }}</p>
+            </div>
+            <!-- Password -->
+            <div class="mb-4">
+                {{ form.password.label(class="block text-sm font-medium mb-1 text-base-content dark:text-base-100") }}
+                <div class="relative" data-controller="reveal-password">
+                    {{ form.password(id="password",
+                                        class="input input-bordered w-full pr-10 bg-base-200 dark:bg-base-700 text-base-content dark:text-base-100",
+                                        autocomplete="new-password",
+                                        required=True,
+                                        data_user_form_target="password") }}
+                    <div class="absolute inset-y-0 right-0 flex items-center pr-3">
+                        <button type="button"
+                                data-action="mousedown->reveal-password#show mouseup->reveal-password#hide mouseleave->reveal-password#hide"
+                                class="focus:outline-none text-base-content dark:text-base-200 hover:text-primary-focus dark:hover:text-primary-focus"
+                                aria-label="{{ _("Hold to reveal password") }}">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                <p class="text-error text-sm hidden"
+                   data-user-form-target="complexityWarning">
+                    {{ _("Password must meet all complexity requirements.") }}
+                </p>
+                {% for error in form.password.errors %}<div class="text-error text-xs mt-1">{{ error }}</div>{% endfor %}
+            </div>
+            <!-- Confirm Password -->
+            <div class="mb-4">
+                {{ form.confirm_password.label(class="block text-sm font-medium mb-1 text-base-content dark:text-base-100", for="confirm_password") }}
+                <div class="relative" data-controller="reveal-password">
+                    {{ form.confirm_password(id="confirm_password",
+                                        class="input input-bordered w-full pr-10 bg-base-200 dark:bg-base-700 text-base-content dark:text-base-100",
+                                        autocomplete="new-password",
+                                        required=True,
+                                        data_user_form_target="confirmPassword") }}
+                    <div class="absolute inset-y-0 right-0 flex items-center pr-3">
+                        <button type="button"
+                                data-action="mousedown->reveal-password#show mouseup->reveal-password#hide mouseleave->reveal-password#hide"
+                                class="focus:outline-none text-base-content dark:text-base-200 hover:text-primary-focus dark:hover:text-primary-focus"
+                                aria-label="{{ _("Hold to reveal confirm password") }}">
+                            <i class="fas fa-eye"></i>
+                        </button>
+                    </div>
+                </div>
+                <div id="passwordMismatchWarning" class="text-error text-sm hidden mt-1">{{ _("Passwords do not match.") }}</div>
+                {% for error in form.confirm_password.errors %}<div class="text-error text-xs mt-1">{{ error }}</div>{% endfor %}
+            </div>
+            <!-- Registration PIN -->
+            <div class="mb-4">
+                {{ form.registration_pin.label(class="block text-sm font-medium mb-1", for="pin") }}
+                {{ form.registration_pin(id="pin",
+                                class="input input-bordered w-full bg-base-200 dark:bg-base-700 text-base-content dark:text-base-100",
+                                autocomplete="one-time-code",
+                                maxlength="64",
+                                minlength="6",
+                                required=True,
+                                data_user_form_target="pin") }}
+                {% for error in form.registration_pin.errors %}<div class="text-error text-xs mt-1">{{ error }}</div>{% endfor %}
+            </div>
+            <!-- Submit + Cancel Buttons -->
+            <div class="flex flex-row gap-2 items-stretch mt-4">
+                <button type="submit"
+                        id="submit-btn"
+                        class="btn btn-primary flex-1"
+                        data-user-form-target="submit">{{ _("Create Account") }}</button>
+                {{ form.cancel(class="btn btn-secondary flex-1", formnovalidate=True) }}
+            </div>
+        </form>
+        <!-- Password Requirements -->
+        <div class="text-sm text-base-content dark:text-base-300 mt-1">
+            <ul class="list-disc list-inside space-y-1">
+                <li>{{ _("Minimum 8 characters") }}</li>
+                <li>{{ _("At least one uppercase letter") }}</li>
+                <li>{{ _("At least one lowercase letter") }}</li>
+                <li>{{ _("At least one number") }}</li>
+                <li>{{ _("At least one special character (e.g., !@#$%)") }}</li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}

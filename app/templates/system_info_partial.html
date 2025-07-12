@@ -1,0 +1,79 @@
+{# ---------------------------------------------------------------------
+   system_info_partial.html
+   app/templates/system_info_partial.html
+   Shows detailed version and environment information for Grylli.
+--------------------------------------------------------------------- #}
+<div class="w-full max-w-full px-4 sm:px-6 lg:px-8 mt-5">
+    <div class="max-w-4xl mx-auto">
+        <div class="w-full bg-base-100 dark:bg-base-300 rounded-lg shadow-md p-4">
+            {# --- Main Title --- #}
+            <h1 class="text-2xl font-bold text-base-content mb-6">{{ _("📦 Environment Versions") }}</h1>
+            <div class="overflow-x-auto rounded-lg border border-base-content/40">
+                <div class="w-full bg-base-100 dark:bg-base-300 rounded-lg shadow-md p-4">
+                    <table class="w-full table-auto border-collapse border border-base-content/40 text-sm">
+                        <thead class="bg-primary text-primary-content">
+                            <tr>
+                                <th class="text-left px-4 py-2 border border-base-content/40">{{ _("Category") }}</th>
+                                <th class="text-left px-4 py-2 border border-base-content/40">{{ _("Tool") }}</th>
+                                <th class="text-left px-4 py-2 border border-base-content/40">{{ _("Version") }}</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-base-content/90">
+                            <tr class="border-t-2 border-base-content/60">
+                                <td class="px-4 py-2 font-semibold break-words" rowspan="3">{{ _("🧠 Python") }}</td>
+                                <td class="px-4 py-2 border-t border-base-content/60 break-words">{{ _("Python") }}</td>
+                                <td class="px-4 py-2 border-t border-base-content/60 break-words">{{ stack["Python"] }}</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-2 break-words">{{ _("pip") }}</td>
+                                <td class="px-4 py-2 break-words">{{ stack["pip"].split(" ")[1] }}</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-2 break-words">{{ _("SQLite") }}</td>
+                                <td class="px-4 py-2 break-words">{{ stack["SQLite"] }}</td>
+                            </tr>
+                            {% for key in ["Flask", "Flask-WTF", "Flask-Login", "Flask-Migrate", "Flask-Babel", "Jinja2", "SQLAlchemy", "Gunicorn"] %}
+                                <tr {% if loop.first %}class="border-t-2 border-base-content/60"{% endif %}>
+                                    {% if loop.first %}<td class="px-4 py-2 font-semibold break-words" rowspan="8">{{ _("⚙️ Core") }}</td>{% endif %}
+                                    <td class="px-4 py-2 break-words">{{ key }}</td>
+                                    <td class="px-4 py-2 break-words">{{ stack[key] }}</td>
+                                </tr>
+                            {% endfor %}
+                            <tr class="border-t-2 border-base-content/60">
+                                <td class="px-4 py-2 font-semibold break-words" rowspan="2">{{ _("🔐 Security") }}</td>
+                                <td class="px-4 py-2 break-words">{{ _("Email Validator") }}</td>
+                                <td class="px-4 py-2 break-words">{{ stack["Email Validator"] }}</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-2 break-words">{{ _("Cryptography") }}</td>
+                                <td class="px-4 py-2 break-words">{{ stack["Cryptography"] }}</td>
+                            </tr>
+                            <tr class="border-t-2 border-base-content/60">
+                                <td class="px-4 py-2 font-semibold break-words" rowspan="3">{{ _("🕰️ Scheduling") }}</td>
+                                <td class="px-4 py-2 break-words">{{ _("APScheduler") }}</td>
+                                <td class="px-4 py-2 break-words">{{ stack["APScheduler"] }}</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-2 break-words">{{ _("Apprise (Python)") }}</td>
+                                <td class="px-4 py-2 break-words">{{ stack["Apprise (Python)"] }}</td>
+                            </tr>
+                            <tr>
+                                <td class="px-4 py-2 break-words">{{ _("Apprise CLI") }}</td>
+                                <td class="px-4 py-2 break-words">
+                                    {{ stack["Apprise CLI"].split(" ")[1] if stack["Apprise CLI"] != 'Unavailable' else 'Unavailable' }}
+                                </td>
+                            </tr>
+                            {% for key in ["Node.js", "npm", "Tailwind CSS", "PostCSS", "Autoprefixer", "DaisyUI"] %}
+                                <tr {% if loop.first %}class="border-t-2 border-base-content/60"{% endif %}>
+                                    {% if loop.first %}<td class="px-4 py-2 font-semibold break-words" rowspan="6">{{ _("🌐 Frontend") }}</td>{% endif %}
+                                    <td class="px-4 py-2 break-words">{{ key }}</td>
+                                    <td class="px-4 py-2 break-words">{{ stack[key] }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

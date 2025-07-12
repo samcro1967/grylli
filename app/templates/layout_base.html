@@ -1,0 +1,35 @@
+{# ---------------------------------------------------------------------
+   layout_base.html
+   app/templates/layout_base.html
+   Minimal layout for bootstrap and first-time setup pages.
+--------------------------------------------------------------------- #}
+<!DOCTYPE html>
+<html lang="{{ get_locale() or 'en' }}"
+      data-theme="{{ 'dark' if request.cookies.theme == 'dark' else 'light' }}">
+  {% include "partials/head.html" %}
+  <body class="min-h-screen bg-base-200 text-base-content">
+    <!-- Flash messages (Stimulus and fallback) -->
+    <div data-controller="flash-message"
+         data-flash-message-messages-value='{{ get_flashed_messages(with_categories=true) | map(attribute=1) | list | tojson | safe }}'>
+    </div>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        <div class="sr-only" id="test-only-flash-messages">
+          {% for category, message in messages %}
+            <div data-category="{{ category }}">{{ message }}</div>
+          {% endfor %}
+        </div>
+      {% endif %}
+    {% endwith %}
+
+    <!-- Main Content Block -->
+    <main class="p-6 flex flex-col items-center justify-center min-h-screen">
+      {% block content %}{% endblock %}
+    </main>
+
+    <!-- JS: Stimulus/Htmx/Service Worker (optional) -->
+    <script src="{{ url_for('static', filename='js/htmx.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/safe-nonce.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/register-sw.js') }}" defer></script>
+  </body>
+</html>

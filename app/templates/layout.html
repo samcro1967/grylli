@@ -1,0 +1,60 @@
+{# ---------------------------------------------------------------------
+   layout.html
+   app/templates/layout.html
+   Container for page main content with fixed header and scrollable main
+--------------------------------------------------------------------- #}
+<!DOCTYPE html>
+<html lang="{{ get_locale() or 'en' }}"
+      data-theme="{{ 'dark' if request.cookies.theme == 'dark' else 'light' }}"
+      class="h-screen overflow-hidden scroll-smooth">
+    {% include "partials/head.html" %}
+    <body hx-ext="safe-nonce"
+          class="h-screen overflow-hidden flex flex-col bg-base-200 text-base-content"
+          data-role-change-base="{{ url_for('users.change_role', user_id=0) }}">
+        <!-- Flash Messages (uses Stimulus controller) -->
+        <div data-controller="flash-message"
+             data-flash-message-messages-value='{{ get_flashed_messages(with_categories=true) | map(attribute=1) | list | tojson | safe }}'>
+        </div>
+        {# Optional: for server-rendered flash fallback #}
+        {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            <div class="sr-only" id="test-only-flash-messages">
+              {% for category, message in messages %}
+                <div data-category="{{ category }}">{{ message }}</div>
+              {% endfor %}
+            </div>
+          {% endif %}
+        {% endwith %}
+
+        <!-- Fixed Header -->
+        {% include "partials/header.html" %}
+        <!-- Layout container below header -->
+        <div class="flex flex-grow h-0">
+            <!-- Sidebar (Desktop) -->
+            {% include "partials/sidebar_desktop.html" %}
+            <!-- Main content (scrollable, height = 100vh - header height) -->
+            <main id="main-content"
+                  class="flex-grow overflow-y-auto p-6 bg-base-100 dark:bg-base-300 mt-16"
+                  hx-target="this"
+                  hx-swap="innerHTML">
+                {% block content %}{% endblock %}
+            </main>
+        </div>
+        <!-- Service Worker -->
+        <script src="{{ url_for('static', filename='js/register-sw.js') }}" defer></script>
+        <!-- Dynamic modal container for HTMX content -->
+        <div id="modal-container" data-controller="modal"></div>
+        <!-- HTMX -->
+        <script src="{{ url_for('static', filename='js/htmx.min.js') }}"></script>
+        <!-- Safe Nonce Extension -->
+        <script src="{{ url_for('static', filename='js/safe-nonce.min.js') }}"></script>
+        <!-- Dashboard Tabs -->
+        <script nonce="{{ g.nonce }}">
+          document.body.addEventListener('htmx:afterSettle', function () {
+            if (window.Stimulus) {
+              Stimulus.start();
+            }
+          });
+        </script>
+    </body>
+</html>

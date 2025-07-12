@@ -1,0 +1,33 @@
+{# ---------------------------------------------------------------------
+  card_view.html
+  app/templates/email/partials/card_view.html
+  DaisyUI-compliant card view for email entries with consistent layout
+  --------------------------------------------------------------------- #}
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    {% for email in emails %}
+        <div class="card bg-base-100 dark:bg-base-800 shadow-md hover:shadow-lg transition-all duration-200 ease-in-out rounded-xl p-4 flex flex-col gap-1 border border-base-300 dark:border-base-700">
+            <div class="card-body">
+                <div>
+                    <span class="font-semibold text-primary dark:text-primary">{{ _("Label:") }}</span>
+                    <span class="text-base text-base-content dark:text-base-300">{{ email.label }}</span>
+                </div>
+                <div>
+                    <span class="font-semibold text-primary dark:text-primary">{{ _("Subject:") }}</span>
+                    <span class="text-base text-base-content dark:text-base-300">{{ email.subject }}</span>
+                </div>
+                <div>
+                    <span class="font-semibold text-primary dark:text-primary">{{ _("To:") }}</span>
+                    <span class="text-base text-base-content dark:text-base-300">{{ email.recipient }}</span>
+                </div>
+                <div>
+                    <span class="font-semibold text-primary dark:text-primary">{{ _("Created At:") }}</span>
+                    <span class="text-base text-base-content dark:text-base-300">{{ email.created_at.strftime("%Y-%m-%d %H:%M") }}</span>
+                </div>
+                <div class="flex flex-wrap gap-2 mt-4 justify-start">
+                    {% set email = email %}
+                    {% include "email/partials/actions.html" %}
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>

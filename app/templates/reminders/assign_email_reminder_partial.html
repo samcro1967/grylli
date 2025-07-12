@@ -1,0 +1,115 @@
+{# ---------------------------------------------------------------------
+  assign_email_reminder_partial.html
+  app/templates/reminders/assign_email_reminder_partial.html
+  CSP-compliant form to link reminders to emails and SMTP configs
+--------------------------------------------------------------------- #}
+<div data-controller="action-title"
+     data-action-title-title-value="Grylli | Reminder | Assign Email"
+     data-action="htmx:afterOnLoad->action-title#setTitle"></div>
+
+<div class="max-w-md mx-auto mt-5 bg-base-100 dark:bg-base-800 shadow-md rounded-xl p-6 space-y-6">
+    <!-- Title -->
+    <h1 class="text-xl font-semibold text-base-content dark:text-base-100 flex items-center space-x-2">
+        <span>📧</span>
+        <span>{{ _("Link Email Reminder for") }}: <span class="font-mono">{{ reminder.label }}</span></span>
+    </h1>
+
+    <!-- Instructions -->
+    <p class="text-sm text-base-content dark:text-base-400">
+        {{ _("Choose the email message and SMTP configuration to associate with this reminder.") }}
+    </p>
+
+    <!-- Form Container -->
+    <form method="post" novalidate class="space-y-6">
+        {{ form.hidden_tag() }}
+
+        <!-- SMTP Configuration -->
+        <div>
+            <h2 class="text-lg font-medium text-primary mb-2">{{ _("SMTP Configuration") }}</h2>
+            <div class="space-y-3">
+                {% for value, label in form.smtp_config.choices %}
+                    {% if value == "none" %}
+                        <label class="flex items-start space-x-2">
+                            <input type="radio"
+                                   name="{{ form.smtp_config.name }}"
+                                   value="none"
+                                   {% if form.smtp_config.data == "none" %}checked{% endif %}
+                                   class="accent-primary mt-1">
+                            <span class="italic text-base-content">{{ _("None (Unassign)") }}</span>
+                        </label>
+                    {% else %}
+                        {% set smtp = smtp_config_map[value] %}
+                        <label class="flex items-start space-x-2">
+                            <input type="radio"
+                                   name="{{ form.smtp_config.name }}"
+                                   value="{{ value }}"
+                                   {% if form.smtp_config.data == value %}checked{% endif %}
+                                   class="accent-primary mt-1">
+                            <div>
+                                <div class="font-medium text-base-content">{{ smtp.label }}</div>
+                                <div class="text-sm text-base-content">
+                                    {{ smtp.from_address or smtp.smtp_username or _("No sender address") }}
+                                </div>
+                            </div>
+                        </label>
+                    {% endif %}
+                {% endfor %}
+                {% if form.smtp_config.errors %}
+                    <p class="text-error text-sm mt-1">{{ form.smtp_config.errors[0] }}</p>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- Email Message -->
+        <div>
+            <h2 class="text-lg font-medium text-accent mb-2">{{ _("Email Message") }}</h2>
+            <div class="space-y-3">
+                {% for value, label in form.message.choices %}
+                    {% if value == "none" %}
+                        <label class="flex items-start space-x-2">
+                            <input type="radio"
+                                   name="{{ form.message.name }}"
+                                   value="none"
+                                   {% if form.message.data == "none" %}checked{% endif %}
+                                   class="accent-accent mt-1">
+                            <span class="italic text-base-content">{{ _("None (Unassign)") }}</span>
+                        </label>
+                    {% else %}
+                        {% set msg = email_messages_map[value] %}
+                        <label class="flex items-start space-x-2">
+                            <input type="radio"
+                                   name="{{ form.message.name }}"
+                                   value="{{ value }}"
+                                   {% if form.message.data == value %}checked{% endif %}
+                                   class="accent-accent mt-1">
+                            <div>
+                                <div class="font-medium text-base-content">{{ msg.label }}</div>
+                                <div class="text-sm text-base-content">
+                                    {{ _("To") }}: {{ msg.recipient or "—" }} | {{ msg.subject or _("No subject") }}
+                                </div>
+                            </div>
+                        </label>
+                    {% endif %}
+                {% endfor %}
+                {% if form.message.errors %}
+                    <p class="text-error text-sm mt-1">{{ form.message.errors[0] }}</p>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="flex gap-6 mt-6">
+            <button type="submit" class="btn btn-primary w-full sm:w-auto max-w-xs">{{ _("Save Email Reminder") }}</button>
+
+            <a href="{{ url_for("reminders_bp.overview") }}"
+               hx-get="{{ url_for("reminders_bp.overview") }}"
+               hx-target="#main-content"
+               hx-swap="innerHTML"
+               hx-push-url="true"
+               data-controller="action-title"
+               data-action-title-title-value="Grylli | Reminder | Overview"
+               data-action="htmx:afterOnLoad->action-title#setTitle"
+               class="btn btn-secondary w-full sm:w-auto max-w-xs text-center">{{ _("Cancel") }}</a>
+        </div>
+    </form>
+</div>

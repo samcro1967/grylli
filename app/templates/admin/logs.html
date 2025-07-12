@@ -1,0 +1,11 @@
+{# ---------------------------------------------------------------------
+  logs.html
+  app/templates/admin/logs.html
+  Displays recent Grylli log output with filters and HTMX table
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    <div id="main-content">
+        <div id="log-table" hx-swap="outerHTML">{% include "admin/partials/logs_table.html" %}</div>
+    </div>
+{% endblock %}

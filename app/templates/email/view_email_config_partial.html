@@ -1,0 +1,95 @@
+{# ---------------------------------------------------------------------
+  view_email_config_partial.html
+  app/templates/email/view_email_config_partial.html
+  Email view config
+--------------------------------------------------------------------- #}
+<div data-controller="action-title"
+     data-action-title-title-value="Grylli | Email | View"
+     data-action="htmx:afterOnLoad->action-title#setTitle"></div>
+
+<h1 class="text-xl font-semibold mb-6 text-base-content dark:text-base-100">{{ _("Email Configuration") }}</h1>
+<div class="bg-base-100 dark:bg-base-800 rounded-lg shadow p-6 max-w-4xl space-y-6">
+    <!-- Grid: Label, Subject, Recipient -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+            <h2 class="text-sm font-medium text-base-content dark:text-base-100">{{ _("Label") }}</h2>
+            <p class="text-lg text-base-content dark:text-base-100">{{ message.label }}</p>
+        </div>
+        <div>
+            <h2 class="text-sm font-medium text-base-content dark:text-base-100">{{ _("Subject") }}</h2>
+            <p class="text-lg text-base-content dark:text-base-100">{{ message.subject }}</p>
+        </div>
+        <div>
+            <h2 class="text-sm font-medium text-base-content dark:text-base-100">{{ _("Recipient") }}</h2>
+            <p class="text-lg text-base-content dark:text-base-100">{{ message.recipient }}</p>
+        </div>
+    </div>
+
+    <!-- Body -->
+    <div>
+        <h2 class="text-sm font-medium text-base-content dark:text-base-100">{{ _("Body") }}</h2>
+        <pre class="whitespace-pre-wrap bg-base-200 dark:bg-base-900 text-base-content dark:text-base-100 p-3 rounded">
+{{ message.body }}
+        </pre>
+    </div>
+
+    <!-- Attached Files -->
+    <div>
+        <h2 class="text-sm font-medium text-base-content dark:text-base-100">{{ _("Attached Files") }}</h2>
+        {% if message.files %}
+            <ul class="list-disc list-inside text-sm text-base-content dark:text-base-100">
+                {% for f in message.files %}
+                    <li>{{ f.file_path }}</li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p class="italic text-sm text-base-content dark:text-base-400">{{ _("No files attached") }}</p>
+        {% endif %}
+    </div>
+
+    <!-- SMTP + Schedule -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <!-- SMTP -->
+        <div>
+            <h2 class="text-sm font-medium text-base-content dark:text-base-100">{{ _("SMTP Configuration") }}</h2>
+            {% if message.smtp_configs %}
+                {% set smtp = message.smtp_configs[0] %}
+                <div class="text-sm text-base-content dark:text-base-100 space-y-1">
+                    <p><strong>{{ _("Label:") }}</strong> {{ smtp.label }}</p>
+                    <p><strong>{{ _("Host:") }}</strong> {{ smtp.smtp_host }}:{{ smtp.smtp_port }}</p>
+                    <p><strong>{{ _("Username:") }}</strong> {{ smtp.smtp_username }}</p>
+                    <p><strong>{{ _("TLS:") }}</strong> {{ _("Yes") if smtp.use_tls else _('No') }}</p>
+                </div>
+            {% else %}
+                <p class="italic text-sm text-base-content dark:text-base-400">{{ _("No SMTP configuration assigned") }}</p>
+            {% endif %}
+        </div>
+
+        <!-- Schedule -->
+        <div>
+            <h2 class="text-sm font-medium text-base-content dark:text-base-100">{{ _("Schedule Information") }}</h2>
+            <div class="text-sm text-base-content dark:text-base-100 space-y-1">
+                <p><strong>{{ _("Check-in Interval:") }}</strong> {{ message.checkin_interval_minutes }} {{ _("minutes") }}</p>
+                <p><strong>{{ _("Grace Period:") }}</strong> {{ message.grace_period_minutes }} {{ _("minutes") }}</p>
+                {% if message.last_checkin %}
+                    <p><strong>{{ _("Last Check-in:") }}</strong> {{ message.last_checkin.strftime("%Y-%m-%d %H:%M") }}</p>
+                {% else %}
+                    <p class="italic text-sm text-base-content dark:text-base-400">{{ _("No check-in has occurred yet") }}</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Back Button -->
+<div>
+    <a href="{{ url_for("email.index") }}"
+       hx-get="{{ url_for("email.index") }}"
+       hx-target="#main-content"
+       hx-swap="innerHTML"
+       hx-push-url="true"
+       data-controller="action-title"
+       data-action-title-title-value="Grylli | Email | Overview"
+       data-action="htmx:afterOnLoad->action-title#setTitle"
+       class="btn btn-secondary w-full sm:w-auto max-w-xs text-center">← {{ _("Back to Emails") }}</a>
+</div>

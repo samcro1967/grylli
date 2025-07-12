@@ -1,0 +1,42 @@
+{# ---------------------------------------------------------------------
+  table_view.html
+  app/templates/admin/partials/table_view.html
+  Table-style user list (uses shared actions partial)
+--------------------------------------------------------------------- #}
+<!-- Users Table -->
+<div data-list-toggle-target="tableView">
+    <div class="overflow-x-auto border border-base-300 dark:border-base-300 rounded-lg">
+        <table class="table w-full text-sm text-left text-base-content dark:text-base-content">
+            <thead class="bg-primary text-primary-content">
+                <tr>
+                    <th>{{ _("ID") }}</th>
+                    <th>{{ _("Username") }}</th>
+                    <th>{{ _("Email") }}</th>
+                    <th>{{ _("Role") }}</th>
+                    <th>{{ _("Actions") }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for user in users %}
+                    <tr class="hover:bg-base-200 dark:hover:bg-base-700 transition-colors">
+                        <td>{{ user.id }}</td>
+                        <td>{{ user.username }}</td>
+                        <td>{{ user.email }}</td>
+                        <td>{{ user.role }}</td>
+                        <td>
+                            {% set user = user %}
+                            {% include "admin/partials/actions.html" %}
+                        </td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="5"
+                            class="text-center py-4 text-base-content dark:text-base-100">
+                            {{ _("No users available.") }}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>

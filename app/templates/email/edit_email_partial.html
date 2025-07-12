@@ -1,0 +1,91 @@
+{# ---------------------------------------------------------------------
+  edit_email_partial.html
+  app/templates/email/edit_email_partial.html
+  CSP-compliant form to create or edit a secure email
+--------------------------------------------------------------------- #}
+{% if message.id %}
+  <div data-controller="action-title"
+       data-action-title-title-value="Grylli | Email | Edit"
+       data-action="htmx:afterOnLoad->action-title#setTitle"></div>
+{% else %}
+  <div data-controller="action-title"
+       data-action-title-title-value="Grylli | Email | Create"
+       data-action="htmx:afterOnLoad->action-title#setTitle"></div>
+{% endif %}
+
+<div class="max-w-md mx-auto mt-5 bg-base-100 dark:bg-base-800 shadow-md rounded-xl p-6 space-y-4"
+     data-controller="email-form">
+    <!-- Page Title -->
+    <h1 class="text-xl font-semibold text-base-content dark:text-base-100">
+        ✉️ {{ _("Edit Email") if message.id else _('Create Email') }}
+    </h1>
+    <!-- Instructions -->
+    <p class="text-sm text-base-content dark:text-base-400">
+        {{ _("Fill out the form to create or edit an email message.") }}
+    </p>
+    <!-- Form -->
+    <form method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <!-- Label -->
+        <div>
+            <label for="label"
+                   class="block text-sm font-medium text-base-content dark:text-base-300">
+                {{ form.label.label.text }}
+            </label>
+            {{ form.label(id="label",
+                        class="w-full mt-1 px-3 py-2 border rounded bg-base-100 dark:bg-base-800 text-base-content dark:text-base-100",
+                        **{"data-email-form-target": "label", "data-action": "input->email-form#validate"}) }}
+            {% if form.label.errors %}<p class="text-error text-sm mt-1">{{ form.label.errors[0] }}</p>{% endif %}
+        </div>
+        <!-- Recipient -->
+        <div>
+            <label for="recipient"
+                   class="block text-sm font-medium text-base-content dark:text-base-300">
+                {{ form.recipient.label.text }}
+            </label>
+            {{ form.recipient(id="recipient",
+                        class="w-full mt-1 px-3 py-2 border rounded bg-base-100 dark:bg-base-800 text-base-content dark:text-base-100",
+                        **{"data-email-form-target": "recipient", "data-action": "input->email-form#validate"}) }}
+            {% if form.recipient.errors %}<p class="text-error text-sm mt-1">{{ form.recipient.errors[0] }}</p>{% endif %}
+        </div>
+        <!-- Subject -->
+        <div>
+            <label for="subject"
+                   class="block text-sm font-medium text-base-content dark:text-base-300">
+                {{ form.subject.label.text }}
+            </label>
+            {{ form.subject(id="subject",
+                        class="w-full mt-1 px-3 py-2 border rounded bg-base-100 dark:bg-base-800 text-base-content dark:text-base-100",
+                        **{"data-email-form-target": "subject", "data-action": "input->email-form#validate"}) }}
+            {% if form.subject.errors %}<p class="text-error text-sm mt-1">{{ form.subject.errors[0] }}</p>{% endif %}
+        </div>
+        <!-- Body -->
+        <div>
+            <label for="body"
+                   class="block text-sm font-medium text-base-content dark:text-base-300">
+                {{ form.body.label.text }}
+            </label>
+            {{ form.body(id="body", rows=6,
+                        class="w-full mt-1 px-3 py-2 border rounded bg-base-100 dark:bg-base-800 text-base-content dark:text-base-100",
+                        **{"data-email-form-target": "body"}) }}
+            {% if form.body.errors %}<p class="text-error text-sm mt-1">{{ form.body.errors[0] }}</p>{% endif %}
+        </div>
+        <!-- Submit / Cancel Buttons -->
+        <div class="flex gap-6 mt-6">
+            <!-- Submit Button -->
+            <button type="submit"
+                    data-email-form-target="submit"
+                    class="btn btn-primary w-full sm:w-auto max-w-xs">{{ _("Save Email") }}</button>
+            <!-- Cancel Button with HTMX -->
+            <a href="{{ url_for("email.index") }}"
+               hx-get="{{ url_for("email.index") }}"
+               hx-target="#main-content"
+               hx-swap="innerHTML"
+               hx-push-url="true"
+               data-controller="action-title"
+               data-action-title-title-value="Grylli | Email | Overview"
+               data-action="htmx:afterOnLoad->action-title#setTitle"
+               class="btn btn-secondary w-full sm:w-auto max-w-xs">{{ _("Cancel") }}</a>
+        </div>
+    </form>
+</div>
