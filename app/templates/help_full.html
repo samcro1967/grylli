@@ -1,0 +1,10 @@
+{# ---------------------------------------------------------------------
+   help_full.html
+   app/templates/help_full.html
+   Help page rendered within the Grylli layout.
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block title %}{{ _("Help") }}{% endblock %}
+{% block content %}
+    {% include "help_partial.html" %}
+{% endblock %}

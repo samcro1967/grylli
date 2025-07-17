@@ -1,0 +1,62 @@
+{# ---------------------------------------------------------------------
+  head.html
+  app/templates/head.html
+  Head for main layout – CSP-compliant, PWA ready
+--------------------------------------------------------------------- #}
+<head>
+  <!-- CSP-compliant HTMX config -->
+  <meta name="htmx-config"
+        content='{"inlineScriptNonce":"{{ g.nonce }}","inlineStyleNonce":"{{ g.nonce }}","allowEval":false,"includeIndicatorStyles":false}'>
+  <script src="{{ url_for('static', filename='js/safe-nonce.min.js') }}" defer></script>
+
+  <!-- Meta -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description"
+        content="{{ _('Grylli is a secure message scheduling and delivery platform.') }}">
+
+  <!-- Performance -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+
+  <!-- PWA: Manifest + Theme -->
+  <link rel="manifest" href="{{ url_for('pwa.manifest') }}">
+  <meta name="theme-color" content="#1e293b" />
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Grylli">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-icon" href="{{ url_for('static', filename='icons/icon-192.png') }}">
+
+  <!-- Favicon -->
+  <link rel="icon"
+        href="{{ url_for('static', filename='icons/favicon.ico') }}"
+        type="image/x-icon" />
+
+  <!-- Title -->
+  <title>{% block title %}{{ _('Grylli') }}{% endblock %}</title>
+
+  <!-- Stylesheets -->
+  <style nonce="{{ g.nonce }}">{% include 'static/css/critical.css' %}</style>
+  <link href="{{ url_for('static', filename='css/styles.min.css') }}" rel="stylesheet" />
+
+  <!-- Font Awesome (deferred) -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha384-..."
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+  <noscript>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+          integrity="sha384-..."
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer" />
+  </noscript>
+
+  <!-- Stimulus bundle -->
+  {% block scripts %}
+    <script defer type="module" src="{{ url_for('static', filename='js/application.min.js') }}"></script>
+  {% endblock %}
+
+  <!-- PWA Service Worker Registration -->
+  <script defer src="{{ url_for('static', filename='js/register-sw.js') }}"></script>
+</head>

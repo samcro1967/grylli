@@ -1,0 +1,50 @@
+{# ---------------------------------------------------------------------
+  actions.html
+  app/templates/webhook/partials/actions.html
+  Shared actions for both card and table views.
+--------------------------------------------------------------------- #}
+<div class="flex justify-between items-center gap-2">
+    {# Edit Webhook (disabled if in use) #}
+    {% if webhook.messages|length == 0 %}
+        <a href="{{ url_for('webhook.edit_webhook', id=webhook.id) }}"
+           hx-get="{{ url_for('webhook.edit_webhook', id=webhook.id) }}"
+           hx-target="#main-content"
+           hx-swap="innerHTML"
+           hx-push-url="true"
+           data-controller="action-title"
+           data-action-title-title-value="Grylli | Webhook | Edit"
+           data-action="htmx:afterOnLoad->action-title#setTitle"
+           class="text-primary hover:underline"
+           title="{{ _('Edit Webhook') }}">✏️</a>
+    {% else %}
+        <span class="text-base-content cursor-not-allowed"
+              title="{{ _('Cannot edit while assigned to Messagess') }}">✏️</span>
+    {% endif %}
+
+    {# Test Webhook (always enabled) #}
+    <form method="post"
+          action="{{ url_for('webhook.test_webhook', id=webhook.id) }}"
+          class="inline">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <button type="submit"
+                class="btn btn-ghost text-primary hover:bg-primary-focus"
+                title="{{ _('Test') }}">🧪</button>
+    </form>
+
+    {# Delete Webhook (disabled if in use) #}
+    {% if webhook.messages|length == 0 %}
+        <form method="post"
+              action="{{ url_for('webhook.delete_webhook', id=webhook.id) }}"
+              class="inline"
+              data-controller="confirm"
+              data-confirm-message-value="{{ _('Delete') }} {{ webhook.label }}?">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <button type="submit"
+                    class="btn btn-ghost text-error hover:bg-error-focus"
+                    title="{{ _('Delete') }}">🗑️</button>
+        </form>
+    {% else %}
+        <span class="text-base-content cursor-not-allowed"
+              title="{{ _('Cannot delete while assigned to Messagess') }}">🗑️</span>
+    {% endif %}
+</div>

@@ -1,0 +1,27 @@
+{# ---------------------------------------------------------------------
+  tools_backups_partial.html
+  app/templates/admin/tools/tools_backups_partial.html
+  HTMX tab content for the Backups tab under Tools.
+--------------------------------------------------------------------- #}
+<div class="w-full max-w-full px-4 sm:px-6 lg:px-8 mt-5 space-y-6">
+    <!-- Page Header -->
+    <div>
+        <h1 class="text-2xl font-bold text-base-content mb-4">{{ _("Database Backups") }}</h1>
+        <p class="text-sm text-base-content mt-1">
+            {{ _("Manage encrypted backups of your Grylli database. Only admins can create or delete backups.") }}
+        </p>
+    </div>
+    <!-- Create Backup Button -->
+    <div class="flex justify-end flex-wrap sm:flex-nowrap gap-2">
+        <button hx-post="{{ url_for("tools.create_backup_view") }}"
+                hx-target="#backup-table"
+                hx-swap="outerHTML"
+                class="btn btn-primary">➕ {{ _("Create Backup") }}</button>
+    </div>
+    <!-- HTMX Targetable Backup Table -->
+    {% include "admin/tools/partials/backup_table_wrapper.html" %}
+    <!-- Footer Notice -->
+    <div class="text-sm text-warning mt-4">
+        ⚠️ {{ _("Backups contain your full app data. Store securely. Sensitive data is encrypted in the DB by default.") }}
+    </div>
+</div>

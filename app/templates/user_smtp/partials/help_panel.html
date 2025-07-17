@@ -1,0 +1,14 @@
+{# user_smtp/partials/help_panel.html #}
+<p class="text-base-content dark:text-base-100">
+    {{ _("Need help finding your SMTP server settings? See here for some links to common providers:") }}
+    <a href="{{ config['GITHUB_URL'] }}/blob/main/HELP_SMTP.md"
+       target="_blank"
+       class="text-primary dark:text-primary-400 underline hover:text-primary-focus dark:hover:text-primary-200 font-semibold">
+        {{ _("SMTP Server Settings Help (GitHub)") }}
+    </a>
+</p>
+<ul class="list-disc list-inside mt-2 text-base-content dark:text-base-100">
+    <li>{{ _("Find official documentation links for Gmail, Outlook, Yahoo, AOL, and others.") }}</li>
+    <li>{{ _("If your provider isn’t listed, search their support site or a search engine for 'SMTP settings'.") }}</li>
+    <li>{{ _("Some providers (like Gmail, Yahoo) require 'App Passwords' or special setup—see their docs!") }}</li>
+</ul>

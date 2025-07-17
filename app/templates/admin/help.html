@@ -1,0 +1,23 @@
+{# app/templates/admin/help.html #}
+{% extends "layout.html" %}
+{% block content %}
+    <h1 class="text-2xl font-bold mb-6 text-base-content">{{ _("Admin Help") }}</h1>
+    <div class="space-y-6">
+        <section>
+            <h2 class="text-xl font-semibold text-base-content">{{ _("Reset Admin Password") }}</h2>
+            <p class="text-base-content">
+                {{ _("If you've forgotten the admin password, you can reset it using the following Docker command:") }}
+            </p>
+            <pre class="bg-base-200 text-base-content rounded p-4 overflow-x-auto text-sm mt-4">
+<code>docker exec -it grylli python3 /grylli/tools/reset_admin_password.py</code>
+</pre>
+            <p class="mt-4 text-sm text-base-content">
+                {{ _("This script will prompt you to enter a new password for the admin user. You must run it from the host system where the Grylli container is running.") }}
+            </p>
+            <p class="text-sm text-base-content">{{ _("After resetting, you can log in with the new password immediately.") }}</p>
+        </section>
+        <div class="pt-6">
+            <a href="{{ url_for("auth.login") }}" class="btn btn-primary">{{ _("Return to Login") }}</a>
+        </div>
+    </div>
+{% endblock %}

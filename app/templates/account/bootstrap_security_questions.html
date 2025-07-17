@@ -1,0 +1,61 @@
+{# ---------------------------------------------------------------------
+  bootstrap_security_questions.html
+  app/templates/account/bootstrap_security_questions.html
+  Dedicated layout for first-time admin security questions setup
+--------------------------------------------------------------------- #}
+{% extends "layout_base.html" %}
+{% block content %}
+  <div class="max-w-xl w-full mx-auto mt-6 p-6 rounded-xl bg-base-100 dark:bg-base-800 shadow-md space-y-6">
+
+    <!-- Progress Step -->
+    <div class="text-sm font-semibold text-primary-focus dark:text-primary-content tracking-wide uppercase">
+      {{ _("Step 2 of 2") }}
+    </div>
+
+    <h1 class="text-xl font-semibold text-base-content dark:text-base-100">
+      {{ _("Set Security Questions") }}
+    </h1>
+    <p class="text-sm text-base-content dark:text-base-200">
+      {{ _("Choose three different questions and provide answers only you know. These will help recover your account.") }}
+    </p>
+
+    <form method="post" novalidate>
+      {{ form.hidden_tag() }}
+
+      {% if form.errors %}
+        <div class="mb-4 p-2 bg-error/10 border border-error text-error-focus rounded">
+          <strong>{{ _("Please fix the following errors:") }}</strong>
+          <ul class="list-disc pl-5">
+            {% for field, errors in form.errors.items() %}
+              {% for error in errors %}<li>{{ error }}</li>{% endfor %}
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+
+      {% for i in range(1, 4) %}
+        <div class="mb-4">
+          {{ form["question_" ~ i].label(class="block text-sm font-medium mb-1 text-base-content dark:text-base-100") }}
+          {{ form["question_" ~ i](class="input input-bordered w-full bg-base-200 dark:bg-base-700 text-base-content dark:text-base-100") }}
+          {% for error in form["question_" ~ i].errors %}
+            <div class="text-error text-xs mt-1">{{ error }}</div>
+          {% endfor %}
+        </div>
+
+        <div class="mb-6">
+          {{ form["answer_" ~ i].label(class="block text-sm font-medium mb-1 text-base-content dark:text-base-100") }}
+          {{ form["answer_" ~ i](class="input input-bordered w-full bg-base-200 dark:bg-base-700 text-base-content dark:text-base-100") }}
+          {% for error in form["answer_" ~ i].errors %}
+            <div class="text-error text-xs mt-1">{{ error }}</div>
+          {% endfor %}
+        </div>
+      {% endfor %}
+
+      <div class="mt-6 flex justify-end">
+        <button type="submit" class="btn btn-primary">
+          {{ _("Save Security Questions") }}
+        </button>
+      </div>
+    </form>
+  </div>
+{% endblock %}

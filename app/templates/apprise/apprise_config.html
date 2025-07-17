@@ -1,0 +1,139 @@
+{# ---------------------------------------------------------------------
+  apprise_config.html
+  app/templates/apprise/apprise_config.html
+  Standalone Apprise configuration view
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    <div data-controller="list-toggle"
+         data-list-toggle-storage-key-value="appriseView"
+         data-list-toggle-show-label-value="{{ _("Show help") }}"
+         data-list-toggle-hide-label-value="{{ _("Hide help") }}">
+        <h1 class="text-xl font-semibold mb-4 text-base-content">{{ _("Apprise Destinations") }}</h1>
+
+        <!-- View toggle and Add button -->
+        <div class="mb-4 flex items-center justify-between">
+            <!-- Toggle Buttons -->
+            <div class="flex space-x-2">
+                <button type="button"
+                        data-action="list-toggle#showTable"
+                        data-list-toggle-target="tableBtn"
+                        aria-label="{{ _('Table View') }}"
+                        title="{{ _('Table View') }}"
+                        class="btn btn-primary px-4 py-2">
+                    <i class="fas fa-table"></i>
+                </button>
+                <button type="button"
+                        data-action="list-toggle#showCard"
+                        data-list-toggle-target="cardBtn"
+                        aria-label="{{ _('Card View') }}"
+                        title="{{ _('Card View') }}"
+                        class="btn btn-secondary p-2">
+                    <i class="fas fa-th"></i>
+                </button>
+            </div>
+
+            <!-- Add Apprise Button -->
+            <a href="{{ url_for('apprise_bp.create_apprise') }}"
+               hx-get="{{ url_for('apprise_bp.create_apprise') }}"
+               hx-target="#main-content"
+               hx-swap="innerHTML"
+               hx-push-url="true"
+               data-controller="action-title"
+               data-action-title-title-value="Grylli | Apprise | Create"
+               data-action="htmx:afterOnLoad->action-title#setTitle"
+               class="btn btn-primary px-4 py-2">
+                ➕ {{ _('Add Destination') }}
+            </a>
+        </div>
+
+        <!-- Table View -->
+        <div data-list-toggle-target="tableView">
+            <table class="table w-full border-collapse border border-base-300 dark:border-base-700">
+                <thead class="bg-primary text-base-content dark:text-base-100">
+                    <tr>
+                        <th class="border px-4 py-2">{{ _('Label') }}</th>
+                        <th class="border px-4 py-2">{{ _('URL') }}</th>
+                        <th class="border px-4 py-2">{{ _('Enabled') }}</th>
+                        <th class="border px-4 py-2">{{ _('Created At') }}</th>
+                        <th class="border px-4 py-2">{{ _('Actions') }}</th>
+                    </tr>
+                </thead>
+                <tbody class="divide-y divide-base-200 dark:divide-base-700">
+                    {% for destination in destinations %}
+                        <tr>
+                            <td class="border px-4 py-2 text-base-content">{{ destination.label }}</td>
+                            <td class="border px-4 py-2 text-base-content">{{ destination.url }}</td>
+                            <td class="border px-4 py-2 text-base-content">{{ '✅' if destination.enabled else '❌' }}</td>
+                            <td class="border px-4 py-2 text-base-content">{{ destination.created_at.strftime("%Y-%m-%d %H:%M") }}</td>
+                            <td class="border px-4 py-2 text-base-content">
+                                <a href="{{ url_for('apprise_bp.edit_apprise', id=destination.id) }}"
+                                   hx-get="{{ url_for('apprise_bp.edit_apprise', id=destination.id) }}"
+                                   hx-target="#main-content"
+                                   hx-swap="innerHTML"
+                                   hx-push-url="true"
+                                   data-controller="action-title"
+                                   data-action-title-title-value="Grylli | Apprise | Edit"
+                                   data-action="htmx:afterOnLoad->action-title#setTitle"
+                                   class="text-primary hover:underline"
+                                   title="{{ _('Edit') }}">✏️</a>
+
+                                <form method="POST"
+                                      action="{{ url_for('apprise_bp.test_apprise', id=destination.id) }}"
+                                      class="inline mx-2">
+                                    <button type="submit"
+                                            class="btn btn-sm btn-ghost text-primary"
+                                            title="{{ _('Test') }}">🧪</button>
+                                </form>
+
+                                <form method="POST"
+                                      action="{{ url_for('apprise_bp.delete_apprise', id=destination.id) }}"
+                                      class="inline"
+                                      data-controller="confirm"
+                                      data-confirm-message="{{ _('Delete') }} {{ destination.label }}?">
+                                    <button type="submit"
+                                            class="btn btn-sm btn-ghost text-error"
+                                            title="{{ _('Delete') }}">🗑️</button>
+                                </form>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Card View -->
+        <div data-list-toggle-target="cardView"
+             class="hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {% for destination in destinations %}
+                <div class="bg-base-100 dark:bg-base-800 rounded-xl shadow p-4">
+                    <h2 class="text-lg font-semibold mb-2 text-base-content">{{ destination.label }}</h2>
+                    <p><strong>{{ _('URL:') }}</strong> {{ destination.url }}</p>
+                    <p><strong>{{ _('Enabled:') }}</strong> {{ '✅' if destination.enabled else '❌' }}</p>
+                    <p><strong>{{ _('Created:') }}</strong> {{ destination.created_at.strftime("%Y-%m-%d %H:%M") }}</p>
+                    <div class="mt-2">
+                        <a href="{{ url_for('apprise_bp.edit_apprise', id=destination.id) }}"
+                           hx-get="{{ url_for('apprise_bp.edit_apprise', id=destination.id) }}"
+                           hx-target="#main-content"
+                           hx-swap="innerHTML"
+                           hx-push-url="true"
+                           data-controller="action-title"
+                           data-action-title-title-value="Grylli | Apprise | Edit"
+                           data-action="htmx:afterOnLoad->action-title#setTitle"
+                           class="text-primary hover:underline mr-4">✏️</a>
+
+                        <form method="POST"
+                              action="{{ url_for('apprise_bp.delete_apprise', id=destination.id) }}"
+                              class="inline"
+                              data-controller="confirm"
+                              data-confirm-message="{{ _('Delete') }} {{ destination.label }}?">
+                            <button type="submit"
+                                    class="btn btn-sm btn-ghost text-error"
+                                    title="{{ _('Delete') }}">🗑️</button>
+                        </form>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,29 @@
+{# ---------------------------------------------------------------------
+  card_view.html
+  app/templates/messages/partials/card_view.html
+  Refined DaisyUI-compliant card view with better contrast and visual focus
+--------------------------------------------------------------------- #}
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    {% for message in messages %}
+        <div class="card bg-base-100 dark:bg-base-800 shadow-md hover:shadow-lg transition-all duration-200 ease-in-out rounded-xl p-4 flex flex-col gap-1 border border-base-300 dark:border-base-700">
+            <div class="card-body">
+                <div>
+                    <span class="font-semibold text-base-content dark:text-base-100">{{ _("Label:") }}</span>
+                    <span class="text-base-content dark:text-base-100">{{ message.label }}</span>
+                </div>
+                <div>
+                    <span class="font-semibold text-base-content dark:text-base-100">{{ _("Subject:") }}</span>
+                    <span class="text-base-content dark:text-base-100">{{ message.subject }}</span>
+                </div>
+                <div>
+                    <span class="font-semibold text-base-content dark:text-base-100">{{ _("Created At:") }}</span>
+                    <span class="text-base-content dark:text-base-100">{{ message.created_at.strftime("%Y-%m-%d %H:%M") }}</span>
+                </div>
+                <div class="flex flex-wrap gap-2 mt-4 justify-start">
+                    {% set message = message %}
+                    {% include "messages/partials/actions.html" %}
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+</div>

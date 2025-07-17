@@ -1,0 +1,111 @@
+{# ---------------------------------------------------------------------
+  webhook_form_partial.html
+  app/templates/webhook/webhook_form_partial.html
+  CSP-compliant form to create or edit a webhook destination
+--------------------------------------------------------------------- #}
+<div class="max-w-md mx-auto mt-5 bg-base-100 dark:bg-base-800 shadow-md rounded-xl p-6 space-y-4"
+     data-controller="webhook-form">
+    <!-- Page Title -->
+    <h1 class="text-xl font-semibold text-base-content dark:text-base-100">
+        {% if is_edit %}
+            {{ _("Edit Webhook") }}
+        {% else %}
+            {{ _("Create Webhook") }}
+        {% endif %}
+    </h1>
+
+    <!-- Instructions -->
+    <p class="text-sm text-base-content dark:text-base-400">
+        {% if is_edit %}
+            {{ _("Update the label, endpoint, or description of this webhook destination.") }}
+        {% else %}
+            {{ _("Fill out the form to add a new webhook destination.") }}
+        {% endif %}
+    </p>
+
+    <!-- Form Start -->
+    <form method="post" novalidate>
+        {{ form.hidden_tag() }}
+
+        <!-- Label -->
+        <div>
+            <label for="label"
+                   class="block text-sm font-medium text-base-content dark:text-base-300">
+                {{ form.label.label.text }}
+            </label>
+            {{ form.label(id="label",
+                        class="w-full mt-1 px-3 py-2 border rounded bg-base-100 dark:bg-base-800 text-base-content dark:text-base-100",
+                        data_webhook_form_target="label",
+                        data_action="input->webhook-form#validate") }}
+            {% if form.label.errors %}
+                <p class="text-error text-sm mt-1">{{ form.label.errors[0] }}</p>
+            {% endif %}
+        </div>
+
+        <!-- Endpoint -->
+        <div>
+            <label for="endpoint"
+                   class="block text-sm font-medium text-base-content dark:text-base-300">
+                {{ form.endpoint.label.text }}
+            </label>
+            {{ form.endpoint(id="endpoint",
+                        class="w-full mt-1 px-3 py-2 border rounded bg-base-100 dark:bg-base-800 text-base-content dark:text-base-100",
+                        data_webhook_form_target="endpoint",
+                        data_action="input->webhook-form#validate") }}
+            {% if form.endpoint.errors %}
+                <p class="text-error text-sm mt-1">{{ form.endpoint.errors[0] }}</p>
+            {% endif %}
+        </div>
+
+        <!-- Description -->
+        <div>
+            <label for="description"
+                   class="block text-sm font-medium text-base-content dark:text-base-300">
+                {{ form.description.label.text }}
+            </label>
+            {{ form.description(id="description",
+                        class="w-full mt-1 px-3 py-2 border rounded bg-base-100 dark:bg-base-800 text-base-content dark:text-base-100",
+                        data_webhook_form_target="description") }}
+            {% if form.description.errors %}
+                <p class="text-error text-sm mt-1">{{ form.description.errors[0] }}</p>
+            {% endif %}
+        </div>
+
+        <!-- Enabled Checkbox -->
+        <div>
+            <label class="inline-flex items-center">
+                {{ form.enabled(aria_label=_("Enabled")) }}
+                <span class="ml-2 text-sm text-base-content dark:text-base-300">{{ _("Enabled") }}</span>
+            </label>
+        </div>
+
+        <!-- Submit / Cancel Buttons -->
+        <div class="flex gap-6 mt-6">
+            <!-- Submit Button -->
+            <button id="submitBtn"
+                    type="submit"
+                    data-webhook-form-target="submit"
+                    class="btn btn-primary w-full sm:w-auto max-w-xs"
+                    disabled>
+                {% if is_edit %}
+                    {{ _("Save Changes") }}
+                {% else %}
+                    {{ _("Create Destination") }}
+                {% endif %}
+            </button>
+
+            <!-- Cancel Button -->
+            <a href="{{ url_for("webhook.config") }}"
+               hx-get="{{ url_for("webhook.config") }}"
+               hx-target="#main-content"
+               hx-swap="innerHTML"
+               hx-push-url="true"
+               data-controller="action-title"
+               data-action-title-title-value="Grylli | Webhooks"
+               data-action="htmx:afterOnLoad->action-title#setTitle"
+               class="btn btn-secondary w-full sm:w-auto max-w-xs">
+                {{ _("Cancel") }}
+            </a>
+        </div>
+    </form>
+</div>

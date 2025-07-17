@@ -1,0 +1,10 @@
+{# ---------------------------------------------------------------------
+  settings_full.html
+  app/templates/admin/settings/settings_full.html
+  Full page layout for admin settings (system + smtp)
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+
+{% block content %}
+    {% include "admin/settings/settings_tabs.html" with context %}
+{% endblock %}

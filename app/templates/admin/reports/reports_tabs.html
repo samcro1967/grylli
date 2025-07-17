@@ -1,0 +1,68 @@
+{# ---------------------------------------------------------------------
+  reports_tabs.html
+  app/templates/admin/reports/reports_tabs.html
+
+  HTMX-based tab loader for the admin user reports view.
+  Loads partials into #report-tab-content without destroying tab UI.
+--------------------------------------------------------------------- #}
+<h1 class="text-2xl font-semibold text-base-content mb-6">{{ _("Admin Reports") }}</h1>
+
+<div class="space-y-4"
+     data-controller="tabs"
+     data-tabs-active-tab-value="{{ active_tab }}">
+    <!-- Tab Headers -->
+    <nav class="tabs tabs-bordered text-base-content">
+        <!-- Accounts -->
+        <a class="tab tab-bordered text-primary hover:underline cursor-pointer {% if active_tab == 'accounts' %}tab-active{% endif %}"
+           data-action="click->tabs#activate"
+           data-tabs-target="tab"
+           data-tabs-name="accounts"
+           data-tabs-title="{{ _('Grylli | Reports | Accounts') }}"
+           hx-get="{{ url_for("reports.report_accounts_full") }}"
+           hx-target="#report-tab-content"
+           hx-swap="innerHTML"
+           hx-push-url="true"
+           id="tab-accounts">{{ _("Accounts") }}
+        </a>
+
+        <!-- Scheduler Activity -->
+        <a class="tab tab-bordered text-primary hover:underline cursor-pointer {% if active_tab == 'scheduler' %}tab-active{% endif %}"
+           data-action="click->tabs#activate"
+           data-tabs-target="tab"
+           data-tabs-name="scheduler"
+           data-tabs-title="{{ _('Grylli | Reports | Scheduler') }}"
+           hx-get="{{ url_for("reports.report_scheduler_full") }}"
+           hx-target="#report-tab-content"
+           hx-swap="innerHTML"
+           hx-push-url="true"
+           id="tab-scheduler">{{ _("Scheduler Activity") }}
+        </a>
+
+        <!-- Application Logs -->
+        <a class="tab tab-bordered hover:underline cursor-pointer"
+           data-action="click->tab#activate"
+           data-tabs-target="tab"
+           data-tabs-name="logs"
+           data-tabs-title="Grylli | Reports | Logs"
+           hx-get="{{ url_for('reports.report_logs_full') }}"
+           hx-target="#report-tab-content"
+           hx-swap="innerHTML"
+           hx-push-url="true"
+           id="tab-logs">{{ _("Application Logs") }}</a>
+
+    </nav>
+
+    <!-- Tab Content -->
+    <div id="report-tab-content"
+         hx-get="{% if active_tab == 'scheduler' %}
+                   {{ url_for("reports.report_scheduler_full") }}
+                 {% elif active_tab == 'logs' %}
+                   {{ url_for("reports.report_logs_full") }}
+                 {% else %}
+                   {{ url_for("reports.report_accounts_full") }}
+                 {% endif %}"
+         hx-trigger="load"
+         hx-target="this"
+         hx-swap="innerHTML"></div>
+
+</div>

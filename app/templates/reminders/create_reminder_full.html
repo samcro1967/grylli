@@ -1,0 +1,10 @@
+{# ---------------------------------------------------------------------
+  create_reminder_full.html
+  app/templates/reminders/create_reminder_full.html
+  [Page to create a new reminder.]
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    {% set is_edit = false %}
+    {% include "reminders/reminder_form_partial.html" %}
+{% endblock %}

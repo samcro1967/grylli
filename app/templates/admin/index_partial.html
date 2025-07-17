@@ -1,0 +1,114 @@
+{# ---------------------------------------------------------------------
+  index_partial.html
+  app/templates/admin/index_partial.html
+  Grylli Admin Panel — entry point for managing users, system settings, backups, and SMTP.
+--------------------------------------------------------------------- #}
+<div class="max-w-5xl mx-auto mt-5 space-y-6 px-4 sm:px-6 lg:px-8">
+    <h1 class="text-2xl font-bold text-base-content mb-4">{{ _("Admin Panel") }}</h1>
+    <p class="text-lg text-base-content">
+        {{ _("Welcome to the Grylli Admin Panel. Use the tools below to manage users, configuration, and infrastructure-related settings.") }}
+    </p>
+    <ul class="list-disc list-inside space-y-2 text-base-content">
+        <li>
+            <a href="{{ url_for('reports.report_logs_full') }}"
+               hx-get="{{ url_for('reports.report_logs_full') }}"
+               hx-target="#main-content"
+               hx-swap="innerHTML"
+               hx-push-url="true"
+               class="link link-primary hover:underline text-med"
+               title="{{ _("View Application Logs") }}">
+                <span class="text-primary font-medium">{{ _("Logs") }}</span>
+            </a>
+            <span class="text-med">{{ _("View recent log output from the application.  View more with docker logs or the log files in the data directory.") }}</span>
+        </li>
+        <li>
+            <a href="{{ url_for('reports.reports_full', tab='accounts') }}"
+               hx-get="{{ url_for('reports.reports_full', tab='accounts') }}"
+               hx-target="#main-content"
+               hx-swap="innerHTML"
+               hx-push-url="{{ url_for('reports.report_accounts_full') }}"
+               class="link link-primary hover:underline text-med"
+               title="{{ _('Reports') }}">
+                <span class="text-primary font-medium">{{ _('Reports') }}</span>
+            </a>
+            <span class="text-med">
+                {{ _("View account summaries and scheduler activity in tabbed reports.") }}
+            </span>
+        </li>
+        <li>
+            <a href="{{ url_for('settings_bp.settings_index', tab='system') }}"
+               hx-get="{{ url_for('settings_bp.settings_index', tab='system') }}"
+               hx-target="#main-content"
+               hx-swap="innerHTML"
+               hx-push-url="{{ url_for('settings_bp.system_tab') }}"
+               class="link link-primary hover:underline text-med"
+               title="{{ _('Settings') }}">
+                <span class="text-primary font-medium">{{ _('Settings') }}</span>
+            </a>
+            <span class="text-med">
+                {{ _("View system configuration, environment variables, and global SMTP settings.") }}
+            </span>
+        </li>
+        <li>
+            <a href="{{ url_for('tools.tools_full') }}"
+               hx-get="{{ url_for('tools.tools_full') }}"
+               hx-target="#main-content"
+               hx-swap="innerHTML"
+               hx-push-url="{{ url_for('tools.tools_full') }}"
+               class="link link-primary hover:underline text-med"
+               title="{{ _('Tools') }}">
+                <span class="text-primary font-medium">{{ _('Tools') }}</span>
+            </a>
+            <span class="text-med">
+                {{ _("Trigger or delete backups and run version check.") }}
+            </span>
+        </li>
+        <li>
+            <a href="{{ url_for("users.list_users") }}"
+               hx-get="{{ url_for("users.list_users") }}"
+               hx-target="#main-content"
+               hx-swap="innerHTML"
+               hx-push-url="true"
+               class="link link-primary hover:underline text-med"
+               title="{{ _("Manage Users") }}">
+                <span class="text-primary font-medium">{{ _("Users") }}</span>
+            </a>
+            <span class="text-med">{{ _("Create, edit, enable/disable, unlock, change roles, reset MFA, or delete user accounts.") }}</span>
+        </li>
+        <li>
+            <a href="https://github.com/samcro1967/grylli/blob/main/README.md"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="link link-primary hover:underline text-sm"
+               title="{{ _("View Admin Guide / README") }}">
+                <span class="text-primary font-medium">{{ _("View README") }}</span>
+            </a>
+            <span class="text-sm">{{ _("Complete documentation covering features, architecture, setup, deployment, security, testing, and accessibility.") }}</span>
+        </li>
+    </ul>
+    <div class="mt-6 p-4 border border-warning bg-warning/30 rounded">
+        <h2 class="font-semibold text-lg text-warning-content">{{ _("⚠️ Admin Tips") }}</h2>
+        <ul class="list-disc list-inside mt-2 text-sm space-y-1 text-base-content">
+            <li>{{ _("Never run in production with DEBUG enabled. Debug mode exposes internal details and stack traces.") }}</li>
+            <li>
+                {{ _("Application logs are automatically written to files in the data directory with rotation enabled (7 files, 10MB each).") }}
+                {{ _("Admins can view recent logs in the UI, or inspect full logs directly from disk or via container tools like docker logs.") }}
+            </li>
+            <li>
+                {{ _("Always deploy Grylli behind a reverse proxy (e.g. Caddy, Nginx, or Traefik) and serve it over HTTPS. Sensitive user data must be encrypted in transit.") }}
+            </li>
+            <li>
+                {{ _("Ensure the data folder (database) is backed up regularly. Backups are stored in the 'backups' folder.") }}
+            </li>
+            <li>
+                {{ _("The uploads folder is shared. To isolate attachments per user, configure host-level directories and access controls.") }}
+            </li>
+            <li>{{ _("To restore a backup: stop the container, replace the grylli.db file from a backup, and restart.") }}</li>
+            <li>{{ _("Admins cannot remove their own admin role to prevent accidental lockout.") }}</li>
+            <li>
+                {{ _("Rate limits and automatic account lockouts are enforced to protect against brute-force login attempts.") }}
+            </li>
+            <li>{{ _("Passwords, SMTP credentials, and API tokens are encrypted at rest using Fernet.") }}</li>
+        </ul>
+    </div>
+</div>

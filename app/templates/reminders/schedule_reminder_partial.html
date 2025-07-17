@@ -1,0 +1,117 @@
+{# ---------------------------------------------------------------------
+  schedule_reminder_partial.html
+  app/templates/reminders/schedule_reminder_partial.html
+  CSP-compliant schedule form matching webhook form style
+--------------------------------------------------------------------- #}
+<div data-controller="action-title"
+     data-action-title-title-value="Grylli | Reminder | Schedule"
+     data-action="htmx:afterOnLoad->action-title#setTitle"></div>
+
+<div class="max-w-md mx-auto mt-5 bg-base-100 dark:bg-base-800 shadow-md rounded-xl p-6 space-y-4">
+    <!-- Page Title -->
+    <h1 class="text-xl font-semibold text-base-content dark:text-base-100">{{ _("Schedule Reminder") }}</h1>
+
+    <p class="text-sm italic text-warning dark:text-warning mt-1">
+        {{ _("Reminders are checked every %(minutes)s minutes, so execution may be delayed slightly.", minutes=interval_minutes) }}
+    </p>
+
+    <!-- Instructions -->
+    <p class="text-sm text-base-content dark:text-base-400">
+        {{ _("Configure when and how often the reminder should be sent.") }}
+    </p>
+
+    <!-- Form -->
+    <form method="post" novalidate class="space-y-6">
+        {{ form.hidden_tag() }}
+
+        <!-- Start Date & Time -->
+        <div>
+            <label for="start_at"
+                   class="block text-sm font-medium text-base-content dark:text-base-300">
+                {{ _("Start Date & Time") }}
+            </label>
+            {{ form.start_at(type="datetime-local",
+                             class_="input input-bordered w-full mt-1 bg-base-200 dark:bg-base-700 text-base-content dark:text-base-100") }}
+            {% if form.start_at.errors %}
+                <p class="text-error text-sm mt-1">{{ form.start_at.errors[0] }}</p>
+            {% endif %}
+        </div>
+
+        <!-- Recurrence Rule -->
+        <div>
+            <label for="recurrence_rule"
+                   class="block text-sm font-medium text-base-content dark:text-base-300">
+                {{ _("Recurrence Rule") }}
+            </label>
+            {{ form.recurrence_rule(class_="input input-bordered w-full mt-1 bg-base-200 dark:bg-base-700 text-base-content dark:text-base-100") }}
+            <small class="text-sm text-base-content dark:text-base-400">
+                {{ _("(Optional) Enter RRULE or leave blank for one-time.") }}
+            </small>
+            {% if form.recurrence_rule.errors %}
+                <p class="text-error text-sm mt-1">{{ form.recurrence_rule.errors[0] }}</p>
+            {% endif %}
+        </div>
+
+        <!-- End Date -->
+        <div>
+            <label for="end_at"
+                   class="block text-sm font-medium text-base-content dark:text-base-300">
+                {{ _("End Date") }}
+            </label>
+            {{ form.end_at(type="datetime-local",
+                           class_="input input-bordered w-full mt-1 bg-base-200 dark:bg-base-700 text-base-content dark:text-base-100") }}
+            <small class="text-sm text-base-content dark:text-base-400">
+                {{ _("(Optional) Stop sending after this date.") }}
+            </small>
+            {% if form.end_at.errors %}
+                <p class="text-error text-sm mt-1">{{ form.end_at.errors[0] }}</p>
+            {% endif %}
+        </div>
+
+        <!-- Max Occurrences -->
+        <div>
+            <label for="max_occurrences"
+                   class="block text-sm font-medium text-base-content dark:text-base-300">
+                {{ _("Max Occurrences") }}
+            </label>
+            {{ form.max_occurrences(class_="input input-bordered w-full mt-1 bg-base-200 dark:bg-base-700 text-base-content dark:text-base-100") }}
+            <small class="text-sm text-base-content dark:text-base-400">
+                {{ _("(Optional) Stop after this many reminders.") }}
+            </small>
+            {% if form.max_occurrences.errors %}
+                <p class="text-error text-sm mt-1">{{ form.max_occurrences.errors[0] }}</p>
+            {% endif %}
+        </div>
+
+        <!-- Submit / Cancel Buttons -->
+        <div class="flex gap-6 mt-6">
+            <button type="submit"
+                    class="btn btn-primary w-full sm:w-auto max-w-xs">{{ _("Save Schedule") }}</button>
+
+            <a href="{{ url_for("reminders_bp.overview") }}"
+               hx-get="{{ url_for("reminders_bp.overview") }}"
+               hx-target="#main-content"
+               hx-swap="innerHTML"
+               hx-push-url="true"
+               data-controller="action-title"
+               data-action-title-title-value="Grylli | Reminder | Overview"
+               data-action="htmx:afterOnLoad->action-title#setTitle"
+               class="btn btn-secondary w-full sm:w-auto max-w-xs text-center">{{ _("Cancel") }}</a>
+        </div>
+    </form>
+
+    <!-- Help Panel -->
+    <div data-controller="toggle-help"
+         data-toggle-help-show-label-value="{{ _('Help for RRULE syntax') }}"
+         data-toggle-help-hide-label-value="{{ _('Hide Instructions') }}">
+        <button type="button"
+                class="text-sm text-primary hover:underline focus:outline-none"
+                data-action="toggle-help#toggle">
+            <span data-toggle-help-target="label">{{ _('Help for RRULE syntax') }}</span>
+        </button>
+        <div data-toggle-help-target="panel"
+             class="hidden mt-4 p-4 rounded bg-base-100 dark:bg-base-800 text-sm text-base-content dark:text-base-100 space-y-2 shadow-md border border-base-300 dark:border-base-700">
+            {% include "reminders/partials/rrule_help_panel.html" %}
+        </div>
+    </div>
+</div>

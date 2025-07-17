@@ -1,0 +1,134 @@
+{# ---------------------------------------------------------------------
+   layout_debug.html
+   app/templates/debug/layout_debug.html
+   Debug view for front end
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    <div data-controller="layout-debug"
+         class="max-w-6xl mx-auto my-8 space-y-6 pt-20">
+        <h1 class="text-2xl font-bold text-center text-base-content dark:text-base-100 dark:text-base-content dark:text-base-100 mt-5">
+            {{ _("Grylli Full Layout Debug Page") }}
+        </h1>
+        <!-- Page selection and export buttons -->
+        <div class="space-y-4">
+            <div class="flex items-center gap-2">
+                <label for="debugPageDropdown"
+                       class="text-sm font-medium text-base-content dark:text-base-200">
+                    {{ _("Select Page to Debug") }}:
+                </label>
+                <select id="debugPageDropdown"
+                        data-layout-debug-target="debugPageDropdown"
+                        class="select select-bordered w-full max-w-xs">
+                    <option value="">{{ _("Choose a Page...") }}</option>
+                </select>
+                <button type="button"
+                        data-action="layout-debug#exportIframe"
+                        class="btn btn-primary">{{ _("Export Selected Page") }}</button>
+            </div>
+            <div class="flex flex-wrap items-center gap-2">
+                <button type="button"
+                        class="btn btn-success"
+                        data-action="click->layout-debug#exportDebug">{{ _("Export Layout Debug") }}</button>
+                <button type="button"
+                        class="btn btn-error"
+                        data-action="click->layout-debug#clearAllDebug">{{ _("Clear Storage & Cookies") }}</button>
+                <button type="button"
+                        class="btn btn-info"
+                        data-action="click->layout-debug#logAllDebug">{{ _("Refresh Debug Info") }}</button>
+            </div>
+        </div>
+        <!-- Theme & Layout State -->
+        <section class="border border-primary rounded p-4 bg-primary/10 space-y-2">
+            <h2 class="font-semibold text-lg text-primary dark:text-primary-focus">{{ _("Theme & DOM State") }}</h2>
+            <pre data-layout-debug-target="themeDebug" class="debug-pre"></pre>
+            <pre data-layout-debug-target="viewportDebug" class="debug-pre"></pre>
+            <pre data-layout-debug-target="layoutMetricsDebug" class="debug-pre"></pre>
+            <pre data-layout-debug-target="localStorageDebug" class="debug-pre"></pre>
+            <pre data-layout-debug-target="cookiesDebug" class="debug-pre"></pre>
+            <pre data-layout-debug-target="performanceDebug" class="debug-pre"></pre>
+            <pre data-layout-debug-target="userAgentDebug" class="debug-pre"></pre>
+        </section>
+        <!-- Stimulus & Events -->
+        <section class="border border-success rounded p-4 bg-success/10 space-y-2">
+            <h2 class="font-semibold text-lg text-success dark:text-success-focus">{{ _("Stimulus & Event Listeners") }}</h2>
+            <pre data-layout-debug-target="stimulusControllersDebug" class="debug-pre"></pre>
+            <pre data-layout-debug-target="stimulusTargetsDebug" class="debug-pre"></pre>
+            <pre data-layout-debug-target="eventListenersDebug" class="debug-pre"></pre>
+        </section>
+        <!-- Accessibility -->
+        <section class="border border-warning rounded p-4 bg-warning/10 space-y-2">
+            <h2 class="font-semibold text-lg text-warning dark:text-warning-focus">{{ _("Accessibility & Focus") }}</h2>
+            <pre data-layout-debug-target="ariaDebug" class="debug-pre"></pre>
+            <pre data-layout-debug-target="focusedElementDebug" class="debug-pre"></pre>
+        </section>
+        <!-- Scroll/Overflow/Visibility -->
+        <section class="border border-error rounded p-4 bg-error/10 space-y-2">
+            <h2 class="font-semibold text-lg text-error dark:text-error-focus">{{ _("Scroll, Overflow & Visibility") }}</h2>
+            <pre data-layout-debug-target="scrollDebug" class="debug-pre"></pre>
+            <pre data-layout-debug-target="visibilityDebug" class="debug-pre"></pre>
+        </section>
+        <!-- Sidebar -->
+        <section class="border border-accent rounded p-4 bg-accent/10 space-y-2">
+            <h2 class="font-semibold text-lg text-accent dark:text-accent-focus">{{ _("Sidebar Debug") }}</h2>
+            <pre data-layout-debug-target="sidebarDebug" class="debug-pre"></pre>
+            <pre data-layout-debug-target="collapseDebug" class="debug-pre"></pre>
+            <pre data-layout-debug-target="footerDebug" class="debug-pre"></pre>
+            <pre data-layout-debug-target="sidebarDom"
+                 class="debug-pre max-h-96 overflow-y-auto"></pre>
+        </section>
+        <!-- Header -->
+        <section class="border border-accent rounded p-4 bg-accent/10 space-y-2">
+            <h2 class="font-semibold text-lg text-accent dark:text-accent-focus">{{ _("Header Debug") }}</h2>
+            <pre data-layout-debug-target="headerDebug" class="debug-pre"></pre>
+            <pre data-layout-debug-target="themeToggleDebug" class="debug-pre"></pre>
+            <pre data-layout-debug-target="languageToggleDebug" class="debug-pre"></pre>
+            <pre data-layout-debug-target="profileDropdownDebug" class="debug-pre"></pre>
+        </section>
+        <!-- Footer -->
+        <section class="border border-accent rounded p-4 bg-accent/10 space-y-2">
+            <h2 class="font-semibold text-lg text-accent dark:text-accent-focus">{{ _("Footer DOM Snapshot") }}</h2>
+            <pre data-layout-debug-target="footerDom"
+                 class="debug-pre max-h-96 overflow-y-auto"></pre>
+        </section>
+        <!-- Computed Styles -->
+        <section class="border border-secondary rounded p-4 bg-secondary/10 space-y-2">
+            <h2 class="font-semibold text-lg text-secondary dark:text-secondary-focus">
+                {{ _("Computed Styles & CSS Variables") }}
+            </h2>
+            <pre data-layout-debug-target="computedStylesDebug" class="debug-pre"></pre>
+        </section>
+        <!-- Scripts, Styles, Route, Templates -->
+        <section class="border border-info rounded p-4 bg-info/10 space-y-2">
+            <h2 class="font-semibold text-lg text-info dark:text-info-focus">{{ _("Page Assets & Context") }}</h2>
+            <pre data-layout-debug-target="scriptDebug" class="debug-pre"></pre>
+            <pre data-layout-debug-target="styleDebug" class="debug-pre"></pre>
+            <pre data-layout-debug-target="routeDebug" class="debug-pre"></pre>
+        </section>
+        <!-- Forms & Inputs -->
+        <section class="border border-primary rounded p-4 bg-primary/10 space-y-2">
+            <h2 class="font-semibold text-lg text-primary dark:text-primary-focus">{{ _("Forms & Inputs") }}</h2>
+            <pre data-layout-debug-target="formDebug" class="debug-pre"></pre>
+        </section>
+        <!-- Memory Usage -->
+        <section class="border border-lime rounded p-4 bg-lime/10 space-y-2">
+            <h2 class="font-semibold text-lg text-lime dark:text-lime-focus">{{ _("Memory Usage (Experimental)") }}</h2>
+            <pre data-layout-debug-target="memoryDebug" class="debug-pre"></pre>
+        </section>
+        <!-- Current User Info -->
+        <section class="border border-neutral rounded p-4 bg-neutral/10 space-y-2">
+            <h2 class="font-semibold text-lg text-neutral dark:text-neutral-focus">{{ _("Current User (Sanitized)") }}</h2>
+            <pre class="debug-pre">{{ current_user.email if current_user else 'Anonymous' }}</pre>
+        </section>
+        <!-- Raw Rendered HTML Snapshot -->
+        <section class="border border-fuchsia rounded p-4 bg-fuchsia/10 space-y-2">
+            <h2 class="font-semibold text-lg text-fuchsia dark:text-fuchsia-focus">{{ _("Rendered HTML Snapshot") }}</h2>
+            <pre data-layout-debug-target="rawHtmlDebug"
+                 class="debug-pre max-h-96 overflow-y-auto"></pre>
+        </section>
+        <!-- Hidden iframe to load selected debug page -->
+        <iframe id="debugPreviewIframe"
+                class="w-full h-[600px] border border-neutral/50 rounded bg-neutral dark:bg-neutral/500"
+                loading="lazy"></iframe>
+    </div>
+{% endblock %}

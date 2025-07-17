@@ -1,0 +1,43 @@
+{# ---------------------------------------------------------------------
+  set_security_questions_partial.html
+  app/templates/account/set_security_questions_partial.html
+  Page for users to select and store 3 security questions and answers.
+--------------------------------------------------------------------- #}
+<div class="max-w-2xl mx-auto mt-5 bg-base-100 dark:bg-base-800 shadow-md rounded-xl p-6 space-y-6">
+    <h1 class="text-xl font-semibold text-base-content">{{ _("Set Your Security Questions") }}</h1>
+    <p class="text-sm text-base-content dark:text-base-400">
+        {{ _("Choose three different questions and provide your answers. These will be used to verify your identity if you ever forget your password.") }}
+        <span class="text-primary font-semibold underline ml-1">{{ _("Each question must be different.") }}</span>
+    </p>
+    <form method="post" novalidate>
+        {{ form.hidden_tag() }}
+        {% for i in [1, 2, 3] %}
+            <div class="space-y-2">
+                <label for="question_{{ i }}"
+                       class="block text-sm font-medium text-base-content dark:text-base-400">
+                    {{ _("Question") }} {{ i }}
+                </label>
+                {{ form["question_" ~ i](class="input input-bordered w-full bg-base-200 dark:bg-base-700 dark:text-base-content dark:text-base-100") }}
+                {% if form["question_" ~ i].errors %}
+                    <div class="text-error text-sm mt-1">{{ form["question_" ~ i].errors[0] }}</div>
+                {% endif %}
+
+                <label for="answer_{{ i }}"
+                       class="block text-sm font-medium text-base-content dark:text-base-400 mt-2">
+                    {{ _("Answer") }} {{ i }}
+                </label>
+                {{ form["answer_" ~ i](class="input input-bordered w-full bg-base-200 dark:bg-base-700 dark:text-base-content dark:text-base-100") }}
+                {% if form["answer_" ~ i].errors %}
+                    <div class="text-error text-sm mt-1">{{ form["answer_" ~ i].errors[0] }}</div>
+                {% endif %}
+            </div>
+        {% endfor %}
+        <div class="mt-6 flex gap-4 justify-end">
+            <button type="submit" class="btn btn-primary w-1/2">
+                {{ _("Save") if not current_user.security_questions_set else _("Update") }}
+            </button>
+            <a href="{{ url_for("home.index") }}"
+               class="btn btn-secondary w-1/2 text-center">{{ _("Cancel") }}</a>
+        </div>
+    </form>
+</div>

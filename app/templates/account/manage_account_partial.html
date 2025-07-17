@@ -1,0 +1,135 @@
+{# ---------------------------------------------------------------------
+   manage_account_partial.html
+   app/templates/account/manage_account_partial.html
+   Shows how to contribute and report translations in Grylli.
+--------------------------------------------------------------------- #}
+<div class="max-w-md mx-auto mt-5 bg-base-100 dark:bg-base-800 shadow-md rounded-xl p-6 space-y-6"
+     data-controller="user-form">
+    <!-- Title -->
+    <h1 class="text-xl font-semibold text-base-content">{{ _("Manage Account") }}</h1>
+    <p class="text-sm text-base-content dark:text-base-400">{{ _("Update your profile information and password.") }}</p>
+    <!-- Update Form -->
+    <form method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <!-- Username -->
+        <div class="mb-4">
+            {{ form.username.label(class="block text-sm font-medium mb-1", for="username") }}
+            {% set username_invalid = 'true' if form.username.errors else 'false' %}
+            {{ form.username(id="username",
+                        class="input input-bordered w-full bg-base-200 dark:bg-base-700 text-base-content dark:text-base-100 focus:ring-2 focus:ring-primary transition",
+                        autocomplete="username",
+                        aria_invalid=username_invalid,
+                        **{"data-user-form-target": "username"}) }}
+            {% if form.username.errors %}
+                <ul class="text-error text-xs mt-1" id="username-errors">
+                    {% for error in form.username.errors %}<li>{{ error }}</li>{% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+        <!-- Email -->
+        <div class="mb-4">
+            {{ form.email.label(class="block text-sm font-medium mb-1", for="email") }}
+            {% set email_invalid = 'true' if form.email.errors else 'false' %}
+            {{ form.email(id="email",
+                        class="input input-bordered w-full bg-base-200 dark:bg-base-700 text-base-content dark:text-base-100 focus:ring-2 focus:ring-primary transition",
+                        autocomplete="email",
+                        aria_invalid=email_invalid,
+                        **{"data-user-form-target": "email"}) }}
+            {% if form.email.errors %}
+                <ul class="text-error text-xs mt-1" id="email-errors">
+                    {% for error in form.email.errors %}<li>{{ error }}</li>{% endfor %}
+                </ul>
+            {% endif %}
+            <p id="emailWarning"
+               data-user-form-target="emailWarning"
+               class="text-error text-sm hidden">{{ _("Please enter a valid email address.") }}</p>
+        </div>
+        <hr class="my-4 border-base-300 dark:border-base-600">
+        <!-- Password fields -->
+        {% for field, field_id, target, field_name in [
+            (form.current_password, 'currentPassword', 'currentPassword', 'current_password'),
+            (form.new_password, 'newPassword', 'password', 'new_password'),
+            (form.confirm_password, 'confirmPassword', 'confirmPassword', 'confirm_password')
+            ] %}
+            <div class="mb-4 relative" data-controller="reveal-password">
+                {{ field.label(class="block text-sm font-medium mb-1", for=field_id) }}
+                <div class="relative">
+                    {{ field(id=field_id,
+                                        class="input input-bordered w-full pr-10 bg-base-200 dark:bg-base-700 text-base-content dark:text-base-100 focus:ring-2 focus:ring-primary transition",
+                                        autocomplete="new-password",
+                                        aria_invalid='true' if field.errors else 'false',
+                                        **({"data-user-form-target": target} if target else {}) ) }}
+                    <div class="absolute inset-y-0 right-0 flex items-center px-3">
+                        <button type="button"
+                                data-action="mousedown->reveal-password#show mouseup->reveal-password#hide mouseleave->reveal-password#hide"
+                                class="focus:outline-none text-base-content hover:text-base-500 dark:hover:text-base-300"
+                                aria-label="{{ _("Hold to reveal") }}">
+                            <svg class="h-5 w-5"
+                                 fill="none"
+                                 stroke="currentColor"
+                                 stroke-width="2"
+                                 viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7 -1.274 4.057-5.064 7-9.542 7 -4.477 0-8.268-2.943-9.542-7z" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                {% if field.errors %}
+                    <ul class="text-error text-xs mt-1" id="{{ field_id }}-errors">
+                        {% for error in field.errors %}<li>{{ error }}</li>{% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+        {% endfor %}
+        <p id="complexityWarning"
+           data-user-form-target="complexityWarning"
+           class="text-error text-sm hidden">{{ _("Password must meet all complexity requirements.") }}</p>
+        <div id="passwordMismatchWarning"
+             data-user-form-target="mismatchWarning"
+             class="text-error text-sm hidden">{{ _("Passwords do not match.") }}</div>
+        <!-- Submit / Cancel -->
+        <div class="flex gap-4 mt-6">
+            <button id="submitBtn"
+                    type="submit"
+                    data-user-form-target="submitButton"
+                    class="btn btn-primary w-1/2 disabled:opacity-50 disabled:cursor-not-allowed"
+                    disabled>{{ _("Update Account") }}</button>
+            <a href="{{ url_for("home.index") }}"
+               class="btn btn-secondary w-1/2 text-center">{{ _("Cancel") }}</a>
+        </div>
+    </form>
+    <!-- Password Requirements -->
+    <div class="text-sm text-base-content dark:text-base-400 mt-4">
+        <ul class="list-disc list-inside space-y-1">
+            <li>{{ _("Minimum 8 characters") }}</li>
+            <li>{{ _("At least one uppercase letter") }}</li>
+            <li>{{ _("At least one lowercase letter") }}</li>
+            <li>{{ _("At least one number") }}</li>
+            <li>{{ _("At least one special character (e.g., !@#$%)") }}</li>
+        </ul>
+    </div>
+    <!-- Export Data -->
+    <div class="bg-base-200 dark:bg-base-700 border border-base-300 dark:border-base-600 rounded-xl p-4">
+        <h2 class="text-lg font-semibold text-primary">{{ _("Download My Data") }}</h2>
+        <p class="text-sm text-base-content dark:text-base-400 mb-3">
+            {{ _("Download all your account data as a JSON file...") }}
+        </p>
+        <a href="{{ url_for("account.export_account_data") }}"
+           class="btn btn-primary">{{ _("Download My Data (JSON)") }}</a>
+    </div>
+    <!-- Danger Zone -->
+    <div class="bg-error dark:bg-error-800 border border-error-700 rounded-xl p-4 space-y-4">
+        <h2 class="text-lg font-semibold text-error">{{ _("Danger Zone") }}</h2>
+        <p class="text-sm text-base-content dark:text-base-400">
+            {{ _("Deleting your account is permanent and cannot be undone.") }}
+        </p>
+        <form method="post"
+              action="{{ url_for("account.delete_account") }}"
+              data-controller="confirm"
+              data-confirm-message-value="{{ _("Are you sure you want to delete your account?") }}">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <button type="submit" class="btn btn-danger w-full">{{ _("Delete My Account") }}</button>
+        </form>
+    </div>
+</div>

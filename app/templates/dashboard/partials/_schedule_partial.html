@@ -1,0 +1,124 @@
+{# ---------------------------------------------------------------------
+  _schedule_partial.html
+  app/templates/dashboard/partials/_schedule_partial.html
+  Schedule summary for enabled Messages, Emails, and Reminders
+--------------------------------------------------------------------- #}
+<div class="w-full max-w-screen-xl px-4 sm:px-6 lg:px-8 mt-5 space-y-12">
+    {% set messages = stats.messages | selectattr("is_enabled") | list %}
+    {% if messages %}
+        <div>
+            <h2 class="text-xl font-bold text-base-content mb-4">{{ _("Enabled Messages") }}</h2>
+            <div class="overflow-x-auto border border-base-300 dark:border-base-300 rounded-lg">
+                <table class="table w-full text-sm text-left text-base-content dark:text-base-content">
+                    <thead class="bg-primary text-primary-content">
+                        <tr>
+                            <th scope="col">{{ _("Label") }}</th>
+                            <th scope="col">{{ _("Interval") }}</th>
+                            <th scope="col">{{ _("Grace Period") }}</th>
+                            <th scope="col">{{ _("Last Check-in") }}</th>
+                            <th scope="col" class="text-right">{{ _("Actions") }}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for msg in messages %}
+                            <tr class="hover:bg-base-200 dark:hover:bg-base-700 transition-colors">
+                                <td>{{ msg.label }}</td>
+                                <td>{{ msg.interval_human }}</td>
+                                <td>{{ msg.grace_human }}</td>
+                                <td>{{ msg.last_checkin.strftime("%Y-%m-%d %H:%M") if msg.last_checkin else "—" }}</td>
+                                <td class="text-right space-x-2">
+                                    {% if msg.is_checkin_due %}
+                                        <a href="{{ url_for('checkin.handle_checkin', type='message', id=msg.id, user=current_user.id) }}"
+                                           class="btn btn-sm btn-primary">
+                                            {{ _("Check In Now") }}
+                                        </a>
+                                    {% endif %}
+                                    <a href="{{ url_for('messages_bp.edit_message', message_id=msg.id) }}"
+                                       class="btn btn-sm btn-outline">
+                                        {{ _("Edit") }}
+                                    </a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    {% endif %}
+
+    {% set emails = stats.emails | selectattr("is_enabled") | list %}
+    {% if emails %}
+        <div>
+            <h2 class="text-xl font-bold text-base-content mb-4">{{ _("Enabled Emails") }}</h2>
+            <div class="overflow-x-auto border border-base-300 dark:border-base-300 rounded-lg">
+                <table class="table w-full text-sm text-left text-base-content dark:text-base-content">
+                    <thead class="bg-primary text-primary-content">
+                        <tr>
+                            <th scope="col">{{ _("Subject") }}</th>
+                            <th scope="col">{{ _("Interval") }}</th>
+                            <th scope="col">{{ _("Grace Period") }}</th>
+                            <th scope="col">{{ _("Last Check-in") }}</th>
+                            <th scope="col" class="text-right">{{ _("Actions") }}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for email in emails %}
+                            <tr class="hover:bg-base-200 dark:hover:bg-base-700 transition-colors">
+                                <td>{{ email.subject }}</td>
+                                <td>{{ email.interval_human }}</td>
+                                <td>{{ email.grace_human }}</td>
+                                <td>{{ email.last_checkin.strftime("%Y-%m-%d %H:%M") if email.last_checkin else "—" }}</td>
+                                <td class="text-right space-x-2">
+                                    {% if email.is_checkin_due %}
+                                        <a href="{{ url_for('checkin.handle_checkin', type='email', id=email.id, user=current_user.id) }}"
+                                           class="btn btn-sm btn-primary">
+                                            {{ _("Check In Now") }}
+                                        </a>
+                                    {% endif %}
+                                    <a href="{{ url_for('email.edit_email', email_id=email.id) }}"
+                                       class="btn btn-sm btn-outline">
+                                        {{ _("Edit") }}
+                                    </a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    {% endif %}
+
+    {% set reminders = stats.reminders | selectattr("is_enabled") | list %}
+    {% if reminders %}
+        <div>
+            <h2 class="text-xl font-bold text-base-content mb-4">{{ _("Enabled Reminders") }}</h2>
+            <div class="overflow-x-auto border border-base-300 dark:border-base-300 rounded-lg">
+                <table class="table w-full text-sm text-left text-base-content dark:text-base-content">
+                    <thead class="bg-primary text-primary-content">
+                        <tr>
+                            <th scope="col">{{ _("Label") }}</th>
+                            <th scope="col">{{ _("Start Time") }}</th>
+                            <th scope="col">{{ _("Recurrence") }}</th>
+                            <th scope="col">{{ _("Last Sent") }}</th>
+                            <th scope="col" class="text-right">{{ _("Actions") }}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for rem in reminders %}
+                            <tr class="hover:bg-base-200 dark:hover:bg-base-700 transition-colors">
+                                <td>{{ rem.label }}</td>
+                                <td>{{ rem.start_at.strftime("%Y-%m-%d %H:%M") if rem.start_at else "—" }}</td>
+                                <td>{{ rem.recurrence_rule or _("One-time") }}</td>
+                                <td>{{ rem.last_sent_at.strftime("%Y-%m-%d %H:%M") if rem.last_sent_at else "—" }}</td>
+                                <td class="text-right">
+                                    <a href="{{ url_for('reminders_bp.edit_reminder', reminder_id=rem.id) }}"
+                                       class="btn btn-sm btn-outline">{{ _("Edit") }}</a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    {% endif %}
+</div>

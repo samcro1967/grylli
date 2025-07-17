@@ -1,0 +1,58 @@
+{# -----------------------------------------------------------------------------
+  report_accounts_partial.html
+  app/templates/admin/reports/report_accounts_partial.html
+  Table view for user account report tab (HTMX swappable)
+----------------------------------------------------------------------------- #}
+<div class="overflow-x-auto border border-base-300 dark:border-base-300 rounded-lg">
+    <table class="table w-full text-sm text-left text-base-content dark:text-base-content">
+        <thead class="bg-primary text-primary-content">
+            <tr>
+                <th>{{ _("Username") }}</th>
+                <th>{{ _("Email") }}</th>
+                <th>{{ _("Role") }}</th>
+                <th>{{ _("Enabled") }}</th>
+                <th>{{ _("Created At") }}</th>
+                <th>{{ _("MFA Enabled") }}</th>
+                <th>{{ _("Locked Until") }}</th>
+                <th>{{ _("Messages") }}</th>
+                <th>{{ _("Emails") }}</th>
+                <th>{{ _("Reminders") }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+                <tr class="hover:bg-base-200 dark:hover:bg-base-700 transition-colors">
+                    <td>{{ user.username }}</td>
+                    <td>{{ user.email }}</td>
+                    <td>{{ user.role }}</td>
+                    <td>
+                        {% if user.is_enabled %}
+                            <span class="text-success">✔</span>
+                        {% else %}
+                            <span class="text-error">✘</span>
+                        {% endif %}
+                    </td>
+                    <td>{{ user.created_at.strftime("%Y-%m-%d") if user.created_at else "—" }}</td>
+                    <td>
+                        {% if user.mfa_enabled %}
+                            <span class="text-success">✔</span>
+                        {% else %}
+                            <span class="text-error">✘</span>
+                        {% endif %}
+                    </td>
+                    <td>{{ user.locked_until.strftime("%Y-%m-%d %H:%M") if user.locked_until else "—" }}</td>
+                    <td class="text-center">{{ user.Messages_count or 0 }}</td>
+                    <td class="text-center">{{ user.email_count or 0 }}</td>
+                    <td class="text-center">{{ user.reminder_count or 0 }}</td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="10"
+                        class="text-center py-4 text-base-content dark:text-base-100">
+                        {{ _("No users available.") }}
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>

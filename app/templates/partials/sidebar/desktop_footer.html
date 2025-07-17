@@ -1,0 +1,42 @@
+{# ---------------------------------------------------------------------
+  desktop_footer.html
+  app/templates/partials/sidebar/desktop_footer.html
+  Fixed footer with native theme and language dropdowns.
+--------------------------------------------------------------------- #}
+<div data-sidebar-target="footer"
+     class="sidebar-footer flex flex-col justify-between border-t border-base-300 dark:border-base-700 bg-base-100 dark:bg-base-300 px-2 py-2 space-y-2 transition-all duration-200">
+    <!-- Version Status -->
+    <div id="sidebar-version-status"
+         data-controller="version-check"
+         data-version-check-status-url-value="{{ url_for("meta.version_status") }}"
+         class="text-xs text-center px-2 py-1 whitespace-nowrap"></div>
+    <!-- Theme Selector -->
+    <div data-controller="theme">
+        <label for="theme-select" class="sr-only">{{ _("Select Theme") }}</label>
+        <select id="theme-select"
+                data-theme-target="select"
+                data-action="change->theme#change"
+                class="w-full text-sm rounded bg-base-100 text-base-content border border-base-300 dark:border-base-700 px-2 py-1 focus:outline-none focus:ring-2 focus:ring-primary transition"
+                aria-label="{{ _("Select theme") }}">
+            {% for theme_name in daisyui_themes %}
+                <option value="{{ theme_name }}"
+                        {% if current_theme == theme_name %}selected{% endif %}>{{ theme_name | capitalize }}</option>
+            {% endfor %}
+        </select>
+    </div>
+    <!-- Language Selector -->
+    <div data-controller="lang">
+        <label for="lang-select" class="sr-only">{{ _("Select language") }}</label>
+        <select id="lang-select"
+                data-lang-target="select"
+                data-action="change->lang#change"
+                data-base-url="{{ url_for('locale.set_language', lang_code='') }}"
+                name="lang"
+                aria-label="{{ _("Select language") }}"
+                class="w-full text-sm rounded bg-base-100 text-base-content border border-base-300 dark:border-base-700 px-2 py-1 focus:outline-none focus:ring-2 focus:ring-primary transition">
+            {% for code, label in config['SUPPORTED_LANGUAGES'].items() %}
+                <option value="{{ code }}" {% if get_locale() == code %}selected{% endif %}>{{ _(label) }}</option>
+            {% endfor %}
+        </select>
+    </div>
+</div>

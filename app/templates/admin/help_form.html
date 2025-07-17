@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+{% block content %}
+    <!-- Centered compact container -->
+    <div class="max-w-md mx-auto mt-12 bg-base-100 shadow rounded-xl p-5 space-y-4">
+        <!-- Title -->
+        <h1 class="text-lg font-semibold text-base-content">{{ _("Admin Help Access") }}</h1>
+        <!-- Description -->
+        <p class="text-sm text-base-content">{{ _("Enter your Ferret Key to unlock admin-only help documentation.") }}</p>
+        <!-- Form -->
+        <form method="post" novalidate>
+            {{ form.hidden_tag() }}
+            <!-- Hidden username for accessibility -->
+            <input type="text"
+                   name="fake_username"
+                   id="fake_username"
+                   autocomplete="username"
+                   class="hidden"
+                   tabindex="-1"
+                   aria-hidden="true">
+            {% set ferret_invalid = 'true' if form.ferret_key.errors else 'false' %}
+            <div class="form-control">
+                {{ form.ferret_key.label(class="label text-sm font-medium") }}
+                {{ form.ferret_key(id="ferret_key",
+                                class="input input-bordered w-full bg-base-200 text-base-content",
+                                required=True,
+                                type="password",
+                                autocomplete="new-password",
+                                **{"aria-invalid": ferret_invalid}) }}
+                {% if form.ferret_key.errors %}
+                    <ul class="text-error text-xs mt-1">
+                        {% for error in form.ferret_key.errors %}<li>{{ error }}</li>{% endfor %}
+                    </ul>
+                {% endif %}
+            </div>
+            <div class="flex gap-2 mt-4">
+                {{ form.submit(class="btn btn-primary flex-1") }}
+                <a href="{{ url_for("auth.login") }}"
+                   class="btn btn-secondary flex-1 text-center">{{ _("Cancel") }}</a>
+            </div>
+        </form>
+        <!-- FERRET_KEY Help -->
+        <div class="border-t border-base-300 pt-4 text-sm space-y-3">
+            <h2 class="text-base font-medium text-base-content">{{ _("How to Find Your FERRET_KEY") }}</h2>
+            <p class="text-base-content">{{ _("The FERRET_KEY is set as an environment variable when running Grylli.") }}</p>
+            <div>
+                <p class="font-semibold text-base-content">{{ _("Option 1: Check docker-compose.yml") }}</p>
+                <pre class="bg-base-200 text-base-content rounded p-2 overflow-x-auto text-xs">
+<code>environment:
+  - FERRET_KEY=your-secret-ferret-key</code>
+            </pre>
+            </div>
+            <div>
+                <p class="font-semibold text-base-content">{{ _("Option 2: Use docker inspect") }}</p>
+                <pre class="bg-base-200 text-base-content rounded p-2 overflow-x-auto text-xs">
+<code>docker inspect grylli | grep FERRET_KEY</code>
+            </pre>
+            </div>
+            <p class="text-base-content">{{ _("This shows the FERRET_KEY as passed to the container at runtime.") }}</p>
+        </div>
+    </div>
+{% endblock %}

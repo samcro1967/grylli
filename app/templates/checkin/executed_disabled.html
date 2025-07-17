@@ -1,0 +1,22 @@
+{# ---------------------------------------------------------------------
+  executed_disabled.html
+  app/templates/checkin/executed_disabled.html
+  [Displayed when a user tries to check in for an item that was executed and is now disabled.]
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    <div class="max-w-xl mx-auto mt-5 text-center p-6 rounded-xl shadow-lg bg-base-100 dark:bg-base-900">
+        <h1 class="text-2xl font-semibold mb-4 text-warning dark:text-warning-focus">
+            ⚠️ {{ _("Already Executed & Disabled") }}
+        </h1>
+        <p class="text-lg mb-2 text-base-content dark:text-base-200">
+            {{ _("This check-in has already been executed and is now disabled. No further action is required.") }}
+        </p>
+        {% if label %}
+            <p class="text-sm text-base-content dark:text-base-100 italic mt-2">
+                {{ _("Check-in for:") }} <strong>{{ label }}</strong>
+            </p>
+        {% endif %}
+        <a href="{{ url_for("home.index") }}" class="btn btn-primary mt-6">{{ _("Return to Dashboard") }}</a>
+    </div>
+{% endblock %}

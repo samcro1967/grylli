@@ -1,0 +1,17 @@
+{# app/templates/reminders/partials/rrule_help_panel.html #}
+<ul class="list-disc list-inside space-y-1 text-base-content">
+    <li>{{ _("Several tools are available to help generate an RRULE.") }}</li>
+    <li>{{ _("Use a search engine or AI tool to assist.") }}</li>
+    <li>
+        {{ _("Here is an example of one such online tool:") }}
+        <a href="https://freetools.textmagic.com/rrule-generator"
+           target="_blank"
+           class="text-primary underline hover:text-primary-focus font-semibold ml-1">{{ _("RRULE Generator Tool") }}</a>
+    </li>
+    <li>
+        {{ _("See here for some common examples:") }}
+        <a href="{{ GITHUB_URL }}/blob/main/HELP_RRULE.md"
+           target="_blank"
+           class="text-primary underline hover:text-primary-focus font-semibold ml-1">{{ _("RRULE Help (GitHub)") }}</a>
+    </li>
+</ul>

@@ -1,0 +1,124 @@
+{# ---------------------------------------------------------------------
+  actions.html
+  app/templates/email/partials/actions.html
+  CSP-compliant secure email actions with wrapping and spacing aligned to Messages
+--------------------------------------------------------------------- #}
+<div class="flex flex-wrap gap-2 mt-4 justify-start">
+    {% if not email.is_enabled %}
+        <!-- Edit -->
+        <a href="{{ url_for('email.edit_email', email_id=email.id) }}"
+           hx-get="{{ url_for('email.edit_email', email_id=email.id) }}"
+           hx-target="#main-content"
+           hx-swap="innerHTML"
+           hx-push-url="true"
+           data-controller="action-title"
+           data-action-title-title-value="Grylli | Email | Edit"
+           data-action="htmx:afterOnLoad->action-title#setTitle"
+           class="btn btn-ghost text-primary hover:bg-primary-focus"
+           title="{{ _('Edit Email') }}">✏️</a>
+    {% else %}
+        <span class="btn btn-ghost text-base-content opacity-50 cursor-not-allowed"
+              title="{{ _('Cannot edit while enabled') }}">✏️</span>
+    {% endif %}
+
+    {% if not email.is_enabled %}
+        <!-- Attach Files -->
+        <a href="{{ url_for('email.attach_files', message_id=email.id) }}"
+           hx-get="{{ url_for('email.attach_files', message_id=email.id) }}"
+           hx-target="#main-content"
+           hx-swap="innerHTML"
+           hx-push-url="true"
+           data-controller="action-title"
+           data-action-title-title-value="Grylli | Email | Attach Files"
+           data-action="htmx:afterOnLoad->action-title#setTitle"
+           class="btn btn-ghost text-secondary hover:bg-secondary-focus ml-2"
+           title="{{ _('Attach Files') }}">📎</a>
+    {% else %}
+        <span class="btn btn-ghost text-base-content opacity-50 cursor-not-allowed ml-2"
+              title="{{ _('Cannot attach files while enabled') }}">📎</span>
+    {% endif %}
+
+    {% if not email.is_enabled %}
+        <!-- Assign SMTP -->
+        <a href="{{ url_for('email.assign_smtp_to_email', email_id=email.id) }}"
+           hx-get="{{ url_for('email.assign_smtp_to_email', email_id=email.id) }}"
+           hx-target="#main-content"
+           hx-swap="innerHTML"
+           hx-push-url="true"
+           data-controller="action-title"
+           data-action-title-title-value="Grylli | Email | Assign SMTP"
+           data-action="htmx:afterOnLoad->action-title#setTitle"
+           class="btn btn-ghost text-accent hover:bg-accent-focus ml-2"
+           title="{{ _('Assign SMTP Config') }}">🧩</a>
+    {% else %}
+        <span class="btn btn-ghost text-base-content opacity-50 cursor-not-allowed ml-2"
+              title="{{ _('Cannot assign SMTP while enabled') }}">🧩</span>
+    {% endif %}
+
+    {% if not email.is_enabled %}
+        <!-- Schedule -->
+        <a href="{{ url_for('email.schedule_email', email_id=email.id) }}"
+           hx-get="{{ url_for('email.schedule_email', email_id=email.id) }}"
+           hx-target="#main-content"
+           hx-swap="innerHTML"
+           hx-push-url="true"
+           data-controller="action-title"
+           data-action-title-title-value="Grylli | Email | Schedule"
+           data-action="htmx:afterOnLoad->action-title#setTitle"
+           class="btn btn-ghost text-warning hover:bg-warning-focus ml-2"
+           title="{{ _('Schedule Email') }}">⏱️</a>
+    {% else %}
+        <span class="btn btn-ghost text-base-content opacity-50 cursor-not-allowed ml-2"
+              title="{{ _('Cannot schedule while enabled') }}">⏱️</span>
+    {% endif %}
+
+    <!-- View Config -->
+    <a href="{{ url_for('email.view_email_config', email_id=email.id) }}"
+       hx-get="{{ url_for('email.view_email_config', email_id=email.id) }}"
+       hx-target="#main-content"
+       hx-swap="innerHTML"
+       hx-push-url="true"
+       data-controller="action-title"
+       data-action-title-title-value="Grylli | Email | View"
+       data-action="htmx:afterOnLoad->action-title#setTitle"
+       class="btn btn-ghost text-neutral hover:bg-neutral-focus ml-2"
+       title="{{ _('View Email Details') }}">🔍</a>
+
+    <!-- Test Email -->
+    <form method="post"
+          action="{{ url_for('email.send_test_email', email_id=email.id) }}"
+          class="inline ml-2">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <button type="submit"
+                class="btn btn-ghost text-info hover:bg-info-focus"
+                title="{{ _('Send Test Email') }}">🧪</button>
+    </form>
+
+    <!-- Delete -->
+    <form method="post"
+          action="{{ url_for('email.delete_email', email_id=email.id) }}"
+          class="inline ml-2"
+          data-controller="confirm"
+          data-confirm-message="{{ _('Delete') }} {{ email.subject }}?">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <button type="submit"
+                class="btn btn-ghost text-error hover:bg-error-focus"
+                title="{{ _('Delete') }}">🗑️</button>
+    </form>
+
+    <!-- Toggle On/Off -->
+    <form method="post"
+          action="{{ url_for('checkin.toggle_enabled', type='email', id=email.id) }}"
+          class="inline ml-2">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <button type="submit"
+                class="btn btn-ghost hover:bg-success-focus"
+                title="{{ _('Toggle Email On/Off') }}">
+            {% if email.is_enabled %}
+                <span class="text-success" title="{{ _('Email is enabled') }}">🟢</span>
+            {% else %}
+                <span class="text-error" title="{{ _('Email is disabled') }}">🔴</span>
+            {% endif %}
+        </button>
+    </form>
+</div>

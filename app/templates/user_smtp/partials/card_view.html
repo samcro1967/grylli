@@ -1,0 +1,32 @@
+{# ---------------------------------------------------------------------
+  card_view.html
+  app/templates/user_smtp/partials/card_view.html
+  Card view of SMTP destinations (matches webhook card layout)
+--------------------------------------------------------------------- #}
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    {% for smtp in smtp_list %}
+        <div class="card bg-base-100 dark:bg-base-800 shadow-md hover:shadow-lg transition-all duration-200 ease-in-out p-6 flex flex-col gap-4 rounded-xl border border-base-300 dark:border-base-700">
+            <h2 class="text-lg font-semibold mb-2 text-base-content dark:text-base-100">{{ smtp.label }}</h2>
+            <p class="text-base-content dark:text-base-200">
+                <strong>{{ _("Host:") }}</strong> {{ smtp.smtp_host }}
+            </p>
+            <p class="text-base-content dark:text-base-200">
+                <strong>{{ _("Port:") }}</strong> {{ smtp.smtp_port }}
+            </p>
+            <p class="text-base-content dark:text-base-200">
+                <strong>{{ _("Username:") }}</strong> {{ smtp.smtp_username }}
+            </p>
+            <p class="text-base-content dark:text-base-200">
+                <strong>{{ _("TLS:") }}</strong> {{ '✅' if smtp.use_tls else '❌' }}
+            </p>
+            <p class="text-base-content dark:text-base-200">
+                <strong>{{ _("Enabled:") }}</strong> {{ '✅' if smtp.enabled else '❌' }}
+            </p>
+            <p class="text-base-content dark:text-base-200">
+                <strong>{{ _("Created:") }}</strong>
+                {{ smtp.created_at.strftime("%Y-%m-%d %H:%M") if smtp.created_at else '' }}
+            </p>
+            <div class="mt-2">{% include "user_smtp/partials/actions.html" %}</div>
+        </div>
+    {% endfor %}
+</div>

@@ -1,0 +1,31 @@
+{# ---------------------------------------------------------------------
+  _config_partial.html
+  app/templates/dashboard/partials/_config_partial.html
+  Main user dashboard with all summary cards and add-all bar
+--------------------------------------------------------------------- #}
+<div class="max-w-screen-xl mt-5 mx-auto px-4 pt-8">
+    <!-- Add All Bar -->
+    <div class="flex flex-wrap gap-2 mb-6">
+        <a href="{{ url_for("messages_bp.create_message") }}"
+           class="btn btn-sm btn-primary">{{ _("New Messages") }}</a>
+        <a href="{{ url_for("apprise_routes.create_apprise") }}"
+           class="btn btn-sm btn-primary">{{ _("New Apprise") }}</a>
+        <a href="{{ url_for("webhook.create_webhook") }}"
+           class="btn btn-sm btn-primary">{{ _("New Webhook") }}</a>
+        <a href="{{ url_for("email.edit_email") }}"
+           class="btn btn-sm btn-primary">{{ _("New Email") }}</a>
+        <a href="{{ url_for("user_smtp.create") }}"
+           class="btn btn-sm btn-primary">{{ _("New SMTP") }}</a>
+        <a href="{{ url_for("reminders_bp.create_reminder") }}"
+           class="btn btn-sm btn-primary">{{ _("New Reminder") }}</a>
+    </div>
+    <!-- Responsive Card Grid -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr">
+        {% include "dashboard/partials/messages_card.html" %}
+        {% include "dashboard/partials/apprise_card.html" %}
+        {% include "dashboard/partials/webhooks_card.html" %}
+        {% include "dashboard/partials/emails_card.html" %}
+        {% include "dashboard/partials/smtp_card.html" %}
+        {% include "dashboard/partials/reminders_card.html" %}
+    </div>
+</div>

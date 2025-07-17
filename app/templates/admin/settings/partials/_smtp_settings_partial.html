@@ -1,0 +1,38 @@
+{# ---------------------------------------------------------------------
+  _smtp_settings_partial.html
+  app/templates/admin/settings/partials/_smtp_settings_partial.html
+  HTMX-compatible partial for SMTP settings with test email support.
+--------------------------------------------------------------------- #}
+
+<h1 class="text-2xl font-semibold text-base-content mb-6">{{ _("SMTP Settings") }}</h1>
+
+<div class="overflow-x-auto border border-base-300 dark:border-base-300 rounded-lg">
+    <table class="table w-full text-sm text-left text-base-content dark:text-base-content">
+        <thead class="bg-primary text-primary-content">
+            <tr>
+                <th class="px-4 py-2">{{ _("Key") }}</th>
+                <th class="px-4 py-2">{{ _("Value") }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for setting in settings %}
+                <tr class="hover">
+                    <td class="px-4 py-2 font-mono">{{ setting.key }}</td>
+                    <td class="px-4 py-2 font-mono break-all">{{ setting.value }}</td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="2" class="px-4 py-4 text-center text-base-content dark:text-base-100">
+                        {{ _("No SMTP settings found.") }}
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<form method="post" action="{{ url_for('settings_bp.send_test_email') }}" class="mt-6">
+    <button type="submit" class="btn btn-primary btn-sm">
+        {{ _("Send Test Email to") }} <span class="ml-1 font-mono">{{ current_user.email }}</span>
+    </button>
+</form>

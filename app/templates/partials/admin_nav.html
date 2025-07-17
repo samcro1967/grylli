@@ -1,0 +1,104 @@
+{# ----------------------------------------------------------------------------
+  admin_nav.html
+  app/templates/partials/admin_nav.html
+  Admin-only Navigation Links
+  Only visible to authenticated users with role "admin"
+ ---------------------------------------------------------------------------- #}
+{% if current_user.role == 'admin' %}
+    <!-- Administration (Collapsible Section) -->
+    <div data-controller="collapse"
+         data-collapse-id-value="administration"
+         class="space-y-1">
+        <button data-action="collapse#toggle"
+                class="w-full flex items-center justify-between px-3 py-2 rounded hover:bg-base-200 dark:hover:bg-base-700 text-base-content dark:text-base-content transition">
+            <div class="flex items-center space-x-3">
+                <!-- Shield icon -->
+                <i class="fas fa-shield-alt w-5"></i>
+                <span data-sidebar-target="label" class="truncate">{{ _("Administration") }}</span>
+            </div>
+            <svg data-collapse-target="icon"
+                 class="w-4 h-4 transform transition-transform"
+                 fill="none"
+                 stroke="currentColor"
+                 stroke-width="2"
+                 viewBox="0 0 24 24"
+                 aria-hidden="true"
+                 focusable="false">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+            </svg>
+        </button>
+        <!-- Active link highlighter controller -->
+        <div data-controller="sidebar-active"
+             data-collapse-target="content"
+             class="space-y-1">
+
+            <!-- Admin Overview -->
+            <a href="{{ url_for("admin.admin_landing") }}"
+               data-sidebar-active-target="link"
+               data-path-prefix="{{ url_for("admin.admin_landing").rstrip('/') + '/' }}"
+               data-sidebar-title="{{ _('Grylli | Admin | Overview') }}"
+               hx-get="{{ url_for("admin.admin_landing") }}"
+               hx-target="#main-content"
+               hx-swap="innerHTML"
+               hx-push-url="true"
+               class="icon-wrapper flex items-center space-x-3 pl-8 pr-3 py-2 rounded transition hover:bg-base-200 dark:hover:bg-base-700 text-sm text-base-content dark:text-base-content">
+                <i class="fas fa-clipboard-list w-4"></i>
+                <span data-sidebar-target="label" class="truncate">{{ _("Overview") }}</span>
+            </a>
+
+            <!-- Reports -->
+            <a href="{{ url_for("reports.reports_full") }}"
+               data-sidebar-active-target="link"
+               data-path-prefix="{{ url_for("reports.reports_full").rstrip('/') + '/' }}"
+               hx-get="{{ url_for("reports.reports_full") }}"
+               hx-target="#main-content"
+               hx-swap="innerHTML"
+               hx-push-url="{{ url_for('reports.report_accounts_full') }}"
+               class="icon-wrapper flex items-center space-x-3 pl-8 pr-3 py-2 rounded transition hover:bg-base-200 dark:hover:bg-base-700 text-sm text-base-content dark:text-base-content">
+                <i class="fas fa-chart-bar w-4"></i>
+                <span data-sidebar-target="label" class="truncate">{{ _("Reports") }}</span>
+            </a>
+
+            <!-- Settings (System + SMTP Tabs) -->
+            <a href="{{ url_for("settings_bp.settings_index", tab='system') }}"
+               data-sidebar-active-target="link"
+               data-path-prefix="{{ url_for("settings_bp.settings_index").rsplit('/', 1)[0] + '/' }}"
+               hx-get="{{ url_for("settings_bp.settings_index", tab='system') }}"
+               hx-target="#main-content"
+               hx-swap="innerHTML"
+               hx-push-url="{{ url_for('settings_bp.system_tab') }}"
+               class="icon-wrapper flex items-center space-x-3 pl-8 pr-3 py-2 rounded transition hover:bg-base-200 dark:hover:bg-base-700 text-sm text-base-content dark:text-base-content">
+                <i class="fas fa-sliders-h w-4"></i>
+                <span data-sidebar-target="label" class="truncate">{{ _("Settings") }}</span>
+            </a>
+
+            <!-- Tools (Backups + Tasks Tabs) -->
+            <a href="{{ url_for("tools.tools_full") }}"
+               data-sidebar-active-target="link"
+               data-path-prefix="{{ url_for("tools.tools_full").rstrip('/') + '/' }}"
+               hx-get="{{ url_for("tools.tools_full") }}"
+               hx-target="#main-content"
+               hx-swap="innerHTML"
+               hx-push-url="{{ url_for('tools.tools_backups') }}"
+               class="icon-wrapper flex items-center space-x-3 pl-8 pr-3 py-2 rounded transition hover:bg-base-200 dark:hover:bg-base-700 text-sm text-base-content dark:text-base-content">
+                <i class="fas fa-toolbox w-4"></i>
+                <span data-sidebar-target="label" class="truncate">{{ _("Tools") }}</span>
+            </a>
+
+            <!-- Users -->
+            <a href="{{ url_for("users.list_users") }}"
+               data-sidebar-active-target="link"
+               data-path-prefix="{{ url_for("users.list_users").rstrip('/') + '/' }}"
+               data-sidebar-title="{{ _('Grylli | Admin | Users') }}"
+               hx-get="{{ url_for("users.list_users") }}"
+               hx-target="#main-content"
+               hx-swap="innerHTML"
+               hx-push-url="true"
+               class="icon-wrapper flex items-center space-x-3 pl-8 pr-3 py-2 rounded transition hover:bg-base-200 dark:hover:bg-base-700 text-sm text-base-content dark:text-base-content">
+                <i class="fas fa-users w-4"></i>
+                <span data-sidebar-target="label" class="truncate">{{ _("Users") }}</span>
+            </a>
+
+        </div>
+    </div>
+{% endif %}

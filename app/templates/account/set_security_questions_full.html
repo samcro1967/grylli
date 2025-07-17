@@ -1,0 +1,10 @@
+{# ---------------------------------------------------------------------
+  set_security_questions_full.html
+  app/templates/account/set_security_questions_full.html
+  Page for users to select and store 3 security questions and answers.
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block title %}{{ _("Security Questions") }}{% endblock %}
+{% block content %}
+    {% include "account/set_security_questions_partial.html" %}
+{% endblock %}

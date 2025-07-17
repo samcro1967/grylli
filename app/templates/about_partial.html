@@ -1,0 +1,51 @@
+{# ---------------------------------------------------------------------
+   about_partial.html
+   app/templates/about_partial.html
+   Public-facing "About Grylli" page (merged with former homepage content)
+--------------------------------------------------------------------- #}
+<div class="max-w-5xl mx-auto mt-6 mb-12 bg-base-100 dark:bg-base-300 shadow-md rounded-xl p-6 space-y-6">
+    <!-- Title -->
+    <h1 class="text-3xl font-bold text-base-content">{{ _("About Grylli") }}</h1>
+    <p class="text-base-content/80">
+        <strong>{{ _("Pronounced") }}:</strong> /ˈɡrɪli/ — {{ _("like “grill-ee”") }}
+    </p>
+    <!-- Mission -->
+    <section>
+        <h2 class="text-xl font-semibold text-base-content mt-2">{{ _("Our Mission") }}</h2>
+        <p class="text-base-content/70 mt-1">
+            {{ _("Grylli was built to ensure critical messages reach their destination — even when you can't be there to send them.") }}
+            {{ _("Whether you're planning ahead, handling emergencies, or setting peace-of-mind check-ins, Grylli ensures secure, scheduled delivery of your communications.") }}
+        </p>
+    </section>
+    <!-- Features -->
+    <section>
+        <h2 class="text-xl font-semibold text-base-content">{{ _("What Grylli Offers") }}</h2>
+        <ul class="list-disc list-inside text-base-content/70 space-y-1 mt-1">
+            <li>{{ _("Automated message delivery via email, webhooks, and Apprise.") }}</li>
+            <li>{{ _("Flexible check-in intervals and grace periods to match your needs.") }}</li>
+            <li>{{ _("Rich scheduling options: one-time, daily, weekly, or custom.") }}</li>
+            <li>{{ _("Attach files to emails.") }}</li>
+            <li>{{ _("Full control over your SMTP configuration.") }}</li>
+            <li>{{ _("Role-based access control and MFA for added security.") }}</li>
+        </ul>
+    </section>
+    <!-- Getting Started (merged from old homepage intent) -->
+    <section>
+        <h2 class="text-xl font-semibold text-base-content">{{ _("Getting Started") }}</h2>
+        <p class="text-base-content/70 mt-1">
+            {{ _("Grylli is simple to set up. Once registered, you can begin creating messages, reminders, and destinations immediately.") }}
+            {{ _("Start by exploring your dashboard, adding destinations, and configuring check-in settings.") }}
+        </p>
+    </section>
+    <!-- Privacy -->
+    <section>
+        <h2 class="text-xl font-semibold text-base-content">{{ _("Privacy and Security First") }}</h2>
+        <p class="text-base-content/70 mt-1">
+            {{ _("Grylli is designed with your privacy in mind. Your messages are encrypted at rest, and no data is shared with third parties. Delivery only occurs if your check-in is missed.") }}
+        </p>
+        <p class="text-base-content/70">
+            {{ _("We do not use trackers or analytics, and you can export or delete your data at any time.") }}
+            {{ _("Grylli puts you in control of your message delivery securely and reliably.") }}
+        </p>
+    </section>
+</div>

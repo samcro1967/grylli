@@ -1,0 +1,20 @@
+{# ---------------------------------------------------------------------
+  already_checked_in.html
+  app/templates/checkin/already_checked_in.html
+  [Displayed when a user tries to check in again for the same cycle.]
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    <div class="max-w-xl mx-auto mt-5 text-center p-6 rounded shadow bg-base-100 dark:bg-base-800">
+        <h1 class="text-2xl font-semibold mb-4 text-info dark:text-info-focus">ℹ️ {{ _("Already Checked In") }}</h1>
+        <p class="text-lg mb-2 text-base-content dark:text-base-200">
+            {{ _("You have already checked in for this item. No further action is needed at this time.") }}
+        </p>
+        {% if label %}
+            <p class="text-sm text-base-content dark:text-base-100 italic mt-2">
+                {{ _("Check-in for:") }} <strong>{{ label }}</strong>
+            </p>
+        {% endif %}
+        <a href="{{ url_for("home.index") }}" class="btn btn-primary mt-6">{{ _("Return to Dashboard") }}</a>
+    </div>
+{% endblock %}

@@ -1,0 +1,37 @@
+{# ---------------------------------------------------------------------
+  table_view.html
+  app/templates/user_smtp/partials/table_view.html
+  DaisyUI-compliant table view for SMTP destinations
+--------------------------------------------------------------------- #}
+<div class="overflow-x-auto rounded-box border border-base-300 dark:border-base-700">
+    <table class="table table-zebra w-full text-sm">
+        <thead class="bg-primary text-primary-content">
+            <tr>
+                <th class="px-4 py-2">{{ _("Label") }}</th>
+                <th class="px-4 py-2">{{ _("Host") }}</th>
+                <th class="px-4 py-2 text-center">{{ _("Port") }}</th>
+                <th class="px-4 py-2">{{ _("Username") }}</th>
+                <th class="px-4 py-2 text-center">{{ _("TLS") }}</th>
+                <th class="px-4 py-2 text-center">{{ _("Enabled") }}</th>
+                <th class="px-4 py-2 text-center">{{ _("Created At") }}</th>
+                <th class="px-4 py-2 text-center">{{ _("Actions") }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for smtp in smtp_list %}
+                <tr class="hover:bg-base-200 dark:hover:bg-base-700">
+                    <td class="px-4 py-2 text-base-content">{{ smtp.label }}</td>
+                    <td class="px-4 py-2 text-base-content">{{ smtp.smtp_host }}</td>
+                    <td class="px-4 py-2 text-center text-base-content">{{ smtp.smtp_port }}</td>
+                    <td class="px-4 py-2 text-base-content">{{ smtp.smtp_username }}</td>
+                    <td class="px-4 py-2 text-center text-base-content">{{ '✅' if smtp.use_tls else '❌' }}</td>
+                    <td class="px-4 py-2 text-center text-base-content">{{ '✅' if smtp.enabled else '❌' }}</td>
+                    <td class="px-4 py-2 text-center text-base-content">
+                        {{ smtp.created_at.strftime("%Y-%m-%d %H:%M") if smtp.created_at else '' }}
+                    </td>
+                    <td class="px-4 py-2 text-center text-base-content">{% include "user_smtp/partials/actions.html" %}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,87 @@
+{# ---------------------------------------------------------------------
+  actions.html
+  app/templates/admin/partials/actions.html
+  Shared actions for table and card views
+  Requires `user` and `current_user` to be in context.
+--------------------------------------------------------------------- #}
+<div class="flex items-center gap-2">
+    {% if user.id != current_user.id %}
+        <a href="{{ url_for('users.edit_user', user_id=user.id) }}"
+           title="{{ _("Edit User") }}"
+           class="btn btn-ghost btn-sm">✏️</a>
+    {% else %}
+        <span title="{{ _("You cannot edit your own account") }}"
+              class="btn btn-ghost btn-sm opacity-50 cursor-not-allowed"
+              aria-disabled="true">✏️</span>
+    {% endif %}
+    {% if user.id != current_user.id %}
+        <button type="button"
+                class="btn btn-ghost btn-sm"
+                data-action="role-modal#openModal"
+                data-role-modal-params-id="{{ user.id }}"
+                data-role-modal-params-username="{{ user.username }}"
+                data-role-modal-params-role="{{ user.role }}"
+                title="{{ _("Change Role") }}"
+                aria-label="{{ _("Change Role for") }} {{ user.username }}">🛡️</button>
+    {% else %}
+        <span title="{{ _("You cannot change your own role") }}"
+              class="btn btn-ghost btn-sm opacity-50 cursor-not-allowed"
+              aria-disabled="true">🛡️</span>
+    {% endif %}
+    {% if user.id != current_user.id and user.mfa_enabled %}
+        <form method="post"
+              action="{{ url_for('users.reset_user_mfa', user_id=user.id) }}"
+              class="inline"
+              data-controller="confirm"
+              data-confirm-message-value="{{ _("Are you sure you want to reset MFA for this user?") }}">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <button type="submit"
+                    title="{{ _("Reset MFA") }}"
+                    class="btn btn-warning btn-sm">
+                <i class="fas fa-key"></i>
+            </button>
+        </form>
+    {% endif %}
+    {% if user.id != current_user.id and user.locked_until and user.locked_until > current_time %}
+        <form method="post"
+              action="{{ url_for('users.unlock_user', user_id=user.id) }}"
+              class="inline"
+              data-controller="confirm"
+              data-confirm-message-value="{{ _("Unlock account for") }} {{ user.username }}?">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <button type="submit"
+                    title="{{ _("Unlock Account") }}"
+                    class="btn btn-primary btn-sm">🔓</button>
+        </form>
+    {% endif %}
+    {% if user.id != current_user.id %}
+        <form method="post"
+              action="{{ url_for('users.delete_user', user_id=user.id) }}"
+              class="inline"
+              data-controller="confirm"
+              data-confirm-message-value="{{ _("Delete user") }} {{ user.username }}?">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <button type="submit"
+                    title="{{ _("Delete User") }}"
+                    class="btn btn-error btn-sm">🗑️</button>
+        </form>
+    {% else %}
+        <span title="{{ _("You cannot delete your own account") }}"
+              class="btn btn-ghost btn-sm opacity-50 cursor-not-allowed"
+              aria-disabled="true">🗑️</span>
+    {% endif %}
+    {% if user.id == current_user.id %}
+        <span title="{{ _("You cannot disable yourself") }}"
+              class="btn btn-ghost btn-sm opacity-50 cursor-not-allowed text-xl leading-none select-none"
+              aria-disabled="true">⚪</span>
+    {% else %}
+        <form method="post"
+              action="{{ url_for('users.toggle_user_enabled', user_id=user.id) }}"
+              class="inline">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <button type="submit"
+                    title="{{ _("Disable") if user.is_enabled else _('Enable') }}"
+                    class="btn btn-ghost btn-sm text-xl leading-none">{{ '🟢' if user.is_enabled else '🔴' }}</button>
+        </form>
+    {% endif %}
+</div>

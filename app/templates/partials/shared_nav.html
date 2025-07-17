@@ -1,0 +1,170 @@
+{# ----------------------------------------------------------------------------
+  shared_nav.html
+  app/templates/partials/shared_nav.html
+  Shared Navigation Links (visible to all authenticated users)
+---------------------------------------------------------------------------- #}
+
+<!-- Messages -->
+<div data-controller="collapse"
+     data-collapse-id-value="Messagess"
+     class="space-y-1">
+    <button data-action="collapse#toggle"
+            class="w-full flex items-center justify-between px-3 py-2 mt-2 rounded hover:bg-base-200 dark:hover:bg-base-700 text-base-content dark:text-base-content transition">
+        <div class="flex items-center space-x-3">
+            <i class="fas fa-inbox w-5"></i>
+            <span data-sidebar-target="label" class="truncate">{{ _("Messages") }}</span>
+        </div>
+        <svg data-collapse-target="icon"
+             class="w-4 h-4 transform transition-transform"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="2"
+             viewBox="0 0 24 24"
+             aria-hidden="true"
+             focusable="false">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+    </button>
+    <div data-collapse-target="content"
+         data-controller="sidebar-active"
+         class="space-y-1">
+        <!-- Overview -->
+        <a href="{{ url_for("messages_bp.overview") }}"
+           data-sidebar-active-target="link"
+           data-path-prefix="{{ url_for("messages_bp.overview").rstrip('/') + '/' }}"
+           data-sidebar-title="{{ _('Grylli | Messages | Overview') }}"
+           hx-get="{{ url_for("messages_bp.overview") }}"
+           hx-target="#main-content"
+           hx-swap="innerHTML"
+           hx-push-url="true"
+           class="icon-wrapper flex items-center space-x-3 pl-8 pr-3 py-2 rounded hover:bg-base-200 dark:hover:bg-base-700 text-sm text-base-content dark:text-base-content transition"
+           title="{{ _('Overview of Messages settings') }}">
+            <i class="fas fa-clipboard-list w-4"></i>
+            <span data-sidebar-target="label" class="truncate">{{ _('Overview') }}</span>
+        </a>
+        <!-- Apprise -->
+        <a href="{{ url_for("apprise_routes.config") }}"
+           data-sidebar-active-target="link"
+           data-path-prefix="{{ url_for("apprise_routes.config").rstrip('/') + '/' }}"
+           data-sidebar-title="{{ _('Grylli | Messages | Apprise') }}"
+           hx-get="{{ url_for("apprise_routes.config") }}"
+           hx-target="#main-content"
+           hx-swap="innerHTML"
+           hx-push-url="true"
+           class="icon-wrapper flex items-center space-x-3 pl-8 pr-3 py-2 rounded hover:bg-base-200 dark:hover:bg-base-700 text-sm text-base-content dark:text-base-content transition"
+           title="{{ _('Configure Apprise services') }}">
+            <i class="fas fa-plug w-4"></i>
+            <span data-sidebar-target="label" class="truncate">{{ _('Apprise') }}</span>
+        </a>
+        <!-- Webhooks -->
+        <a href="{{ url_for("webhook.config") }}"
+           data-sidebar-active-target="link"
+           data-path-prefix="{{ url_for("webhook.config").rstrip('/') + '/' }}"
+           data-sidebar-title="{{ _('Grylli | Messages | Webhooks') }}"
+           hx-get="{{ url_for("webhook.config") }}"
+           hx-target="#main-content"
+           hx-swap="innerHTML"
+           hx-push-url="true"
+           class="icon-wrapper flex items-center space-x-3 pl-8 pr-3 py-2 rounded hover:bg-base-200 dark:hover:bg-base-700 text-sm text-base-content dark:text-base-content transition"
+           title="{{ _('Configure Webhook integrations') }}">
+            <i class="fas fa-link w-4"></i>
+            <span data-sidebar-target="label" class="truncate">{{ _('Webhooks') }}</span>
+        </a>
+    </div>
+</div>
+
+<!-- Emails -->
+<div data-controller="collapse"
+     data-collapse-id-value="emails"
+     class="space-y-1">
+    <button data-action="collapse#toggle"
+            class="w-full flex items-center justify-between px-3 py-2 mt-2 rounded hover:bg-base-200 dark:hover:bg-base-700 text-base-content dark:text-base-content transition">
+        <div class="flex items-center space-x-3">
+            <i class="fas fa-envelope w-5"></i>
+            <span data-sidebar-target="label" class="truncate">{{ _("Emails") }}</span>
+        </div>
+        <svg data-collapse-target="icon"
+             class="w-4 h-4 transform transition-transform"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="2"
+             viewBox="0 0 24 24"
+             aria-hidden="true"
+             focusable="false">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+    </button>
+    <div data-collapse-target="content"
+         data-controller="sidebar-active"
+         class="space-y-1">
+        <!-- Overview -->
+        <a href="{{ url_for("email.index") }}"
+           data-sidebar-active-target="link"
+           data-path-prefix="{{ url_for("email.index").rstrip('/') + '/' }}"
+           data-sidebar-title="{{ _('Grylli | Emails | Overview') }}"
+           hx-get="{{ url_for("email.index") }}"
+           hx-target="#main-content"
+           hx-swap="innerHTML"
+           hx-push-url="true"
+           class="icon-wrapper flex items-center space-x-3 pl-8 pr-3 py-2 rounded hover:bg-base-200 dark:hover:bg-base-700 text-sm text-base-content dark:text-base-content transition"
+           title="{{ _('Overview of secure email messages') }}">
+            <i class="fas fa-inbox w-4"></i>
+            <span data-sidebar-target="label" class="truncate">{{ _('Overview') }}</span>
+        </a>
+        <!-- SMTP -->
+        <a href="{{ url_for("user_smtp.overview") }}"
+           data-sidebar-active-target="link"
+           data-path-prefix="{{ url_for("user_smtp.overview").rstrip('/') + '/' }}"
+           data-sidebar-title="{{ _('Grylli | Emails | SMTP') }}"
+           hx-get="{{ url_for("user_smtp.overview") }}"
+           hx-target="#main-content"
+           hx-swap="innerHTML"
+           hx-push-url="true"
+           class="icon-wrapper flex items-center space-x-3 pl-8 pr-3 py-2 rounded hover:bg-base-200 dark:hover:bg-base-700 text-sm text-base-content dark:text-base-content transition"
+           title="{{ _('Configure SMTP email settings') }}">
+            <i class="fas fa-server w-4"></i>
+            <span data-sidebar-target="label" class="truncate">{{ _('SMTP') }}</span>
+        </a>
+    </div>
+</div>
+
+<!-- Reminders -->
+<div data-controller="collapse"
+     data-collapse-id-value="reminders"
+     class="space-y-1">
+    <button data-action="collapse#toggle"
+            class="w-full flex items-center justify-between px-3 py-2 mt-2 rounded hover:bg-base-200 dark:hover:bg-base-700 text-base-content dark:text-base-content transition">
+        <div class="flex items-center space-x-3">
+            <i class="fas fa-bell w-5"></i>
+            <span data-sidebar-target="label" class="truncate">{{ _("Reminders") }}</span>
+        </div>
+        <svg data-collapse-target="icon"
+             class="w-4 h-4 transform transition-transform"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="2"
+             viewBox="0 0 24 24"
+             aria-hidden="true"
+             focusable="false">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+    </button>
+    <div data-collapse-target="content"
+         data-controller="sidebar-active"
+         class="space-y-1">
+        <!-- Overview -->
+        <a href="{{ url_for("reminders_bp.overview") }}"
+           data-sidebar-active-target="link"
+           data-path-prefix="{{ url_for("reminders_bp.overview").rstrip('/') + '/' }}"
+           data-sidebar-title="{{ _('Grylli | Reminders | Overview') }}"
+           hx-get="{{ url_for("reminders_bp.overview") }}"
+           hx-target="#main-content"
+           hx-swap="innerHTML"
+           hx-push-url="true"
+           class="icon-wrapper flex items-center space-x-3 pl-8 pr-3 py-2 rounded hover:bg-base-200 dark:hover:bg-base-700 text-sm text-base-content dark:text-base-content transition"
+           title="{{ _('Overview of reminders') }}">
+            <i class="fas fa-list-alt w-4"></i>
+            <span data-sidebar-target="label" class="truncate">{{ _('Overview') }}</span>
+        </a>
+    </div>
+</div>

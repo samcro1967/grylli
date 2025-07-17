@@ -1,0 +1,10 @@
+{# ---------------------------------------------------------------------
+  server_time.html
+  app/templates/partials/server_time.html
+--------------------------------------------------------------------- #}
+<div id="server-time"
+     class="font-mono text-sm font-bold px-3 py-1 rounded border border-primary/50 bg-primary/10 text-primary shadow-sm"
+     hx-get="{{ url_for("home.server_time") }}"
+     hx-swap="outerHTML"
+     hx-trigger="every 60s"
+     hx-target="this">{{ now.strftime("%Y-%m-%d %H:%M %Z") }}</div>

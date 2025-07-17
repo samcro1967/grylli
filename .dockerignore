@@ -1,0 +1,24 @@
+# Ignore files and folders not needed in Docker build context
+
+# 🔹 Documentation and examples
+README.md
+HELP_RRULE.md
+HELP_SMTP.md
+LICENSE
+
+# 🔹 Dev tools and configs
+.dockerignore
+.gitignore
+.env.example
+docker-compose.sample.yml
+
+# 🔹 Data & user uploads (mounted at runtime)
+uploads/*
+!uploads/.keep
+data/*
+!data/.keep
+data/backups/*
+!data/backups/.keep
+
+# 🔹 Local-only scripts and tooling
+screenshots/

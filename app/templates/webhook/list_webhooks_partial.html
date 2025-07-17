@@ -1,0 +1,94 @@
+{# ---------------------------------------------------------------------
+  webhook/list_webhooks_partial.html
+  CSP-compliant list view for webhooks with view toggle.
+--------------------------------------------------------------------- #}
+<div class="w-full max-w-full px-4 sm:px-6 lg:px-8 mt-5 space-y-6"
+     data-controller="list-toggle"
+     data-list-toggle-storage-key-value="webhookListView"
+     data-list-toggle-show-label-value="{{ _("How to configure Webhooks") }}"
+     data-list-toggle-hide-label-value="{{ _("Hide Instructions") }}">
+    <!-- Page Header -->
+    <div>
+        <h1 class="text-2xl font-bold text-base-content mb-4">{{ _("Webhook Destinations") }}</h1>
+        <p class="text-sm text-base-content dark:text-base-400 mt-1">{{ _("Manage your webhook Messages endpoints.") }}</p>
+    </div>
+
+    <!-- View Toggle + Add Button -->
+    <div class="flex items-center justify-between flex-wrap sm:flex-nowrap gap-2">
+        <div class="flex space-x-2">
+            <!-- Table View Button -->
+            <button type="button"
+                    data-list-toggle-target="tableBtn"
+                    data-action="click->list-toggle#showTable"
+                    aria-label="{{ _("Table View") }}"
+                    title="{{ _("Table View") }}"
+                    class="btn btn-primary px-4 py-2">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     class="h-6 w-6"
+                     fill="none"
+                     viewBox="0 0 24 24"
+                     stroke="currentColor"
+                     stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+                </svg>
+            </button>
+            <!-- Card View Button -->
+            <button type="button"
+                    data-list-toggle-target="cardBtn"
+                    data-action="click->list-toggle#showCard"
+                    aria-label="{{ _("Card View") }}"
+                    title="{{ _("Card View") }}"
+                    class="btn btn-primary px-4 py-2">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     class="h-6 w-6"
+                     fill="none"
+                     viewBox="0 0 24 24"
+                     stroke="currentColor"
+                     stroke-width="2">
+                    <rect x="3" y="3" width="7" height="7" />
+                    <rect x="14" y="3" width="7" height="7" />
+                    <rect x="14" y="14" width="7" height="7" />
+                    <rect x="3" y="14" width="7" height="7" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Add Webhook Button (HTMX + Stimulus title) -->
+        <a href="{{ url_for('webhook.create_webhook') }}"
+           hx-get="{{ url_for('webhook.create_webhook') }}"
+           hx-target="#main-content"
+           hx-swap="innerHTML"
+           hx-push-url="true"
+           data-controller="action-title"
+           data-action-title-title-value="Grylli | Webhook | Create"
+           data-action="htmx:afterOnLoad->action-title#setTitle"
+           class="btn btn-primary shrink-0 whitespace-nowrap px-4 py-2">➕ {{ _("Add Webhook") }}</a>
+    </div>
+
+    <!-- Table View -->
+    <div id="webhookTableView"
+         class="overflow-x-auto w-full"
+         data-list-toggle-target="tableView">
+        {% include "webhook/partials/table_view.html" %}
+    </div>
+
+    <!-- Card View -->
+    <div id="webhookCardView"
+         class="hidden"
+         data-list-toggle-target="cardView">
+        {% include "webhook/partials/card_view.html" %}
+    </div>
+
+    <!-- Help Panel -->
+    <div class="pt-4">
+        <button type="button"
+                class="text-sm text-primary hover:underline focus:outline-none"
+                data-action="click->list-toggle#toggleInstructions">
+            <span data-list-toggle-target="toggleText">{{ _("How to configure Webhooks") }}</span>
+        </button>
+        <div class="hidden mt-4 p-4 rounded bg-base-100 dark:bg-base-800 text-sm text-base-content dark:text-base-100 shadow-md border border-base-300"
+             data-list-toggle-target="instructions">
+            {% include "webhook/partials/help_panel.html" %}
+        </div>
+    </div>
+</div>

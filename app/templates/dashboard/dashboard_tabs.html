@@ -1,0 +1,78 @@
+{# ---------------------------------------------------------------------
+  dashboard_tabs.html
+  app/templates/dashboard/dashboard_tabs.html
+
+  HTMX-based tab loader for the user/admin dashboard.
+  Loads partials into #dashboard-tab-content without destroying tab UI.
+--------------------------------------------------------------------- #}
+<div data-controller="insecure-warning"
+     class="hidden mt-6 bg-error text-error-content px-4 py-3 rounded-md text-med font-semibold text-center mx-auto space-y-1 shadow">
+    <div>{{ _("⚠️ Grylli is not using a secure HTTPS connection.") }}</div>
+    <div>{{ _("Data is not encrypted in transit across the network.") }}</div>
+</div>
+
+<h1 class="text-2xl font-semibold text-base-content mb-6">{{ _("Your Grylli Dashboard") }}</h1>
+
+<div class="space-y-4"
+     data-controller="tabs"
+     data-tabs-active-tab-value="{{ active_tab }}">
+    <nav class="tabs tabs-bordered text-base-content">
+        <a class="tab tab-bordered text-primary hover:underline cursor-pointer {% if active_tab == 'config' %}tab-active{% endif %}"
+           data-action="click->tabs#activate"
+           data-tabs-target="tab"
+           data-tabs-name="config"
+           data-tabs-title="{{ _('Grylli | Dashboard | Config') }}"
+           hx-get="{{ url_for("home.config_tab") }}"
+           hx-target="#dashboard-tab-content"
+           hx-swap="innerHTML"
+           hx-push-url="true"
+           id="tab-config">{{ _("Config") }}</a>
+
+        <a class="tab tab-bordered text-primary hover:underline cursor-pointer {% if active_tab == 'schedule' %}tab-active{% endif %}"
+           data-action="click->tabs#activate"
+           data-tabs-target="tab"
+           data-tabs-name="schedule"
+           data-tabs-title="{{ _('Grylli | Dashboard | Schedule') }}"
+           hx-get="{{ url_for("home.schedule_tab") }}"
+           hx-target="#dashboard-tab-content"
+           hx-swap="innerHTML"
+           hx-push-url="true"
+           id="tab-schedule">{{ _("Schedule") }}</a>
+
+        <a class="tab tab-bordered text-primary hover:underline cursor-pointer {% if active_tab == 'activity' %}tab-active{% endif %}"
+           data-action="click->tabs#activate"
+           data-tabs-target="tab"
+           data-tabs-name="activity"
+           data-tabs-title="{{ _('Grylli | Dashboard | Activity') }}"
+           hx-get="{{ url_for("home.activity_tab") }}"
+           hx-target="#dashboard-tab-content"
+           hx-swap="innerHTML"
+           hx-push-url="true"
+           id="tab-activity">{{ _("Activity") }}</a>
+
+        <a class="tab tab-bordered text-primary hover:underline cursor-pointer {% if active_tab == 'linked_items' %}tab-active{% endif %}"
+           data-action="click->tabs#activate"
+           data-tabs-target="tab"
+           data-tabs-name="linked_items"
+           data-tabs-title="{{ _('Grylli | Dashboard | Linked Items') }}"
+           hx-get="{{ url_for("home.linked_items_tab") }}"
+           hx-target="#dashboard-tab-content"
+           hx-swap="innerHTML"
+           hx-push-url="true"
+           id="tab-linked-items">{{ _("Linked Items") }}</a>
+    </nav>
+
+    <div id="dashboard-tab-content"
+         hx-get="{% if active_tab == 'schedule' %}
+                   {{ url_for("home.schedule_tab") }}
+                 {% elif active_tab == 'activity' %}
+                   {{ url_for("home.activity_tab") }}
+                 {% elif active_tab == 'linked_items' %}
+                   {{ url_for("home.linked_items_tab") }}
+                 {% else %}
+                   {{ url_for("home.config_tab") }}
+                 {% endif %}"
+         hx-trigger="load"
+         hx-target="this"
+         hx-swap="innerHTML"></div>
+</div>

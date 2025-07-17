@@ -1,0 +1,101 @@
+{# ---------------------------------------------------------------------
+  reminder_form_partial.html
+  app/templates/reminders/reminder_form_partial.html
+  CSP-compliant form to create or edit a reminder
+--------------------------------------------------------------------- #}
+{% if is_edit %}
+  <div data-controller="action-title"
+       data-action-title-title-value="Grylli | Reminder | Edit"
+       data-action="htmx:afterOnLoad->action-title#setTitle"></div>
+{% else %}
+  <div data-controller="action-title"
+       data-action-title-title-value="Grylli | Reminder | Create"
+       data-action="htmx:afterOnLoad->action-title#setTitle"></div>
+{% endif %}
+
+<div class="max-w-md mx-auto mt-5 bg-base-100 dark:bg-base-800 shadow-md rounded-xl p-6 space-y-4">
+    <!-- Page Title -->
+    <h1 class="text-xl font-semibold text-base-content dark:text-base-100">
+        {% if is_edit %}
+            ✏️ {{ _("Edit Reminder") }}
+        {% else %}
+            ➕ {{ _("Create Reminder") }}
+        {% endif %}
+    </h1>
+
+    <!-- Instructions -->
+    <p class="text-sm text-base-content dark:text-base-400">
+        {% if is_edit %}
+            {{ _("Update the label, subject, and content of your reminder.") }}
+        {% else %}
+            {{ _("Fill out the form to schedule a reminder.") }}
+        {% endif %}
+    </p>
+
+    <!-- Reminder Form -->
+    <form method="post" novalidate>
+        {{ form.hidden_tag() }}
+
+        <!-- Label -->
+        <div>
+            <label for="label"
+                   class="block text-sm font-medium text-base-content dark:text-base-300">
+                {{ form.label.label.text }}
+            </label>
+            {{ form.label(id="label",
+                          class="w-full mt-1 px-3 py-2 border rounded bg-base-100 dark:bg-base-800 text-base-content dark:text-base-100") }}
+            {% if form.label.errors %}
+                <p class="text-error text-sm mt-1">{{ form.label.errors[0] }}</p>
+            {% endif %}
+        </div>
+
+        <!-- Subject -->
+        <div>
+            <label for="subject"
+                   class="block text-sm font-medium text-base-content dark:text-base-300">
+                {{ form.subject.label.text }}
+            </label>
+            {{ form.subject(id="subject",
+                            class="w-full mt-1 px-3 py-2 border rounded bg-base-100 dark:bg-base-800 text-base-content dark:text-base-100") }}
+            {% if form.subject.errors %}
+                <p class="text-error text-sm mt-1">{{ form.subject.errors[0] }}</p>
+            {% endif %}
+        </div>
+
+        <!-- Content -->
+        <div>
+            <label for="content"
+                   class="block text-sm font-medium text-base-content dark:text-base-300">
+                {{ form.content.label.text }}
+            </label>
+            {{ form.content(id="content",
+                            rows=5,
+                            class="w-full mt-1 px-3 py-2 border rounded bg-base-100 dark:bg-base-800 text-base-content dark:text-base-100") }}
+            {% if form.content.errors %}
+                <p class="text-error text-sm mt-1">{{ form.content.errors[0] }}</p>
+            {% endif %}
+        </div>
+
+        <!-- Submit / Cancel Buttons -->
+        <div class="flex gap-6 mt-6">
+            <button type="submit"
+                    class="btn btn-primary w-full sm:w-auto max-w-xs">
+                {% if is_edit %}
+                    {{ _("Save Reminder") }}
+                {% else %}
+                    {{ _("Create Reminder") }}
+                {% endif %}
+            </button>
+
+            <a href="{{ url_for("reminders_bp.overview") }}"
+               hx-get="{{ url_for("reminders_bp.overview") }}"
+               hx-target="#main-content"
+               hx-swap="innerHTML"
+               hx-push-url="true"
+               data-controller="action-title"
+               data-action-title-title-value="Grylli | Reminder | Overview"
+               data-action="htmx:afterOnLoad->action-title#setTitle"
+               class="btn btn-secondary w-full sm:w-auto max-w-xs text-center">{{ _("Cancel") }}</a>
+        </div>
+    </form>
+</div>

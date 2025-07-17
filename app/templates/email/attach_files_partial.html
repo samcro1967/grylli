@@ -1,0 +1,104 @@
+{# ---------------------------------------------------------------------
+  attach_files_partial.html
+  app/templates/email/attach_files_partial.html
+  CSP-compliant UI to attach files to an email message
+--------------------------------------------------------------------- #}
+<div data-controller="action-title"
+     data-action-title-title-value="Grylli | Email | Attach Files"
+     data-action="htmx:afterOnLoad->action-title#setTitle"></div>
+
+<div class="max-w-3xl mx-auto mt-5 bg-base-100 dark:bg-base-800 shadow-md rounded-xl p-6 space-y-6">
+    <!-- Page Header -->
+    <div>
+        <h1 class="text-xl font-semibold mb-4 text-base-content dark:text-base-100 flex items-center gap-2">
+            📎 <span>{{ _("Attach Files for:") }} <span class="font-mono">{{ message.label }}</span></span>
+        </h1>
+        <p class="text-sm text-base-content dark:text-base-400 mt-1">
+            {{ _("Select files from the uploads folder to attach to this message.") }}
+        </p>
+    </div>
+
+    <!-- Form -->
+    <form method="post" novalidate>
+        {{ form.hidden_tag() }}
+
+        <!-- File List -->
+        <div>
+            <h2 class="text-sm font-medium text-base-content dark:text-base-100 mb-2">{{ _("Available Files") }}</h2>
+            <ul class="space-y-2">
+                {% for file in available_files %}
+                    <li>
+                        <label class="inline-flex items-center space-x-2">
+                            <input type="checkbox"
+                                   name="file_paths"
+                                   value="{{ file.name }}"
+                                   {% if file.name in existing_files %}checked{% endif %}
+                                   class="checkbox checkbox-primary mt-1">
+                            <span class="text-sm text-base-content dark:text-base-100">{{ file.name }}</span>
+                            <span class="text-xs text-base-content dark:text-base-400 ml-2">({{ file.size | filesizeformat }})</span>
+                        </label>
+                    </li>
+                {% else %}
+                    <li class="italic text-base-content dark:text-base-400 text-sm">
+                        {{ _("No files found in the upload directory.") }}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+
+        <!-- Submit / Cancel Buttons -->
+        <div class="flex gap-6 mt-6">
+            <button type="submit"
+                    data-email-form-target="submit"
+                    class="btn btn-primary w-full sm:w-auto max-w-xs">{{ _("Save Attachments") }}</button>
+
+            <a href="{{ url_for("email.index") }}"
+               hx-get="{{ url_for("email.index") }}"
+               hx-target="#main-content"
+               hx-swap="innerHTML"
+               hx-push-url="true"
+               data-controller="action-title"
+               data-action-title-title-value="Grylli | Email | Overview"
+               data-action="htmx:afterOnLoad->action-title#setTitle"
+               class="btn btn-secondary w-full sm:w-auto max-w-xs text-center">{{ _("Cancel") }}</a>
+        </div>
+    </form>
+
+    <!-- Stimulus Help Panel -->
+    <div data-controller="toggle-help"
+         data-toggle-help-show-label-value="{{ _('File Attach Notes') }}"
+         data-toggle-help-hide-label-value="{{ _('Hide Instructions') }}">
+        <button type="button"
+                class="text-sm text-primary dark:text-primary-400 hover:underline focus:outline-none"
+                data-action="click->toggle-help#toggle">
+            <span data-toggle-help-target="label">{{ _("File Attach Notes") }}</span>
+        </button>
+        <div data-toggle-help-target="panel"
+             class="mt-4 p-4 rounded bg-base-100 dark:bg-base-800 text-sm text-base-content dark:text-base-100 space-y-2 shadow-md border border-base-700 hidden">
+            <ul class="list-disc ml-5">
+                <li>
+                    <strong>{{ _("Important:") }}</strong>
+                    <span class="ml-1">
+                        {{ _("Only files that are present in the 'uploads' folder (provided by your system administrator) will be shown here. If you do not see your file(s), please contact your Grylli administrator.") }}
+                    </span>
+                </li>
+                <li>
+                    <strong>{{ _("Accepted file types:") }}</strong>
+                    <div class="ml-3">
+                        – <strong>{{ _("Documents:") }}</strong> PDF, DOCX, XLSX, PPTX, TXT, CSV<br>
+                        – <strong>{{ _("Images:") }}</strong> JPG, JPEG, PNG, GIF, BMP<br>
+                        – <strong>{{ _("Audio:") }}</strong> WAV, M4A
+                    </div>
+                </li>
+                <li>
+                    <strong>{{ _("Maximum file size:") }}</strong>
+                    <span class="ml-1">{{ _("10 MB per file") }}</span>
+                </li>
+                <li>
+                    <strong>{{ _("Total upload size:") }}</strong>
+                    <span class="ml-1">{{ _("20 MB (all files combined)") }}</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

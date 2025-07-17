@@ -1,0 +1,36 @@
+{# ---------------------------------------------------------------------
+  _activity_partial.html
+  app/templates/dashboard/partials/_activity_partial.html
+  Activity log for the current user (Access + Auth + CheckIn events)
+--------------------------------------------------------------------- #}
+<div class="w-full max-w-screen-xl px-4 sm:px-6 lg:px-8 mt-5 space-y-6">
+    <h2 class="text-xl font-bold text-base-content">{{ _("Your Activity History") }}</h2>
+    {% if entries %}
+        <div class="overflow-x-auto border border-base-300 dark:border-base-300 rounded-lg">
+            <table class="table w-full text-sm text-left text-base-content dark:text-base-content">
+                <thead class="bg-primary text-primary-content">
+                    <tr>
+                        <th class="font-semibold px-4 py-2 whitespace-nowrap">{{ _("Timestamp") }}</th>
+                        <th class="font-semibold px-4 py-2 whitespace-nowrap">{{ _("Type") }}</th>
+                        <th class="font-semibold px-4 py-2">{{ _("Details") }}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for entry in entries %}
+                        <tr class="hover:bg-base-200 dark:hover:bg-base-700 transition-colors">
+                            <td class="px-4 py-2 whitespace-nowrap">{{ entry.timestamp }}</td>
+                            <td class="px-4 py-2 whitespace-nowrap">
+                                <span class="badge badge-med {% if entry.category == 'Auth' %} badge-success text-success-content {% elif entry.category == 'Access' %} badge-primary text-primary-content {% elif entry.category == 'CheckIn' %} badge-warning text-warning-content {% else %} badge-neutral text-neutral-content {% endif %} ">
+                                    {{ entry.category }}
+                                </span>
+                            </td>
+                            <td class="px-4 py-2 text-pretty">{{ entry.message }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% else %}
+        <p class="text-base-content dark:text-base-300 text-sm">{{ _("No recent activity found in the application log.") }}</p>
+    {% endif %}
+</div>

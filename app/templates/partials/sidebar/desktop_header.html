@@ -1,0 +1,25 @@
+{# ---------------------------------------------------------------------
+  desktop_header.html
+  Sidebar top section with label and collapse button
+--------------------------------------------------------------------- #}
+<div data-sidebar-target="header"
+     class="flex items-center justify-between px-4 py-3 border-b border-base-300 dark:border-base-700 bg-base-200 dark:bg-base-300 text-base-content flex-shrink-0 transition-all duration-200">
+    <!-- Sidebar Label -->
+    <span data-sidebar-target="label"
+          class="text-sm font-bold truncate transition-opacity duration-200">{{ _("Menu") }}</span>
+    <!-- Collapse Toggle Button (Hamburger) -->
+    <button data-action="sidebar#toggleCollapsed"
+            aria-label="{{ _("Collapse Sidebar") }}"
+            title="{{ _("Collapse Sidebar") }}"
+            class="p-2 rounded hover:bg-base-300 dark:hover:bg-base-700 text-base-content hover:text-primary transition focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-1">
+        <svg class="w-5 h-5"
+             fill="none"
+             stroke="currentColor"
+             stroke-width="2"
+             viewBox="0 0 24 24"
+             aria-hidden="true"
+             focusable="false">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+    </button>
+</div>

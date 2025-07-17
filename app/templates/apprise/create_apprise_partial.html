@@ -1,0 +1,110 @@
+{# ---------------------------------------------------------------------
+  create_apprise_partial.html
+  app/templates/apprise/create_apprise_partial.html
+  CSP-compliant form to create or edit an Apprise Messages destination
+--------------------------------------------------------------------- #}
+
+{% if is_edit %}
+  <div data-controller="action-title"
+       data-action-title-title-value="Grylli | Apprise | Edit"
+       data-action="htmx:afterOnLoad->action-title#setTitle"></div>
+{% else %}
+  <div data-controller="action-title"
+       data-action-title-title-value="Grylli | Apprise | Create"
+       data-action="htmx:afterOnLoad->action-title#setTitle"></div>
+{% endif %}
+
+<div class="max-w-md mx-auto mt-5 bg-base-100 dark:bg-base-800 shadow-md rounded-xl p-6 space-y-4"
+     data-controller="apprise-form">
+    <!-- Page Title (dynamic for Create/Edit) -->
+    <h1 class="text-xl font-semibold text-base-content dark:text-base-100">
+        {% if is_edit %}
+            {{ _("Edit Apprise Destination") }}
+        {% else %}
+            {{ _("Create Apprise Destination") }}
+        {% endif %}
+    </h1>
+
+    <!-- Instructions -->
+    <p class="text-sm text-base-content dark:text-base-400">
+        {% if is_edit %}
+            {{ _("Update the label or URL for this Apprise destination.") }}
+        {% else %}
+            {{ _("Enter a label and the Apprise URL to create a new destination.") }}
+        {% endif %}
+    </p>
+
+    <!-- Form -->
+    <form method="post" novalidate>
+        {{ form.hidden_tag() }}
+
+        <!-- Label -->
+        <div>
+            <label for="label"
+                   class="block text-sm font-medium text-base-content dark:text-base-300">
+                {{ form.label.label.text }}
+            </label>
+            {{ form.label(id="label",
+                          class="w-full mt-1 px-3 py-2 border rounded bg-base-100 dark:bg-base-800 text-base-content dark:text-base-100",
+                          data_apprise_form_target="label") }}
+            {% if form.label.errors %}<p class="text-error text-sm mt-1">{{ form.label.errors[0] }}</p>{% endif %}
+        </div>
+
+        <!-- URL -->
+        <div>
+            <label for="url"
+                   class="block text-sm font-medium text-base-content dark:text-base-300">
+                {{ form.url.label.text }}
+            </label>
+            {{ form.url(id="url",
+                        class="w-full mt-1 px-3 py-2 border rounded bg-base-100 dark:bg-base-800 text-base-content dark:text-base-100",
+                        data_apprise_form_target="url") }}
+            {% if form.url.errors %}<p class="text-error text-sm mt-1">{{ form.url.errors[0] }}</p>{% endif %}
+        </div>
+
+        <!-- Enabled Checkbox -->
+        <div>
+            <label class="inline-flex items-center">
+                {{ form.enabled() }}
+                <span class="ml-2 text-sm text-base-content dark:text-base-300">{{ _("Enabled") }}</span>
+            </label>
+        </div>
+
+        <!-- Submit / Cancel Buttons -->
+        <div class="flex gap-6 mt-6">
+            <button id="submitBtn"
+                    type="submit"
+                    data-apprise-form-target="submit"
+                    class="btn btn-primary w-full sm:w-auto max-w-xs"
+                    disabled>
+                {% if is_edit %}
+                    {{ _("Save Changes") }}
+                {% else %}
+                    {{ _("Create Destination") }}
+                {% endif %}
+            </button>
+
+            <!-- Cancel Button -->
+            <a href="{{ url_for("apprise_routes.config") }}"
+               hx-get="{{ url_for("apprise_routes.config") }}"
+               hx-target="#main-content"
+               hx-swap="innerHTML"
+               hx-push-url="true"
+               data-controller="action-title"
+               data-action-title-title-value="Grylli | Apprise | Overview"
+               data-action="htmx:afterOnLoad->action-title#setTitle"
+               class="btn btn-secondary w-full sm:w-auto max-w-xs">{{ _("Cancel") }}</a>
+        </div>
+
+        <!-- Apprise Documentation -->
+        <div class="mt-4 text-sm text-base-content dark:text-base-400">
+            📚 {{ _("Need help with Apprise URLs? See the") }}
+            <a href="https://github.com/caronc/apprise/wiki#Messages-services"
+               target="_blank"
+               rel="noopener noreferrer"
+               class="text-primary dark:text-primary-400 underline hover:text-primary-900">
+                {{ _("Apprise Messages Services documentation") }}
+            </a>.
+        </div>
+    </form>
+</div>

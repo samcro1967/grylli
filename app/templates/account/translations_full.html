@@ -1,0 +1,10 @@
+{# ---------------------------------------------------------------------
+   translations_full.html
+   app/templates/translations_full.html
+   Shows how to contribute and report translations in Grylli.
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block title %}{{ _("Translations") }}{% endblock %}
+{% block content %}
+    {% include "account/translations_partial.html" %}
+{% endblock %}

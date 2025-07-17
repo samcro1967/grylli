@@ -1,0 +1,92 @@
+{# ---------------------------------------------------------------------
+  report_logs_partial.html
+  app/templates/admin/partials/reports/report_logs_partial.html
+  Table view for filtered application logs (HTMX swappable)
+--------------------------------------------------------------------- #}
+<div id="log-table" hx-swap="outerHTML">
+    <div class="max-w-6xl mx-auto mt-5 mb-8">
+        <p class="text-sm text-base-content mt-2 mb-4">
+            {{ _("Showing up to %(count)s recent log entries (newest first).", count=UI_LOG_LINE_LIMIT) }}
+        </p>
+        <!-- Filtering Form -->
+        <form hx-get="{{ url_for("reports.report_logs_full") }}"
+              hx-target="#log-table"
+              hx-push-url="true"
+              class="flex flex-wrap gap-4 items-end mb-4"
+              role="search"
+              aria-label="{{ _("Filter logs") }}">
+            <div class="form-control">
+                <label class="label">
+                    <span class="label-text">{{ _("Level") }}</span>
+                </label>
+                <select name="level" class="select select-bordered select-sm">
+                    <option value="">{{ _("All") }}</option>
+                    <option value="INFO">INFO</option>
+                    <option value="ERROR">ERROR</option>
+                    <option value="DEBUG">DEBUG</option>
+                </select>
+            </div>
+            <div class="form-control">
+                <label class="label">
+                    <span class="label-text">{{ _("Text Contains") }}</span>
+                </label>
+                <input type="text"
+                       name="text"
+                       class="input input-bordered input-sm"
+                       placeholder="{{ _("e.g. login or scheduler") }}">
+            </div>
+            <div class="form-control">
+                <label class="label">
+                    <span class="label-text">{{ _("After (ISO Time)") }}</span>
+                </label>
+                <input type="datetime-local"
+                       name="after"
+                       class="input input-bordered input-sm">
+            </div>
+            <div class="form-control">
+                <button type="submit" class="btn btn-primary btn-sm mt-4">{{ _("Apply Filters") }}</button>
+            </div>
+        </form>
+    </div>
+    <div class="overflow-x-auto w-full">
+        <table class="table w-full text-sm border-collapse border border-base-300 dark:border-base-700">
+            <thead>
+                <tr>
+                    <th class="text-left">
+                        <a href="?sort=timestamp"
+                           hx-get="{{ url_for("reports.report_logs_full") }}?sort=timestamp"
+                           hx-target="#log-table"
+                           hx-push-url="true"
+                           class="link link-hover text-primary">{{ _("Timestamp") }}</a>
+                    </th>
+                    <th class="text-left">
+                        <a href="?sort=level"
+                           hx-get="{{ url_for("reports.report_logs_full") }}?sort=level"
+                           hx-target="#log-table"
+                           hx-push-url="true"
+                           class="link link-hover text-primary">{{ _("Level") }}</a>
+                    </th>
+                    <th class="text-left">{{ _("Message") }}</th>
+                </tr>
+            </thead>
+            <tbody class="text-base-content divide-y divide-base-300 dark:divide-base-700 bg-base-100 dark:bg-base-800">
+                {% for line in logs if line.strip() %}
+                    {% set parts = line.split(' - ') %}
+                    <tr class="hover:bg-base-200 dark:hover:bg-base-700">
+                        <td class="py-2 px-4 font-mono text-xs border-l border-t border-base-300 dark:border-base-700">{{ parts[0] }}</td>
+                        <td class="py-2 px-4 text-xs border-l border-t border-base-300 dark:border-base-700">
+                            {{ parts[1] if parts|length > 2 else "" }}
+                        </td>
+                        <td class="py-2 px-4 break-words text-xs border-l border-t border-base-300 dark:border-base-700">
+                            {{ parts[2:] | join(" - ") if parts|length > 2 else line }}
+                        </td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="3" class="text-center text-base-content p-2">{{ _("No matching log entries found.") }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>

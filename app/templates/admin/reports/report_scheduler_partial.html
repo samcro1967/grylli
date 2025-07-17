@@ -1,0 +1,45 @@
+{# ---------------------------------------------------------------------
+  report_scheduler_partial.html
+  app/templates/admin/partials/reports/report_scheduler_partial.html
+  HTMX-safe partial for Scheduler Activity tab content.
+--------------------------------------------------------------------- #}
+<p class="text-sm text-base-content mb-4 italic">
+    {{ _("Only showing the most recent %(count)s entries.", count=max_entries) }} {{ _("from the log file.") }}
+</p>
+
+{% if logs %}
+    <div class="overflow-x-auto border border-base-300 dark:border-base-300 rounded-lg">
+        <table class="table w-full text-sm">
+            <thead>
+                <tr class="bg-primary text-primary-content text-left">
+                    <th class="px-4 py-2">{{ _("Date") }}</th>
+                    <th class="px-4 py-2">{{ _("Level") }}</th>
+                    <th class="px-4 py-2">{{ _("Job Name") }}</th>
+                    <th class="px-4 py-2">{{ _("Status") }}</th>
+                    <th class="px-4 py-2">{{ _("Details") }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for entry in logs %}
+                    <tr class="hover">
+                        <td class="px-4 py-2 whitespace-nowrap">{{ entry.timestamp }}</td>
+                        <td class="px-4 py-2 whitespace-nowrap">
+                            <span class="badge badge-sm {% if entry.level == 'ERROR' %}badge-error{% elif entry.level == 'WARNING' %}badge-warning{% else %}badge-ghost{% endif %}">
+                                {{ entry.level }}
+                            </span>
+                        </td>
+                        <td class="px-4 py-2">{{ entry.job_name }}</td>
+                        <td class="px-4 py-2">{{ entry.status }}</td>
+                        <td class="px-4 py-2 text-pretty">{{ entry.detail }}</td>
+                    </tr>
+                {% else %}
+                    <tr>
+                        <td colspan="5" class="px-4 py-4 text-center text-base-content">{{ _("No scheduler activity found.") }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% else %}
+    <p>No scheduler activity found.</p>
+{% endif %}

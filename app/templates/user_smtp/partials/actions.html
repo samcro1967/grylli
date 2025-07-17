@@ -1,0 +1,50 @@
+{# ---------------------------------------------------------------------
+  actions.html
+  app/templates/user_smtp/partials/actions.html
+  CSP-compliant SMTP action buttons matching Messages/Apprise style
+--------------------------------------------------------------------- #}
+<div class="flex items-center justify-between gap-2">
+    {# Edit (disabled if in use) #}
+    {% if not smtp.linked_secure_emails %}
+        <a href="{{ url_for('user_smtp.edit', smtp_id=smtp.id) }}"
+           hx-get="{{ url_for('user_smtp.edit', smtp_id=smtp.id) }}"
+           hx-target="#main-content"
+           hx-swap="innerHTML"
+           hx-push-url="true"
+           data-controller="action-title"
+           data-action-title-title-value="Grylli | SMTP | Edit"
+           data-action="htmx:afterOnLoad->action-title#setTitle"
+           class="btn btn-ghost text-primary hover:bg-primary-focus"
+           title="{{ _('Edit') }}">✏️</a>
+    {% else %}
+        <span class="btn btn-ghost text-base-content opacity-50 cursor-not-allowed"
+              title="{{ _('Cannot edit while assigned to emails') }}">✏️</span>
+    {% endif %}
+
+    {# Test button (always enabled) #}
+    <form method="post"
+          action="{{ url_for('user_smtp.send_test', smtp_id=smtp.id) }}"
+          class="inline">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <button type="submit"
+                class="btn btn-ghost text-info hover:bg-info-focus"
+                title="{{ _('Send Test Email') }}">🧪</button>
+    </form>
+
+    {# Delete (disabled if in use) #}
+    {% if not smtp.linked_secure_emails %}
+        <form method="post"
+              action="{{ url_for('user_smtp.delete', smtp_id=smtp.id) }}"
+              class="inline"
+              data-controller="confirm"
+              data-confirm-message-value="{{ _('Delete') }} {{ smtp.label }}?">
+            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+            <button type="submit"
+                    class="btn btn-ghost text-error hover:bg-error-focus"
+                    title="{{ _('Delete') }}">🗑️</button>
+        </form>
+    {% else %}
+        <span class="btn btn-ghost text-base-content opacity-50 cursor-not-allowed"
+              title="{{ _('Cannot delete while assigned to emails') }}">🗑️</span>
+    {% endif %}
+</div>

@@ -1,0 +1,10 @@
+{# ---------------------------------------------------------------------
+  assign_destinations_full.html
+  app/templates/reminders/assign_destinations_full.html
+  CSP-compliant form to assign Apprise and Webhook destinations to a reminder
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    {% set is_edit = false %}
+    {% include "reminders/assign_destinations_partial.html" %}
+{% endblock %}

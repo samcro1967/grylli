@@ -1,0 +1,10 @@
+{# ---------------------------------------------------------------------
+  schedule_email_full.html
+  app/templates/email/schedule_email_full.html
+  CSP-compliant form to schedule an email (check-in + grace)
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    {% set is_edit = false %}
+    {% include "email/schedule_email_partial.html" %}
+{% endblock %}

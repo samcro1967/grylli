@@ -1,0 +1,15 @@
+{# ---------------------------------------------------------------------
+  help_panel.html
+  app/templates/webhook/partials/help_panel.html
+  Instructions content only — no toggle logic. Controlled by parent.
+--------------------------------------------------------------------- #}
+<ol class="list-decimal list-inside space-y-1">
+    <li>{{ _("Click “Add Webhook” to register a new destination.") }}</li>
+    <li>{{ _("Enter a valid endpoint URL that will receive the HTTP POST request.") }}</li>
+    <li>{{ _("Optionally provide a description to clarify the webhook’s purpose.") }}</li>
+    <li>{{ _("Use the 🧪 icon to test that the webhook destination is working properly.") }}</li>
+    <li>{{ _("Webhooks in use by Messagess cannot be edited or deleted.") }}</li>
+    <li>{{ _("Use the 🔴/🟢 toggle to enable or disable destinations globally.") }}</li>
+    <li>{{ _("Switch between table and card view using the top-left buttons.") }}</li>
+    <li>{{ _("You can create and manage multiple webhooks for different systems or automations.") }}</li>
+</ol>

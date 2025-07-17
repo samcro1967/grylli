@@ -1,0 +1,42 @@
+{# ---------------------------------------------------------------------
+  forgot_username.html
+  app/templates/auth/forgot_username.html
+  Username recovery page: enter your email, get your username via email.
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    <div class="max-w-md mx-auto mt-5 text-center p-6 rounded-xl bg-base-100 dark:bg-base-800 shadow-md space-y-4"
+         data-controller="forgot-username">
+        <!-- Page Title -->
+        <h1 class="text-xl font-semibold text-base-content dark:text-base-100">{{ _("Forgot Username") }}</h1>
+        <!-- Instructions -->
+        <p class="text-sm text-base-content dark:text-base-200">
+            {{ _("Enter your email address, and we'll send you your username.") }}
+        </p>
+        <form method="post" novalidate id="forgotUsernameForm">
+            {{ form.hidden_tag() }}
+            <!-- Email Field -->
+            <div class="mb-4">
+                {{ form.email.label(class="block text-sm font-medium mb-1 text-base-content dark:text-base-100") }}
+                {{ form.email(id="email",
+                                class="input input-bordered w-full bg-base-200 dark:bg-base-700 text-base-content dark:text-base-100",
+                                autocomplete="email",
+                                required=True) }}
+                {% if form.email.errors %}
+                    <ul class="text-error text-xs mt-1" id="email-errors">
+                        {% for error in form.email.errors %}<li>{{ error }}</li>{% endfor %}
+                    </ul>
+                {% endif %}
+                <p class="text-error text-sm hidden"
+                   data-forgot-username-target="emailWarning">{{ _("Please enter a valid email address.") }}</p>
+            </div>
+            <!-- Submit Button -->
+            <div class="flex flex-row gap-2 items-stretch mt-4">
+                <button type="submit"
+                        class="btn btn-primary flex-1"
+                        data-forgot-username-target="submit">{{ _("Send Username") }}</button>
+                {{ form.cancel(class="btn btn-secondary flex-1", formnovalidate=True) }}
+            </div>
+        </form>
+    </div>
+{% endblock %}

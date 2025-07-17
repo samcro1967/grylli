@@ -1,0 +1,128 @@
+{# ---------------------------------------------------------------------
+  actions.html
+  app/templates/reminders/partials/actions.html
+  CSP-compliant reminder actions partial with wrapping and spacing
+--------------------------------------------------------------------- #}
+<div class="flex flex-wrap gap-2 mt-4 justify-start">
+    {% if not reminder.is_enabled %}
+        <!-- Edit Reminder -->
+        <a href="{{ url_for('reminders_bp.edit_reminder', reminder_id=reminder.id) }}"
+           hx-get="{{ url_for('reminders_bp.edit_reminder', reminder_id=reminder.id) }}"
+           hx-target="#main-content"
+           hx-swap="innerHTML"
+           hx-push-url="true"
+           data-controller="action-title"
+           data-action-title-title-value="Grylli | Reminder | Edit"
+           data-action="htmx:afterOnLoad->action-title#setTitle"
+           class="btn btn-ghost btn-sm text-primary hover:bg-primary-focus"
+           title="{{ _('Edit Reminder') }}">✏️</a>
+    {% else %}
+        <span class="btn btn-ghost btn-sm opacity-50 cursor-not-allowed"
+              title="{{ _('Cannot edit while enabled') }}">✏️</span>
+    {% endif %}
+
+    {% if not reminder.is_enabled %}
+        <!-- Assign Destinations -->
+        <a href="{{ url_for('reminders_bp.assign_destinations', reminder_id=reminder.id) }}"
+           hx-get="{{ url_for('reminders_bp.assign_destinations', reminder_id=reminder.id) }}"
+           hx-target="#main-content"
+           hx-swap="innerHTML"
+           hx-push-url="true"
+           data-controller="action-title"
+           data-action-title-title-value="Grylli | Reminder | Assign Destinations"
+           data-action="htmx:afterOnLoad->action-title#setTitle"
+           class="btn btn-ghost btn-sm text-accent hover:bg-accent-focus ml-2"
+           title="{{ _('Assign Destinations') }}">🧩</a>
+    {% else %}
+        <span class="btn btn-ghost btn-sm opacity-50 cursor-not-allowed ml-2"
+              title="{{ _('Cannot assign destinations while enabled') }}">🧩</span>
+    {% endif %}
+
+    {% if not reminder.is_enabled %}
+        <!-- Assign Email -->
+        <a href="{{ url_for('reminders_bp.assign_email_to_reminder', reminder_id=reminder.id) }}"
+           hx-get="{{ url_for('reminders_bp.assign_email_to_reminder', reminder_id=reminder.id) }}"
+           hx-target="#main-content"
+           hx-swap="innerHTML"
+           hx-push-url="true"
+           data-controller="action-title"
+           data-action-title-title-value="Grylli | Reminder | Assign Email"
+           data-action="htmx:afterOnLoad->action-title#setTitle"
+           class="btn btn-ghost btn-sm text-accent hover:bg-accent-focus ml-2"
+           title="{{ _('Assign Email Reminder') }}">📧</a>
+    {% else %}
+        <span class="btn btn-ghost btn-sm opacity-50 cursor-not-allowed ml-2"
+              title="{{ _('Cannot assign email while enabled') }}">📧</span>
+    {% endif %}
+
+    {% if not reminder.is_enabled %}
+        <!-- Set Schedule -->
+        <a href="{{ url_for('reminders_bp.schedule_reminder', reminder_id=reminder.id) }}"
+           hx-get="{{ url_for('reminders_bp.schedule_reminder', reminder_id=reminder.id) }}"
+           hx-target="#main-content"
+           hx-swap="innerHTML"
+           hx-push-url="true"
+           data-controller="action-title"
+           data-action-title-title-value="Grylli | Reminder | Schedule"
+           data-action="htmx:afterOnLoad->action-title#setTitle"
+           class="btn btn-ghost btn-sm text-warning hover:bg-warning-focus ml-2"
+           title="{{ _('Set Schedule') }}">⏱️</a>
+    {% else %}
+        <span class="btn btn-ghost btn-sm opacity-50 cursor-not-allowed ml-2"
+              title="{{ _('Cannot schedule while enabled') }}">⏱️</span>
+    {% endif %}
+
+    <!-- View Details -->
+    <a href="{{ url_for('reminders_bp.view_reminder', reminder_id=reminder.id) }}"
+       hx-get="{{ url_for('reminders_bp.view_reminder', reminder_id=reminder.id) }}"
+       hx-target="#main-content"
+       hx-swap="innerHTML"
+       hx-push-url="true"
+       data-controller="action-title"
+       data-action-title-title-value="Grylli | Reminder | View"
+       data-action="htmx:afterOnLoad->action-title#setTitle"
+       class="btn btn-ghost btn-sm text-neutral hover:bg-neutral-focus ml-2"
+       title="{{ _('View Details') }}">🔍</a>
+
+    <!-- Send Test Reminder -->
+    <form method="post"
+          action="{{ url_for('reminders_bp.send_test_reminder', reminder_id=reminder.id) }}"
+          class="inline ml-2"
+          hx-post="{{ url_for('reminders_bp.send_test_reminder', reminder_id=reminder.id) }}"
+          hx-target="#main-content"
+          hx-swap="innerHTML"
+          hx-push-url="true">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <button type="submit"
+                class="btn btn-sm btn-ghost text-info hover:bg-info-focus"
+                title="{{ _('Send Test Reminder') }}">🧪</button>
+    </form>
+
+    <!-- Delete Reminder -->
+    <form method="post"
+          action="{{ url_for('reminders_bp.delete_reminder', reminder_id=reminder.id) }}"
+          class="inline ml-2"
+          data-controller="confirm"
+          data-confirm-message-value="{{ _('Delete reminder') }} {{ reminder.label or reminder.subject }}?">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <button type="submit"
+                class="btn btn-sm btn-ghost text-error hover:bg-error-focus"
+                title="{{ _('Delete Reminder') }}">🗑️</button>
+    </form>
+
+    <!-- Toggle Reminder Enabled -->
+    <form method="post"
+          action="{{ url_for('checkin.toggle_enabled', type='reminder', id=reminder.id) }}"
+          class="inline ml-2">
+        <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+        <button type="submit"
+                class="btn btn-sm btn-ghost text-primary hover:bg-primary-focus"
+                title="{{ _('Toggle Reminder On/Off') }}">
+            {% if reminder.is_enabled %}
+                <span class="text-success">🟢</span>
+            {% else %}
+                <span class="text-error">🔴</span>
+            {% endif %}
+        </button>
+    </form>
+</div>

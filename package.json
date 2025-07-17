@@ -1,0 +1,35 @@
+{
+  "name": "grylli",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "setup": "npm install",
+    "generate:versions": "node scripts/generate_versions.js",
+    "build:css": "NODE_ENV=production npx tailwindcss -i app/static/css/tailwind.css -o app/static/css/styles.min.css --minify",
+    "build:js": "npx terser app/static/js/application.js -o app/static/js/application.min.js --compress --mangle",
+    "build:critical": "npx critical http://osu.grylli:5069/grylli/ --width 390 --height 844 --inline false --extract --css app/static/css/styles.min.css --base app/static/css --target ../../templates/static/css/critical.css",
+    "build:all": "npm run generate:versions && npm run build:css && npm run build:critical && npm run build:js",
+    "build": "npm run build:all"     
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "clean-css-cli": "^5.6.3",
+    "critical": "^7.2.1",
+    "lighthouse": "^12.6.1",
+    "postcss": "^8.4.24",
+    "tailwindcss": "^3.4.17",
+    "terser": "^5.43.0"
+  },
+  "dependencies": {
+    "@alpinejs/collapse": "^3.14.9",
+    "daisyui": "^4.12.24",
+    "pa11y": "^9.0.0"
+  }
+}

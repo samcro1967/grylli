@@ -1,0 +1,64 @@
+{# ---------------------------------------------------------------------
+  assign_smtp_to_email_partial.html
+  app/templates/email/assign_smtp_to_email_partial.html
+  Assign a specific SMTP configuration to an email message
+--------------------------------------------------------------------- #}
+<div data-controller="action-title"
+     data-action-title-title-value="Grylli | Email | Assign SMTP"
+     data-action="htmx:afterOnLoad->action-title#setTitle"></div>
+
+<div class="max-w-xl mx-auto px-4 py-8 mt-5">
+    <h1 class="text-xl font-semibold mb-4 text-base-content dark:text-base-100">
+        {{ _("📧 Assign SMTP Config to:") }} <span class="font-mono">{{ message.label }}</span>
+    </h1>
+    <form method="post"
+          class="space-y-4 bg-base-100 dark:bg-base-800 p-6 rounded-xl shadow-md">
+        {{ form.hidden_tag() }}
+
+        <!-- No SMTP (unassign) option -->
+        <label class="flex items-start space-x-3 px-4 py-3 rounded-lg hover:bg-base-200 dark:hover:bg-base-700 transition">
+            <input type="radio"
+                   name="smtp_config"
+                   value=""
+                   {% if message.smtp_configs|length == 0 %}checked{% endif %}
+                   class="radio radio-primary mt-1">
+            <div>
+                <div class="font-medium text-base-content dark:text-base-100">{{ _("No SMTP (Unassign)") }}</div>
+                <div class="text-sm text-base-content dark:text-base-400">
+                    {{ _("This email will not use any SMTP configuration.") }}
+                </div>
+            </div>
+        </label>
+
+        <!-- Loop through SMTP options -->
+        {% for smtp in smtp_options %}
+            <label class="flex items-start space-x-3 px-4 py-3 rounded-lg hover:bg-base-200 dark:hover:bg-base-700 transition">
+                <input type="radio"
+                       name="smtp_config"
+                       value="{{ smtp.id }}"
+                       {% if smtp in message.smtp_configs %}checked{% endif %}
+                       class="radio radio-primary mt-1">
+                <div>
+                    <div class="font-medium text-base-content dark:text-base-100">{{ smtp.label }}</div>
+                    <div class="text-sm text-base-content dark:text-base-400">{{ smtp.smtp_username }} @ {{ smtp.smtp_host }}</div>
+                </div>
+            </label>
+        {% endfor %}
+
+        <!-- Submit / Cancel Buttons -->
+        <div class="flex gap-6 mt-6">
+            <button type="submit"
+                    data-email-form-target="submit"
+                    class="btn btn-primary w-full sm:w-auto max-w-xs">{{ _("Save") }}</button>
+            <a href="{{ url_for("email.index") }}"
+               hx-get="{{ url_for("email.index") }}"
+               hx-target="#main-content"
+               hx-swap="innerHTML"
+               hx-push-url="true"
+               data-controller="action-title"
+               data-action-title-title-value="Grylli | Email | Overview"
+               data-action="htmx:afterOnLoad->action-title#setTitle"
+               class="btn btn-secondary w-full sm:w-auto max-w-xs">{{ _("Cancel") }}</a>
+        </div>
+    </form>
+</div>

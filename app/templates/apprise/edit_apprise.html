@@ -1,0 +1,10 @@
+{# ---------------------------------------------------------------------
+  edit_apprise.html
+  app/templates/apprise/edit_apprise.html
+  CSP-compliant form to edit an existing Apprise Messages destination
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    {% set is_edit = true %}
+    {% include "apprise/create_apprise_partial.html" %}
+{% endblock %}

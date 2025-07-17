@@ -1,0 +1,79 @@
+{# ---------------------------------------------------------------------
+  create_message_partial.html
+  app/templates/messages/create_message_partial.html
+  DaisyUI-compliant form to create or edit a Messages
+--------------------------------------------------------------------- #}
+{% if message %}
+  <div data-controller="action-title"
+       data-action-title-title-value="Grylli | Messages | Edit"
+       data-action="htmx:afterOnLoad->action-title#setTitle"></div>
+{% else %}
+  <div data-controller="action-title"
+       data-action-title-title-value="Grylli | Messages | Create"
+       data-action="htmx:afterOnLoad->action-title#setTitle"></div>
+{% endif %}
+
+<div class="max-w-md mx-auto mt-5 card bg-base-100 dark:bg-base-800 shadow-md rounded-xl p-6 space-y-4"
+     data-controller="message-form">
+    <!-- Page Title -->
+    <h1 class="text-xl font-semibold text-base-content dark:text-base-100">
+        {% if message %}
+            ✏️ {{ _("Edit Messages") }}
+        {% else %}
+            ➕ {{ _("Create Messages") }}
+        {% endif %}
+    </h1>
+    <!-- Instructions -->
+    <p class="text-sm text-base-content dark:text-base-400">
+        {% if message %}
+            {{ _("Update the label, subject, and content of your Messages.") }}
+        {% else %}
+            {{ _("Fill out the form to create a new Messages.") }}
+        {% endif %}
+    </p>
+    <!-- Form -->
+    <form method="post" novalidate class="space-y-6">
+        {{ form.hidden_tag() }}
+        <!-- Label -->
+        <div>
+            <label for="label"
+                   class="block text-sm font-medium text-base-content dark:text-base-300">{{ _("Label") }}</label>
+            {{ form.label(id="label",
+                        class="input input-bordered w-full mt-1 bg-base-100 dark:bg-base-800 text-base-content dark:text-base-100",
+                        data_action="input->message-form#validate") }}
+            {% if form.label.errors %}<p class="text-error text-sm mt-1">{{ form.label.errors[0] }}</p>{% endif %}
+        </div>
+        <!-- Subject -->
+        <div>
+            <label for="subject"
+                   class="block text-sm font-medium text-base-content dark:text-base-300">{{ _("Subject") }}</label>
+            {{ form.subject(id="subject",
+                        class="input input-bordered w-full mt-1 bg-base-100 dark:bg-base-800 text-base-content dark:text-base-100",
+                        data_action="input->message-form#validate") }}
+            {% if form.subject.errors %}<p class="text-error text-sm mt-1">{{ form.subject.errors[0] }}</p>{% endif %}
+        </div>
+        <!-- Content -->
+        <div>
+            <label for="content"
+                   class="block text-sm font-medium text-base-content dark:text-base-300">{{ _("Content") }}</label>
+            {{ form.content(id="content",
+                        class="textarea textarea-bordered w-full mt-1 bg-base-100 dark:bg-base-800 text-base-content dark:text-base-100",
+                        rows=6,
+                        data_action="input->message-form#validate") }}
+            {% if form.content.errors %}<p class="text-error text-sm mt-1">{{ form.content.errors[0] }}</p>{% endif %}
+        </div>
+        <!-- Submit / Cancel -->
+        <div class="flex gap-6 pt-4">
+            <button type="submit" class="btn btn-primary w-full sm:w-auto max-w-xs">{{ _("Save Messages") }}</button>
+            <a href="{{ url_for("messages_bp.overview") }}"
+               hx-get="{{ url_for("messages_bp.overview") }}"
+               hx-target="#main-content"
+               hx-swap="innerHTML"
+               hx-push-url="true"
+               data-controller="action-title"
+               data-action-title-title-value="Grylli | Messages | Overview"
+               data-action="htmx:afterOnLoad->action-title#setTitle"
+               class="btn btn-secondary w-full sm:w-auto max-w-xs">{{ _("Cancel") }}</a>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,44 @@
+{# ---------------------------------------------------------------------
+  messages_card.html
+  app/templates/dashboard/partials/messages_card.html
+  Summary card for the user's standard check-in messages
+--------------------------------------------------------------------- #}
+<div class="card card-compact bg-base-100 dark:bg-base-800 border border-base-300 dark:border-base-700 shadow w-auto max-w-xs">
+    <div class="card-body p-4 text-sm">
+        <h2 class="card-title text-base-content text-lg">📢 {{ _("Messages") }}</h2>
+        {% set messages = stats.messages %}
+        {% set enabled_count = messages | selectattr('is_enabled') | list | length %}
+        {% set total = messages | length %}
+        <p class="text-base-content">
+            {{ total }} {{ _("configured") }},
+            {{ enabled_count }} {{ _("enabled") }}
+        </p>
+        {% if total == 0 %}
+            <p class="text-warning text-sm mt-2">{{ _("You haven't created any messages yet.") }}</p>
+        {% else %}
+            <ul class="mt-2 space-y-1 text-sm text-base-content">
+                {% for message in messages[:3] %}
+                    <li class="flex items-center justify-between">
+                        <a href="{{ url_for('messages_bp.edit_message', message_id=message.id) }}"
+                           class="truncate text-primary hover:underline focus:outline-none focus-visible:ring focus-visible:ring-primary rounded"
+                           title="{{ message.label or message.subject }}">{{ message.label or message.subject }}</a>
+                        {% if message.is_enabled %}
+                            <span class="badge badge-success badge-sm">{{ _("Enabled") }}</span>
+                        {% else %}
+                            <span class="badge badge-neutral badge-sm">{{ _("Disabled") }}</span>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+                {% if total > 3 %}
+                    <li class="text-xs text-right text-base-content opacity-70">{{ _("+ %(count)s more", count=total - 3) }}</li>
+                {% endif %}
+            </ul>
+        {% endif %}
+        <div class="card-actions justify-end mt-4">
+            <a href="{{ url_for("messages_bp.overview") }}"
+               class="btn btn-outline btn-sm">{{ _("View All") }}</a>
+            <a href="{{ url_for("messages_bp.create_message") }}"
+               class="btn btn-primary btn-sm">{{ _("New Messages") }}</a>
+        </div>
+    </div>
+</div>

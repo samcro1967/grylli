@@ -1,0 +1,114 @@
+{# ---------------------------------------------------------------------
+  messages/partials/actions.html
+  CSP-compliant Messages actions partial
+--------------------------------------------------------------------- #}
+
+{% if not message.is_enabled %}
+  <!-- Edit Messages -->  
+  <a href="{{ url_for('messages_bp.edit_message', message_id=message.id) }}"
+     hx-get="{{ url_for('messages_bp.edit_message', message_id=message.id) }}"
+     hx-target="#main-content"
+     hx-swap="innerHTML"
+     hx-push-url="true"
+     data-controller="action-title"
+     data-action-title-title-value="Grylli | Messages | Edit"
+     data-action="htmx:afterOnLoad->action-title#setTitle"
+     class="btn btn-ghost text-primary hover:bg-primary-focus"
+     title="{{ _('Edit Messages') }}">✏️</a>
+{% else %}
+  <span class="btn btn-ghost text-base-content cursor-not-allowed"
+        title="{{ _('Disable to edit Messages') }}">✏️</span>
+{% endif %}
+
+{% if not message.is_enabled %}
+  <!-- Assign Destinations -->
+  <a href="{{ url_for('messages_bp.assign_destinations', message_id=message.id) }}"
+     hx-get="{{ url_for('messages_bp.assign_destinations', message_id=message.id) }}"
+     hx-target="#main-content"
+     hx-swap="innerHTML"
+     hx-push-url="true"
+     data-controller="action-title"
+     data-action-title-title-value="Grylli | Messages | Assign"
+     data-action="htmx:afterOnLoad->action-title#setTitle"
+     class="btn btn-ghost text-accent hover:bg-accent-focus ml-2"
+     title="{{ _('Assign Destinations') }}">🧩</a>
+{% else %}
+  <span class="btn btn-ghost text-base-content cursor-not-allowed ml-2"
+        title="{{ _('Disable to assign destinations') }}">🧩</span>
+{% endif %}
+
+{% if not message.is_enabled %}
+  <!-- Set Schedule -->
+  <a href="{{ url_for('messages_bp.schedule_message', message_id=message.id) }}"
+     hx-get="{{ url_for('messages_bp.schedule_message', message_id=message.id) }}"
+     hx-target="#main-content"
+     hx-swap="innerHTML"
+     hx-push-url="true"
+     data-controller="action-title"
+     data-action-title-title-value="Grylli | Messages | Schedule"
+     data-action="htmx:afterOnLoad->action-title#setTitle"
+     class="btn btn-ghost text-warning hover:bg-warning-focus ml-2"
+     title="{{ _('Set Schedule') }}">⏱️</a>
+{% else %}
+  <span class="btn btn-ghost text-base-content cursor-not-allowed ml-2"
+        title="{{ _('Disable to set schedule') }}">⏱️</span>
+{% endif %}
+
+<!-- View Details -->
+<a href="{{ url_for('messages_bp.view_message', message_id=message.id) }}"
+   hx-get="{{ url_for('messages_bp.view_message', message_id=message.id) }}"
+   hx-target="#main-content"
+   hx-swap="innerHTML"
+   hx-push-url="true"
+   data-controller="action-title"
+   data-action-title-title-value="Grylli | Messages | View"
+   data-action="htmx:afterOnLoad->action-title#setTitle"
+   class="btn btn-ghost text-neutral hover:bg-neutral-focus ml-2"
+   title="{{ _('View Details') }}">🔍</a>
+
+<!-- Send Test Messages -->
+<form method="post"
+      action="{{ url_for('messages_bp.send_test_message', message_id=message.id) }}"
+      class="inline ml-2">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    <button type="submit"
+            class="btn btn-ghost text-info hover:bg-info-focus"
+            title="{{ _('Send Test Messages') }}">🧪</button>
+</form>
+
+<!-- Delete Messages -->
+<form method="post"
+      action="{{ url_for('messages_bp.delete_message', message_id=message.id) }}"
+      class="inline ml-2"
+      data-controller="confirm"
+      data-confirm-message-value="{{ _('Delete') }} {{ message.label or message.subject }}?">
+    <button type="submit"
+            class="btn btn-ghost btn-sm text-primary"
+            title="{{ _('Delete Messages') }}">🗑️</button>
+</form>
+
+<!-- Toggle Messages Enabled -->
+<form method="post"
+      action="{{ url_for('checkin.toggle_enabled', type='message', id=message.id) }}"
+      class="inline ml-2">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+    {% if message.apprise_destinations or message.webhooks %}
+        {% if message.checkin_interval_minutes %}
+            <button type="submit"
+                    class="btn btn-ghost btn-sm text-primary"
+                    title="{{ _('Toggle Message On/Off') }}">
+                {% if message.is_enabled %}
+                    <span class="text-success" title="{{ _('Messages is enabled') }}">🟢</span>
+                {% else %}
+                    <span class="text-error" title="{{ _('Messages is disabled') }}">🔴</span>
+                {% endif %}
+            </button>
+        {% else %}
+            <span class="btn btn-ghost text-base-content cursor-not-allowed ml-2"
+                  title="{{ _('Enable only after schedule is set') }}">🔴</span>
+        {% endif %}
+    {% else %}
+        <span class="btn btn-ghost text-base-content cursor-not-allowed ml-2"
+              title="{{ _('Enable only after destinations are assigned') }}">🔴</span>
+    {% endif %}
+</form>

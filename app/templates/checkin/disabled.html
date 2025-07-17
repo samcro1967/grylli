@@ -1,0 +1,20 @@
+{# ---------------------------------------------------------------------
+  disabled.html
+  app/templates/checkin/disabled.html
+  [Displayed when a user tries to check in for a disabled Messages or email.]
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block content %}
+    <div class="max-w-xl mx-auto mt-5 text-center p-6 rounded-xl shadow-lg bg-base-100 dark:bg-base-900">
+        <h1 class="text-2xl font-semibold mb-4 text-error dark:text-error-focus">⏸️ {{ _("Check-In Disabled") }}</h1>
+        <p class="text-lg mb-2 text-base-content dark:text-base-200">
+            {{ _("This check-in is currently disabled and cannot be completed.") }}
+        </p>
+        {% if label %}
+            <p class="text-sm text-base-content dark:text-base-100 italic mt-2">
+                {{ _("Check-in for:") }} <strong>{{ label }}</strong>
+            </p>
+        {% endif %}
+        <a href="{{ url_for("home.index") }}" class="btn btn-primary mt-6">{{ _("Return to Dashboard") }}</a>
+    </div>
+{% endblock %}

@@ -1,0 +1,134 @@
+{# ---------------------------------------------------------------------
+  _linked_items_partial.html
+  app/templates/dashboard/partials/_linked_items_partial.html
+  Unified table of linked destinations across all types
+--------------------------------------------------------------------- #}
+<div class="w-full max-w-screen-xl px-4 sm:px-6 lg:px-8 mt-5">
+    <h2 class="text-xl font-bold text-base-content mb-4">{{ _("Linked Destinations") }}</h2>
+    <div class="overflow-x-auto border border-base-300 dark:border-base-300 rounded-lg">
+        <table class="table w-full text-sm text-left text-base-content dark:text-base-content">
+            <thead class="bg-primary text-primary-content">
+                <tr>
+                    <th>{{ _("Type") }}</th>
+                    <th>{{ _("Label") }}</th>
+                    <th class="text-center">{{ _("Messages") }}</th>
+                    <th class="text-center">{{ _("Email") }}</th>
+                    <th class="text-center">{{ _("Reminder") }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for destination_type, destination_list in [("Apprise", stats.apprise), ("Webhook", stats.webhooks), ("SMTP", stats.smtp)] %}
+                    {% for dest in destination_list %}
+                        <tr class="hover:bg-base-200 dark:hover:bg-base-700 transition-colors">
+                            <td>{{ destination_type }}</td>
+                            <td>
+                                <a href="{% if destination_type == 'Apprise' %}{{ url_for('apprise_routes.edit_apprise', id=dest.id) }}
+                                         {% elif destination_type == 'Webhook' %}{{ url_for('webhook.edit_webhook', id=dest.id) }}
+                                         {% else %}{{ url_for('user_smtp.edit', smtp_id=dest.id) }}{% endif %}"
+                                   class="text-primary hover:underline focus:outline-none"
+                                   title="{{ _('Edit') }} {{ dest.label }}">{{ dest.label }}</a>
+                            </td>
+
+                            {# Linked Messages #}
+                            <td class="text-center">
+                                {% set linked_messages = [] %}
+                                {% for msg in stats.messages %}
+                                    {% if destination_type == 'Apprise' and dest in msg.apprise_links %}
+                                        {% set _ = linked_messages.append(msg) %}
+                                    {% elif destination_type == 'Webhook' and dest in msg.webhook_links %}
+                                        {% set _ = linked_messages.append(msg) %}
+                                    {% endif %}
+                                {% endfor %}
+                                {% if linked_messages %}
+                                    <ul class="space-y-1">
+                                        {% for msg in linked_messages %}
+                                            <li>
+                                                <a href="{{ url_for('messages_bp.view_message', message_id=msg.id) }}"
+                                                   class="hover:underline"
+                                                   title="{{ msg.subject }}">
+                                                    {{ msg.label or msg.subject }}
+                                                </a>
+                                                {% if msg.is_enabled in [True, 1, '1'] %}
+
+                                                    <span class="badge badge-success badge-xs ml-1">✅</span>
+                                                {% else %}
+                                                    <span class="badge badge-error badge-xs ml-1">🚫</span>
+                                                {% endif %}
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                {% else %}
+                                    —
+                                {% endif %}
+                            </td>
+
+                            {# Linked Emails #}
+                            <td class="text-center">
+                                {% set linked_emails = [] %}
+                                {% for email in stats.emails %}
+                                    {% if destination_type == 'SMTP' and dest in email.smtp_links %}
+                                        {% set _ = linked_emails.append(email) %}
+                                    {% endif %}
+                                {% endfor %}
+                                {% if linked_emails %}
+                                    <ul class="space-y-1">
+                                        {% for email in linked_emails %}
+                                            <li>
+                                                <a href="{{ url_for('email.view_email_config', email_id=email.id) }}"
+                                                   class="hover:underline"
+                                                   title="{{ email.subject }}">
+                                                    {{ email.label or email.subject }}
+                                                </a>
+                                                {% if email.is_enabled  in [True, 1, '1'] %}
+                                                    <span class="badge badge-success badge-xs ml-1">✅</span>
+                                                {% else %}
+                                                    <span class="badge badge-error badge-xs ml-1">🚫</span>
+                                                {% endif %}
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                {% else %}
+                                    —
+                                {% endif %}
+                            </td>
+
+                            {# Linked Reminders #}
+                            <td class="text-center">
+                                {% set linked_reminders = [] %}
+                                {% for reminder in stats.reminders %}
+                                    {% if destination_type == 'Apprise' and dest in reminder.apprise_links %}
+                                        {% set _ = linked_reminders.append(reminder) %}
+                                    {% elif destination_type == 'Webhook' and dest in reminder.webhook_links %}
+                                        {% set _ = linked_reminders.append(reminder) %}
+                                    {% elif destination_type == 'SMTP' and dest in reminder.smtp_links %}
+                                        {% set _ = linked_reminders.append(reminder) %}
+                                    {% endif %}
+                                {% endfor %}
+                                {% if linked_reminders %}
+                                    <ul class="space-y-1">
+                                        {% for reminder in linked_reminders %}
+                                            <li>
+                                                <a href="{{ url_for('reminders_bp.view_reminder', reminder_id=reminder.id) }}"
+                                                   class="hover:underline"
+                                                   title="{{ reminder.label }}">
+                                                    {{ reminder.label }}
+                                                </a>
+                                                {% if reminder.is_enabled  in [True, 1, '1'] %}
+                                                    <span class="badge badge-success badge-xs ml-1">✅</span>
+                                                {% else %}
+                                                    <span class="badge badge-error badge-xs ml-1">🚫</span>
+                                                {% endif %}
+                                            </li>
+                                        {% endfor %}
+                                    </ul>
+                                {% else %}
+                                    —
+                                {% endif %}
+                            </td>
+                        </tr>
+                    {% endfor %}
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>

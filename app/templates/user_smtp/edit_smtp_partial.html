@@ -1,0 +1,111 @@
+{# ---------------------------------------------------------------------
+  edit_smtp_partial.html
+  app/templates/user_smtp/edit_smtp_partial.html
+  CSP-compliant form to edit an SMTP destination
+--------------------------------------------------------------------- #}
+<div data-controller="action-title"
+     data-action-title-title-value="Grylli | SMTP | Edit"
+     data-action="htmx:afterOnLoad->action-title#setTitle"></div>
+
+<div class="max-w-md mx-auto mt-5 bg-base-100 dark:bg-base-800 shadow-md rounded-xl p-6 space-y-4"
+     data-controller="smtp-form"
+     data-smtp-form-new-value="false">
+    <!-- Page Title -->
+    <h1 class="text-xl font-semibold text-base-content dark:text-base-100">{{ _("Edit SMTP Destination") }}</h1>
+
+    <!-- Instructions -->
+    <p class="text-sm text-base-content dark:text-base-400">
+        {{ _("Update the mail server settings or credentials for this destination.") }}
+    </p>
+
+    <!-- Form -->
+    <form method="post" novalidate>
+        {{ form.hidden_tag() }}
+
+        {% for field in [form.label, form.smtp_host, form.smtp_port, form.smtp_username] %}
+            <div>
+                {{ field.label(class="block text-sm font-medium text-base-content dark:text-base-300") }}
+                {{ field(id=field.id,
+                         class="w-full mt-1 px-3 py-2 border rounded bg-base-100 dark:bg-base-800 text-base-content dark:text-base-100",
+                         autocomplete="off",
+                         **{
+                             "aria-invalid": "true" if field.errors else "false",
+                             "data-smtp-form-target": field.name
+                         }) }}
+                {% if field.errors %}
+                    <p class="text-error text-sm mt-1">{{ field.errors[0] }}</p>
+                {% endif %}
+            </div>
+        {% endfor %}
+
+        <!-- SMTP Password -->
+        <div class="mb-4 relative" data-controller="reveal-password">
+            {{ form.smtp_password.label(class="block text-sm font-medium text-base-content dark:text-base-300") }}
+            <div class="relative">
+                {{ form.smtp_password(id="smtp_password",
+                                      class="input input-bordered w-full pr-10 bg-base-200 dark:bg-base-700 text-base-content dark:text-base-100 focus:ring-2 focus:ring-primary transition",
+                                      autocomplete="new-password",
+                                      aria_invalid='true' if form.smtp_password.errors else 'false',
+                                      **{"data-smtp-form-target": "password"}) }}
+                <div class="absolute inset-y-0 right-0 flex items-center px-3">
+                    <button type="button"
+                            data-action="mousedown->reveal-password#show mouseup->reveal-password#hide mouseleave->reveal-password#hide"
+                            class="focus:outline-none text-base-content hover:text-base-500 dark:hover:text-base-300"
+                            aria-label="{{ _('Hold to reveal') }}">
+                        <svg class="h-5 w-5"
+                             fill="none"
+                             stroke="currentColor"
+                             stroke-width="2"
+                             viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                  d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            {% if form.smtp_password.errors %}
+                <ul class="text-error text-xs mt-1" id="smtp-password-errors">
+                    {% for error in form.smtp_password.errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+
+        <!-- TLS -->
+        <div>
+            <label class="inline-flex items-center">
+                {{ form.use_tls() }}
+                <span class="ml-2 text-sm text-base-content dark:text-base-300">{{ _("Use TLS") }}</span>
+            </label>
+        </div>
+
+        <!-- Enabled -->
+        <div>
+            <label class="inline-flex items-center">
+                {{ form.enabled() }}
+                <span class="ml-2 text-sm text-base-content dark:text-base-300">{{ _("Enabled") }}</span>
+            </label>
+        </div>
+
+        <!-- Submit + Cancel -->
+        <div class="flex gap-6 mt-6">
+            <button type="submit"
+                    data-smtp-form-target="submit"
+                    class="btn btn-primary w-full sm:w-auto max-w-xs disabled:opacity-50 disabled:cursor-not-allowed"
+                    disabled>{{ _("Update Destination") }}</button>
+
+            <a href="{{ url_for("user_smtp.overview") }}"
+               hx-get="{{ url_for("user_smtp.overview") }}"
+               hx-target="#main-content"
+               hx-swap="innerHTML"
+               hx-push-url="true"
+               data-controller="action-title"
+               data-action-title-title-value="Grylli | SMTP | Overview"
+               data-action="htmx:afterOnLoad->action-title#setTitle"
+               class="btn btn-secondary w-full sm:w-auto max-w-xs text-center">{{ _("Cancel") }}</a>
+        </div>
+    </form>
+</div>

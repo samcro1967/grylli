@@ -1,0 +1,38 @@
+{# ---------------------------------------------------------------------
+  backup_table.html
+  app/templates/admin/tools/partials/backup_table.html
+  Partial for rendering the backup table with visual parity to Users table
+--------------------------------------------------------------------- #}
+{% if backups %}
+    <div id="backup-table"
+         class="overflow-x-auto rounded-box border border-base-300 dark:border-base-700">
+        <table class="table table-zebra w-full text-sm">
+            <thead class="bg-primary text-primary-content">
+                <tr>
+                    <th>{{ _("Filename") }}</th>
+                    <th class="text-right">{{ _("Actions") }}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for file in backups %}
+                    <tr class="hover">
+                        <td class="font-mono">{{ file }}</td>
+                        <td class="text-right">
+                            <form method="post"
+                                  action="{{ url_for('tools.delete_backup', filename=file) }}"
+                                  data-controller="confirm"
+                                  data-confirm-message-value="{{ _('Delete') }} {{ file }}?">
+                                <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                                <button type="submit"
+                                        class="btn btn-error btn-sm"
+                                        title="{{ _('Delete Backup') }}">🗑️</button>
+                            </form>
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% else %}
+    <p class="text-sm text-base-content dark:text-base-400">{{ _("No backups found.") }}</p>
+{% endif %}

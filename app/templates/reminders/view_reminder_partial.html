@@ -1,0 +1,97 @@
+{# ---------------------------------------------------------------------
+  view_reminder_partial.html
+  app/templates/reminders/view_reminder_partial.html
+  CSP-compliant reminder detail view (matches webhook style)
+--------------------------------------------------------------------- #}
+<div data-controller="action-title"
+     data-action-title-title-value="Grylli | Reminder | View"
+     data-action="htmx:afterOnLoad->action-title#setTitle"></div>
+
+<div class="max-w-md mx-auto mt-5 px-4 space-y-6">
+    <!-- Page Title -->
+    <h1 class="text-xl font-semibold text-base-content dark:text-base-100">{{ _("Reminder Details") }}</h1>
+
+    <!-- Card -->
+    <div class="bg-base-100 dark:bg-base-800 shadow-md rounded-xl p-6 space-y-6 border border-base-300 dark:border-base-700">
+        <!-- Metadata -->
+        <div class="space-y-4">
+            {% for label, value in [
+                (_("Label"), reminder.label),
+                (_("Subject"), reminder.subject),
+                (_("Start At"), reminder.start_at.strftime("%Y-%m-%d %H:%M") if reminder.start_at else "—"),
+                (_("Recurrence Rule"), reminder.recurrence_rule or _("One-time")),
+                (_("End At"), reminder.end_at.strftime("%Y-%m-%d %H:%M") if reminder.end_at else None),
+                (_("Max Occurrences"), reminder.max_occurrences),
+                (_("Last Sent"), reminder.last_sent_at.strftime("%Y-%m-%d %H:%M") if reminder.last_sent_at else None),
+                (_("Created At"), reminder.created_at.strftime("%Y-%m-%d %H:%M"))
+            ] %}
+                {% if value %}
+                    <div>
+                        <h2 class="text-sm font-medium text-base-content dark:text-base-300">{{ label }}</h2>
+                        <p class="text-base-content dark:text-base-100">{{ value }}</p>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        <!-- Content -->
+        <div>
+            <h2 class="text-sm font-medium text-base-content dark:text-base-300">{{ _("Content") }}</h2>
+            <pre class="whitespace-pre-wrap bg-base-200 dark:bg-base-900 text-base-content p-3 rounded">
+{{ reminder.content }}
+            </pre>
+        </div>
+
+        <!-- Destinations -->
+        {% for section_label, items, empty_text in [
+            (_("Apprise URLs"), reminder.apprise_destinations, _("None assigned.")),
+            (_("Webhooks"), reminder.webhooks, _("None assigned.")),
+            (_("SMTP"), reminder.smtp_configs, _("None assigned."))
+        ] %}
+            <div>
+                <h2 class="text-sm font-medium text-base-content dark:text-base-300">{{ section_label }}</h2>
+                {% if items %}
+                    <ul class="list-disc list-inside text-sm text-base-content dark:text-base-100">
+                        {% for item in items %}
+                            <li>{{ item.label }}</li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p class="italic text-sm text-base-content dark:text-base-300">{{ empty_text }}</p>
+                {% endif %}
+            </div>
+        {% endfor %}
+
+        <!-- Email Templates -->
+        <div>
+            <h2 class="text-sm font-medium text-base-content dark:text-base-300">{{ _("Email Templates") }}</h2>
+            {% if reminder.email_messages %}
+                <ul class="list-disc list-inside text-sm text-base-content dark:text-base-100 space-y-2">
+                    {% for msg in reminder.email_messages %}
+                        <li>
+                            <strong>{{ msg.label }}</strong><br>
+                            <span>{{ _("Subject:") }}</span> {{ msg.subject or _("No subject") }}
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p class="italic text-sm text-base-content dark:text-base-300">{{ _("No email linked.") }}</p>
+            {% endif %}
+        </div>
+    </div>
+
+    <!-- Back Button -->
+    <div class="pt-2">
+        <a href="{{ url_for("reminders_bp.overview") }}"
+           hx-get="{{ url_for("reminders_bp.overview") }}"
+           hx-target="#main-content"
+           hx-swap="innerHTML"
+           hx-push-url="true"
+           data-controller="action-title"
+           data-action-title-title-value="Grylli | Reminder | Overview"
+           data-action="htmx:afterOnLoad->action-title#setTitle"
+           class="btn btn-secondary w-full sm:w-auto text-center"
+           role="button"
+           aria-label="{{ _('Back to Reminders') }}">← {{ _("Back to Reminders") }}</a>
+    </div>
+</div>

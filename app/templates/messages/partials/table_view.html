@@ -1,0 +1,38 @@
+{# ---------------------------------------------------------------------
+  table_view.html
+  app/templates/messages/partials/table_view.html
+  Refined DaisyUI-compliant table for message Messagess
+--------------------------------------------------------------------- #}
+<div id="tableView"
+     class="overflow-x-auto rounded-box border border-base-300 dark:border-base-700">
+    <table class="table table-zebra w-full text-sm">
+        <thead class="bg-primary text-primary-content">
+            <tr>
+                <th>{{ _("Label") }}</th>
+                <th>{{ _("Subject") }}</th>
+                <th>{{ _("Created At") }}</th>
+                <th class="text-right">{{ _("Actions") }}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for message in messages %}
+                <tr class="hover:bg-base-200 dark:hover:bg-base-700">
+                    <td class="text-base-content">{{ message.label }}</td>
+                    <td class="text-base-content">{{ message.subject }}</td>
+                    <td class="text-base-content">{{ message.created_at.strftime("%Y-%m-%d %H:%M") }}</td>
+                    <td class="text-right text-base-content">
+                        {% set message = message %}
+                        {% include "messages/partials/actions.html" %}
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="4"
+                        class="text-center py-4 text-base-content dark:text-base-100">
+                        {{ _("No Messagess available.") }}
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>

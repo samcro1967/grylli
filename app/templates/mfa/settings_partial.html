@@ -1,0 +1,54 @@
+{# ---------------------------------------------------------------------
+   settings_partial.html
+   app/templates/mfa/settings_partial.html
+--------------------------------------------------------------------- #}
+<div class="mt-5 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-md mx-auto bg-base-100 dark:bg-base-800 shadow-md rounded-xl p-6 space-y-4">
+        <h1 class="text-xl font-semibold text-base-content dark:text-base-100 text-center mb-2">
+            {{ _("Two-Factor Authentication (MFA)") }}
+        </h1>
+        <form method="post" novalidate>
+            {{ form.hidden_tag() }}
+            {% if not mfa_enabled %}
+                <div class="flex flex-col items-center space-y-4 mb-4">
+                    <img src="data:image/png;base64,{{ qr_b64 }}"
+                         alt="{{ _("MFA QR Code") }}"
+                         class="w-52 h-52 max-w-full rounded border shadow" />
+                    <div class="w-full flex flex-col items-center">
+                        <span class="font-semibold text-base-content dark:text-base-100">{{ _("Manual Entry:") }}</span>
+                        <span class="font-mono text-base bg-base-200 dark:bg-base-700 rounded px-2 py-1 mt-1 select-all break-all text-base-content dark:text-base-100">
+                            {{ secret }}
+                        </span>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label class="inline-flex items-center">
+                        {{ form.enabled() }}
+                        <span class="ml-2 text-sm text-base-content dark:text-base-100">{{ _("Enabled") }}</span>
+                    </label>
+                </div>
+                <div class="mb-4">
+                    {{ form.code.label(class="block text-sm font-medium mb-1 text-base-content dark:text-base-100") }}
+                    {{ form.code(class="input input-bordered w-full bg-base-200 dark:bg-base-700 text-base-content dark:text-base-100", autocomplete="off", autofocus=True) }}
+                    {% if form.code.errors %}
+                        <ul class="text-error text-xs mt-1">
+                            {% for error in form.code.errors %}<li>{{ error }}</li>{% endfor %}
+                        </ul>
+                    {% endif %}
+                </div>
+            {% else %}
+                <div class="mb-4">
+                    <label class="inline-flex items-center">
+                        {{ form.enabled() }}
+                        <span class="ml-2 text-sm text-base-content dark:text-base-100">{{ _("Enabled") }}</span>
+                    </label>
+                </div>
+            {% endif %}
+            <div class="flex gap-4">
+                <button type="submit" class="w-1/2 btn btn-primary font-semibold">{{ _("Save") }}</button>
+                <a href="{{ url_for("home.index") }}"
+                   class="w-1/2 text-center btn btn-secondary font-semibold">{{ _("Cancel") }}</a>
+            </div>
+        </form>
+    </div>
+</div>

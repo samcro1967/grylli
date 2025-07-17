@@ -1,0 +1,81 @@
+{# ---------------------------------------------------------------------
+  assign_destinations_partial.html
+  app/templates/reminders/assign_destinations_partial.html
+  CSP-compliant form to assign Apprise and Webhook destinations to a reminder
+--------------------------------------------------------------------- #}
+<div data-controller="action-title"
+     data-action-title-title-value="Grylli | Reminder | Assign Destinations"
+     data-action="htmx:afterOnLoad->action-title#setTitle"></div>
+
+<div class="max-w-md mx-auto mt-5 bg-base-100 dark:bg-base-800 shadow-md rounded-xl p-6 space-y-6">
+    <!-- Title -->
+    <h1 class="text-xl font-semibold text-base-content dark:text-base-100 flex items-center gap-2">
+        🧩 <span>{{ _("Assign Destinations for") }}: <span class="font-mono">{{ reminder.label }}</span></span>
+    </h1>
+
+    <!-- Instructions -->
+    <p class="text-sm text-base-content dark:text-base-400">
+        {{ _("Select the Apprise and Webhook destinations for this reminder.") }}
+    </p>
+
+    <!-- Form Start -->
+    <form method="post" novalidate>
+        {{ form.hidden_tag() }}
+
+        <!-- Apprise Destinations -->
+        <div>
+            <h2 class="text-lg font-medium text-orange-600 mb-2">📣 {{ _("Apprise Destinations") }}</h2>
+            <div class="space-y-2">
+                {% for apprise in apprise_options %}
+                    <label class="flex items-start gap-2">
+                        <input type="checkbox"
+                               name="apprise_destinations"
+                               value="{{ apprise.id }}"
+                               {% if apprise in reminder.apprise_destinations %}checked{% endif %}
+                               class="checkbox checkbox-primary mt-1" />
+                        <div>
+                            <div class="font-medium text-base-content dark:text-base-100">{{ apprise.label }}</div>
+                            <div class="text-sm text-base-content dark:text-base-400">{{ apprise.url }}</div>
+                        </div>
+                    </label>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Webhooks -->
+        <div>
+            <h2 class="text-lg font-medium text-primary mb-2">🔗 {{ _("Webhooks") }}</h2>
+            <div class="space-y-2">
+                {% for hook in webhook_options %}
+                    <label class="flex items-start gap-2">
+                        <input type="checkbox"
+                               name="webhooks"
+                               value="{{ hook.id }}"
+                               {% if hook in reminder.webhooks %}checked{% endif %}
+                               class="checkbox checkbox-secondary mt-1" />
+                        <div>
+                            <div class="font-medium text-base-content dark:text-base-100">{{ hook.label }}</div>
+                            <div class="text-sm text-base-content dark:text-base-400">{{ hook.endpoint }}</div>
+                        </div>
+                    </label>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="flex gap-6 mt-6">
+            <button type="submit"
+                    class="btn btn-primary w-full sm:w-auto max-w-xs">{{ _("Save Destinations") }}</button>
+
+            <a href="{{ url_for("reminders_bp.overview") }}"
+               hx-get="{{ url_for("reminders_bp.overview") }}"
+               hx-target="#main-content"
+               hx-swap="innerHTML"
+               hx-push-url="true"
+               data-controller="action-title"
+               data-action-title-title-value="Grylli | Reminder | Overview"
+               data-action="htmx:afterOnLoad->action-title#setTitle"
+               class="btn btn-secondary w-full sm:w-auto max-w-xs text-center">{{ _("Cancel") }}</a>
+        </div>
+    </form>
+</div>

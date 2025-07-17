@@ -1,0 +1,152 @@
+{# ---------------------------------------------------------------------
+  list_users_partial.html
+  app/templates/admin/list_users_partial.html
+  Admin user manager with view toggle, role modal, and help panel.
+--------------------------------------------------------------------- #}
+<div class="w-full max-w-full px-4 sm:px-6 lg:px-8 mt-5 space-y-6"
+     data-controller="list-toggle role-modal"
+     data-list-toggle-storage-key-value="usersView"
+     data-list-toggle-show-label-value="{{ _("How to manage users") }}"
+     data-list-toggle-hide-label-value="{{ _("Hide Instructions") }}">
+    <!-- Page Header -->
+    <div>
+        <h1 class="text-2xl font-bold text-base-content mb-4">{{ _("Users") }}</h1>
+        <p class="text-sm text-base-content mt-1">
+            {{ _("Manage user accounts, change roles, and remove or disable access.") }}
+        </p>
+    </div>
+    <!-- View Toggle + Add User -->
+    <div class="flex items-center justify-between flex-wrap sm:flex-nowrap gap-2">
+        <div class="flex space-x-2">
+            <!-- Table View Button -->
+            <button data-list-toggle-target="tableBtn"
+                    data-action="click->list-toggle#showTable"
+                    aria-label="{{ _("Table View") }}"
+                    title="{{ _("Table View") }}"
+                    class="btn btn-primary px-4">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     class="h-5 w-5"
+                     fill="none"
+                     viewBox="0 0 24 24"
+                     stroke="currentColor"
+                     stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 10h16M4 14h16M4 18h16" />
+                </svg>
+            </button>
+            <!-- Card View Button -->
+            <button data-list-toggle-target="cardBtn"
+                    data-action="click->list-toggle#showCard"
+                    aria-label="{{ _("Card View") }}"
+                    title="{{ _("Card View") }}"
+                    class="btn btn-primary px-4">
+                <svg xmlns="http://www.w3.org/2000/svg"
+                     class="h-5 w-5"
+                     fill="none"
+                     viewBox="0 0 24 24"
+                     stroke="currentColor"
+                     stroke-width="2">
+                    <rect x="3" y="3" width="7" height="7" />
+                    <rect x="14" y="3" width="7" height="7" />
+                    <rect x="14" y="14" width="7" height="7" />
+                    <rect x="3" y="14" width="7" height="7" />
+                </svg>
+            </button>
+        </div>
+        <!-- Add User -->
+        <a href="{{ url_for("users.create_user") }}"
+           hx-get="{{ url_for("users.create_user") }}"
+           hx-target="#main-content"
+           hx-swap="innerHTML"
+           hx-push-url="true"
+           class="btn btn-primary whitespace-nowrap">➕ {{ _("Add User") }}</a>
+    </div>
+    <!-- Table View -->
+    <div id="usersTableView"
+         class="overflow-x-auto w-full"
+         data-list-toggle-target="tableView">{% include "admin/partials/table_view.html" %}</div>
+    <!-- Card View -->
+    <div id="usersCardView"
+         data-list-toggle-target="cardView"
+         class="hidden grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {% include "admin/partials/card_view.html" %}
+    </div>
+    <!-- Help Panel -->
+    <div class="pt-4">
+        <button type="button"
+                class="text-sm text-primary hover:underline focus:outline-none"
+                data-action="click->list-toggle#toggleInstructions">
+            <span data-list-toggle-target="toggleText">{{ _("How to manage users") }}</span>
+        </button>
+        <div class="hidden mt-4 p-4 rounded bg-base-100 text-sm text-base-content space-y-2 shadow border border-base-300"
+             data-list-toggle-target="instructions">{% include "admin/partials/help_panel.html" %}</div>
+    </div>
+    <!-- Role Change Modal -->
+    <div id="roleModal"
+         class="fixed inset-0 z-50 flex items-center justify-center bg-base-900 bg-opacity-50 hidden"
+         data-role-modal-target="modal">
+        <div class="bg-base-100 dark:bg-base-800 p-6 rounded-xl border shadow-lg w-full max-w-md">
+            <h2 class="text-xl font-semibold mb-4 text-base-content dark:text-base-100">{{ _("Change Role") }}</h2>
+            <p class="mb-4 text-sm text-base-content dark:text-base-400">
+                {{ _("Changing role for:") }}
+                <span class="font-semibold" data-role-modal-target="username"></span>
+            </p>
+            <!-- Role Selection Form -->
+            <form id="roleModalForm" method="post" data-role-modal-target="form">
+                <input type="hidden"
+                       name="user_id"
+                       id="roleModalUserId"
+                       data-role-modal-target="userIdInput">
+                <!-- Role Selection -->
+                <div class="mb-6">
+                    <label for="role"
+                           class="block text-sm font-medium text-base-content dark:text-base-300 mb-2">
+                        {{ _("Select Role") }}
+                    </label>
+                    <div class="space-y-2 px-4 py-3 rounded-md border border-base-300 dark:border-base-700 bg-base-200 dark:bg-base-700">
+                        <label class="flex items-center gap-2 text-base-content dark:text-base-100">
+                            <input type="radio"
+                                   name="role"
+                                   value="admin"
+                                   class="radio text-primary-500 focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400"
+                                   data-role-modal-target="roleInputs"
+                                   data-action="role-modal#enableSave">
+                            <span>{{ _("Admin") }}</span>
+                        </label>
+                        <label class="flex items-center gap-2 text-base-content dark:text-base-100">
+                            <input type="radio"
+                                   name="role"
+                                   value="user"
+                                   class="radio text-primary-500 focus:ring-2 focus:ring-primary-500 dark:focus:ring-primary-400"
+                                   data-role-modal-target="roleInputs"
+                                   data-action="role-modal#enableSave">
+                            <span>{{ _("User") }}</span>
+                        </label>
+                    </div>
+                </div>
+                <!-- Save and Cancel Buttons -->
+                <div class="flex justify-end gap-4 mt-6">
+                    <!-- Save Changes Button -->
+                    <button type="submit"
+                            data-role-modal-target="saveButton"
+                            class="btn btn-primary w-full sm:w-auto max-w-xs py-2 px-4 rounded hover:bg-primary-focus transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                            disabled>{{ _("Save Changes") }}</button>
+                    <!-- Cancel Button -->
+                    <button type="button"
+                            data-action="role-modal#closeModal"
+                            hx-get="{{ url_for("users.list_users") }}"
+                            hx-target="#main-content"
+                            hx-swap="innerHTML"
+                            hx-push-url="true"
+                            class="btn btn-secondary w-full sm:w-auto py-2 px-4 rounded-md border border-base-300 dark:border-base-700 text-base-content dark:text-base-100 hover:bg-base-300 dark:hover:bg-base-700 transition-colors">
+                        {{ _("Cancel") }}
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+    {% if debug %}
+        {% set debug_label = _('List Users') %}
+        {% include "partials/_debug_register.html" %}
+        {% include "partials/_layout_debug_targets.html" %}
+    {% endif %}
+</div>

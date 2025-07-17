@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="max-w-xl mx-auto mt-5 text-center">
+        <h1 class="text-2xl font-semibold text-error dark:text-error-focus">500 - {{ _("Something went wrong") }}</h1>
+        <p class="text-base-content dark:text-base-300 mt-2">
+            {{ _("An unexpected error occurred. Please try again later or contact support.") }}
+        </p>
+        <a href="{{ url_for("home.index") }}"
+           class="btn btn-primary inline-block px-4 py-2">{{ _("Return Home") }}</a>
+    </div>
+{% endblock %}

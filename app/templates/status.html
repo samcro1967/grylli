@@ -1,0 +1,21 @@
+{# ---------------------------------------------------------------------
+  status.html
+  app/templates/status.html
+  Browser-accessible fallback for /status/ JSON endpoint.
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block title %}Status{% endblock %}
+{% block content %}
+    <div class="max-w-xl mx-auto mt-5 bg-base-100 dark:bg-base-800 dark:bg-zinc-800 shadow-md rounded-xl p-6 space-y-4">
+        <h1 class="text-xl font-semibold text-zinc-800 dark:text-zinc-100">{{ _("System Status") }}</h1>
+        <p class="text-zinc-700 dark:text-zinc-300">
+            {{ _("This endpoint provides system health and version information.") }}
+        </p>
+        <pre class="bg-zinc-100 dark:bg-zinc-700 p-4 rounded text-sm text-zinc-900 dark:text-zinc-100">
+{
+    "status": "ok",
+    "version": "{{ version }}"
+}
+    </pre>
+    </div>
+{% endblock %}

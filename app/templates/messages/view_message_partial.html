@@ -1,0 +1,82 @@
+{# ---------------------------------------------------------------------
+  view_message.html
+  app/templates/messages/view_message.html
+  CSP-compliant read-only detail view for a Messages message
+--------------------------------------------------------------------- #}
+<div class="max-w-4xl mx-auto mt-5 bg-base-100 dark:bg-base-800 shadow-md rounded-xl p-6 space-y-6">
+    <!-- Page Title -->
+    <h1 class="text-xl font-semibold text-base-content dark:text-base-100">{{ _("Message Details") }}</h1>
+    <!-- Meta Details Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+            <h2 class="text-sm font-medium text-base-content dark:text-base-100">{{ _("Label") }}</h2>
+            <p class="text-lg text-base-content dark:text-base-100">{{ message.label }}</p>
+        </div>
+        <div>
+            <h2 class="text-sm font-medium text-base-content dark:text-base-100">{{ _("Subject") }}</h2>
+            <p class="text-lg text-base-content dark:text-base-100">{{ message.subject }}</p>
+        </div>
+        <div>
+            <h2 class="text-sm font-medium text-base-content dark:text-base-100">{{ _("Check-in Interval") }}</h2>
+            <p class="text-lg text-base-content dark:text-base-100">{{ checkin_human }}</p>
+        </div>
+        <div>
+            <h2 class="text-sm font-medium text-base-content dark:text-base-100">{{ _("Grace Period") }}</h2>
+            <p class="text-lg text-base-content dark:text-base-100">{{ grace_human }}</p>
+        </div>
+        {% if message.last_checkin %}
+            <div>
+                <h2 class="text-sm font-medium text-base-content dark:text-base-100">{{ _("Last Check-in") }}</h2>
+                <p class="text-lg text-base-content dark:text-base-100">{{ message.last_checkin.strftime("%Y-%m-%d %H:%M") }}</p>
+            </div>
+        {% endif %}
+        <div>
+            <h2 class="text-sm font-medium text-base-content dark:text-base-100">{{ _("Created At") }}</h2>
+            <p class="text-lg text-base-content dark:text-base-100">{{ message.created_at.strftime("%Y-%m-%d %H:%M") }}</p>
+        </div>
+    </div>
+    <!-- Content Section -->
+    <div>
+        <h2 class="text-sm font-medium text-base-content dark:text-base-100">{{ _("Content") }}</h2>
+        <pre class="whitespace-pre-wrap bg-base-200 dark:bg-base-900 text-base-content dark:text-base-100 p-3 rounded">
+{{ message.content }}
+            </pre>
+    </div>
+    <!-- Destinations Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+            <h2 class="text-sm font-medium text-base-content dark:text-base-100">{{ _("Apprise URLs") }}</h2>
+            {% if message.apprise_destinations %}
+                <ul class="list-disc list-inside text-sm text-base-content dark:text-base-100">
+                    {% for apprise in message.apprise_destinations %}<li>{{ apprise.label }}</li>{% endfor %}
+                </ul>
+            {% else %}
+                <p class="italic text-sm text-base-content dark:text-base-400">{{ _("None assigned.") }}</p>
+            {% endif %}
+        </div>
+        <div>
+            <h2 class="text-sm font-medium text-base-content dark:text-base-100">{{ _("Webhooks") }}</h2>
+            {% if message.webhooks %}
+                <ul class="list-disc list-inside text-sm text-base-content dark:text-base-100">
+                    {% for webhook in message.webhooks %}<li>{{ webhook.label }}</li>{% endfor %}
+                </ul>
+            {% else %}
+                <p class="italic text-sm text-base-content dark:text-base-400">{{ _("None assigned.") }}</p>
+            {% endif %}
+        </div>
+    </div>
+    <!-- Back Button -->
+    <div class="pt-4">
+        <a href="{{ url_for("messages_bp.overview") }}"
+           hx-get="{{ url_for("messages_bp.overview") }}"
+           hx-target="#main-content"
+           hx-swap="innerHTML"
+           hx-push-url="true"
+           data-controller="action-title"
+           data-action-title-title-value="Grylli | Messages | Overview"
+           data-action="htmx:afterOnLoad->action-title#setTitle"
+           class="btn btn-primary w-full sm:w-auto text-center"
+           role="button"
+           aria-label="{{ _('Back to Messages') }}">← {{ _('Back to Messages') }}</a>
+    </div>
+</div>

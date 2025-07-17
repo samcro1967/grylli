@@ -1,0 +1,126 @@
+{# ---------------------------------------------------------------------
+  create_smtp_partial.html
+  app/templates/user_smtp/create_smtp_partial.html
+  CSP-compliant form to create an SMTP destination
+--------------------------------------------------------------------- #}
+<div data-controller="action-title"
+     data-action-title-title-value="Grylli | SMTP | Create"
+     data-action="htmx:afterOnLoad->action-title#setTitle"></div>
+
+<div class="max-w-md mx-auto mt-5 bg-base-100 dark:bg-base-800 shadow-md rounded-xl p-6 space-y-4"
+     data-controller="smtp-form"
+     data-smtp-form-new-value="true">
+    <!-- Page Title -->
+    <h1 class="text-xl font-semibold text-base-content dark:text-base-100">{{ _("Create SMTP Destination") }}</h1>
+
+    <!-- Instructions -->
+    <p class="text-sm text-base-content dark:text-base-400">
+        {{ _("Fill out the form to configure a new SMTP destination.") }}
+    </p>
+
+    <!-- Form -->
+    <form method="post" novalidate>
+        {{ form.hidden_tag() }}
+
+        <!-- Label -->
+        <div>
+            <label for="label"
+                   class="block text-sm font-medium text-base-content dark:text-base-300">
+                {{ form.label.label.text }}
+            </label>
+            {{ form.label(id="label",
+                          class="w-full mt-1 px-3 py-2 border rounded bg-base-100 dark:bg-base-800 text-base-content dark:text-base-100") }}
+            {% if form.label.errors %}
+                <p class="text-error text-sm mt-1">{{ form.label.errors[0] }}</p>
+            {% endif %}
+        </div>
+
+        <!-- SMTP Host -->
+        <div>
+            <label for="smtp_host"
+                   class="block text-sm font-medium text-base-content dark:text-base-300">
+                {{ form.smtp_host.label.text }}
+            </label>
+            {{ form.smtp_host(id="smtp_host",
+                              class="w-full mt-1 px-3 py-2 border rounded bg-base-100 dark:bg-base-800 text-base-content dark:text-base-100") }}
+            {% if form.smtp_host.errors %}
+                <p class="text-error text-sm mt-1">{{ form.smtp_host.errors[0] }}</p>
+            {% endif %}
+        </div>
+
+        <!-- SMTP Port -->
+        <div>
+            <label for="smtp_port"
+                   class="block text-sm font-medium text-base-content dark:text-base-300">
+                {{ form.smtp_port.label.text }}
+            </label>
+            {{ form.smtp_port(id="smtp_port",
+                              class="w-full mt-1 px-3 py-2 border rounded bg-base-100 dark:bg-base-800 text-base-content dark:text-base-100") }}
+            {% if form.smtp_port.errors %}
+                <p class="text-error text-sm mt-1">{{ form.smtp_port.errors[0] }}</p>
+            {% endif %}
+        </div>
+
+        <!-- SMTP Username -->
+        <div>
+            <label for="smtp_username"
+                   class="block text-sm font-medium text-base-content dark:text-base-300">
+                {{ form.smtp_username.label.text }}
+            </label>
+            {{ form.smtp_username(id="smtp_username",
+                                  class="w-full mt-1 px-3 py-2 border rounded bg-base-100 dark:bg-base-800 text-base-content dark:text-base-100",
+                                  autocomplete="username") }}
+            {% if form.smtp_username.errors %}
+                <p class="text-error text-sm mt-1">{{ form.smtp_username.errors[0] }}</p>
+            {% endif %}
+        </div>
+
+        <!-- SMTP Password -->
+        <div>
+            <label for="smtp_password"
+                   class="block text-sm font-medium text-base-content dark:text-base-300">
+                {{ form.smtp_password.label.text }}
+            </label>
+            {{ form.smtp_password(id="smtp_password",
+                                  class="w-full mt-1 px-3 py-2 border rounded bg-base-100 dark:bg-base-800 text-base-content dark:text-base-100",
+                                  autocomplete="new-password") }}
+            {% if form.smtp_password.errors %}
+                <p class="text-error text-sm mt-1">{{ form.smtp_password.errors[0] }}</p>
+            {% endif %}
+        </div>
+
+        <!-- TLS -->
+        <div>
+            <label class="inline-flex items-center">
+                {{ form.use_tls() }}
+                <span class="ml-2 text-sm text-base-content dark:text-base-300">{{ _("Use TLS") }}</span>
+            </label>
+        </div>
+
+        <!-- Enabled -->
+        <div>
+            <label class="inline-flex items-center">
+                {{ form.enabled() }}
+                <span class="ml-2 text-sm text-base-content dark:text-base-300">{{ _("Enabled") }}</span>
+            </label>
+        </div>
+
+        <!-- Submit + Cancel -->
+        <div class="flex gap-6 mt-6">
+            <button type="submit"
+                    data-smtp-form-target="submit"
+                    class="btn btn-primary w-full sm:w-auto max-w-xs disabled:opacity-50 disabled:cursor-not-allowed"
+                    disabled>{{ _("Create Destination") }}</button>
+
+            <a href="{{ url_for("user_smtp.overview") }}"
+               hx-get="{{ url_for("user_smtp.overview") }}"
+               hx-target="#main-content"
+               hx-swap="innerHTML"
+               hx-push-url="true"
+               data-controller="action-title"
+               data-action-title-title-value="Grylli | SMTP | Overview"
+               data-action="htmx:afterOnLoad->action-title#setTitle"
+               class="btn btn-secondary w-full sm:w-auto max-w-xs text-center">{{ _("Cancel") }}</a>
+        </div>
+    </form>
+</div>

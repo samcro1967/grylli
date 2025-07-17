@@ -1,0 +1,54 @@
+{# ---------------------------------------------------------------------
+   help_partial.html
+   app/templates/help.html
+   Help page rendered within the Grylli layout.
+--------------------------------------------------------------------- #}
+<div class="mt-5 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto p-6 bg-base-100 dark:bg-base-300 rounded-2xl shadow space-y-6">
+        <h1 class="text-2xl font-bold text-base-content">{{ _("Help & Overview") }}</h1>
+        <p class="text-base-content/80">
+            {{ _("Grylli helps you schedule messages, emails, and reminders that are sent automatically if you fail to check in on time.") }}
+            {{ _("It supports multiple delivery methods, user-level SMTP, rich scheduling, and secure data handling.") }}
+        </p>
+        <div class="space-y-4">
+            <h2 class="text-lg font-semibold text-base-content">{{ _("Key Areas") }}</h2>
+            <ul class="list-disc pl-6 space-y-2 text-base-content/80">
+                <li>
+                    <strong>{{ _("Messages") }}:</strong>
+                    {{ _("Configure Messagess to be sent if you miss a check-in. Supports check-in intervals, grace periods, and multiple destinations.") }}
+                </li>
+                <li>
+                    <strong>{{ _("Reminders") }}:</strong>
+                    {{ _("Schedule single or recurring reminders without requiring a check-in. Useful for fixed-date messages.") }}
+                </li>
+                <li>
+                    <strong>{{ _("Emails") }}:</strong>
+                    {{ _("Send secure emails with optional file attachments. Emails can be used with both messages and reminders.") }}
+                </li>
+                <li>
+                    <strong>{{ _("SMTP Settings") }}:</strong>
+                    {{ _("Configure your own email credentials for personalized delivery. Each user can define their own SMTP server.") }}
+                </li>
+                <li>
+                    <strong>{{ _("Apprise Destinations") }}:</strong>
+                    {{ _("Send Messagess to 80+ third-party services like Pushover, Gotify, Discord, Slack, and more.") }}
+                </li>
+                <li>
+                    <strong>{{ _("Webhooks") }}:</strong>
+                    {{ _("Trigger an HTTP POST to an external service or automation tool when a message is delivered.") }}
+                </li>
+                <li>
+                    <strong>{{ _("Test Send") }}:</strong>
+                    {{ _("Quickly verify that your destinations (email, webhook, Apprise) are working as expected.") }}
+                </li>
+                <li>
+                    <strong>{{ _("Security") }}:</strong>
+                    {{ _("All sensitive credentials are encrypted at rest. Your messages are only sent if you fail to check in.") }}
+                </li>
+            </ul>
+        </div>
+        <div class="text-sm text-base-content/50 pt-4 border-t border-base-300 dark:border-base-700">
+            {{ _("Need help with something specific? Each module in Grylli includes its own help panel with detailed guidance.") }}
+        </div>
+    </div>
+</div>

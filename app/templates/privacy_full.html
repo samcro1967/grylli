@@ -1,0 +1,10 @@
+{# ---------------------------------------------------------------------
+   privacy_full.html
+   app/templates/privacy_full.html
+   Styled privacy notice rendered within the Grylli layout.
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block title %}{{ _("Privacy") }}{% endblock %}
+{% block content %}
+    {% include "privacy_partial.html" %}
+{% endblock %}
