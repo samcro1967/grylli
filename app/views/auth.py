@@ -210,6 +210,25 @@ def login():
         if user and attempts >= 10:
             user.locked_until = datetime.now(timezone.utc) + timedelta(minutes=15)
             db.session.commit()
+
+            try:
+                send_email(
+                    to=user.email,
+                    subject="Your Grylli Account Has Been Locked",
+                    body=f"""Hello {user.username},
+
+Your Grylli account has been locked due to too many failed login attempts.
+It will automatically unlock after 15 minutes.
+
+If this was not you, we recommend resetting your password or contacting support.
+
+- Grylli Team
+""",
+                )
+                log_info_message(f"Auth - {username} - Lockout email sent to {user.email}")
+            except Exception as e:
+                log_exception_with_traceback(f"Auth - {username} - Failed to send lockout email", e)
+
             flash(
                 _("Too many failed login attempts. Your account is locked for 15 minutes."),
                 "danger",
