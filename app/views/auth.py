@@ -180,6 +180,23 @@ def login():
             db.session.commit()
             reset_failures(username)
 
+            try:
+                send_email(
+                    to=user.email,
+                    subject="Your Grylli Account Was Unlocked",
+                    body=f"""Hello {user.username},
+
+Your Grylli account was automatically unlocked after the lockout period ended, and you have successfully logged in.
+
+If this was not you, please reset your password or contact support immediately.
+
+- Grylli Team
+""",
+                )
+                log_info_message(f"Auth - {user.username} - Auto-unlock email sent")
+            except Exception as e:
+                log_exception_with_traceback(f"Auth - {user.username} - Failed to send auto-unlock email", e)
+
             if not user.is_enabled:
                 flash(_("Your account is not activated."), "warning")
                 return render_template("auth/login.html", form=form)
