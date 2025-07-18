@@ -18,6 +18,7 @@ from app.forms.edit_user_form import EditUserForm
 from app.models import User, db
 from app.utils.logging import log_exception_with_traceback, log_info_message
 from app.views.auth import admin_required
+from app.services.system_settings_email import send_email
 
 bp = Blueprint("users", __name__)
 
@@ -288,6 +289,24 @@ def toggle_user_enabled(user_id):
         user.is_enabled = not user.is_enabled
         db.session.commit()
         state = "enabled" if user.is_enabled else "disabled"
+
+        try:
+            send_email(
+                to=user.email,
+                subject=f"Your Grylli Account Was {state.capitalize()}",
+                body=f"""Hello {user.username},
+
+Your Grylli account has been {state} by an administrator.
+
+If this was unexpected, please contact support.
+
+- Grylli Team
+""",
+            )
+            log_info_message(f"Users - {user.username} - {state.capitalize()} email sent")
+        except Exception as e:
+            log_exception_with_traceback(f"Users - {user.username} - Failed to send {state} email", e)
+
         flash(
             _("User '%(username)s' has been %(status)s.")
             % {"username": user.username, "status": _(state)},
@@ -328,6 +347,24 @@ def reset_user_mfa(user_id):
         user.mfa_secret = None
         user.mfa_recovery_codes = None
         db.session.commit()
+
+        try:
+            send_email(
+                to=user.email,
+                subject="Your MFA Was Reset by an Administrator",
+                body=f"""Hello {user.username},
+
+Your multi-factor authentication (MFA) was reset by an administrator.
+
+If you did not request this, please contact support immediately.
+
+- Grylli Team
+""",
+            )
+            log_info_message(f"Users - {user.username} - MFA reset email notification sent")
+        except Exception as e:
+            log_exception_with_traceback(f"Users - {user.username} - Failed to send MFA reset email", e)
+
         flash(_("MFA disabled for user '%(username)s'.") % {"username": user.username}, "success")
         log_info_message(f"Admin '{current_user.username}' reset MFA for user '{user.username}'.")
     except Exception:
@@ -361,10 +398,28 @@ def change_role(user_id):
     try:
         user.role = new_role
         db.session.commit()
-        flash(_("Role updated for %(username)s.") % {"username": user.username}, "success")
-        log_info_message(
-            f"Admin '{current_user.username}' changed role of '{user.username}' to '{new_role}'."
-        )
+
+        try:
+            send_email(
+                to=user.email,
+                subject="Your Grylli Role Was Changed",
+                body=f"""Hello {user.username},
+
+Your role in Grylli has been changed by an administrator.
+Your new role is: {new_role}
+
+If you did not expect this change, please contact support immediately.
+
+- Grylli Team
+""",
+            )
+
+            flash(_("Role updated for %(username)s.") % {"username": user.username}, "success")
+            log_info_message(
+                f"Admin '{current_user.username}' changed role of '{user.username}' to '{new_role}'."
+            )
+        except Exception as e:
+            log_exception_with_traceback(f"Users - {user.username} - Failed to send role change email", e)
     except Exception:
         db.session.rollback()
         flash(_("An error occurred while updating the role."), "danger")
@@ -387,6 +442,24 @@ def unlock_user(user_id):
 
         user.locked_until = None
         db.session.commit()
+
+        try:
+            send_email(
+                to=user.email,
+                subject="Your Grylli Account Was Unlocked",
+                body=f"""Hello {user.username},
+
+Your account has been manually unlocked by an administrator.
+
+If this was unexpected, please contact support.
+
+- Grylli Team
+""",
+            )
+            log_info_message(f"Users - {user.username} - Unlock email sent")
+        except Exception as e:
+            log_exception_with_traceback(f"Users - {user.username} - Failed to send unlock email", e)
+
         flash(_("User account unlocked."), "success")
         log_info_message(f"Admin '{current_user.username}' unlocked user '{user.username}'.")
     except Exception as e:
