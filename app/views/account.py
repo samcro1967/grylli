@@ -129,8 +129,13 @@ def manage_account():
         if request.headers.get("HX-Request") == "true"
         else "account/manage_account_full.html"
     )
-    return render_template(template, form=form)
 
+    is_last_admin = (
+        current_user.role == "admin"
+        and User.query.filter_by(role="admin", is_enabled=True).count() == 1
+    )
+
+    return render_template(template, form=form, is_last_admin=is_last_admin)
 
 # ---------------------------------------------------------------------
 # Route: Translations Info Page
