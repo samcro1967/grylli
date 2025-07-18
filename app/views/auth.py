@@ -175,16 +175,22 @@ def login():
         # 2. Password check
         # ----------------------------
         if user and check_password_hash(user.password_hash, form.password.data):
+            # Check if user was previously locked
+            was_locked = user.locked_until and user.locked_until <= datetime.now(timezone.utc)
+
             # Clear lockout and reset failures on success
             user.locked_until = None
             db.session.commit()
             reset_failures(username)
 
-            try:
-                send_email(
-                    to=user.email,
-                    subject="Your Grylli Account Was Unlocked",
-                    body=f"""Hello {user.username},
+            # Only send email if they were previously locked
+            if was_locked:
+
+                try:
+                    send_email(
+                        to=user.email,
+                        subject="Your Grylli Account Was Unlocked",
+                        body=f"""Hello {user.username},
 
 Your Grylli account was automatically unlocked after the lockout period ended, and you have successfully logged in.
 
@@ -192,10 +198,10 @@ If this was not you, please reset your password or contact support immediately.
 
 - Grylli Team
 """,
-                )
-                log_info_message(f"Auth - {user.username} - Auto-unlock email sent")
-            except Exception as e:
-                log_exception_with_traceback(f"Auth - {user.username} - Failed to send auto-unlock email", e)
+                    )
+                    log_info_message(f"Auth - {user.username} - Auto-unlock email sent")
+                except Exception as e:
+                    log_exception_with_traceback(f"Auth - {user.username} - Failed to send auto-unlock email", e)
 
             if not user.is_enabled:
                 flash(_("Your account is not activated."), "warning")
@@ -212,7 +218,6 @@ If this was not you, please reset your password or contact support immediately.
             login_user(user)
             flash(_("Logged in successfully."), "success")
             log_info_message(f"Auth - {username} - Logged in")
-            next_page = unquote(request.args.get("next", ""))
             next_page = unquote(request.args.get("next", ""))
             # Safe redirect: `get_safe_redirect` ensures `next_page` is same-origin or internal
             return redirect(get_safe_redirect(next_page, fallback_endpoint="home.index"))
