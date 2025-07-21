@@ -12,8 +12,7 @@ from datetime import timedelta
 # ---------------------------------------------------------------------
 # APPLICATION METADATA
 # ---------------------------------------------------------------------
-APP_NAME = "Grylli"
-APP_VERSION = "1.0.5"  # Update in package.json also
+APP_VERSION = "1.0.0"  # Update in package.json also
 GITHUB_URL = "https://github.com/samcro1967/grylli"
 DEFAULT_LOCALE = "en"
 FERRET_KEY = os.environ.get("FERRET_KEY")
