@@ -35,6 +35,7 @@ import InsecureWarningController from "./controllers/insecure_warning_controller
 import SidebarActiveController from "./controllers/sidebar_active_controller.js"
 import TabsController from "./controllers/tabs_controller.js"
 import ActionTitleController from "./controllers/action_title_controller.js";
+import BackgroundController from "./controllers/background_controller.js";
 
 const application = Application.start();
 application.register("sidebar", SidebarController);
@@ -71,3 +72,4 @@ application.register("insecure-warning", InsecureWarningController)
 application.register("sidebar-active", SidebarActiveController)
 application.register("tabs", TabsController)
 application.register("action-title", ActionTitleController);
+application.register("background", BackgroundController);

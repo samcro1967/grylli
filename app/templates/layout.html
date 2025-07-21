@@ -34,7 +34,7 @@
             {% include "partials/sidebar_desktop.html" %}
             <!-- Main content (scrollable, height = 100vh - header height) -->
             <main id="main-content"
-                  class="flex-grow overflow-y-auto p-6 bg-base-100 dark:bg-base-300 bg-defaults bg-protruding-squares text-base-content mt-16"
+                  class="flex-grow overflow-y-auto p-6 bg-base-100 dark:bg-base-300 bg-defaults text-base-content mt-16"
                   hx-target="this"
                   hx-swap="innerHTML">
                 {% block content %}{% endblock %}
@@ -56,11 +56,5 @@
             }
           });
         </script>
-        <!-- Set Background Pattern -->
-        <style nonce="{{ g.nonce }}">
-          .bg-protruding-squares {
-            background-image: url("{{ url_for('static', filename='img/protruding-squares.svg') }}");
-          }
-        </style>
     </body>
 </html>

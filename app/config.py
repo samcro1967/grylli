@@ -184,3 +184,15 @@ UI_LOG_LINE_LIMIT = 2000
 
 # Limit for scheduler log lines displayed in the UI
 SCHEDULER_LOG_DISPLAY_LIMIT = 1000
+
+
+# config.py
+
+BACKGROUND_PATTERNS = [
+    {"name": "transparent", "file": "none"},
+    {"name": "bermuda-diamond", "file": "img/bermuda-diamond.svg"},
+    {"name": "endless-constellation", "file": "img/endless-constellation.svg"},
+    {"name": "hollowed-boxes", "file": "img/hollowed-boxes.svg"},
+    {"name": "protruding-squares", "file": "img/protruding-squares.svg"},
+    {"name": "wavey-fingerprint", "file": "img/wavey-fingerprint.svg"},
+]

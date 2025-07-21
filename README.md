@@ -396,6 +396,7 @@ docker run -d \
 - [HTMX](https://htmx.org/) — Dynamic HTML-over-the-wire interactivity without custom JavaScript
 - [Tailwind CSS](https://tailwindcss.com/) — Utility-first CSS framework for responsive, accessible UI
 - [DaisyUI](https://daisyui.com/) — Plugin for TailwindCSS that provides pre-designed components
+- [SVGBackgrounds](https://www.svgbackgrounds.com/set/free-svg-backgrounds-and-patterns/) — Open-source SVG background patterns used in the theme-aware background selector
 - [PostCSS](https://postcss.org/) — CSS transformation engine used in Tailwind’s build pipeline
 - [Autoprefixer](https://github.com/postcss/autoprefixer) — Adds vendor prefixes to CSS rules automatically
 
