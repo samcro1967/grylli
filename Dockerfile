@@ -7,8 +7,8 @@ COPY healthcheck.go .
 COPY entrypoint.go .
 
 # Build both binaries
-RUN CGO_ENABLED=0 GOOS=linux go build -o healthcheck ./healthcheck.go && \
-    CGO_ENABLED=0 GOOS=linux go build -o entrypoint ./entrypoint.go
+RUN CGO_ENABLED=0 GOOS=linux go build -ldflags="-s -w" -o healthcheck ./healthcheck.go && \
+    CGO_ENABLED=0 GOOS=linux go build -ldflags="-s -w" -o entrypoint ./entrypoint.go
 
 # ---------- Build Stage ----------
 FROM python:3.11-slim AS build
