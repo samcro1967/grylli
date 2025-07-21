@@ -38,6 +38,9 @@ services:
       - SMTP_USER=you@example.com
       - SMTP_PASS=your_password_or_app_token
     restart: unless-stopped
+    read_only: true
+    tmpfs:
+      - /tmp
     healthcheck:
       test: ["CMD", "/healthcheck"]
       interval: 60s
