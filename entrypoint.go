@@ -1,8 +1,7 @@
 // ---------------------------------------------------------------------
 // entrypoint.go
 // Project root
-// Compiled container entrypoint. Verifies file integrity using SHA-256
-// against file_hashes.sha256 and exits if tampering is detected.
+// Verifies file integrity, then starts the app via Gunicorn
 // ---------------------------------------------------------------------
 
 package main
@@ -12,6 +11,7 @@ import (
 	"crypto/sha256"
 	"encoding/hex"
 	"fmt"
+	"log"
 	"os"
 	"os/exec"
 	"strings"
@@ -20,14 +20,12 @@ import (
 var (
 	hashFile = "file_hashes.sha256"
 
-	// Optional files allowed to be missing in production containers
 	optionalFiles = map[string]bool{
 		"scripts/generate_screenshots.py": true,
 		"scripts/init_db.py":              true,
 	}
 )
 
-// computeHash calculates SHA-256 hash of the given file
 func computeHash(path string) (string, error) {
 	f, err := os.Open(path)
 	if err != nil {
@@ -49,7 +47,6 @@ func computeHash(path string) (string, error) {
 	return hex.EncodeToString(h.Sum(nil)), nil
 }
 
-// checkIntegrity parses file_hashes.sha256 and compares hashes to actual files
 func checkIntegrity() error {
 	file, err := os.Open(hashFile)
 	if err != nil {
@@ -97,9 +94,20 @@ func checkIntegrity() error {
 	return nil
 }
 
-// main verifies integrity and starts the Python application
+func generateVersionStatusFile() {
+	cmd := exec.Command("/usr/local/bin/python3", "-m", "app.services.scheduler.version_check")
+	cmd.Stdout = os.Stdout
+	cmd.Stderr = os.Stderr
+	err := cmd.Run()
+	if err != nil {
+		log.Printf("[entrypoint]  Failed to write version_status.json: %v", err)
+	} else {
+		log.Println("[entrypoint] version_status.json written successfully")
+	}
+}
+
 func main() {
-	fmt.Println("🔒 Grylli Entrypoint: Verifying file integrity...")
+	fmt.Println("Grylli Entrypoint: Verifying file integrity...")
 
 	if err := checkIntegrity(); err != nil {
 		fmt.Fprintln(os.Stderr, err)
@@ -108,10 +116,22 @@ func main() {
 
 	fmt.Println("Integrity verified. Starting Python app...")
 
-	// Run the main application (adjust path if needed)
-	err := exec.Command("/usr/bin/python3", "/grylli/wsgi.pyc").Run()
-	if err != nil {
-		fmt.Fprintf(os.Stderr, "Failed to start app: %v\n", err)
-		os.Exit(1)
+	generateVersionStatusFile()
+
+	port := os.Getenv("FLASK_APP_PORT")
+	if port == "" {
+		port = "5069"
 	}
+
+	args := []string{
+		"-c", "gunicorn.conf.py",
+		"-b", "0.0.0.0:" + port,
+		"wsgi:app",
+	}
+
+	cmd := exec.Command("/usr/local/bin/gunicorn", args...)
+	cmd.Stdout = os.Stdout
+	cmd.Stderr = os.Stderr
+	cmd.Env = os.Environ()
+	cmd.Run()
 }
