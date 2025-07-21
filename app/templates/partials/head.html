@@ -37,6 +37,7 @@
   <!-- Stylesheets -->
   <style nonce="{{ g.nonce }}">{% include 'static/css/critical.css' %}</style>
   <link href="{{ url_for('static', filename='css/styles.min.css') }}" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}" nonce="{{ g.nonce }}">
 
   <!-- Font Awesome (deferred) -->
   <link rel="stylesheet"

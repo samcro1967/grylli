@@ -7,7 +7,7 @@
     <h1 class="text-2xl font-bold text-base-content mb-4">{{ _("Tasks") }}</h1>
     <p class="text-base-content/70 mb-6">{{ _("Run administrative tasks manually.") }}</p>
 
-    <div class="overflow-x-auto rounded-box border border-base-300 dark:border-base-700">
+    <div class="bg-base-100 dark:bg-base-800 shadow-md rounded-xl p-4 border border-base-300 dark:border-base-700 overflow-x-auto">
         <table class="table table-zebra w-full text-sm">
             <thead class="bg-primary text-primary-content">
                 <tr>
@@ -17,7 +17,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr class="hover">
+                <tr class="hover:bg-base-200 dark:hover:bg-base-700 transition-colors">
                     <td class="font-semibold">{{ _("Version Check") }}</td>
                     <td class="text-base-content/70">
                         {{ _("Check if a newer version of Grylli is available by running the scheduled version check task manually.") }}

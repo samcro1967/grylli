@@ -6,7 +6,7 @@
 
 <h1 class="text-2xl font-semibold text-base-content mb-6">{{ _("SMTP Settings") }}</h1>
 
-<div class="overflow-x-auto border border-base-300 dark:border-base-300 rounded-lg">
+<div class="bg-base-100 dark:bg-base-800 shadow-md rounded-xl p-4 border border-base-300 dark:border-base-300 overflow-x-auto">
     <table class="table w-full text-sm text-left text-base-content dark:text-base-content">
         <thead class="bg-primary text-primary-content">
             <tr>
@@ -16,7 +16,7 @@
         </thead>
         <tbody>
             {% for setting in settings %}
-                <tr class="hover">
+                <tr class="hover:bg-base-200 dark:hover:bg-base-700 transition-colors">
                     <td class="px-4 py-2 font-mono">{{ setting.key }}</td>
                     <td class="px-4 py-2 font-mono break-all">{{ setting.value }}</td>
                 </tr>

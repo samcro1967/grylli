@@ -8,7 +8,7 @@
 </p>
 
 {% if logs %}
-    <div class="overflow-x-auto border border-base-300 dark:border-base-300 rounded-lg">
+    <div class="bg-base-100 dark:bg-base-800 shadow-md rounded-xl p-4 border border-base-300 dark:border-base-300 overflow-x-auto">
         <table class="table w-full text-sm">
             <thead>
                 <tr class="bg-primary text-primary-content text-left">
@@ -21,7 +21,7 @@
             </thead>
             <tbody>
                 {% for entry in logs %}
-                    <tr class="hover">
+                    <tr class="hover:bg-base-200 dark:hover:bg-base-700 transition-colors">
                         <td class="px-4 py-2 whitespace-nowrap">{{ entry.timestamp }}</td>
                         <td class="px-4 py-2 whitespace-nowrap">
                             <span class="badge badge-sm {% if entry.level == 'ERROR' %}badge-error{% elif entry.level == 'WARNING' %}badge-warning{% else %}badge-ghost{% endif %}">
@@ -34,12 +34,14 @@
                     </tr>
                 {% else %}
                     <tr>
-                        <td colspan="5" class="px-4 py-4 text-center text-base-content">{{ _("No scheduler activity found.") }}</td>
+                        <td colspan="5" class="px-4 py-4 text-center text-base-content">
+                            {{ _("No scheduler activity found.") }}
+                        </td>
                     </tr>
                 {% endfor %}
             </tbody>
         </table>
     </div>
 {% else %}
-    <p>No scheduler activity found.</p>
+    <p class="text-base-content text-sm">{{ _("No scheduler activity found.") }}</p>
 {% endif %}
