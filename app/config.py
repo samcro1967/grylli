@@ -192,7 +192,9 @@ BACKGROUND_PATTERNS = [
     {"name": "transparent", "file": "none"},
     {"name": "bermuda-diamond", "file": "img/bermuda-diamond.svg"},
     {"name": "endless-constellation", "file": "img/endless-constellation.svg"},
+    {"name": "floating-cogs", "file": "img/floating-cogs.svg"},
     {"name": "hollowed-boxes", "file": "img/hollowed-boxes.svg"},
+    {"name": "overcast", "file": "img/overcast.svg"},
     {"name": "protruding-squares", "file": "img/protruding-squares.svg"},
     {"name": "wavey-fingerprint", "file": "img/wavey-fingerprint.svg"},
 ]
