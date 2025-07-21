@@ -49,6 +49,8 @@ COPY --from=build /grylli/migrations /grylli/migrations
 COPY --from=build /grylli/wsgi.py /grylli/wsgi.py
 COPY --from=build /grylli/gunicorn.conf.py /grylli/gunicorn.conf.py
 COPY --from=build /grylli/tools /grylli/tools
+COPY --from=build /grylli/verify_file_integrity.py /grylli/verify_file_integrity.py
+COPY --from=build /grylli/file_hashes.sha256 /grylli/file_hashes.sha256
 
 # This includes all installed Python packages (like gunicorn)
 COPY --from=build /usr/local /usr/local

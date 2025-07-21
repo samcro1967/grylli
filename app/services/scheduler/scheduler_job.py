@@ -5,6 +5,8 @@
 # ---------------------------------------------------------------------
 
 import traceback
+import subprocess
+import os
 
 # ------------------------ Imports (PEP8 order) -----------------------
 from datetime import timedelta
@@ -91,11 +93,35 @@ def start_scheduler(app):
                     + traceback.format_exc()
                 )
 
+    # Wrapper for file integrity verification
+    def file_integrity_wrapper():
+        with app.app_context():
+            try:
+                result = subprocess.run(
+                    ["python3", "verify_file_integrity.py", "--silent"],
+                    capture_output=True,
+                    text=True,
+                )
+                if result.returncode != 0:
+                    log_info_message(
+                        f"ERROR - Scheduler [FileIntegrity] - Failure - File integrity check failed:\n{result.stdout}\n{result.stderr}"
+                    )
+                    os._exit(1)
+                else:
+                    log_info_message("Scheduler [FileIntegrity] - Success - File integrity verified.")
+            except Exception as e:
+                log_info_message(
+                    f"ERROR - Scheduler [FileIntegrity] - Failure - Exception during check:\n{e}\n{traceback.format_exc()}"
+                )
+                os._exit(1)
+
     # Get schedule settings from app config
     checkin_minutes = app.config.get("SCHEDULER_CHECKIN_INTERVAL_MINUTES", 1)
     backup_hour = app.config.get("SCHEDULER_BACKUP_CRON_HOUR", 2)
     backup_minute = app.config.get("SCHEDULER_BACKUP_CRON_MINUTE", 0)
     reminder_interval = app.config.get("SCHEDULER_REMINDER_INTERVAL_MINUTES", 5)
+    file_integrity_minutes = app.config.get("SCHEDULER_FILE_INTEGRITY_INTERVAL_MINUTES", 15)
+    version_check_minutes = app.config.get("SCHEDULER_VERSION_CHECK_INTERVAL_MINUTES", 60)
 
     # Schedule the check-in/reminder/overdue job
     scheduler.add_job(
@@ -124,12 +150,23 @@ def start_scheduler(app):
         replace_existing=True,
     )
 
-    # Schedule the version check every 60 minutes
+    # Schedule the version check
     scheduler.add_job(
         version_check_wrapper,
-        trigger=IntervalTrigger(minutes=60),
+        trigger="interval",
+        minutes=version_check_minutes,
         id="check_latest_version",
         name="Check for new Grylli releases on GitHub",
+        replace_existing=True,
+    )
+
+    # Schedule the file integrity
+    scheduler.add_job(
+        file_integrity_wrapper,
+        trigger="interval",
+        minutes=file_integrity_minutes,
+        id="file_integrity_check",
+        name="Verify file hashes against manifest and exit on mismatch",
         replace_existing=True,
     )
 

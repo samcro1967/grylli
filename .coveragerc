@@ -1,0 +1,11 @@
+[run]
+omit =
+    app/post_translations.py
+    app/pre_translations.py
+parallel = true
+data_file = tests/.coverage_data/.coverage
+
+[report]
+exclude_lines =
+    pragma: no cover
+    if __name__ == .__main__.:

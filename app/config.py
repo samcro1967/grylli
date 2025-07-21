@@ -12,8 +12,7 @@ from datetime import timedelta
 # ---------------------------------------------------------------------
 # APPLICATION METADATA
 # ---------------------------------------------------------------------
-APP_NAME = "Grylli"
-APP_VERSION = "1.0.0"  # Update in package.json also
+APP_VERSION = "1.0.1"  # Update in package.json also
 GITHUB_URL = "https://github.com/samcro1967/grylli"
 DEFAULT_LOCALE = "en"
 FERRET_KEY = os.environ.get("FERRET_KEY")
@@ -58,6 +57,8 @@ SCHEDULER_CHECKIN_INTERVAL_MINUTES = 10  # Check-ins every 5 minutes
 SCHEDULER_BACKUP_CRON_HOUR = 2  # 2:00 AM daily
 SCHEDULER_BACKUP_CRON_MINUTE = 0
 SCHEDULER_REMINDER_INTERVAL_MINUTES = 10
+SCHEDULER_FILE_INTEGRITY_INTERVAL_MINUTES = 10
+SCHEDULER_VERSION_CHECK_INTERVAL_MINUTES = 60
 
 # ---------------------------------------------------------------------
 # FILE UPLOAD VALIDATION
