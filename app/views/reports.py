@@ -192,7 +192,9 @@ def report_logs_full():
                         log_time = datetime.strptime(timestamp, "%Y-%m-%d %H:%M:%S,%f")
                         if log_time < after_dt:
                             continue
-                    except Exception:
+                    except Exception as e:
+                        from app.utils.logging import log_exception_with_traceback
+                        log_exception_with_traceback("Skipping log entry due to timestamp parse failure", e)
                         continue
 
                 log_entries.append((timestamp, level, message))

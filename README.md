@@ -11,28 +11,28 @@ Grylli is a secure, self-hosted message delivery platform that automatically sen
 [![Version](https://img.shields.io/github/v/release/samcro1967/grylli)](https://github.com/samcro1967/grylli/releases)
 [![License](https://img.shields.io/github/license/samcro1967/grylli)](LICENSE)
 
+<a name="toc"></a>
 ## Table of Contents
-
 - [Features](#features)
-  - [Core Application](#-core-application)
-  - [Accessibility & Inclusive Design](#-accessibility--inclusive-design)
-  - [Notifications](#-notifications)
-  - [Reminder System](#-reminder-system)
-  - [User Management & Access Control](#-user-management--access-control)
-  - [Email & Integrations](#-email--integrations)
-  - [Logging & Diagnostics](#-logging--diagnostics)
-  - [ Admin Tasks](#️-admin-tasks)
-  - [Admin Reports](#-admin-reports)
-  - [ Security & Production Readiness](#️-security--production-readiness)
-  - [ Application Trust Model](#️-application-trust-model)
-- [Security Checklist](#-security-checklist)
-- [Lighthouse Audit Results](#-lighthouse-audit-results)
-- [Testing & Quality Assurance](#-testing--quality-assurance)
-- [Backups & Maintenance](#-backups--maintenance)
+  - [Core Application](#core-application)
+  - [Accessibility & Inclusive Design](#accessibility-inclusive-design)
+  - [Notifications](#notifications)
+  - [Reminder System](#reminder-system)
+  - [User Management & Access Control](#user-management-access-control)
+  - [Email & Integrations](#email-integrations)
+  - [Logging & Diagnostics](#logging-diagnostics)
+  - [Admin Tasks](#admin-tasks)
+  - [Admin Reports](#admin-reports)
+  - [Security & Production Readiness](#security-production-readiness)
+  - [Application Trust Model](#application-trust-model)
+- [Security Checklist](#security-checklist)
+- [Lighthouse Audit Results](#lighthouse-audit-results)
+- [Testing & Quality Assurance](#testing-quality-assurance)
+- [Backups & Maintenance](#backups-maintenance)
 - [Screenshots](#screenshots)
 - [Docker Compose Configuration](#docker-compose-configuration)
   - [Environment Variables](#environment-variables)
-- [Credits & Key Dependencies](#credits--key-dependencies)
+- [Credits & Key Dependencies](#credits-key-dependencies)
 - [Recommended Third-Party Services](#recommended-third-party-services)
 
 ---
@@ -66,6 +66,7 @@ Grylli is a secure, self-hosted message delivery platform that automatically sen
 ---
 
 ### Accessibility & Inclusive Design
+[⬆ Back to Table of Contents](#toc)
 - Grylli has undergone a thorough accessibility audit using [pa11y](https://pa11y.org/) and manual contrast verification.
 - Main pages (login, signup, dashboard, reminders, emails, messages, settings) have been remediated for WCAG 2.1 AA compliance
 - All forms include semantic labels, ARIA feedback, and keyboard-accessible controls
@@ -77,6 +78,7 @@ Grylli is a secure, self-hosted message delivery platform that automatically sen
 ---
 
 ### Messages
+[⬆ Back to Table of Contents](#toc)
 - Configurable notification and check-in system
 - Deliver Messages using [Apprise](https://github.com/caronc/apprise), with support for dozens of services
 - Execute webhooks when notification grace period for checkin has expired
@@ -87,6 +89,7 @@ Grylli is a secure, self-hosted message delivery platform that automatically sen
 ---
 
 ### Reminder System
+[⬆ Back to Table of Contents](#toc)
 - Create reminders with labels, subjects, and rich scheduling options
 - Assign email, webhook, and Apprise destinations to each reminder
 - Optional test-send for validation of all linked services
@@ -96,6 +99,7 @@ Grylli is a secure, self-hosted message delivery platform that automatically sen
 ---
 
 ### User Management & Access Control
+[⬆ Back to Table of Contents](#toc)
 - Multi-admin and multi-user support
 - Role-based access control (RBAC) with user/admin privileges
 - MFA using TOTP apps (e.g. Google Authenticator) with recovery codes
@@ -108,12 +112,14 @@ Grylli is a secure, self-hosted message delivery platform that automatically sen
 ---
 
 ### Email & Integrations
+[⬆ Back to Table of Contents](#toc)
 - Global SMTP settings for system-level notifications
 - User-specific SMTP settings for personalized delivery
 
 ---
 
 ### Logging & Diagnostics
+[⬆ Back to Table of Contents](#toc)
 - All application events are logged with context, including:
   - check-in attempts, enable/disable actions, task execution, test runs, and validation errors
   - internal exceptions are captured with full tracebacks and categorized by severity
@@ -131,6 +137,7 @@ Grylli is a secure, self-hosted message delivery platform that automatically sen
 ---
 
 ### Admin Tasks
+[⬆ Back to Table of Contents](#toc)
 - Admin-only UI available under **Tasks** for executing one-time system actions
 - First task available: **Manual Version Check**
   - Triggers the same logic used in the scheduled update check
@@ -140,7 +147,7 @@ Grylli is a secure, self-hosted message delivery platform that automatically sen
 ---
 
 ### Admin Reports
-
+[⬆ Back to Table of Contents](#toc)
 - Admin-only dashboard with real-time reports and usage summaries
 - Tabbed UI with HTMX-based dynamic content loading (no full page reloads)
 - Currently available reports:
@@ -153,6 +160,7 @@ Grylli is a secure, self-hosted message delivery platform that automatically sen
 ---
 
 ### Security & Production Readiness
+[⬆ Back to Table of Contents](#toc)
 - Sensitive credentials (e.g., SMTP passwords, Apprise tokens) are encrypted at rest using Fernet symmetric encryption
 - Fully Content Security Policy (CSP) compliant: dynamic nonces, no inline scripts or handlers, no `.innerHTML`
 - Frontend entirely refactored to use Stimulus.js controllers instead of Alpine.js or inline JavaScript
@@ -173,7 +181,19 @@ Grylli is a secure, self-hosted message delivery platform that automatically sen
 
 ---
 
+### File Integrity Verification
+[⬆ Back to Table of Contents](#toc)
+- Grylli performs a secure file integrity check on startup to ensure application files have not been tampered with.
+- A `file_hashes.sha256` manifest is generated at build time, containing **SHA-256 hashes** for all `.py`, `.html`, and `.js` files in the source tree.
+- At runtime, a built-in Python script verifies these hashes against the actual files on disk.
+- If any file has been modified or added, **startup is aborted**, and the failure is logged.
+- This ensures administrators or malicious actors cannot modify core logic or templates without detection.
+- A scheduler task re-validates file integrity and exits if any tampering is detected.
+
+---
+
 ### Application Trust Model
+[⬆ Back to Table of Contents](#toc)
 - Grylli is designed with privacy and control in mind.
 - Users retain full control over their check-in schedules, messages, and delivery methods.
 - All sensitive user data — including email passwords, Apprise tokens, and webhook URLs — is encrypted before being stored.
@@ -184,6 +204,7 @@ Grylli is a secure, self-hosted message delivery platform that automatically sen
 ---
 
 ## Security Checklist
+[⬆ Back to Table of Contents](#toc)
 - [x] Passwords and secrets encrypted at rest
 - [x] CSP-compliant templates and JavaScript (no inline scripts or handlers)
 - [x] Rate-limited login, signup, and reset flows
@@ -198,6 +219,7 @@ Grylli is a secure, self-hosted message delivery platform that automatically sen
 ---
 
 ### Lighthouse Audit Results
+[⬆ Back to Table of Contents](#toc)
 Grylli has been tested with [Google Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) across all major modules, achieving:
 
 | Metric         | Average Score |
@@ -213,10 +235,11 @@ Installability was validated using Lighthouse PWA audits.
 ---
 
 ## **Testing & Quality Assurance**
+[⬆ Back to Table of Contents](#toc)
 Grylli has a comprehensive test suite covering the platform's core features, ensuring the stability, security, and functionality of all workflows.
 
 ### **Test Coverage Breakdown**
-
+[⬆ Back to Table of Contents](#toc)
 | Module                     | Coverage |
 |----------------------------|----------|
 | **Auth Routes**            | 83%      |
@@ -236,6 +259,7 @@ Grylli has a comprehensive test suite covering the platform's core features, ens
 (4977 statements, 933 currently not covered)
 
 ### **Test Framework**
+[⬆ Back to Table of Contents](#toc)
 - Written using **pytest**
 - Uses **SQLAlchemy 2.x-style** `db.session.get()` methods
 - Mocks all external calls (email, encryption, login state) for safe, fast test runs
@@ -245,12 +269,14 @@ Grylli has a comprehensive test suite covering the platform's core features, ens
 ---
 
 ## Backups & Maintenance
+[⬆ Back to Table of Contents](#toc)
 - Automated daily database backups (7-day retention)
 - On-demand backup option
 
 ---
 
 ## Screenshots
+[⬆ Back to Table of Contents](#toc)
 <details>
   <summary><strong>Show Screenshots</strong></summary>
 
@@ -279,6 +305,7 @@ Grylli has a comprehensive test suite covering the platform's core features, ens
 ---
 
 ## Docker Compose Configuration
+[⬆ Back to Table of Contents](#toc)
 [`docker-compose.sample.yml`](./docker-compose.sample.yml)
 
 If you prefer not to use Docker Compose, you can run Grylli with a single command:
@@ -316,6 +343,7 @@ docker run -d \
 </details>
 
 ### Environment Variables
+[⬆ Back to Table of Contents](#toc)
 <details>
   <summary><strong>Show Environment Variables</strong></summary>
 
@@ -348,6 +376,7 @@ docker run -d \
 ## Credits & Key Dependencies
 
 ### Core Backend
+[⬆ Back to Table of Contents](#toc)
 - [Flask](https://flask.palletsprojects.com/) — Python web framework
 - [Flask-WTF](https://flask-wtf.readthedocs.io/) — Secure web forms with CSRF protection
 - [Flask-Login](https://flask-login.readthedocs.io/) — User session and authentication management
@@ -362,6 +391,7 @@ docker run -d \
 - [GPT-PO Translator](https://github.com/gaborvecsei/gpt-po-translator) — Automated PO file translation with GPT
 
 ### Frontend & UI
+[⬆ Back to Table of Contents](#toc)
 - [Stimulus](https://stimulus.hotwired.dev/) — Lightweight JavaScript framework for CSP-compliant interactivity
 - [HTMX](https://htmx.org/) — Dynamic HTML-over-the-wire interactivity without custom JavaScript
 - [Tailwind CSS](https://tailwindcss.com/) — Utility-first CSS framework for responsive, accessible UI
@@ -370,18 +400,21 @@ docker run -d \
 - [Autoprefixer](https://github.com/postcss/autoprefixer) — Adds vendor prefixes to CSS rules automatically
 
 ### Integrations & Features
+[⬆ Back to Table of Contents](#toc)
 - [Apprise](https://github.com/caronc/apprise) — Notification delivery to dozens of services
 - [htmx-extensions: safe-nonce](https://github.com/MichaelWest22/htmx-extensions/tree/main/safe-nonce) — HTMX extension for CSP nonce propagation
 - [Critical](https://github.com/addyosmani/critical) — Extracts and inlines critical-path CSS for faster first paint
 - [Pa11y](https://pa11y.org/) — Automated accessibility testing and validation
 
 ### Runtime & Deployment
+[⬆ Back to Table of Contents](#toc)
 - [gunicorn](https://gunicorn.org/) — Production Python WSGI server
 - [Docker](https://www.docker.com/) — Containerized application deployment (distroless)
 - [Clean-CSS CLI](https://github.com/jakubpawlowicz/clean-css-cli) — CSS minifier for optimized production output
 - [Terser](https://github.com/terser/terser) — JavaScript minifier used in production builds
 
 ### Testing, Auditing, & Code Quality
+[⬆ Back to Table of Contents](#toc)
 - [pytest](https://docs.pytest.org/) — Python test framework
 - [pytest-cov](https://pypi.org/project/pytest-cov/) — Coverage reporting plugin for pytest
 - [black](https://black.readthedocs.io/) — Opinionated Python code formatter
@@ -396,4 +429,5 @@ docker run -d \
 ---
 
 ## Recommended Third-Party Services
+[⬆ Back to Table of Contents](#toc)
 - [webhook (adnanh/webhook)](https://github.com/adnanh/webhook) — Simple webhook server

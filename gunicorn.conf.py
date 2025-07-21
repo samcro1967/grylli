@@ -23,6 +23,7 @@ LOGLEVEL = "debug" if DEBUG else "info"
 ACCESSLOG = None
 ERRORLOG = "-"
 CAPTURE_OUTPUT = True
+preload_app = True
 WORKERS = 1
 
 bind = BIND

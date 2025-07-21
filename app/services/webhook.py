@@ -109,7 +109,7 @@ def send_test_webhook_notification(endpoint_url):
     log_info_message(f"[webhook] Sending test notification to: {endpoint_url} (user: {user})")
 
     try:
-        response = requests.post(endpoint_url, json=payload)
+        response = requests.post(endpoint_url, json=payload, timeout=5)
         if response.ok:
             log_info_message(
                 f"[webhook] Webhook test success (user: {user}, status={response.status_code})"

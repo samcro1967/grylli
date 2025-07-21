@@ -38,17 +38,17 @@
            id="tab-scheduler">{{ _("Scheduler Activity") }}
         </a>
 
-        <!-- Application Logs -->
-        <a class="tab tab-bordered hover:underline cursor-pointer"
-           data-action="click->tab#activate"
-           data-tabs-target="tab"
-           data-tabs-name="logs"
-           data-tabs-title="Grylli | Reports | Logs"
-           hx-get="{{ url_for('reports.report_logs_full') }}"
-           hx-target="#report-tab-content"
-           hx-swap="innerHTML"
-           hx-push-url="true"
-           id="tab-logs">{{ _("Application Logs") }}</a>
+		<!-- Application Logs -->
+		<a class="tab tab-bordered text-primary hover:underline cursor-pointer {% if active_tab == 'logs' %}tab-active{% endif %}"
+		   data-action="click->tabs#activate"
+		   data-tabs-target="tab"
+		   data-tabs-name="logs"
+		   data-tabs-title="{{ _('Grylli | Reports | Logs') }}"
+		   hx-get="{{ url_for('reports.report_logs_full') }}"
+		   hx-target="#report-tab-content"
+		   hx-swap="innerHTML"
+		   hx-push-url="true"
+		   id="tab-logs">{{ _("Application Logs") }}</a>
 
     </nav>
 

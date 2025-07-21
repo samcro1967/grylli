@@ -6,6 +6,8 @@ Flask application factory setup: config, DB, login, blueprints, session, i18n, a
 import os
 import secrets
 from datetime import datetime
+import subprocess
+import sys
 
 from flask import Flask, current_app, g, redirect, request, url_for
 from flask_babel import Babel
@@ -38,6 +40,21 @@ configure_file_logging()
 
 
 def create_app(config_overrides=None):
+    # -----------------------------------------------------------------
+    # Run file integrity check
+    # -----------------------------------------------------------------
+    result = subprocess.run(
+        ["python3", "verify_file_integrity.py"],
+        capture_output=True,
+        text=True
+    )
+    if result.returncode != 0:
+        print(result.stdout)
+        print(result.stderr)
+        sys.exit("❌ Startup aborted due to file integrity failure.")
+
+    log_info_message("✅ File integrity check passed.")
+
     base_url = os.getenv("BASE_URL", "").rstrip("/")  # default to "" if unset
 
     app = Flask(

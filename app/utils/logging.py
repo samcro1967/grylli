@@ -70,8 +70,9 @@ def log_debug_message(message: str):
                 flush=True,
             )
             logging.debug(message)
-    except Exception:
-        pass
+    except Exception as e:
+        logging.warning("Failed to log debug message: %s", str(e))
+
 
 
 # ---------------------------------------------------------------------
