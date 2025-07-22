@@ -9,7 +9,7 @@ from datetime import datetime
 import subprocess
 import sys
 
-from flask import Flask, current_app, g, redirect, request, url_for
+from flask import Flask, current_app, g, redirect, request, url_for, has_request_context
 from flask_babel import Babel
 from flask_login import current_user
 from flask_wtf.csrf import generate_csrf
@@ -55,7 +55,9 @@ def create_app(config_overrides=None):
 
     log_info_message("✅ File integrity check passed.")
 
-    base_url = os.getenv("BASE_URL", "").rstrip("/")  # default to "" if unset
+    base_url = os.getenv("BASE_URL", "").rstrip("/")
+    if not base_url:
+        base_url = "/grylli"
 
     app = Flask(
         __name__,
@@ -63,6 +65,8 @@ def create_app(config_overrides=None):
         static_url_path=f"{base_url}/static",
         static_folder="static",
     )
+
+    app.config["BASE_URL"] = base_url
 
     try:
         # Load standard config
@@ -146,12 +150,12 @@ def create_app(config_overrides=None):
 
         @app.context_processor
         def inject_checkin_alert_flag():
-            if current_user.is_authenticated:
-                try:
+            try:
+                if has_request_context() and current_user.is_authenticated:
                     count = get_due_checkin_count(current_user.id)
                     return {"has_due_checkins": count > 0, "due_checkin_count": count}
-                except Exception:
-                    return {"has_due_checkins": False, "due_checkin_count": 0}
+            except Exception:
+                pass
             return {"has_due_checkins": False, "due_checkin_count": 0}
 
         setup_i18n(app)

@@ -1,0 +1,13 @@
+// Auto-generated from config.py
+
+export const FONT_CLASSES = [
+  {% for font in config["AVAILABLE_FONTS"] %}
+  "font-{{ font.key }}"{% if not loop.last %},{% endif %}
+  {% endfor %}
+];
+
+export const FONT_FAMILIES = {
+  {% for font in config["AVAILABLE_FONTS"] %}
+  {{ font.key|tojson }}: {{ font.label|tojson }}{% if not loop.last %},{% endif %}
+  {% endfor %}
+};

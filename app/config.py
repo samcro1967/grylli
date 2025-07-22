@@ -198,3 +198,156 @@ BACKGROUND_PATTERNS = [
     {"name": "protruding-squares", "file": "img/protruding-squares.svg"},
     {"name": "wavey-fingerprint", "file": "img/wavey-fingerprint.svg"},
 ]
+
+# ------------------------------------------------------------------------------
+# Font Definitions
+# Used for sidebar selector and font loading
+# They must also be added to tailwind.config.js
+# ------------------------------------------------------------------------------
+
+AVAILABLE_FONTS = [
+    {
+        "key": "comic",
+        "label": "Comic Neue",
+        "filename": "comic-neue/files/comic-neue-latin-400-normal.woff2",
+        "fallback": "cursive",
+    },
+    {
+        "key": "gloria",
+        "label": "Gloria Hallelujah",
+        "filename": "gloria-hallelujah/files/gloria-hallelujah-latin-400-normal.woff2",
+        "fallback": "cursive",
+    },
+    {
+        "key": "inter",
+        "label": "Inter",
+        "filename": "inter/files/inter-latin-400-normal.woff2",
+        "fallback": "ui-sans-serif",
+    },
+    {
+        "key": "noto",
+        "label": "Noto Sans",
+        "filename": "noto-sans/files/noto-sans-latin-400-normal.woff2",
+        "fallback": "sans-serif",
+    },
+    {
+        "key": "orbitron",
+        "label": "Orbitron",
+        "filename": "orbitron/files/orbitron-latin-400-normal.woff2",
+        "fallback": "sans-serif",
+    },
+    {
+        "key": "pacifico",
+        "label": "Pacifico",
+        "filename": "pacifico/files/pacifico-latin-400-normal.woff2",
+        "fallback": "cursive",
+    },
+    {
+        "key": "patrick",
+        "label": "Patrick Hand",
+        "filename": "patrick-hand/files/patrick-hand-latin-400-normal.woff2",
+        "fallback": "cursive",
+    },
+    {
+        "key": "playfair",
+        "label": "Playfair Display",
+        "filename": "playfair-display/files/playfair-display-latin-400-normal.woff2",
+        "fallback": "serif",
+    },
+    {
+        "key": "plexmono",
+        "label": "IBM Plex Mono",
+        "filename": "ibm-plex-mono/files/ibm-plex-mono-latin-400-normal.woff2",
+        "fallback": "monospace",
+    },
+    {
+        "key": "rubikmono",
+        "label": "Rubik Mono One",
+        "filename": "rubik-mono-one/files/rubik-mono-one-latin-400-normal.woff2",
+        "fallback": "monospace",
+    },
+    {
+        "key": "sharetech",
+        "label": "Share Tech Mono",
+        "filename": "share-tech-mono/files/share-tech-mono-latin-400-normal.woff2",
+        "fallback": "monospace",
+    },
+    {
+        "key": "vt323",
+        "label": "VT323",
+        "filename": "vt323/files/vt323-latin-400-normal.woff2",
+        "fallback": "monospace",
+    },
+    {
+        "key": "rocksalt",
+        "label": "Rock Salt",
+        "filename": "rock-salt/files/rock-salt-latin-400-normal.woff2",
+        "fallback": "cursive",
+    },
+    {
+        "key": "audiowide",
+        "label": "Audiowide",
+        "filename": "audiowide/files/audiowide-latin-400-normal.woff2",
+        "fallback": "sans-serif",
+    },
+    {
+        "key": "amaticsc",
+        "label": "Amatic SC",
+        "filename": "amatic-sc/files/amatic-sc-latin-400-normal.woff2",
+        "fallback": "cursive",
+    },
+    {
+        "key": "schoolbell",
+        "label": "Schoolbell",
+        "filename": "schoolbell/files/schoolbell-latin-400-normal.woff2",
+        "fallback": "cursive",
+    },
+    {
+        "key": "lato",
+        "label": "Lato",
+        "filename": "lato/files/lato-latin-400-normal.woff2",
+        "fallback": "sans-serif",
+    },
+    {
+        "key": "luckiest",
+        "label": "Luckiest Guy",
+        "filename": "luckiest-guy/files/luckiest-guy-latin-400-normal.woff2",
+        "fallback": "cursive",
+    },
+    {
+        "key": "caveat",
+        "label": "Caveat",
+        "filename": "caveat/files/caveat-latin-400-normal.woff2",
+        "fallback": "cursive",
+    },
+    {
+        "key": "satisfy",
+        "label": "Satisfy",
+        "filename": "satisfy/files/satisfy-latin-400-normal.woff2",
+        "fallback": "cursive",
+    },
+    {
+        "key": "reenie",
+        "label": "Reenie Beanie",
+        "filename": "reenie-beanie/files/reenie-beanie-latin-400-normal.woff2",
+        "fallback": "cursive",
+    },
+    {
+        "key": "righteous",
+        "label": "Righteous",
+        "filename": "righteous/files/righteous-latin-400-normal.woff2",
+        "fallback": "sans-serif",
+    },
+    {
+        "key": "bebas",
+        "label": "Bebas Neue",
+        "filename": "bebas-neue/files/bebas-neue-latin-400-normal.woff2",
+        "fallback": "sans-serif",
+    },
+    {
+        "key": "baloo2",
+        "label": "Baloo 2",
+        "filename": "baloo-2/files/baloo-2-latin-400-normal.woff2",
+        "fallback": "sans-serif",
+    },
+]

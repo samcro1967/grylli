@@ -6,7 +6,7 @@
 <!DOCTYPE html>
 <html lang="{{ get_locale() or 'en' }}"
       data-theme="{{ 'dark' if request.cookies.theme == 'dark' else 'light' }}"
-      class="h-screen overflow-hidden scroll-smooth">
+      class="h-screen overflow-hidden scroll-smooth font-{{ current_user.font_preference if current_user.is_authenticated else 'inter' }}">
     {% include "partials/head.html" %}
     <body hx-ext="safe-nonce"
           class="h-screen overflow-hidden flex flex-col bg-base-200 text-base-content"

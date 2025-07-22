@@ -32,7 +32,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY ./app/templates/static/css/critical.css /grylli/app/templates/static/css/critical.css
 COPY ./app/static/version.json /grylli/app/static/version.json
 COPY ./app/static/daisyui-themes.json /grylli/app/static/daisyui-themes.json
-
+COPY ./app/assets/fonts /grylli/app/assets/fonts
 
 # Copy the source files (excluding any build steps)
 COPY . .
@@ -51,6 +51,8 @@ COPY --from=build /grylli/gunicorn.conf.py /grylli/gunicorn.conf.py
 COPY --from=build /grylli/tools /grylli/tools
 COPY --from=build /grylli/verify_file_integrity.py /grylli/verify_file_integrity.py
 COPY --from=build /grylli/file_hashes.sha256 /grylli/file_hashes.sha256
+COPY ./app/assets/fonts /grylli/app/assets/fonts
+COPY --from=build /grylli/scripts/generate_fonts_css.py /grylli/scripts/generate_fonts_css.py
 
 # This includes all installed Python packages (like gunicorn)
 COPY --from=build /usr/local /usr/local

@@ -42,3 +42,10 @@ def register_context_processors(app):
     def inject_github_url():
         """Inject the GitHub repository URL into templates."""
         return {"GITHUB_URL": app.config.get("GITHUB_URL")}
+
+    @app.context_processor
+    def inject_available_fonts():
+        """Inject AVAILABLE_FONTS sorted by label into all templates."""
+        from app.config import AVAILABLE_FONTS
+        sorted_fonts = sorted(AVAILABLE_FONTS, key=lambda f: f["label"].lower())
+        return {"available_fonts": sorted_fonts}

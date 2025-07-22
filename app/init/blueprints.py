@@ -41,6 +41,7 @@ from app.views.users import bp as users
 from app.views.webhook import bp as webhook
 from app.views.settings import bp as settings_bp
 from app.views.tools import bp as tools
+from app.views.assets import bp as assets
 
 def register_blueprints(app):
     """
@@ -96,7 +97,7 @@ def register_blueprints(app):
     _r(csp_report, f"{prefix}/csp-report")
     _r(reports, f"{prefix}/admin/reports")
     _r(tools, f"{prefix}/admin/tools")
-
+    _r(assets, f"{prefix}/assets")
 
     # -------------------------------
     # Conditionally register debug blueprint

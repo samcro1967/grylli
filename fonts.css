@@ -1,0 +1,434 @@
+
+
+<!DOCTYPE html>
+<html lang="en"
+      data-theme="light"
+      class="h-screen overflow-hidden scroll-smooth font-inter">
+    
+<head>
+  <!-- CSP-compliant HTMX config -->
+  <meta name="htmx-config"
+        content='{"inlineScriptNonce":"PT1dLsku3CU653CmgJIgSg","inlineStyleNonce":"PT1dLsku3CU653CmgJIgSg","allowEval":false,"includeIndicatorStyles":false}'>
+  <script src="/grylli/static/js/safe-nonce.min.js" defer></script>
+
+  <!-- Meta -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description"
+        content="Grylli is a secure message scheduling and delivery platform.">
+
+  <!-- Performance -->
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
+
+  <!-- PWA: Manifest + Theme -->
+  <link rel="manifest" href="/grylli/pwa/manifest.json">
+  <meta name="theme-color" content="#1e293b" />
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Grylli">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <link rel="apple-touch-icon" href="/grylli/static/icons/icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="icon"
+        href="/grylli/static/icons/favicon.ico"
+        type="image/x-icon" />
+
+  <!-- Title -->
+  <title>Grylli</title>
+
+  <!-- Stylesheets -->
+  <style nonce="PT1dLsku3CU653CmgJIgSg">*,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgba(59,130,246,.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-feature-settings:normal;font-variation-settings:normal}body{margin:0;line-height:inherit}h1{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}button,input,select{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button{-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}h1{margin:0}input::-moz-placeholder{opacity:1;color:#9ca3af}img,svg{display:block;vertical-align:middle}img{max-width:100%;height:auto}:root,[data-theme]{background-color:var(--fallback-b1,oklch(var(--b1)/1));color:var(--fallback-bc,oklch(var(--bc)/1))}@supports not (color:oklch(0% 0 0)){:root{color-scheme:light;--fallback-p:#491eff;--fallback-pc:#d4dbff;--fallback-s:#ff41c7;--fallback-sc:#fff9fc;--fallback-a:#00cfbd;--fallback-ac:#00100d;--fallback-n:#2b3440;--fallback-nc:#d7dde4;--fallback-b1:#fff;--fallback-b2:#e5e6e6;--fallback-b3:#e5e6e6;--fallback-bc:#1f2937;--fallback-in:#00b3f0;--fallback-inc:#000;--fallback-su:#00ca92;--fallback-suc:#000;--fallback-wa:#ffc22d;--fallback-wac:#000;--fallback-er:#ff6f70;--fallback-erc:#000}@media (prefers-color-scheme:dark){:root{color-scheme:dark;--fallback-p:#7582ff;--fallback-pc:#050617;--fallback-s:#ff71cf;--fallback-sc:#190211;--fallback-a:#00c7b5;--fallback-ac:#000e0c;--fallback-n:#2a323c;--fallback-nc:#a6adbb;--fallback-b1:#1d232a;--fallback-b2:#191e24;--fallback-b3:#15191e;--fallback-bc:#a6adbb;--fallback-in:#00b3f0;--fallback-inc:#000;--fallback-su:#00ca92;--fallback-suc:#000;--fallback-wa:#ffc22d;--fallback-wac:#000;--fallback-er:#ff6f70;--fallback-erc:#000}}}*{scrollbar-color:color-mix(in oklch,currentColor 35%,transparent) transparent}:hover{scrollbar-color:color-mix(in oklch,currentColor 60%,transparent) transparent}:root{color-scheme:light;--in:72.06% 0.191 231.6;--su:64.8% 0.150 160;--wa:84.71% 0.199 83.87;--er:71.76% 0.221 22.18;--pc:89.824% 0.06192 275.75;--ac:15.352% 0.0368 183.61;--inc:0% 0 0;--suc:0% 0 0;--wac:0% 0 0;--erc:0% 0 0;--rounded-box:1rem;--rounded-btn:0.5rem;--rounded-badge:1.9rem;--animation-btn:0.25s;--animation-input:.2s;--btn-focus-scale:0.95;--border-btn:1px;--tab-border:1px;--tab-radius:0.5rem;--p:49.12% 0.3096 275.75;--s:69.71% 0.329 342.55;--sc:98.71% 0.0106 342.55;--a:76.76% 0.184 183.61;--n:32.1785% 0.02476 255.701624;--nc:89.4994% 0.011585 252.096176;--b1:100% 0 0;--b2:96.1151% 0 0;--b3:92.4169% 0.00108 197.137559;--bc:27.8078% 0.029596 256.847952}@media (prefers-color-scheme:dark){:root{color-scheme:dark;--in:72.06% 0.191 231.6;--su:64.8% 0.150 160;--wa:84.71% 0.199 83.87;--er:71.76% 0.221 22.18;--pc:13.138% 0.0392 275.75;--sc:14.96% 0.052 342.55;--ac:14.902% 0.0334 183.61;--inc:0% 0 0;--suc:0% 0 0;--wac:0% 0 0;--erc:0% 0 0;--rounded-box:1rem;--rounded-btn:0.5rem;--rounded-badge:1.9rem;--animation-btn:0.25s;--animation-input:.2s;--btn-focus-scale:0.95;--border-btn:1px;--tab-border:1px;--tab-radius:0.5rem;--p:65.69% 0.196 275.75;--s:74.8% 0.26 342.55;--a:74.51% 0.167 183.61;--n:31.3815% 0.021108 254.139175;--nc:74.6477% 0.0216 264.435964;--b1:25.3267% 0.015896 252.417568;--b2:23.2607% 0.013807 253.100675;--b3:21.1484% 0.01165 254.087939;--bc:74.6477% 0.0216 264.435964}}[data-theme=light]{color-scheme:light;--in:72.06% 0.191 231.6;--su:64.8% 0.150 160;--wa:84.71% 0.199 83.87;--er:71.76% 0.221 22.18;--pc:89.824% 0.06192 275.75;--ac:15.352% 0.0368 183.61;--inc:0% 0 0;--suc:0% 0 0;--wac:0% 0 0;--erc:0% 0 0;--rounded-box:1rem;--rounded-btn:0.5rem;--rounded-badge:1.9rem;--animation-btn:0.25s;--animation-input:.2s;--btn-focus-scale:0.95;--border-btn:1px;--tab-border:1px;--tab-radius:0.5rem;--p:49.12% 0.3096 275.75;--s:69.71% 0.329 342.55;--sc:98.71% 0.0106 342.55;--a:76.76% 0.184 183.61;--n:32.1785% 0.02476 255.701624;--nc:89.4994% 0.011585 252.096176;--b1:100% 0 0;--b2:96.1151% 0 0;--b3:92.4169% 0.00108 197.137559;--bc:27.8078% 0.029596 256.847952}html{--font-refresh:0}.btn{display:inline-flex;height:3rem;min-height:3rem;flex-shrink:0;flex-wrap:wrap;align-items:center;justify-content:center;border-radius:var(--rounded-btn,.5rem);border-color:transparent;border-color:oklch(var(--btn-color,var(--b2))/var(--tw-border-opacity));padding-left:1rem;padding-right:1rem;text-align:center;font-size:.875rem;line-height:1em;gap:.5rem;font-weight:600;text-decoration-line:none;border-width:var(--border-btn,1px);--tw-text-opacity:1;color:var(--fallback-bc,oklch(var(--bc)/var(--tw-text-opacity)));--tw-shadow:0 1px 2px 0 rgba(0,0,0,.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);outline-color:var(--fallback-bc,oklch(var(--bc)/1));background-color:oklch(var(--btn-color,var(--b2))/var(--tw-bg-opacity));--tw-bg-opacity:1;--tw-border-opacity:1}.btn-circle{height:3rem;width:3rem;border-radius:9999px;padding:0}.input{flex-shrink:1;-webkit-appearance:none;-moz-appearance:none;appearance:none;height:3rem;padding-left:1rem;padding-right:1rem;font-size:1rem;line-height:2;line-height:1.5rem;border-radius:var(--rounded-btn,.5rem);border-width:1px;border-color:transparent;--tw-bg-opacity:1;background-color:var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity)))}@media (prefers-reduced-motion:no-preference){.btn{animation:button-pop var(--animation-btn,.25s) ease-out}}@supports not (color:oklch(0% 0 0)){.btn{background-color:var(--btn-color,var(--fallback-b2));border-color:var(--btn-color,var(--fallback-b2))}.btn-primary{--btn-color:var(--fallback-p)}}.btn-primary{--tw-text-opacity:1;color:var(--fallback-pc,oklch(var(--pc)/var(--tw-text-opacity)));outline-color:var(--fallback-p,oklch(var(--p)/1))}@supports (color:oklch(0% 0 0)){.btn-primary{--btn-color:var(--p)}}.btn-ghost{border-width:1px;border-color:transparent;background-color:transparent;color:currentColor;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow);outline-color:currentColor}.input-bordered{border-color:var(--fallback-bc,oklch(var(--bc)/.2))}.input::-webkit-date-and-time-value{text-align:inherit}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border-width:0}.invisible{visibility:hidden}.fixed{position:fixed}.absolute{position:absolute}.bottom-4{bottom:1rem}.left-0{left:0}.left-1\/2{left:50%}.right-0{right:0}.right-4{right:1rem}.top-0{top:0}.top-1{top:.25rem}.z-20{z-index:20}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:.25rem}.mb-4{margin-bottom:1rem}.mt-16{margin-top:4rem}.mt-4{margin-top:1rem}.mt-5{margin-top:1.25rem}.block{display:block}.flex{display:flex}.hidden{display:none}.h-0{height:0}.h-10{height:2.5rem}.h-16{height:4rem}.h-4{height:1rem}.h-\[calc\(100vh-4rem\)\]{height:calc(100vh - 4rem)}.h-screen{height:100vh}.min-h-0{min-height:0}.w-10{width:2.5rem}.w-4{width:1rem}.w-64{width:16rem}.w-full{width:100%}.min-w-\[4rem\]{min-width:4rem}.max-w-\[16rem\]{max-width:16rem}.max-w-md{max-width:28rem}.flex-1{flex:1 1 0%}.flex-shrink-0,.shrink-0{flex-shrink:0}.flex-grow{flex-grow:1}.-translate-x-1\/2{--tw-translate-x:-50%}.-translate-x-1\/2{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.flex-col{flex-direction:column}.items-center{align-items:center}.justify-between{justify-content:space-between}.gap-1{gap:.25rem}.space-x-4>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1rem*var(--tw-space-x-reverse));margin-left:calc(1rem*(1 - var(--tw-space-x-reverse)))}.space-y-2>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.5rem*var(--tw-space-y-reverse))}.space-y-4>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem*var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-y-auto{overflow-y:auto}.scroll-smooth{scroll-behavior:smooth}.whitespace-nowrap{white-space:nowrap}.rounded{border-radius:.25rem}.rounded-full{border-radius:9999px}.rounded-xl{border-radius:.75rem}.border{border-width:1px}.border-b{border-bottom-width:1px}.border-r{border-right-width:1px}.border-t{border-top-width:1px}.border-base-300{--tw-border-opacity:1;border-color:var(--fallback-b3,oklch(var(--b3)/var(--tw-border-opacity,1)))}.border-primary\/50{border-color:var(--fallback-p,oklch(var(--p)/.5))}.bg-base-100{--tw-bg-opacity:1;background-color:var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity,1)))}.bg-base-200{--tw-bg-opacity:1;background-color:var(--fallback-b2,oklch(var(--b2)/var(--tw-bg-opacity,1)))}.bg-primary\/10{background-color:var(--fallback-p,oklch(var(--p)/.1))}.p-2{padding:.5rem}.p-6{padding:1.5rem}.px-2{padding-left:.5rem;padding-right:.5rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-1{padding-top:.25rem;padding-bottom:.25rem}.py-2{padding-top:.5rem;padding-bottom:.5rem}.text-center{text-align:center}.font-inter{font-family:Inter,ui-sans-serif,system-ui}.font-mono{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:.75rem;line-height:1rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.font-semibold{font-weight:600}.text-base-content{--tw-text-opacity:1;color:var(--fallback-bc,oklch(var(--bc)/var(--tw-text-opacity,1)))}.text-primary{--tw-text-opacity:1;color:var(--fallback-p,oklch(var(--p)/var(--tw-text-opacity,1)))}.shadow-md{--tw-shadow:0 4px 6px -1px rgba(0,0,0,.1),0 2px 4px -2px rgba(0,0,0,.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color),0 2px 4px -2px var(--tw-shadow-color)}.shadow-md,.shadow-sm{box-shadow:var(--tw-ring-offset-shadow,0 0 #0000),var(--tw-ring-shadow,0 0 #0000),var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgba(0,0,0,.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color)}</style>
+  <link href="/grylli/static/css/styles.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="/grylli/static/css/custom.css" nonce="PT1dLsku3CU653CmgJIgSg">
+
+  <!-- Font Awesome (deferred) -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha384-..."
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer" />
+  <noscript>
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+          integrity="sha384-..."
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer" />
+  </noscript>
+  <link rel="stylesheet" href="/grylli/assets/fonts.css">
+
+  <!-- Stimulus bundle -->
+  
+    <script defer type="module" src="/grylli/static/js/application.min.js"></script>
+  
+
+  <!-- PWA Service Worker Registration -->
+  <script defer src="/grylli/static/js/register-sw.js"></script>
+</head>
+    <body hx-ext="safe-nonce"
+          class="h-screen overflow-hidden flex flex-col bg-base-200 text-base-content"
+          data-role-change-base="/grylli/admin/users/0/change_role">
+        <!-- Flash Messages (uses Stimulus controller) -->
+        <div data-controller="flash-message"
+             data-flash-message-messages-value='[]'>
+        </div>
+        
+        
+          
+        
+
+        <!-- Fixed Header -->
+        
+<header class="fixed top-0 left-0 right-0 h-16 z-20 bg-base-100 dark:bg-base-300 border-b border-base-300 dark:border-base-700 flex items-center justify-between px-6 shadow-sm">
+    <!-- Left group: Logo + Badge -->
+    <div class="flex items-center space-x-2">
+        <!-- Logo -->
+        <a href="/grylli/overview/"
+           title="Home"
+           class="btn btn-ghost btn-circle">
+            <img src="/grylli/static/icons/grylli_icon_light.png"
+                 class="h-10 w-10 dark:hidden"
+                 alt="Logo" />
+            <img src="/grylli/static/icons/grylli_icon_dark.png"
+                 class="h-10 w-10 hidden dark:inline"
+                 alt="Logo" />
+        </a>
+        <!-- Inline badge (in same flex row) -->
+        
+    </div>
+    <!-- Center: Title and optional debug warning -->
+    <div class="absolute left-1/2 transform -translate-x-1/2 top-1 flex flex-col items-center gap-1">
+        <div class="text-xl font-bold text-base-content dark:text-base-100">Grylli</div>
+        
+    </div>
+    <!-- Right: Clock and Profile -->
+    <div class="flex items-center space-x-4 text-sm text-base-content dark:text-base-100">
+        <!-- Clock -->
+          
+        
+<div id="server-time"
+     class="font-mono text-sm font-bold px-3 py-1 rounded border border-primary/50 bg-primary/10 text-primary shadow-sm"
+     hx-get="/grylli/server-time"
+     hx-swap="outerHTML"
+     hx-trigger="every 60s"
+     hx-target="this">2025-07-22 15:21 CDT</div>
+        <!-- Profile -->
+        
+            <!-- Invisible placeholder to balance layout -->
+            <div class="w-10 h-10 invisible"></div>
+        
+    </div>
+</header>
+        <!-- Layout container below header -->
+        <div class="flex flex-grow h-0">
+            <!-- Sidebar (Desktop) -->
+            
+<aside class="flex flex-col min-h-0 h-[calc(100vh-4rem)] mt-16 transition-all duration-200 ease-in-out overflow-hidden w-64 min-w-[4rem] max-w-[16rem] flex-shrink-0 bg-base-100 dark:bg-base-300 border-r border-base-300 dark:border-base-700"
+       data-controller="sidebar"
+       data-sidebar-target="desktop">
+    <!-- Fixed header -->
+    <div class="shrink-0">
+        
+    </div>
+    <!-- Scrollable middle -->
+    <div class="flex-1 min-h-0 overflow-y-auto" data-sidebar-target="middle">
+        
+    </div>
+    <!-- Fixed footer -->
+    <div class="shrink-0">
+<div data-sidebar-target="footer"
+     class="sidebar-footer flex flex-col justify-between border-t border-base-300 dark:border-base-700 bg-base-100 dark:bg-base-300 px-2 py-2 space-y-2 transition-all duration-200">
+    <!-- Version Status -->
+    <div id="sidebar-version-status"
+         data-controller="version-check"
+         data-version-check-status-url-value="/grylli/meta/version/status"
+         class="text-xs text-center px-2 py-1 whitespace-nowrap"></div>
+    <!-- Font Selector -->
+    <div data-controller="font">
+      <label for="font-select" class="sr-only">Select font</label>
+      <select id="font-select"
+              data-font-target="select"
+              data-action="change->font#change"
+              aria-label="Select font"
+              class="w-full text-sm rounded bg-base-100 text-base-content border border-base-300 dark:border-base-700 px-2 py-1 focus:outline-none focus:ring-2 focus:ring-primary transition">
+        
+          <option value="comic">Comic Neue</option>
+        
+          <option value="gloria">Gloria Hallelujah</option>
+        
+          <option value="plexmono">IBM Plex Mono</option>
+        
+          <option value="inter">Inter</option>
+        
+          <option value="noto">Noto Sans</option>
+        
+          <option value="orbitron">Orbitron</option>
+        
+          <option value="pacifico">Pacifico</option>
+        
+          <option value="patrick">Patrick Hand</option>
+        
+          <option value="playfair">Playfair Display</option>
+        
+          <option value="rubikmono">Rubik Mono One</option>
+        
+          <option value="sharetech">Share Tech Mono</option>
+        
+          <option value="vt323">VT323</option>
+        
+      </select>
+    </div>
+    <!-- Background Pattern Selector -->
+    <div data-controller="background">
+      <label for="bg-select" class="sr-only">Select background pattern</label>
+      <select id="bg-select"
+              data-background-target="select"
+              data-action="change->background#change"
+              aria-label="Select background pattern"
+              class="w-full text-sm rounded bg-base-100 text-base-content border border-base-300 dark:border-base-700 px-2 py-1 focus:outline-none focus:ring-2 focus:ring-primary transition">
+        <option>Loading…</option>
+      </select>
+    </div>
+    <!-- Theme Selector -->
+    <div data-controller="theme">
+        <label for="theme-select" class="sr-only">Select Theme</label>
+        <select id="theme-select"
+                data-theme-target="select"
+                data-action="change->theme#change"
+                class="w-full text-sm rounded bg-base-100 text-base-content border border-base-300 dark:border-base-700 px-2 py-1 focus:outline-none focus:ring-2 focus:ring-primary transition"
+                aria-label="Select theme">
+            
+        </select>
+    </div>
+    <!-- Language Selector -->
+    <div data-controller="lang">
+        <label for="lang-select" class="sr-only">Select language</label>
+        <select id="lang-select"
+                data-lang-target="select"
+                data-action="change->lang#change"
+                data-base-url="/grylli/locale/set/"
+                name="lang"
+                aria-label="Select language"
+                class="w-full text-sm rounded bg-base-100 text-base-content border border-base-300 dark:border-base-700 px-2 py-1 focus:outline-none focus:ring-2 focus:ring-primary transition">
+            
+                <option value="sq" >Shqip (Albanian)</option>
+            
+                <option value="ar" >العربية (Arabic)</option>
+            
+                <option value="az" >Azərbaycan dili (Azerbaijani)</option>
+            
+                <option value="eu" >Euskara (Basque)</option>
+            
+                <option value="be" >Беларуская (Belarusian)</option>
+            
+                <option value="bn" >বাংলা (Bengali)</option>
+            
+                <option value="bs" >Bosanski (Bosnian)</option>
+            
+                <option value="my" >ဗမာစာ (Burmese)</option>
+            
+                <option value="zh" >中文 (Chinese)</option>
+            
+                <option value="hr" >Hrvatski (Croatian)</option>
+            
+                <option value="cs" >Čeština (Czech)</option>
+            
+                <option value="da" >Dansk (Danish)</option>
+            
+                <option value="nl" >Nederlands (Dutch)</option>
+            
+                <option value="en" selected>English (English)</option>
+            
+                <option value="et" >Eesti (Estonian)</option>
+            
+                <option value="fi" >Suomi (Finnish)</option>
+            
+                <option value="fr" >Français (French)</option>
+            
+                <option value="gl" >Galego (Galician)</option>
+            
+                <option value="ka" >ქართული (Georgian)</option>
+            
+                <option value="de" >Deutsch (German)</option>
+            
+                <option value="el" >Ελληνικά (Greek)</option>
+            
+                <option value="kl" >Kalaallisut (Greenlandic)</option>
+            
+                <option value="gu" >ગુજરાતી (Gujarati)</option>
+            
+                <option value="ha" >Hausa (Hausa)</option>
+            
+                <option value="he" >עברית (Hebrew)</option>
+            
+                <option value="hi" >हिन्दी (Hindi)</option>
+            
+                <option value="hu" >Magyar (Hungarian)</option>
+            
+                <option value="is" >Íslenska (Icelandic)</option>
+            
+                <option value="ig" >Igbo (Igbo)</option>
+            
+                <option value="id" >Bahasa Indonesia (Indonesian)</option>
+            
+                <option value="ga" >Gaeilge (Irish)</option>
+            
+                <option value="it" >Italiano (Italian)</option>
+            
+                <option value="ja" >日本語 (Japanese)</option>
+            
+                <option value="jv" >Basa Jawa (Javanese)</option>
+            
+                <option value="ko" >한국어 (Korean)</option>
+            
+                <option value="ku" >Kurdî (Kurdish (Kurmanji))</option>
+            
+                <option value="lv" >Latviešu (Latvian)</option>
+            
+                <option value="lt" >Lietuvių (Lithuanian)</option>
+            
+                <option value="mk" >Македонски (Macedonian)</option>
+            
+                <option value="mg" >Malagasy (Malagasy)</option>
+            
+                <option value="ms" >Bahasa Melayu (Malay)</option>
+            
+                <option value="ml" >മലയാളം (Malayalam)</option>
+            
+                <option value="mt" >Malti (Maltese)</option>
+            
+                <option value="mi" >Māori (Māori)</option>
+            
+                <option value="no" >Norsk (Norwegian)</option>
+            
+                <option value="fa" >فارسی (Persian (Farsi))</option>
+            
+                <option value="pl" >Polski (Polish)</option>
+            
+                <option value="pt" >Português (Portuguese)</option>
+            
+                <option value="pa" >ਪੰਜਾਬੀ (Punjabi)</option>
+            
+                <option value="ro" >Română (Romanian)</option>
+            
+                <option value="rm" >Rumantsch (Romansh)</option>
+            
+                <option value="ru" >Русский (Russian)</option>
+            
+                <option value="gd" >Gàidhlig (Scottish Gaelic)</option>
+            
+                <option value="sr" >Српски (Serbian)</option>
+            
+                <option value="sn" >Shona (Shona)</option>
+            
+                <option value="sk" >Slovenčina (Slovak)</option>
+            
+                <option value="sl" >Slovenščina (Slovenian)</option>
+            
+                <option value="so" >Soomaali (Somali)</option>
+            
+                <option value="es" >Español (Spanish)</option>
+            
+                <option value="sw" >Kiswahili (Swahili)</option>
+            
+                <option value="sv" >Svenska (Swedish)</option>
+            
+                <option value="ta" >தமிழ் (Tamil)</option>
+            
+                <option value="te" >తెలుగు (Telugu)</option>
+            
+                <option value="th" >ไทย (Thai)</option>
+            
+                <option value="tr" >Türkçe (Turkish)</option>
+            
+                <option value="uk" >Українська (Ukrainian)</option>
+            
+                <option value="ur" >اردو (Urdu)</option>
+            
+                <option value="uz" >Oʻzbekcha (Uzbek)</option>
+            
+                <option value="vi" >Tiếng Việt (Vietnamese)</option>
+            
+                <option value="cy" >Cymraeg (Welsh)</option>
+            
+                <option value="xh" >isiXhosa (Xhosa)</option>
+            
+                <option value="yo" >Yorùbá (Yoruba)</option>
+            
+                <option value="zu" >isiZulu (Zulu)</option>
+            
+        </select>
+    </div>
+</div></div>
+</aside>
+            <!-- Main content (scrollable, height = 100vh - header height) -->
+            <main id="main-content"
+                  class="flex-grow overflow-y-auto p-6 bg-base-100 dark:bg-base-300 bg-defaults text-base-content mt-16"
+                  hx-target="this"
+                  hx-swap="innerHTML">
+                
+    <!-- Centered Login Box -->
+    <div class="max-w-md mx-auto mt-5 bg-base-100 dark:bg-base-800 shadow-md rounded-xl p-6 space-y-4">
+        <!-- Page Title with fixed contrast -->
+        <h1 class="text-xl font-semibold text-base-content dark:text-base-100">Log In</h1>
+        <!-- Login Form -->
+        <form method="post" novalidate>
+            <!-- Username Field -->
+            <div class="mb-4">
+                <label class="block text-sm font-medium mb-1 text-base-content dark:text-base-100" for="username">Username</label>
+                <input aria-invalid="false" autocomplete="username" class="input input-bordered w-full bg-base-200 dark:bg-base-700 text-base-content dark:text-base-100 focus:ring-2 focus:ring-primary transition" id="username" name="username" required type="text" value="">
+                
+            </div>
+            <!-- Password Field -->
+            <div class="mb-4">
+                <label class="block text-sm font-medium mb-1 text-base-content dark:text-base-100" for="password">Password</label>
+                <input aria-invalid="false" autocomplete="current-password" class="input input-bordered w-full bg-base-200 dark:bg-base-700 text-base-content dark:text-base-100 focus:ring-2 focus:ring-primary transition" id="password" name="password" required type="password" value="">
+                
+            </div>
+            <!-- Submit Button -->
+            <div>
+                <button type="submit" class="btn btn-primary w-full">Log In</button>
+            </div>
+        </form>
+        <!-- Links -->
+        <div class="mt-4 text-sm text-center space-x-4">
+            <a href="/grylli/forgot-username"
+               class="text-primary hover:underline">Forgot Username?</a>
+            <a href="/grylli/forgot-password"
+               class="text-primary hover:underline">Forgot Password?</a>
+            <a href="/grylli/signup"
+               class="text-primary hover:underline">Sign Up</a>
+        </div>
+    </div>
+    <!-- Admin Help Button (subtle '?' icon) -->
+    <a href="/grylli/admin/help"
+       class="fixed bottom-4 right-4 z-50 bg-base-100 dark:bg-base-800 hover:bg-base-200 dark:hover:bg-base-700 text-base-content dark:text-base-300 p-2 rounded-full transition-colors"
+       title="Admin Help"
+       aria-label="Admin Help">
+        <svg xmlns="http://www.w3.org/2000/svg"
+             class="w-4 h-4"
+             viewBox="0 0 24 24"
+             fill="currentColor">
+            <path d="M12 2a10 10 0 100 20 10 10 0 000-20zm.25 15a1.25 1.25 0 11-2.5 0 1.25 1.25 0 012.5 0zm1.55-6.6c-.33.32-.6.62-.6 1.35v.25a.75.75 0 11-1.5 0v-.25c0-1.17.52-1.83 1.02-2.3.43-.41.73-.7.73-1.15 0-.72-.58-1.25-1.4-1.25-.73 0-1.26.41-1.38 1.01a.75.75 0 11-1.47-.27c.25-1.36 1.5-2.24 2.85-2.24 1.63 0 2.9 1.2 2.9 2.75 0 1.11-.61 1.72-1.15 2.3z" />
+        </svg>
+    </a>
+
+            </main>
+        </div>
+        <!-- Service Worker -->
+        <script src="/grylli/static/js/register-sw.js" defer></script>
+        <!-- Dynamic modal container for HTMX content -->
+        <div id="modal-container" data-controller="modal"></div>
+        <!-- HTMX -->
+        <script src="/grylli/static/js/htmx.min.js"></script>
+        <!-- Safe Nonce Extension -->
+        <script src="/grylli/static/js/safe-nonce.min.js"></script>
+        <!-- Dashboard Tabs -->
+        <script nonce="PT1dLsku3CU653CmgJIgSg">
+          document.body.addEventListener('htmx:afterSettle', function () {
+            if (window.Stimulus) {
+              Stimulus.start();
+            }
+          });
+        </script>
+    </body>
+</html>

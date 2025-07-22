@@ -1,0 +1,16 @@
+{% set base = config["BASE_URL"].rstrip("/") ~ "/assets/fonts" %}
+/* DEBUG: BASE_URL = {{ config["BASE_URL"]|default("NOT SET") }} */
+/* DEBUG: base path = {{ base }} */
+{% set style = "normal" %}
+{% set weight = "400" %}
+{% set display = "swap" %}
+
+{% for font in config["AVAILABLE_FONTS"] %}
+@font-face {
+  font-family: "{{ font.label }}";
+  font-style: {{ style }};
+  font-weight: {{ weight }};
+  font-display: {{ display }};
+  src: url("{{ base }}/{{ font.filename }}") format("woff2");
+}
+{% endfor %}

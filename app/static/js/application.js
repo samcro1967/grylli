@@ -36,6 +36,7 @@ import SidebarActiveController from "./controllers/sidebar_active_controller.js"
 import TabsController from "./controllers/tabs_controller.js"
 import ActionTitleController from "./controllers/action_title_controller.js";
 import BackgroundController from "./controllers/background_controller.js";
+import FontController from "./controllers/font_controller.js"
 
 const application = Application.start();
 application.register("sidebar", SidebarController);
@@ -73,3 +74,4 @@ application.register("sidebar-active", SidebarActiveController)
 application.register("tabs", TabsController)
 application.register("action-title", ActionTitleController);
 application.register("background", BackgroundController);
+application.register("font", FontController);
