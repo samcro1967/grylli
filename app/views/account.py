@@ -452,3 +452,26 @@ def set_security_questions():
         log_exception_with_traceback("Failed to save or render security questions", e)
         flash(_("An error occurred while saving your security questions."), "danger")
         return redirect(url_for("home.index"))
+
+# ---------------------------------------------------------------------
+# Route: Interface Customization Page
+# ---------------------------------------------------------------------
+@bp.route("account/customization", strict_slashes=False)
+@login_required
+def customization():
+    try:
+        log_info_message(f"Access - {current_user.username} - Customization Settings")
+
+        if "HX-Request" in request.headers:
+            return render_template("account/customization_partial.html")
+        else:
+            return render_template("account/customization_full.html")
+
+    except Exception as e:
+        tb = traceback.format_exc()
+        print("=== CUSTOMIZATION RENDER ERROR ===")
+        print(tb)
+        log_exception_with_traceback("Error rendering customization page", e)
+        flash(_("An error occurred while loading customization settings."), "danger")
+        return redirect(url_for("home.index"))
+

@@ -6,3 +6,61 @@
   background-attachment: fixed;
   background-size: auto;
 }
+
+/* Roundedness overrides */
+html.rounded-none * {
+  border-radius: 0 !important;
+}
+
+/* Optional enhancements: globally soften corners */
+html.rounded-lg * {
+  border-radius: 0.5rem !important; /* Tailwind's rounded-lg = 8px */
+}
+
+html.rounded-xl * {
+  border-radius: 0.75rem !important; /* Tailwind's rounded-xl = 12px */
+}
+
+/* ---------------------------------------------------------------------
+   Theme-aware contrast overrides
+--------------------------------------------------------------------- */
+
+/* Low contrast */
+html.contrast-low {
+  filter: contrast(85%);
+}
+
+/* High contrast */
+html.contrast-high {
+  filter: contrast(125%);
+}
+
+/* ---------------------------------------------------------------------
+   Letter Spacing (Tracking)
+--------------------------------------------------------------------- */
+html.tracking-tight * {
+  letter-spacing: -0.02em !important;
+}
+
+html.tracking-normal * {
+  letter-spacing: 0 !important;
+}
+
+html.tracking-wide * {
+  letter-spacing: 0.05em !important;
+}
+
+/* ---------------------------------------------------------------------
+   Line Height (Reading Density)
+--------------------------------------------------------------------- */
+html.leading-tight * {
+  line-height: 1.25 !important;
+}
+
+html.leading-normal * {
+  line-height: 1.5 !important;
+}
+
+html.leading-loose * {
+  line-height: 1.75 !important;
+}

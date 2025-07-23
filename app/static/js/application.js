@@ -38,6 +38,10 @@ import ActionTitleController from "./controllers/action_title_controller.js";
 import BackgroundController from "./controllers/background_controller.js";
 import FontController from "./controllers/font_controller.js"
 import FontSizeController from "./controllers/font_size_controller.js"
+import RoundednessController from "./controllers/roundedness_controller.js";
+import ContrastController from "./controllers/contrast_controller.js";
+import TrackingController from "./controllers/tracking_controller.js";
+import LineHeightController from "./controllers/line_height_controller.js";
 
 const application = Application.start();
 application.register("sidebar", SidebarController);
@@ -77,5 +81,9 @@ application.register("action-title", ActionTitleController);
 application.register("background", BackgroundController);
 application.register("font", FontController);
 application.register("font-size", FontSizeController);
+application.register("roundedness", RoundednessController);
+application.register("contrast", ContrastController);
+application.register("tracking", TrackingController);
+application.register("line-height", LineHeightController);
 
 window.Stimulus = application;

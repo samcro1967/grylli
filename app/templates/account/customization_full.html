@@ -1,0 +1,10 @@
+{# ---------------------------------------------------------------------
+   customization_full.html
+   app/templates/account/customization_full.html
+   Full-page container for interface customization settings in Grylli.
+--------------------------------------------------------------------- #}
+{% extends "layout.html" %}
+{% block title %}{{ _("Customization") }}{% endblock %}
+{% block content %}
+    {% include "account/customization_partial.html" %}
+{% endblock %}

@@ -6,7 +6,8 @@
 <!DOCTYPE html>
 <html lang="{{ get_locale() or 'en' }}"
       data-theme="{{ 'dark' if request.cookies.theme == 'dark' else 'light' }}"
-      class="h-screen overflow-hidden scroll-smooth font-{{ current_user.font_preference if current_user.is_authenticated else 'inter' }}">
+      class="h-screen overflow-hidden scroll-smooth font-{{ current_user.font_preference if current_user.is_authenticated else 'inter' }} tracking-normal lineheight-normal">
+
     {% include "partials/head.html" %}
     <body data-controller="customization"
           data-customization-default-font-value="font-base"

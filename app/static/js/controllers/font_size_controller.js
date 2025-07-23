@@ -6,23 +6,26 @@
 import { Controller } from "https://cdn.jsdelivr.net/npm/@hotwired/stimulus@3.0.0/dist/stimulus.js";
 
 export default class extends Controller {
-  static values = {
-    default: Number
-  }
+  static targets = ["select"];
 
   connect() {
-    const saved = localStorage.getItem("fontSizePercent");
-    const size = saved || this.defaultValue || 100;
-    this.setFontSize(size);
+    const saved = localStorage.getItem("grylli-font-size") || "100";
+
+    setTimeout(() => {
+      this.applyFontSize(saved);
+      if (this.hasSelectTarget) {
+        this.selectTarget.value = saved;
+      }
+    }, 10);
   }
 
   update(event) {
-    const size = event.target.value;
-    localStorage.setItem("fontSizePercent", size);
-    this.setFontSize(size);
+    const value = event.target.value;
+    localStorage.setItem("grylli-font-size", value);
+    this.applyFontSize(value);
   }
 
-  setFontSize(percent) {
+  applyFontSize(percent) {
     document.documentElement.style.fontSize = `${percent}%`;
   }
 }

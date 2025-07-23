@@ -1,0 +1,139 @@
+{# ---------------------------------------------------------------------
+   customization_partial.html
+   app/templates/account/customization_partial.html
+   Compact, responsive layout for interface customization settings
+--------------------------------------------------------------------- #}
+<div class="mt-4 px-4 sm:px-6 lg:px-8">
+  <div class="max-w-4xl mx-auto bg-base-100 dark:bg-base-800 dark:bg-base-900 rounded-2xl shadow p-4 sm:p-6 lg:p-8 space-y-4">
+    <div>
+      <h1 class="text-xl sm:text-2xl font-bold text-base-content">
+        {{ _("Customize Your Interface") }}
+      </h1>
+      <p class="text-sm sm:text-base text-base-content mt-1">
+        {{ _("Change the look and feel of Grylli using the options below. Your preferences are saved in your browser.") }}
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <!-- Font Selector -->
+      <div data-controller="font">
+        <label for="font-select" class="label label-text text-sm">{{ _("Font Family") }}</label>
+        <select id="font-select"
+                data-font-target="select"
+                data-action="change->font#change"
+                class="select select-bordered w-full text-sm">
+          {% for font in available_fonts %}
+            <option value="{{ font.key }}">{{ font.label }}</option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <!-- Font Size Selector -->
+      <div data-controller="font-size">
+        <label for="font-size-select" class="label label-text">{{ _("Font Size") }}</label>
+        <select id="font-size-select"
+                data-font-size-target="select"
+                data-action="change->font-size#update"
+                class="select select-bordered w-full text-sm">
+          <option value="80">{{ _('Extra Small') }}</option>
+          <option value="90">{{ _('Small') }}</option>
+          <option value="100">{{ _('Default') }}</option>
+          <option value="120">{{ _('Large') }}</option>
+          <option value="140">{{ _('Extra Large') }}</option>
+        </select>
+      </div>
+
+      <!-- Background Pattern Selector -->
+      <div data-controller="background">
+        <label for="bg-select" class="label label-text text-sm">{{ _("Background Pattern") }}</label>
+        <select id="bg-select"
+                data-background-target="select"
+                data-action="change->background#change"
+                class="select select-bordered w-full text-sm">
+          <option>Loading…</option>
+        </select>
+      </div>
+
+      <!-- Contrast Selector -->
+      <div data-controller="contrast">
+        <label for="contrast-select" class="label label-text">{{ _("Contrast") }}</label>
+        <select id="contrast-select"
+                data-contrast-target="select"
+                data-action="change->contrast#change"
+                class="select select-bordered w-full">
+          <option value="default">{{ _("Default") }}</option>
+          <option value="low">{{ _("Low Contrast") }}</option>
+          <option value="high">{{ _("High Contrast") }}</option>
+        </select>
+      </div>
+
+      <!-- Tracking Selector -->
+      <div data-controller="tracking">
+        <label for="tracking" class="label-text">{{ _("Letter Spacing") }}</label>
+        <select id="tracking" name="tracking" class="select select-bordered w-full"
+                data-tracking-target="selector"
+                data-action="change->tracking#update">
+          <option value="tracking-tight">{{ _("Tight") }}</option>
+          <option value="tracking-normal" selected>{{ _("Normal") }}</option>
+          <option value="tracking-wide">{{ _("Wide") }}</option>
+        </select>
+      </div>
+
+      <!-- Line height Selector -->
+      <div data-controller="line-height">
+        <label for="lineheight" class="label-text">{{ _("Reading Density") }}</label>
+        <select id="lineheight" name="lineheight" class="select select-bordered w-full"
+                data-line-height-target="selector"
+                data-action="change->line-height#update">
+                <option value="leading-tight">Compact</option>
+                <option value="leading-normal" selected>Normal</option>
+                <option value="leading-loose">Spacious</option>
+        </select>
+      </div>
+
+      <!-- Roundedness Selector -->
+      <div data-controller="roundedness">
+        <label for="rounded-select" class="label label-text">{{ _("Border Radius") }}</label>
+        <select id="rounded-select"
+                data-roundedness-target="select"
+                data-action="change->roundedness#update"
+                class="select select-bordered w-full text-sm">
+          <option value="default">{{ _('Default') }}</option>
+          <option value="none">{{ _('Sharp Corners') }}</option>
+          <option value="xl">{{ _('Extra Rounded') }}</option>
+        </select>
+      </div>
+
+      <!-- Theme Selector -->
+      <div data-controller="theme">
+        <label for="theme-select" class="label label-text text-sm">{{ _("Theme") }}</label>
+        <select id="theme-select"
+                data-theme-target="select"
+                data-action="change->theme#change"
+                class="select select-bordered w-full text-sm">
+          {% for theme_name in daisyui_themes %}
+            <option value="{{ theme_name }}"
+                    {% if current_theme == theme_name %}selected{% endif %}>
+              {{ theme_name | capitalize }}
+            </option>
+          {% endfor %}
+        </select>
+      </div>
+
+      <!-- Language Selector -->
+      <div data-controller="lang">
+        <label for="lang-select" class="label label-text text-sm">{{ _("Language") }}</label>
+        <select id="lang-select"
+                data-lang-target="select"
+                data-action="change->lang#change"
+                data-base-url="{{ url_for('locale.set_language', lang_code='') }}"
+                name="lang"
+                class="select select-bordered w-full text-sm">
+          {% for code, label in config['SUPPORTED_LANGUAGES'].items() %}
+            <option value="{{ code }}" {% if get_locale() == code %}selected{% endif %}>{{ _(label) }}</option>
+          {% endfor %}
+        </select>
+      </div>
+    </div>
+  </div>
+</div>

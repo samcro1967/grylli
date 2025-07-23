@@ -126,7 +126,7 @@ def create_app(config_overrides=None):
                 csp_policy = (
                     f"default-src 'self'; "
                     f"script-src 'self' 'nonce-{nonce}' https://cdn.jsdelivr.net; "
-                    f"style-src 'self' 'nonce-{nonce}' https://cdnjs.cloudflare.com; "
+                    f"style-src 'self' 'nonce-{nonce}' https://cdnjs.cloudflare.com 'unsafe-inline'; "
                     f"font-src 'self' https://cdnjs.cloudflare.com; "
                     f"img-src 'self' data:; "
                     f"connect-src 'self' https://api.github.com; "
@@ -136,6 +136,8 @@ def create_app(config_overrides=None):
                     f"frame-ancestors {frame_ancestors};"
                     f"report-uri {current_app.config['BASE_URL']}/csp-report/overview;"
                 )
+                # Add support for inline style attributes (for HTMX)
+                csp_policy += " style-src-attr 'unsafe-inline';"
                 response.headers["Content-Security-Policy"] = csp_policy
 
             response.headers.setdefault("X-Content-Type-Options", "nosniff")

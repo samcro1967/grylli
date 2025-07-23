@@ -39,6 +39,15 @@
     <i class="fas fa-circle-info w-4 h-4"></i>
     <span class="truncate">{{ _("About") }}</span>
 </a>
+<!-- Customization -->
+<a href="{{ url_for('account.customization') }}"
+   data-hx-get="{{ url_for('account.customization') }}"
+   data-hx-target="#main-content"
+   data-hx-push-url="true"
+   class="flex items-center space-x-2 px-4 py-2 text-sm rounded hover:bg-base-200 dark:hover:bg-base-700 text-base-content dark:text-base-content transition">
+    <i class="fas fa-sliders-h w-4 h-4"></i>
+    <span class="truncate">{{ _("Customization") }}</span>
+</a>
 <!-- GitHub Repository -->
 <a href="https://github.com/samcro1967/grylli"
    target="_blank"
