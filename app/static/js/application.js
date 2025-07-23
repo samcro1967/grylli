@@ -37,6 +37,7 @@ import TabsController from "./controllers/tabs_controller.js"
 import ActionTitleController from "./controllers/action_title_controller.js";
 import BackgroundController from "./controllers/background_controller.js";
 import FontController from "./controllers/font_controller.js"
+import FontSizeController from "./controllers/font_size_controller.js"
 
 const application = Application.start();
 application.register("sidebar", SidebarController);
@@ -75,5 +76,6 @@ application.register("tabs", TabsController)
 application.register("action-title", ActionTitleController);
 application.register("background", BackgroundController);
 application.register("font", FontController);
+application.register("font-size", FontSizeController);
 
 window.Stimulus = application;
