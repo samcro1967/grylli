@@ -4,91 +4,126 @@
   Modular dropdown menu for authenticated user profile
 --------------------------------------------------------------------- #}
 <!-- Account -->
-<a href="{{ url_for("account.manage_account") }}"
-   data-hx-get="{{ url_for("account.manage_account") }}"
-   data-hx-target="#main-content"
-   data-hx-push-url="true"
-   class="flex items-center space-x-2 px-4 py-2 text-sm rounded hover:bg-base-200 dark:hover:bg-base-700 text-base-content dark:text-base-content transition">
-    <i class="fas fa-user-cog w-4 h-4"></i>
-    <span class="truncate">{{ _("Account") }}</span>
-</a>
+<div data-controller="profile-title">
+  <a href="{{ url_for('account.manage_account') }}"
+     data-profile-title="{{ _('Grylli | Account') }}"
+     data-hx-get="{{ url_for('account.manage_account') }}"
+     data-hx-target="#main-content"
+     data-hx-push-url="true"
+     class="flex items-center space-x-2 px-4 py-2 text-sm rounded hover:bg-base-200 dark:hover:bg-base-700 text-base-content dark:text-base-content transition">
+      <i class="fas fa-user-cog w-4 h-4"></i>
+      <span class="truncate">{{ _('Account') }}</span>
+  </a>
+</div>
+
 <!-- Security Questions -->
-<a href="{{ url_for("account.set_security_questions") }}"
-   data-hx-get="{{ url_for("account.set_security_questions") }}"
-   data-hx-target="#main-content"
-   data-hx-push-url="true"
-   class="flex items-center space-x-2 px-4 py-2 text-sm rounded hover:bg-base-200 dark:hover:bg-base-700 text-base-content dark:text-base-content transition">
-    <i class="fas fa-shield-alt w-4 h-4"></i>
-    <span class="truncate">{{ _("Security") }}</span>
-</a>
+<div data-controller="profile-title">
+  <a href="{{ url_for('account.set_security_questions') }}"
+     data-profile-title="{{ _('Grylli | Security Questions') }}"
+     data-hx-get="{{ url_for('account.set_security_questions') }}"
+     data-hx-target="#main-content"
+     data-hx-push-url="true"
+     class="flex items-center space-x-2 px-4 py-2 text-sm rounded hover:bg-base-200 dark:hover:bg-base-700 text-base-content dark:text-base-content transition">
+      <i class="fas fa-shield-alt w-4 h-4"></i>
+      <span class="truncate">{{ _('Security') }}</span>
+  </a>
+</div>
+
 <!-- MFA -->
-<a href="{{ url_for("mfa.mfa_settings") }}"
-   data-hx-get="{{ url_for("mfa.mfa_settings") }}"
-   data-hx-target="#main-content"
-   data-hx-push-url="true"
-   class="flex items-center space-x-2 px-4 py-2 text-sm rounded hover:bg-base-200 dark:hover:bg-base-700 text-base-content dark:text-base-content transition">
-    <i class="fas fa-key w-4 h-4"></i>
-    <span class="truncate">{{ _("MFA") }}</span>
-</a>
+<div data-controller="profile-title">
+  <a href="{{ url_for('mfa.mfa_settings') }}"
+     data-profile-title="{{ _('Grylli | MFA') }}"
+     data-hx-get="{{ url_for('mfa.mfa_settings') }}"
+     data-hx-target="#main-content"
+     data-hx-push-url="true"
+     class="flex items-center space-x-2 px-4 py-2 text-sm rounded hover:bg-base-200 dark:hover:bg-base-700 text-base-content dark:text-base-content transition">
+      <i class="fas fa-key w-4 h-4"></i>
+      <span class="truncate">{{ _('MFA') }}</span>
+  </a>
+</div>
+
 <!-- About -->
-<a href="{{ url_for("about.show_about") }}"
-   data-hx-get="{{ url_for("about.show_about") }}"
-   data-hx-target="#main-content"
-   data-hx-push-url="true"
-   class="flex items-center space-x-2 px-4 py-2 text-sm rounded hover:bg-base-200 dark:hover:bg-base-700 text-base-content dark:text-base-content transition">
-    <i class="fas fa-circle-info w-4 h-4"></i>
-    <span class="truncate">{{ _("About") }}</span>
-</a>
+<div data-controller="profile-title">
+  <a href="{{ url_for('about.show_about') }}"
+     data-profile-title="{{ _('Grylli | About') }}"
+     data-hx-get="{{ url_for('about.show_about') }}"
+     data-hx-target="#main-content"
+     data-hx-push-url="true"
+     class="flex items-center space-x-2 px-4 py-2 text-sm rounded hover:bg-base-200 dark:hover:bg-base-700 text-base-content dark:text-base-content transition">
+      <i class="fas fa-circle-info w-4 h-4"></i>
+      <span class="truncate">{{ _('About') }}</span>
+  </a>
+</div>
+
 <!-- Customization -->
-<a href="{{ url_for('account.customization') }}"
-   data-hx-get="{{ url_for('account.customization') }}"
-   data-hx-target="#main-content"
-   data-hx-push-url="true"
-   class="flex items-center space-x-2 px-4 py-2 text-sm rounded hover:bg-base-200 dark:hover:bg-base-700 text-base-content dark:text-base-content transition">
-    <i class="fas fa-sliders-h w-4 h-4"></i>
-    <span class="truncate">{{ _("Customization") }}</span>
-</a>
+<div data-controller="profile-title">
+  <a href="{{ url_for('account.customization') }}"
+     data-profile-title="{{ _('Grylli | Customization') }}"
+     data-hx-get="{{ url_for('account.customization') }}"
+     data-hx-target="#main-content"
+     data-hx-push-url="true"
+     class="flex items-center space-x-2 px-4 py-2 text-sm rounded hover:bg-base-200 dark:hover:bg-base-700 text-base-content dark:text-base-content transition">
+      <i class="fas fa-sliders-h w-4 h-4"></i>
+      <span class="truncate">{{ _('Customization') }}</span>
+  </a>
+</div>
+
 <!-- GitHub Repository -->
 <a href="https://github.com/samcro1967/grylli"
    target="_blank"
    rel="noopener noreferrer"
    class="flex items-center space-x-2 px-4 py-2 text-sm rounded hover:bg-base-200 dark:hover:bg-base-700 text-base-content dark:text-base-content transition">
     <i class="fab fa-github w-4 h-4"></i>
-    <span class="truncate">{{ _("GitHub") }}</span>
+    <span class="truncate">{{ _('GitHub') }}</span>
 </a>
+
 <!-- Help -->
-<a href="{{ url_for("help.show_help") }}"
-   data-hx-get="{{ url_for("help.show_help") }}"
-   data-hx-target="#main-content"
-   data-hx-push-url="true"
-   class="flex items-center space-x-2 px-4 py-2 text-sm rounded hover:bg-base-200 dark:hover:bg-base-700 text-base-content dark:text-base-content transition">
-    <i class="fas fa-question-circle w-4 h-4"></i>
-    <span class="truncate">{{ _("Help") }}</span>
-</a>
+<div data-controller="profile-title">
+  <a href="{{ url_for('help.show_help') }}"
+     data-profile-title="{{ _('Grylli | Help') }}"
+     data-hx-get="{{ url_for('help.show_help') }}"
+     data-hx-target="#main-content"
+     data-hx-push-url="true"
+     class="flex items-center space-x-2 px-4 py-2 text-sm rounded hover:bg-base-200 dark:hover:bg-base-700 text-base-content dark:text-base-content transition">
+      <i class="fas fa-question-circle w-4 h-4"></i>
+      <span class="truncate">{{ _('Help') }}</span>
+  </a>
+</div>
+
 <!-- Privacy -->
-<a href="{{ url_for("privacy.show_privacy") }}"
-   data-hx-get="{{ url_for("privacy.show_privacy") }}"
-   data-hx-target="#main-content"
-   data-hx-push-url="true"
-   class="flex items-center space-x-2 px-4 py-2 text-sm rounded hover:bg-base-200 dark:hover:bg-base-700 text-base-content dark:text-base-content transition">
-    <i class="fas fa-user-shield w-4 h-4"></i>
-    <span class="truncate">{{ _("Privacy") }}</span>
-</a>
+<div data-controller="profile-title">
+  <a href="{{ url_for('privacy.show_privacy') }}"
+     data-profile-title="{{ _('Grylli | Privacy') }}"
+     data-hx-get="{{ url_for('privacy.show_privacy') }}"
+     data-hx-target="#main-content"
+     data-hx-push-url="true"
+     class="flex items-center space-x-2 px-4 py-2 text-sm rounded hover:bg-base-200 dark:hover:bg-base-700 text-base-content dark:text-base-content transition">
+      <i class="fas fa-user-shield w-4 h-4"></i>
+      <span class="truncate">{{ _('Privacy') }}</span>
+  </a>
+</div>
+
 <!-- System Info -->
-<a href="{{ url_for("system_info.index") }}"
-   data-hx-get="{{ url_for("system_info.index") }}"
-   data-hx-target="#main-content"
-   data-hx-push-url="true"
-   class="flex items-center space-x-2 px-4 py-2 text-sm rounded hover:bg-base-200 dark:hover:bg-base-700 text-base-content dark:text-base-content transition">
-    <i class="fas fa-microchip w-4 h-4"></i>
-    <span class="truncate">{{ _("System Info") }}</span>
-</a>
+<div data-controller="profile-title">
+  <a href="{{ url_for('system_info.index') }}"
+     data-profile-title="{{ _('Grylli | System Info') }}"
+     data-hx-get="{{ url_for('system_info.index') }}"
+     data-hx-target="#main-content"
+     data-hx-push-url="true"
+     class="flex items-center space-x-2 px-4 py-2 text-sm rounded hover:bg-base-200 dark:hover:bg-base-700 text-base-content dark:text-base-content transition">
+      <i class="fas fa-microchip w-4 h-4"></i>
+      <span class="truncate">{{ _('System Info') }}</span>
+  </a>
+</div>
+
 <!-- Translations -->
-<a href="{{ url_for("account.translations_info") }}"
-   data-hx-get="{{ url_for("account.translations_info") }}"
-   data-hx-target="#main-content"
-   data-hx-push-url="true"
-   class="flex items-center space-x-2 px-4 py-2 text-sm rounded hover:bg-base-200 dark:hover:bg-base-700 text-base-content dark:text-base-content transition">
+<div data-controller="profile-title">
+  <a href="{{ url_for('account.translations_info') }}"
+     data-profile-title="{{ _('Grylli | Translations') }}"
+     data-hx-get="{{ url_for('account.translations_info') }}"
+     data-hx-target="#main-content"
+     data-hx-push-url="true"
+     class="flex items-center space-x-2 px-4 py-2 text-sm rounded hover:bg-base-200 dark:hover:bg-base-700 text-base-content dark:text-base-content transition">
     <svg fill="none"
          stroke="currentColor"
          stroke-width="2"
@@ -101,8 +136,10 @@
         <path d="M12 2a15 15 0 0 1 0 20" />
         <path d="M12 2a15 15 0 0 0 0 20" />
     </svg>
-    <span class="truncate">{{ _("Translations") }}</span>
-</a>
+    <span class="truncate">{{ _('Translations') }}</span>
+  </a>
+</div>
+
 <!-- Logout -->
 <a href="{{ url_for("auth.logout") }}"
    class="flex items-center space-x-2 px-4 py-2 text-sm rounded text-error hover:bg-error-focus dark:hover:bg-error-focus transition">

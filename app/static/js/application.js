@@ -42,6 +42,7 @@ import RoundednessController from "./controllers/roundedness_controller.js";
 import ContrastController from "./controllers/contrast_controller.js";
 import TrackingController from "./controllers/tracking_controller.js";
 import LineHeightController from "./controllers/line_height_controller.js";
+import ProfileTitleController from "./controllers/profile_title_controller.js"
 
 const application = Application.start();
 application.register("sidebar", SidebarController);
@@ -85,5 +86,6 @@ application.register("roundedness", RoundednessController);
 application.register("contrast", ContrastController);
 application.register("tracking", TrackingController);
 application.register("line-height", LineHeightController);
+application.register("profile-title", ProfileTitleController)
 
 window.Stimulus = application;
