@@ -13,6 +13,9 @@ import requests
 from app.config import APP_VERSION, DATA_DIR, GITHUB_URL
 from app.utils.logging import log_exception_with_traceback, log_info_message
 
+import warnings
+warnings.filterwarnings("ignore", category=RuntimeWarning, message=".*found in sys.modules.*")
+
 # Derive API URL from GitHub repo
 REPO_PATH = GITHUB_URL.rstrip("/").replace("https://github.com/", "")
 GITHUB_API_RELEASES = f"https://api.github.com/repos/{REPO_PATH}/releases/latest"

@@ -75,3 +75,5 @@ application.register("tabs", TabsController)
 application.register("action-title", ActionTitleController);
 application.register("background", BackgroundController);
 application.register("font", FontController);
+
+window.Stimulus = application;

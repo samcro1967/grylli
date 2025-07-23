@@ -36,7 +36,7 @@ export default class extends Controller {
       wrapper.title = "Version check failed";
     } else if (current_version === latest_version) {
       icon.classList.add("fa-check-circle", "text-success");
-      label.textContent = `Grylli is up to date (v${current_version})`;
+      label.textContent = `Up to date (v${current_version})`;
       wrapper.title = label.textContent;
     } else {
       icon.classList.add("fa-rocket", "text-warning");
@@ -44,7 +44,7 @@ export default class extends Controller {
       const link = document.createElement("a");
       link.href = `${github_url}/releases`;
       link.className = "underline hover:text-warning-focus";
-      link.textContent = `New version available: ${latest_version}`;
+      link.textContent = `Update available: ${latest_version}`;
 
       label.appendChild(link);
       wrapper.title = `New version available: ${latest_version}`;
