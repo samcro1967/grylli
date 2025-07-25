@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-07-14 11:49-0500\n"
+"POT-Creation-Date: 2025-07-25 13:21-0500\n"
 "PO-Revision-Date: 2025-05-25 13:03-0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: sq <LL@li.org>\n"
@@ -364,7 +364,7 @@ msgstr ""
 "sigurt dhe të besueshme."
 
 #: app/templates/help_full.html:7
-#: app/templates/partials/profile_dropdown_menu.html:57
+#: app/templates/partials/profile_dropdown_menu.html:89
 msgid "Help"
 msgstr "Ndihmë"
 
@@ -503,7 +503,7 @@ msgstr ""
 "funksionojnë siç pritet."
 
 #: app/templates/help_partial.html:45
-#: app/templates/partials/profile_dropdown_menu.html:22
+#: app/templates/partials/profile_dropdown_menu.html:28
 msgid "Security"
 msgstr "🔐 Siguria"
 
@@ -523,7 +523,7 @@ msgstr ""
 "Keni nevojë për ndihmë me diçka specifike? Çdo modul në Grylli përfshin "
 "panelin e tij të ndihmës me udhëzime të detajuara."
 
-#: app/templates/partials/profile_dropdown_menu.html:66
+#: app/templates/partials/profile_dropdown_menu.html:102
 #: app/templates/privacy_full.html:7
 msgid "Privacy"
 msgstr "Privatësia"
@@ -673,7 +673,7 @@ msgid "This endpoint provides system health and version information."
 msgstr ""
 "Ky endpoint ofron informacion rreth shëndetit dhe versionit të sistemit."
 
-#: app/templates/partials/profile_dropdown_menu.html:75
+#: app/templates/partials/profile_dropdown_menu.html:115
 #: app/templates/system_info_full.html:7
 msgid "System Info"
 msgstr "Informacioni i Sistemit"
@@ -768,6 +768,109 @@ msgstr ""
 #: app/templates/auth/signup.html:16
 msgid "Please fix the following errors:"
 msgstr "Ju lutemi rregulloni gabimet e mëposhtme:"
+
+#: app/templates/account/customization_full.html:7
+#: app/templates/partials/profile_dropdown_menu.html:67
+msgid "Customization"
+msgstr "Përshtatja"
+
+#: app/templates/account/customization_partial.html:10
+msgid "Customize Your Interface"
+msgstr "Përshtat Ndërfaqen Tënde"
+
+#: app/templates/account/customization_partial.html:13
+msgid ""
+"Change the look and feel of Grylli using the options below. Your preferences"
+" are saved in your browser."
+msgstr ""
+"Ndrysho pamjen dhe ndjesinë e Grylli duke përdorur opsionet më poshtë. "
+"Preferencat tuaja ruhen në shfletuesin tuaj."
+
+#: app/templates/account/customization_partial.html:20
+msgid "Font Family"
+msgstr "Familje Fonti"
+
+#: app/templates/account/customization_partial.html:33
+msgid "Font Size"
+msgstr "Madhësia e Fontit"
+
+#: app/templates/account/customization_partial.html:38
+msgid "Extra Small"
+msgstr "Ekstra e Vogël"
+
+#: app/templates/account/customization_partial.html:39
+msgid "Small"
+msgstr "Të gjitha"
+
+#: app/templates/account/customization_partial.html:40
+#: app/templates/account/customization_partial.html:64
+#: app/templates/account/customization_partial.html:101
+msgid "Default"
+msgstr "Fshi"
+
+#: app/templates/account/customization_partial.html:41
+msgid "Large"
+msgstr "Etiketë"
+
+#: app/templates/account/customization_partial.html:42
+msgid "Extra Large"
+msgstr "Ekstra e Madhe"
+
+#: app/templates/account/customization_partial.html:48
+msgid "Background Pattern"
+msgstr "Model i Sfondit"
+
+#: app/templates/account/customization_partial.html:59
+msgid "Contrast"
+msgstr "Përmbajtja"
+
+#: app/templates/account/customization_partial.html:65
+msgid "Low Contrast"
+msgstr "Kontrast i Ulët"
+
+#: app/templates/account/customization_partial.html:66
+msgid "High Contrast"
+msgstr "Kontrast i Lartë"
+
+#: app/templates/account/customization_partial.html:72
+msgid "Letter Spacing"
+msgstr "Hapësira Midis Letrave"
+
+#: app/templates/account/customization_partial.html:76
+msgid "Tight"
+msgstr "I Ngushtë"
+
+#: app/templates/account/customization_partial.html:77
+msgid "Normal"
+msgstr "Normal"
+
+#: app/templates/account/customization_partial.html:78
+msgid "Wide"
+msgstr "ID"
+
+#: app/templates/account/customization_partial.html:84
+msgid "Reading Density"
+msgstr "Densiteti i Leximit"
+
+#: app/templates/account/customization_partial.html:96
+msgid "Border Radius"
+msgstr "Rrezja e Kufirit"
+
+#: app/templates/account/customization_partial.html:102
+msgid "Sharp Corners"
+msgstr "Këndet e Mprehta"
+
+#: app/templates/account/customization_partial.html:103
+msgid "Extra Rounded"
+msgstr "Ekstra të Rrumbullakosura"
+
+#: app/templates/account/customization_partial.html:109
+msgid "Theme"
+msgstr "Faqja Kryesore"
+
+#: app/templates/account/customization_partial.html:125
+msgid "Language"
+msgstr "Zgjidhni"
 
 #: app/templates/account/manage_account_full.html:7
 #: app/templates/account/manage_account_partial.html:9
@@ -910,12 +1013,19 @@ msgstr ""
 "Fshirja e llogarisë tuaj është e përhershme dhe nuk mund të ndryshohet."
 
 #: app/templates/account/manage_account_partial.html:130
-msgid "Are you sure you want to delete your account?"
-msgstr "A jeni i sigurt që dëshironi të rivendosni MFA për këtë përdorues?"
-
 #: app/templates/account/manage_account_partial.html:132
+msgid "You are the last admin. Deleting your account is not allowed."
+msgstr ""
+"Ju jeni administratori i fundit. Fshirja e llogarisë suaj nuk lejohet."
+
+#: app/templates/account/manage_account_partial.html:133
+#: app/templates/account/manage_account_partial.html:143
 msgid "Delete My Account"
 msgstr "Përditëso Llogarinë"
+
+#: app/templates/account/manage_account_partial.html:140
+msgid "Are you sure you want to delete your account?"
+msgstr "A jeni i sigurt që dëshironi të rivendosni MFA për këtë përdorues?"
 
 #: app/templates/account/set_security_questions_full.html:7
 msgid "Security Questions"
@@ -947,7 +1057,7 @@ msgstr "Përditëso Llogarinë"
 
 #: app/templates/account/translations_full.html:7
 #: app/templates/account/translations_partial.html:8
-#: app/templates/partials/profile_dropdown_menu.html:95
+#: app/templates/partials/profile_dropdown_menu.html:139
 msgid "Translations"
 msgstr "Përkthimet"
 
@@ -1135,7 +1245,7 @@ msgstr "Plotësoni formularin për të shtuar një përdorues të ri."
 
 #: app/templates/admin/create_user_partial.html:26
 #: app/templates/admin/edit_user.html:28
-#: app/templates/admin/partials/table_view.html:13
+#: app/templates/admin/partials/table_view.html:14
 #: app/templates/admin/reports/report_accounts_partial.html:10
 #: app/templates/user_smtp/partials/table_view.html:13
 msgid "Username"
@@ -1143,14 +1253,14 @@ msgstr "Emri i përdoruesit"
 
 #: app/templates/admin/create_user_partial.html:36
 #: app/templates/admin/edit_user.html:36
-#: app/templates/admin/partials/table_view.html:14
+#: app/templates/admin/partials/table_view.html:15
 #: app/templates/admin/reports/report_accounts_partial.html:11
 #: app/templates/dashboard/partials/_linked_items_partial.html:15
 msgid "Email"
 msgstr "Email"
 
 #: app/templates/admin/create_user_partial.html:49
-#: app/templates/admin/partials/table_view.html:15
+#: app/templates/admin/partials/table_view.html:16
 #: app/templates/admin/reports/report_accounts_partial.html:12
 msgid "Role"
 msgstr "Roli"
@@ -1676,11 +1786,11 @@ msgstr ""
 "Të gjitha veprimet regjistrohen për përgjegjësi. Fjalëkalimet dhe sekretet "
 "nuk janë kurrë të dukshme."
 
-#: app/templates/admin/partials/table_view.html:12
+#: app/templates/admin/partials/table_view.html:13
 msgid "ID"
 msgstr "ID"
 
-#: app/templates/admin/partials/table_view.html:16
+#: app/templates/admin/partials/table_view.html:17
 #: app/templates/admin/tools/partials/backup_table.html:13
 #: app/templates/apprise/apprise_config.html:59
 #: app/templates/apprise/partials/table_view.html:14
@@ -1696,7 +1806,7 @@ msgstr "ID"
 msgid "Actions"
 msgstr "Veprime"
 
-#: app/templates/admin/partials/table_view.html:35
+#: app/templates/admin/partials/table_view.html:36
 #: app/templates/admin/reports/report_accounts_partial.html:52
 msgid "No users available."
 msgstr "Nuk ka përdorues të disponueshëm."
@@ -1798,7 +1908,8 @@ msgstr "Cilësimet e Sistemit"
 msgid "Details"
 msgstr "Emailat"
 
-#: app/templates/admin/reports/report_scheduler_partial.html:37
+#: app/templates/admin/reports/report_scheduler_partial.html:38
+#: app/templates/admin/reports/report_scheduler_partial.html:46
 msgid "No scheduler activity found."
 msgstr "Nuk u gjet asnjë aktivitet planifikues."
 
@@ -1821,6 +1932,10 @@ msgstr "Kthehu në Panel"
 #: app/templates/admin/reports/reports_tabs.html:38
 msgid "Scheduler Activity"
 msgstr "Planifiko Email"
+
+#: app/templates/admin/reports/reports_tabs.html:46
+msgid "Grylli | Reports | Logs"
+msgstr "Paneli i Administratorit"
 
 #: app/templates/admin/reports/reports_tabs.html:51
 msgid "Application Logs"
@@ -3285,13 +3400,13 @@ msgstr "Përmbledhja"
 msgid "Grylli | Admin | Users"
 msgstr "Grylli | Admin | Përdorues"
 
-#: app/templates/partials/head.html:14
+#: app/templates/partials/head.html:16
 msgid "Grylli is a secure message scheduling and delivery platform."
 msgstr ""
 "Grylli është një platformë e sigurt për planifikimin dhe dorëzimin e "
 "mesazheve."
 
-#: app/templates/partials/head.html:25
+#: app/templates/partials/head.html:35
 msgid "Grylli"
 msgstr "Grylli"
 
@@ -3305,23 +3420,59 @@ msgstr "Faqja Kryesore"
 msgid "Check-ins Due"
 msgstr "Kontrollo"
 
-#: app/templates/partials/profile_dropdown_menu.html:13
+#: app/templates/partials/profile_dropdown_menu.html:9
+msgid "Grylli | Account"
+msgstr "Paneli i Administratorit"
+
+#: app/templates/partials/profile_dropdown_menu.html:15
 msgid "Account"
 msgstr "Llogaria"
 
-#: app/templates/partials/profile_dropdown_menu.html:31
+#: app/templates/partials/profile_dropdown_menu.html:22
+msgid "Grylli | Security Questions"
+msgstr "🔐 Siguria"
+
+#: app/templates/partials/profile_dropdown_menu.html:35
+msgid "Grylli | MFA"
+msgstr "Grylli"
+
+#: app/templates/partials/profile_dropdown_menu.html:41
 msgid "MFA"
 msgstr "MFA"
 
-#: app/templates/partials/profile_dropdown_menu.html:40
+#: app/templates/partials/profile_dropdown_menu.html:48
+msgid "Grylli | About"
+msgstr "Paneli i Administratorit"
+
+#: app/templates/partials/profile_dropdown_menu.html:54
 msgid "About"
 msgstr "Rreth"
 
-#: app/templates/partials/profile_dropdown_menu.html:48
+#: app/templates/partials/profile_dropdown_menu.html:61
+msgid "Grylli | Customization"
+msgstr "Grylli | E-maile | SMTP"
+
+#: app/templates/partials/profile_dropdown_menu.html:77
 msgid "GitHub"
 msgstr "GitHub"
 
-#: app/templates/partials/profile_dropdown_menu.html:107
+#: app/templates/partials/profile_dropdown_menu.html:83
+msgid "Grylli | Help"
+msgstr "Grylli | E-maile | SMTP"
+
+#: app/templates/partials/profile_dropdown_menu.html:96
+msgid "Grylli | Privacy"
+msgstr "Privatësia"
+
+#: app/templates/partials/profile_dropdown_menu.html:109
+msgid "Grylli | System Info"
+msgstr "Cilësimet e Sistemit"
+
+#: app/templates/partials/profile_dropdown_menu.html:122
+msgid "Grylli | Translations"
+msgstr "Përkthimet"
+
+#: app/templates/partials/profile_dropdown_menu.html:153
 msgid "Logout"
 msgstr "Dil"
 
@@ -3376,19 +3527,6 @@ msgstr "Grylli | Kujtime | Pasqyrë"
 #: app/templates/partials/shared_nav.html:165
 msgid "Overview of reminders"
 msgstr "Përmbledhje e kujtesave"
-
-#: app/templates/partials/sidebar/desktop_footer.html:15
-msgid "Select Theme"
-msgstr "Zgjidhni"
-
-#: app/templates/partials/sidebar/desktop_footer.html:20
-msgid "Select theme"
-msgstr "Zgjidhni"
-
-#: app/templates/partials/sidebar/desktop_footer.html:29
-#: app/templates/partials/sidebar/desktop_footer.html:35
-msgid "Select language"
-msgstr "Zgjidhni"
 
 #: app/templates/partials/sidebar/desktop_header.html:9
 msgid "Menu"
@@ -3900,27 +4038,27 @@ msgstr "Nuk janë bërë ndryshime."
 msgid "An error occurred while updating your account."
 msgstr "Ndodhi një gabim gjatë përditësimit të llogarisë tuaj."
 
-#: app/views/account.py:159
+#: app/views/account.py:164
 msgid "An error occurred while loading translation info."
 msgstr "Ndodhi një gabim gjatë përditësimit të përdoruesit."
 
-#: app/views/account.py:186
+#: app/views/account.py:191
 msgid "You cannot delete your account because you are the last admin."
 msgstr "Nuk mund ta fshini llogarinë tuaj sepse jeni administratori i fundit."
 
-#: app/views/account.py:195
+#: app/views/account.py:200
 msgid "Your account has been permanently deleted."
 msgstr "Llogaria juaj është fshirë përgjithmonë."
 
-#: app/views/account.py:202
+#: app/views/account.py:207
 msgid "An error occurred while trying to delete your account."
 msgstr "Ndodhi një gabim gjatë përditësimit të llogarisë tuaj."
 
-#: app/views/account.py:221
+#: app/views/account.py:226
 msgid "Your account has been deleted"
 msgstr "Llogaria juaj është fshirë përgjithmonë."
 
-#: app/views/account.py:223
+#: app/views/account.py:228
 #, python-brace-format
 msgid ""
 "Hello {username},\n"
@@ -3935,17 +4073,21 @@ msgstr ""
 "\n"
 "{site_url}"
 
-#: app/views/account.py:408
+#: app/views/account.py:413
 msgid "Each security question must be different."
 msgstr "Të tria pyetjet duhet të jenë të ndryshme."
 
-#: app/views/account.py:432
+#: app/views/account.py:437
 msgid "Security questions saved."
 msgstr "Pyetjet e sigurisë u ruajtën."
 
-#: app/views/account.py:448
+#: app/views/account.py:453
 msgid "An error occurred while saving your security questions."
 msgstr "Ndodhi një gabim gjatë përditësimit të llogarisë tuaj."
+
+#: app/views/account.py:475
+msgid "An error occurred while loading customization settings."
+msgstr "Ndodhi një gabim gjatë përditësimit të përdoruesit."
 
 #: app/views/admin.py:41
 msgid "Failed to load admin dashboard."
@@ -4023,99 +4165,99 @@ msgstr ""
 msgid "An error occurred while creating the admin account."
 msgstr "Ndodhi një gabim gjatë krijimit të llogarisë së administratorit."
 
-#: app/views/auth.py:184
+#: app/views/auth.py:207
 msgid "Your account is not activated."
 msgstr "Llogaria juaj është fshirë përgjithmonë."
 
-#: app/views/auth.py:192
+#: app/views/auth.py:215
 msgid "Multi-factor authentication required."
 msgstr "Njoftimi është çaktivizuar"
 
-#: app/views/auth.py:196 app/views/mfa.py:222
+#: app/views/auth.py:219 app/views/mfa.py:218
 msgid "Logged in successfully."
 msgstr "Hyrja me sukses."
 
-#: app/views/auth.py:214
+#: app/views/auth.py:255
 msgid "Too many failed login attempts. Your account is locked for 15 minutes."
 msgstr "Shumë tentativa të dështuara hyrjeje. Ju lutemi prisni"
 
-#: app/views/auth.py:232
+#: app/views/auth.py:273
 msgid "Invalid username or password."
 msgstr "Emri i përdoruesit ose fjalëkalimi është i pavlefshëm."
 
-#: app/views/auth.py:258
+#: app/views/auth.py:299
 msgid "You have been logged out."
 msgstr "Ju jeni dalë nga sistemi."
 
-#: app/views/auth.py:320
+#: app/views/auth.py:361
 msgid "If a user with that email exists, we've sent the username to them."
 msgstr ""
 "Nëse ekziston një përdorues me atë email, ne i kemi dërguar emrin e "
 "përdoruesit."
 
-#: app/views/auth.py:327
+#: app/views/auth.py:368
 msgid "An error occurred while sending your username reminder."
 msgstr "Ndodhi një gabim gjatë përditësimit të llogarisë tuaj."
 
-#: app/views/auth.py:379
+#: app/views/auth.py:420
 msgid "No account found matching that username and email."
 msgstr ""
 "Nuk u gjet asnjë llogari që përputhet me atë emër përdoruesi dhe email."
 
-#: app/views/auth.py:386
+#: app/views/auth.py:427
 msgid "An error occurred while checking your credentials."
 msgstr "Ndodhi një gabim gjatë përditësimit të llogarisë tuaj."
 
-#: app/views/auth.py:395
+#: app/views/auth.py:436
 msgid "Session expired. Please start over."
 msgstr "Seanca ka skaduar. Ju lutemi filloni përsëri."
 
-#: app/views/auth.py:414
+#: app/views/auth.py:455
 msgid "Too many failed attempts. Please try again later."
 msgstr "Shumë tentativa të dështuara hyrjeje. Ju lutemi prisni"
 
-#: app/views/auth.py:435
+#: app/views/auth.py:476
 msgid "A password reset link has been sent to your email."
 msgstr ""
 "Një lidhje për të rikthyer fjalëkalimin është dërguar në email-in tuaj."
 
-#: app/views/auth.py:448
+#: app/views/auth.py:489
 msgid "One or more answers were incorrect."
 msgstr "Një ose më shumë përgjigje ishin të pasakta."
 
-#: app/views/auth.py:458
+#: app/views/auth.py:499
 msgid "An error occurred while verifying your answers."
 msgstr "Ndodhi një gabim gjatë përditësimit të llogarisë tuaj."
 
-#: app/views/auth.py:491
+#: app/views/auth.py:532
 msgid "The reset link is invalid or has expired."
 msgstr "Lidhja e rikuperimit është e pavlefshme ose ka skaduar."
 
-#: app/views/auth.py:504
+#: app/views/auth.py:545
 msgid "Username and email do not match."
 msgstr "Emri i përdoruesit dhe emaili nuk përputhen."
 
-#: app/views/auth.py:528
+#: app/views/auth.py:569
 msgid "Your password has been reset. Please log in."
 msgstr "Fjalëkalimi juaj është rivendosur. Ju lutem kyçuni."
 
-#: app/views/auth.py:533
+#: app/views/auth.py:574
 msgid "An error occurred while resetting your password."
 msgstr "Ndodhi një gabim gjatë fshirjes së përdoruesit."
 
-#: app/views/auth.py:570
+#: app/views/auth.py:611
 msgid "Invalid registration PIN."
 msgstr "PIN i regjistrimit i pavlefshëm."
 
-#: app/views/auth.py:579
+#: app/views/auth.py:620
 msgid "Username or email already exists."
 msgstr "Emri i përdoruesit ose emaili ekziston tashmë."
 
-#: app/views/auth.py:608
+#: app/views/auth.py:649
 msgid "Activate Your Grylli Account"
 msgstr "Aktivizoni Llogarinë Tuaj Grylli"
 
-#: app/views/auth.py:609
+#: app/views/auth.py:650
 #, python-brace-format
 msgid ""
 "Hello {username},\n"
@@ -4126,45 +4268,45 @@ msgstr ""
 "\n"
 "Ju lutemi aktivizoni llogarinë tuaj duke klikuar..."
 
-#: app/views/auth.py:615
+#: app/views/auth.py:656
 msgid "Account created! Please check your email to activate your account."
 msgstr ""
 "Llogaria u krijua! Ju lutemi kontrolloni emailin tuaj për të aktivizuar "
 "llogarinë tuaj."
 
-#: app/views/auth.py:622
+#: app/views/auth.py:663
 msgid "An error occurred during signup."
 msgstr "Ndodhi një gabim gjatë fshirjes së përdoruesit."
 
-#: app/views/auth.py:641
+#: app/views/auth.py:682
 msgid "Activation link is invalid or expired."
 msgstr "Lidhja e aktivizimit është e pavlefshme ose e skaduar."
 
-#: app/views/auth.py:648 app/views/users.py:135 app/views/users.py:202
+#: app/views/auth.py:689 app/views/users.py:136 app/views/users.py:203
 msgid "User not found."
 msgstr "Përdoruesi nuk u gjet."
 
-#: app/views/auth.py:652
+#: app/views/auth.py:693
 msgid "Account already activated. Please log in."
 msgstr "Llogaria është aktivizuar tashmë. Ju lutem kyçuni."
 
-#: app/views/auth.py:663
+#: app/views/auth.py:704
 msgid "Your account has been activated! You can now log in."
 msgstr "Llogaria juaj është aktivizuar! Tani mund të kyçeni."
 
-#: app/views/auth.py:667
+#: app/views/auth.py:708
 msgid "Failed to activate account."
 msgstr "Dështoi krijimi i kopjes rezervë."
 
-#: app/views/auth.py:699
+#: app/views/auth.py:740
 msgid "Security questions not set or user not found."
 msgstr "Pyetjet e sigurisë nuk janë vendosur ose përdoruesi nuk u gjet."
 
-#: app/views/auth.py:707
+#: app/views/auth.py:748
 msgid "Password reset email sent."
 msgstr "Fjalëkalimet nuk përputhen."
 
-#: app/views/auth.py:714
+#: app/views/auth.py:755
 msgid "Incorrect answer."
 msgstr "Përgjigja e pasaktë."
 
@@ -4291,7 +4433,7 @@ msgstr "Dështoi dërgimi i emailit të provës:"
 msgid "An error occurred while loading the help page."
 msgstr "Ndodhi një gabim gjatë përditësimit të përdoruesit."
 
-#: app/views/index.py:53
+#: app/views/index.py:55
 msgid "Error loading dashboard"
 msgstr "Kthehu te Email-et"
 
@@ -4355,7 +4497,7 @@ msgstr "Mesazhi u ruajt."
 msgid "You must enter a code from your authenticator."
 msgstr "Ju duhet të fusni një kod nga autentikuesi juaj."
 
-#: app/views/mfa.py:85 app/views/mfa.py:295 app/views/mfa.py:303
+#: app/views/mfa.py:85 app/views/mfa.py:291 app/views/mfa.py:299
 msgid "Invalid code. Please try again."
 msgstr "Kodi i pavlefshëm. Ju lutemi provoni përsëri."
 
@@ -4375,15 +4517,15 @@ msgstr "Kodet e rikuperimit shfaqen vetëm menjëherë pas aktivizimit të MFA."
 msgid "Could not load recovery codes."
 msgstr "Nuk mund të ngarkohen kodet e rikuperimit."
 
-#: app/views/mfa.py:194
+#: app/views/mfa.py:190
 msgid "No MFA challenge in progress."
 msgstr "Nuk ka asnjë sfidë MFA në progres."
 
-#: app/views/mfa.py:202
+#: app/views/mfa.py:198
 msgid "User not found for MFA challenge."
 msgstr "Përdoruesi nuk u gjet."
 
-#: app/views/mfa.py:262
+#: app/views/mfa.py:258
 msgid ""
 "You have used your last recovery code. MFA has been disabled. Please remove "
 "Grylli from your authenticator app, and re-enable MFA to protect your "
@@ -4393,13 +4535,13 @@ msgstr ""
 " Ju lutemi hiqni Grylli nga aplikacioni juaj i autentikuesit dhe rivendosni "
 "MFA për të mbrojtur llogarinë tuaj."
 
-#: app/views/mfa.py:283
+#: app/views/mfa.py:279
 #, python-brace-format
 msgid "Recovery code accepted. You have {remaining} recovery codes left."
 msgstr ""
 "Kodi i rikuperimit pranuar. Ju keni {remaining} kode rikuperimi të mbetura."
 
-#: app/views/mfa.py:298
+#: app/views/mfa.py:294
 msgid "An unexpected error occurred during MFA challenge."
 msgstr "Ndodhi një gabim gjatë fshirjes së përdoruesit."
 
@@ -4575,87 +4717,87 @@ msgstr "Dështoi dërgimi i emailit të provës. Kontrolloni cilësimet SMTP."
 msgid "Error sending test email."
 msgstr "Dërgo Email Test"
 
-#: app/views/users.py:58
+#: app/views/users.py:59
 msgid "Failed to load user list."
 msgstr "Kthehu te Email-et"
 
-#: app/views/users.py:82
+#: app/views/users.py:83
 msgid "Password is required when creating a new user."
 msgstr "Fjalëkalimi është i nevojshëm kur krijohet një përdorues i ri."
 
-#: app/views/users.py:87 app/views/users.py:156
+#: app/views/users.py:88 app/views/users.py:157
 msgid "Username already exists."
 msgstr "Emri i përdoruesit ekziston tashmë."
 
-#: app/views/users.py:92 app/views/users.py:163
+#: app/views/users.py:93 app/views/users.py:164
 msgid "Email already exists."
 msgstr "Emaili ekziston tashmë."
 
-#: app/views/users.py:107
+#: app/views/users.py:108
 #, python-format
 msgid "User '%(username)s' created successfully."
 msgstr "Përdoruesi '%(username)s' u krijua me sukses."
 
-#: app/views/users.py:115
+#: app/views/users.py:116
 msgid "Failed to create user."
 msgstr "Dështoi krijimi i përdoruesit."
 
-#: app/views/users.py:176
+#: app/views/users.py:177
 msgid "User updated successfully."
 msgstr "Përdoruesi u përditësua me sukses."
 
-#: app/views/users.py:183 app/views/users.py:301
+#: app/views/users.py:184 app/views/users.py:320
 msgid "An error occurred while updating the user."
 msgstr "Ndodhi një gabim gjatë përditësimit të përdoruesit."
 
-#: app/views/users.py:255
+#: app/views/users.py:256
 msgid "User deleted."
 msgstr "Përdoruesi u fshi."
 
-#: app/views/users.py:262
+#: app/views/users.py:263
 msgid "An error occurred while deleting the user."
 msgstr "Ndodhi një gabim gjatë fshirjes së përdoruesit."
 
-#: app/views/users.py:279
+#: app/views/users.py:280
 msgid "You cannot change your own enabled status."
 msgstr "Nuk mund të ndryshosh statusin e aktivizimit tënd."
 
-#: app/views/users.py:292
+#: app/views/users.py:311
 #, python-format
 msgid "User '%(username)s' has been %(status)s."
 msgstr "Përdoruesi '%(username)s' është %(status)s."
 
-#: app/views/users.py:318
+#: app/views/users.py:337
 msgid "You cannot reset your own MFA."
 msgstr "⚪ = Nuk mund të çaktivizoni llogarinë tuaj."
 
-#: app/views/users.py:331
+#: app/views/users.py:368
 #, python-format
 msgid "MFA disabled for user '%(username)s'."
 msgstr "MFA çaktivizuar për përdoruesin '%(username)s'."
 
-#: app/views/users.py:335
+#: app/views/users.py:372
 msgid "An error occurred while resetting MFA."
 msgstr "Ndodhi një gabim gjatë fshirjes së përdoruesit."
 
-#: app/views/users.py:358
+#: app/views/users.py:395
 msgid "Invalid role"
 msgstr "Roli i pavlefshëm."
 
-#: app/views/users.py:364
+#: app/views/users.py:417
 #, python-format
 msgid "Role updated for %(username)s."
 msgstr "MFA çaktivizuar për përdoruesin '%(username)s'."
 
-#: app/views/users.py:370
+#: app/views/users.py:425
 msgid "An error occurred while updating the role."
 msgstr "Ndodhi një gabim gjatë përditësimit të përdoruesit."
 
-#: app/views/users.py:390
+#: app/views/users.py:463
 msgid "User account unlocked."
 msgstr "Llogaria juaj është fshirë përgjithmonë."
 
-#: app/views/users.py:395
+#: app/views/users.py:468
 msgid "An error occurred while unlocking the account."
 msgstr "Ndodhi një gabim gjatë krijimit të llogarisë së administratorit."
 
@@ -5423,3 +5565,9 @@ msgstr "Ndodhi një gabim gjatë fshirjes së përdoruesit."
 
 #~ msgid "Failed to send test email. "
 #~ msgstr "Dështoi dërgimi i emailit të provës:"
+
+#~ msgid "Select Theme"
+#~ msgstr "Zgjidhni"
+
+#~ msgid "Select theme"
+#~ msgstr "Zgjidhni"

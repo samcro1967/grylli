@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-07-14 11:49-0500\n"
+"POT-Creation-Date: 2025-07-25 13:21-0500\n"
 "PO-Revision-Date: 2025-05-25 16:45-0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: sw <LL@li.org>\n"
@@ -362,7 +362,7 @@ msgstr ""
 "uhakika."
 
 #: app/templates/help_full.html:7
-#: app/templates/partials/profile_dropdown_menu.html:57
+#: app/templates/partials/profile_dropdown_menu.html:89
 msgid "Help"
 msgstr "Msaada"
 
@@ -501,7 +501,7 @@ msgstr ""
 "kazi kama ilivyotarajiwa."
 
 #: app/templates/help_partial.html:45
-#: app/templates/partials/profile_dropdown_menu.html:22
+#: app/templates/partials/profile_dropdown_menu.html:28
 msgid "Security"
 msgstr "🔐 Usalama"
 
@@ -521,7 +521,7 @@ msgstr ""
 "Unahitaji msaada na kitu maalum? Kila moduli katika Grylli inajumuisha jopo "
 "lake la msaada na mwongozo wa kina."
 
-#: app/templates/partials/profile_dropdown_menu.html:66
+#: app/templates/partials/profile_dropdown_menu.html:102
 #: app/templates/privacy_full.html:7
 msgid "Privacy"
 msgstr "Faragha"
@@ -665,7 +665,7 @@ msgstr "Mipangilio ya Mfumo"
 msgid "This endpoint provides system health and version information."
 msgstr "Mwisho huu unatoa taarifa za afya na toleo la mfumo."
 
-#: app/templates/partials/profile_dropdown_menu.html:75
+#: app/templates/partials/profile_dropdown_menu.html:115
 #: app/templates/system_info_full.html:7
 msgid "System Info"
 msgstr "Maelezo ya Mfumo"
@@ -760,6 +760,109 @@ msgstr ""
 #: app/templates/auth/signup.html:16
 msgid "Please fix the following errors:"
 msgstr "Tafadhali rekebisha makosa yafuatayo:"
+
+#: app/templates/account/customization_full.html:7
+#: app/templates/partials/profile_dropdown_menu.html:67
+msgid "Customization"
+msgstr "Ubinafsishaji"
+
+#: app/templates/account/customization_partial.html:10
+msgid "Customize Your Interface"
+msgstr "Binafsisha Kiolesura Chako"
+
+#: app/templates/account/customization_partial.html:13
+msgid ""
+"Change the look and feel of Grylli using the options below. Your preferences"
+" are saved in your browser."
+msgstr ""
+"Badilisha mwonekano na hisia za Grylli ukitumia chaguo zilizo hapa chini. "
+"Mapendeleo yako yamehifadhiwa kwenye kivinjari chako."
+
+#: app/templates/account/customization_partial.html:20
+msgid "Font Family"
+msgstr "Familia ya Fonti"
+
+#: app/templates/account/customization_partial.html:33
+msgid "Font Size"
+msgstr "Ukubwa wa Fonti"
+
+#: app/templates/account/customization_partial.html:38
+msgid "Extra Small"
+msgstr "Ndogo Sana"
+
+#: app/templates/account/customization_partial.html:39
+msgid "Small"
+msgstr "Yote"
+
+#: app/templates/account/customization_partial.html:40
+#: app/templates/account/customization_partial.html:64
+#: app/templates/account/customization_partial.html:101
+msgid "Default"
+msgstr "Futa"
+
+#: app/templates/account/customization_partial.html:41
+msgid "Large"
+msgstr "Lebo"
+
+#: app/templates/account/customization_partial.html:42
+msgid "Extra Large"
+msgstr "Kubwa Sana"
+
+#: app/templates/account/customization_partial.html:48
+msgid "Background Pattern"
+msgstr "Mfumo wa Mandharinyuma"
+
+#: app/templates/account/customization_partial.html:59
+msgid "Contrast"
+msgstr "Maudhui"
+
+#: app/templates/account/customization_partial.html:65
+msgid "Low Contrast"
+msgstr "Utofauti Chini"
+
+#: app/templates/account/customization_partial.html:66
+msgid "High Contrast"
+msgstr "Utofauti Juu"
+
+#: app/templates/account/customization_partial.html:72
+msgid "Letter Spacing"
+msgstr "Mwitikio wa Herufi"
+
+#: app/templates/account/customization_partial.html:76
+msgid "Tight"
+msgstr "Bana"
+
+#: app/templates/account/customization_partial.html:77
+msgid "Normal"
+msgstr "Kawaida"
+
+#: app/templates/account/customization_partial.html:78
+msgid "Wide"
+msgstr "ID"
+
+#: app/templates/account/customization_partial.html:84
+msgid "Reading Density"
+msgstr "Uzito wa Kusoma"
+
+#: app/templates/account/customization_partial.html:96
+msgid "Border Radius"
+msgstr "Mzunguko wa Mpaka"
+
+#: app/templates/account/customization_partial.html:102
+msgid "Sharp Corners"
+msgstr "Pembezoni Kali"
+
+#: app/templates/account/customization_partial.html:103
+msgid "Extra Rounded"
+msgstr "Mbali Zaidi"
+
+#: app/templates/account/customization_partial.html:109
+msgid "Theme"
+msgstr "Nyumbani"
+
+#: app/templates/account/customization_partial.html:125
+msgid "Language"
+msgstr "Chagua"
 
 #: app/templates/account/manage_account_full.html:7
 #: app/templates/account/manage_account_partial.html:9
@@ -900,12 +1003,18 @@ msgid "Deleting your account is permanent and cannot be undone."
 msgstr "Kufuta akaunti yako ni hatua ya kudumu na haiwezi kubatilishwa."
 
 #: app/templates/account/manage_account_partial.html:130
-msgid "Are you sure you want to delete your account?"
-msgstr "Je, una uhakika unataka kuweka upya MFA kwa mtumiaji huyu?"
-
 #: app/templates/account/manage_account_partial.html:132
+msgid "You are the last admin. Deleting your account is not allowed."
+msgstr "Wewe ndiye msimamizi wa mwisho. Kufuta akaunti yako hairuhusiwi."
+
+#: app/templates/account/manage_account_partial.html:133
+#: app/templates/account/manage_account_partial.html:143
 msgid "Delete My Account"
 msgstr "Sasisha Akaunti"
+
+#: app/templates/account/manage_account_partial.html:140
+msgid "Are you sure you want to delete your account?"
+msgstr "Je, una uhakika unataka kuweka upya MFA kwa mtumiaji huyu?"
 
 #: app/templates/account/set_security_questions_full.html:7
 msgid "Security Questions"
@@ -937,7 +1046,7 @@ msgstr "Sasisha Akaunti"
 
 #: app/templates/account/translations_full.html:7
 #: app/templates/account/translations_partial.html:8
-#: app/templates/partials/profile_dropdown_menu.html:95
+#: app/templates/partials/profile_dropdown_menu.html:139
 msgid "Translations"
 msgstr "Tafsiri"
 
@@ -1121,7 +1230,7 @@ msgstr "Jaza fomu ili kuongeza mtumiaji mpya."
 
 #: app/templates/admin/create_user_partial.html:26
 #: app/templates/admin/edit_user.html:28
-#: app/templates/admin/partials/table_view.html:13
+#: app/templates/admin/partials/table_view.html:14
 #: app/templates/admin/reports/report_accounts_partial.html:10
 #: app/templates/user_smtp/partials/table_view.html:13
 msgid "Username"
@@ -1129,14 +1238,14 @@ msgstr "Jina la Mtumiaji"
 
 #: app/templates/admin/create_user_partial.html:36
 #: app/templates/admin/edit_user.html:36
-#: app/templates/admin/partials/table_view.html:14
+#: app/templates/admin/partials/table_view.html:15
 #: app/templates/admin/reports/report_accounts_partial.html:11
 #: app/templates/dashboard/partials/_linked_items_partial.html:15
 msgid "Email"
 msgstr "Barua Pepe"
 
 #: app/templates/admin/create_user_partial.html:49
-#: app/templates/admin/partials/table_view.html:15
+#: app/templates/admin/partials/table_view.html:16
 #: app/templates/admin/reports/report_accounts_partial.html:12
 msgid "Role"
 msgstr "Jukumu"
@@ -1654,11 +1763,11 @@ msgid ""
 msgstr ""
 "Hatua zote zinarekodiwa kwa uwajibikaji. Nywila na siri hazionekani kamwe."
 
-#: app/templates/admin/partials/table_view.html:12
+#: app/templates/admin/partials/table_view.html:13
 msgid "ID"
 msgstr "ID"
 
-#: app/templates/admin/partials/table_view.html:16
+#: app/templates/admin/partials/table_view.html:17
 #: app/templates/admin/tools/partials/backup_table.html:13
 #: app/templates/apprise/apprise_config.html:59
 #: app/templates/apprise/partials/table_view.html:14
@@ -1674,7 +1783,7 @@ msgstr "ID"
 msgid "Actions"
 msgstr "Vitendo"
 
-#: app/templates/admin/partials/table_view.html:35
+#: app/templates/admin/partials/table_view.html:36
 #: app/templates/admin/reports/report_accounts_partial.html:52
 msgid "No users available."
 msgstr "Hakuna watumiaji waliopo."
@@ -1776,7 +1885,8 @@ msgstr "Mipangilio ya Mfumo"
 msgid "Details"
 msgstr "Barua pepe"
 
-#: app/templates/admin/reports/report_scheduler_partial.html:37
+#: app/templates/admin/reports/report_scheduler_partial.html:38
+#: app/templates/admin/reports/report_scheduler_partial.html:46
 msgid "No scheduler activity found."
 msgstr "Hakuna shughuli za ratiba zilizopatikana."
 
@@ -1799,6 +1909,10 @@ msgstr "Rudi kwenye Dashibodi"
 #: app/templates/admin/reports/reports_tabs.html:38
 msgid "Scheduler Activity"
 msgstr "Panga Barua Pepe"
+
+#: app/templates/admin/reports/reports_tabs.html:46
+msgid "Grylli | Reports | Logs"
+msgstr "Jopo la Utawala"
 
 #: app/templates/admin/reports/reports_tabs.html:51
 msgid "Application Logs"
@@ -3245,11 +3359,11 @@ msgstr "Muhtasari"
 msgid "Grylli | Admin | Users"
 msgstr "Grylli | Msimamizi | Watumiaji"
 
-#: app/templates/partials/head.html:14
+#: app/templates/partials/head.html:16
 msgid "Grylli is a secure message scheduling and delivery platform."
 msgstr "Grylli ni jukwaa salama la kupanga ratiba na utoaji wa ujumbe."
 
-#: app/templates/partials/head.html:25
+#: app/templates/partials/head.html:35
 msgid "Grylli"
 msgstr "Grylli"
 
@@ -3263,23 +3377,59 @@ msgstr "Nyumbani"
 msgid "Check-ins Due"
 msgstr "Ukaguzi"
 
-#: app/templates/partials/profile_dropdown_menu.html:13
+#: app/templates/partials/profile_dropdown_menu.html:9
+msgid "Grylli | Account"
+msgstr "Jopo la Utawala"
+
+#: app/templates/partials/profile_dropdown_menu.html:15
 msgid "Account"
 msgstr "Akaunti"
 
-#: app/templates/partials/profile_dropdown_menu.html:31
+#: app/templates/partials/profile_dropdown_menu.html:22
+msgid "Grylli | Security Questions"
+msgstr "🔐 Usalama"
+
+#: app/templates/partials/profile_dropdown_menu.html:35
+msgid "Grylli | MFA"
+msgstr "Grylli"
+
+#: app/templates/partials/profile_dropdown_menu.html:41
 msgid "MFA"
 msgstr "MFA"
 
-#: app/templates/partials/profile_dropdown_menu.html:40
+#: app/templates/partials/profile_dropdown_menu.html:48
+msgid "Grylli | About"
+msgstr "Jopo la Utawala"
+
+#: app/templates/partials/profile_dropdown_menu.html:54
 msgid "About"
 msgstr "Kuhusu"
 
-#: app/templates/partials/profile_dropdown_menu.html:48
+#: app/templates/partials/profile_dropdown_menu.html:61
+msgid "Grylli | Customization"
+msgstr "Grylli | Barua Pepe | SMTP"
+
+#: app/templates/partials/profile_dropdown_menu.html:77
 msgid "GitHub"
 msgstr "GitHub"
 
-#: app/templates/partials/profile_dropdown_menu.html:107
+#: app/templates/partials/profile_dropdown_menu.html:83
+msgid "Grylli | Help"
+msgstr "Grylli | Barua Pepe | SMTP"
+
+#: app/templates/partials/profile_dropdown_menu.html:96
+msgid "Grylli | Privacy"
+msgstr "Faragha"
+
+#: app/templates/partials/profile_dropdown_menu.html:109
+msgid "Grylli | System Info"
+msgstr "Mipangilio ya Mfumo"
+
+#: app/templates/partials/profile_dropdown_menu.html:122
+msgid "Grylli | Translations"
+msgstr "Tafsiri"
+
+#: app/templates/partials/profile_dropdown_menu.html:153
 msgid "Logout"
 msgstr "Ondoka"
 
@@ -3334,19 +3484,6 @@ msgstr "Grylli | Vikumbusho | Muhtasari"
 #: app/templates/partials/shared_nav.html:165
 msgid "Overview of reminders"
 msgstr "Muhtasari wa vikumbusho"
-
-#: app/templates/partials/sidebar/desktop_footer.html:15
-msgid "Select Theme"
-msgstr "Chagua"
-
-#: app/templates/partials/sidebar/desktop_footer.html:20
-msgid "Select theme"
-msgstr "Chagua"
-
-#: app/templates/partials/sidebar/desktop_footer.html:29
-#: app/templates/partials/sidebar/desktop_footer.html:35
-msgid "Select language"
-msgstr "Chagua"
 
 #: app/templates/partials/sidebar/desktop_header.html:9
 msgid "Menu"
@@ -3845,27 +3982,27 @@ msgstr "Hakuna mabadiliko yaliyofanywa."
 msgid "An error occurred while updating your account."
 msgstr "Hitilafu ilitokea wakati wa kuboresha akaunti yako."
 
-#: app/views/account.py:159
+#: app/views/account.py:164
 msgid "An error occurred while loading translation info."
 msgstr "Hitilafu ilitokea wakati wa kusasisha mtumiaji."
 
-#: app/views/account.py:186
+#: app/views/account.py:191
 msgid "You cannot delete your account because you are the last admin."
 msgstr "Huwezi kufuta akaunti yako kwa sababu wewe ndiye msimamizi wa mwisho."
 
-#: app/views/account.py:195
+#: app/views/account.py:200
 msgid "Your account has been permanently deleted."
 msgstr "Akaunti yako imefutwa kabisa."
 
-#: app/views/account.py:202
+#: app/views/account.py:207
 msgid "An error occurred while trying to delete your account."
 msgstr "Hitilafu ilitokea wakati wa kuboresha akaunti yako."
 
-#: app/views/account.py:221
+#: app/views/account.py:226
 msgid "Your account has been deleted"
 msgstr "Akaunti yako imefutwa kabisa."
 
-#: app/views/account.py:223
+#: app/views/account.py:228
 #, python-brace-format
 msgid ""
 "Hello {username},\n"
@@ -3880,17 +4017,21 @@ msgstr ""
 "\n"
 "{site_url}"
 
-#: app/views/account.py:408
+#: app/views/account.py:413
 msgid "Each security question must be different."
 msgstr "Maswali yote matatu lazima yawe tofauti."
 
-#: app/views/account.py:432
+#: app/views/account.py:437
 msgid "Security questions saved."
 msgstr "Maswali ya usalama yamehifadhiwa."
 
-#: app/views/account.py:448
+#: app/views/account.py:453
 msgid "An error occurred while saving your security questions."
 msgstr "Hitilafu ilitokea wakati wa kuboresha akaunti yako."
+
+#: app/views/account.py:475
+msgid "An error occurred while loading customization settings."
+msgstr "Hitilafu ilitokea wakati wa kusasisha mtumiaji."
 
 #: app/views/admin.py:41
 msgid "Failed to load admin dashboard."
@@ -3968,98 +4109,98 @@ msgstr ""
 msgid "An error occurred while creating the admin account."
 msgstr "Hitilafu ilitokea wakati wa kuunda akaunti ya msimamizi."
 
-#: app/views/auth.py:184
+#: app/views/auth.py:207
 msgid "Your account is not activated."
 msgstr "Akaunti yako imefutwa kabisa."
 
-#: app/views/auth.py:192
+#: app/views/auth.py:215
 msgid "Multi-factor authentication required."
 msgstr "Taarifa imezimwa"
 
-#: app/views/auth.py:196 app/views/mfa.py:222
+#: app/views/auth.py:219 app/views/mfa.py:218
 msgid "Logged in successfully."
 msgstr "Umeingia kwa mafanikio."
 
-#: app/views/auth.py:214
+#: app/views/auth.py:255
 msgid "Too many failed login attempts. Your account is locked for 15 minutes."
 msgstr "Jaribio nyingi za kuingia zimeshindwa. Tafadhali subiri"
 
-#: app/views/auth.py:232
+#: app/views/auth.py:273
 msgid "Invalid username or password."
 msgstr "Jina la mtumiaji au nenosiri sio sahihi."
 
-#: app/views/auth.py:258
+#: app/views/auth.py:299
 msgid "You have been logged out."
 msgstr "Umetolewa nje."
 
-#: app/views/auth.py:320
+#: app/views/auth.py:361
 msgid "If a user with that email exists, we've sent the username to them."
 msgstr ""
 "Ikiwa mtumiaji aliye na barua pepe hiyo yupo, tumewatumia jina la mtumiaji."
 
-#: app/views/auth.py:327
+#: app/views/auth.py:368
 msgid "An error occurred while sending your username reminder."
 msgstr "Hitilafu ilitokea wakati wa kuboresha akaunti yako."
 
-#: app/views/auth.py:379
+#: app/views/auth.py:420
 msgid "No account found matching that username and email."
 msgstr ""
 "Hakuna akaunti iliyopatikana inayolingana na jina la mtumiaji na barua pepe "
 "hiyo."
 
-#: app/views/auth.py:386
+#: app/views/auth.py:427
 msgid "An error occurred while checking your credentials."
 msgstr "Hitilafu ilitokea wakati wa kuboresha akaunti yako."
 
-#: app/views/auth.py:395
+#: app/views/auth.py:436
 msgid "Session expired. Please start over."
 msgstr "Kipindi kimeisha muda. Tafadhali anza upya."
 
-#: app/views/auth.py:414
+#: app/views/auth.py:455
 msgid "Too many failed attempts. Please try again later."
 msgstr "Jaribio nyingi za kuingia zimeshindwa. Tafadhali subiri"
 
-#: app/views/auth.py:435
+#: app/views/auth.py:476
 msgid "A password reset link has been sent to your email."
 msgstr "Kiungo cha kuweka upya nenosiri kimepelekwa kwenye barua pepe yako."
 
-#: app/views/auth.py:448
+#: app/views/auth.py:489
 msgid "One or more answers were incorrect."
 msgstr "Jibu moja au zaidi halikuwa sahihi."
 
-#: app/views/auth.py:458
+#: app/views/auth.py:499
 msgid "An error occurred while verifying your answers."
 msgstr "Hitilafu ilitokea wakati wa kuboresha akaunti yako."
 
-#: app/views/auth.py:491
+#: app/views/auth.py:532
 msgid "The reset link is invalid or has expired."
 msgstr "Kiungo cha upya kimebatilika au kimeisha muda wake."
 
-#: app/views/auth.py:504
+#: app/views/auth.py:545
 msgid "Username and email do not match."
 msgstr "Jina la mtumiaji na barua pepe hazilingani."
 
-#: app/views/auth.py:528
+#: app/views/auth.py:569
 msgid "Your password has been reset. Please log in."
 msgstr "Nenosiri lako limewekwa upya. Tafadhali ingia."
 
-#: app/views/auth.py:533
+#: app/views/auth.py:574
 msgid "An error occurred while resetting your password."
 msgstr "Hitilafu ilitokea wakati wa kufuta mtumiaji."
 
-#: app/views/auth.py:570
+#: app/views/auth.py:611
 msgid "Invalid registration PIN."
 msgstr "PIN ya usajili si sahihi."
 
-#: app/views/auth.py:579
+#: app/views/auth.py:620
 msgid "Username or email already exists."
 msgstr "Jina la mtumiaji au barua pepe tayari vipo."
 
-#: app/views/auth.py:608
+#: app/views/auth.py:649
 msgid "Activate Your Grylli Account"
 msgstr "Washa Akaunti Yako ya Grylli"
 
-#: app/views/auth.py:609
+#: app/views/auth.py:650
 #, python-brace-format
 msgid ""
 "Hello {username},\n"
@@ -4070,45 +4211,45 @@ msgstr ""
 "\n"
 "Tafadhali washa akaunti yako kwa kubofya..."
 
-#: app/views/auth.py:615
+#: app/views/auth.py:656
 msgid "Account created! Please check your email to activate your account."
 msgstr ""
 "Akaunti imeundwa! Tafadhali angalia barua pepe yako ili kuamsha akaunti "
 "yako."
 
-#: app/views/auth.py:622
+#: app/views/auth.py:663
 msgid "An error occurred during signup."
 msgstr "Hitilafu ilitokea wakati wa kufuta mtumiaji."
 
-#: app/views/auth.py:641
+#: app/views/auth.py:682
 msgid "Activation link is invalid or expired."
 msgstr "Kiungo cha kuamsha ni batili au kimekwisha muda."
 
-#: app/views/auth.py:648 app/views/users.py:135 app/views/users.py:202
+#: app/views/auth.py:689 app/views/users.py:136 app/views/users.py:203
 msgid "User not found."
 msgstr "Mtumiaji hajapatikana."
 
-#: app/views/auth.py:652
+#: app/views/auth.py:693
 msgid "Account already activated. Please log in."
 msgstr "Akaunti tayari imewashwa. Tafadhali ingia."
 
-#: app/views/auth.py:663
+#: app/views/auth.py:704
 msgid "Your account has been activated! You can now log in."
 msgstr "Akaunti yako imewashwa! Sasa unaweza kuingia."
 
-#: app/views/auth.py:667
+#: app/views/auth.py:708
 msgid "Failed to activate account."
 msgstr "Imeshindikana kuunda backup."
 
-#: app/views/auth.py:699
+#: app/views/auth.py:740
 msgid "Security questions not set or user not found."
 msgstr "Maswali ya usalama hayajwekwa au mtumiaji hajapatikana."
 
-#: app/views/auth.py:707
+#: app/views/auth.py:748
 msgid "Password reset email sent."
 msgstr "Manenosiri hayalingani."
 
-#: app/views/auth.py:714
+#: app/views/auth.py:755
 msgid "Incorrect answer."
 msgstr "Jibu lisilo sahihi."
 
@@ -4234,7 +4375,7 @@ msgstr "Imeshindikana kutuma barua pepe ya majaribio:"
 msgid "An error occurred while loading the help page."
 msgstr "Hitilafu ilitokea wakati wa kusasisha mtumiaji."
 
-#: app/views/index.py:53
+#: app/views/index.py:55
 msgid "Error loading dashboard"
 msgstr "Rudi kwa Barua Pepe"
 
@@ -4298,7 +4439,7 @@ msgstr "Ujumbe umehifadhiwa."
 msgid "You must enter a code from your authenticator."
 msgstr "Lazima uingize msimbo kutoka kwa uthibitishaji wako."
 
-#: app/views/mfa.py:85 app/views/mfa.py:295 app/views/mfa.py:303
+#: app/views/mfa.py:85 app/views/mfa.py:291 app/views/mfa.py:299
 msgid "Invalid code. Please try again."
 msgstr "Msimbo si sahihi. Tafadhali jaribu tena."
 
@@ -4318,15 +4459,15 @@ msgstr "Misimbo ya urejeshaji huonyeshwa tu mara baada ya kuwezesha MFA."
 msgid "Could not load recovery codes."
 msgstr "Haikuweza kupakia misimbo ya urejeshaji."
 
-#: app/views/mfa.py:194
+#: app/views/mfa.py:190
 msgid "No MFA challenge in progress."
 msgstr "Hakuna changamoto ya MFA inayoendelea."
 
-#: app/views/mfa.py:202
+#: app/views/mfa.py:198
 msgid "User not found for MFA challenge."
 msgstr "Mtumiaji hajapatikana."
 
-#: app/views/mfa.py:262
+#: app/views/mfa.py:258
 msgid ""
 "You have used your last recovery code. MFA has been disabled. Please remove "
 "Grylli from your authenticator app, and re-enable MFA to protect your "
@@ -4336,14 +4477,14 @@ msgstr ""
 "ondoa Grylli kutoka kwa programu yako ya uthibitishaji, na uwezeshe tena MFA"
 " ili kulinda akaunti yako."
 
-#: app/views/mfa.py:283
+#: app/views/mfa.py:279
 #, python-brace-format
 msgid "Recovery code accepted. You have {remaining} recovery codes left."
 msgstr ""
 "Msimbo wa urejeshaji umekubaliwa. Umebaki na misimbo {remaining} ya "
 "urejeshaji."
 
-#: app/views/mfa.py:298
+#: app/views/mfa.py:294
 msgid "An unexpected error occurred during MFA challenge."
 msgstr "Hitilafu ilitokea wakati wa kufuta mtumiaji."
 
@@ -4524,87 +4665,87 @@ msgstr ""
 msgid "Error sending test email."
 msgstr "Tuma Barua pepe ya Majaribio"
 
-#: app/views/users.py:58
+#: app/views/users.py:59
 msgid "Failed to load user list."
 msgstr "Rudi kwa Barua Pepe"
 
-#: app/views/users.py:82
+#: app/views/users.py:83
 msgid "Password is required when creating a new user."
 msgstr "Nenosiri linahitajika unapounda mtumiaji mpya."
 
-#: app/views/users.py:87 app/views/users.py:156
+#: app/views/users.py:88 app/views/users.py:157
 msgid "Username already exists."
 msgstr "Jina la mtumiaji lipo tayari."
 
-#: app/views/users.py:92 app/views/users.py:163
+#: app/views/users.py:93 app/views/users.py:164
 msgid "Email already exists."
 msgstr "Barua pepe ipo tayari."
 
-#: app/views/users.py:107
+#: app/views/users.py:108
 #, python-format
 msgid "User '%(username)s' created successfully."
 msgstr "Mtumiaji '%(username)s' ameundwa kwa mafanikio."
 
-#: app/views/users.py:115
+#: app/views/users.py:116
 msgid "Failed to create user."
 msgstr "Imeshindikana kuunda mtumiaji."
 
-#: app/views/users.py:176
+#: app/views/users.py:177
 msgid "User updated successfully."
 msgstr "Mtumiaji amesasishwa kwa mafanikio."
 
-#: app/views/users.py:183 app/views/users.py:301
+#: app/views/users.py:184 app/views/users.py:320
 msgid "An error occurred while updating the user."
 msgstr "Hitilafu ilitokea wakati wa kusasisha mtumiaji."
 
-#: app/views/users.py:255
+#: app/views/users.py:256
 msgid "User deleted."
 msgstr "Mtumiaji amefutwa."
 
-#: app/views/users.py:262
+#: app/views/users.py:263
 msgid "An error occurred while deleting the user."
 msgstr "Hitilafu ilitokea wakati wa kufuta mtumiaji."
 
-#: app/views/users.py:279
+#: app/views/users.py:280
 msgid "You cannot change your own enabled status."
 msgstr "Huwezi kubadilisha hali yako mwenyewe ya kuwashwa."
 
-#: app/views/users.py:292
+#: app/views/users.py:311
 #, python-format
 msgid "User '%(username)s' has been %(status)s."
 msgstr "Mtumiaji '%(username)s' amekuwa %(status)s."
 
-#: app/views/users.py:318
+#: app/views/users.py:337
 msgid "You cannot reset your own MFA."
 msgstr "⚪ = Huwezi kusimamisha akaunti yako mwenyewe."
 
-#: app/views/users.py:331
+#: app/views/users.py:368
 #, python-format
 msgid "MFA disabled for user '%(username)s'."
 msgstr "MFA imelemazwa kwa mtumiaji '%(username)s'."
 
-#: app/views/users.py:335
+#: app/views/users.py:372
 msgid "An error occurred while resetting MFA."
 msgstr "Hitilafu ilitokea wakati wa kufuta mtumiaji."
 
-#: app/views/users.py:358
+#: app/views/users.py:395
 msgid "Invalid role"
 msgstr "Jukumu si sahihi."
 
-#: app/views/users.py:364
+#: app/views/users.py:417
 #, python-format
 msgid "Role updated for %(username)s."
 msgstr "MFA imelemazwa kwa mtumiaji '%(username)s'."
 
-#: app/views/users.py:370
+#: app/views/users.py:425
 msgid "An error occurred while updating the role."
 msgstr "Hitilafu ilitokea wakati wa kusasisha mtumiaji."
 
-#: app/views/users.py:390
+#: app/views/users.py:463
 msgid "User account unlocked."
 msgstr "Akaunti yako imefutwa kabisa."
 
-#: app/views/users.py:395
+#: app/views/users.py:468
 msgid "An error occurred while unlocking the account."
 msgstr "Hitilafu ilitokea wakati wa kuunda akaunti ya msimamizi."
 
@@ -5360,3 +5501,9 @@ msgstr "Hitilafu ilitokea wakati wa kufuta mtumiaji."
 
 #~ msgid "Failed to send test email. "
 #~ msgstr "Imeshindikana kutuma barua pepe ya majaribio:"
+
+#~ msgid "Select Theme"
+#~ msgstr "Chagua"
+
+#~ msgid "Select theme"
+#~ msgstr "Chagua"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-07-14 11:49-0500\n"
+"POT-Creation-Date: 2025-07-25 13:21-0500\n"
 "PO-Revision-Date: 2025-05-25 16:45-0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: he <LL@li.org>\n"
@@ -358,7 +358,7 @@ msgstr ""
 "מסירת ההודעות שלך - בצורה מאובטחת ואמינה."
 
 #: app/templates/help_full.html:7
-#: app/templates/partials/profile_dropdown_menu.html:57
+#: app/templates/partials/profile_dropdown_menu.html:89
 msgid "Help"
 msgstr "עזרה"
 
@@ -493,7 +493,7 @@ msgstr ""
 "ודא במהירות שהיעדים שלך (דואר אלקטרוני, Webhook, Apprise) פועלים כמצופה."
 
 #: app/templates/help_partial.html:45
-#: app/templates/partials/profile_dropdown_menu.html:22
+#: app/templates/partials/profile_dropdown_menu.html:28
 msgid "Security"
 msgstr "🔐 אבטחה"
 
@@ -512,7 +512,7 @@ msgstr ""
 "צריך עזרה במשהו ספציפי? כל מודול ב-Grylli כולל לוח עזרה משלו עם הדרכה "
 "מפורטת."
 
-#: app/templates/partials/profile_dropdown_menu.html:66
+#: app/templates/partials/profile_dropdown_menu.html:102
 #: app/templates/privacy_full.html:7
 msgid "Privacy"
 msgstr "פרטיות"
@@ -646,7 +646,7 @@ msgstr "הגדרות מערכת"
 msgid "This endpoint provides system health and version information."
 msgstr "נקודת סיום זו מספקת מידע על בריאות המערכת וגרסה."
 
-#: app/templates/partials/profile_dropdown_menu.html:75
+#: app/templates/partials/profile_dropdown_menu.html:115
 #: app/templates/system_info_full.html:7
 msgid "System Info"
 msgstr "מידע מערכת"
@@ -741,6 +741,108 @@ msgstr ""
 #: app/templates/auth/signup.html:16
 msgid "Please fix the following errors:"
 msgstr "אנא תקן את השגיאות הבאות:"
+
+#: app/templates/account/customization_full.html:7
+#: app/templates/partials/profile_dropdown_menu.html:67
+msgid "Customization"
+msgstr "התאמה אישית"
+
+#: app/templates/account/customization_partial.html:10
+msgid "Customize Your Interface"
+msgstr "התאם את הממשק שלך"
+
+#: app/templates/account/customization_partial.html:13
+msgid ""
+"Change the look and feel of Grylli using the options below. Your preferences"
+" are saved in your browser."
+msgstr ""
+"שנה את המראה של Grylli באמצעות האפשרויות שלהלן. העדפותיך נשמרות בדפדפן שלך."
+
+#: app/templates/account/customization_partial.html:20
+msgid "Font Family"
+msgstr "משפחת גופנים"
+
+#: app/templates/account/customization_partial.html:33
+msgid "Font Size"
+msgstr "גודל גופן"
+
+#: app/templates/account/customization_partial.html:38
+msgid "Extra Small"
+msgstr "קטן מאוד"
+
+#: app/templates/account/customization_partial.html:39
+msgid "Small"
+msgstr "הכל"
+
+#: app/templates/account/customization_partial.html:40
+#: app/templates/account/customization_partial.html:64
+#: app/templates/account/customization_partial.html:101
+msgid "Default"
+msgstr "מחק"
+
+#: app/templates/account/customization_partial.html:41
+msgid "Large"
+msgstr "תווית"
+
+#: app/templates/account/customization_partial.html:42
+msgid "Extra Large"
+msgstr "גדול מאוד"
+
+#: app/templates/account/customization_partial.html:48
+msgid "Background Pattern"
+msgstr "תבנית רקע"
+
+#: app/templates/account/customization_partial.html:59
+msgid "Contrast"
+msgstr "תוכן"
+
+#: app/templates/account/customization_partial.html:65
+msgid "Low Contrast"
+msgstr "ניגודיות נמוכה"
+
+#: app/templates/account/customization_partial.html:66
+msgid "High Contrast"
+msgstr "ניגודיות גבוהה"
+
+#: app/templates/account/customization_partial.html:72
+msgid "Letter Spacing"
+msgstr "ריווח אותיות"
+
+#: app/templates/account/customization_partial.html:76
+msgid "Tight"
+msgstr "צפוף"
+
+#: app/templates/account/customization_partial.html:77
+msgid "Normal"
+msgstr "רגיל"
+
+#: app/templates/account/customization_partial.html:78
+msgid "Wide"
+msgstr "מזהה"
+
+#: app/templates/account/customization_partial.html:84
+msgid "Reading Density"
+msgstr "צפיפות קריאה"
+
+#: app/templates/account/customization_partial.html:96
+msgid "Border Radius"
+msgstr "קוטר פינות"
+
+#: app/templates/account/customization_partial.html:102
+msgid "Sharp Corners"
+msgstr "פינות חדות"
+
+#: app/templates/account/customization_partial.html:103
+msgid "Extra Rounded"
+msgstr "עגול במיוחד"
+
+#: app/templates/account/customization_partial.html:109
+msgid "Theme"
+msgstr "בית"
+
+#: app/templates/account/customization_partial.html:125
+msgid "Language"
+msgstr "בחר את ה-"
 
 #: app/templates/account/manage_account_full.html:7
 #: app/templates/account/manage_account_partial.html:9
@@ -881,12 +983,18 @@ msgid "Deleting your account is permanent and cannot be undone."
 msgstr "מחיקת חשבונך היא לצמיתות ולא ניתנת לביטול."
 
 #: app/templates/account/manage_account_partial.html:130
-msgid "Are you sure you want to delete your account?"
-msgstr "האם אתה בטוח שברצונך לאפס את האימות הדו-שלבי עבור משתמש זה?"
-
 #: app/templates/account/manage_account_partial.html:132
+msgid "You are the last admin. Deleting your account is not allowed."
+msgstr "אתה המנהל האחרון. מחיקת החשבון שלך אסורה."
+
+#: app/templates/account/manage_account_partial.html:133
+#: app/templates/account/manage_account_partial.html:143
 msgid "Delete My Account"
 msgstr "עדכון חשבון"
+
+#: app/templates/account/manage_account_partial.html:140
+msgid "Are you sure you want to delete your account?"
+msgstr "האם אתה בטוח שברצונך לאפס את האימות הדו-שלבי עבור משתמש זה?"
 
 #: app/templates/account/set_security_questions_full.html:7
 msgid "Security Questions"
@@ -918,7 +1026,7 @@ msgstr "עדכון חשבון"
 
 #: app/templates/account/translations_full.html:7
 #: app/templates/account/translations_partial.html:8
-#: app/templates/partials/profile_dropdown_menu.html:95
+#: app/templates/partials/profile_dropdown_menu.html:139
 msgid "Translations"
 msgstr "תרגומים"
 
@@ -1087,7 +1195,7 @@ msgstr "מלא את הטופס כדי להוסיף משתמש חדש."
 
 #: app/templates/admin/create_user_partial.html:26
 #: app/templates/admin/edit_user.html:28
-#: app/templates/admin/partials/table_view.html:13
+#: app/templates/admin/partials/table_view.html:14
 #: app/templates/admin/reports/report_accounts_partial.html:10
 #: app/templates/user_smtp/partials/table_view.html:13
 msgid "Username"
@@ -1095,14 +1203,14 @@ msgstr "שם משתמש"
 
 #: app/templates/admin/create_user_partial.html:36
 #: app/templates/admin/edit_user.html:36
-#: app/templates/admin/partials/table_view.html:14
+#: app/templates/admin/partials/table_view.html:15
 #: app/templates/admin/reports/report_accounts_partial.html:11
 #: app/templates/dashboard/partials/_linked_items_partial.html:15
 msgid "Email"
 msgstr "דוא\"ל"
 
 #: app/templates/admin/create_user_partial.html:49
-#: app/templates/admin/partials/table_view.html:15
+#: app/templates/admin/partials/table_view.html:16
 #: app/templates/admin/reports/report_accounts_partial.html:12
 msgid "Role"
 msgstr "תפקיד"
@@ -1595,11 +1703,11 @@ msgid ""
 "visible."
 msgstr "כל הפעולות מתועדות לשקיפות. סיסמאות וסודות לעולם לא גלויים."
 
-#: app/templates/admin/partials/table_view.html:12
+#: app/templates/admin/partials/table_view.html:13
 msgid "ID"
 msgstr "מזהה"
 
-#: app/templates/admin/partials/table_view.html:16
+#: app/templates/admin/partials/table_view.html:17
 #: app/templates/admin/tools/partials/backup_table.html:13
 #: app/templates/apprise/apprise_config.html:59
 #: app/templates/apprise/partials/table_view.html:14
@@ -1615,7 +1723,7 @@ msgstr "מזהה"
 msgid "Actions"
 msgstr "פעולות"
 
-#: app/templates/admin/partials/table_view.html:35
+#: app/templates/admin/partials/table_view.html:36
 #: app/templates/admin/reports/report_accounts_partial.html:52
 msgid "No users available."
 msgstr "אין משתמשים זמינים."
@@ -1715,7 +1823,8 @@ msgstr "הגדרות מערכת"
 msgid "Details"
 msgstr "אימיילים"
 
-#: app/templates/admin/reports/report_scheduler_partial.html:37
+#: app/templates/admin/reports/report_scheduler_partial.html:38
+#: app/templates/admin/reports/report_scheduler_partial.html:46
 msgid "No scheduler activity found."
 msgstr "לא נמצאה פעילות של מתזמן."
 
@@ -1738,6 +1847,10 @@ msgstr "חזור ללוח הבקרה"
 #: app/templates/admin/reports/reports_tabs.html:38
 msgid "Scheduler Activity"
 msgstr "לוח זמנים לאימייל"
+
+#: app/templates/admin/reports/reports_tabs.html:46
+msgid "Grylli | Reports | Logs"
+msgstr "לוח ניהול"
 
 #: app/templates/admin/reports/reports_tabs.html:51
 msgid "Application Logs"
@@ -3157,11 +3270,11 @@ msgstr "סקירה כללית"
 msgid "Grylli | Admin | Users"
 msgstr "Grylli | מנהל | משתמשים"
 
-#: app/templates/partials/head.html:14
+#: app/templates/partials/head.html:16
 msgid "Grylli is a secure message scheduling and delivery platform."
 msgstr "Grylli היא פלטפורמה מאובטחת לתזמון והעברת הודעות."
 
-#: app/templates/partials/head.html:25
+#: app/templates/partials/head.html:35
 msgid "Grylli"
 msgstr "Grylli"
 
@@ -3175,23 +3288,59 @@ msgstr "בית"
 msgid "Check-ins Due"
 msgstr "צ'ק-אין"
 
-#: app/templates/partials/profile_dropdown_menu.html:13
+#: app/templates/partials/profile_dropdown_menu.html:9
+msgid "Grylli | Account"
+msgstr "לוח ניהול"
+
+#: app/templates/partials/profile_dropdown_menu.html:15
 msgid "Account"
 msgstr "חשבון"
 
-#: app/templates/partials/profile_dropdown_menu.html:31
+#: app/templates/partials/profile_dropdown_menu.html:22
+msgid "Grylli | Security Questions"
+msgstr "🔐 אבטחה"
+
+#: app/templates/partials/profile_dropdown_menu.html:35
+msgid "Grylli | MFA"
+msgstr "Grylli"
+
+#: app/templates/partials/profile_dropdown_menu.html:41
 msgid "MFA"
 msgstr "MFA"
 
-#: app/templates/partials/profile_dropdown_menu.html:40
+#: app/templates/partials/profile_dropdown_menu.html:48
+msgid "Grylli | About"
+msgstr "לוח ניהול"
+
+#: app/templates/partials/profile_dropdown_menu.html:54
 msgid "About"
 msgstr "אודות"
 
-#: app/templates/partials/profile_dropdown_menu.html:48
+#: app/templates/partials/profile_dropdown_menu.html:61
+msgid "Grylli | Customization"
+msgstr "Grylli | אימיילים | SMTP"
+
+#: app/templates/partials/profile_dropdown_menu.html:77
 msgid "GitHub"
 msgstr "GitHub"
 
-#: app/templates/partials/profile_dropdown_menu.html:107
+#: app/templates/partials/profile_dropdown_menu.html:83
+msgid "Grylli | Help"
+msgstr "Grylli | אימיילים | SMTP"
+
+#: app/templates/partials/profile_dropdown_menu.html:96
+msgid "Grylli | Privacy"
+msgstr "פרטיות"
+
+#: app/templates/partials/profile_dropdown_menu.html:109
+msgid "Grylli | System Info"
+msgstr "הגדרות מערכת"
+
+#: app/templates/partials/profile_dropdown_menu.html:122
+msgid "Grylli | Translations"
+msgstr "תרגומים"
+
+#: app/templates/partials/profile_dropdown_menu.html:153
 msgid "Logout"
 msgstr "התנתקות"
 
@@ -3246,19 +3395,6 @@ msgstr "Grylli | תזכורות | סקירה כללית"
 #: app/templates/partials/shared_nav.html:165
 msgid "Overview of reminders"
 msgstr "סקירה כללית על תזכורות"
-
-#: app/templates/partials/sidebar/desktop_footer.html:15
-msgid "Select Theme"
-msgstr "בחר את ה-"
-
-#: app/templates/partials/sidebar/desktop_footer.html:20
-msgid "Select theme"
-msgstr "בחר את ה-"
-
-#: app/templates/partials/sidebar/desktop_footer.html:29
-#: app/templates/partials/sidebar/desktop_footer.html:35
-msgid "Select language"
-msgstr "בחר את ה-"
 
 #: app/templates/partials/sidebar/desktop_header.html:9
 msgid "Menu"
@@ -3745,27 +3881,27 @@ msgstr "לא בוצעו שינויים."
 msgid "An error occurred while updating your account."
 msgstr "אירעה שגיאה בעת עדכון החשבון שלך."
 
-#: app/views/account.py:159
+#: app/views/account.py:164
 msgid "An error occurred while loading translation info."
 msgstr "אירעה שגיאה בעת עדכון המשתמש."
 
-#: app/views/account.py:186
+#: app/views/account.py:191
 msgid "You cannot delete your account because you are the last admin."
 msgstr "לא ניתן למחוק את חשבונך כי אתה המנהל האחרון."
 
-#: app/views/account.py:195
+#: app/views/account.py:200
 msgid "Your account has been permanently deleted."
 msgstr "חשבונך נמחק לצמיתות."
 
-#: app/views/account.py:202
+#: app/views/account.py:207
 msgid "An error occurred while trying to delete your account."
 msgstr "אירעה שגיאה בעת עדכון החשבון שלך."
 
-#: app/views/account.py:221
+#: app/views/account.py:226
 msgid "Your account has been deleted"
 msgstr "חשבונך נמחק לצמיתות."
 
-#: app/views/account.py:223
+#: app/views/account.py:228
 #, python-brace-format
 msgid ""
 "Hello {username},\n"
@@ -3780,17 +3916,21 @@ msgstr ""
 "\n"
 "{site_url}"
 
-#: app/views/account.py:408
+#: app/views/account.py:413
 msgid "Each security question must be different."
 msgstr "כל שלוש השאלות חייבות להיות שונות."
 
-#: app/views/account.py:432
+#: app/views/account.py:437
 msgid "Security questions saved."
 msgstr "שאלות האבטחה נשמרו."
 
-#: app/views/account.py:448
+#: app/views/account.py:453
 msgid "An error occurred while saving your security questions."
 msgstr "אירעה שגיאה בעת עדכון החשבון שלך."
+
+#: app/views/account.py:475
+msgid "An error occurred while loading customization settings."
+msgstr "אירעה שגיאה בעת עדכון המשתמש."
 
 #: app/views/admin.py:41
 msgid "Failed to load admin dashboard."
@@ -3864,95 +4004,95 @@ msgstr "אירעה שגיאה בלתי צפויה. אנא נסה שוב מאוח
 msgid "An error occurred while creating the admin account."
 msgstr "אירעה שגיאה בעת יצירת חשבון המנהל."
 
-#: app/views/auth.py:184
+#: app/views/auth.py:207
 msgid "Your account is not activated."
 msgstr "חשבונך נמחק לצמיתות."
 
-#: app/views/auth.py:192
+#: app/views/auth.py:215
 msgid "Multi-factor authentication required."
 msgstr "התראה מושבתת"
 
-#: app/views/auth.py:196 app/views/mfa.py:222
+#: app/views/auth.py:219 app/views/mfa.py:218
 msgid "Logged in successfully."
 msgstr "נכנסת בהצלחה."
 
-#: app/views/auth.py:214
+#: app/views/auth.py:255
 msgid "Too many failed login attempts. Your account is locked for 15 minutes."
 msgstr "יותר מדי ניסיונות כניסה כושלים. אנא המתן"
 
-#: app/views/auth.py:232
+#: app/views/auth.py:273
 msgid "Invalid username or password."
 msgstr "שם משתמש או סיסמה שגויים."
 
-#: app/views/auth.py:258
+#: app/views/auth.py:299
 msgid "You have been logged out."
 msgstr "התנתקת."
 
-#: app/views/auth.py:320
+#: app/views/auth.py:361
 msgid "If a user with that email exists, we've sent the username to them."
 msgstr "אם קיים משתמש עם הדוא\"ל הזה, שלחנו להם את שם המשתמש."
 
-#: app/views/auth.py:327
+#: app/views/auth.py:368
 msgid "An error occurred while sending your username reminder."
 msgstr "אירעה שגיאה בעת עדכון החשבון שלך."
 
-#: app/views/auth.py:379
+#: app/views/auth.py:420
 msgid "No account found matching that username and email."
 msgstr "לא נמצא חשבון התואם את שם המשתמש והדוא\"ל הללו."
 
-#: app/views/auth.py:386
+#: app/views/auth.py:427
 msgid "An error occurred while checking your credentials."
 msgstr "אירעה שגיאה בעת עדכון החשבון שלך."
 
-#: app/views/auth.py:395
+#: app/views/auth.py:436
 msgid "Session expired. Please start over."
 msgstr "הסשן פג תוקף. אנא התחל מחדש."
 
-#: app/views/auth.py:414
+#: app/views/auth.py:455
 msgid "Too many failed attempts. Please try again later."
 msgstr "יותר מדי ניסיונות כניסה כושלים. אנא המתן"
 
-#: app/views/auth.py:435
+#: app/views/auth.py:476
 msgid "A password reset link has been sent to your email."
 msgstr "קישור לאיפוס הסיסמה נשלח לדוא\"ל שלך."
 
-#: app/views/auth.py:448
+#: app/views/auth.py:489
 msgid "One or more answers were incorrect."
 msgstr "תשובה או יותר היו שגויות."
 
-#: app/views/auth.py:458
+#: app/views/auth.py:499
 msgid "An error occurred while verifying your answers."
 msgstr "אירעה שגיאה בעת עדכון החשבון שלך."
 
-#: app/views/auth.py:491
+#: app/views/auth.py:532
 msgid "The reset link is invalid or has expired."
 msgstr "קישור האיפוס אינו תקף או שפג תוקפו."
 
-#: app/views/auth.py:504
+#: app/views/auth.py:545
 msgid "Username and email do not match."
 msgstr "שם המשתמש והאימייל אינם תואמים."
 
-#: app/views/auth.py:528
+#: app/views/auth.py:569
 msgid "Your password has been reset. Please log in."
 msgstr "הסיסמה שלך אופסה. אנא התחבר."
 
-#: app/views/auth.py:533
+#: app/views/auth.py:574
 msgid "An error occurred while resetting your password."
 msgstr "אירעה שגיאה בעת מחיקת המשתמש."
 
-#: app/views/auth.py:570
+#: app/views/auth.py:611
 msgid "Invalid registration PIN."
 msgstr "מספר ההרשמה אינו תקין."
 
-#: app/views/auth.py:579
+#: app/views/auth.py:620
 msgid "Username or email already exists."
 msgstr "שם משתמש או אימייל כבר קיימים."
 
-#: app/views/auth.py:608
+#: app/views/auth.py:649
 msgid "Activate Your Grylli Account"
 msgstr "הפעל את חשבונך ב-Grylli"
 
-#: app/views/auth.py:609
+#: app/views/auth.py:650
 #, python-brace-format
 msgid ""
 "Hello {username},\n"
@@ -3963,43 +4103,43 @@ msgstr ""
 "\n"
 "אנא הפעל את חשבונך על ידי לחיצה..."
 
-#: app/views/auth.py:615
+#: app/views/auth.py:656
 msgid "Account created! Please check your email to activate your account."
 msgstr "החשבון נוצר! אנא בדוק את האימייל שלך כדי להפעיל את החשבון."
 
-#: app/views/auth.py:622
+#: app/views/auth.py:663
 msgid "An error occurred during signup."
 msgstr "אירעה שגיאה בעת מחיקת המשתמש."
 
-#: app/views/auth.py:641
+#: app/views/auth.py:682
 msgid "Activation link is invalid or expired."
 msgstr "קישור ההפעלה אינו תקין או פג תוקף."
 
-#: app/views/auth.py:648 app/views/users.py:135 app/views/users.py:202
+#: app/views/auth.py:689 app/views/users.py:136 app/views/users.py:203
 msgid "User not found."
 msgstr "המשתמש לא נמצא."
 
-#: app/views/auth.py:652
+#: app/views/auth.py:693
 msgid "Account already activated. Please log in."
 msgstr "החשבון כבר הופעל. אנא התחבר."
 
-#: app/views/auth.py:663
+#: app/views/auth.py:704
 msgid "Your account has been activated! You can now log in."
 msgstr "החשבון שלך הופעל! כעת תוכל להתחבר."
 
-#: app/views/auth.py:667
+#: app/views/auth.py:708
 msgid "Failed to activate account."
 msgstr "יצירת הגיבוי נכשלה."
 
-#: app/views/auth.py:699
+#: app/views/auth.py:740
 msgid "Security questions not set or user not found."
 msgstr "שאלות האבטחה לא הוגדרו או שהמשתמש לא נמצא."
 
-#: app/views/auth.py:707
+#: app/views/auth.py:748
 msgid "Password reset email sent."
 msgstr "הסיסמאות אינן תואמות."
 
-#: app/views/auth.py:714
+#: app/views/auth.py:755
 msgid "Incorrect answer."
 msgstr "תשובה שגויה."
 
@@ -4124,7 +4264,7 @@ msgstr "שליחת אימייל הבדיקה נכשלה:"
 msgid "An error occurred while loading the help page."
 msgstr "אירעה שגיאה בעת עדכון המשתמש."
 
-#: app/views/index.py:53
+#: app/views/index.py:55
 msgid "Error loading dashboard"
 msgstr "חזרה לאימיילים"
 
@@ -4188,7 +4328,7 @@ msgstr "ההודעה נשמרה."
 msgid "You must enter a code from your authenticator."
 msgstr "חובה להכניס קוד מהמאמת שלך."
 
-#: app/views/mfa.py:85 app/views/mfa.py:295 app/views/mfa.py:303
+#: app/views/mfa.py:85 app/views/mfa.py:291 app/views/mfa.py:299
 msgid "Invalid code. Please try again."
 msgstr "קוד לא תקין. בבקשה נסה שוב."
 
@@ -4208,15 +4348,15 @@ msgstr "קודי שחזור מוצגים רק מיד לאחר הפעלת MFA."
 msgid "Could not load recovery codes."
 msgstr "לא ניתן לטעון קודי שחזור."
 
-#: app/views/mfa.py:194
+#: app/views/mfa.py:190
 msgid "No MFA challenge in progress."
 msgstr "אין אתגר MFA בעיצומו."
 
-#: app/views/mfa.py:202
+#: app/views/mfa.py:198
 msgid "User not found for MFA challenge."
 msgstr "המשתמש לא נמצא."
 
-#: app/views/mfa.py:262
+#: app/views/mfa.py:258
 msgid ""
 "You have used your last recovery code. MFA has been disabled. Please remove "
 "Grylli from your authenticator app, and re-enable MFA to protect your "
@@ -4225,12 +4365,12 @@ msgstr ""
 "ניצלת את קוד השחזור האחרון שלך. ה-MFA הושבת. אנא הסר את Grylli מאפליקציית "
 "המאמת שלך, והפעל מחדש את ה-MFA כדי להגן על חשבונך."
 
-#: app/views/mfa.py:283
+#: app/views/mfa.py:279
 #, python-brace-format
 msgid "Recovery code accepted. You have {remaining} recovery codes left."
 msgstr "קוד השחזור התקבל. נותרו לך {remaining} קודי שחזור."
 
-#: app/views/mfa.py:298
+#: app/views/mfa.py:294
 msgid "An unexpected error occurred during MFA challenge."
 msgstr "אירעה שגיאה בעת מחיקת המשתמש."
 
@@ -4404,87 +4544,87 @@ msgstr "שליחת אימייל הבדיקה נכשלה. בדוק את הגדר�
 msgid "Error sending test email."
 msgstr "שלח דוא\"ל בדיקה"
 
-#: app/views/users.py:58
+#: app/views/users.py:59
 msgid "Failed to load user list."
 msgstr "חזרה לאימיילים"
 
-#: app/views/users.py:82
+#: app/views/users.py:83
 msgid "Password is required when creating a new user."
 msgstr "דרושה סיסמה בעת יצירת משתמש חדש."
 
-#: app/views/users.py:87 app/views/users.py:156
+#: app/views/users.py:88 app/views/users.py:157
 msgid "Username already exists."
 msgstr "שם המשתמש כבר קיים."
 
-#: app/views/users.py:92 app/views/users.py:163
+#: app/views/users.py:93 app/views/users.py:164
 msgid "Email already exists."
 msgstr "האימייל כבר קיים."
 
-#: app/views/users.py:107
+#: app/views/users.py:108
 #, python-format
 msgid "User '%(username)s' created successfully."
 msgstr "המשתמש '%(username)s' נוצר בהצלחה."
 
-#: app/views/users.py:115
+#: app/views/users.py:116
 msgid "Failed to create user."
 msgstr "יצירת המשתמש נכשלה."
 
-#: app/views/users.py:176
+#: app/views/users.py:177
 msgid "User updated successfully."
 msgstr "המשתמש עודכן בהצלחה."
 
-#: app/views/users.py:183 app/views/users.py:301
+#: app/views/users.py:184 app/views/users.py:320
 msgid "An error occurred while updating the user."
 msgstr "אירעה שגיאה בעת עדכון המשתמש."
 
-#: app/views/users.py:255
+#: app/views/users.py:256
 msgid "User deleted."
 msgstr "המשתמש נמחק."
 
-#: app/views/users.py:262
+#: app/views/users.py:263
 msgid "An error occurred while deleting the user."
 msgstr "אירעה שגיאה בעת מחיקת המשתמש."
 
-#: app/views/users.py:279
+#: app/views/users.py:280
 msgid "You cannot change your own enabled status."
 msgstr "אינך יכול לשנות את הסטטוס המופעל שלך."
 
-#: app/views/users.py:292
+#: app/views/users.py:311
 #, python-format
 msgid "User '%(username)s' has been %(status)s."
 msgstr "למשתמש '%(username)s' שונה הסטטוס ל-%(status)s."
 
-#: app/views/users.py:318
+#: app/views/users.py:337
 msgid "You cannot reset your own MFA."
 msgstr "⚪ = אינך יכול להשבית את החשבון שלך."
 
-#: app/views/users.py:331
+#: app/views/users.py:368
 #, python-format
 msgid "MFA disabled for user '%(username)s'."
 msgstr "MFA הושבת עבור המשתמש '%(username)s'."
 
-#: app/views/users.py:335
+#: app/views/users.py:372
 msgid "An error occurred while resetting MFA."
 msgstr "אירעה שגיאה בעת מחיקת המשתמש."
 
-#: app/views/users.py:358
+#: app/views/users.py:395
 msgid "Invalid role"
 msgstr "תפקיד לא תקין."
 
-#: app/views/users.py:364
+#: app/views/users.py:417
 #, python-format
 msgid "Role updated for %(username)s."
 msgstr "MFA הושבת עבור המשתמש '%(username)s'."
 
-#: app/views/users.py:370
+#: app/views/users.py:425
 msgid "An error occurred while updating the role."
 msgstr "אירעה שגיאה בעת עדכון המשתמש."
 
-#: app/views/users.py:390
+#: app/views/users.py:463
 msgid "User account unlocked."
 msgstr "חשבונך נמחק לצמיתות."
 
-#: app/views/users.py:395
+#: app/views/users.py:468
 msgid "An error occurred while unlocking the account."
 msgstr "אירעה שגיאה בעת יצירת חשבון המנהל."
 
@@ -5219,3 +5359,9 @@ msgstr "אירעה שגיאה בעת מחיקת המשתמש."
 
 #~ msgid "Failed to send test email. "
 #~ msgstr "שליחת אימייל הבדיקה נכשלה:"
+
+#~ msgid "Select Theme"
+#~ msgstr "בחר את ה-"
+
+#~ msgid "Select theme"
+#~ msgstr "בחר את ה-"

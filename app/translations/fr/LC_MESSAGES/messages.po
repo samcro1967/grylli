@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-07-14 11:49-0500\n"
+"POT-Creation-Date: 2025-07-25 13:21-0500\n"
 "PO-Revision-Date: 2025-05-24 21:53-0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: fr <LL@li.org>\n"
@@ -368,7 +368,7 @@ msgstr ""
 "— en toute sécurité et fiabilité."
 
 #: app/templates/help_full.html:7
-#: app/templates/partials/profile_dropdown_menu.html:57
+#: app/templates/partials/profile_dropdown_menu.html:89
 msgid "Help"
 msgstr "Aide"
 
@@ -508,7 +508,7 @@ msgstr ""
 "fonctionnent comme prévu."
 
 #: app/templates/help_partial.html:45
-#: app/templates/partials/profile_dropdown_menu.html:22
+#: app/templates/partials/profile_dropdown_menu.html:28
 msgid "Security"
 msgstr "🔐 Sécurité"
 
@@ -528,7 +528,7 @@ msgstr ""
 "Besoin d'aide sur quelque chose de précis ? Chaque module dans Grylli inclut"
 " son propre panneau d'aide avec des conseils détaillés."
 
-#: app/templates/partials/profile_dropdown_menu.html:66
+#: app/templates/partials/profile_dropdown_menu.html:102
 #: app/templates/privacy_full.html:7
 msgid "Privacy"
 msgstr "Confidentialité"
@@ -677,7 +677,7 @@ msgstr ""
 "Ce point de terminaison fournit des informations sur la santé et la version "
 "du système."
 
-#: app/templates/partials/profile_dropdown_menu.html:75
+#: app/templates/partials/profile_dropdown_menu.html:115
 #: app/templates/system_info_full.html:7
 msgid "System Info"
 msgstr "Infos Système"
@@ -773,6 +773,109 @@ msgstr ""
 #: app/templates/auth/signup.html:16
 msgid "Please fix the following errors:"
 msgstr "Veuillez corriger les erreurs suivantes :"
+
+#: app/templates/account/customization_full.html:7
+#: app/templates/partials/profile_dropdown_menu.html:67
+msgid "Customization"
+msgstr "Personnalisation"
+
+#: app/templates/account/customization_partial.html:10
+msgid "Customize Your Interface"
+msgstr "Personnalisez votre interface"
+
+#: app/templates/account/customization_partial.html:13
+msgid ""
+"Change the look and feel of Grylli using the options below. Your preferences"
+" are saved in your browser."
+msgstr ""
+"Changez l'apparence de Grylli en utilisant les options ci-dessous. Vos "
+"préférences sont enregistrées dans votre navigateur."
+
+#: app/templates/account/customization_partial.html:20
+msgid "Font Family"
+msgstr "Famille de polices"
+
+#: app/templates/account/customization_partial.html:33
+msgid "Font Size"
+msgstr "Taille de la police"
+
+#: app/templates/account/customization_partial.html:38
+msgid "Extra Small"
+msgstr "Très petit"
+
+#: app/templates/account/customization_partial.html:39
+msgid "Small"
+msgstr "Tous"
+
+#: app/templates/account/customization_partial.html:40
+#: app/templates/account/customization_partial.html:64
+#: app/templates/account/customization_partial.html:101
+msgid "Default"
+msgstr "Supprimer"
+
+#: app/templates/account/customization_partial.html:41
+msgid "Large"
+msgstr "Étiquette"
+
+#: app/templates/account/customization_partial.html:42
+msgid "Extra Large"
+msgstr "Très grand"
+
+#: app/templates/account/customization_partial.html:48
+msgid "Background Pattern"
+msgstr "Motif de fond"
+
+#: app/templates/account/customization_partial.html:59
+msgid "Contrast"
+msgstr "Contenu"
+
+#: app/templates/account/customization_partial.html:65
+msgid "Low Contrast"
+msgstr "Faible contraste"
+
+#: app/templates/account/customization_partial.html:66
+msgid "High Contrast"
+msgstr "Fort contraste"
+
+#: app/templates/account/customization_partial.html:72
+msgid "Letter Spacing"
+msgstr "Espacement des lettres"
+
+#: app/templates/account/customization_partial.html:76
+msgid "Tight"
+msgstr "Serré"
+
+#: app/templates/account/customization_partial.html:77
+msgid "Normal"
+msgstr "Normal"
+
+#: app/templates/account/customization_partial.html:78
+msgid "Wide"
+msgstr "ID"
+
+#: app/templates/account/customization_partial.html:84
+msgid "Reading Density"
+msgstr "Densité de lecture"
+
+#: app/templates/account/customization_partial.html:96
+msgid "Border Radius"
+msgstr "Rayon de la bordure"
+
+#: app/templates/account/customization_partial.html:102
+msgid "Sharp Corners"
+msgstr "Coins nets"
+
+#: app/templates/account/customization_partial.html:103
+msgid "Extra Rounded"
+msgstr "Très arrondi"
+
+#: app/templates/account/customization_partial.html:109
+msgid "Theme"
+msgstr "Accueil"
+
+#: app/templates/account/customization_partial.html:125
+msgid "Language"
+msgstr "Sélectionnez le rôle approprié"
 
 #: app/templates/account/manage_account_full.html:7
 #: app/templates/account/manage_account_partial.html:9
@@ -914,12 +1017,20 @@ msgid "Deleting your account is permanent and cannot be undone."
 msgstr "Supprimer votre compte est permanent et ne peut pas être annulé."
 
 #: app/templates/account/manage_account_partial.html:130
-msgid "Are you sure you want to delete your account?"
-msgstr "Êtes-vous sûr de vouloir réinitialiser MFA pour cet utilisateur ?"
-
 #: app/templates/account/manage_account_partial.html:132
+msgid "You are the last admin. Deleting your account is not allowed."
+msgstr ""
+"Vous êtes le dernier admin. La suppression de votre compte n'est pas "
+"autorisée."
+
+#: app/templates/account/manage_account_partial.html:133
+#: app/templates/account/manage_account_partial.html:143
 msgid "Delete My Account"
 msgstr "Mettre à jour le compte"
+
+#: app/templates/account/manage_account_partial.html:140
+msgid "Are you sure you want to delete your account?"
+msgstr "Êtes-vous sûr de vouloir réinitialiser MFA pour cet utilisateur ?"
 
 #: app/templates/account/set_security_questions_full.html:7
 msgid "Security Questions"
@@ -952,7 +1063,7 @@ msgstr "Mettre à jour le compte"
 
 #: app/templates/account/translations_full.html:7
 #: app/templates/account/translations_partial.html:8
-#: app/templates/partials/profile_dropdown_menu.html:95
+#: app/templates/partials/profile_dropdown_menu.html:139
 msgid "Translations"
 msgstr "Traductions"
 
@@ -1148,7 +1259,7 @@ msgstr "Remplissez le formulaire pour ajouter un nouvel utilisateur."
 
 #: app/templates/admin/create_user_partial.html:26
 #: app/templates/admin/edit_user.html:28
-#: app/templates/admin/partials/table_view.html:13
+#: app/templates/admin/partials/table_view.html:14
 #: app/templates/admin/reports/report_accounts_partial.html:10
 #: app/templates/user_smtp/partials/table_view.html:13
 msgid "Username"
@@ -1156,14 +1267,14 @@ msgstr "Nom d'utilisateur"
 
 #: app/templates/admin/create_user_partial.html:36
 #: app/templates/admin/edit_user.html:36
-#: app/templates/admin/partials/table_view.html:14
+#: app/templates/admin/partials/table_view.html:15
 #: app/templates/admin/reports/report_accounts_partial.html:11
 #: app/templates/dashboard/partials/_linked_items_partial.html:15
 msgid "Email"
 msgstr "Email"
 
 #: app/templates/admin/create_user_partial.html:49
-#: app/templates/admin/partials/table_view.html:15
+#: app/templates/admin/partials/table_view.html:16
 #: app/templates/admin/reports/report_accounts_partial.html:12
 msgid "Role"
 msgstr "Rôle"
@@ -1699,11 +1810,11 @@ msgstr ""
 "Toutes les actions sont enregistrées pour la responsabilité. Les mots de "
 "passe et secrets ne sont jamais visibles."
 
-#: app/templates/admin/partials/table_view.html:12
+#: app/templates/admin/partials/table_view.html:13
 msgid "ID"
 msgstr "ID"
 
-#: app/templates/admin/partials/table_view.html:16
+#: app/templates/admin/partials/table_view.html:17
 #: app/templates/admin/tools/partials/backup_table.html:13
 #: app/templates/apprise/apprise_config.html:59
 #: app/templates/apprise/partials/table_view.html:14
@@ -1719,7 +1830,7 @@ msgstr "ID"
 msgid "Actions"
 msgstr "Actions"
 
-#: app/templates/admin/partials/table_view.html:35
+#: app/templates/admin/partials/table_view.html:36
 #: app/templates/admin/reports/report_accounts_partial.html:52
 msgid "No users available."
 msgstr "Aucun utilisateur disponible."
@@ -1821,7 +1932,8 @@ msgstr "Paramètres Système"
 msgid "Details"
 msgstr "Emails"
 
-#: app/templates/admin/reports/report_scheduler_partial.html:37
+#: app/templates/admin/reports/report_scheduler_partial.html:38
+#: app/templates/admin/reports/report_scheduler_partial.html:46
 msgid "No scheduler activity found."
 msgstr "Aucune activité de planification trouvée."
 
@@ -1844,6 +1956,10 @@ msgstr "Retourner au tableau de bord"
 #: app/templates/admin/reports/reports_tabs.html:38
 msgid "Scheduler Activity"
 msgstr "Planifier l'email"
+
+#: app/templates/admin/reports/reports_tabs.html:46
+msgid "Grylli | Reports | Logs"
+msgstr "Panneau d'administration"
 
 #: app/templates/admin/reports/reports_tabs.html:51
 msgid "Application Logs"
@@ -3316,13 +3432,13 @@ msgstr "Vue d'ensemble"
 msgid "Grylli | Admin | Users"
 msgstr "Grylli | Admin | Utilisateurs"
 
-#: app/templates/partials/head.html:14
+#: app/templates/partials/head.html:16
 msgid "Grylli is a secure message scheduling and delivery platform."
 msgstr ""
 "Grylli est une plateforme sécurisée de planification et de distribution de "
 "messages."
 
-#: app/templates/partials/head.html:25
+#: app/templates/partials/head.html:35
 msgid "Grylli"
 msgstr "Grylli"
 
@@ -3336,23 +3452,59 @@ msgstr "Accueil"
 msgid "Check-ins Due"
 msgstr "Enregistrement"
 
-#: app/templates/partials/profile_dropdown_menu.html:13
+#: app/templates/partials/profile_dropdown_menu.html:9
+msgid "Grylli | Account"
+msgstr "Panneau d'administration"
+
+#: app/templates/partials/profile_dropdown_menu.html:15
 msgid "Account"
 msgstr "Compte"
 
-#: app/templates/partials/profile_dropdown_menu.html:31
+#: app/templates/partials/profile_dropdown_menu.html:22
+msgid "Grylli | Security Questions"
+msgstr "🔐 Sécurité"
+
+#: app/templates/partials/profile_dropdown_menu.html:35
+msgid "Grylli | MFA"
+msgstr "Grylli"
+
+#: app/templates/partials/profile_dropdown_menu.html:41
 msgid "MFA"
 msgstr "MFA"
 
-#: app/templates/partials/profile_dropdown_menu.html:40
+#: app/templates/partials/profile_dropdown_menu.html:48
+msgid "Grylli | About"
+msgstr "Panneau d'administration"
+
+#: app/templates/partials/profile_dropdown_menu.html:54
 msgid "About"
 msgstr "À propos"
 
-#: app/templates/partials/profile_dropdown_menu.html:48
+#: app/templates/partials/profile_dropdown_menu.html:61
+msgid "Grylli | Customization"
+msgstr "Grylli | Emails | SMTP"
+
+#: app/templates/partials/profile_dropdown_menu.html:77
 msgid "GitHub"
 msgstr "GitHub"
 
-#: app/templates/partials/profile_dropdown_menu.html:107
+#: app/templates/partials/profile_dropdown_menu.html:83
+msgid "Grylli | Help"
+msgstr "Grylli | Emails | SMTP"
+
+#: app/templates/partials/profile_dropdown_menu.html:96
+msgid "Grylli | Privacy"
+msgstr "Confidentialité"
+
+#: app/templates/partials/profile_dropdown_menu.html:109
+msgid "Grylli | System Info"
+msgstr "Paramètres Système"
+
+#: app/templates/partials/profile_dropdown_menu.html:122
+msgid "Grylli | Translations"
+msgstr "Traductions"
+
+#: app/templates/partials/profile_dropdown_menu.html:153
 msgid "Logout"
 msgstr "Déconnexion"
 
@@ -3407,19 +3559,6 @@ msgstr "Grylli | Rappels | Aperçu"
 #: app/templates/partials/shared_nav.html:165
 msgid "Overview of reminders"
 msgstr "Aperçu des rappels"
-
-#: app/templates/partials/sidebar/desktop_footer.html:15
-msgid "Select Theme"
-msgstr "Sélectionnez le rôle approprié"
-
-#: app/templates/partials/sidebar/desktop_footer.html:20
-msgid "Select theme"
-msgstr "Sélectionnez le rôle approprié"
-
-#: app/templates/partials/sidebar/desktop_footer.html:29
-#: app/templates/partials/sidebar/desktop_footer.html:35
-msgid "Select language"
-msgstr "Sélectionnez le rôle approprié"
 
 #: app/templates/partials/sidebar/desktop_header.html:9
 msgid "Menu"
@@ -3938,29 +4077,29 @@ msgstr "Aucun changement effectué."
 msgid "An error occurred while updating your account."
 msgstr "Une erreur s'est produite lors de la mise à jour de votre compte."
 
-#: app/views/account.py:159
+#: app/views/account.py:164
 msgid "An error occurred while loading translation info."
 msgstr "Une erreur s'est produite lors de la mise à jour de l'utilisateur."
 
-#: app/views/account.py:186
+#: app/views/account.py:191
 msgid "You cannot delete your account because you are the last admin."
 msgstr ""
 "Vous ne pouvez pas supprimer votre compte car vous êtes le dernier "
 "administrateur."
 
-#: app/views/account.py:195
+#: app/views/account.py:200
 msgid "Your account has been permanently deleted."
 msgstr "Votre compte a été supprimé définitivement."
 
-#: app/views/account.py:202
+#: app/views/account.py:207
 msgid "An error occurred while trying to delete your account."
 msgstr "Une erreur s'est produite lors de la mise à jour de votre compte."
 
-#: app/views/account.py:221
+#: app/views/account.py:226
 msgid "Your account has been deleted"
 msgstr "Votre compte a été supprimé définitivement."
 
-#: app/views/account.py:223
+#: app/views/account.py:228
 #, python-brace-format
 msgid ""
 "Hello {username},\n"
@@ -3975,17 +4114,21 @@ msgstr ""
 "\n"
 "{site_url}"
 
-#: app/views/account.py:408
+#: app/views/account.py:413
 msgid "Each security question must be different."
 msgstr "Les trois questions doivent être différentes."
 
-#: app/views/account.py:432
+#: app/views/account.py:437
 msgid "Security questions saved."
 msgstr "Questions de sécurité enregistrées."
 
-#: app/views/account.py:448
+#: app/views/account.py:453
 msgid "An error occurred while saving your security questions."
 msgstr "Une erreur s'est produite lors de la mise à jour de votre compte."
+
+#: app/views/account.py:475
+msgid "An error occurred while loading customization settings."
+msgstr "Une erreur s'est produite lors de la mise à jour de l'utilisateur."
 
 #: app/views/admin.py:41
 msgid "Failed to load admin dashboard."
@@ -4064,100 +4207,100 @@ msgid "An error occurred while creating the admin account."
 msgstr ""
 "Une erreur s'est produite lors de la création du compte administrateur."
 
-#: app/views/auth.py:184
+#: app/views/auth.py:207
 msgid "Your account is not activated."
 msgstr "Votre compte a été supprimé définitivement."
 
-#: app/views/auth.py:192
+#: app/views/auth.py:215
 msgid "Multi-factor authentication required."
 msgstr "La notification est désactivée"
 
-#: app/views/auth.py:196 app/views/mfa.py:222
+#: app/views/auth.py:219 app/views/mfa.py:218
 msgid "Logged in successfully."
 msgstr "Connecté avec succès."
 
-#: app/views/auth.py:214
+#: app/views/auth.py:255
 msgid "Too many failed login attempts. Your account is locked for 15 minutes."
 msgstr "Trop de tentatives de connexion échouées. Veuillez attendre"
 
-#: app/views/auth.py:232
+#: app/views/auth.py:273
 msgid "Invalid username or password."
 msgstr "Nom d'utilisateur ou mot de passe invalide."
 
-#: app/views/auth.py:258
+#: app/views/auth.py:299
 msgid "You have been logged out."
 msgstr "Vous avez été déconnecté."
 
-#: app/views/auth.py:320
+#: app/views/auth.py:361
 msgid "If a user with that email exists, we've sent the username to them."
 msgstr ""
 "Si un utilisateur avec cet e-mail existe, nous lui avons envoyé le nom "
 "d'utilisateur."
 
-#: app/views/auth.py:327
+#: app/views/auth.py:368
 msgid "An error occurred while sending your username reminder."
 msgstr "Une erreur s'est produite lors de la mise à jour de votre compte."
 
-#: app/views/auth.py:379
+#: app/views/auth.py:420
 msgid "No account found matching that username and email."
 msgstr ""
 "Aucun compte correspondant à ce nom d'utilisateur et cet e-mail n'a été "
 "trouvé."
 
-#: app/views/auth.py:386
+#: app/views/auth.py:427
 msgid "An error occurred while checking your credentials."
 msgstr "Une erreur s'est produite lors de la mise à jour de votre compte."
 
-#: app/views/auth.py:395
+#: app/views/auth.py:436
 msgid "Session expired. Please start over."
 msgstr "Session expirée. Veuillez recommencer."
 
-#: app/views/auth.py:414
+#: app/views/auth.py:455
 msgid "Too many failed attempts. Please try again later."
 msgstr "Trop de tentatives de connexion échouées. Veuillez attendre"
 
-#: app/views/auth.py:435
+#: app/views/auth.py:476
 msgid "A password reset link has been sent to your email."
 msgstr ""
 "Un lien de réinitialisation de mot de passe a été envoyé à votre e-mail."
 
-#: app/views/auth.py:448
+#: app/views/auth.py:489
 msgid "One or more answers were incorrect."
 msgstr "Une ou plusieurs réponses étaient incorrectes."
 
-#: app/views/auth.py:458
+#: app/views/auth.py:499
 msgid "An error occurred while verifying your answers."
 msgstr "Une erreur s'est produite lors de la mise à jour de votre compte."
 
-#: app/views/auth.py:491
+#: app/views/auth.py:532
 msgid "The reset link is invalid or has expired."
 msgstr "Le lien de réinitialisation est invalide ou a expiré."
 
-#: app/views/auth.py:504
+#: app/views/auth.py:545
 msgid "Username and email do not match."
 msgstr "Le nom d'utilisateur et l'e-mail ne correspondent pas."
 
-#: app/views/auth.py:528
+#: app/views/auth.py:569
 msgid "Your password has been reset. Please log in."
 msgstr "Votre mot de passe a été réinitialisé. Veuillez vous connecter."
 
-#: app/views/auth.py:533
+#: app/views/auth.py:574
 msgid "An error occurred while resetting your password."
 msgstr "Une erreur s'est produite lors de la suppression de l'utilisateur."
 
-#: app/views/auth.py:570
+#: app/views/auth.py:611
 msgid "Invalid registration PIN."
 msgstr "PIN d'inscription invalide."
 
-#: app/views/auth.py:579
+#: app/views/auth.py:620
 msgid "Username or email already exists."
 msgstr "Nom d'utilisateur ou e-mail déjà existant."
 
-#: app/views/auth.py:608
+#: app/views/auth.py:649
 msgid "Activate Your Grylli Account"
 msgstr "Activez votre compte Grylli"
 
-#: app/views/auth.py:609
+#: app/views/auth.py:650
 #, python-brace-format
 msgid ""
 "Hello {username},\n"
@@ -4168,44 +4311,44 @@ msgstr ""
 "\n"
 "Veuillez activer votre compte en cliquant..."
 
-#: app/views/auth.py:615
+#: app/views/auth.py:656
 msgid "Account created! Please check your email to activate your account."
 msgstr ""
 "Compte créé! Veuillez vérifier votre e-mail pour activer votre compte."
 
-#: app/views/auth.py:622
+#: app/views/auth.py:663
 msgid "An error occurred during signup."
 msgstr "Une erreur s'est produite lors de la suppression de l'utilisateur."
 
-#: app/views/auth.py:641
+#: app/views/auth.py:682
 msgid "Activation link is invalid or expired."
 msgstr "Le lien d'activation est invalide ou a expiré."
 
-#: app/views/auth.py:648 app/views/users.py:135 app/views/users.py:202
+#: app/views/auth.py:689 app/views/users.py:136 app/views/users.py:203
 msgid "User not found."
 msgstr "Utilisateur non trouvé."
 
-#: app/views/auth.py:652
+#: app/views/auth.py:693
 msgid "Account already activated. Please log in."
 msgstr "Compte déjà activé. Veuillez vous connecter."
 
-#: app/views/auth.py:663
+#: app/views/auth.py:704
 msgid "Your account has been activated! You can now log in."
 msgstr "Votre compte a été activé! Vous pouvez maintenant vous connecter."
 
-#: app/views/auth.py:667
+#: app/views/auth.py:708
 msgid "Failed to activate account."
 msgstr "Échec de la création de la sauvegarde."
 
-#: app/views/auth.py:699
+#: app/views/auth.py:740
 msgid "Security questions not set or user not found."
 msgstr "Questions de sécurité non définies ou utilisateur non trouvé."
 
-#: app/views/auth.py:707
+#: app/views/auth.py:748
 msgid "Password reset email sent."
 msgstr "Les mots de passe ne correspondent pas."
 
-#: app/views/auth.py:714
+#: app/views/auth.py:755
 msgid "Incorrect answer."
 msgstr "Réponse incorrecte."
 
@@ -4333,7 +4476,7 @@ msgstr "Échec de l'envoi de l'email de test:"
 msgid "An error occurred while loading the help page."
 msgstr "Une erreur s'est produite lors de la mise à jour de l'utilisateur."
 
-#: app/views/index.py:53
+#: app/views/index.py:55
 msgid "Error loading dashboard"
 msgstr "Retour aux emails"
 
@@ -4398,7 +4541,7 @@ msgstr "Message enregistré."
 msgid "You must enter a code from your authenticator."
 msgstr "Vous devez entrer un code de votre authentificateur."
 
-#: app/views/mfa.py:85 app/views/mfa.py:295 app/views/mfa.py:303
+#: app/views/mfa.py:85 app/views/mfa.py:291 app/views/mfa.py:299
 msgid "Invalid code. Please try again."
 msgstr "Code invalide. Veuillez réessayer."
 
@@ -4420,15 +4563,15 @@ msgstr ""
 msgid "Could not load recovery codes."
 msgstr "Impossible de charger les codes de récupération."
 
-#: app/views/mfa.py:194
+#: app/views/mfa.py:190
 msgid "No MFA challenge in progress."
 msgstr "Aucun défi MFA en cours."
 
-#: app/views/mfa.py:202
+#: app/views/mfa.py:198
 msgid "User not found for MFA challenge."
 msgstr "Utilisateur non trouvé."
 
-#: app/views/mfa.py:262
+#: app/views/mfa.py:258
 msgid ""
 "You have used your last recovery code. MFA has been disabled. Please remove "
 "Grylli from your authenticator app, and re-enable MFA to protect your "
@@ -4438,14 +4581,14 @@ msgstr ""
 "Veuillez supprimer Grylli de votre application d'authentification, et "
 "réactiver MFA pour protéger votre compte."
 
-#: app/views/mfa.py:283
+#: app/views/mfa.py:279
 #, python-brace-format
 msgid "Recovery code accepted. You have {remaining} recovery codes left."
 msgstr ""
 "Code de récupération accepté. Il vous reste {remaining} codes de "
 "récupération."
 
-#: app/views/mfa.py:298
+#: app/views/mfa.py:294
 msgid "An unexpected error occurred during MFA challenge."
 msgstr "Une erreur s'est produite lors de la suppression de l'utilisateur."
 
@@ -4621,88 +4764,88 @@ msgstr "Échec de l'envoi de l'email de test. Vérifiez les paramètres SMTP."
 msgid "Error sending test email."
 msgstr "Envoyer un email de test"
 
-#: app/views/users.py:58
+#: app/views/users.py:59
 msgid "Failed to load user list."
 msgstr "Retour aux emails"
 
-#: app/views/users.py:82
+#: app/views/users.py:83
 msgid "Password is required when creating a new user."
 msgstr ""
 "Le mot de passe est requis lors de la création d'un nouvel utilisateur."
 
-#: app/views/users.py:87 app/views/users.py:156
+#: app/views/users.py:88 app/views/users.py:157
 msgid "Username already exists."
 msgstr "Nom d'utilisateur déjà existant."
 
-#: app/views/users.py:92 app/views/users.py:163
+#: app/views/users.py:93 app/views/users.py:164
 msgid "Email already exists."
 msgstr "Email déjà existant."
 
-#: app/views/users.py:107
+#: app/views/users.py:108
 #, python-format
 msgid "User '%(username)s' created successfully."
 msgstr "Utilisateur '%(username)s' créé avec succès."
 
-#: app/views/users.py:115
+#: app/views/users.py:116
 msgid "Failed to create user."
 msgstr "Échec de la création de l'utilisateur."
 
-#: app/views/users.py:176
+#: app/views/users.py:177
 msgid "User updated successfully."
 msgstr "Utilisateur mis à jour avec succès."
 
-#: app/views/users.py:183 app/views/users.py:301
+#: app/views/users.py:184 app/views/users.py:320
 msgid "An error occurred while updating the user."
 msgstr "Une erreur s'est produite lors de la mise à jour de l'utilisateur."
 
-#: app/views/users.py:255
+#: app/views/users.py:256
 msgid "User deleted."
 msgstr "Utilisateur supprimé."
 
-#: app/views/users.py:262
+#: app/views/users.py:263
 msgid "An error occurred while deleting the user."
 msgstr "Une erreur s'est produite lors de la suppression de l'utilisateur."
 
-#: app/views/users.py:279
+#: app/views/users.py:280
 msgid "You cannot change your own enabled status."
 msgstr "Vous ne pouvez pas changer votre propre statut activé."
 
-#: app/views/users.py:292
+#: app/views/users.py:311
 #, python-format
 msgid "User '%(username)s' has been %(status)s."
 msgstr "L'utilisateur '%(username)s' a été %(status)s."
 
-#: app/views/users.py:318
+#: app/views/users.py:337
 msgid "You cannot reset your own MFA."
 msgstr "⚪ = Vous ne pouvez pas désactiver votre propre compte."
 
-#: app/views/users.py:331
+#: app/views/users.py:368
 #, python-format
 msgid "MFA disabled for user '%(username)s'."
 msgstr "MFA désactivé pour l'utilisateur '%(username)s'."
 
-#: app/views/users.py:335
+#: app/views/users.py:372
 msgid "An error occurred while resetting MFA."
 msgstr "Une erreur s'est produite lors de la suppression de l'utilisateur."
 
-#: app/views/users.py:358
+#: app/views/users.py:395
 msgid "Invalid role"
 msgstr "Rôle invalide."
 
-#: app/views/users.py:364
+#: app/views/users.py:417
 #, python-format
 msgid "Role updated for %(username)s."
 msgstr "MFA désactivé pour l'utilisateur '%(username)s'."
 
-#: app/views/users.py:370
+#: app/views/users.py:425
 msgid "An error occurred while updating the role."
 msgstr "Une erreur s'est produite lors de la mise à jour de l'utilisateur."
 
-#: app/views/users.py:390
+#: app/views/users.py:463
 msgid "User account unlocked."
 msgstr "Votre compte a été supprimé définitivement."
 
-#: app/views/users.py:395
+#: app/views/users.py:468
 msgid "An error occurred while unlocking the account."
 msgstr ""
 "Une erreur s'est produite lors de la création du compte administrateur."
@@ -5599,3 +5742,9 @@ msgstr "Une erreur s'est produite lors de la suppression de l'utilisateur."
 
 #~ msgid "Failed to send test email. "
 #~ msgstr "Échec de l'envoi de l'email de test:"
+
+#~ msgid "Select Theme"
+#~ msgstr "Sélectionnez le rôle approprié"
+
+#~ msgid "Select theme"
+#~ msgstr "Sélectionnez le rôle approprié"

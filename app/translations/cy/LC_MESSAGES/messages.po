@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-07-14 11:49-0500\n"
+"POT-Creation-Date: 2025-07-25 13:21-0500\n"
 "PO-Revision-Date: 2025-05-25 13:03-0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: cy <LL@li.org>\n"
@@ -366,7 +366,7 @@ msgstr ""
 " rheolaeth i chi dros gyflwyno'ch negeseuon — yn ddiogel ac yn ddibynadwy."
 
 #: app/templates/help_full.html:7
-#: app/templates/partials/profile_dropdown_menu.html:57
+#: app/templates/partials/profile_dropdown_menu.html:89
 msgid "Help"
 msgstr "Cymorth"
 
@@ -505,7 +505,7 @@ msgstr ""
 "gweithio fel y disgwylir."
 
 #: app/templates/help_partial.html:45
-#: app/templates/partials/profile_dropdown_menu.html:22
+#: app/templates/partials/profile_dropdown_menu.html:28
 msgid "Security"
 msgstr "🔐 Diogelwch"
 
@@ -525,7 +525,7 @@ msgstr ""
 "Angen cymorth gyda rhywbeth penodol? Mae pob modiwl yn Grylli yn cynnwys ei "
 "banel cymorth ei hun gyda chanllaw manwl."
 
-#: app/templates/partials/profile_dropdown_menu.html:66
+#: app/templates/partials/profile_dropdown_menu.html:102
 #: app/templates/privacy_full.html:7
 msgid "Privacy"
 msgstr "Preifatrwydd"
@@ -672,7 +672,7 @@ msgid "This endpoint provides system health and version information."
 msgstr ""
 "Mae'r pwynt terfyn hwn yn darparu gwybodaeth iechyd y system a'r fersiwn."
 
-#: app/templates/partials/profile_dropdown_menu.html:75
+#: app/templates/partials/profile_dropdown_menu.html:115
 #: app/templates/system_info_full.html:7
 msgid "System Info"
 msgstr "Gwybodaeth System"
@@ -767,6 +767,109 @@ msgstr ""
 #: app/templates/auth/signup.html:16
 msgid "Please fix the following errors:"
 msgstr "Trwswch y gwallau canlynol os gwelwch yn dda:"
+
+#: app/templates/account/customization_full.html:7
+#: app/templates/partials/profile_dropdown_menu.html:67
+msgid "Customization"
+msgstr "Addasu"
+
+#: app/templates/account/customization_partial.html:10
+msgid "Customize Your Interface"
+msgstr "Addasu'r Rhyngwyneb"
+
+#: app/templates/account/customization_partial.html:13
+msgid ""
+"Change the look and feel of Grylli using the options below. Your preferences"
+" are saved in your browser."
+msgstr ""
+"Newid edrychiad a theimlad Grylli gan ddefnyddio'r opsiynau isod. Mae eich "
+"dewisiadau'n cael eu cadw yn eich porwr."
+
+#: app/templates/account/customization_partial.html:20
+msgid "Font Family"
+msgstr "Teulu Ffontiau"
+
+#: app/templates/account/customization_partial.html:33
+msgid "Font Size"
+msgstr "Maint Ffont"
+
+#: app/templates/account/customization_partial.html:38
+msgid "Extra Small"
+msgstr "Bach Iawn"
+
+#: app/templates/account/customization_partial.html:39
+msgid "Small"
+msgstr "Pob"
+
+#: app/templates/account/customization_partial.html:40
+#: app/templates/account/customization_partial.html:64
+#: app/templates/account/customization_partial.html:101
+msgid "Default"
+msgstr "Dileu"
+
+#: app/templates/account/customization_partial.html:41
+msgid "Large"
+msgstr "Label"
+
+#: app/templates/account/customization_partial.html:42
+msgid "Extra Large"
+msgstr "Mawr Iawn"
+
+#: app/templates/account/customization_partial.html:48
+msgid "Background Pattern"
+msgstr "Patrwm Cefndir"
+
+#: app/templates/account/customization_partial.html:59
+msgid "Contrast"
+msgstr "Cynnwys"
+
+#: app/templates/account/customization_partial.html:65
+msgid "Low Contrast"
+msgstr "Cyferbyniad Isel"
+
+#: app/templates/account/customization_partial.html:66
+msgid "High Contrast"
+msgstr "Cyferbyniad Uchel"
+
+#: app/templates/account/customization_partial.html:72
+msgid "Letter Spacing"
+msgstr "Bylchu Llythrennau"
+
+#: app/templates/account/customization_partial.html:76
+msgid "Tight"
+msgstr "Cul"
+
+#: app/templates/account/customization_partial.html:77
+msgid "Normal"
+msgstr "Normal"
+
+#: app/templates/account/customization_partial.html:78
+msgid "Wide"
+msgstr "ID"
+
+#: app/templates/account/customization_partial.html:84
+msgid "Reading Density"
+msgstr "Dwysedd Darllen"
+
+#: app/templates/account/customization_partial.html:96
+msgid "Border Radius"
+msgstr "Radiws Ffiniau"
+
+#: app/templates/account/customization_partial.html:102
+msgid "Sharp Corners"
+msgstr "Corneli Miniog"
+
+#: app/templates/account/customization_partial.html:103
+msgid "Extra Rounded"
+msgstr "Wedi'i Rowndio'n Eithaf"
+
+#: app/templates/account/customization_partial.html:109
+msgid "Theme"
+msgstr "Cartref"
+
+#: app/templates/account/customization_partial.html:125
+msgid "Language"
+msgstr "Dewiswch y"
 
 #: app/templates/account/manage_account_full.html:7
 #: app/templates/account/manage_account_partial.html:9
@@ -907,12 +1010,18 @@ msgid "Deleting your account is permanent and cannot be undone."
 msgstr "Mae dileu eich cyfrif yn weithred barhaol ac ni ellir ei dadwneud."
 
 #: app/templates/account/manage_account_partial.html:130
-msgid "Are you sure you want to delete your account?"
-msgstr "Ydych chi'n siŵr eich bod am ailosod MFA ar gyfer y defnyddiwr hwn?"
-
 #: app/templates/account/manage_account_partial.html:132
+msgid "You are the last admin. Deleting your account is not allowed."
+msgstr "Chi yw'r gweinyddwr olaf. Ni chaniateir dileu eich cyfrif."
+
+#: app/templates/account/manage_account_partial.html:133
+#: app/templates/account/manage_account_partial.html:143
 msgid "Delete My Account"
 msgstr "Diweddaru Cyfrif"
+
+#: app/templates/account/manage_account_partial.html:140
+msgid "Are you sure you want to delete your account?"
+msgstr "Ydych chi'n siŵr eich bod am ailosod MFA ar gyfer y defnyddiwr hwn?"
 
 #: app/templates/account/set_security_questions_full.html:7
 msgid "Security Questions"
@@ -944,7 +1053,7 @@ msgstr "Diweddaru Cyfrif"
 
 #: app/templates/account/translations_full.html:7
 #: app/templates/account/translations_partial.html:8
-#: app/templates/partials/profile_dropdown_menu.html:95
+#: app/templates/partials/profile_dropdown_menu.html:139
 msgid "Translations"
 msgstr "Cyfieithiadau"
 
@@ -1129,7 +1238,7 @@ msgstr "Llenwch y ffurflen i ychwanegu defnyddiwr newydd."
 
 #: app/templates/admin/create_user_partial.html:26
 #: app/templates/admin/edit_user.html:28
-#: app/templates/admin/partials/table_view.html:13
+#: app/templates/admin/partials/table_view.html:14
 #: app/templates/admin/reports/report_accounts_partial.html:10
 #: app/templates/user_smtp/partials/table_view.html:13
 msgid "Username"
@@ -1137,14 +1246,14 @@ msgstr "Enw Defnyddiwr"
 
 #: app/templates/admin/create_user_partial.html:36
 #: app/templates/admin/edit_user.html:36
-#: app/templates/admin/partials/table_view.html:14
+#: app/templates/admin/partials/table_view.html:15
 #: app/templates/admin/reports/report_accounts_partial.html:11
 #: app/templates/dashboard/partials/_linked_items_partial.html:15
 msgid "Email"
 msgstr "E-bost"
 
 #: app/templates/admin/create_user_partial.html:49
-#: app/templates/admin/partials/table_view.html:15
+#: app/templates/admin/partials/table_view.html:16
 #: app/templates/admin/reports/report_accounts_partial.html:12
 msgid "Role"
 msgstr "Rôl"
@@ -1663,11 +1772,11 @@ msgstr ""
 "Mae'r holl weithredoedd yn cael eu logio ar gyfer atebolrwydd. Ni chaiff "
 "cyfrineiriau a chyfrinachau fyth fod yn weledig."
 
-#: app/templates/admin/partials/table_view.html:12
+#: app/templates/admin/partials/table_view.html:13
 msgid "ID"
 msgstr "ID"
 
-#: app/templates/admin/partials/table_view.html:16
+#: app/templates/admin/partials/table_view.html:17
 #: app/templates/admin/tools/partials/backup_table.html:13
 #: app/templates/apprise/apprise_config.html:59
 #: app/templates/apprise/partials/table_view.html:14
@@ -1683,7 +1792,7 @@ msgstr "ID"
 msgid "Actions"
 msgstr "Gweithredoedd"
 
-#: app/templates/admin/partials/table_view.html:35
+#: app/templates/admin/partials/table_view.html:36
 #: app/templates/admin/reports/report_accounts_partial.html:52
 msgid "No users available."
 msgstr "Dim defnyddwyr ar gael."
@@ -1784,7 +1893,8 @@ msgstr "Gosodiadau System"
 msgid "Details"
 msgstr "E-byst"
 
-#: app/templates/admin/reports/report_scheduler_partial.html:37
+#: app/templates/admin/reports/report_scheduler_partial.html:38
+#: app/templates/admin/reports/report_scheduler_partial.html:46
 msgid "No scheduler activity found."
 msgstr "Dim gweithgaredd amserlennwr wedi'i ganfod."
 
@@ -1807,6 +1917,10 @@ msgstr "Dychwelyd i'r Dangosfwrdd"
 #: app/templates/admin/reports/reports_tabs.html:38
 msgid "Scheduler Activity"
 msgstr "Trefnu E-bost"
+
+#: app/templates/admin/reports/reports_tabs.html:46
+msgid "Grylli | Reports | Logs"
+msgstr "Panel Gweinyddol"
 
 #: app/templates/admin/reports/reports_tabs.html:51
 msgid "Application Logs"
@@ -3262,11 +3376,11 @@ msgstr "Trosolwg"
 msgid "Grylli | Admin | Users"
 msgstr "Grylli | Gweinyddol | Defnyddwyr"
 
-#: app/templates/partials/head.html:14
+#: app/templates/partials/head.html:16
 msgid "Grylli is a secure message scheduling and delivery platform."
 msgstr "Mae Grylli yn blatfform amserlenni a danfon negeseuon diogel."
 
-#: app/templates/partials/head.html:25
+#: app/templates/partials/head.html:35
 msgid "Grylli"
 msgstr "Grylli"
 
@@ -3280,23 +3394,59 @@ msgstr "Cartref"
 msgid "Check-ins Due"
 msgstr "Gwirio i Mewn"
 
-#: app/templates/partials/profile_dropdown_menu.html:13
+#: app/templates/partials/profile_dropdown_menu.html:9
+msgid "Grylli | Account"
+msgstr "Panel Gweinyddol"
+
+#: app/templates/partials/profile_dropdown_menu.html:15
 msgid "Account"
 msgstr "Cyfrif"
 
-#: app/templates/partials/profile_dropdown_menu.html:31
+#: app/templates/partials/profile_dropdown_menu.html:22
+msgid "Grylli | Security Questions"
+msgstr "🔐 Diogelwch"
+
+#: app/templates/partials/profile_dropdown_menu.html:35
+msgid "Grylli | MFA"
+msgstr "Grylli"
+
+#: app/templates/partials/profile_dropdown_menu.html:41
 msgid "MFA"
 msgstr "MFA"
 
-#: app/templates/partials/profile_dropdown_menu.html:40
+#: app/templates/partials/profile_dropdown_menu.html:48
+msgid "Grylli | About"
+msgstr "Panel Gweinyddol"
+
+#: app/templates/partials/profile_dropdown_menu.html:54
 msgid "About"
 msgstr "Ynglŷn"
 
-#: app/templates/partials/profile_dropdown_menu.html:48
+#: app/templates/partials/profile_dropdown_menu.html:61
+msgid "Grylli | Customization"
+msgstr "Grylli | E-byst | SMTP"
+
+#: app/templates/partials/profile_dropdown_menu.html:77
 msgid "GitHub"
 msgstr "GitHub"
 
-#: app/templates/partials/profile_dropdown_menu.html:107
+#: app/templates/partials/profile_dropdown_menu.html:83
+msgid "Grylli | Help"
+msgstr "Grylli | E-byst | SMTP"
+
+#: app/templates/partials/profile_dropdown_menu.html:96
+msgid "Grylli | Privacy"
+msgstr "Preifatrwydd"
+
+#: app/templates/partials/profile_dropdown_menu.html:109
+msgid "Grylli | System Info"
+msgstr "Gosodiadau System"
+
+#: app/templates/partials/profile_dropdown_menu.html:122
+msgid "Grylli | Translations"
+msgstr "Cyfieithiadau"
+
+#: app/templates/partials/profile_dropdown_menu.html:153
 msgid "Logout"
 msgstr "Allgofnodi"
 
@@ -3351,19 +3501,6 @@ msgstr "Grylli | Atgoffiadau | Trosolwg"
 #: app/templates/partials/shared_nav.html:165
 msgid "Overview of reminders"
 msgstr "Trosolwg o atgoffa"
-
-#: app/templates/partials/sidebar/desktop_footer.html:15
-msgid "Select Theme"
-msgstr "Dewiswch y"
-
-#: app/templates/partials/sidebar/desktop_footer.html:20
-msgid "Select theme"
-msgstr "Dewiswch y"
-
-#: app/templates/partials/sidebar/desktop_footer.html:29
-#: app/templates/partials/sidebar/desktop_footer.html:35
-msgid "Select language"
-msgstr "Dewiswch y"
 
 #: app/templates/partials/sidebar/desktop_header.html:9
 msgid "Menu"
@@ -3871,27 +4008,27 @@ msgstr "Dim newidiau wedi'u gwneud."
 msgid "An error occurred while updating your account."
 msgstr "Digwyddodd gwall wrth ddiweddaru eich cyfrif."
 
-#: app/views/account.py:159
+#: app/views/account.py:164
 msgid "An error occurred while loading translation info."
 msgstr "Digwyddodd gwall wrth ddiweddaru'r defnyddiwr."
 
-#: app/views/account.py:186
+#: app/views/account.py:191
 msgid "You cannot delete your account because you are the last admin."
 msgstr "Ni allwch ddileu eich cyfrif oherwydd rydych chi'n weinyddwr olaf."
 
-#: app/views/account.py:195
+#: app/views/account.py:200
 msgid "Your account has been permanently deleted."
 msgstr "Mae eich cyfrif wedi'i ddileu'n barhaol."
 
-#: app/views/account.py:202
+#: app/views/account.py:207
 msgid "An error occurred while trying to delete your account."
 msgstr "Digwyddodd gwall wrth ddiweddaru eich cyfrif."
 
-#: app/views/account.py:221
+#: app/views/account.py:226
 msgid "Your account has been deleted"
 msgstr "Mae eich cyfrif wedi'i ddileu'n barhaol."
 
-#: app/views/account.py:223
+#: app/views/account.py:228
 #, python-brace-format
 msgid ""
 "Hello {username},\n"
@@ -3906,17 +4043,21 @@ msgstr ""
 "\n"
 "{site_url}"
 
-#: app/views/account.py:408
+#: app/views/account.py:413
 msgid "Each security question must be different."
 msgstr "Rhaid i'r tri chwestiwn fod yn wahanol."
 
-#: app/views/account.py:432
+#: app/views/account.py:437
 msgid "Security questions saved."
 msgstr "Cwestiynau diogelwch wedi eu harbed."
 
-#: app/views/account.py:448
+#: app/views/account.py:453
 msgid "An error occurred while saving your security questions."
 msgstr "Digwyddodd gwall wrth ddiweddaru eich cyfrif."
+
+#: app/views/account.py:475
+msgid "An error occurred while loading customization settings."
+msgstr "Digwyddodd gwall wrth ddiweddaru'r defnyddiwr."
 
 #: app/views/admin.py:41
 msgid "Failed to load admin dashboard."
@@ -3994,98 +4135,98 @@ msgstr ""
 msgid "An error occurred while creating the admin account."
 msgstr "Digwyddodd gwall wrth greu'r cyfrif gweinyddwr."
 
-#: app/views/auth.py:184
+#: app/views/auth.py:207
 msgid "Your account is not activated."
 msgstr "Mae eich cyfrif wedi'i ddileu'n barhaol."
 
-#: app/views/auth.py:192
+#: app/views/auth.py:215
 msgid "Multi-factor authentication required."
 msgstr "Hysbysiad wedi'i anablu"
 
-#: app/views/auth.py:196 app/views/mfa.py:222
+#: app/views/auth.py:219 app/views/mfa.py:218
 msgid "Logged in successfully."
 msgstr "Mewngofnodwyd yn llwyddiannus."
 
-#: app/views/auth.py:214
+#: app/views/auth.py:255
 msgid "Too many failed login attempts. Your account is locked for 15 minutes."
 msgstr "Gormod o geisiadau mewngofnodi aflwyddiannus. Arhoswch"
 
-#: app/views/auth.py:232
+#: app/views/auth.py:273
 msgid "Invalid username or password."
 msgstr "Enw defnyddiwr neu gyfrinair annilys."
 
-#: app/views/auth.py:258
+#: app/views/auth.py:299
 msgid "You have been logged out."
 msgstr "Rydych wedi bod yn allgofnodi."
 
-#: app/views/auth.py:320
+#: app/views/auth.py:361
 msgid "If a user with that email exists, we've sent the username to them."
 msgstr ""
 "Os oes defnyddiwr gyda'r e-bost hynny yn bodoli, rydym wedi danfon yr enw "
 "defnyddiwr atynt."
 
-#: app/views/auth.py:327
+#: app/views/auth.py:368
 msgid "An error occurred while sending your username reminder."
 msgstr "Digwyddodd gwall wrth ddiweddaru eich cyfrif."
 
-#: app/views/auth.py:379
+#: app/views/auth.py:420
 msgid "No account found matching that username and email."
 msgstr ""
 "Ni chanfuwyd unrhyw gyfrif sy'n cyfateb i'r enw defnyddiwr a'r e-bost hynny."
 
-#: app/views/auth.py:386
+#: app/views/auth.py:427
 msgid "An error occurred while checking your credentials."
 msgstr "Digwyddodd gwall wrth ddiweddaru eich cyfrif."
 
-#: app/views/auth.py:395
+#: app/views/auth.py:436
 msgid "Session expired. Please start over."
 msgstr "Sesiwn wedi dod i ben. Dechreuwch eto os gwelwch yn dda."
 
-#: app/views/auth.py:414
+#: app/views/auth.py:455
 msgid "Too many failed attempts. Please try again later."
 msgstr "Gormod o geisiadau mewngofnodi aflwyddiannus. Arhoswch"
 
-#: app/views/auth.py:435
+#: app/views/auth.py:476
 msgid "A password reset link has been sent to your email."
 msgstr "Mae dolen ailosod cyfrinair wedi'i hanfon at eich e-bost."
 
-#: app/views/auth.py:448
+#: app/views/auth.py:489
 msgid "One or more answers were incorrect."
 msgstr "Roedd un neu fwy o'r atebion yn anghywir."
 
-#: app/views/auth.py:458
+#: app/views/auth.py:499
 msgid "An error occurred while verifying your answers."
 msgstr "Digwyddodd gwall wrth ddiweddaru eich cyfrif."
 
-#: app/views/auth.py:491
+#: app/views/auth.py:532
 msgid "The reset link is invalid or has expired."
 msgstr "Mae'r ddolen ailosod yn annilys neu wedi dod i ben."
 
-#: app/views/auth.py:504
+#: app/views/auth.py:545
 msgid "Username and email do not match."
 msgstr "Nid yw'r enw defnyddiwr a'r ebost yn cyfateb."
 
-#: app/views/auth.py:528
+#: app/views/auth.py:569
 msgid "Your password has been reset. Please log in."
 msgstr "Mae eich cyfrinair wedi'i ailosod. Mewngofnodwch os gwelwch yn dda."
 
-#: app/views/auth.py:533
+#: app/views/auth.py:574
 msgid "An error occurred while resetting your password."
 msgstr "Digwyddodd gwall wrth ddileu'r defnyddiwr."
 
-#: app/views/auth.py:570
+#: app/views/auth.py:611
 msgid "Invalid registration PIN."
 msgstr "PIN cofrestru annilys."
 
-#: app/views/auth.py:579
+#: app/views/auth.py:620
 msgid "Username or email already exists."
 msgstr "Mae'r enw defnyddiwr neu'r ebost eisoes yn bodoli."
 
-#: app/views/auth.py:608
+#: app/views/auth.py:649
 msgid "Activate Your Grylli Account"
 msgstr "Actifadu Eich Cyfrif Grylli"
 
-#: app/views/auth.py:609
+#: app/views/auth.py:650
 #, python-brace-format
 msgid ""
 "Hello {username},\n"
@@ -4096,45 +4237,45 @@ msgstr ""
 "\n"
 "Os gwelwch yn dda actifadu eich cyfrif trwy glicio..."
 
-#: app/views/auth.py:615
+#: app/views/auth.py:656
 msgid "Account created! Please check your email to activate your account."
 msgstr ""
 "Mae'r cyfrif wedi'i greu! Gwiriwch eich ebost i actifadu eich cyfrif os "
 "gwelwch yn dda."
 
-#: app/views/auth.py:622
+#: app/views/auth.py:663
 msgid "An error occurred during signup."
 msgstr "Digwyddodd gwall wrth ddileu'r defnyddiwr."
 
-#: app/views/auth.py:641
+#: app/views/auth.py:682
 msgid "Activation link is invalid or expired."
 msgstr "Mae'r ddolen actifadu'n annilys neu wedi dod i ben."
 
-#: app/views/auth.py:648 app/views/users.py:135 app/views/users.py:202
+#: app/views/auth.py:689 app/views/users.py:136 app/views/users.py:203
 msgid "User not found."
 msgstr "Heb ddod o hyd i'r defnyddiwr."
 
-#: app/views/auth.py:652
+#: app/views/auth.py:693
 msgid "Account already activated. Please log in."
 msgstr "Mae'r cyfrif eisoes wedi'i actifadu. Mewngofnodwch os gwelwch yn dda."
 
-#: app/views/auth.py:663
+#: app/views/auth.py:704
 msgid "Your account has been activated! You can now log in."
 msgstr "Mae eich cyfrif wedi'i actifadu! Gallwch fewngofnodi nawr."
 
-#: app/views/auth.py:667
+#: app/views/auth.py:708
 msgid "Failed to activate account."
 msgstr "Methwyd â chreu copi wrth gefn."
 
-#: app/views/auth.py:699
+#: app/views/auth.py:740
 msgid "Security questions not set or user not found."
 msgstr "Cwestiynau diogelwch heb eu gosod neu defnyddiwr heb ei ddarganfod."
 
-#: app/views/auth.py:707
+#: app/views/auth.py:748
 msgid "Password reset email sent."
 msgstr "Nid yw'r cyfrineiriau'n cyfateb."
 
-#: app/views/auth.py:714
+#: app/views/auth.py:755
 msgid "Incorrect answer."
 msgstr "Ateb anghywir."
 
@@ -4259,7 +4400,7 @@ msgstr "Methwyd ag anfon prawf ebost:"
 msgid "An error occurred while loading the help page."
 msgstr "Digwyddodd gwall wrth ddiweddaru'r defnyddiwr."
 
-#: app/views/index.py:53
+#: app/views/index.py:55
 msgid "Error loading dashboard"
 msgstr "Yn ôl i E-byst"
 
@@ -4323,7 +4464,7 @@ msgstr "Neges wedi'i arbed."
 msgid "You must enter a code from your authenticator."
 msgstr "Rhaid i chi roi cod o'ch dilyswr."
 
-#: app/views/mfa.py:85 app/views/mfa.py:295 app/views/mfa.py:303
+#: app/views/mfa.py:85 app/views/mfa.py:291 app/views/mfa.py:299
 msgid "Invalid code. Please try again."
 msgstr "Cod annilys. Ceisiwch eto, os gwelwch yn dda."
 
@@ -4343,15 +4484,15 @@ msgstr "Dim ond ar ôl galluogi MFA y dangosir codau adfer yn syth."
 msgid "Could not load recovery codes."
 msgstr "Methu llwytho codau adfer."
 
-#: app/views/mfa.py:194
+#: app/views/mfa.py:190
 msgid "No MFA challenge in progress."
 msgstr "Dim her MFA ar waith."
 
-#: app/views/mfa.py:202
+#: app/views/mfa.py:198
 msgid "User not found for MFA challenge."
 msgstr "Heb ddod o hyd i'r defnyddiwr."
 
-#: app/views/mfa.py:262
+#: app/views/mfa.py:258
 msgid ""
 "You have used your last recovery code. MFA has been disabled. Please remove "
 "Grylli from your authenticator app, and re-enable MFA to protect your "
@@ -4361,12 +4502,12 @@ msgstr ""
 "Tynnwch Grylli o'ch app dilyswr, a galluogwch MFA eto i ddiogelu eich "
 "cyfrif."
 
-#: app/views/mfa.py:283
+#: app/views/mfa.py:279
 #, python-brace-format
 msgid "Recovery code accepted. You have {remaining} recovery codes left."
 msgstr "Derbyniwyd cod adfer. Mae gennych {remaining} codau adfer ar ôl."
 
-#: app/views/mfa.py:298
+#: app/views/mfa.py:294
 msgid "An unexpected error occurred during MFA challenge."
 msgstr "Digwyddodd gwall wrth ddileu'r defnyddiwr."
 
@@ -4541,87 +4682,87 @@ msgstr "Methwyd ag anfon prawf ebost. Gwiriwch y gosodiadau SMTP."
 msgid "Error sending test email."
 msgstr "Anfon E-bost Profi"
 
-#: app/views/users.py:58
+#: app/views/users.py:59
 msgid "Failed to load user list."
 msgstr "Yn ôl i E-byst"
 
-#: app/views/users.py:82
+#: app/views/users.py:83
 msgid "Password is required when creating a new user."
 msgstr "Mae angen cyfrinair wrth greu defnyddiwr newydd."
 
-#: app/views/users.py:87 app/views/users.py:156
+#: app/views/users.py:88 app/views/users.py:157
 msgid "Username already exists."
 msgstr "Mae'r enw defnyddiwr eisoes yn bodoli."
 
-#: app/views/users.py:92 app/views/users.py:163
+#: app/views/users.py:93 app/views/users.py:164
 msgid "Email already exists."
 msgstr "Mae'r e-bost eisoes yn bodoli."
 
-#: app/views/users.py:107
+#: app/views/users.py:108
 #, python-format
 msgid "User '%(username)s' created successfully."
 msgstr "Defnyddiwr '%(username)s' wedi'i greu'n llwyddiannus."
 
-#: app/views/users.py:115
+#: app/views/users.py:116
 msgid "Failed to create user."
 msgstr "Methwyd â chreu defnyddiwr."
 
-#: app/views/users.py:176
+#: app/views/users.py:177
 msgid "User updated successfully."
 msgstr "Diweddarwyd y defnyddiwr yn llwyddiannus."
 
-#: app/views/users.py:183 app/views/users.py:301
+#: app/views/users.py:184 app/views/users.py:320
 msgid "An error occurred while updating the user."
 msgstr "Digwyddodd gwall wrth ddiweddaru'r defnyddiwr."
 
-#: app/views/users.py:255
+#: app/views/users.py:256
 msgid "User deleted."
 msgstr "Defnyddiwr wedi'i ddileu."
 
-#: app/views/users.py:262
+#: app/views/users.py:263
 msgid "An error occurred while deleting the user."
 msgstr "Digwyddodd gwall wrth ddileu'r defnyddiwr."
 
-#: app/views/users.py:279
+#: app/views/users.py:280
 msgid "You cannot change your own enabled status."
 msgstr "Ni allwch newid eich statws galluog eich hun."
 
-#: app/views/users.py:292
+#: app/views/users.py:311
 #, python-format
 msgid "User '%(username)s' has been %(status)s."
 msgstr "Mae defnyddiwr '%(username)s' wedi bod yn %(status)s."
 
-#: app/views/users.py:318
+#: app/views/users.py:337
 msgid "You cannot reset your own MFA."
 msgstr "⚪ = Ni allwch anablu eich cyfrif eich hun."
 
-#: app/views/users.py:331
+#: app/views/users.py:368
 #, python-format
 msgid "MFA disabled for user '%(username)s'."
 msgstr "MFA wedi'i anablu ar gyfer defnyddiwr '%(username)s'."
 
-#: app/views/users.py:335
+#: app/views/users.py:372
 msgid "An error occurred while resetting MFA."
 msgstr "Digwyddodd gwall wrth ddileu'r defnyddiwr."
 
-#: app/views/users.py:358
+#: app/views/users.py:395
 msgid "Invalid role"
 msgstr "Rôl annilys."
 
-#: app/views/users.py:364
+#: app/views/users.py:417
 #, python-format
 msgid "Role updated for %(username)s."
 msgstr "MFA wedi'i anablu ar gyfer defnyddiwr '%(username)s'."
 
-#: app/views/users.py:370
+#: app/views/users.py:425
 msgid "An error occurred while updating the role."
 msgstr "Digwyddodd gwall wrth ddiweddaru'r defnyddiwr."
 
-#: app/views/users.py:390
+#: app/views/users.py:463
 msgid "User account unlocked."
 msgstr "Mae eich cyfrif wedi'i ddileu'n barhaol."
 
-#: app/views/users.py:395
+#: app/views/users.py:468
 msgid "An error occurred while unlocking the account."
 msgstr "Digwyddodd gwall wrth greu'r cyfrif gweinyddwr."
 
@@ -5383,3 +5524,9 @@ msgstr "Digwyddodd gwall wrth ddileu'r defnyddiwr."
 
 #~ msgid "Failed to send test email. "
 #~ msgstr "Methwyd ag anfon prawf ebost:"
+
+#~ msgid "Select Theme"
+#~ msgstr "Dewiswch y"
+
+#~ msgid "Select theme"
+#~ msgstr "Dewiswch y"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-07-14 11:49-0500\n"
+"POT-Creation-Date: 2025-07-25 13:21-0500\n"
 "PO-Revision-Date: 2025-05-25 16:12-0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: is <LL@li.org>\n"
@@ -362,7 +362,7 @@ msgstr ""
 "áreiðanlega."
 
 #: app/templates/help_full.html:7
-#: app/templates/partials/profile_dropdown_menu.html:57
+#: app/templates/partials/profile_dropdown_menu.html:89
 msgid "Help"
 msgstr "Aðstoð"
 
@@ -501,7 +501,7 @@ msgstr ""
 " eins og ætlað er."
 
 #: app/templates/help_partial.html:45
-#: app/templates/partials/profile_dropdown_menu.html:22
+#: app/templates/partials/profile_dropdown_menu.html:28
 msgid "Security"
 msgstr "🔐 Öryggi"
 
@@ -521,7 +521,7 @@ msgstr ""
 "Þarf aðstoð við eitthvað sérstakt? Hvert einasta eining í Grylli hefur sitt "
 "eigin hjálparpanil með nákvæmum leiðbeiningum."
 
-#: app/templates/partials/profile_dropdown_menu.html:66
+#: app/templates/partials/profile_dropdown_menu.html:102
 #: app/templates/privacy_full.html:7
 msgid "Privacy"
 msgstr "Persónuvernd"
@@ -664,7 +664,7 @@ msgstr "Kerfisstillingar"
 msgid "This endpoint provides system health and version information."
 msgstr "Þessi endapunktur veitir upplýsingar um kerfisheilsu og útgáfu."
 
-#: app/templates/partials/profile_dropdown_menu.html:75
+#: app/templates/partials/profile_dropdown_menu.html:115
 #: app/templates/system_info_full.html:7
 msgid "System Info"
 msgstr "Kerfisupplýsingar"
@@ -759,6 +759,109 @@ msgstr ""
 #: app/templates/auth/signup.html:16
 msgid "Please fix the following errors:"
 msgstr "Vinsamlegast lagaðu eftirfarandi villur:"
+
+#: app/templates/account/customization_full.html:7
+#: app/templates/partials/profile_dropdown_menu.html:67
+msgid "Customization"
+msgstr "Aðlögun"
+
+#: app/templates/account/customization_partial.html:10
+msgid "Customize Your Interface"
+msgstr "Aðlagaðu viðmótið þitt"
+
+#: app/templates/account/customization_partial.html:13
+msgid ""
+"Change the look and feel of Grylli using the options below. Your preferences"
+" are saved in your browser."
+msgstr ""
+"Breyttu útliti og tilfinningu Grylli með valmöguleikunum hér að neðan. "
+"Stilltingar þínar eru vistaðar í vafranum þínum."
+
+#: app/templates/account/customization_partial.html:20
+msgid "Font Family"
+msgstr "Leturfjölskyldan"
+
+#: app/templates/account/customization_partial.html:33
+msgid "Font Size"
+msgstr "Leturstærð"
+
+#: app/templates/account/customization_partial.html:38
+msgid "Extra Small"
+msgstr "Extra lítið"
+
+#: app/templates/account/customization_partial.html:39
+msgid "Small"
+msgstr "Allt"
+
+#: app/templates/account/customization_partial.html:40
+#: app/templates/account/customization_partial.html:64
+#: app/templates/account/customization_partial.html:101
+msgid "Default"
+msgstr "Eyða"
+
+#: app/templates/account/customization_partial.html:41
+msgid "Large"
+msgstr "Merkimiði"
+
+#: app/templates/account/customization_partial.html:42
+msgid "Extra Large"
+msgstr "Extra stórt"
+
+#: app/templates/account/customization_partial.html:48
+msgid "Background Pattern"
+msgstr "Bakgrunnsmynstur"
+
+#: app/templates/account/customization_partial.html:59
+msgid "Contrast"
+msgstr "Efni"
+
+#: app/templates/account/customization_partial.html:65
+msgid "Low Contrast"
+msgstr "Lítið kontrast"
+
+#: app/templates/account/customization_partial.html:66
+msgid "High Contrast"
+msgstr "Mikið kontrast"
+
+#: app/templates/account/customization_partial.html:72
+msgid "Letter Spacing"
+msgstr "Leturbil"
+
+#: app/templates/account/customization_partial.html:76
+msgid "Tight"
+msgstr "Þétt"
+
+#: app/templates/account/customization_partial.html:77
+msgid "Normal"
+msgstr "Venjulegt"
+
+#: app/templates/account/customization_partial.html:78
+msgid "Wide"
+msgstr "ID"
+
+#: app/templates/account/customization_partial.html:84
+msgid "Reading Density"
+msgstr "Lesþéttleiki"
+
+#: app/templates/account/customization_partial.html:96
+msgid "Border Radius"
+msgstr "Rammasveigur"
+
+#: app/templates/account/customization_partial.html:102
+msgid "Sharp Corners"
+msgstr "Skörp horn"
+
+#: app/templates/account/customization_partial.html:103
+msgid "Extra Rounded"
+msgstr "Extra ávöl"
+
+#: app/templates/account/customization_partial.html:109
+msgid "Theme"
+msgstr "Heim"
+
+#: app/templates/account/customization_partial.html:125
+msgid "Language"
+msgstr "Veldu viðeigandi"
 
 #: app/templates/account/manage_account_full.html:7
 #: app/templates/account/manage_account_partial.html:9
@@ -899,12 +1002,19 @@ msgid "Deleting your account is permanent and cannot be undone."
 msgstr "Eyðing reikningsins þíns er varanleg og getur ekki verið afturkölluð."
 
 #: app/templates/account/manage_account_partial.html:130
-msgid "Are you sure you want to delete your account?"
-msgstr "Ertu viss um að þú viljir endurstilla MFA fyrir þennan notanda?"
-
 #: app/templates/account/manage_account_partial.html:132
+msgid "You are the last admin. Deleting your account is not allowed."
+msgstr ""
+"Þú ert síðasti stjórnandinn. Ekki er leyfilegt að eyða reikningnum þínum."
+
+#: app/templates/account/manage_account_partial.html:133
+#: app/templates/account/manage_account_partial.html:143
 msgid "Delete My Account"
 msgstr "Uppfæra Reikning"
+
+#: app/templates/account/manage_account_partial.html:140
+msgid "Are you sure you want to delete your account?"
+msgstr "Ertu viss um að þú viljir endurstilla MFA fyrir þennan notanda?"
 
 #: app/templates/account/set_security_questions_full.html:7
 msgid "Security Questions"
@@ -936,7 +1046,7 @@ msgstr "Uppfæra Reikning"
 
 #: app/templates/account/translations_full.html:7
 #: app/templates/account/translations_partial.html:8
-#: app/templates/partials/profile_dropdown_menu.html:95
+#: app/templates/partials/profile_dropdown_menu.html:139
 msgid "Translations"
 msgstr "Þýðingar"
 
@@ -1116,7 +1226,7 @@ msgstr "Fylltu út formið til að bæta við nýjum notanda."
 
 #: app/templates/admin/create_user_partial.html:26
 #: app/templates/admin/edit_user.html:28
-#: app/templates/admin/partials/table_view.html:13
+#: app/templates/admin/partials/table_view.html:14
 #: app/templates/admin/reports/report_accounts_partial.html:10
 #: app/templates/user_smtp/partials/table_view.html:13
 msgid "Username"
@@ -1124,14 +1234,14 @@ msgstr "Notandanafn"
 
 #: app/templates/admin/create_user_partial.html:36
 #: app/templates/admin/edit_user.html:36
-#: app/templates/admin/partials/table_view.html:14
+#: app/templates/admin/partials/table_view.html:15
 #: app/templates/admin/reports/report_accounts_partial.html:11
 #: app/templates/dashboard/partials/_linked_items_partial.html:15
 msgid "Email"
 msgstr "Netfang"
 
 #: app/templates/admin/create_user_partial.html:49
-#: app/templates/admin/partials/table_view.html:15
+#: app/templates/admin/partials/table_view.html:16
 #: app/templates/admin/reports/report_accounts_partial.html:12
 msgid "Role"
 msgstr "Hlutverk"
@@ -1647,11 +1757,11 @@ msgstr ""
 "Allar aðgerðir eru skráðar fyrir ábyrgð. Lykilorð og leyndarmál eru aldrei "
 "sýnileg."
 
-#: app/templates/admin/partials/table_view.html:12
+#: app/templates/admin/partials/table_view.html:13
 msgid "ID"
 msgstr "ID"
 
-#: app/templates/admin/partials/table_view.html:16
+#: app/templates/admin/partials/table_view.html:17
 #: app/templates/admin/tools/partials/backup_table.html:13
 #: app/templates/apprise/apprise_config.html:59
 #: app/templates/apprise/partials/table_view.html:14
@@ -1667,7 +1777,7 @@ msgstr "ID"
 msgid "Actions"
 msgstr "Aðgerðir"
 
-#: app/templates/admin/partials/table_view.html:35
+#: app/templates/admin/partials/table_view.html:36
 #: app/templates/admin/reports/report_accounts_partial.html:52
 msgid "No users available."
 msgstr "Engir notendur tiltækir."
@@ -1767,7 +1877,8 @@ msgstr "Kerfisstillingar"
 msgid "Details"
 msgstr "Tölvupóstar"
 
-#: app/templates/admin/reports/report_scheduler_partial.html:37
+#: app/templates/admin/reports/report_scheduler_partial.html:38
+#: app/templates/admin/reports/report_scheduler_partial.html:46
 msgid "No scheduler activity found."
 msgstr "Enga vinnuáætlun finna."
 
@@ -1790,6 +1901,10 @@ msgstr "Fara aftur á mælingaborð"
 #: app/templates/admin/reports/reports_tabs.html:38
 msgid "Scheduler Activity"
 msgstr "Tímasetja tölvupóst"
+
+#: app/templates/admin/reports/reports_tabs.html:46
+msgid "Grylli | Reports | Logs"
+msgstr "Stjórnborð"
 
 #: app/templates/admin/reports/reports_tabs.html:51
 msgid "Application Logs"
@@ -3246,11 +3361,11 @@ msgstr "Yfirlit"
 msgid "Grylli | Admin | Users"
 msgstr "Grylli | Stjórnandi | Notendur"
 
-#: app/templates/partials/head.html:14
+#: app/templates/partials/head.html:16
 msgid "Grylli is a secure message scheduling and delivery platform."
 msgstr "Grylli er öruggur vettvangur fyrir áætlun og afhendingu skilaboða."
 
-#: app/templates/partials/head.html:25
+#: app/templates/partials/head.html:35
 msgid "Grylli"
 msgstr "Grylli"
 
@@ -3264,23 +3379,59 @@ msgstr "Heim"
 msgid "Check-ins Due"
 msgstr "Innritun"
 
-#: app/templates/partials/profile_dropdown_menu.html:13
+#: app/templates/partials/profile_dropdown_menu.html:9
+msgid "Grylli | Account"
+msgstr "Stjórnborð"
+
+#: app/templates/partials/profile_dropdown_menu.html:15
 msgid "Account"
 msgstr "Aðgangur"
 
-#: app/templates/partials/profile_dropdown_menu.html:31
+#: app/templates/partials/profile_dropdown_menu.html:22
+msgid "Grylli | Security Questions"
+msgstr "🔐 Öryggi"
+
+#: app/templates/partials/profile_dropdown_menu.html:35
+msgid "Grylli | MFA"
+msgstr "Grylli"
+
+#: app/templates/partials/profile_dropdown_menu.html:41
 msgid "MFA"
 msgstr "MFA"
 
-#: app/templates/partials/profile_dropdown_menu.html:40
+#: app/templates/partials/profile_dropdown_menu.html:48
+msgid "Grylli | About"
+msgstr "Stjórnborð"
+
+#: app/templates/partials/profile_dropdown_menu.html:54
 msgid "About"
 msgstr "Um"
 
-#: app/templates/partials/profile_dropdown_menu.html:48
+#: app/templates/partials/profile_dropdown_menu.html:61
+msgid "Grylli | Customization"
+msgstr "Grylli | Tölvupóstar | SMTP"
+
+#: app/templates/partials/profile_dropdown_menu.html:77
 msgid "GitHub"
 msgstr "GitHub"
 
-#: app/templates/partials/profile_dropdown_menu.html:107
+#: app/templates/partials/profile_dropdown_menu.html:83
+msgid "Grylli | Help"
+msgstr "Grylli | Tölvupóstar | SMTP"
+
+#: app/templates/partials/profile_dropdown_menu.html:96
+msgid "Grylli | Privacy"
+msgstr "Persónuvernd"
+
+#: app/templates/partials/profile_dropdown_menu.html:109
+msgid "Grylli | System Info"
+msgstr "Kerfisstillingar"
+
+#: app/templates/partials/profile_dropdown_menu.html:122
+msgid "Grylli | Translations"
+msgstr "Þýðingar"
+
+#: app/templates/partials/profile_dropdown_menu.html:153
 msgid "Logout"
 msgstr "Útskráning"
 
@@ -3335,19 +3486,6 @@ msgstr "Grylli | Áminningar | Yfirlit"
 #: app/templates/partials/shared_nav.html:165
 msgid "Overview of reminders"
 msgstr "Yfirlit yfir áminningar"
-
-#: app/templates/partials/sidebar/desktop_footer.html:15
-msgid "Select Theme"
-msgstr "Veldu viðeigandi"
-
-#: app/templates/partials/sidebar/desktop_footer.html:20
-msgid "Select theme"
-msgstr "Veldu viðeigandi"
-
-#: app/templates/partials/sidebar/desktop_footer.html:29
-#: app/templates/partials/sidebar/desktop_footer.html:35
-msgid "Select language"
-msgstr "Veldu viðeigandi"
 
 #: app/templates/partials/sidebar/desktop_header.html:9
 msgid "Menu"
@@ -3853,27 +3991,27 @@ msgstr "Engar breytingar gerðar."
 msgid "An error occurred while updating your account."
 msgstr "Villa kom upp við uppfærslu reikningsins."
 
-#: app/views/account.py:159
+#: app/views/account.py:164
 msgid "An error occurred while loading translation info."
 msgstr "Villa kom upp þegar verið var að uppfæra notanda."
 
-#: app/views/account.py:186
+#: app/views/account.py:191
 msgid "You cannot delete your account because you are the last admin."
 msgstr "Þú getur ekki eytt reikningnum þínum því þú ert síðasti stjórnandi."
 
-#: app/views/account.py:195
+#: app/views/account.py:200
 msgid "Your account has been permanently deleted."
 msgstr "Reikningur þinn hefur verið varanlega eytt."
 
-#: app/views/account.py:202
+#: app/views/account.py:207
 msgid "An error occurred while trying to delete your account."
 msgstr "Villa kom upp við uppfærslu reikningsins."
 
-#: app/views/account.py:221
+#: app/views/account.py:226
 msgid "Your account has been deleted"
 msgstr "Reikningur þinn hefur verið varanlega eytt."
 
-#: app/views/account.py:223
+#: app/views/account.py:228
 #, python-brace-format
 msgid ""
 "Hello {username},\n"
@@ -3888,17 +4026,21 @@ msgstr ""
 "\n"
 "{site_url}"
 
-#: app/views/account.py:408
+#: app/views/account.py:413
 msgid "Each security question must be different."
 msgstr "Allar þrjár spurningarnar verða að vera mismunandi."
 
-#: app/views/account.py:432
+#: app/views/account.py:437
 msgid "Security questions saved."
 msgstr "Öryggisspurningar vistaðar."
 
-#: app/views/account.py:448
+#: app/views/account.py:453
 msgid "An error occurred while saving your security questions."
 msgstr "Villa kom upp við uppfærslu reikningsins."
+
+#: app/views/account.py:475
+msgid "An error occurred while loading customization settings."
+msgstr "Villa kom upp þegar verið var að uppfæra notanda."
 
 #: app/views/admin.py:41
 msgid "Failed to load admin dashboard."
@@ -3976,98 +4118,98 @@ msgstr ""
 msgid "An error occurred while creating the admin account."
 msgstr "Villa kom upp við að búa til stjórnendur reikning."
 
-#: app/views/auth.py:184
+#: app/views/auth.py:207
 msgid "Your account is not activated."
 msgstr "Reikningur þinn hefur verið varanlega eytt."
 
-#: app/views/auth.py:192
+#: app/views/auth.py:215
 msgid "Multi-factor authentication required."
 msgstr "Tilkynning er óvirk"
 
-#: app/views/auth.py:196 app/views/mfa.py:222
+#: app/views/auth.py:219 app/views/mfa.py:218
 msgid "Logged in successfully."
 msgstr "Innskráður með góðum árangri."
 
-#: app/views/auth.py:214
+#: app/views/auth.py:255
 msgid "Too many failed login attempts. Your account is locked for 15 minutes."
 msgstr "Of margar innsláttartilraunir mistókust. Vinsamlegast bíðið"
 
-#: app/views/auth.py:232
+#: app/views/auth.py:273
 msgid "Invalid username or password."
 msgstr "Ógilt notandanafn eða lykilorð."
 
-#: app/views/auth.py:258
+#: app/views/auth.py:299
 msgid "You have been logged out."
 msgstr "Þú hefur verið útskráður."
 
-#: app/views/auth.py:320
+#: app/views/auth.py:361
 msgid "If a user with that email exists, we've sent the username to them."
 msgstr ""
 "Ef notandi með það netfang er til, höfum við sent honum notandanafnið."
 
-#: app/views/auth.py:327
+#: app/views/auth.py:368
 msgid "An error occurred while sending your username reminder."
 msgstr "Villa kom upp við uppfærslu reikningsins."
 
-#: app/views/auth.py:379
+#: app/views/auth.py:420
 msgid "No account found matching that username and email."
 msgstr "Ekkert reikningur fannst sem samsvarar því notandanafni og netfangi."
 
-#: app/views/auth.py:386
+#: app/views/auth.py:427
 msgid "An error occurred while checking your credentials."
 msgstr "Villa kom upp við uppfærslu reikningsins."
 
-#: app/views/auth.py:395
+#: app/views/auth.py:436
 msgid "Session expired. Please start over."
 msgstr "Lotan rann út. Vinsamlegast byrjið upp á nýtt."
 
-#: app/views/auth.py:414
+#: app/views/auth.py:455
 msgid "Too many failed attempts. Please try again later."
 msgstr "Of margar innsláttartilraunir mistókust. Vinsamlegast bíðið"
 
-#: app/views/auth.py:435
+#: app/views/auth.py:476
 msgid "A password reset link has been sent to your email."
 msgstr ""
 "Tengil til að endurstilla lykilorð hefur verið sendur í tölvupóstinn þinn."
 
-#: app/views/auth.py:448
+#: app/views/auth.py:489
 msgid "One or more answers were incorrect."
 msgstr "Eitt eða fleiri svör voru röng."
 
-#: app/views/auth.py:458
+#: app/views/auth.py:499
 msgid "An error occurred while verifying your answers."
 msgstr "Villa kom upp við uppfærslu reikningsins."
 
-#: app/views/auth.py:491
+#: app/views/auth.py:532
 msgid "The reset link is invalid or has expired."
 msgstr "Endurstillingartengillinn er ógildur eða útrunninn."
 
-#: app/views/auth.py:504
+#: app/views/auth.py:545
 msgid "Username and email do not match."
 msgstr "Notendanafn og netfang passa ekki saman."
 
-#: app/views/auth.py:528
+#: app/views/auth.py:569
 msgid "Your password has been reset. Please log in."
 msgstr ""
 "Lykilorðinu þínu hefur verið endurstillt. Vinsamlegast skráðu þig inn."
 
-#: app/views/auth.py:533
+#: app/views/auth.py:574
 msgid "An error occurred while resetting your password."
 msgstr "Villa kom upp við að eyða notanda."
 
-#: app/views/auth.py:570
+#: app/views/auth.py:611
 msgid "Invalid registration PIN."
 msgstr "Ógildur skráningarnúmer."
 
-#: app/views/auth.py:579
+#: app/views/auth.py:620
 msgid "Username or email already exists."
 msgstr "Notandanafn eða netfang er þegar til."
 
-#: app/views/auth.py:608
+#: app/views/auth.py:649
 msgid "Activate Your Grylli Account"
 msgstr "Virkjaðu Grylli reikninginn þinn"
 
-#: app/views/auth.py:609
+#: app/views/auth.py:650
 #, python-brace-format
 msgid ""
 "Hello {username},\n"
@@ -4078,45 +4220,45 @@ msgstr ""
 "\n"
 "Vinsamlegast virkjaðu reikninginn þinn með því að smella..."
 
-#: app/views/auth.py:615
+#: app/views/auth.py:656
 msgid "Account created! Please check your email to activate your account."
 msgstr ""
 "Reikningur búinn til! Vinsamlegast athugaðu netfangið þitt til að virkja "
 "reikninginn þinn."
 
-#: app/views/auth.py:622
+#: app/views/auth.py:663
 msgid "An error occurred during signup."
 msgstr "Villa kom upp við að eyða notanda."
 
-#: app/views/auth.py:641
+#: app/views/auth.py:682
 msgid "Activation link is invalid or expired."
 msgstr "Virkjunartengill er ógildur eða útrunninn."
 
-#: app/views/auth.py:648 app/views/users.py:135 app/views/users.py:202
+#: app/views/auth.py:689 app/views/users.py:136 app/views/users.py:203
 msgid "User not found."
 msgstr "Notandi fannst ekki."
 
-#: app/views/auth.py:652
+#: app/views/auth.py:693
 msgid "Account already activated. Please log in."
 msgstr "Reikningur þegar virkjaður. Vinsamlegast skráðu þig inn."
 
-#: app/views/auth.py:663
+#: app/views/auth.py:704
 msgid "Your account has been activated! You can now log in."
 msgstr "Reikningur þinn hefur verið virkjaður! Þú getur nú skráð þig inn."
 
-#: app/views/auth.py:667
+#: app/views/auth.py:708
 msgid "Failed to activate account."
 msgstr "Mistókst að búa til afrit."
 
-#: app/views/auth.py:699
+#: app/views/auth.py:740
 msgid "Security questions not set or user not found."
 msgstr "Öryggisspurningar ekki settar eða notandi fannst ekki."
 
-#: app/views/auth.py:707
+#: app/views/auth.py:748
 msgid "Password reset email sent."
 msgstr "Lykilorð passa ekki saman."
 
-#: app/views/auth.py:714
+#: app/views/auth.py:755
 msgid "Incorrect answer."
 msgstr "Rangt svar."
 
@@ -4241,7 +4383,7 @@ msgstr "Mistókst að senda prófunarpóst:"
 msgid "An error occurred while loading the help page."
 msgstr "Villa kom upp þegar verið var að uppfæra notanda."
 
-#: app/views/index.py:53
+#: app/views/index.py:55
 msgid "Error loading dashboard"
 msgstr "Til baka í tölvupósta"
 
@@ -4305,7 +4447,7 @@ msgstr "Skilaboð vistuð."
 msgid "You must enter a code from your authenticator."
 msgstr "Þú verður að slá inn kóða úr auðkenningaranum þínum."
 
-#: app/views/mfa.py:85 app/views/mfa.py:295 app/views/mfa.py:303
+#: app/views/mfa.py:85 app/views/mfa.py:291 app/views/mfa.py:299
 msgid "Invalid code. Please try again."
 msgstr "Ógildur kóði. Vinsamlegast reyndu aftur."
 
@@ -4325,15 +4467,15 @@ msgstr "Endurheimtunar kóðar eru aðeins sýndir strax eftir að MFA er virkja
 msgid "Could not load recovery codes."
 msgstr "Ekki tókst að hlaða inn endurheimtunar kóðum."
 
-#: app/views/mfa.py:194
+#: app/views/mfa.py:190
 msgid "No MFA challenge in progress."
 msgstr "Engin MFA áskorun í gangi."
 
-#: app/views/mfa.py:202
+#: app/views/mfa.py:198
 msgid "User not found for MFA challenge."
 msgstr "Notandi fannst ekki."
 
-#: app/views/mfa.py:262
+#: app/views/mfa.py:258
 msgid ""
 "You have used your last recovery code. MFA has been disabled. Please remove "
 "Grylli from your authenticator app, and re-enable MFA to protect your "
@@ -4343,14 +4485,14 @@ msgstr ""
 "Vinsamlegast fjarlægðu Grylli úr auðkenningaranum þínum, og virkjaðu MFA "
 "aftur til að vernda reikninginn þinn."
 
-#: app/views/mfa.py:283
+#: app/views/mfa.py:279
 #, python-brace-format
 msgid "Recovery code accepted. You have {remaining} recovery codes left."
 msgstr ""
 "Endurheimtunar kóði samþykktur. Þú hefur {remaining} endurheimtunar kóða "
 "eftir."
 
-#: app/views/mfa.py:298
+#: app/views/mfa.py:294
 msgid "An unexpected error occurred during MFA challenge."
 msgstr "Villa kom upp við að eyða notanda."
 
@@ -4524,87 +4666,87 @@ msgstr "Mistókst að senda prófunarpóst. Athugaðu SMTP stillingar."
 msgid "Error sending test email."
 msgstr "Senda prufupóst"
 
-#: app/views/users.py:58
+#: app/views/users.py:59
 msgid "Failed to load user list."
 msgstr "Til baka í tölvupósta"
 
-#: app/views/users.py:82
+#: app/views/users.py:83
 msgid "Password is required when creating a new user."
 msgstr "Lykilorð er krafist þegar verið er að stofna nýjan notanda."
 
-#: app/views/users.py:87 app/views/users.py:156
+#: app/views/users.py:88 app/views/users.py:157
 msgid "Username already exists."
 msgstr "Notandanafn er þegar til."
 
-#: app/views/users.py:92 app/views/users.py:163
+#: app/views/users.py:93 app/views/users.py:164
 msgid "Email already exists."
 msgstr "Netfang er þegar til."
 
-#: app/views/users.py:107
+#: app/views/users.py:108
 #, python-format
 msgid "User '%(username)s' created successfully."
 msgstr "Notandi '%(username)s' var búinn til með góðum árangri."
 
-#: app/views/users.py:115
+#: app/views/users.py:116
 msgid "Failed to create user."
 msgstr "Tókst ekki að búa til notanda."
 
-#: app/views/users.py:176
+#: app/views/users.py:177
 msgid "User updated successfully."
 msgstr "Notandi uppfærður með árangri."
 
-#: app/views/users.py:183 app/views/users.py:301
+#: app/views/users.py:184 app/views/users.py:320
 msgid "An error occurred while updating the user."
 msgstr "Villa kom upp þegar verið var að uppfæra notanda."
 
-#: app/views/users.py:255
+#: app/views/users.py:256
 msgid "User deleted."
 msgstr "Notandi eytt."
 
-#: app/views/users.py:262
+#: app/views/users.py:263
 msgid "An error occurred while deleting the user."
 msgstr "Villa kom upp við að eyða notanda."
 
-#: app/views/users.py:279
+#: app/views/users.py:280
 msgid "You cannot change your own enabled status."
 msgstr "Þú getur ekki breytt þínu eigin virkjunarstöðu."
 
-#: app/views/users.py:292
+#: app/views/users.py:311
 #, python-format
 msgid "User '%(username)s' has been %(status)s."
 msgstr "Notandi '%(username)s' hefur verið %(status)s."
 
-#: app/views/users.py:318
+#: app/views/users.py:337
 msgid "You cannot reset your own MFA."
 msgstr "⚪ = Þú getur ekki afvirkjað þinn eigin reikning."
 
-#: app/views/users.py:331
+#: app/views/users.py:368
 #, python-format
 msgid "MFA disabled for user '%(username)s'."
 msgstr "MFA óvirkt fyrir notanda '%(username)s'."
 
-#: app/views/users.py:335
+#: app/views/users.py:372
 msgid "An error occurred while resetting MFA."
 msgstr "Villa kom upp við að eyða notanda."
 
-#: app/views/users.py:358
+#: app/views/users.py:395
 msgid "Invalid role"
 msgstr "Ógilt hlutverk."
 
-#: app/views/users.py:364
+#: app/views/users.py:417
 #, python-format
 msgid "Role updated for %(username)s."
 msgstr "MFA óvirkt fyrir notanda '%(username)s'."
 
-#: app/views/users.py:370
+#: app/views/users.py:425
 msgid "An error occurred while updating the role."
 msgstr "Villa kom upp þegar verið var að uppfæra notanda."
 
-#: app/views/users.py:390
+#: app/views/users.py:463
 msgid "User account unlocked."
 msgstr "Reikningur þinn hefur verið varanlega eytt."
 
-#: app/views/users.py:395
+#: app/views/users.py:468
 msgid "An error occurred while unlocking the account."
 msgstr "Villa kom upp við að búa til stjórnendur reikning."
 
@@ -5361,3 +5503,9 @@ msgstr "Villa kom upp við að eyða notanda."
 
 #~ msgid "Failed to send test email. "
 #~ msgstr "Mistókst að senda prófunarpóst:"
+
+#~ msgid "Select Theme"
+#~ msgstr "Veldu viðeigandi"
+
+#~ msgid "Select theme"
+#~ msgstr "Veldu viðeigandi"

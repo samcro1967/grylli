@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-07-14 11:49-0500\n"
+"POT-Creation-Date: 2025-07-25 13:21-0500\n"
 "PO-Revision-Date: 2025-05-25 13:03-0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: gd <LL@li.org>\n"
@@ -369,7 +369,7 @@ msgstr ""
 "tèarainte agus gu earbsach."
 
 #: app/templates/help_full.html:7
-#: app/templates/partials/profile_dropdown_menu.html:57
+#: app/templates/partials/profile_dropdown_menu.html:89
 msgid "Help"
 msgstr "Cobhair"
 
@@ -510,7 +510,7 @@ msgstr ""
 " dèanamh cinnteach gu bheil iad ag obair mar a bha dùil."
 
 #: app/templates/help_partial.html:45
-#: app/templates/partials/profile_dropdown_menu.html:22
+#: app/templates/partials/profile_dropdown_menu.html:28
 msgid "Security"
 msgstr "🔐 Tèarainteachd"
 
@@ -531,7 +531,7 @@ msgstr ""
 "Feumaidh cuideachadh le rudeigin sònraichte? Tha gach modal ann an Grylli a’"
 " toirt a-steach am pannal cuideachaidh fhèin le stiùireadh mionaideach."
 
-#: app/templates/partials/profile_dropdown_menu.html:66
+#: app/templates/partials/profile_dropdown_menu.html:102
 #: app/templates/privacy_full.html:7
 msgid "Privacy"
 msgstr "Prìobhaideachd"
@@ -685,7 +685,7 @@ msgstr ""
 "Bheir an ceann-uidhe seo seachad fhiosrachadh air slàinte is tionndadh an "
 "t-siostaim."
 
-#: app/templates/partials/profile_dropdown_menu.html:75
+#: app/templates/partials/profile_dropdown_menu.html:115
 #: app/templates/system_info_full.html:7
 msgid "System Info"
 msgstr "Fiosrachadh Siostam"
@@ -781,6 +781,109 @@ msgstr ""
 #: app/templates/auth/signup.html:16
 msgid "Please fix the following errors:"
 msgstr "Feuch an cuir thu ceart na mearachdan a leanas:"
+
+#: app/templates/account/customization_full.html:7
+#: app/templates/partials/profile_dropdown_menu.html:67
+msgid "Customization"
+msgstr "Gnàthachadh"
+
+#: app/templates/account/customization_partial.html:10
+msgid "Customize Your Interface"
+msgstr "Gnàthaich an Eadar-aghaidh Agad"
+
+#: app/templates/account/customization_partial.html:13
+msgid ""
+"Change the look and feel of Grylli using the options below. Your preferences"
+" are saved in your browser."
+msgstr ""
+"Atharraich coltas is faireachdainn Grylli a’ cleachdadh nan roghainnean gu "
+"h-ìosal. Tha na roghainnean agad air an sàbhaladh sa bhrobhsair agad."
+
+#: app/templates/account/customization_partial.html:20
+msgid "Font Family"
+msgstr "Teaghlach Cruth-clò"
+
+#: app/templates/account/customization_partial.html:33
+msgid "Font Size"
+msgstr "Meud Cruth-clò"
+
+#: app/templates/account/customization_partial.html:38
+msgid "Extra Small"
+msgstr "Glè Bheag"
+
+#: app/templates/account/customization_partial.html:39
+msgid "Small"
+msgstr "Uile"
+
+#: app/templates/account/customization_partial.html:40
+#: app/templates/account/customization_partial.html:64
+#: app/templates/account/customization_partial.html:101
+msgid "Default"
+msgstr "Sguab às"
+
+#: app/templates/account/customization_partial.html:41
+msgid "Large"
+msgstr "Label"
+
+#: app/templates/account/customization_partial.html:42
+msgid "Extra Large"
+msgstr "Glè Mhòr"
+
+#: app/templates/account/customization_partial.html:48
+msgid "Background Pattern"
+msgstr "Pàtran Cùl-raoin"
+
+#: app/templates/account/customization_partial.html:59
+msgid "Contrast"
+msgstr "Susbaint"
+
+#: app/templates/account/customization_partial.html:65
+msgid "Low Contrast"
+msgstr "Ìosal eadar-dhealachadh"
+
+#: app/templates/account/customization_partial.html:66
+msgid "High Contrast"
+msgstr "Àrd eadar-dhealachadh"
+
+#: app/templates/account/customization_partial.html:72
+msgid "Letter Spacing"
+msgstr "Spàsachadh Litrichean"
+
+#: app/templates/account/customization_partial.html:76
+msgid "Tight"
+msgstr "Teann"
+
+#: app/templates/account/customization_partial.html:77
+msgid "Normal"
+msgstr "Àbhaisteach"
+
+#: app/templates/account/customization_partial.html:78
+msgid "Wide"
+msgstr "ID"
+
+#: app/templates/account/customization_partial.html:84
+msgid "Reading Density"
+msgstr "Dùmhlachd Leughaidh"
+
+#: app/templates/account/customization_partial.html:96
+msgid "Border Radius"
+msgstr "Radius Crìochan"
+
+#: app/templates/account/customization_partial.html:102
+msgid "Sharp Corners"
+msgstr "Oiseanan Biorach"
+
+#: app/templates/account/customization_partial.html:103
+msgid "Extra Rounded"
+msgstr "Gu Math Cruinn"
+
+#: app/templates/account/customization_partial.html:109
+msgid "Theme"
+msgstr "Dachaigh"
+
+#: app/templates/account/customization_partial.html:125
+msgid "Language"
+msgstr "Tagh an"
 
 #: app/templates/account/manage_account_full.html:7
 #: app/templates/account/manage_account_partial.html:9
@@ -922,14 +1025,21 @@ msgid "Deleting your account is permanent and cannot be undone."
 msgstr "Tha cur às do chunntas maireannach agus chan fhaodar a thilleadh."
 
 #: app/templates/account/manage_account_partial.html:130
+#: app/templates/account/manage_account_partial.html:132
+msgid "You are the last admin. Deleting your account is not allowed."
+msgstr ""
+"‘S tu an rianaire mu dheireadh. Chan fhaod thu d’ chunntas a dhubhadh às."
+
+#: app/templates/account/manage_account_partial.html:133
+#: app/templates/account/manage_account_partial.html:143
+msgid "Delete My Account"
+msgstr "Ùraich Cunntas"
+
+#: app/templates/account/manage_account_partial.html:140
 msgid "Are you sure you want to delete your account?"
 msgstr ""
 "A bheil thu cinnteach gu bheil thu airson MFA ath-shuidheachadh airson an "
 "neach-cleachdaidh seo?"
-
-#: app/templates/account/manage_account_partial.html:132
-msgid "Delete My Account"
-msgstr "Ùraich Cunntas"
 
 #: app/templates/account/set_security_questions_full.html:7
 msgid "Security Questions"
@@ -962,7 +1072,7 @@ msgstr "Ùraich Cunntas"
 
 #: app/templates/account/translations_full.html:7
 #: app/templates/account/translations_partial.html:8
-#: app/templates/partials/profile_dropdown_menu.html:95
+#: app/templates/partials/profile_dropdown_menu.html:139
 msgid "Translations"
 msgstr "Eadar-theangachaidhean"
 
@@ -1162,7 +1272,7 @@ msgstr "Lìon a-steach am foirm airson cleachdaiche ùr."
 
 #: app/templates/admin/create_user_partial.html:26
 #: app/templates/admin/edit_user.html:28
-#: app/templates/admin/partials/table_view.html:13
+#: app/templates/admin/partials/table_view.html:14
 #: app/templates/admin/reports/report_accounts_partial.html:10
 #: app/templates/user_smtp/partials/table_view.html:13
 msgid "Username"
@@ -1170,14 +1280,14 @@ msgstr "Ainm-cleachdaiche"
 
 #: app/templates/admin/create_user_partial.html:36
 #: app/templates/admin/edit_user.html:36
-#: app/templates/admin/partials/table_view.html:14
+#: app/templates/admin/partials/table_view.html:15
 #: app/templates/admin/reports/report_accounts_partial.html:11
 #: app/templates/dashboard/partials/_linked_items_partial.html:15
 msgid "Email"
 msgstr "Post-d"
 
 #: app/templates/admin/create_user_partial.html:49
-#: app/templates/admin/partials/table_view.html:15
+#: app/templates/admin/partials/table_view.html:16
 #: app/templates/admin/reports/report_accounts_partial.html:12
 msgid "Role"
 msgstr "Dreuchd"
@@ -1715,11 +1825,11 @@ msgstr ""
 "Tha na gnìomhan uile air an clàradh airson cunntachalachd. Chan eil faclan-"
 "faire agus dìomhaireachdan faicsinneach a-riamh."
 
-#: app/templates/admin/partials/table_view.html:12
+#: app/templates/admin/partials/table_view.html:13
 msgid "ID"
 msgstr "ID"
 
-#: app/templates/admin/partials/table_view.html:16
+#: app/templates/admin/partials/table_view.html:17
 #: app/templates/admin/tools/partials/backup_table.html:13
 #: app/templates/apprise/apprise_config.html:59
 #: app/templates/apprise/partials/table_view.html:14
@@ -1735,7 +1845,7 @@ msgstr "ID"
 msgid "Actions"
 msgstr "Gnìomhan"
 
-#: app/templates/admin/partials/table_view.html:35
+#: app/templates/admin/partials/table_view.html:36
 #: app/templates/admin/reports/report_accounts_partial.html:52
 msgid "No users available."
 msgstr "Gun luchd-cleachdaidh ri fhaighinn."
@@ -1837,7 +1947,8 @@ msgstr "Suidhichidhean an t-Siostaim"
 msgid "Details"
 msgstr "Post-d"
 
-#: app/templates/admin/reports/report_scheduler_partial.html:37
+#: app/templates/admin/reports/report_scheduler_partial.html:38
+#: app/templates/admin/reports/report_scheduler_partial.html:46
 msgid "No scheduler activity found."
 msgstr "Cha deach gnìomh sam bith le scheduler a lorg."
 
@@ -1860,6 +1971,10 @@ msgstr "Till chun Pannal Smachd"
 #: app/templates/admin/reports/reports_tabs.html:38
 msgid "Scheduler Activity"
 msgstr "Clàradh Post-d"
+
+#: app/templates/admin/reports/reports_tabs.html:46
+msgid "Grylli | Reports | Logs"
+msgstr "Pannal Rianachd"
 
 #: app/templates/admin/reports/reports_tabs.html:51
 msgid "Application Logs"
@@ -3339,12 +3454,12 @@ msgstr "Sealladh Coitcheann"
 msgid "Grylli | Admin | Users"
 msgstr "Grylli | Rianachd | Luchd-cleachdaidh"
 
-#: app/templates/partials/head.html:14
+#: app/templates/partials/head.html:16
 msgid "Grylli is a secure message scheduling and delivery platform."
 msgstr ""
 "Tha Grylli na àrd-ùrlar lìbhrigidh is clàraidh teachdaireachdan tèarainte."
 
-#: app/templates/partials/head.html:25
+#: app/templates/partials/head.html:35
 msgid "Grylli"
 msgstr "Grylli"
 
@@ -3358,23 +3473,59 @@ msgstr "Dachaigh"
 msgid "Check-ins Due"
 msgstr "Sgrùdaidh a-steach"
 
-#: app/templates/partials/profile_dropdown_menu.html:13
+#: app/templates/partials/profile_dropdown_menu.html:9
+msgid "Grylli | Account"
+msgstr "Pannal Rianachd"
+
+#: app/templates/partials/profile_dropdown_menu.html:15
 msgid "Account"
 msgstr "Cunntas"
 
-#: app/templates/partials/profile_dropdown_menu.html:31
+#: app/templates/partials/profile_dropdown_menu.html:22
+msgid "Grylli | Security Questions"
+msgstr "🔐 Tèarainteachd"
+
+#: app/templates/partials/profile_dropdown_menu.html:35
+msgid "Grylli | MFA"
+msgstr "Grylli"
+
+#: app/templates/partials/profile_dropdown_menu.html:41
 msgid "MFA"
 msgstr "MFA"
 
-#: app/templates/partials/profile_dropdown_menu.html:40
+#: app/templates/partials/profile_dropdown_menu.html:48
+msgid "Grylli | About"
+msgstr "Pannal Rianachd"
+
+#: app/templates/partials/profile_dropdown_menu.html:54
 msgid "About"
 msgstr "Mu dheidhinn"
 
-#: app/templates/partials/profile_dropdown_menu.html:48
+#: app/templates/partials/profile_dropdown_menu.html:61
+msgid "Grylli | Customization"
+msgstr "Grylli | Puist-d | SMTP"
+
+#: app/templates/partials/profile_dropdown_menu.html:77
 msgid "GitHub"
 msgstr "GitHub"
 
-#: app/templates/partials/profile_dropdown_menu.html:107
+#: app/templates/partials/profile_dropdown_menu.html:83
+msgid "Grylli | Help"
+msgstr "Grylli | Puist-d | SMTP"
+
+#: app/templates/partials/profile_dropdown_menu.html:96
+msgid "Grylli | Privacy"
+msgstr "Prìobhaideachd"
+
+#: app/templates/partials/profile_dropdown_menu.html:109
+msgid "Grylli | System Info"
+msgstr "Suidhichidhean an t-Siostaim"
+
+#: app/templates/partials/profile_dropdown_menu.html:122
+msgid "Grylli | Translations"
+msgstr "Eadar-theangachaidhean"
+
+#: app/templates/partials/profile_dropdown_menu.html:153
 msgid "Logout"
 msgstr "Log a-mach"
 
@@ -3429,19 +3580,6 @@ msgstr "Grylli | Cuimhneachain | Sealladh Coitcheann"
 #: app/templates/partials/shared_nav.html:165
 msgid "Overview of reminders"
 msgstr "Sealladh farsaing air cuimhneachain"
-
-#: app/templates/partials/sidebar/desktop_footer.html:15
-msgid "Select Theme"
-msgstr "Tagh an"
-
-#: app/templates/partials/sidebar/desktop_footer.html:20
-msgid "Select theme"
-msgstr "Tagh an"
-
-#: app/templates/partials/sidebar/desktop_footer.html:29
-#: app/templates/partials/sidebar/desktop_footer.html:35
-msgid "Select language"
-msgstr "Tagh an"
 
 #: app/templates/partials/sidebar/desktop_header.html:9
 msgid "Menu"
@@ -3962,29 +4100,29 @@ msgstr "Cha deach atharrachaidhean a dhèanamh."
 msgid "An error occurred while updating your account."
 msgstr "Thachair mearachd fhad ‘s a bha thu ag ùrachadh an cunntais agad."
 
-#: app/views/account.py:159
+#: app/views/account.py:164
 msgid "An error occurred while loading translation info."
 msgstr "Thachair mearachd fhad 's a bha thu ag ùrachadh an neach-cleachdaidh."
 
-#: app/views/account.py:186
+#: app/views/account.py:191
 msgid "You cannot delete your account because you are the last admin."
 msgstr ""
 "Chan urrainn dhut do chunntas a sguabadh às oir is tusa am fear rianachd mu "
 "dheireadh."
 
-#: app/views/account.py:195
+#: app/views/account.py:200
 msgid "Your account has been permanently deleted."
 msgstr "Tha do chunntas air a bhith air a sguabadh às gu maireannach."
 
-#: app/views/account.py:202
+#: app/views/account.py:207
 msgid "An error occurred while trying to delete your account."
 msgstr "Thachair mearachd fhad ‘s a bha thu ag ùrachadh an cunntais agad."
 
-#: app/views/account.py:221
+#: app/views/account.py:226
 msgid "Your account has been deleted"
 msgstr "Tha do chunntas air a bhith air a sguabadh às gu maireannach."
 
-#: app/views/account.py:223
+#: app/views/account.py:228
 #, python-brace-format
 msgid ""
 "Hello {username},\n"
@@ -3999,17 +4137,21 @@ msgstr ""
 "\n"
 "{site_url}"
 
-#: app/views/account.py:408
+#: app/views/account.py:413
 msgid "Each security question must be different."
 msgstr "Feumaidh na trì ceistean a bhith eadar-dhealaichte."
 
-#: app/views/account.py:432
+#: app/views/account.py:437
 msgid "Security questions saved."
 msgstr "Ceistean tèarainteachd air an sàbhaladh."
 
-#: app/views/account.py:448
+#: app/views/account.py:453
 msgid "An error occurred while saving your security questions."
 msgstr "Thachair mearachd fhad ‘s a bha thu ag ùrachadh an cunntais agad."
+
+#: app/views/account.py:475
+msgid "An error occurred while loading customization settings."
+msgstr "Thachair mearachd fhad 's a bha thu ag ùrachadh an neach-cleachdaidh."
 
 #: app/views/admin.py:41
 msgid "Failed to load admin dashboard."
@@ -4088,105 +4230,105 @@ msgid "An error occurred while creating the admin account."
 msgstr ""
 "Thachair mearachd fhad ‘s a bha thu a’ cruthachadh a’ chunntais rianachd."
 
-#: app/views/auth.py:184
+#: app/views/auth.py:207
 msgid "Your account is not activated."
 msgstr "Tha do chunntas air a bhith air a sguabadh às gu maireannach."
 
-#: app/views/auth.py:192
+#: app/views/auth.py:215
 msgid "Multi-factor authentication required."
 msgstr "Tha fios air a chur dheth"
 
-#: app/views/auth.py:196 app/views/mfa.py:222
+#: app/views/auth.py:219 app/views/mfa.py:218
 msgid "Logged in successfully."
 msgstr "Log a-steach gu soirbheachail."
 
-#: app/views/auth.py:214
+#: app/views/auth.py:255
 msgid "Too many failed login attempts. Your account is locked for 15 minutes."
 msgstr ""
 "Cus oidhirpean logaidh a-steach air fàiligeadh. Feuch an feitheamh thu"
 
-#: app/views/auth.py:232
+#: app/views/auth.py:273
 msgid "Invalid username or password."
 msgstr "Ainm-cleachdaiche no facal-faire mì-dhligheach."
 
-#: app/views/auth.py:258
+#: app/views/auth.py:299
 msgid "You have been logged out."
 msgstr "Chaidh do chlàradh a-mach."
 
-#: app/views/auth.py:320
+#: app/views/auth.py:361
 msgid "If a user with that email exists, we've sent the username to them."
 msgstr ""
 "Ma tha neach-cleachdaidh leis a’ phost-d sin ann, tha sinn air an t-ainm-"
 "cleachdaidh a chuir thuige."
 
-#: app/views/auth.py:327
+#: app/views/auth.py:368
 msgid "An error occurred while sending your username reminder."
 msgstr "Thachair mearachd fhad ‘s a bha thu ag ùrachadh an cunntais agad."
 
-#: app/views/auth.py:379
+#: app/views/auth.py:420
 msgid "No account found matching that username and email."
 msgstr ""
 "Cha deach cunntas sam bith a lorg a fhreagras ris an ainm-cleachdaidh agus "
 "am post-d sin."
 
-#: app/views/auth.py:386
+#: app/views/auth.py:427
 msgid "An error occurred while checking your credentials."
 msgstr "Thachair mearachd fhad ‘s a bha thu ag ùrachadh an cunntais agad."
 
-#: app/views/auth.py:395
+#: app/views/auth.py:436
 msgid "Session expired. Please start over."
 msgstr "Session закончена. Пожалуйста, начните заново."
 
-#: app/views/auth.py:414
+#: app/views/auth.py:455
 msgid "Too many failed attempts. Please try again later."
 msgstr ""
 "Cus oidhirpean logaidh a-steach air fàiligeadh. Feuch an feitheamh thu"
 
-#: app/views/auth.py:435
+#: app/views/auth.py:476
 msgid "A password reset link has been sent to your email."
 msgstr ""
 "Chaidh ceangal ath-shuidheachadh facal-faire a chur chun phost-d agad."
 
-#: app/views/auth.py:448
+#: app/views/auth.py:489
 msgid "One or more answers were incorrect."
 msgstr "Bha aon no barrachd fhreagairtean ceàrr."
 
-#: app/views/auth.py:458
+#: app/views/auth.py:499
 msgid "An error occurred while verifying your answers."
 msgstr "Thachair mearachd fhad ‘s a bha thu ag ùrachadh an cunntais agad."
 
-#: app/views/auth.py:491
+#: app/views/auth.py:532
 msgid "The reset link is invalid or has expired."
 msgstr ""
 "Tha an ceangal ath-shuidheachadh mì-dhligheach no tha e air tighinn gu "
 "crìch."
 
-#: app/views/auth.py:504
+#: app/views/auth.py:545
 msgid "Username and email do not match."
 msgstr "Chan eil an t-ainm-cleachdaiche agus am post-d a’ freagairt."
 
-#: app/views/auth.py:528
+#: app/views/auth.py:569
 msgid "Your password has been reset. Please log in."
 msgstr "Chaidh am facal-faire agad ath-shuidheachadh. Feuch log a-steach."
 
-#: app/views/auth.py:533
+#: app/views/auth.py:574
 msgid "An error occurred while resetting your password."
 msgstr ""
 "Thachair mearachd fhad 's a bha thu a’ sguabadh às an neach-cleachdaidh."
 
-#: app/views/auth.py:570
+#: app/views/auth.py:611
 msgid "Invalid registration PIN."
 msgstr "PIN clàraidh mì-dhligheach."
 
-#: app/views/auth.py:579
+#: app/views/auth.py:620
 msgid "Username or email already exists."
 msgstr "Tha ainm-cleachdaiche no post-d ann mu thràth."
 
-#: app/views/auth.py:608
+#: app/views/auth.py:649
 msgid "Activate Your Grylli Account"
 msgstr "Gnìomhachaich do Chunntas Grylli"
 
-#: app/views/auth.py:609
+#: app/views/auth.py:650
 #, python-brace-format
 msgid ""
 "Hello {username},\n"
@@ -4197,50 +4339,50 @@ msgstr ""
 "\n"
 "Gnìomhachaich do chunntas le bhith a’ briogadh air..."
 
-#: app/views/auth.py:615
+#: app/views/auth.py:656
 msgid "Account created! Please check your email to activate your account."
 msgstr ""
 "Cruthaichte cunntas! Feuch an toir thu sùil air do phost-d gus do chunntas a"
 " ghnìomhachadh."
 
-#: app/views/auth.py:622
+#: app/views/auth.py:663
 msgid "An error occurred during signup."
 msgstr ""
 "Thachair mearachd fhad 's a bha thu a’ sguabadh às an neach-cleachdaidh."
 
-#: app/views/auth.py:641
+#: app/views/auth.py:682
 msgid "Activation link is invalid or expired."
 msgstr "Ceangal gnìomhachaidh mì-dhligheach no air tighinn gu crìch."
 
-#: app/views/auth.py:648 app/views/users.py:135 app/views/users.py:202
+#: app/views/auth.py:689 app/views/users.py:136 app/views/users.py:203
 msgid "User not found."
 msgstr "Cha deach neach-cleachdaidh a lorg."
 
-#: app/views/auth.py:652
+#: app/views/auth.py:693
 msgid "Account already activated. Please log in."
 msgstr "Tha an cunntas air a ghnìomhachadh mu thràth. Feuch log a-steach."
 
-#: app/views/auth.py:663
+#: app/views/auth.py:704
 msgid "Your account has been activated! You can now log in."
 msgstr ""
 "Tha an cunntas agad air a bhith air a ghnìomhachadh! Faodaidh tu logadh "
 "a-steach a-nis."
 
-#: app/views/auth.py:667
+#: app/views/auth.py:708
 msgid "Failed to activate account."
 msgstr "Dh'fhàillig cruthachadh cùl-taic."
 
-#: app/views/auth.py:699
+#: app/views/auth.py:740
 msgid "Security questions not set or user not found."
 msgstr ""
 "Ceistean tèarainteachd gun shuidheachadh no neach-cleachdaidh nach deach a "
 "lorg."
 
-#: app/views/auth.py:707
+#: app/views/auth.py:748
 msgid "Password reset email sent."
 msgstr "Chan eil na faclan-faire a’ freagairt."
 
-#: app/views/auth.py:714
+#: app/views/auth.py:755
 msgid "Incorrect answer."
 msgstr "Freagairt ceàrr."
 
@@ -4370,7 +4512,7 @@ msgstr "Dh'fhàillig cuir post-deuchainn:"
 msgid "An error occurred while loading the help page."
 msgstr "Thachair mearachd fhad 's a bha thu ag ùrachadh an neach-cleachdaidh."
 
-#: app/views/index.py:53
+#: app/views/index.py:55
 msgid "Error loading dashboard"
 msgstr "Air ais gu Post-d"
 
@@ -4435,7 +4577,7 @@ msgstr "Teachdaireachd air a shàbhaladh."
 msgid "You must enter a code from your authenticator."
 msgstr "Feumaidh tu còd bho do dh’earbhadh-chunntais a chuir a-steach."
 
-#: app/views/mfa.py:85 app/views/mfa.py:295 app/views/mfa.py:303
+#: app/views/mfa.py:85 app/views/mfa.py:291 app/views/mfa.py:299
 msgid "Invalid code. Please try again."
 msgstr "Còd mì-dhligheach. Feuch ris a-rithist."
 
@@ -4457,15 +4599,15 @@ msgstr ""
 msgid "Could not load recovery codes."
 msgstr "Chaidh dìth a' luchdachadh nan còdan ath-leasachaidh."
 
-#: app/views/mfa.py:194
+#: app/views/mfa.py:190
 msgid "No MFA challenge in progress."
 msgstr "Gun dùbhlan MFA ann an adhartas."
 
-#: app/views/mfa.py:202
+#: app/views/mfa.py:198
 msgid "User not found for MFA challenge."
 msgstr "Cha deach neach-cleachdaidh a lorg."
 
-#: app/views/mfa.py:262
+#: app/views/mfa.py:258
 msgid ""
 "You have used your last recovery code. MFA has been disabled. Please remove "
 "Grylli from your authenticator app, and re-enable MFA to protect your "
@@ -4475,14 +4617,14 @@ msgstr ""
 " chuir à comas. Thoir air falbh Grylli bhon app dearbhadair agad, agus feuch"
 " ris a-rithist MFA gus do chunntas a dhìon."
 
-#: app/views/mfa.py:283
+#: app/views/mfa.py:279
 #, python-brace-format
 msgid "Recovery code accepted. You have {remaining} recovery codes left."
 msgstr ""
 "Còd ath-leasachaidh air a ghabhail ris. Tha {remaining} còdan ath-"
 "leasachaidh air fhàgail agad."
 
-#: app/views/mfa.py:298
+#: app/views/mfa.py:294
 msgid "An unexpected error occurred during MFA challenge."
 msgstr ""
 "Thachair mearachd fhad 's a bha thu a’ sguabadh às an neach-cleachdaidh."
@@ -4662,92 +4804,92 @@ msgstr ""
 msgid "Error sending test email."
 msgstr "Cuir Post-dearbhaidh"
 
-#: app/views/users.py:58
+#: app/views/users.py:59
 msgid "Failed to load user list."
 msgstr "Air ais gu Post-d"
 
-#: app/views/users.py:82
+#: app/views/users.py:83
 msgid "Password is required when creating a new user."
 msgstr ""
 "Tha am facal-faire a dhìth nuair a tha thu a' cruthachadh neach-cleachdaidh "
 "ùr."
 
-#: app/views/users.py:87 app/views/users.py:156
+#: app/views/users.py:88 app/views/users.py:157
 msgid "Username already exists."
 msgstr "Tha an t-ainm-cleachdaidh ann mar-thà."
 
-#: app/views/users.py:92 app/views/users.py:163
+#: app/views/users.py:93 app/views/users.py:164
 msgid "Email already exists."
 msgstr "Tha am post-d ann mar-thà."
 
-#: app/views/users.py:107
+#: app/views/users.py:108
 #, python-format
 msgid "User '%(username)s' created successfully."
 msgstr ""
 "Chaidh neach-cleachdaidh '%(username)s' a chruthachadh gu soirbheachail."
 
-#: app/views/users.py:115
+#: app/views/users.py:116
 msgid "Failed to create user."
 msgstr "Dh'fhàillig cruthachadh neach-cleachdaidh."
 
-#: app/views/users.py:176
+#: app/views/users.py:177
 msgid "User updated successfully."
 msgstr "Neach-cleachdaidh air ùrachadh gu soirbheachail."
 
-#: app/views/users.py:183 app/views/users.py:301
+#: app/views/users.py:184 app/views/users.py:320
 msgid "An error occurred while updating the user."
 msgstr "Thachair mearachd fhad 's a bha thu ag ùrachadh an neach-cleachdaidh."
 
-#: app/views/users.py:255
+#: app/views/users.py:256
 msgid "User deleted."
 msgstr "Neach-cleachdaidh air a sguabadh às."
 
-#: app/views/users.py:262
+#: app/views/users.py:263
 msgid "An error occurred while deleting the user."
 msgstr ""
 "Thachair mearachd fhad 's a bha thu a’ sguabadh às an neach-cleachdaidh."
 
-#: app/views/users.py:279
+#: app/views/users.py:280
 msgid "You cannot change your own enabled status."
 msgstr "Chan urrainn dhut inbhe gnìomhach fhèin atharrachadh."
 
-#: app/views/users.py:292
+#: app/views/users.py:311
 #, python-format
 msgid "User '%(username)s' has been %(status)s."
 msgstr "Tha neach-cleachdaidh '%(username)s' air a bhith %(status)s."
 
-#: app/views/users.py:318
+#: app/views/users.py:337
 msgid "You cannot reset your own MFA."
 msgstr "⚪ = Chan urrainn dhut do chunntas fhèin a chiorramachadh."
 
-#: app/views/users.py:331
+#: app/views/users.py:368
 #, python-format
 msgid "MFA disabled for user '%(username)s'."
 msgstr "MFA air a chur à comas airson neach-cleachdaidh '%(username)s'."
 
-#: app/views/users.py:335
+#: app/views/users.py:372
 msgid "An error occurred while resetting MFA."
 msgstr ""
 "Thachair mearachd fhad 's a bha thu a’ sguabadh às an neach-cleachdaidh."
 
-#: app/views/users.py:358
+#: app/views/users.py:395
 msgid "Invalid role"
 msgstr "Dreuchd mì-dhligheach."
 
-#: app/views/users.py:364
+#: app/views/users.py:417
 #, python-format
 msgid "Role updated for %(username)s."
 msgstr "MFA air a chur à comas airson neach-cleachdaidh '%(username)s'."
 
-#: app/views/users.py:370
+#: app/views/users.py:425
 msgid "An error occurred while updating the role."
 msgstr "Thachair mearachd fhad 's a bha thu ag ùrachadh an neach-cleachdaidh."
 
-#: app/views/users.py:390
+#: app/views/users.py:463
 msgid "User account unlocked."
 msgstr "Tha do chunntas air a bhith air a sguabadh às gu maireannach."
 
-#: app/views/users.py:395
+#: app/views/users.py:468
 msgid "An error occurred while unlocking the account."
 msgstr ""
 "Thachair mearachd fhad ‘s a bha thu a’ cruthachadh a’ chunntais rianachd."
@@ -5540,3 +5682,9 @@ msgstr ""
 
 #~ msgid "Failed to send test email. "
 #~ msgstr "Dh'fhàillig cuir post-deuchainn:"
+
+#~ msgid "Select Theme"
+#~ msgstr "Tagh an"
+
+#~ msgid "Select theme"
+#~ msgstr "Tagh an"

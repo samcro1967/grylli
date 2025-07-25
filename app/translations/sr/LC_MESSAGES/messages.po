@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-07-14 11:49-0500\n"
+"POT-Creation-Date: 2025-07-25 13:21-0500\n"
 "PO-Revision-Date: 2025-05-25 13:03-0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: sr <LL@li.org>\n"
@@ -362,7 +362,7 @@ msgstr ""
 "Grylli vam daje kontrolu nad isporukom poruka — sigurno i pouzdano."
 
 #: app/templates/help_full.html:7
-#: app/templates/partials/profile_dropdown_menu.html:57
+#: app/templates/partials/profile_dropdown_menu.html:89
 msgid "Help"
 msgstr "Pomoć"
 
@@ -501,7 +501,7 @@ msgstr ""
 " očekuje."
 
 #: app/templates/help_partial.html:45
-#: app/templates/partials/profile_dropdown_menu.html:22
+#: app/templates/partials/profile_dropdown_menu.html:28
 msgid "Security"
 msgstr "🔐 Bezbednost"
 
@@ -521,7 +521,7 @@ msgstr ""
 "Trebate pomoć sa nečim specifičnim? Svaki modul u Grylli uključuje svoj "
 "panel za pomoć sa detaljnim uputstvima."
 
-#: app/templates/partials/profile_dropdown_menu.html:66
+#: app/templates/partials/profile_dropdown_menu.html:102
 #: app/templates/privacy_full.html:7
 msgid "Privacy"
 msgstr "Privatnost"
@@ -667,7 +667,7 @@ msgstr ""
 "Ovaj krajnji raspored pruža informacije o zdravstvenom stanju sistema i "
 "verziji."
 
-#: app/templates/partials/profile_dropdown_menu.html:75
+#: app/templates/partials/profile_dropdown_menu.html:115
 #: app/templates/system_info_full.html:7
 msgid "System Info"
 msgstr "Informacije o sistemu"
@@ -762,6 +762,109 @@ msgstr ""
 #: app/templates/auth/signup.html:16
 msgid "Please fix the following errors:"
 msgstr "Molimo ispravite sledeće greške:"
+
+#: app/templates/account/customization_full.html:7
+#: app/templates/partials/profile_dropdown_menu.html:67
+msgid "Customization"
+msgstr "Prilagođavanje"
+
+#: app/templates/account/customization_partial.html:10
+msgid "Customize Your Interface"
+msgstr "Prilagodite svoj interfejs"
+
+#: app/templates/account/customization_partial.html:13
+msgid ""
+"Change the look and feel of Grylli using the options below. Your preferences"
+" are saved in your browser."
+msgstr ""
+"Promenite izgled i osećaj aplikacije Grylli pomoću opcija ispod. Vaše "
+"postavke su sačuvane u vašem pretraživaču."
+
+#: app/templates/account/customization_partial.html:20
+msgid "Font Family"
+msgstr "Porodica fontova"
+
+#: app/templates/account/customization_partial.html:33
+msgid "Font Size"
+msgstr "Veličina fonta"
+
+#: app/templates/account/customization_partial.html:38
+msgid "Extra Small"
+msgstr "Vrlo mala"
+
+#: app/templates/account/customization_partial.html:39
+msgid "Small"
+msgstr "Sve"
+
+#: app/templates/account/customization_partial.html:40
+#: app/templates/account/customization_partial.html:64
+#: app/templates/account/customization_partial.html:101
+msgid "Default"
+msgstr "Obriši"
+
+#: app/templates/account/customization_partial.html:41
+msgid "Large"
+msgstr "Oznaka"
+
+#: app/templates/account/customization_partial.html:42
+msgid "Extra Large"
+msgstr "Vrlo velika"
+
+#: app/templates/account/customization_partial.html:48
+msgid "Background Pattern"
+msgstr "Pozadinski obrazac"
+
+#: app/templates/account/customization_partial.html:59
+msgid "Contrast"
+msgstr "Sadržaj"
+
+#: app/templates/account/customization_partial.html:65
+msgid "Low Contrast"
+msgstr "Nizak kontrast"
+
+#: app/templates/account/customization_partial.html:66
+msgid "High Contrast"
+msgstr "Visok kontrast"
+
+#: app/templates/account/customization_partial.html:72
+msgid "Letter Spacing"
+msgstr "Rastojanje između slova"
+
+#: app/templates/account/customization_partial.html:76
+msgid "Tight"
+msgstr "Tesno"
+
+#: app/templates/account/customization_partial.html:77
+msgid "Normal"
+msgstr "Normalno"
+
+#: app/templates/account/customization_partial.html:78
+msgid "Wide"
+msgstr "ID"
+
+#: app/templates/account/customization_partial.html:84
+msgid "Reading Density"
+msgstr "Gustina čitanja"
+
+#: app/templates/account/customization_partial.html:96
+msgid "Border Radius"
+msgstr "Poluprečnik ivica"
+
+#: app/templates/account/customization_partial.html:102
+msgid "Sharp Corners"
+msgstr "Opreke ivice"
+
+#: app/templates/account/customization_partial.html:103
+msgid "Extra Rounded"
+msgstr "Veoma zaobljeno"
+
+#: app/templates/account/customization_partial.html:109
+msgid "Theme"
+msgstr "Početna"
+
+#: app/templates/account/customization_partial.html:125
+msgid "Language"
+msgstr "Izaberite odgovarajuću"
 
 #: app/templates/account/manage_account_full.html:7
 #: app/templates/account/manage_account_partial.html:9
@@ -902,12 +1005,19 @@ msgid "Deleting your account is permanent and cannot be undone."
 msgstr "Brisanje vašeg naloga je trajno i ne može se opozvati."
 
 #: app/templates/account/manage_account_partial.html:130
-msgid "Are you sure you want to delete your account?"
-msgstr "Da li ste sigurni da želite da resetujete MFA za ovog korisnika?"
-
 #: app/templates/account/manage_account_partial.html:132
+msgid "You are the last admin. Deleting your account is not allowed."
+msgstr ""
+"Vi ste poslednji administrator. Brisanje vašeg naloga nije dozvoljeno."
+
+#: app/templates/account/manage_account_partial.html:133
+#: app/templates/account/manage_account_partial.html:143
 msgid "Delete My Account"
 msgstr "Ažuriraj nalog"
+
+#: app/templates/account/manage_account_partial.html:140
+msgid "Are you sure you want to delete your account?"
+msgstr "Da li ste sigurni da želite da resetujete MFA za ovog korisnika?"
 
 #: app/templates/account/set_security_questions_full.html:7
 msgid "Security Questions"
@@ -939,7 +1049,7 @@ msgstr "Ažuriraj nalog"
 
 #: app/templates/account/translations_full.html:7
 #: app/templates/account/translations_partial.html:8
-#: app/templates/partials/profile_dropdown_menu.html:95
+#: app/templates/partials/profile_dropdown_menu.html:139
 msgid "Translations"
 msgstr "Prevod"
 
@@ -1119,7 +1229,7 @@ msgstr "Popunite obrazac da dodate novog korisnika."
 
 #: app/templates/admin/create_user_partial.html:26
 #: app/templates/admin/edit_user.html:28
-#: app/templates/admin/partials/table_view.html:13
+#: app/templates/admin/partials/table_view.html:14
 #: app/templates/admin/reports/report_accounts_partial.html:10
 #: app/templates/user_smtp/partials/table_view.html:13
 msgid "Username"
@@ -1127,14 +1237,14 @@ msgstr "Korisničko ime"
 
 #: app/templates/admin/create_user_partial.html:36
 #: app/templates/admin/edit_user.html:36
-#: app/templates/admin/partials/table_view.html:14
+#: app/templates/admin/partials/table_view.html:15
 #: app/templates/admin/reports/report_accounts_partial.html:11
 #: app/templates/dashboard/partials/_linked_items_partial.html:15
 msgid "Email"
 msgstr "Email"
 
 #: app/templates/admin/create_user_partial.html:49
-#: app/templates/admin/partials/table_view.html:15
+#: app/templates/admin/partials/table_view.html:16
 #: app/templates/admin/reports/report_accounts_partial.html:12
 msgid "Role"
 msgstr "Uloga"
@@ -1656,11 +1766,11 @@ msgstr ""
 "Sve akcije su zabeležene radi odgovornosti. Lozinke i tajne nikada nisu "
 "vidljive."
 
-#: app/templates/admin/partials/table_view.html:12
+#: app/templates/admin/partials/table_view.html:13
 msgid "ID"
 msgstr "ID"
 
-#: app/templates/admin/partials/table_view.html:16
+#: app/templates/admin/partials/table_view.html:17
 #: app/templates/admin/tools/partials/backup_table.html:13
 #: app/templates/apprise/apprise_config.html:59
 #: app/templates/apprise/partials/table_view.html:14
@@ -1676,7 +1786,7 @@ msgstr "ID"
 msgid "Actions"
 msgstr "Akcije"
 
-#: app/templates/admin/partials/table_view.html:35
+#: app/templates/admin/partials/table_view.html:36
 #: app/templates/admin/reports/report_accounts_partial.html:52
 msgid "No users available."
 msgstr "Nema dostupnih korisnika."
@@ -1776,7 +1886,8 @@ msgstr "Sistemske postavke"
 msgid "Details"
 msgstr "Emailovi"
 
-#: app/templates/admin/reports/report_scheduler_partial.html:37
+#: app/templates/admin/reports/report_scheduler_partial.html:38
+#: app/templates/admin/reports/report_scheduler_partial.html:46
 msgid "No scheduler activity found."
 msgstr "Nema aktivnosti planera."
 
@@ -1799,6 +1910,10 @@ msgstr "Vrati se na kontrolnu tablu"
 #: app/templates/admin/reports/reports_tabs.html:38
 msgid "Scheduler Activity"
 msgstr "Raspored Slanja Emaila"
+
+#: app/templates/admin/reports/reports_tabs.html:46
+msgid "Grylli | Reports | Logs"
+msgstr "Administratorski panel"
 
 #: app/templates/admin/reports/reports_tabs.html:51
 msgid "Application Logs"
@@ -3245,11 +3360,11 @@ msgstr "Pregled"
 msgid "Grylli | Admin | Users"
 msgstr "Grylli | Admin | Korisnici"
 
-#: app/templates/partials/head.html:14
+#: app/templates/partials/head.html:16
 msgid "Grylli is a secure message scheduling and delivery platform."
 msgstr "Grylli je bezbedna platforma za planiranje i isporuku poruka."
 
-#: app/templates/partials/head.html:25
+#: app/templates/partials/head.html:35
 msgid "Grylli"
 msgstr "Grylli"
 
@@ -3263,23 +3378,59 @@ msgstr "Početna"
 msgid "Check-ins Due"
 msgstr "Prijava"
 
-#: app/templates/partials/profile_dropdown_menu.html:13
+#: app/templates/partials/profile_dropdown_menu.html:9
+msgid "Grylli | Account"
+msgstr "Administratorski panel"
+
+#: app/templates/partials/profile_dropdown_menu.html:15
 msgid "Account"
 msgstr "Nalog"
 
-#: app/templates/partials/profile_dropdown_menu.html:31
+#: app/templates/partials/profile_dropdown_menu.html:22
+msgid "Grylli | Security Questions"
+msgstr "🔐 Bezbednost"
+
+#: app/templates/partials/profile_dropdown_menu.html:35
+msgid "Grylli | MFA"
+msgstr "Grylli"
+
+#: app/templates/partials/profile_dropdown_menu.html:41
 msgid "MFA"
 msgstr "MFA"
 
-#: app/templates/partials/profile_dropdown_menu.html:40
+#: app/templates/partials/profile_dropdown_menu.html:48
+msgid "Grylli | About"
+msgstr "Administratorski panel"
+
+#: app/templates/partials/profile_dropdown_menu.html:54
 msgid "About"
 msgstr "O"
 
-#: app/templates/partials/profile_dropdown_menu.html:48
+#: app/templates/partials/profile_dropdown_menu.html:61
+msgid "Grylli | Customization"
+msgstr "Grylli | Emailovi | SMTP"
+
+#: app/templates/partials/profile_dropdown_menu.html:77
 msgid "GitHub"
 msgstr "GitHub"
 
-#: app/templates/partials/profile_dropdown_menu.html:107
+#: app/templates/partials/profile_dropdown_menu.html:83
+msgid "Grylli | Help"
+msgstr "Grylli | Emailovi | SMTP"
+
+#: app/templates/partials/profile_dropdown_menu.html:96
+msgid "Grylli | Privacy"
+msgstr "Privatnost"
+
+#: app/templates/partials/profile_dropdown_menu.html:109
+msgid "Grylli | System Info"
+msgstr "Sistemske postavke"
+
+#: app/templates/partials/profile_dropdown_menu.html:122
+msgid "Grylli | Translations"
+msgstr "Prevod"
+
+#: app/templates/partials/profile_dropdown_menu.html:153
 msgid "Logout"
 msgstr "Odjava"
 
@@ -3334,19 +3485,6 @@ msgstr "Grylli | Podsetnici | Pregled"
 #: app/templates/partials/shared_nav.html:165
 msgid "Overview of reminders"
 msgstr "Pregled podsetnika"
-
-#: app/templates/partials/sidebar/desktop_footer.html:15
-msgid "Select Theme"
-msgstr "Izaberite odgovarajuću"
-
-#: app/templates/partials/sidebar/desktop_footer.html:20
-msgid "Select theme"
-msgstr "Izaberite odgovarajuću"
-
-#: app/templates/partials/sidebar/desktop_footer.html:29
-#: app/templates/partials/sidebar/desktop_footer.html:35
-msgid "Select language"
-msgstr "Izaberite odgovarajuću"
 
 #: app/templates/partials/sidebar/desktop_header.html:9
 msgid "Menu"
@@ -3854,27 +3992,27 @@ msgstr "Nema napravljenih izmena."
 msgid "An error occurred while updating your account."
 msgstr "Došlo je do greške pri ažuriranju vašeg naloga."
 
-#: app/views/account.py:159
+#: app/views/account.py:164
 msgid "An error occurred while loading translation info."
 msgstr "Došlo je do greške prilikom ažuriranja korisnika."
 
-#: app/views/account.py:186
+#: app/views/account.py:191
 msgid "You cannot delete your account because you are the last admin."
 msgstr "Ne možete obrisati svoj nalog jer ste poslednji administrator."
 
-#: app/views/account.py:195
+#: app/views/account.py:200
 msgid "Your account has been permanently deleted."
 msgstr "Vaš nalog je trajno obrisan."
 
-#: app/views/account.py:202
+#: app/views/account.py:207
 msgid "An error occurred while trying to delete your account."
 msgstr "Došlo je do greške pri ažuriranju vašeg naloga."
 
-#: app/views/account.py:221
+#: app/views/account.py:226
 msgid "Your account has been deleted"
 msgstr "Vaš nalog je trajno obrisan."
 
-#: app/views/account.py:223
+#: app/views/account.py:228
 #, python-brace-format
 msgid ""
 "Hello {username},\n"
@@ -3889,17 +4027,21 @@ msgstr ""
 "\n"
 "{site_url}"
 
-#: app/views/account.py:408
+#: app/views/account.py:413
 msgid "Each security question must be different."
 msgstr "Сва три питања морају бити различита."
 
-#: app/views/account.py:432
+#: app/views/account.py:437
 msgid "Security questions saved."
 msgstr "Bezbednosna pitanja sačuvana."
 
-#: app/views/account.py:448
+#: app/views/account.py:453
 msgid "An error occurred while saving your security questions."
 msgstr "Došlo je do greške pri ažuriranju vašeg naloga."
+
+#: app/views/account.py:475
+msgid "An error occurred while loading customization settings."
+msgstr "Došlo je do greške prilikom ažuriranja korisnika."
 
 #: app/views/admin.py:41
 msgid "Failed to load admin dashboard."
@@ -3977,95 +4119,95 @@ msgstr ""
 msgid "An error occurred while creating the admin account."
 msgstr "Došlo je do greške prilikom kreiranja admin naloga."
 
-#: app/views/auth.py:184
+#: app/views/auth.py:207
 msgid "Your account is not activated."
 msgstr "Vaš nalog je trajno obrisan."
 
-#: app/views/auth.py:192
+#: app/views/auth.py:215
 msgid "Multi-factor authentication required."
 msgstr "Obaveštenje je onemogućeno"
 
-#: app/views/auth.py:196 app/views/mfa.py:222
+#: app/views/auth.py:219 app/views/mfa.py:218
 msgid "Logged in successfully."
 msgstr "Uspešno prijavljen."
 
-#: app/views/auth.py:214
+#: app/views/auth.py:255
 msgid "Too many failed login attempts. Your account is locked for 15 minutes."
 msgstr "Previše neuspelih pokušaja prijavljivanja. Molimo sačekajte"
 
-#: app/views/auth.py:232
+#: app/views/auth.py:273
 msgid "Invalid username or password."
 msgstr "Nevažeće korisničko ime ili lozinka."
 
-#: app/views/auth.py:258
+#: app/views/auth.py:299
 msgid "You have been logged out."
 msgstr "Odjavili ste se."
 
-#: app/views/auth.py:320
+#: app/views/auth.py:361
 msgid "If a user with that email exists, we've sent the username to them."
 msgstr "Ako postoji korisnik sa tim emailom, poslali smo mu korisničko ime."
 
-#: app/views/auth.py:327
+#: app/views/auth.py:368
 msgid "An error occurred while sending your username reminder."
 msgstr "Došlo je do greške pri ažuriranju vašeg naloga."
 
-#: app/views/auth.py:379
+#: app/views/auth.py:420
 msgid "No account found matching that username and email."
 msgstr "Nije pronađen nalog koji odgovara tom korisničkom imenu i emailu."
 
-#: app/views/auth.py:386
+#: app/views/auth.py:427
 msgid "An error occurred while checking your credentials."
 msgstr "Došlo je do greške pri ažuriranju vašeg naloga."
 
-#: app/views/auth.py:395
+#: app/views/auth.py:436
 msgid "Session expired. Please start over."
 msgstr "Sesija je istekla. Molimo počnite ispočetka."
 
-#: app/views/auth.py:414
+#: app/views/auth.py:455
 msgid "Too many failed attempts. Please try again later."
 msgstr "Previše neuspelih pokušaja prijavljivanja. Molimo sačekajte"
 
-#: app/views/auth.py:435
+#: app/views/auth.py:476
 msgid "A password reset link has been sent to your email."
 msgstr "Link za reset lozinke je poslat na vaš email."
 
-#: app/views/auth.py:448
+#: app/views/auth.py:489
 msgid "One or more answers were incorrect."
 msgstr "Jedan ili više odgovora nije bilo tačno."
 
-#: app/views/auth.py:458
+#: app/views/auth.py:499
 msgid "An error occurred while verifying your answers."
 msgstr "Došlo je do greške pri ažuriranju vašeg naloga."
 
-#: app/views/auth.py:491
+#: app/views/auth.py:532
 msgid "The reset link is invalid or has expired."
 msgstr "Link za resetovanje je nevažeći ili je istekao."
 
-#: app/views/auth.py:504
+#: app/views/auth.py:545
 msgid "Username and email do not match."
 msgstr "Korisničko ime i email se ne poklapaju."
 
-#: app/views/auth.py:528
+#: app/views/auth.py:569
 msgid "Your password has been reset. Please log in."
 msgstr "Vaša lozinka je resetovana. Molimo prijavite se."
 
-#: app/views/auth.py:533
+#: app/views/auth.py:574
 msgid "An error occurred while resetting your password."
 msgstr "Došlo je do greške prilikom brisanja korisnika."
 
-#: app/views/auth.py:570
+#: app/views/auth.py:611
 msgid "Invalid registration PIN."
 msgstr "PIN za registraciju nije validan."
 
-#: app/views/auth.py:579
+#: app/views/auth.py:620
 msgid "Username or email already exists."
 msgstr "Korisničko ime ili email već postoje."
 
-#: app/views/auth.py:608
+#: app/views/auth.py:649
 msgid "Activate Your Grylli Account"
 msgstr "Aktivirajte svoj Grylli nalog"
 
-#: app/views/auth.py:609
+#: app/views/auth.py:650
 #, python-brace-format
 msgid ""
 "Hello {username},\n"
@@ -4076,43 +4218,43 @@ msgstr ""
 "\n"
 "Molimo aktivirajte svoj nalog klikom..."
 
-#: app/views/auth.py:615
+#: app/views/auth.py:656
 msgid "Account created! Please check your email to activate your account."
 msgstr "Nalog kreiran! Molimo proverite vaš email da aktivirate nalog."
 
-#: app/views/auth.py:622
+#: app/views/auth.py:663
 msgid "An error occurred during signup."
 msgstr "Došlo je do greške prilikom brisanja korisnika."
 
-#: app/views/auth.py:641
+#: app/views/auth.py:682
 msgid "Activation link is invalid or expired."
 msgstr "Aktivacioni link je nevažeći ili istekao."
 
-#: app/views/auth.py:648 app/views/users.py:135 app/views/users.py:202
+#: app/views/auth.py:689 app/views/users.py:136 app/views/users.py:203
 msgid "User not found."
 msgstr "Korisnik nije pronađen."
 
-#: app/views/auth.py:652
+#: app/views/auth.py:693
 msgid "Account already activated. Please log in."
 msgstr "Nalog je već aktiviran. Molimo prijavite se."
 
-#: app/views/auth.py:663
+#: app/views/auth.py:704
 msgid "Your account has been activated! You can now log in."
 msgstr "Vaš nalog je aktiviran! Možete se sada prijaviti."
 
-#: app/views/auth.py:667
+#: app/views/auth.py:708
 msgid "Failed to activate account."
 msgstr "Neuspešno kreiranje rezervne kopije."
 
-#: app/views/auth.py:699
+#: app/views/auth.py:740
 msgid "Security questions not set or user not found."
 msgstr "Bezbednosna pitanja nisu postavljena ili korisnik nije pronađen."
 
-#: app/views/auth.py:707
+#: app/views/auth.py:748
 msgid "Password reset email sent."
 msgstr "Lozinke se ne poklapaju."
 
-#: app/views/auth.py:714
+#: app/views/auth.py:755
 msgid "Incorrect answer."
 msgstr "Pogrešan odgovor."
 
@@ -4238,7 +4380,7 @@ msgstr "Neuspešno slanje test emaila:"
 msgid "An error occurred while loading the help page."
 msgstr "Došlo je do greške prilikom ažuriranja korisnika."
 
-#: app/views/index.py:53
+#: app/views/index.py:55
 msgid "Error loading dashboard"
 msgstr "Nazad na Emailove"
 
@@ -4302,7 +4444,7 @@ msgstr "Poruka sačuvana."
 msgid "You must enter a code from your authenticator."
 msgstr "Morate uneti kôd sa svog autentifikatora."
 
-#: app/views/mfa.py:85 app/views/mfa.py:295 app/views/mfa.py:303
+#: app/views/mfa.py:85 app/views/mfa.py:291 app/views/mfa.py:299
 msgid "Invalid code. Please try again."
 msgstr "Nevažeći kôd. Pokušajte ponovo."
 
@@ -4322,15 +4464,15 @@ msgstr "Kodovi za oporavak se prikazuju samo odmah nakon aktiviranja MFA."
 msgid "Could not load recovery codes."
 msgstr "Nije moguće učitati kodove za oporavak."
 
-#: app/views/mfa.py:194
+#: app/views/mfa.py:190
 msgid "No MFA challenge in progress."
 msgstr "Nema aktivnog MFA izazova."
 
-#: app/views/mfa.py:202
+#: app/views/mfa.py:198
 msgid "User not found for MFA challenge."
 msgstr "Korisnik nije pronađen."
 
-#: app/views/mfa.py:262
+#: app/views/mfa.py:258
 msgid ""
 "You have used your last recovery code. MFA has been disabled. Please remove "
 "Grylli from your authenticator app, and re-enable MFA to protect your "
@@ -4340,12 +4482,12 @@ msgstr ""
 "uklonite Grylli iz svog autentifikatora i ponovo omogućite MFA da biste "
 "zaštitili svoj nalog."
 
-#: app/views/mfa.py:283
+#: app/views/mfa.py:279
 #, python-brace-format
 msgid "Recovery code accepted. You have {remaining} recovery codes left."
 msgstr "Kôd za oporavak prihvaćen. Imate još {remaining} kodova za oporavak."
 
-#: app/views/mfa.py:298
+#: app/views/mfa.py:294
 msgid "An unexpected error occurred during MFA challenge."
 msgstr "Došlo je do greške prilikom brisanja korisnika."
 
@@ -4519,87 +4661,87 @@ msgstr "Neuspešno slanje test emaila. Proverite SMTP podešavanja."
 msgid "Error sending test email."
 msgstr "Pošalji test e-mail"
 
-#: app/views/users.py:58
+#: app/views/users.py:59
 msgid "Failed to load user list."
 msgstr "Nazad na Emailove"
 
-#: app/views/users.py:82
+#: app/views/users.py:83
 msgid "Password is required when creating a new user."
 msgstr "Šifra je obavezna prilikom kreiranja novog korisnika."
 
-#: app/views/users.py:87 app/views/users.py:156
+#: app/views/users.py:88 app/views/users.py:157
 msgid "Username already exists."
 msgstr "Korisničko ime već postoji."
 
-#: app/views/users.py:92 app/views/users.py:163
+#: app/views/users.py:93 app/views/users.py:164
 msgid "Email already exists."
 msgstr "Email već postoji."
 
-#: app/views/users.py:107
+#: app/views/users.py:108
 #, python-format
 msgid "User '%(username)s' created successfully."
 msgstr "Korisnik '%(username)s' uspešno kreiran."
 
-#: app/views/users.py:115
+#: app/views/users.py:116
 msgid "Failed to create user."
 msgstr "Neuspešno kreiranje korisnika."
 
-#: app/views/users.py:176
+#: app/views/users.py:177
 msgid "User updated successfully."
 msgstr "Korisnik uspešno ažuriran."
 
-#: app/views/users.py:183 app/views/users.py:301
+#: app/views/users.py:184 app/views/users.py:320
 msgid "An error occurred while updating the user."
 msgstr "Došlo je do greške prilikom ažuriranja korisnika."
 
-#: app/views/users.py:255
+#: app/views/users.py:256
 msgid "User deleted."
 msgstr "Korisnik obrisan."
 
-#: app/views/users.py:262
+#: app/views/users.py:263
 msgid "An error occurred while deleting the user."
 msgstr "Došlo je do greške prilikom brisanja korisnika."
 
-#: app/views/users.py:279
+#: app/views/users.py:280
 msgid "You cannot change your own enabled status."
 msgstr "Ne možete promeniti sopstveni status."
 
-#: app/views/users.py:292
+#: app/views/users.py:311
 #, python-format
 msgid "User '%(username)s' has been %(status)s."
 msgstr "Korisnik '%(username)s' je %(status)s."
 
-#: app/views/users.py:318
+#: app/views/users.py:337
 msgid "You cannot reset your own MFA."
 msgstr "⚪ = Ne možete onemogućiti sopstveni nalog."
 
-#: app/views/users.py:331
+#: app/views/users.py:368
 #, python-format
 msgid "MFA disabled for user '%(username)s'."
 msgstr "MFA je onemogućena za korisnika '%(username)s'."
 
-#: app/views/users.py:335
+#: app/views/users.py:372
 msgid "An error occurred while resetting MFA."
 msgstr "Došlo je do greške prilikom brisanja korisnika."
 
-#: app/views/users.py:358
+#: app/views/users.py:395
 msgid "Invalid role"
 msgstr "Nevažeća uloga."
 
-#: app/views/users.py:364
+#: app/views/users.py:417
 #, python-format
 msgid "Role updated for %(username)s."
 msgstr "MFA je onemogućena za korisnika '%(username)s'."
 
-#: app/views/users.py:370
+#: app/views/users.py:425
 msgid "An error occurred while updating the role."
 msgstr "Došlo je do greške prilikom ažuriranja korisnika."
 
-#: app/views/users.py:390
+#: app/views/users.py:463
 msgid "User account unlocked."
 msgstr "Vaš nalog je trajno obrisan."
 
-#: app/views/users.py:395
+#: app/views/users.py:468
 msgid "An error occurred while unlocking the account."
 msgstr "Došlo je do greške prilikom kreiranja admin naloga."
 
@@ -5355,3 +5497,9 @@ msgstr "Došlo je do greške prilikom brisanja korisnika."
 
 #~ msgid "Failed to send test email. "
 #~ msgstr "Neuspešno slanje test emaila:"
+
+#~ msgid "Select Theme"
+#~ msgstr "Izaberite odgovarajuću"
+
+#~ msgid "Select theme"
+#~ msgstr "Izaberite odgovarajuću"

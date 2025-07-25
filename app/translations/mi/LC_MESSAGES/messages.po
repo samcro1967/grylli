@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-07-14 11:49-0500\n"
+"POT-Creation-Date: 2025-07-25 13:21-0500\n"
 "PO-Revision-Date: 2025-05-25 16:12-0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: mi <LL@li.org>\n"
@@ -363,7 +363,7 @@ msgstr ""
 "hoki."
 
 #: app/templates/help_full.html:7
-#: app/templates/partials/profile_dropdown_menu.html:57
+#: app/templates/partials/profile_dropdown_menu.html:89
 msgid "Help"
 msgstr "Āwhina"
 
@@ -503,7 +503,7 @@ msgstr ""
 "Tere te manatoko i tō ūnga (īmēra, whākiripā, Apprise) kei te pai te mahi."
 
 #: app/templates/help_partial.html:45
-#: app/templates/partials/profile_dropdown_menu.html:22
+#: app/templates/partials/profile_dropdown_menu.html:28
 msgid "Security"
 msgstr "🔐 Haumarutanga"
 
@@ -523,7 +523,7 @@ msgstr ""
 "Me āwhina i tētahi mea tino motuhake? Kei ia maramara i Grylli tōna ake "
 "paewhiri āwhina whai aratohu taipitopito."
 
-#: app/templates/partials/profile_dropdown_menu.html:66
+#: app/templates/partials/profile_dropdown_menu.html:102
 #: app/templates/privacy_full.html:7
 msgid "Privacy"
 msgstr "Tūmataitinga"
@@ -675,7 +675,7 @@ msgstr ""
 "Ka tuku awakeri tēnei e tuku ana i ngā mōhiohio hauora pūnaha me te putanga "
 "putanga."
 
-#: app/templates/partials/profile_dropdown_menu.html:75
+#: app/templates/partials/profile_dropdown_menu.html:115
 #: app/templates/system_info_full.html:7
 msgid "System Info"
 msgstr "Pārongo Pūnaha"
@@ -770,6 +770,109 @@ msgstr ""
 #: app/templates/auth/signup.html:16
 msgid "Please fix the following errors:"
 msgstr "Tēnā, whakatika i ngā hapa e whai ake nei:"
+
+#: app/templates/account/customization_full.html:7
+#: app/templates/partials/profile_dropdown_menu.html:67
+msgid "Customization"
+msgstr "Whakarite"
+
+#: app/templates/account/customization_partial.html:10
+msgid "Customize Your Interface"
+msgstr "Whakaritea tō Atanga"
+
+#: app/templates/account/customization_partial.html:13
+msgid ""
+"Change the look and feel of Grylli using the options below. Your preferences"
+" are saved in your browser."
+msgstr ""
+"Hurihia te āhua o Grylli mā te whakamahi i ngā kōwhiringa i raro nei. Ka "
+"tiakina āu manakohanga ki tō pūtirotiro."
+
+#: app/templates/account/customization_partial.html:20
+msgid "Font Family"
+msgstr "Whānau Momotuhi"
+
+#: app/templates/account/customization_partial.html:33
+msgid "Font Size"
+msgstr "Rahi Momotuhi"
+
+#: app/templates/account/customization_partial.html:38
+msgid "Extra Small"
+msgstr "Paku Rawa"
+
+#: app/templates/account/customization_partial.html:39
+msgid "Small"
+msgstr "Katoa"
+
+#: app/templates/account/customization_partial.html:40
+#: app/templates/account/customization_partial.html:64
+#: app/templates/account/customization_partial.html:101
+msgid "Default"
+msgstr "Mukua"
+
+#: app/templates/account/customization_partial.html:41
+msgid "Large"
+msgstr "Tūtohu"
+
+#: app/templates/account/customization_partial.html:42
+msgid "Extra Large"
+msgstr "Nui Rawa"
+
+#: app/templates/account/customization_partial.html:48
+msgid "Background Pattern"
+msgstr "Tauira Papamuri"
+
+#: app/templates/account/customization_partial.html:59
+msgid "Contrast"
+msgstr "Ihirangi"
+
+#: app/templates/account/customization_partial.html:65
+msgid "Low Contrast"
+msgstr "Whākōiti Rerekētanga"
+
+#: app/templates/account/customization_partial.html:66
+msgid "High Contrast"
+msgstr "Whāroa Rerekētanga"
+
+#: app/templates/account/customization_partial.html:72
+msgid "Letter Spacing"
+msgstr "Waehere Reta"
+
+#: app/templates/account/customization_partial.html:76
+msgid "Tight"
+msgstr "Kikino"
+
+#: app/templates/account/customization_partial.html:77
+msgid "Normal"
+msgstr "Pūnoa"
+
+#: app/templates/account/customization_partial.html:78
+msgid "Wide"
+msgstr "ID"
+
+#: app/templates/account/customization_partial.html:84
+msgid "Reading Density"
+msgstr "Whakāipoipo Pānui"
+
+#: app/templates/account/customization_partial.html:96
+msgid "Border Radius"
+msgstr "Radius Parirau"
+
+#: app/templates/account/customization_partial.html:102
+msgid "Sharp Corners"
+msgstr "Kokonga Kiko"
+
+#: app/templates/account/customization_partial.html:103
+msgid "Extra Rounded"
+msgstr "Porotaka Rawa"
+
+#: app/templates/account/customization_partial.html:109
+msgid "Theme"
+msgstr "Kāinga"
+
+#: app/templates/account/customization_partial.html:125
+msgid "Language"
+msgstr "Tīpakohia te"
 
 #: app/templates/account/manage_account_full.html:7
 #: app/templates/account/manage_account_partial.html:9
@@ -910,13 +1013,21 @@ msgid "Deleting your account is permanent and cannot be undone."
 msgstr "Ko te muku i tō pūkete he pumau, ā, kāore e taea te whakahoki."
 
 #: app/templates/account/manage_account_partial.html:130
+#: app/templates/account/manage_account_partial.html:132
+msgid "You are the last admin. Deleting your account is not allowed."
+msgstr ""
+"Ko koe te kaiwhakahaere whakamutunga. Kāore e whakaaehia te muku i tō "
+"pūkete."
+
+#: app/templates/account/manage_account_partial.html:133
+#: app/templates/account/manage_account_partial.html:143
+msgid "Delete My Account"
+msgstr "Whakahou Pūkete"
+
+#: app/templates/account/manage_account_partial.html:140
 msgid "Are you sure you want to delete your account?"
 msgstr ""
 "Kei te tino hiahia koe ki te tautuhi anō i te MFA mō tēnei kaiwhakamahi?"
-
-#: app/templates/account/manage_account_partial.html:132
-msgid "Delete My Account"
-msgstr "Whakahou Pūkete"
 
 #: app/templates/account/set_security_questions_full.html:7
 msgid "Security Questions"
@@ -948,7 +1059,7 @@ msgstr "Whakahou Pūkete"
 
 #: app/templates/account/translations_full.html:7
 #: app/templates/account/translations_partial.html:8
-#: app/templates/partials/profile_dropdown_menu.html:95
+#: app/templates/partials/profile_dropdown_menu.html:139
 msgid "Translations"
 msgstr "Whakamāoritanga"
 
@@ -1141,7 +1252,7 @@ msgstr "Whakakīia te puka ki te tāpiri i tētahi kaiwhakamahi hou."
 
 #: app/templates/admin/create_user_partial.html:26
 #: app/templates/admin/edit_user.html:28
-#: app/templates/admin/partials/table_view.html:13
+#: app/templates/admin/partials/table_view.html:14
 #: app/templates/admin/reports/report_accounts_partial.html:10
 #: app/templates/user_smtp/partials/table_view.html:13
 msgid "Username"
@@ -1149,14 +1260,14 @@ msgstr "Ingoa Kaiwhakamahi"
 
 #: app/templates/admin/create_user_partial.html:36
 #: app/templates/admin/edit_user.html:36
-#: app/templates/admin/partials/table_view.html:14
+#: app/templates/admin/partials/table_view.html:15
 #: app/templates/admin/reports/report_accounts_partial.html:11
 #: app/templates/dashboard/partials/_linked_items_partial.html:15
 msgid "Email"
 msgstr "Ī-mēra"
 
 #: app/templates/admin/create_user_partial.html:49
-#: app/templates/admin/partials/table_view.html:15
+#: app/templates/admin/partials/table_view.html:16
 #: app/templates/admin/reports/report_accounts_partial.html:12
 msgid "Role"
 msgstr "Tūnga"
@@ -1690,11 +1801,11 @@ msgstr ""
 "Kei te rēhitatia ngā mahi katoa mō te takihi. Kaore e tukuna ngā kupuhipa me"
 " ngā huna."
 
-#: app/templates/admin/partials/table_view.html:12
+#: app/templates/admin/partials/table_view.html:13
 msgid "ID"
 msgstr "ID"
 
-#: app/templates/admin/partials/table_view.html:16
+#: app/templates/admin/partials/table_view.html:17
 #: app/templates/admin/tools/partials/backup_table.html:13
 #: app/templates/apprise/apprise_config.html:59
 #: app/templates/apprise/partials/table_view.html:14
@@ -1710,7 +1821,7 @@ msgstr "ID"
 msgid "Actions"
 msgstr "Ngā Mahi"
 
-#: app/templates/admin/partials/table_view.html:35
+#: app/templates/admin/partials/table_view.html:36
 #: app/templates/admin/reports/report_accounts_partial.html:52
 msgid "No users available."
 msgstr "Kāore he kaiwhakamahi e wātea ana."
@@ -1810,7 +1921,8 @@ msgstr "Tautuhinga Pūnaha"
 msgid "Details"
 msgstr "Īmēra"
 
-#: app/templates/admin/reports/report_scheduler_partial.html:37
+#: app/templates/admin/reports/report_scheduler_partial.html:38
+#: app/templates/admin/reports/report_scheduler_partial.html:46
 msgid "No scheduler activity found."
 msgstr "Kaore he mahinga kaihono i kitea."
 
@@ -1833,6 +1945,10 @@ msgstr "Hoki ki te Papamahi"
 #: app/templates/admin/reports/reports_tabs.html:38
 msgid "Scheduler Activity"
 msgstr "Hōtaka Īmēra"
+
+#: app/templates/admin/reports/reports_tabs.html:46
+msgid "Grylli | Reports | Logs"
+msgstr "Pae Whakahaere"
 
 #: app/templates/admin/reports/reports_tabs.html:51
 msgid "Application Logs"
@@ -3293,11 +3409,11 @@ msgstr "Tirohanga"
 msgid "Grylli | Admin | Users"
 msgstr "Grylli | Kaiwhakahaere | Kaiwhakamahi"
 
-#: app/templates/partials/head.html:14
+#: app/templates/partials/head.html:16
 msgid "Grylli is a secure message scheduling and delivery platform."
 msgstr "He papa whakatakoto, tuku karere haumaru a Grylli."
 
-#: app/templates/partials/head.html:25
+#: app/templates/partials/head.html:35
 msgid "Grylli"
 msgstr "Grylli"
 
@@ -3311,23 +3427,59 @@ msgstr "Kāinga"
 msgid "Check-ins Due"
 msgstr "Taki"
 
-#: app/templates/partials/profile_dropdown_menu.html:13
+#: app/templates/partials/profile_dropdown_menu.html:9
+msgid "Grylli | Account"
+msgstr "Pae Whakahaere"
+
+#: app/templates/partials/profile_dropdown_menu.html:15
 msgid "Account"
 msgstr "Pūkete"
 
-#: app/templates/partials/profile_dropdown_menu.html:31
+#: app/templates/partials/profile_dropdown_menu.html:22
+msgid "Grylli | Security Questions"
+msgstr "🔐 Haumarutanga"
+
+#: app/templates/partials/profile_dropdown_menu.html:35
+msgid "Grylli | MFA"
+msgstr "Grylli"
+
+#: app/templates/partials/profile_dropdown_menu.html:41
 msgid "MFA"
 msgstr "MFA"
 
-#: app/templates/partials/profile_dropdown_menu.html:40
+#: app/templates/partials/profile_dropdown_menu.html:48
+msgid "Grylli | About"
+msgstr "Pae Whakahaere"
+
+#: app/templates/partials/profile_dropdown_menu.html:54
 msgid "About"
 msgstr "Mo"
 
-#: app/templates/partials/profile_dropdown_menu.html:48
+#: app/templates/partials/profile_dropdown_menu.html:61
+msgid "Grylli | Customization"
+msgstr "Grylli | Īmēra | SMTP"
+
+#: app/templates/partials/profile_dropdown_menu.html:77
 msgid "GitHub"
 msgstr "GitHub"
 
-#: app/templates/partials/profile_dropdown_menu.html:107
+#: app/templates/partials/profile_dropdown_menu.html:83
+msgid "Grylli | Help"
+msgstr "Grylli | Īmēra | SMTP"
+
+#: app/templates/partials/profile_dropdown_menu.html:96
+msgid "Grylli | Privacy"
+msgstr "Tūmataitinga"
+
+#: app/templates/partials/profile_dropdown_menu.html:109
+msgid "Grylli | System Info"
+msgstr "Tautuhinga Pūnaha"
+
+#: app/templates/partials/profile_dropdown_menu.html:122
+msgid "Grylli | Translations"
+msgstr "Whakamāoritanga"
+
+#: app/templates/partials/profile_dropdown_menu.html:153
 msgid "Logout"
 msgstr "Putanga"
 
@@ -3382,19 +3534,6 @@ msgstr "Grylli | Whakautū Maharahara | Tirohanga Whānui"
 #: app/templates/partials/shared_nav.html:165
 msgid "Overview of reminders"
 msgstr "Tirohanga atu o ngā whakamaumahara"
-
-#: app/templates/partials/sidebar/desktop_footer.html:15
-msgid "Select Theme"
-msgstr "Tīpakohia te"
-
-#: app/templates/partials/sidebar/desktop_footer.html:20
-msgid "Select theme"
-msgstr "Tīpakohia te"
-
-#: app/templates/partials/sidebar/desktop_footer.html:29
-#: app/templates/partials/sidebar/desktop_footer.html:35
-msgid "Select language"
-msgstr "Tīpakohia te"
 
 #: app/templates/partials/sidebar/desktop_header.html:9
 msgid "Menu"
@@ -3911,29 +4050,29 @@ msgstr "Kaore he whakarereketanga i mahia."
 msgid "An error occurred while updating your account."
 msgstr "I puta he hapa i te whakahounga i tō pūkete."
 
-#: app/views/account.py:159
+#: app/views/account.py:164
 msgid "An error occurred while loading translation info."
 msgstr "I puta he hapa i te whakahou i te kaiwhakamahi."
 
-#: app/views/account.py:186
+#: app/views/account.py:191
 msgid "You cannot delete your account because you are the last admin."
 msgstr ""
 "Kāore e taea e koe te muku i tō pūkete nā te mea ko koe te kaiwhakahaere "
 "whakamutunga."
 
-#: app/views/account.py:195
+#: app/views/account.py:200
 msgid "Your account has been permanently deleted."
 msgstr "Kua mukua tō pūkete mō ake tonu atu."
 
-#: app/views/account.py:202
+#: app/views/account.py:207
 msgid "An error occurred while trying to delete your account."
 msgstr "I puta he hapa i te whakahounga i tō pūkete."
 
-#: app/views/account.py:221
+#: app/views/account.py:226
 msgid "Your account has been deleted"
 msgstr "Kua mukua tō pūkete mō ake tonu atu."
 
-#: app/views/account.py:223
+#: app/views/account.py:228
 #, python-brace-format
 msgid ""
 "Hello {username},\n"
@@ -3948,17 +4087,21 @@ msgstr ""
 "\n"
 "{site_url}"
 
-#: app/views/account.py:408
+#: app/views/account.py:413
 msgid "Each security question must be different."
 msgstr "Me rerekē ngā pātai e toru katoa."
 
-#: app/views/account.py:432
+#: app/views/account.py:437
 msgid "Security questions saved."
 msgstr "Kua tiakina ngā pātai haumaru."
 
-#: app/views/account.py:448
+#: app/views/account.py:453
 msgid "An error occurred while saving your security questions."
 msgstr "I puta he hapa i te whakahounga i tō pūkete."
+
+#: app/views/account.py:475
+msgid "An error occurred while loading customization settings."
+msgstr "I puta he hapa i te whakahou i te kaiwhakamahi."
 
 #: app/views/admin.py:41
 msgid "Failed to load admin dashboard."
@@ -4036,98 +4179,98 @@ msgstr ""
 msgid "An error occurred while creating the admin account."
 msgstr "I puta he hapa i te hanga i te pūkete kaiwhakahaere."
 
-#: app/views/auth.py:184
+#: app/views/auth.py:207
 msgid "Your account is not activated."
 msgstr "Kua mukua tō pūkete mō ake tonu atu."
 
-#: app/views/auth.py:192
+#: app/views/auth.py:215
 msgid "Multi-factor authentication required."
 msgstr "Kua whakakāhore te Whakamōhiotanga"
 
-#: app/views/auth.py:196 app/views/mfa.py:222
+#: app/views/auth.py:219 app/views/mfa.py:218
 msgid "Logged in successfully."
 msgstr "Kua takiuru pai."
 
-#: app/views/auth.py:214
+#: app/views/auth.py:255
 msgid "Too many failed login attempts. Your account is locked for 15 minutes."
 msgstr "He maha nga nganatanga takiuru rahua. Tena koa tatari"
 
-#: app/views/auth.py:232
+#: app/views/auth.py:273
 msgid "Invalid username or password."
 msgstr "He hē te ingoa kaiwhakamahi, te kupuhipa rānei."
 
-#: app/views/auth.py:258
+#: app/views/auth.py:299
 msgid "You have been logged out."
 msgstr "Kua takiurru kore."
 
-#: app/views/auth.py:320
+#: app/views/auth.py:361
 msgid "If a user with that email exists, we've sent the username to them."
 msgstr ""
 "Mēnā he kaiwhakamahi kei a mātou taua īmēra, kua tukuna atu e mātou te ingoa"
 " kaiwhakamahi ki a ia."
 
-#: app/views/auth.py:327
+#: app/views/auth.py:368
 msgid "An error occurred while sending your username reminder."
 msgstr "I puta he hapa i te whakahounga i tō pūkete."
 
-#: app/views/auth.py:379
+#: app/views/auth.py:420
 msgid "No account found matching that username and email."
 msgstr ""
 "Kāore he pūkete i kitea e ōrite ana ki taua ingoa kaiwhakamahi me te īmēra."
 
-#: app/views/auth.py:386
+#: app/views/auth.py:427
 msgid "An error occurred while checking your credentials."
 msgstr "I puta he hapa i te whakahounga i tō pūkete."
 
-#: app/views/auth.py:395
+#: app/views/auth.py:436
 msgid "Session expired. Please start over."
 msgstr "Kua pau te wā whakahaere. Tīmata anō koa."
 
-#: app/views/auth.py:414
+#: app/views/auth.py:455
 msgid "Too many failed attempts. Please try again later."
 msgstr "He maha nga nganatanga takiuru rahua. Tena koa tatari"
 
-#: app/views/auth.py:435
+#: app/views/auth.py:476
 msgid "A password reset link has been sent to your email."
 msgstr "Kua tukuna he hononga whakarite kupuhipa ki tō īmēra."
 
-#: app/views/auth.py:448
+#: app/views/auth.py:489
 msgid "One or more answers were incorrect."
 msgstr "He hē tētahi, he maha rānei o ngā whakautu."
 
-#: app/views/auth.py:458
+#: app/views/auth.py:499
 msgid "An error occurred while verifying your answers."
 msgstr "I puta he hapa i te whakahounga i tō pūkete."
 
-#: app/views/auth.py:491
+#: app/views/auth.py:532
 msgid "The reset link is invalid or has expired."
 msgstr "He muhu, kua pahemo rānei te hononga whāketohanga."
 
-#: app/views/auth.py:504
+#: app/views/auth.py:545
 msgid "Username and email do not match."
 msgstr "Kāore te ingoa kaiwhakamahi me te īmēra i te ōrite."
 
-#: app/views/auth.py:528
+#: app/views/auth.py:569
 msgid "Your password has been reset. Please log in."
 msgstr "Kua tautuhi anō tō kupu huna. Tēnā takiuru mai."
 
-#: app/views/auth.py:533
+#: app/views/auth.py:574
 msgid "An error occurred while resetting your password."
 msgstr "I puta he hapa i te muku i te kaiwhakamahi."
 
-#: app/views/auth.py:570
+#: app/views/auth.py:611
 msgid "Invalid registration PIN."
 msgstr "PIN rēhita muhu."
 
-#: app/views/auth.py:579
+#: app/views/auth.py:620
 msgid "Username or email already exists."
 msgstr "Kua tīari te ingoa kaiwhakamahi, te īmēra rānei."
 
-#: app/views/auth.py:608
+#: app/views/auth.py:649
 msgid "Activate Your Grylli Account"
 msgstr "Whakahoheia tō Pūkete Grylli"
 
-#: app/views/auth.py:609
+#: app/views/auth.py:650
 #, python-brace-format
 msgid ""
 "Hello {username},\n"
@@ -4138,47 +4281,47 @@ msgstr ""
 "\n"
 "Tēnā whakahoheia tō pūkete mā te pāwhiri..."
 
-#: app/views/auth.py:615
+#: app/views/auth.py:656
 msgid "Account created! Please check your email to activate your account."
 msgstr ""
 "Kua waihangatia te pūkete! Tēnā tirohia tō īmēra ki te whakahohe i tō "
 "pūkete."
 
-#: app/views/auth.py:622
+#: app/views/auth.py:663
 msgid "An error occurred during signup."
 msgstr "I puta he hapa i te muku i te kaiwhakamahi."
 
-#: app/views/auth.py:641
+#: app/views/auth.py:682
 msgid "Activation link is invalid or expired."
 msgstr "He muhu, kua pau rānei te wā o te hononga whakahohe."
 
-#: app/views/auth.py:648 app/views/users.py:135 app/views/users.py:202
+#: app/views/auth.py:689 app/views/users.py:136 app/views/users.py:203
 msgid "User not found."
 msgstr "Kāore te kaiwhakamahi i kitea."
 
-#: app/views/auth.py:652
+#: app/views/auth.py:693
 msgid "Account already activated. Please log in."
 msgstr "Kua whakamana kē te pūkete. Tēnā takiuru mai."
 
-#: app/views/auth.py:663
+#: app/views/auth.py:704
 msgid "Your account has been activated! You can now log in."
 msgstr "Kua whakahohe tō pūkete! Ka taea e koe te takiuru ināianei."
 
-#: app/views/auth.py:667
+#: app/views/auth.py:708
 msgid "Failed to activate account."
 msgstr "I rahua te waihanga tārua."
 
-#: app/views/auth.py:699
+#: app/views/auth.py:740
 msgid "Security questions not set or user not found."
 msgstr ""
 "Kāore anō kia whakatūhia ngā pātai haumaru, kāore rānei te kaiwhakamahi i "
 "kitea."
 
-#: app/views/auth.py:707
+#: app/views/auth.py:748
 msgid "Password reset email sent."
 msgstr "Kāore e ōrite ngā kupuhipa."
 
-#: app/views/auth.py:714
+#: app/views/auth.py:755
 msgid "Incorrect answer."
 msgstr "He whakautu hē."
 
@@ -4305,7 +4448,7 @@ msgstr "I rahua te tuku īmēra whakamātautau:"
 msgid "An error occurred while loading the help page."
 msgstr "I puta he hapa i te whakahou i te kaiwhakamahi."
 
-#: app/views/index.py:53
+#: app/views/index.py:55
 msgid "Error loading dashboard"
 msgstr "Hoki ki ngā Īmēra"
 
@@ -4369,7 +4512,7 @@ msgstr "Kua tiakina te karere."
 msgid "You must enter a code from your authenticator."
 msgstr "Me whakauru koe i tētahi waehere mai i tō waea whakaū."
 
-#: app/views/mfa.py:85 app/views/mfa.py:295 app/views/mfa.py:303
+#: app/views/mfa.py:85 app/views/mfa.py:291 app/views/mfa.py:299
 msgid "Invalid code. Please try again."
 msgstr "Waehere hē. Kōrero anō mai koa."
 
@@ -4391,15 +4534,15 @@ msgstr ""
 msgid "Could not load recovery codes."
 msgstr "Kāore i taea te utaina ngā waehere whakaora."
 
-#: app/views/mfa.py:194
+#: app/views/mfa.py:190
 msgid "No MFA challenge in progress."
 msgstr "Kāore he wero MFA e haere ana."
 
-#: app/views/mfa.py:202
+#: app/views/mfa.py:198
 msgid "User not found for MFA challenge."
 msgstr "Kāore te kaiwhakamahi i kitea."
 
-#: app/views/mfa.py:262
+#: app/views/mfa.py:258
 msgid ""
 "You have used your last recovery code. MFA has been disabled. Please remove "
 "Grylli from your authenticator app, and re-enable MFA to protect your "
@@ -4409,14 +4552,14 @@ msgstr ""
 "MFA. Tēnā, tangohia a Grylli mai i tō pūkoro whakaū, ā, whakawhakahouhia anō"
 " te MFA ki te haumaru i tō pūkete."
 
-#: app/views/mfa.py:283
+#: app/views/mfa.py:279
 #, python-brace-format
 msgid "Recovery code accepted. You have {remaining} recovery codes left."
 msgstr ""
 "Kua whakaaetia te waehere whakaora. E {remaining} ana ngā waehere whakaora e"
 " toe ana."
 
-#: app/views/mfa.py:298
+#: app/views/mfa.py:294
 msgid "An unexpected error occurred during MFA challenge."
 msgstr "I puta he hapa i te muku i te kaiwhakamahi."
 
@@ -4593,87 +4736,87 @@ msgstr "I rahua te tuku īmēra whakamātautau. Tirohia ngā tautuhinga SMTP."
 msgid "Error sending test email."
 msgstr "Tukuna Īmēra Whakamātautau"
 
-#: app/views/users.py:58
+#: app/views/users.py:59
 msgid "Failed to load user list."
 msgstr "Hoki ki ngā Īmēra"
 
-#: app/views/users.py:82
+#: app/views/users.py:83
 msgid "Password is required when creating a new user."
 msgstr "E hiahiatia ana te kupuhipa ina waihangahia he kaiwhakamahi hou."
 
-#: app/views/users.py:87 app/views/users.py:156
+#: app/views/users.py:88 app/views/users.py:157
 msgid "Username already exists."
 msgstr "Kua tīari te īngoa kaiwhakamahi."
 
-#: app/views/users.py:92 app/views/users.py:163
+#: app/views/users.py:93 app/views/users.py:164
 msgid "Email already exists."
 msgstr "Kua tīari te īmēra."
 
-#: app/views/users.py:107
+#: app/views/users.py:108
 #, python-format
 msgid "User '%(username)s' created successfully."
 msgstr "Kua angitū te waihanga i te kaiwhakamahi '%(username)s'."
 
-#: app/views/users.py:115
+#: app/views/users.py:116
 msgid "Failed to create user."
 msgstr "I rahua te waihanga i te kaiwhakamahi."
 
-#: app/views/users.py:176
+#: app/views/users.py:177
 msgid "User updated successfully."
 msgstr "I whakahoutia angitu te kaiwhakamahi."
 
-#: app/views/users.py:183 app/views/users.py:301
+#: app/views/users.py:184 app/views/users.py:320
 msgid "An error occurred while updating the user."
 msgstr "I puta he hapa i te whakahou i te kaiwhakamahi."
 
-#: app/views/users.py:255
+#: app/views/users.py:256
 msgid "User deleted."
 msgstr "Kua mukua te kaiwhakamahi."
 
-#: app/views/users.py:262
+#: app/views/users.py:263
 msgid "An error occurred while deleting the user."
 msgstr "I puta he hapa i te muku i te kaiwhakamahi."
 
-#: app/views/users.py:279
+#: app/views/users.py:280
 msgid "You cannot change your own enabled status."
 msgstr "Kāore koe e āhei ki te huri i tō ake tūnga āhei."
 
-#: app/views/users.py:292
+#: app/views/users.py:311
 #, python-format
 msgid "User '%(username)s' has been %(status)s."
 msgstr "Ko te kaiwhakamahi '%(username)s' kua %(status)s."
 
-#: app/views/users.py:318
+#: app/views/users.py:337
 msgid "You cannot reset your own MFA."
 msgstr "⚪ = Kāore e taea e koe te whakakore i tō ake pūkete."
 
-#: app/views/users.py:331
+#: app/views/users.py:368
 #, python-format
 msgid "MFA disabled for user '%(username)s'."
 msgstr "Kua whakakorehia te MFA mō te kaiwhakamahi '%(username)s'."
 
-#: app/views/users.py:335
+#: app/views/users.py:372
 msgid "An error occurred while resetting MFA."
 msgstr "I puta he hapa i te muku i te kaiwhakamahi."
 
-#: app/views/users.py:358
+#: app/views/users.py:395
 msgid "Invalid role"
 msgstr "Tūnga hē."
 
-#: app/views/users.py:364
+#: app/views/users.py:417
 #, python-format
 msgid "Role updated for %(username)s."
 msgstr "Kua whakakorehia te MFA mō te kaiwhakamahi '%(username)s'."
 
-#: app/views/users.py:370
+#: app/views/users.py:425
 msgid "An error occurred while updating the role."
 msgstr "I puta he hapa i te whakahou i te kaiwhakamahi."
 
-#: app/views/users.py:390
+#: app/views/users.py:463
 msgid "User account unlocked."
 msgstr "Kua mukua tō pūkete mō ake tonu atu."
 
-#: app/views/users.py:395
+#: app/views/users.py:468
 msgid "An error occurred while unlocking the account."
 msgstr "I puta he hapa i te hanga i te pūkete kaiwhakahaere."
 
@@ -5440,3 +5583,9 @@ msgstr "I puta he hapa i te muku i te kaiwhakamahi."
 
 #~ msgid "Failed to send test email. "
 #~ msgstr "I rahua te tuku īmēra whakamātautau:"
+
+#~ msgid "Select Theme"
+#~ msgstr "Tīpakohia te"
+
+#~ msgid "Select theme"
+#~ msgstr "Tīpakohia te"

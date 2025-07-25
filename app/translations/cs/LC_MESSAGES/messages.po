@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-07-14 11:49-0500\n"
+"POT-Creation-Date: 2025-07-25 13:21-0500\n"
 "PO-Revision-Date: 2025-05-25 12:48-0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: cs <LL@li.org>\n"
@@ -363,7 +363,7 @@ msgstr ""
 "spolehlivě."
 
 #: app/templates/help_full.html:7
-#: app/templates/partials/profile_dropdown_menu.html:57
+#: app/templates/partials/profile_dropdown_menu.html:89
 msgid "Help"
 msgstr "Nápověda"
 
@@ -502,7 +502,7 @@ msgstr ""
 "očekávání."
 
 #: app/templates/help_partial.html:45
-#: app/templates/partials/profile_dropdown_menu.html:22
+#: app/templates/partials/profile_dropdown_menu.html:28
 msgid "Security"
 msgstr "🔐 Zabezpečení"
 
@@ -522,7 +522,7 @@ msgstr ""
 "Potřebujete pomoc s něčím konkrétním? Každý modul v Grylli obsahuje vlastní "
 "panel nápovědy s podrobným vedením."
 
-#: app/templates/partials/profile_dropdown_menu.html:66
+#: app/templates/partials/profile_dropdown_menu.html:102
 #: app/templates/privacy_full.html:7
 msgid "Privacy"
 msgstr "Soukromí"
@@ -665,7 +665,7 @@ msgstr "Systémové nastavení"
 msgid "This endpoint provides system health and version information."
 msgstr "Tento endpoint poskytuje informace o zdraví systému a verzi."
 
-#: app/templates/partials/profile_dropdown_menu.html:75
+#: app/templates/partials/profile_dropdown_menu.html:115
 #: app/templates/system_info_full.html:7
 msgid "System Info"
 msgstr "Systémové informace"
@@ -760,6 +760,109 @@ msgstr ""
 #: app/templates/auth/signup.html:16
 msgid "Please fix the following errors:"
 msgstr "Prosím, opravte následující chyby:"
+
+#: app/templates/account/customization_full.html:7
+#: app/templates/partials/profile_dropdown_menu.html:67
+msgid "Customization"
+msgstr "Přizpůsobení"
+
+#: app/templates/account/customization_partial.html:10
+msgid "Customize Your Interface"
+msgstr "Přizpůsobte si své rozhraní"
+
+#: app/templates/account/customization_partial.html:13
+msgid ""
+"Change the look and feel of Grylli using the options below. Your preferences"
+" are saved in your browser."
+msgstr ""
+"Změňte vzhled a dojem z Grylli pomocí možností níže. Vaše preference jsou "
+"uloženy ve vašem prohlížeči."
+
+#: app/templates/account/customization_partial.html:20
+msgid "Font Family"
+msgstr "Typ písma"
+
+#: app/templates/account/customization_partial.html:33
+msgid "Font Size"
+msgstr "Velikost písma"
+
+#: app/templates/account/customization_partial.html:38
+msgid "Extra Small"
+msgstr "Velmi malý"
+
+#: app/templates/account/customization_partial.html:39
+msgid "Small"
+msgstr "Vše"
+
+#: app/templates/account/customization_partial.html:40
+#: app/templates/account/customization_partial.html:64
+#: app/templates/account/customization_partial.html:101
+msgid "Default"
+msgstr "Smazat"
+
+#: app/templates/account/customization_partial.html:41
+msgid "Large"
+msgstr "Štítek"
+
+#: app/templates/account/customization_partial.html:42
+msgid "Extra Large"
+msgstr "Velmi velký"
+
+#: app/templates/account/customization_partial.html:48
+msgid "Background Pattern"
+msgstr "Vzor pozadí"
+
+#: app/templates/account/customization_partial.html:59
+msgid "Contrast"
+msgstr "Obsah"
+
+#: app/templates/account/customization_partial.html:65
+msgid "Low Contrast"
+msgstr "Nízký kontrast"
+
+#: app/templates/account/customization_partial.html:66
+msgid "High Contrast"
+msgstr "Vysoký kontrast"
+
+#: app/templates/account/customization_partial.html:72
+msgid "Letter Spacing"
+msgstr "Mezera mezi písmeny"
+
+#: app/templates/account/customization_partial.html:76
+msgid "Tight"
+msgstr "Úzký"
+
+#: app/templates/account/customization_partial.html:77
+msgid "Normal"
+msgstr "Normální"
+
+#: app/templates/account/customization_partial.html:78
+msgid "Wide"
+msgstr "ID"
+
+#: app/templates/account/customization_partial.html:84
+msgid "Reading Density"
+msgstr "Hustota čtení"
+
+#: app/templates/account/customization_partial.html:96
+msgid "Border Radius"
+msgstr "Poloměr rohu"
+
+#: app/templates/account/customization_partial.html:102
+msgid "Sharp Corners"
+msgstr "Ostré rohy"
+
+#: app/templates/account/customization_partial.html:103
+msgid "Extra Rounded"
+msgstr "Velmi zaoblený"
+
+#: app/templates/account/customization_partial.html:109
+msgid "Theme"
+msgstr "Domů"
+
+#: app/templates/account/customization_partial.html:125
+msgid "Language"
+msgstr "Vyberte odpovídající"
 
 #: app/templates/account/manage_account_full.html:7
 #: app/templates/account/manage_account_partial.html:9
@@ -900,12 +1003,18 @@ msgid "Deleting your account is permanent and cannot be undone."
 msgstr "Smazání vašeho účtu je trvalé a nelze jej vrátit zpět."
 
 #: app/templates/account/manage_account_partial.html:130
-msgid "Are you sure you want to delete your account?"
-msgstr "Opravdu chcete resetovat MFA pro tohoto uživatele?"
-
 #: app/templates/account/manage_account_partial.html:132
+msgid "You are the last admin. Deleting your account is not allowed."
+msgstr "Jste posledním administrátorem. Mazání vašeho účtu není povoleno."
+
+#: app/templates/account/manage_account_partial.html:133
+#: app/templates/account/manage_account_partial.html:143
 msgid "Delete My Account"
 msgstr "Aktualizovat účet"
+
+#: app/templates/account/manage_account_partial.html:140
+msgid "Are you sure you want to delete your account?"
+msgstr "Opravdu chcete resetovat MFA pro tohoto uživatele?"
 
 #: app/templates/account/set_security_questions_full.html:7
 msgid "Security Questions"
@@ -937,7 +1046,7 @@ msgstr "Aktualizovat účet"
 
 #: app/templates/account/translations_full.html:7
 #: app/templates/account/translations_partial.html:8
-#: app/templates/partials/profile_dropdown_menu.html:95
+#: app/templates/partials/profile_dropdown_menu.html:139
 msgid "Translations"
 msgstr "Překlady"
 
@@ -1117,7 +1226,7 @@ msgstr "Vyplňte formulář pro přidání nového uživatele."
 
 #: app/templates/admin/create_user_partial.html:26
 #: app/templates/admin/edit_user.html:28
-#: app/templates/admin/partials/table_view.html:13
+#: app/templates/admin/partials/table_view.html:14
 #: app/templates/admin/reports/report_accounts_partial.html:10
 #: app/templates/user_smtp/partials/table_view.html:13
 msgid "Username"
@@ -1125,14 +1234,14 @@ msgstr "Uživatelské jméno"
 
 #: app/templates/admin/create_user_partial.html:36
 #: app/templates/admin/edit_user.html:36
-#: app/templates/admin/partials/table_view.html:14
+#: app/templates/admin/partials/table_view.html:15
 #: app/templates/admin/reports/report_accounts_partial.html:11
 #: app/templates/dashboard/partials/_linked_items_partial.html:15
 msgid "Email"
 msgstr "Email"
 
 #: app/templates/admin/create_user_partial.html:49
-#: app/templates/admin/partials/table_view.html:15
+#: app/templates/admin/partials/table_view.html:16
 #: app/templates/admin/reports/report_accounts_partial.html:12
 msgid "Role"
 msgstr "Role"
@@ -1646,11 +1755,11 @@ msgstr ""
 "Všechny akce jsou zaznamenávány pro zajištění odpovědnosti. Hesla a tajné "
 "hodnoty nejsou nikdy viditelné."
 
-#: app/templates/admin/partials/table_view.html:12
+#: app/templates/admin/partials/table_view.html:13
 msgid "ID"
 msgstr "ID"
 
-#: app/templates/admin/partials/table_view.html:16
+#: app/templates/admin/partials/table_view.html:17
 #: app/templates/admin/tools/partials/backup_table.html:13
 #: app/templates/apprise/apprise_config.html:59
 #: app/templates/apprise/partials/table_view.html:14
@@ -1666,7 +1775,7 @@ msgstr "ID"
 msgid "Actions"
 msgstr "Akce"
 
-#: app/templates/admin/partials/table_view.html:35
+#: app/templates/admin/partials/table_view.html:36
 #: app/templates/admin/reports/report_accounts_partial.html:52
 msgid "No users available."
 msgstr "Žádní uživatelé k dispozici."
@@ -1767,7 +1876,8 @@ msgstr "Systémové nastavení"
 msgid "Details"
 msgstr "E-maily"
 
-#: app/templates/admin/reports/report_scheduler_partial.html:37
+#: app/templates/admin/reports/report_scheduler_partial.html:38
+#: app/templates/admin/reports/report_scheduler_partial.html:46
 msgid "No scheduler activity found."
 msgstr "Nenalezena žádná činnost plánovače."
 
@@ -1790,6 +1900,10 @@ msgstr "Zpět na panel"
 #: app/templates/admin/reports/reports_tabs.html:38
 msgid "Scheduler Activity"
 msgstr "Naplánovat email"
+
+#: app/templates/admin/reports/reports_tabs.html:46
+msgid "Grylli | Reports | Logs"
+msgstr "Admin Panel"
 
 #: app/templates/admin/reports/reports_tabs.html:51
 msgid "Application Logs"
@@ -3235,11 +3349,11 @@ msgstr "Přehled"
 msgid "Grylli | Admin | Users"
 msgstr "Grylli | Admin | Uživatelé"
 
-#: app/templates/partials/head.html:14
+#: app/templates/partials/head.html:16
 msgid "Grylli is a secure message scheduling and delivery platform."
 msgstr "Grylli je platforma pro bezpečné plánování a doručování zpráv."
 
-#: app/templates/partials/head.html:25
+#: app/templates/partials/head.html:35
 msgid "Grylli"
 msgstr "Grylli"
 
@@ -3253,23 +3367,59 @@ msgstr "Domů"
 msgid "Check-ins Due"
 msgstr "Kontrola"
 
-#: app/templates/partials/profile_dropdown_menu.html:13
+#: app/templates/partials/profile_dropdown_menu.html:9
+msgid "Grylli | Account"
+msgstr "Admin Panel"
+
+#: app/templates/partials/profile_dropdown_menu.html:15
 msgid "Account"
 msgstr "Účet"
 
-#: app/templates/partials/profile_dropdown_menu.html:31
+#: app/templates/partials/profile_dropdown_menu.html:22
+msgid "Grylli | Security Questions"
+msgstr "🔐 Zabezpečení"
+
+#: app/templates/partials/profile_dropdown_menu.html:35
+msgid "Grylli | MFA"
+msgstr "Grylli"
+
+#: app/templates/partials/profile_dropdown_menu.html:41
 msgid "MFA"
 msgstr "MFA"
 
-#: app/templates/partials/profile_dropdown_menu.html:40
+#: app/templates/partials/profile_dropdown_menu.html:48
+msgid "Grylli | About"
+msgstr "Admin Panel"
+
+#: app/templates/partials/profile_dropdown_menu.html:54
 msgid "About"
 msgstr "O nás"
 
-#: app/templates/partials/profile_dropdown_menu.html:48
+#: app/templates/partials/profile_dropdown_menu.html:61
+msgid "Grylli | Customization"
+msgstr "Grylli | E-maily | SMTP"
+
+#: app/templates/partials/profile_dropdown_menu.html:77
 msgid "GitHub"
 msgstr "GitHub"
 
-#: app/templates/partials/profile_dropdown_menu.html:107
+#: app/templates/partials/profile_dropdown_menu.html:83
+msgid "Grylli | Help"
+msgstr "Grylli | E-maily | SMTP"
+
+#: app/templates/partials/profile_dropdown_menu.html:96
+msgid "Grylli | Privacy"
+msgstr "Soukromí"
+
+#: app/templates/partials/profile_dropdown_menu.html:109
+msgid "Grylli | System Info"
+msgstr "Systémové nastavení"
+
+#: app/templates/partials/profile_dropdown_menu.html:122
+msgid "Grylli | Translations"
+msgstr "Překlady"
+
+#: app/templates/partials/profile_dropdown_menu.html:153
 msgid "Logout"
 msgstr "Odhlásit"
 
@@ -3324,19 +3474,6 @@ msgstr "Grylli | Připomínky | Přehled"
 #: app/templates/partials/shared_nav.html:165
 msgid "Overview of reminders"
 msgstr "Přehled připomenutí"
-
-#: app/templates/partials/sidebar/desktop_footer.html:15
-msgid "Select Theme"
-msgstr "Vyberte odpovídající"
-
-#: app/templates/partials/sidebar/desktop_footer.html:20
-msgid "Select theme"
-msgstr "Vyberte odpovídající"
-
-#: app/templates/partials/sidebar/desktop_footer.html:29
-#: app/templates/partials/sidebar/desktop_footer.html:35
-msgid "Select language"
-msgstr "Vyberte odpovídající"
 
 #: app/templates/partials/sidebar/desktop_header.html:9
 msgid "Menu"
@@ -3840,27 +3977,27 @@ msgstr "Žádné změny nebyly provedeny."
 msgid "An error occurred while updating your account."
 msgstr "Při aktualizaci vašeho účtu došlo k chybě."
 
-#: app/views/account.py:159
+#: app/views/account.py:164
 msgid "An error occurred while loading translation info."
 msgstr "Při aktualizaci uživatele došlo k chybě."
 
-#: app/views/account.py:186
+#: app/views/account.py:191
 msgid "You cannot delete your account because you are the last admin."
 msgstr "Nemůžete smazat svůj účet, protože jste poslední správce."
 
-#: app/views/account.py:195
+#: app/views/account.py:200
 msgid "Your account has been permanently deleted."
 msgstr "Váš účet byl trvale smazán."
 
-#: app/views/account.py:202
+#: app/views/account.py:207
 msgid "An error occurred while trying to delete your account."
 msgstr "Při aktualizaci vašeho účtu došlo k chybě."
 
-#: app/views/account.py:221
+#: app/views/account.py:226
 msgid "Your account has been deleted"
 msgstr "Váš účet byl trvale smazán."
 
-#: app/views/account.py:223
+#: app/views/account.py:228
 #, python-brace-format
 msgid ""
 "Hello {username},\n"
@@ -3875,17 +4012,21 @@ msgstr ""
 "\n"
 "{site_url}"
 
-#: app/views/account.py:408
+#: app/views/account.py:413
 msgid "Each security question must be different."
 msgstr "Všechny tři otázky musí být různé."
 
-#: app/views/account.py:432
+#: app/views/account.py:437
 msgid "Security questions saved."
 msgstr "Bezpečnostní otázky uloženy."
 
-#: app/views/account.py:448
+#: app/views/account.py:453
 msgid "An error occurred while saving your security questions."
 msgstr "Při aktualizaci vašeho účtu došlo k chybě."
+
+#: app/views/account.py:475
+msgid "An error occurred while loading customization settings."
+msgstr "Při aktualizaci uživatele došlo k chybě."
 
 #: app/views/admin.py:41
 msgid "Failed to load admin dashboard."
@@ -3963,97 +4104,97 @@ msgstr ""
 msgid "An error occurred while creating the admin account."
 msgstr "Při vytváření účtu správce došlo k chybě."
 
-#: app/views/auth.py:184
+#: app/views/auth.py:207
 msgid "Your account is not activated."
 msgstr "Váš účet byl trvale smazán."
 
-#: app/views/auth.py:192
+#: app/views/auth.py:215
 msgid "Multi-factor authentication required."
 msgstr "Oznámení je zakázáno"
 
-#: app/views/auth.py:196 app/views/mfa.py:222
+#: app/views/auth.py:219 app/views/mfa.py:218
 msgid "Logged in successfully."
 msgstr "Přihlášení bylo úspěšné."
 
-#: app/views/auth.py:214
+#: app/views/auth.py:255
 msgid "Too many failed login attempts. Your account is locked for 15 minutes."
 msgstr "Příliš mnoho neúspěšných pokusů o přihlášení. Prosím, počkejte"
 
-#: app/views/auth.py:232
+#: app/views/auth.py:273
 msgid "Invalid username or password."
 msgstr "Neplatné uživatelské jméno nebo heslo."
 
-#: app/views/auth.py:258
+#: app/views/auth.py:299
 msgid "You have been logged out."
 msgstr "Byli jste odhlášeni."
 
-#: app/views/auth.py:320
+#: app/views/auth.py:361
 msgid "If a user with that email exists, we've sent the username to them."
 msgstr ""
 "Pokud uživatel s tímto emailem existuje, poslali jsme mu uživatelské jméno."
 
-#: app/views/auth.py:327
+#: app/views/auth.py:368
 msgid "An error occurred while sending your username reminder."
 msgstr "Při aktualizaci vašeho účtu došlo k chybě."
 
-#: app/views/auth.py:379
+#: app/views/auth.py:420
 msgid "No account found matching that username and email."
 msgstr ""
 "Nebyl nalezen žádný účet odpovídající danému uživatelskému jménu a emailu."
 
-#: app/views/auth.py:386
+#: app/views/auth.py:427
 msgid "An error occurred while checking your credentials."
 msgstr "Při aktualizaci vašeho účtu došlo k chybě."
 
-#: app/views/auth.py:395
+#: app/views/auth.py:436
 msgid "Session expired. Please start over."
 msgstr "Relace vypršela. Začněte znovu."
 
-#: app/views/auth.py:414
+#: app/views/auth.py:455
 msgid "Too many failed attempts. Please try again later."
 msgstr "Příliš mnoho neúspěšných pokusů o přihlášení. Prosím, počkejte"
 
-#: app/views/auth.py:435
+#: app/views/auth.py:476
 msgid "A password reset link has been sent to your email."
 msgstr "Odkaz pro reset hesla byl odeslán na váš email."
 
-#: app/views/auth.py:448
+#: app/views/auth.py:489
 msgid "One or more answers were incorrect."
 msgstr "Jedna nebo více odpovědí bylo nesprávných."
 
-#: app/views/auth.py:458
+#: app/views/auth.py:499
 msgid "An error occurred while verifying your answers."
 msgstr "Při aktualizaci vašeho účtu došlo k chybě."
 
-#: app/views/auth.py:491
+#: app/views/auth.py:532
 msgid "The reset link is invalid or has expired."
 msgstr "Odkaz na reset je neplatný nebo vypršel."
 
-#: app/views/auth.py:504
+#: app/views/auth.py:545
 msgid "Username and email do not match."
 msgstr "Uživatelské jméno a email se neshodují."
 
-#: app/views/auth.py:528
+#: app/views/auth.py:569
 msgid "Your password has been reset. Please log in."
 msgstr "Vaše heslo bylo resetováno. Přihlaste se prosím."
 
-#: app/views/auth.py:533
+#: app/views/auth.py:574
 msgid "An error occurred while resetting your password."
 msgstr "Při mazání uživatele došlo k chybě."
 
-#: app/views/auth.py:570
+#: app/views/auth.py:611
 msgid "Invalid registration PIN."
 msgstr "Neplatný registrační PIN."
 
-#: app/views/auth.py:579
+#: app/views/auth.py:620
 msgid "Username or email already exists."
 msgstr "Uživatelské jméno nebo email již existuje."
 
-#: app/views/auth.py:608
+#: app/views/auth.py:649
 msgid "Activate Your Grylli Account"
 msgstr "Aktivujte svůj účet Grylli"
 
-#: app/views/auth.py:609
+#: app/views/auth.py:650
 #, python-brace-format
 msgid ""
 "Hello {username},\n"
@@ -4064,43 +4205,43 @@ msgstr ""
 "\n"
 "Prosím aktivujte svůj účet kliknutím..."
 
-#: app/views/auth.py:615
+#: app/views/auth.py:656
 msgid "Account created! Please check your email to activate your account."
 msgstr "Účet vytvořen! Zkontrolujte prosím váš email pro aktivaci účtu."
 
-#: app/views/auth.py:622
+#: app/views/auth.py:663
 msgid "An error occurred during signup."
 msgstr "Při mazání uživatele došlo k chybě."
 
-#: app/views/auth.py:641
+#: app/views/auth.py:682
 msgid "Activation link is invalid or expired."
 msgstr "Aktivační odkaz je neplatný nebo vypršel."
 
-#: app/views/auth.py:648 app/views/users.py:135 app/views/users.py:202
+#: app/views/auth.py:689 app/views/users.py:136 app/views/users.py:203
 msgid "User not found."
 msgstr "Uživatel nenalezen."
 
-#: app/views/auth.py:652
+#: app/views/auth.py:693
 msgid "Account already activated. Please log in."
 msgstr "Účet již aktivován. Přihlaste se prosím."
 
-#: app/views/auth.py:663
+#: app/views/auth.py:704
 msgid "Your account has been activated! You can now log in."
 msgstr "Váš účet byl aktivován! Můžete se nyní přihlásit."
 
-#: app/views/auth.py:667
+#: app/views/auth.py:708
 msgid "Failed to activate account."
 msgstr "Nepodařilo se vytvořit zálohu."
 
-#: app/views/auth.py:699
+#: app/views/auth.py:740
 msgid "Security questions not set or user not found."
 msgstr "Bezpečnostní otázky nejsou nastaveny nebo uživatel nebyl nalezen."
 
-#: app/views/auth.py:707
+#: app/views/auth.py:748
 msgid "Password reset email sent."
 msgstr "Hesla se neshodují."
 
-#: app/views/auth.py:714
+#: app/views/auth.py:755
 msgid "Incorrect answer."
 msgstr "Nesprávná odpověď."
 
@@ -4225,7 +4366,7 @@ msgstr "Nepodařilo se odeslat testovací email:"
 msgid "An error occurred while loading the help page."
 msgstr "Při aktualizaci uživatele došlo k chybě."
 
-#: app/views/index.py:53
+#: app/views/index.py:55
 msgid "Error loading dashboard"
 msgstr "Zpět k emailům"
 
@@ -4289,7 +4430,7 @@ msgstr "Zpráva uložena."
 msgid "You must enter a code from your authenticator."
 msgstr "Musíte zadat kód z vašeho autentizátoru."
 
-#: app/views/mfa.py:85 app/views/mfa.py:295 app/views/mfa.py:303
+#: app/views/mfa.py:85 app/views/mfa.py:291 app/views/mfa.py:299
 msgid "Invalid code. Please try again."
 msgstr "Neplatný kód. Zkuste to prosím znovu."
 
@@ -4309,15 +4450,15 @@ msgstr "Obnovovací kódy jsou zobrazeny pouze ihned po povolení MFA."
 msgid "Could not load recovery codes."
 msgstr "Nepodařilo se načíst obnovovací kódy."
 
-#: app/views/mfa.py:194
+#: app/views/mfa.py:190
 msgid "No MFA challenge in progress."
 msgstr "Žádná výzva MFA není aktivní."
 
-#: app/views/mfa.py:202
+#: app/views/mfa.py:198
 msgid "User not found for MFA challenge."
 msgstr "Uživatel nenalezen."
 
-#: app/views/mfa.py:262
+#: app/views/mfa.py:258
 msgid ""
 "You have used your last recovery code. MFA has been disabled. Please remove "
 "Grylli from your authenticator app, and re-enable MFA to protect your "
@@ -4327,12 +4468,12 @@ msgstr ""
 "odstraňte Grylli z vaší autentizační aplikace a znovu povolte MFA pro "
 "ochranu vašeho účtu."
 
-#: app/views/mfa.py:283
+#: app/views/mfa.py:279
 #, python-brace-format
 msgid "Recovery code accepted. You have {remaining} recovery codes left."
 msgstr "Obnovovací kód přijat. Zbývá vám {remaining} obnovovacích kódů."
 
-#: app/views/mfa.py:298
+#: app/views/mfa.py:294
 msgid "An unexpected error occurred during MFA challenge."
 msgstr "Při mazání uživatele došlo k chybě."
 
@@ -4506,87 +4647,87 @@ msgstr "Nepodařilo se odeslat testovací email. Zkontrolujte nastavení SMTP."
 msgid "Error sending test email."
 msgstr "Odeslat testovací e-mail"
 
-#: app/views/users.py:58
+#: app/views/users.py:59
 msgid "Failed to load user list."
 msgstr "Zpět k emailům"
 
-#: app/views/users.py:82
+#: app/views/users.py:83
 msgid "Password is required when creating a new user."
 msgstr "Při vytváření nového uživatele je vyžadováno heslo."
 
-#: app/views/users.py:87 app/views/users.py:156
+#: app/views/users.py:88 app/views/users.py:157
 msgid "Username already exists."
 msgstr "Uživatelské jméno již existuje."
 
-#: app/views/users.py:92 app/views/users.py:163
+#: app/views/users.py:93 app/views/users.py:164
 msgid "Email already exists."
 msgstr "E-mail již existuje."
 
-#: app/views/users.py:107
+#: app/views/users.py:108
 #, python-format
 msgid "User '%(username)s' created successfully."
 msgstr "Uživatel '%(username)s' byl úspěšně vytvořen."
 
-#: app/views/users.py:115
+#: app/views/users.py:116
 msgid "Failed to create user."
 msgstr "Nepodařilo se vytvořit uživatele."
 
-#: app/views/users.py:176
+#: app/views/users.py:177
 msgid "User updated successfully."
 msgstr "Uživatel úspěšně aktualizován."
 
-#: app/views/users.py:183 app/views/users.py:301
+#: app/views/users.py:184 app/views/users.py:320
 msgid "An error occurred while updating the user."
 msgstr "Při aktualizaci uživatele došlo k chybě."
 
-#: app/views/users.py:255
+#: app/views/users.py:256
 msgid "User deleted."
 msgstr "Uživatel smazán."
 
-#: app/views/users.py:262
+#: app/views/users.py:263
 msgid "An error occurred while deleting the user."
 msgstr "Při mazání uživatele došlo k chybě."
 
-#: app/views/users.py:279
+#: app/views/users.py:280
 msgid "You cannot change your own enabled status."
 msgstr "Nelze změnit vlastní stav aktivace."
 
-#: app/views/users.py:292
+#: app/views/users.py:311
 #, python-format
 msgid "User '%(username)s' has been %(status)s."
 msgstr "Uživatel '%(username)s' byl %(status)s."
 
-#: app/views/users.py:318
+#: app/views/users.py:337
 msgid "You cannot reset your own MFA."
 msgstr "⚪ = Nemůžete zakázat vlastní účet."
 
-#: app/views/users.py:331
+#: app/views/users.py:368
 #, python-format
 msgid "MFA disabled for user '%(username)s'."
 msgstr "MFA deaktivováno pro uživatele '%(username)s'."
 
-#: app/views/users.py:335
+#: app/views/users.py:372
 msgid "An error occurred while resetting MFA."
 msgstr "Při mazání uživatele došlo k chybě."
 
-#: app/views/users.py:358
+#: app/views/users.py:395
 msgid "Invalid role"
 msgstr "Neplatná role."
 
-#: app/views/users.py:364
+#: app/views/users.py:417
 #, python-format
 msgid "Role updated for %(username)s."
 msgstr "MFA deaktivováno pro uživatele '%(username)s'."
 
-#: app/views/users.py:370
+#: app/views/users.py:425
 msgid "An error occurred while updating the role."
 msgstr "Při aktualizaci uživatele došlo k chybě."
 
-#: app/views/users.py:390
+#: app/views/users.py:463
 msgid "User account unlocked."
 msgstr "Váš účet byl trvale smazán."
 
-#: app/views/users.py:395
+#: app/views/users.py:468
 msgid "An error occurred while unlocking the account."
 msgstr "Při vytváření účtu správce došlo k chybě."
 
@@ -5341,3 +5482,9 @@ msgstr "Při mazání uživatele došlo k chybě."
 
 #~ msgid "Failed to send test email. "
 #~ msgstr "Nepodařilo se odeslat testovací email:"
+
+#~ msgid "Select Theme"
+#~ msgstr "Vyberte odpovídající"
+
+#~ msgid "Select theme"
+#~ msgstr "Vyberte odpovídající"

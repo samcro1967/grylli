@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-07-14 11:49-0500\n"
+"POT-Creation-Date: 2025-07-25 13:21-0500\n"
 "PO-Revision-Date: 2025-05-25 16:45-0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: ms <LL@li.org>\n"
@@ -363,7 +363,7 @@ msgstr ""
 "secara selamat dan boleh dipercayai."
 
 #: app/templates/help_full.html:7
-#: app/templates/partials/profile_dropdown_menu.html:57
+#: app/templates/partials/profile_dropdown_menu.html:89
 msgid "Help"
 msgstr "Bantuan"
 
@@ -502,7 +502,7 @@ msgstr ""
 "seperti yang diharapkan."
 
 #: app/templates/help_partial.html:45
-#: app/templates/partials/profile_dropdown_menu.html:22
+#: app/templates/partials/profile_dropdown_menu.html:28
 msgid "Security"
 msgstr "🔐 Keselamatan"
 
@@ -522,7 +522,7 @@ msgstr ""
 "Perlu bantuan dengan sesuatu yang spesifik? Setiap modul dalam Grylli "
 "termasuk panel bantuan sendiri dengan panduan terperinci."
 
-#: app/templates/partials/profile_dropdown_menu.html:66
+#: app/templates/partials/profile_dropdown_menu.html:102
 #: app/templates/privacy_full.html:7
 msgid "Privacy"
 msgstr "Privasi"
@@ -668,7 +668,7 @@ msgstr "Tetapan Sistem"
 msgid "This endpoint provides system health and version information."
 msgstr "Titik akhir ini menyediakan maklumat kesihatan sistem dan versi."
 
-#: app/templates/partials/profile_dropdown_menu.html:75
+#: app/templates/partials/profile_dropdown_menu.html:115
 #: app/templates/system_info_full.html:7
 msgid "System Info"
 msgstr "Info Sistem"
@@ -763,6 +763,109 @@ msgstr ""
 #: app/templates/auth/signup.html:16
 msgid "Please fix the following errors:"
 msgstr "Sila betulkan ralat berikut:"
+
+#: app/templates/account/customization_full.html:7
+#: app/templates/partials/profile_dropdown_menu.html:67
+msgid "Customization"
+msgstr "Penyesuaian"
+
+#: app/templates/account/customization_partial.html:10
+msgid "Customize Your Interface"
+msgstr "Sesuaikan Antara Muka Anda"
+
+#: app/templates/account/customization_partial.html:13
+msgid ""
+"Change the look and feel of Grylli using the options below. Your preferences"
+" are saved in your browser."
+msgstr ""
+"Ubah rupa dan rasa Grylli menggunakan pilihan di bawah. Keutamaan anda "
+"disimpan dalam pelayar anda."
+
+#: app/templates/account/customization_partial.html:20
+msgid "Font Family"
+msgstr "Keluarga Fon"
+
+#: app/templates/account/customization_partial.html:33
+msgid "Font Size"
+msgstr "Saiz Fon"
+
+#: app/templates/account/customization_partial.html:38
+msgid "Extra Small"
+msgstr "Sangat Kecil"
+
+#: app/templates/account/customization_partial.html:39
+msgid "Small"
+msgstr "Semua"
+
+#: app/templates/account/customization_partial.html:40
+#: app/templates/account/customization_partial.html:64
+#: app/templates/account/customization_partial.html:101
+msgid "Default"
+msgstr "Padam"
+
+#: app/templates/account/customization_partial.html:41
+msgid "Large"
+msgstr "Label"
+
+#: app/templates/account/customization_partial.html:42
+msgid "Extra Large"
+msgstr "Sangat Besar"
+
+#: app/templates/account/customization_partial.html:48
+msgid "Background Pattern"
+msgstr "Corak Latar Belakang"
+
+#: app/templates/account/customization_partial.html:59
+msgid "Contrast"
+msgstr "Kandungan"
+
+#: app/templates/account/customization_partial.html:65
+msgid "Low Contrast"
+msgstr "Kontras Rendah"
+
+#: app/templates/account/customization_partial.html:66
+msgid "High Contrast"
+msgstr "Kontras Tinggi"
+
+#: app/templates/account/customization_partial.html:72
+msgid "Letter Spacing"
+msgstr "Jarak Huruf"
+
+#: app/templates/account/customization_partial.html:76
+msgid "Tight"
+msgstr "Ketat"
+
+#: app/templates/account/customization_partial.html:77
+msgid "Normal"
+msgstr "Normal"
+
+#: app/templates/account/customization_partial.html:78
+msgid "Wide"
+msgstr "ID"
+
+#: app/templates/account/customization_partial.html:84
+msgid "Reading Density"
+msgstr "Kepadatan Bacaan"
+
+#: app/templates/account/customization_partial.html:96
+msgid "Border Radius"
+msgstr "Radius Sempadan"
+
+#: app/templates/account/customization_partial.html:102
+msgid "Sharp Corners"
+msgstr "Sudut Tajam"
+
+#: app/templates/account/customization_partial.html:103
+msgid "Extra Rounded"
+msgstr "Sangat Bulat"
+
+#: app/templates/account/customization_partial.html:109
+msgid "Theme"
+msgstr "Rumah"
+
+#: app/templates/account/customization_partial.html:125
+msgid "Language"
+msgstr "Pilih"
 
 #: app/templates/account/manage_account_full.html:7
 #: app/templates/account/manage_account_partial.html:9
@@ -903,12 +1006,18 @@ msgid "Deleting your account is permanent and cannot be undone."
 msgstr "Memadam akaun anda adalah kekal dan tidak boleh dibatalkan."
 
 #: app/templates/account/manage_account_partial.html:130
-msgid "Are you sure you want to delete your account?"
-msgstr "Adakah anda pasti mahu menetapkan semula MFA untuk pengguna ini?"
-
 #: app/templates/account/manage_account_partial.html:132
+msgid "You are the last admin. Deleting your account is not allowed."
+msgstr "Anda adalah pentadbir terakhir. Memadam akaun anda tidak dibenarkan."
+
+#: app/templates/account/manage_account_partial.html:133
+#: app/templates/account/manage_account_partial.html:143
 msgid "Delete My Account"
 msgstr "Kemaskini Akaun"
+
+#: app/templates/account/manage_account_partial.html:140
+msgid "Are you sure you want to delete your account?"
+msgstr "Adakah anda pasti mahu menetapkan semula MFA untuk pengguna ini?"
 
 #: app/templates/account/set_security_questions_full.html:7
 msgid "Security Questions"
@@ -940,7 +1049,7 @@ msgstr "Kemaskini Akaun"
 
 #: app/templates/account/translations_full.html:7
 #: app/templates/account/translations_partial.html:8
-#: app/templates/partials/profile_dropdown_menu.html:95
+#: app/templates/partials/profile_dropdown_menu.html:139
 msgid "Translations"
 msgstr "Terjemahan"
 
@@ -1123,7 +1232,7 @@ msgstr "Isi borang untuk menambah pengguna baru."
 
 #: app/templates/admin/create_user_partial.html:26
 #: app/templates/admin/edit_user.html:28
-#: app/templates/admin/partials/table_view.html:13
+#: app/templates/admin/partials/table_view.html:14
 #: app/templates/admin/reports/report_accounts_partial.html:10
 #: app/templates/user_smtp/partials/table_view.html:13
 msgid "Username"
@@ -1131,14 +1240,14 @@ msgstr "Nama Pengguna"
 
 #: app/templates/admin/create_user_partial.html:36
 #: app/templates/admin/edit_user.html:36
-#: app/templates/admin/partials/table_view.html:14
+#: app/templates/admin/partials/table_view.html:15
 #: app/templates/admin/reports/report_accounts_partial.html:11
 #: app/templates/dashboard/partials/_linked_items_partial.html:15
 msgid "Email"
 msgstr "E-mel"
 
 #: app/templates/admin/create_user_partial.html:49
-#: app/templates/admin/partials/table_view.html:15
+#: app/templates/admin/partials/table_view.html:16
 #: app/templates/admin/reports/report_accounts_partial.html:12
 msgid "Role"
 msgstr "Peranan"
@@ -1660,11 +1769,11 @@ msgstr ""
 "Semua tindakan dicatatkan untuk akauntabiliti. Kata laluan dan rahsia tidak "
 "pernah kelihatan."
 
-#: app/templates/admin/partials/table_view.html:12
+#: app/templates/admin/partials/table_view.html:13
 msgid "ID"
 msgstr "ID"
 
-#: app/templates/admin/partials/table_view.html:16
+#: app/templates/admin/partials/table_view.html:17
 #: app/templates/admin/tools/partials/backup_table.html:13
 #: app/templates/apprise/apprise_config.html:59
 #: app/templates/apprise/partials/table_view.html:14
@@ -1680,7 +1789,7 @@ msgstr "ID"
 msgid "Actions"
 msgstr "Tindakan"
 
-#: app/templates/admin/partials/table_view.html:35
+#: app/templates/admin/partials/table_view.html:36
 #: app/templates/admin/reports/report_accounts_partial.html:52
 msgid "No users available."
 msgstr "Tiada pengguna tersedia."
@@ -1781,7 +1890,8 @@ msgstr "Tetapan Sistem"
 msgid "Details"
 msgstr "E-mel"
 
-#: app/templates/admin/reports/report_scheduler_partial.html:37
+#: app/templates/admin/reports/report_scheduler_partial.html:38
+#: app/templates/admin/reports/report_scheduler_partial.html:46
 msgid "No scheduler activity found."
 msgstr "Tiada aktiviti penjadual ditemui."
 
@@ -1804,6 +1914,10 @@ msgstr "Kembali ke Papan Pemuka"
 #: app/templates/admin/reports/reports_tabs.html:38
 msgid "Scheduler Activity"
 msgstr "Jadualkan Emel"
+
+#: app/templates/admin/reports/reports_tabs.html:46
+msgid "Grylli | Reports | Logs"
+msgstr "Panel Pentadbir"
 
 #: app/templates/admin/reports/reports_tabs.html:51
 msgid "Application Logs"
@@ -3260,12 +3374,12 @@ msgstr "Gambaran Keseluruhan"
 msgid "Grylli | Admin | Users"
 msgstr "Grylli | Admin | Pengguna"
 
-#: app/templates/partials/head.html:14
+#: app/templates/partials/head.html:16
 msgid "Grylli is a secure message scheduling and delivery platform."
 msgstr ""
 "Grylli adalah platform penjadwalan dan penghantaran mesej yang selamat."
 
-#: app/templates/partials/head.html:25
+#: app/templates/partials/head.html:35
 msgid "Grylli"
 msgstr "Grylli"
 
@@ -3279,23 +3393,59 @@ msgstr "Rumah"
 msgid "Check-ins Due"
 msgstr "Daftar Masuk"
 
-#: app/templates/partials/profile_dropdown_menu.html:13
+#: app/templates/partials/profile_dropdown_menu.html:9
+msgid "Grylli | Account"
+msgstr "Panel Pentadbir"
+
+#: app/templates/partials/profile_dropdown_menu.html:15
 msgid "Account"
 msgstr "Akaun"
 
-#: app/templates/partials/profile_dropdown_menu.html:31
+#: app/templates/partials/profile_dropdown_menu.html:22
+msgid "Grylli | Security Questions"
+msgstr "🔐 Keselamatan"
+
+#: app/templates/partials/profile_dropdown_menu.html:35
+msgid "Grylli | MFA"
+msgstr "Grylli"
+
+#: app/templates/partials/profile_dropdown_menu.html:41
 msgid "MFA"
 msgstr "MFA"
 
-#: app/templates/partials/profile_dropdown_menu.html:40
+#: app/templates/partials/profile_dropdown_menu.html:48
+msgid "Grylli | About"
+msgstr "Panel Pentadbir"
+
+#: app/templates/partials/profile_dropdown_menu.html:54
 msgid "About"
 msgstr "Mengenai"
 
-#: app/templates/partials/profile_dropdown_menu.html:48
+#: app/templates/partials/profile_dropdown_menu.html:61
+msgid "Grylli | Customization"
+msgstr "Grylli | E-mel | SMTP"
+
+#: app/templates/partials/profile_dropdown_menu.html:77
 msgid "GitHub"
 msgstr "GitHub"
 
-#: app/templates/partials/profile_dropdown_menu.html:107
+#: app/templates/partials/profile_dropdown_menu.html:83
+msgid "Grylli | Help"
+msgstr "Grylli | E-mel | SMTP"
+
+#: app/templates/partials/profile_dropdown_menu.html:96
+msgid "Grylli | Privacy"
+msgstr "Privasi"
+
+#: app/templates/partials/profile_dropdown_menu.html:109
+msgid "Grylli | System Info"
+msgstr "Tetapan Sistem"
+
+#: app/templates/partials/profile_dropdown_menu.html:122
+msgid "Grylli | Translations"
+msgstr "Terjemahan"
+
+#: app/templates/partials/profile_dropdown_menu.html:153
 msgid "Logout"
 msgstr "Keluar"
 
@@ -3350,19 +3500,6 @@ msgstr "Grylli | Peringatan | Gambaran Keseluruhan"
 #: app/templates/partials/shared_nav.html:165
 msgid "Overview of reminders"
 msgstr "Gambaran keseluruhan peringatan"
-
-#: app/templates/partials/sidebar/desktop_footer.html:15
-msgid "Select Theme"
-msgstr "Pilih"
-
-#: app/templates/partials/sidebar/desktop_footer.html:20
-msgid "Select theme"
-msgstr "Pilih"
-
-#: app/templates/partials/sidebar/desktop_footer.html:29
-#: app/templates/partials/sidebar/desktop_footer.html:35
-msgid "Select language"
-msgstr "Pilih"
 
 #: app/templates/partials/sidebar/desktop_header.html:9
 msgid "Menu"
@@ -3870,28 +4007,28 @@ msgstr "Tiada perubahan dibuat."
 msgid "An error occurred while updating your account."
 msgstr "Ralat berlaku semasa mengemaskini akaun anda."
 
-#: app/views/account.py:159
+#: app/views/account.py:164
 msgid "An error occurred while loading translation info."
 msgstr "Ralat berlaku semasa mengemas kini pengguna."
 
-#: app/views/account.py:186
+#: app/views/account.py:191
 msgid "You cannot delete your account because you are the last admin."
 msgstr ""
 "Anda tidak boleh memadam akaun anda kerana anda adalah pentadbir terakhir."
 
-#: app/views/account.py:195
+#: app/views/account.py:200
 msgid "Your account has been permanently deleted."
 msgstr "Akaun anda telah dipadam secara kekal."
 
-#: app/views/account.py:202
+#: app/views/account.py:207
 msgid "An error occurred while trying to delete your account."
 msgstr "Ralat berlaku semasa mengemaskini akaun anda."
 
-#: app/views/account.py:221
+#: app/views/account.py:226
 msgid "Your account has been deleted"
 msgstr "Akaun anda telah dipadam secara kekal."
 
-#: app/views/account.py:223
+#: app/views/account.py:228
 #, python-brace-format
 msgid ""
 "Hello {username},\n"
@@ -3906,17 +4043,21 @@ msgstr ""
 "\n"
 "{site_url}"
 
-#: app/views/account.py:408
+#: app/views/account.py:413
 msgid "Each security question must be different."
 msgstr "Kesemua tiga soalan mesti berbeza."
 
-#: app/views/account.py:432
+#: app/views/account.py:437
 msgid "Security questions saved."
 msgstr "Soalan keselamatan disimpan."
 
-#: app/views/account.py:448
+#: app/views/account.py:453
 msgid "An error occurred while saving your security questions."
 msgstr "Ralat berlaku semasa mengemaskini akaun anda."
+
+#: app/views/account.py:475
+msgid "An error occurred while loading customization settings."
+msgstr "Ralat berlaku semasa mengemas kini pengguna."
 
 #: app/views/admin.py:41
 msgid "Failed to load admin dashboard."
@@ -3994,97 +4135,97 @@ msgstr ""
 msgid "An error occurred while creating the admin account."
 msgstr "Ralat berlaku semasa mencipta akaun admin."
 
-#: app/views/auth.py:184
+#: app/views/auth.py:207
 msgid "Your account is not activated."
 msgstr "Akaun anda telah dipadam secara kekal."
 
-#: app/views/auth.py:192
+#: app/views/auth.py:215
 msgid "Multi-factor authentication required."
 msgstr "Notifikasi dinyahaktifkan"
 
-#: app/views/auth.py:196 app/views/mfa.py:222
+#: app/views/auth.py:219 app/views/mfa.py:218
 msgid "Logged in successfully."
 msgstr "Berjaya log masuk."
 
-#: app/views/auth.py:214
+#: app/views/auth.py:255
 msgid "Too many failed login attempts. Your account is locked for 15 minutes."
 msgstr "Terlalu banyak percubaan log masuk gagal. Sila tunggu"
 
-#: app/views/auth.py:232
+#: app/views/auth.py:273
 msgid "Invalid username or password."
 msgstr "Nama pengguna atau kata laluan tidak sah."
 
-#: app/views/auth.py:258
+#: app/views/auth.py:299
 msgid "You have been logged out."
 msgstr "Anda telah log keluar."
 
-#: app/views/auth.py:320
+#: app/views/auth.py:361
 msgid "If a user with that email exists, we've sent the username to them."
 msgstr ""
 "Jika pengguna dengan e-mel itu wujud, kami telah menghantar nama pengguna "
 "kepada mereka."
 
-#: app/views/auth.py:327
+#: app/views/auth.py:368
 msgid "An error occurred while sending your username reminder."
 msgstr "Ralat berlaku semasa mengemaskini akaun anda."
 
-#: app/views/auth.py:379
+#: app/views/auth.py:420
 msgid "No account found matching that username and email."
 msgstr "Tiada akaun ditemui yang sepadan dengan nama pengguna dan e-mel itu."
 
-#: app/views/auth.py:386
+#: app/views/auth.py:427
 msgid "An error occurred while checking your credentials."
 msgstr "Ralat berlaku semasa mengemaskini akaun anda."
 
-#: app/views/auth.py:395
+#: app/views/auth.py:436
 msgid "Session expired. Please start over."
 msgstr "Sesi tamat tempoh. Sila mulakan semula."
 
-#: app/views/auth.py:414
+#: app/views/auth.py:455
 msgid "Too many failed attempts. Please try again later."
 msgstr "Terlalu banyak percubaan log masuk gagal. Sila tunggu"
 
-#: app/views/auth.py:435
+#: app/views/auth.py:476
 msgid "A password reset link has been sent to your email."
 msgstr "Pautan menetapkan semula kata laluan telah dihantar ke e-mel anda."
 
-#: app/views/auth.py:448
+#: app/views/auth.py:489
 msgid "One or more answers were incorrect."
 msgstr "Satu atau lebih jawapan tidak betul."
 
-#: app/views/auth.py:458
+#: app/views/auth.py:499
 msgid "An error occurred while verifying your answers."
 msgstr "Ralat berlaku semasa mengemaskini akaun anda."
 
-#: app/views/auth.py:491
+#: app/views/auth.py:532
 msgid "The reset link is invalid or has expired."
 msgstr "Pautan menetapkan semula tidak sah atau telah tamat tempoh."
 
-#: app/views/auth.py:504
+#: app/views/auth.py:545
 msgid "Username and email do not match."
 msgstr "Nama pengguna dan emel tidak sepadan."
 
-#: app/views/auth.py:528
+#: app/views/auth.py:569
 msgid "Your password has been reset. Please log in."
 msgstr "Kata laluan anda telah diset semula. Sila log masuk."
 
-#: app/views/auth.py:533
+#: app/views/auth.py:574
 msgid "An error occurred while resetting your password."
 msgstr "Ralat berlaku semasa memadamkan pengguna."
 
-#: app/views/auth.py:570
+#: app/views/auth.py:611
 msgid "Invalid registration PIN."
 msgstr "PIN pendaftaran tidak sah."
 
-#: app/views/auth.py:579
+#: app/views/auth.py:620
 msgid "Username or email already exists."
 msgstr "Nama pengguna atau emel sudah wujud."
 
-#: app/views/auth.py:608
+#: app/views/auth.py:649
 msgid "Activate Your Grylli Account"
 msgstr "Aktifkan Akaun Grylli Anda"
 
-#: app/views/auth.py:609
+#: app/views/auth.py:650
 #, python-brace-format
 msgid ""
 "Hello {username},\n"
@@ -4095,44 +4236,44 @@ msgstr ""
 "\n"
 "Sila aktifkan akaun anda dengan klik..."
 
-#: app/views/auth.py:615
+#: app/views/auth.py:656
 msgid "Account created! Please check your email to activate your account."
 msgstr ""
 "Akaun telah dicipta! Sila semak emel anda untuk mengaktifkan akaun anda."
 
-#: app/views/auth.py:622
+#: app/views/auth.py:663
 msgid "An error occurred during signup."
 msgstr "Ralat berlaku semasa memadamkan pengguna."
 
-#: app/views/auth.py:641
+#: app/views/auth.py:682
 msgid "Activation link is invalid or expired."
 msgstr "Pautan pengaktifan tidak sah atau telah tamat."
 
-#: app/views/auth.py:648 app/views/users.py:135 app/views/users.py:202
+#: app/views/auth.py:689 app/views/users.py:136 app/views/users.py:203
 msgid "User not found."
 msgstr "Pengguna tidak ditemui."
 
-#: app/views/auth.py:652
+#: app/views/auth.py:693
 msgid "Account already activated. Please log in."
 msgstr "Akaun telah diaktifkan. Sila log masuk."
 
-#: app/views/auth.py:663
+#: app/views/auth.py:704
 msgid "Your account has been activated! You can now log in."
 msgstr "Akaun anda telah diaktifkan! Anda kini boleh log masuk."
 
-#: app/views/auth.py:667
+#: app/views/auth.py:708
 msgid "Failed to activate account."
 msgstr "Gagal mencipta sandaran."
 
-#: app/views/auth.py:699
+#: app/views/auth.py:740
 msgid "Security questions not set or user not found."
 msgstr "Soalan keselamatan tidak ditetapkan atau pengguna tidak ditemui."
 
-#: app/views/auth.py:707
+#: app/views/auth.py:748
 msgid "Password reset email sent."
 msgstr "Kata laluan tidak sepadan."
 
-#: app/views/auth.py:714
+#: app/views/auth.py:755
 msgid "Incorrect answer."
 msgstr "Jawapan tidak betul."
 
@@ -4258,7 +4399,7 @@ msgstr "Gagal menghantar emel ujian:"
 msgid "An error occurred while loading the help page."
 msgstr "Ralat berlaku semasa mengemas kini pengguna."
 
-#: app/views/index.py:53
+#: app/views/index.py:55
 msgid "Error loading dashboard"
 msgstr "Kembali ke Emel"
 
@@ -4322,7 +4463,7 @@ msgstr "Mesej disimpan."
 msgid "You must enter a code from your authenticator."
 msgstr "Anda mesti memasukkan kod daripada pengesah anda."
 
-#: app/views/mfa.py:85 app/views/mfa.py:295 app/views/mfa.py:303
+#: app/views/mfa.py:85 app/views/mfa.py:291 app/views/mfa.py:299
 msgid "Invalid code. Please try again."
 msgstr "Kod tidak sah. Sila cuba lagi."
 
@@ -4342,15 +4483,15 @@ msgstr "Kod pemulihan hanya ditunjukkan sejurus selepas mengaktifkan MFA."
 msgid "Could not load recovery codes."
 msgstr "Tidak dapat memuat kod pemulihan."
 
-#: app/views/mfa.py:194
+#: app/views/mfa.py:190
 msgid "No MFA challenge in progress."
 msgstr "Tiada cabaran MFA sedang berlangsung."
 
-#: app/views/mfa.py:202
+#: app/views/mfa.py:198
 msgid "User not found for MFA challenge."
 msgstr "Pengguna tidak ditemui."
 
-#: app/views/mfa.py:262
+#: app/views/mfa.py:258
 msgid ""
 "You have used your last recovery code. MFA has been disabled. Please remove "
 "Grylli from your authenticator app, and re-enable MFA to protect your "
@@ -4360,14 +4501,14 @@ msgstr ""
 " Sila keluarkan Grylli dari aplikasi autentikasi anda, dan aktifkan semula "
 "MFA untuk melindungi akaun anda."
 
-#: app/views/mfa.py:283
+#: app/views/mfa.py:279
 #, python-brace-format
 msgid "Recovery code accepted. You have {remaining} recovery codes left."
 msgstr ""
 "Kod pemulihan diterima. Anda mempunyai {remaining} kod pemulihan yang "
 "tinggal."
 
-#: app/views/mfa.py:298
+#: app/views/mfa.py:294
 msgid "An unexpected error occurred during MFA challenge."
 msgstr "Ralat berlaku semasa memadamkan pengguna."
 
@@ -4543,87 +4684,87 @@ msgstr "Gagal menghantar emel ujian. Sila semak tetapan SMTP."
 msgid "Error sending test email."
 msgstr "Hantar Emel Ujian"
 
-#: app/views/users.py:58
+#: app/views/users.py:59
 msgid "Failed to load user list."
 msgstr "Kembali ke Emel"
 
-#: app/views/users.py:82
+#: app/views/users.py:83
 msgid "Password is required when creating a new user."
 msgstr "Kata laluan diperlukan apabila membuat pengguna baharu."
 
-#: app/views/users.py:87 app/views/users.py:156
+#: app/views/users.py:88 app/views/users.py:157
 msgid "Username already exists."
 msgstr "Nama pengguna sudah wujud."
 
-#: app/views/users.py:92 app/views/users.py:163
+#: app/views/users.py:93 app/views/users.py:164
 msgid "Email already exists."
 msgstr "E-mel sudah wujud."
 
-#: app/views/users.py:107
+#: app/views/users.py:108
 #, python-format
 msgid "User '%(username)s' created successfully."
 msgstr "Pengguna '%(username)s' berjaya dicipta."
 
-#: app/views/users.py:115
+#: app/views/users.py:116
 msgid "Failed to create user."
 msgstr "Gagal untuk mencipta pengguna."
 
-#: app/views/users.py:176
+#: app/views/users.py:177
 msgid "User updated successfully."
 msgstr "Pengguna berjaya dikemaskini."
 
-#: app/views/users.py:183 app/views/users.py:301
+#: app/views/users.py:184 app/views/users.py:320
 msgid "An error occurred while updating the user."
 msgstr "Ralat berlaku semasa mengemas kini pengguna."
 
-#: app/views/users.py:255
+#: app/views/users.py:256
 msgid "User deleted."
 msgstr "Pengguna dipadamkan."
 
-#: app/views/users.py:262
+#: app/views/users.py:263
 msgid "An error occurred while deleting the user."
 msgstr "Ralat berlaku semasa memadamkan pengguna."
 
-#: app/views/users.py:279
+#: app/views/users.py:280
 msgid "You cannot change your own enabled status."
 msgstr "Anda tidak boleh menukar status diaktifkan anda sendiri."
 
-#: app/views/users.py:292
+#: app/views/users.py:311
 #, python-format
 msgid "User '%(username)s' has been %(status)s."
 msgstr "Pengguna '%(username)s' telah %(status)s."
 
-#: app/views/users.py:318
+#: app/views/users.py:337
 msgid "You cannot reset your own MFA."
 msgstr "⚪ = Anda tidak boleh nyahaktifkan akaun anda sendiri."
 
-#: app/views/users.py:331
+#: app/views/users.py:368
 #, python-format
 msgid "MFA disabled for user '%(username)s'."
 msgstr "MFA dinyahdayakan untuk pengguna '%(username)s'."
 
-#: app/views/users.py:335
+#: app/views/users.py:372
 msgid "An error occurred while resetting MFA."
 msgstr "Ralat berlaku semasa memadamkan pengguna."
 
-#: app/views/users.py:358
+#: app/views/users.py:395
 msgid "Invalid role"
 msgstr "Peranan tidak sah."
 
-#: app/views/users.py:364
+#: app/views/users.py:417
 #, python-format
 msgid "Role updated for %(username)s."
 msgstr "MFA dinyahdayakan untuk pengguna '%(username)s'."
 
-#: app/views/users.py:370
+#: app/views/users.py:425
 msgid "An error occurred while updating the role."
 msgstr "Ralat berlaku semasa mengemas kini pengguna."
 
-#: app/views/users.py:390
+#: app/views/users.py:463
 msgid "User account unlocked."
 msgstr "Akaun anda telah dipadam secara kekal."
 
-#: app/views/users.py:395
+#: app/views/users.py:468
 msgid "An error occurred while unlocking the account."
 msgstr "Ralat berlaku semasa mencipta akaun admin."
 
@@ -5382,3 +5523,9 @@ msgstr "Ralat berlaku semasa memadamkan pengguna."
 
 #~ msgid "Failed to send test email. "
 #~ msgstr "Gagal menghantar emel ujian:"
+
+#~ msgid "Select Theme"
+#~ msgstr "Pilih"
+
+#~ msgid "Select theme"
+#~ msgstr "Pilih"

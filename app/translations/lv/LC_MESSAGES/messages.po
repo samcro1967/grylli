@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-07-14 11:49-0500\n"
+"POT-Creation-Date: 2025-07-25 13:21-0500\n"
 "PO-Revision-Date: 2025-05-25 13:03-0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: lv <LL@li.org>\n"
@@ -363,7 +363,7 @@ msgstr ""
 "jums kontrolēt jūsu ziņojumu piegādi — droši un uzticami."
 
 #: app/templates/help_full.html:7
-#: app/templates/partials/profile_dropdown_menu.html:57
+#: app/templates/partials/profile_dropdown_menu.html:89
 msgid "Help"
 msgstr "Palīdzība"
 
@@ -502,7 +502,7 @@ msgstr ""
 "darbojas, kā paredzēts."
 
 #: app/templates/help_partial.html:45
-#: app/templates/partials/profile_dropdown_menu.html:22
+#: app/templates/partials/profile_dropdown_menu.html:28
 msgid "Security"
 msgstr "🔐 Drošība"
 
@@ -522,7 +522,7 @@ msgstr ""
 "Nepieciešama palīdzība ar ko konkrētu? Katrs Grylli modulis ietver savu "
 "palīdzības paneli ar detalizētām vadlīnijām."
 
-#: app/templates/partials/profile_dropdown_menu.html:66
+#: app/templates/partials/profile_dropdown_menu.html:102
 #: app/templates/privacy_full.html:7
 msgid "Privacy"
 msgstr "Privātums"
@@ -665,7 +665,7 @@ msgstr "Sistēmas iestatījumi"
 msgid "This endpoint provides system health and version information."
 msgstr "Šis galsnodrošina sistēmas veselības un versijas informāciju."
 
-#: app/templates/partials/profile_dropdown_menu.html:75
+#: app/templates/partials/profile_dropdown_menu.html:115
 #: app/templates/system_info_full.html:7
 msgid "System Info"
 msgstr "Sistēmas informācija"
@@ -761,6 +761,109 @@ msgstr ""
 #: app/templates/auth/signup.html:16
 msgid "Please fix the following errors:"
 msgstr "Lūdzu, izlabojiet šādas kļūdas:"
+
+#: app/templates/account/customization_full.html:7
+#: app/templates/partials/profile_dropdown_menu.html:67
+msgid "Customization"
+msgstr "Pielāgošana"
+
+#: app/templates/account/customization_partial.html:10
+msgid "Customize Your Interface"
+msgstr "Pielāgojiet savu saskarni"
+
+#: app/templates/account/customization_partial.html:13
+msgid ""
+"Change the look and feel of Grylli using the options below. Your preferences"
+" are saved in your browser."
+msgstr ""
+"Mainiet Grylli izskatu un sajūtu, izmantojot zemāk esošās iespējas. Jūsu "
+"preferences tiek saglabātas jūsu pārlūkprogrammā."
+
+#: app/templates/account/customization_partial.html:20
+msgid "Font Family"
+msgstr "Fontu ģimene"
+
+#: app/templates/account/customization_partial.html:33
+msgid "Font Size"
+msgstr "Fonta lielums"
+
+#: app/templates/account/customization_partial.html:38
+msgid "Extra Small"
+msgstr "Ļoti mazs"
+
+#: app/templates/account/customization_partial.html:39
+msgid "Small"
+msgstr "Visi"
+
+#: app/templates/account/customization_partial.html:40
+#: app/templates/account/customization_partial.html:64
+#: app/templates/account/customization_partial.html:101
+msgid "Default"
+msgstr "Dzēst"
+
+#: app/templates/account/customization_partial.html:41
+msgid "Large"
+msgstr "Etiķete"
+
+#: app/templates/account/customization_partial.html:42
+msgid "Extra Large"
+msgstr "Ļoti liels"
+
+#: app/templates/account/customization_partial.html:48
+msgid "Background Pattern"
+msgstr "Fona raksts"
+
+#: app/templates/account/customization_partial.html:59
+msgid "Contrast"
+msgstr "Saturs"
+
+#: app/templates/account/customization_partial.html:65
+msgid "Low Contrast"
+msgstr "Zems kontrasts"
+
+#: app/templates/account/customization_partial.html:66
+msgid "High Contrast"
+msgstr "Augsts kontrasts"
+
+#: app/templates/account/customization_partial.html:72
+msgid "Letter Spacing"
+msgstr "Burtu atstarpes"
+
+#: app/templates/account/customization_partial.html:76
+msgid "Tight"
+msgstr "Stingra"
+
+#: app/templates/account/customization_partial.html:77
+msgid "Normal"
+msgstr "Normāla"
+
+#: app/templates/account/customization_partial.html:78
+msgid "Wide"
+msgstr "ID"
+
+#: app/templates/account/customization_partial.html:84
+msgid "Reading Density"
+msgstr "Lasīšanas blīvums"
+
+#: app/templates/account/customization_partial.html:96
+msgid "Border Radius"
+msgstr "Malas rādiuss"
+
+#: app/templates/account/customization_partial.html:102
+msgid "Sharp Corners"
+msgstr "Asi stūri"
+
+#: app/templates/account/customization_partial.html:103
+msgid "Extra Rounded"
+msgstr "Ļoti noapaļots"
+
+#: app/templates/account/customization_partial.html:109
+msgid "Theme"
+msgstr "Sākums"
+
+#: app/templates/account/customization_partial.html:125
+msgid "Language"
+msgstr "Izvēlieties atbilstošo"
 
 #: app/templates/account/manage_account_full.html:7
 #: app/templates/account/manage_account_partial.html:9
@@ -901,12 +1004,18 @@ msgid "Deleting your account is permanent and cannot be undone."
 msgstr "Jūsu konta dzēšana ir pastāvīga un neatgriezeniska."
 
 #: app/templates/account/manage_account_partial.html:130
-msgid "Are you sure you want to delete your account?"
-msgstr "Vai tiešām vēlaties atiestatīt MFA šim lietotājam?"
-
 #: app/templates/account/manage_account_partial.html:132
+msgid "You are the last admin. Deleting your account is not allowed."
+msgstr "Jūs esat pēdējais administrators. Jūsu konta dzēšana nav atļauta."
+
+#: app/templates/account/manage_account_partial.html:133
+#: app/templates/account/manage_account_partial.html:143
 msgid "Delete My Account"
 msgstr "Atjaunināt Kontu"
+
+#: app/templates/account/manage_account_partial.html:140
+msgid "Are you sure you want to delete your account?"
+msgstr "Vai tiešām vēlaties atiestatīt MFA šim lietotājam?"
 
 #: app/templates/account/set_security_questions_full.html:7
 msgid "Security Questions"
@@ -939,7 +1048,7 @@ msgstr "Atjaunināt Kontu"
 
 #: app/templates/account/translations_full.html:7
 #: app/templates/account/translations_partial.html:8
-#: app/templates/partials/profile_dropdown_menu.html:95
+#: app/templates/partials/profile_dropdown_menu.html:139
 msgid "Translations"
 msgstr "Tulkots"
 
@@ -1119,7 +1228,7 @@ msgstr "Aizpildiet veidlapu, lai pievienotu jaunu lietotāju."
 
 #: app/templates/admin/create_user_partial.html:26
 #: app/templates/admin/edit_user.html:28
-#: app/templates/admin/partials/table_view.html:13
+#: app/templates/admin/partials/table_view.html:14
 #: app/templates/admin/reports/report_accounts_partial.html:10
 #: app/templates/user_smtp/partials/table_view.html:13
 msgid "Username"
@@ -1127,14 +1236,14 @@ msgstr "Lietotājvārds"
 
 #: app/templates/admin/create_user_partial.html:36
 #: app/templates/admin/edit_user.html:36
-#: app/templates/admin/partials/table_view.html:14
+#: app/templates/admin/partials/table_view.html:15
 #: app/templates/admin/reports/report_accounts_partial.html:11
 #: app/templates/dashboard/partials/_linked_items_partial.html:15
 msgid "Email"
 msgstr "E-pasts"
 
 #: app/templates/admin/create_user_partial.html:49
-#: app/templates/admin/partials/table_view.html:15
+#: app/templates/admin/partials/table_view.html:16
 #: app/templates/admin/reports/report_accounts_partial.html:12
 msgid "Role"
 msgstr "Loma"
@@ -1651,11 +1760,11 @@ msgstr ""
 "Visas darbības tiek reģistrētas atbildīgumam. Paroles un slepeni nekad nav "
 "redzami."
 
-#: app/templates/admin/partials/table_view.html:12
+#: app/templates/admin/partials/table_view.html:13
 msgid "ID"
 msgstr "ID"
 
-#: app/templates/admin/partials/table_view.html:16
+#: app/templates/admin/partials/table_view.html:17
 #: app/templates/admin/tools/partials/backup_table.html:13
 #: app/templates/apprise/apprise_config.html:59
 #: app/templates/apprise/partials/table_view.html:14
@@ -1671,7 +1780,7 @@ msgstr "ID"
 msgid "Actions"
 msgstr "Darbības"
 
-#: app/templates/admin/partials/table_view.html:35
+#: app/templates/admin/partials/table_view.html:36
 #: app/templates/admin/reports/report_accounts_partial.html:52
 msgid "No users available."
 msgstr "Nav pieejami lietotāji."
@@ -1771,7 +1880,8 @@ msgstr "Sistēmas iestatījumi"
 msgid "Details"
 msgstr "E-pasti"
 
-#: app/templates/admin/reports/report_scheduler_partial.html:37
+#: app/templates/admin/reports/report_scheduler_partial.html:38
+#: app/templates/admin/reports/report_scheduler_partial.html:46
 msgid "No scheduler activity found."
 msgstr "Scheduler aktivitāte netika atrasta."
 
@@ -1794,6 +1904,10 @@ msgstr "Atgriezties uz galveno lapu"
 #: app/templates/admin/reports/reports_tabs.html:38
 msgid "Scheduler Activity"
 msgstr "Plānot e-pastu"
+
+#: app/templates/admin/reports/reports_tabs.html:46
+msgid "Grylli | Reports | Logs"
+msgstr "Administrācijas panelis"
 
 #: app/templates/admin/reports/reports_tabs.html:51
 msgid "Application Logs"
@@ -3250,11 +3364,11 @@ msgstr "Pārskats"
 msgid "Grylli | Admin | Users"
 msgstr "Grylli | Administrēšana | Lietotāji"
 
-#: app/templates/partials/head.html:14
+#: app/templates/partials/head.html:16
 msgid "Grylli is a secure message scheduling and delivery platform."
 msgstr "Grylli ir droša ziņojumu plānošanas un piegādes platforma."
 
-#: app/templates/partials/head.html:25
+#: app/templates/partials/head.html:35
 msgid "Grylli"
 msgstr "Grylli"
 
@@ -3268,23 +3382,59 @@ msgstr "Sākums"
 msgid "Check-ins Due"
 msgstr "Reģistrēšanās"
 
-#: app/templates/partials/profile_dropdown_menu.html:13
+#: app/templates/partials/profile_dropdown_menu.html:9
+msgid "Grylli | Account"
+msgstr "Administrācijas panelis"
+
+#: app/templates/partials/profile_dropdown_menu.html:15
 msgid "Account"
 msgstr "Konts"
 
-#: app/templates/partials/profile_dropdown_menu.html:31
+#: app/templates/partials/profile_dropdown_menu.html:22
+msgid "Grylli | Security Questions"
+msgstr "🔐 Drošība"
+
+#: app/templates/partials/profile_dropdown_menu.html:35
+msgid "Grylli | MFA"
+msgstr "Grylli"
+
+#: app/templates/partials/profile_dropdown_menu.html:41
 msgid "MFA"
 msgstr "MFA"
 
-#: app/templates/partials/profile_dropdown_menu.html:40
+#: app/templates/partials/profile_dropdown_menu.html:48
+msgid "Grylli | About"
+msgstr "Administrācijas panelis"
+
+#: app/templates/partials/profile_dropdown_menu.html:54
 msgid "About"
 msgstr "Par"
 
-#: app/templates/partials/profile_dropdown_menu.html:48
+#: app/templates/partials/profile_dropdown_menu.html:61
+msgid "Grylli | Customization"
+msgstr "Grylli | E-pasti | SMTP"
+
+#: app/templates/partials/profile_dropdown_menu.html:77
 msgid "GitHub"
 msgstr "GitHub"
 
-#: app/templates/partials/profile_dropdown_menu.html:107
+#: app/templates/partials/profile_dropdown_menu.html:83
+msgid "Grylli | Help"
+msgstr "Grylli | E-pasti | SMTP"
+
+#: app/templates/partials/profile_dropdown_menu.html:96
+msgid "Grylli | Privacy"
+msgstr "Privātums"
+
+#: app/templates/partials/profile_dropdown_menu.html:109
+msgid "Grylli | System Info"
+msgstr "Sistēmas iestatījumi"
+
+#: app/templates/partials/profile_dropdown_menu.html:122
+msgid "Grylli | Translations"
+msgstr "Tulkots"
+
+#: app/templates/partials/profile_dropdown_menu.html:153
 msgid "Logout"
 msgstr "Izrakstīties"
 
@@ -3339,19 +3489,6 @@ msgstr "Grylli | Atgādinājumi | Pārskats"
 #: app/templates/partials/shared_nav.html:165
 msgid "Overview of reminders"
 msgstr "Atgādinājumu pārskats"
-
-#: app/templates/partials/sidebar/desktop_footer.html:15
-msgid "Select Theme"
-msgstr "Izvēlieties atbilstošo"
-
-#: app/templates/partials/sidebar/desktop_footer.html:20
-msgid "Select theme"
-msgstr "Izvēlieties atbilstošo"
-
-#: app/templates/partials/sidebar/desktop_footer.html:29
-#: app/templates/partials/sidebar/desktop_footer.html:35
-msgid "Select language"
-msgstr "Izvēlieties atbilstošo"
 
 #: app/templates/partials/sidebar/desktop_header.html:9
 msgid "Menu"
@@ -3858,27 +3995,27 @@ msgstr "Izmaiņas netika veiktas."
 msgid "An error occurred while updating your account."
 msgstr "Notika kļūda, atjauninot jūsu kontu."
 
-#: app/views/account.py:159
+#: app/views/account.py:164
 msgid "An error occurred while loading translation info."
 msgstr "Radās kļūda, atjauninot lietotāju."
 
-#: app/views/account.py:186
+#: app/views/account.py:191
 msgid "You cannot delete your account because you are the last admin."
 msgstr "Jūs nevarat dzēst savu kontu, jo esat pēdējais administrators."
 
-#: app/views/account.py:195
+#: app/views/account.py:200
 msgid "Your account has been permanently deleted."
 msgstr "Jūsu konts ir neatgriezeniski dzēsts."
 
-#: app/views/account.py:202
+#: app/views/account.py:207
 msgid "An error occurred while trying to delete your account."
 msgstr "Notika kļūda, atjauninot jūsu kontu."
 
-#: app/views/account.py:221
+#: app/views/account.py:226
 msgid "Your account has been deleted"
 msgstr "Jūsu konts ir neatgriezeniski dzēsts."
 
-#: app/views/account.py:223
+#: app/views/account.py:228
 #, python-brace-format
 msgid ""
 "Hello {username},\n"
@@ -3893,17 +4030,21 @@ msgstr ""
 "\n"
 "{site_url}"
 
-#: app/views/account.py:408
+#: app/views/account.py:413
 msgid "Each security question must be different."
 msgstr "Visiem trim jautājumiem jābūt atšķirīgiem."
 
-#: app/views/account.py:432
+#: app/views/account.py:437
 msgid "Security questions saved."
 msgstr "Drošības jautājumi saglabāti."
 
-#: app/views/account.py:448
+#: app/views/account.py:453
 msgid "An error occurred while saving your security questions."
 msgstr "Notika kļūda, atjauninot jūsu kontu."
+
+#: app/views/account.py:475
+msgid "An error occurred while loading customization settings."
+msgstr "Radās kļūda, atjauninot lietotāju."
 
 #: app/views/admin.py:41
 msgid "Failed to load admin dashboard."
@@ -3981,97 +4122,97 @@ msgstr ""
 msgid "An error occurred while creating the admin account."
 msgstr "Radās kļūda, izveidojot admina kontu."
 
-#: app/views/auth.py:184
+#: app/views/auth.py:207
 msgid "Your account is not activated."
 msgstr "Jūsu konts ir neatgriezeniski dzēsts."
 
-#: app/views/auth.py:192
+#: app/views/auth.py:215
 msgid "Multi-factor authentication required."
 msgstr "Paziņojums ir atspējots"
 
-#: app/views/auth.py:196 app/views/mfa.py:222
+#: app/views/auth.py:219 app/views/mfa.py:218
 msgid "Logged in successfully."
 msgstr "Veiksmīgi pieteicies."
 
-#: app/views/auth.py:214
+#: app/views/auth.py:255
 msgid "Too many failed login attempts. Your account is locked for 15 minutes."
 msgstr "Pārāk daudz neveiksmīgu pieteikšanās mēģinājumu. Lūdzu, uzgaidiet"
 
-#: app/views/auth.py:232
+#: app/views/auth.py:273
 msgid "Invalid username or password."
 msgstr "Nederīgs lietotājvārds vai parole."
 
-#: app/views/auth.py:258
+#: app/views/auth.py:299
 msgid "You have been logged out."
 msgstr "Jūs esat izrakstījies."
 
-#: app/views/auth.py:320
+#: app/views/auth.py:361
 msgid "If a user with that email exists, we've sent the username to them."
 msgstr ""
 "Ja ir izveidots lietotājs ar šo e-pastu, mēs viņiem esam nosūtījuši "
 "lietotājvārdu."
 
-#: app/views/auth.py:327
+#: app/views/auth.py:368
 msgid "An error occurred while sending your username reminder."
 msgstr "Notika kļūda, atjauninot jūsu kontu."
 
-#: app/views/auth.py:379
+#: app/views/auth.py:420
 msgid "No account found matching that username and email."
 msgstr "Netika atrasts konts, kas atbilst šim lietotājvārdam un e-pastam."
 
-#: app/views/auth.py:386
+#: app/views/auth.py:427
 msgid "An error occurred while checking your credentials."
 msgstr "Notika kļūda, atjauninot jūsu kontu."
 
-#: app/views/auth.py:395
+#: app/views/auth.py:436
 msgid "Session expired. Please start over."
 msgstr "Sesija beigusies. Lūdzu, sāciet no jauna."
 
-#: app/views/auth.py:414
+#: app/views/auth.py:455
 msgid "Too many failed attempts. Please try again later."
 msgstr "Pārāk daudz neveiksmīgu pieteikšanās mēģinājumu. Lūdzu, uzgaidiet"
 
-#: app/views/auth.py:435
+#: app/views/auth.py:476
 msgid "A password reset link has been sent to your email."
 msgstr "Saite paroles atjaunošanai ir nosūtīta uz jūsu e-pastu."
 
-#: app/views/auth.py:448
+#: app/views/auth.py:489
 msgid "One or more answers were incorrect."
 msgstr "Viena vai vairākas atbildes bija nepareizas."
 
-#: app/views/auth.py:458
+#: app/views/auth.py:499
 msgid "An error occurred while verifying your answers."
 msgstr "Notika kļūda, atjauninot jūsu kontu."
 
-#: app/views/auth.py:491
+#: app/views/auth.py:532
 msgid "The reset link is invalid or has expired."
 msgstr "Atjaunošanas saite ir nederīga vai ir beigusies tās derīguma termiņš."
 
-#: app/views/auth.py:504
+#: app/views/auth.py:545
 msgid "Username and email do not match."
 msgstr "Lietotājvārds un e-pasts nesakrīt."
 
-#: app/views/auth.py:528
+#: app/views/auth.py:569
 msgid "Your password has been reset. Please log in."
 msgstr "Jūsu parole ir atiestatīta. Lūdzu, pieteikties."
 
-#: app/views/auth.py:533
+#: app/views/auth.py:574
 msgid "An error occurred while resetting your password."
 msgstr "Radās kļūda, dzēšot lietotāju."
 
-#: app/views/auth.py:570
+#: app/views/auth.py:611
 msgid "Invalid registration PIN."
 msgstr "Nederīgs reģistrēšanās PIN."
 
-#: app/views/auth.py:579
+#: app/views/auth.py:620
 msgid "Username or email already exists."
 msgstr "Lietotājvārds vai e-pasts jau pastāv."
 
-#: app/views/auth.py:608
+#: app/views/auth.py:649
 msgid "Activate Your Grylli Account"
 msgstr "Aktivizējiet savu Grylli kontu"
 
-#: app/views/auth.py:609
+#: app/views/auth.py:650
 #, python-brace-format
 msgid ""
 "Hello {username},\n"
@@ -4082,44 +4223,44 @@ msgstr ""
 "\n"
 "Lūdzu, aktivizējiet savu kontu, noklikšķinot uz..."
 
-#: app/views/auth.py:615
+#: app/views/auth.py:656
 msgid "Account created! Please check your email to activate your account."
 msgstr ""
 "Konts izveidots! Lūdzu, pārbaudiet savu e-pastu, lai aktivizētu savu kontu."
 
-#: app/views/auth.py:622
+#: app/views/auth.py:663
 msgid "An error occurred during signup."
 msgstr "Radās kļūda, dzēšot lietotāju."
 
-#: app/views/auth.py:641
+#: app/views/auth.py:682
 msgid "Activation link is invalid or expired."
 msgstr "Aktivizācijas saite ir nederīga vai beidzies tās derīguma termiņš."
 
-#: app/views/auth.py:648 app/views/users.py:135 app/views/users.py:202
+#: app/views/auth.py:689 app/views/users.py:136 app/views/users.py:203
 msgid "User not found."
 msgstr "Lietotājs nav atrasts."
 
-#: app/views/auth.py:652
+#: app/views/auth.py:693
 msgid "Account already activated. Please log in."
 msgstr "Konts jau aktivizēts. Lūdzu, pieteikties."
 
-#: app/views/auth.py:663
+#: app/views/auth.py:704
 msgid "Your account has been activated! You can now log in."
 msgstr "Jūsu konts ir aktivizēts! Tagad varat pieteikties."
 
-#: app/views/auth.py:667
+#: app/views/auth.py:708
 msgid "Failed to activate account."
 msgstr "Neizdevās izveidot rezerves kopiju."
 
-#: app/views/auth.py:699
+#: app/views/auth.py:740
 msgid "Security questions not set or user not found."
 msgstr "Drošības jautājumi nav iestatīti vai lietotājs nav atrasts."
 
-#: app/views/auth.py:707
+#: app/views/auth.py:748
 msgid "Password reset email sent."
 msgstr "Paroles nesakrīt."
 
-#: app/views/auth.py:714
+#: app/views/auth.py:755
 msgid "Incorrect answer."
 msgstr "Nepareiza atbilde."
 
@@ -4244,7 +4385,7 @@ msgstr "Neizdevās nosūtīt testa e-pastu:"
 msgid "An error occurred while loading the help page."
 msgstr "Radās kļūda, atjauninot lietotāju."
 
-#: app/views/index.py:53
+#: app/views/index.py:55
 msgid "Error loading dashboard"
 msgstr "Atpakaļ uz e-pastiem"
 
@@ -4308,7 +4449,7 @@ msgstr "Ziņojums saglabāts."
 msgid "You must enter a code from your authenticator."
 msgstr "Jums jāievada kods no sava autentifikatora."
 
-#: app/views/mfa.py:85 app/views/mfa.py:295 app/views/mfa.py:303
+#: app/views/mfa.py:85 app/views/mfa.py:291 app/views/mfa.py:299
 msgid "Invalid code. Please try again."
 msgstr "Nederīgs kods. Lūdzu, mēģiniet vēlreiz."
 
@@ -4328,15 +4469,15 @@ msgstr "Atgūšanas kodi tiek rādīti tikai uzreiz pēc MFA aktivizēšanas."
 msgid "Could not load recovery codes."
 msgstr "Atgūšanas kodus neizdevās ielādēt."
 
-#: app/views/mfa.py:194
+#: app/views/mfa.py:190
 msgid "No MFA challenge in progress."
 msgstr "Nav notiekoša MFA izaicinājuma."
 
-#: app/views/mfa.py:202
+#: app/views/mfa.py:198
 msgid "User not found for MFA challenge."
 msgstr "Lietotājs nav atrasts."
 
-#: app/views/mfa.py:262
+#: app/views/mfa.py:258
 msgid ""
 "You have used your last recovery code. MFA has been disabled. Please remove "
 "Grylli from your authenticator app, and re-enable MFA to protect your "
@@ -4346,12 +4487,12 @@ msgstr ""
 "noņemiet Grylli no sava autentifikatora lietotnes un atkārtoti aktivizējiet "
 "MFA, lai aizsargātu savu kontu."
 
-#: app/views/mfa.py:283
+#: app/views/mfa.py:279
 #, python-brace-format
 msgid "Recovery code accepted. You have {remaining} recovery codes left."
 msgstr "Atgūšanas kods pieņemts. Jums ir palikuši {remaining} atgūšanas kodi."
 
-#: app/views/mfa.py:298
+#: app/views/mfa.py:294
 msgid "An unexpected error occurred during MFA challenge."
 msgstr "Radās kļūda, dzēšot lietotāju."
 
@@ -4527,87 +4668,87 @@ msgstr "Neizdevās nosūtīt testa e-pastu. Pārbaudiet SMTP iestatījumus."
 msgid "Error sending test email."
 msgstr "Sūtīt testa e-pastu"
 
-#: app/views/users.py:58
+#: app/views/users.py:59
 msgid "Failed to load user list."
 msgstr "Atpakaļ uz e-pastiem"
 
-#: app/views/users.py:82
+#: app/views/users.py:83
 msgid "Password is required when creating a new user."
 msgstr "Jauna lietotāja izveidošanai nepieciešama parole."
 
-#: app/views/users.py:87 app/views/users.py:156
+#: app/views/users.py:88 app/views/users.py:157
 msgid "Username already exists."
 msgstr "Lietotājvārds jau pastāv."
 
-#: app/views/users.py:92 app/views/users.py:163
+#: app/views/users.py:93 app/views/users.py:164
 msgid "Email already exists."
 msgstr "E-pasts jau pastāv."
 
-#: app/views/users.py:107
+#: app/views/users.py:108
 #, python-format
 msgid "User '%(username)s' created successfully."
 msgstr "Lietotājs '%(username)s' veiksmīgi izveidots."
 
-#: app/views/users.py:115
+#: app/views/users.py:116
 msgid "Failed to create user."
 msgstr "Neizdevās izveidot lietotāju."
 
-#: app/views/users.py:176
+#: app/views/users.py:177
 msgid "User updated successfully."
 msgstr "Lietotājs veiksmīgi atjaunināts."
 
-#: app/views/users.py:183 app/views/users.py:301
+#: app/views/users.py:184 app/views/users.py:320
 msgid "An error occurred while updating the user."
 msgstr "Radās kļūda, atjauninot lietotāju."
 
-#: app/views/users.py:255
+#: app/views/users.py:256
 msgid "User deleted."
 msgstr "Lietotājs dzēsts."
 
-#: app/views/users.py:262
+#: app/views/users.py:263
 msgid "An error occurred while deleting the user."
 msgstr "Radās kļūda, dzēšot lietotāju."
 
-#: app/views/users.py:279
+#: app/views/users.py:280
 msgid "You cannot change your own enabled status."
 msgstr "Jūs nevarat mainīt savu iespējoto statusu."
 
-#: app/views/users.py:292
+#: app/views/users.py:311
 #, python-format
 msgid "User '%(username)s' has been %(status)s."
 msgstr "Lietotājam '%(username)s' ir %(status)s."
 
-#: app/views/users.py:318
+#: app/views/users.py:337
 msgid "You cannot reset your own MFA."
 msgstr "⚪ = Jūs nevarat atspējot savu kontu."
 
-#: app/views/users.py:331
+#: app/views/users.py:368
 #, python-format
 msgid "MFA disabled for user '%(username)s'."
 msgstr "MFA atslēgta lietotājam '%(username)s'."
 
-#: app/views/users.py:335
+#: app/views/users.py:372
 msgid "An error occurred while resetting MFA."
 msgstr "Radās kļūda, dzēšot lietotāju."
 
-#: app/views/users.py:358
+#: app/views/users.py:395
 msgid "Invalid role"
 msgstr "Nederīga loma."
 
-#: app/views/users.py:364
+#: app/views/users.py:417
 #, python-format
 msgid "Role updated for %(username)s."
 msgstr "MFA atslēgta lietotājam '%(username)s'."
 
-#: app/views/users.py:370
+#: app/views/users.py:425
 msgid "An error occurred while updating the role."
 msgstr "Radās kļūda, atjauninot lietotāju."
 
-#: app/views/users.py:390
+#: app/views/users.py:463
 msgid "User account unlocked."
 msgstr "Jūsu konts ir neatgriezeniski dzēsts."
 
-#: app/views/users.py:395
+#: app/views/users.py:468
 msgid "An error occurred while unlocking the account."
 msgstr "Radās kļūda, izveidojot admina kontu."
 
@@ -5367,3 +5508,9 @@ msgstr "Radās kļūda, dzēšot lietotāju."
 
 #~ msgid "Failed to send test email. "
 #~ msgstr "Neizdevās nosūtīt testa e-pastu:"
+
+#~ msgid "Select Theme"
+#~ msgstr "Izvēlieties atbilstošo"
+
+#~ msgid "Select theme"
+#~ msgstr "Izvēlieties atbilstošo"

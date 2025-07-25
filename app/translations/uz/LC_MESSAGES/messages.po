@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-07-14 11:49-0500\n"
+"POT-Creation-Date: 2025-07-25 13:21-0500\n"
 "PO-Revision-Date: 2025-05-25 16:45-0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: uz <LL@li.org>\n"
@@ -367,7 +367,7 @@ msgstr ""
 "xavfsiz va ishonchli tarzda."
 
 #: app/templates/help_full.html:7
-#: app/templates/partials/profile_dropdown_menu.html:57
+#: app/templates/partials/profile_dropdown_menu.html:89
 msgid "Help"
 msgstr "Yordam"
 
@@ -510,7 +510,7 @@ msgstr ""
 "ish berayotganligini tekshiring."
 
 #: app/templates/help_partial.html:45
-#: app/templates/partials/profile_dropdown_menu.html:22
+#: app/templates/partials/profile_dropdown_menu.html:28
 msgid "Security"
 msgstr "🔐 Xavfsizlik"
 
@@ -530,7 +530,7 @@ msgstr ""
 "Maxsus narsa uchun yordam kerakmi? Grylli'dagi har bir modul batafsil "
 "qo'llanma bilan o'zining yordam panelini o'z ichiga olgan."
 
-#: app/templates/partials/profile_dropdown_menu.html:66
+#: app/templates/partials/profile_dropdown_menu.html:102
 #: app/templates/privacy_full.html:7
 msgid "Privacy"
 msgstr "Maxfiylik"
@@ -680,7 +680,7 @@ msgid "This endpoint provides system health and version information."
 msgstr ""
 "Ushbu endpoint tizim salomatligi va versiyasi ma'lumotlarini taqdim etadi."
 
-#: app/templates/partials/profile_dropdown_menu.html:75
+#: app/templates/partials/profile_dropdown_menu.html:115
 #: app/templates/system_info_full.html:7
 msgid "System Info"
 msgstr "Tizim ma'lumoti"
@@ -775,6 +775,109 @@ msgstr ""
 #: app/templates/auth/signup.html:16
 msgid "Please fix the following errors:"
 msgstr "Iltimos, quyidagi xatolarni tuzating:"
+
+#: app/templates/account/customization_full.html:7
+#: app/templates/partials/profile_dropdown_menu.html:67
+msgid "Customization"
+msgstr "Moslashtirish"
+
+#: app/templates/account/customization_partial.html:10
+msgid "Customize Your Interface"
+msgstr "Interfeysni moslashtiring"
+
+#: app/templates/account/customization_partial.html:13
+msgid ""
+"Change the look and feel of Grylli using the options below. Your preferences"
+" are saved in your browser."
+msgstr ""
+"Quyidagi variantlardan foydalangan holda Grylli ko'rinishi va his-tuyg'usini"
+" o'zgartiring. Sizning afzalliklaringiz brauzeringizda saqlanadi."
+
+#: app/templates/account/customization_partial.html:20
+msgid "Font Family"
+msgstr "Shrift oilasi"
+
+#: app/templates/account/customization_partial.html:33
+msgid "Font Size"
+msgstr "Shrift hajmi"
+
+#: app/templates/account/customization_partial.html:38
+msgid "Extra Small"
+msgstr "Juda Kichik"
+
+#: app/templates/account/customization_partial.html:39
+msgid "Small"
+msgstr "Barchasi"
+
+#: app/templates/account/customization_partial.html:40
+#: app/templates/account/customization_partial.html:64
+#: app/templates/account/customization_partial.html:101
+msgid "Default"
+msgstr "O'chirish"
+
+#: app/templates/account/customization_partial.html:41
+msgid "Large"
+msgstr "Yorliq"
+
+#: app/templates/account/customization_partial.html:42
+msgid "Extra Large"
+msgstr "Juda Katta"
+
+#: app/templates/account/customization_partial.html:48
+msgid "Background Pattern"
+msgstr "Fon naqshlari"
+
+#: app/templates/account/customization_partial.html:59
+msgid "Contrast"
+msgstr "Mazmuni"
+
+#: app/templates/account/customization_partial.html:65
+msgid "Low Contrast"
+msgstr "Past kontrast"
+
+#: app/templates/account/customization_partial.html:66
+msgid "High Contrast"
+msgstr "Yuqori kontrast"
+
+#: app/templates/account/customization_partial.html:72
+msgid "Letter Spacing"
+msgstr "Harf oralig'i"
+
+#: app/templates/account/customization_partial.html:76
+msgid "Tight"
+msgstr "Qo'shale"
+
+#: app/templates/account/customization_partial.html:77
+msgid "Normal"
+msgstr "Normal"
+
+#: app/templates/account/customization_partial.html:78
+msgid "Wide"
+msgstr "ID"
+
+#: app/templates/account/customization_partial.html:84
+msgid "Reading Density"
+msgstr "O'qish zichligi"
+
+#: app/templates/account/customization_partial.html:96
+msgid "Border Radius"
+msgstr "Chekka radiusi"
+
+#: app/templates/account/customization_partial.html:102
+msgid "Sharp Corners"
+msgstr "Keskin burchaklar"
+
+#: app/templates/account/customization_partial.html:103
+msgid "Extra Rounded"
+msgstr "Juda yumaloq"
+
+#: app/templates/account/customization_partial.html:109
+msgid "Theme"
+msgstr "Bosh sahifa"
+
+#: app/templates/account/customization_partial.html:125
+msgid "Language"
+msgstr "Tegishli"
 
 #: app/templates/account/manage_account_full.html:7
 #: app/templates/account/manage_account_partial.html:9
@@ -915,13 +1018,20 @@ msgid "Deleting your account is permanent and cannot be undone."
 msgstr "Hisobingizni o‘chirish doimiy va bekor qilib bo‘lmaydi."
 
 #: app/templates/account/manage_account_partial.html:130
+#: app/templates/account/manage_account_partial.html:132
+msgid "You are the last admin. Deleting your account is not allowed."
+msgstr ""
+"Siz oxirgi administrator hisoblanasiz. Hisobingizni o'chirish mumkin emas."
+
+#: app/templates/account/manage_account_partial.html:133
+#: app/templates/account/manage_account_partial.html:143
+msgid "Delete My Account"
+msgstr "Hisobni yangilash"
+
+#: app/templates/account/manage_account_partial.html:140
 msgid "Are you sure you want to delete your account?"
 msgstr ""
 "Ushbu foydalanuvchi uchun MFAni qayta o‘rnatishga ishonchingiz komilmi?"
-
-#: app/templates/account/manage_account_partial.html:132
-msgid "Delete My Account"
-msgstr "Hisobni yangilash"
 
 #: app/templates/account/set_security_questions_full.html:7
 msgid "Security Questions"
@@ -953,7 +1063,7 @@ msgstr "Hisobni yangilash"
 
 #: app/templates/account/translations_full.html:7
 #: app/templates/account/translations_partial.html:8
-#: app/templates/partials/profile_dropdown_menu.html:95
+#: app/templates/partials/profile_dropdown_menu.html:139
 msgid "Translations"
 msgstr "Tarjimalar"
 
@@ -1142,7 +1252,7 @@ msgstr "Yangi foydalanuvchi qo'shish uchun shaklni to'ldiring."
 
 #: app/templates/admin/create_user_partial.html:26
 #: app/templates/admin/edit_user.html:28
-#: app/templates/admin/partials/table_view.html:13
+#: app/templates/admin/partials/table_view.html:14
 #: app/templates/admin/reports/report_accounts_partial.html:10
 #: app/templates/user_smtp/partials/table_view.html:13
 msgid "Username"
@@ -1150,14 +1260,14 @@ msgstr "Foydalanuvchi nomi"
 
 #: app/templates/admin/create_user_partial.html:36
 #: app/templates/admin/edit_user.html:36
-#: app/templates/admin/partials/table_view.html:14
+#: app/templates/admin/partials/table_view.html:15
 #: app/templates/admin/reports/report_accounts_partial.html:11
 #: app/templates/dashboard/partials/_linked_items_partial.html:15
 msgid "Email"
 msgstr "Email"
 
 #: app/templates/admin/create_user_partial.html:49
-#: app/templates/admin/partials/table_view.html:15
+#: app/templates/admin/partials/table_view.html:16
 #: app/templates/admin/reports/report_accounts_partial.html:12
 msgid "Role"
 msgstr "Roli"
@@ -1687,11 +1797,11 @@ msgstr ""
 "Barcha harakatlar uchun hisobdorlik uchun qayd qilinadi. Parollar va oshkora"
 " ma'lumotlar hech qachon ko'rinmaydi."
 
-#: app/templates/admin/partials/table_view.html:12
+#: app/templates/admin/partials/table_view.html:13
 msgid "ID"
 msgstr "ID"
 
-#: app/templates/admin/partials/table_view.html:16
+#: app/templates/admin/partials/table_view.html:17
 #: app/templates/admin/tools/partials/backup_table.html:13
 #: app/templates/apprise/apprise_config.html:59
 #: app/templates/apprise/partials/table_view.html:14
@@ -1707,7 +1817,7 @@ msgstr "ID"
 msgid "Actions"
 msgstr "Amallar"
 
-#: app/templates/admin/partials/table_view.html:35
+#: app/templates/admin/partials/table_view.html:36
 #: app/templates/admin/reports/report_accounts_partial.html:52
 msgid "No users available."
 msgstr "Foydalanuvchilar mavjud emas."
@@ -1808,7 +1918,8 @@ msgstr "Tizim sozlamalari"
 msgid "Details"
 msgstr "Elektron pochta"
 
-#: app/templates/admin/reports/report_scheduler_partial.html:37
+#: app/templates/admin/reports/report_scheduler_partial.html:38
+#: app/templates/admin/reports/report_scheduler_partial.html:46
 msgid "No scheduler activity found."
 msgstr "Rejalashtiruvchi faoliyati topilmadi."
 
@@ -1831,6 +1942,10 @@ msgstr "Boshqaruv paneliga qaytish"
 #: app/templates/admin/reports/reports_tabs.html:38
 msgid "Scheduler Activity"
 msgstr "Elektron pochta rejalashtirish"
+
+#: app/templates/admin/reports/reports_tabs.html:46
+msgid "Grylli | Reports | Logs"
+msgstr "Admin Panel"
 
 #: app/templates/admin/reports/reports_tabs.html:51
 msgid "Application Logs"
@@ -3307,11 +3422,11 @@ msgstr "Umumiy ko'rinish"
 msgid "Grylli | Admin | Users"
 msgstr "Grylli | Admin | Foydalanuvchilar"
 
-#: app/templates/partials/head.html:14
+#: app/templates/partials/head.html:16
 msgid "Grylli is a secure message scheduling and delivery platform."
 msgstr "Grylli xavfsiz xabar rejalashtirish va yetkazib berish platformasi."
 
-#: app/templates/partials/head.html:25
+#: app/templates/partials/head.html:35
 msgid "Grylli"
 msgstr "Grylli"
 
@@ -3325,23 +3440,59 @@ msgstr "Bosh sahifa"
 msgid "Check-ins Due"
 msgstr "Tekshirish"
 
-#: app/templates/partials/profile_dropdown_menu.html:13
+#: app/templates/partials/profile_dropdown_menu.html:9
+msgid "Grylli | Account"
+msgstr "Admin Panel"
+
+#: app/templates/partials/profile_dropdown_menu.html:15
 msgid "Account"
 msgstr "Hisob"
 
-#: app/templates/partials/profile_dropdown_menu.html:31
+#: app/templates/partials/profile_dropdown_menu.html:22
+msgid "Grylli | Security Questions"
+msgstr "🔐 Xavfsizlik"
+
+#: app/templates/partials/profile_dropdown_menu.html:35
+msgid "Grylli | MFA"
+msgstr "Grylli"
+
+#: app/templates/partials/profile_dropdown_menu.html:41
 msgid "MFA"
 msgstr "MFA"
 
-#: app/templates/partials/profile_dropdown_menu.html:40
+#: app/templates/partials/profile_dropdown_menu.html:48
+msgid "Grylli | About"
+msgstr "Admin Panel"
+
+#: app/templates/partials/profile_dropdown_menu.html:54
 msgid "About"
 msgstr "Haqida"
 
-#: app/templates/partials/profile_dropdown_menu.html:48
+#: app/templates/partials/profile_dropdown_menu.html:61
+msgid "Grylli | Customization"
+msgstr "Grylli | Email | SMTP"
+
+#: app/templates/partials/profile_dropdown_menu.html:77
 msgid "GitHub"
 msgstr "GitHub"
 
-#: app/templates/partials/profile_dropdown_menu.html:107
+#: app/templates/partials/profile_dropdown_menu.html:83
+msgid "Grylli | Help"
+msgstr "Grylli | Email | SMTP"
+
+#: app/templates/partials/profile_dropdown_menu.html:96
+msgid "Grylli | Privacy"
+msgstr "Maxfiylik"
+
+#: app/templates/partials/profile_dropdown_menu.html:109
+msgid "Grylli | System Info"
+msgstr "Tizim sozlamalari"
+
+#: app/templates/partials/profile_dropdown_menu.html:122
+msgid "Grylli | Translations"
+msgstr "Tarjimalar"
+
+#: app/templates/partials/profile_dropdown_menu.html:153
 msgid "Logout"
 msgstr "Chiqish"
 
@@ -3396,19 +3547,6 @@ msgstr "Grylli | Eslatmalar | Ko'rinish"
 #: app/templates/partials/shared_nav.html:165
 msgid "Overview of reminders"
 msgstr "Eslatmalarning umumiy ko'rinishi"
-
-#: app/templates/partials/sidebar/desktop_footer.html:15
-msgid "Select Theme"
-msgstr "Tegishli"
-
-#: app/templates/partials/sidebar/desktop_footer.html:20
-msgid "Select theme"
-msgstr "Tegishli"
-
-#: app/templates/partials/sidebar/desktop_footer.html:29
-#: app/templates/partials/sidebar/desktop_footer.html:35
-msgid "Select language"
-msgstr "Tegishli"
 
 #: app/templates/partials/sidebar/desktop_header.html:9
 msgid "Menu"
@@ -3925,28 +4063,28 @@ msgstr "Hech qanday oʻzgarish kiritilmadi."
 msgid "An error occurred while updating your account."
 msgstr "Hisobingizni yangilashda xatolik yuz berdi."
 
-#: app/views/account.py:159
+#: app/views/account.py:164
 msgid "An error occurred while loading translation info."
 msgstr "Foydalanuvchini yangilashda xatolik yuz berdi."
 
-#: app/views/account.py:186
+#: app/views/account.py:191
 msgid "You cannot delete your account because you are the last admin."
 msgstr ""
 "Siz hisobingizni o‘chira olmaysiz, chunki siz oxirgi administratorsiz."
 
-#: app/views/account.py:195
+#: app/views/account.py:200
 msgid "Your account has been permanently deleted."
 msgstr "Hisobingiz doimiy ravishda o‘chirildi."
 
-#: app/views/account.py:202
+#: app/views/account.py:207
 msgid "An error occurred while trying to delete your account."
 msgstr "Hisobingizni yangilashda xatolik yuz berdi."
 
-#: app/views/account.py:221
+#: app/views/account.py:226
 msgid "Your account has been deleted"
 msgstr "Hisobingiz doimiy ravishda o‘chirildi."
 
-#: app/views/account.py:223
+#: app/views/account.py:228
 #, python-brace-format
 msgid ""
 "Hello {username},\n"
@@ -3961,17 +4099,21 @@ msgstr ""
 "\n"
 "{site_url}"
 
-#: app/views/account.py:408
+#: app/views/account.py:413
 msgid "Each security question must be different."
 msgstr "Uchala savol ham har xil bo'lishi kerak."
 
-#: app/views/account.py:432
+#: app/views/account.py:437
 msgid "Security questions saved."
 msgstr "Xavfsizlik savollari saqlandi."
 
-#: app/views/account.py:448
+#: app/views/account.py:453
 msgid "An error occurred while saving your security questions."
 msgstr "Hisobingizni yangilashda xatolik yuz berdi."
+
+#: app/views/account.py:475
+msgid "An error occurred while loading customization settings."
+msgstr "Foydalanuvchini yangilashda xatolik yuz berdi."
 
 #: app/views/admin.py:41
 msgid "Failed to load admin dashboard."
@@ -4049,99 +4191,99 @@ msgstr ""
 msgid "An error occurred while creating the admin account."
 msgstr "Admin hisobi yaratishda xatolik yuz berdi."
 
-#: app/views/auth.py:184
+#: app/views/auth.py:207
 msgid "Your account is not activated."
 msgstr "Hisobingiz doimiy ravishda o‘chirildi."
 
-#: app/views/auth.py:192
+#: app/views/auth.py:215
 msgid "Multi-factor authentication required."
 msgstr "Bildirishnoma o‘chirilgan"
 
-#: app/views/auth.py:196 app/views/mfa.py:222
+#: app/views/auth.py:219 app/views/mfa.py:218
 msgid "Logged in successfully."
 msgstr "Muvaffaqiyatli tizimga kirdingiz."
 
-#: app/views/auth.py:214
+#: app/views/auth.py:255
 msgid "Too many failed login attempts. Your account is locked for 15 minutes."
 msgstr "Juda ko'p muvaffaqiyatsiz kirish urinishlari. Iltimos, kuting"
 
-#: app/views/auth.py:232
+#: app/views/auth.py:273
 msgid "Invalid username or password."
 msgstr "Noto'g'ri foydalanuvchi nomi yoki parol."
 
-#: app/views/auth.py:258
+#: app/views/auth.py:299
 msgid "You have been logged out."
 msgstr "Tizimdan chiqdingiz."
 
-#: app/views/auth.py:320
+#: app/views/auth.py:361
 msgid "If a user with that email exists, we've sent the username to them."
 msgstr ""
 "Agar ushbu email manzili bilan foydalanuvchi mavjud bo'lsa, biz ularga "
 "foydalanuvchi nomini yubordik."
 
-#: app/views/auth.py:327
+#: app/views/auth.py:368
 msgid "An error occurred while sending your username reminder."
 msgstr "Hisobingizni yangilashda xatolik yuz berdi."
 
-#: app/views/auth.py:379
+#: app/views/auth.py:420
 msgid "No account found matching that username and email."
 msgstr ""
 "Ushbu foydalanuvchi nomi va elektron pochta manziliga mos keladigan hisob "
 "topilmadi."
 
-#: app/views/auth.py:386
+#: app/views/auth.py:427
 msgid "An error occurred while checking your credentials."
 msgstr "Hisobingizni yangilashda xatolik yuz berdi."
 
-#: app/views/auth.py:395
+#: app/views/auth.py:436
 msgid "Session expired. Please start over."
 msgstr "Sessiya muddati tugadi. Iltimos, qayta boshlang."
 
-#: app/views/auth.py:414
+#: app/views/auth.py:455
 msgid "Too many failed attempts. Please try again later."
 msgstr "Juda ko'p muvaffaqiyatsiz kirish urinishlari. Iltimos, kuting"
 
-#: app/views/auth.py:435
+#: app/views/auth.py:476
 msgid "A password reset link has been sent to your email."
 msgstr "Parolni tiklash havolasi elektron pochtangizga yuborildi."
 
-#: app/views/auth.py:448
+#: app/views/auth.py:489
 msgid "One or more answers were incorrect."
 msgstr "Bir yoki bir nechta javoblar noto'g'ri."
 
-#: app/views/auth.py:458
+#: app/views/auth.py:499
 msgid "An error occurred while verifying your answers."
 msgstr "Hisobingizni yangilashda xatolik yuz berdi."
 
-#: app/views/auth.py:491
+#: app/views/auth.py:532
 msgid "The reset link is invalid or has expired."
 msgstr "Tiklanuvchi havola yaroqsiz yoki muddati o'tgan."
 
-#: app/views/auth.py:504
+#: app/views/auth.py:545
 msgid "Username and email do not match."
 msgstr "Foydalanuvchi nomi va elektron pochta mos kelmaydi."
 
-#: app/views/auth.py:528
+#: app/views/auth.py:569
 msgid "Your password has been reset. Please log in."
 msgstr "Parolingiz tiklandi. Iltimos, tizimga kiring."
 
-#: app/views/auth.py:533
+#: app/views/auth.py:574
 msgid "An error occurred while resetting your password."
 msgstr "Foydalanuvchini o'chirishda xatolik yuz berdi."
 
-#: app/views/auth.py:570
+#: app/views/auth.py:611
 msgid "Invalid registration PIN."
 msgstr "Noto'g'ri ro'yxatdan o'tish PIN."
 
-#: app/views/auth.py:579
+#: app/views/auth.py:620
 msgid "Username or email already exists."
 msgstr "Foydalanuvchi nomi yoki elektron pochta allaqachon mavjud."
 
-#: app/views/auth.py:608
+#: app/views/auth.py:649
 msgid "Activate Your Grylli Account"
 msgstr "Grylli hisobingizni faollashtiring"
 
-#: app/views/auth.py:609
+#: app/views/auth.py:650
 #, python-brace-format
 msgid ""
 "Hello {username},\n"
@@ -4152,45 +4294,45 @@ msgstr ""
 "\n"
 "Iltimos, hisobingizni faollashtirish uchun bosing..."
 
-#: app/views/auth.py:615
+#: app/views/auth.py:656
 msgid "Account created! Please check your email to activate your account."
 msgstr ""
 "Hisob yaratildi! Hisobingizni faollashtirish uchun elektron pochtangizni "
 "tekshiring."
 
-#: app/views/auth.py:622
+#: app/views/auth.py:663
 msgid "An error occurred during signup."
 msgstr "Foydalanuvchini o'chirishda xatolik yuz berdi."
 
-#: app/views/auth.py:641
+#: app/views/auth.py:682
 msgid "Activation link is invalid or expired."
 msgstr "Faollashtirish havolasi noto'g'ri yoki muddati o'tgan."
 
-#: app/views/auth.py:648 app/views/users.py:135 app/views/users.py:202
+#: app/views/auth.py:689 app/views/users.py:136 app/views/users.py:203
 msgid "User not found."
 msgstr "Foydalanuvchi topilmadi."
 
-#: app/views/auth.py:652
+#: app/views/auth.py:693
 msgid "Account already activated. Please log in."
 msgstr "Hisob allaqachon faollashtirilgan. Iltimos, tizimga kiring."
 
-#: app/views/auth.py:663
+#: app/views/auth.py:704
 msgid "Your account has been activated! You can now log in."
 msgstr "Hisobingiz faollashtirildi! Endi tizimga kirishingiz mumkin."
 
-#: app/views/auth.py:667
+#: app/views/auth.py:708
 msgid "Failed to activate account."
 msgstr "Zaxira nusxasini yaratishda xatolik yuz berdi."
 
-#: app/views/auth.py:699
+#: app/views/auth.py:740
 msgid "Security questions not set or user not found."
 msgstr "Xavfsizlik savollari o'rnatilmagan yoki foydalanuvchi topilmadi."
 
-#: app/views/auth.py:707
+#: app/views/auth.py:748
 msgid "Password reset email sent."
 msgstr "Parollar mos kelmaydi."
 
-#: app/views/auth.py:714
+#: app/views/auth.py:755
 msgid "Incorrect answer."
 msgstr "Noto'g'ri javob."
 
@@ -4315,7 +4457,7 @@ msgstr "Sinov elektron postini yuborishda xatolik yuz berdi:"
 msgid "An error occurred while loading the help page."
 msgstr "Foydalanuvchini yangilashda xatolik yuz berdi."
 
-#: app/views/index.py:53
+#: app/views/index.py:55
 msgid "Error loading dashboard"
 msgstr "Elektron pochtalarga qaytish"
 
@@ -4379,7 +4521,7 @@ msgstr "Xabar saqlandi."
 msgid "You must enter a code from your authenticator."
 msgstr "Autentifikatoringizdan kod kiritishingiz kerak."
 
-#: app/views/mfa.py:85 app/views/mfa.py:295 app/views/mfa.py:303
+#: app/views/mfa.py:85 app/views/mfa.py:291 app/views/mfa.py:299
 msgid "Invalid code. Please try again."
 msgstr "Noto‘g‘ri kod. Iltimos, qayta urining."
 
@@ -4400,15 +4542,15 @@ msgstr ""
 msgid "Could not load recovery codes."
 msgstr "Qayta tiklash kodlarini yuklab bo‘lmadi."
 
-#: app/views/mfa.py:194
+#: app/views/mfa.py:190
 msgid "No MFA challenge in progress."
 msgstr "MFA muammosi jarayoni mavjud emas."
 
-#: app/views/mfa.py:202
+#: app/views/mfa.py:198
 msgid "User not found for MFA challenge."
 msgstr "Foydalanuvchi topilmadi."
 
-#: app/views/mfa.py:262
+#: app/views/mfa.py:258
 msgid ""
 "You have used your last recovery code. MFA has been disabled. Please remove "
 "Grylli from your authenticator app, and re-enable MFA to protect your "
@@ -4418,14 +4560,14 @@ msgstr ""
 "Gryllini autentifikator ilovangizdan o'chiring va hisobingizni himoya qilish"
 " uchun MFAni qayta yoqing."
 
-#: app/views/mfa.py:283
+#: app/views/mfa.py:279
 #, python-brace-format
 msgid "Recovery code accepted. You have {remaining} recovery codes left."
 msgstr ""
 "Qayta tiklash kodi qabul qilindi. Sizda {remaining} qayta tiklash kodlari "
 "qoldi."
 
-#: app/views/mfa.py:298
+#: app/views/mfa.py:294
 msgid "An unexpected error occurred during MFA challenge."
 msgstr "Foydalanuvchini o'chirishda xatolik yuz berdi."
 
@@ -4607,87 +4749,87 @@ msgstr ""
 msgid "Error sending test email."
 msgstr "Sinovchi Elektron Xatni Yuborish"
 
-#: app/views/users.py:58
+#: app/views/users.py:59
 msgid "Failed to load user list."
 msgstr "Elektron pochtalarga qaytish"
 
-#: app/views/users.py:82
+#: app/views/users.py:83
 msgid "Password is required when creating a new user."
 msgstr "Yangi foydalanuvchi yaratishda parol talab qilinadi."
 
-#: app/views/users.py:87 app/views/users.py:156
+#: app/views/users.py:88 app/views/users.py:157
 msgid "Username already exists."
 msgstr "Foydalanuvchi nomi allaqachon mavjud."
 
-#: app/views/users.py:92 app/views/users.py:163
+#: app/views/users.py:93 app/views/users.py:164
 msgid "Email already exists."
 msgstr "Email allaqachon mavjud."
 
-#: app/views/users.py:107
+#: app/views/users.py:108
 #, python-format
 msgid "User '%(username)s' created successfully."
 msgstr "Foydalanuvchi '%(username)s' muvaffaqiyatli yaratildi."
 
-#: app/views/users.py:115
+#: app/views/users.py:116
 msgid "Failed to create user."
 msgstr "Foydalanuvchini yaratib bo'lmadi."
 
-#: app/views/users.py:176
+#: app/views/users.py:177
 msgid "User updated successfully."
 msgstr "Foydalanuvchi muvaffaqiyatli yangilandi."
 
-#: app/views/users.py:183 app/views/users.py:301
+#: app/views/users.py:184 app/views/users.py:320
 msgid "An error occurred while updating the user."
 msgstr "Foydalanuvchini yangilashda xatolik yuz berdi."
 
-#: app/views/users.py:255
+#: app/views/users.py:256
 msgid "User deleted."
 msgstr "Foydalanuvchi o'chirildi."
 
-#: app/views/users.py:262
+#: app/views/users.py:263
 msgid "An error occurred while deleting the user."
 msgstr "Foydalanuvchini o'chirishda xatolik yuz berdi."
 
-#: app/views/users.py:279
+#: app/views/users.py:280
 msgid "You cannot change your own enabled status."
 msgstr "Siz o'z imkoniyatlaringizni o'zgartira olmaysiz."
 
-#: app/views/users.py:292
+#: app/views/users.py:311
 #, python-format
 msgid "User '%(username)s' has been %(status)s."
 msgstr "Foydalanuvchi '%(username)s' %(status)s qilib qo'yildi."
 
-#: app/views/users.py:318
+#: app/views/users.py:337
 msgid "You cannot reset your own MFA."
 msgstr "⚪ = Siz o'z hisobingizni o'chira olmaysiz."
 
-#: app/views/users.py:331
+#: app/views/users.py:368
 #, python-format
 msgid "MFA disabled for user '%(username)s'."
 msgstr "Foydalanuvchi '%(username)s' uchun MFA o‘chirildi."
 
-#: app/views/users.py:335
+#: app/views/users.py:372
 msgid "An error occurred while resetting MFA."
 msgstr "Foydalanuvchini o'chirishda xatolik yuz berdi."
 
-#: app/views/users.py:358
+#: app/views/users.py:395
 msgid "Invalid role"
 msgstr "Noto'g'ri rol."
 
-#: app/views/users.py:364
+#: app/views/users.py:417
 #, python-format
 msgid "Role updated for %(username)s."
 msgstr "Foydalanuvchi '%(username)s' uchun MFA o‘chirildi."
 
-#: app/views/users.py:370
+#: app/views/users.py:425
 msgid "An error occurred while updating the role."
 msgstr "Foydalanuvchini yangilashda xatolik yuz berdi."
 
-#: app/views/users.py:390
+#: app/views/users.py:463
 msgid "User account unlocked."
 msgstr "Hisobingiz doimiy ravishda o‘chirildi."
 
-#: app/views/users.py:395
+#: app/views/users.py:468
 msgid "An error occurred while unlocking the account."
 msgstr "Admin hisobi yaratishda xatolik yuz berdi."
 
@@ -5470,3 +5612,9 @@ msgstr "Foydalanuvchini o'chirishda xatolik yuz berdi."
 
 #~ msgid "Failed to send test email. "
 #~ msgstr "Sinov elektron postini yuborishda xatolik yuz berdi:"
+
+#~ msgid "Select Theme"
+#~ msgstr "Tegishli"
+
+#~ msgid "Select theme"
+#~ msgstr "Tegishli"

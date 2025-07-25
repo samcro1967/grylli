@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-07-14 11:49-0500\n"
+"POT-Creation-Date: 2025-07-25 13:21-0500\n"
 "PO-Revision-Date: 2025-05-25 12:41-0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: nl <LL@li.org>\n"
@@ -364,7 +364,7 @@ msgstr ""
 "veilig en betrouwbaar."
 
 #: app/templates/help_full.html:7
-#: app/templates/partials/profile_dropdown_menu.html:57
+#: app/templates/partials/profile_dropdown_menu.html:89
 msgid "Help"
 msgstr "Help"
 
@@ -503,7 +503,7 @@ msgstr ""
 "verwacht."
 
 #: app/templates/help_partial.html:45
-#: app/templates/partials/profile_dropdown_menu.html:22
+#: app/templates/partials/profile_dropdown_menu.html:28
 msgid "Security"
 msgstr "🔐 Beveiliging"
 
@@ -523,7 +523,7 @@ msgstr ""
 "Hulp nodig met iets specifieks? Elke module in Grylli bevat zijn eigen "
 "hulppaneel met gedetailleerde begeleiding."
 
-#: app/templates/partials/profile_dropdown_menu.html:66
+#: app/templates/partials/profile_dropdown_menu.html:102
 #: app/templates/privacy_full.html:7
 msgid "Privacy"
 msgstr "Privacy"
@@ -667,7 +667,7 @@ msgstr "Systeeminstellingen"
 msgid "This endpoint provides system health and version information."
 msgstr "Deze eindpunt biedt systeemgezondheid en versie-informatie."
 
-#: app/templates/partials/profile_dropdown_menu.html:75
+#: app/templates/partials/profile_dropdown_menu.html:115
 #: app/templates/system_info_full.html:7
 msgid "System Info"
 msgstr "Systeeminfo"
@@ -762,6 +762,109 @@ msgstr ""
 #: app/templates/auth/signup.html:16
 msgid "Please fix the following errors:"
 msgstr "Corrigeer de volgende fouten:"
+
+#: app/templates/account/customization_full.html:7
+#: app/templates/partials/profile_dropdown_menu.html:67
+msgid "Customization"
+msgstr "Aanpassing"
+
+#: app/templates/account/customization_partial.html:10
+msgid "Customize Your Interface"
+msgstr "Pas uw interface aan"
+
+#: app/templates/account/customization_partial.html:13
+msgid ""
+"Change the look and feel of Grylli using the options below. Your preferences"
+" are saved in your browser."
+msgstr ""
+"Verander de uitstraling van Grylli met de onderstaande opties. Uw voorkeuren"
+" worden in uw browser opgeslagen."
+
+#: app/templates/account/customization_partial.html:20
+msgid "Font Family"
+msgstr "Lettertypefamilie"
+
+#: app/templates/account/customization_partial.html:33
+msgid "Font Size"
+msgstr "Lettergrootte"
+
+#: app/templates/account/customization_partial.html:38
+msgid "Extra Small"
+msgstr "Extra Klein"
+
+#: app/templates/account/customization_partial.html:39
+msgid "Small"
+msgstr "Alles"
+
+#: app/templates/account/customization_partial.html:40
+#: app/templates/account/customization_partial.html:64
+#: app/templates/account/customization_partial.html:101
+msgid "Default"
+msgstr "Verwijderen"
+
+#: app/templates/account/customization_partial.html:41
+msgid "Large"
+msgstr "Label"
+
+#: app/templates/account/customization_partial.html:42
+msgid "Extra Large"
+msgstr "Extra Groot"
+
+#: app/templates/account/customization_partial.html:48
+msgid "Background Pattern"
+msgstr "Achtergrondpatroon"
+
+#: app/templates/account/customization_partial.html:59
+msgid "Contrast"
+msgstr "Inhoud"
+
+#: app/templates/account/customization_partial.html:65
+msgid "Low Contrast"
+msgstr "Lage Contrast"
+
+#: app/templates/account/customization_partial.html:66
+msgid "High Contrast"
+msgstr "Hoge Contrast"
+
+#: app/templates/account/customization_partial.html:72
+msgid "Letter Spacing"
+msgstr "Letterspatiëring"
+
+#: app/templates/account/customization_partial.html:76
+msgid "Tight"
+msgstr "Compact"
+
+#: app/templates/account/customization_partial.html:77
+msgid "Normal"
+msgstr "Normaal"
+
+#: app/templates/account/customization_partial.html:78
+msgid "Wide"
+msgstr "ID"
+
+#: app/templates/account/customization_partial.html:84
+msgid "Reading Density"
+msgstr "Leesdichtheid"
+
+#: app/templates/account/customization_partial.html:96
+msgid "Border Radius"
+msgstr "Randradius"
+
+#: app/templates/account/customization_partial.html:102
+msgid "Sharp Corners"
+msgstr "Scherpe Hoeken"
+
+#: app/templates/account/customization_partial.html:103
+msgid "Extra Rounded"
+msgstr "Extra Afgerond"
+
+#: app/templates/account/customization_partial.html:109
+msgid "Theme"
+msgstr "Startpagina"
+
+#: app/templates/account/customization_partial.html:125
+msgid "Language"
+msgstr "Selecteer de juiste"
 
 #: app/templates/account/manage_account_full.html:7
 #: app/templates/account/manage_account_partial.html:9
@@ -904,12 +1007,20 @@ msgstr ""
 "gemaakt."
 
 #: app/templates/account/manage_account_partial.html:130
-msgid "Are you sure you want to delete your account?"
-msgstr "Weet u zeker dat u MFA voor deze gebruiker wilt resetten?"
-
 #: app/templates/account/manage_account_partial.html:132
+msgid "You are the last admin. Deleting your account is not allowed."
+msgstr ""
+"U bent de laatste beheerder. Het verwijderen van uw account is niet "
+"toegestaan."
+
+#: app/templates/account/manage_account_partial.html:133
+#: app/templates/account/manage_account_partial.html:143
 msgid "Delete My Account"
 msgstr "Update Account"
+
+#: app/templates/account/manage_account_partial.html:140
+msgid "Are you sure you want to delete your account?"
+msgstr "Weet u zeker dat u MFA voor deze gebruiker wilt resetten?"
 
 #: app/templates/account/set_security_questions_full.html:7
 msgid "Security Questions"
@@ -941,7 +1052,7 @@ msgstr "Update Account"
 
 #: app/templates/account/translations_full.html:7
 #: app/templates/account/translations_partial.html:8
-#: app/templates/partials/profile_dropdown_menu.html:95
+#: app/templates/partials/profile_dropdown_menu.html:139
 msgid "Translations"
 msgstr "Vertalingen"
 
@@ -1130,7 +1241,7 @@ msgstr "Vul het formulier in om een nieuwe gebruiker toe te voegen."
 
 #: app/templates/admin/create_user_partial.html:26
 #: app/templates/admin/edit_user.html:28
-#: app/templates/admin/partials/table_view.html:13
+#: app/templates/admin/partials/table_view.html:14
 #: app/templates/admin/reports/report_accounts_partial.html:10
 #: app/templates/user_smtp/partials/table_view.html:13
 msgid "Username"
@@ -1138,14 +1249,14 @@ msgstr "Gebruikersnaam"
 
 #: app/templates/admin/create_user_partial.html:36
 #: app/templates/admin/edit_user.html:36
-#: app/templates/admin/partials/table_view.html:14
+#: app/templates/admin/partials/table_view.html:15
 #: app/templates/admin/reports/report_accounts_partial.html:11
 #: app/templates/dashboard/partials/_linked_items_partial.html:15
 msgid "Email"
 msgstr "Email"
 
 #: app/templates/admin/create_user_partial.html:49
-#: app/templates/admin/partials/table_view.html:15
+#: app/templates/admin/partials/table_view.html:16
 #: app/templates/admin/reports/report_accounts_partial.html:12
 msgid "Role"
 msgstr "Rol"
@@ -1672,11 +1783,11 @@ msgstr ""
 "Alle acties worden gelogd voor verantwoording. Wachtwoorden en geheimen zijn"
 " nooit zichtbaar."
 
-#: app/templates/admin/partials/table_view.html:12
+#: app/templates/admin/partials/table_view.html:13
 msgid "ID"
 msgstr "ID"
 
-#: app/templates/admin/partials/table_view.html:16
+#: app/templates/admin/partials/table_view.html:17
 #: app/templates/admin/tools/partials/backup_table.html:13
 #: app/templates/apprise/apprise_config.html:59
 #: app/templates/apprise/partials/table_view.html:14
@@ -1692,7 +1803,7 @@ msgstr "ID"
 msgid "Actions"
 msgstr "Acties"
 
-#: app/templates/admin/partials/table_view.html:35
+#: app/templates/admin/partials/table_view.html:36
 #: app/templates/admin/reports/report_accounts_partial.html:52
 msgid "No users available."
 msgstr "Geen gebruikers beschikbaar."
@@ -1792,7 +1903,8 @@ msgstr "Systeeminstellingen"
 msgid "Details"
 msgstr "E-mails"
 
-#: app/templates/admin/reports/report_scheduler_partial.html:37
+#: app/templates/admin/reports/report_scheduler_partial.html:38
+#: app/templates/admin/reports/report_scheduler_partial.html:46
 msgid "No scheduler activity found."
 msgstr "Geen planneractiviteit gevonden."
 
@@ -1815,6 +1927,10 @@ msgstr "Terug naar Dashboard"
 #: app/templates/admin/reports/reports_tabs.html:38
 msgid "Scheduler Activity"
 msgstr "E-mail inplannen"
+
+#: app/templates/admin/reports/reports_tabs.html:46
+msgid "Grylli | Reports | Logs"
+msgstr "Beheerder Paneel"
 
 #: app/templates/admin/reports/reports_tabs.html:51
 msgid "Application Logs"
@@ -3275,12 +3391,12 @@ msgstr "Overzicht"
 msgid "Grylli | Admin | Users"
 msgstr "Grylli | Admin | Gebruikers"
 
-#: app/templates/partials/head.html:14
+#: app/templates/partials/head.html:16
 msgid "Grylli is a secure message scheduling and delivery platform."
 msgstr ""
 "Grylli is een veilig platform voor het plannen en afleveren van berichten."
 
-#: app/templates/partials/head.html:25
+#: app/templates/partials/head.html:35
 msgid "Grylli"
 msgstr "Grylli"
 
@@ -3294,23 +3410,59 @@ msgstr "Startpagina"
 msgid "Check-ins Due"
 msgstr "Inchecken"
 
-#: app/templates/partials/profile_dropdown_menu.html:13
+#: app/templates/partials/profile_dropdown_menu.html:9
+msgid "Grylli | Account"
+msgstr "Beheerder Paneel"
+
+#: app/templates/partials/profile_dropdown_menu.html:15
 msgid "Account"
 msgstr "Account"
 
-#: app/templates/partials/profile_dropdown_menu.html:31
+#: app/templates/partials/profile_dropdown_menu.html:22
+msgid "Grylli | Security Questions"
+msgstr "🔐 Beveiliging"
+
+#: app/templates/partials/profile_dropdown_menu.html:35
+msgid "Grylli | MFA"
+msgstr "Grylli"
+
+#: app/templates/partials/profile_dropdown_menu.html:41
 msgid "MFA"
 msgstr "MFA"
 
-#: app/templates/partials/profile_dropdown_menu.html:40
+#: app/templates/partials/profile_dropdown_menu.html:48
+msgid "Grylli | About"
+msgstr "Beheerder Paneel"
+
+#: app/templates/partials/profile_dropdown_menu.html:54
 msgid "About"
 msgstr "Over"
 
-#: app/templates/partials/profile_dropdown_menu.html:48
+#: app/templates/partials/profile_dropdown_menu.html:61
+msgid "Grylli | Customization"
+msgstr "Grylli | E-mails | SMTP"
+
+#: app/templates/partials/profile_dropdown_menu.html:77
 msgid "GitHub"
 msgstr "GitHub"
 
-#: app/templates/partials/profile_dropdown_menu.html:107
+#: app/templates/partials/profile_dropdown_menu.html:83
+msgid "Grylli | Help"
+msgstr "Grylli | E-mails | SMTP"
+
+#: app/templates/partials/profile_dropdown_menu.html:96
+msgid "Grylli | Privacy"
+msgstr "Privacy"
+
+#: app/templates/partials/profile_dropdown_menu.html:109
+msgid "Grylli | System Info"
+msgstr "Systeeminstellingen"
+
+#: app/templates/partials/profile_dropdown_menu.html:122
+msgid "Grylli | Translations"
+msgstr "Vertalingen"
+
+#: app/templates/partials/profile_dropdown_menu.html:153
 msgid "Logout"
 msgstr "Uitloggen"
 
@@ -3365,19 +3517,6 @@ msgstr "Grylli | Herinneringen | Overzicht"
 #: app/templates/partials/shared_nav.html:165
 msgid "Overview of reminders"
 msgstr "Overzicht van herinneringen"
-
-#: app/templates/partials/sidebar/desktop_footer.html:15
-msgid "Select Theme"
-msgstr "Selecteer de juiste"
-
-#: app/templates/partials/sidebar/desktop_footer.html:20
-msgid "Select theme"
-msgstr "Selecteer de juiste"
-
-#: app/templates/partials/sidebar/desktop_footer.html:29
-#: app/templates/partials/sidebar/desktop_footer.html:35
-msgid "Select language"
-msgstr "Selecteer de juiste"
 
 #: app/templates/partials/sidebar/desktop_header.html:9
 msgid "Menu"
@@ -3892,27 +4031,27 @@ msgstr "Geen wijzigingen aangebracht."
 msgid "An error occurred while updating your account."
 msgstr "Er is een fout opgetreden bij het bijwerken van uw account."
 
-#: app/views/account.py:159
+#: app/views/account.py:164
 msgid "An error occurred while loading translation info."
 msgstr "Er is een fout opgetreden bij het bijwerken van de gebruiker."
 
-#: app/views/account.py:186
+#: app/views/account.py:191
 msgid "You cannot delete your account because you are the last admin."
 msgstr "U kunt uw account niet verwijderen omdat u de laatste beheerder bent."
 
-#: app/views/account.py:195
+#: app/views/account.py:200
 msgid "Your account has been permanently deleted."
 msgstr "Uw account is permanent verwijderd."
 
-#: app/views/account.py:202
+#: app/views/account.py:207
 msgid "An error occurred while trying to delete your account."
 msgstr "Er is een fout opgetreden bij het bijwerken van uw account."
 
-#: app/views/account.py:221
+#: app/views/account.py:226
 msgid "Your account has been deleted"
 msgstr "Uw account is permanent verwijderd."
 
-#: app/views/account.py:223
+#: app/views/account.py:228
 #, python-brace-format
 msgid ""
 "Hello {username},\n"
@@ -3927,17 +4066,21 @@ msgstr ""
 "\n"
 "{site_url}"
 
-#: app/views/account.py:408
+#: app/views/account.py:413
 msgid "Each security question must be different."
 msgstr "Alle drie de vragen moeten verschillend zijn."
 
-#: app/views/account.py:432
+#: app/views/account.py:437
 msgid "Security questions saved."
 msgstr "Beveiligingsvragen opgeslagen."
 
-#: app/views/account.py:448
+#: app/views/account.py:453
 msgid "An error occurred while saving your security questions."
 msgstr "Er is een fout opgetreden bij het bijwerken van uw account."
+
+#: app/views/account.py:475
+msgid "An error occurred while loading customization settings."
+msgstr "Er is een fout opgetreden bij het bijwerken van de gebruiker."
 
 #: app/views/admin.py:41
 msgid "Failed to load admin dashboard."
@@ -4015,101 +4158,101 @@ msgstr ""
 msgid "An error occurred while creating the admin account."
 msgstr "Er is een fout opgetreden bij het aanmaken van het beheerdersaccount."
 
-#: app/views/auth.py:184
+#: app/views/auth.py:207
 msgid "Your account is not activated."
 msgstr "Uw account is permanent verwijderd."
 
-#: app/views/auth.py:192
+#: app/views/auth.py:215
 msgid "Multi-factor authentication required."
 msgstr "Melding is uitgeschakeld"
 
-#: app/views/auth.py:196 app/views/mfa.py:222
+#: app/views/auth.py:219 app/views/mfa.py:218
 msgid "Logged in successfully."
 msgstr "Succesvol ingelogd."
 
-#: app/views/auth.py:214
+#: app/views/auth.py:255
 msgid "Too many failed login attempts. Your account is locked for 15 minutes."
 msgstr "Te veel mislukte inlogpogingen. Wacht alstublieft"
 
-#: app/views/auth.py:232
+#: app/views/auth.py:273
 msgid "Invalid username or password."
 msgstr "Ongeldige gebruikersnaam of wachtwoord."
 
-#: app/views/auth.py:258
+#: app/views/auth.py:299
 msgid "You have been logged out."
 msgstr "U bent uitgelogd."
 
-#: app/views/auth.py:320
+#: app/views/auth.py:361
 msgid "If a user with that email exists, we've sent the username to them."
 msgstr ""
 "Als er een gebruiker met die e-mail bestaat, hebben we de gebruikersnaam "
 "naar hen gestuurd."
 
-#: app/views/auth.py:327
+#: app/views/auth.py:368
 msgid "An error occurred while sending your username reminder."
 msgstr "Er is een fout opgetreden bij het bijwerken van uw account."
 
-#: app/views/auth.py:379
+#: app/views/auth.py:420
 msgid "No account found matching that username and email."
 msgstr ""
 "Er is geen account gevonden dat overeenkomt met die gebruikersnaam en "
 "e-mail."
 
-#: app/views/auth.py:386
+#: app/views/auth.py:427
 msgid "An error occurred while checking your credentials."
 msgstr "Er is een fout opgetreden bij het bijwerken van uw account."
 
-#: app/views/auth.py:395
+#: app/views/auth.py:436
 msgid "Session expired. Please start over."
 msgstr "Sessie verlopen. Begin opnieuw."
 
-#: app/views/auth.py:414
+#: app/views/auth.py:455
 msgid "Too many failed attempts. Please try again later."
 msgstr "Te veel mislukte inlogpogingen. Wacht alstublieft"
 
-#: app/views/auth.py:435
+#: app/views/auth.py:476
 msgid "A password reset link has been sent to your email."
 msgstr ""
 "Een link voor het opnieuw instellen van het wachtwoord is naar uw e-mail "
 "gestuurd."
 
-#: app/views/auth.py:448
+#: app/views/auth.py:489
 msgid "One or more answers were incorrect."
 msgstr "Een of meer antwoorden waren onjuist."
 
-#: app/views/auth.py:458
+#: app/views/auth.py:499
 msgid "An error occurred while verifying your answers."
 msgstr "Er is een fout opgetreden bij het bijwerken van uw account."
 
-#: app/views/auth.py:491
+#: app/views/auth.py:532
 msgid "The reset link is invalid or has expired."
 msgstr "De resetlink is ongeldig of verlopen."
 
-#: app/views/auth.py:504
+#: app/views/auth.py:545
 msgid "Username and email do not match."
 msgstr "Gebruikersnaam en e-mail komen niet overeen."
 
-#: app/views/auth.py:528
+#: app/views/auth.py:569
 msgid "Your password has been reset. Please log in."
 msgstr "Je wachtwoord is opnieuw ingesteld. Log alstublieft in."
 
-#: app/views/auth.py:533
+#: app/views/auth.py:574
 msgid "An error occurred while resetting your password."
 msgstr "Er is een fout opgetreden bij het verwijderen van de gebruiker."
 
-#: app/views/auth.py:570
+#: app/views/auth.py:611
 msgid "Invalid registration PIN."
 msgstr "Ongeldige registratie-PIN."
 
-#: app/views/auth.py:579
+#: app/views/auth.py:620
 msgid "Username or email already exists."
 msgstr "Gebruikersnaam of e-mail bestaat al."
 
-#: app/views/auth.py:608
+#: app/views/auth.py:649
 msgid "Activate Your Grylli Account"
 msgstr "Activeer uw Grylli-account"
 
-#: app/views/auth.py:609
+#: app/views/auth.py:650
 #, python-brace-format
 msgid ""
 "Hello {username},\n"
@@ -4120,43 +4263,43 @@ msgstr ""
 "\n"
 "Activeer alstublieft uw account door te klikken..."
 
-#: app/views/auth.py:615
+#: app/views/auth.py:656
 msgid "Account created! Please check your email to activate your account."
 msgstr "Account aangemaakt! Controleer je e-mail om je account te activeren."
 
-#: app/views/auth.py:622
+#: app/views/auth.py:663
 msgid "An error occurred during signup."
 msgstr "Er is een fout opgetreden bij het verwijderen van de gebruiker."
 
-#: app/views/auth.py:641
+#: app/views/auth.py:682
 msgid "Activation link is invalid or expired."
 msgstr "Activatielink is ongeldig of verlopen."
 
-#: app/views/auth.py:648 app/views/users.py:135 app/views/users.py:202
+#: app/views/auth.py:689 app/views/users.py:136 app/views/users.py:203
 msgid "User not found."
 msgstr "Gebruiker niet gevonden."
 
-#: app/views/auth.py:652
+#: app/views/auth.py:693
 msgid "Account already activated. Please log in."
 msgstr "Account al geactiveerd. Log alstublieft in."
 
-#: app/views/auth.py:663
+#: app/views/auth.py:704
 msgid "Your account has been activated! You can now log in."
 msgstr "Je account is geactiveerd! Je kunt nu inloggen."
 
-#: app/views/auth.py:667
+#: app/views/auth.py:708
 msgid "Failed to activate account."
 msgstr "Maken van backup mislukt."
 
-#: app/views/auth.py:699
+#: app/views/auth.py:740
 msgid "Security questions not set or user not found."
 msgstr "Beveiligingsvragen niet ingesteld of gebruiker niet gevonden."
 
-#: app/views/auth.py:707
+#: app/views/auth.py:748
 msgid "Password reset email sent."
 msgstr "Wachtwoorden komen niet overeen."
 
-#: app/views/auth.py:714
+#: app/views/auth.py:755
 msgid "Incorrect answer."
 msgstr "Onjuist antwoord."
 
@@ -4282,7 +4425,7 @@ msgstr "Verzenden van test-e-mail mislukt:"
 msgid "An error occurred while loading the help page."
 msgstr "Er is een fout opgetreden bij het bijwerken van de gebruiker."
 
-#: app/views/index.py:53
+#: app/views/index.py:55
 msgid "Error loading dashboard"
 msgstr "Terug naar e-mails"
 
@@ -4346,7 +4489,7 @@ msgstr "Bericht opgeslagen."
 msgid "You must enter a code from your authenticator."
 msgstr "U moet een code van uw authenticator invoeren."
 
-#: app/views/mfa.py:85 app/views/mfa.py:295 app/views/mfa.py:303
+#: app/views/mfa.py:85 app/views/mfa.py:291 app/views/mfa.py:299
 msgid "Invalid code. Please try again."
 msgstr "Ongeldige code. Probeer het opnieuw."
 
@@ -4366,15 +4509,15 @@ msgstr "Herstelcodes worden alleen meteen na het inschakelen van MFA getoond."
 msgid "Could not load recovery codes."
 msgstr "Kon herstelcodes niet laden."
 
-#: app/views/mfa.py:194
+#: app/views/mfa.py:190
 msgid "No MFA challenge in progress."
 msgstr "Geen MFA-uitdaging gaande."
 
-#: app/views/mfa.py:202
+#: app/views/mfa.py:198
 msgid "User not found for MFA challenge."
 msgstr "Gebruiker niet gevonden."
 
-#: app/views/mfa.py:262
+#: app/views/mfa.py:258
 msgid ""
 "You have used your last recovery code. MFA has been disabled. Please remove "
 "Grylli from your authenticator app, and re-enable MFA to protect your "
@@ -4384,12 +4527,12 @@ msgstr ""
 "Grylli uit uw authenticator-app en stel MFA opnieuw in om uw account te "
 "beveiligen."
 
-#: app/views/mfa.py:283
+#: app/views/mfa.py:279
 #, python-brace-format
 msgid "Recovery code accepted. You have {remaining} recovery codes left."
 msgstr "Herstelcode geaccepteerd. U heeft nog {remaining} herstelcodes over."
 
-#: app/views/mfa.py:298
+#: app/views/mfa.py:294
 msgid "An unexpected error occurred during MFA challenge."
 msgstr "Er is een fout opgetreden bij het verwijderen van de gebruiker."
 
@@ -4565,87 +4708,87 @@ msgstr "Verzenden van test-e-mail mislukt. Controleer SMTP-instellingen."
 msgid "Error sending test email."
 msgstr "Verstuur test-e-mail"
 
-#: app/views/users.py:58
+#: app/views/users.py:59
 msgid "Failed to load user list."
 msgstr "Terug naar e-mails"
 
-#: app/views/users.py:82
+#: app/views/users.py:83
 msgid "Password is required when creating a new user."
 msgstr "Wachtwoord is vereist bij het aanmaken van een nieuwe gebruiker."
 
-#: app/views/users.py:87 app/views/users.py:156
+#: app/views/users.py:88 app/views/users.py:157
 msgid "Username already exists."
 msgstr "Gebruikersnaam bestaat al."
 
-#: app/views/users.py:92 app/views/users.py:163
+#: app/views/users.py:93 app/views/users.py:164
 msgid "Email already exists."
 msgstr "Email bestaat al."
 
-#: app/views/users.py:107
+#: app/views/users.py:108
 #, python-format
 msgid "User '%(username)s' created successfully."
 msgstr "Gebruiker '%(username)s' succesvol aangemaakt."
 
-#: app/views/users.py:115
+#: app/views/users.py:116
 msgid "Failed to create user."
 msgstr "Het maken van de gebruiker is mislukt."
 
-#: app/views/users.py:176
+#: app/views/users.py:177
 msgid "User updated successfully."
 msgstr "Gebruiker succesvol bijgewerkt."
 
-#: app/views/users.py:183 app/views/users.py:301
+#: app/views/users.py:184 app/views/users.py:320
 msgid "An error occurred while updating the user."
 msgstr "Er is een fout opgetreden bij het bijwerken van de gebruiker."
 
-#: app/views/users.py:255
+#: app/views/users.py:256
 msgid "User deleted."
 msgstr "Gebruiker verwijderd."
 
-#: app/views/users.py:262
+#: app/views/users.py:263
 msgid "An error occurred while deleting the user."
 msgstr "Er is een fout opgetreden bij het verwijderen van de gebruiker."
 
-#: app/views/users.py:279
+#: app/views/users.py:280
 msgid "You cannot change your own enabled status."
 msgstr "Je kunt je eigen ingeschakelde status niet wijzigen."
 
-#: app/views/users.py:292
+#: app/views/users.py:311
 #, python-format
 msgid "User '%(username)s' has been %(status)s."
 msgstr "Gebruiker '%(username)s' is %(status)s."
 
-#: app/views/users.py:318
+#: app/views/users.py:337
 msgid "You cannot reset your own MFA."
 msgstr "⚪ = U kunt uw eigen account niet uitschakelen."
 
-#: app/views/users.py:331
+#: app/views/users.py:368
 #, python-format
 msgid "MFA disabled for user '%(username)s'."
 msgstr "MFA is uitgeschakeld voor gebruiker '%(username)s'."
 
-#: app/views/users.py:335
+#: app/views/users.py:372
 msgid "An error occurred while resetting MFA."
 msgstr "Er is een fout opgetreden bij het verwijderen van de gebruiker."
 
-#: app/views/users.py:358
+#: app/views/users.py:395
 msgid "Invalid role"
 msgstr "Ongeldige rol."
 
-#: app/views/users.py:364
+#: app/views/users.py:417
 #, python-format
 msgid "Role updated for %(username)s."
 msgstr "MFA is uitgeschakeld voor gebruiker '%(username)s'."
 
-#: app/views/users.py:370
+#: app/views/users.py:425
 msgid "An error occurred while updating the role."
 msgstr "Er is een fout opgetreden bij het bijwerken van de gebruiker."
 
-#: app/views/users.py:390
+#: app/views/users.py:463
 msgid "User account unlocked."
 msgstr "Uw account is permanent verwijderd."
 
-#: app/views/users.py:395
+#: app/views/users.py:468
 msgid "An error occurred while unlocking the account."
 msgstr "Er is een fout opgetreden bij het aanmaken van het beheerdersaccount."
 
@@ -5403,3 +5546,9 @@ msgstr "Er is een fout opgetreden bij het verwijderen van de gebruiker."
 
 #~ msgid "Failed to send test email. "
 #~ msgstr "Verzenden van test-e-mail mislukt:"
+
+#~ msgid "Select Theme"
+#~ msgstr "Selecteer de juiste"
+
+#~ msgid "Select theme"
+#~ msgstr "Selecteer de juiste"

@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-07-14 11:49-0500\n"
+"POT-Creation-Date: 2025-07-25 13:21-0500\n"
 "PO-Revision-Date: 2025-05-25 13:03-0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: ga <LL@li.org>\n"
@@ -359,7 +359,7 @@ msgstr ""
 " ma ho so."
 
 #: app/templates/help_full.html:7
-#: app/templates/partials/profile_dropdown_menu.html:57
+#: app/templates/partials/profile_dropdown_menu.html:89
 msgid "Help"
 msgstr "Boa"
 
@@ -499,7 +499,7 @@ msgstr ""
 "Apprise) ag feidhmiú mar a bhfuiltear ag súil leis."
 
 #: app/templates/help_partial.html:45
-#: app/templates/partials/profile_dropdown_menu.html:22
+#: app/templates/partials/profile_dropdown_menu.html:28
 msgid "Security"
 msgstr "🔐 Ankasa"
 
@@ -519,7 +519,7 @@ msgstr ""
 "Ag teastáil cabhrach le rud éigin sonrach? Tá a phainéal cabhrach féin le "
 "treoirlínte mionsonraithe ag gach modúl i Grylli."
 
-#: app/templates/partials/profile_dropdown_menu.html:66
+#: app/templates/partials/profile_dropdown_menu.html:102
 #: app/templates/privacy_full.html:7
 msgid "Privacy"
 msgstr "Amansɛm"
@@ -663,7 +663,7 @@ msgstr "Socruithe Córas"
 msgid "This endpoint provides system health and version information."
 msgstr "Wↄ nyansa yi ma nsɛm fa yɛsoadeɛ ne nsakraeɛ ho nsɛm."
 
-#: app/templates/partials/profile_dropdown_menu.html:75
+#: app/templates/partials/profile_dropdown_menu.html:115
 #: app/templates/system_info_full.html:7
 msgid "System Info"
 msgstr "Eolas Córas"
@@ -758,6 +758,109 @@ msgstr ""
 #: app/templates/auth/signup.html:16
 msgid "Please fix the following errors:"
 msgstr "Fíjl riyas zíven úrootx:"
+
+#: app/templates/account/customization_full.html:7
+#: app/templates/partials/profile_dropdown_menu.html:67
+msgid "Customization"
+msgstr "Saincheaptha"
+
+#: app/templates/account/customization_partial.html:10
+msgid "Customize Your Interface"
+msgstr "Saincheap Do Chomhéadan"
+
+#: app/templates/account/customization_partial.html:13
+msgid ""
+"Change the look and feel of Grylli using the options below. Your preferences"
+" are saved in your browser."
+msgstr ""
+"Athraigh cuma agus mothú Grylli ag baint úsáide as na roghanna thíos. "
+"Sábhálfar do roghanna i do bhrabhsálaí."
+
+#: app/templates/account/customization_partial.html:20
+msgid "Font Family"
+msgstr "Teaghlach Cló"
+
+#: app/templates/account/customization_partial.html:33
+msgid "Font Size"
+msgstr "Méid Cló"
+
+#: app/templates/account/customization_partial.html:38
+msgid "Extra Small"
+msgstr "An-bheag"
+
+#: app/templates/account/customization_partial.html:39
+msgid "Small"
+msgstr "Nnyinaa"
+
+#: app/templates/account/customization_partial.html:40
+#: app/templates/account/customization_partial.html:64
+#: app/templates/account/customization_partial.html:101
+msgid "Default"
+msgstr "Scrios"
+
+#: app/templates/account/customization_partial.html:41
+msgid "Large"
+msgstr "Lipéad"
+
+#: app/templates/account/customization_partial.html:42
+msgid "Extra Large"
+msgstr "An-mhór"
+
+#: app/templates/account/customization_partial.html:48
+msgid "Background Pattern"
+msgstr "Patrún Cúlra"
+
+#: app/templates/account/customization_partial.html:59
+msgid "Contrast"
+msgstr "Ábhar"
+
+#: app/templates/account/customization_partial.html:65
+msgid "Low Contrast"
+msgstr "Ísealchodarsnacht"
+
+#: app/templates/account/customization_partial.html:66
+msgid "High Contrast"
+msgstr "Ardchodarsnacht"
+
+#: app/templates/account/customization_partial.html:72
+msgid "Letter Spacing"
+msgstr "Spásáil Litreach"
+
+#: app/templates/account/customization_partial.html:76
+msgid "Tight"
+msgstr "Téann"
+
+#: app/templates/account/customization_partial.html:77
+msgid "Normal"
+msgstr "Gnáth"
+
+#: app/templates/account/customization_partial.html:78
+msgid "Wide"
+msgstr "ID"
+
+#: app/templates/account/customization_partial.html:84
+msgid "Reading Density"
+msgstr "Dlús Léitheoireachta"
+
+#: app/templates/account/customization_partial.html:96
+msgid "Border Radius"
+msgstr "Ga Teorann"
+
+#: app/templates/account/customization_partial.html:102
+msgid "Sharp Corners"
+msgstr "Coirnéil Sharpa"
+
+#: app/templates/account/customization_partial.html:103
+msgid "Extra Rounded"
+msgstr "An-bhabhtaíte"
+
+#: app/templates/account/customization_partial.html:109
+msgid "Theme"
+msgstr "Baile"
+
+#: app/templates/account/customization_partial.html:125
+msgid "Language"
+msgstr "Roghnaigh an cuí"
 
 #: app/templates/account/manage_account_full.html:7
 #: app/templates/account/manage_account_partial.html:9
@@ -898,12 +1001,20 @@ msgid "Deleting your account is permanent and cannot be undone."
 msgstr "Wogyii wo akawontafunu ho tum, na wɔrentumi nsesa."
 
 #: app/templates/account/manage_account_partial.html:130
-msgid "Are you sure you want to delete your account?"
-msgstr "Wote nsɛm sɛ rebue MFA ama ɔyɛfo yi no?"
-
 #: app/templates/account/manage_account_partial.html:132
+msgid "You are the last admin. Deleting your account is not allowed."
+msgstr ""
+"Is tusa an t-aon riarachán deireanach. Ní cheadaítear do chuntas a "
+"scriosadh."
+
+#: app/templates/account/manage_account_partial.html:133
+#: app/templates/account/manage_account_partial.html:143
 msgid "Delete My Account"
 msgstr "Akonta Bɔ anuonyam"
+
+#: app/templates/account/manage_account_partial.html:140
+msgid "Are you sure you want to delete your account?"
+msgstr "Wote nsɛm sɛ rebue MFA ama ɔyɛfo yi no?"
 
 #: app/templates/account/set_security_questions_full.html:7
 msgid "Security Questions"
@@ -935,7 +1046,7 @@ msgstr "Akonta Bɔ anuonyam"
 
 #: app/templates/account/translations_full.html:7
 #: app/templates/account/translations_partial.html:8
-#: app/templates/partials/profile_dropdown_menu.html:95
+#: app/templates/partials/profile_dropdown_menu.html:139
 msgid "Translations"
 msgstr "Aistriúcháin"
 
@@ -1126,7 +1237,7 @@ msgstr "Líon isteach an fhoirm chun úsáideoir nua a chur leis."
 
 #: app/templates/admin/create_user_partial.html:26
 #: app/templates/admin/edit_user.html:28
-#: app/templates/admin/partials/table_view.html:13
+#: app/templates/admin/partials/table_view.html:14
 #: app/templates/admin/reports/report_accounts_partial.html:10
 #: app/templates/user_smtp/partials/table_view.html:13
 msgid "Username"
@@ -1134,14 +1245,14 @@ msgstr "Ainm úsáideora"
 
 #: app/templates/admin/create_user_partial.html:36
 #: app/templates/admin/edit_user.html:36
-#: app/templates/admin/partials/table_view.html:14
+#: app/templates/admin/partials/table_view.html:15
 #: app/templates/admin/reports/report_accounts_partial.html:11
 #: app/templates/dashboard/partials/_linked_items_partial.html:15
 msgid "Email"
 msgstr "Ríomhphost"
 
 #: app/templates/admin/create_user_partial.html:49
-#: app/templates/admin/partials/table_view.html:15
+#: app/templates/admin/partials/table_view.html:16
 #: app/templates/admin/reports/report_accounts_partial.html:12
 msgid "Role"
 msgstr "Ról"
@@ -1659,11 +1770,11 @@ msgstr ""
 "Tá gach gníomh logáilte le haghaidh cuntasachta. Ní fheictear pasfhocail "
 "agus rúin riamh."
 
-#: app/templates/admin/partials/table_view.html:12
+#: app/templates/admin/partials/table_view.html:13
 msgid "ID"
 msgstr "ID"
 
-#: app/templates/admin/partials/table_view.html:16
+#: app/templates/admin/partials/table_view.html:17
 #: app/templates/admin/tools/partials/backup_table.html:13
 #: app/templates/apprise/apprise_config.html:59
 #: app/templates/apprise/partials/table_view.html:14
@@ -1679,7 +1790,7 @@ msgstr "ID"
 msgid "Actions"
 msgstr "Gníomhartha"
 
-#: app/templates/admin/partials/table_view.html:35
+#: app/templates/admin/partials/table_view.html:36
 #: app/templates/admin/reports/report_accounts_partial.html:52
 msgid "No users available."
 msgstr "Níl aon úsáideoirí ar fáil."
@@ -1779,7 +1890,8 @@ msgstr "Socruithe Córas"
 msgid "Details"
 msgstr "E-mail"
 
-#: app/templates/admin/reports/report_scheduler_partial.html:37
+#: app/templates/admin/reports/report_scheduler_partial.html:38
+#: app/templates/admin/reports/report_scheduler_partial.html:46
 msgid "No scheduler activity found."
 msgstr "Onni dwuma a wɔayɛ wɔ ɔyɛnfo no ho."
 
@@ -1802,6 +1914,10 @@ msgstr "San bra Dashboard"
 #: app/templates/admin/reports/reports_tabs.html:38
 msgid "Scheduler Activity"
 msgstr "Hyɛn a wɔayɛde email"
+
+#: app/templates/admin/reports/reports_tabs.html:46
+msgid "Grylli | Reports | Logs"
+msgstr "Painéal Riaracháin"
 
 #: app/templates/admin/reports/reports_tabs.html:51
 msgid "Application Logs"
@@ -3253,13 +3369,13 @@ msgstr "Forbhreathnú"
 msgid "Grylli | Admin | Users"
 msgstr "Grylli | Admin | Adwumayɛfoɔ"
 
-#: app/templates/partials/head.html:14
+#: app/templates/partials/head.html:16
 msgid "Grylli is a secure message scheduling and delivery platform."
 msgstr ""
 "Grylli yɛ nsakraeɛ wɔ nsɛm a wɔde bɔ dwa ne yɛ adwumadwuma wɔ ban mu "
 "platform."
 
-#: app/templates/partials/head.html:25
+#: app/templates/partials/head.html:35
 msgid "Grylli"
 msgstr "Grylli"
 
@@ -3273,23 +3389,59 @@ msgstr "Baile"
 msgid "Check-ins Due"
 msgstr "Nnyeɛ w'adakye"
 
-#: app/templates/partials/profile_dropdown_menu.html:13
+#: app/templates/partials/profile_dropdown_menu.html:9
+msgid "Grylli | Account"
+msgstr "Painéal Riaracháin"
+
+#: app/templates/partials/profile_dropdown_menu.html:15
 msgid "Account"
 msgstr "Cuntas"
 
-#: app/templates/partials/profile_dropdown_menu.html:31
+#: app/templates/partials/profile_dropdown_menu.html:22
+msgid "Grylli | Security Questions"
+msgstr "🔐 Ankasa"
+
+#: app/templates/partials/profile_dropdown_menu.html:35
+msgid "Grylli | MFA"
+msgstr "Grylli"
+
+#: app/templates/partials/profile_dropdown_menu.html:41
 msgid "MFA"
 msgstr "MFA"
 
-#: app/templates/partials/profile_dropdown_menu.html:40
+#: app/templates/partials/profile_dropdown_menu.html:48
+msgid "Grylli | About"
+msgstr "Painéal Riaracháin"
+
+#: app/templates/partials/profile_dropdown_menu.html:54
 msgid "About"
 msgstr "Faoi"
 
-#: app/templates/partials/profile_dropdown_menu.html:48
+#: app/templates/partials/profile_dropdown_menu.html:61
+msgid "Grylli | Customization"
+msgstr "Grylli | Mɛkaɛ | SMTP"
+
+#: app/templates/partials/profile_dropdown_menu.html:77
 msgid "GitHub"
 msgstr "GitHub"
 
-#: app/templates/partials/profile_dropdown_menu.html:107
+#: app/templates/partials/profile_dropdown_menu.html:83
+msgid "Grylli | Help"
+msgstr "Grylli | Mɛkaɛ | SMTP"
+
+#: app/templates/partials/profile_dropdown_menu.html:96
+msgid "Grylli | Privacy"
+msgstr "Amansɛm"
+
+#: app/templates/partials/profile_dropdown_menu.html:109
+msgid "Grylli | System Info"
+msgstr "Socruithe Córas"
+
+#: app/templates/partials/profile_dropdown_menu.html:122
+msgid "Grylli | Translations"
+msgstr "Aistriúcháin"
+
+#: app/templates/partials/profile_dropdown_menu.html:153
 msgid "Logout"
 msgstr "Logáil Amach"
 
@@ -3344,19 +3496,6 @@ msgstr "Grylli | Kaeɛ | Nkyerɛmu"
 #: app/templates/partials/shared_nav.html:165
 msgid "Overview of reminders"
 msgstr "Forbhreathnú ar mheabhrúcháin"
-
-#: app/templates/partials/sidebar/desktop_footer.html:15
-msgid "Select Theme"
-msgstr "Roghnaigh an cuí"
-
-#: app/templates/partials/sidebar/desktop_footer.html:20
-msgid "Select theme"
-msgstr "Roghnaigh an cuí"
-
-#: app/templates/partials/sidebar/desktop_footer.html:29
-#: app/templates/partials/sidebar/desktop_footer.html:35
-msgid "Select language"
-msgstr "Roghnaigh an cuí"
 
 #: app/templates/partials/sidebar/desktop_header.html:9
 msgid "Menu"
@@ -3869,27 +4008,27 @@ msgstr "Wɔanyɛ nsakrae biara."
 msgid "An error occurred while updating your account."
 msgstr "Tharla earráid agus do chuntas á nuashonrú."
 
-#: app/views/account.py:159
+#: app/views/account.py:164
 msgid "An error occurred while loading translation info."
 msgstr "Tharla earráid agus an t-úsáideoir á nuashonrú."
 
-#: app/views/account.py:186
+#: app/views/account.py:191
 msgid "You cannot delete your account because you are the last admin."
 msgstr "Wuntumi mommy wo akawontafunu ase kɔ si wode biara nsɛm ni."
 
-#: app/views/account.py:195
+#: app/views/account.py:200
 msgid "Your account has been permanently deleted."
 msgstr "Wo akawontafunu ase ayɛ aketretrajwɛ no."
 
-#: app/views/account.py:202
+#: app/views/account.py:207
 msgid "An error occurred while trying to delete your account."
 msgstr "Tharla earráid agus do chuntas á nuashonrú."
 
-#: app/views/account.py:221
+#: app/views/account.py:226
 msgid "Your account has been deleted"
 msgstr "Wo akawontafunu ase ayɛ aketretrajwɛ no."
 
-#: app/views/account.py:223
+#: app/views/account.py:228
 #, python-brace-format
 msgid ""
 "Hello {username},\n"
@@ -3904,17 +4043,21 @@ msgstr ""
 "\n"
 "{site_url}"
 
-#: app/views/account.py:408
+#: app/views/account.py:413
 msgid "Each security question must be different."
 msgstr "Ní mór trí cheist a bheith éagsúil."
 
-#: app/views/account.py:432
+#: app/views/account.py:437
 msgid "Security questions saved."
 msgstr "Ceisteanna slándála sábháilte."
 
-#: app/views/account.py:448
+#: app/views/account.py:453
 msgid "An error occurred while saving your security questions."
 msgstr "Tharla earráid agus do chuntas á nuashonrú."
+
+#: app/views/account.py:475
+msgid "An error occurred while loading customization settings."
+msgstr "Tharla earráid agus an t-úsáideoir á nuashonrú."
 
 #: app/views/admin.py:41
 msgid "Failed to load admin dashboard."
@@ -3988,99 +4131,99 @@ msgstr "Ɔnsɛm a ɛyɛ foɔ ahuno. Mepa kyɛw nsɛm anaa wɔmpɛ support."
 msgid "An error occurred while creating the admin account."
 msgstr "Tharla earráid agus an cuntas admin á chruthú."
 
-#: app/views/auth.py:184
+#: app/views/auth.py:207
 msgid "Your account is not activated."
 msgstr "Wo akawontafunu ase ayɛ aketretrajwɛ no."
 
-#: app/views/auth.py:192
+#: app/views/auth.py:215
 msgid "Multi-factor authentication required."
 msgstr "Tá fógra díchumasaithe"
 
-#: app/views/auth.py:196 app/views/mfa.py:222
+#: app/views/auth.py:219 app/views/mfa.py:218
 msgid "Logged in successfully."
 msgstr "Logáilte isteach go rathúil."
 
-#: app/views/auth.py:214
+#: app/views/auth.py:255
 msgid "Too many failed login attempts. Your account is locked for 15 minutes."
 msgstr "Ɛyɛ kɛyɛ nsae wɔ wim. Mepa kyɛw kɔ"
 
-#: app/views/auth.py:232
+#: app/views/auth.py:273
 msgid "Invalid username or password."
 msgstr "Ainm úsáideora nó focal faire neamhbhailí."
 
-#: app/views/auth.py:258
+#: app/views/auth.py:299
 msgid "You have been logged out."
 msgstr "Tá tú dílogáilte amach."
 
-#: app/views/auth.py:320
+#: app/views/auth.py:361
 msgid "If a user with that email exists, we've sent the username to them."
 msgstr ""
 "Má tá úsáideoir leis an ríomhphost sin ann, tá an t-ainm úsáideora seolta "
 "againn chucu."
 
-#: app/views/auth.py:327
+#: app/views/auth.py:368
 msgid "An error occurred while sending your username reminder."
 msgstr "Tharla earráid agus do chuntas á nuashonrú."
 
-#: app/views/auth.py:379
+#: app/views/auth.py:420
 msgid "No account found matching that username and email."
 msgstr ""
 "Níor aimsíodh aon chuntas a bhfuil an t-ainm úsáideora agus an ríomhphost "
 "sin ag teacht leis."
 
-#: app/views/auth.py:386
+#: app/views/auth.py:427
 msgid "An error occurred while checking your credentials."
 msgstr "Tharla earráid agus do chuntas á nuashonrú."
 
-#: app/views/auth.py:395
+#: app/views/auth.py:436
 msgid "Session expired. Please start over."
 msgstr "Seisiún imithe in éag. Tosaigh arís le do thoil."
 
-#: app/views/auth.py:414
+#: app/views/auth.py:455
 msgid "Too many failed attempts. Please try again later."
 msgstr "Ɛyɛ kɛyɛ nsae wɔ wim. Mepa kyɛw kɔ"
 
-#: app/views/auth.py:435
+#: app/views/auth.py:476
 msgid "A password reset link has been sent to your email."
 msgstr "Seoladh nasc athshocraithe pasfhocail chuig do r-phost."
 
-#: app/views/auth.py:448
+#: app/views/auth.py:489
 msgid "One or more answers were incorrect."
 msgstr "Bhí freagraí ceann nó níos mó mícheart."
 
-#: app/views/auth.py:458
+#: app/views/auth.py:499
 msgid "An error occurred while verifying your answers."
 msgstr "Tharla earráid agus do chuntas á nuashonrú."
 
-#: app/views/auth.py:491
+#: app/views/auth.py:532
 msgid "The reset link is invalid or has expired."
 msgstr "Tá an nasc athshocraithe neamhbhailí nó tá sé imithe in éag."
 
-#: app/views/auth.py:504
+#: app/views/auth.py:545
 msgid "Username and email do not match."
 msgstr "Ainm úsáideora agus r-phost ní hionann iad."
 
-#: app/views/auth.py:528
+#: app/views/auth.py:569
 msgid "Your password has been reset. Please log in."
 msgstr "Tá do phasfhocal athshocraithe. Logáil isteach le do thoil."
 
-#: app/views/auth.py:533
+#: app/views/auth.py:574
 msgid "An error occurred while resetting your password."
 msgstr "Tharla earráid agus an t-úsáideoir á scriosadh."
 
-#: app/views/auth.py:570
+#: app/views/auth.py:611
 msgid "Invalid registration PIN."
 msgstr "PIN clárúcháin neamhbhailí."
 
-#: app/views/auth.py:579
+#: app/views/auth.py:620
 msgid "Username or email already exists."
 msgstr "Ainm úsáideora nó ríomhphost ann cheana."
 
-#: app/views/auth.py:608
+#: app/views/auth.py:649
 msgid "Activate Your Grylli Account"
 msgstr "Sɛe Wo Grylli Akawontafunu"
 
-#: app/views/auth.py:609
+#: app/views/auth.py:650
 #, python-brace-format
 msgid ""
 "Hello {username},\n"
@@ -4091,45 +4234,45 @@ msgstr ""
 "\n"
 "Mesrɛ, yɛ sɛ yɛyɛ wo akawontafunu yɛwusi..."
 
-#: app/views/auth.py:615
+#: app/views/auth.py:656
 msgid "Account created! Please check your email to activate your account."
 msgstr ""
 "Cruthaíodh cuntas! Seiceáil do ríomhphost le do thoil chun do chuntas a "
 "ghníomhachtú."
 
-#: app/views/auth.py:622
+#: app/views/auth.py:663
 msgid "An error occurred during signup."
 msgstr "Tharla earráid agus an t-úsáideoir á scriosadh."
 
-#: app/views/auth.py:641
+#: app/views/auth.py:682
 msgid "Activation link is invalid or expired."
 msgstr "Nasc gníomhachtúcháin neamhbhailí nó in éag."
 
-#: app/views/auth.py:648 app/views/users.py:135 app/views/users.py:202
+#: app/views/auth.py:689 app/views/users.py:136 app/views/users.py:203
 msgid "User not found."
 msgstr "Úsáideoir gan aimsiú."
 
-#: app/views/auth.py:652
+#: app/views/auth.py:693
 msgid "Account already activated. Please log in."
 msgstr "Cuntas gníomhachtaithe cheana féin. Logáil isteach le do thoil."
 
-#: app/views/auth.py:663
+#: app/views/auth.py:704
 msgid "Your account has been activated! You can now log in."
 msgstr "Tá do chuntas gníomhachtaithe! Anois is féidir logáil isteach."
 
-#: app/views/auth.py:667
+#: app/views/auth.py:708
 msgid "Failed to activate account."
 msgstr "Theip ag cruthú cúltaca."
 
-#: app/views/auth.py:699
+#: app/views/auth.py:740
 msgid "Security questions not set or user not found."
 msgstr "Ceisteanna slándála gan socrú nó úsáideoir gan aimsiú."
 
-#: app/views/auth.py:707
+#: app/views/auth.py:748
 msgid "Password reset email sent."
 msgstr "Nsɛm ka no nokware di sɔ n'ani."
 
-#: app/views/auth.py:714
+#: app/views/auth.py:755
 msgid "Incorrect answer."
 msgstr "Freagra mícheart."
 
@@ -4255,7 +4398,7 @@ msgstr "Theiptheach seoladh ríomhphoist tástála:"
 msgid "An error occurred while loading the help page."
 msgstr "Tharla earráid agus an t-úsáideoir á nuashonrú."
 
-#: app/views/index.py:53
+#: app/views/index.py:55
 msgid "Error loading dashboard"
 msgstr "San kɔ Emails"
 
@@ -4319,7 +4462,7 @@ msgstr "Teachtaireacht sábháilte."
 msgid "You must enter a code from your authenticator."
 msgstr "Wobisa w'adiketewafo kod bi da bi."
 
-#: app/views/mfa.py:85 app/views/mfa.py:295 app/views/mfa.py:303
+#: app/views/mfa.py:85 app/views/mfa.py:291 app/views/mfa.py:299
 msgid "Invalid code. Please try again."
 msgstr "Kod no mfata. Mesrɛ, abe yɛ bio."
 
@@ -4339,15 +4482,15 @@ msgstr "Agyawde aherɛyɛ akyire bɛyɛ wɔ MFA nsɛm abue."
 msgid "Could not load recovery codes."
 msgstr "Antumi emfa agyawde kod bɛdii no."
 
-#: app/views/mfa.py:194
+#: app/views/mfa.py:190
 msgid "No MFA challenge in progress."
 msgstr "Akyereba MFA kɔ si enyigye mu."
 
-#: app/views/mfa.py:202
+#: app/views/mfa.py:198
 msgid "User not found for MFA challenge."
 msgstr "Úsáideoir gan aimsiú."
 
-#: app/views/mfa.py:262
+#: app/views/mfa.py:258
 msgid ""
 "You have used your last recovery code. MFA has been disabled. Please remove "
 "Grylli from your authenticator app, and re-enable MFA to protect your "
@@ -4356,12 +4499,12 @@ msgstr ""
 "Wo agyawde abue akyiri. MFA bu wɔ bi no. Mesan fa Grylli pɔ sika bi a, na yɛ"
 " MFA bio de bɔ wo akawontafunu ase."
 
-#: app/views/mfa.py:283
+#: app/views/mfa.py:279
 #, python-brace-format
 msgid "Recovery code accepted. You have {remaining} recovery codes left."
 msgstr "Agyawde koforoma. Wɔ ha {nakafo} agyawde kod nsiɛɛ."
 
-#: app/views/mfa.py:298
+#: app/views/mfa.py:294
 msgid "An unexpected error occurred during MFA challenge."
 msgstr "Tharla earráid agus an t-úsáideoir á scriosadh."
 
@@ -4537,87 +4680,87 @@ msgstr "Theip ar sheoladh ríomhphoist tástála. Seiceáil socruithe SMTP."
 msgid "Error sending test email."
 msgstr "Seol Ríomhphost Tástála"
 
-#: app/views/users.py:58
+#: app/views/users.py:59
 msgid "Failed to load user list."
 msgstr "San kɔ Emails"
 
-#: app/views/users.py:82
+#: app/views/users.py:83
 msgid "Password is required when creating a new user."
 msgstr "Tá pasfhocal ag teastáil nuair a chruthaítear úsáideoir nua."
 
-#: app/views/users.py:87 app/views/users.py:156
+#: app/views/users.py:88 app/views/users.py:157
 msgid "Username already exists."
 msgstr "Tá an t-ainm úsáideora ann cheana féin."
 
-#: app/views/users.py:92 app/views/users.py:163
+#: app/views/users.py:93 app/views/users.py:164
 msgid "Email already exists."
 msgstr "Tá an r-phost ann cheana féin."
 
-#: app/views/users.py:107
+#: app/views/users.py:108
 #, python-format
 msgid "User '%(username)s' created successfully."
 msgstr "Cruthaíodh an t-úsáideoir '%(username)s' go rathúil."
 
-#: app/views/users.py:115
+#: app/views/users.py:116
 msgid "Failed to create user."
 msgstr "Theip ar úsáideoir a chruthú."
 
-#: app/views/users.py:176
+#: app/views/users.py:177
 msgid "User updated successfully."
 msgstr "Nuashonraíodh an t-úsáideoir go rathúil."
 
-#: app/views/users.py:183 app/views/users.py:301
+#: app/views/users.py:184 app/views/users.py:320
 msgid "An error occurred while updating the user."
 msgstr "Tharla earráid agus an t-úsáideoir á nuashonrú."
 
-#: app/views/users.py:255
+#: app/views/users.py:256
 msgid "User deleted."
 msgstr "Úsáideoir scriosta."
 
-#: app/views/users.py:262
+#: app/views/users.py:263
 msgid "An error occurred while deleting the user."
 msgstr "Tharla earráid agus an t-úsáideoir á scriosadh."
 
-#: app/views/users.py:279
+#: app/views/users.py:280
 msgid "You cannot change your own enabled status."
 msgstr "Ní féidir leat do stádas cumasaithe féin a athrú."
 
-#: app/views/users.py:292
+#: app/views/users.py:311
 #, python-format
 msgid "User '%(username)s' has been %(status)s."
 msgstr "Tá an t-úsáideoir '%(username)s' %(status)s."
 
-#: app/views/users.py:318
+#: app/views/users.py:337
 msgid "You cannot reset your own MFA."
 msgstr "⚪ = Ní féidir leat do chuntas féin a dhíchumasú."
 
-#: app/views/users.py:331
+#: app/views/users.py:368
 #, python-format
 msgid "MFA disabled for user '%(username)s'."
 msgstr "MFA sɛe wɔ ɛyɛfo '%(username)s'."
 
-#: app/views/users.py:335
+#: app/views/users.py:372
 msgid "An error occurred while resetting MFA."
 msgstr "Tharla earráid agus an t-úsáideoir á scriosadh."
 
-#: app/views/users.py:358
+#: app/views/users.py:395
 msgid "Invalid role"
 msgstr "Akwa yɛfo nnsɛm no."
 
-#: app/views/users.py:364
+#: app/views/users.py:417
 #, python-format
 msgid "Role updated for %(username)s."
 msgstr "MFA sɛe wɔ ɛyɛfo '%(username)s'."
 
-#: app/views/users.py:370
+#: app/views/users.py:425
 msgid "An error occurred while updating the role."
 msgstr "Tharla earráid agus an t-úsáideoir á nuashonrú."
 
-#: app/views/users.py:390
+#: app/views/users.py:463
 msgid "User account unlocked."
 msgstr "Wo akawontafunu ase ayɛ aketretrajwɛ no."
 
-#: app/views/users.py:395
+#: app/views/users.py:468
 msgid "An error occurred while unlocking the account."
 msgstr "Tharla earráid agus an cuntas admin á chruthú."
 
@@ -5382,3 +5525,9 @@ msgstr "Tharla earráid agus an t-úsáideoir á scriosadh."
 
 #~ msgid "Failed to send test email. "
 #~ msgstr "Theiptheach seoladh ríomhphoist tástála:"
+
+#~ msgid "Select Theme"
+#~ msgstr "Roghnaigh an cuí"
+
+#~ msgid "Select theme"
+#~ msgstr "Roghnaigh an cuí"

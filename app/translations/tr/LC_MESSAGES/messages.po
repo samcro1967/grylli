@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-07-14 11:49-0500\n"
+"POT-Creation-Date: 2025-07-25 13:21-0500\n"
 "PO-Revision-Date: 2025-05-25 12:48-0500\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: tr <LL@li.org>\n"
@@ -363,7 +363,7 @@ msgstr ""
 "şekilde."
 
 #: app/templates/help_full.html:7
-#: app/templates/partials/profile_dropdown_menu.html:57
+#: app/templates/partials/profile_dropdown_menu.html:89
 msgid "Help"
 msgstr "Yardım"
 
@@ -502,7 +502,7 @@ msgstr ""
 " hızlıca doğrulayın."
 
 #: app/templates/help_partial.html:45
-#: app/templates/partials/profile_dropdown_menu.html:22
+#: app/templates/partials/profile_dropdown_menu.html:28
 msgid "Security"
 msgstr "🔐 Güvenlik"
 
@@ -522,7 +522,7 @@ msgstr ""
 "Özel bir konuda yardıma mı ihtiyacınız var? Grylli'deki her modül kendi "
 "yardım paneli ile ayrıntılı rehberlik sunar."
 
-#: app/templates/partials/profile_dropdown_menu.html:66
+#: app/templates/partials/profile_dropdown_menu.html:102
 #: app/templates/privacy_full.html:7
 msgid "Privacy"
 msgstr "Gizlilik"
@@ -667,7 +667,7 @@ msgstr "Sistem Ayarları"
 msgid "This endpoint provides system health and version information."
 msgstr "Bu uç nokta, sistem sağlığı ve sürüm bilgilerini sağlar."
 
-#: app/templates/partials/profile_dropdown_menu.html:75
+#: app/templates/partials/profile_dropdown_menu.html:115
 #: app/templates/system_info_full.html:7
 msgid "System Info"
 msgstr "Sistem Bilgisi"
@@ -762,6 +762,109 @@ msgstr ""
 #: app/templates/auth/signup.html:16
 msgid "Please fix the following errors:"
 msgstr "Lütfen aşağıdaki hataları düzeltin:"
+
+#: app/templates/account/customization_full.html:7
+#: app/templates/partials/profile_dropdown_menu.html:67
+msgid "Customization"
+msgstr "Özelleştirme"
+
+#: app/templates/account/customization_partial.html:10
+msgid "Customize Your Interface"
+msgstr "Arayüzünüzü Özelleştirin"
+
+#: app/templates/account/customization_partial.html:13
+msgid ""
+"Change the look and feel of Grylli using the options below. Your preferences"
+" are saved in your browser."
+msgstr ""
+"Aşağıdaki seçenekleri kullanarak Grylli'nin görünümünü ve hissini "
+"değiştirin. Tercihleriniz tarayıcınızda saklanır."
+
+#: app/templates/account/customization_partial.html:20
+msgid "Font Family"
+msgstr "Yazı Tipi Ailesi"
+
+#: app/templates/account/customization_partial.html:33
+msgid "Font Size"
+msgstr "Yazı Tipi Boyutu"
+
+#: app/templates/account/customization_partial.html:38
+msgid "Extra Small"
+msgstr "Ekstra Küçük"
+
+#: app/templates/account/customization_partial.html:39
+msgid "Small"
+msgstr "Tümü"
+
+#: app/templates/account/customization_partial.html:40
+#: app/templates/account/customization_partial.html:64
+#: app/templates/account/customization_partial.html:101
+msgid "Default"
+msgstr "Sil"
+
+#: app/templates/account/customization_partial.html:41
+msgid "Large"
+msgstr "Etiket"
+
+#: app/templates/account/customization_partial.html:42
+msgid "Extra Large"
+msgstr "Ekstra Büyük"
+
+#: app/templates/account/customization_partial.html:48
+msgid "Background Pattern"
+msgstr "Arka Plan Deseni"
+
+#: app/templates/account/customization_partial.html:59
+msgid "Contrast"
+msgstr "İçerik"
+
+#: app/templates/account/customization_partial.html:65
+msgid "Low Contrast"
+msgstr "Düşük Kontrast"
+
+#: app/templates/account/customization_partial.html:66
+msgid "High Contrast"
+msgstr "Yüksek Kontrast"
+
+#: app/templates/account/customization_partial.html:72
+msgid "Letter Spacing"
+msgstr "Harf Aralığı"
+
+#: app/templates/account/customization_partial.html:76
+msgid "Tight"
+msgstr "Sıkı"
+
+#: app/templates/account/customization_partial.html:77
+msgid "Normal"
+msgstr "Normal"
+
+#: app/templates/account/customization_partial.html:78
+msgid "Wide"
+msgstr "ID"
+
+#: app/templates/account/customization_partial.html:84
+msgid "Reading Density"
+msgstr "Okuma Yoğunluğu"
+
+#: app/templates/account/customization_partial.html:96
+msgid "Border Radius"
+msgstr "Kenar Yuvarlaklığı"
+
+#: app/templates/account/customization_partial.html:102
+msgid "Sharp Corners"
+msgstr "Keskin Köşeler"
+
+#: app/templates/account/customization_partial.html:103
+msgid "Extra Rounded"
+msgstr "Ekstra Yuvarlak"
+
+#: app/templates/account/customization_partial.html:109
+msgid "Theme"
+msgstr "Ana Sayfa"
+
+#: app/templates/account/customization_partial.html:125
+msgid "Language"
+msgstr "Uygun"
 
 #: app/templates/account/manage_account_full.html:7
 #: app/templates/account/manage_account_partial.html:9
@@ -902,12 +1005,18 @@ msgid "Deleting your account is permanent and cannot be undone."
 msgstr "Hesabınızı silmek kalıcıdır ve geri alınamaz."
 
 #: app/templates/account/manage_account_partial.html:130
-msgid "Are you sure you want to delete your account?"
-msgstr "Bu kullanıcının MFA'sını sıfırlamak istediğinizden emin misiniz?"
-
 #: app/templates/account/manage_account_partial.html:132
+msgid "You are the last admin. Deleting your account is not allowed."
+msgstr "Son yöneticisiniz. Hesabınızı silmeniz yasaktır."
+
+#: app/templates/account/manage_account_partial.html:133
+#: app/templates/account/manage_account_partial.html:143
 msgid "Delete My Account"
 msgstr "Hesabı Güncelle"
+
+#: app/templates/account/manage_account_partial.html:140
+msgid "Are you sure you want to delete your account?"
+msgstr "Bu kullanıcının MFA'sını sıfırlamak istediğinizden emin misiniz?"
 
 #: app/templates/account/set_security_questions_full.html:7
 msgid "Security Questions"
@@ -939,7 +1048,7 @@ msgstr "Hesabı Güncelle"
 
 #: app/templates/account/translations_full.html:7
 #: app/templates/account/translations_partial.html:8
-#: app/templates/partials/profile_dropdown_menu.html:95
+#: app/templates/partials/profile_dropdown_menu.html:139
 msgid "Translations"
 msgstr "Çeviriler"
 
@@ -1122,7 +1231,7 @@ msgstr "Yeni bir kullanıcı eklemek için formu doldurun."
 
 #: app/templates/admin/create_user_partial.html:26
 #: app/templates/admin/edit_user.html:28
-#: app/templates/admin/partials/table_view.html:13
+#: app/templates/admin/partials/table_view.html:14
 #: app/templates/admin/reports/report_accounts_partial.html:10
 #: app/templates/user_smtp/partials/table_view.html:13
 msgid "Username"
@@ -1130,14 +1239,14 @@ msgstr "Kullanıcı Adı"
 
 #: app/templates/admin/create_user_partial.html:36
 #: app/templates/admin/edit_user.html:36
-#: app/templates/admin/partials/table_view.html:14
+#: app/templates/admin/partials/table_view.html:15
 #: app/templates/admin/reports/report_accounts_partial.html:11
 #: app/templates/dashboard/partials/_linked_items_partial.html:15
 msgid "Email"
 msgstr "E-posta"
 
 #: app/templates/admin/create_user_partial.html:49
-#: app/templates/admin/partials/table_view.html:15
+#: app/templates/admin/partials/table_view.html:16
 #: app/templates/admin/reports/report_accounts_partial.html:12
 msgid "Role"
 msgstr "Rol"
@@ -1661,11 +1770,11 @@ msgstr ""
 "Tüm işlemler hesap verilirlik için kaydedilir. Parolalar ve sırlar asla "
 "görünmez."
 
-#: app/templates/admin/partials/table_view.html:12
+#: app/templates/admin/partials/table_view.html:13
 msgid "ID"
 msgstr "ID"
 
-#: app/templates/admin/partials/table_view.html:16
+#: app/templates/admin/partials/table_view.html:17
 #: app/templates/admin/tools/partials/backup_table.html:13
 #: app/templates/apprise/apprise_config.html:59
 #: app/templates/apprise/partials/table_view.html:14
@@ -1681,7 +1790,7 @@ msgstr "ID"
 msgid "Actions"
 msgstr "Eylemler"
 
-#: app/templates/admin/partials/table_view.html:35
+#: app/templates/admin/partials/table_view.html:36
 #: app/templates/admin/reports/report_accounts_partial.html:52
 msgid "No users available."
 msgstr "Kullanıcı yok."
@@ -1781,7 +1890,8 @@ msgstr "Sistem Ayarları"
 msgid "Details"
 msgstr "E-postalar"
 
-#: app/templates/admin/reports/report_scheduler_partial.html:37
+#: app/templates/admin/reports/report_scheduler_partial.html:38
+#: app/templates/admin/reports/report_scheduler_partial.html:46
 msgid "No scheduler activity found."
 msgstr "Zamanlayıcı etkinliği bulunamadı."
 
@@ -1804,6 +1914,10 @@ msgstr "Kontrol Paneline Dön"
 #: app/templates/admin/reports/reports_tabs.html:38
 msgid "Scheduler Activity"
 msgstr "E-posta Planla"
+
+#: app/templates/admin/reports/reports_tabs.html:46
+msgid "Grylli | Reports | Logs"
+msgstr "Yönetici Paneli"
 
 #: app/templates/admin/reports/reports_tabs.html:51
 msgid "Application Logs"
@@ -3255,11 +3369,11 @@ msgstr "Genel Bakış"
 msgid "Grylli | Admin | Users"
 msgstr "Grylli | Yönetici | Kullanıcılar"
 
-#: app/templates/partials/head.html:14
+#: app/templates/partials/head.html:16
 msgid "Grylli is a secure message scheduling and delivery platform."
 msgstr "Grylli, güvenli bir mesajlama planlama ve teslimat platformudur."
 
-#: app/templates/partials/head.html:25
+#: app/templates/partials/head.html:35
 msgid "Grylli"
 msgstr "Grylli"
 
@@ -3273,23 +3387,59 @@ msgstr "Ana Sayfa"
 msgid "Check-ins Due"
 msgstr "Kontrol"
 
-#: app/templates/partials/profile_dropdown_menu.html:13
+#: app/templates/partials/profile_dropdown_menu.html:9
+msgid "Grylli | Account"
+msgstr "Yönetici Paneli"
+
+#: app/templates/partials/profile_dropdown_menu.html:15
 msgid "Account"
 msgstr "Hesap"
 
-#: app/templates/partials/profile_dropdown_menu.html:31
+#: app/templates/partials/profile_dropdown_menu.html:22
+msgid "Grylli | Security Questions"
+msgstr "🔐 Güvenlik"
+
+#: app/templates/partials/profile_dropdown_menu.html:35
+msgid "Grylli | MFA"
+msgstr "Grylli"
+
+#: app/templates/partials/profile_dropdown_menu.html:41
 msgid "MFA"
 msgstr "MFA"
 
-#: app/templates/partials/profile_dropdown_menu.html:40
+#: app/templates/partials/profile_dropdown_menu.html:48
+msgid "Grylli | About"
+msgstr "Yönetici Paneli"
+
+#: app/templates/partials/profile_dropdown_menu.html:54
 msgid "About"
 msgstr "Hakkında"
 
-#: app/templates/partials/profile_dropdown_menu.html:48
+#: app/templates/partials/profile_dropdown_menu.html:61
+msgid "Grylli | Customization"
+msgstr "Grylli | E-postalar | SMTP"
+
+#: app/templates/partials/profile_dropdown_menu.html:77
 msgid "GitHub"
 msgstr "GitHub"
 
-#: app/templates/partials/profile_dropdown_menu.html:107
+#: app/templates/partials/profile_dropdown_menu.html:83
+msgid "Grylli | Help"
+msgstr "Grylli | E-postalar | SMTP"
+
+#: app/templates/partials/profile_dropdown_menu.html:96
+msgid "Grylli | Privacy"
+msgstr "Gizlilik"
+
+#: app/templates/partials/profile_dropdown_menu.html:109
+msgid "Grylli | System Info"
+msgstr "Sistem Ayarları"
+
+#: app/templates/partials/profile_dropdown_menu.html:122
+msgid "Grylli | Translations"
+msgstr "Çeviriler"
+
+#: app/templates/partials/profile_dropdown_menu.html:153
 msgid "Logout"
 msgstr "Çıkış"
 
@@ -3344,19 +3494,6 @@ msgstr "Grylli | Hatırlatıcılar | Genel Bakış"
 #: app/templates/partials/shared_nav.html:165
 msgid "Overview of reminders"
 msgstr "Hatırlatıcıların genel bakışı"
-
-#: app/templates/partials/sidebar/desktop_footer.html:15
-msgid "Select Theme"
-msgstr "Uygun"
-
-#: app/templates/partials/sidebar/desktop_footer.html:20
-msgid "Select theme"
-msgstr "Uygun"
-
-#: app/templates/partials/sidebar/desktop_footer.html:29
-#: app/templates/partials/sidebar/desktop_footer.html:35
-msgid "Select language"
-msgstr "Uygun"
 
 #: app/templates/partials/sidebar/desktop_header.html:9
 msgid "Menu"
@@ -3867,27 +4004,27 @@ msgstr "Değişiklik yapılmadı."
 msgid "An error occurred while updating your account."
 msgstr "Hesabınızı güncellerken bir hata oluştu."
 
-#: app/views/account.py:159
+#: app/views/account.py:164
 msgid "An error occurred while loading translation info."
 msgstr "Kullanıcı güncellenirken bir hata oluştu."
 
-#: app/views/account.py:186
+#: app/views/account.py:191
 msgid "You cannot delete your account because you are the last admin."
 msgstr "Son yönetici olduğunuz için hesabınızı silemezsiniz."
 
-#: app/views/account.py:195
+#: app/views/account.py:200
 msgid "Your account has been permanently deleted."
 msgstr "Hesabınız kalıcı olarak silindi."
 
-#: app/views/account.py:202
+#: app/views/account.py:207
 msgid "An error occurred while trying to delete your account."
 msgstr "Hesabınızı güncellerken bir hata oluştu."
 
-#: app/views/account.py:221
+#: app/views/account.py:226
 msgid "Your account has been deleted"
 msgstr "Hesabınız kalıcı olarak silindi."
 
-#: app/views/account.py:223
+#: app/views/account.py:228
 #, python-brace-format
 msgid ""
 "Hello {username},\n"
@@ -3902,17 +4039,21 @@ msgstr ""
 "\n"
 "{site_url}"
 
-#: app/views/account.py:408
+#: app/views/account.py:413
 msgid "Each security question must be different."
 msgstr "Üç sorunun da birbirinden farklı olması gerekir."
 
-#: app/views/account.py:432
+#: app/views/account.py:437
 msgid "Security questions saved."
 msgstr "Güvenlik soruları kaydedildi."
 
-#: app/views/account.py:448
+#: app/views/account.py:453
 msgid "An error occurred while saving your security questions."
 msgstr "Hesabınızı güncellerken bir hata oluştu."
+
+#: app/views/account.py:475
+msgid "An error occurred while loading customization settings."
+msgstr "Kullanıcı güncellenirken bir hata oluştu."
 
 #: app/views/admin.py:41
 msgid "Failed to load admin dashboard."
@@ -3990,95 +4131,95 @@ msgstr ""
 msgid "An error occurred while creating the admin account."
 msgstr "Yönetici hesabı oluşturulurken bir hata oluştu."
 
-#: app/views/auth.py:184
+#: app/views/auth.py:207
 msgid "Your account is not activated."
 msgstr "Hesabınız kalıcı olarak silindi."
 
-#: app/views/auth.py:192
+#: app/views/auth.py:215
 msgid "Multi-factor authentication required."
 msgstr "Bildirim devre dışı"
 
-#: app/views/auth.py:196 app/views/mfa.py:222
+#: app/views/auth.py:219 app/views/mfa.py:218
 msgid "Logged in successfully."
 msgstr "Başarıyla giriş yapıldı."
 
-#: app/views/auth.py:214
+#: app/views/auth.py:255
 msgid "Too many failed login attempts. Your account is locked for 15 minutes."
 msgstr "Çok fazla başarısız giriş denemesi. Lütfen bekleyin"
 
-#: app/views/auth.py:232
+#: app/views/auth.py:273
 msgid "Invalid username or password."
 msgstr "Geçersiz kullanıcı adı veya şifre."
 
-#: app/views/auth.py:258
+#: app/views/auth.py:299
 msgid "You have been logged out."
 msgstr "Çıkış yaptınız."
 
-#: app/views/auth.py:320
+#: app/views/auth.py:361
 msgid "If a user with that email exists, we've sent the username to them."
 msgstr "Bu e-postaya sahip bir kullanıcı varsa, kullanıcı adını gönderdik."
 
-#: app/views/auth.py:327
+#: app/views/auth.py:368
 msgid "An error occurred while sending your username reminder."
 msgstr "Hesabınızı güncellerken bir hata oluştu."
 
-#: app/views/auth.py:379
+#: app/views/auth.py:420
 msgid "No account found matching that username and email."
 msgstr "Bu kullanıcı adı ve e-posta ile eşleşen bir hesap bulunamadı."
 
-#: app/views/auth.py:386
+#: app/views/auth.py:427
 msgid "An error occurred while checking your credentials."
 msgstr "Hesabınızı güncellerken bir hata oluştu."
 
-#: app/views/auth.py:395
+#: app/views/auth.py:436
 msgid "Session expired. Please start over."
 msgstr "Oturum süresi doldu. Lütfen yeniden başlayın."
 
-#: app/views/auth.py:414
+#: app/views/auth.py:455
 msgid "Too many failed attempts. Please try again later."
 msgstr "Çok fazla başarısız giriş denemesi. Lütfen bekleyin"
 
-#: app/views/auth.py:435
+#: app/views/auth.py:476
 msgid "A password reset link has been sent to your email."
 msgstr "Şifre sıfırlama bağlantısı e-postanıza gönderildi."
 
-#: app/views/auth.py:448
+#: app/views/auth.py:489
 msgid "One or more answers were incorrect."
 msgstr "Bir veya daha fazla cevap yanlış."
 
-#: app/views/auth.py:458
+#: app/views/auth.py:499
 msgid "An error occurred while verifying your answers."
 msgstr "Hesabınızı güncellerken bir hata oluştu."
 
-#: app/views/auth.py:491
+#: app/views/auth.py:532
 msgid "The reset link is invalid or has expired."
 msgstr "Sıfırlama bağlantısı geçersiz veya süresi dolmuş."
 
-#: app/views/auth.py:504
+#: app/views/auth.py:545
 msgid "Username and email do not match."
 msgstr "Kullanıcı adı ve e-posta eşleşmiyor."
 
-#: app/views/auth.py:528
+#: app/views/auth.py:569
 msgid "Your password has been reset. Please log in."
 msgstr "Şifreniz sıfırlandı. Lütfen giriş yapın."
 
-#: app/views/auth.py:533
+#: app/views/auth.py:574
 msgid "An error occurred while resetting your password."
 msgstr "Kullanıcı silinirken bir hata oluştu."
 
-#: app/views/auth.py:570
+#: app/views/auth.py:611
 msgid "Invalid registration PIN."
 msgstr "Geçersiz kayıt PIN'i."
 
-#: app/views/auth.py:579
+#: app/views/auth.py:620
 msgid "Username or email already exists."
 msgstr "Kullanıcı adı veya e-posta zaten mevcut."
 
-#: app/views/auth.py:608
+#: app/views/auth.py:649
 msgid "Activate Your Grylli Account"
 msgstr "Grylli Hesabınızı Etkinleştirin"
 
-#: app/views/auth.py:609
+#: app/views/auth.py:650
 #, python-brace-format
 msgid ""
 "Hello {username},\n"
@@ -4089,45 +4230,45 @@ msgstr ""
 "\n"
 "Lütfen hesabınızı etkinleştirmek için tıklayın..."
 
-#: app/views/auth.py:615
+#: app/views/auth.py:656
 msgid "Account created! Please check your email to activate your account."
 msgstr ""
 "Hesap oluşturuldu! Hesabınızı etkinleştirmek için lütfen e-postanızı kontrol"
 " edin."
 
-#: app/views/auth.py:622
+#: app/views/auth.py:663
 msgid "An error occurred during signup."
 msgstr "Kullanıcı silinirken bir hata oluştu."
 
-#: app/views/auth.py:641
+#: app/views/auth.py:682
 msgid "Activation link is invalid or expired."
 msgstr "Etkinleştirme bağlantısı geçersiz veya süresi dolmuş."
 
-#: app/views/auth.py:648 app/views/users.py:135 app/views/users.py:202
+#: app/views/auth.py:689 app/views/users.py:136 app/views/users.py:203
 msgid "User not found."
 msgstr "Kullanıcı bulunamadı."
 
-#: app/views/auth.py:652
+#: app/views/auth.py:693
 msgid "Account already activated. Please log in."
 msgstr "Hesap zaten etkinleştirilmiş. Lütfen giriş yapın."
 
-#: app/views/auth.py:663
+#: app/views/auth.py:704
 msgid "Your account has been activated! You can now log in."
 msgstr "Hesabınız etkinleştirildi! Artık giriş yapabilirsiniz."
 
-#: app/views/auth.py:667
+#: app/views/auth.py:708
 msgid "Failed to activate account."
 msgstr "Yedekleme oluşturulamadı."
 
-#: app/views/auth.py:699
+#: app/views/auth.py:740
 msgid "Security questions not set or user not found."
 msgstr "Güvenlik soruları ayarlanmadı veya kullanıcı bulunamadı."
 
-#: app/views/auth.py:707
+#: app/views/auth.py:748
 msgid "Password reset email sent."
 msgstr "Şifreler eşleşmiyor."
 
-#: app/views/auth.py:714
+#: app/views/auth.py:755
 msgid "Incorrect answer."
 msgstr "Yanlış cevap."
 
@@ -4252,7 +4393,7 @@ msgstr "Test e-postası gönderilemedi:"
 msgid "An error occurred while loading the help page."
 msgstr "Kullanıcı güncellenirken bir hata oluştu."
 
-#: app/views/index.py:53
+#: app/views/index.py:55
 msgid "Error loading dashboard"
 msgstr "E-postalara Geri Dön"
 
@@ -4316,7 +4457,7 @@ msgstr "Mesaj kaydedildi."
 msgid "You must enter a code from your authenticator."
 msgstr "Doğrulayıcınızdan bir kod girmelisiniz."
 
-#: app/views/mfa.py:85 app/views/mfa.py:295 app/views/mfa.py:303
+#: app/views/mfa.py:85 app/views/mfa.py:291 app/views/mfa.py:299
 msgid "Invalid code. Please try again."
 msgstr "Geçersiz kod. Lütfen tekrar deneyin."
 
@@ -4337,15 +4478,15 @@ msgstr ""
 msgid "Could not load recovery codes."
 msgstr "Kurtarma kodları yüklenemedi."
 
-#: app/views/mfa.py:194
+#: app/views/mfa.py:190
 msgid "No MFA challenge in progress."
 msgstr "MFA meydan okuması devam etmiyor."
 
-#: app/views/mfa.py:202
+#: app/views/mfa.py:198
 msgid "User not found for MFA challenge."
 msgstr "Kullanıcı bulunamadı."
 
-#: app/views/mfa.py:262
+#: app/views/mfa.py:258
 msgid ""
 "You have used your last recovery code. MFA has been disabled. Please remove "
 "Grylli from your authenticator app, and re-enable MFA to protect your "
@@ -4355,12 +4496,12 @@ msgstr ""
 "Grylli'yi doğrulayıcı uygulamanızdan kaldırın ve hesabınızı korumak için "
 "MFA'yı yeniden etkinleştirin."
 
-#: app/views/mfa.py:283
+#: app/views/mfa.py:279
 #, python-brace-format
 msgid "Recovery code accepted. You have {remaining} recovery codes left."
 msgstr "Kurtarma kodu kabul edildi. {remaining} kurtarma kodunuz kaldı."
 
-#: app/views/mfa.py:298
+#: app/views/mfa.py:294
 msgid "An unexpected error occurred during MFA challenge."
 msgstr "Kullanıcı silinirken bir hata oluştu."
 
@@ -4536,87 +4677,87 @@ msgstr "Test e-postası gönderilemedi. SMTP ayarlarını kontrol edin."
 msgid "Error sending test email."
 msgstr "Test E-postası Gönder"
 
-#: app/views/users.py:58
+#: app/views/users.py:59
 msgid "Failed to load user list."
 msgstr "E-postalara Geri Dön"
 
-#: app/views/users.py:82
+#: app/views/users.py:83
 msgid "Password is required when creating a new user."
 msgstr "Yeni bir kullanıcı oluştururken şifre gereklidir."
 
-#: app/views/users.py:87 app/views/users.py:156
+#: app/views/users.py:88 app/views/users.py:157
 msgid "Username already exists."
 msgstr "Kullanıcı adı zaten var."
 
-#: app/views/users.py:92 app/views/users.py:163
+#: app/views/users.py:93 app/views/users.py:164
 msgid "Email already exists."
 msgstr "E-posta zaten var."
 
-#: app/views/users.py:107
+#: app/views/users.py:108
 #, python-format
 msgid "User '%(username)s' created successfully."
 msgstr "Kullanıcı '%(username)s' başarıyla oluşturuldu."
 
-#: app/views/users.py:115
+#: app/views/users.py:116
 msgid "Failed to create user."
 msgstr "Kullanıcı oluşturulamadı."
 
-#: app/views/users.py:176
+#: app/views/users.py:177
 msgid "User updated successfully."
 msgstr "Kullanıcı başarıyla güncellendi."
 
-#: app/views/users.py:183 app/views/users.py:301
+#: app/views/users.py:184 app/views/users.py:320
 msgid "An error occurred while updating the user."
 msgstr "Kullanıcı güncellenirken bir hata oluştu."
 
-#: app/views/users.py:255
+#: app/views/users.py:256
 msgid "User deleted."
 msgstr "Kullanıcı silindi."
 
-#: app/views/users.py:262
+#: app/views/users.py:263
 msgid "An error occurred while deleting the user."
 msgstr "Kullanıcı silinirken bir hata oluştu."
 
-#: app/views/users.py:279
+#: app/views/users.py:280
 msgid "You cannot change your own enabled status."
 msgstr "Kendi etkin durumunuzu değiştiremezsiniz."
 
-#: app/views/users.py:292
+#: app/views/users.py:311
 #, python-format
 msgid "User '%(username)s' has been %(status)s."
 msgstr "Kullanıcı '%(username)s' %(status)s."
 
-#: app/views/users.py:318
+#: app/views/users.py:337
 msgid "You cannot reset your own MFA."
 msgstr "⚪ = Kendi hesabınızı devre dışı bırakamazsınız."
 
-#: app/views/users.py:331
+#: app/views/users.py:368
 #, python-format
 msgid "MFA disabled for user '%(username)s'."
 msgstr "Kullanıcı '%(username)s' için MFA devre dışı bırakıldı."
 
-#: app/views/users.py:335
+#: app/views/users.py:372
 msgid "An error occurred while resetting MFA."
 msgstr "Kullanıcı silinirken bir hata oluştu."
 
-#: app/views/users.py:358
+#: app/views/users.py:395
 msgid "Invalid role"
 msgstr "Geçersiz rol."
 
-#: app/views/users.py:364
+#: app/views/users.py:417
 #, python-format
 msgid "Role updated for %(username)s."
 msgstr "Kullanıcı '%(username)s' için MFA devre dışı bırakıldı."
 
-#: app/views/users.py:370
+#: app/views/users.py:425
 msgid "An error occurred while updating the role."
 msgstr "Kullanıcı güncellenirken bir hata oluştu."
 
-#: app/views/users.py:390
+#: app/views/users.py:463
 msgid "User account unlocked."
 msgstr "Hesabınız kalıcı olarak silindi."
 
-#: app/views/users.py:395
+#: app/views/users.py:468
 msgid "An error occurred while unlocking the account."
 msgstr "Yönetici hesabı oluşturulurken bir hata oluştu."
 
@@ -5382,3 +5523,9 @@ msgstr "Kullanıcı silinirken bir hata oluştu."
 
 #~ msgid "Failed to send test email. "
 #~ msgstr "Test e-postası gönderilemedi:"
+
+#~ msgid "Select Theme"
+#~ msgstr "Uygun"
+
+#~ msgid "Select theme"
+#~ msgstr "Uygun"
