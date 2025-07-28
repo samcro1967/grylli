@@ -6,6 +6,7 @@
 # ---------------------------------------------------------------------
 """
 
+import hashlib
 import time
 from datetime import datetime, timedelta, timezone
 from functools import wraps
@@ -175,12 +176,20 @@ def login():
         # 2. Password check
         # ----------------------------
         if user and check_password_hash(user.password_hash, form.password.data):
+            # Verify email hash integrity
+            expected_hash = hashlib.sha256(user.email.strip().lower().encode()).hexdigest()
+            if user.email_integrity_hash != expected_hash:
+                log_info_message(f"Auth - {username} - Email hash mismatch detected")
+                flash(_("Account data integrity issue detected. Please contact support."), "danger")
+                return render_template("auth/login.html", form=form)
+
             # Check if user was previously locked
             was_locked = user.locked_until and user.locked_until <= datetime.now(timezone.utc)
 
             # Clear lockout and reset failures on success
             user.locked_until = None
             db.session.commit()
+
             reset_failures(username)
 
             # Only send email if they were previously locked

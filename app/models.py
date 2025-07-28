@@ -11,6 +11,7 @@ from datetime import datetime, timezone
 
 from sqlalchemy import DateTime
 from sqlalchemy.sql import text
+from sqlalchemy.orm import validates
 from werkzeug.security import check_password_hash
 
 from app.extensions import db
@@ -61,6 +62,14 @@ class User(db.Model):
     username = db.Column(db.String(64), unique=True, nullable=False)
     email = db.Column(db.String(120), unique=True, nullable=False)
     password_hash = db.Column(db.String(128), nullable=False)
+
+    email_integrity_hash = db.Column(db.String(64), nullable=True)
+    @validates("email")
+    def update_email_and_hash(self, key, value):
+        cleaned = value.strip().lower()
+        self.email_integrity_hash = hashlib.sha256(cleaned.encode()).hexdigest()
+        return value
+
     role = db.Column(db.String(10), nullable=False)  # 'admin' or 'user'
     is_enabled = db.Column(db.Boolean, nullable=False, default=False)
     created_at = db.Column(
