@@ -248,8 +248,26 @@ class Message(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey("users.id"), nullable=False)
     user = db.relationship("User", back_populates="messages")
     label = db.Column(db.String(100), nullable=False)
-    subject = db.Column(db.String(200), nullable=False)
-    content = db.Column(db.Text, nullable=False)
+
+    _subject = db.Column("subject", db.Text, nullable=False)
+    _content = db.Column("content", db.Text, nullable=False)
+
+    @property
+    def subject(self):
+        return decrypt(self._subject) if self._subject else ""
+
+    @subject.setter
+    def subject(self, value):
+        self._subject = encrypt(value) if value else ""
+
+    @property
+    def content(self):
+        return decrypt(self._content) if self._content else ""
+
+    @content.setter
+    def content(self, value):
+        self._content = encrypt(value) if value else ""
+
     checkin_interval_minutes = db.Column(db.Integer, nullable=True)
     grace_period_minutes = db.Column(db.Integer, nullable=True)
     created_at = db.Column(db.DateTime(timezone=True), default=lambda: datetime.now(timezone.utc))
@@ -297,9 +315,36 @@ class EmailMessage(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey("users.id"), nullable=False)
     user = db.relationship("User", back_populates="email_messages")
     label = db.Column(db.String(100), nullable=False)
-    subject = db.Column(db.String(255), nullable=False)
-    body = db.Column(db.Text, nullable=False)
-    recipient = db.Column(db.String(255), nullable=False)
+
+    # Encrypted fields
+    _subject = db.Column("subject", db.Text, nullable=False)
+    _body = db.Column("body", db.Text, nullable=False)
+    _recipient = db.Column("recipient", db.Text, nullable=False)
+
+    @property
+    def subject(self):
+        return decrypt(self._subject) if self._subject else ""
+
+    @subject.setter
+    def subject(self, value):
+        self._subject = encrypt(value) if value else ""
+
+    @property
+    def body(self):
+        return decrypt(self._body) if self._body else ""
+
+    @body.setter
+    def body(self, value):
+        self._body = encrypt(value) if value else ""
+
+    @property
+    def recipient(self):
+        return decrypt(self._recipient) if self._recipient else ""
+
+    @recipient.setter
+    def recipient(self, value):
+        self._recipient = encrypt(value) if value else ""
+
     created_at = db.Column(
         db.DateTime(timezone=True),
         default=lambda: datetime.now(timezone.utc),
@@ -413,8 +458,25 @@ class Reminder(db.Model):
     user = db.relationship("User", backref="reminders")
 
     label = db.Column(db.String(100), nullable=False)
-    subject = db.Column(db.String(200), nullable=False)
-    content = db.Column(db.Text, nullable=True)
+
+    _subject = db.Column("subject", db.Text, nullable=False)
+    _content = db.Column("content", db.Text, nullable=False)
+
+    @property
+    def subject(self):
+        return decrypt(self._subject) if self._subject else ""
+
+    @subject.setter
+    def subject(self, value):
+        self._subject = encrypt(value) if value else ""
+
+    @property
+    def content(self):
+        return decrypt(self._content) if self._content else ""
+
+    @content.setter
+    def content(self, value):
+        self._content = encrypt(value) if value else ""
 
     # Scheduling fields
     start_at = db.Column(db.DateTime(timezone=True), nullable=False)
