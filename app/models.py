@@ -488,7 +488,7 @@ class Reminder(db.Model):
     occurrences_sent = db.Column(db.Integer, nullable=False, default=0)
 
     # Enable/disable logic
-    is_enabled = db.Column(db.Boolean, nullable=False, default=True)
+    is_enabled = db.Column(db.Boolean, nullable=False, default=False)
 
     # Timestamps (timezone-aware replacements)
     created_at = db.Column(
