@@ -30,16 +30,20 @@
                 {{ form.username(id="username", class="input input-bordered w-full", autocomplete="username") }}
                 {% for error in form.username.errors %}<p class="text-error text-sm mt-1">{{ error }}</p>{% endfor %}
             </div>
-            <!-- Email -->
+            <!-- Email (read-only display) -->
             <div>
                 <label for="email" class="label">
                     <span class="label-text text-base-content">{{ _("Email") }}</span>
                 </label>
-                {{ form.email(id="email", class="input input-bordered w-full", autocomplete="email") }}
-                {% for error in form.email.errors %}<p class="text-error text-sm mt-1">{{ error }}</p>{% endfor %}
-                <p id="emailWarning"
-                   data-user-form-target="emailWarning"
-                   class="text-error text-sm hidden">{{ _("Please enter a valid email address.") }}</p>
+                <input id="email"
+                       name="email"
+                       type="text"
+                       class="input input-bordered w-full bg-base-200 text-base-content"
+                       value="{{ form.email.data }}"
+                       readonly
+                       tabindex="-1"
+                       aria-readonly="true">
+                <p class="text-sm text-base-content opacity-70 mt-1">{{ _("Email address cannot be changed.") }}</p>
             </div>
             <!-- New Password -->
             <div>
