@@ -91,7 +91,7 @@ def create_reminder():
                 subject=form.subject.data.strip(),
                 content=form.content.data.strip(),
                 start_at=datetime(2000, 1, 1),  # placeholder until scheduled
-                is_enabled=True,
+                is_enabled=False,
                 created_at=now,
                 updated_at=now,
             )
