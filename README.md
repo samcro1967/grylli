@@ -161,7 +161,8 @@ Grylli is a secure, self-hosted message delivery platform that automatically sen
 
 ### Security & Production Readiness
 [⬆ Back to Table of Contents](#toc)
-- Sensitive credentials (e.g., SMTP passwords, Apprise tokens) are encrypted at rest using Fernet symmetric encryption
+- Email integrity is enforced on login: only users can change their own email address, preventing backend tampering
+- Sensitive credentials (e.g., SMTP passwords, Apprise tokens) and user-defined data (e.g., message subjects, email recipients, reminder text, etc.) are encrypted at rest using Fernet symmetric encryption
 - Fully Content Security Policy (CSP) compliant: dynamic nonces, no inline scripts or handlers, no `.innerHTML`
 - Frontend entirely refactored to use Stimulus.js controllers instead of Alpine.js or inline JavaScript
 - Password and token reveal functionality is CSP-safe with strict event handling
