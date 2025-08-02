@@ -59,5 +59,9 @@
             }
           });
         </script>
+        <script nonce="{{ g.nonce }}">
+          window.BASE_URL = "{{ config['URL_PREFIX'] }}";
+        </script>
+       
     </body>
 </html>

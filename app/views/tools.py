@@ -23,6 +23,7 @@ from app.services.scheduler.backup_utils import get_backup_files
 from werkzeug.utils import secure_filename
 from app.views.auth import admin_required
 
+
 bp = Blueprint("tools", __name__, url_prefix="/admin/tools")
 
 TEST_HOOKS = {
@@ -206,3 +207,14 @@ def check_version():
         log_exception_with_traceback("Manual version check failed", e)
 
     return redirect(url_for("tools.tools_tasks"))
+
+
+# ---------------------------------------------------------------------
+# Route: Capture JS Errors
+# ---------------------------------------------------------------------
+@login_required
+@bp.route("/log_js_error", methods=["POST"])
+def log_js_error():
+    data = request.get_json()
+    log_info_message(f"📱 JS Error: {data}")
+    return "", 204

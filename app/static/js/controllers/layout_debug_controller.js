@@ -1,16 +1,18 @@
 // app/static/js/controllers/layout_debug_controller.js
-import { Controller } from "https://cdn.jsdelivr.net/npm/@hotwired/stimulus@3.0.0/dist/stimulus.js";
+import { Controller } from "../vendor/stimulus.js";
 
 export default class extends Controller {
-  static targets = [
-    "themeDebug", "viewportDebug", "layoutMetricsDebug", "localStorageDebug", "cookiesDebug",
-    "performanceDebug", "userAgentDebug", "stimulusControllersDebug", "stimulusTargetsDebug",
-    "eventListenersDebug", "ariaDebug", "focusedElementDebug", "scrollDebug", "sidebarDebug",
-    "collapseDebug", "footerDebug", "sidebarDom", "headerDebug", "themeToggleDebug",
-    "languageToggleDebug", "profileDropdownDebug", "footerDom", "computedStylesDebug",
-    "scriptDebug", "styleDebug", "routeDebug", "formDebug", "memoryDebug",
-    "visibilityDebug", "rawHtmlDebug"
-  ];
+  static get targets() {
+    return [
+      "themeDebug", "viewportDebug", "layoutMetricsDebug", "localStorageDebug", "cookiesDebug",
+      "performanceDebug", "userAgentDebug", "stimulusControllersDebug", "stimulusTargetsDebug",
+      "eventListenersDebug", "ariaDebug", "focusedElementDebug", "scrollDebug", "sidebarDebug",
+      "collapseDebug", "footerDebug", "sidebarDom", "headerDebug", "themeToggleDebug",
+      "languageToggleDebug", "profileDropdownDebug", "footerDom", "computedStylesDebug",
+      "scriptDebug", "styleDebug", "routeDebug", "formDebug", "memoryDebug",
+      "visibilityDebug", "rawHtmlDebug"
+    ];
+  }
 
   static get optionalTargets() {
     return ["debugPageDropdown"];
@@ -22,11 +24,13 @@ export default class extends Controller {
     const key = "__GrylliDebugPages";
     let pages = JSON.parse(localStorage.getItem(key) || "[]");
 
+    const base = (window.BASE_URL || "").replace(/\/$/, "");
+
     const preloadPages = [
-      { label: "List Users", url: "/grylli/admin/users/" },
-      { label: "List Emails", url: "/grylli/email/" },
-      { label: "List Messages", url: "/grylli/messages/" },
-      { label: "List Reminders", url: "/grylli/reminders/" },
+      { label: "List Users", url: `${base}/admin/users/` },
+      { label: "List Emails", url: `${base}/email/` },
+      { label: "List Messages", url: `${base}/messages/` },
+      { label: "List Reminders", url: `${base}/reminders/` },
     ];
 
     preloadPages.forEach(page => {
@@ -42,11 +46,11 @@ export default class extends Controller {
     localStorage.setItem(key, JSON.stringify(pages));
 
     const allowedPages = {
-      "/grylli/admin/users/": "List Users",
-      "/grylli/email/": "List Emails",
-      "/grylli/messages/": "List Messages",
-      "/grylli/reminders/": "List Reminders",
-      "/grylli/admin/smtp/": "List SMTP"
+      [`${base}/admin/users/`]: "List Users",
+      [`${base}/email/`]: "List Emails",
+      [`${base}/messages/`]: "List Messages",
+      [`${base}/reminders/`]: "List Reminders",
+      [`${base}/admin/smtp/`]: "List SMTP",
     };
 
     requestAnimationFrame(() => {

@@ -16,7 +16,13 @@
             {% for key, value in config.items() %}
                 <tr class="hover:bg-base-200 dark:hover:bg-base-700 transition-colors">
                     <td class="px-4 py-2 font-mono">{{ key }}</td>
-                    <td class="px-4 py-2 font-mono break-all">{{ value }}</td>
+                    <td class="px-4 py-2 font-mono break-all">
+                      {% if value is string and value.startswith("http") %}
+                        <a href="{{ value }}" class="link link-primary" target="_blank" rel="noopener noreferrer">{{ value }}</a>
+                      {% else %}
+                        {{ value }}
+                      {% endif %}
+                    </td>
                 </tr>
             {% else %}
                 <tr>

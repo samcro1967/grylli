@@ -1,13 +1,14 @@
 // app/static/js/controllers/background_controller.js
 
-import { Controller } from "https://cdn.jsdelivr.net/npm/@hotwired/stimulus@3.0.0/dist/stimulus.js";
+import { Controller } from "../vendor/stimulus.js";
 
 export default class extends Controller {
   static targets = ["select"];
 
   async connect() {
     try {
-      const response = await fetch("/grylli/meta/static/background-patterns.json");
+      const base = window.BASE_URL || "";
+      const response = await fetch(`${base}/meta/static/background-patterns.json`);
       this.patterns = await response.json();
 
       if (this.hasSelectTarget) {
@@ -34,7 +35,8 @@ export default class extends Controller {
     const target = document.querySelector("#main-content");
     if (!target) return;
 
-    const url = file === "none" ? "none" : `url('/grylli/static/${file}')`;
+    const base = window.BASE_URL || "";
+    const url = file === "none" ? "none" : `url('${base}/static/${file}')`;
     target.style.backgroundImage = url;
   }
 

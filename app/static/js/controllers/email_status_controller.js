@@ -1,5 +1,5 @@
 // static/js/controllers/email_status_controller.js
-import { Controller } from "https://cdn.jsdelivr.net/npm/@hotwired/stimulus@3.0.0/dist/stimulus.js";
+import { Controller } from "../vendor/stimulus.js";
 
 export default class extends Controller {
   connect() {
@@ -12,7 +12,9 @@ export default class extends Controller {
   }
 
   fetchStatuses() {
-    fetch('/grylli/email/status')
+    const base = window.BASE_URL || "";
+
+    fetch(`${base}/email/status`)
       .then(response => response.json())
       .then(data => {
         data.forEach(email => {

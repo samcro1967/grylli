@@ -31,7 +31,7 @@ bp = Blueprint("home", __name__)
 @bp.route("/", strict_slashes=False)
 def root_redirect():
     """
-    Redirects /grylli/ to /grylli/overview/ to avoid 404 errors.
+    Redirects /base_url/ to /base_url/overview/ to avoid 404 errors.
     """
     return redirect(url_for("home.index"))
 
@@ -292,7 +292,7 @@ def server_time():
 def service_worker():
     """
     Serve the PWA service worker from the static directory.
-    This avoids hardcoding the URL prefix like /grylli/static.
+    This avoids hardcoding the URL prefix like /base_url/static.
     """
     response = send_from_directory(
         current_app.static_folder,

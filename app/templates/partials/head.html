@@ -54,10 +54,24 @@
   </noscript>
   <link rel="stylesheet" href="{{ url_for('assets.fonts_css') }}">
 
+  {# Stimulus bundle #}
+  {% set ua = request.user_agent.string.lower() %}
+  {% set is_ios = 'iphone' in ua or 'ipad' in ua or 'ipod' in ua %}
+  {% set is_safari = 'safari' in ua and 'chrome' not in ua %}
+  {% set is_https = request.is_secure %}
+
+  {% if is_ios and is_safari and is_https %}
+    <script src="{{ url_for('static', filename='js/application.bundle.js') }}" defer nonce="{{ g.nonce }}"></script>
+  {% else %}
+    <script type="module" src="{{ url_for('static', filename='js/application.min.js') }}" defer></script>
+  {% endif %}
+
   <!-- Stimulus bundle -->
-  {% block scripts %}
-    <script defer type="module" src="{{ url_for('static', filename='js/application.min.js') }}"></script>
-  {% endblock %}
+  <!-- <script nonce="{{ g.nonce }}"> -->
+  <!-- {% block scripts %} -->
+    <!-- <script defer type="module" src="{{ url_for('static', filename='js/application.min.js') }}"></script> -->
+  <!-- {% endblock %} -->
+  <!-- </script> -->
 
   <!-- PWA Service Worker Registration -->
   <script defer src="{{ url_for('static', filename='js/register-sw.js') }}"></script>

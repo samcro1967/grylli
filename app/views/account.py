@@ -212,6 +212,7 @@ def delete_account():
 # ---------------------------------------------------------------------
 # Email to user on account deletion
 # ---------------------------------------------------------------------
+
 def send_account_deleted_email(user):
     """
     Send an account deletion notification email to the user.
@@ -224,15 +225,23 @@ def send_account_deleted_email(user):
     :param user: User object representing the account being deleted.
     """
     subject = _("Your account has been deleted")
+
+    try:
+        base_url = request.url_root.rstrip('/')
+    except RuntimeError:
+        # Fallback when request context is missing
+        site_url = current_app.config["SITE_URL"]
+
     body = _(
-        "Hello {username},\n\nYour account on {site_name} has been deleted."
-        "Remember to delete your files from the uploads folder."
+        "Hello {username},\n\nYour account on {site_name} has been deleted.\n"
+        "Remember to delete your files from the uploads folder.\n"
         "If this was not you, please contact support immediately.\n\n{site_url}"
     ).format(
         username=user.username,
         site_name=current_app.config.get("SITE_NAME", "Grylli"),
-        site_url=current_app.config.get("SITE_URL", "http://osu.grylli:5069/grylli/"),
+        site_url=base_url,
     )
+
     send_email(user.email, subject, body)
 
 

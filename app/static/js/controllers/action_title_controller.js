@@ -1,5 +1,5 @@
 // action_title_controller.js
-import { Controller } from "https://cdn.jsdelivr.net/npm/@hotwired/stimulus@3.0.0/dist/stimulus.js";
+import { Controller } from "../vendor/stimulus.js";
 
 /**
  * Sets document title after HTMX loads an action view
@@ -12,7 +12,9 @@ import { Controller } from "https://cdn.jsdelivr.net/npm/@hotwired/stimulus@3.0.
  * >
  */
 export default class extends Controller {
-  static values = { title: String }
+  static values = {
+    title: String
+  };
 
   setTitle() {
     if (this.hasTitleValue) {

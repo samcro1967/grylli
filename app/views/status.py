@@ -32,7 +32,7 @@ def health_and_version():
 
 
 # ---------------------------------------------------------------------
-# Route: Serve favicon at /grylli/status/favicon.ico
+# Route: Serve favicon at /base_url/status/favicon.ico
 # ---------------------------------------------------------------------
 @bp.route("favicon.ico", strict_slashes=False)
 def root_favicon():
@@ -51,7 +51,7 @@ def root_favicon():
 
 
 # ---------------------------------------------------------------------
-# Route: Serve html view at /grylli/status/html
+# Route: Serve html view at /base_url/status/html
 # ---------------------------------------------------------------------
 @bp.route("html", methods=["GET"], strict_slashes=False)
 def health_and_version_html():

@@ -1,13 +1,15 @@
 // app/static/js/controllers/theme_controller.js
 
-import { Controller } from "https://cdn.jsdelivr.net/npm/@hotwired/stimulus@3.0.0/dist/stimulus.js";
+import { Controller } from "../vendor/stimulus.js";
 
 export default class extends Controller {
   static targets = ["knob", "select"];
 
   async connect() {
+    const base = window.BASE_URL || "";
+
     try {
-      const response = await fetch("/grylli/static/daisyui-themes.json");
+      const response = await fetch(`${base}/static/daisyui-themes.json`);
       this.themes = await response.json();
 
       if (this.hasSelectTarget) {
@@ -30,14 +32,15 @@ export default class extends Controller {
   }
 
   async change() {
+    const base = window.BASE_URL || "";
     const newTheme = this.selectTarget.value;
+
     document.documentElement.setAttribute("data-theme", newTheme);
     document.cookie = `theme=${newTheme}; path=/; max-age=31536000; samesite=lax`;
     this.updateKnob(newTheme);
 
-    // 🔹 Send theme change log to server
     try {
-      await fetch("/grylli/meta/log-theme-change", {
+      await fetch(`${base}/meta/log-theme-change`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

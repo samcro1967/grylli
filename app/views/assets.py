@@ -20,12 +20,18 @@ def serve_font(filename):
     base_dir = os.path.abspath(os.path.join("app", "assets", "fonts"))
     full_path = os.path.abspath(os.path.join(base_dir, filename))
 
-    # Prevent path traversal
-    if not full_path.startswith(base_dir):
+    # ✅ Normalize both paths before comparison
+    if not os.path.commonpath([full_path, base_dir]) == base_dir:
+        abort(403)
+
+    file = os.path.basename(full_path)
+
+    # ✅ Only allow font files
+    ALLOWED_EXTENSIONS = {'.woff2', '.woff', '.ttf'}
+    if not any(file.endswith(ext) for ext in ALLOWED_EXTENSIONS):
         abort(403)
 
     directory = os.path.dirname(full_path)
-    file = os.path.basename(full_path)
 
     return send_from_directory(directory, file)
 

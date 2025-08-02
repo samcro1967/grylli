@@ -1,5 +1,55 @@
 // application.js
-import { Application } from "https://cdn.jsdelivr.net/npm/@hotwired/stimulus@3.0.0/dist/stimulus.js";
+// import { Application } from "https://cdn.jsdelivr.net/npm/@hotwired/stimulus@3.0.0/dist/stimulus.js";
+import { Application } from "./vendor/stimulus.js";
+
+// Get base path from server-injected global variable
+const base = window.BASE_URL || "";
+
+// Capture runtime JS errors
+window.onerror = function(message, source, lineno, colno, error) {
+  fetch(`${base}/log_js_error`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      type: "error",
+      message,
+      source,
+      lineno,
+      colno,
+      stack: error && error.stack
+    })
+  });
+};
+
+// Capture unhandled Promise rejections
+window.onunhandledrejection = function(event) {
+  fetch(`${base}/admin/tools/log_js_error`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      type: "unhandledrejection",
+      reason: event.reason
+    })
+  });
+};
+
+// Console log tracking
+["log", "info", "warn", "error"].forEach(level => {
+  const original = console[level];
+  console[level] = function (...args) {
+    original.apply(console, args);
+    fetch(`${base}/admin/tools/log_js_error`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        type: "console",
+        level,
+        message: args.map(a => String(a)).join(" "),
+        timestamp: new Date().toISOString()
+      })
+    });
+  };
+});
 
 import SidebarController from "./controllers/sidebar_controller.js";
 import CollapseController from "./controllers/collapse_controller.js";
@@ -89,3 +139,4 @@ application.register("line-height", LineHeightController);
 application.register("profile-title", ProfileTitleController)
 
 window.Stimulus = application;
+console.log("✅ Stimulus boot finished");

@@ -3,7 +3,7 @@
 // Controls line height (reading density): tight / normal / loose
 // ---------------------------------------------------------------------
 
-import { Controller } from "https://cdn.jsdelivr.net/npm/@hotwired/stimulus@3.0.0/dist/stimulus.js";
+import { Controller } from "../vendor/stimulus.js";
 
 export default class extends Controller {
   static targets = ["selector"];

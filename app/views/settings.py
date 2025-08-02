@@ -9,6 +9,7 @@ from pathlib import Path
 from flask import Blueprint, flash, redirect, render_template, request, url_for
 from flask_babel import _
 from flask_login import current_user, login_required
+from urllib.parse import urlparse
 
 import app.config as project_config
 from app.models import SystemConfig
@@ -61,15 +62,28 @@ def system_tab():
         config_items = {}
         for key in keys:
             value = getattr(project_config, key)
-            if isinstance(value, str) and "/grylli" in value:
-                value = str(Path(value).as_posix())
-                value = value[value.find("/grylli"):]
+
+            # Only truncate paths, not full URLs
+            if isinstance(value, str):
+                if "/grylli" in value:
+                    from urllib.parse import urlparse
+                    if not urlparse(value).scheme:
+                        value = str(Path(value).as_posix())
+                        value = value[value.find("/grylli"):]
+
             config_items[key] = value
 
         if request.headers.get("HX-Request"):
-            return render_template("admin/settings/partials/_system_settings_partial.html", config=config_items)
+            return render_template(
+                "admin/settings/partials/_system_settings_partial.html",
+                config=config_items
+            )
 
-        return render_template("admin/settings/settings_full.html", active_tab="system", config=config_items)
+        return render_template(
+            "admin/settings/settings_full.html",
+            active_tab="system",
+            config=config_items
+        )
 
     except Exception as e:
         log_exception_with_traceback("Failed to load system settings tab", e)
