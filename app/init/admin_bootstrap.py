@@ -70,7 +70,9 @@ def enforce_admin_bootstrap(app):
             return redirect(url_for("auth.bootstrap"))
 
         if not current_user.is_authenticated:
-            log_info_message("🔒 User not authenticated. Redirecting to login.")
+            ip = request.remote_addr or "unknown IP"
+            ua = request.user_agent.string or "unknown user-agent"
+            log_info_message(f"🔒 Unauthenticated access attempt from {ip} using {ua}")
             return redirect(url_for("auth.login"))
 
         log_debug_message("✅ Request passed admin/login checks.")

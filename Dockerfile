@@ -29,7 +29,7 @@ COPY requirements.txt ./
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy pre-built assets (generated locally in app/static/)
-COPY ./app/templates/static/css/critical.css /grylli/app/templates/static/css/critical.css
+COPY ./app/static/css/critical.css /grylli/app/static/css/critical.css
 COPY ./app/static/version.json /grylli/app/static/version.json
 COPY ./app/static/daisyui-themes.json /grylli/app/static/daisyui-themes.json
 COPY ./app/assets/fonts /grylli/app/assets/fonts
