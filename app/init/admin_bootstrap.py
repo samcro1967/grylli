@@ -45,6 +45,8 @@ def enforce_admin_bootstrap(app):
             "/locale.langcheck",
             "pwa.manifest",
             "csp_report.overview",
+            "assets.fonts_css",
+            "assets.serve_font",
         }
 
         try:

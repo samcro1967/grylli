@@ -1,16 +1,20 @@
-{% set base = config["BASE_URL"].rstrip("/") ~ "/assets/fonts" %}
-/* DEBUG: BASE_URL = {{ config["BASE_URL"]|default("NOT SET") }} */
-/* DEBUG: base path = {{ base }} */
+{# app/templates/static/css/_fonts.css.j2 #}
 {% set style = "normal" %}
 {% set weight = "400" %}
 {% set display = "swap" %}
 
-{% for font in config["AVAILABLE_FONTS"] %}
+/* Debug info */
+{% set script_base = request.script_root.rstrip('/') %}
+{% set font_base = script_base + '/assets/fonts' %}
+/* script_root = {{ script_base }} */
+/* font_base = {{ font_base }} */
+
+{% for font in fonts %}
 @font-face {
   font-family: "{{ font.label }}";
   font-style: {{ style }};
   font-weight: {{ weight }};
   font-display: {{ display }};
-  src: url("{{ base }}/{{ font.filename }}") format("woff2");
+  src: url("{{ url_for('assets.serve_font', filename=font.filename) }}") format("woff2");
 }
 {% endfor %}

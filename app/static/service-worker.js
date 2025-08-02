@@ -4,7 +4,7 @@
 // Dynamically caches static assets (CSS, icons, etc.) — excludes JS
 // ---------------------------------------------------------------------
 
-const CACHE_VERSION = "v1.0.7"; // bump this on every deploy
+const CACHE_VERSION = "v1.0.8"; // bump this on every deploy
 const CACHE_NAME = `grylli-static-${CACHE_VERSION}`;
 
 // Only cache non-JS assets

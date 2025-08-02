@@ -35,7 +35,7 @@
   <title>{% block title %}{{ _('Grylli') }}{% endblock %}</title>
 
   <!-- Stylesheets -->
-  <style nonce="{{ g.nonce }}">{% include 'static/css/critical.css' %}</style>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/critical.css') }}" nonce="{{ g.nonce }}">
   <link href="{{ url_for('static', filename='css/styles.min.css') }}" rel="stylesheet" />
   <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}" nonce="{{ g.nonce }}">
 
