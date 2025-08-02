@@ -9,6 +9,9 @@
 import os
 from datetime import timedelta
 
+from dotenv import load_dotenv
+load_dotenv()
+
 # ---------------------------------------------------------------------
 # APPLICATION METADATA
 # ---------------------------------------------------------------------
@@ -23,6 +26,13 @@ FERRET_KEY = os.environ.get("FERRET_KEY")
 FLASK_HOST = "0.0.0.0"
 FLASK_PORT = int(os.environ.get("FLASK_APP_PORT", 5069))
 FLASK_DEBUG = os.environ.get("DEBUG", "False").lower() in ("true", "1", "yes")
+
+# ---------------------------------------------------------------------
+# EXTERNAL SITE URL CONFIGURATION
+# ---------------------------------------------------------------------
+FQDN = os.environ.get("FQDN").rstrip("/")
+BASE_URL = os.environ.get("BASE_URL", "/grylli").rstrip("/")
+SITE_URL = f"{FQDN}{BASE_URL}"
 
 # ---------------------------------------------------------------------
 # DATABASE & BACKUP STORAGE CONFIGURATION
