@@ -47,6 +47,7 @@ def enforce_admin_bootstrap(app):
             "csp_report.overview",
             "assets.fonts_css",
             "assets.serve_font",
+            "home.server_time",
         }
 
         try:

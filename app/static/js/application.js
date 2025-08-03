@@ -5,9 +5,30 @@ import { Application } from "./vendor/stimulus.js";
 // Get base path from server-injected global variable
 const base = window.BASE_URL || "";
 
+const logUrl = `${base}/admin/tools/log_js_error`;  // ✅ unified endpoint
+
+// Capture non-JS resource loading errors
+window.addEventListener("error", function (event) {
+  const target = event.target || event.srcElement;
+
+  if (target && (target.src || target.href)) {
+    fetch(logUrl, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        type: "resource-error",
+        tag: target.tagName,
+        url: target.src || target.href,
+        outerHTML: target.outerHTML
+      })
+    });
+  }
+}, true); // 👈 useCapture = true is critical to catch resource errors
+
+
 // Capture runtime JS errors
 window.onerror = function(message, source, lineno, colno, error) {
-  fetch(`${base}/log_js_error`, {
+  fetch(logUrl, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
@@ -23,7 +44,7 @@ window.onerror = function(message, source, lineno, colno, error) {
 
 // Capture unhandled Promise rejections
 window.onunhandledrejection = function(event) {
-  fetch(`${base}/admin/tools/log_js_error`, {
+  fetch(logUrl, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
@@ -38,7 +59,7 @@ window.onunhandledrejection = function(event) {
   const original = console[level];
   console[level] = function (...args) {
     original.apply(console, args);
-    fetch(`${base}/admin/tools/log_js_error`, {
+    fetch(logUrl, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -50,6 +71,7 @@ window.onunhandledrejection = function(event) {
     });
   };
 });
+
 
 import SidebarController from "./controllers/sidebar_controller.js";
 import CollapseController from "./controllers/collapse_controller.js";

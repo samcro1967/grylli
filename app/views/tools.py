@@ -212,9 +212,20 @@ def check_version():
 # ---------------------------------------------------------------------
 # Route: Capture JS Errors
 # ---------------------------------------------------------------------
-@login_required
 @bp.route("/log_js_error", methods=["POST"])
+@login_required
 def log_js_error():
-    data = request.get_json()
-    log_info_message(f"📱 JS Error: {data}")
+    data = request.get_json() or {}
+    log_type = data.get("type")
+
+    if log_type == "console":
+        level = data.get("level", "log")
+        log_info_message(f"📱 JS Console ({level}): {data}")
+    elif log_type == "unhandledrejection":
+        log_info_message(f"📱 JS Rejection: {data}")
+    elif log_type == "error":
+        log_info_message(f"📱 JS Error: {data}")
+    else:
+        log_info_message(f"📱 JS Event: {data}")
+
     return "", 204
