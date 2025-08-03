@@ -7,6 +7,88 @@ const base = window.BASE_URL || "";
 
 const logUrl = `${base}/admin/tools/log_js_error`;  // ✅ unified endpoint
 
+// Page Load & Interaction Performance
+window.addEventListener("load", () => {
+  const perf = performance.getEntriesByType("navigation")[0];
+  if (!perf) return;
+
+  fetch(logUrl, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      type: "performance",
+      timing: {
+        domContentLoaded: perf.domContentLoadedEventEnd - perf.startTime,
+        loadEvent: perf.loadEventEnd - perf.startTime,
+        timeToFirstByte: perf.responseStart - perf.requestStart,
+      }
+    })
+  });
+});
+
+// Patch all controller lifecycle hooks
+application.register = new Proxy(application.register, {
+  apply(target, thisArg, argumentsList) {
+    const [identifier, controllerClass] = argumentsList;
+
+    const wrap = (fn, hookName) => {
+      return function (...args) {
+        try {
+          return fn.apply(this, args);
+        } catch (e) {
+          fetch(logUrl, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              type: "stimulus-error",
+              controller: identifier,
+              hook: hookName,
+              message: e.message,
+              stack: e.stack,
+            })
+          });
+          throw e;
+        }
+      };
+    };
+
+    // Wrap hooks if they exist
+    ["initialize", "connect", "disconnect"].forEach(hook => {
+      if (controllerClass.prototype[hook]) {
+        controllerClass.prototype[hook] = wrap(controllerClass.prototype[hook], hook);
+      }
+    });
+
+    return target.apply(thisArg, argumentsList);
+  }
+});
+
+// HTMX Error Logging
+document.body.addEventListener("htmx:responseError", function (event) {
+    fetch(logUrl, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      type: "htmx-response-error",
+      status: event.detail.xhr.status,
+      url: event.detail.pathInfo.requestPath,
+      response: event.detail.xhr.responseText
+    })
+  });
+});
+
+document.body.addEventListener("htmx:sendError", function (event) {
+    fetch(logUrl, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      type: "htmx-send-error",
+      error: event.detail.error?.message || "Unknown send error",
+      url: event.detail.pathInfo.requestPath
+    })
+  });
+});
+
 // Capture non-JS resource loading errors
 window.addEventListener("error", function (event) {
   const target = event.target || event.srcElement;
