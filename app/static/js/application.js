@@ -2,159 +2,6 @@
 // import { Application } from "https://cdn.jsdelivr.net/npm/@hotwired/stimulus@3.0.0/dist/stimulus.js";
 import { Application } from "./vendor/stimulus.js";
 
-// Get base path from server-injected global variable
-const base = window.BASE_URL || "";
-
-const logUrl = `${base}/admin/tools/log_js_error`;  // ✅ unified endpoint
-
-// Page Load & Interaction Performance
-window.addEventListener("load", () => {
-  const perf = performance.getEntriesByType("navigation")[0];
-  if (!perf) return;
-
-  fetch(logUrl, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      type: "performance",
-      timing: {
-        domContentLoaded: perf.domContentLoadedEventEnd - perf.startTime,
-        loadEvent: perf.loadEventEnd - perf.startTime,
-        timeToFirstByte: perf.responseStart - perf.requestStart,
-      }
-    })
-  });
-});
-
-// Patch all controller lifecycle hooks
-application.register = new Proxy(application.register, {
-  apply(target, thisArg, argumentsList) {
-    const [identifier, controllerClass] = argumentsList;
-
-    const wrap = (fn, hookName) => {
-      return function (...args) {
-        try {
-          return fn.apply(this, args);
-        } catch (e) {
-          fetch(logUrl, {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              type: "stimulus-error",
-              controller: identifier,
-              hook: hookName,
-              message: e.message,
-              stack: e.stack,
-            })
-          });
-          throw e;
-        }
-      };
-    };
-
-    // Wrap hooks if they exist
-    ["initialize", "connect", "disconnect"].forEach(hook => {
-      if (controllerClass.prototype[hook]) {
-        controllerClass.prototype[hook] = wrap(controllerClass.prototype[hook], hook);
-      }
-    });
-
-    return target.apply(thisArg, argumentsList);
-  }
-});
-
-// HTMX Error Logging
-document.body.addEventListener("htmx:responseError", function (event) {
-    fetch(logUrl, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      type: "htmx-response-error",
-      status: event.detail.xhr.status,
-      url: event.detail.pathInfo.requestPath,
-      response: event.detail.xhr.responseText
-    })
-  });
-});
-
-document.body.addEventListener("htmx:sendError", function (event) {
-    fetch(logUrl, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      type: "htmx-send-error",
-      error: event.detail.error?.message || "Unknown send error",
-      url: event.detail.pathInfo.requestPath
-    })
-  });
-});
-
-// Capture non-JS resource loading errors
-window.addEventListener("error", function (event) {
-  const target = event.target || event.srcElement;
-
-  if (target && (target.src || target.href)) {
-    fetch(logUrl, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        type: "resource-error",
-        tag: target.tagName,
-        url: target.src || target.href,
-        outerHTML: target.outerHTML
-      })
-    });
-  }
-}, true); // 👈 useCapture = true is critical to catch resource errors
-
-
-// Capture runtime JS errors
-window.onerror = function(message, source, lineno, colno, error) {
-  fetch(logUrl, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      type: "error",
-      message,
-      source,
-      lineno,
-      colno,
-      stack: error && error.stack
-    })
-  });
-};
-
-// Capture unhandled Promise rejections
-window.onunhandledrejection = function(event) {
-  fetch(logUrl, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      type: "unhandledrejection",
-      reason: event.reason
-    })
-  });
-};
-
-// Console log tracking
-["log", "info", "warn", "error"].forEach(level => {
-  const original = console[level];
-  console[level] = function (...args) {
-    original.apply(console, args);
-    fetch(logUrl, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        type: "console",
-        level,
-        message: args.map(a => String(a)).join(" "),
-        timestamp: new Date().toISOString()
-      })
-    });
-  };
-});
-
-
 import SidebarController from "./controllers/sidebar_controller.js";
 import CollapseController from "./controllers/collapse_controller.js";
 import ThemeController from "./controllers/theme_controller.js";
@@ -197,8 +44,10 @@ import ContrastController from "./controllers/contrast_controller.js";
 import TrackingController from "./controllers/tracking_controller.js";
 import LineHeightController from "./controllers/line_height_controller.js";
 import ProfileTitleController from "./controllers/profile_title_controller.js"
+import LoggerController from "./controllers/logger_controller.js";
 
 const application = Application.start();
+application.register("logger", LoggerController);
 application.register("sidebar", SidebarController);
 application.register("collapse", CollapseController);
 application.register("theme", ThemeController);
