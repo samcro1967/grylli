@@ -81,4 +81,9 @@
         <div class="hidden mt-4 p-4 rounded bg-base-100 dark:bg-base-800 text-sm text-base-content dark:text-base-100 shadow-md border border-base-700"
              data-list-toggle-target="instructions">{% include "apprise/partials/help_panel.html" %}</div>
     </div>
+    {% if debug %}
+        {% set debug_label = _('List Users') %}
+        {% include "partials/_debug_register.html" %}
+        {% include "partials/_layout_debug_targets.html" %}
+    {% endif %}
 </div>

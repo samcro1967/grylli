@@ -91,4 +91,9 @@
             {% include "webhook/partials/help_panel.html" %}
         </div>
     </div>
+    {% if debug %}
+        {% set debug_label = _('List Users') %}
+        {% include "partials/_debug_register.html" %}
+        {% include "partials/_layout_debug_targets.html" %}
+    {% endif %}
 </div>

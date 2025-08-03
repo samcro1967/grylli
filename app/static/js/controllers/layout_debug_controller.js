@@ -26,18 +26,21 @@ export default class extends Controller {
 
     const base = (window.BASE_URL || "").replace(/\/$/, "");
 
+    // Remember to add debug block to template also
     const preloadPages = [
       { label: "List Users", url: `${base}/admin/users/` },
-      { label: "List Emails", url: `${base}/email/` },
-      { label: "List Messages", url: `${base}/messages/` },
-      { label: "List Reminders", url: `${base}/reminders/` },
+      { label: "List Emails", url: `${base}/email/overview/` },
+      { label: "List Messages", url: `${base}/messages/overview/` },
+      { label: "List Apprise", url: `${base}/messages/apprise/overview/` },
+      { label: "List Webhook", url: `${base}/messages/webhook/overview/` },
+      { label: "List Reminders", url: `${base}/reminders/overview/` },
+      { label: "List User SMTP", url: `${base}/email/smtp/overview/` },
     ];
 
-    preloadPages.forEach(page => {
-      if (!pages.some(p => p.url === page.url)) {
-        pages.push(page);
-      }
-    });
+    const labelsToKeep = new Set(preloadPages.map(p => p.label));
+    pages = preloadPages.concat(
+      pages.filter(p => !labelsToKeep.has(p.label))
+    );
 
     // 🔠 Sort AFTER merging preload pages
     pages.sort((a, b) => a.label.localeCompare(b.label));
@@ -45,37 +48,46 @@ export default class extends Controller {
     // Save back updated and sorted list
     localStorage.setItem(key, JSON.stringify(pages));
 
-    const allowedPages = {
-      [`${base}/admin/users/`]: "List Users",
-      [`${base}/email/`]: "List Emails",
-      [`${base}/messages/`]: "List Messages",
-      [`${base}/reminders/`]: "List Reminders",
-      [`${base}/admin/smtp/`]: "List SMTP",
-    };
-
     requestAnimationFrame(() => {
       this._safe(() => {
         const select = document.querySelector("#debugPageDropdown");
         if (!select) return;
 
-        select.innerHTML = `<option value="">Choose a Page...</option>`;
-        const currentPath = window.location.pathname;
+        // ✅ Fully clear all existing options (including ghost ones)
+        select.options.length = 0;
 
-        for (const [url, label] of Object.entries(allowedPages)) {
-          if (url === currentPath) continue;
+        // ✅ Add default placeholder option
+        const defaultOption = document.createElement("option");
+        defaultOption.value = "";
+        defaultOption.textContent = "Choose a Page...";
+        select.appendChild(defaultOption);
+
+        // ✅ Use the same `pages` list as before
+        const currentPath = window.location.pathname;
+        const pages = JSON.parse(localStorage.getItem("__GrylliDebugPages") || "[]");
+
+        pages.forEach(({ url, label }) => {
+          if (url === currentPath) return;
+
           const option = document.createElement("option");
           option.value = url;
           option.textContent = label;
           select.appendChild(option);
-        }
+        });
 
+        // ✅ Safely handle selection
         select.addEventListener("change", () => {
           const selectedPath = select.value;
           const iframe = document.getElementById("debugPreviewIframe");
-          if (!selectedPath || !iframe) return;
 
-          if (!(selectedPath in allowedPages)) {
-            console.warn("🚫 Unsafe debug page blocked:", selectedPath);
+          if (!selectedPath || !iframe || selectedPath.startsWith(":")) {
+            console.warn("🚫 Invalid debug selection:", selectedPath);
+            return;
+          }
+
+          // Only basic URL safety check now
+          if (!selectedPath.startsWith(base)) {
+            console.warn("🚫 Unsafe debug URL rejected:", selectedPath);
             return;
           }
 
@@ -126,15 +138,26 @@ export default class extends Controller {
         const blob = new Blob([output], { type: "text/plain" });
         const url = URL.createObjectURL(blob);
 
+        // ✅ Generate filename before anchor
+        const selectedOption = document.querySelector("#debugPageDropdown")?.selectedOptions?.[0];
+        const label = selectedOption?.textContent?.trim().replace(/\s+/g, "_").toLowerCase() || "debug_page";
+        const timestamp = new Date().toISOString().slice(0, 19).replace(/[:T]/g, "-");
+        const filename = `grylli_${label}_${timestamp}.txt`;
+
         const a = document.createElement("a");
         a.href = url;
-        a.download = "grylli_layout_debug.txt";
+        a.download = filename;
+
         document.body.appendChild(a);
         a.click();
         document.body.removeChild(a);
         URL.revokeObjectURL(url);
 
         window.removeEventListener("message", listener);
+
+        // ✅ Trigger export request
+        iframeWindow.postMessage("grylli:requestDebugExport", "*");
+
       }
     };
 
@@ -199,6 +222,15 @@ export default class extends Controller {
       const targets = Array.from(document.querySelectorAll("[data-target]"))
         .map(el => el.getAttribute("data-target")).join(", ");
       this.stimulusTargetsDebugTarget.textContent = `Targets:\n${targets}`;
+    });
+
+    this._safe(() => {
+      try {
+        const registered = window.application?.controllers?.map(c => c.identifier) || [];
+        this.stimulusControllersDebugTarget.textContent += `\n\nConnected:\n${registered.join(", ")}`;
+      } catch (e) {
+        this.stimulusControllersDebugTarget.textContent += "\n⚠️ Unable to fetch registered Stimulus controllers.";
+      }
     });
 
     this.eventListenersDebugTarget.textContent =
@@ -308,6 +340,20 @@ export default class extends Controller {
     });
 
     this._safe(() => {
+      const htmxAttrs = Array.from(document.querySelectorAll("[hx-get], [hx-post], [hx-target]"));
+      const report = [`HTMX elements: ${htmxAttrs.length}`];
+      htmxAttrs.forEach(el => {
+        const tag = el.tagName.toLowerCase();
+        const info = Array.from(el.attributes)
+          .filter(attr => attr.name.startsWith("hx-"))
+          .map(attr => `${attr.name}="${attr.value}"`)
+          .join(" ");
+        report.push(`- <${tag}> ${info}`);
+      });
+      this.eventListenersDebugTarget.textContent += `\n\n${report.join("\n")}`;
+    });
+
+    this._safe(() => {
       const check = sel => {
         const el = document.querySelector(sel);
         return el ? (el.offsetParent !== null ? "visible" : "hidden") : "not found";
@@ -341,6 +387,20 @@ export default class extends Controller {
         ? html.slice(0, 5000) + "\n[...truncated]"
         : html;
     });
+
+    // Customization summary: theme, contrast, font, tracking, line height
+    this._safe(() => {
+      const html = document.documentElement;
+      const styleData = [
+        `Theme: ${html.getAttribute("data-theme") || "unknown"}`,
+        `Contrast: ${html.dataset.contrast || "default"}`,
+        `Tracking: ${html.dataset.tracking || "default"}`,
+        `Line Height: ${html.dataset.lineHeight || "default"}`,
+        `Font Family: ${getComputedStyle(document.body).fontFamily}`,
+      ];
+      this.themeDebugTarget.textContent += `\n${styleData.join("\n")}`;
+    });
+
   }
 
   _safe(fn) {

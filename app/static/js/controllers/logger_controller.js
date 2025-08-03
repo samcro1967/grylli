@@ -20,6 +20,10 @@ import { Controller } from "../vendor/stimulus.js";
  * Only a short SHA-256 hash of these fields is sent.
  */
 async function generateFingerprint() {
+  if (!window.isSecureContext || !crypto?.subtle) {
+    console.warn("⚠️ Insecure context or unsupported crypto. Skipping fingerprint.");
+    return "insecure-context";
+  }
   const components = [
     navigator.userAgent,
     navigator.language,
