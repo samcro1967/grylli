@@ -22,7 +22,7 @@ export default class extends Controller {
 
   _applyCollapseState() {
     if (this.hasDesktopTarget) {
-      this.desktopTarget.classList.toggle("w-16", this.collapsed);
+      this.desktopTarget.classList.toggle("w-20", this.collapsed);
       this.desktopTarget.classList.toggle("w-64", !this.collapsed);
     }
 

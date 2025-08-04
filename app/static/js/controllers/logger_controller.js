@@ -21,7 +21,7 @@ import { Controller } from "../vendor/stimulus.js";
  */
 async function generateFingerprint() {
   if (!window.isSecureContext || !crypto?.subtle) {
-    console.warn("⚠️ Insecure context or unsupported crypto. Skipping fingerprint.");
+    console.info("Insecure context. Skipping fingerprint.");
     return "insecure-context";
   }
   const components = [
@@ -224,8 +224,6 @@ export default class extends Controller {
         });
       };
     });
-
-    console.log("📡 Logger controller connected");
   }
 
   _send(url, payload) {

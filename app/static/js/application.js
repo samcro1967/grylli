@@ -92,4 +92,4 @@ application.register("line-height", LineHeightController);
 application.register("profile-title", ProfileTitleController)
 
 window.Stimulus = application;
-console.log("✅ Stimulus boot finished");
+// console.log("✅ Stimulus boot finished");

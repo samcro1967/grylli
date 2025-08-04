@@ -16,7 +16,9 @@ export default class extends Controller {
     const saved = localStorage.getItem(this.keyValue);
     if (saved) {
       this.applyTracking(saved);
-      this.selectorTarget.value = saved;
+      if (this.hasSelectorTarget) {
+        this.selectorTarget.value = saved;
+      }
     }
   }
 

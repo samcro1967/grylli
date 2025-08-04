@@ -6,10 +6,10 @@
 <!DOCTYPE html>
 <html lang="{{ get_locale() or 'en' }}"
       data-theme="{{ 'dark' if request.cookies.theme == 'dark' else 'light' }}"
-      class="h-screen overflow-hidden scroll-smooth font-{{ current_user.font_preference if current_user.is_authenticated else 'inter' }} tracking-normal lineheight-normal">
+      class="scroll-smooth font-{{ current_user.font_preference if current_user.is_authenticated else 'inter' }} tracking-normal lineheight-normal">
 
     {% include "partials/head.html" %}
-    <body data-controller="customization logger"
+    <body data-controller="customization logger theme background font font-size contrast tracking line-height roundedness"
           data-customization-default-font-value="font-base"
           hx-ext="safe-nonce"
           class="h-screen overflow-hidden flex flex-col bg-base-200 text-base-content"
@@ -34,10 +34,14 @@
         <!-- Layout container below header -->
         <div class="flex flex-grow h-0">
             <!-- Sidebar (Desktop) -->
-            {% include "partials/sidebar_desktop.html" %}
+            {% if request.endpoint != "auth.login" %}
+              {% include "partials/sidebar_desktop.html" %}
+            {% endif %}
             <!-- Main content (scrollable, height = 100vh - header height) -->
             <main id="main-content"
-                  class="flex-grow overflow-y-auto p-6 bg-base-100 dark:bg-base-300 bg-defaults text-base-content mt-16"
+                  class="flex-grow overflow-y-auto
+                         {% if request.endpoint != 'auth.login' %} p-6 mt-16 {% endif %}
+                         bg-base-100 dark:bg-base-300 bg-defaults text-base-content"
                   hx-target="this"
                   hx-swap="innerHTML">
                 {% block content %}{% endblock %}
@@ -62,6 +66,9 @@
         <script nonce="{{ g.nonce }}">
           window.BASE_URL = "{{ config['URL_PREFIX'] }}";
         </script>
-       
+        {% if request.endpoint == 'auth.login' %}
+          <script src="{{ url_for('static', filename='js/matrix.js') }}" defer></script>
+        {% endif %}
+
     </body>
 </html>

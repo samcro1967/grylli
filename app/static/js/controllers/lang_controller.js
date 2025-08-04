@@ -1,3 +1,5 @@
+// lang_controller.js
+
 import { Controller } from "../vendor/stimulus.js";
 
 export default class extends Controller {
