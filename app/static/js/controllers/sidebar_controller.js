@@ -12,6 +12,10 @@ export default class extends Controller {
   connect() {
     this.collapsed = localStorage.getItem("sidebarCollapsed") === "true";
     this._applyCollapseState();
+
+    this.element.addEventListener("sidebar:labels:update", () => {
+      this._applyCollapseState();
+    });
   }
 
   toggleCollapsed() {

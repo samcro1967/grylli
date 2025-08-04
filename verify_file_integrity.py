@@ -14,6 +14,11 @@ import argparse
 
 HASH_FILE = "file_hashes.sha256"
 
+class IntegrityCheckFailed(Exception):
+    """
+    Raised when the file integrity check detects missing or modified files
+    that do not match the expected SHA-256 hashes in the manifest.
+    """
 
 def compute_hash(path):
     """Compute SHA-256 hash of a file."""
@@ -23,21 +28,18 @@ def compute_hash(path):
             sha256.update(chunk)
     return sha256.hexdigest()
 
-
 def check_integrity():
-    if not os.path.exists(HASH_FILE):
-        raise FileNotFoundError(f"{HASH_FILE} not found")
+    """
+    Verify the integrity of application files by comparing their SHA-256 hashes
+    against a pre-generated manifest. Raises an exception if any discrepancies
+    are found, indicating missing or modified files. Dev-only tools listed in
+    `optional_files` are allowed to be absent without triggering a failure.
+    
+    Raises:
+        FileNotFoundError: If the hash manifest file is not found.
+        Exception: If any file integrity issues are detected.
+    """
 
-    with open(HASH_FILE, "r", encoding="utf-8") as f:
-        lines = f.readlines()
-
-    # List of files that are allowed to be missing in container (dev-only tools)
-    optional_files = {
-        "scripts/generate_screenshots.py",
-        "scripts/init_db.py",
-    }
-
-def check_integrity():
     if not os.path.exists(HASH_FILE):
         raise FileNotFoundError(f"{HASH_FILE} not found")
 
@@ -64,7 +66,7 @@ def check_integrity():
             failures.append(f"❌ Modified: {rel_path}")
 
     if failures:
-        raise Exception("File integrity check failed:\n" + "\n".join(failures))
+        raise IntegrityCheckFailed("File integrity check failed:\n" + "\n".join(failures))
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
@@ -76,6 +78,6 @@ if __name__ == "__main__":
         if not args.silent:
             print("✅ File integrity check passed.")
         sys.exit(0)
-    except Exception as e:
+    except IntegrityCheckFailed as e:
         print(f"{e}")
         sys.exit(1)

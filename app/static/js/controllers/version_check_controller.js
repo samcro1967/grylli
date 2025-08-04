@@ -54,5 +54,6 @@ export default class extends Controller {
     wrapper.appendChild(label);
     this.element.appendChild(wrapper);
     this.element.classList.remove("hidden");
+    this.element.dispatchEvent(new CustomEvent("sidebar:labels:update", { bubbles: true }));
   }
 }
