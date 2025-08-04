@@ -48,6 +48,8 @@ def enforce_admin_bootstrap(app):
             "assets.fonts_css",
             "assets.serve_font",
             "home.server_time",
+            "tools.log_js_error",
+            "meta.background_patterns",
         }
 
         try:

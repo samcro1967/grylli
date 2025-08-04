@@ -46,6 +46,8 @@ async function generateFingerprint() {
 // Stimulus Controller
 // ─────────────────────────────────────────────────────────────
 export default class extends Controller {
+  suppressErrors = false;
+
   connect() {
     const base = window.BASE_URL || "";
     const logUrl = `${base}/admin/tools/log_js_error`;
@@ -226,7 +228,19 @@ export default class extends Controller {
     });
   }
 
+  seenErrors = new Set();
+
   _send(url, payload) {
+    const key = JSON.stringify({
+      type: payload?.type,
+      message: payload?.message,
+      source: payload?.source,
+      status: payload?.status,
+      reason: payload?.reason
+    });
+
+    if (this.seenErrors.has(key)) return;
+
     fetch(url, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -234,6 +248,18 @@ export default class extends Controller {
         fingerprint: this.fingerprint || null,
         ...payload
       })
+    })
+    .then(res => {
+      const ct = res.headers.get("content-type") || "";
+      if (!res.ok || (res.status !== 204 && !ct.includes("application/json"))) {
+        console.warn("Log response not JSON. Suppressing this error from future logs.");
+        this.seenErrors.add(key);
+      }
+    })
+    .catch((err) => {
+      console.warn("Logger failed. Suppressing this error from future logs.", err);
+      this.seenErrors.add(key);
     });
   }
+
 }

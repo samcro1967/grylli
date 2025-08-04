@@ -15,7 +15,7 @@ load_dotenv()
 # ---------------------------------------------------------------------
 # APPLICATION METADATA
 # ---------------------------------------------------------------------
-APP_VERSION = "1.0.7"  # Update in package.json also
+APP_VERSION = "1.0.8"  # Update in package.json also
 GITHUB_URL = "https://github.com/samcro1967/grylli"
 DEFAULT_LOCALE = "en"
 FERRET_KEY = os.environ.get("FERRET_KEY")

@@ -213,7 +213,6 @@ def check_version():
 # Route: Capture JS Errors
 # ---------------------------------------------------------------------
 @bp.route("/log_js_error", methods=["POST"])
-@login_required
 def log_js_error():
     data = request.get_json() or {}
     log_type = data.get("type")

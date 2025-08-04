@@ -272,7 +272,6 @@ def linked_items_tab():
 
 
 @bp.route("/server-time")
-@login_required
 def server_time():
     """
     Returns the current server-local time and timezone, formatted for display.
