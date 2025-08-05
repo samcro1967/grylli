@@ -1,4 +1,9 @@
+// ---------------------------------------------------------------------
+// profile_dropdown_controller.js
 // app/static/js/controllers/profile_dropdown_controller.js
+// Stimulus controller for profile dropdown behavior.
+// ---------------------------------------------------------------------
+
 import { Controller } from "../vendor/stimulus.js";
 
 export default class extends Controller {
@@ -18,10 +23,14 @@ export default class extends Controller {
         this.buttonTarget.setAttribute("aria-expanded", isOpen);
     }
 
+    close() {
+        this.menuTarget.classList.add("hidden");
+        this.buttonTarget.setAttribute("aria-expanded", "false");
+    }
+
     _outsideClick = (event) => {
         if (!this.containerTarget.contains(event.target)) {
-            this.menuTarget.classList.add("hidden");
-            this.buttonTarget.setAttribute("aria-expanded", "false");
+            this.close();
         }
     };
 }

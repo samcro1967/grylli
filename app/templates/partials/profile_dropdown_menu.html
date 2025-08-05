@@ -6,6 +6,7 @@
 <!-- Account -->
 <div data-controller="profile-title">
   <a href="{{ url_for('account.manage_account') }}"
+     data-action="click->profile-dropdown#close"
      data-profile-title="{{ _('Grylli | Account') }}"
      data-hx-get="{{ url_for('account.manage_account') }}"
      data-hx-target="#main-content"
@@ -19,6 +20,7 @@
 <!-- Security Questions -->
 <div data-controller="profile-title">
   <a href="{{ url_for('account.set_security_questions') }}"
+     data-action="click->profile-dropdown#close"
      data-profile-title="{{ _('Grylli | Security Questions') }}"
      data-hx-get="{{ url_for('account.set_security_questions') }}"
      data-hx-target="#main-content"
@@ -32,6 +34,7 @@
 <!-- MFA -->
 <div data-controller="profile-title">
   <a href="{{ url_for('mfa.mfa_settings') }}"
+     data-action="click->profile-dropdown#close"
      data-profile-title="{{ _('Grylli | MFA') }}"
      data-hx-get="{{ url_for('mfa.mfa_settings') }}"
      data-hx-target="#main-content"
@@ -45,6 +48,7 @@
 <!-- About -->
 <div data-controller="profile-title">
   <a href="{{ url_for('about.show_about') }}"
+     data-action="click->profile-dropdown#close"
      data-profile-title="{{ _('Grylli | About') }}"
      data-hx-get="{{ url_for('about.show_about') }}"
      data-hx-target="#main-content"
@@ -58,6 +62,7 @@
 <!-- Customization -->
 <div data-controller="profile-title">
   <a href="{{ url_for('account.customization') }}"
+     data-action="click->profile-dropdown#close"
      data-profile-title="{{ _('Grylli | Customization') }}"
      data-hx-get="{{ url_for('account.customization') }}"
      data-hx-target="#main-content"
@@ -70,6 +75,7 @@
 
 <!-- GitHub Repository -->
 <a href="https://github.com/samcro1967/grylli"
+   data-action="click->profile-dropdown#close"
    target="_blank"
    rel="noopener noreferrer"
    class="flex items-center space-x-2 px-4 py-2 text-sm rounded hover:bg-base-200 dark:hover:bg-base-700 text-base-content dark:text-base-content transition">
@@ -80,6 +86,7 @@
 <!-- Help -->
 <div data-controller="profile-title">
   <a href="{{ url_for('help.show_help') }}"
+     data-action="click->profile-dropdown#close"
      data-profile-title="{{ _('Grylli | Help') }}"
      data-hx-get="{{ url_for('help.show_help') }}"
      data-hx-target="#main-content"
@@ -93,6 +100,7 @@
 <!-- Privacy -->
 <div data-controller="profile-title">
   <a href="{{ url_for('privacy.show_privacy') }}"
+     data-action="click->profile-dropdown#close"
      data-profile-title="{{ _('Grylli | Privacy') }}"
      data-hx-get="{{ url_for('privacy.show_privacy') }}"
      data-hx-target="#main-content"
@@ -106,6 +114,7 @@
 <!-- System Info -->
 <div data-controller="profile-title">
   <a href="{{ url_for('system_info.index') }}"
+     data-action="click->profile-dropdown#close"
      data-profile-title="{{ _('Grylli | System Info') }}"
      data-hx-get="{{ url_for('system_info.index') }}"
      data-hx-target="#main-content"
@@ -119,6 +128,7 @@
 <!-- Translations -->
 <div data-controller="profile-title">
   <a href="{{ url_for('account.translations_info') }}"
+     data-action="click->profile-dropdown#close"
      data-profile-title="{{ _('Grylli | Translations') }}"
      data-hx-get="{{ url_for('account.translations_info') }}"
      data-hx-target="#main-content"
@@ -142,6 +152,7 @@
 
 <!-- Logout -->
 <a href="{{ url_for("auth.logout") }}"
+   data-action="click->profile-dropdown#close"
    class="flex items-center space-x-2 px-4 py-2 text-sm rounded text-error hover:bg-error-focus dark:hover:bg-error-focus transition">
     <svg class="w-4 h-4"
          fill="none"
