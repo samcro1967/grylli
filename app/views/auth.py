@@ -149,16 +149,26 @@ def login():
         session.pop("pending_mfa_next", None)
 
     form = LoginForm()
+
+    raw_next = request.args.get("next") or request.form.get("next")
+    next_page = unquote(raw_next or "")
+
+    # Preserve `next` across GET and POST
+    raw_next = request.args.get("next") or request.form.get("next")
+    next_page = unquote(raw_next or "")
+
+    # Preserve ?next= in session if present, so we can redirect after login
+    if request.args.get("next"):
+        session["post_login_next"] = request.args.get("next")
+
     if form.validate_on_submit():
         username = form.username.data.strip()
-
         user = User.query.filter_by(username=username).first()
 
         #  Test-only hook to force lockout during login
         if current_app.config.get("TEST_FORCE_LOCK") and user:
             user.locked_until = datetime.now(timezone.utc) + timedelta(minutes=5)
             db.session.commit()
-
 
         # ----------------------------
         # 1. Account lockout check
@@ -170,7 +180,8 @@ def login():
             if locked_until > datetime.now(timezone.utc):
                 flash(_("Your account is temporarily locked. Please try again later."), "danger")
                 log_info_message(f"Auth - {username} - Attempted login during active lockout")
-                return render_template("auth/login.html", form=form)
+                # keep next so the template can round-trip it again
+                return render_template("auth/login.html", form=form, next=next_page)
 
         # ----------------------------
         # 2. Password check
@@ -181,20 +192,15 @@ def login():
             if user.email_integrity_hash != expected_hash:
                 log_info_message(f"Auth - {username} - Email hash mismatch detected")
                 flash(_("Account data integrity issue detected. Please contact support."), "danger")
-                return render_template("auth/login.html", form=form)
-
-            # Check if user was previously locked
-            was_locked = user.locked_until and user.locked_until <= datetime.now(timezone.utc)
+                return render_template("auth/login.html", form=form, next=next_page)
 
             # Clear lockout and reset failures on success
+            was_locked = user.locked_until and user.locked_until <= datetime.now(timezone.utc)
             user.locked_until = None
             db.session.commit()
-
             reset_failures(username)
 
-            # Only send email if they were previously locked
             if was_locked:
-
                 try:
                     send_email(
                         to=user.email,
@@ -214,21 +220,23 @@ If this was not you, please reset your password or contact support immediately.
 
             if not user.is_enabled:
                 flash(_("Your account is not activated."), "warning")
-                return render_template("auth/login.html", form=form)
+                return render_template("auth/login.html", form=form, next=next_page)
 
+            # MFA flow preserves `next`
             if getattr(user, "mfa_enabled", False):
                 session["pending_mfa_user_id"] = user.id
-                next_page = unquote(request.args.get("next", ""))
                 if next_page:
                     session["pending_mfa_next"] = next_page
                 flash(_("Multi-factor authentication required."), "info")
                 return redirect(url_for("mfa.mfa_challenge"))
 
+            # Normal login
             login_user(user)
             flash(_("Logged in successfully."), "success")
             log_info_message(f"Auth - {username} - Logged in")
-            next_page = unquote(request.args.get("next", ""))
-            # Safe redirect: `get_safe_redirect` ensures `next_page` is same-origin or internal
+
+            # First try session-stored next (from GET before login), then ?next=, else home
+            next_page = session.pop("post_login_next", None) or unquote(request.args.get("next", ""))
             return redirect(get_safe_redirect(next_page, fallback_endpoint="home.index"))
 
         # ----------------------------
@@ -236,12 +244,9 @@ If this was not you, please reset your password or contact support immediately.
         # ----------------------------
         record_failure(username)
         attempts = get_failure_count(username)
-
-        # Lock account after 10 failures
         if user and attempts >= 10:
             user.locked_until = datetime.now(timezone.utc) + timedelta(minutes=15)
             db.session.commit()
-
             try:
                 send_email(
                     to=user.email,
@@ -260,12 +265,9 @@ If this was not you, we recommend resetting your password or contacting support.
             except Exception as e:
                 log_exception_with_traceback(f"Auth - {username} - Failed to send lockout email", e)
 
-            flash(
-                _("Too many failed login attempts. Your account is locked for 15 minutes."),
-                "danger",
-            )
+            flash(_("Too many failed login attempts. Your account is locked for 15 minutes."), "danger")
             log_info_message(f"Auth - {username} - Locked out after {attempts} failed attempts")
-            return render_template("auth/login.html", form=form)
+            return render_template("auth/login.html", form=form, next=next_page)
 
         # ----------------------------
         # 4. Rate limiting
@@ -274,7 +276,6 @@ If this was not you, we recommend resetting your password or contacting support.
         if delay > 0:
             log_info_message(f"Auth - {username} - Rate limited with delay {delay}s")
             return redirect(url_for("auth.rate_limit_delay", username=username))
-
 
         # ----------------------------
         # 5. Invalid login fallback
@@ -286,7 +287,8 @@ If this was not you, we recommend resetting your password or contacting support.
         username = (form.username.data or "").strip()
         log_info_message(f"Auth - {username} - Login form validation error")
 
-    return render_template("auth/login.html", form=form)
+    # Make sure template receives `next` for hidden field
+    return render_template("auth/login.html", form=form, next=next_page)
 
 
 # ---------------------------------------------------------------------

@@ -11,7 +11,8 @@ RUN CGO_ENABLED=0 GOOS=linux go build -ldflags="-s -w" -o healthcheck ./healthch
     CGO_ENABLED=0 GOOS=linux go build -ldflags="-s -w" -o entrypoint ./entrypoint.go
 
 # ---------- Build Stage ----------
-FROM python:3.11-slim AS build
+#FROM python:3.11-slim AS build
+FROM python:3.11-slim-bookworm AS build
 
 ENV PYTHONDONTWRITEBYTECODE=1 \
     PYTHONUNBUFFERED=1 \

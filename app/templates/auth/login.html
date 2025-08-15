@@ -20,6 +20,7 @@
 
         <!-- Login Form -->
         <form method="post" novalidate>
+            <input type="hidden" name="next" value="{{ (next or request.args.get('next') or '')|e }}">
             <!-- Username Field -->
             <div class="mb-4">
                 {{ form.username.label(class="block text-sm font-medium mb-1 text-base-content dark:text-base-100") }}
