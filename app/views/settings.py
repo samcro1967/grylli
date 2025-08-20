@@ -101,15 +101,11 @@ def smtp_tab():
         log_info_message(f"Access - {current_user.username} - Settings Tab - SMTP")
 
         settings = SystemConfig.query.order_by(SystemConfig.key).all()
+
         for setting in settings:
             if setting.is_sensitive:
-                try:
-                    setting.value = decrypt(setting.value)
-                except Exception as e:
-                    setting.value = "[decryption error]"
-                    log_exception_with_traceback(
-                        f"Admin '{current_user.username}' failed to decrypt setting '{setting.key}'", e
-                    )
+                # Redact display — don't decrypt
+                setting.value = "••••••••"
 
         if request.headers.get("HX-Request"):
             return render_template("admin/settings/partials/_smtp_settings_partial.html", settings=settings)
