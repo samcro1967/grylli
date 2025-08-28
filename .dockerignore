@@ -12,6 +12,9 @@ LICENSE
 .env.example
 docker-compose.sample.yml
 
+__pycache__/
+*.pyc
+
 # 🔹 Data & user uploads (mounted at runtime)
 uploads/*
 !uploads/.keep
@@ -19,6 +22,12 @@ data/*
 !data/.keep
 data/backups/*
 !data/backups/.keep
+
+# Exclude all Python files in tools
+tools/*
+
+# Re-include reset_admin_password.py
+!tools/reset_admin_password.py
 
 # 🔹 Local-only scripts and tooling
 screenshots/
