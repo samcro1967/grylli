@@ -11,7 +11,6 @@ RUN CGO_ENABLED=0 GOOS=linux go build -ldflags="-s -w" -o healthcheck ./healthch
     CGO_ENABLED=0 GOOS=linux go build -ldflags="-s -w" -o entrypoint ./entrypoint.go
 
 # ---------- Build Stage ----------
-#FROM python:3.11-slim AS build
 FROM python:3.11-slim-bookworm AS build
 
 ENV PYTHONDONTWRITEBYTECODE=1 \
@@ -20,22 +19,25 @@ ENV PYTHONDONTWRITEBYTECODE=1 \
 
 WORKDIR /grylli
 
-# Install system dependencies (without Puppeteer-related packages)
+# Install only minimal system deps (no compilers needed anymore)
 RUN apt-get update && apt-get install -y \
-    build-essential gcc nodejs npm gettext \
+    nodejs npm gettext \
     --no-install-recommends && rm -rf /var/lib/apt/lists/*
 
-# Install Python dependencies
-COPY requirements.txt ./ 
-RUN pip install --no-cache-dir -r requirements.txt
+# Copy requirements and prebuilt wheels
+COPY requirements.txt ./
+COPY wheelhouse /wheelhouse
 
-# Copy pre-built assets (generated locally in app/static/)
+# Install deps from prebuilt wheels only
+RUN pip install --no-index --find-links=/wheelhouse -r requirements.txt
+
+# Copy pre-built assets
 COPY ./app/static/css/critical.css /grylli/app/static/css/critical.css
 COPY ./app/static/version.json /grylli/app/static/version.json
 COPY ./app/static/daisyui-themes.json /grylli/app/static/daisyui-themes.json
 COPY ./app/assets/fonts /grylli/app/assets/fonts
 
-# Copy the source files (excluding any build steps)
+# Copy the source files
 COPY . .
 
 # ---------- Final Runtime Stage ----------
