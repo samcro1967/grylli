@@ -32,7 +32,7 @@ COPY requirements.txt ./
 COPY wheelhouse /wheelhouse
 
 # Install deps from prebuilt wheels only
-RUN pip install --no-index --find-links=/wheelhouse -r requirements.txt
+RUN pip install --find-links=/wheelhouse --requirement requirements.txt
 
 # Copy pre-built assets
 COPY ./app/static /grylli/app/static
@@ -44,11 +44,15 @@ COPY ./app/assets/fonts /grylli/app/assets/fonts
 # Copy the full source tree (app, scripts, config, etc.)
 COPY . .
 
-# Import all Python files to generate .pyc via import
-RUN python3 scripts/import_all_for_pyc.py
+# ✅ Compile all .py files to .pyc beside them
+RUN python -m compileall -b -f app
 
-RUN find app/ -type f -name '*.py' -delete && \
-    find . -maxdepth 1 -type f -name '*.py' ! -name 'wsgi.py' ! -name 'gunicorn.conf.py' ! -name 'verify_file_integrity.py' -delete
+# ✅ Delete all .py files (except config.py if needed)
+RUN find app -type f -name '*.py' ! -name 'config.py' -delete
+
+# ✅ Generate hash manifest using only .pyc/.html/.jf
+ENV GRYLLI_COMPILE_ONLY=1
+RUN python3 generate_hashes.py
 
 # ---------- Final Runtime Stage ----------
 FROM gcr.io/distroless/python3-debian12
