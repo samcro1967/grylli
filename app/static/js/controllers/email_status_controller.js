@@ -26,9 +26,12 @@ export default class extends Controller {
           const isOn = email.is_enabled;
           button.classList.toggle('text-red-500', !isOn);
           button.classList.toggle('text-green-600', isOn);
-          button.innerHTML = isOn
-            ? `<span class="text-green-600" title="Email is enabled">🟢</span>`
-            : `<span class="text-red-500" title="Email is disabled">🔴</span>`;
+          const span = document.createElement("span");
+          span.className = isOn ? "text-green-600" : "text-red-500";
+          span.title = isOn ? "Email is enabled" : "Email is disabled";
+          span.textContent = isOn ? "🟢" : "🔴";
+
+          button.replaceChildren(span);
         });
       })
       .catch(err => console.error("Failed to fetch email statuses:", err));

@@ -12,9 +12,14 @@ export default class extends Controller {
       this.patterns = await response.json();
 
       if (this.hasSelectTarget) {
-        this.selectTarget.innerHTML = this.patterns
-          .map(p => `<option value="${p.file}">${this.label(p.name)}</option>`)
-          .join("");
+        this.selectTarget.replaceChildren();  // Clear existing options
+
+        this.patterns.forEach(p => {
+          const option = document.createElement("option");
+          option.value = p.file;
+          option.textContent = this.label(p.name);
+          this.selectTarget.appendChild(option);
+        });
       }
 
       const saved = localStorage.getItem("background") || "none";

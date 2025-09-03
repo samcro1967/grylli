@@ -92,3 +92,20 @@ postcss.config.js
 *.bak
 *.tmp
 *.orig
+
+
+# 🐳 Docker buildx cache (can be huge)
+.buildx-cache/
+
+# 📦 Prebuilt wheels (heavy, redundant, should never be tracked)
+wheelhouse/
+
+# 🚫 Shortcut artifacts
+*.lnk
+
+# ✅ Auto-generated release notes (manual or CI-managed)
+release_notes/*.md
+
+# 🔐 In case any persistent session or compiled files sneak in
+*.egg-info/
+*.lock

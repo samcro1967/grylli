@@ -54,6 +54,9 @@ RUN find app -type f -name '*.py' ! -name 'config.py' -delete
 ENV GRYLLI_COMPILE_ONLY=1
 RUN python3 generate_hashes.py
 
+# Clean up runtime-imported cache again
+RUN find app -type d -name '__pycache__' -exec rm -rf {} +
+
 # ---------- Final Runtime Stage ----------
 FROM gcr.io/distroless/python3-debian12
 

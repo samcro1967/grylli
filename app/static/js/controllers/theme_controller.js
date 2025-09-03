@@ -13,9 +13,14 @@ export default class extends Controller {
       this.themes = await response.json();
 
       if (this.hasSelectTarget) {
-        this.selectTarget.innerHTML = this.themes
-          .map(t => `<option value="${t}">${t.charAt(0).toUpperCase() + t.slice(1)}</option>`)
-          .join("");
+        this.selectTarget.replaceChildren();  // Clear existing options
+
+        this.themes.forEach(t => {
+          const option = document.createElement("option");
+          option.value = t;
+          option.textContent = t.charAt(0).toUpperCase() + t.slice(1);
+          this.selectTarget.appendChild(option);
+        });
       }
 
       const theme = this.getCookie("theme") || this.themes[0] || "light";

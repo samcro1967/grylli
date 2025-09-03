@@ -31,3 +31,36 @@ tools/*
 
 # 🔹 Local-only scripts and tooling
 screenshots/
+
+# 🔹 Local-only build cache
+.buildx-cache/
+
+# 🔹 Git history
+.git/
+
+# 🔹 Unused scripts/docs
+release_notes/
+scripts/generate_screenshots.py
+scripts/copy_fonts_from_node_modules.py
+tools/pa11y_*
+tools/summarize_*
+tools/lighthouse_*
+
+# 🔹 Testing
+tests/
+htmlcov/
+.pytest_cache/
+*.coverage
+
+# 🔹 Node build artifacts
+node_modules/
+dist/
+build/
+tailwind.config.js
+postcss.config.js
+
+# 🔹 Logs, tmp, and misc
+*.log
+*.bak
+*.tmp
+*.orig
