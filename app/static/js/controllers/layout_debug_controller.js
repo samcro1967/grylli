@@ -383,9 +383,14 @@ export default class extends Controller {
 
     this._safe(() => {
       const html = document.documentElement.outerHTML;
-      this.rawHtmlDebugTarget.textContent = html.length > 5000
+      const safeText = html.length > 5000
         ? html.slice(0, 5000) + "\n[...truncated]"
         : html;
+
+      const pre = document.createElement("pre");
+      pre.textContent = safeText;
+
+      this.rawHtmlDebugTarget.replaceChildren(pre);
     });
 
     // Customization summary: theme, contrast, font, tracking, line height

@@ -44,8 +44,8 @@ Main: ${e("main")}`}),this._safe(()=>{if(performance.memory){let{usedJSHeapSize:
 Total: ${(r/1048576).toFixed(1)} MB`}else this.memoryDebugTarget.textContent="Memory info not supported."}),this._safe(()=>{let e=window.__GrylliContext||{};this.routeDebugTarget.textContent=`Route: ${e.route||window.location.pathname}
 Title: ${document.title}
 View: ${e.view||"Unknown"}
-Template: ${e.template||"Unknown"}`}),this._safe(()=>{let e=document.documentElement.outerHTML;this.rawHtmlDebugTarget.textContent=e.length>5e3?e.slice(0,5e3)+`
-[...truncated]`:e}),this._safe(()=>{let e=document.documentElement,r=[`Theme: ${e.getAttribute("data-theme")||"unknown"}`,`Contrast: ${e.dataset.contrast||"default"}`,`Tracking: ${e.dataset.tracking||"default"}`,`Line Height: ${e.dataset.lineHeight||"default"}`,`Font Family: ${getComputedStyle(document.body).fontFamily}`];this.themeDebugTarget.textContent+=`
+Template: ${e.template||"Unknown"}`}),this._safe(()=>{let e=document.documentElement.outerHTML,r=e.length>5e3?e.slice(0,5e3)+`
+[...truncated]`:e,i=document.createElement("pre");i.textContent=r,this.rawHtmlDebugTarget.replaceChildren(i)}),this._safe(()=>{let e=document.documentElement,r=[`Theme: ${e.getAttribute("data-theme")||"unknown"}`,`Contrast: ${e.dataset.contrast||"default"}`,`Tracking: ${e.dataset.tracking||"default"}`,`Line Height: ${e.dataset.lineHeight||"default"}`,`Font Family: ${getComputedStyle(document.body).fontFamily}`];this.themeDebugTarget.textContent+=`
 ${r.join(`
 `)}`})}_safe(s){try{s()}catch(t){console.warn("\u26D4\uFE0F Debug block failed:",t)}}clearAllDebug(){localStorage.clear(),document.cookie.split(";").forEach(s=>{let t=s.split("=")[0].trim();document.cookie=`${t}=;expires=Thu, 01 Jan 1970 00:00:00 GMT;path=/`}),window.location.reload()}exportDebug(){let s=this.constructor.targets,t=`GRYLLI LAYOUT DEBUG REPORT
 ===========================
