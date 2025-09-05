@@ -1,5 +1,5 @@
 # ---------- Go Build Stage ----------
-FROM golang:1.24.4-bookworm AS go-builder
+FROM golang:1.24.6-bookworm AS go-builder
 WORKDIR /app
 
 # Copy both Go source files
