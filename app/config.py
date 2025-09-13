@@ -53,6 +53,9 @@ BACKUP_DIR = os.environ.get("GRYLLI_BACKUP_DIR", os.path.join(DATA_DIR, "backups
 
 TOOLS_DIR = os.path.join(PROJECT_ROOT, "tools")
 
+# How many days to keep backups
+BACKUP_RETENTION_DAYS = 7
+
 # ---------------------------------------------------------------------
 # AUTH & SECURITY
 # ---------------------------------------------------------------------
@@ -64,8 +67,8 @@ PERMANENT_SESSION_LIFETIME = timedelta(days=7)
 # SCHEDULER CONFIGURATION
 # ---------------------------------------------------------------------
 SCHEDULER_CHECKIN_INTERVAL_MINUTES = 10  # Check-ins every 5 minutes
-SCHEDULER_BACKUP_CRON_HOUR = 2  # 2:00 AM daily
-SCHEDULER_BACKUP_CRON_MINUTE = 0
+SCHEDULER_BACKUP_CRON_HOUR = 10  # 2:00 AM daily
+SCHEDULER_BACKUP_CRON_MINUTE = 11
 SCHEDULER_REMINDER_INTERVAL_MINUTES = 10
 SCHEDULER_FILE_INTEGRITY_INTERVAL_MINUTES = 10
 SCHEDULER_VERSION_CHECK_INTERVAL_MINUTES = 60

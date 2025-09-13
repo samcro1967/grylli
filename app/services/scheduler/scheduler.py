@@ -8,13 +8,13 @@ import traceback
 
 # ------------------------ Imports (PEP8 order) -----------------------
 from datetime import datetime, timedelta, timezone
-
 from dateutil.rrule import rrulestr
+from flask import current_app
 
 from app.extensions import db
 from app.models import EmailMessage, Message, Reminder, User, UserMailSettings
 from app.services.scheduler.apprise_utils import execute_apprise
-from app.services.scheduler.backup_utils import create_backup
+from app.services.scheduler.backup_utils import create_backup, delete_old_backups
 from app.services.scheduler.email_utils import (
     send_checkin_email,
     send_owner_notice,
@@ -23,7 +23,6 @@ from app.services.scheduler.email_utils import (
 )
 from app.services.scheduler.webhook_utils import execute_webhooks
 from app.utils.logging import log_error_message, log_info_message
-
 
 # ---------------------------------------------------------------------
 # process_checkins_and_overdue_actions
@@ -195,6 +194,10 @@ def create_daily_backup():
     try:
         path = create_backup()
         log_info_message(f"Scheduler [DailyBackup] - Success - Daily backup created: {path}")
+
+        # Prune backups older than 7 days (or adjust retention here)
+        delete_old_backups(days_to_keep=current_app.config["BACKUP_RETENTION_DAYS"])
+
     except Exception as e:
         log_error_message(
             f"ERROR - Scheduler [DailyBackup] - Failure - Failed to create daily backup: {e}\n{traceback.format_exc()}"

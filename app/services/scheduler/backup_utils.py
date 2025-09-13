@@ -88,6 +88,11 @@ def delete_old_backups(days_to_keep=7):
             )
             return
 
+        # ✅ New: log retention setting up front
+        log_info_message(
+            f"Scheduler [DeleteOldBackups] - Start - Pruning backups older than {days_to_keep} day(s)."
+        )
+
         now = datetime.now()
         deleted_count = 0
 
