@@ -17,13 +17,28 @@
                 </tr>
             </thead>
             <tbody>
+                <!-- Version Check -->
                 <tr class="hover:bg-base-200 dark:hover:bg-base-700 transition-colors">
                     <td class="font-semibold">{{ _("Version Check") }}</td>
                     <td class="text-base-content/70">
                         {{ _("Check if a newer version of Grylli is available by running the scheduled version check task manually.") }}
                     </td>
                     <td class="text-right">
-                        <form method="post" action="{{ url_for("tools.check_version") }}">
+                        <form method="post" action="{{ url_for('tools.check_version') }}">
+                            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                            <button type="submit" class="btn btn-primary btn-sm">{{ _("Run") }}</button>
+                        </form>
+                    </td>
+                </tr>
+
+                <!-- Prune Backups -->
+                <tr class="hover:bg-base-200 dark:hover:bg-base-700 transition-colors">
+                    <td class="font-semibold">{{ _("Prune Backups") }}</td>
+                    <td class="text-base-content/70">
+                        {{ _("Delete old database backups older than BACKUP_RETENTION_DAYS (currently %(days)s day(s)).") % {"days": config.BACKUP_RETENTION_DAYS} }}
+                    </td>
+                    <td class="text-right">
+                        <form method="post" action="{{ url_for('tools.prune_backups') }}">
                             <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
                             <button type="submit" class="btn btn-primary btn-sm">{{ _("Run") }}</button>
                         </form>

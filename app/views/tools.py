@@ -228,3 +228,35 @@ def log_js_error():
         log_info_message(f"📱 JS Event: {data}")
 
     return "", 204
+
+
+# ---------------------------------------------------------------------
+# Route: Manual prune backups task (Tools tab)
+# ---------------------------------------------------------------------
+@bp.route("/tasks/prune-backups", methods=["POST"], strict_slashes=False)
+@admin_required
+@login_required
+def prune_backups():
+    from flask import flash, redirect
+    from app.services.scheduler.backup_utils import delete_old_backups
+
+    log_info_message(f"Admin '{current_user.username}' triggered manual backup pruning.")
+
+    try:
+        if TEST_HOOKS.get("force_error"):
+            raise Exception("Forced error for test coverage")
+
+        days_to_keep = current_app.config.get("BACKUP_RETENTION_DAYS", 7)
+        deleted_count = delete_old_backups(days_to_keep=days_to_keep)
+
+        flash(
+            _("✅ Backup pruning complete. Deleted %(count)d old backup(s). Retention set to %(days)d day(s).")
+            % {"count": deleted_count, "days": days_to_keep},
+            "success",
+        )
+    except Exception as e:
+        flash(_("❌ Backup pruning failed. See logs for details."), "error")
+        log_exception_with_traceback("Manual backup prune failed", e)
+
+    return redirect(url_for("tools.tools_tasks"))
+

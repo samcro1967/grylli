@@ -79,6 +79,9 @@ def delete_old_backups(days_to_keep=7):
 
     Args:
         days_to_keep: Number of days to retain backups (default: 7).
+
+    Returns:
+        int: Number of deleted backups.
     """
     try:
         dir_path = current_app.config["BACKUP_DIR"]
@@ -86,9 +89,8 @@ def delete_old_backups(days_to_keep=7):
             log_info_message(
                 "Scheduler [DeleteOldBackups] - Success - Backup directory does not exist. Skipping deletion."
             )
-            return
+            return 0
 
-        # ✅ New: log retention setting up front
         log_info_message(
             f"Scheduler [DeleteOldBackups] - Start - Pruning backups older than {days_to_keep} day(s)."
         )
@@ -118,8 +120,10 @@ def delete_old_backups(days_to_keep=7):
         log_info_message(
             f"Scheduler [DeleteOldBackups] - Success - Cleanup complete. Deleted {deleted_count} old backup(s)."
         )
+        return deleted_count
 
     except Exception as e:
         log_error_message(
             f"ERROR - Scheduler [DeleteOldBackups] - Failure - Unexpected error during backup cleanup: {e}"
         )
+        return 0
