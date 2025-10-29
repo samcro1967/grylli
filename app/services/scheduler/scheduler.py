@@ -122,7 +122,11 @@ def find_expired_items():
             continue
 
         grace = timedelta(minutes=item.checkin_interval_minutes + item.grace_period_minutes)
-        if now - item.last_checkin >= grace:
+        last_checkin = item.last_checkin
+        if last_checkin and last_checkin.tzinfo is None:
+            last_checkin = last_checkin.replace(tzinfo=timezone.utc)
+
+        if now - last_checkin >= grace:
             try:
                 log_info_message(
                     f"Scheduler [ExecuteExpiredMessage] - Success - Executing expired message: {item.label}"
@@ -225,8 +229,14 @@ def execute_due_reminders():
             )
             continue
 
-        if reminder.start_at.tzinfo is None:
+        # Normalize all reminder timestamps to aware UTC
+        if reminder.start_at and reminder.start_at.tzinfo is None:
             reminder.start_at = reminder.start_at.replace(tzinfo=timezone.utc)
+        if reminder.end_at and reminder.end_at.tzinfo is None:
+            reminder.end_at = reminder.end_at.replace(tzinfo=timezone.utc)
+        if reminder.last_sent_at and reminder.last_sent_at.tzinfo is None:
+            reminder.last_sent_at = reminder.last_sent_at.replace(tzinfo=timezone.utc)
+
 
         if reminder.start_at > now:
             log_info_message(
@@ -252,7 +262,11 @@ def execute_due_reminders():
 
         if reminder.recurrence_rule:
             rule = rrulestr(reminder.recurrence_rule, dtstart=reminder.start_at)
-            next_occurrence = rule.after(reminder.last_sent_at or reminder.start_at, inc=True)
+            probe = reminder.last_sent_at or reminder.start_at
+            if probe.tzinfo is None:
+                probe = probe.replace(tzinfo=timezone.utc)
+            next_occurrence = rule.after(probe, inc=True)
+
 
             if not next_occurrence or next_occurrence > now:
                 log_info_message(

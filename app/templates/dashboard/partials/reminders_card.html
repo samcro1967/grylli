@@ -27,7 +27,7 @@
                         {% if reminder.is_enabled %}
                             <span class="badge badge-success badge-sm">{{ _("Enabled") }}</span>
                         {% else %}
-                            <span class="badge badge-neutral badge-sm">{{ _("Disabled") }}</span>
+                            <span class="badge badge-error badge-sm">{{ _("Disabled") }}</span>
                         {% endif %}
                     </li>
                 {% endfor %}
