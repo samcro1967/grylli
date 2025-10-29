@@ -33,8 +33,9 @@
                                             {{ _("Check In Now") }}
                                         </a>
                                     {% endif %}
-                                    <a href="{{ url_for('messages_bp.edit_message', message_id=msg.id) }}"
-                                       class="btn btn-sm btn-outline">
+                                    <a href="{{ url_for('messages_bp.overview') }}"
+                                       class="btn btn-sm btn-outline"
+                                       title="{{ _('Go to Messages list') }}">
                                         {{ _("Edit") }}
                                     </a>
                                 </td>
@@ -75,8 +76,9 @@
                                             {{ _("Check In Now") }}
                                         </a>
                                     {% endif %}
-                                    <a href="{{ url_for('email.edit_email', email_id=email.id) }}"
-                                       class="btn btn-sm btn-outline">
+                                    <a href="{{ url_for('messages_bp.overview') }}"
+                                       class="btn btn-sm btn-outline"
+                                       title="{{ _('Go to Messages list') }}">
                                         {{ _("Edit") }}
                                     </a>
                                 </td>
@@ -111,8 +113,11 @@
                                 <td>{{ rem.recurrence_rule or _("One-time") }}</td>
                                 <td>{{ rem.last_sent_at.strftime("%Y-%m-%d %H:%M") if rem.last_sent_at else "—" }}</td>
                                 <td class="text-right">
-                                    <a href="{{ url_for('reminders_bp.edit_reminder', reminder_id=rem.id) }}"
-                                       class="btn btn-sm btn-outline">{{ _("Edit") }}</a>
+                                    <a href="{{ url_for('messages_bp.overview') }}"
+                                       class="btn btn-sm btn-outline"
+                                       title="{{ _('Go to Messages list') }}">
+                                        {{ _("Edit") }}
+                                    </a>
                                 </td>
                             </tr>
                         {% endfor %}
