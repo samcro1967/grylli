@@ -163,11 +163,15 @@ def toggle_enabled(type, id):
                     record.executed_at = None
                 if hasattr(record, "reminder_sent_at"):
                     record.reminder_sent_at = None
-                if hasattr(record, "last_checkin") and not record.last_checkin:
-                    record.last_checkin = datetime.utcnow()
+                if hasattr(record, "last_checkin"):
+                    # Always reset check-in clock when re-enabled
+                    record.last_checkin = datetime.now(timezone.utc)
 
-                log_info_message(f"User '{current_user.username}' enabled {type} ID={id}.")
-                flash(_("✅ Enabled and timer started."), "success")
+                log_info_message(
+                    f"User '{current_user.username}' enabled {type} ID={id} — check-in timer reset to now."
+                )
+                flash(_("✅ Enabled — check-in timer reset and started."), "success")
+
             else:
                 record.is_enabled = False
                 if type == "reminder":
